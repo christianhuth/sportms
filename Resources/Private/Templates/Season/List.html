@@ -1,0 +1,8 @@
+<f:if condition="{seasons}">
+	<ul>
+		<li><f:translate key="tx_clubms_domain_model_person.lastname"/>, <f:translate key="tx_clubms_domain_model_person.firstname"/></li>
+		<f:for each="{seasons}" as="season">
+			<li>{season.season_name}, {season.season_name_short}, {season.season_name_very_short}</li>
+		</f:for>
+	</ul>
+</f:if>

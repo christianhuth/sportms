@@ -1,0 +1,368 @@
+<T3DataStructure>
+	<meta>
+		<langDisable>1</langDisable>
+	</meta>
+	<sheets>
+		<sDEF>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>Allgemein</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<switchableControllerActions>
+						<TCEforms>
+							<label>Darstellungselemente</label>
+							<config>
+								<type>select</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">Club-Detail</numIndex>
+										<numIndex index="1">Club->detail</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">Club-List</numIndex>
+										<numIndex index="1">Club->list</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">Competition-Games</numIndex>
+										<numIndex index="1">Competition->games</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">Competition-List</numIndex>
+										<numIndex index="1">Competition->list</numIndex>
+									</numIndex>
+									<numIndex index="4" type="array">
+										<numIndex index="0">Competition-Stats</numIndex>
+										<numIndex index="1">Competition->stats</numIndex>
+									</numIndex>
+									<numIndex index="5" type="array">
+										<numIndex index="0">Competition-Teams</numIndex>
+										<numIndex index="1">Competition->teams</numIndex>
+									</numIndex>
+									<numIndex index="6" type="array">
+										<numIndex index="0">Competition-Detail</numIndex>
+										<numIndex index="1">Competition->detail</numIndex>
+									</numIndex>
+									<numIndex index="7" type="array">
+										<numIndex index="0">Game-Detail</numIndex>
+										<numIndex index="1">Game->detail</numIndex>
+									</numIndex>
+									<numIndex index="8" type="array">
+										<numIndex index="0">Game-List</numIndex>
+										<numIndex index="1">Game->list</numIndex>
+									</numIndex>
+									<numIndex index="9" type="array">
+										<numIndex index="0">Game-Report</numIndex>
+										<numIndex index="1">Game->report</numIndex>
+									</numIndex>
+									<numIndex index="10" type="array">
+										<numIndex index="0">Game-Stats</numIndex>
+										<numIndex index="1">Game->stats</numIndex>
+									</numIndex>
+									<numIndex index="11" type="array">
+										<numIndex index="0">Official-Detail</numIndex>
+										<numIndex index="1">Official->detail</numIndex>
+									</numIndex>
+									<numIndex index="12" type="array">
+										<numIndex index="0">Person-Detail</numIndex>
+										<numIndex index="1">Person->detail</numIndex>
+									</numIndex>
+									<numIndex index="13" type="array">
+										<numIndex index="0">Person-List</numIndex>
+										<numIndex index="1">Person->list</numIndex>
+									</numIndex>
+									<numIndex index="14" type="array">
+										<numIndex index="0">Player-Detail</numIndex>
+										<numIndex index="1">Player->detail</numIndex>
+									</numIndex>
+									<numIndex index="15" type="array">
+										<numIndex index="0">Referee-Detail</numIndex>
+										<numIndex index="1">Referee->detail</numIndex>
+									</numIndex>
+									<numIndex index="16" type="array">
+										<numIndex index="0">Team-Detail</numIndex>
+										<numIndex index="1">Team->detail</numIndex>
+									</numIndex>
+									<numIndex index="17" type="array">
+										<numIndex index="0">Team-Games</numIndex>
+										<numIndex index="1">Team->games</numIndex>
+									</numIndex>
+									<numIndex index="18" type="array">
+										<numIndex index="0">Team-Goals</numIndex>
+										<numIndex index="1">Team->goals</numIndex>
+									</numIndex>
+									<numIndex index="19" type="array">
+										<numIndex index="0">Team-History</numIndex>
+										<numIndex index="1">Team->history</numIndex>
+									</numIndex>
+									<numIndex index="20" type="array">
+										<numIndex index="0">Team-List</numIndex>
+										<numIndex index="1">Team->list</numIndex>
+									</numIndex>
+									<numIndex index="21" type="array">
+										<numIndex index="0">Team-Squad</numIndex>
+										<numIndex index="1">Team->squad</numIndex>
+									</numIndex>
+									<numIndex index="22" type="array">
+										<numIndex index="0">Team-Stats</numIndex>
+										<numIndex index="1">Team->stats</numIndex>
+									</numIndex>
+								</items>
+								<size>10</size>
+								<maxitems>40</maxitems>
+								<minitems>1</minitems>
+							</config>
+						</TCEforms>
+					</switchableControllerActions>
+				</el>
+			</ROOT>
+		</sDEF>
+		<additional>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>Scope</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<settings.scope.saison>
+						<TCEforms>
+							<label>Saison</label>
+							<config>
+								<type>select</type>
+								<foreign_table>tx_clubms_domain_model_season</foreign_table>
+								<size>5</size>
+								<maxitems>3</maxitems>
+							</config>
+						</TCEforms>
+					</settings.scope.saison>
+					<settings.scope.saison.select>
+						<TCEforms>
+							<label>Selectbox für Saison?</label>
+							<config>
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</settings.scope.saison.select>
+					<settings.scope.section>
+						<TCEforms>
+							<label>Abteilung</label>
+							<config>
+								<type>select</type>
+								<foreign_table>tx_clubms_domain_model_section</foreign_table>
+								<size>5</size>
+								<maxitems>3</maxitems>
+							</config>
+						</TCEforms>
+					</settings.scope.section>
+					<settings.scope.section.select>
+						<TCEforms>
+							<label>Selectbox für Abteilung?</label>
+							<config>
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</settings.scope.section.select>
+					<settings.scope.agegroup>
+						<TCEforms>
+							<label>Altersgruppe</label>
+							<config>
+								<type>select</type>
+								<foreign_table>tx_clubms_domain_model_agegroup</foreign_table>
+								<size>5</size>
+								<maxitems>3</maxitems>
+							</config>
+						</TCEforms>
+					</settings.scope.agegroup>
+					<settings.scope.agegroup.select>
+						<TCEforms>
+							<label>Selectbox für Altersgruppe?</label>
+							<config>
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</settings.scope.agegroup.select>
+					<settings.scope.agelevel>
+						<TCEforms>
+							<label>Altersstufe</label>
+							<config>
+								<type>select</type>
+								<foreign_table>tx_clubms_domain_model_agelevel</foreign_table>
+								<size>5</size>
+								<maxitems>3</maxitems>
+							</config>
+						</TCEforms>
+					</settings.scope.agelevel>
+					<settings.scope.agelevel.select>
+						<TCEforms>
+							<label>Selectbox für Altersstufe?</label>
+							<config>
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</settings.scope.agelevel.select>
+				</el>
+			</ROOT>
+		</additional>
+		<sEx>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>Einzelansicht</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<settings.single.club>
+						<TCEforms>
+							<label>Zeige folgenden Verein</label>
+							<config>
+								<type>group</type>
+								<internal_type>db</internal_type>
+								<allowed>tx_clubms_domain_model_club</allowed>
+								<size>1</size>
+								<maxItems>1</maxItems>
+								<minItems>0</minItems>
+								<show_thumbs>1</show_thumbs>
+							</config>
+						</TCEforms>
+					</settings.single.club>
+					<settings.single.team>
+						<TCEforms>
+							<label>Zeige folgendes Team</label>
+							<config>
+								<type>group</type>
+								<internal_type>db</internal_type>
+								<allowed>tx_clubms_domain_model_team</allowed>
+								<size>1</size>
+								<maxItems>1</maxItems>
+								<minItems>0</minItems>
+								<show_thumbs>1</show_thumbs>
+							</config>
+						</TCEforms>
+					</settings.single.team>
+					<settings.single.game>
+						<TCEforms>
+							<label>Zeige folgendes Spiel</label>
+							<config>
+								<type>group</type>
+								<internal_type>db</internal_type>
+								<allowed>tx_clubms_domain_model_game</allowed>
+								<size>1</size>
+								<maxItems>1</maxItems>
+								<minItems>0</minItems>
+								<show_thumbs>1</show_thumbs>
+							</config>
+						</TCEforms>
+					</settings.single.game>
+					<settings.single.competition>
+						<TCEforms>
+							<label>Zeige folgenden Wettbewerb</label>
+							<config>
+								<type>group</type>
+								<internal_type>db</internal_type>
+								<allowed>tx_clubms_domain_model_competition</allowed>
+								<size>1</size>
+								<maxItems>1</maxItems>
+								<minItems>0</minItems>
+								<show_thumbs>1</show_thumbs>
+							</config>
+						</TCEforms>
+					</settings.single.competition>
+					<settings.single.person>
+						<TCEforms>
+							<label>Zeige folgende Person</label>
+							<config>
+								<type>group</type>
+								<internal_type>db</internal_type>
+								<allowed>tx_clubms_domain_model_person</allowed>
+								<size>1</size>
+								<maxItems>1</maxItems>
+								<minItems>0</minItems>
+								<show_thumbs>1</show_thumbs>
+							</config>
+						</TCEforms>
+					</settings.single.person>
+				</el>
+			</ROOT>
+		</sEx>
+		<pages>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>Detailseiten</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<settings.pages.club>
+						<TCEforms>
+							<label>Detailseite für Vereine</label>
+							<config>
+								<type>group</type>
+								<internal_type>db</internal_type>
+								<allowed>pages</allowed>
+								<size>1</size>
+								<maxItems>1</maxItems>
+								<minItems>0</minItems>
+								<show_thumbs>1</show_thumbs>
+							</config>
+						</TCEforms>
+					</settings.pages.club>
+					<settings.pages.team>
+						<TCEforms>
+							<label>Detailseite für Mannschaften</label>
+							<config>
+								<type>group</type>
+								<internal_type>db</internal_type>
+								<allowed>pages</allowed>
+								<size>1</size>
+								<maxItems>1</maxItems>
+								<minItems>0</minItems>
+								<show_thumbs>1</show_thumbs>
+							</config>
+						</TCEforms>
+					</settings.pages.team>
+					<settings.pages.game>
+						<TCEforms>
+							<label>Detailseite für Spiele</label>
+							<config>
+								<type>group</type>
+								<internal_type>db</internal_type>
+								<allowed>pages</allowed>
+								<size>1</size>
+								<maxItems>1</maxItems>
+								<minItems>0</minItems>
+								<show_thumbs>1</show_thumbs>
+							</config>
+						</TCEforms>
+					</settings.pages.game>
+					<settings.pages.competition>
+						<TCEforms>
+							<label>Detailseite für Wettbewerbe</label>
+							<config>
+								<type>group</type>
+								<internal_type>db</internal_type>
+								<allowed>pages</allowed>
+								<size>1</size>
+								<maxItems>1</maxItems>
+								<minItems>0</minItems>
+								<show_thumbs>1</show_thumbs>
+							</config>
+						</TCEforms>
+					</settings.pages.competition>
+					<settings.pages.person>
+						<TCEforms>
+							<label>Detailseite für Personen</label>
+							<config>
+								<type>group</type>
+								<internal_type>db</internal_type>
+								<allowed>pages</allowed>
+								<size>1</size>
+								<maxItems>1</maxItems>
+								<minItems>0</minItems>
+								<show_thumbs>1</show_thumbs>
+							</config>
+						</TCEforms>
+					</settings.pages.person>
+				</el>
+			</ROOT>
+		</pages>
+	</sheets>
+</T3DataStructure>

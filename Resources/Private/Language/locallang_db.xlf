@@ -1,0 +1,755 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="de" datatype="plaintext" original="messages" date="2015-05-13T11:46:05Z" product-name="clubms">
+		<header/>
+		<body>
+			
+			
+			<trans-unit id="tx_clubms_domain_model_address">
+				<source>Addresse</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_address.street">
+				<source>Straße</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_address.housenumber">
+				<source>Hausnummer</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_address.zipcode">
+				<source>Postleitzahl</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_address.location">
+				<source>Ort</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_address.country">
+				<source>Land</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_address.region">
+				<source>Region</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_address.public">
+				<source>Öffentlich</source>
+			</trans-unit>
+			
+			
+			<trans-unit id="tx_clubms_domain_model_agegroup">
+				<source>Altersgruppe</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_agegroup.label">
+				<source>Bezeichnung</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_agegroup.short">
+				<source>Kurzform</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_agegroup.agelevel">
+				<source>Altersstufen</source>
+			</trans-unit>
+			
+			
+			<trans-unit id="tx_clubms_domain_model_agelevel">
+				<source>Altersstufe</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_agelevel.label">
+				<source>Bezeichnung</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_agelevel.short">
+				<source>Kurzform</source>
+			</trans-unit>
+			
+			
+			<trans-unit id="tx_clubms_domain_model_club">
+				<source>Verein</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club.name">
+				<source>Vereinsname</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club.colours">
+				<source>Vereinsfarben</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club.image">
+				<source>Vereinslogos</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club.contact">
+				<source>Kontaktdaten</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club.section">
+				<source>Abteilungen</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club.official">
+				<source>Funktionäre</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club.dateOfFounding">
+				<source>Gründungsdatum</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club.yearOfFounding">
+				<source>Gründungsjahr</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club.clubMembers">
+				<source>Mitglieder</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club.images">
+				<source>Bilder</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club.visibility">
+				<source>Sichtbarkeit</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club.visibility_dataset">
+				<source>Verein verbergen</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club.detail_link">
+				<source>Link auf Einzelansicht möglich?</source>
+			</trans-unit>
+			
+			
+			<trans-unit id="tx_clubms_domain_model_club_ground">
+				<source>Vereinsgelände</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club_ground.name">
+				<source>Bezeichnung</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club_ground.journey">
+				<source>Anfahrt</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club_ground.image">
+				<source>Fotos</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club_ground.details">
+				<source>Details</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club_ground.description">
+				<source>Beschreibung</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club_ground.club_owned">
+				<source>In Vereinsbesitz?</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club_ground.club_owned_since">
+				<source>In Vereinsbesitz seit</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club_ground.year_of_building">
+				<source>Baujahr</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club_ground.date_of_building">
+				<source>Baudatum</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club_ground.venues">
+				<source>Sportstätten</source>
+			</trans-unit>
+			
+			
+			<trans-unit id="tx_clubms_domain_model_club_members.members">
+				<source>Mitgliederanzahl</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club_members.date">
+				<source>Erfassungsdatum</source>
+			</trans-unit>
+			
+			
+			<trans-unit id="tx_clubms_domain_model_club_official.person">
+				<source>Person</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club_official.details">
+				<source>Details</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club_official.startdate">
+				<source>Startdatum</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club_official.enddate">
+				<source>Enddatum</source>
+			</trans-unit>
+			
+			
+			<trans-unit id="tx_clubms_domain_model_club_official_job.position">
+				<source>Posten</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club_official_job.person">
+				<source>Person</source>
+			</trans-unit>
+			
+			
+			<trans-unit id="tx_clubms_domain_model_club_section">
+				<source>Abteilung</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club_section.contact">
+				<source>Kontaktdaten</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club_section.official">
+				<source>Funktionäre</source>
+			</trans-unit>
+			
+			
+			<trans-unit id="tx_clubms_domain_model_club_section_members">
+				<source>Mitglieder</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club_section_members.members">
+				<source>Mitgliederanzahl</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club_section_members.date">
+				<source>Erfassungsdatum</source>
+			</trans-unit>
+			
+			
+			<trans-unit id="tx_clubms_domain_model_club_section_official.person">
+				<source>Person</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club_section_official.details">
+				<source>Details</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club_section_official.startdate">
+				<source>Startdatum</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club_section_official.enddate">
+				<source>Enddatum</source>
+			</trans-unit>
+			
+			
+			<trans-unit id="tx_clubms_domain_model_club_section_official_job.position">
+				<source>Posten</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club_section_official_job.person">
+				<source>Person</source>
+			</trans-unit>
+			
+			
+			<trans-unit id="tx_clubms_domain_model_club_venue">
+				<source>Vereinsstätte</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club_venue.name">
+				<source>Bezeichnung</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club_venue.journey">
+				<source>Anfahrt</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club_venue.image">
+				<source>Fotos</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club_venue.details">
+				<source>Details</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club_venue.description">
+				<source>Beschreibung</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club_venue.club_owned">
+				<source>In Vereinsbesitz?</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club_venue.club_owned_since">
+				<source>In Vereinsbesitz seit</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club_venue.date_of_building">
+				<source>Baudatum</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club_venue.year_of_building">
+				<source>Baujahr</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club_venue.size">
+				<source>Größe</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club_venue.dimensions">
+				<source>Maße</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club_venue.surface">
+				<source>Bodenbelag</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club_venue.spectator_capacity">
+				<source>Zuschauerkapazität</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club_venue.parking">
+				<source>Anzahl Parkplätze</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club_venue.park_and_ride">
+				<source>Park / Ride vorhanden?</source>
+			</trans-unit>
+			
+			
+			<trans-unit id="tx_clubms_domain_model_competition">
+				<source>Wettbewerb</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_competition.name">
+				<source>Wettbewerbsname</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_competition.short">
+				<source>Kurzform</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_competition.section">
+				<source>Abteilung</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_competition.age_level">
+				<source>Altersstufe</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_competition.competitionType">
+				<source>Wettbewerbstyp</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_competition.visibility">
+				<source>Sichtbarkeit</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_competition.visibility_dataset">
+				<source>Wettbewerb verbergen</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_competition.detail_link">
+				<source>Link auf Einzelansicht möglich?</source>
+			</trans-unit>
+			
+			
+			<trans-unit id="tx_clubms_domain_model_competition_type">
+				<source>Wettbewerbsart</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_competition_type.label">
+				<source>Bezeichnung</source>
+			</trans-unit>
+			
+			
+			<trans-unit id="tx_clubms_domain_model_contact_type">
+				<source>Kontaktart</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_contact_type.label">
+				<source>Bezeichnung</source>
+			</trans-unit>
+			
+			
+			<trans-unit id="tx_clubms_domain_model_mail">
+				<source>Mail</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_mail.mail">
+				<source>Mail</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_mail.type">
+				<source>Typ</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_mail.type_1">
+				<source>Privat</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_mail.type_2">
+				<source>Geschäftlich</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_mail.public">
+				<source>Öffentlich</source>
+			</trans-unit>
+			
+			
+			<trans-unit id="tx_clubms_domain_model_official_job">
+				<source>Official Job</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_official_job.label">
+				<source>Bezeichnung</source>
+			</trans-unit>
+			
+			
+			<trans-unit id="tx_clubms_domain_model_person">
+				<source>Person</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.personal">
+				<source>Persönliche Daten</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.firstname">
+				<source>Vorname</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.lastname">
+				<source>Nachname</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.birthname">
+				<source>Geburtsname</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.nickname">
+				<source>Spitzname</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.dateOfBirth">
+				<source>Geburtsdatum</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.zodiacSign">
+				<source>Sternzeichen</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.zodiacSign_1">
+				<source>Wassermann</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.zodiacSign_2">
+				<source>Fische</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.zodiacSign_3">
+				<source>Widder</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.zodiacSign_4">
+				<source>Stier</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.zodiacSign_5">
+				<source>Zwillinge</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.zodiacSign_6">
+				<source>Krebs</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.zodiacSign_7">
+				<source>Löwe</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.zodiacSign_8">
+				<source>Jungfrau</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.zodiacSign_9">
+				<source>Waage</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.zodiacSign_10">
+				<source>Skorpion</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.zodiacSign_11">
+				<source>Schütze</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.zodiacSign_12">
+				<source>Steinbock</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.placeOfBirth">
+				<source>Geburtsort</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.nationality">
+				<source>Nationalität</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.gender">
+				<source>Geschlecht</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.gender_male">
+				<source>Männlich</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.gender_female">
+				<source>Weiblich</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.weight">
+				<source>Gewicht</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.height">
+				<source>Größe</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.sizeOfShoe">
+				<source>Schuhgröße</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.footer">
+				<source>Starker Fuß</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.footer_1">
+				<source>Rechts</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.footer_2">
+				<source>Links</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.footer_3">
+				<source>Beidfüßig</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.hander">
+				<source>Starke Hand</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.hander_1">
+				<source>Rechts</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.hander_2">
+				<source>Links</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.hander_3">
+				<source>Beidhändig</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.familyStatus">
+				<source>Familienstand</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.graduation">
+				<source>Schulabschluss</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.job">
+				<source>Beruf</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.characteristics">
+				<source>Eigenschaften</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.hobbies">
+				<source>Hobbies</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.favoriteDish">
+				<source>Lieblingsgericht</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.favoriteDrink">
+				<source>Lieblinsgetränk</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.addresses">
+				<source>Addressen</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.contact">
+				<source>Kontaktdaten</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.sections">
+				<source>Abteilungen</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.visibility">
+				<source>Sichtbarkeit</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.visibility_dataset">
+				<source>Person verbergen</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.visibility_birthday">
+				<source>Geburtsdatum verbergen</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.detail_link">
+				<source>Link auf Einzelansicht möglich?</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.profile_player">
+				<source>Spieler-Profil?</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.profile_official">
+				<source>Funktionärs-Profil?</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.profile_referee">
+				<source>Schiedsrichter-Profil?</source>
+			</trans-unit>
+			
+			
+			<trans-unit id="tx_clubms_domain_model_phone">
+				<source>Telefonnummer</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_phone.areaCode">
+				<source>Vorwahl</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_phone.callingNumber">
+				<source>Rufnummer</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_phone.internationalAreaCode">
+				<source>Länder Code</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_phone.type">
+				<source>Typ</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_phone.type_1">
+				<source>Privat</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_phone.type_2">
+				<source>Geschäftlich</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_phone.type_3">
+				<source>Mobil</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_phone.public">
+				<source>Öffentlich</source>
+			</trans-unit>
+			
+			
+			<trans-unit id="tx_clubms_domain_model_referee_job">
+				<source>Schiedsrichter Job</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_referee_job.label">
+				<source>Bezeichnung</source>
+			</trans-unit>
+			
+			
+			<trans-unit id="tx_clubms_domain_model_season">
+				<source>Season</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_season.season_name">
+				<source>Bezeichnung</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_season.season_name_short">
+				<source>Alternative Bezeichnung</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_season.season_name_very_short">
+				<source>Kurzform</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_season.dates">
+				<source>Daten</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_season.startdate">
+				<source>Startdatum</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_season.enddate">
+				<source>Enddatum</source>
+			</trans-unit>
+			
+			
+			<trans-unit id="tx_clubms_domain_model_section">
+				<source>Abteilung</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_section.label">
+				<source>Bezeichnung</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_section.section_position_group">
+				<source>Spielerpositionen</source>
+			</trans-unit>
+			
+			
+			<trans-unit id="tx_clubms_domain_model_section_position">
+				<source>Position</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_section_position.label">
+				<source>Bezeichnung</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_section_position.label_short">
+				<source>Abkürzung</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_section_position.representation">
+				<source>Darstellung</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_section_position.x_position">
+				<source>Position X-Achse</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_section_position.y_position">
+				<source>Position Y-Achse</source>
+			</trans-unit>
+			
+			
+			<trans-unit id="tx_clubms_domain_model_section_position_group">
+				<source>Positionen-Gruppen</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_section_position_group.label">
+				<source>Positionen-Gruppe</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_section_position_group.section_position">
+				<source>Positionen</source>
+			</trans-unit>
+			
+			
+			<trans-unit id="tx_clubms_domain_model_team">
+				<source>Mannschaft</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_team.season">
+				<source>Saison-Instanzen</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_team.name">
+				<source>Mannschaftsname</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_team.club">
+				<source>Verein</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_team.section">
+				<source>Abteilung</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_team.age_level">
+				<source>Altersstufe</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_team.dummy">
+				<source>Spielfrei</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_team.visibility">
+				<source>Sichtbarkeit</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_team.visibility_dataset">
+				<source>Mannschaft verbergen</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_team.detail_link">
+				<source>Link auf Einzelansicht möglich?</source>
+			</trans-unit>
+			
+			
+			<trans-unit id="tx_clubms_domain_model_team_season">
+				<source>Saison</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_team_season.image">
+				<source>Mannschaftsfoto</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_team_season.official">
+				<source>Funktionäre</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_team_season.season">
+				<source>Saison</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_team_season.practice">
+				<source>Trainingszeiten</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_team_season.squad">
+				<source>Kader</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_team_season.visibility">
+				<source>Sichtbarkeit</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_team_season.visibility_dataset">
+				<source>Mannschafts-Instanz verbergen</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_team_season.detail_link">
+				<source>Link auf Einzelansicht möglich?</source>
+			</trans-unit>
+			
+			
+			<trans-unit id="tx_clubms_domain_model_team_season_official.person">
+				<source>Person</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_team_season_official.details">
+				<source>Details</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_team_season_official.startdate">
+				<source>Startdatum</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_team_season_official.enddate">
+				<source>Enddatum</source>
+			</trans-unit>
+			
+			
+			<trans-unit id="tx_clubms_domain_model_team_season_official_job.position">
+				<source>Posten</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_team_season_official_job.person">
+				<source>Person</source>
+			</trans-unit>
+			
+			
+			<trans-unit id="tx_clubms_domain_model_team_season_practice.day">
+				<source>Tag</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_team_season_practice.time_start">
+				<source>Startzeit</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_team_season_practice.time_end">
+				<source>Endzeit</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_team_season_practice.club_venue">
+				<source>Sportstätte</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_team_season_practice.annotation">
+				<source>Anmerkung</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_team_season_practice.visibility">
+				<source>Sichtbarkeit</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_team_season_practice.visibility_dataset">
+				<source>Trainingszeit verbergen</source>
+			</trans-unit>
+			
+			
+			<trans-unit id="tx_clubms_domain_model_team_season_squad_member.person">
+				<source>Spieler/Spielerin</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_team_season_squad_member.details">
+				<source>Details</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_team_season_squad_member.squad_number">
+				<source>Rückennummer</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_team_season_squad_member.position">
+				<source>Position</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_team_season_squad_member.transfer">
+				<source>Transfer</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_team_season_squad_member.new_signing">
+				<source>Neuzugang</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_team_season_squad_member.leaving">
+				<source>Abgang</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_team_season_squad_member.visibility">
+				<source>Sichtbarkeit</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_team_season_squad_member.visibility_dataset">
+				<source>Spieler/Spielerin verbergen</source>
+			</trans-unit>
+			
+			
+			<trans-unit id="tx_clubms_domain_model_url">
+				<source>URL</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_url.url">
+				<source>URL</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_url.type">
+				<source>Typ</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_url.type_1">
+				<source>Privat</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_url.type_2">
+				<source>Geschäftlich</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_url.public">
+				<source>Öffentlich</source>
+			</trans-unit>
+			
+			
+		</body>
+	</file>
+</xliff>

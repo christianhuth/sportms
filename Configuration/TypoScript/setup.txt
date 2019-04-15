@@ -1,0 +1,11 @@
+page.includeCSS {
+	file962 = EXT:clubms/Resources/Public/Css/clubms.css
+	file963 = EXT:clubms/Resources/Public/Css/person.css
+}
+
+plugin.tx_clubms {
+	persistence {
+		enableAutomaticCacheClearing = 1
+		storagePid = 38
+	}
+}

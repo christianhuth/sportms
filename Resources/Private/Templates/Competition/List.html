@@ -1,0 +1,23 @@
+<f:if condition="{competitions}">
+	<table>
+		<tr>
+			<th><f:translate key="tx_clubms_domain_model_competition.name"/></th>
+			<th><f:translate key="tx_clubms_domain_model_competition.short"/></th>
+			<th><f:translate key="tx_clubms_domain_model_competition.section"/></th>
+			<th><f:translate key="tx_clubms_domain_model_competition.ageLevel"/></th>
+			<th><f:translate key="tx_clubms_domain_model_competition.competitionType"/></th>
+			<th>Einzelansicht</th>
+		</tr>
+		<f:for each="{competitions}" as="competition">
+			<f:debug>{competition}</f:debug>
+			<tr>
+				<td>{competition.name}</td>
+				<td>{competition.short}</td>
+				<td>{competition.section.label}</td>
+				<td>{competition.ageLevel.label}</td>
+				<td>{competition.competitionType}</td>
+				<td><f:link.action action="detail" arguments="{uid: competition}">LINK</f:link.action></td>
+			</tr>
+		</f:for>
+	</table>
+</f:if>
