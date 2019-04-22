@@ -38,6 +38,12 @@ class Section extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @var string
 	 */
 	protected $label = '';
+	
+	/**
+	 * Images
+	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference>
+	 */
+	protected $images = NULL;
 
 	/**
 	 * Returns the label of the section
@@ -54,6 +60,23 @@ class Section extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 */
 	public function setLabel($label) {
 		$this->label = $label;
+	}
+	
+	/**
+	 * Returns the image
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference> $images
+	 */
+	public function getImages() {
+			return $this->images;
+	}
+
+	/**
+	 * Sets the image
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference> $images
+	 * @return void
+	 */
+	public function setImages($images) {
+			$this->images = $images;
 	}
 
 }

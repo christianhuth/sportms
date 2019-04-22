@@ -1030,6 +1030,7 @@ CREATE TABLE tx_clubms_domain_model_section (
 	pid int(11) DEFAULT '0' NOT NULL,
 	
 	label varchar(255) DEFAULT NULL,
+	images varchar(255) DEFAULT NULL,
 	
 	section_position_group int(11) DEFAULT NULL,
 	

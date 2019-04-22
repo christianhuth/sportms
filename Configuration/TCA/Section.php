@@ -26,7 +26,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_section'] = array(
 		'showRecordFieldList' => 'label',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'label,
+		'1' => array('showitem' => 'label, images,
 									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_section.section_position_group, section_position_group'),
 	),
 	'palettes' => array(
@@ -87,6 +87,20 @@ $GLOBALS['TCA']['tx_clubms_domain_model_section'] = array(
 				'type' => 'input',
 				'size' => 30,
 				'eval' => 'trim, required'
+			),
+		),
+		
+		'images' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_section.images',
+			'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
+				'image',
+				array(
+					'appearance' => array(
+						'createNewRelationLinkTitle' => 'LLL:EXT:cms/locallang_ttc.xlf:images.addFileReference'
+					),
+				),
+				$GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']
 			),
 		),
 		
