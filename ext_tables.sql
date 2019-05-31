@@ -328,15 +328,16 @@ CREATE TABLE tx_clubms_domain_model_club_official_job (
 );
 
 #
-# Table structure for table 'tx_clubms_domain_model_club_section'
+# Table structure for table 'tx_clubms_domain_model_clubsection'
 #
-CREATE TABLE tx_clubms_domain_model_club_section (
+CREATE TABLE tx_clubms_domain_model_clubsection (
 
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
 
 	club int(11) DEFAULT '0' NOT NULL,
 	section int(11) DEFAULT '0' NOT NULL,
+	images varchar(255) DEFAULT NULL,
 	members int(11) DEFAULT NULL,
 	
 	address int(11) DEFAULT NULL,

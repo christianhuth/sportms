@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<T3DataStructure>
+	<ROOT>
+		<TCEforms>
+			<sheetTitle>LLL:EXT:clubms/Resources/Private/Language/locallang_flexform.xlf:tx_clubms_flexform.sheet.scope</sheetTitle>
+		</TCEforms>
+		<type>array</type>
+		<el>
+			<settings.scope.saison>
+				<TCEforms>
+					<label>Saison</label>
+					<config>
+						<type>select</type>
+						<foreign_table>tx_clubms_domain_model_season</foreign_table>
+						<size>5</size>
+						<maxitems>3</maxitems>
+					</config>
+				</TCEforms>
+			</settings.scope.saison>
+			<settings.scope.saison.select>
+				<TCEforms>
+					<label>Selectbox für Saison?</label>
+					<config>
+						<type>check</type>
+					</config>
+				</TCEforms>
+			</settings.scope.saison.select>
+			<settings.scope.section>
+				<TCEforms>
+					<label>Abteilung</label>
+					<config>
+						<type>select</type>
+						<foreign_table>tx_clubms_domain_model_section</foreign_table>
+						<size>5</size>
+						<maxitems>3</maxitems>
+					</config>
+				</TCEforms>
+			</settings.scope.section>
+			<settings.scope.section.select>
+				<TCEforms>
+					<label>Selectbox für Abteilung?</label>
+					<config>
+						<type>check</type>
+					</config>
+				</TCEforms>
+			</settings.scope.section.select>
+			<settings.scope.agegroup>
+				<TCEforms>
+					<label>Altersgruppe</label>
+					<config>
+						<type>select</type>
+						<foreign_table>tx_clubms_domain_model_agegroup</foreign_table>
+						<size>5</size>
+						<maxitems>3</maxitems>
+					</config>
+				</TCEforms>
+			</settings.scope.agegroup>
+			<settings.scope.agegroup.select>
+				<TCEforms>
+					<label>Selectbox für Altersgruppe?</label>
+					<config>
+						<type>check</type>
+					</config>
+				</TCEforms>
+			</settings.scope.agegroup.select>
+			<settings.scope.agelevel>
+				<TCEforms>
+					<label>Altersstufe</label>
+					<config>
+						<type>select</type>
+						<foreign_table>tx_clubms_domain_model_agelevel</foreign_table>
+						<size>5</size>
+						<maxitems>3</maxitems>
+					</config>
+				</TCEforms>
+			</settings.scope.agelevel>
+			<settings.scope.agelevel.select>
+				<TCEforms>
+					<label>Selectbox für Altersstufe?</label>
+					<config>
+						<type>check</type>
+					</config>
+				</TCEforms>
+			</settings.scope.agelevel.select>
+		</el>
+	</ROOT>
+</T3DataStructure>

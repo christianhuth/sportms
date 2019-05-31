@@ -62,4 +62,20 @@ class Url extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 */
 	protected $person = '';
 
+	/**
+	 * Returns the url
+	 * @return string $url
+	 */
+	public function getUrl() {
+		return $this->url;
+	}
+
+	/**
+	 * Sets the url
+	 * @param string $url
+	 */
+	public function setUrl($url) {
+		$this->url = $url;
+	}
+
 }

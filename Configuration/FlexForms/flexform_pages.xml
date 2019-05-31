@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<T3DataStructure>
+	<ROOT>
+		<TCEforms>
+			<sheetTitle>Detailseiten</sheetTitle>
+		</TCEforms>
+		<type>array</type>
+		<el>
+			<settings.pages.club>
+				<TCEforms>
+					<label>Detailseite für Vereine</label>
+					<config>
+						<type>group</type>
+						<internal_type>db</internal_type>
+						<allowed>pages</allowed>
+						<size>1</size>
+						<maxItems>1</maxItems>
+						<minItems>0</minItems>
+						<show_thumbs>1</show_thumbs>
+					</config>
+				</TCEforms>
+			</settings.pages.club>
+			<settings.pages.team>
+				<TCEforms>
+					<label>Detailseite für Mannschaften</label>
+					<config>
+						<type>group</type>
+						<internal_type>db</internal_type>
+						<allowed>pages</allowed>
+						<size>1</size>
+						<maxItems>1</maxItems>
+						<minItems>0</minItems>
+						<show_thumbs>1</show_thumbs>
+					</config>
+				</TCEforms>
+			</settings.pages.team>
+			<settings.pages.game>
+				<TCEforms>
+					<label>Detailseite für Spiele</label>
+					<config>
+						<type>group</type>
+						<internal_type>db</internal_type>
+						<allowed>pages</allowed>
+						<size>1</size>
+						<maxItems>1</maxItems>
+						<minItems>0</minItems>
+						<show_thumbs>1</show_thumbs>
+					</config>
+				</TCEforms>
+			</settings.pages.game>
+			<settings.pages.competition>
+				<TCEforms>
+					<label>Detailseite für Wettbewerbe</label>
+					<config>
+						<type>group</type>
+						<internal_type>db</internal_type>
+						<allowed>pages</allowed>
+						<size>1</size>
+						<maxItems>1</maxItems>
+						<minItems>0</minItems>
+						<show_thumbs>1</show_thumbs>
+					</config>
+				</TCEforms>
+			</settings.pages.competition>
+			<settings.pages.person>
+				<TCEforms>
+					<label>Detailseite für Personen</label>
+					<config>
+						<type>group</type>
+						<internal_type>db</internal_type>
+						<allowed>pages</allowed>
+						<size>1</size>
+						<maxItems>1</maxItems>
+						<minItems>0</minItems>
+						<show_thumbs>1</show_thumbs>
+					</config>
+				</TCEforms>
+			</settings.pages.person>
+		</el>
+	</ROOT>
+</T3DataStructure>

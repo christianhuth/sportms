@@ -96,7 +96,7 @@ class Club extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\ClubSection>
 	 * @cascade remove
 	 */
-	protected $club_sections = NULL;
+	protected $clubSections = NULL;
 	
 	/**
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\ClubOfficialJob>
@@ -109,6 +109,26 @@ class Club extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @var int
      */
     protected $detailLink = '';
+	
+	/**
+	 * __construct
+	 */
+	public function __construct() {
+		//Do not remove the next line: It would break the functionality
+		$this->initStorageObjects();
+	}
+	
+	/**
+	 * Initializes all ObjectStorage properties
+	 * Do not modify this method!
+	 * It will be rewritten on each save in the extension builder
+	 * You may modify the constructor of this class instead
+	 *
+	 * @return void
+	 */
+	protected function initStorageObjects(){
+		$this->club_sections = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+	}
 
 	/**
 	 * Returns the name
@@ -213,20 +233,40 @@ class Club extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	}
 	
 	/**
+	 * Adds a ClubSection
+	 *
+	 * @param \Balumedien\Clubms\Domain\Model\ClubSection $clubSection
+	 * @return void
+	 */
+	public function addClubSection(\Balumedien\Clubms\Domain\Model\ClubSection $clubSection) {
+		$this->clubSections->attach($clubSection);
+	}
+	
+	/**
+	 * Removes a Image
+	 *
+	 * @param \Balumedien\Clubms\Domain\Model\ClubSection $clubSection The ClubSection to be removed
+	 * @return void
+	 */
+	public function removeClubSection(\Balumedien\Clubms\Domain\Model\ClubSection $clubSection) {
+		$this->clubSections->detach($clubSection);
+	}
+	
+	/**
 	 * Returns the sections of the club
-	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\ClubSection> $club_sections
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\ClubSection> $clubSections
 	 */
 	public function getClubSections() {
-			return $this->club_sections;
+		return $this->clubSections;
 	}
 
 	/**
 	 * Sets the sections of the club
-	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\ClubSection> $club_sections
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\ClubSection> $clubSections
 	 * @return void
 	 */
-	public function setClubSections($club_sections) {
-			$this->club_sections = $club_sections;
+	public function setClubSections($clubSections) {
+			$this->clubSections = $clubSections;
 	}
 	
 	/**

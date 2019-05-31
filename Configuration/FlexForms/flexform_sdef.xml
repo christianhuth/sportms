@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<T3DataStructure>
+	<ROOT>
+		<TCEforms>
+			<sheetTitle>LLL:EXT:clubms/Resources/Private/Language/locallang_flexform.xlf:tx_clubms_flexform.sheet.general</sheetTitle>
+		</TCEforms>
+		<type>array</type>
+		<el>
+			<switchableControllerActions>
+				<TCEforms>
+					<label>Darstellungselemente</label>
+					<onChange>reload</onChange>
+					<config>
+						<type>select</type>
+						<renderType>selectSingle</renderType>
+						<items type="array">
+							<numIndex index="1">
+								<numIndex index="0">Vereinsansichten</numIndex>
+								<numIndex index="1">--div--</numIndex>
+							</numIndex>
+							<numIndex index="2">
+								<numIndex index="0">Verein (Einzelansicht)</numIndex>
+								<numIndex index="1">Club->detail</numIndex>
+							</numIndex>
+							<numIndex index="3">
+								<numIndex index="0">Verein (Listenansicht)</numIndex>
+								<numIndex index="1">Club->list</numIndex>
+							</numIndex>
+							<numIndex index="4">
+								<numIndex index="0">Verein (Abteilungen)</numIndex>
+								<numIndex index="1">Club->sections</numIndex>
+							</numIndex>
+							<numIndex index="5">
+								<numIndex index="0">Wettbewerbsansichten</numIndex>
+								<numIndex index="1">--div--</numIndex>
+							</numIndex>
+							<numIndex index="6">
+								<numIndex index="0">Competition-Games</numIndex>
+								<numIndex index="1">Competition->games</numIndex>
+							</numIndex>
+							<numIndex index="7">
+								<numIndex index="0">Competition-List</numIndex>
+								<numIndex index="1">Competition->list</numIndex>
+							</numIndex>
+							<numIndex index="8">
+								<numIndex index="0">Competition-Stats</numIndex>
+								<numIndex index="1">Competition->stats</numIndex>
+							</numIndex>
+							<numIndex index="9">
+								<numIndex index="0">Competition-Teams</numIndex>
+								<numIndex index="1">Competition->teams</numIndex>
+							</numIndex>
+							<numIndex index="10">
+								<numIndex index="0">Competition-Detail</numIndex>
+								<numIndex index="1">Competition->detail</numIndex>
+							</numIndex>
+							<numIndex index="11">
+								<numIndex index="0">Spielansichten</numIndex>
+								<numIndex index="1">--div--</numIndex>
+							</numIndex>
+							<numIndex index="12">
+								<numIndex index="0">Game-Detail</numIndex>
+								<numIndex index="1">Game->detail</numIndex>
+							</numIndex>
+							<numIndex index="13">
+								<numIndex index="0">Game-List</numIndex>
+								<numIndex index="1">Game->list</numIndex>
+							</numIndex>
+							<numIndex index="14">
+								<numIndex index="0">Game-Report</numIndex>
+								<numIndex index="1">Game->report</numIndex>
+							</numIndex>
+							<numIndex index="15">
+								<numIndex index="0">Game-Stats</numIndex>
+								<numIndex index="1">Game->stats</numIndex>
+							</numIndex>
+							<numIndex index="16">
+								<numIndex index="0">Personenansichten</numIndex>
+								<numIndex index="1">--div--</numIndex>
+							</numIndex>
+							<numIndex index="17">
+								<numIndex index="0">FunktionärIn (Einzelansicht)</numIndex>
+								<numIndex index="1">Official->detail</numIndex>
+							</numIndex>
+							<numIndex index="18">
+								<numIndex index="0">Person (Einzelansicht)</numIndex>
+								<numIndex index="1">Person->detail</numIndex>
+							</numIndex>
+							<numIndex index="19">
+								<numIndex index="0">Person (Listenansicht)</numIndex>
+								<numIndex index="1">Person->list</numIndex>
+							</numIndex>
+							<numIndex index="20">
+								<numIndex index="0">SpielerIn (Einzelansicht)</numIndex>
+								<numIndex index="1">Player->detail</numIndex>
+							</numIndex>
+							<numIndex index="21">
+								<numIndex index="0">SchiedsrichterIn (Einzelansicht)</numIndex>
+								<numIndex index="1">Referee->detail</numIndex>
+							</numIndex>
+							<numIndex index="22">
+								<numIndex index="0">Mannschaftsansichten</numIndex>
+								<numIndex index="1">--div--</numIndex>
+							</numIndex>
+							<numIndex index="23">
+								<numIndex index="0">Team-Detail</numIndex>
+								<numIndex index="1">Team->detail</numIndex>
+							</numIndex>
+							<numIndex index="24">
+								<numIndex index="0">Team-Games</numIndex>
+								<numIndex index="1">Team->games</numIndex>
+							</numIndex>
+							<numIndex index="25">
+								<numIndex index="0">Team-Goals</numIndex>
+								<numIndex index="1">Team->goals</numIndex>
+							</numIndex>
+							<numIndex index="26">
+								<numIndex index="0">Team-History</numIndex>
+								<numIndex index="1">Team->history</numIndex>
+							</numIndex>
+							<numIndex index="27">
+								<numIndex index="0">Team-List</numIndex>
+								<numIndex index="1">Team->list</numIndex>
+							</numIndex>
+							<numIndex index="28">
+								<numIndex index="0">Team-Squad</numIndex>
+								<numIndex index="1">Team->squad</numIndex>
+							</numIndex>
+							<numIndex index="29">
+								<numIndex index="0">Team-Stats</numIndex>
+								<numIndex index="1">Team->stats</numIndex>
+							</numIndex>
+						</items>
+					</config>
+				</TCEforms>
+			</switchableControllerActions>
+		</el>
+	</ROOT>
+</T3DataStructure>

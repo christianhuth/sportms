@@ -45,6 +45,12 @@ class ClubSection extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	protected $section = '';
 	
 	/**
+	 * Images
+	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference>
+	 */
+	protected $images = NULL;
+	
+	/**
 	 * @var int
 	 * @lazy
 	 */
@@ -83,6 +89,129 @@ class ClubSection extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @lazy
 	 * @cascade remove
 	 */
-	protected $club_section_official_job = '';
-
+	protected $clubSectionOfficialJobs = '';
+	
+	/**
+	 * __construct
+	 */
+	public function __construct() {
+		//Do not remove the next line: It would break the functionality
+		$this->initStorageObjects();
+	}
+	
+	/**
+	 * Initializes all ObjectStorage properties
+	 * Do not modify this method!
+	 * It will be rewritten on each save in the extension builder
+	 * You may modify the constructor of this class instead
+	 *
+	 * @return void
+	 */
+	protected function initStorageObjects(){
+		$this->images = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+		$this->address = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+		$this->phone = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+		$this->mail = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+		$this->url = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+		$this->clubSectionOfficialJobs = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+	}
+	
+	/**
+	 * Returns the section of the clubsection
+	 * @return \Balumedien\Clubms\Domain\Model\Section
+	 */
+	public function getSection() {
+		return $this->section;
+	}
+	
+	/**
+	 * Sets the section of the clubsection
+	 * @param \Balumedien\Clubms\Domain\Model\Section $section
+	 * @return void
+	 */
+	public function setSection($section) {
+		$this->section = $section;
+	}
+	
+	/**
+	 * Returns the image
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference> $images
+	 */
+	public function getImages() {
+			return $this->images;
+	}
+	
+	/**
+	 * Sets the image
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference> $images
+	 * @return void
+	 */
+	public function setImages($images) {
+			$this->images = $images;
+	}
+	
+	/**
+	 * Returns the addresses
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\Address> $address
+	 */
+	public function getAddress() {
+			return $this->address;
+	}
+	
+	/**
+	 * Sets the addresses
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\Address> $address
+	 */
+	public function setAddress($address) {
+			$this->address = $address;
+	}
+	
+	/**
+	 * Returns the phones
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\Phone> $phone
+	 */
+	public function Phone() {
+			return $this->phone;
+	}
+	
+	/**
+	 * Sets the phones
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\Phone> $phone
+	 */
+	public function setPhone($phone) {
+			$this->phone = $phone;
+	}
+	
+	/**
+	 * Returns the mails
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\Mail> $mail
+	 */
+	public function getMail() {
+			return $this->mail;
+	}
+	
+	/**
+	 * Sets the mails
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\Mail> $mail
+	 */
+	public function setMail($mail) {
+			$this->mail = $mail;
+	}
+	
+	/**
+	 * Returns the urls
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\url> $url
+	 */
+	public function getUrl() {
+			return $this->url;
+	}
+	
+	/**
+	 * Sets the urls
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\Url> $url
+	 */
+	public function setUrl($url) {
+			$this->url = $url;
+	}
+	
 }

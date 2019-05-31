@@ -37,14 +37,7 @@ class ClubController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 	 * @var \Balumedien\Clubms\Domain\Repository\ClubRepository
 	 * @inject
 	 */
-	protected $clubRepository;
-	
-	/**
-	 * @return void
-	 */
-	public function initializeAction() {
-		//$this->clubRepository = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('\Balumedien\Clubms\Domain\Repository\ClubRepository');
-	}
+	protected $clubRepository = null;
 	
 	/**
 	 * @return void
@@ -56,11 +49,21 @@ class ClubController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 
 	/**
 	 * @param int $uid
-	 * @return void
 	 */
-	public function showAction($uid) {
+	public function detailAction($uid = null) {
 		$club = $this->clubRepository->findByUid($uid);
 		$this->view->assign('club', $club);
+	}
+	
+	/**
+	 * @param \Balumedien\Clubms\Domain\Model\Club $club club item
+	 */
+	public function sectionsAction(\Balumedien\Clubms\Domain\Model\Club $club = null) {
+		if($club === null) {
+			$clubUid = $this->settings['single']['club'];
+			$club = $this->clubRepository->findByUid($clubUid);
+		}
+		$this->view->assign('sections', $club->getClubSections());
 	}
 
 }

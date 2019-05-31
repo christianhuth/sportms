@@ -3,7 +3,7 @@ if (!defined ('TYPO3_MODE')) {
 	die ('Access denied.');
 }
 
-$GLOBALS['TCA']['tx_clubms_domain_model_club_section'] = array(
+$GLOBALS['TCA']['tx_clubms_domain_model_clubsection'] = array(
 	'ctrl' => array(
 		'crdate' => 'crdate',
 		'cruser_id' => 'cruser_id',
@@ -27,7 +27,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_club_section'] = array(
 		'showRecordFieldList' => 'hidden, section, member, address, phone, mail, url, club_section_official_job',
 	),
 	'types' => array(
-		'1' => array('showitem' => '--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_club_section, section, members,
+		'1' => array('showitem' => '--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_club_section, section, images, members,
 									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_club_section.contact, address, phone, mail, url,
 									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_club_section.official, club_section_official_job'),
 	),
@@ -100,6 +100,20 @@ $GLOBALS['TCA']['tx_clubms_domain_model_club_section'] = array(
 				'renderType' => 'selectSingle',
 				'size' => 1,
 				'type' => 'select',
+			),
+		),
+		
+		'images' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_club_section.images',
+			'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
+				'image',
+				array(
+					'appearance' => array(
+						'createNewRelationLinkTitle' => 'LLL:EXT:cms/locallang_ttc.xlf:images.addFileReference'
+					),
+				),
+				$GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']
 			),
 		),
 		

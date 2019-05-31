@@ -1,0 +1,35 @@
+<div id="tx_clubms_container">
+	
+	<div class="tx_clubms_club_sections">
+		
+		<div class="row">
+			
+			<div class="container">
+				
+				<f:for each="{sections}" as="section">
+					<f:if condition="{section.url} && {section.images} && {section.section.label}">
+						<div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 abteilungsaufzaehlung-outer">
+							<div class="abteilungsaufzaehlung-inner">
+								<f:for each="{section.url}" as="url" iteration="iterator">
+									<f:if condition="{iterator.isFirst}">
+										<f:link.typolink parameter="{url.url}">
+											<f:for each="{section.images}" as="image" iteration="iterator2">
+												<f:if condition="{iterator2.isFirst}">
+													<div class="image"><f:image image="{image}" width="350c" height="200c"/></div>
+												</f:if>
+											</f:for>
+											<div class="info">{section.section.label}</div>
+										</f:link.typolink>
+									</f:if>
+								</f:for>
+							</div>
+						</div>
+					</f:if>
+				</f:for>
+			</div>
+			
+		</div>
+		
+	</div>
+	
+</div>

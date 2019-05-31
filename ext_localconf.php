@@ -4,7 +4,7 @@
 		'Balumedien.' . $_EXTKEY,
 		'clubms',
 		array(
-			'Club' => 'list, detail',
+			'Club' => 'list, detail, section',
 			'Competition' => 'list, detail',
 			'Game' => 'list, detail',
 			'Person' => 'list, detail',
