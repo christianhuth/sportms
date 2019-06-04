@@ -20,7 +20,7 @@
 							</numIndex>
 							<numIndex index="2">
 								<numIndex index="0">Verein (Einzelansicht)</numIndex>
-								<numIndex index="1">Club->detail</numIndex>
+								<numIndex index="1">Club->show</numIndex>
 							</numIndex>
 							<numIndex index="3">
 								<numIndex index="0">Verein (Listenansicht)</numIndex>
@@ -35,43 +35,43 @@
 								<numIndex index="1">--div--</numIndex>
 							</numIndex>
 							<numIndex index="6">
-								<numIndex index="0">Competition-Games</numIndex>
-								<numIndex index="1">Competition->games</numIndex>
+								<numIndex index="0">Wettbewerb (Einzelansicht)</numIndex>
+								<numIndex index="1">Competition->show</numIndex>
 							</numIndex>
 							<numIndex index="7">
-								<numIndex index="0">Competition-List</numIndex>
+								<numIndex index="0">Wettbewerb (Listenansicht)</numIndex>
 								<numIndex index="1">Competition->list</numIndex>
 							</numIndex>
 							<numIndex index="8">
-								<numIndex index="0">Competition-Stats</numIndex>
+								<numIndex index="0">Wettbewerb (Spiele)</numIndex>
+								<numIndex index="1">Competition->games</numIndex>
+							</numIndex>
+							<numIndex index="9">
+								<numIndex index="0">Wettbewerb (Statistiken)</numIndex>
 								<numIndex index="1">Competition->stats</numIndex>
 							</numIndex>
 							<numIndex index="9">
-								<numIndex index="0">Competition-Teams</numIndex>
+								<numIndex index="0">Wettbewerb (Mannschaften)</numIndex>
 								<numIndex index="1">Competition->teams</numIndex>
-							</numIndex>
-							<numIndex index="10">
-								<numIndex index="0">Competition-Detail</numIndex>
-								<numIndex index="1">Competition->detail</numIndex>
 							</numIndex>
 							<numIndex index="11">
 								<numIndex index="0">Spielansichten</numIndex>
 								<numIndex index="1">--div--</numIndex>
 							</numIndex>
 							<numIndex index="12">
-								<numIndex index="0">Game-Detail</numIndex>
-								<numIndex index="1">Game->detail</numIndex>
+								<numIndex index="0">Spiel (Einzelansicht)</numIndex>
+								<numIndex index="1">Game->show</numIndex>
 							</numIndex>
 							<numIndex index="13">
-								<numIndex index="0">Game-List</numIndex>
+								<numIndex index="0">Spiel (Listenansicht)</numIndex>
 								<numIndex index="1">Game->list</numIndex>
 							</numIndex>
 							<numIndex index="14">
-								<numIndex index="0">Game-Report</numIndex>
+								<numIndex index="0">Spiel (Spielbericht)</numIndex>
 								<numIndex index="1">Game->report</numIndex>
 							</numIndex>
 							<numIndex index="15">
-								<numIndex index="0">Game-Stats</numIndex>
+								<numIndex index="0">Spiel (Statistiken)</numIndex>
 								<numIndex index="1">Game->stats</numIndex>
 							</numIndex>
 							<numIndex index="16">
@@ -79,55 +79,63 @@
 								<numIndex index="1">--div--</numIndex>
 							</numIndex>
 							<numIndex index="17">
-								<numIndex index="0">FunktionärIn (Einzelansicht)</numIndex>
-								<numIndex index="1">Official->detail</numIndex>
-							</numIndex>
-							<numIndex index="18">
 								<numIndex index="0">Person (Einzelansicht)</numIndex>
 								<numIndex index="1">Person->detail</numIndex>
 							</numIndex>
-							<numIndex index="19">
+							<numIndex index="18">
 								<numIndex index="0">Person (Listenansicht)</numIndex>
 								<numIndex index="1">Person->list</numIndex>
 							</numIndex>
-							<numIndex index="20">
+							<numIndex index="19">
 								<numIndex index="0">SpielerIn (Einzelansicht)</numIndex>
 								<numIndex index="1">Player->detail</numIndex>
 							</numIndex>
+							<numIndex index="20">
+								<numIndex index="0">SpielerIn (Listenansicht)</numIndex>
+								<numIndex index="1">Player->list</numIndex>
+							</numIndex>
 							<numIndex index="21">
+								<numIndex index="0">FunktionärIn (Einzelansicht)</numIndex>
+								<numIndex index="1">Official->detail</numIndex>
+							</numIndex>
+							<numIndex index="22">
+								<numIndex index="0">FunktionärIn (Listenansicht)</numIndex>
+								<numIndex index="1">Official->list</numIndex>
+							</numIndex>
+							<numIndex index="23">
 								<numIndex index="0">SchiedsrichterIn (Einzelansicht)</numIndex>
 								<numIndex index="1">Referee->detail</numIndex>
 							</numIndex>
-							<numIndex index="22">
+							<numIndex index="24">
+								<numIndex index="0">SchiedsrichterIn (Listenansicht)</numIndex>
+								<numIndex index="1">Referee->list</numIndex>
+							</numIndex>
+							<numIndex index="25">
 								<numIndex index="0">Mannschaftsansichten</numIndex>
 								<numIndex index="1">--div--</numIndex>
 							</numIndex>
-							<numIndex index="23">
-								<numIndex index="0">Team-Detail</numIndex>
+							<numIndex index="26">
+								<numIndex index="0">Mannschaft (Einzelansicht)</numIndex>
 								<numIndex index="1">Team->detail</numIndex>
 							</numIndex>
-							<numIndex index="24">
-								<numIndex index="0">Team-Games</numIndex>
-								<numIndex index="1">Team->games</numIndex>
-							</numIndex>
-							<numIndex index="25">
-								<numIndex index="0">Team-Goals</numIndex>
-								<numIndex index="1">Team->goals</numIndex>
-							</numIndex>
-							<numIndex index="26">
-								<numIndex index="0">Team-History</numIndex>
-								<numIndex index="1">Team->history</numIndex>
-							</numIndex>
 							<numIndex index="27">
-								<numIndex index="0">Team-List</numIndex>
+								<numIndex index="0">Mannschaft (Listenansicht)</numIndex>
 								<numIndex index="1">Team->list</numIndex>
 							</numIndex>
 							<numIndex index="28">
-								<numIndex index="0">Team-Squad</numIndex>
-								<numIndex index="1">Team->squad</numIndex>
+								<numIndex index="0">Mannschaft (Spiele)</numIndex>
+								<numIndex index="1">Team->games</numIndex>
 							</numIndex>
 							<numIndex index="29">
-								<numIndex index="0">Team-Stats</numIndex>
+								<numIndex index="0">Mannschaft (Tore)</numIndex>
+								<numIndex index="1">Team->goals</numIndex>
+							</numIndex>
+							<numIndex index="30">
+								<numIndex index="0">Mannschaft (Geschichte)</numIndex>
+								<numIndex index="1">Team->history</numIndex>
+							</numIndex>
+							<numIndex index="31">
+								<numIndex index="0">Mannschaft (Statistiken)</numIndex>
 								<numIndex index="1">Team->stats</numIndex>
 							</numIndex>
 						</items>
