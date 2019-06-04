@@ -80,7 +80,7 @@
 							</numIndex>
 							<numIndex index="17">
 								<numIndex index="0">Person (Einzelansicht)</numIndex>
-								<numIndex index="1">Person->detail</numIndex>
+								<numIndex index="1">Person->show</numIndex>
 							</numIndex>
 							<numIndex index="18">
 								<numIndex index="0">Person (Listenansicht)</numIndex>
@@ -88,7 +88,7 @@
 							</numIndex>
 							<numIndex index="19">
 								<numIndex index="0">SpielerIn (Einzelansicht)</numIndex>
-								<numIndex index="1">Player->detail</numIndex>
+								<numIndex index="1">Player->show</numIndex>
 							</numIndex>
 							<numIndex index="20">
 								<numIndex index="0">SpielerIn (Listenansicht)</numIndex>
@@ -96,7 +96,7 @@
 							</numIndex>
 							<numIndex index="21">
 								<numIndex index="0">FunktionärIn (Einzelansicht)</numIndex>
-								<numIndex index="1">Official->detail</numIndex>
+								<numIndex index="1">Official->show</numIndex>
 							</numIndex>
 							<numIndex index="22">
 								<numIndex index="0">FunktionärIn (Listenansicht)</numIndex>
@@ -104,7 +104,7 @@
 							</numIndex>
 							<numIndex index="23">
 								<numIndex index="0">SchiedsrichterIn (Einzelansicht)</numIndex>
-								<numIndex index="1">Referee->detail</numIndex>
+								<numIndex index="1">Referee->show</numIndex>
 							</numIndex>
 							<numIndex index="24">
 								<numIndex index="0">SchiedsrichterIn (Listenansicht)</numIndex>
@@ -116,7 +116,7 @@
 							</numIndex>
 							<numIndex index="26">
 								<numIndex index="0">Mannschaft (Einzelansicht)</numIndex>
-								<numIndex index="1">Team->detail</numIndex>
+								<numIndex index="1">Team->show</numIndex>
 							</numIndex>
 							<numIndex index="27">
 								<numIndex index="0">Mannschaft (Listenansicht)</numIndex>
