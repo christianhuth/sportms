@@ -23,11 +23,11 @@ $GLOBALS['TCA']['tx_clubms_domain_model_team'] = array(
 		'versioningWS' => TRUE,
     ),
 	'interface' => array(
-		'showRecordFieldList' => 'name, club, section, team_season',
+		'showRecordFieldList' => 'name, club, section, team_seasons',
 	),
 	'types' => array(
 		'1' => array('showitem' => 'name, club, section, age_level, dummy,
-									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_team.season, team_season,
+									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_team.season, team_seasons,
 									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_team.visibility, hidden, detail_link'),
 	),
 	'palettes' => array(
@@ -135,7 +135,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_team'] = array(
 			),
 		),
 		
-		'team_season' => array(
+		'team_seasons' => array(
 			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_team.season',
 			'config' => array(
 				'appearance' => array(
