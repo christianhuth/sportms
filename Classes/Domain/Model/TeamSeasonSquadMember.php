@@ -53,7 +53,6 @@ class TeamSeasonSquadMember extends \TYPO3\CMS\Extbase\DomainObject\AbstractEnti
 	/**
 	 * Sets the squadNumber
 	 * @param int
-	 * @return void
 	 */
 	public function setSquadNumber($squadNumber) {
 		$this->squadNumber = $squadNumber;
@@ -70,9 +69,8 @@ class TeamSeasonSquadMember extends \TYPO3\CMS\Extbase\DomainObject\AbstractEnti
 	/**
 	 * Sets the person
 	 * @param \Balumedien\Clubms\Domain\Model\Person $person
-	 * @return void
 	 */
-	public function setPerson($person) {
+	public function setPerson(\Balumedien\Clubms\Domain\Model\Person $person) {
 		$this->person = $person;
 	}
 
