@@ -127,7 +127,7 @@ class Club extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @return void
 	 */
 	protected function initStorageObjects(){
-		$this->club_sections = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+		$this->clubSections = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 	}
 
 	/**

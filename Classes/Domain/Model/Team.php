@@ -171,7 +171,6 @@ class Team extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
     /**
      * Removes a teamSeason from the teamSeasons
      * @param \Balumedien\Clubms\Domain\Model\TeamSeason $teamSeason
-     * @return void
      */
     public function removeTeamSeason(\Balumedien\Clubms\Domain\Model\TeamSeason $teamSeason) {
         $this->teamSeasons->detach($teamSeason);
