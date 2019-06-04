@@ -53,7 +53,6 @@ class TeamSeason extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Sets the team
 	 * @param \Balumedien\Clubms\Domain\Model\Team $team
-	 * @return void
 	 */
 	public function setTeam($team) {
 		$this->team = $team;
@@ -70,7 +69,6 @@ class TeamSeason extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Sets the season
 	 * @param \Balumedien\Clubms\Domain\Model\Season $season
-	 * @return void
 	 */
 	public function setSeason($season) {
 		$this->season = $season;

@@ -2,7 +2,6 @@
 
 namespace Balumedien\Clubms\Controller;
 
-
 /***************************************************************
  *
  *  Copyright notice
