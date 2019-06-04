@@ -1153,7 +1153,7 @@ CREATE TABLE tx_clubms_domain_model_team (
 	age_level int(11) DEFAULT '0' NOT NULL,
 	dummy tinyint(4) unsigned DEFAULT '0' NOT NULL,
 	
-	team_season int(11) DEFAULT NULL,
+	team_seasons int(11) DEFAULT NULL,
 	
 	ordering int(11) DEFAULT NULL,
 	
