@@ -42,25 +42,20 @@ class CompetitionController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCont
 	/**
 	 * @return void
 	 */
-	public function initializeAction() {
-		//$this->clubRepository = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('\Balumedien\Clubms\Domain\Repository\ClubRepository');
-	}
-	
-	/**
-	 * @return void
-	 */
 	public function listAction() {
 		$competitions = $this->competitionRepository->findAll();
 		$this->view->assign('competitions', $competitions);
 	}
 
-	/**
-	 * @param int $uid
-	 * @return void
-	 */
-	public function showAction($uid) {
-		$competition = $this->competitionRepository->findByUid($uid);
-		$this->view->assign('competition', $competition);
-	}
+    /**
+     * @param \Balumedien\Clubms\Domain\Model\Competition $competition competition item
+     */
+    public function showAction(\Balumedien\Clubms\Domain\Model\Competition $competition = null) {
+        if($competition === null) {
+            $competitionUid = $this->settings['single']['competition'];
+            $competition = $this->competitionRepository->findByUid($competitionUid);
+        }
+        $this->view->assign('competition', $competition);
+    }
 
 }

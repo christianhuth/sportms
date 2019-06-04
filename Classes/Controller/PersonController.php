@@ -42,25 +42,20 @@ class PersonController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
 	/**
 	 * @return void
 	 */
-	public function initializeAction() {
-		
-	}
-	
-	/**
-	 * @return void
-	 */
 	public function listAction() {
 		$persons = $this->personRepository->findAll();
 		$this->view->assign('persons', $persons);
 	}
 
-	/**
-	 * @param int $uid
-	 * @return void
-	 */
-	public function showAction($uid) {
-		$person = $this->personRepository->findByUid($uid);
-		$this->view->assign('person', $person);
-	}
+    /**
+     * @param \Balumedien\Clubms\Domain\Model\Person $person person item
+     */
+    public function showAction(\Balumedien\Clubms\Domain\Model\Person $person = null) {
+        if($person === null) {
+            $personUid = $this->settings['single']['person'];
+            $person = $this->personRepository->findByUid($personUid);
+        }
+        $this->view->assign('person', $person);
+    }
 
 }
