@@ -1184,9 +1184,9 @@ CREATE TABLE tx_clubms_domain_model_team (
 );
 
 #
-# Table structure for table 'tx_clubms_domain_model_team_season'
+# Table structure for table 'tx_clubms_domain_model_teamseason'
 #
-CREATE TABLE tx_clubms_domain_model_team_season (
+CREATE TABLE tx_clubms_domain_model_teamseason (
 
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
