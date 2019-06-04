@@ -3,7 +3,7 @@ if (!defined ('TYPO3_MODE')) {
 	die ('Access denied.');
 }
 
-$GLOBALS['TCA']['tx_clubms_domain_model_team_season'] = array(
+$GLOBALS['TCA']['tx_clubms_domain_model_teamseason'] = array(
 	'ctrl' => array(
 		'crdate' => 'crdate',
 		'cruser_id' => 'cruser_id',
