@@ -142,7 +142,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_team'] = array(
 					'levelLinksPosition' => 'bottom',
 				),
 				'foreign_field' => 'team',
-				'foreign_table' => 'tx_clubms_domain_model_team_season',
+				'foreign_table' => 'tx_clubms_domain_model_teamseason',
 				'type' => 'inline',
 			),
 		),
