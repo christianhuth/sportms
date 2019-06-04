@@ -8,6 +8,10 @@
 
                 <f:debug>{team}</f:debug>
 
+                <f:for each="{team.teamSeasons}" as="teamSeason">
+                    <f:debug>{teamSeason.season.season_name}</f:debug>
+                </f:for>
+
             </div>
 
         </div>
