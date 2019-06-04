@@ -140,6 +140,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_team'] = array(
 			'config' => array(
 				'appearance' => array(
 					'levelLinksPosition' => 'bottom',
+                    'useSortable' => 1,
 				),
 				'foreign_field' => 'team',
 				'foreign_table' => 'tx_clubms_domain_model_teamseason',
