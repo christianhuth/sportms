@@ -54,12 +54,14 @@ class TeamController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 		$this->view->assign('teams', $teams);
 	}
 
-	/**
-	 * @param int $uid
-	 * @return void
-	 */
-	public function showAction($uid) {
-		$team = $this->teamRepository->findByUid($uid);
+    /**
+     * @param \Balumedien\Clubms\Domain\Model\Team $team team item
+     */
+	public function showAction(\Balumedien\Clubms\Domain\Model\Team $team = null) {
+        if($team === null) {
+            $teamUid = $this->settings['single']['team'];
+            $team = $this->teamRepository->findByUid($teamUid);
+        }
 		$this->view->assign('team', $team);
 	}
 
