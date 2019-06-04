@@ -65,7 +65,7 @@ class Team extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\TeamSeason>
 	 */
-	protected $team_season = '';
+	protected $teamSeasons = '';
 	
 	public function __construct() {
         //Do not remove the next line: It would break the functionality
@@ -81,7 +81,7 @@ class Team extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
      * @return void
      */
     protected function initStorageObjects(){
-        $this->team_season = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        $this->teamSeasons = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
     }
 
 	/**
@@ -152,37 +152,37 @@ class Team extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 		$this->ageLevel = $ageLevel;
 	}
 
+    /**
+     * Adds a teamSeason to the teamSeasons
+     * @param \Balumedien\Clubms\Domain\Model\TeamSeason $teamSeason
+     */
+    public function addTeamSeason(\Balumedien\Clubms\Domain\Model\TeamSeason $teamSeason) {
+        $this->teamSeasons->attach($teamSeason);
+    }
+
 	/**
-	 * Returns the teamSeason
+	 * Returns the teamSeasons
 	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\TeamSeason>
 	 */
-	public function getTeamSeason() {
-		return $this->team_season;
+	public function getTeamSeasons() {
+		return $this->teamSeasons;
 	}
+
+    /**
+     * Removes a teamSeason from the teamSeasons
+     * @param \Balumedien\Clubms\Domain\Model\TeamSeason $teamSeason
+     * @return void
+     */
+    public function removeTeamSeason(\Balumedien\Clubms\Domain\Model\TeamSeason $teamSeason) {
+        $this->teamSeasons->detach($teamSeason);
+    }
 
 	/**
 	 * Sets the teamSeasons
-	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\TeamSeason> $team_season
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\TeamSeason> $teamSeasons
 	 */
-	public function setTeamSeason(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $team_season) {
-		$this->team_season = $team_season;
-	}
-
-	/**
-	 * Adds a teamSeason to the teamSeasons
-	 * @param \Balumedien\Clubms\Domain\Model\TeamSeason $teamSeason
-	 */
-	public function addTeamSeason(\Balumedien\Clubms\Domain\Model\TeamSeason $team_season) {
-		$this->team_season->attach($team_season);
-	}
-
-	/**
-	 * Removes a teamSeason from the teamSeasons
-	 * @param \Balumedien\Clubms\Domain\Model\TeamSeason $teamSeason
-	 * @return void
-	 */
-	public function removeTeamSeason(\Balumedien\Clubms\Domain\Model\TeamSeason $team_season) {
-		$this->team_season->detach($team_season);
+	public function setTeamSeasons(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $teamSeasons) {
+		$this->teamSeasons = $teamSeasons;
 	}
 	
 	/**
