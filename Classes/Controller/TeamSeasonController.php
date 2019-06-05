@@ -34,6 +34,9 @@ namespace Balumedien\Clubms\Controller;
 class TeamSeasonController
 {
 
+    // TODO: PROBABLY DELETE THIS CONTROLLER
+    // ALL ACTIONS FOR TEAMS SEASON INSTANCES ARE TRIGGERED BY THEIR PARENT TEAM
+
     /**
      * @var \Balumedien\Clubms\Domain\Repository\TeamSeasonRepository
      * @inject

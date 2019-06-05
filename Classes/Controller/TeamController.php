@@ -32,11 +32,23 @@ namespace Balumedien\Clubms\Controller;
  */
 class TeamController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
 
+    /**
+     * @var \Balumedien\Clubms\Domain\Repository\SeasonRepository
+     * @inject
+     */
+    protected $seasonRepository;
+
 	/**
 	 * @var \Balumedien\Clubms\Domain\Repository\TeamRepository
 	 * @inject
 	 */
 	protected $teamRepository;
+
+    /**
+     * @var \Balumedien\Clubms\Domain\Repository\TeamSeasonRepository
+     * @inject
+     */
+    protected $teamSeasonRepository;
 	
 	/**
 	 * @return void
@@ -48,13 +60,25 @@ class TeamController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 
     /**
      * @param \Balumedien\Clubms\Domain\Model\Team $team team item
+     * @param \Balumedien\Clubms\Domain\Model\Season $season season item
      */
-	public function showAction(\Balumedien\Clubms\Domain\Model\Team $team = null) {
+	public function showAction(\Balumedien\Clubms\Domain\Model\Team $team = null, \Balumedien\Clubms\Domain\Model\Season $season = null) {
         if($team === null) {
+            // TODO: DIE IF NO TEAM IS SELECTED VIA FLEXFORM
             $teamUid = $this->settings['single']['team'];
             $team = $this->teamRepository->findByUid($teamUid);
         }
-		$this->view->assign('team', $team);
+        if($season === null) {
+            if($this->settings['single']['season']) {
+                $seasonUid = $this->settings['single']['season'];
+                $season = $this->seasonRepository->findByUid($seasonUid);
+            } else {
+                $season = $this->teamSeasonRepository->findLatestSeasonOfTeam($team);
+            }
+        }
+        // AT THIS POINT WE DEFINITELY HAVE TEAM AND SEASON OR WE DIED EARLIER
+        $teamSeason = $this->teamSeasonRepository->findByTeamAndSeason($team, $season);
+        $this->view->assign('teamSeason', $teamSeason);
 	}
 
 }
