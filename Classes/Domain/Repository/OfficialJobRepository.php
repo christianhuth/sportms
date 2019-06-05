@@ -2,7 +2,7 @@
 	
 	namespace Balumedien\Clubms\Domain\Repository;
 	
-	class OfficialRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
+	class OfficialJobRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
 		
 	}
 	
