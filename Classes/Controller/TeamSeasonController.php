@@ -35,9 +35,26 @@ class TeamSeasonController
 {
 
     /**
-     * @var \Balumedien\Clubms\Domain\Repository\TeamRepository
+     * @var \Balumedien\Clubms\Domain\Repository\TeamSeasonRepository
      * @inject
      */
-    protected $teamRepository;
+    protected $teamSeasonRepository;
+
+    /**
+     * @return void
+     */
+    public function listAction() {
+        $teamSeasons = $this->teamSeasonRepository->findAll();
+        $this->view->assign('teamSeasons', $teamSeasons);
+    }
+
+    /**
+     * @param \Balumedien\Clubms\Domain\Model\Team $team team item
+     * @param \Balumedien\Clubms\Domain\Model\Season $season season item
+     */
+    public function showAction(\Balumedien\Clubms\Domain\Model\Team $team = null, \Balumedien\Clubms\Domain\Model\Season $season = null) {
+        $teamSeason = $this->teamSeasonRepository->findByTeamAndSeason($team, $season);
+        $this->view->assign('teamSeason', $teamSeason);
+    }
 
 }
