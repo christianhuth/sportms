@@ -64,9 +64,12 @@ class TeamController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
      */
 	public function showAction(\Balumedien\Clubms\Domain\Model\Team $team = null, \Balumedien\Clubms\Domain\Model\Season $season = null) {
         if($team === null) {
-            // TODO: DIE IF NO TEAM IS SELECTED VIA FLEXFORM
-            $teamUid = $this->settings['single']['team'];
-            $team = $this->teamRepository->findByUid($teamUid);
+            if($this->settings['single']['team']) {
+                $teamUid = $this->settings['single']['team'];
+                $team = $this->teamRepository->findByUid($teamUid);
+            } else {
+                // TODO: DIE IF NO TEAM IS SELECTED VIA FLEXFORM
+            }
         }
         if($season === null) {
             if($this->settings['single']['season']) {
