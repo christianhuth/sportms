@@ -38,12 +38,36 @@ class Section extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @var string
 	 */
 	protected $label = '';
-	
-	/**
-	 * Images
-	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference>
-	 */
-	protected $images = NULL;
+
+    /**
+     * Images
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference>
+     */
+    protected $images = NULL;
+
+    /**
+     * Images
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\SectionPositionGroup>
+     */
+    protected $sectionPositionGroups = NULL;
+
+    public function __construct() {
+        //Do not remove the next line: It would break the functionality
+        $this->initStorageObjects();
+    }
+
+    /**
+     * Initializes all ObjectStorage properties
+     * Do not modify this method!
+     * It will be rewritten on each save in the extension builder
+     * You may modify the constructor of this class instead
+     *
+     * @return void
+     */
+    protected function initStorageObjects(){
+        $this->images = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        $this->sectionPositionGroups = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+    }
 
 	/**
 	 * Returns the label of the section
@@ -61,6 +85,14 @@ class Section extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	public function setLabel($label) {
 		$this->label = $label;
 	}
+
+    /**
+     * Adds a Image to the Section
+     * @param \TYPO3\CMS\Extbase\Domain\Model\FileReference $image
+     */
+    public function addImage(\TYPO3\CMS\Extbase\Domain\Model\FileReference $image) {
+        $this->images->attach($image);
+    }
 	
 	/**
 	 * Returns the image
@@ -70,6 +102,14 @@ class Section extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 			return $this->images;
 	}
 
+    /**
+     * Removes a Image from the Section
+     * @param \TYPO3\CMS\Extbase\Domain\Model\FileReference $image
+     */
+    public function removeImage(\TYPO3\CMS\Extbase\Domain\Model\FileReference $image) {
+        $this->images->detach($image);
+    }
+
 	/**
 	 * Sets the image
 	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference> $images
@@ -78,5 +118,38 @@ class Section extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	public function setImages($images) {
 			$this->images = $images;
 	}
+
+    /**
+     * Adds a SectionPositionGroup to the Section
+     * @param \Balumedien\Clubms\Domain\Model\SectionPositionGroup $sectionPositionGroup
+     */
+    public function addSectionPositionGroup(\TYPO3\CMS\Extbase\Domain\Model\FileReference $sectionPositionGroup) {
+        $this->sectionPositionGroups->attach($sectionPositionGroup);
+    }
+
+    /**
+     * Returns the image
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\SectionPositionGroup> $sectionPositionGroups
+     */
+    public function getSectionPositionGroups() {
+        return $this->sectionPositionGroups;
+    }
+
+    /**
+     * Removes a Image from the Section
+     * @param \TYPO3\CMS\Extbase\Domain\Model\FileReference $sectionPositionGroup
+     */
+    public function removeSectionPositionGroup(\Balumedien\Clubms\Domain\Model\SectionPositionGroup $sectionPositionGroup) {
+        $this->sectionPositionGroups->detach($sectionPositionGroup);
+    }
+
+    /**
+     * Sets the sectionPositionGroups
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\SectionPositionGroup> $sectionPositionGroups
+     * @return void
+     */
+    public function setSectionPositionGroup($sectionPositionGroups) {
+        $this->sectionPositionGroups = $sectionPositionGroups;
+    }
 
 }
