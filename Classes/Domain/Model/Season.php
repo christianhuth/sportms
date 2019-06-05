@@ -54,6 +54,20 @@ class Season extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
     protected $seasonNameVeryShort = '';
 
     /**
+     * startdate
+     *
+     * @var int
+     */
+    protected $startdate;
+
+    /**
+     * enddate
+     *
+     * @var int
+     */
+    protected $enddate;
+
+    /**
      * @return string
      */
     public function getSeasonName()
@@ -101,8 +115,36 @@ class Season extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
         $this->seasonNameVeryShort = $seasonNameVeryShort;
     }
 
+    /**
+     * @return int
+     */
+    public function getStartdate()
+    {
+        return $this->startdate;
+    }
 
+    /**
+     * @param int $startdate
+     */
+    public function setStartdate($startdate)
+    {
+        $this->startdate = $startdate;
+    }
 
+    /**
+     * @return int
+     */
+    public function getEnddate()
+    {
+        return $this->enddate;
+    }
 
+    /**
+     * @param int $enddate
+     */
+    public function setEnddate($enddate)
+    {
+        $this->enddate = $enddate;
+    }
 
 }
