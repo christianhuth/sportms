@@ -37,20 +37,72 @@ class Season extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 *
 	 * @var string
 	 */
-	protected $season_name = '';
+	protected $seasonName = '';
 
 	/**
 	 * season_name_short
 	 *
 	 * @var string
 	 */
-	protected $season_name_short = '';
+	protected $seasonNameShort = '';
 
     /**
      * season_name_very_short
      *
      * @var string
      */
-    protected $season_name_very_short = '';
+    protected $seasonNameVeryShort = '';
+
+    /**
+     * @return string
+     */
+    public function getSeasonName()
+    {
+        return $this->seasonName;
+    }
+
+    /**
+     * @param string $seasonName
+     */
+    public function setSeasonName($seasonName)
+    {
+        $this->seasonName = $seasonName;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSeasonNameShort()
+    {
+        return $this->seasonNameShort;
+    }
+
+    /**
+     * @param string $seasonNameShort
+     */
+    public function setSeasonNameShort($seasonNameShort)
+    {
+        $this->seasonNameShort = $seasonNameShort;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSeasonNameVeryShort()
+    {
+        return $this->seasonNameVeryShort;
+    }
+
+    /**
+     * @param string $seasonNameVeryShort
+     */
+    public function setSeasonNameVeryShort($seasonNameVeryShort)
+    {
+        $this->seasonNameVeryShort = $seasonNameVeryShort;
+    }
+
+
+
+
 
 }
