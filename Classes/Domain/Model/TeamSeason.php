@@ -2,6 +2,8 @@
 
 namespace Balumedien\Clubms\Domain\Model;
 
+use \TYPO3\CMS\Extbase\Persistence\ObjectStorage;
+
 /***************************************************************
  *
  *  Copyright notice
@@ -43,10 +45,28 @@ class TeamSeason extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	protected $season = '';
 
 	/**
-	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\TeamSeasonPractice>
+	 * @var ObjectStorage<\Balumedien\Clubms\Domain\Model\TeamSeasonPractice>
 	 */
 	protected $teamSeasonPractices = NULL;
 
+	/**
+	 * @var ObjectStorage<\Balumedien\Clubms\Domain\Model\TeamSeasonOfficialJob>
+	 */
+	protected $teamSeasonOfficialJobs = NULL;
+
+	/**
+	 * @var ObjectStorage<\Balumedien\Clubms\Domain\Model\TeamSeasonSquadMember>
+	 */
+	protected $teamSeasonSquadMembers = NULL;
+
+	/**
+	 * @var	boolean
+	 */
+	protected $detailLink;
+
+	/**
+	 * TeamSeason constructor.
+	 */
 	public function __construct() {
 		//Do not remove the next line: It would break the functionality
 		$this->initStorageObjects();
@@ -61,7 +81,9 @@ class TeamSeason extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @return void
 	 */
 	protected function initStorageObjects() {
-		$this->teamSeasonPractices = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+		$this->teamSeasonPractices = new ObjectStorage();
+		$this->teamSeasonOfficialJobs = new ObjectStorage();
+		$this->teamSeasonSquadMembers = new ObjectStorage();
 	}
 
 	/**
@@ -99,6 +121,14 @@ class TeamSeason extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	}
 
 	/**
+	 * Adds a teamSeasonPratice to the teamSeasonPractices
+	 * @param \Balumedien\Clubms\Domain\Model\TeamSeasonPractice $teamSeasonPractice
+	 */
+	public function addTeamSeasonPractice(TeamSeasonPractice $teamSeasonPractice) {
+		$this->teamSeasonPractices->attach($teamSeasonPractice);
+	}
+
+	/**
 	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
 	 */
 	public function getTeamSeasonPractices() {
@@ -106,10 +136,60 @@ class TeamSeason extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	}
 
 	/**
+	 * Removes a teamSeason from the teamSeasons
+	 * @param \Balumedien\Clubms\Domain\Model\TeamSeasonPractice $teamSeasonPractice
+	 */
+	public function removeTeamSeasonPractice(TeamSeasonPractice $teamSeasonPractice) {
+		$this->teamSeasonPractices->detach($teamSeasonPractice);
+	}
+
+	/**
 	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $teamSeasonPractices
 	 */
-	public function setTeamSeasonPractices($teamSeasonPractices) {
+	public function setTeamSeasonPractices(ObjectStorage $teamSeasonPractices) {
 		$this->teamSeasonPractices = $teamSeasonPractices;
+	}
+
+	/**
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+	 */
+	public function getTeamSeasonOfficialJobs() {
+		return $this->teamSeasonOfficialJobs;
+	}
+
+	/**
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $teamSeasonOfficialJobs
+	 */
+	public function setTeamSeasonOfficialJobs(ObjectStorage $teamSeasonOfficialJobs) {
+		$this->teamSeasonOfficialJobs = $teamSeasonOfficialJobs;
+	}
+
+	/**
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+	 */
+	public function getTeamSeasonSquadMembers() {
+		return $this->teamSeasonSquadMembers;
+	}
+
+	/**
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $teamSeasonSquadMembers
+	 */
+	public function setTeamSeasonSquadMembers(ObjectStorage $teamSeasonSquadMembers) {
+		$this->teamSeasonSquadMembers = $teamSeasonSquadMembers;
+	}
+
+	/**
+	 * @return bool
+	 */
+	public function isDetailLink() {
+		return $this->detailLink;
+	}
+
+	/**
+	 * @param bool $detailLink
+	 */
+	public function setDetailLink(bool $detailLink) {
+		$this->detailLink = $detailLink;
 	}
 
 }
