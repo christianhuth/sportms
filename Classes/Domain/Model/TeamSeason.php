@@ -3,6 +3,7 @@
 namespace Balumedien\Clubms\Domain\Model;
 
 use \TYPO3\CMS\Extbase\Persistence\ObjectStorage;
+use \TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 
 /***************************************************************
  *
@@ -32,7 +33,7 @@ use \TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 /**
  * TeamSeason
  */
-class TeamSeason extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
+class TeamSeason extends AbstractEntity {
 
 	/**
 	 * @var \Balumedien\Clubms\Domain\Model\Team
