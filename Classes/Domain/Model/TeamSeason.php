@@ -36,7 +36,7 @@ use \TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 class TeamSeason extends AbstractEntity {
 
 	/**
-	 * @var Team
+	 * @var \Balumedien\Clubms\Domain\Model\Team
 	 */
 	protected $team = '';
 
