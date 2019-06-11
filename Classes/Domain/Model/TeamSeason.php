@@ -125,7 +125,7 @@ class TeamSeason extends AbstractEntity {
 	 * Adds a teamSeasonPratice to the teamSeasonPractices
 	 * @param \Balumedien\Clubms\Domain\Model\TeamSeasonPractice $teamSeasonPractice
 	 */
-	public function addTeamSeasonPractice(TeamSeasonPractice $teamSeasonPractice) {
+	public function addTeamSeasonPractice($teamSeasonPractice) {
 		$this->teamSeasonPractices->attach($teamSeasonPractice);
 	}
 
@@ -140,14 +140,14 @@ class TeamSeason extends AbstractEntity {
 	 * Removes a teamSeason from the teamSeasons
 	 * @param \Balumedien\Clubms\Domain\Model\TeamSeasonPractice $teamSeasonPractice
 	 */
-	public function removeTeamSeasonPractice(TeamSeasonPractice $teamSeasonPractice) {
+	public function removeTeamSeasonPractice($teamSeasonPractice) {
 		$this->teamSeasonPractices->detach($teamSeasonPractice);
 	}
 
 	/**
 	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $teamSeasonPractices
 	 */
-	public function setTeamSeasonPractices(ObjectStorage $teamSeasonPractices) {
+	public function setTeamSeasonPractices($teamSeasonPractices) {
 		$this->teamSeasonPractices = $teamSeasonPractices;
 	}
 
@@ -161,7 +161,7 @@ class TeamSeason extends AbstractEntity {
 	/**
 	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $teamSeasonOfficialJobs
 	 */
-	public function setTeamSeasonOfficialJobs(ObjectStorage $teamSeasonOfficialJobs) {
+	public function setTeamSeasonOfficialJobs($teamSeasonOfficialJobs) {
 		$this->teamSeasonOfficialJobs = $teamSeasonOfficialJobs;
 	}
 
@@ -175,7 +175,7 @@ class TeamSeason extends AbstractEntity {
 	/**
 	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $teamSeasonSquadMembers
 	 */
-	public function setTeamSeasonSquadMembers(ObjectStorage $teamSeasonSquadMembers) {
+	public function setTeamSeasonSquadMembers($teamSeasonSquadMembers) {
 		$this->teamSeasonSquadMembers = $teamSeasonSquadMembers;
 	}
 
@@ -189,7 +189,7 @@ class TeamSeason extends AbstractEntity {
 	/**
 	 * @param bool $detailLink
 	 */
-	public function setDetailLink(bool $detailLink) {
+	public function setDetailLink($detailLink) {
 		$this->detailLink = $detailLink;
 	}
 
