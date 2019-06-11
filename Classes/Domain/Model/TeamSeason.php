@@ -46,17 +46,17 @@ class TeamSeason extends AbstractEntity {
 	protected $season = '';
 
 	/**
-	 * @var ObjectStorage<\Balumedien\Clubms\Domain\Model\TeamSeasonPractice>
+	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\TeamSeasonPractice>
 	 */
 	protected $teamSeasonPractices = NULL;
 
 	/**
-	 * @var ObjectStorage<\Balumedien\Clubms\Domain\Model\TeamSeasonOfficialJob>
+	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\TeamSeasonOfficialJob>
 	 */
 	protected $teamSeasonOfficialJobs = NULL;
 
 	/**
-	 * @var ObjectStorage<\Balumedien\Clubms\Domain\Model\TeamSeasonSquadMember>
+	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\TeamSeasonSquadMember>
 	 */
 	protected $teamSeasonSquadMembers = NULL;
 
