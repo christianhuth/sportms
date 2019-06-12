@@ -1,11 +1,31 @@
-page.includeCSS {
-	file962 = EXT:clubms/Resources/Public/Css/clubms.css
-	file963 = EXT:clubms/Resources/Public/Css/person.css
-}
-
 plugin.tx_clubms {
+
+    view {
+        templateRootPaths {
+                0 = EXT:clubms/Resources/Private/Templates/
+                1 = {$plugin.clubms.view.templateRootPath}
+        }
+
+        partialRootPaths {
+                0 = EXT:clubms/Resources/Private/Partials/
+                1 = {$plugin.clubms.view.partialRootPath}
+        }
+
+        layoutRootPaths {
+                0 = EXT:clubms/Resources/Private/Layouts/
+                1 = {$plugin.clubms.view.layoutRootPath}
+        }
+    }
+
+    # ====================================
+    # Settings available inside Controller and View by accessing $this->settings or {settings.xyz}
+    # ====================================
+    settings {
+        cssFile = {$plugin.tx_news.settings.cssFile}
+    }
+
 	persistence {
-		enableAutomaticCacheClearing = 1
-		storagePid = 38
+		storagePid = {$plugin.clubms.persistence.storagePid}
 	}
+
 }
