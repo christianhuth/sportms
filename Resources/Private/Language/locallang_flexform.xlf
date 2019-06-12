@@ -7,7 +7,9 @@
 			<trans-unit id="tx_clubms_flexform.sheet.general">
 				<source>Allgemeine Einstellungen</source>
 			</trans-unit>
-			
+			<trans-unit id="tx_clubms_flexform.sheet.general.recursive.I.inherit">
+                <source>Wie in TypoScript definiert</source>
+            </trans-unit>
 			
 			<trans-unit id="tx_clubms_flexform.sheet.scope">
 				<source>Scope</source>

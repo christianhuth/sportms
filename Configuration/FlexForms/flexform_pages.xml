@@ -6,7 +6,7 @@
 		</TCEforms>
 		<type>array</type>
 		<el>
-			<settings.pages.club>
+			<settings.club.showPid>
 				<TCEforms>
 					<label>Detailseite für Vereine</label>
 					<config>
@@ -19,7 +19,7 @@
 						<show_thumbs>1</show_thumbs>
 					</config>
 				</TCEforms>
-			</settings.pages.club>
+			</settings.club.showPid>
 			<settings.pages.team>
 				<TCEforms>
 					<label>Detailseite für Mannschaften</label>

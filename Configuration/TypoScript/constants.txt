@@ -1,3 +1,21 @@
-plugin.clubms {
-	
+plugin.tx_clubms {
+
+    view {
+        # cat=plugin.tx_clubms/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:clubms/Resources/Private/Templates/
+        # cat=plugin.tx_clubms/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:clubms/Resources/Private/Partials/
+        # cat=plugin.tx_clubms/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:clubms/Resources/Private/Layouts/
+    }
+
+    settings {
+        cssFile = EXT:clubms/Resources/Public/Css/clubms.css
+    }
+
+    persistence {
+        # cat=plugin.tx_clubms//a; type=string; label=Default storage PID
+        storagePid =
+    }
+
 }
