@@ -3,7 +3,6 @@
 		<tr>
 			<th><f:translate key="tx_clubms_domain_model_club.image"/></th>
 			<th><f:translate key="tx_clubms_domain_model_club.name"/></th>
-			<th><f:translate key="tx_clubms_domain_model_club.colours"/></th>
 			<th>Gründung</th>
 			<th><f:translate key="tx_clubms_domain_model_club.clubMembers"/></th>
 			<th><f:translate key="tx_clubms_domain_model_club.clubSections"/></th>
@@ -14,7 +13,6 @@
 			<tr>
 				<td><f:if condition="{club.images}"><f:image src="{club.images.0.uid}" width="150" height="100" treatIdAsReference="1" /></f:if></td>
 				<td>{club.name}</td>
-				<td>{club.colours}</td>
 				<td>
 					<f:if condition="{club.dateOfFounding}">
 						<f:then>
@@ -29,10 +27,13 @@
 				</td>
 				<td><f:count>{club.clubMembers}</f:count></td>
 				<td>
-					<f:for each="{club.clubSections}" as="clubSection">
-						<f:debug>{clubSection}</f:debug>
-					</f:for>
-
+					<f:if condition="{club.clubSections}">
+						<ul>
+							<f:for each="{club.clubSections}" as="clubSection">
+								<li>{clubSection.section.label}</li>
+							</f:for>
+						</ul>
+					</f:if>
 				</td>
 				<td>
 					<f:if condition="{club.detailLink}">
