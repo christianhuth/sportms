@@ -50,7 +50,7 @@ class ClubController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 	/**
 	 * @param int $uid
 	 */
-	public function detailAction($uid = null) {
+	public function showAction($uid = null) {
 		$club = $this->clubRepository->findByUid($uid);
 		$this->view->assign('club', $club);
 	}
