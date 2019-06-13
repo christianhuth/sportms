@@ -1,4 +1,8 @@
-# customsubcategory=club=Club-Settings
+# customsubcategory=club=Settings: Club
+# customsubcategory=competition=Settings: Competition
+# customsubcategory=game=Settings: Game
+# customsubcategory=person=Settings: Person
+# customsubcategory=team=Settings: Team
 
 plugin.tx_clubms {
 
@@ -19,6 +23,38 @@ plugin.tx_clubms {
             # cat=plugin.tx_clubms/club; type=int; label=Default PID of Club->List
             listPid =
             # cat=plugin.tx_clubms/club; type=int; label=Default PID of Club->Show
+            showPid =
+        }
+
+        competition {
+            # cat=plugin.tx_clubms/competition; type=int; label=Default PID of Competition->List
+            listPid =
+            # cat=plugin.tx_clubms/competition; type=int; label=Default PID of Competition->Show
+            showPid =
+        }
+
+        game {
+            # cat=plugin.tx_clubms/game; type=int; label=Default PID of Game->List
+            listPid =
+            # cat=plugin.tx_clubms/game; type=int; label=Default PID of Game->Show
+            showPid =
+        }
+
+        person {
+            # cat=plugin.tx_clubms/person; type=int; label=Default PID of Person->List
+            listPid =
+            # cat=plugin.tx_clubms/person; type=int; label=Default PID of Person->Official
+            officialPid =
+            # cat=plugin.tx_clubms/person; type=int; label=Default PID of Person->Player
+            playerPid =
+            # cat=plugin.tx_clubms/person; type=int; label=Default PID of Person->Referee
+            refereePid =
+        }
+
+        team {
+            # cat=plugin.tx_clubms/team; type=int; label=Default PID of Team->List
+            listPid =
+            # cat=plugin.tx_clubms/team; type=int; label=Default PID of Team->Show
             showPid =
         }
 

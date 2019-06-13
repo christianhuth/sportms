@@ -28,6 +28,28 @@ plugin.tx_clubms {
             showPid = {$plugin.tx_clubms.settings.club.showPid}
         }
 
+        competition {
+            listPid = {$plugin.tx_clubms.settings.competition.listPid}
+            showPid = {$plugin.tx_clubms.settings.competition.showPid}
+        }
+
+        game {
+            listPid = {$plugin.tx_clubms.settings.game.listPid}
+            showPid = {$plugin.tx_clubms.settings.game.showPid}
+        }
+
+        person {
+            listPid = {$plugin.tx_clubms.settings.person.listPid}
+            officialPid = {$plugin.tx_clubms.settings.person.officialPid}
+            playerPid = {$plugin.tx_clubms.settings.person.playerPid}
+            refereePid = {$plugin.tx_clubms.settings.person.refereePid}
+        }
+
+        team {
+            listPid = {$plugin.tx_clubms.settings.team.listPid}
+            showPid = {$plugin.tx_clubms.settings.team.showPid}
+        }
+
     }
 
 	persistence {
