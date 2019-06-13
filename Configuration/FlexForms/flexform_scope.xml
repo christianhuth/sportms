@@ -6,7 +6,7 @@
 		</TCEforms>
 		<type>array</type>
 		<el>
-			<settings.scope.saison>
+			<settings.scope.season>
 				<TCEforms>
 					<label>Saison</label>
 					<config>
@@ -16,15 +16,15 @@
 						<maxitems>3</maxitems>
 					</config>
 				</TCEforms>
-			</settings.scope.saison>
-			<settings.scope.saison.select>
+			</settings.scope.season>
+			<settings.scope.season.select>
 				<TCEforms>
 					<label>Selectbox für Saison?</label>
 					<config>
 						<type>check</type>
 					</config>
 				</TCEforms>
-			</settings.scope.saison.select>
+			</settings.scope.season.select>
 			<settings.scope.section>
 				<TCEforms>
 					<label>Abteilung</label>
