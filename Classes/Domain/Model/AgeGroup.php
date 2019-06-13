@@ -47,6 +47,6 @@ class AgeGroup extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @lazy
 	 * @cascade remove
 	 */
-	protected $ageLevelStorage = '';
+	protected $ageLevels = '';
 
 }
