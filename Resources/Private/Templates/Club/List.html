@@ -9,7 +9,7 @@
 			<th>Einzelansicht</th>
 		</tr>
 		<f:for each="{clubs}" as="club">
-			<f:debug>{tx_clubms.settings}</f:debug>
+			<f:debug>{settings}</f:debug>
 			<tr>
 				<td><f:if condition="{club.images}"><f:image src="{club.images.0.uid}" width="150" height="100" treatIdAsReference="1" /></f:if></td>
 				<td>{club.name}</td>
