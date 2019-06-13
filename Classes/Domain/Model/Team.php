@@ -183,6 +183,22 @@ class Team extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	public function setTeamSeasons(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $teamSeasons) {
 		$this->teamSeasons = $teamSeasons;
 	}
+
+    /**
+     * @return int
+     */
+    public function getDummy()
+    {
+        return $this->dummy;
+    }
+
+    /**
+     * @param int $dummy
+     */
+    public function setDummy($dummy)
+    {
+        $this->dummy = $dummy;
+    }
 	
 	/**
 	 * Returns the detailLink
