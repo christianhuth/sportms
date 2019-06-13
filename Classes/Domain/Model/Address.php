@@ -119,6 +119,22 @@ class Address extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
         $this->housenumber = $housenumber;
     }
 
+    /**
+     * @return string
+     */
+    public function getZipcode()
+    {
+        return $this->zipcode;
+    }
+
+    /**
+     * @param string $zipcode
+     */
+    public function setZipcode($zipcode)
+    {
+        $this->zipcode = $zipcode;
+    }
+
 
 
 
