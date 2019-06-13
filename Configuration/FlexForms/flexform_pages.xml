@@ -90,20 +90,6 @@
 					</config>
 				</TCEforms>
 			</settings.game.listPid>
-			<settings.club.showPid>
-				<TCEforms>
-					<label>Verein: Detailseite</label>
-					<config>
-						<type>group</type>
-						<internal_type>db</internal_type>
-						<allowed>pages</allowed>
-						<size>1</size>
-						<maxItems>1</maxItems>
-						<minItems>0</minItems>
-						<show_thumbs>1</show_thumbs>
-					</config>
-				</TCEforms>
-			</settings.club.showPid>
 			<settings.club.listPid>
 				<TCEforms>
 					<label>Verein: Listenseite</label>
