@@ -103,6 +103,24 @@ class Address extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
         $this->street = $street;
     }
 
+    /**
+     * @return string
+     */
+    public function getHousenumber()
+    {
+        return $this->housenumber;
+    }
+
+    /**
+     * @param string $housenumber
+     */
+    public function setHousenumber($housenumber)
+    {
+        $this->housenumber = $housenumber;
+    }
+
+
+
 
 
 }
