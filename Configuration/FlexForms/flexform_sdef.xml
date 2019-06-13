@@ -159,7 +159,7 @@
 			</persistence.storagePid>
 
 			<!-- recursive -->
-			<settings.recursive>
+			<persistence.recursive>
 				<TCEforms>
 					<label>LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.recursive</label>
 					<config>
@@ -197,7 +197,7 @@
 						</items>
 					</config>
 				</TCEforms>
-			</settings.recursive>
+			</persistence.recursive>
 
 		</el>
 	</ROOT>
