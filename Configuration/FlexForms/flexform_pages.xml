@@ -2,13 +2,97 @@
 <T3DataStructure>
 	<ROOT>
 		<TCEforms>
-			<sheetTitle>Detailseiten</sheetTitle>
+			<sheetTitle>PageIDs</sheetTitle>
 		</TCEforms>
 		<type>array</type>
 		<el>
+			<settings.team.showPid>
+				<TCEforms>
+					<label>Mannschaft: Detailseite</label>
+					<config>
+						<type>group</type>
+						<internal_type>db</internal_type>
+						<allowed>pages</allowed>
+						<size>1</size>
+						<maxItems>1</maxItems>
+						<minItems>0</minItems>
+						<show_thumbs>1</show_thumbs>
+					</config>
+				</TCEforms>
+			</settings.team.showPid>
+			<settings.team.listPid>
+				<TCEforms>
+					<label>Mannschaft: Listenseite</label>
+					<config>
+						<type>group</type>
+						<internal_type>db</internal_type>
+						<allowed>pages</allowed>
+						<size>1</size>
+						<maxItems>1</maxItems>
+						<minItems>0</minItems>
+						<show_thumbs>1</show_thumbs>
+					</config>
+				</TCEforms>
+			</settings.team.listPid>
+			<settings.person.showPid>
+				<TCEforms>
+					<label>Person: Detailseite</label>
+					<config>
+						<type>group</type>
+						<internal_type>db</internal_type>
+						<allowed>pages</allowed>
+						<size>1</size>
+						<maxItems>1</maxItems>
+						<minItems>0</minItems>
+						<show_thumbs>1</show_thumbs>
+					</config>
+				</TCEforms>
+			</settings.person.showPid>
+			<settings.person.listPid>
+				<TCEforms>
+					<label>Person: Listenseite</label>
+					<config>
+						<type>group</type>
+						<internal_type>db</internal_type>
+						<allowed>pages</allowed>
+						<size>1</size>
+						<maxItems>1</maxItems>
+						<minItems>0</minItems>
+						<show_thumbs>1</show_thumbs>
+					</config>
+				</TCEforms>
+			</settings.person.listPid>
+			<settings.game.showPid>
+				<TCEforms>
+					<label>Spiel: Detailseite</label>
+					<config>
+						<type>group</type>
+						<internal_type>db</internal_type>
+						<allowed>pages</allowed>
+						<size>1</size>
+						<maxItems>1</maxItems>
+						<minItems>0</minItems>
+						<show_thumbs>1</show_thumbs>
+					</config>
+				</TCEforms>
+			</settings.game.showPid>
+			<settings.game.listPid>
+				<TCEforms>
+					<label>Spiel: Listenseite</label>
+					<config>
+						<type>group</type>
+						<internal_type>db</internal_type>
+						<allowed>pages</allowed>
+						<size>1</size>
+						<maxItems>1</maxItems>
+						<minItems>0</minItems>
+						<show_thumbs>1</show_thumbs>
+					</config>
+				</TCEforms>
+			</settings.game.listPid>
 			<settings.club.showPid>
 				<TCEforms>
-					<label>Detailseite für Vereine</label>
+					<label>Verein: Detailseite</label>
 					<config>
 						<type>group</type>
 						<internal_type>db</internal_type>
@@ -20,9 +104,9 @@
 					</config>
 				</TCEforms>
 			</settings.club.showPid>
-			<settings.pages.team>
+			<settings.club.listPid>
 				<TCEforms>
-					<label>Detailseite für Mannschaften</label>
+					<label>Verein: Listenseite</label>
 					<config>
 						<type>group</type>
 						<internal_type>db</internal_type>
@@ -33,10 +117,10 @@
 						<show_thumbs>1</show_thumbs>
 					</config>
 				</TCEforms>
-			</settings.pages.team>
-			<settings.pages.game>
+			</settings.club.listPid>
+			<settings.competition.showPid>
 				<TCEforms>
-					<label>Detailseite für Spiele</label>
+					<label>Wettbewerb: Detailseite</label>
 					<config>
 						<type>group</type>
 						<internal_type>db</internal_type>
@@ -47,10 +131,10 @@
 						<show_thumbs>1</show_thumbs>
 					</config>
 				</TCEforms>
-			</settings.pages.game>
-			<settings.pages.competition>
+			</settings.competition.showPid>
+			<settings.competition.listPid>
 				<TCEforms>
-					<label>Detailseite für Wettbewerbe</label>
+					<label>Wettbewerb: Listenseite</label>
 					<config>
 						<type>group</type>
 						<internal_type>db</internal_type>
@@ -61,21 +145,7 @@
 						<show_thumbs>1</show_thumbs>
 					</config>
 				</TCEforms>
-			</settings.pages.competition>
-			<settings.pages.person>
-				<TCEforms>
-					<label>Detailseite für Personen</label>
-					<config>
-						<type>group</type>
-						<internal_type>db</internal_type>
-						<allowed>pages</allowed>
-						<size>1</size>
-						<maxItems>1</maxItems>
-						<minItems>0</minItems>
-						<show_thumbs>1</show_thumbs>
-					</config>
-				</TCEforms>
-			</settings.pages.person>
+			</settings.competition.listPid>
 		</el>
 	</ROOT>
 </T3DataStructure>

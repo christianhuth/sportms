@@ -1,3 +1,5 @@
+# customsubcategory=club=Club-Settings
+
 plugin.tx_clubms {
 
     view {
@@ -10,7 +12,16 @@ plugin.tx_clubms {
     }
 
     settings {
+        # cat=plugin.tx_clubms/file; type=string; label=Path to css file (FE)
         cssFile = EXT:clubms/Resources/Public/Css/clubms.css
+
+        club {
+            # cat=plugin.tx_clubms/club; type=int; label=Default PID of Club->List
+            listPid =
+            # cat=plugin.tx_clubms/club; type=int; label=Default PID of Club->Show
+            showPid =
+        }
+
     }
 
     persistence {

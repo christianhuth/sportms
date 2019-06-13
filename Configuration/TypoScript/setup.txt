@@ -3,17 +3,17 @@ plugin.tx_clubms {
     view {
         templateRootPaths {
                 0 = EXT:clubms/Resources/Private/Templates/
-                1 = {$plugin.clubms.view.templateRootPath}
+                1 = {$plugin.tx_clubms.view.templateRootPath}
         }
 
         partialRootPaths {
                 0 = EXT:clubms/Resources/Private/Partials/
-                1 = {$plugin.clubms.view.partialRootPath}
+                1 = {$plugin.tx_clubms.view.partialRootPath}
         }
 
         layoutRootPaths {
                 0 = EXT:clubms/Resources/Private/Layouts/
-                1 = {$plugin.clubms.view.layoutRootPath}
+                1 = {$plugin.tx_clubms.view.layoutRootPath}
         }
     }
 
@@ -21,11 +21,17 @@ plugin.tx_clubms {
     # Settings available inside Controller and View by accessing $this->settings or {settings.xyz}
     # ====================================
     settings {
-        cssFile = {$plugin.tx_news.settings.cssFile}
+        cssFile = {$plugin.tx_clubms.settings.cssFile}
+
+        club {
+            listPid = {$plugin.tx_clubms.settings.club.listPid}
+            showPid = {$plugin.tx_clubms.settings.club.showPid}
+        }
+
     }
 
 	persistence {
-		storagePid = {$plugin.clubms.persistence.storagePid}
+		storagePid = {$plugin.tx_clubms.persistence.storagePid}
 	}
 
 }
