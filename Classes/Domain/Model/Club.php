@@ -54,13 +54,14 @@ class Club extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	
 	/**
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\ClubMembers>
+     * @lazy
 	 * @cascade remove
 	 */
 	protected $clubMembers = NULL;
 	
 	/**
-	 * Images
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference>
+     * @lazy
 	 */
 	protected $images = NULL;
 	
@@ -94,6 +95,7 @@ class Club extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	
 	/**
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\ClubSection>
+     * @lazy
 	 * @cascade remove
 	 */
 	protected $clubSections = NULL;

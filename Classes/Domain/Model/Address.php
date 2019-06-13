@@ -87,4 +87,22 @@ class Address extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
      */
     protected $ordering = '';
 
+    /**
+     * @return string
+     */
+    public function getStreet()
+    {
+        return $this->street;
+    }
+
+    /**
+     * @param string $street
+     */
+    public function setStreet($street)
+    {
+        $this->street = $street;
+    }
+
+
+
 }
