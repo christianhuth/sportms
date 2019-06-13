@@ -6,6 +6,5 @@
 		<scope>EXT:clubms/Configuration/FlexForms/flexform_scope.xml</scope>
 		-->
 		<sEx>EXT:clubms/Configuration/FlexForms/flexform_sex.xml</sEx>
-		<pages>EXT:clubms/Configuration/FlexForms/flexform_pages.xml</pages>
 	</sheets>
 </T3DataStructure>
