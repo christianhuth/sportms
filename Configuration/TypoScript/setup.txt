@@ -32,6 +32,7 @@ plugin.tx_clubms {
 
 	persistence {
 		storagePid = {$plugin.tx_clubms.persistence.storagePid}
+		recursive = {$plugin.tx_clubms.persistence.recursive}
 	}
 
 }
