@@ -7,6 +7,24 @@ storagePid=
 ###########################
 # cat=pages/enable; type=int; label=Define PID for Club->List
 clubListPid=
+# cat=pages/enable; type=int; label=Define PID for Club->Show
+clubShowPid=
+# cat=pages/enable; type=int; label=Define PID for Team->List
+teamListPid=
+# cat=pages/enable; type=int; label=Define PID for Team->Show
+teamShowPid=
+# cat=pages/enable; type=int; label=Define PID for Competition->List
+competitionListPid=
+# cat=pages/enable; type=int; label=Define PID for Competition->Show
+competitionShowPid=
+# cat=pages/enable; type=int; label=Define PID for Person->List
+personListPid=
+# cat=pages/enable; type=int; label=Define PID for Person->Player
+personPlayerPid=
+# cat=pages/enable; type=int; label=Define PID for Person->Official
+personOfficialPid=
+# cat=pages/enable; type=int; label=Define PID for Person->Referee
+personRefereePid=
 
 # Backend Module
 ###########################
