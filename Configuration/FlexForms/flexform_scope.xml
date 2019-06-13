@@ -17,14 +17,14 @@
 					</config>
 				</TCEforms>
 			</settings.scope.season>
-			<settings.scope.season.select>
+			<settings.scope.season.selectbox>
 				<TCEforms>
 					<label>Selectbox für Saison?</label>
 					<config>
 						<type>check</type>
 					</config>
 				</TCEforms>
-			</settings.scope.season.select>
+			</settings.scope.season.selectbox>
 			<settings.scope.section>
 				<TCEforms>
 					<label>Abteilung</label>
@@ -36,14 +36,14 @@
 					</config>
 				</TCEforms>
 			</settings.scope.section>
-			<settings.scope.section.select>
+			<settings.scope.section.selectbox>
 				<TCEforms>
 					<label>Selectbox für Abteilung?</label>
 					<config>
 						<type>check</type>
 					</config>
 				</TCEforms>
-			</settings.scope.section.select>
+			</settings.scope.section.selectbox>
 			<settings.scope.agegroup>
 				<TCEforms>
 					<label>Altersgruppe</label>
@@ -55,14 +55,14 @@
 					</config>
 				</TCEforms>
 			</settings.scope.agegroup>
-			<settings.scope.agegroup.select>
+			<settings.scope.agegroup.selectbox>
 				<TCEforms>
 					<label>Selectbox für Altersgruppe?</label>
 					<config>
 						<type>check</type>
 					</config>
 				</TCEforms>
-			</settings.scope.agegroup.select>
+			</settings.scope.agegroup.selectbox>
 			<settings.scope.agelevel>
 				<TCEforms>
 					<label>Altersstufe</label>
@@ -74,14 +74,14 @@
 					</config>
 				</TCEforms>
 			</settings.scope.agelevel>
-			<settings.scope.agelevel.select>
+			<settings.scope.agelevel.selectbox>
 				<TCEforms>
 					<label>Selectbox für Altersstufe?</label>
 					<config>
 						<type>check</type>
 					</config>
 				</TCEforms>
-			</settings.scope.agelevel.select>
+			</settings.scope.agelevel.selectbox>
 		</el>
 	</ROOT>
 </T3DataStructure>
