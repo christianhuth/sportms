@@ -25,7 +25,7 @@ plugin.tx_clubms {
     }
 
     persistence {
-        # cat=plugin.tx_clubms//a; type=string; label=Default storage PID
+        # cat=plugin.tx_clubms//a; type=int+; label=Default storage PID
         storagePid =
         # cat=plugin.tx_clubms//a; type=int+; label=Recursion level of storage PID
 		recursive = 1
