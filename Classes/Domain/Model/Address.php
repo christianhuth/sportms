@@ -183,4 +183,20 @@ class Address extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
         $this->region = $region;
     }
 
+    /**
+     * @return bool
+     */
+    public function isPublic()
+    {
+        return $this->public;
+    }
+
+    /**
+     * @param bool $public
+     */
+    public function setPublic($public)
+    {
+        $this->public = $public;
+    }
+
 }
