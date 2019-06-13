@@ -12,7 +12,6 @@ class TeamSeasonRepository extends Repository {
      */
     public function findLatestSeasonOfTeam($team) {
         // TODO: BUILD QUERY TO FIND LATEST SEASON OF A SPECIFIC TEAM
-        $query->
     }
 
 }
