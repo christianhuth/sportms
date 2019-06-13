@@ -135,8 +135,20 @@ class Address extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
         $this->zipcode = $zipcode;
     }
 
+    /**
+     * @return string
+     */
+    public function getLocation()
+    {
+        return $this->location;
+    }
 
-
-
+    /**
+     * @param string $location
+     */
+    public function setLocation($location)
+    {
+        $this->location = $location;
+    }
 
 }
