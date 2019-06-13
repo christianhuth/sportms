@@ -151,4 +151,20 @@ class Address extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
         $this->location = $location;
     }
 
+    /**
+     * @return int
+     */
+    public function getCountry()
+    {
+        return $this->country;
+    }
+
+    /**
+     * @param int $country
+     */
+    public function setCountry($country)
+    {
+        $this->country = $country;
+    }
+
 }
