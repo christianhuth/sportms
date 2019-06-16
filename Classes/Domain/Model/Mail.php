@@ -38,28 +38,61 @@ class Mail extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	protected $mail = '';
 
 	/**
-	 * @var \Balumedien\Clubms\Domain\Model\MailType
+	 * @var \Balumedien\Clubms\Domain\Model\ContactType
 	 */
-	protected $type = '';
+	protected $contactType = '';
 
 	/**
 	 * @var boolean
 	 */
 	protected $public = '';
 
-	/**
-	 * @var int
-	 */
-	protected $club = '';
+    /**
+     * @return string
+     */
+    public function getMail()
+    {
+        return $this->mail;
+    }
 
-	/**
-	 * @var int
-	 */
-	protected $club_section = '';
+    /**
+     * @param string $mail
+     */
+    public function setMail($mail)
+    {
+        $this->mail = $mail;
+    }
 
-	/**
-	 * @var int
-	 */
-	protected $person = '';
+    /**
+     * @return ContactType
+     */
+    public function getContactType()
+    {
+        return $this->contactType;
+    }
+
+    /**
+     * @param ContactType $contactType
+     */
+    public function setContactType($contactType)
+    {
+        $this->contactType = $contactType;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isPublic()
+    {
+        return $this->public;
+    }
+
+    /**
+     * @param bool $public
+     */
+    public function setPublic($public)
+    {
+        $this->public = $public;
+    }
 
 }
