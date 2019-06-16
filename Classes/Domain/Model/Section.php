@@ -33,20 +33,16 @@ namespace Balumedien\Clubms\Domain\Model;
 class Section extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 
 	/**
-	 * label
-	 *
 	 * @var string
 	 */
 	protected $label = '';
 
     /**
-     * Images
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference>
      */
     protected $images = NULL;
 
     /**
-     * Images
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\SectionPositionGroup>
      */
     protected $sectionPositionGroups = NULL;
@@ -69,86 +65,51 @@ class Section extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
         $this->sectionPositionGroups = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
     }
 
-	/**
-	 * Returns the label of the section
-	 * @return string
-	 */
-	public function getLabel() {
-		return $this->label;
-	}
-	
-	/**
-	 * Sets the label of the section
-	 * @param string
-	 * @return void
-	 */
-	public function setLabel($label) {
-		$this->label = $label;
-	}
-
     /**
-     * Adds a Image to the Section
-     * @param \TYPO3\CMS\Extbase\Domain\Model\FileReference $image
+     * @return string
      */
-    public function addImage(\TYPO3\CMS\Extbase\Domain\Model\FileReference $image) {
-        $this->images->attach($image);
-    }
-	
-	/**
-	 * Returns the image
-	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference> $images
-	 */
-	public function getImages() {
-			return $this->images;
-	}
-
-    /**
-     * Removes a Image from the Section
-     * @param \TYPO3\CMS\Extbase\Domain\Model\FileReference $image
-     */
-    public function removeImage(\TYPO3\CMS\Extbase\Domain\Model\FileReference $image) {
-        $this->images->detach($image);
-    }
-
-	/**
-	 * Sets the image
-	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference> $images
-	 * @return void
-	 */
-	public function setImages($images) {
-			$this->images = $images;
-	}
-
-    /**
-     * Adds a SectionPositionGroup to the Section
-     * @param \Balumedien\Clubms\Domain\Model\SectionPositionGroup $sectionPositionGroup
-     */
-    public function addSectionPositionGroup(\TYPO3\CMS\Extbase\Domain\Model\FileReference $sectionPositionGroup) {
-        $this->sectionPositionGroups->attach($sectionPositionGroup);
+    public function getLabel()
+    {
+        return $this->label;
     }
 
     /**
-     * Returns the image
-     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\SectionPositionGroup> $sectionPositionGroups
+     * @param string $label
      */
-    public function getSectionPositionGroups() {
+    public function setLabel($label)
+    {
+        $this->label = $label;
+    }
+
+    /**
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+     */
+    public function getImages()
+    {
+        return $this->images;
+    }
+
+    /**
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $images
+     */
+    public function setImages($images)
+    {
+        $this->images = $images;
+    }
+
+    /**
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+     */
+    public function getSectionPositionGroups()
+    {
         return $this->sectionPositionGroups;
     }
 
     /**
-     * Removes a Image from the Section
-     * @param \TYPO3\CMS\Extbase\Domain\Model\FileReference $sectionPositionGroup
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $sectionPositionGroups
      */
-    public function removeSectionPositionGroup(\Balumedien\Clubms\Domain\Model\SectionPositionGroup $sectionPositionGroup) {
-        $this->sectionPositionGroups->detach($sectionPositionGroup);
-    }
-
-    /**
-     * Sets the sectionPositionGroups
-     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\SectionPositionGroup> $sectionPositionGroups
-     * @return void
-     */
-    public function setSectionPositionGroup($sectionPositionGroups) {
+    public function setSectionPositionGroups($sectionPositionGroups)
+    {
         $this->sectionPositionGroups = $sectionPositionGroups;
     }
 
