@@ -35,111 +35,127 @@ class Competition extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * @var string
 	 */
-	protected $name = '';
+	protected $name;
 	
 	/**
 	 * @var string
 	 */
-	protected $short = '';
+	protected $nameShort;
 	
 	/**
 	 * @var \Balumedien\Clubms\Domain\Model\Section
 	 */
-	protected $section = NULL;
+	protected $section;
 	
 	/**
 	 * @var \Balumedien\Clubms\Domain\Model\AgeLevel
 	 */
-	protected $ageLevel = NULL;
+	protected $ageLevel;
 	
 	/**
 	 * @var string
 	 */
-	protected $competitionType = '';
+	protected $competitionType;
 
-	/**
-	 * Returns the name of the competition
-	 * @return string $name
-	 */
-	public function getName() {
-		return $this->name;
-	}
-	
-	/**
-	 * Sets the name of the competition
-	 * @param string $name
-	 * @return void
-	 */
-	public function setName($name) {
-		$this->name = $name;
-	}
+    /**
+     * @var boolean
+     */
+    protected $detailLink;
 
-	/**
-	 * Returns the short name of the competition
-	 * @return string $short 
-	 */
-	public function getShort() {
-		return $this->short;
-	}
-	
-	/**
-	 * Sets the short name of the competition
-	 * @param string $short
-	 * @return void
-	 */
-	public function setShort($short) {
-		$this->short = $short;
-	}
+    /**
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
 
-	/**
-	 * Returns the section of the competition
-	 * @return \Balumedien\Clubms\Domain\Model\Section 
-	 */
-	public function getSection() {
-		return $this->section;
-	}
-	
-	/**
-	 * Sets the section of the competition
-	 * @param \Balumedien\Clubms\Domain\Model\Section $section
-	 * @return void
-	 */
-	public function setSection(\Balumedien\Clubms\Domain\Model\Section $section) {
-		$this->section = $section;
-	}
+    /**
+     * @param string $name
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
 
-	/**
-	 * Returns the ageLevel of the competition
-	 * @return \Balumedien\Clubms\Domain\Model\AgeLevel
-	 */
-	public function getAgeLevel() {
-		return $this->ageLevel;
-	}
-	
-	/**
-	 * Sets the ageLevel of the competition
-	 * @param \Balumedien\Clubms\Domain\Model\AgeLevel $ageLevel
-	 * @return void
-	 */
-	public function setAgeLevel(\Balumedien\Clubms\Domain\Model\AgeLevel $ageLevel) {
-		$this->ageLevel = $ageLevel;
-	}
+    /**
+     * @return string
+     */
+    public function getNameShort()
+    {
+        return $this->nameShort;
+    }
 
-	/**
-	 * Returns the type of the competition
-	 * @return string 
-	 */
-	public function getCompetitionType() {
-		return $this->competitionType;
-	}
-	
-	/**
-	 * Sets the type of the competition
-	 * @param string $competitionType
-	 * @return void
-	 */
-	public function setCompetitionType($competitionType) {
-		$this->competitionType = $competitionType;
-	}
+    /**
+     * @param string $nameShort
+     */
+    public function setNameShort($nameShort)
+    {
+        $this->nameShort = $nameShort;
+    }
+
+    /**
+     * @return Section
+     */
+    public function getSection()
+    {
+        return $this->section;
+    }
+
+    /**
+     * @param Section $section
+     */
+    public function setSection($section)
+    {
+        $this->section = $section;
+    }
+
+    /**
+     * @return AgeLevel
+     */
+    public function getAgeLevel()
+    {
+        return $this->ageLevel;
+    }
+
+    /**
+     * @param AgeLevel $ageLevel
+     */
+    public function setAgeLevel($ageLevel)
+    {
+        $this->ageLevel = $ageLevel;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCompetitionType()
+    {
+        return $this->competitionType;
+    }
+
+    /**
+     * @param string $competitionType
+     */
+    public function setCompetitionType($competitionType)
+    {
+        $this->competitionType = $competitionType;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isDetailLink()
+    {
+        return $this->detailLink;
+    }
+
+    /**
+     * @param bool $detailLink
+     */
+    public function setDetailLink($detailLink)
+    {
+        $this->detailLink = $detailLink;
+    }
 
 }
