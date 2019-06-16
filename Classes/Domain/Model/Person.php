@@ -462,4 +462,212 @@ class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
         $this->job = $job;
     }
 
+    /**
+     * @return string
+     */
+    public function getCharacteristics()
+    {
+        return $this->characteristics;
+    }
+
+    /**
+     * @param string $characteristics
+     */
+    public function setCharacteristics($characteristics)
+    {
+        $this->characteristics = $characteristics;
+    }
+
+    /**
+     * @return string
+     */
+    public function getHobbies()
+    {
+        return $this->hobbies;
+    }
+
+    /**
+     * @param string $hobbies
+     */
+    public function setHobbies($hobbies)
+    {
+        $this->hobbies = $hobbies;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFavoriteDish()
+    {
+        return $this->favoriteDish;
+    }
+
+    /**
+     * @param string $favoriteDish
+     */
+    public function setFavoriteDish($favoriteDish)
+    {
+        $this->favoriteDish = $favoriteDish;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFavoriteDrink()
+    {
+        return $this->favoriteDrink;
+    }
+
+    /**
+     * @param string $favoriteDrink
+     */
+    public function setFavoriteDrink($favoriteDrink)
+    {
+        $this->favoriteDrink = $favoriteDrink;
+    }
+
+    /**
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+     */
+    public function getAddresses()
+    {
+        return $this->addresses;
+    }
+
+    /**
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $addresses
+     */
+    public function setAddresses($addresses)
+    {
+        $this->addresses = $addresses;
+    }
+
+    /**
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+     */
+    public function getPhones()
+    {
+        return $this->phones;
+    }
+
+    /**
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $phones
+     */
+    public function setPhones($phones)
+    {
+        $this->phones = $phones;
+    }
+
+    /**
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+     */
+    public function getMails()
+    {
+        return $this->mails;
+    }
+
+    /**
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $mails
+     */
+    public function setMails($mails)
+    {
+        $this->mails = $mails;
+    }
+
+    /**
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+     */
+    public function getUrls()
+    {
+        return $this->urls;
+    }
+
+    /**
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $urls
+     */
+    public function setUrls($urls)
+    {
+        $this->urls = $urls;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isHiddenBirthday()
+    {
+        return $this->hiddenBirthday;
+    }
+
+    /**
+     * @param bool $hiddenBirthday
+     */
+    public function setHiddenBirthday($hiddenBirthday)
+    {
+        $this->hiddenBirthday = $hiddenBirthday;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isDetailLink()
+    {
+        return $this->detailLink;
+    }
+
+    /**
+     * @param bool $detailLink
+     */
+    public function setDetailLink($detailLink)
+    {
+        $this->detailLink = $detailLink;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isProfilePlayer()
+    {
+        return $this->profilePlayer;
+    }
+
+    /**
+     * @param bool $profilePlayer
+     */
+    public function setProfilePlayer($profilePlayer)
+    {
+        $this->profilePlayer = $profilePlayer;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isProfileOfficial()
+    {
+        return $this->profileOfficial;
+    }
+
+    /**
+     * @param bool $profileOfficial
+     */
+    public function setProfileOfficial($profileOfficial)
+    {
+        $this->profileOfficial = $profileOfficial;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isProfileReferee()
+    {
+        return $this->profileReferee;
+    }
+
+    /**
+     * @param bool $profileReferee
+     */
+    public function setProfileReferee($profileReferee)
+    {
+        $this->profileReferee = $profileReferee;
+    }
+
 }
