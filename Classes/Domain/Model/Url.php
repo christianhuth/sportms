@@ -35,47 +35,64 @@ class Url extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * @var string
 	 */
-	protected $url = '';
+	protected $url;
 
 	/**
 	 * @var int
 	 */
-	protected $type = '';
+	protected $type;
 
 	/**
 	 * @var boolean
 	 */
-	protected $public = '';
+	protected $public;
 
-	/**
-	 * @var int
-	 */
-	protected $club = '';
+    /**
+     * @return string
+     */
+    public function getUrl()
+    {
+        return $this->url;
+    }
 
-	/**
-	 * @var int
-	 */
-	protected $club_section = '';
+    /**
+     * @param string $url
+     */
+    public function setUrl($url)
+    {
+        $this->url = $url;
+    }
 
-	/**
-	 * @var int
-	 */
-	protected $person = '';
+    /**
+     * @return int
+     */
+    public function getType()
+    {
+        return $this->type;
+    }
 
-	/**
-	 * Returns the url
-	 * @return string $url
-	 */
-	public function getUrl() {
-		return $this->url;
-	}
+    /**
+     * @param int $type
+     */
+    public function setType($type)
+    {
+        $this->type = $type;
+    }
 
-	/**
-	 * Sets the url
-	 * @param string $url
-	 */
-	public function setUrl($url) {
-		$this->url = $url;
-	}
+    /**
+     * @return bool
+     */
+    public function isPublic()
+    {
+        return $this->public;
+    }
+
+    /**
+     * @param bool $public
+     */
+    public function setPublic($public)
+    {
+        $this->public = $public;
+    }
 
 }
