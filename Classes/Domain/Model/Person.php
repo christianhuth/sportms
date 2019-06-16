@@ -350,4 +350,100 @@ class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
         $this->weight = $weight;
     }
 
+    /**
+     * @return string
+     */
+    public function getHeight()
+    {
+        return $this->height;
+    }
+
+    /**
+     * @param string $height
+     */
+    public function setHeight($height)
+    {
+        $this->height = $height;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSizeOfShoe()
+    {
+        return $this->sizeOfShoe;
+    }
+
+    /**
+     * @param string $sizeOfShoe
+     */
+    public function setSizeOfShoe($sizeOfShoe)
+    {
+        $this->sizeOfShoe = $sizeOfShoe;
+    }
+
+    /**
+     * @return int
+     */
+    public function getFooter()
+    {
+        return $this->footer;
+    }
+
+    /**
+     * @param int $footer
+     */
+    public function setFooter($footer)
+    {
+        $this->footer = $footer;
+    }
+
+    /**
+     * @return int
+     */
+    public function getHander()
+    {
+        return $this->hander;
+    }
+
+    /**
+     * @param int $hander
+     */
+    public function setHander($hander)
+    {
+        $this->hander = $hander;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFamilyStatus()
+    {
+        return $this->familyStatus;
+    }
+
+    /**
+     * @param string $familyStatus
+     */
+    public function setFamilyStatus($familyStatus)
+    {
+        $this->familyStatus = $familyStatus;
+    }
+
+    /**
+     * @return string
+     */
+    public function getGraduation()
+    {
+        return $this->graduation;
+    }
+
+    /**
+     * @param string $graduation
+     */
+    public function setGraduation($graduation)
+    {
+        $this->graduation = $graduation;
+    }
+
 }
