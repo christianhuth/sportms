@@ -49,4 +49,52 @@ class AgeGroup extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 */
 	protected $ageLevels = '';
 
+    /**
+     * @return string
+     */
+    public function getLabel()
+    {
+        return $this->label;
+    }
+
+    /**
+     * @param string $label
+     */
+    public function setLabel($label)
+    {
+        $this->label = $label;
+    }
+
+    /**
+     * @return string
+     */
+    public function getShort()
+    {
+        return $this->short;
+    }
+
+    /**
+     * @param string $short
+     */
+    public function setShort($short)
+    {
+        $this->short = $short;
+    }
+
+    /**
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+     */
+    public function getAgeLevels()
+    {
+        return $this->ageLevels;
+    }
+
+    /**
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $ageLevels
+     */
+    public function setAgeLevels($ageLevels)
+    {
+        $this->ageLevels = $ageLevels;
+    }
+
 }
