@@ -35,26 +35,64 @@ class ClubSectionOfficial extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	/**
 	 * @var \Balumedien\Clubms\Domain\Model\Person
 	 */
-	protected $person = '';
+	protected $person;
 
 	/**
 	 * @var int
 	 */
-	protected $startdate = '';
+	protected $startdate;
 
     /**
      * @var int
      */
-    protected $enddate = '';
-
-	/**
-	 * @var \Balumedien\Clubms\Domain\Model\ClubSectionOfficialJob
-	 */
-	protected $club_section_official_job = '';
+    protected $enddate;
 
     /**
-     * @var int
+     * @return Person
      */
-    protected $ordering = '';
+    public function getPerson()
+    {
+        return $this->person;
+    }
+
+    /**
+     * @param Person $person
+     */
+    public function setPerson($person)
+    {
+        $this->person = $person;
+    }
+
+    /**
+     * @return int
+     */
+    public function getStartdate()
+    {
+        return $this->startdate;
+    }
+
+    /**
+     * @param int $startdate
+     */
+    public function setStartdate($startdate)
+    {
+        $this->startdate = $startdate;
+    }
+
+    /**
+     * @return int
+     */
+    public function getEnddate()
+    {
+        return $this->enddate;
+    }
+
+    /**
+     * @param int $enddate
+     */
+    public function setEnddate($enddate)
+    {
+        $this->enddate = $enddate;
+    }
 
 }
