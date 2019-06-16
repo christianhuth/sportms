@@ -35,45 +35,43 @@ class ClubSectionMembers extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity 
 	/**
 	 * @var int
 	 */
-	protected $members = '';
+	protected $members;
 
     /**
      * @var int
      */
-    protected $date = '';
- 
-	/**
-	 * Returns the members
-	 * @return int $members
-	 */
-	public function getMembers() {
-		return $this->members;
-	}
+    protected $date;
 
-	/**
-	 * Sets the members
-	 * @param int $members
-	 * @return void
-	 */
-	public function setMembers($members) {
-		$this->members = $members;
-	}
- 
-	/**
-	 * Returns the date
-	 * @return int $date
-	 */
-	public function getDate() {
-		return $this->date;
-	}
+    /**
+     * @return int
+     */
+    public function getMembers()
+    {
+        return $this->members;
+    }
 
-	/**
-	 * Sets the date
-	 * @param int $date
-	 * @return void
-	 */
-	public function setDate($date) {
-		$this->date = $date;
-	}
+    /**
+     * @param int $members
+     */
+    public function setMembers($members)
+    {
+        $this->members = $members;
+    }
+
+    /**
+     * @return int
+     */
+    public function getDate()
+    {
+        return $this->date;
+    }
+
+    /**
+     * @param int $date
+     */
+    public function setDate($date)
+    {
+        $this->date = $date;
+    }
 
 }
