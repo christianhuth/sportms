@@ -254,4 +254,100 @@ class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
         $this->nickname = $nickname;
     }
 
+    /**
+     * @return int
+     */
+    public function getDateOfBirth()
+    {
+        return $this->dateOfBirth;
+    }
+
+    /**
+     * @param int $dateOfBirth
+     */
+    public function setDateOfBirth($dateOfBirth)
+    {
+        $this->dateOfBirth = $dateOfBirth;
+    }
+
+    /**
+     * @return int
+     */
+    public function getZodiacSign()
+    {
+        return $this->zodiacSign;
+    }
+
+    /**
+     * @param int $zodiacSign
+     */
+    public function setZodiacSign($zodiacSign)
+    {
+        $this->zodiacSign = $zodiacSign;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPlaceOfBirth()
+    {
+        return $this->placeOfBirth;
+    }
+
+    /**
+     * @param string $placeOfBirth
+     */
+    public function setPlaceOfBirth($placeOfBirth)
+    {
+        $this->placeOfBirth = $placeOfBirth;
+    }
+
+    /**
+     * @return int
+     */
+    public function getNationality()
+    {
+        return $this->nationality;
+    }
+
+    /**
+     * @param int $nationality
+     */
+    public function setNationality($nationality)
+    {
+        $this->nationality = $nationality;
+    }
+
+    /**
+     * @return string
+     */
+    public function getGender()
+    {
+        return $this->gender;
+    }
+
+    /**
+     * @param string $gender
+     */
+    public function setGender($gender)
+    {
+        $this->gender = $gender;
+    }
+
+    /**
+     * @return string
+     */
+    public function getWeight()
+    {
+        return $this->weight;
+    }
+
+    /**
+     * @param string $weight
+     */
+    public function setWeight($weight)
+    {
+        $this->weight = $weight;
+    }
+
 }
