@@ -33,10 +33,24 @@ namespace Balumedien\Clubms\Domain\Model;
 class OfficialJob extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 
 	/**
-	 * label
-	 *
 	 * @var string
 	 */
 	protected $label = '';
+
+    /**
+     * @return string
+     */
+    public function getLabel()
+    {
+        return $this->label;
+    }
+
+    /**
+     * @param string $label
+     */
+    public function setLabel($label)
+    {
+        $this->label = $label;
+    }
 
 }
