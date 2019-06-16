@@ -446,4 +446,20 @@ class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
         $this->graduation = $graduation;
     }
 
+    /**
+     * @return string
+     */
+    public function getJob()
+    {
+        return $this->job;
+    }
+
+    /**
+     * @param string $job
+     */
+    public function setJob($job)
+    {
+        $this->job = $job;
+    }
+
 }
