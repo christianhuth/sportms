@@ -31,47 +31,110 @@ namespace Balumedien\Clubms\Domain\Model;
  * TeamSeasonSquadMember
  */
 class TeamSeasonSquadMember extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
+
+    /**
+     * @var \Balumedien\Clubms\Domain\Model\Person
+     */
+    protected $person;
+
+    /**
+     * @var \Balumedien\Clubms\Domain\Model\SectionPosition
+     */
+    protected $position;
 	
 	/**
-	 * @var int
+	 * @var string
 	 */
-	protected $squadNumber = '';
+	protected $squadNumber;
 
-	/**
-	 * @var \Balumedien\Clubms\Domain\Model\Person
-	 */
-	protected $person = '';
+    /**
+     * @var boolean
+     */
+	protected $newSigning;
 
-	/**
-	 * Returns the squadNumber
-	 * @return int
-	 */
-	public function getSquadNumber() {
-		return $this->squadNumber;
-	}
+    /**
+     * @var boolean
+     */
+	protected $leaving;
 
-	/**
-	 * Sets the squadNumber
-	 * @param int
-	 */
-	public function setSquadNumber($squadNumber) {
-		$this->squadNumber = $squadNumber;
-	}
+    /**
+     * @return Person
+     */
+    public function getPerson()
+    {
+        return $this->person;
+    }
 
-	/**
-	 * Returns the person
-	 * @return \Balumedien\Clubms\Domain\Model\Person $person
-	 */
-	public function getPerson() {
-		return $this->person;
-	}
+    /**
+     * @param Person $person
+     */
+    public function setPerson($person)
+    {
+        $this->person = $person;
+    }
 
-	/**
-	 * Sets the person
-	 * @param \Balumedien\Clubms\Domain\Model\Person $person
-	 */
-	public function setPerson(\Balumedien\Clubms\Domain\Model\Person $person) {
-		$this->person = $person;
-	}
+    /**
+     * @return SectionPosition
+     */
+    public function getPosition()
+    {
+        return $this->position;
+    }
+
+    /**
+     * @param SectionPosition $position
+     */
+    public function setPosition($position)
+    {
+        $this->position = $position;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSquadNumber()
+    {
+        return $this->squadNumber;
+    }
+
+    /**
+     * @param string $squadNumber
+     */
+    public function setSquadNumber($squadNumber)
+    {
+        $this->squadNumber = $squadNumber;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isNewSigning()
+    {
+        return $this->newSigning;
+    }
+
+    /**
+     * @param bool $newSigning
+     */
+    public function setNewSigning($newSigning)
+    {
+        $this->newSigning = $newSigning;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isLeaving()
+    {
+        return $this->leaving;
+    }
+
+    /**
+     * @param bool $leaving
+     */
+    public function setLeaving($leaving)
+    {
+        $this->leaving = $leaving;
+    }
 
 }
