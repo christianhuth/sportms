@@ -31,18 +31,49 @@ namespace Balumedien\Clubms\Domain\Model;
  * ClubOfficialJob
  */
 class ClubOfficialJob extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
-	
-	/**
-	 * @var \Balumedien\Clubms\Domain\Model\Club
-	 * @lazy
-	 */
-	protected $club = '';
+
+    /**
+     * @var \Balumedien\Clubms\Domain\Model\OfficialJob
+     */
+    protected $officialJob;
 	
 	/**
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\ClubOfficial>
 	 * @lazy
 	 * @cascade remove
 	 */
-	protected $club_official = '';
+	protected $clubOfficials;
+
+    /**
+     * @return OfficialJob
+     */
+    public function getOfficialJob()
+    {
+        return $this->officialJob;
+    }
+
+    /**
+     * @param OfficialJob $officialJob
+     */
+    public function setOfficialJob($officialJob)
+    {
+        $this->officialJob = $officialJob;
+    }
+
+    /**
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+     */
+    public function getClubOfficials()
+    {
+        return $this->clubOfficials;
+    }
+
+    /**
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $clubOfficials
+     */
+    public function setClubOfficials($clubOfficials)
+    {
+        $this->clubOfficials = $clubOfficials;
+    }
 
 }
