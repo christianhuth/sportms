@@ -35,41 +35,106 @@ class Phone extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * @var string
 	 */
-	protected $areaCode = '';
+	protected $areaCode;
 
     /**
      * @var string
      */
-    protected $callingNumber = '';
+    protected $callingNumber;
 
     /**
 	 * @var string
      */
-    protected $internationalAreaCode = '';
+    protected $internationalAreaCode;
 	
 	/**
 	 * @var int
 	 */
-	protected $type = '';
+	protected $type;
 	
 	/**
 	 * @var boolen
 	 */
-	protected $public = '';
+	protected $public;
 
-	/**
-	 * @var int
-	 */
-	protected $club = '';
+    /**
+     * @return string
+     */
+    public function getAreaCode()
+    {
+        return $this->areaCode;
+    }
 
-	/**
-	 * @var int
-	 */
-	protected $club_section = '';
+    /**
+     * @param string $areaCode
+     */
+    public function setAreaCode($areaCode)
+    {
+        $this->areaCode = $areaCode;
+    }
 
-	/**
-	 * @var int
-	 */
-	protected $person = '';
+    /**
+     * @return string
+     */
+    public function getCallingNumber()
+    {
+        return $this->callingNumber;
+    }
+
+    /**
+     * @param string $callingNumber
+     */
+    public function setCallingNumber($callingNumber)
+    {
+        $this->callingNumber = $callingNumber;
+    }
+
+    /**
+     * @return string
+     */
+    public function getInternationalAreaCode()
+    {
+        return $this->internationalAreaCode;
+    }
+
+    /**
+     * @param string $internationalAreaCode
+     */
+    public function setInternationalAreaCode($internationalAreaCode)
+    {
+        $this->internationalAreaCode = $internationalAreaCode;
+    }
+
+    /**
+     * @return int
+     */
+    public function getType()
+    {
+        return $this->type;
+    }
+
+    /**
+     * @param int $type
+     */
+    public function setType($type)
+    {
+        $this->type = $type;
+    }
+
+    /**
+     * @return boolen
+     */
+    public function getPublic()
+    {
+        return $this->public;
+    }
+
+    /**
+     * @param boolen $public
+     */
+    public function setPublic($public)
+    {
+        $this->public = $public;
+    }
 
 }
