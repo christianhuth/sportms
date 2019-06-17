@@ -42,12 +42,12 @@ class TeamSeasonPractice extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity 
 	protected $day;
 
 	/**
-	 * @var	string
+	 * @var	int
 	 */
 	protected $timeStart;
 
 	/**
-	 * @var string
+	 * @var int
 	 */
 	protected $timeEnd;
 
@@ -61,74 +61,84 @@ class TeamSeasonPractice extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity 
 	 */
 	protected $annotation;
 
-	/**
-	 * @return string
-	 */
-	public function getDay() {
-		return $this->day;
-	}
+    /**
+     * @return string
+     */
+    public function getDay()
+    {
+        return $this->day;
+    }
 
-	/**
-	 * @param string $day
-	 */
-	public function setDay($day) {
-		$this->day = $day;
-	}
+    /**
+     * @param string $day
+     */
+    public function setDay($day)
+    {
+        $this->day = $day;
+    }
 
-	/**
-	 * @return string
-	 */
-	public function getTimeStart() {
-		return $this->timeStart;
-	}
+    /**
+     * @return int
+     */
+    public function getTimeStart()
+    {
+        return $this->timeStart;
+    }
 
-	/**
-	 * @param string $timeStart
-	 */
-	public function setTimeStart($timeStart) {
-		$this->timeStart = $timeStart;
-	}
+    /**
+     * @param int $timeStart
+     */
+    public function setTimeStart($timeStart)
+    {
+        $this->timeStart = $timeStart;
+    }
 
-	/**
-	 * @return string
-	 */
-	public function getTimeEnd() {
-		return $this->timeEnd;
-	}
+    /**
+     * @return int
+     */
+    public function getTimeEnd()
+    {
+        return $this->timeEnd;
+    }
 
-	/**
-	 * @param string $timeEnd
-	 */
-	public function setTimeEnd($timeEnd) {
-		$this->timeEnd = $timeEnd;
-	}
+    /**
+     * @param int $timeEnd
+     */
+    public function setTimeEnd($timeEnd)
+    {
+        $this->timeEnd = $timeEnd;
+    }
 
-	/**
-	 * @return ClubVenue
-	 */
-	public function getClubVenue() {
-		return $this->clubVenue;
-	}
+    /**
+     * @return ClubVenue
+     */
+    public function getClubVenue()
+    {
+        return $this->clubVenue;
+    }
 
-	/**
-	 * @param ClubVenue $clubVenue
-	 */
-	public function setClubVenue($clubVenue) {
-		$this->clubVenue = $clubVenue;
-	}
+    /**
+     * @param ClubVenue $clubVenue
+     */
+    public function setClubVenue($clubVenue)
+    {
+        $this->clubVenue = $clubVenue;
+    }
 
-	/**
-	 * @return string
-	 */
-	public function getAnnotation() {
-		return $this->annotation;
-	}
+    /**
+     * @return string
+     */
+    public function getAnnotation()
+    {
+        return $this->annotation;
+    }
 
-	/**
-	 * @param string $annotation
-	 */
-	public function setAnnotation($annotation) {
-		$this->annotation = $annotation;
-	}
+    /**
+     * @param string $annotation
+     */
+    public function setAnnotation($annotation)
+    {
+        $this->annotation = $annotation;
+    }
 
 }
