@@ -58,6 +58,11 @@ class Competition extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	protected $competitionType;
 
     /**
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\CompetitionSeason>
+     */
+	protected $competitionSeasons;
+
+    /**
      * @var boolean
      */
     protected $detailLink;
@@ -140,6 +145,22 @@ class Competition extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
     public function setCompetitionType($competitionType)
     {
         $this->competitionType = $competitionType;
+    }
+
+    /**
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+     */
+    public function getCompetitionSeasons()
+    {
+        return $this->competitionSeasons;
+    }
+
+    /**
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $competitionSeasons
+     */
+    public function setCompetitionSeasons($competitionSeasons)
+    {
+        $this->competitionSeasons = $competitionSeasons;
     }
 
     /**
