@@ -35,82 +35,89 @@ class Club extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * @var string
 	 */
-	protected $name = '';
+	protected $name;
 	
 	/**
 	 * @var string
 	 */
-	protected $colours = '';
+	protected $colours;
 	
 	/**
 	 * @var int
 	 */
-	protected $dateOfFounding = '';
+	protected $dateOfFounding;
 	
 	/**
 	 * @var int
 	 */
-	protected $yearOfFounding = '';
+	protected $yearOfFounding;
 	
 	/**
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\ClubMembers>
      * @lazy
 	 * @cascade remove
 	 */
-	protected $clubMembers = NULL;
+	protected $clubMembers;
 	
 	/**
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference>
      * @lazy
 	 */
-	protected $images = NULL;
+	protected $images;
 	
 	/**
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\Address>
 	 * @lazy
 	 * @cascade remove
 	 */
-	protected $addresses = NULL;
+	protected $addresses;
 	
 	/**
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\Phone>
 	 * @lazy
 	 * @cascade remove
 	 */
-	protected $phones = NULL;
+	protected $phones;
 	
 	/**
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\Mail>
 	 * @lazy
 	 * @cascade remove
 	 */
-	protected $mails = NULL;
+	protected $mails;
 	
 	/**
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\Url>
 	 * @lazy
 	 * @cascade remove
 	 */
-	protected $urls = NULL;
+	protected $urls;
+
+    /**
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\ClubGround>
+     * @lazy
+     * @cascade remove
+     */
+    protected $clubGrounds;
 	
 	/**
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\ClubSection>
      * @lazy
 	 * @cascade remove
 	 */
-	protected $clubSections = NULL;
+	protected $clubSections;
 	
 	/**
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\ClubOfficialJob>
 	 * @lazy
 	 * @cascade remove
 	 */
-	protected $club_official_job = '';
+	protected $clubOfficialJobs;
 
     /**
-	 * @var int
+	 * @var boolean
      */
-    protected $detailLink = '';
+    protected $detailLink;
 	
 	/**
 	 * __construct
@@ -129,163 +136,239 @@ class Club extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @return void
 	 */
 	protected function initStorageObjects(){
+        $this->clubMembers = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        $this->images = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        $this->addresses = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        $this->phones = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        $this->mails = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        $this->urls = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        $this->clubGrounds = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 		$this->clubSections = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+		$this->clubOfficialJobs = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 	}
 
-	/**
-	 * Returns the name
-	 * @return string $name
-	 */
-	public function getName() {
-		return $this->name;
-	}
-	
-	/**
-	 * Sets the name
-	 * @param string $name
-	 * @return void
-	 */
-	public function setName($name) {
-		$this->name = $name;
-	}
-	
-	/**
-	 * Returns the colours of the club
-	 * @return string
-	 */
-	public function getColours() {
-		return $this->colours;
-	}
-	
-	/**
-	 * Sets the colours of the club
-	 * @param string $colours
-	 * @return void
-	 */
-	public function setColours($colours) {
-		$this->colours = $colours;
-	}
-	
-	/**
-	 * Returns the dateOfFounding
-	 * @return int $dateOfFounding
-	 */
-	public function getDateOfFounding() {
-		return $this->dateOfFounding;
-	}
-	
-	/**
-	 * Sets the dateOfFounding
-	 * @param int $dateOfFounding
-	 * @return void
-	 */
-	public function setDateOfFounding($dateOfFounding) {
-		$this->dateOfFounding = $dateOfFounding;
-	}
-	
-	/**
-	 * Returns the yearOfFounding
-	 * @return int $yearOfFounding
-	 */
-	public function getYearOfFounding() {
-		return $this->yearOfFounding;
-	}
-	
-	/**
-	 * Sets the yearOfFounding
-	 * @param int $yearOfFounding
-	 * @return void
-	 */
-	public function setYearOfFounding($yearOfFounding) {
-		$this->yearOfFounding = $yearOfFounding;
-	}
-	
-	/**
-	 * Returns the members of the club
-	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\ClubMembers>
-	 */
-	public function getClubMembers() {
-		return $this->clubMembers;
-	}
-	
-	/**
-	 * Set the members of the club
-	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\ClubMembers> $clubMembers
-	 * @return void
-	 */
-	public function setClubMembers(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $clubMembers) {
-		return $this->clubMembers = $clubMembers;
-	}
-	
-	/**
-	 * Returns the image
-	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference> $images
-	 */
-	public function getImages() {
-			return $this->images;
-	}
+    /**
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
 
-	/**
-	 * Sets the image
-	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference> $images
-	 * @return void
-	 */
-	public function setImages($images) {
-			$this->images = $images;
-	}
-	
-	/**
-	 * Adds a ClubSection
-	 *
-	 * @param \Balumedien\Clubms\Domain\Model\ClubSection $clubSection
-	 * @return void
-	 */
-	public function addClubSection(\Balumedien\Clubms\Domain\Model\ClubSection $clubSection) {
-		$this->clubSections->attach($clubSection);
-	}
-	
-	/**
-	 * Removes a Image
-	 *
-	 * @param \Balumedien\Clubms\Domain\Model\ClubSection $clubSection The ClubSection to be removed
-	 * @return void
-	 */
-	public function removeClubSection(\Balumedien\Clubms\Domain\Model\ClubSection $clubSection) {
-		$this->clubSections->detach($clubSection);
-	}
-	
-	/**
-	 * Returns the sections of the club
-	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\ClubSection> $clubSections
-	 */
-	public function getClubSections() {
-		return $this->clubSections;
-	}
+    /**
+     * @param string $name
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
 
-	/**
-	 * Sets the sections of the club
-	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\ClubSection> $clubSections
-	 * @return void
-	 */
-	public function setClubSections($clubSections) {
-			$this->clubSections = $clubSections;
-	}
-	
-	/**
-	 * Returns the detailLink
-	 * @return int $detailLink
-	 */
-	public function getDetailLink() {
-		return $this->detailLink;
-	}
-	
-	/**
-	 * Sets the detailLink
-	 * @param int $detailLink
-	 * @return void
-	 */
-	public function setDetailLink($detailLink) {
-		$this->detailLink = $detailLink;
-	}
+    /**
+     * @return string
+     */
+    public function getColours()
+    {
+        return $this->colours;
+    }
+
+    /**
+     * @param string $colours
+     */
+    public function setColours($colours)
+    {
+        $this->colours = $colours;
+    }
+
+    /**
+     * @return int
+     */
+    public function getDateOfFounding()
+    {
+        return $this->dateOfFounding;
+    }
+
+    /**
+     * @param int $dateOfFounding
+     */
+    public function setDateOfFounding($dateOfFounding)
+    {
+        $this->dateOfFounding = $dateOfFounding;
+    }
+
+    /**
+     * @return int
+     */
+    public function getYearOfFounding()
+    {
+        return $this->yearOfFounding;
+    }
+
+    /**
+     * @param int $yearOfFounding
+     */
+    public function setYearOfFounding($yearOfFounding)
+    {
+        $this->yearOfFounding = $yearOfFounding;
+    }
+
+    /**
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+     */
+    public function getClubMembers()
+    {
+        return $this->clubMembers;
+    }
+
+    /**
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $clubMembers
+     */
+    public function setClubMembers($clubMembers)
+    {
+        $this->clubMembers = $clubMembers;
+    }
+
+    /**
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+     */
+    public function getImages()
+    {
+        return $this->images;
+    }
+
+    /**
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $images
+     */
+    public function setImages($images)
+    {
+        $this->images = $images;
+    }
+
+    /**
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+     */
+    public function getAddresses()
+    {
+        return $this->addresses;
+    }
+
+    /**
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $addresses
+     */
+    public function setAddresses($addresses)
+    {
+        $this->addresses = $addresses;
+    }
+
+    /**
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+     */
+    public function getPhones()
+    {
+        return $this->phones;
+    }
+
+    /**
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $phones
+     */
+    public function setPhones($phones)
+    {
+        $this->phones = $phones;
+    }
+
+    /**
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+     */
+    public function getMails()
+    {
+        return $this->mails;
+    }
+
+    /**
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $mails
+     */
+    public function setMails($mails)
+    {
+        $this->mails = $mails;
+    }
+
+    /**
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+     */
+    public function getUrls()
+    {
+        return $this->urls;
+    }
+
+    /**
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $urls
+     */
+    public function setUrls($urls)
+    {
+        $this->urls = $urls;
+    }
+
+    /**
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+     */
+    public function getClubGrounds()
+    {
+        return $this->clubGrounds;
+    }
+
+    /**
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $clubGrounds
+     */
+    public function setClubGrounds($clubGrounds)
+    {
+        $this->clubGrounds = $clubGrounds;
+    }
+
+    /**
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+     */
+    public function getClubSections()
+    {
+        return $this->clubSections;
+    }
+
+    /**
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $clubSections
+     */
+    public function setClubSections($clubSections)
+    {
+        $this->clubSections = $clubSections;
+    }
+
+    /**
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+     */
+    public function getClubOfficialJobs()
+    {
+        return $this->clubOfficialJobs;
+    }
+
+    /**
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $clubOfficialJobs
+     */
+    public function setClubOfficialJobs($clubOfficialJobs)
+    {
+        $this->clubOfficialJobs = $clubOfficialJobs;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isDetailLink()
+    {
+        return $this->detailLink;
+    }
+
+    /**
+     * @param bool $detailLink
+     */
+    public function setDetailLink($detailLink)
+    {
+        $this->detailLink = $detailLink;
+    }
 
 }
