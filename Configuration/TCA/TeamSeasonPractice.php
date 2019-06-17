@@ -3,7 +3,7 @@ if (!defined ('TYPO3_MODE')) {
 	die ('Access denied.');
 }
 
-$GLOBALS['TCA']['tx_clubms_domain_model_team_season_practice'] = array(
+$GLOBALS['TCA']['tx_clubms_domain_model_teamseasonpractice'] = array(
 	'ctrl' => array(
 		'crdate' => 'crdate',
 		'cruser_id' => 'cruser_id',
@@ -114,7 +114,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_team_season_practice'] = array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_team_season_practice.club_venue',
 			'config' => array(
-				'foreign_table' => 'tx_clubms_domain_model_club_venue',
+				'foreign_table' => 'tx_clubms_domain_model_clubvenue',
 				'foreign_table_where' => 'ORDER BY name ASC',
 				'items' => Array (
 					Array("", 0),

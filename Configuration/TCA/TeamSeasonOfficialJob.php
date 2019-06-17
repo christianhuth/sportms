@@ -3,7 +3,7 @@ if (!defined ('TYPO3_MODE')) {
 	die ('Access denied.');
 }
 
-$GLOBALS['TCA']['tx_clubms_domain_model_team_season_official_job'] = array(
+$GLOBALS['TCA']['tx_clubms_domain_model_teamseasonofficialjob'] = array(
 	'ctrl' => array(
 		'crdate' => 'crdate',
 		'cruser_id' => 'cruser_id',
@@ -93,7 +93,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_team_season_official_job'] = array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_team_season_official_job.position',
 			'config' => array(
-				'foreign_table' => 'tx_clubms_domain_model_official_job',
+				'foreign_table' => 'tx_clubms_domain_model_officialjob',
 				'foreign_table_where' => 'ORDER BY tx_clubms_domain_model_official_job.label ASC',
 				'maxItems' => 1,
 				'renderType' => 'selectSingle',
@@ -110,7 +110,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_team_season_official_job'] = array(
 					'useSortable' => 1,
 				),
 				'foreign_field' => 'team_season_official_job',
-				'foreign_table' => 'tx_clubms_domain_model_team_season_official',
+				'foreign_table' => 'tx_clubms_domain_model_teamseasonofficial',
 				'type' => 'inline',
 			),
 		),

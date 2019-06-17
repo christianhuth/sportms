@@ -3,7 +3,7 @@ if (!defined ('TYPO3_MODE')) {
 	die ('Access denied.');
 }
 
-$GLOBALS['TCA']['tx_clubms_domain_model_club_section_official_job'] = array(
+$GLOBALS['TCA']['tx_clubms_domain_model_clubsectionofficialjob'] = array(
 	'ctrl' => array(
 		'crdate' => 'crdate',
 		'cruser_id' => 'cruser_id',
@@ -93,8 +93,8 @@ $GLOBALS['TCA']['tx_clubms_domain_model_club_section_official_job'] = array(
             'exclude' => 1,
             'label' => '',
             'config' => array(
-				'foreign_table' => 'tx_clubms_domain_model_official_job',
-				'foreign_table_where' => 'ORDER BY tx_clubms_domain_model_official_job.label ASC',
+				'foreign_table' => 'tx_clubms_domain_model_officialjob',
+				'foreign_table_where' => 'ORDER BY label ASC',
 				'maxItems' => 1,
 				'renderType' => 'selectSingle',
                 'size' => 1,
@@ -110,7 +110,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_club_section_official_job'] = array(
 					'useSortable' => 1,
 				),
 				'foreign_field' => 'club_section_official_job',
-				'foreign_table' => 'tx_clubms_domain_model_club_section_official',
+				'foreign_table' => 'tx_clubms_domain_model_clubsectionofficial',
 				'type' => 'inline',
             ),
         ),

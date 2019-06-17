@@ -3,7 +3,7 @@ if (!defined ('TYPO3_MODE')) {
 	die ('Access denied.');
 }
 
-$GLOBALS['TCA']['tx_clubms_domain_model_team_season'] = array(
+$GLOBALS['TCA']['tx_clubms_domain_model_competitionseason'] = array(
 	'ctrl' => array(
 		'crdate' => 'crdate',
 		'cruser_id' => 'cruser_id',
@@ -107,7 +107,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_team_season'] = array(
 					'levelLinksPosition' => 'bottom',
 				),
 				'foreign_field' => 'team_season',
-				'foreign_table' => 'tx_clubms_domain_model_team_season_practice',
+				'foreign_table' => 'tx_clubms_domain_model_teamseasonpractice',
 				'type' => 'inline',
 			),
 		),
@@ -120,7 +120,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_team_season'] = array(
 					'useSortable' => 1,
 				),
 				'foreign_field' => 'team_season',
-				'foreign_table' => 'tx_clubms_domain_model_team_season_official_job',
+				'foreign_table' => 'tx_clubms_domain_model_teamseasonofficialjob',
 				'type' => 'inline',
 			),
 		),
@@ -133,7 +133,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_team_season'] = array(
 					'useSortable' => TRUE,
 				),
 				'foreign_field' => 'team_season',
-				'foreign_table' => 'tx_clubms_domain_model_team_season_squad_member',
+				'foreign_table' => 'tx_clubms_domain_model_teamseasonsquadmember',
 				'type' => 'inline',
 			),
 		),

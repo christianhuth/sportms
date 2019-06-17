@@ -385,19 +385,6 @@ $GLOBALS['TCA']['tx_clubms_domain_model_person'] = array(
             ),
         ),
 		
-		'person_sections' => array(
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_person.sections',
-			'config' => array(
-				'appearance' => array(
-					'levelLinksPosition' => 'bottom',
-					'useSortable' => 1,
-				),
-				'foreign_field' => 'person',
-				'foreign_table' => 'tx_clubms_domain_model_person_section',
-				'type' => 'inline',
-			),
-		),
-		
 		'hidden' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_person.visibility_dataset',
