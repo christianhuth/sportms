@@ -3,7 +3,7 @@ if (!defined ('TYPO3_MODE')) {
 	die ('Access denied.');
 }
 
-$GLOBALS['TCA']['tx_clubms_domain_model_club_ground'] = array(
+$GLOBALS['TCA']['tx_clubms_domain_model_clubground'] = array(
     'ctrl' => array(
         'crdate' => 'crdate',
         'cruser_id' => 'cruser_id',
@@ -200,7 +200,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_club_ground'] = array(
 				),
 				'eval' => 'required',
 				'foreign_field' => 'club_ground',
-				'foreign_table' => 'tx_clubms_domain_model_club_venue',
+				'foreign_table' => 'tx_clubms_domain_model_clubvenue',
 				'type' => 'inline',
 			),
 		),
