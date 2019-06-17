@@ -36,60 +36,61 @@ class ClubSection extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @var \Balumedien\Clubms\Domain\Model\Club
 	 * @lazy
 	 */
-	protected $club = '';
+	protected $club;
 	
 	/**
 	 * @var \Balumedien\Clubms\Domain\Model\Section
 	 * @lazy
 	 */
-	protected $section = '';
+	protected $section;
 	
 	/**
-	 * Images
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference>
+     * @lazy
 	 */
-	protected $images = NULL;
+	protected $images;
 	
 	/**
-	 * @var int
-	 * @lazy
+	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\ClubSectionMembers>
+     * @lazy
+     * @cascade remove
 	 */
-	protected $member = '';
+	protected $clubSectionMembers;
 	
 	/**
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\Address>
 	 * @lazy
 	 * @cascade remove
 	 */
-	protected $address = '';
+	protected $addresses;
 	
 	/**
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\Phone>
 	 * @lazy
 	 * @cascade remove
 	 */
-	protected $phone = '';
+	protected $phones;
 	
 	/**
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\Mail>
 	 * @lazy
 	 * @cascade remove
 	 */
-	protected $mail = '';
+	protected $mails;
 	
 	/**
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\Url>
 	 * @lazy
 	 * @cascade remove
 	 */
-	protected $url = '';
+	protected $urls;
 	
 	/**
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\ClubSectionOfficialJob>
 	 * @lazy
 	 * @cascade remove
 	 */
-	protected $clubSectionOfficialJobs = '';
+	protected $clubSectionOfficialJobs;
 	
 	/**
 	 * __construct
@@ -109,109 +110,156 @@ class ClubSection extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 */
 	protected function initStorageObjects(){
 		$this->images = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-		$this->address = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-		$this->phone = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-		$this->mail = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-		$this->url = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        $this->clubSectionMembers = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+		$this->addresses = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+		$this->phones = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+		$this->mails = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+		$this->urls = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 		$this->clubSectionOfficialJobs = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 	}
-	
-	/**
-	 * Returns the section of the clubsection
-	 * @return \Balumedien\Clubms\Domain\Model\Section
-	 */
-	public function getSection() {
-		return $this->section;
-	}
-	
-	/**
-	 * Sets the section of the clubsection
-	 * @param \Balumedien\Clubms\Domain\Model\Section $section
-	 * @return void
-	 */
-	public function setSection($section) {
-		$this->section = $section;
-	}
-	
-	/**
-	 * Returns the image
-	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference> $images
-	 */
-	public function getImages() {
-			return $this->images;
-	}
-	
-	/**
-	 * Sets the image
-	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference> $images
-	 * @return void
-	 */
-	public function setImages($images) {
-			$this->images = $images;
-	}
-	
-	/**
-	 * Returns the addresses
-	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\Address> $address
-	 */
-	public function getAddress() {
-			return $this->address;
-	}
-	
-	/**
-	 * Sets the addresses
-	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\Address> $address
-	 */
-	public function setAddress($address) {
-			$this->address = $address;
-	}
-	
-	/**
-	 * Returns the phones
-	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\Phone> $phone
-	 */
-	public function Phone() {
-			return $this->phone;
-	}
-	
-	/**
-	 * Sets the phones
-	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\Phone> $phone
-	 */
-	public function setPhone($phone) {
-			$this->phone = $phone;
-	}
-	
-	/**
-	 * Returns the mails
-	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\Mail> $mail
-	 */
-	public function getMail() {
-			return $this->mail;
-	}
-	
-	/**
-	 * Sets the mails
-	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\Mail> $mail
-	 */
-	public function setMail($mail) {
-			$this->mail = $mail;
-	}
-	
-	/**
-	 * Returns the urls
-	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\url> $url
-	 */
-	public function getUrl() {
-			return $this->url;
-	}
-	
-	/**
-	 * Sets the urls
-	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\Url> $url
-	 */
-	public function setUrl($url) {
-			$this->url = $url;
-	}
+
+    /**
+     * @return Club
+     */
+    public function getClub()
+    {
+        return $this->club;
+    }
+
+    /**
+     * @param Club $club
+     */
+    public function setClub($club)
+    {
+        $this->club = $club;
+    }
+
+    /**
+     * @return Section
+     */
+    public function getSection()
+    {
+        return $this->section;
+    }
+
+    /**
+     * @param Section $section
+     */
+    public function setSection($section)
+    {
+        $this->section = $section;
+    }
+
+    /**
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+     */
+    public function getImages()
+    {
+        return $this->images;
+    }
+
+    /**
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $images
+     */
+    public function setImages($images)
+    {
+        $this->images = $images;
+    }
+
+    /**
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+     */
+    public function getClubSectionMembers()
+    {
+        return $this->clubSectionMembers;
+    }
+
+    /**
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $clubSectionMembers
+     */
+    public function setClubSectionMembers($clubSectionMembers)
+    {
+        $this->clubSectionMembers = $clubSectionMembers;
+    }
+
+    /**
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+     */
+    public function getAddresses()
+    {
+        return $this->addresses;
+    }
+
+    /**
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $addresses
+     */
+    public function setAddresses($addresses)
+    {
+        $this->addresses = $addresses;
+    }
+
+    /**
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+     */
+    public function getPhones()
+    {
+        return $this->phones;
+    }
+
+    /**
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $phones
+     */
+    public function setPhones($phones)
+    {
+        $this->phones = $phones;
+    }
+
+    /**
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+     */
+    public function getMails()
+    {
+        return $this->mails;
+    }
+
+    /**
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $mails
+     */
+    public function setMails($mails)
+    {
+        $this->mails = $mails;
+    }
+
+    /**
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+     */
+    public function getUrls()
+    {
+        return $this->urls;
+    }
+
+    /**
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $urls
+     */
+    public function setUrls($urls)
+    {
+        $this->urls = $urls;
+    }
+
+    /**
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+     */
+    public function getClubSectionOfficialJobs()
+    {
+        return $this->clubSectionOfficialJobs;
+    }
+
+    /**
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $clubSectionOfficialJobs
+     */
+    public function setClubSectionOfficialJobs($clubSectionOfficialJobs)
+    {
+        $this->clubSectionOfficialJobs = $clubSectionOfficialJobs;
+    }
 	
 }
