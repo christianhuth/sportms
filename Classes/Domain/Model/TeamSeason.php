@@ -2,9 +2,6 @@
 
 namespace Balumedien\Clubms\Domain\Model;
 
-use \TYPO3\CMS\Extbase\Persistence\ObjectStorage;
-use \TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
-
 /***************************************************************
  *
  *  Copyright notice
@@ -33,32 +30,32 @@ use \TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 /**
  * TeamSeason
  */
-class TeamSeason extends AbstractEntity {
+class TeamSeason extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 
 	/**
 	 * @var \Balumedien\Clubms\Domain\Model\Team
 	 */
-	protected $team = '';
+	protected $team;
 
 	/**
 	 * @var \Balumedien\Clubms\Domain\Model\Season
 	 */
-	protected $season = '';
+	protected $season;
 
 	/**
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\TeamSeasonPractice>
 	 */
-	protected $teamSeasonPractices = NULL;
+	protected $teamSeasonPractices;
 
 	/**
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\TeamSeasonOfficialJob>
 	 */
-	protected $teamSeasonOfficialJobs = NULL;
+	protected $teamSeasonOfficialJobs;
 
 	/**
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\TeamSeasonSquadMember>
 	 */
-	protected $teamSeasonSquadMembers = NULL;
+	protected $teamSeasonSquadMembers;
 
 	/**
 	 * @var	boolean
@@ -82,115 +79,105 @@ class TeamSeason extends AbstractEntity {
 	 * @return void
 	 */
 	protected function initStorageObjects() {
-		$this->teamSeasonPractices = new ObjectStorage();
-		$this->teamSeasonOfficialJobs = new ObjectStorage();
-		$this->teamSeasonSquadMembers = new ObjectStorage();
+		$this->teamSeasonPractices = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+		$this->teamSeasonOfficialJobs = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+		$this->teamSeasonSquadMembers = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 	}
 
-	/**
-	 * Returns the team
-	 * @return \Balumedien\Clubms\Domain\Model\Team $team
-	 */
-	public function getTeam() {
-		return $this->team;
-	}
+    /**
+     * @return Team
+     */
+    public function getTeam()
+    {
+        return $this->team;
+    }
 
-	/**
-	 * Sets the team
-	 *
-	 * @param \Balumedien\Clubms\Domain\Model\Team $team
-	 */
-	public function setTeam($team) {
-		$this->team = $team;
-	}
+    /**
+     * @param Team $team
+     */
+    public function setTeam($team)
+    {
+        $this->team = $team;
+    }
 
-	/**
-	 * Returns the season
-	 * @return \Balumedien\Clubms\Domain\Model\Season $season
-	 */
-	public function getSeason() {
-		return $this->season;
-	}
+    /**
+     * @return Season
+     */
+    public function getSeason()
+    {
+        return $this->season;
+    }
 
-	/**
-	 * Sets the season
-	 *
-	 * @param \Balumedien\Clubms\Domain\Model\Season $season
-	 */
-	public function setSeason($season) {
-		$this->season = $season;
-	}
+    /**
+     * @param Season $season
+     */
+    public function setSeason($season)
+    {
+        $this->season = $season;
+    }
 
-	/**
-	 * Adds a teamSeasonPratice to the teamSeasonPractices
-	 * @param \Balumedien\Clubms\Domain\Model\TeamSeasonPractice $teamSeasonPractice
-	 */
-	public function addTeamSeasonPractice($teamSeasonPractice) {
-		$this->teamSeasonPractices->attach($teamSeasonPractice);
-	}
+    /**
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+     */
+    public function getTeamSeasonPractices()
+    {
+        return $this->teamSeasonPractices;
+    }
 
-	/**
-	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
-	 */
-	public function getTeamSeasonPractices() {
-		return $this->teamSeasonPractices;
-	}
+    /**
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $teamSeasonPractices
+     */
+    public function setTeamSeasonPractices($teamSeasonPractices)
+    {
+        $this->teamSeasonPractices = $teamSeasonPractices;
+    }
 
-	/**
-	 * Removes a teamSeason from the teamSeasons
-	 * @param \Balumedien\Clubms\Domain\Model\TeamSeasonPractice $teamSeasonPractice
-	 */
-	public function removeTeamSeasonPractice($teamSeasonPractice) {
-		$this->teamSeasonPractices->detach($teamSeasonPractice);
-	}
+    /**
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+     */
+    public function getTeamSeasonOfficialJobs()
+    {
+        return $this->teamSeasonOfficialJobs;
+    }
 
-	/**
-	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $teamSeasonPractices
-	 */
-	public function setTeamSeasonPractices($teamSeasonPractices) {
-		$this->teamSeasonPractices = $teamSeasonPractices;
-	}
+    /**
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $teamSeasonOfficialJobs
+     */
+    public function setTeamSeasonOfficialJobs($teamSeasonOfficialJobs)
+    {
+        $this->teamSeasonOfficialJobs = $teamSeasonOfficialJobs;
+    }
 
-	/**
-	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
-	 */
-	public function getTeamSeasonOfficialJobs() {
-		return $this->teamSeasonOfficialJobs;
-	}
+    /**
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+     */
+    public function getTeamSeasonSquadMembers()
+    {
+        return $this->teamSeasonSquadMembers;
+    }
 
-	/**
-	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $teamSeasonOfficialJobs
-	 */
-	public function setTeamSeasonOfficialJobs($teamSeasonOfficialJobs) {
-		$this->teamSeasonOfficialJobs = $teamSeasonOfficialJobs;
-	}
+    /**
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $teamSeasonSquadMembers
+     */
+    public function setTeamSeasonSquadMembers($teamSeasonSquadMembers)
+    {
+        $this->teamSeasonSquadMembers = $teamSeasonSquadMembers;
+    }
 
-	/**
-	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
-	 */
-	public function getTeamSeasonSquadMembers() {
-		return $this->teamSeasonSquadMembers;
-	}
+    /**
+     * @return bool
+     */
+    public function isDetailLink()
+    {
+        return $this->detailLink;
+    }
 
-	/**
-	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $teamSeasonSquadMembers
-	 */
-	public function setTeamSeasonSquadMembers($teamSeasonSquadMembers) {
-		$this->teamSeasonSquadMembers = $teamSeasonSquadMembers;
-	}
-
-	/**
-	 * @return bool
-	 */
-	public function isDetailLink() {
-		return $this->detailLink;
-	}
-
-	/**
-	 * @param bool $detailLink
-	 */
-	public function setDetailLink($detailLink) {
-		$this->detailLink = $detailLink;
-	}
+    /**
+     * @param bool $detailLink
+     */
+    public function setDetailLink($detailLink)
+    {
+        $this->detailLink = $detailLink;
+    }
 
 }
