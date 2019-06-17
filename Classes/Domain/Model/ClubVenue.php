@@ -32,71 +32,257 @@ namespace Balumedien\Clubms\Domain\Model;
  */
 class ClubVenue extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 
-	/**
-	 * @var string
-	 */
-	protected $name = '';
+    /**
+     * @var \Balumedien\Clubms\Domain\Model\ClubGround
+     */
+    protected $clubGround;
+
+    /**
+     * @var string
+     */
+    protected $name ;
+
+    /**
+     * @var string
+     */
+    protected $description;
 	
 	/**
 	 * @var \Balumedien\Clubms\Domain\Model\Address
 	 */
-	protected $address = '';
-	
-	/**
-	 * @var \Balumedien\Clubms\Domain\Model\Club
-	 * @lazy
-	 */
-	protected $club = '';
- 
-	/**
-	 * Returns the name
-	 * @return string $name
-	 */
-	public function getName() {
-		return $this->name;
-	}
+	protected $address;
 
-	/**
-	 * Sets the name
-	 * @param string $name
-	 * @return void
-	 */
-	public function setName($name) {
-		$this->name = $name;
-	}
-	
     /**
-     * Returns the address
-     * @return \Balumedien\Clubms\Domain\Model\Address $address
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference>
+     * @lazy
      */
-    public function getAddress() {
+    protected $images;
+
+    /**
+     * @var boolean
+     */
+    protected $clubOwned;
+
+    /**
+     * @var int
+     */
+    protected $clubOwnedSince;
+
+    /**
+     * @var int
+     */
+    protected $yearOfBuilding;
+
+    /**
+     * @var int
+     */
+    protected $dateOfBuilding;
+
+    /**
+     * @var string
+     */
+    protected $dimensions;
+
+    /**
+     * @var string
+     */
+    protected $surface;
+
+    /**
+     * @var int
+     */
+    protected $spectatorCapacity;
+
+    /**
+     * @return ClubGround
+     */
+    public function getClubGround()
+    {
+        return $this->clubGround;
+    }
+
+    /**
+     * @param ClubGround $clubGround
+     */
+    public function setClubGround($clubGround)
+    {
+        $this->clubGround = $clubGround;
+    }
+
+    /**
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * @param string $name
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * @param string $description
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+    }
+
+    /**
+     * @return Address
+     */
+    public function getAddress()
+    {
         return $this->address;
     }
 
     /**
-     * Sets the address
-	 * @param \Balumedien\Clubms\Domain\Model\Address $address
-     * @return void
+     * @param Address $address
      */
-    public function setAddress($address) {
+    public function setAddress($address)
+    {
         $this->address = $address;
-    }
-	
-    /**
-     * Returns the club
-     * @return \Balumedien\Clubms\Domain\Model\Club $club
-     */
-    public function getClub() {
-        return $this->club;
     }
 
     /**
-     * Sets the club
-	 * @param \Balumedien\Clubms\Domain\Model\Club $club
-     * @return void
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
      */
-    public function setClub($club) {
-        $this->club = $club;
+    public function getImages()
+    {
+        return $this->images;
+    }
+
+    /**
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $images
+     */
+    public function setImages($images)
+    {
+        $this->images = $images;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isClubOwned()
+    {
+        return $this->clubOwned;
+    }
+
+    /**
+     * @param bool $clubOwned
+     */
+    public function setClubOwned($clubOwned)
+    {
+        $this->clubOwned = $clubOwned;
+    }
+
+    /**
+     * @return int
+     */
+    public function getClubOwnedSince()
+    {
+        return $this->clubOwnedSince;
+    }
+
+    /**
+     * @param int $clubOwnedSince
+     */
+    public function setClubOwnedSince($clubOwnedSince)
+    {
+        $this->clubOwnedSince = $clubOwnedSince;
+    }
+
+    /**
+     * @return int
+     */
+    public function getYearOfBuilding()
+    {
+        return $this->yearOfBuilding;
+    }
+
+    /**
+     * @param int $yearOfBuilding
+     */
+    public function setYearOfBuilding($yearOfBuilding)
+    {
+        $this->yearOfBuilding = $yearOfBuilding;
+    }
+
+    /**
+     * @return int
+     */
+    public function getDateOfBuilding()
+    {
+        return $this->dateOfBuilding;
+    }
+
+    /**
+     * @param int $dateOfBuilding
+     */
+    public function setDateOfBuilding($dateOfBuilding)
+    {
+        $this->dateOfBuilding = $dateOfBuilding;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDimensions()
+    {
+        return $this->dimensions;
+    }
+
+    /**
+     * @param string $dimensions
+     */
+    public function setDimensions($dimensions)
+    {
+        $this->dimensions = $dimensions;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSurface()
+    {
+        return $this->surface;
+    }
+
+    /**
+     * @param string $surface
+     */
+    public function setSurface($surface)
+    {
+        $this->surface = $surface;
+    }
+
+    /**
+     * @return int
+     */
+    public function getSpectatorCapacity()
+    {
+        return $this->spectatorCapacity;
+    }
+
+    /**
+     * @param int $spectatorCapacity
+     */
+    public function setSpectatorCapacity($spectatorCapacity)
+    {
+        $this->spectatorCapacity = $spectatorCapacity;
     }
 
 }
