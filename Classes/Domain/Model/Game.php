@@ -66,6 +66,7 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\GameReferee>
+     * @cascade remove
      */
     protected $gameReferees;
 
