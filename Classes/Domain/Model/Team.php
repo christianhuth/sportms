@@ -32,40 +32,41 @@ namespace Balumedien\Clubms\Domain\Model;
  */
 class Team extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 
+    /**
+     * @var \Balumedien\Clubms\Domain\Model\Club
+     */
+    protected $club;
+
+    /**
+     * @var \Balumedien\Clubms\Domain\Model\Section
+     */
+    protected $section;
+
+    /**
+     * @var \Balumedien\Clubms\Domain\Model\AgeLevel
+     */
+    protected $ageLevel;
+
 	/**
 	 * @var string
 	 */
-	protected $name = '';
+	protected $name;
 
 	/**
-	 * @var \Balumedien\Clubms\Domain\Model\Club
+	 * @var boolean
 	 */
-	protected $club = '';
-
-	/**
-	 * @var \Balumedien\Clubms\Domain\Model\Section
-	 */
-	protected $section = '';
-
-	/**
-	 * @var \Balumedien\Clubms\Domain\Model\AgeLevel
-	 */
-	protected $ageLevel = '';
-
-	/**
-	 * @var int
-	 */
-	protected $dummy = '';
+	protected $dummy;
 
     /**
-	 * @var int
+	 * @var boolean
      */
-    protected $detailLink = '';
+    protected $detailLink;
 
 	/**
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\TeamSeason>
+     * @cascade remove
 	 */
-	protected $teamSeasons = '';
+	protected $teamSeasons;
 	
 	public function __construct() {
         //Do not remove the next line: It would break the functionality
@@ -84,137 +85,116 @@ class Team extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
         $this->teamSeasons = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
     }
 
-	/**
-	 * Returns the name
-	 * @return string $name
-	 */
-	public function getName() {
-		return $this->name;
-	}
-
-	/**
-	 * Sets the name
-	 * @param string $name
-	 * @return void
-	 */
-	public function setName($name) {
-		$this->name = $name;
-	}
-
-	/**
-	 * Returns the club
-	 * @return \Balumedien\Clubms\Domain\Model\Club
-	 */
-	public function getClub() {
-		return $this->club;
-	}
-
-	/**
-	 * Sets the club
-	 * @param \Balumedien\Clubms\Domain\Model\Club $club
-	 * @return void
-	 */
-	public function setClub(\Balumedien\Clubms\Domain\Model\Club $club) {
-		$this->club = $club;
-	}
-
-	/**
-	 * Returns the section
-	 * @return \Balumedien\Clubms\Domain\Model\Section
-	 */
-	public function getSection() {
-		return $this->section;
-	}
-
-	/**
-	 * Sets the section
-	 * @param \Balumedien\Clubms\Domain\Model\Section $section
-	 * @return void
-	 */
-	public function setSection(\Balumedien\Clubms\Domain\Model\Section $section) {
-		$this->section = $section;
-	}
-
-	/**
-	 * Returns the ageLevel
-	 * @return \Balumedien\Clubms\Domain\Model\Section
-	 */
-	public function getAgeLevel() {
-		return $this->ageLevel;
-	}
-
-	/**
-	 * Sets the ageLevel
-	 * @param \Balumedien\Clubms\Domain\Model\AgeLevel $ageLevel
-	 * @return void
-	 */
-	public function setAgeLevel(\Balumedien\Clubms\Domain\Model\AgeLevel $ageLevel) {
-		$this->ageLevel = $ageLevel;
-	}
-
     /**
-     * Adds a teamSeason to the teamSeasons
-     * @param \Balumedien\Clubms\Domain\Model\TeamSeason $teamSeason
+     * @return Club
      */
-    public function addTeamSeason(\Balumedien\Clubms\Domain\Model\TeamSeason $teamSeason) {
-        $this->teamSeasons->attach($teamSeason);
+    public function getClub()
+    {
+        return $this->club;
     }
 
-	/**
-	 * Returns the teamSeasons
-	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\TeamSeason>
-	 */
-	public function getTeamSeasons() {
-		return $this->teamSeasons;
-	}
-
     /**
-     * Removes a teamSeason from the teamSeasons
-     * @param \Balumedien\Clubms\Domain\Model\TeamSeason $teamSeason
+     * @param Club $club
      */
-    public function removeTeamSeason(\Balumedien\Clubms\Domain\Model\TeamSeason $teamSeason) {
-        $this->teamSeasons->detach($teamSeason);
+    public function setClub($club)
+    {
+        $this->club = $club;
     }
 
-	/**
-	 * Sets the teamSeasons
-	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\TeamSeason> $teamSeasons
-	 */
-	public function setTeamSeasons(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $teamSeasons) {
-		$this->teamSeasons = $teamSeasons;
-	}
+    /**
+     * @return Section
+     */
+    public function getSection()
+    {
+        return $this->section;
+    }
 
     /**
-     * @return int
+     * @param Section $section
      */
-    public function getDummy()
+    public function setSection($section)
+    {
+        $this->section = $section;
+    }
+
+    /**
+     * @return AgeLevel
+     */
+    public function getAgeLevel()
+    {
+        return $this->ageLevel;
+    }
+
+    /**
+     * @param AgeLevel $ageLevel
+     */
+    public function setAgeLevel($ageLevel)
+    {
+        $this->ageLevel = $ageLevel;
+    }
+
+    /**
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * @param string $name
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isDummy()
     {
         return $this->dummy;
     }
 
     /**
-     * @param int $dummy
+     * @param bool $dummy
      */
     public function setDummy($dummy)
     {
         $this->dummy = $dummy;
     }
-	
-	/**
-	 * Returns the detailLink
-	 * @return int $detailLink
-	 */
-	public function getDetailLink() {
-		return $this->detailLink;
-	}
-	
-	/**
-	 * Sets the detailLink
-	 * @param int $detailLink
-	 * @return void
-	 */
-	public function setDetailLink($detailLink) {
-		$this->detailLink = $detailLink;
-	}
+
+    /**
+     * @return bool
+     */
+    public function isDetailLink()
+    {
+        return $this->detailLink;
+    }
+
+    /**
+     * @param bool $detailLink
+     */
+    public function setDetailLink($detailLink)
+    {
+        $this->detailLink = $detailLink;
+    }
+
+    /**
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+     */
+    public function getTeamSeasons()
+    {
+        return $this->teamSeasons;
+    }
+
+    /**
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $teamSeasons
+     */
+    public function setTeamSeasons($teamSeasons)
+    {
+        $this->teamSeasons = $teamSeasons;
+    }
 
 }
