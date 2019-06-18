@@ -90,6 +90,12 @@ $GLOBALS['TCA']['tx_clubms_domain_model_agelevel'] = array(
 				'renderType' => 'inputDateTime',
 			),
 		),
+
+		'age_group' => array (
+            'config' => array(
+                'type' => 'passthrough',
+            ),
+        ),
 		
 		'label' => array(
 			'exclude' => 1,
