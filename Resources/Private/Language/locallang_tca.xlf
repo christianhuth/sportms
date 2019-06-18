@@ -128,6 +128,15 @@
 			<trans-unit id="tx_clubms_domain_model_game.competition">
 				<source>Wettbewerb</source>
 			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_game.game_referees">
+				<source>Schiedsrichter</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_game.tab_information">
+				<source>Allgemeine Informationen</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_game.tab_referees">
+				<source>Schiedsrichter</source>
+			</trans-unit>
 
 
 			<!-- Domain Model RefereeJob -->

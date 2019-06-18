@@ -23,10 +23,12 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
 		'versioningWS' => TRUE,
 	),
 	'interface' => array(
-		'showRecordFieldList' => 'season, competition',
+		'showRecordFieldList' => '',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'season, competition'),
+		'1' => array('showitem' => '--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_information, season, competition,
+		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_referees, game_referees,
+		                            '),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -118,6 +120,19 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
                 'renderType' => 'selectSingle',
                 'size' => 1,
                 'type' => 'select',
+            ),
+        ),
+
+        'game_referees' => array(
+            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.game_referees',
+            'config' => array(
+                'appearance' => array(
+                    'levelLinksPosition' => 'bottom',
+                    'useSortable' => 1,
+                ),
+                'foreign_field' => 'game',
+                'foreign_table' => 'tx_clubms_domain_model_gamereferee',
+                'type' => 'inline',
             ),
         ),
 		
