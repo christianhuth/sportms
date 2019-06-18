@@ -31,20 +31,6 @@
 			</trans-unit>
 			
 			
-			<trans-unit id="tx_clubms_domain_model_agegroup">
-				<source>Altersgruppe</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_agegroup.label">
-				<source>Bezeichnung</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_agegroup.short">
-				<source>Kurzform</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_agegroup.agelevel">
-				<source>Altersstufen</source>
-			</trans-unit>
-			
-			
 			<trans-unit id="tx_clubms_domain_model_agelevel">
 				<source>Altersstufe</source>
 			</trans-unit>

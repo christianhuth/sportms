@@ -4,6 +4,7 @@
 		<header/>
 		<body>
 
+            <!-- Domain Model AgeGroup -->
 			<trans-unit id="tx_clubms_domain_model_agegroup">
 				<source>Altersgruppe</source>
 			</trans-unit>
@@ -15,6 +16,17 @@
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_agegroup.age_levels">
 				<source>Altersstufen</source>
+			</trans-unit>
+
+            <!-- Domain Model AgeLevel -->
+			<trans-unit id="tx_clubms_domain_model_agelevel">
+				<source>Altersstufe</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_agelevel.label">
+				<source>Bezeichnung</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_agelevel.short">
+				<source>Kurzform</source>
 			</trans-unit>
 
 		</body>
