@@ -112,7 +112,6 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
                 'foreign_table' => 'tx_clubms_domain_model_competition',
                 'foreign_table_where' => 'ORDER BY name DESC',
                 'items' => Array (
-                    # TODO: "Bitte wählen" nach LOCALLANG auslagern
                     Array("Bitte wählen", ""),
                 ),
                 'maxItems' => 1,
