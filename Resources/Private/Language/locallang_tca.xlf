@@ -47,6 +47,39 @@
 			</trans-unit>
 
 
+			<!-- Domain Model Competition -->
+			<trans-unit id="tx_clubms_domain_model_competition">
+				<source>Wettbewerb</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_competition.section">
+				<source>Abteilung</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_competition.competition_type">
+				<source>Wettbewerbsart</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_competition.age_level">
+				<source>Altersstufe</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_competition.name">
+				<source>Wettbewerbsname</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_competition.name_short">
+				<source>Kurzform</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_competition.competition_seasons">
+				<source>Saison-Instanzen</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_competition.detail_link">
+				<source>Link auf Einzelansicht möglich?</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_competition.tab_seasons">
+				<source>Saison-Instanzen</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_competition.tab_visibility">
+				<source>Sichtbarkeit</source>
+			</trans-unit>
+
+
 			<!-- Domain Model CompetitionType -->
 			<trans-unit id="tx_clubms_domain_model_competitiontype">
 				<source>Wettbewerbsart</source>

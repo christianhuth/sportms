@@ -28,9 +28,9 @@ $GLOBALS['TCA']['tx_clubms_domain_model_competition'] = array(
 		'showRecordFieldList' => 'name, club, section, team_season',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'name, short, section, age_level, competition_type,
-									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_competition.season, competition_season,
-									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_competition.visibility, hidden, detail_link'),
+		'1' => array('showitem' => 'section, competition_type, age_level, name, name_short, 
+									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_competition.tab_season, competition_seasons,
+									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_competition.tab_visibility, hidden, detail_link'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -45,7 +45,13 @@ $GLOBALS['TCA']['tx_clubms_domain_model_competition'] = array(
 				'max' => 255,
 			)
 		),
-		
+        'hidden' => array(
+            'exclude' => 1,
+            'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.hidden',
+            'config' => array(
+                'type' => 'check',
+            ),
+        ),
 		'starttime' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.starttime',
@@ -82,10 +88,52 @@ $GLOBALS['TCA']['tx_clubms_domain_model_competition'] = array(
 				'renderType' => 'inputDateTime',
 			),
 		),
+
+        'section' => array(
+            'exclude' => 1,
+            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_competition.section',
+            'config' => array(
+                'foreign_table' => 'tx_clubms_domain_model_section',
+                'foreign_table_where' => 'ORDER BY label ASC',
+                'maxItems' => 1,
+                'minItems' => 1,
+                'renderType' => 'selectSingle',
+                'size' => 1,
+                'type' => 'select',
+            ),
+        ),
+
+        'competition_type' => array(
+            'exclude' => 1,
+            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_competition.competition_type',
+            'config' => array(
+                'foreign_table' => 'tx_clubms_domain_model_competitiontype',
+                'foreign_table_where' => 'ORDER BY label ASC',
+                'maxItems' => 1,
+                'minItems' => 1,
+                'renderType' => 'selectSingle',
+                'size' => 1,
+                'type' => 'select',
+            ),
+        ),
+
+        'age_level' => array(
+            'exclude' => 1,
+            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_competition.age_level',
+            'config' => array(
+                'foreign_table' => 'tx_clubms_domain_model_agelevel',
+                'foreign_table_where' => 'ORDER BY label ASC',
+                'maxItems' => 1,
+                'minItems' => 1,
+                'renderType' => 'selectSingle',
+                'size' => 1,
+                'type' => 'select',
+            ),
+        ),
 		
 		'name' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_competition.name',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_competition.name',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -93,69 +141,32 @@ $GLOBALS['TCA']['tx_clubms_domain_model_competition'] = array(
 			),
 		),
 		
-		'short' => array(
+		'name_short' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_competition.short',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_competition.name_short',
 			'config' => array(
 				'eval' => 'trim',
 				'size' => 255,
 				'type' => 'input',
 			),
 		),
-		
-		'section' => array(
-			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_competition.section',
-			'config' => array(
-				'foreign_table' => 'tx_clubms_domain_model_section',
-				'foreign_table_where' => 'ORDER BY label ASC',
-				'maxItems' => 1,
-				'minItems' => 1,
-				'renderType' => 'selectSingle',
-				'size' => 1,
-				'type' => 'select',
-			),
-		),
-		
-		'age_level' => array(
-			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_competition.age_level',
-			'config' => array(
-				'foreign_table' => 'tx_clubms_domain_model_agelevel',
-				'foreign_table_where' => 'ORDER BY label ASC',
-				'maxItems' => 1,
-				'minItems' => 1,
-				'renderType' => 'selectSingle',
-				'size' => 1,
-				'type' => 'select',
-			),
-		),
-		
-		'competition_type' => array(
-			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_competition_type',
-			'config' => array(
-				'foreign_table' => 'tx_clubms_domain_model_competitiontype',
-				'foreign_table_where' => 'ORDER BY label ASC',
-				'maxItems' => 1,
-				'minItems' => 1,
-				'renderType' => 'selectSingle',
-				'size' => 1,
-				'type' => 'select',
-			),
-		),
-		
-		'hidden' => array(
-			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_competition.visibility_dataset',
-			'config' => array(
-				'type' => 'check',
-			),
-		),
+
+        'competition_seasons' => array(
+            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_competition.competition_seasons',
+            'config' => array(
+                'appearance' => array(
+                    'levelLinksPosition' => 'bottom',
+                    'useSortable' => 1,
+                ),
+                'foreign_field' => 'competition',
+                'foreign_table' => 'tx_clubms_domain_model_competitionseason',
+                'type' => 'inline',
+            ),
+        ),
 		
 		'detail_link' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_competition.detail_link',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_competition.detail_link',
 			'config' => array(
 				'type' => 'check',
 			),

@@ -229,35 +229,6 @@
 			</trans-unit>
 			
 			
-			<trans-unit id="tx_clubms_domain_model_competition">
-				<source>Wettbewerb</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_competition.name">
-				<source>Wettbewerbsname</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_competition.short">
-				<source>Kurzform</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_competition.section">
-				<source>Abteilung</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_competition.age_level">
-				<source>Altersstufe</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_competition.competitionType">
-				<source>Wettbewerbstyp</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_competition.visibility">
-				<source>Sichtbarkeit</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_competition.visibility_dataset">
-				<source>Wettbewerb verbergen</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_competition.detail_link">
-				<source>Link auf Einzelansicht möglich?</source>
-			</trans-unit>
-			
-			
 			<trans-unit id="tx_clubms_domain_model_contact_type">
 				<source>Kontaktart</source>
 			</trans-unit>
