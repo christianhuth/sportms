@@ -55,7 +55,7 @@ CREATE TABLE tx_clubms_domain_model_agegroup (
 	
 	label varchar(255) DEFAULT NULL,
 	short varchar(255) DEFAULT NULL,
-	age_level_storage int(11) DEFAULT NULL,
+	age_levels int(11) DEFAULT NULL,
 	
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,

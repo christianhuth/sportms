@@ -109,7 +109,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_agegroup'] = array(
 			),
 		),
 		
-		'age_level_storage' => array(
+		'age_levels' => array(
 			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_agegroup.age_level',
 			'config' => array(
 				'appearance' => array(
