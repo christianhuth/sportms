@@ -18,7 +18,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_agegroup'] = array(
 		'iconfile' => 'EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_agegroup.svg',
 		'label' => 'label',
 		'searchFields' => '',
-		'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_agegroup',
+		'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_agegroup',
 		'tstamp' => 'tstamp',
 		'versioningWS' => TRUE,
     ),
@@ -26,7 +26,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_agegroup'] = array(
 		'showRecordFieldList' => 'label, short',
 	),
 	'types' => array(
-		'1' => array('showitem' => '--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_agegroup, label, short, age_levels'),
+		'1' => array('showitem' => 'label, short, age_levels'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
