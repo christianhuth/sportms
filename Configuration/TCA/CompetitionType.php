@@ -18,12 +18,12 @@ $GLOBALS['TCA']['tx_clubms_domain_model_competitiontype'] = array(
 		'iconfile' => 'EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_competition_type.svg',
 		'label' => 'label',
 		'searchFields' => '',
-		'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_competition_type',
+		'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_competitiontype',
 		'tstamp' => 'tstamp',
 		'versioningWS' => TRUE,
 	),
 	'interface' => array(
-		'showRecordFieldList' => 'name, club, section, team_season',
+		'showRecordFieldList' => 'label',
 	),
 	'types' => array(
 		'1' => array('showitem' => 'label'),
@@ -41,7 +41,13 @@ $GLOBALS['TCA']['tx_clubms_domain_model_competitiontype'] = array(
 				'max' => 255,
 			)
 		),
-		
+        'hidden' => array(
+            'exclude' => 1,
+            'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.hidden',
+            'config' => array(
+                'type' => 'check',
+            ),
+        ),
 		'starttime' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.starttime',
@@ -81,19 +87,11 @@ $GLOBALS['TCA']['tx_clubms_domain_model_competitiontype'] = array(
 		
 		'label' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_competition_type.label',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_competitiontype.label',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
 				'eval' => 'trim, required'
-			),
-		),
-		
-		'hidden' => array(
-			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_competition.visibility_dataset',
-			'config' => array(
-				'type' => 'check',
 			),
 		),
 		
