@@ -92,10 +92,10 @@ $GLOBALS['TCA']['tx_clubms_domain_model_clubofficialjob'] = array(
 		
 		'official_job' => array(
 			'exclude' => 1,
-			'label' => '',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubofficialjob.official_job',
 			'config' => array(
 				'foreign_table' => 'tx_clubms_domain_model_officialjob',
-				'foreign_table_where' => 'ORDER BY tx_clubms_domain_model_official_job.label ASC',
+				'foreign_table_where' => 'ORDER BY label ASC',
 				'maxItems' => 1,
 				'renderType' => 'selectSingle',
 				'size' => 1,
@@ -104,7 +104,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_clubofficialjob'] = array(
 		),
 		
 		'club_official' => array(
-			'label' => '',
+            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubofficialjob.club_official',
 			'config' => array(
 				'appearance' => array(
 					'levelLinksPosition' => 'bottom',

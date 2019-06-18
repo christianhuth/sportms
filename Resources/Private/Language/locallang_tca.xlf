@@ -4,6 +4,7 @@
 		<header/>
 		<body>
 
+
             <!-- Domain Model AgeGroup -->
 			<trans-unit id="tx_clubms_domain_model_agegroup">
 				<source>Altersgruppe</source>
@@ -18,6 +19,7 @@
 				<source>Altersstufen</source>
 			</trans-unit>
 
+
             <!-- Domain Model AgeLevel -->
 			<trans-unit id="tx_clubms_domain_model_agelevel">
 				<source>Altersstufe</source>
@@ -28,6 +30,19 @@
 			<trans-unit id="tx_clubms_domain_model_agelevel.short">
 				<source>Kurzform</source>
 			</trans-unit>
+
+
+			<!-- Domain Model ClubOfficialJob -->
+			<trans-unit id="tx_clubms_domain_model_clubofficialjob">
+				<source>Vereinsfunktionärstätigkeit</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_clubofficialjob.official_job">
+				<source>Funktionärsaufgabe</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_clubofficialjob.club_official">
+				<source>VereinsfunktionärIn</source>
+			</trans-unit>
+
 
 		</body>
 	</file>

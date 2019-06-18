@@ -132,14 +132,6 @@
 			</trans-unit>
 			
 			
-			<trans-unit id="tx_clubms_domain_model_club_official_job.position">
-				<source>Posten</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_club_official_job.person">
-				<source>Person</source>
-			</trans-unit>
-			
-			
 			<trans-unit id="tx_clubms_domain_model_club_section">
 				<source>Abteilung</source>
 			</trans-unit>
