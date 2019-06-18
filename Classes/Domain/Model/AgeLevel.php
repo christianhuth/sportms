@@ -32,15 +32,36 @@ namespace Balumedien\Clubms\Domain\Model;
  */
 class AgeLevel extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 
-	/**
-	 * @var string
-	 */
-	protected $label = '';
+    /**
+     * @var \Balumedien\Clubms\Domain\Model\AgeGroup
+     */
+    protected $ageGroup;
 
 	/**
 	 * @var string
 	 */
-	protected $short = '';
+	protected $label;
+
+	/**
+	 * @var string
+	 */
+	protected $short;
+
+    /**
+     * @return AgeGroup
+     */
+    public function getAgeGroup()
+    {
+        return $this->ageGroup;
+    }
+
+    /**
+     * @param AgeGroup $ageGroup
+     */
+    public function setAgeGroup($ageGroup)
+    {
+        $this->ageGroup = $ageGroup;
+    }
 
 	/**
 	 * Returns the label of the ageLevel
