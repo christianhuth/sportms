@@ -139,6 +139,21 @@
 			</trans-unit>
 
 
+			<!-- Domain Model GameReferee -->
+			<trans-unit id="tx_clubms_domain_model_gamereferee">
+				<source>Schiedsrichter</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_gamereferee.game">
+				<source>Spiel</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_gamereferee.person">
+				<source>Person</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_gamereferee.referee_job">
+				<source>Schiedsrichteraufgabe</source>
+			</trans-unit>
+
+
 			<!-- Domain Model RefereeJob -->
 			<trans-unit id="tx_clubms_domain_model_refereejob">
 				<source>Schiedsrichteraufgabe</source>
