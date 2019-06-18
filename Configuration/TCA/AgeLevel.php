@@ -21,7 +21,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_agelevel'] = array(
 		'label_alt' => 'short',
 		'label_alt_force' => TRUE,
 		'searchFields' => '',
-		'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_agelevel',
+		'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_agelevel',
 		'tstamp' => 'tstamp',
 		'versioningWS' => TRUE,
     ),
@@ -99,7 +99,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_agelevel'] = array(
 		
 		'label' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_agelevel.label',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_agelevel.label',
 			'config' => array(
 				'eval' => 'required, trim',
 				'size' => 255,
@@ -109,7 +109,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_agelevel'] = array(
 		
 		'short' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_agelevel.short',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_agelevel.short',
 			'config' => array(
 				'eval' => 'trim',
 				'size' => 255,
