@@ -794,12 +794,10 @@ CREATE TABLE tx_clubms_domain_model_person (
 	favorite_dish varchar(255) DEFAULT NULL,
 	favorite_drink varchar(255) DEFAULT NULL,
 	
-	address int(11) DEFAULT NULL,
-	phone int(11) DEFAULT NULL,
-	mail int(11) DEFAULT NULL,
-	url int(11) DEFAULT NULL,
-	
-	person_sections int(11) DEFAULT NULL,
+	addresses int(11) DEFAULT NULL,
+	phones int(11) DEFAULT NULL,
+	mails int(11) DEFAULT NULL,
+	urls int(11) DEFAULT NULL,
 	
 	hidden tinyint(4) unsigned DEFAULT '0' NOT NULL,
 	hidden_birthday tinyint(4) unsigned DEFAULT '0' NOT NULL,
@@ -807,8 +805,6 @@ CREATE TABLE tx_clubms_domain_model_person (
 	profile_player tinyint(4) unsigned DEFAULT '0' NOT NULL,
 	profile_official tinyint(4) unsigned DEFAULT '0' NOT NULL,
 	profile_referee tinyint(4) unsigned DEFAULT '0' NOT NULL,
-	
-	club_official int(11) DEFAULT NULL,
 	
 	ordering int(11) DEFAULT NULL,
 

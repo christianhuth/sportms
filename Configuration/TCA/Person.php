@@ -337,7 +337,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_person'] = array(
             ),
         ),
 		
-        'address' => array(
+        'addresses' => array(
             'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_person.addresses',
             'config' => array(
 				'appearance' => array(
@@ -349,7 +349,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_person'] = array(
             ),
         ),
 		
-        'phone' => array(
+        'phones' => array(
             'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_phone',
             'config' => array(
 				'appearance' => array(
@@ -361,7 +361,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_person'] = array(
             ),
         ),
 		
-        'mail' => array(
+        'mails' => array(
             'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_mail',
             'config' => array(
 				'appearance' => array(
@@ -373,7 +373,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_person'] = array(
             ),
         ),
 		
-        'url' => array(
+        'urls' => array(
             'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_url',
             'config' => array(
 				'appearance' => array(
