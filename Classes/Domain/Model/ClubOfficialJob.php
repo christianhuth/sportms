@@ -33,6 +33,11 @@ namespace Balumedien\Clubms\Domain\Model;
 class ClubOfficialJob extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 
     /**
+     * @var \Balumedien\Clubms\Domain\Model\Club
+     */
+    protected $club;
+
+    /**
      * @var \Balumedien\Clubms\Domain\Model\OfficialJob
      */
     protected $officialJob;
@@ -43,6 +48,22 @@ class ClubOfficialJob extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @cascade remove
 	 */
 	protected $clubOfficials;
+
+    /**
+     * @return Club
+     */
+    public function getClub()
+    {
+        return $this->club;
+    }
+
+    /**
+     * @param Club $club
+     */
+    public function setClub($club)
+    {
+        $this->club = $club;
+    }
 
     /**
      * @return OfficialJob
