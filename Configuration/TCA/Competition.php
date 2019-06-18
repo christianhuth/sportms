@@ -20,12 +20,12 @@ $GLOBALS['TCA']['tx_clubms_domain_model_competition'] = array(
 		'label_alt' => 'section, age_level',
 		'label_alt_force' => TRUE,
 		'searchFields' => '',
-		'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_competition',
+		'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_competition',
 		'tstamp' => 'tstamp',
 		'versioningWS' => TRUE,
 	),
 	'interface' => array(
-		'showRecordFieldList' => 'name, club, section, team_season',
+		'showRecordFieldList' => 'section, competition_type, age_level, name',
 	),
 	'types' => array(
 		'1' => array('showitem' => 'section, competition_type, age_level, name, name_short, 
