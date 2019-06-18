@@ -18,7 +18,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_refereejob'] = array(
 		'iconfile' => 'EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_referee_job.svg',
 		'label' => 'label',
 		'searchFields' => 'season_name, season_name_short, season_name_very_short',
-		'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_referee_job',
+		'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_refereejob',
 		'tstamp' => 'tstamp',
 		'versioningWS' => TRUE,
 	),
@@ -89,7 +89,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_refereejob'] = array(
 		
 		'label' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_referee_job.label',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_refereejob.label',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,

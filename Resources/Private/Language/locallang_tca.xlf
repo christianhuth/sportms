@@ -47,6 +47,15 @@
 			</trans-unit>
 
 
+			<!-- Domain Model RefereeJob -->
+			<trans-unit id="tx_clubms_domain_model_refereejob">
+				<source>Schiedsrichteraufgabe</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_refereejob.label">
+				<source>Bezeichnung</source>
+			</trans-unit>
+
+
 		</body>
 	</file>
 </xliff>

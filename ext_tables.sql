@@ -296,7 +296,7 @@ CREATE TABLE tx_clubms_domain_model_clubofficialjob (
 
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
-	
+
 	club int(11) DEFAULT NULL,
 	club_official int(11) DEFAULT NULL,
 	official_job int(11) DEFAULT NULL,
@@ -883,7 +883,7 @@ CREATE TABLE tx_clubms_domain_model_refereejob (
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
 	
-	label varchar(255) DEFAULT NULL,
+	label varchar(255) DEFAULT '0' NOT NULL,
 	
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
