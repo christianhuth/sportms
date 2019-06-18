@@ -127,7 +127,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_competitionseason'] = array(
                 'eval' => 'int, trim'
             ),
         ),
-		'practice' => array(
+		'games' => array(
 			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_competitionseason.games',
 			'config' => array(
 				'appearance' => array(
