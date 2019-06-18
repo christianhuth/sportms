@@ -455,29 +455,6 @@
 			</trans-unit>
 			
 			
-			<trans-unit id="tx_clubms_domain_model_season">
-				<source>Season</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_season.season_name">
-				<source>Bezeichnung</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_season.season_name_short">
-				<source>Alternative Bezeichnung</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_season.season_name_very_short">
-				<source>Kurzform</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_season.dates">
-				<source>Daten</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_season.startdate">
-				<source>Startdatum</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_season.enddate">
-				<source>Enddatum</source>
-			</trans-unit>
-			
-			
 			<trans-unit id="tx_clubms_domain_model_section">
 				<source>Abteilung</source>
 			</trans-unit>

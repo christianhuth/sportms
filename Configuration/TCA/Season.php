@@ -18,7 +18,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_season'] = array(
 		'iconfile' => 'EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_season.svg',
 		'label' => 'season_name',
 		'searchFields' => 'season_name, season_name_short, season_name_very_short',
-		'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_season',
+		'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_season',
 		'tstamp' => 'tstamp',
 		'versioningWS' => TRUE,
 	),
@@ -27,13 +27,22 @@ $GLOBALS['TCA']['tx_clubms_domain_model_season'] = array(
 	),
 	'types' => array(
 		'1' => array('showitem' => 'season_name, season_name_short, season_name_very_short,
-									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_season.dates, startdate, enddate,'),
+									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_season.tab_dates, startdate, enddate,
+									'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
 	),
 	'columns' => array(
-		
+
+        't3ver_label' => array(
+            'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.versionLabel',
+            'config' => array(
+                'type' => 'input',
+                'size' => 30,
+                'max' => 255,
+            )
+        ),
 		'hidden' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.hidden',
@@ -59,7 +68,6 @@ $GLOBALS['TCA']['tx_clubms_domain_model_season'] = array(
 				'renderType' => 'inputDateTime',
 			),
 		),
-		
 		'endtime' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.endtime',
@@ -81,37 +89,35 @@ $GLOBALS['TCA']['tx_clubms_domain_model_season'] = array(
 		
 		'season_name' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_season.season_name',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_season.season_name',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
 				'eval' => 'trim, required'
 			),
 		),
-		
 		'season_name_short' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_season.season_name_short',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_season.season_name_short',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
 				'eval' => 'trim'
 			),
 		),
-		
 		'season_name_very_short' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_season.season_name_very_short',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_season.season_name_very_short',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
 				'eval' => 'trim'
 			),
 		),
-		
+
 		'startdate' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_season.startdate',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_season.startdate',
 			'config' => array(
 				'type' => 'input',
 				'size' => 8,
@@ -120,10 +126,9 @@ $GLOBALS['TCA']['tx_clubms_domain_model_season'] = array(
 				'renderType' => 'inputDateTime',
 			),
 		),
-		
 		'enddate' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_season.enddate',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_season.enddate',
 			'config' => array(
 				'type' => 'input',
 				'size' => 8,

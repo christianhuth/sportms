@@ -41,7 +41,6 @@ $GLOBALS['TCA']['tx_clubms_domain_model_refereejob'] = array(
 				'max' => 255,
 			)
 		),
-		
 		'hidden' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.hidden',
@@ -67,7 +66,6 @@ $GLOBALS['TCA']['tx_clubms_domain_model_refereejob'] = array(
 				'renderType' => 'inputDateTime',
 			),
 		),
-		
 		'endtime' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.endtime',
