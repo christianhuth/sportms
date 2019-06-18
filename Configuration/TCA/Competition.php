@@ -96,6 +96,9 @@ $GLOBALS['TCA']['tx_clubms_domain_model_competition'] = array(
                 'eval' => 'required',
                 'foreign_table' => 'tx_clubms_domain_model_section',
                 'foreign_table_where' => 'ORDER BY label ASC',
+                'items' => array (
+                    array("",0),
+                ),
                 'maxItems' => 1,
                 'minItems' => 1,
                 'renderType' => 'selectSingle',
@@ -111,6 +114,9 @@ $GLOBALS['TCA']['tx_clubms_domain_model_competition'] = array(
                 'eval' => 'required',
                 'foreign_table' => 'tx_clubms_domain_model_competitiontype',
                 'foreign_table_where' => 'ORDER BY label ASC',
+                'items' => array (
+                    array("",0),
+                ),
                 'maxItems' => 1,
                 'minItems' => 1,
                 'renderType' => 'selectSingle',
@@ -126,6 +132,9 @@ $GLOBALS['TCA']['tx_clubms_domain_model_competition'] = array(
                 'eval' => 'required',
                 'foreign_table' => 'tx_clubms_domain_model_agelevel',
                 'foreign_table_where' => 'ORDER BY label ASC',
+                'items' => array (
+                    array("",0),
+                ),
                 'maxItems' => 1,
                 'minItems' => 1,
                 'renderType' => 'selectSingle',
