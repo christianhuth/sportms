@@ -729,6 +729,49 @@ CREATE TABLE tx_clubms_domain_model_contacttype (
 );
 
 #
+# Table structure for table 'tx_clubms_domain_model_game'
+#
+CREATE TABLE tx_clubms_domain_model_game (
+
+    uid int(11) NOT NULL auto_increment,
+    pid int(11) DEFAULT '0' NOT NULL,
+
+    season int(11) DEFAULT '0' NOT NULL,
+    competition int(11) DEFAULT '0' NOT NULL,
+    team_home int(11) DEFAULT '0' NOT NULL,
+    team_guest int(11) DEFAULT '0' NOT NULL,
+    date int(11) unsigned DEFAULT NULL,
+    time int(11) unsigned DEFAULT NULL,
+    game_referees int(11) DEFAULT NULL,
+    club_venue int(11) DEFAULT NULL,
+    game_spectators int(11) DEFAULT NULL,
+    detail_link tinyint(4) unsigned DEFAULT '0' NOT NULL,
+
+    tstamp int(11) unsigned DEFAULT '0' NOT NULL,
+    crdate int(11) unsigned DEFAULT '0' NOT NULL,
+    cruser_id int(11) unsigned DEFAULT '0' NOT NULL,
+    deleted tinyint(4) unsigned DEFAULT '0' NOT NULL,
+    hidden tinyint(4) unsigned DEFAULT '0' NOT NULL,
+    starttime int(11) unsigned DEFAULT '0' NOT NULL,
+    endtime int(11) unsigned DEFAULT '0' NOT NULL,
+
+    t3ver_oid int(11) DEFAULT '0' NOT NULL,
+    t3ver_id int(11) DEFAULT '0' NOT NULL,
+    t3ver_wsid int(11) DEFAULT '0' NOT NULL,
+    t3ver_label varchar(255) DEFAULT '' NOT NULL,
+    t3ver_state tinyint(4) DEFAULT '0' NOT NULL,
+    t3ver_stage int(11) DEFAULT '0' NOT NULL,
+    t3ver_count int(11) DEFAULT '0' NOT NULL,
+    t3ver_tstamp int(11) DEFAULT '0' NOT NULL,
+    t3ver_move_id int(11) DEFAULT '0' NOT NULL,
+
+    PRIMARY KEY (uid),
+    KEY parent (pid),
+    KEY t3ver_oid (t3ver_oid,t3ver_wsid),
+
+);
+
+#
 # Table structure for table 'tx_clubms_domain_model_mail'
 #
 CREATE TABLE tx_clubms_domain_model_mail (
