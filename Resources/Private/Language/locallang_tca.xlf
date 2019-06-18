@@ -118,6 +118,18 @@
 			</trans-unit>
 
 
+			<!-- Domain Model Game -->
+			<trans-unit id="tx_clubms_domain_model_game">
+				<source>Spiel</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_game.season">
+				<source>Saison</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_game.competition">
+				<source>Wettbewerb</source>
+			</trans-unit>
+
+
 			<!-- Domain Model RefereeJob -->
 			<trans-unit id="tx_clubms_domain_model_refereejob">
 				<source>Schiedsrichteraufgabe</source>
