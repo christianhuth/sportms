@@ -29,7 +29,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_competition'] = array(
 	),
 	'types' => array(
 		'1' => array('showitem' => 'section, competition_type, age_level, name, name_short, 
-									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_competition.tab_season, competition_seasons,
+									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_competition.tab_seasons, competition_seasons,
 									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_competition.tab_visibility, hidden, detail_link'),
 	),
 	'palettes' => array(
