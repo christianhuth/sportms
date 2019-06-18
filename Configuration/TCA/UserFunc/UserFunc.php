@@ -13,8 +13,9 @@
         public function competitionLabel(&$parameters, $parentObject) {
             $record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
             $section = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_section", $record['section']);
+            $competitionType = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_competitiontype", $record['competition_type']);
             $ageLevel = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_agelevel", $record['age_level']);
-            $newLabel = $record['name'] . " (" . $section['label'] . " " . $ageLevel['label'] . ")";
+            $newLabel = $record['name'] . " (" . $section['label'] . " - " . $competitionType['label'] . " - " . $ageLevel['label'] . ")";
             $parameters['title'] = $newLabel;
         }
 		
