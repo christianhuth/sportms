@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="de" datatype="plaintext" original="messages" date="2015-05-13T11:46:05Z" product-name="clubms">
+		<header/>
+		<body>
+
+			<trans-unit id="tx_clubms_domain_model_agegroup">
+				<source>Altersgruppe</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_agegroup.label">
+				<source>Bezeichnung</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_agegroup.short">
+				<source>Kurzform</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_agegroup.age_levels">
+				<source>Altersstufen</source>
+			</trans-unit>
+
+		</body>
+	</file>
+</xliff>
