@@ -89,6 +89,12 @@ $GLOBALS['TCA']['tx_clubms_domain_model_clubofficialjob'] = array(
 				'renderType' => 'inputDateTime',
 			),
 		),
+
+		'club' => array(
+		    'config' => array(
+		        'type' => 'passthrough',
+            ),
+        ),
 		
 		'official_job' => array(
 			'exclude' => 1,
