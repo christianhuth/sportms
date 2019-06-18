@@ -157,7 +157,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_competition'] = array(
 			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_competition.name_short',
 			'config' => array(
 				'eval' => 'trim',
-				'size' => 255,
+				'size' => 15,
 				'type' => 'input',
 			),
 		),
