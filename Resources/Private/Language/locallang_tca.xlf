@@ -103,7 +103,7 @@
 				<source>Link auf Einzelansicht möglich?</source>
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_competitionseason.tab_games">
-				<source>Sichtbarkeit</source>
+				<source>Spiele</source>
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_competitionseason.tab_visibility">
 				<source>Sichtbarkeit</source>
