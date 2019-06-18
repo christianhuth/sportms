@@ -19,19 +19,17 @@ $GLOBALS['TCA']['tx_clubms_domain_model_competitionseason'] = array(
 		'label' => 'season',
 		'searchFields' => '',
 		'sort_by' => 'season',
-		'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_team_season',
+		'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_competitionseason',
 		'tstamp' => 'tstamp',
 		'versioningWS' => TRUE,
 	),
 	'interface' => array(
-		'showRecordFieldList' => 'season',
+		'showRecordFieldList' => '',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'season, practice,
-									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_team_season.image,
-									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_team_season.official, team_season_official_job,
-									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_team_season.squad, team_season_squad_member,
-									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_team_season.visibility, hidden, detail_link'),
+		'1' => array('showitem' => 'season, max_teams, gamedays,
+									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_competitionseason.tab_games, games,
+									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_competitionseason.tab_visibility, hidden, detail_link'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -46,6 +44,13 @@ $GLOBALS['TCA']['tx_clubms_domain_model_competitionseason'] = array(
 				'max' => 255,
 			)
 		),
+        'hidden' => array(
+            'exclude' => 1,
+            'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.hidden',
+            'config' => array(
+                'type' => 'check',
+            ),
+        ),
 		'starttime' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.starttime',
@@ -82,10 +87,15 @@ $GLOBALS['TCA']['tx_clubms_domain_model_competitionseason'] = array(
 				'renderType' => 'inputDateTime',
 			),
 		),
-		
+
+        'competition' => array(
+            'config' => array(
+                'type' => 'passthrough',
+            ),
+        ),
 		'season' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_team_season.season',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_competitionseason.season',
 			'config' => array(
 				'eval' => 'required',
 				'foreign_table' => 'tx_clubms_domain_model_season',
@@ -99,56 +109,38 @@ $GLOBALS['TCA']['tx_clubms_domain_model_competitionseason'] = array(
 				'type' => 'select',
 			),
 		),
-		
+        'max_teams' => array(
+            'exclude' => 1,
+            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_competitionseason.max_teams',
+            'config' => array(
+                'type' => 'input',
+                'size' => 30,
+                'eval' => 'int, trim'
+            ),
+        ),
+        'gamedays' => array(
+            'exclude' => 1,
+            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_competitionseason.gamedays',
+            'config' => array(
+                'type' => 'input',
+                'size' => 30,
+                'eval' => 'int, trim'
+            ),
+        ),
 		'practice' => array(
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_team_season.practice',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_competitionseason.games',
 			'config' => array(
 				'appearance' => array(
 					'levelLinksPosition' => 'bottom',
 				),
-				'foreign_field' => 'team_season',
-				'foreign_table' => 'tx_clubms_domain_model_teamseasonpractice',
+				'foreign_field' => 'competition_season',
+				'foreign_table' => 'tx_clubms_domain_model_games',
 				'type' => 'inline',
 			),
 		),
-		
-		'team_season_official_job' => array(
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_team_season.official',
-			'config' => array(
-				'appearance' => array(
-					'levelLinksPosition' => 'bottom',
-					'useSortable' => 1,
-				),
-				'foreign_field' => 'team_season',
-				'foreign_table' => 'tx_clubms_domain_model_teamseasonofficialjob',
-				'type' => 'inline',
-			),
-		),
-		
-		'team_season_squad_member' => array(
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_team_season.squad',
-			'config' => array(
-				'appearance' => array(
-					'levelLinksPosition' => 'bottom',
-					'useSortable' => TRUE,
-				),
-				'foreign_field' => 'team_season',
-				'foreign_table' => 'tx_clubms_domain_model_teamseasonsquadmember',
-				'type' => 'inline',
-			),
-		),
-		
-		'hidden' => array(
-			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_team_season.visibility_dataset',
-			'config' => array(
-				'type' => 'check',
-			),
-		),
-		
 		'detail_link' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_team_season.detail_link',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_competitionseason.detail_link',
 			'config' => array(
 				'type' => 'check',
 			),
