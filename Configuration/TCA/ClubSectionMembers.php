@@ -16,7 +16,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_clubsectionmembers'] = array(
             'endtime' => 'endtime',
         ),
 		'hideTable' => TRUE,
-		'iconfile' => 'EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_club_section_members.svg',
+		'iconfile' => 'EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_clubsectionmembers.svg',
         'label' => 'date',
         'searchFields' => '',
         'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_club_section_members',

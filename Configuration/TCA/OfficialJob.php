@@ -15,7 +15,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_officialjob'] = array(
 			'starttime' => 'starttime',
 			'endtime' => 'endtime',
 		),
-		'iconfile' => 'EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_official_job.svg',
+		'iconfile' => 'EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_officialjob.svg',
 		'label' => 'label',
 		'searchFields' => 'season_name, season_name_short, season_name_very_short',
 		'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_official_job',

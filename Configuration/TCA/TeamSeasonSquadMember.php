@@ -15,7 +15,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_teamseasonsquadmember'] = array(
 			'endtime' => 'endtime',
 		),
 		'hideTable' => TRUE,
-		'iconfile' => 'EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_team_season_squad_member.svg',
+		'iconfile' => 'EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_teamseasonsquadmember.svg',
 		'label' => 'person',
 		'label_alt' => 'squad_number, position',
 		'label_alt_force' => TRUE,

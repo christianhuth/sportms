@@ -15,7 +15,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_sectionposition'] = array(
 			'endtime' => 'endtime',
 		),
 		'hideTable' => TRUE,
-		'iconfile' => 'EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_section_position.svg',
+		'iconfile' => 'EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_sectionposition.svg',
 		'label' => 'label',
 		'label_userFunc' => \Balumedien\Clubms\Configuration\TCA\UserFunc\UserFunc::class . '->sectionPositionLabel',
 		'searchFields' => '',

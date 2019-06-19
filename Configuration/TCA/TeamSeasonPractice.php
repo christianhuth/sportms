@@ -15,7 +15,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_teamseasonpractice'] = array(
 			'endtime' => 'endtime',
 		),
 		'hideTable' => TRUE,
-		'iconfile' => 'EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_team_season_practice.svg',
+		'iconfile' => 'EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_teamseasonpractice.svg',
 		'label' => 'day',
 		'label_userFunc' => \Balumedien\Clubms\Configuration\TCA\UserFunc\UserFunc::class . '->teamSeasonPracticeLabel',
 		'searchFields' => '',
