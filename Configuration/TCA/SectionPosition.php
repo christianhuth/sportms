@@ -20,7 +20,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_sectionposition'] = array(
 		'label_userFunc' => \Balumedien\Clubms\Configuration\TCA\UserFunc\UserFunc::class . '->sectionPositionLabel',
 		'searchFields' => '',
 		'sortby' => 'sorting',
-		'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_section_position',
+		'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_sectionposition',
 		'tstamp' => 'tstamp',
 		'versioningWS' => TRUE,
 	),
@@ -29,7 +29,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_sectionposition'] = array(
 	),
 	'types' => array(
 		'1' => array('showitem' => 'label, label_short, 
-									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_section_position.representation, x_position, y_position'),
+									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_sectionposition.tab_representation, x_position, y_position'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -44,7 +44,6 @@ $GLOBALS['TCA']['tx_clubms_domain_model_sectionposition'] = array(
 				'max' => 255,
 			)
 		),
-		
 		'hidden' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.hidden',
@@ -70,7 +69,6 @@ $GLOBALS['TCA']['tx_clubms_domain_model_sectionposition'] = array(
 				'renderType' => 'inputDateTime',
 			),
 		),
-		
 		'endtime' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.endtime',
@@ -92,7 +90,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_sectionposition'] = array(
 		
 		'label' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_section_position.label',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_sectionposition.label',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -102,7 +100,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_sectionposition'] = array(
 		
 		'label_short' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_section_position.label_short',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_sectionposition.label_short',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -112,7 +110,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_sectionposition'] = array(
 		
 		'x_position' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_section_position.x_position',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_sectionposition.x_position',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -122,7 +120,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_sectionposition'] = array(
 		
 		'y_position' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_section_position.y_position',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_sectionposition.y_position',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,

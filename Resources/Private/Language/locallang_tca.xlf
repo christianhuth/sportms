@@ -202,6 +202,27 @@
 			</trans-unit>
 
 
+			<!-- Domain Model SectionPosition -->
+			<trans-unit id="tx_clubms_domain_model_sectionposition">
+				<source>Position</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_sectionposition.label">
+				<source>Bezeichnung</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_sectionposition.label_short">
+				<source>Abkürzung</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_sectionposition.x_position">
+				<source>Position X-Achse</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_sectionposition.y_position">
+				<source>Position Y-Achse</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_sectionposition.tab_representation">
+				<source>Darstellung</source>
+			</trans-unit>
+
+
 			<!-- Domain Model SectionPositionGroup -->
 			<trans-unit id="tx_clubms_domain_model_sectionpositiongroup">
 				<source>Position</source>

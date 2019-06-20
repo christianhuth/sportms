@@ -455,26 +455,6 @@
 			</trans-unit>
 			
 			
-			<trans-unit id="tx_clubms_domain_model_section_position">
-				<source>Position</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_section_position.label">
-				<source>Bezeichnung</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_section_position.label_short">
-				<source>Abkürzung</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_section_position.representation">
-				<source>Darstellung</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_section_position.x_position">
-				<source>Position X-Achse</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_section_position.y_position">
-				<source>Position Y-Achse</source>
-			</trans-unit>
-			
-			
 			<trans-unit id="tx_clubms_domain_model_team">
 				<source>Mannschaft</source>
 			</trans-unit>

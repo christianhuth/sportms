@@ -1076,8 +1076,7 @@ CREATE TABLE tx_clubms_domain_model_section (
 	
 	label varchar(255) DEFAULT NULL,
 	images varchar(255) DEFAULT NULL,
-	
-	section_position_group int(11) DEFAULT NULL,
+	section_position_groups int(11) DEFAULT NULL,
 	
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
@@ -1153,9 +1152,7 @@ CREATE TABLE tx_clubms_domain_model_sectionpositiongroup (
 	pid int(11) DEFAULT '0' NOT NULL,
 	
 	label varchar(255) DEFAULT NULL,
-	
-	section int(11) DEFAULT NULL,
-	section_position int(11) DEFAULT NULL,
+	section_positions int(11) DEFAULT NULL,
 	
 	sorting int(11) DEFAULT '0' NOT NULL,
 	
