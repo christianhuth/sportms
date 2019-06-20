@@ -1350,15 +1350,12 @@ CREATE TABLE tx_clubms_domain_model_teamseasonsquadmember (
 
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
-	
-	squad_number varchar(255) DEFAULT NULL,
+
 	person int(11) DEFAULT '0' NOT NULL,
 	position int(11) DEFAULT '0' NOT NULL,
+    squad_number varchar(255) DEFAULT NULL,
 	new_signing tinyint(4) unsigned DEFAULT '0' NOT NULL,
 	leaving tinyint(4) unsigned DEFAULT '0' NOT NULL,
-	hidden tinyint(4) unsigned DEFAULT '0' NOT NULL,
-	
-	team_season int(11) DEFAULT '0' NOT NULL,
 	
 	sorting int(11) DEFAULT NULL,
 	
@@ -1366,6 +1363,7 @@ CREATE TABLE tx_clubms_domain_model_teamseasonsquadmember (
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
 	cruser_id int(11) unsigned DEFAULT '0' NOT NULL,
 	deleted tinyint(4) unsigned DEFAULT '0' NOT NULL,
+    hidden tinyint(4) unsigned DEFAULT '0' NOT NULL,
 	starttime int(11) unsigned DEFAULT '0' NOT NULL,
 	endtime int(11) unsigned DEFAULT '0' NOT NULL,
 

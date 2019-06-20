@@ -461,35 +461,6 @@
 			</trans-unit>
 			
 			
-			<trans-unit id="tx_clubms_domain_model_team_season_squad_member.person">
-				<source>Spieler/Spielerin</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_team_season_squad_member.details">
-				<source>Details</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_team_season_squad_member.squad_number">
-				<source>Rückennummer</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_team_season_squad_member.position">
-				<source>Position</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_team_season_squad_member.transfer">
-				<source>Transfer</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_team_season_squad_member.new_signing">
-				<source>Neuzugang</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_team_season_squad_member.leaving">
-				<source>Abgang</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_team_season_squad_member.visibility">
-				<source>Sichtbarkeit</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_team_season_squad_member.visibility_dataset">
-				<source>Spieler/Spielerin verbergen</source>
-			</trans-unit>
-			
-			
 			<trans-unit id="tx_clubms_domain_model_url">
 				<source>URL</source>
 			</trans-unit>
