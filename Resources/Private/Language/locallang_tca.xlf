@@ -109,11 +109,22 @@
 				<source>Sichtbarkeit</source>
 			</trans-unit>
 
+
+
 			<!-- Domain Model CompetitionType -->
 			<trans-unit id="tx_clubms_domain_model_competitiontype">
 				<source>Wettbewerbsart</source>
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_competitiontype.label">
+				<source>Bezeichnung</source>
+			</trans-unit>
+
+
+			<!-- Domain Model ContactType -->
+			<trans-unit id="tx_clubms_domain_model_contacttype">
+				<source>Kontaktart</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_contacttype.label">
 				<source>Bezeichnung</source>
 			</trans-unit>
 

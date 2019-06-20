@@ -167,7 +167,7 @@ CREATE TABLE tx_clubms_domain_model_club (
 );
 
 #
-# Table structure for table 'tx_clubms_domain_model_club_ground'
+# Table structure for table 'tx_clubms_domain_model_clubground'
 #
 CREATE TABLE tx_clubms_domain_model_clubground (
 
@@ -214,7 +214,7 @@ CREATE TABLE tx_clubms_domain_model_clubground (
 );
 
 #
-# Table structure for table 'tx_clubms_domain_model_club_members'
+# Table structure for table 'tx_clubms_domain_model_clubmembers'
 #
 CREATE TABLE tx_clubms_domain_model_clubmembers (
 
@@ -250,7 +250,7 @@ CREATE TABLE tx_clubms_domain_model_clubmembers (
 );
 
 #
-# Table structure for table 'tx_clubms_domain_model_club_official'
+# Table structure for table 'tx_clubms_domain_model_clubofficial'
 #
 CREATE TABLE tx_clubms_domain_model_clubofficial (
 
@@ -290,7 +290,7 @@ CREATE TABLE tx_clubms_domain_model_clubofficial (
 );
 
 #
-# Table structure for table 'tx_clubms_domain_model_club_official_job'
+# Table structure for table 'tx_clubms_domain_model_clubofficialjob'
 #
 CREATE TABLE tx_clubms_domain_model_clubofficialjob (
 
@@ -374,7 +374,7 @@ CREATE TABLE tx_clubms_domain_model_clubsection (
 );
 
 #
-# Table structure for table 'tx_clubms_domain_model_club_section_members'
+# Table structure for table 'tx_clubms_domain_model_clubsectionmembers'
 #
 CREATE TABLE tx_clubms_domain_model_clubsectionmembers (
 
@@ -412,7 +412,7 @@ CREATE TABLE tx_clubms_domain_model_clubsectionmembers (
 );
 
 #
-# Table structure for table 'tx_clubms_domain_model_club_section_official'
+# Table structure for table 'tx_clubms_domain_model_clubsectionofficial'
 #
 CREATE TABLE tx_clubms_domain_model_clubsectionofficial (
 
@@ -452,7 +452,7 @@ CREATE TABLE tx_clubms_domain_model_clubsectionofficial (
 );
 
 #
-# Table structure for table 'tx_clubms_domain_model_club_section_official_job'
+# Table structure for table 'tx_clubms_domain_model_clubsectionofficialjob'
 #
 CREATE TABLE tx_clubms_domain_model_clubsectionofficialjob (
 
@@ -490,44 +490,7 @@ CREATE TABLE tx_clubms_domain_model_clubsectionofficialjob (
 );
 
 #
-# Table structure for table 'tx_clubms_domain_model_club_section_season'
-#
-CREATE TABLE tx_clubms_domain_model_clubsectionseason (
-
-	uid int(11) NOT NULL auto_increment,
-	pid int(11) DEFAULT '0' NOT NULL,
-
-	club_section int(11) DEFAULT '0' NOT NULL,
-	season int(11) DEFAULT '0' NOT NULL,
-	
-	ordering int(11) DEFAULT NULL,
-
-	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
-	crdate int(11) unsigned DEFAULT '0' NOT NULL,
-	cruser_id int(11) unsigned DEFAULT '0' NOT NULL,
-	deleted tinyint(4) unsigned DEFAULT '0' NOT NULL,
-	hidden tinyint(4) unsigned DEFAULT '0' NOT NULL,
-	starttime int(11) unsigned DEFAULT '0' NOT NULL,
-	endtime int(11) unsigned DEFAULT '0' NOT NULL,
-
-	t3ver_oid int(11) DEFAULT '0' NOT NULL,
-	t3ver_id int(11) DEFAULT '0' NOT NULL,
-	t3ver_wsid int(11) DEFAULT '0' NOT NULL,
-	t3ver_label varchar(255) DEFAULT '' NOT NULL,
-	t3ver_state tinyint(4) DEFAULT '0' NOT NULL,
-	t3ver_stage int(11) DEFAULT '0' NOT NULL,
-	t3ver_count int(11) DEFAULT '0' NOT NULL,
-	t3ver_tstamp int(11) DEFAULT '0' NOT NULL,
-	t3ver_move_id int(11) DEFAULT '0' NOT NULL,
-
-	PRIMARY KEY (uid),
-	KEY parent (pid),
-	KEY t3ver_oid (t3ver_oid,t3ver_wsid),
-
-);
-
-#
-# Table structure for table 'tx_clubms_domain_model_club_venue'
+# Table structure for table 'tx_clubms_domain_model_clubvenue'
 #
 CREATE TABLE tx_clubms_domain_model_clubvenue (
 
@@ -657,7 +620,7 @@ CREATE TABLE tx_clubms_domain_model_competitionseason (
 );
 
 #
-# Table structure for table 'tx_clubms_domain_model_competition_type'
+# Table structure for table 'tx_clubms_domain_model_competitiontype'
 #
 CREATE TABLE tx_clubms_domain_model_competitiontype (
 
@@ -693,7 +656,7 @@ CREATE TABLE tx_clubms_domain_model_competitiontype (
 );
 
 #
-# Table structure for table 'tx_clubms_domain_model_contact_type'
+# Table structure for table 'tx_clubms_domain_model_contacttype'
 #
 CREATE TABLE tx_clubms_domain_model_contacttype (
 
@@ -850,7 +813,7 @@ CREATE TABLE tx_clubms_domain_model_mail (
 );
 
 #
-# Table structure for table 'tx_clubms_domain_model_official_job'
+# Table structure for table 'tx_clubms_domain_model_officialjob'
 #
 CREATE TABLE tx_clubms_domain_model_officialjob (
 
@@ -995,7 +958,7 @@ CREATE TABLE tx_clubms_domain_model_phone (
 );
 
 #
-# Table structure for table 'tx_clubms_domain_model_referee_job'
+# Table structure for table 'tx_clubms_domain_model_refereejob'
 #
 CREATE TABLE tx_clubms_domain_model_refereejob (
 
@@ -1103,7 +1066,7 @@ CREATE TABLE tx_clubms_domain_model_section (
 );
 
 #
-# Table structure for table 'tx_clubms_domain_model_section_position'
+# Table structure for table 'tx_clubms_domain_model_sectionposition'
 #
 CREATE TABLE tx_clubms_domain_model_sectionposition (
 
@@ -1144,7 +1107,7 @@ CREATE TABLE tx_clubms_domain_model_sectionposition (
 );
 
 #
-# Table structure for table 'tx_clubms_domain_model_section_position_group'
+# Table structure for table 'tx_clubms_domain_model_sectionpositiongroup'
 #
 CREATE TABLE tx_clubms_domain_model_sectionpositiongroup (
 
@@ -1267,7 +1230,7 @@ CREATE TABLE tx_clubms_domain_model_teamseason (
 );
 
 #
-# Table structure for table 'tx_clubms_domain_model_team_season_official'
+# Table structure for table 'tx_clubms_domain_model_teamseasonofficial'
 #
 CREATE TABLE tx_clubms_domain_model_teamseasonofficial (
 
@@ -1307,7 +1270,7 @@ CREATE TABLE tx_clubms_domain_model_teamseasonofficial (
 );
 
 #
-# Table structure for table 'tx_clubms_domain_model_team_season_official_job'
+# Table structure for table 'tx_clubms_domain_model_teamseasonofficialjob'
 #
 CREATE TABLE tx_clubms_domain_model_teamseasonofficialjob (
 
@@ -1345,7 +1308,7 @@ CREATE TABLE tx_clubms_domain_model_teamseasonofficialjob (
 );
 
 #
-# Table structure for table 'tx_clubms_domain_model_team_season_practice'
+# Table structure for table 'tx_clubms_domain_model_teamseasonpractice'
 #
 CREATE TABLE tx_clubms_domain_model_teamseasonpractice (
 
@@ -1385,7 +1348,7 @@ CREATE TABLE tx_clubms_domain_model_teamseasonpractice (
 );
 
 #
-# Table structure for table 'tx_clubms_domain_model_team_season_squad_member'
+# Table structure for table 'tx_clubms_domain_model_teamseasonsquadmember'
 #
 CREATE TABLE tx_clubms_domain_model_teamseasonsquadmember (
 

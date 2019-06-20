@@ -18,7 +18,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_contacttype'] = array(
 		'iconfile' => 'EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_contacttype.svg',
 		'label' => 'label',
 		'searchFields' => '',
-		'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_contact_type',
+		'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_contacttype',
 		'tstamp' => 'tstamp',
 		'versioningWS' => TRUE,
 	),
@@ -41,7 +41,13 @@ $GLOBALS['TCA']['tx_clubms_domain_model_contacttype'] = array(
 				'max' => 255,
 			)
 		),
-		
+        'hidden' => array(
+            'exclude' => 1,
+            'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.hidden',
+            'config' => array(
+                'type' => 'check',
+            ),
+        ),
 		'starttime' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.starttime',
@@ -81,7 +87,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_contacttype'] = array(
 		
 		'label' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_contact_type.label',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_contacttype.label',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,

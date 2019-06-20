@@ -229,14 +229,6 @@
 			</trans-unit>
 			
 			
-			<trans-unit id="tx_clubms_domain_model_contact_type">
-				<source>Kontaktart</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_contact_type.label">
-				<source>Bezeichnung</source>
-			</trans-unit>
-			
-			
 			<trans-unit id="tx_clubms_domain_model_mail">
 				<source>Mail</source>
 			</trans-unit>
