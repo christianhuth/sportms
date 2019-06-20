@@ -257,14 +257,6 @@
 			</trans-unit>
 			
 			
-			<trans-unit id="tx_clubms_domain_model_official_job">
-				<source>Official Job</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_official_job.label">
-				<source>Bezeichnung</source>
-			</trans-unit>
-			
-			
 			<trans-unit id="tx_clubms_domain_model_person">
 				<source>Person</source>
 			</trans-unit>
@@ -527,6 +519,14 @@
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_team_season_official.enddate">
 				<source>Enddatum</source>
+			</trans-unit>
+
+
+			<trans-unit id="tx_clubms_domain_model_team_season_official_job.position">
+				<source>Posten</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_team_season_official_job.person">
+				<source>Person</source>
 			</trans-unit>
 			
 			
