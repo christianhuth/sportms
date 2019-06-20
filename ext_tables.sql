@@ -1239,8 +1239,6 @@ CREATE TABLE tx_clubms_domain_model_teamseasonofficial (
 	startdate int(11) DEFAULT NULL,
 	enddate int(11) DEFAULT NULL,
 	
-	team_season_official_job int(11) DEFAULT NULL,
-	
 	ordering int(11) DEFAULT NULL,
 	
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,

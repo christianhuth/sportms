@@ -19,7 +19,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_teamseasonofficial'] = array(
 		'iconfile' => 'EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_teamseasonofficial.svg',
 		'label' => 'person',
 		'searchFields' => '',
-		'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_team_season_official',
+		'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_teamseasonofficial',
 		'tstamp' => 'tstamp',
 		'versioningWS' => TRUE,
 	),
@@ -27,8 +27,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_teamseasonofficial'] = array(
 		'showRecordFieldList' => 'person, startdate, enddate',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'person,
-									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_team_season_official.details, startdate, enddate,'),
+		'1' => array('showitem' => 'person, startdate, enddate,'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -43,7 +42,6 @@ $GLOBALS['TCA']['tx_clubms_domain_model_teamseasonofficial'] = array(
 				'max' => 255,
 			)
 		),
-		
 		'hidden' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.hidden',
@@ -51,7 +49,6 @@ $GLOBALS['TCA']['tx_clubms_domain_model_teamseasonofficial'] = array(
 				'type' => 'check',
 			),
 		),
-		
 		'starttime' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.starttime',
@@ -70,7 +67,6 @@ $GLOBALS['TCA']['tx_clubms_domain_model_teamseasonofficial'] = array(
 				'renderType' => 'inputDateTime',
 			),
 		),
-		
 		'endtime' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.endtime',
@@ -92,10 +88,11 @@ $GLOBALS['TCA']['tx_clubms_domain_model_teamseasonofficial'] = array(
 		
 		'person' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_person',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_teamseasonofficial.person',
 			'config' => array(
 				'foreign_table' => 'tx_clubms_domain_model_person',
-				'foreign_table_where' => 'AND profile_official = 1 ORDER BY tx_clubms_domain_model_person.lastname ASC, tx_clubms_domain_model_person.firstname ASC',
+                #'foreign_table_where' => 'AND profile_official = 1 ORDER BY tx_clubms_domain_model_person.lastname ASC, tx_clubms_domain_model_person.firstname ASC',
+                'foreign_table_where' => 'ORDER BY lastname ASC, firstname ASC',
 				'items' => array(
 					array('', ''),
 				),
@@ -106,10 +103,9 @@ $GLOBALS['TCA']['tx_clubms_domain_model_teamseasonofficial'] = array(
 				'type' => 'select',
 			),
 		),
-		
 		'startdate' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_team_season_official.startdate',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_teamseasonofficial.startdate',
 			'config' => array(
 				'type' => 'input',
 				'size' => 8,
@@ -118,10 +114,9 @@ $GLOBALS['TCA']['tx_clubms_domain_model_teamseasonofficial'] = array(
 				'renderType' => 'inputDateTime',
 			),
 		),
-		
 		'enddate' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_team_season_official.enddate',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_teamseasonofficial.enddate',
 			'config' => array(
 				'type' => 'input',
 				'size' => 8,

@@ -318,6 +318,21 @@
 			</trans-unit>
 
 
+			<!-- Domain Model TeamSeasonOfficial -->
+			<trans-unit id="tx_clubms_domain_model_team_season_official">
+				<source>MannschaftsfunktionärIn</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_team_season_official.person">
+				<source>Person</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_team_season_official.startdate">
+				<source>Startdatum</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_team_season_official.enddate">
+				<source>Enddatum</source>
+			</trans-unit>
+
+
             <!-- Domain Model TeamSeasonOfficialJob -->
 			<trans-unit id="tx_clubms_domain_model_teamseasonofficialjob">
 				<source>Mannschaftsfunktionärstätigkeit</source>
