@@ -143,7 +143,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_teamseason'] = array(
 					'useSortable' => 1,
 				),
 				'foreign_field' => 'team_season',
-				'foreign_table' => 'tx_clubms_domain_model_team_season_official_job',
+				'foreign_table' => 'tx_clubms_domain_model_teamseasonofficialjob',
 				'type' => 'inline',
 			),
 		),

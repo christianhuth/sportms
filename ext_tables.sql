@@ -1234,6 +1234,8 @@ CREATE TABLE tx_clubms_domain_model_teamseasonofficial (
 
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
+
+	team_season_official_job int(11) DEFAULT '0' NOT NULL,
 	
 	person int(11) DEFAULT '0' NOT NULL,
 	startdate int(11) DEFAULT NULL,
@@ -1273,6 +1275,8 @@ CREATE TABLE tx_clubms_domain_model_teamseasonofficialjob (
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
 
+    team_season int(11) DEFAULT '0' NOT NULL,
+
 	official_job int(11) DEFAULT NULL,
 	team_season_officials int(11) DEFAULT NULL,
 	
@@ -1309,6 +1313,8 @@ CREATE TABLE tx_clubms_domain_model_teamseasonpractice (
 
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
+
+    team_season int(11) DEFAULT '0' NOT NULL,
 	
 	day varchar(255) DEFAULT '' NOT NULL,
 	time_start varchar(255) DEFAULT '' NOT NULL,
@@ -1347,6 +1353,8 @@ CREATE TABLE tx_clubms_domain_model_teamseasonsquadmember (
 
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
+
+    team_season int(11) DEFAULT '0' NOT NULL,
 
 	person int(11) DEFAULT '0' NOT NULL,
 	position int(11) DEFAULT '0' NOT NULL,
