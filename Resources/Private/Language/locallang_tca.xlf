@@ -318,6 +318,27 @@
 			</trans-unit>
 
 
+			<!-- Domain Model TeamSeasonPractice -->
+			<trans-unit id="tx_clubms_domain_model_teamseasonpractice.day">
+				<source>Tag</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_teamseasonpractice.time_start">
+				<source>Startzeit</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_teamseasonpractice.time_end">
+				<source>Endzeit</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_teamseasonpractice.club_venue">
+				<source>Vereinsanlage</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_teamseasonpractice.annotation">
+				<source>Anmerkung</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_teamseasonpractice.tab_visibility">
+				<source>Sichtbarkeit</source>
+			</trans-unit>
+
+
 		</body>
 	</file>
 </xliff>

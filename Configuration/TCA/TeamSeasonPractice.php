@@ -19,7 +19,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_teamseasonpractice'] = array(
 		'label' => 'day',
 		'label_userFunc' => \Balumedien\Clubms\Configuration\TCA\UserFunc\UserFunc::class . '->teamSeasonPracticeLabel',
 		'searchFields' => '',
-		'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_team_season_practice',
+		'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_teamseasonpractice',
 		'tstamp' => 'tstamp',
 		'versioningWS' => TRUE,
 	),
@@ -28,7 +28,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_teamseasonpractice'] = array(
 	),
 	'types' => array(
 		'1' => array('showitem' => 'day, time_start, time_end, club_venue, annotation,
-									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_team_season_practice.visibility, hidden'),
+									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_teamseasonpractice.tab_visibility, hidden'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -43,6 +43,13 @@ $GLOBALS['TCA']['tx_clubms_domain_model_teamseasonpractice'] = array(
 				'max' => 255,
 			)
 		),
+        'hidden' => array(
+            'exclude' => 1,
+            'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.hidden',
+            'config' => array(
+                'type' => 'check',
+            ),
+        ),
 		'starttime' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.starttime',
@@ -82,7 +89,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_teamseasonpractice'] = array(
 		
 		'day' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_team_season_practice.day',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_teamseasonpractice.day',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -92,7 +99,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_teamseasonpractice'] = array(
 		
 		'time_start' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_team_season_practice.time_start',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_teamseasonpractice.time_start',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -102,7 +109,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_teamseasonpractice'] = array(
 		
 		'time_end' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_team_season_practice.time_end',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_teamseasonpractice.time_end',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -112,7 +119,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_teamseasonpractice'] = array(
 		
 		'club_venue' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_team_season_practice.club_venue',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_teamseasonpractice.club_venue',
 			'config' => array(
 				'foreign_table' => 'tx_clubms_domain_model_clubvenue',
 				'foreign_table_where' => 'ORDER BY name ASC',
@@ -129,19 +136,11 @@ $GLOBALS['TCA']['tx_clubms_domain_model_teamseasonpractice'] = array(
 		
 		'annotation' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_team_season_practice.annotation',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_teamseasonpractice.annotation',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
 				'eval' => 'trim'
-			),
-		),
-		
-		'hidden' => array(
-			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_team_season_practice.visibility_dataset',
-			'config' => array(
-				'type' => 'check',
 			),
 		),
 		

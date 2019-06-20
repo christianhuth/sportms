@@ -1319,8 +1319,6 @@ CREATE TABLE tx_clubms_domain_model_teamseasonpractice (
 	club_venue int(11) DEFAULT '0' NOT NULL,
 	annotation varchar(255) DEFAULT '' NOT NULL,
 	
-	team_season int(11) DEFAULT '0' NOT NULL,
-	
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
 	cruser_id int(11) unsigned DEFAULT '0' NOT NULL,
