@@ -1274,10 +1274,9 @@ CREATE TABLE tx_clubms_domain_model_teamseasonofficialjob (
 
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
-	
-	team_season int(11) DEFAULT NULL,
+
 	official_job int(11) DEFAULT NULL,
-	team_season_official int(11) DEFAULT NULL,
+	team_season_officials int(11) DEFAULT NULL,
 	
 	ordering int(11) DEFAULT NULL,
 	

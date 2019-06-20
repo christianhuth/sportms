@@ -318,6 +318,18 @@
 			</trans-unit>
 
 
+            <!-- Domain Model TeamSeasonOfficialJob -->
+			<trans-unit id="tx_clubms_domain_model_teamseasonofficialjob">
+				<source>Mannschaftsfunktionärstätigkeit</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_teamseasonofficialjob.official_job">
+				<source>Funktionärsaufgabe</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_teamseasonofficialjob.team_season_officials">
+				<source>MannschaftsfunktionärIn</source>
+			</trans-unit>
+
+
 			<!-- Domain Model TeamSeasonPractice -->
 			<trans-unit id="tx_clubms_domain_model_teamseasonpractice.day">
 				<source>Tag</source>
