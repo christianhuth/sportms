@@ -22,6 +22,18 @@
 	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
 		'<INCLUDE_TYPOSCRIPT: source="FILE:EXT:clubms/Configuration/TSconfig/ContentElementWizard.txt">'
 	);
-	
-	
+
+
+    /* ===========================================================================
+        Add Icon for Extension
+    =========================================================================== */
+    $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
+    $iconRegistry->registerIcon(
+        'clubms_clubms',
+        \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+        ['source' => 'EXT:clubms/Resources/Public/Icons/tx_clubms.svg']
+    );
+
+
+
 ?>
