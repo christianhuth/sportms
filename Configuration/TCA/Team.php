@@ -18,7 +18,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_team'] = array(
         'label' => 'name',
         'searchFields' => '',
 		'sortby' => 'ordering',
-        'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_team',
+        'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_team',
         'tstamp' => 'tstamp',
 		'versioningWS' => TRUE,
     ),
@@ -26,9 +26,9 @@ $GLOBALS['TCA']['tx_clubms_domain_model_team'] = array(
 		'showRecordFieldList' => 'name, club, section, team_seasons',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'name, club, section, age_level, dummy,
-									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_team.season, team_seasons,
-									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_team.visibility, hidden, detail_link'),
+		'1' => array('showitem' => 'club, section, age_level, name, dummy,
+									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_team.tab_seasons, team_seasons,
+									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_team.tab_visibility, hidden, detail_link'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -43,7 +43,13 @@ $GLOBALS['TCA']['tx_clubms_domain_model_team'] = array(
 				'max' => 255,
 			)
 		),
-		
+        'hidden' => array(
+            'exclude' => 1,
+            'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.hidden',
+            'config' => array(
+                'type' => 'check',
+            ),
+        ),
 		'starttime' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.starttime',
@@ -80,63 +86,59 @@ $GLOBALS['TCA']['tx_clubms_domain_model_team'] = array(
 				'renderType' => 'inputDateTime',
 			),
 		),
-		
+
+        'club' => array(
+            'exclude' => 1,
+            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_team.club',
+            'config' => array(
+                'foreign_table' => 'tx_clubms_domain_model_club',
+                'foreign_table_where' => 'ORDER BY name ASC',
+                'renderType' => 'selectSingle',
+                'size' => 1,
+                'type' => 'select',
+            ),
+        ),
+        'section' => array(
+            'exclude' => 1,
+            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_team.section',
+            'config' => array(
+                'foreign_table' => 'tx_clubms_domain_model_section',
+                'foreign_table_where' => 'ORDER BY label ASC',
+                'renderType' => 'selectSingle',
+                'size' => 1,
+                'type' => 'select',
+            ),
+        ),
+        'age_level' => array(
+            'exclude' => 1,
+            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_team.age_level',
+            'config' => array(
+                'foreign_table' => 'tx_clubms_domain_model_agelevel',
+                'foreign_table_where' => 'ORDER BY label ASC',
+                'renderType' => 'selectSingle',
+                'size' => 1,
+                'type' => 'select',
+            ),
+        ),
 		'name' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_team.name',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_team.name',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
 				'eval' => 'trim, required'
 			),
 		),
-		
-		'club' => array(
-			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_team.club',
-			'config' => array(
-				'foreign_table' => 'tx_clubms_domain_model_club',
-				'foreign_table_where' => 'ORDER BY name ASC',
-				'renderType' => 'selectSingle',
-				'size' => 1,
-				'type' => 'select',
-			),
-		),
-		
-		'section' => array(
-			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_team.section',
-			'config' => array(
-				'foreign_table' => 'tx_clubms_domain_model_section',
-				'foreign_table_where' => 'ORDER BY label ASC',
-				'renderType' => 'selectSingle',
-				'size' => 1,
-				'type' => 'select',
-			),
-		),
-		
-		'age_level' => array(
-			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_team.age_level',
-			'config' => array(
-				'foreign_table' => 'tx_clubms_domain_model_agelevel',
-				'foreign_table_where' => 'ORDER BY label ASC',
-				'renderType' => 'selectSingle',
-				'size' => 1,
-				'type' => 'select',
-			),
-		),
-		
 		'dummy' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_team.dummy',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_team.dummy',
 			'config' => array(
 				'type' => 'check',
 			),
 		),
 		
 		'team_seasons' => array(
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_team.season',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_team.team_seasons',
 			'config' => array(
 				'appearance' => array(
 					'levelLinksPosition' => 'bottom',
@@ -148,17 +150,9 @@ $GLOBALS['TCA']['tx_clubms_domain_model_team'] = array(
 			),
 		),
 		
-		'hidden' => array(
-			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_team.visibility_dataset',
-			'config' => array(
-				'type' => 'check',
-			),
-		),
-		
 		'detail_link' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_team.detail_link',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_team.detail_link',
 			'config' => array(
 				'type' => 'check',
 			),

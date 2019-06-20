@@ -439,38 +439,6 @@
 			</trans-unit>
 			
 			
-			<trans-unit id="tx_clubms_domain_model_team">
-				<source>Mannschaft</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_team.season">
-				<source>Saison-Instanzen</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_team.name">
-				<source>Mannschaftsname</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_team.club">
-				<source>Verein</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_team.section">
-				<source>Abteilung</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_team.age_level">
-				<source>Altersstufe</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_team.dummy">
-				<source>Spielfrei</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_team.visibility">
-				<source>Sichtbarkeit</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_team.visibility_dataset">
-				<source>Mannschaft verbergen</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_team.detail_link">
-				<source>Link auf Einzelansicht möglich?</source>
-			</trans-unit>
-			
-			
 			<trans-unit id="tx_clubms_domain_model_team_season">
 				<source>Saison</source>
 			</trans-unit>
