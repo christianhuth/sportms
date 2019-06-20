@@ -1109,13 +1109,13 @@ CREATE TABLE tx_clubms_domain_model_sectionposition (
 
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
+
+    section_position_group int(11) DEFAULT '0' NOT NULL,
 	
 	label varchar(255) DEFAULT NULL,
 	label_short varchar(255) DEFAULT NULL,
 	x_position int(11) DEFAULT NULL,
 	y_position int(11) DEFAULT NULL,
-	
-	section_position_group int(11) DEFAULT NULL,
 	
 	sorting int(11) DEFAULT '0' NOT NULL,
 	
@@ -1150,6 +1150,8 @@ CREATE TABLE tx_clubms_domain_model_sectionpositiongroup (
 
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
+
+    section int(11) DEFAULT '0' NOT NULL,
 	
 	label varchar(255) DEFAULT NULL,
 	section_positions int(11) DEFAULT NULL,
