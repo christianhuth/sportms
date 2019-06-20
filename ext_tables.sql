@@ -1357,7 +1357,8 @@ CREATE TABLE tx_clubms_domain_model_teamseasonsquadmember (
     team_season int(11) DEFAULT '0' NOT NULL,
 
 	person int(11) DEFAULT '0' NOT NULL,
-	position int(11) DEFAULT '0' NOT NULL,
+    section_position_group int(11) DEFAULT NULL,
+    section_position int(11) DEFAULT NULL,
     squad_number varchar(255) DEFAULT NULL,
 	new_signing tinyint(4) unsigned DEFAULT '0' NOT NULL,
 	leaving tinyint(4) unsigned DEFAULT '0' NOT NULL,

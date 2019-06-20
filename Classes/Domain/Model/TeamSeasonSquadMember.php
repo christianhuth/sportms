@@ -38,9 +38,14 @@ class TeamSeasonSquadMember extends \TYPO3\CMS\Extbase\DomainObject\AbstractEnti
     protected $person;
 
     /**
+     * @var \Balumedien\Clubms\Domain\Model\SectionPositionGroup
+     */
+    protected $sectionPositionGroup;
+
+    /**
      * @var \Balumedien\Clubms\Domain\Model\SectionPosition
      */
-    protected $position;
+    protected $sectionPosition;
 	
 	/**
 	 * @var string
@@ -74,19 +79,35 @@ class TeamSeasonSquadMember extends \TYPO3\CMS\Extbase\DomainObject\AbstractEnti
     }
 
     /**
-     * @return SectionPosition
+     * @return SectionPositionGroup
      */
-    public function getPosition()
+    public function getSectionPositionGroup()
     {
-        return $this->position;
+        return $this->sectionPositionGroup;
     }
 
     /**
-     * @param SectionPosition $position
+     * @param SectionPositionGroup $sectionPositionGroup
      */
-    public function setPosition($position)
+    public function setSectionPositionGroup($sectionPositionGroup)
     {
-        $this->position = $position;
+        $this->sectionPositionGroup = $sectionPositionGroup;
+    }
+
+    /**
+     * @return SectionPosition
+     */
+    public function getSectionPosition()
+    {
+        return $this->sectionPosition;
+    }
+
+    /**
+     * @param SectionPosition $sectionPosition
+     */
+    public function setSectionPosition($sectionPosition)
+    {
+        $this->sectionPosition = $sectionPosition;
     }
 
     /**

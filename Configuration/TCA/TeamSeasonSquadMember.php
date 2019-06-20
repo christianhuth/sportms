@@ -107,9 +107,24 @@ $GLOBALS['TCA']['tx_clubms_domain_model_teamseasonsquadmember'] = array(
 				'type' => 'select',
 			),
 		),
-        'position' => array(
+        'section_position_group' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_teamseasonsquadmember.position',
+            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_teamseasonsquadmember.section_position_group',
+            'config' => array(
+                'foreign_table' => 'tx_clubms_domain_model_sectionpositiongroup',
+                'foreign_table_where' => 'ORDER BY tx_clubms_domain_model_sectionpositiongroup.sorting ASC',
+                'items' => Array (
+                    Array("", ""),
+                ),
+                'maxItems' => 1,
+                'renderType' => 'selectSingle',
+                'size' => 1,
+                'type' => 'select',
+            ),
+        ),
+        'section_position' => array(
+            'exclude' => 1,
+            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_teamseasonsquadmember.section_position',
             'config' => array(
                 'foreign_table' => 'tx_clubms_domain_model_sectionposition',
                 'foreign_table_where' => 'ORDER BY tx_clubms_domain_model_sectionposition.sorting ASC',

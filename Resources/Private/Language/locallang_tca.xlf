@@ -370,8 +370,11 @@
 			<trans-unit id="tx_clubms_domain_model_teamseasonsquadmember.person">
 				<source>Spieler/Spielerin</source>
 			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_teamseasonsquadmember.position">
+			<trans-unit id="tx_clubms_domain_model_teamseasonsquadmember.section_position_group">
 				<source>Position</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_teamseasonsquadmember.section_position">
+				<source>Detailposition</source>
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_teamseasonsquadmember.squad_number">
 				<source>Rückennummer</source>
