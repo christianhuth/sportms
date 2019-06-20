@@ -187,6 +187,21 @@
 			</trans-unit>
 
 
+			<!-- Domain Model Section -->
+			<trans-unit id="tx_clubms_domain_model_section">
+				<source>Abteilung</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_section.label">
+				<source>Bezeichnung</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_section.images">
+				<source>Bilder</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_section.section_position_groups">
+				<source>Positionen</source>
+			</trans-unit>
+
+
 		</body>
 	</file>
 </xliff>

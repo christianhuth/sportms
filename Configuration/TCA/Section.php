@@ -18,7 +18,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_section'] = array(
 		'iconfile' => 'EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_section.svg',
 		'label' => 'label',
 		'searchFields' => '',
-		'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_section',
+		'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_section',
 		'tstamp' => 'tstamp',
 		'versioningWS' => TRUE,
 	),
@@ -26,8 +26,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_section'] = array(
 		'showRecordFieldList' => 'label',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'label, images,
-									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_section.section_position_group, section_position_group'),
+		'1' => array('showitem' => 'label, images, section_position_groups'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -41,7 +40,6 @@ $GLOBALS['TCA']['tx_clubms_domain_model_section'] = array(
 				'type' => 'check',
 			),
 		),
-		
 		'starttime' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.starttime',
@@ -60,7 +58,6 @@ $GLOBALS['TCA']['tx_clubms_domain_model_section'] = array(
 				'renderType' => 'inputDateTime',
 			),
 		),
-		
 		'endtime' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.endtime',
@@ -82,17 +79,16 @@ $GLOBALS['TCA']['tx_clubms_domain_model_section'] = array(
 		
 		'label' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_section.label',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_section.label',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
 				'eval' => 'trim, required'
 			),
 		),
-		
 		'images' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_section.images',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_section.images',
 			'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
 				'image',
 				array(
@@ -103,9 +99,8 @@ $GLOBALS['TCA']['tx_clubms_domain_model_section'] = array(
 				$GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']
 			),
 		),
-		
-		'section_position_group' => array(
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_section_position_group',
+		'section_position_groups' => array(
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_section.section_position_groups',
 			'config' => array(
 				'appearance' => array(
 					'levelLinksPosition' => 'bottom',
