@@ -29,7 +29,7 @@
     =========================================================================== */
     $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
     $iconRegistry->registerIcon(
-        'clubms_clubms',
+        'tx_clubms_clubms',
         \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
         ['source' => 'EXT:clubms/Resources/Public/Icons/tx_clubms.svg']
     );
