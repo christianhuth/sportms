@@ -30,7 +30,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_teamseasonsquadmember'] = array(
 		'showRecordFieldList' => 'squad_number, person',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'person, position, squad_number,
+		'1' => array('showitem' => 'person, section_position_group, section_position, squad_number,
 									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_teamseasonsquadmember.tab_transfer, new_signing, leaving,
 									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_teamseasonsquadmember.tab_visibility, hidden'),
 	),
