@@ -1197,17 +1197,16 @@ CREATE TABLE tx_clubms_domain_model_teamseason (
 
 	team int(11) DEFAULT '0' NOT NULL,
 	season int(11) DEFAULT '0' NOT NULL,
-	practice int(11) DEFAULT NULL,
-	team_season_official_job int(11) DEFAULT NULL,
-	team_season_squad_member int(11) DEFAULT NULL,
-	
-	hidden tinyint(4) unsigned DEFAULT '0' NOT NULL,
-	detail_link tinyint(4) unsigned DEFAULT '0' NOT NULL,
+	team_season_practices int(11) DEFAULT NULL,
+	team_season_official_jobs int(11) DEFAULT NULL,
+	team_season_squad_members int(11) DEFAULT NULL,
+    detail_link tinyint(4) unsigned DEFAULT '0' NOT NULL,
 	
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
 	cruser_id int(11) unsigned DEFAULT '0' NOT NULL,
 	deleted tinyint(4) unsigned DEFAULT '0' NOT NULL,
+    hidden tinyint(4) unsigned DEFAULT '0' NOT NULL,
 	starttime int(11) unsigned DEFAULT '0' NOT NULL,
 	endtime int(11) unsigned DEFAULT '0' NOT NULL,
 

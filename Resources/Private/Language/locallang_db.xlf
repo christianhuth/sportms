@@ -439,35 +439,6 @@
 			</trans-unit>
 			
 			
-			<trans-unit id="tx_clubms_domain_model_team_season">
-				<source>Saison</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_team_season.image">
-				<source>Mannschaftsfoto</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_team_season.official">
-				<source>Funktionäre</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_team_season.season">
-				<source>Saison</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_team_season.practice">
-				<source>Trainingszeiten</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_team_season.squad">
-				<source>Kader</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_team_season.visibility">
-				<source>Sichtbarkeit</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_team_season.visibility_dataset">
-				<source>Mannschafts-Instanz verbergen</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_team_season.detail_link">
-				<source>Link auf Einzelansicht möglich?</source>
-			</trans-unit>
-			
-			
 			<trans-unit id="tx_clubms_domain_model_team_season_official.person">
 				<source>Person</source>
 			</trans-unit>

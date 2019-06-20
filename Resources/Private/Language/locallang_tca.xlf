@@ -285,6 +285,42 @@
 			</trans-unit>
 
 
+			<!-- Domain Model TeamSeason -->
+			<trans-unit id="tx_clubms_domain_model_teamseason">
+				<source>Mannschafts-Instanz</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_teamseason.season">
+				<source>Saison</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_teamseason.image">
+				<source>Mannschaftsfoto</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_teamseason.official">
+				<source>Funktionäre</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_teamseason.season">
+				<source>Saison</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_teamseason.team_season_practices">
+				<source>Trainingszeiten</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_teamseason.team_season_squad_members">
+				<source>Mannschaftskader</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_teamseason.detail_link">
+				<source>Link auf Einzelansicht möglich?</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_teamseason.tab_officials">
+				<source>Mannschaftsfunktionäre</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_teamseason.tab_squad_members">
+				<source>Mannschaftskader</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_teamseason.tab_visibility">
+				<source>Sichtbarkeit</source>
+			</trans-unit>
+
+
 		</body>
 	</file>
 </xliff>
