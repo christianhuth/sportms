@@ -35,6 +35,12 @@ class SectionPositionGroup extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntit
 {
 
     /**
+     * @var \Balumedien\Clubms\Domain\Model\Section
+     * @lazy
+     */
+    protected $section;
+
+    /**
      * @var string
      */
     protected $label;
@@ -61,6 +67,22 @@ class SectionPositionGroup extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntit
      */
     protected function initStorageObjects(){
         $this->sectionPositions = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+    }
+
+    /**
+     * @return Section
+     */
+    public function getSection()
+    {
+        return $this->section;
+    }
+
+    /**
+     * @param Section $section
+     */
+    public function setSection($section)
+    {
+        $this->section = $section;
     }
 
     /**
