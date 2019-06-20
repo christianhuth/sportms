@@ -31,7 +31,7 @@
     $iconRegistry->registerIcon(
         'tx_clubms_clubms',
         \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
-        ['source' => 'EXT:clubms/Resources/Public/Icons/tx_clubms.svg']
+        ['source' => 'EXT:clubms/Resources/Public/Icons/Extension.svg']
     );
 
 
