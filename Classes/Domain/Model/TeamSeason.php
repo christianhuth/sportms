@@ -47,6 +47,12 @@ class TeamSeason extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 */
 	protected $teamSeasonPractices;
 
+    /**
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference>
+     * @lazy
+     */
+    protected $teamSeasonImages;
+
 	/**
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\TeamSeasonOfficialJob>
 	 */
@@ -80,6 +86,7 @@ class TeamSeason extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 */
 	protected function initStorageObjects() {
 		$this->teamSeasonPractices = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+		$this->images = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 		$this->teamSeasonOfficialJobs = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 		$this->teamSeasonSquadMembers = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 	}
@@ -130,6 +137,22 @@ class TeamSeason extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
     public function setTeamSeasonPractices($teamSeasonPractices)
     {
         $this->teamSeasonPractices = $teamSeasonPractices;
+    }
+
+    /**
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+     */
+    public function getTeamSeasonImages()
+    {
+        return $this->teamSeasonImages;
+    }
+
+    /**
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $teamSeasonImages
+     */
+    public function setTeamSeasonImages($teamSeasonImages)
+    {
+        $this->teamSeasonImages = $teamSeasonImages;
     }
 
     /**

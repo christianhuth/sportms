@@ -1198,6 +1198,7 @@ CREATE TABLE tx_clubms_domain_model_teamseason (
 	team int(11) DEFAULT '0' NOT NULL,
 	season int(11) DEFAULT '0' NOT NULL,
 	team_season_practices int(11) DEFAULT NULL,
+    team_season_images varchar(255) DEFAULT NULL,
 	team_season_official_jobs int(11) DEFAULT NULL,
 	team_season_squad_members int(11) DEFAULT NULL,
     detail_link tinyint(4) unsigned DEFAULT '0' NOT NULL,

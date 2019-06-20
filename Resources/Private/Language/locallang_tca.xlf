@@ -292,17 +292,14 @@
 			<trans-unit id="tx_clubms_domain_model_teamseason.season">
 				<source>Saison</source>
 			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_teamseason.image">
-				<source>Mannschaftsfoto</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_teamseason.official">
-				<source>Funktionäre</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_teamseason.season">
-				<source>Saison</source>
-			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_teamseason.team_season_practices">
 				<source>Trainingszeiten</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_teamseason.team_season_images">
+				<source>Mannschaftsfoto</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_teamseason.team_season_official_jobs">
+				<source>Funktionäre</source>
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_teamseason.team_season_squad_members">
 				<source>Mannschaftskader</source>
