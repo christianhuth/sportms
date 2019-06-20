@@ -111,8 +111,8 @@ $GLOBALS['TCA']['tx_clubms_domain_model_teamseasonsquadmember'] = array(
             'exclude' => 1,
             'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_teamseasonsquadmember.position',
             'config' => array(
-                'foreign_table' => 'tx_clubms_domain_model_sectionpositiongroup',
-                'foreign_table_where' => 'ORDER BY sorting ASC',
+                'foreign_table' => 'tx_clubms_domain_model_sectionposition',
+                'foreign_table_where' => 'ORDER BY tx_clubms_domain_model_sectionposition.sorting ASC',
                 'items' => Array (
                     Array("", ""),
                 ),
