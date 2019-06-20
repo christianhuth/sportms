@@ -475,17 +475,6 @@
 			</trans-unit>
 			
 			
-			<trans-unit id="tx_clubms_domain_model_section_position_group">
-				<source>Positionen-Gruppen</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_section_position_group.label">
-				<source>Positionen-Gruppe</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_section_position_group.section_position">
-				<source>Positionen</source>
-			</trans-unit>
-			
-			
 			<trans-unit id="tx_clubms_domain_model_team">
 				<source>Mannschaft</source>
 			</trans-unit>

@@ -202,6 +202,18 @@
 			</trans-unit>
 
 
+			<!-- Domain Model SectionPositionGroup -->
+			<trans-unit id="tx_clubms_domain_model_sectionpositiongroup">
+				<source>Position</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_sectionpositiongroup.label">
+				<source>Bezeichnung</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_sectionpositiongroup.section_positions">
+				<source>Detailpositionen</source>
+			</trans-unit>
+
+
 		</body>
 	</file>
 </xliff>
