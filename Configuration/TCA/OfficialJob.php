@@ -17,8 +17,8 @@ $GLOBALS['TCA']['tx_clubms_domain_model_officialjob'] = array(
 		),
 		'iconfile' => 'EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_officialjob.svg',
 		'label' => 'label',
-		'searchFields' => 'season_name, season_name_short, season_name_very_short',
-		'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_official_job',
+		'searchFields' => '',
+		'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_officialjob',
 		'tstamp' => 'tstamp',
 		'versioningWS' => TRUE,
 	),
@@ -41,7 +41,6 @@ $GLOBALS['TCA']['tx_clubms_domain_model_officialjob'] = array(
 				'max' => 255,
 			)
 		),
-		
 		'hidden' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.hidden',
@@ -67,7 +66,6 @@ $GLOBALS['TCA']['tx_clubms_domain_model_officialjob'] = array(
 				'renderType' => 'inputDateTime',
 			),
 		),
-		
 		'endtime' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.endtime',
@@ -89,7 +87,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_officialjob'] = array(
 		
 		'label' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_official_job.label',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_officialjob.label',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,

@@ -154,6 +154,15 @@
 			</trans-unit>
 
 
+			<!-- Domain Model OfficialJob -->
+			<trans-unit id="tx_clubms_domain_model_team_season_officialjob">
+				<source>Funktionärsaufgabe</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_team_season_officialjob.label">
+				<source>Bezeichnung</source>
+			</trans-unit>
+
+
 			<!-- Domain Model RefereeJob -->
 			<trans-unit id="tx_clubms_domain_model_refereejob">
 				<source>Schiedsrichteraufgabe</source>
