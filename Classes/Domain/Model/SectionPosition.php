@@ -33,6 +33,11 @@ namespace Balumedien\Clubms\Domain\Model;
  */
 class SectionPosition extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 {
+    /**
+     * @var \Balumedien\Clubms\Domain\Model\SectionPositionGroup
+     * @lazy
+     */
+    protected $sectionPositionGroup;
 
     /**
      * @var string
@@ -53,6 +58,22 @@ class SectionPosition extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * @var int
      */
     protected $yPosition;
+
+    /**
+     * @return SectionPositionGroup
+     */
+    public function getSectionPositionGroup()
+    {
+        return $this->sectionPositionGroup;
+    }
+
+    /**
+     * @param SectionPositionGroup $sectionPositionGroup
+     */
+    public function setSectionPositionGroup($sectionPositionGroup)
+    {
+        $this->sectionPositionGroup = $sectionPositionGroup;
+    }
 
     /**
      * @return string

@@ -87,6 +87,12 @@ $GLOBALS['TCA']['tx_clubms_domain_model_sectionposition'] = array(
 				'renderType' => 'inputDateTime',
 			),
 		),
+
+		'section_position_group' => array(
+            'config' => array(
+                'type' => 'passthrough',
+            ),
+        ),
 		
 		'label' => array(
 			'exclude' => 1,
