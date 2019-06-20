@@ -94,6 +94,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_teamseason'] = array(
                 'type' => 'passthrough',
             ),
         ),
+
 		'season' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_teamseason.season',
