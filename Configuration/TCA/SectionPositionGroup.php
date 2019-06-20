@@ -28,8 +28,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_sectionpositiongroup'] = array(
 		'showRecordFieldList' => 'label',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'label,
-									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_section_position_group.section_position, section_position'),
+		'1' => array('showitem' => 'label, section_positions'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
