@@ -299,7 +299,8 @@ CREATE TABLE tx_clubms_domain_model_clubofficialjob (
 	pid int(11) DEFAULT '0' NOT NULL,
 
 	club int(11) DEFAULT NULL,
-	club_official int(11) DEFAULT NULL,
+
+	club_officials int(11) DEFAULT NULL,
 	official_job int(11) DEFAULT NULL,
 	
 	ordering int(11) DEFAULT NULL,
