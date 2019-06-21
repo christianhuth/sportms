@@ -36,6 +36,12 @@ namespace Balumedien\Clubms\Domain\Model;
 
 class TeamSeasonPractice extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 
+    /**
+     * @var \Balumedien\Clubms\Domain\Model\TeamSeason
+     * @lazy
+     */
+    protected $teamSeason;
+
 	/**
 	 * @var string
 	 */
@@ -60,6 +66,22 @@ class TeamSeasonPractice extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity 
 	 * @var	string
 	 */
 	protected $annotation;
+
+    /**
+     * @return TeamSeason
+     */
+    public function getTeamSeason()
+    {
+        return $this->teamSeason;
+    }
+
+    /**
+     * @param TeamSeason $teamSeason
+     */
+    public function setTeamSeason($teamSeason)
+    {
+        $this->teamSeason = $teamSeason;
+    }
 
     /**
      * @return string
