@@ -19,15 +19,15 @@ $GLOBALS['TCA']['tx_clubms_domain_model_mail'] = array(
         'label' => 'mail',
         'searchFields' => '',
 		'sortby' => 'ordering',
-        'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_mail',
+        'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_mail',
         'tstamp' => 'tstamp',
 		'versioningWS' => TRUE,
     ),
 	'interface' => array(
-		'showRecordFieldList' => 'mail, contact_type, public',
+		'showRecordFieldList' => '',
 	),
 	'types' => array(
-		'1' => array('showitem' => '--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_mail, mail, contact_type, public,'),
+		'1' => array('showitem' => 'mail, contact_type, public,'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -42,7 +42,6 @@ $GLOBALS['TCA']['tx_clubms_domain_model_mail'] = array(
 				'max' => 255,
 			)
 		),
-		
 		'hidden' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.hidden',
@@ -50,7 +49,6 @@ $GLOBALS['TCA']['tx_clubms_domain_model_mail'] = array(
 				'type' => 'check',
 			),
 		),
-		
 		'starttime' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.starttime',
@@ -69,7 +67,6 @@ $GLOBALS['TCA']['tx_clubms_domain_model_mail'] = array(
 				'renderType' => 'inputDateTime',
 			),
 		),
-		
 		'endtime' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.endtime',
@@ -91,17 +88,16 @@ $GLOBALS['TCA']['tx_clubms_domain_model_mail'] = array(
 		
 		'mail' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_mail.mail',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_mail.mail',
 			'config' => array(
 				'eval' => 'email, required, trim',
 				'size' => 255,
 				'type' => 'input',
 			),
 		),
-		
 		'contact_type' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_mail.type',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_mail.type',
 			'config' => array(
 				'foreign_table' => 'tx_clubms_domain_model_contacttype',
 				'foreign_table_where' => 'ORDER BY label ASC',
@@ -112,10 +108,9 @@ $GLOBALS['TCA']['tx_clubms_domain_model_mail'] = array(
 				'type' => 'select',
 			),
 		),
-		
 		'public' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_mail.public',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_mail.public',
 			'config' => array(
 				'type' => 'check',
 			),

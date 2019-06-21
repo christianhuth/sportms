@@ -4,25 +4,6 @@
 		<header/>
 		<body>
 			
-			<trans-unit id="tx_clubms_domain_model_mail">
-				<source>Mail</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_mail.mail">
-				<source>Mail</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_mail.type">
-				<source>Typ</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_mail.type_1">
-				<source>Privat</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_mail.type_2">
-				<source>Geschäftlich</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_mail.public">
-				<source>Öffentlich</source>
-			</trans-unit>
-			
 			
 			<trans-unit id="tx_clubms_domain_model_phone">
 				<source>Telefonnummer</source>

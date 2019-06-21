@@ -777,13 +777,9 @@ CREATE TABLE tx_clubms_domain_model_mail (
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
 	
-	mail varchar(255) DEFAULT NULL,
+	mail varchar(255) DEFAULT '' NOT NULL,
 	contact_type int(11) unsigned DEFAULT NULL,
-	public tinyint(1) unsigned DEFAULT NULL,
-	
-	club int(11) DEFAULT NULL,
-	club_section int(11) DEFAULT NULL,
-	person int(11) DEFAULT NULL,
+	public tinyint(4) unsigned DEFAULT '0' NULL,
 	
 	ordering int(11) DEFAULT NULL,
 	
@@ -921,14 +917,10 @@ CREATE TABLE tx_clubms_domain_model_phone (
 	pid int(11) DEFAULT '0' NOT NULL,
 
 	areaCode varchar(255) DEFAULT NULL,
-	callingNumber varchar(255) DEFAULT NULL,
+	callingNumber varchar(255) DEFAULT '0' NOT NULL,
 	internationalAreaCode varchar(255) DEFAULT NULL,
-	type int(11) unsigned DEFAULT NULL,
-	public tinyint(1) unsigned DEFAULT NULL,
-	
-	club int(11) DEFAULT NULL,
-	club_section int(11) DEFAULT NULL,
-	person int(11) DEFAULT NULL,
+	contact_type int(11) unsigned DEFAULT NULL,
+	public tinyint(4) unsigned DEFAULT '0' NOT NULL,
 	
 	ordering int(11) DEFAULT NULL,
 
@@ -1396,13 +1388,9 @@ CREATE TABLE tx_clubms_domain_model_url (
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
 
-	url varchar(255) DEFAULT NULL,
-	type int(11) unsigned DEFAULT NULL,
-	public tinyint(1) unsigned DEFAULT NULL,
-	
-	club int(11) DEFAULT NULL,
-	club_section int(11) DEFAULT NULL,
-	person int(11) DEFAULT NULL,
+	url varchar(255) DEFAULT '0' NOT NULL,
+	contact_type int(11) unsigned DEFAULT NULL,
+	public tinyint(4) unsigned DEFAULT '0' NOT NULL,
 	
 	ordering int(11) DEFAULT NULL,
 

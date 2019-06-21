@@ -465,6 +465,21 @@
 			</trans-unit>
 
 
+			<!-- Domain Model Mail -->
+			<trans-unit id="tx_clubms_domain_model_mail">
+				<source>Mail</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_mail.mail">
+				<source>Mail</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_mail.contact_type">
+				<source>Kontaktart</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_mail.public">
+				<source>Öffentlich</source>
+			</trans-unit>
+
+
 			<!-- Domain Model OfficialJob -->
 			<trans-unit id="tx_clubms_domain_model_officialjob">
 				<source>Funktionärsaufgabe</source>
