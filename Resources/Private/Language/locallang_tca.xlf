@@ -182,6 +182,21 @@
 			</trans-unit>
 
 
+			<!-- Domain Model ClubOfficial -->
+			<trans-unit id="tx_clubms_domain_model_club_official">
+				<source>Vereinsfunktionär</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club_official.person">
+				<source>Person</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club_official.startdate">
+				<source>Startdatum</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club_official.enddate">
+				<source>Enddatum</source>
+			</trans-unit>
+
+
 			<!-- Domain Model ClubOfficialJob -->
 			<trans-unit id="tx_clubms_domain_model_clubofficialjob">
 				<source>Vereinsfunktionärstätigkeit</source>

@@ -4,19 +4,6 @@
 		<header/>
 		<body>
 			
-			<trans-unit id="tx_clubms_domain_model_club_official.person">
-				<source>Person</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_club_official.details">
-				<source>Details</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_club_official.startdate">
-				<source>Startdatum</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_club_official.enddate">
-				<source>Enddatum</source>
-			</trans-unit>
-			
 			
 			<trans-unit id="tx_clubms_domain_model_club_section">
 				<source>Abteilung</source>
