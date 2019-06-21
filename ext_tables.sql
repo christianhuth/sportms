@@ -177,7 +177,7 @@ CREATE TABLE tx_clubms_domain_model_clubground (
     club int(11) DEFAULT '0' NOT NULL,
 
 	name varchar(255) DEFAULT '' NOT NULL,
-	addresses int(11) DEFAULT NULL,
+	address int(11) DEFAULT NULL,
 	journey varchar(255) DEFAULT '' NOT NULL,
 	images varchar(255) DEFAULT NULL,
 	description varchar(255) DEFAULT '' NOT NULL,

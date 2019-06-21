@@ -105,7 +105,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_clubground'] = array(
 			),
 		),
 		'address' => array(
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubground.addresses',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubground.address',
 			'config' => array(
 				'appearance' => array(
 					'levelLinksPosition' => 'bottom',
