@@ -221,7 +221,8 @@ CREATE TABLE tx_clubms_domain_model_clubmembers (
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
 
-	club int(11) DEFAULT NULL,
+	club int(11) DEFAULT '0' NOT NULL,
+
 	members varchar(255) DEFAULT '' NOT NULL,
 	date int(11) DEFAULT '0' NOT NULL,
 	
