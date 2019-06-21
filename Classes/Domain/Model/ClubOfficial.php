@@ -32,20 +32,42 @@ namespace Balumedien\Clubms\Domain\Model;
  */
 class ClubOfficial extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 
+    /**
+     * @var \Balumedien\Clubms\Domain\Model\ClubOfficialJob
+     * @lazy
+     */
+    protected $clubOfficialJob;
+
 	/**
 	 * @var \Balumedien\Clubms\Domain\Model\Person
 	 */
-	protected $person = '';
+	protected $person;
 
 	/**
 	 * @var int
 	 */
-	protected $startdate = '';
+	protected $startdate;
 
     /**
      * @var int
      */
-    protected $enddate = '';
+    protected $enddate;
+
+    /**
+     * @return ClubOfficialJob
+     */
+    public function getClubOfficialJob()
+    {
+        return $this->clubOfficialJob;
+    }
+
+    /**
+     * @param ClubOfficialJob $clubOfficialJob
+     */
+    public function setClubOfficialJob($clubOfficialJob)
+    {
+        $this->clubOfficialJob = $clubOfficialJob;
+    }
 
     /**
      * @return Person
