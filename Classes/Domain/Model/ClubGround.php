@@ -54,6 +54,11 @@ class ClubGround extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
     protected $journey;
 
     /**
+     * @var string
+     */
+    protected $description;
+
+    /**
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference>
      * @lazy
      */
@@ -148,6 +153,22 @@ class ClubGround extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
     public function setJourney($journey)
     {
         $this->journey = $journey;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * @param string $description
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
     }
 
     /**

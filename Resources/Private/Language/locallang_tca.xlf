@@ -125,6 +125,51 @@
 			</trans-unit>
 
 
+			<!-- Domain Model ClubGround -->
+			<trans-unit id="tx_clubms_domain_model_clubground">
+                <source>Vereinsgelände</source>
+            </trans-unit>
+            <trans-unit id="tx_clubms_domain_model_clubground.name">
+                <source>Bezeichnung</source>
+            </trans-unit>
+            <trans-unit id="tx_clubms_domain_model_clubground.address">
+                <source>Adresse</source>
+            </trans-unit>
+            <trans-unit id="tx_clubms_domain_model_clubground.journey">
+                <source>Anfahrt</source>
+            </trans-unit>
+            <trans-unit id="tx_clubms_domain_model_clubground.description">
+                <source>Beschreibung</source>
+            </trans-unit>
+            <trans-unit id="tx_clubms_domain_model_clubground.images">
+                <source>Fotos</source>
+            </trans-unit>
+            <trans-unit id="tx_clubms_domain_model_clubground.club_owned">
+                <source>In Vereinsbesitz?</source>
+            </trans-unit>
+            <trans-unit id="tx_clubms_domain_model_clubground.club_owned_since">
+                <source>In Vereinsbesitz seit</source>
+            </trans-unit>
+            <trans-unit id="tx_clubms_domain_model_clubground.year_of_building">
+                <source>Baujahr</source>
+            </trans-unit>
+            <trans-unit id="tx_clubms_domain_model_clubground.date_of_building">
+                <source>Baudatum</source>
+            </trans-unit>
+            <trans-unit id="tx_clubms_domain_model_clubground.club_venues">
+                <source>Sportstätten</source>
+            </trans-unit>
+            <trans-unit id="tx_clubms_domain_model_clubground.tab_images">
+                <source>Bilder</source>
+            </trans-unit>
+            <trans-unit id="tx_clubms_domain_model_clubground.tab_details">
+                <source>Details</source>
+            </trans-unit>
+            <trans-unit id="tx_clubms_domain_model_clubground.tab_venues">
+                <source>Sportstätten</source>
+            </trans-unit>
+
+
 			<!-- Domain Model ClubOfficialJob -->
 			<trans-unit id="tx_clubms_domain_model_clubofficialjob">
 				<source>Vereinsfunktionärstätigkeit</source>

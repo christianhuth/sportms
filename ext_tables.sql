@@ -174,8 +174,10 @@ CREATE TABLE tx_clubms_domain_model_clubground (
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
 
+    club int(11) DEFAULT '0' NOT NULL,
+
 	name varchar(255) DEFAULT '' NOT NULL,
-	address int(11) DEFAULT NULL,
+	addresses int(11) DEFAULT NULL,
 	journey varchar(255) DEFAULT '' NOT NULL,
 	images varchar(255) DEFAULT NULL,
 	description varchar(255) DEFAULT '' NOT NULL,
@@ -184,8 +186,6 @@ CREATE TABLE tx_clubms_domain_model_clubground (
 	date_of_building int(11) DEFAULT NULL,
 	year_of_building varchar(255) DEFAULT NULL,
 	venues int(11) DEFAULT NULL,
-	
-	club int(11) DEFAULT '0' NOT NULL,
 	
 	ordering int(11) DEFAULT NULL,
 

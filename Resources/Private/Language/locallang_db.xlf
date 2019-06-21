@@ -6,39 +6,7 @@
 
 			
 			
-			<trans-unit id="tx_clubms_domain_model_club_ground">
-				<source>Vereinsgelände</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_club_ground.name">
-				<source>Bezeichnung</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_club_ground.journey">
-				<source>Anfahrt</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_club_ground.image">
-				<source>Fotos</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_club_ground.details">
-				<source>Details</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_club_ground.description">
-				<source>Beschreibung</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_club_ground.club_owned">
-				<source>In Vereinsbesitz?</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_club_ground.club_owned_since">
-				<source>In Vereinsbesitz seit</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_club_ground.year_of_building">
-				<source>Baujahr</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_club_ground.date_of_building">
-				<source>Baudatum</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_club_ground.venues">
-				<source>Sportstätten</source>
-			</trans-unit>
+
 			
 			
 			<trans-unit id="tx_clubms_domain_model_club_members.members">
