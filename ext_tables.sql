@@ -498,11 +498,12 @@ CREATE TABLE tx_clubms_domain_model_clubvenue (
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
 
+    club_ground int(11) DEFAULT '0' NOT NULL,
+
 	name varchar(255) DEFAULT '' NOT NULL,
+    description varchar(255) DEFAULT '' NOT NULL,
 	address int(11) DEFAULT NULL,
-	journey varchar(255) DEFAULT '' NOT NULL,
 	images varchar(255) DEFAULT NULL,
-	description varchar(255) DEFAULT '' NOT NULL,
 	club_owned tinyint(4) unsigned DEFAULT '0' NOT NULL,
 	club_owned_since int(11) DEFAULT NULL,
 	date_of_building int(11) DEFAULT NULL,
@@ -510,10 +511,6 @@ CREATE TABLE tx_clubms_domain_model_clubvenue (
 	dimensions varchar(255) DEFAULT '' NOT NULL,
 	surface int(11) DEFAULT '0' NOT NULL,
 	spectator_capacity varchar(255) DEFAULT '' NOT NULL,
-	parking varchar(255) DEFAULT '' NOT NULL,
-	park_and_ride tinyint(4) unsigned DEFAULT '0' NOT NULL,
-	
-	club_ground int(11) DEFAULT '0' NOT NULL,
 	
 	ordering int(11) DEFAULT NULL,
 

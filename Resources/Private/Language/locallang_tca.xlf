@@ -197,6 +197,48 @@
 			</trans-unit>
 
 
+			<!-- Domain Model ClubVenue -->
+			<trans-unit id="tx_clubms_domain_model_clubvenue">
+				<source>Vereinsstätte</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_clubvenue.name">
+				<source>Bezeichnung</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_clubvenue.description">
+				<source>Beschreibung</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_clubvenue.address">
+				<source>Adresse</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_clubvenue.images">
+				<source>Bilder</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_clubvenue.club_owned">
+				<source>In Vereinsbesitz?</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_clubvenue.club_owned_since">
+				<source>In Vereinsbesitz seit</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_clubvenue.date_of_building">
+				<source>Baudatum</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_clubvenue.year_of_building">
+				<source>Baujahr</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_clubvenue.dimensions">
+				<source>Maße</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_clubvenue.surface">
+				<source>Bodenbelag</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_clubvenue.spectator_capacity">
+				<source>Zuschauerkapazität</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_clubvenue.tab_details">
+				<source>Details</source>
+			</trans-unit>
+
+
 			<!-- Domain Model Competition -->
 			<trans-unit id="tx_clubms_domain_model_competition">
 				<source>Wettbewerb</source>

@@ -3,13 +3,6 @@
 	<file source-language="de" datatype="plaintext" original="messages" date="2015-05-13T11:46:05Z" product-name="clubms">
 		<header/>
 		<body>
-
-			
-			
-
-			
-
-			
 			
 			<trans-unit id="tx_clubms_domain_model_club_official.person">
 				<source>Person</source>
@@ -69,56 +62,6 @@
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_club_section_official_job.person">
 				<source>Person</source>
-			</trans-unit>
-			
-			
-			<trans-unit id="tx_clubms_domain_model_club_venue">
-				<source>Vereinsstätte</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_club_venue.name">
-				<source>Bezeichnung</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_club_venue.journey">
-				<source>Anfahrt</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_club_venue.image">
-				<source>Fotos</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_club_venue.details">
-				<source>Details</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_club_venue.description">
-				<source>Beschreibung</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_club_venue.club_owned">
-				<source>In Vereinsbesitz?</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_club_venue.club_owned_since">
-				<source>In Vereinsbesitz seit</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_club_venue.date_of_building">
-				<source>Baudatum</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_club_venue.year_of_building">
-				<source>Baujahr</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_club_venue.size">
-				<source>Größe</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_club_venue.dimensions">
-				<source>Maße</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_club_venue.surface">
-				<source>Bodenbelag</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_club_venue.spectator_capacity">
-				<source>Zuschauerkapazität</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_club_venue.parking">
-				<source>Anzahl Parkplätze</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_club_venue.park_and_ride">
-				<source>Park / Ride vorhanden?</source>
 			</trans-unit>
 			
 			

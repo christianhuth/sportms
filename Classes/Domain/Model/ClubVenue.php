@@ -40,7 +40,7 @@ class ClubVenue extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
     /**
      * @var string
      */
-    protected $name ;
+    protected $name;
 
     /**
      * @var string

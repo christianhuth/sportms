@@ -19,7 +19,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_clubvenue'] = array(
 		'label' => 'name',
 		'searchFields' => '',
 		'sortby' => 'ordering',
-		'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_club_venue',
+		'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubvenue',
 		'tstamp' => 'tstamp',
 		'versioningWS' => TRUE,
 	),
@@ -28,9 +28,9 @@ $GLOBALS['TCA']['tx_clubms_domain_model_clubvenue'] = array(
 	),
 	'types' => array(
 		'1' => array('showitem' => 'name, address, journey,
-									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_club_venue.image, images,
-									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_club_venue.details, description, club_owned, club_owned_since, date_of_building, year_of_building,
-									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_club_venue.size, dimensions, surface, spectator_capacity, parking, park_and_ride'),
+									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubvenue.image, images,
+									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubvenue.details, description, club_owned, club_owned_since, date_of_building, year_of_building,
+									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubvenue.size, dimensions, surface, spectator_capacity, parking, park_and_ride'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -45,7 +45,6 @@ $GLOBALS['TCA']['tx_clubms_domain_model_clubvenue'] = array(
 				'max' => 255,
 			)
 		),
-		
 		'hidden' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.hidden',
@@ -71,7 +70,6 @@ $GLOBALS['TCA']['tx_clubms_domain_model_clubvenue'] = array(
 				'renderType' => 'inputDateTime',
 			),
 		),
-		
 		'endtime' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.endtime',
@@ -90,19 +88,33 @@ $GLOBALS['TCA']['tx_clubms_domain_model_clubvenue'] = array(
 				'renderType' => 'inputDateTime',
 			),
 		),
+
+        'club_ground' => array(
+            'config' => array(
+                'type' => 'passthrough',
+            ),
+        ),
 		
 		'name' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_club_venue.name',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubvenue.name',
 			'config' => array(
 				'eval' => 'required, trim',
 				'size' => 30,
 				'type' => 'input',
 			),
 		),
-		
+        'description' => array(
+            'exclude' => 1,
+            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubvenue.description',
+            'config' => array(
+                'cols' => '40',
+                'rows' => '15',
+                'type' => 'text',
+            ),
+        ),
 		'address' => array(
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_address',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubvenue.address',
 			'config' => array(
 				'appearance' => array(
 					'levelLinksPosition' => 'bottom',
@@ -112,16 +124,6 @@ $GLOBALS['TCA']['tx_clubms_domain_model_clubvenue'] = array(
 				'foreign_field' => 'club_ground',
 				'foreign_table' => 'tx_clubms_domain_model_address',
 				'type' => 'inline',
-			),
-		),
-		
-		'journey' => array(
-			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_club_venue.journey',
-			'config' => array(
-				'cols' => '40',
-				'rows' => '15',
-				'type' => 'text',
 			),
 		),
 		
@@ -139,27 +141,16 @@ $GLOBALS['TCA']['tx_clubms_domain_model_clubvenue'] = array(
 				),
 		),
 		
-		'description' => array(
-			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_club_venue.description',
-			'config' => array(
-				'cols' => '40',
-				'rows' => '15',
-				'type' => 'text',
-			),
-		),
-		
 		'club_owned' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_club_venue.club_owned',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubvenue.club_owned',
 			'config' => array(
 				'type' => 'check',
 			),
 		),
-		
 		'club_owned_since' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_club_venue.club_owned_since',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubvenue.club_owned_since',
 			'config' => array(
 				'type' => 'input',
 				'size' => 8,
@@ -168,10 +159,9 @@ $GLOBALS['TCA']['tx_clubms_domain_model_clubvenue'] = array(
 				'renderType' => 'inputDateTime',
 			),
 		),
-		
 		'date_of_building' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_club_venue.date_of_building',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubvenue.date_of_building',
 			'config' => array(
 				'type' => 'input',
 				'size' => 8,
@@ -180,10 +170,9 @@ $GLOBALS['TCA']['tx_clubms_domain_model_clubvenue'] = array(
 				'renderType' => 'inputDateTime',
 			),
 		),
-		
 		'year_of_building' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_club_venue.year_of_building',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubvenue.year_of_building',
 			'config' => array(
 				'eval' => 'trim',
 				'size' => 5,
@@ -193,17 +182,16 @@ $GLOBALS['TCA']['tx_clubms_domain_model_clubvenue'] = array(
 		
 		'dimensions' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_club_venue.dimensions',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubvenue.dimensions',
 			'config' => array(
 				'type' => 'input',
 				'size' => 12,
 				'eval' => 'trim',
 			),
 		),
-		
 		'surface' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_club_venue.surface',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubvenue.surface',
 			'config' => array(
 				'items' => array(
 					array('', '0'),
@@ -215,32 +203,13 @@ $GLOBALS['TCA']['tx_clubms_domain_model_clubvenue'] = array(
 				'type' => 'select',
 			),
 		),
-		
 		'spectator_capacity' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_club_venue.spectator_capacity',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubvenue.spectator_capacity',
 			'config' => array(
 				'type' => 'input',
 				'size' => 6,
 				'eval' => 'int, trim',
-			),
-		),
-		
-		'parking' => array(
-			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_club_venue.parking',
-			'config' => array(
-				'type' => 'input',
-				'size' => 6,
-				'eval' => 'int, trim',
-			),
-		),
-		
-		'park_and_ride' => array(
-			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_club_venue.park_and_ride',
-			'config' => array(
-				'type' => 'check',
 			),
 		),
 		
