@@ -184,7 +184,7 @@
 
 			<!-- Domain Model ClubOfficial -->
 			<trans-unit id="tx_clubms_domain_model_club_official">
-				<source>Vereinsfunktionär</source>
+				<source>Vereinsfunktionäre</source>
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_club_official.person">
 				<source>Person</source>
@@ -209,6 +209,21 @@
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_clubofficialjob.club_official">
 				<source>VereinsfunktionärIn</source>
+			</trans-unit>
+
+
+			<!-- Domain Model ClubSectionOfficial -->
+			<trans-unit id="tx_clubms_domain_model_club_section_official">
+				<source>Abteilungsfunktionäre</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club_section_official.person">
+				<source>Person</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club_section_official.startdate">
+				<source>Startdatum</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club_section_official.enddate">
+				<source>Enddatum</source>
 			</trans-unit>
 
 
@@ -548,7 +563,7 @@
 
 			<!-- Domain Model TeamSeasonOfficial -->
 			<trans-unit id="tx_clubms_domain_model_teamseasonofficial">
-				<source>MannschaftsfunktionärIn</source>
+				<source>Mannschaftsfunktionäre</source>
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_teamseasonofficial.person">
 				<source>Person</source>
