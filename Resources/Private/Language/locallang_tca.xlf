@@ -894,6 +894,21 @@
 			</trans-unit>
 
 
+			<!-- Domain Model Url -->
+			<trans-unit id="tx_clubms_domain_model_url">
+				<source>URL</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_url.url">
+				<source>URL</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_url.contact_type">
+				<source>Kontaktart</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_url.public">
+				<source>Öffentlich</source>
+			</trans-unit>
+
+
 		</body>
 	</file>
 </xliff>

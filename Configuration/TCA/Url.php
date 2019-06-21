@@ -19,15 +19,15 @@ $GLOBALS['TCA']['tx_clubms_domain_model_url'] = array(
         'label' => 'url',
         'searchFields' => '',
 		'sortby' => 'ordering',
-        'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_url',
+        'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_url',
         'tstamp' => 'tstamp',
         'versioningWS' => TRUE,
     ),
 	'interface' => array(
-		'showRecordFieldList' => 'url, type',
+		'showRecordFieldList' => '',
 	),
 	'types' => array(
-		'1' => array('showitem' => '--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_url, url, type, public,'),
+		'1' => array('showitem' => 'url, contact_type, public,'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -42,7 +42,6 @@ $GLOBALS['TCA']['tx_clubms_domain_model_url'] = array(
 				'max' => 255,
 			)
 		),
-		
 		'hidden' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.hidden',
@@ -50,7 +49,6 @@ $GLOBALS['TCA']['tx_clubms_domain_model_url'] = array(
 				'type' => 'check',
 			),
 		),
-		
 		'starttime' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.starttime',
@@ -69,7 +67,6 @@ $GLOBALS['TCA']['tx_clubms_domain_model_url'] = array(
 				'type' => 'input',
 			),
 		),
-		
 		'endtime' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.endtime',
@@ -91,7 +88,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_url'] = array(
 		
 		'url' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_url.url',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_url.url',
 			'config' => array(
 				'eval' => 'domainname, required, trim',
 				'renderType' => 'inputLink',
@@ -99,22 +96,22 @@ $GLOBALS['TCA']['tx_clubms_domain_model_url'] = array(
 				'type' => 'input',
 			),
 		),
-		
-		'type' => array(
-			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_url.type',
-			'config' => array(
-				'foreign_table' => 'tx_clubms_domain_model_contacttype',
-				'maxItems' => 1,
-				'renderType' => 'selectSingle',
-				'size' => 1,
-				'type' => 'select',
-			),
-		),
-		
+        'contact_type' => array(
+            'exclude' => 1,
+            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_url.contact_type',
+            'config' => array(
+                'foreign_table' => 'tx_clubms_domain_model_contacttype',
+                'foreign_table_where' => 'ORDER BY label ASC',
+                'maxItems' => 1,
+                'minItems' => 1,
+                'renderType' => 'selectSingle',
+                'size' => 1,
+                'type' => 'select',
+            ),
+        ),
 		'public' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_url.public',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_url.public',
 			'config' => array(
 				'type' => 'check',
 			),

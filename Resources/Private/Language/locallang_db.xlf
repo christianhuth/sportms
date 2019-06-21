@@ -6,25 +6,7 @@
 			
 
 			
-			
-			<trans-unit id="tx_clubms_domain_model_url">
-				<source>URL</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_url.url">
-				<source>URL</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_url.type">
-				<source>Typ</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_url.type_1">
-				<source>Privat</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_url.type_2">
-				<source>Geschäftlich</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_url.public">
-				<source>Öffentlich</source>
-			</trans-unit>
+
 			
 			
 		</body>
