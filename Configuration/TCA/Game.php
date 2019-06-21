@@ -17,6 +17,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
 		),
 		'iconfile' => 'EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_game.svg',
 		'label' => 'label',
+        'label_userFunc' => \Balumedien\Clubms\Configuration\TCA\UserFunc\UserFunc::class . '->GameLabel',
 		'searchFields' => '',
 		'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game',
 		'tstamp' => 'tstamp',

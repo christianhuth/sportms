@@ -18,6 +18,14 @@
             $newLabel = $record['name'] . " (" . $section['label'] . " - " . $competitionType['label'] . " - " . $ageLevel['label'] . ")";
             $parameters['title'] = $newLabel;
         }
+
+        public function gameLabel(&$parameters, $parentObject) {
+            $record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
+            $teamHome = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_team", $record['team_home']);
+            $teamGuest = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_team", $record['team_guest']);
+            $newLabel = $teamHome['name'] . " - " . $teamGuest['name'];
+            $parameters['title'] = $newLabel;
+        }
 		
 		public function phoneLabel(&$parameters, $parentObject) {
 			$record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
