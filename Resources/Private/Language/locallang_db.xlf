@@ -5,20 +5,6 @@
 		<body>
 			
 			
-			<trans-unit id="tx_clubms_domain_model_club_section">
-				<source>Abteilung</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_club_section.images">
-				<source>Bilder</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_club_section.contact">
-				<source>Kontaktdaten</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_club_section.official">
-				<source>Funktionäre</source>
-			</trans-unit>
-			
-			
 			<trans-unit id="tx_clubms_domain_model_club_section_members">
 				<source>Mitglieder</source>
 			</trans-unit>

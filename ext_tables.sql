@@ -337,16 +337,15 @@ CREATE TABLE tx_clubms_domain_model_clubsection (
 	pid int(11) DEFAULT '0' NOT NULL,
 
 	club int(11) DEFAULT '0' NOT NULL,
+
 	section int(11) DEFAULT '0' NOT NULL,
 	images varchar(255) DEFAULT NULL,
-	members int(11) DEFAULT NULL,
-	
-	address int(11) DEFAULT NULL,
-	phone int(11) DEFAULT NULL,
-	mail int(11) DEFAULT NULL,
-	url int(11) DEFAULT NULL,
-	
-	club_section_official_job int(11) DEFAULT NULL,
+	club_section_members int(11) DEFAULT NULL,
+	addresses int(11) DEFAULT NULL,
+	phones int(11) DEFAULT NULL,
+	mails int(11) DEFAULT NULL,
+	urls int(11) DEFAULT NULL,
+	club_section_official_jobs int(11) DEFAULT NULL,
 	
 	ordering int(11) DEFAULT NULL,
 

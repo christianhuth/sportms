@@ -76,7 +76,7 @@
 				<source>Gründungsjahr</source>
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_club.club_members">
-				<source>Mitglieder</source>
+				<source>Vereinsmitglieder</source>
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_club.images">
 				<source>Vereinslogos</source>
@@ -100,7 +100,7 @@
 				<source>Abteilungen</source>
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_club.club_official_jobs">
-				<source>Funktionäre</source>
+				<source>Vereinsfunktionärstätigkeiten</source>
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_club.detail_link">
 				<source>Link auf Einzelansicht möglich?</source>
@@ -171,28 +171,28 @@
 
 
             <!-- Domain Model ClubMembers -->
-			<trans-unit id="tx_clubms_domain_model_club_members">
+			<trans-unit id="tx_clubms_domain_model_clubmembers">
 				<source>Vereinsmitglieder</source>
 			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_club_members.members">
+			<trans-unit id="tx_clubms_domain_model_clubmembers.members">
 				<source>Mitgliederanzahl</source>
 			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_club_members.date">
+			<trans-unit id="tx_clubms_domain_model_clubmembers.date">
 				<source>Erfassungsdatum</source>
 			</trans-unit>
 
 
 			<!-- Domain Model ClubOfficial -->
-			<trans-unit id="tx_clubms_domain_model_club_official">
+			<trans-unit id="tx_clubms_domain_model_clubofficial">
 				<source>Vereinsfunktionäre</source>
 			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_club_official.person">
+			<trans-unit id="tx_clubms_domain_model_clubofficial.person">
 				<source>Person</source>
 			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_club_official.startdate">
+			<trans-unit id="tx_clubms_domain_model_clubofficial.startdate">
 				<source>Startdatum</source>
 			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_club_official.enddate">
+			<trans-unit id="tx_clubms_domain_model_clubofficial.enddate">
 				<source>Enddatum</source>
 			</trans-unit>
 
@@ -209,17 +209,53 @@
 			</trans-unit>
 
 
-			<!-- Domain Model ClubSectionOfficial -->
-			<trans-unit id="tx_clubms_domain_model_club_section_official">
+			<!-- Domain Model ClubSection -->
+			<trans-unit id="tx_clubms_domain_model_clubsection">
+				<source>Abteilung</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_clubsection.section">
+				<source>Abteilung</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_clubsection.images">
+				<source>Bilder</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_clubsection.club_section_members">
+				<source>Abteilungsmitglieder</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_clubsection.addresses">
+				<source>Adressen</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_clubsection.phones">
+				<source>Telefonnummern</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_clubsection.mails">
+				<source>Mail-Adressen</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_clubsection.urls">
+				<source>Webseiten</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_clubsection.club_section_official_jobs">
+				<source>Abteilungsfunktionärstätigkeiten</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_clubsection.tab_contact">
+				<source>Kontaktinformationen</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_clubsection.tab_officials">
 				<source>Abteilungsfunktionäre</source>
 			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_club_section_official.person">
+
+
+			<!-- Domain Model ClubSectionOfficial -->
+			<trans-unit id="tx_clubms_domain_model_clubsectionofficial">
+				<source>Abteilungsfunktionäre</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_clubsectionofficial.person">
 				<source>Person</source>
 			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_club_section_official.startdate">
+			<trans-unit id="tx_clubms_domain_model_clubsectionofficial.startdate">
 				<source>Startdatum</source>
 			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_club_section_official.enddate">
+			<trans-unit id="tx_clubms_domain_model_clubsectionofficial.enddate">
 				<source>Enddatum</source>
 			</trans-unit>
 
@@ -551,7 +587,7 @@
 				<source>Mannschaftsfoto</source>
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_teamseason.team_season_official_jobs">
-				<source>Funktionäre</source>
+				<source>Mannschaftsfunktionärstätigkeiten</source>
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_teamseason.team_season_squad_members">
 				<source>Mannschaftskader</source>

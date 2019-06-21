@@ -19,17 +19,17 @@ $GLOBALS['TCA']['tx_clubms_domain_model_clubsection'] = array(
 		'label' => 'section',
 		'searchFields' => '',
 		'sortby' => 'ordering',
-		'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_club_section',
+		'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubsection',
 		'tstamp' => 'tstamp',
 		'versioningWS' => TRUE,
 	),
 	'interface' => array(
-		'showRecordFieldList' => 'hidden, section, member, address, phone, mail, url, club_section_official_job',
+		'showRecordFieldList' => '',
 	),
 	'types' => array(
-		'1' => array('showitem' => '--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_club_section, section, images, members,
-									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_club_section.contact, address, phone, mail, url,
-									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_club_section.official, club_section_official_job'),
+		'1' => array('showitem' => 'section, images, club_section_members,
+									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubsection.tab_contact, addresses, phones, mails, urls,
+									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubsection.tab_officials, club_section_official_jobs'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -44,7 +44,6 @@ $GLOBALS['TCA']['tx_clubms_domain_model_clubsection'] = array(
 				'max' => 255,
 			)
 		),
-		
 		'hidden' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.hidden',
@@ -70,7 +69,6 @@ $GLOBALS['TCA']['tx_clubms_domain_model_clubsection'] = array(
 				'renderType' => 'inputDateTime',
 			),
 		),
-		
 		'endtime' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.endtime',
@@ -89,10 +87,16 @@ $GLOBALS['TCA']['tx_clubms_domain_model_clubsection'] = array(
 				'renderType' => 'inputDateTime',
 			),
 		),
+
+        'club' => array(
+            'config' => array(
+                'type' => 'passthrough',
+            ),
+        ),
 		
 		'section' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_section',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubsection.section',
 			'config' => array(
 				'foreign_table' => 'tx_clubms_domain_model_section',
 				'foreign_table_where' => 'ORDER BY tx_clubms_domain_model_section.label ASC',
@@ -102,10 +106,9 @@ $GLOBALS['TCA']['tx_clubms_domain_model_clubsection'] = array(
 				'type' => 'select',
 			),
 		),
-		
 		'images' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_club_section.images',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubsection.images',
 			'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
 				'image',
 				array(
@@ -116,9 +119,8 @@ $GLOBALS['TCA']['tx_clubms_domain_model_clubsection'] = array(
 				$GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']
 			),
 		),
-		
-		'members' => array(
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_club_section_members',
+		'club_section_members' => array(
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubsection.club_section_members',
 			'config' => array(
 				'appearance' => array(
 					'levelLinksPosition' => 'bottom',
@@ -130,8 +132,8 @@ $GLOBALS['TCA']['tx_clubms_domain_model_clubsection'] = array(
 			),
 		),
 		
-		'address' => array(
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_person.addresses',
+		'addresses' => array(
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubsection.addresses',
 			'config' => array(
 				'appearance' => array(
 					'levelLinksPosition' => 'bottom',
@@ -142,9 +144,8 @@ $GLOBALS['TCA']['tx_clubms_domain_model_clubsection'] = array(
 				'type' => 'inline',
             ),
         ),
-		
-        'phone' => array(
-            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_phone',
+        'phones' => array(
+            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubsection.phones',
             'config' => array(
 				'appearance' => array(
 					'levelLinksPosition' => 'bottom',
@@ -155,9 +156,8 @@ $GLOBALS['TCA']['tx_clubms_domain_model_clubsection'] = array(
 				'type' => 'inline',
             ),
         ),
-		
-        'mail' => array(
-            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_mail',
+        'mails' => array(
+            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubsection.mails',
             'config' => array(
 				'appearance' => array(
 					'levelLinksPosition' => 'bottom',
@@ -168,9 +168,8 @@ $GLOBALS['TCA']['tx_clubms_domain_model_clubsection'] = array(
 				'type' => 'inline',
 			),
 		),
-		
-		'url' => array(
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_url',
+		'urls' => array(
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubsection.urls',
 			'config' => array(
 				'appearance' => array(
 					'levelLinksPosition' => 'bottom',
@@ -182,8 +181,8 @@ $GLOBALS['TCA']['tx_clubms_domain_model_clubsection'] = array(
 			),
 		),
 		
-		'club_section_official_job' => array(
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_club_section.official',
+		'club_section_official_jobs' => array(
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubsection.club_section_official_jobs',
 			'config' => array(
 				'appearance' => array(
 					'levelLinksPosition' => 'bottom',
