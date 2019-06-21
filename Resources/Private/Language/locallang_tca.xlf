@@ -654,6 +654,27 @@
 			</trans-unit>
 
 
+			<!-- Domain Model Phone -->
+			<trans-unit id="tx_clubms_domain_model_phone">
+				<source>Telefonnummer</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_phone.area_code">
+				<source>Vorwahl</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_phone.calling_number">
+				<source>Rufnummer</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_phone.international_area_code">
+				<source>Länder Code</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_phone.contact_type">
+				<source>Kontaktart</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_phone.public">
+				<source>Öffentlich</source>
+			</trans-unit>
+
+
 			<!-- Domain Model RefereeJob -->
 			<trans-unit id="tx_clubms_domain_model_refereejob">
 				<source>Schiedsrichteraufgabe</source>

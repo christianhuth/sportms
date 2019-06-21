@@ -22,15 +22,15 @@ $GLOBALS['TCA']['tx_clubms_domain_model_phone'] = array(
 		'label_userFunc' => \Balumedien\Clubms\Configuration\TCA\UserFunc\UserFunc::class . '->phoneLabel',
 		'searchFields' => '',
 		'sortby' => 'ordering',
-		'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_phone',
+		'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_phone',
 		'tstamp' => 'tstamp',
 		'versioningWS' => TRUE,
 	),
 	'interface' => array(
-		'showRecordFieldList' => 'areaCode, callingNumber, internationalAreaCode, type, public',
+		'showRecordFieldList' => '',
 	),
 	'types' => array(
-		'1' => array('showitem' => '--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_phone, areaCode, callingNumber, internationalAreaCode, type, public,'),
+		'1' => array('showitem' => 'area_code, calling_number, international_area_code, contact_type, public,'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -45,7 +45,6 @@ $GLOBALS['TCA']['tx_clubms_domain_model_phone'] = array(
 				'max' => 255,
 			)
 		),
-		
 		'hidden' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.hidden',
@@ -53,7 +52,6 @@ $GLOBALS['TCA']['tx_clubms_domain_model_phone'] = array(
 				'type' => 'check',
 			),
 		),
-		
 		'starttime' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.starttime',
@@ -72,7 +70,6 @@ $GLOBALS['TCA']['tx_clubms_domain_model_phone'] = array(
 				'renderType' => 'inputDateTime',
 			),
 		),
-		
 		'endtime' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.endtime',
@@ -92,29 +89,27 @@ $GLOBALS['TCA']['tx_clubms_domain_model_phone'] = array(
 			),
 		),
 		
-		'areaCode' => array(
+		'area_code' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_phone.areaCode',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_phone.area_code',
 			'config' => array(
 				'type' => 'input',
 				'size' => 255,
 				'eval' => 'trim'
 			),
 		),
-		
-		'callingNumber' => array(
+		'calling_number' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_phone.callingNumber',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_phone.calling_number',
 			'config' => array(
 				'type' => 'input',
 				'size' => 255,
 				'eval' => 'trim'
 			),
 		),
-		
-		'internationalAreaCode' => array(
+		'international_area_code' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_phone.internationalAreaCode',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_phone.international_area_code',
 			'config' => array(
 				'foreign_table' => 'static_countries',
 				'items' => Array (
@@ -126,28 +121,22 @@ $GLOBALS['TCA']['tx_clubms_domain_model_phone'] = array(
 				'type' => 'select',
 			),
 		),
-		
-		'type' => array(
-			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_phone.type',
-			'config' => array(
-				'items' => array(
-					array('', '0'),
-					array('LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_phone.type_1', '1'),
-					array('LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_phone.type_2', '2'),
-					array('LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_phone.type_3', '3'),
-				),
-				'maxItems' => '1',
-				'minItems' => '0',
-				'renderType' => 'selectSingle',
-				'size' => '1',
-				'type' => 'select',
-			),
-		),
-		
+        'contact_type' => array(
+            'exclude' => 1,
+            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_phone.contact_type',
+            'config' => array(
+                'foreign_table' => 'tx_clubms_domain_model_contacttype',
+                'foreign_table_where' => 'ORDER BY label ASC',
+                'maxItems' => 1,
+                'minItems' => 1,
+                'renderType' => 'selectSingle',
+                'size' => 1,
+                'type' => 'select',
+            ),
+        ),
 		'public' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_phone.public',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_phone.public',
 			'config' => array(
 				'type' => 'check',
 			),

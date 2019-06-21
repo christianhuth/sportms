@@ -4,34 +4,7 @@
 		<header/>
 		<body>
 			
-			
-			<trans-unit id="tx_clubms_domain_model_phone">
-				<source>Telefonnummer</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_phone.areaCode">
-				<source>Vorwahl</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_phone.callingNumber">
-				<source>Rufnummer</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_phone.internationalAreaCode">
-				<source>Länder Code</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_phone.type">
-				<source>Typ</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_phone.type_1">
-				<source>Privat</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_phone.type_2">
-				<source>Geschäftlich</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_phone.type_3">
-				<source>Mobil</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_phone.public">
-				<source>Öffentlich</source>
-			</trans-unit>
+
 			
 			
 			<trans-unit id="tx_clubms_domain_model_url">
