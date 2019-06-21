@@ -31,50 +31,6 @@
 			</trans-unit>
 			
 			
-			<trans-unit id="tx_clubms_domain_model_club">
-				<source>Verein</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_club.name">
-				<source>Vereinsname</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_club.colours">
-				<source>Vereinsfarben</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_club.image">
-				<source>Vereinslogos</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_club.contact">
-				<source>Kontaktdaten</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_club.section">
-				<source>Abteilungen</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_club.official">
-				<source>Funktionäre</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_club.dateOfFounding">
-				<source>Gründungsdatum</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_club.yearOfFounding">
-				<source>Gründungsjahr</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_club.clubMembers">
-				<source>Mitglieder</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_club.images">
-				<source>Bilder</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_club.visibility">
-				<source>Sichtbarkeit</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_club.visibility_dataset">
-				<source>Verein verbergen</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_club.detail_link">
-				<source>Link auf Einzelansicht möglich?</source>
-			</trans-unit>
-			
-			
 			<trans-unit id="tx_clubms_domain_model_club_ground">
 				<source>Vereinsgelände</source>
 			</trans-unit>

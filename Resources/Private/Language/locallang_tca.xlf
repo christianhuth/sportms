@@ -32,6 +32,72 @@
 			</trans-unit>
 
 
+			<!-- Domain Model Club -->
+			<trans-unit id="tx_clubms_domain_model_club">
+				<source>Verein</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club.name">
+				<source>Vereinsname</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club.colours">
+				<source>Vereinsfarben</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club.date_of_founding">
+				<source>Gründungsdatum</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club.year_of_founding">
+				<source>Gründungsjahr</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club.club_members">
+				<source>Mitglieder</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club.images">
+				<source>Vereinslogos</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club.addresses">
+				<source>Adressen</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club.phones">
+				<source>Telefonnummern</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club.mails">
+				<source>Mail-Adressen</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club.urls">
+				<source>Webseiten</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club.club_grounds">
+				<source>Vereinsgelände</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club.club_sections">
+				<source>Abteilungen</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club.club_official_jobs">
+				<source>Funktionäre</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club.detail_link">
+				<source>Link auf Einzelansicht möglich?</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club.tab_images">
+				<source>Bilder</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club.tab_contact">
+				<source>Kontaktinformationen</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club.tab_grounds">
+				<source>Vereinsgelände</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club.tab_sections">
+				<source>Abteilungen</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club.tab_officials">
+				<source>Vereinsfunktionäre</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club.tab_visibility">
+				<source>Sichtbarkeit</source>
+			</trans-unit>
+
+
 			<!-- Domain Model ClubOfficialJob -->
 			<trans-unit id="tx_clubms_domain_model_clubofficialjob">
 				<source>Vereinsfunktionärstätigkeit</source>
