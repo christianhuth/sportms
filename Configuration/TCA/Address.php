@@ -22,7 +22,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_address'] = array(
 		'label_userFunc' => \Balumedien\Clubms\Configuration\TCA\UserFunc\UserFunc::class . '->addressLabel',
         'searchFields' => '',
 		'sortby' => 'ordering',
-        'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_address',
+        'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_address',
         'tstamp' => 'tstamp',
 		'versioningWS' => TRUE,
     ),
@@ -30,7 +30,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_address'] = array(
 		'showRecordFieldList' => 'street, housenumber, zipcode, location, country, region, public',
 	),
 	'types' => array(
-		'1' => array('showitem' => '--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_address, street, housenumber, zipcode, location, country, region, public,'),
+		'1' => array('showitem' => 'street, housenumber, zipcode, location, country, region, public,'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -45,7 +45,6 @@ $GLOBALS['TCA']['tx_clubms_domain_model_address'] = array(
 				'max' => 255,
 			)
 		),
-		
 		'hidden' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.hidden',
@@ -53,7 +52,6 @@ $GLOBALS['TCA']['tx_clubms_domain_model_address'] = array(
 				'type' => 'check',
 			),
 		),
-		
 		'starttime' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.starttime',
@@ -72,7 +70,6 @@ $GLOBALS['TCA']['tx_clubms_domain_model_address'] = array(
 				'renderType' => 'inputDateTime',
 			),
 		),
-		
 		'endtime' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.endtime',
@@ -94,47 +91,43 @@ $GLOBALS['TCA']['tx_clubms_domain_model_address'] = array(
 
 		'street' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_address.street',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_address.street',
 			'config' => array(
 				'type' => 'input',
 				'size' => 255,
 				'eval' => 'trim'
 			),
 		),
-		
 		'housenumber' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_address.housenumber',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_address.housenumber',
 			'config' => array(
 				'type' => 'input',
 				'size' => 255,
 				'eval' => 'trim'
 			),
 		),
-		
         'zipcode' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_address.zipcode',
+            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_address.zipcode',
             'config' => array(
                 'type' => 'input',
                 'size' => 255,
                 'eval' => 'trim'
             ),
         ),
-		
         'location' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_address.location',
+            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_address.location',
             'config' => array(
                 'type' => 'input',
                 'size' => 255,
                 'eval' => 'trim'
             ),
         ),
-		
         'country' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_address.country',
+            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_address.country',
             'config' => array(
 				'foreign_table' => 'static_countries',
 				'items' => Array (
@@ -146,20 +139,18 @@ $GLOBALS['TCA']['tx_clubms_domain_model_address'] = array(
                 'type' => 'select',
             ),
         ),
-		
         'region' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_address.region',
+            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_address.region',
             'config' => array(
                 'type' => 'input',
                 'size' => 255,
                 'eval' => 'trim'
             ),
         ),
-		
         'public' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_address.public',
+            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_address.public',
             'config' => array(
                 'type' => 'check',
             ),

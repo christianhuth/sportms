@@ -5,6 +5,33 @@
 		<body>
 
 
+			<!-- Domain Model Address -->
+			<trans-unit id="tx_clubms_domain_model_address">
+				<source>Addresse</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_address.street">
+				<source>Straße</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_address.housenumber">
+				<source>Hausnummer</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_address.zipcode">
+				<source>Postleitzahl</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_address.location">
+				<source>Ort</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_address.country">
+				<source>Land</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_address.region">
+				<source>Region</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_address.public">
+				<source>Öffentlich</source>
+			</trans-unit>
+
+
             <!-- Domain Model AgeGroup -->
 			<trans-unit id="tx_clubms_domain_model_agegroup">
 				<source>Altersgruppe</source>
