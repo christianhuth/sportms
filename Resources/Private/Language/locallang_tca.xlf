@@ -245,6 +245,18 @@
 			</trans-unit>
 
 
+			<!-- Domain Model ClubSectionMembers -->
+			<trans-unit id="tx_clubms_domain_model_clubsectionmembers">
+				<source>Abteilungsmitglieder</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_clubsectionmembers.members">
+				<source>Mitgliederanzahl</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_clubsectionmembers.date">
+				<source>Erfassungsdatum</source>
+			</trans-unit>
+
+
 			<!-- Domain Model ClubSectionOfficial -->
 			<trans-unit id="tx_clubms_domain_model_clubsectionofficial">
 				<source>Abteilungsfunktionäre</source>

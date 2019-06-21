@@ -4,18 +4,6 @@
 		<header/>
 		<body>
 			
-			
-			<trans-unit id="tx_clubms_domain_model_club_section_members">
-				<source>Mitglieder</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_club_section_members.members">
-				<source>Mitgliederanzahl</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_club_section_members.date">
-				<source>Erfassungsdatum</source>
-			</trans-unit>
-			
-			
 			<trans-unit id="tx_clubms_domain_model_mail">
 				<source>Mail</source>
 			</trans-unit>

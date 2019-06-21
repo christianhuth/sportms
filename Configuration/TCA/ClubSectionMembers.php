@@ -19,15 +19,15 @@ $GLOBALS['TCA']['tx_clubms_domain_model_clubsectionmembers'] = array(
 		'iconfile' => 'EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_clubsectionmembers.svg',
         'label' => 'date',
         'searchFields' => '',
-        'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_club_section_members',
+        'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubsectionmembers',
         'tstamp' => 'tstamp',
 		'versioningWS' => TRUE,
     ),
 	'interface' => array(
-		'showRecordFieldList' => 'hidden, members, date',
+		'showRecordFieldList' => '',
 	),
 	'types' => array(
-		'1' => array('showitem' => '--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_club_section_members, date, members'),
+		'1' => array('showitem' => 'members, date,'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -42,7 +42,6 @@ $GLOBALS['TCA']['tx_clubms_domain_model_clubsectionmembers'] = array(
 				'max' => 255,
 			)
 		),
-	
 		'hidden' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.hidden',
@@ -68,7 +67,6 @@ $GLOBALS['TCA']['tx_clubms_domain_model_clubsectionmembers'] = array(
 				'renderType' => 'inputDateTime',
 			),
 		),
-		
 		'endtime' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.endtime',
@@ -87,26 +85,31 @@ $GLOBALS['TCA']['tx_clubms_domain_model_clubsectionmembers'] = array(
 				'renderType' => 'inputDateTime',
 			),
 		),
-		
+
+        'club_section' => array(
+            'config' => array(
+                'type' => 'passthrough',
+            ),
+        ),
+
+        'members' => array(
+            'exclude' => 1,
+            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubsectionmembers.members',
+            'config' => array(
+                'type' => 'input',
+                'size' => 30,
+                'eval' => 'required, trim'
+            ),
+        ),
 		'date' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_club_section_members.date',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubsectionmembers.date',
 			'config' => array(
 				'type' => 'input',
 				'size' => 8,
 				'eval' => 'date',
 				'placeholder' => 'dd-mm-yyyy',
 				'renderType' => 'inputDateTime',
-			),
-		),
-		
-		'members' => array(
-			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_club_section_members.members',
-			'config' => array(
-				'type' => 'input',
-				'size' => 30,
-				'eval' => 'trim'
 			),
 		),
 		
