@@ -26,8 +26,9 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
 		'showRecordFieldList' => '',
 	),
 	'types' => array(
-		'1' => array('showitem' => '--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_information, season, competition,
+		'1' => array('showitem' => '--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_information, season, competition, team_home, team_guest, date, time, club_venue, game_spectators,
 		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_referees, game_referees,
+		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_visibility, hidden, detail_link,
 		                            '),
 	),
 	'palettes' => array(
@@ -121,6 +122,67 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
                 'type' => 'select',
             ),
         ),
+        'team_home' => array(
+            'exclude' => 1,
+            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.team_home',
+            'config' => array(
+                'foreign_table' => 'tx_clubms_domain_model_team',
+                'foreign_table_where' => 'ORDER BY name ASC',
+                'renderType' => 'selectSingle',
+                'size' => 1,
+                'type' => 'select',
+            ),
+        ),
+        'team_guest' => array(
+            'exclude' => 1,
+            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.team_guest',
+            'config' => array(
+                'foreign_table' => 'tx_clubms_domain_model_team',
+                'foreign_table_where' => 'ORDER BY name ASC',
+                'renderType' => 'selectSingle',
+                'size' => 1,
+                'type' => 'select',
+            ),
+        ),
+        'date' => array(
+            'exclude' => 1,
+            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.date',
+            'config' => array(
+                'type' => 'input',
+                'eval' => 'date',
+                'placeholder' => 'dd-mm-yyyy',
+                'renderType' => 'inputDateTime',
+            ),
+        ),
+        'time' => array(
+            'exclude' => 1,
+            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.time',
+            'config' => array(
+                'type' => 'input',
+                'eval' => 'time',
+                'renderType' => 'inputDateTime',
+            ),
+        ),
+        'club_venue' => array(
+            'exclude' => 1,
+            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.club_venue',
+            'config' => array(
+                'foreign_table' => 'tx_clubms_domain_model_clubvenue',
+                'foreign_table_where' => 'ORDER BY name ASC',
+                'renderType' => 'selectSingle',
+                'size' => 1,
+                'type' => 'select',
+            ),
+        ),
+        'game_spectators' => array(
+            'exclude' => 1,
+            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.game_spectators',
+            'config' => array(
+                'type' => 'input',
+                'size' => 30,
+                'eval' => 'int, trim'
+            ),
+        ),
 
         'game_referees' => array(
             'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.game_referees',
@@ -132,6 +194,14 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
                 'foreign_field' => 'game',
                 'foreign_table' => 'tx_clubms_domain_model_gamereferee',
                 'type' => 'inline',
+            ),
+        ),
+
+        'detail_link' => array(
+            'exclude' => 1,
+            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_club.detail_link',
+            'config' => array(
+                'type' => 'check',
             ),
         ),
 		

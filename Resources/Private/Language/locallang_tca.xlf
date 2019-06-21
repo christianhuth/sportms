@@ -232,14 +232,35 @@
 			<trans-unit id="tx_clubms_domain_model_game.competition">
 				<source>Wettbewerb</source>
 			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_game.team_home">
+				<source>Heimmannschaft</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_game.team_guest">
+				<source>Gastmannschaft</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_game.date">
+				<source>Datum</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_game.time">
+				<source>Uhrzeit</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_game.club_venue">
+				<source>Sportstätte</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_game.game_spectators">
+				<source>Zuschauerzahl</source>
+			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_game.game_referees">
 				<source>Schiedsrichter</source>
 			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_game.tab_information">
-				<source>Allgemeine Informationen</source>
+			<trans-unit id="tx_clubms_domain_model_game.detail_link">
+				<source>Link auf Einzelansicht möglich?</source>
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_game.tab_referees">
 				<source>Schiedsrichter</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_game.tab_visibility">
+				<source>Sichtbarkeit</source>
 			</trans-unit>
 
 
