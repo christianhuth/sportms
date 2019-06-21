@@ -474,6 +474,171 @@
 			</trans-unit>
 
 
+			<!-- Domain Model Person -->
+			<trans-unit id="tx_clubms_domain_model_person">
+				<source>Person</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.firstname">
+				<source>Vorname</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.lastname">
+				<source>Nachname</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.birthname">
+				<source>Geburtsname</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.nickname">
+				<source>Spitzname</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.date_of_birth">
+				<source>Geburtsdatum</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.zodiac_sign">
+				<source>Sternzeichen</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.zodiac_sign_1">
+				<source>Wassermann</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.zodiac_sign_2">
+				<source>Fische</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.zodiac_sign_3">
+				<source>Widder</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.zodiac_sign_4">
+				<source>Stier</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.zodiac_sign_5">
+				<source>Zwillinge</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.zodiac_sign_6">
+				<source>Krebs</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.zodiac_sign_7">
+				<source>Löwe</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.zodiac_sign_8">
+				<source>Jungfrau</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.zodiac_sign_9">
+				<source>Waage</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.zodiac_sign_10">
+				<source>Skorpion</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.zodiac_sign_11">
+				<source>Schütze</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.zodiac_sign_12">
+				<source>Steinbock</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.place_of_birth">
+				<source>Geburtsort</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.nationality">
+				<source>Nationalität</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.gender">
+				<source>Geschlecht</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.gender_male">
+				<source>Männlich</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.gender_female">
+				<source>Weiblich</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.weight">
+				<source>Gewicht</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.height">
+				<source>Größe</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.size_of_shoe">
+				<source>Schuhgröße</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.footer">
+				<source>Starker Fuß</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.footer_1">
+				<source>Rechts</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.footer_2">
+				<source>Links</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.footer_3">
+				<source>Beidfüßig</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.hander">
+				<source>Starke Hand</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.hander_1">
+				<source>Rechts</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.hander_2">
+				<source>Links</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.hander_3">
+				<source>Beidhändig</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.family_status">
+				<source>Familienstand</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.graduation">
+				<source>Schulabschluss</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.job">
+				<source>Beruf</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.characteristics">
+				<source>Eigenschaften</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.hobbies">
+				<source>Hobbies</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.favorite_dish">
+				<source>Lieblingsgericht</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.favorite_drink">
+				<source>Lieblinsgetränk</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.addresses">
+				<source>Adressen</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.phones">
+				<source>Telefonnummern</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.mails">
+				<source>Mail-Adressen</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.urls">
+				<source>Webseiten</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.hidden_birthday">
+				<source>Geburtsdatum verbergen</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.detail_link">
+				<source>Link auf Einzelansicht möglich?</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.profile_player">
+				<source>Spieler-Profil?</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.profile_official">
+				<source>Funktionärs-Profil?</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.profile_referee">
+				<source>Schiedsrichter-Profil?</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.tab_personal">
+				<source>Persönliche Daten</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.tab_contact">
+				<source>Kontaktinformationen</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.tab_visibility">
+				<source>Sichtbarkeit</source>
+			</trans-unit>
+
+
 			<!-- Domain Model RefereeJob -->
 			<trans-unit id="tx_clubms_domain_model_refereejob">
 				<source>Schiedsrichteraufgabe</source>
