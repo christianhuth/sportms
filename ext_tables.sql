@@ -705,9 +705,9 @@ CREATE TABLE tx_clubms_domain_model_game (
     team_guest int(11) DEFAULT '0' NOT NULL,
     date int(11) unsigned DEFAULT NULL,
     time int(11) unsigned DEFAULT NULL,
-    game_referees int(11) DEFAULT NULL,
     club_venue int(11) DEFAULT NULL,
     game_spectators int(11) DEFAULT NULL,
+    game_referees int(11) DEFAULT NULL,
     detail_link tinyint(4) unsigned DEFAULT '0' NOT NULL,
 
     tstamp int(11) unsigned DEFAULT '0' NOT NULL,
@@ -743,6 +743,7 @@ CREATE TABLE tx_clubms_domain_model_gamereferee (
      pid int(11) DEFAULT '0' NOT NULL,
 
      game int(11) unsigned DEFAULT '0' NOT NULL,
+
      person int(11) unsigned DEFAULT '0' NOT NULL,
      referee_job int(11) unsigned DEFAULT NULL,
 
