@@ -129,6 +129,11 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
                 'eval' => 'required',
                 'foreign_table' => 'tx_clubms_domain_model_team',
                 'foreign_table_where' => 'ORDER BY name ASC',
+                'items' => Array (
+                    Array("Bitte wählen", ""),
+                ),
+                'maxItems' => 1,
+                'minItems' => 1,
                 'renderType' => 'selectSingle',
                 'size' => 1,
                 'type' => 'select',
@@ -141,6 +146,11 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
                 'eval' => 'required',
                 'foreign_table' => 'tx_clubms_domain_model_team',
                 'foreign_table_where' => 'ORDER BY name ASC',
+                'items' => Array (
+                    Array("Bitte wählen", ""),
+                ),
+                'maxItems' => 1,
+                'minItems' => 1,
                 'renderType' => 'selectSingle',
                 'size' => 1,
                 'type' => 'select',
