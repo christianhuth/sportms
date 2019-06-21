@@ -35,17 +35,17 @@ class Mail extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * @var string
 	 */
-	protected $mail = '';
+	protected $mail;
 
 	/**
 	 * @var \Balumedien\Clubms\Domain\Model\ContactType
 	 */
-	protected $contactType = '';
+	protected $contactType;
 
 	/**
 	 * @var boolean
 	 */
-	protected $public = '';
+	protected $public;
 
     /**
      * @return string
