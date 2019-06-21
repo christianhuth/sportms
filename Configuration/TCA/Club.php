@@ -215,7 +215,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_club'] = array(
                     'useSortable' => 1,
                 ),
                 'foreign_field' => 'club',
-                'foreign_table' => 'tx_clubms_domain_model_club_ground',
+                'foreign_table' => 'tx_clubms_domain_model_clubground',
                 'type' => 'inline',
             ),
         ),
