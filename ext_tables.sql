@@ -421,13 +421,13 @@ CREATE TABLE tx_clubms_domain_model_clubsectionofficial (
 	pid int(11) DEFAULT '0' NOT NULL,
 
     club_section_official_job int(11) DEFAULT '0' NOT NULL,
-	
+
 	person int(11) DEFAULT '0' NOT NULL,
 	startdate int(11) DEFAULT NULL,
 	enddate int(11) DEFAULT NULL,
-	
+
 	ordering int(11) DEFAULT NULL,
-	
+
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
 	cruser_id int(11) unsigned DEFAULT '0' NOT NULL,
@@ -459,13 +459,14 @@ CREATE TABLE tx_clubms_domain_model_clubsectionofficialjob (
 
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
-	
-	club_section int(11) DEFAULT NULL,
-	club_section_official int(11) DEFAULT NULL,
-	official_job int(11) DEFAULT NULL,
-	
+
+	club_section int(11) DEFAULT '0' NOT NULL,
+
+    official_job int(11) DEFAULT NULL,
+	club_section_officials int(11) DEFAULT NULL,
+
 	ordering int(11) DEFAULT NULL,
-	
+
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
 	cruser_id int(11) unsigned DEFAULT '0' NOT NULL,

@@ -30,14 +30,6 @@
 			</trans-unit>
 			
 			
-			<trans-unit id="tx_clubms_domain_model_club_section_official_job.position">
-				<source>Posten</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_club_section_official_job.person">
-				<source>Person</source>
-			</trans-unit>
-			
-			
 			<trans-unit id="tx_clubms_domain_model_mail">
 				<source>Mail</source>
 			</trans-unit>
