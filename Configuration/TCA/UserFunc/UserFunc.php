@@ -12,7 +12,7 @@
 
         public function clubMembersLabel(&$parameters, $parentObject) {
             $record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
-            $newLabel = $record['members'] . " Mitglieder " . "(" . $record['date'] . ")";
+            $newLabel = $record['members'] . " Mitglieder " . "(" . date("d.m.Y", $record['date']) . ")";
             $parameters['title'] = $newLabel;
         }
 
