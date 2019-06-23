@@ -37,11 +37,6 @@ class Url extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 */
 	protected $url;
 
-    /**
-     * @var \Balumedien\Clubms\Domain\Model\ContactType
-     */
-    protected $contactType;
-
 	/**
 	 * @var boolean
 	 */
@@ -61,22 +56,6 @@ class Url extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
     public function setUrl($url)
     {
         $this->url = $url;
-    }
-
-    /**
-     * @return ContactType
-     */
-    public function getContactType()
-    {
-        return $this->contactType;
-    }
-
-    /**
-     * @param ContactType $contactType
-     */
-    public function setContactType($contactType)
-    {
-        $this->contactType = $contactType;
     }
 
     /**

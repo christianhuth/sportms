@@ -1405,7 +1405,6 @@ CREATE TABLE tx_clubms_domain_model_url (
     person int(11) DEFAULT NULL,
 
 	url varchar(255) DEFAULT '0' NOT NULL,
-	contact_type int(11) unsigned DEFAULT NULL,
 	public tinyint(4) unsigned DEFAULT '0' NOT NULL,
 	
 	ordering int(11) DEFAULT NULL,

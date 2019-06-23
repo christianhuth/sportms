@@ -27,7 +27,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_url'] = array(
 		'showRecordFieldList' => '',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'url, contact_type, public,'),
+		'1' => array('showitem' => 'url, public,'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -96,19 +96,6 @@ $GLOBALS['TCA']['tx_clubms_domain_model_url'] = array(
 				'type' => 'input',
 			),
 		),
-        'contact_type' => array(
-            'exclude' => 1,
-            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_url.contact_type',
-            'config' => array(
-                'foreign_table' => 'tx_clubms_domain_model_contacttype',
-                'foreign_table_where' => 'ORDER BY label ASC',
-                'maxItems' => 1,
-                'minItems' => 1,
-                'renderType' => 'selectSingle',
-                'size' => 1,
-                'type' => 'select',
-            ),
-        ),
 		'public' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_url.public',
