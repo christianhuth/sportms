@@ -18,6 +18,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_clubmembers'] = array(
 		'hideTable' => TRUE,
 		'iconfile' => 'EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_clubmembers.svg',
         'label' => 'date',
+        'label_userFunc' => \Balumedien\Clubms\Configuration\TCA\UserFunc\UserFunc::class . '->clubMembersLabel',
         'searchFields' => '',
         'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubmembers',
         'tstamp' => 'tstamp',
