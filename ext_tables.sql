@@ -140,8 +140,6 @@ CREATE TABLE tx_clubms_domain_model_club (
 	club_official_jobs int(11) DEFAULT NULL,
 	detail_link tinyint(4) unsigned DEFAULT '0' NOT NULL,
 	
-	ordering int(11) DEFAULT NULL,
-	
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
 	cruser_id int(11) unsigned DEFAULT '0' NOT NULL,
