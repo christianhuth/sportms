@@ -113,13 +113,6 @@ class Club extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @cascade remove
 	 */
 	protected $clubOfficials;
-	
-	/**
-	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\ClubOfficialJob>
-	 * @lazy
-	 * @cascade remove
-	 */
-	protected $clubOfficialJobs;
 
     /**
 	 * @var boolean
@@ -152,7 +145,6 @@ class Club extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
         $this->clubGrounds = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 		$this->clubSections = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 		$this->clubOfficials = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-		$this->clubOfficialJobs = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 	}
 
     /**
@@ -360,22 +352,6 @@ class Club extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	public function setClubOfficials($clubOfficials) {
 		$this->clubOfficials = $clubOfficials;
 	}
-
-    /**
-     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
-     */
-    public function getClubOfficialJobs()
-    {
-        return $this->clubOfficialJobs;
-    }
-
-    /**
-     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $clubOfficialJobs
-     */
-    public function setClubOfficialJobs($clubOfficialJobs)
-    {
-        $this->clubOfficialJobs = $clubOfficialJobs;
-    }
 
     /**
      * @return bool
