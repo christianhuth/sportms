@@ -23,7 +23,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_club'] = array(
 		'versioningWS' => TRUE,
 	),
 	'interface' => array(
-		'showRecordFieldList' => 'name, date_of_founding, year_of_founding, club_members, images, address, club_ground, phone, mail, url, hidden',
+		'showRecordFieldList' => '',
 	),
 	'types' => array(
 		'1' => array('showitem' => 'name, favorite, colours, date_of_founding, year_of_founding, club_members,
@@ -31,6 +31,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_club'] = array(
 									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_club.tab_contact, addresses, phones, mails, urls,
 									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_club.tab_grounds, club_grounds,
 									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_club.tab_sections, club_sections,
+									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_club.tab_officials, club_officials,,
 									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_club.tab_officials, club_official_jobs,
 									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_club.tab_visibility, hidden, detail_link'),
 	),

@@ -105,6 +105,9 @@
 			<trans-unit id="tx_clubms_domain_model_club.club_sections">
 				<source>Abteilungen</source>
 			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_club.club_officials">
+				<source>Vereinsfunktionärstätigkeiten</source>
+			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_club.club_official_jobs">
 				<source>Vereinsfunktionärstätigkeiten</source>
 			</trans-unit>

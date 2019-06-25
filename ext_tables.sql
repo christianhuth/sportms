@@ -137,6 +137,7 @@ CREATE TABLE tx_clubms_domain_model_club (
 	urls int(11) DEFAULT NULL,
     club_grounds int(11) DEFAULT NULL,
     club_sections int(11) DEFAULT NULL,
+    club_officials int(11) DEFAULT NULL,
 	club_official_jobs int(11) DEFAULT NULL,
 	detail_link tinyint(4) unsigned DEFAULT '0' NOT NULL,
 	
