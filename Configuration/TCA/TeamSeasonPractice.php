@@ -130,7 +130,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_teamseasonpractice'] = array(
 				'foreign_table' => 'tx_clubms_domain_model_clubvenue',
 				'foreign_table_where' => 'ORDER BY name ASC',
 				'items' => Array (
-					Array("", 0),
+                    array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
 				),
 				'maxItems' => 1,
 				'minItems' => 1,
