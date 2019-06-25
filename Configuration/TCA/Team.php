@@ -94,7 +94,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_team'] = array(
                 'foreign_table' => 'tx_clubms_domain_model_club',
                 'foreign_table_where' => 'ORDER BY name ASC',
                 'items' => Array (
-                    Array("Bitte wählen", ''),
+                    array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
                 ),
                 'renderType' => 'selectSingle',
                 'size' => 1,
@@ -108,7 +108,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_team'] = array(
                 'foreign_table' => 'tx_clubms_domain_model_section',
                 'foreign_table_where' => 'ORDER BY label ASC',
                 'items' => Array (
-                    Array("Bitte wählen", ''),
+                    array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
                 ),
                 'renderType' => 'selectSingle',
                 'size' => 1,
@@ -122,7 +122,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_team'] = array(
                 'foreign_table' => 'tx_clubms_domain_model_agelevel',
                 'foreign_table_where' => 'ORDER BY label ASC',
                 'items' => Array (
-                    Array("Bitte wählen", ''),
+                    array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
                 ),
                 'renderType' => 'selectSingle',
                 'size' => 1,
