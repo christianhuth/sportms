@@ -97,7 +97,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
                 'foreign_table' => 'tx_clubms_domain_model_season',
                 'foreign_table_where' => 'ORDER BY season_name DESC',
                 'items' => Array (
-                    Array("Bitte wählen", ""),
+                    array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
                 ),
                 'maxItems' => 1,
                 'minItems' => 1,
@@ -114,7 +114,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
                 'foreign_table' => 'tx_clubms_domain_model_competition',
                 'foreign_table_where' => 'ORDER BY name DESC',
                 'items' => Array (
-                    Array("Bitte wählen", ""),
+                    array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
                 ),
                 'maxItems' => 1,
                 'minItems' => 1,
@@ -131,7 +131,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
                 'foreign_table' => 'tx_clubms_domain_model_team',
                 'foreign_table_where' => 'ORDER BY name ASC',
                 'items' => Array (
-                    Array("Bitte wählen", ""),
+                    array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
                 ),
                 'maxItems' => 1,
                 'minItems' => 1,
@@ -148,7 +148,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
                 'foreign_table' => 'tx_clubms_domain_model_team',
                 'foreign_table_where' => 'ORDER BY name ASC',
                 'items' => Array (
-                    Array("Bitte wählen", ""),
+                    array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
                 ),
                 'maxItems' => 1,
                 'minItems' => 1,
@@ -183,7 +183,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
                 'foreign_table' => 'tx_clubms_domain_model_clubvenue',
                 'foreign_table_where' => 'ORDER BY name ASC',
                 'items' => Array (
-                    Array("Bitte wählen", ""),
+                    array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
                 ),
                 'renderType' => 'selectSingle',
                 'size' => 1,
