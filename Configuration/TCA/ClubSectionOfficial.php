@@ -97,10 +97,9 @@ $GLOBALS['TCA']['tx_clubms_domain_model_clubsectionofficial'] = array(
 			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubsectionofficial',
 			'config' => array(
 				'foreign_table' => 'tx_clubms_domain_model_person',
-                #'foreign_table_where' => 'AND profile_official = 1 ORDER BY tx_clubms_domain_model_person.lastname ASC, tx_clubms_domain_model_person.firstname ASC',
-                'foreign_table_where' => 'ORDER BY lastname ASC, firstname ASC',
+                'foreign_table_where' => 'AND profile_official = 1 ORDER BY tx_clubms_domain_model_person.lastname ASC, tx_clubms_domain_model_person.firstname ASC',
 				'items' => array(
-					array('', ''),
+                    array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
 				),
 				'maxItems' => 1,
 				'minItems' => 1,
