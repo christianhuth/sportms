@@ -17,7 +17,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_refereejob'] = array(
 		),
 		'iconfile' => 'EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_refereejob.svg',
 		'label' => 'label',
-		'searchFields' => 'season_name, season_name_short, season_name_very_short',
+		'searchFields' => '',
 		'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_refereejob',
 		'tstamp' => 'tstamp',
 		'versioningWS' => TRUE,
