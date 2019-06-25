@@ -195,6 +195,9 @@
 			<trans-unit id="tx_clubms_domain_model_clubofficial.person">
 				<source>Person</source>
 			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_clubofficial.official_job">
+				<source>Funktionärsaufgabe</source>
+			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_clubofficial.startdate">
 				<source>Startdatum</source>
 			</trans-unit>

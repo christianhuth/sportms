@@ -258,9 +258,10 @@ CREATE TABLE tx_clubms_domain_model_clubofficial (
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
 
-    club_official_job int(11) DEFAULT '0' NOT NULL,
+    club int(11) DEFAULT '0' NOT NULL,
 	
 	person int(11) DEFAULT '0' NOT NULL,
+    official_job int(11) DEFAULT '0' NOT NULL,
 	startdate int(11) DEFAULT NULL,
 	enddate int(11) DEFAULT NULL,
 	
