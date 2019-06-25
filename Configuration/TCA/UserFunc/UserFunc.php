@@ -10,11 +10,27 @@
 			$parameters['title'] = $newLabel;
 		}
 
-        public function clubMembersLabel(&$parameters, $parentObject) {
-            $record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
-            $newLabel = $record['members'] . " Mitglieder " . "(" . date("d.m.Y", $record['date']) . ")";
-            $parameters['title'] = $newLabel;
-        }
+		public function clubMembersLabel(&$parameters, $parentObject) {
+			$record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
+			$newLabel = $record['members'] . " Mitglieder " . "(" . date("d.m.Y", $record['date']) . ")";
+			$parameters['title'] = $newLabel;
+		}
+
+		public function clubOfficialLabel(&$parameters, $parentObject) {
+			$record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
+			$person = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_person", $record['person']);
+			$officialJob = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_officialjob", $record['official_job']);
+			$newLabel = $officialJob['label'] . ": " . $person['firstname'] . " " . $person['lastname'];
+			$parameters['title'] = $newLabel;
+		}
+
+		public function clubSectionOfficialLabel(&$parameters, $parentObject) {
+			$record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
+			$person = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_person", $record['person']);
+			$officialJob = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_officialjob", $record['official_job']);
+			$newLabel = $officialJob['label'] . ": " . $person['firstname'] . " " . $person['lastname'];
+			$parameters['title'] = $newLabel;
+		}
 
         public function competitionLabel(&$parameters, $parentObject) {
             $record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
@@ -42,6 +58,14 @@
 		public function sectionPositionLabel(&$parameters, $parentObject) {
 			$record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
             $newLabel = $record['label'] . " (" . $record['label_short'] . ")";
+			$parameters['title'] = $newLabel;
+		}
+
+		public function teamSeasonOfficialLabel(&$parameters, $parentObject) {
+			$record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
+			$person = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_person", $record['person']);
+			$officialJob = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_officialjob", $record['official_job']);
+			$newLabel = $officialJob['label'] . ": " . $person['firstname'] . " " . $person['lastname'];
 			$parameters['title'] = $newLabel;
 		}
 		
