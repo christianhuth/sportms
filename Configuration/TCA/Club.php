@@ -232,6 +232,19 @@ $GLOBALS['TCA']['tx_clubms_domain_model_club'] = array(
 				'type' => 'inline',
 			),
 		),
+
+		'club_officials' => array(
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_club.club_officials',
+			'config' => array(
+				'appearance' => array(
+					'levelLinksPosition' => 'bottom',
+					'useSortable' => 1,
+				),
+				'foreign_field' => 'club',
+				'foreign_table' => 'tx_clubms_domain_model_clubofficial',
+				'type' => 'inline',
+			),
+		),
 		
 		'club_official_jobs' => array(
 			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_club.club_official_jobs',
