@@ -194,7 +194,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_clubvenue'] = array(
 			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubvenue.surface',
 			'config' => array(
 				'items' => array(
-					array('', '0'),
+                    array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
 					array('Halle', '1'),
 					array('Kunstrasen', '2'),
 					array('Rasen', '3'),
