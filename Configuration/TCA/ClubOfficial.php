@@ -24,10 +24,10 @@ $GLOBALS['TCA']['tx_clubms_domain_model_clubofficial'] = array(
 		'versioningWS' => TRUE,
 	),
 	'interface' => array(
-		'showRecordFieldList' => 'person, startdate, enddate',
+		'showRecordFieldList' => '',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'person, startdate, enddate,'),
+		'1' => array('showitem' => 'person, official_job, startdate, enddate,'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
