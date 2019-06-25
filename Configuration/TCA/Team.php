@@ -93,6 +93,9 @@ $GLOBALS['TCA']['tx_clubms_domain_model_team'] = array(
             'config' => array(
                 'foreign_table' => 'tx_clubms_domain_model_club',
                 'foreign_table_where' => 'ORDER BY name ASC',
+                'items' => Array (
+                    Array("Bitte wählen", ''),
+                ),
                 'renderType' => 'selectSingle',
                 'size' => 1,
                 'type' => 'select',
@@ -104,6 +107,9 @@ $GLOBALS['TCA']['tx_clubms_domain_model_team'] = array(
             'config' => array(
                 'foreign_table' => 'tx_clubms_domain_model_section',
                 'foreign_table_where' => 'ORDER BY label ASC',
+                'items' => Array (
+                    Array("Bitte wählen", ''),
+                ),
                 'renderType' => 'selectSingle',
                 'size' => 1,
                 'type' => 'select',
@@ -115,6 +121,9 @@ $GLOBALS['TCA']['tx_clubms_domain_model_team'] = array(
             'config' => array(
                 'foreign_table' => 'tx_clubms_domain_model_agelevel',
                 'foreign_table_where' => 'ORDER BY label ASC',
+                'items' => Array (
+                    Array("Bitte wählen", ''),
+                ),
                 'renderType' => 'selectSingle',
                 'size' => 1,
                 'type' => 'select',
