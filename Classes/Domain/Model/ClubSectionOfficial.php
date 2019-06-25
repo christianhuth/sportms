@@ -33,15 +33,20 @@ namespace Balumedien\Clubms\Domain\Model;
 class ClubSectionOfficial extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 
     /**
-     * @var \Balumedien\Clubms\Domain\Model\ClubSectionOfficialJob
+     * @var \Balumedien\Clubms\Domain\Model\ClubSection
      * @lazy
      */
-    protected $clubSectionOfficialJob;
+    protected $clubSection;
 
 	/**
 	 * @var \Balumedien\Clubms\Domain\Model\Person
 	 */
 	protected $person;
+
+	/**
+	 * @var \Balumedien\Clubms\Domain\Model\OfficialJob
+	 */
+	protected $officialJob;
 
 	/**
 	 * @var int
@@ -53,21 +58,19 @@ class ClubSectionOfficial extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      */
     protected $enddate;
 
-    /**
-     * @return ClubSectionOfficialJob
-     */
-    public function getClubSectionOfficialJob()
-    {
-        return $this->clubSectionOfficialJob;
-    }
+	/**
+	 * @return ClubSection
+	 */
+	public function getClubSection() {
+		return $this->clubSection;
+	}
 
-    /**
-     * @param ClubSectionOfficialJob $clubSectionOfficialJob
-     */
-    public function setClubSectionOfficialJob($clubSectionOfficialJob)
-    {
-        $this->clubSectionOfficialJob = $clubSectionOfficialJob;
-    }
+	/**
+	 * @param ClubSection $clubSection
+	 */
+	public function setClubSection($clubSection) {
+		$this->clubSection = $clubSection;
+	}
 
     /**
      * @return Person
@@ -84,6 +87,20 @@ class ClubSectionOfficial extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         $this->person = $person;
     }
+
+	/**
+	 * @return OfficialJob
+	 */
+	public function getOfficialJob() {
+		return $this->officialJob;
+	}
+
+	/**
+	 * @param OfficialJob $officialJob
+	 */
+	public function setOfficialJob($officialJob) {
+		$this->officialJob = $officialJob;
+	}
 
     /**
      * @return int

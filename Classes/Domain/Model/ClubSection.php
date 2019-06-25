@@ -86,11 +86,11 @@ class ClubSection extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	protected $urls;
 	
 	/**
-	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\ClubSectionOfficialJob>
+	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\ClubSectionOfficial>
 	 * @lazy
 	 * @cascade remove
 	 */
-	protected $clubSectionOfficialJobs;
+	protected $clubSectionOfficials;
 	
 	/**
 	 * __construct
@@ -115,7 +115,7 @@ class ClubSection extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 		$this->phones = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 		$this->mails = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 		$this->urls = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-		$this->clubSectionOfficialJobs = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+		$this->clubSectionOfficials = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 	}
 
     /**
@@ -246,20 +246,18 @@ class ClubSection extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
         $this->urls = $urls;
     }
 
-    /**
-     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
-     */
-    public function getClubSectionOfficialJobs()
-    {
-        return $this->clubSectionOfficialJobs;
-    }
+	/**
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+	 */
+	public function getClubSectionOfficials() {
+		return $this->clubSectionOfficials;
+	}
 
-    /**
-     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $clubSectionOfficialJobs
-     */
-    public function setClubSectionOfficialJobs($clubSectionOfficialJobs)
-    {
-        $this->clubSectionOfficialJobs = $clubSectionOfficialJobs;
-    }
+	/**
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $clubSectionOfficials
+	 */
+	public function setClubSectionOfficials($clubSectionOfficials) {
+		$this->clubSectionOfficials = $clubSectionOfficials;
+	}
 	
 }

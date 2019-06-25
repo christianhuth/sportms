@@ -231,7 +231,7 @@
 			<trans-unit id="tx_clubms_domain_model_clubsection.urls">
 				<source>Webseiten</source>
 			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_clubsection.club_section_official_jobs">
+			<trans-unit id="tx_clubms_domain_model_clubsection.club_section_officials">
 				<source>Abteilungsfunktionärstätigkeiten</source>
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_clubsection.tab_contact">
@@ -261,23 +261,14 @@
 			<trans-unit id="tx_clubms_domain_model_clubsectionofficial.person">
 				<source>Person</source>
 			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_clubsectionofficial.official_job">
+				<source>Funktionärsaufgabe</source>
+			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_clubsectionofficial.startdate">
 				<source>Startdatum</source>
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_clubsectionofficial.enddate">
 				<source>Enddatum</source>
-			</trans-unit>
-
-
-			<!-- Domain Model ClubSectionOfficialJob -->
-			<trans-unit id="tx_clubms_domain_model_clubsectionofficialjob">
-				<source>Abteilungsfunktionärstätigkeit</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_clubsectionofficialjob.official_job">
-				<source>Funktionärsaufgabe</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_clubsectionofficialjob.club_section_officials">
-				<source>AbteilungsfunktionärIn</source>
 			</trans-unit>
 
 

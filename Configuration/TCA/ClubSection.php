@@ -29,7 +29,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_clubsection'] = array(
 	'types' => array(
 		'1' => array('showitem' => 'section, images, club_section_members,
 									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubsection.tab_contact, addresses, phones, mails, urls,
-									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubsection.tab_officials, club_section_official_jobs'),
+									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubsection.tab_officials, club_section_officials'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -184,15 +184,15 @@ $GLOBALS['TCA']['tx_clubms_domain_model_clubsection'] = array(
 			),
 		),
 		
-		'club_section_official_jobs' => array(
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubsection.club_section_official_jobs',
+		'club_section_officials' => array(
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubsection.club_section_officials',
 			'config' => array(
 				'appearance' => array(
 					'levelLinksPosition' => 'bottom',
 					'useSortable' => 1,
 				),
 				'foreign_field' => 'club_section',
-				'foreign_table' => 'tx_clubms_domain_model_clubsectionofficialjob',
+				'foreign_table' => 'tx_clubms_domain_model_clubsectionofficial',
 				'type' => 'inline',
 			),
 		),
