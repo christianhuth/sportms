@@ -203,7 +203,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_person'] = array(
             'exclude' => 1,
             'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.weight',
             'config' => array(
-                'eval' => 'int, null, trim',
+                'eval' => 'float, null, trim',
                 'size' => 3,
                 'type' => 'input',
             ),
@@ -212,7 +212,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_person'] = array(
             'exclude' => 1,
             'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.height',
             'config' => array(
-                'eval' => 'int, null, trim',
+                'eval' => 'float, null, trim',
                 'size' => 3,
                 'type' => 'input',
             ),
