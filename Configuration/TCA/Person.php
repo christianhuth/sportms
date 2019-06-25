@@ -142,7 +142,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_person'] = array(
             'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.zodiac_sign',
             'config' => array(
 				'items' => Array (
-					Array("", NULL),
+                    Array("Bitte wählen", ""),
 					array('LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.zodiac_sign_1', 1),
 					array('LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.zodiac_sign_2', 2),
 					array('LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.zodiac_sign_3', 3),
@@ -177,7 +177,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_person'] = array(
             'config' => array(
 				'foreign_table' => 'static_countries',
 				'items' => Array (
-					Array("", 0),
+                    Array("Bitte wählen", ""),
 				),
 				'maxItems' => 1,
 				'renderType' => 'selectSingle',
@@ -189,9 +189,8 @@ $GLOBALS['TCA']['tx_clubms_domain_model_person'] = array(
             'exclude' => 1,
             'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.gender',
             'config' => array(
-                'eval' => 'required',
 				'items' => array(
-                    Array("", ""),
+                    Array("Bitte wählen", ""),
 					array('LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.gender_male', 'm'),
 					array('LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.gender_female', 'f'),
 				),
