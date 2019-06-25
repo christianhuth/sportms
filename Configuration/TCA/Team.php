@@ -18,7 +18,6 @@ $GLOBALS['TCA']['tx_clubms_domain_model_team'] = array(
 		'iconfile' => 'EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_team.svg',
         'label' => 'name',
         'searchFields' => '',
-		'sortby' => 'ordering',
         'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_team',
         'tstamp' => 'tstamp',
 		'versioningWS' => TRUE,
