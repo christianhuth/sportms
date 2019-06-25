@@ -54,9 +54,9 @@ class TeamSeason extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
     protected $teamSeasonImages;
 
 	/**
-	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\TeamSeasonOfficialJob>
+	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\TeamSeasonOfficial>
 	 */
-	protected $teamSeasonOfficialJobs;
+	protected $teamSeasonOfficials;
 
 	/**
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\TeamSeasonSquadMember>
@@ -87,7 +87,7 @@ class TeamSeason extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	protected function initStorageObjects() {
 		$this->teamSeasonPractices = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 		$this->images = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-		$this->teamSeasonOfficialJobs = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+		$this->teamSeasonOfficials = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 		$this->teamSeasonSquadMembers = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 	}
 
@@ -155,21 +155,19 @@ class TeamSeason extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
         $this->teamSeasonImages = $teamSeasonImages;
     }
 
-    /**
-     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
-     */
-    public function getTeamSeasonOfficialJobs()
-    {
-        return $this->teamSeasonOfficialJobs;
-    }
+	/**
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+	 */
+	public function getTeamSeasonOfficials() {
+		return $this->teamSeasonOfficials;
+	}
 
-    /**
-     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $teamSeasonOfficialJobs
-     */
-    public function setTeamSeasonOfficialJobs($teamSeasonOfficialJobs)
-    {
-        $this->teamSeasonOfficialJobs = $teamSeasonOfficialJobs;
-    }
+	/**
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $teamSeasonOfficials
+	 */
+	public function setTeamSeasonOfficials($teamSeasonOfficials) {
+		$this->teamSeasonOfficials = $teamSeasonOfficials;
+	}
 
     /**
      * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage

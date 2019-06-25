@@ -28,7 +28,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_teamseason'] = array(
 	),
 	'types' => array(
 		'1' => array('showitem' => 'season, team_season_practices, team_season_images,
-									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_teamseason.tab_officials, team_season_official_jobs,
+									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_teamseason.tab_officials, team_season_officials,
 									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_teamseason.tab_squad_members, team_season_squad_members,
 									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_teamseason.tab_visibility, hidden, detail_link'),
 	),
@@ -136,15 +136,15 @@ $GLOBALS['TCA']['tx_clubms_domain_model_teamseason'] = array(
             ),
         ),
 		
-		'team_season_official_jobs' => array(
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_teamseason.team_season_official_jobs',
+		'team_season_officials' => array(
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_teamseason.team_season_officials',
 			'config' => array(
 				'appearance' => array(
 					'levelLinksPosition' => 'bottom',
 					'useSortable' => 1,
 				),
 				'foreign_field' => 'team_season',
-				'foreign_table' => 'tx_clubms_domain_model_teamseasonofficialjob',
+				'foreign_table' => 'tx_clubms_domain_model_teamseasonofficial',
 				'type' => 'inline',
 			),
 		),

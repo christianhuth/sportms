@@ -790,7 +790,7 @@
 			<trans-unit id="tx_clubms_domain_model_teamseason.team_season_images">
 				<source>Mannschaftsfoto</source>
 			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_teamseason.team_season_official_jobs">
+			<trans-unit id="tx_clubms_domain_model_teamseason.team_season_officials">
 				<source>Mannschaftsfunktionärstätigkeiten</source>
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_teamseason.team_season_squad_members">
@@ -817,23 +817,14 @@
 			<trans-unit id="tx_clubms_domain_model_teamseasonofficial.person">
 				<source>Person</source>
 			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_teamseasonofficial.official_job">
+				<source>Funktionärsaufgabe</source>
+			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_teamseasonofficial.startdate">
 				<source>Startdatum</source>
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_teamseasonofficial.enddate">
 				<source>Enddatum</source>
-			</trans-unit>
-
-
-            <!-- Domain Model TeamSeasonOfficialJob -->
-			<trans-unit id="tx_clubms_domain_model_teamseasonofficialjob">
-				<source>Mannschaftsfunktionärstätigkeit</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_teamseasonofficialjob.official_job">
-				<source>Funktionärsaufgabe</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_teamseasonofficialjob.team_season_officials">
-				<source>MannschaftsfunktionärIn</source>
 			</trans-unit>
 
 

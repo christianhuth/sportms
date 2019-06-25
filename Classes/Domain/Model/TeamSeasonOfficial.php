@@ -33,19 +33,44 @@ namespace Balumedien\Clubms\Domain\Model;
 class TeamSeasonOfficial extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 
 	/**
+	 * @var \Balumedien\Clubms\Domain\Model\TeamSeason
+	 * @lazy
+	 */
+	protected $teamSeason;
+
+	/**
 	 * @var \Balumedien\Clubms\Domain\Model\Person
 	 */
-	protected $person = '';
+	protected $person;
+
+	/**
+	 * @var \Balumedien\Clubms\Domain\Model\OfficialJob
+	 */
+	protected $officialJob;
 
 	/**
 	 * @var int
 	 */
-	protected $startdate = '';
+	protected $startdate;
 
     /**
      * @var int
      */
-    protected $enddate = '';
+    protected $enddate;
+
+	/**
+	 * @return TeamSeason
+	 */
+	public function getTeamSeason() {
+		return $this->teamSeason;
+	}
+
+	/**
+	 * @param TeamSeason $teamSeason
+	 */
+	public function setTeamSeason($teamSeason) {
+		$this->teamSeason = $teamSeason;
+	}
 
     /**
      * @return Person
@@ -62,6 +87,20 @@ class TeamSeasonOfficial extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity 
     {
         $this->person = $person;
     }
+
+	/**
+	 * @return OfficialJob
+	 */
+	public function getOfficialJob() {
+		return $this->officialJob;
+	}
+
+	/**
+	 * @param OfficialJob $officialJob
+	 */
+	public function setOfficialJob($officialJob) {
+		$this->officialJob = $officialJob;
+	}
 
     /**
      * @return int
