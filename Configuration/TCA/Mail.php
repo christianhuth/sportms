@@ -101,6 +101,9 @@ $GLOBALS['TCA']['tx_clubms_domain_model_mail'] = array(
 			'config' => array(
 				'foreign_table' => 'tx_clubms_domain_model_contacttype',
 				'foreign_table_where' => 'ORDER BY label ASC',
+				'items' => array(
+                    array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
+                ),
 				'maxItems' => 1,
 				'minItems' => 1,
 				'renderType' => 'selectSingle',
