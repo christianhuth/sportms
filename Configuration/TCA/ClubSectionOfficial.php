@@ -96,6 +96,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_clubsectionofficial'] = array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubsectionofficial',
 			'config' => array(
+				'eval' => 'required',
 				'foreign_table' => 'tx_clubms_domain_model_person',
                 'foreign_table_where' => 'AND profile_official = 1 ORDER BY tx_clubms_domain_model_person.lastname ASC, tx_clubms_domain_model_person.firstname ASC',
 				'items' => array(
