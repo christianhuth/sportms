@@ -775,6 +775,9 @@
 			<trans-unit id="tx_clubms_domain_model_team.dummy">
 				<source>Spielfrei</source>
 			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_team.team_seasons">
+				<source>Saison-Instanzen</source>
+			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_team.detail_link">
 				<source>Link auf Einzelansicht möglich?</source>
 			</trans-unit>
