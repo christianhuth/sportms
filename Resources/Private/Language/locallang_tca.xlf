@@ -206,18 +206,6 @@
 			</trans-unit>
 
 
-			<!-- Domain Model ClubOfficialJob -->
-			<trans-unit id="tx_clubms_domain_model_clubofficialjob">
-				<source>Vereinsfunktionärstätigkeit</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_clubofficialjob.official_job">
-				<source>Funktionärsaufgabe</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_clubofficialjob.club_officials">
-				<source>VereinsfunktionärIn</source>
-			</trans-unit>
-
-
 			<!-- Domain Model ClubSection -->
 			<trans-unit id="tx_clubms_domain_model_clubsection">
 				<source>Abteilung</source>
