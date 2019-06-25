@@ -5,6 +5,12 @@
 		<body>
 
 
+            <!-- General -->
+			<trans-unit id="tx_clubms_general.select">
+				<source>Bitte wählen</source>
+			</trans-unit>
+
+
 			<!-- Domain Model Address -->
 			<trans-unit id="tx_clubms_domain_model_address">
 				<source>Addresse</source>
