@@ -113,7 +113,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_gamereferee'] = array(
             'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gamereferee.referee_job',
             'config' => array(
                 'eval' => 'required',
-                'foreign_table' => 'tx_clubms_domain_model_referee_job',
+                'foreign_table' => 'tx_clubms_domain_model_refereejob',
                 'foreign_table_where' => 'ORDER BY label ASC',
                 'items' => Array (
                     array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
