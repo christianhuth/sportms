@@ -173,6 +173,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
             'config' => array(
                 'type' => 'input',
                 'eval' => 'time',
+                'placeholder' => 'hh:mm',
                 'renderType' => 'inputDateTime',
             ),
         ),
