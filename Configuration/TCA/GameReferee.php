@@ -97,10 +97,9 @@ $GLOBALS['TCA']['tx_clubms_domain_model_gamereferee'] = array(
             'config' => array(
                 'eval' => 'required',
                 'foreign_table' => 'tx_clubms_domain_model_person',
-                'foreign_table_where' => 'ORDER BY lastname ASC, firstname ASC',
+                'foreign_table_where' => 'ORDER BY tx_clubms_domain_model_person.lastname ASC, tx_clubms_domain_model_person.firstname ASC',
                 'items' => Array (
-                    # TODO: "Bitte wählen" nach LOCALLANG auslagern
-                    Array("Bitte wählen", ""),
+                    array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
                 ),
                 'maxItems' => 1,
                 'minItems' => 1,
@@ -117,8 +116,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_gamereferee'] = array(
                 'foreign_table' => 'tx_clubms_domain_model_referee_job',
                 'foreign_table_where' => 'ORDER BY label ASC',
                 'items' => Array (
-                    # TODO: "Bitte wählen" nach LOCALLANG auslagern
-                    Array("Bitte wählen", ""),
+                    array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
                 ),
                 'maxItems' => 1,
                 'minItems' => 1,
