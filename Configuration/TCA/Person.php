@@ -189,13 +189,14 @@ $GLOBALS['TCA']['tx_clubms_domain_model_person'] = array(
             'exclude' => 1,
             'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.gender',
             'config' => array(
-				'default' => 'm',
                 'eval' => 'required',
 				'items' => array(
+                    Array("", ""),
 					array('LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.gender_male', 'm'),
 					array('LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.gender_female', 'f'),
 				),
-				'type' => 'radio',
+                'renderType' => 'selectSingle',
+				'type' => 'select',
             ),
         ),
 		
