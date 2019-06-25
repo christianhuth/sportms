@@ -129,7 +129,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_address'] = array(
             'config' => array(
 				'foreign_table' => 'static_countries',
 				'items' => Array (
-					Array("", 0),
+                    array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
 				),
 				'maxItems' => 1,
 				'renderType' => 'selectSingle',
