@@ -96,7 +96,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_competition'] = array(
                 'foreign_table' => 'tx_clubms_domain_model_section',
                 'foreign_table_where' => 'ORDER BY label ASC',
                 'items' => array (
-                    array("", ""),
+                    array("Bitte wählen", ""),
                 ),
                 'maxItems' => 1,
                 'minItems' => 1,
@@ -105,7 +105,6 @@ $GLOBALS['TCA']['tx_clubms_domain_model_competition'] = array(
                 'type' => 'select',
             ),
         ),
-
         'competition_type' => array(
             'exclude' => 1,
             'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_competition.competition_type',
@@ -114,7 +113,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_competition'] = array(
                 'foreign_table' => 'tx_clubms_domain_model_competitiontype',
                 'foreign_table_where' => 'ORDER BY label ASC',
                 'items' => array (
-                    array("", ""),
+                    array("Bitte wählen", ""),
                 ),
                 'maxItems' => 1,
                 'minItems' => 1,
@@ -123,7 +122,6 @@ $GLOBALS['TCA']['tx_clubms_domain_model_competition'] = array(
                 'type' => 'select',
             ),
         ),
-
         'age_level' => array(
             'exclude' => 1,
             'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_competition.age_level',
@@ -132,7 +130,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_competition'] = array(
                 'foreign_table' => 'tx_clubms_domain_model_agelevel',
                 'foreign_table_where' => 'ORDER BY label ASC',
                 'items' => array (
-                    array("", ""),
+                    array("Bitte wählen", ""),
                 ),
                 'maxItems' => 1,
                 'minItems' => 1,
@@ -141,7 +139,6 @@ $GLOBALS['TCA']['tx_clubms_domain_model_competition'] = array(
                 'type' => 'select',
             ),
         ),
-		
 		'name' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_competition.name',
@@ -151,7 +148,6 @@ $GLOBALS['TCA']['tx_clubms_domain_model_competition'] = array(
 				'eval' => 'trim, required'
 			),
 		),
-		
 		'name_short' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_competition.name_short',
