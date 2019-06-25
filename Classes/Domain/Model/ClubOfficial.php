@@ -33,15 +33,20 @@ namespace Balumedien\Clubms\Domain\Model;
 class ClubOfficial extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 
     /**
-     * @var \Balumedien\Clubms\Domain\Model\ClubOfficialJob
+     * @var \Balumedien\Clubms\Domain\Model\Club
      * @lazy
      */
-    protected $clubOfficialJob;
+    protected $club;
 
 	/**
 	 * @var \Balumedien\Clubms\Domain\Model\Person
 	 */
 	protected $person;
+
+	/**
+	 * @var \Balumedien\Clubms\Domain\Model\OfficialJob
+	 */
+	protected $officialJob;
 
 	/**
 	 * @var int
@@ -53,21 +58,19 @@ class ClubOfficial extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
      */
     protected $enddate;
 
-    /**
-     * @return ClubOfficialJob
-     */
-    public function getClubOfficialJob()
-    {
-        return $this->clubOfficialJob;
-    }
+	/**
+	 * @return Club
+	 */
+	public function getClub() {
+		return $this->club;
+	}
 
-    /**
-     * @param ClubOfficialJob $clubOfficialJob
-     */
-    public function setClubOfficialJob($clubOfficialJob)
-    {
-        $this->clubOfficialJob = $clubOfficialJob;
-    }
+	/**
+	 * @param Club $club
+	 */
+	public function setClub($club) {
+		$this->club = $club;
+	}
 
     /**
      * @return Person
@@ -84,6 +87,20 @@ class ClubOfficial extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
     {
         $this->person = $person;
     }
+
+	/**
+	 * @return OfficialJob
+	 */
+	public function getOfficialJob() {
+		return $this->officialJob;
+	}
+
+	/**
+	 * @param OfficialJob $officialJob
+	 */
+	public function setOfficialJob($officialJob) {
+		$this->officialJob = $officialJob;
+	}
 
     /**
      * @return int
