@@ -103,7 +103,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_teamseason'] = array(
 				'foreign_table' => 'tx_clubms_domain_model_season',
 				'foreign_table_where' => 'ORDER BY season_name DESC',
 				'items' => Array (
-					Array("Bitte wählen", 0),
+                    array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
 				),
 				'maxItems' => 1,
 				'renderType' => 'selectSingle',
