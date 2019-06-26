@@ -963,6 +963,8 @@ CREATE TABLE tx_clubms_domain_model_sectionagegroup (
 	short varchar(255) DEFAULT NULL,
 	section_age_levels int(11) DEFAULT NULL,
 
+	ordering int(11) DEFAULT '0' NOT NULL,
+
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
 	cruser_id int(11) unsigned DEFAULT '0' NOT NULL,
@@ -998,6 +1000,8 @@ CREATE TABLE tx_clubms_domain_model_sectionagelevel (
 	section_age_group int(11) DEFAULT NULL,
 	label varchar(255) DEFAULT NULL,
 	short varchar(255) DEFAULT NULL,
+
+	ordering int(11) DEFAULT '0' NOT NULL,
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
