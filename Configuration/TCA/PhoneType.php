@@ -15,10 +15,10 @@ $GLOBALS['TCA']['tx_clubms_domain_model_phonetype'] = array(
 			'starttime' => 'starttime',
 			'endtime' => 'endtime',
 		),
-		'iconfile' => 'EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_phoneype.svg',
+		'iconfile' => 'EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_phonetype.svg',
 		'label' => 'label',
 		'searchFields' => '',
-		'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_phoneype',
+		'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_phonetype',
 		'tstamp' => 'tstamp',
 		'versioningWS' => TRUE,
 	),
@@ -87,7 +87,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_phonetype'] = array(
 		
 		'label' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_phoneype.label',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_phonetype.label',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
