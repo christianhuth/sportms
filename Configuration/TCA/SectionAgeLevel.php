@@ -3,7 +3,7 @@ if (!defined ('TYPO3_MODE')) {
 	die ('Access denied.');
 }
 
-$GLOBALS['TCA']['tx_clubms_domain_model_agelevel'] = array(
+$GLOBALS['TCA']['tx_clubms_domain_model_sectionagelevel'] = array(
 		'ctrl' => array(
 		'crdate' => 'crdate',
 		'cruser_id' => 'cruser_id',
@@ -16,12 +16,12 @@ $GLOBALS['TCA']['tx_clubms_domain_model_agelevel'] = array(
 			'endtime' => 'endtime',
 		),
 		'hideTable' => TRUE,
-		'iconfile' => 'EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_agelevel.svg',
+		'iconfile' => 'EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_sectionagelevel.svg',
 		'label' => 'label',
 		'label_alt' => 'short',
 		'label_alt_force' => TRUE,
 		'searchFields' => '',
-		'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_agelevel',
+		'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_sectionagelevel',
 		'tstamp' => 'tstamp',
 		'versioningWS' => TRUE,
     ),
@@ -91,7 +91,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_agelevel'] = array(
 			),
 		),
 
-		'age_group' => array (
+		'section_age_group' => array (
             'config' => array(
                 'type' => 'passthrough',
             ),
@@ -99,7 +99,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_agelevel'] = array(
 		
 		'label' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_agelevel.label',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_sectionagelevel.label',
 			'config' => array(
 				'eval' => 'required, trim',
 				'size' => 255,
@@ -109,7 +109,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_agelevel'] = array(
 		
 		'short' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_agelevel.short',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_sectionagelevel.short',
 			'config' => array(
 				'eval' => 'trim',
 				'size' => 255,

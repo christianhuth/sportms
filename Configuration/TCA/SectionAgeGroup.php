@@ -3,7 +3,7 @@ if (!defined ('TYPO3_MODE')) {
 	die ('Access denied.');
 }
 
-$GLOBALS['TCA']['tx_clubms_domain_model_agegroup'] = array(
+$GLOBALS['TCA']['tx_clubms_domain_model_sectionagegroup'] = array(
 		'ctrl' => array(
 		'crdate' => 'crdate',
 		'cruser_id' => 'cruser_id',
@@ -15,10 +15,10 @@ $GLOBALS['TCA']['tx_clubms_domain_model_agegroup'] = array(
 			'starttime' => 'starttime',
 			'endtime' => 'endtime',
 		),
-		'iconfile' => 'EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_agegroup.svg',
+		'iconfile' => 'EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_sectionagegroup.svg',
 		'label' => 'label',
 		'searchFields' => '',
-		'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_agegroup',
+		'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_sectionagegroup',
 		'tstamp' => 'tstamp',
 		'versioningWS' => TRUE,
     ),
@@ -26,7 +26,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_agegroup'] = array(
 		'showRecordFieldList' => 'label, short',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'label, short, age_levels'),
+		'1' => array('showitem' => 'label, short, section_age_levels'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -41,7 +41,6 @@ $GLOBALS['TCA']['tx_clubms_domain_model_agegroup'] = array(
 				'max' => 255,
 			)
 		),
-		
 		'hidden' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.hidden',
@@ -49,7 +48,6 @@ $GLOBALS['TCA']['tx_clubms_domain_model_agegroup'] = array(
 				'type' => 'check',
 			),
 		),
-		
 		'starttime' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.starttime',
@@ -68,7 +66,6 @@ $GLOBALS['TCA']['tx_clubms_domain_model_agegroup'] = array(
 				'renderType' => 'inputDateTime',
 			),
 		),
-		
 		'endtime' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.endtime',
@@ -90,7 +87,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_agegroup'] = array(
 		
 		'label' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_agegroup.label',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_sectionagegroup.label',
 			'config' => array(
 				'eval' => 'required, trim',
 				'size' => 255,
@@ -100,7 +97,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_agegroup'] = array(
 		
 		'short' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_agegroup.short',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_sectionagegroup.short',
 			'config' => array(
 				'eval' => 'trim',
 				'size' => 255,
@@ -108,8 +105,8 @@ $GLOBALS['TCA']['tx_clubms_domain_model_agegroup'] = array(
 			),
 		),
 		
-		'age_levels' => array(
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_agegroup.age_levels',
+		'section_age_levels' => array(
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_sectionagegroup.section_age_levels',
 			'config' => array(
 				'appearance' => array(
 					'levelLinksPosition' => 'bottom',
