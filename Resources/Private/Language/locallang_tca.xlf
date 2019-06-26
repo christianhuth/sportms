@@ -706,6 +706,9 @@
 			<trans-unit id="tx_clubms_domain_model_sectionagegroup">
 				<source>Altersgruppe</source>
 			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_sectionagegroup.section">
+				<source>Abteilung</source>
+			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_sectionagegroup.label">
 				<source>Bezeichnung</source>
 			</trans-unit>

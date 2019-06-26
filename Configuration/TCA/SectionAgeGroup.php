@@ -26,7 +26,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_sectionagegroup'] = array(
 		'showRecordFieldList' => 'label, short',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'label, short, section_age_levels'),
+		'1' => array('showitem' => 'section, label, short, section_age_levels'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -84,7 +84,23 @@ $GLOBALS['TCA']['tx_clubms_domain_model_sectionagegroup'] = array(
 				'renderType' => 'inputDateTime',
 			),
 		),
-		
+
+        'section' => array(
+            'exclude' => 1,
+            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_sectionagegroup.section',
+            'config' => array(
+                'eval' => 'required',
+                'foreign_table' => 'tx_clubms_domain_model_section',
+                'foreign_table_where' => 'ORDER BY label ASC',
+                'items' => Array (
+                    array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
+                ),
+                'maxItems' => 1,
+                'renderType' => 'selectSingle',
+                'size' => 1,
+                'type' => 'select',
+            ),
+        ),
 		'label' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_sectionagegroup.label',
