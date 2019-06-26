@@ -113,9 +113,10 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
             'exclude' => 1,
             'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.competition',
             'config' => array(
+                'enableMultiSelectFilterTextfield' => true,
                 'eval' => 'required',
                 'foreign_table' => 'tx_clubms_domain_model_competitionseason',
-                'foreign_table_where' => ' AND tx_clubms_domain_model_competitionseason.season = FIELD:season ORDER BY name DESC',
+                'foreign_table_where' => ' AND tx_clubms_domain_model_competitionseason.season = ###REC_FIELD_season### ORDER BY name DESC',
                 'items' => Array (
                     array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
                 ),
