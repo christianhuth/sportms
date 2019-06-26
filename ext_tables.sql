@@ -46,78 +46,6 @@ CREATE TABLE tx_clubms_domain_model_address (
 );
 
 #
-# Table structure for table 'tx_clubms_domain_model_agegroup'
-#
-CREATE TABLE tx_clubms_domain_model_agegroup (
-
-	uid int(11) NOT NULL auto_increment,
-	pid int(11) DEFAULT '0' NOT NULL,
-	
-	label varchar(255) DEFAULT NULL,
-	short varchar(255) DEFAULT NULL,
-	age_levels int(11) DEFAULT NULL,
-	
-	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
-	crdate int(11) unsigned DEFAULT '0' NOT NULL,
-	cruser_id int(11) unsigned DEFAULT '0' NOT NULL,
-	deleted tinyint(4) unsigned DEFAULT '0' NOT NULL,
-	hidden tinyint(4) unsigned DEFAULT '0' NOT NULL,
-	starttime int(11) unsigned DEFAULT '0' NOT NULL,
-	endtime int(11) unsigned DEFAULT '0' NOT NULL,
-
-	t3ver_oid int(11) DEFAULT '0' NOT NULL,
-	t3ver_id int(11) DEFAULT '0' NOT NULL,
-	t3ver_wsid int(11) DEFAULT '0' NOT NULL,
-	t3ver_label varchar(255) DEFAULT '' NOT NULL,
-	t3ver_state tinyint(4) DEFAULT '0' NOT NULL,
-	t3ver_stage int(11) DEFAULT '0' NOT NULL,
-	t3ver_count int(11) DEFAULT '0' NOT NULL,
-	t3ver_tstamp int(11) DEFAULT '0' NOT NULL,
-	t3ver_move_id int(11) DEFAULT '0' NOT NULL,
-
-	PRIMARY KEY (uid),
-	KEY parent (pid),
-	KEY t3ver_oid (t3ver_oid,t3ver_wsid),
-
-);
-
-#
-# Table structure for table 'tx_clubms_domain_model_agelevel'
-#
-CREATE TABLE tx_clubms_domain_model_agelevel (
-
-	uid int(11) NOT NULL auto_increment,
-	pid int(11) DEFAULT '0' NOT NULL,
-	
-	age_group int(11) DEFAULT NULL,
-	label varchar(255) DEFAULT NULL,
-	short varchar(255) DEFAULT NULL,
-	
-	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
-	crdate int(11) unsigned DEFAULT '0' NOT NULL,
-	cruser_id int(11) unsigned DEFAULT '0' NOT NULL,
-	deleted tinyint(4) unsigned DEFAULT '0' NOT NULL,
-	hidden tinyint(4) unsigned DEFAULT '0' NOT NULL,
-	starttime int(11) unsigned DEFAULT '0' NOT NULL,
-	endtime int(11) unsigned DEFAULT '0' NOT NULL,
-
-	t3ver_oid int(11) DEFAULT '0' NOT NULL,
-	t3ver_id int(11) DEFAULT '0' NOT NULL,
-	t3ver_wsid int(11) DEFAULT '0' NOT NULL,
-	t3ver_label varchar(255) DEFAULT '' NOT NULL,
-	t3ver_state tinyint(4) DEFAULT '0' NOT NULL,
-	t3ver_stage int(11) DEFAULT '0' NOT NULL,
-	t3ver_count int(11) DEFAULT '0' NOT NULL,
-	t3ver_tstamp int(11) DEFAULT '0' NOT NULL,
-	t3ver_move_id int(11) DEFAULT '0' NOT NULL,
-
-	PRIMARY KEY (uid),
-	KEY parent (pid),
-	KEY t3ver_oid (t3ver_oid,t3ver_wsid),
-
-);
-
-#
 # Table structure for table 'tx_clubms_domain_model_club'
 #
 CREATE TABLE tx_clubms_domain_model_club (
@@ -474,7 +402,7 @@ CREATE TABLE tx_clubms_domain_model_competition (
 
     section int(11) DEFAULT '0' NOT NULL,
     competition_type int(11) DEFAULT '0' NOT NULL,
-    age_level int(11) DEFAULT '0' NOT NULL,
+    section_age_level int(11) DEFAULT '0' NOT NULL,
 	name varchar(255) DEFAULT '0' NOT NULL,
 	name_short varchar(255) DEFAULT NULL,
 	competition_seasons int(11) DEFAULT NULL,
@@ -1023,6 +951,78 @@ CREATE TABLE tx_clubms_domain_model_section (
 );
 
 #
+# Table structure for table 'tx_clubms_domain_model_sectionagegroup'
+#
+CREATE TABLE tx_clubms_domain_model_sectionagegroup (
+
+	uid int(11) NOT NULL auto_increment,
+	pid int(11) DEFAULT '0' NOT NULL,
+
+	label varchar(255) DEFAULT NULL,
+	short varchar(255) DEFAULT NULL,
+	section_age_levels int(11) DEFAULT NULL,
+
+	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
+	crdate int(11) unsigned DEFAULT '0' NOT NULL,
+	cruser_id int(11) unsigned DEFAULT '0' NOT NULL,
+	deleted tinyint(4) unsigned DEFAULT '0' NOT NULL,
+	hidden tinyint(4) unsigned DEFAULT '0' NOT NULL,
+	starttime int(11) unsigned DEFAULT '0' NOT NULL,
+	endtime int(11) unsigned DEFAULT '0' NOT NULL,
+
+	t3ver_oid int(11) DEFAULT '0' NOT NULL,
+	t3ver_id int(11) DEFAULT '0' NOT NULL,
+	t3ver_wsid int(11) DEFAULT '0' NOT NULL,
+	t3ver_label varchar(255) DEFAULT '' NOT NULL,
+	t3ver_state tinyint(4) DEFAULT '0' NOT NULL,
+	t3ver_stage int(11) DEFAULT '0' NOT NULL,
+	t3ver_count int(11) DEFAULT '0' NOT NULL,
+	t3ver_tstamp int(11) DEFAULT '0' NOT NULL,
+	t3ver_move_id int(11) DEFAULT '0' NOT NULL,
+
+	PRIMARY KEY (uid),
+	KEY parent (pid),
+	KEY t3ver_oid (t3ver_oid,t3ver_wsid),
+
+);
+
+#
+# Table structure for table 'tx_clubms_domain_model_sectionagelevel'
+#
+CREATE TABLE tx_clubms_domain_model_sectionagelevel (
+
+	uid int(11) NOT NULL auto_increment,
+	pid int(11) DEFAULT '0' NOT NULL,
+
+	section_age_group int(11) DEFAULT NULL,
+	label varchar(255) DEFAULT NULL,
+	short varchar(255) DEFAULT NULL,
+
+	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
+	crdate int(11) unsigned DEFAULT '0' NOT NULL,
+	cruser_id int(11) unsigned DEFAULT '0' NOT NULL,
+	deleted tinyint(4) unsigned DEFAULT '0' NOT NULL,
+	hidden tinyint(4) unsigned DEFAULT '0' NOT NULL,
+	starttime int(11) unsigned DEFAULT '0' NOT NULL,
+	endtime int(11) unsigned DEFAULT '0' NOT NULL,
+
+	t3ver_oid int(11) DEFAULT '0' NOT NULL,
+	t3ver_id int(11) DEFAULT '0' NOT NULL,
+	t3ver_wsid int(11) DEFAULT '0' NOT NULL,
+	t3ver_label varchar(255) DEFAULT '' NOT NULL,
+	t3ver_state tinyint(4) DEFAULT '0' NOT NULL,
+	t3ver_stage int(11) DEFAULT '0' NOT NULL,
+	t3ver_count int(11) DEFAULT '0' NOT NULL,
+	t3ver_tstamp int(11) DEFAULT '0' NOT NULL,
+	t3ver_move_id int(11) DEFAULT '0' NOT NULL,
+
+	PRIMARY KEY (uid),
+	KEY parent (pid),
+	KEY t3ver_oid (t3ver_oid,t3ver_wsid),
+
+);
+
+#
 # Table structure for table 'tx_clubms_domain_model_sectionposition'
 #
 CREATE TABLE tx_clubms_domain_model_sectionposition (
@@ -1112,7 +1112,7 @@ CREATE TABLE tx_clubms_domain_model_team (
 
     club int(11) DEFAULT '0' NOT NULL,
     section int(11) DEFAULT '0' NOT NULL,
-    age_level int(11) DEFAULT '0' NOT NULL,
+    section_age_level int(11) DEFAULT '0' NOT NULL,
 	name varchar(255) DEFAULT '' NOT NULL,
 	dummy tinyint(4) unsigned DEFAULT '0' NOT NULL,
     detail_link tinyint(4) unsigned DEFAULT '0' NOT NULL,
