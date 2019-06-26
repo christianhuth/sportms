@@ -44,9 +44,9 @@ class TeamSeasonOfficial extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity 
 	protected $person;
 
 	/**
-	 * @var \Balumedien\Clubms\Domain\Model\OfficialJob
+	 * @var \Balumedien\Clubms\Domain\Model\TeamSeasonOfficialJob
 	 */
-	protected $officialJob;
+	protected $teamSeasonOfficialJob;
 
 	/**
 	 * @var int
@@ -89,17 +89,17 @@ class TeamSeasonOfficial extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity 
     }
 
 	/**
-	 * @return OfficialJob
+	 * @return TeamSeasonOfficialJob
 	 */
-	public function getOfficialJob() {
-		return $this->officialJob;
+	public function getTeamSeasonOfficialJob() {
+		return $this->teamSeasonOfficialJob;
 	}
 
 	/**
-	 * @param OfficialJob $officialJob
+	 * @param TeamSeasonOfficialJob $teamSeasonOfficialJob
 	 */
-	public function setOfficialJob($officialJob) {
-		$this->officialJob = $officialJob;
+	public function setTeamSeasonOfficialJob($teamSeasonOfficialJob) {
+		$this->teamSeasonOfficialJob = $teamSeasonOfficialJob;
 	}
 
     /**
