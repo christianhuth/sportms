@@ -3,7 +3,7 @@ if (!defined ('TYPO3_MODE')) {
 	die ('Access denied.');
 }
 
-$GLOBALS['TCA']['tx_clubms_domain_model_contacttype'] = array(
+$GLOBALS['TCA']['tx_clubms_domain_model_phoneype'] = array(
 	'ctrl' => array(
 		'crdate' => 'crdate',
 		'cruser_id' => 'cruser_id',
@@ -15,10 +15,10 @@ $GLOBALS['TCA']['tx_clubms_domain_model_contacttype'] = array(
 			'starttime' => 'starttime',
 			'endtime' => 'endtime',
 		),
-		'iconfile' => 'EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_contacttype.svg',
+		'iconfile' => 'EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_phoneype.svg',
 		'label' => 'label',
 		'searchFields' => '',
-		'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_contacttype',
+		'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_phoneype',
 		'tstamp' => 'tstamp',
 		'versioningWS' => TRUE,
 	),
@@ -87,7 +87,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_contacttype'] = array(
 		
 		'label' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_contacttype.label',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_phoneype.label',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,

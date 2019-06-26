@@ -393,15 +393,6 @@
 			</trans-unit>
 
 
-			<!-- Domain Model ContactType -->
-			<trans-unit id="tx_clubms_domain_model_contacttype">
-				<source>Kontaktart</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_contacttype.label">
-				<source>Bezeichnung</source>
-			</trans-unit>
-
-
 			<!-- Domain Model Game -->
 			<trans-unit id="tx_clubms_domain_model_game">
 				<source>Spiel</source>
@@ -678,6 +669,15 @@
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_phone.public">
 				<source>Öffentlich</source>
+			</trans-unit>
+
+
+			<!-- Domain Model PhoneType -->
+			<trans-unit id="tx_clubms_domain_model_phonetype">
+				<source>Telefonart</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_phonetype.label">
+				<source>Bezeichnung</source>
 			</trans-unit>
 
 

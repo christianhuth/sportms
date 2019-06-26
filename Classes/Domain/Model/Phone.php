@@ -48,9 +48,9 @@ class Phone extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
     protected $internationalAreaCode;
 
     /**
-     * @var \Balumedien\Clubms\Domain\Model\ContactType
+     * @var \Balumedien\Clubms\Domain\Model\PhoneType
      */
-    protected $contactType;
+    protected $phoneType;
 	
 	/**
 	 * @var boolen
@@ -106,19 +106,19 @@ class Phone extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
     }
 
     /**
-     * @return ContactType
+     * @return PhoneType
      */
-    public function getContactType()
+    public function getPhoneType()
     {
-        return $this->contactType;
+        return $this->phoneType;
     }
 
     /**
-     * @param ContactType $contactType
+     * @param PhoneType $phoneType
      */
-    public function setContactType($contactType)
+    public function setPhoneType($phoneType)
     {
-        $this->contactType = $contactType;
+        $this->phoneType = $phoneType;
     }
 
     /**

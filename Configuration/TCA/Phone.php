@@ -30,7 +30,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_phone'] = array(
 		'showRecordFieldList' => '',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'area_code, calling_number, international_area_code, contact_type, public,'),
+		'1' => array('showitem' => 'area_code, calling_number, international_area_code, phone_type, public,'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -123,11 +123,11 @@ $GLOBALS['TCA']['tx_clubms_domain_model_phone'] = array(
 				'type' => 'select',
 			),
 		),
-        'contact_type' => array(
+        'phone_type' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_phone.contact_type',
+            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_phone.phone_type',
             'config' => array(
-                'foreign_table' => 'tx_clubms_domain_model_contacttype',
+                'foreign_table' => 'tx_clubms_domain_model_phonetype',
                 'foreign_table_where' => 'ORDER BY label ASC',
                 'items' => array(
                     array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),

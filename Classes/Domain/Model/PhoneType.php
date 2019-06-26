@@ -29,9 +29,9 @@ namespace Balumedien\Clubms\Domain\Model;
  ***************************************************************/
 
 /**
- * ContactType
+ * PhoneType
  */
-class ContactType extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
+class PhoneType extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 {
 
     /**
