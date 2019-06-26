@@ -460,8 +460,8 @@
 			<trans-unit id="tx_clubms_domain_model_mail.mail">
 				<source>Mail</source>
 			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_mail.contact_type">
-				<source>Kontaktart</source>
+			<trans-unit id="tx_clubms_domain_model_mail.mail_type">
+				<source>Mailart</source>
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_mail.public">
 				<source>Öffentlich</source>
@@ -664,8 +664,8 @@
 			<trans-unit id="tx_clubms_domain_model_phone.international_area_code">
 				<source>Länder Code</source>
 			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_phone.contact_type">
-				<source>Kontaktart</source>
+			<trans-unit id="tx_clubms_domain_model_phone.phone_type">
+				<source>Telefonart</source>
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_phone.public">
 				<source>Öffentlich</source>
@@ -903,9 +903,6 @@
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_url.url">
 				<source>URL</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_url.contact_type">
-				<source>Kontaktart</source>
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_url.public">
 				<source>Öffentlich</source>
