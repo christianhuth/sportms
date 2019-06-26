@@ -28,7 +28,8 @@ $GLOBALS['TCA']['tx_clubms_domain_model_teamseasonofficial'] = array(
 		'showRecordFieldList' => '',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'person, official_job, startdate, enddate,'),
+		'1' => array('showitem' => 'person, official_job, 
+		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_teamseasonofficial.tab_date, startdate, enddate,'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
