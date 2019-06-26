@@ -189,7 +189,7 @@ CREATE TABLE tx_clubms_domain_model_clubofficial (
     club int(11) DEFAULT '0' NOT NULL,
 	
 	person int(11) DEFAULT '0' NOT NULL,
-    official_job int(11) DEFAULT '0' NOT NULL,
+    club_official_job int(11) DEFAULT '0' NOT NULL,
 	startdate int(11) DEFAULT NULL,
 	enddate int(11) DEFAULT NULL,
 	
@@ -348,7 +348,7 @@ CREATE TABLE tx_clubms_domain_model_clubsectionofficial (
     club_section int(11) DEFAULT '0' NOT NULL,
 
     person int(11) DEFAULT '0' NOT NULL,
-    official_job int(11) DEFAULT '0' NOT NULL,
+    club_section_official_job int(11) DEFAULT '0' NOT NULL,
 	startdate int(11) DEFAULT NULL,
 	enddate int(11) DEFAULT NULL,
 
@@ -1266,7 +1266,7 @@ CREATE TABLE tx_clubms_domain_model_teamseasonofficial (
 	team_season int(11) DEFAULT '0' NOT NULL,
 	
 	person int(11) DEFAULT '0' NOT NULL,
-	official_job int(11) DEFAULT '0' NOT NULL,
+	team_season_official_job int(11) DEFAULT '0' NOT NULL,
 	startdate int(11) DEFAULT NULL,
 	enddate int(11) DEFAULT NULL,
 	
