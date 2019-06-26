@@ -48,9 +48,9 @@ class Competition extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	protected $section;
 	
 	/**
-	 * @var \Balumedien\Clubms\Domain\Model\AgeLevel
+	 * @var \Balumedien\Clubms\Domain\Model\SectionAgeLevel
 	 */
-	protected $ageLevel;
+	protected $sectionAgeLevel;
 	
 	/**
 	 * @var string
@@ -116,19 +116,19 @@ class Competition extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
     }
 
     /**
-     * @return AgeLevel
+     * @return SectionAgeLevel
      */
-    public function getAgeLevel()
+    public function getSectionAgeLevel()
     {
-        return $this->ageLevel;
+        return $this->sectionAgeLevel;
     }
 
     /**
-     * @param AgeLevel $ageLevel
+     * @param SectionAgeLevel $sectionAgeLevel
      */
-    public function setAgeLevel($ageLevel)
+    public function setSectionAgeLevel($sectionAgeLevel)
     {
-        $this->ageLevel = $ageLevel;
+        $this->sectionAgeLevel = $sectionAgeLevel;
     }
 
     /**

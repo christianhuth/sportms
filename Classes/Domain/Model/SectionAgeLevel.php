@@ -28,14 +28,14 @@ namespace Balumedien\Clubms\Domain\Model;
  ***************************************************************/
 
 /**
- * AgeLevel
+ * SectionAgeLevel
  */
-class AgeLevel extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
+class SectionAgeLevel extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 
     /**
-     * @var \Balumedien\Clubms\Domain\Model\AgeGroup
+     * @var \Balumedien\Clubms\Domain\Model\SectionAgeGroup
      */
-    protected $ageGroup;
+    protected $sectionAgeGroup;
 
 	/**
 	 * @var string
@@ -48,19 +48,19 @@ class AgeLevel extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	protected $short;
 
     /**
-     * @return AgeGroup
+     * @return SectionAgeGroup
      */
-    public function getAgeGroup()
+    public function getSectionAgeGroup()
     {
-        return $this->ageGroup;
+        return $this->sectionAgeGroup;
     }
 
     /**
-     * @param AgeGroup $ageGroup
+     * @param SectionAgeGroup $sectionAgeGroup
      */
-    public function setAgeGroup($ageGroup)
+    public function setSectionAgeGroup($sectionAgeGroup)
     {
-        $this->ageGroup = $ageGroup;
+        $this->sectionAgeGroup = $sectionAgeGroup;
     }
 
 	/**

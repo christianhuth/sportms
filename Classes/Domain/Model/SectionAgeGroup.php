@@ -28,9 +28,9 @@ namespace Balumedien\Clubms\Domain\Model;
  ***************************************************************/
 
 /**
- * AgeGroup
+ * SectionAgeGroup
  */
-class AgeGroup extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
+class SectionAgeGroup extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 
 	/**
 	 * @var string
@@ -43,11 +43,11 @@ class AgeGroup extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	protected $short = '';
 	
 	/**
-	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\AgeLevel>
+	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\SectionAgeLevel>
 	 * @lazy
 	 * @cascade remove
 	 */
-	protected $ageLevels = '';
+	protected $sectionAgeLevels = '';
 
     /**
      * @return string
@@ -84,17 +84,17 @@ class AgeGroup extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
     /**
      * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
      */
-    public function getAgeLevels()
+    public function getSectionAgeLevels()
     {
-        return $this->ageLevels;
+        return $this->sectionAgeLevels;
     }
 
     /**
-     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $ageLevels
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $sectionAgeLevels
      */
-    public function setAgeLevels($ageLevels)
+    public function setSectionAgeLevels($sectionAgeLevels)
     {
-        $this->ageLevels = $ageLevels;
+        $this->sectionAgeLevels = $sectionAgeLevels;
     }
 
 }
