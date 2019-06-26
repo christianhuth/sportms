@@ -17,6 +17,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_sectionagegroup'] = array(
 		),
 		'iconfile' => 'EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_sectionagegroup.svg',
 		'label' => 'label',
+        'label_userFunc' => \Balumedien\Clubms\Configuration\TCA\UserFunc\UserFunc::class . '->sectionAgeGroupLabel',
 		'searchFields' => '',
 		'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_sectionagegroup',
 		'tstamp' => 'tstamp',
