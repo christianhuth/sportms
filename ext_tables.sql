@@ -10,7 +10,7 @@ CREATE TABLE tx_clubms_domain_model_address (
 	housenumber varchar(255) DEFAULT NULL,
 	zipcode varchar(255) DEFAULT NULL,
 	location varchar(255) DEFAULT '' NOT NULL,
-	country int(11) DEFAULT '' NOT NULL,
+	country int(11) DEFAULT '0' NOT NULL,
 	region varchar(255) DEFAULT NULL,
 	public tinyint(1) unsigned DEFAULT NULL,
 	
