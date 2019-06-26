@@ -6,11 +6,11 @@ CREATE TABLE tx_clubms_domain_model_address (
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
 	
-	street varchar(255) DEFAULT NULL,
+	street varchar(255) DEFAULT '' NOT NULL,
 	housenumber varchar(255) DEFAULT NULL,
 	zipcode varchar(255) DEFAULT NULL,
-	location varchar(255) DEFAULT NULL,
-	country int(11) DEFAULT NULL,
+	location varchar(255) DEFAULT '' NOT NULL,
+	country int(11) DEFAULT '' NOT NULL,
 	region varchar(255) DEFAULT NULL,
 	public tinyint(1) unsigned DEFAULT NULL,
 	
@@ -851,8 +851,8 @@ CREATE TABLE tx_clubms_domain_model_phone (
     person int(11) DEFAULT NULL,
 
 	area_code varchar(255) DEFAULT NULL,
-	calling_number varchar(255) DEFAULT '0' NOT NULL,
-	international_area_code varchar(255) DEFAULT NULL,
+	calling_number varchar(255) DEFAULT '' NOT NULL,
+	international_area_code varchar(255) DEFAULT '' NOT NULL,
 	contact_type int(11) unsigned DEFAULT NULL,
 	public tinyint(4) unsigned DEFAULT '0' NOT NULL,
 	
