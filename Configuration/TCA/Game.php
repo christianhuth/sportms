@@ -105,7 +105,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
                 'size' => 1,
                 'type' => 'select',
             ),
-            'onchange' => 'reload',
+            'onChange' => 'reload',
 		),
         'competition' => array(
             'exclude' => 1,
@@ -123,7 +123,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
                 'size' => 1,
                 'type' => 'select',
             ),
-            'onchange' => 'reload',
+            'onChange' => 'reload',
         ),
         'team_home' => array(
             'exclude' => 1,
@@ -141,7 +141,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
                 'size' => 1,
                 'type' => 'select',
             ),
-            'onchange' => 'reload',
+            'onChange' => 'reload',
         ),
         'team_guest' => array(
             'exclude' => 1,
@@ -159,7 +159,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
                 'size' => 1,
                 'type' => 'select',
             ),
-            'onchange' => 'reload',
+            'onChange' => 'reload',
         ),
         'date' => array(
             'exclude' => 1,
