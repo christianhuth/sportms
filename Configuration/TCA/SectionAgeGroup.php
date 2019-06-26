@@ -129,7 +129,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_sectionagegroup'] = array(
 					'useSortable' => 1,
 				),
 				'foreign_field' => 'age_group',
-				'foreign_table' => 'tx_clubms_domain_model_agelevel',
+				'foreign_table' => 'tx_clubms_domain_model_sectionagelevel',
 				'type' => 'inline',
 			),
 		),
