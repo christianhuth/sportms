@@ -958,6 +958,7 @@ CREATE TABLE tx_clubms_domain_model_sectionagegroup (
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
 
+	section int(11) DEFAULT NULL,
 	label varchar(255) DEFAULT NULL,
 	short varchar(255) DEFAULT NULL,
 	section_age_levels int(11) DEFAULT NULL,
