@@ -44,9 +44,9 @@ class ClubOfficial extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	protected $person;
 
 	/**
-	 * @var \Balumedien\Clubms\Domain\Model\OfficialJob
+	 * @var \Balumedien\Clubms\Domain\Model\ClubOfficialJob
 	 */
-	protected $officialJob;
+	protected $clubOfficialJob;
 
 	/**
 	 * @var int
@@ -89,17 +89,17 @@ class ClubOfficial extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
     }
 
 	/**
-	 * @return OfficialJob
+	 * @return ClubOfficialJob
 	 */
-	public function getOfficialJob() {
-		return $this->officialJob;
+	public function getClubOfficialJob() {
+		return $this->clubOfficialJob;
 	}
 
 	/**
-	 * @param OfficialJob $officialJob
+	 * @param ClubOfficialJob $clubOfficialJob
 	 */
-	public function setOfficialJob($officialJob) {
-		$this->officialJob = $officialJob;
+	public function setClubOfficialJob($clubOfficialJob) {
+		$this->clubOfficialJob = $clubOfficialJob;
 	}
 
     /**
