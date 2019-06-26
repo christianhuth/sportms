@@ -97,7 +97,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_mail'] = array(
 		),
 		'contact_type' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_mail.type',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_mail.contact_type',
 			'config' => array(
 				'foreign_table' => 'tx_clubms_domain_model_contacttype',
 				'foreign_table_where' => 'ORDER BY label ASC',
