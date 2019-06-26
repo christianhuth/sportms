@@ -102,6 +102,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_phone'] = array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_phone.calling_number',
 			'config' => array(
+                'eval' => 'required',
 				'type' => 'input',
 				'size' => 255,
 				'eval' => 'trim'
@@ -111,6 +112,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_phone'] = array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_phone.international_area_code',
 			'config' => array(
+			    'eval' => 'required',
 				'foreign_table' => 'static_countries',
 				'items' => Array (
                     array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
