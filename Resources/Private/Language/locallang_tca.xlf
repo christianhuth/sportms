@@ -468,15 +468,6 @@
 			</trans-unit>
 
 
-			<!-- Domain Model OfficialJob -->
-			<trans-unit id="tx_clubms_domain_model_officialjob">
-				<source>Funktionärsaufgabe</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_officialjob.label">
-				<source>Bezeichnung</source>
-			</trans-unit>
-
-
 			<!-- Domain Model Person -->
 			<trans-unit id="tx_clubms_domain_model_person">
 				<source>Person</source>

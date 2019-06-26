@@ -19,7 +19,7 @@
 		public function clubOfficialLabel(&$parameters, $parentObject) {
 			$record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
 			$person = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_person", $record['person']);
-			$officialJob = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_officialjob", $record['official_job']);
+			$officialJob = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_clubofficialjob", $record['club_official_job']);
 			$newLabel = $officialJob['label'] . ": " . $person['firstname'] . " " . $person['lastname'];
 			$parameters['title'] = $newLabel;
 		}
@@ -27,7 +27,7 @@
 		public function clubSectionOfficialLabel(&$parameters, $parentObject) {
 			$record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
 			$person = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_person", $record['person']);
-			$officialJob = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_officialjob", $record['official_job']);
+			$officialJob = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_clubsectionofficialjob", $record['club_section_official_job']);
 			$newLabel = $officialJob['label'] . ": " . $person['firstname'] . " " . $person['lastname'];
 			$parameters['title'] = $newLabel;
 		}
@@ -82,7 +82,7 @@
 		public function teamSeasonOfficialLabel(&$parameters, $parentObject) {
 			$record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
 			$person = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_person", $record['person']);
-			$officialJob = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_officialjob", $record['official_job']);
+			$officialJob = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_teamseasonofficialjob", $record['team_season_official_job']);
 			$newLabel = $officialJob['label'] . ": " . $person['firstname'] . " " . $person['lastname'];
 			$parameters['title'] = $newLabel;
 		}
