@@ -38,9 +38,9 @@ class Mail extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	protected $mail;
 
 	/**
-	 * @var \Balumedien\Clubms\Domain\Model\ContactType
+	 * @var \Balumedien\Clubms\Domain\Model\MailType
 	 */
-	protected $contactType;
+	protected $mailType;
 
 	/**
 	 * @var boolean
@@ -64,19 +64,19 @@ class Mail extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
     }
 
     /**
-     * @return ContactType
+     * @return MailType
      */
-    public function getContactType()
+    public function getMailType()
     {
-        return $this->contactType;
+        return $this->mailType;
     }
 
     /**
-     * @param ContactType $contactType
+     * @param MailType $mailType
      */
-    public function setContactType($contactType)
+    public function setMailType($mailType)
     {
-        $this->contactType = $contactType;
+        $this->mailType = $mailType;
     }
 
     /**
