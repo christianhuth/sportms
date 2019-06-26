@@ -26,7 +26,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_gamereferee'] = array(
 		'showRecordFieldList' => '',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'game, person, referee_job'),
+		'1' => array('showitem' => 'referee_job, person'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -91,13 +91,13 @@ $GLOBALS['TCA']['tx_clubms_domain_model_gamereferee'] = array(
             ),
 		),
 
-        'person' => array(
+        'referee_job' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gamereferee.person',
+            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gamereferee.referee_job',
             'config' => array(
                 'eval' => 'required',
-                'foreign_table' => 'tx_clubms_domain_model_person',
-                'foreign_table_where' => 'ORDER BY tx_clubms_domain_model_person.lastname ASC, tx_clubms_domain_model_person.firstname ASC',
+                'foreign_table' => 'tx_clubms_domain_model_refereejob',
+                'foreign_table_where' => 'ORDER BY label ASC',
                 'items' => Array (
                     array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
                 ),
@@ -108,13 +108,13 @@ $GLOBALS['TCA']['tx_clubms_domain_model_gamereferee'] = array(
                 'type' => 'select',
             ),
         ),
-        'referee_job' => array(
+        'person' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gamereferee.referee_job',
+            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gamereferee.person',
             'config' => array(
                 'eval' => 'required',
-                'foreign_table' => 'tx_clubms_domain_model_refereejob',
-                'foreign_table_where' => 'ORDER BY label ASC',
+                'foreign_table' => 'tx_clubms_domain_model_person',
+                'foreign_table_where' => 'ORDER BY tx_clubms_domain_model_person.lastname ASC, tx_clubms_domain_model_person.firstname ASC',
                 'items' => Array (
                     array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
                 ),
