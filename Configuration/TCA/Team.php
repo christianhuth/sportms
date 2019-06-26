@@ -101,6 +101,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_team'] = array(
                 'size' => 1,
                 'type' => 'select',
             ),
+            'onChange' => 'reload',
         ),
         'section' => array(
             'exclude' => 1,
