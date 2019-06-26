@@ -38,33 +38,6 @@
 			</trans-unit>
 
 
-            <!-- Domain Model AgeGroup -->
-			<trans-unit id="tx_clubms_domain_model_agegroup">
-				<source>Altersgruppe</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_agegroup.label">
-				<source>Bezeichnung</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_agegroup.short">
-				<source>Kurzform</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_agegroup.age_levels">
-				<source>Altersstufen</source>
-			</trans-unit>
-
-
-            <!-- Domain Model AgeLevel -->
-			<trans-unit id="tx_clubms_domain_model_agelevel">
-				<source>Altersstufe</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_agelevel.label">
-				<source>Bezeichnung</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_agelevel.short">
-				<source>Kurzform</source>
-			</trans-unit>
-
-
 			<!-- Domain Model Club -->
 			<trans-unit id="tx_clubms_domain_model_club">
 				<source>Verein</source>
@@ -330,7 +303,7 @@
 			<trans-unit id="tx_clubms_domain_model_competition.competition_type">
 				<source>Wettbewerbsart</source>
 			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_competition.age_level">
+			<trans-unit id="tx_clubms_domain_model_competition.section_age_level">
 				<source>Altersstufe</source>
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_competition.name">
@@ -729,6 +702,33 @@
 			</trans-unit>
 
 
+            <!-- Domain Model SectionAgeGroup -->
+			<trans-unit id="tx_clubms_domain_model_sectionagegroup">
+				<source>Altersgruppe</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_sectionagegroup.label">
+				<source>Bezeichnung</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_sectionagegroup.short">
+				<source>Kurzform</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_sectionagegroup.section_age_levels">
+				<source>Altersstufen</source>
+			</trans-unit>
+
+
+            <!-- Domain Model SectionAgeLevel -->
+			<trans-unit id="tx_clubms_domain_model_sectionagelevel">
+				<source>Altersstufe</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_sectionagelevel.label">
+				<source>Bezeichnung</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_sectionagelevel.short">
+				<source>Kurzform</source>
+			</trans-unit>
+
+
 			<!-- Domain Model SectionPosition -->
 			<trans-unit id="tx_clubms_domain_model_sectionposition">
 				<source>Position</source>
@@ -772,7 +772,7 @@
 			<trans-unit id="tx_clubms_domain_model_team.section">
 				<source>Abteilung</source>
 			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_team.age_level">
+			<trans-unit id="tx_clubms_domain_model_team.section_age_level">
 				<source>Altersstufe</source>
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_team.name">
