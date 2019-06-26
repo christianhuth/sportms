@@ -28,7 +28,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_clubofficial'] = array(
 		'showRecordFieldList' => '',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'official_job, person, 
+		'1' => array('showitem' => 'club_official_job, person, 
 		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubofficial.tab_date, startdate, enddate,'),
 	),
 	'palettes' => array(
@@ -94,13 +94,13 @@ $GLOBALS['TCA']['tx_clubms_domain_model_clubofficial'] = array(
             ),
         ),
 
-		'official_job' => array(
+		'club_official_job' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubofficial.official_job',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubofficial.club_official_job',
 			'config' => array(
 				'eval' => 'required',
-				'foreign_table' => 'tx_clubms_domain_model_officialjob',
-				'foreign_table_where' => 'ORDER BY tx_clubms_domain_model_officialjob.label ASC',
+				'foreign_table' => 'tx_clubms_domain_model_clubofficialjob',
+				'foreign_table_where' => 'ORDER BY tx_clubms_domain_model_clubofficialjob.label ASC',
 				'items' => array(
 					array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
 				),
