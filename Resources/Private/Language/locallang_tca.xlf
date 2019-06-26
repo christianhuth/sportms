@@ -168,8 +168,8 @@
 			<trans-unit id="tx_clubms_domain_model_clubofficial.person">
 				<source>Person</source>
 			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_clubofficial.official_job">
-				<source>Funktionärsaufgabe</source>
+			<trans-unit id="tx_clubms_domain_model_clubofficial.club_official_job">
+				<source>Vereinsfunktionärsaufgabe</source>
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_clubofficial.startdate">
 				<source>Startdatum</source>
@@ -246,8 +246,8 @@
 			<trans-unit id="tx_clubms_domain_model_clubsectionofficial.person">
 				<source>Person</source>
 			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_clubsectionofficial.official_job">
-				<source>Funktionärsaufgabe</source>
+			<trans-unit id="tx_clubms_domain_model_clubsectionofficial.club_section_official_job">
+				<source>Abteilungsfunktionärsaufgabe</source>
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_clubsectionofficial.startdate">
 				<source>Startdatum</source>
@@ -847,8 +847,8 @@
 			<trans-unit id="tx_clubms_domain_model_teamseasonofficial.person">
 				<source>Person</source>
 			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_teamseasonofficial.official_job">
-				<source>Funktionärsaufgabe</source>
+			<trans-unit id="tx_clubms_domain_model_teamseasonofficial.team_season_official_job">
+				<source>Mannschaftsfunktionärsaufgabe</source>
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_teamseasonofficial.startdate">
 				<source>Startdatum</source>
