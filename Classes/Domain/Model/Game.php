@@ -69,6 +69,12 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      */
     protected $time;
 
+	/**
+	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\GameLineup>
+	 * @cascade remove
+	 */
+	protected $gameLineups;
+
     /**
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\GameReferee>
      * @cascade remove
@@ -199,6 +205,20 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         $this->time = $time;
     }
+
+	/**
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+	 */
+	public function getGameLineups() {
+		return $this->gameLineups;
+	}
+
+	/**
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $gameLineups
+	 */
+	public function setGameLineups($gameLineups) {
+		$this->gameLineups = $gameLineups;
+	}
 
     /**
      * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage

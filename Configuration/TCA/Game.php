@@ -227,6 +227,19 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
             ),
         ),
 
+		'game_lineups' => array(
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.game_lineups',
+			'config' => array(
+				'appearance' => array(
+					'levelLinksPosition' => 'bottom',
+					'useSortable' => 1,
+				),
+				'foreign_field' => 'game',
+				'foreign_table' => 'tx_clubms_domain_model_gamelineup',
+				'type' => 'inline',
+			),
+		),
+
         'game_referees' => array(
             'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.game_referees',
             'config' => array(

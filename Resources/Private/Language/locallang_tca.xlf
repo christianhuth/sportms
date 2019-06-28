@@ -418,6 +418,9 @@
 			<trans-unit id="tx_clubms_domain_model_game.game_spectators">
 				<source>Zuschauerzahl</source>
 			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_game.game_lineups">
+				<source>Aufstellungen</source>
+			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_game.game_referees">
 				<source>Schiedsrichter</source>
 			</trans-unit>
@@ -432,6 +435,21 @@
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_game.tab_visibility">
 				<source>Sichtbarkeit</source>
+			</trans-unit>
+
+
+			<!-- Domain Model GameLineup -->
+			<trans-unit id="tx_clubms_domain_model_gamelineup">
+				<source>Aufstellung</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_gamelineup.joursey_number">
+				<source>Rückennummer</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_gamelineup.person">
+				<source>Person</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_gamelineup.section_position">
+				<source>Detailpositionen</source>
 			</trans-unit>
 
 
