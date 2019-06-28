@@ -65,13 +65,6 @@
             $newLabel = $record['areaCode'] . " / " . $record['callingNumber'];
 			$parameters['title'] = $newLabel;
 		}
-
-        public function sectionAgeGroupLabel(&$parameters, $parentObject) {
-            $record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
-            $section = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_section", $record['section']);
-            $newLabel = $section['label'] . ": " . $record['label'];
-            $parameters['title'] = $newLabel;
-        }
 		
 		public function sectionPositionLabel(&$parameters, $parentObject) {
 			$record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
