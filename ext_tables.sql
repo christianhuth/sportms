@@ -958,7 +958,8 @@ CREATE TABLE tx_clubms_domain_model_section (
 	
 	label varchar(255) DEFAULT NULL,
 	images varchar(255) DEFAULT NULL,
-	section_position_groups int(11) DEFAULT NULL,
+    section_position_groups int(11) DEFAULT NULL,
+    section_age_groups int(11) DEFAULT NULL,
 	
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,

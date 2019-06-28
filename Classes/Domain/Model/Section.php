@@ -35,17 +35,22 @@ class Section extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * @var string
 	 */
-	protected $label = '';
+	protected $label;
 
     /**
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference>
      */
-    protected $images = NULL;
+    protected $images;
 
     /**
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\SectionPositionGroup>
      */
-    protected $sectionPositionGroups = NULL;
+    protected $sectionPositionGroups;
+
+	/**
+	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\SectionAgeGroup>
+	 */
+	protected $sectionAgeGroups;
 
     public function __construct() {
         //Do not remove the next line: It would break the functionality
@@ -63,6 +68,7 @@ class Section extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
     protected function initStorageObjects(){
         $this->images = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
         $this->sectionPositionGroups = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+	    $this->sectionAgeGroups = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
     }
 
     /**
@@ -112,5 +118,19 @@ class Section extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
     {
         $this->sectionPositionGroups = $sectionPositionGroups;
     }
+
+	/**
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+	 */
+	public function getSectionAgeGroups() {
+		return $this->sectionAgeGroups;
+	}
+
+	/**
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $sectionAgeGroups
+	 */
+	public function setSectionAgeGroups($sectionAgeGroups) {
+		$this->sectionAgeGroups = $sectionAgeGroups;
+	}
 
 }

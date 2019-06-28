@@ -709,6 +709,9 @@
 			<trans-unit id="tx_clubms_domain_model_section.section_position_groups">
 				<source>Positionen</source>
 			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_section.section_position_groups">
+				<source>Altersgruppen</source>
+			</trans-unit>
 
 
             <!-- Domain Model SectionAgeGroup -->
