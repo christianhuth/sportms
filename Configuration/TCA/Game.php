@@ -152,7 +152,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
             'config' => array(
                 'eval' => 'required',
                 'foreign_table' => 'tx_clubms_domain_model_teamseason',
-                'foreign_table_where' => 'ORDER BY team ASC',
+                'foreign_table_where' => ' AND tx_clubms_domain_model_competitionseason.season = ###REC_FIELD_season### ORDER BY team ASC',
                 'items' => Array (
                     array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
                 ),
@@ -171,7 +171,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
             'config' => array(
                 'eval' => 'required',
                 'foreign_table' => 'tx_clubms_domain_model_teamseason',
-                'foreign_table_where' => 'ORDER BY team ASC',
+                'foreign_table_where' => ' AND tx_clubms_domain_model_competitionseason.season = ###REC_FIELD_season### ORDER BY team ASC',
                 'items' => Array (
                     array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
                 ),
