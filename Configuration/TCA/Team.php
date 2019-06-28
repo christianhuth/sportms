@@ -104,6 +104,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_team'] = array(
             'onChange' => 'reload',
         ),
         'section' => array(
+	        'displayCond' => 'FIELD:club:>:0',
             'exclude' => 1,
             'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_team.section',
             'config' => array(
@@ -120,6 +121,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_team'] = array(
 	        'onChange' => 'reload',
         ),
 		'section_age_group' => array(
+			'displayCond' => 'FIELD:section:>:0',
 			'exclude' => 1,
 			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_team.section_age_group',
 			'config' => array(
@@ -136,6 +138,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_team'] = array(
 			'onChange' => 'reload',
 		),
         'section_age_level' => array(
+	        'displayCond' => 'FIELD:section_age_group:>:0',
             'exclude' => 1,
             'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_team.section_age_level',
             'config' => array(
