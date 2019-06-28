@@ -36,8 +36,8 @@
             $record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
             $section = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_section", $record['section']);
             $competitionType = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_competitiontype", $record['competition_type']);
-            $ageLevel = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_agelevel", $record['age_level']);
-            $newLabel = $record['name'] . " (" . $section['label'] . " - " . $competitionType['label'] . " - " . $ageLevel['label'] . ")";
+            $sectionAgeLevel = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_sectionAgelevel", $record['section_age_level']);
+            $newLabel = $record['name'] . " (" . $section['label'] . " - " . $competitionType['label'] . " - " . $sectionAgeLevel['label'] . ")";
             $parameters['title'] = $newLabel;
         }
 
@@ -45,10 +45,7 @@
             $record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
             $competition = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_competition", $record['competition']);
             $season = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_season", $record['season']);
-            $section = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_section", $competition['section']);
-            $sectionAgeGroup = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_sectionagegroup", $competition['section_age_group']);
-            $sectionAgeLevel = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_sectionagelevel", $competition['section_age_level']);
-            $newLabel = $competition['name'] . " - " . $season['season_name'] . " (" . $section['label'] . " - " . $sectionAgeGroup['short'] . " - " . $sectionAgeLevel['label'] . ")";
+            $newLabel = $competition['name'] . " (" . $season['season_name'] . ")";
             $parameters['title'] = $newLabel;
         }
 
