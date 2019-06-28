@@ -787,6 +787,9 @@
 			<trans-unit id="tx_clubms_domain_model_team.section">
 				<source>Abteilung</source>
 			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_team.section_age_group">
+				<source>Altersgruppe</source>
+			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_team.section_age_level">
 				<source>Altersstufe</source>
 			</trans-unit>

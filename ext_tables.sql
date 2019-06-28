@@ -1152,6 +1152,7 @@ CREATE TABLE tx_clubms_domain_model_team (
 
     club int(11) DEFAULT '0' NOT NULL,
     section int(11) DEFAULT '0' NOT NULL,
+    section_age_group int(11) DEFAULT '0' NOT NULL,
     section_age_level int(11) DEFAULT '0' NOT NULL,
 	name varchar(255) DEFAULT '' NOT NULL,
 	dummy tinyint(4) unsigned DEFAULT '0' NOT NULL,
