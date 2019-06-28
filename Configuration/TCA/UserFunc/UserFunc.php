@@ -49,7 +49,7 @@
             $competitionType = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_competitiontype", $competition['competition_type']);
 	        $sectionAgeGroup = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_sectionagegroup", $competition['section_age_group']);
             $sectionAgeLevel = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_sectionagelevel", $competition['section_age_level']);
-            $newLabel = $competition['name'] . " - " . $season['season_name'] . " (" . $section['label'] . " - " . $competitionType['label'] . " - " . $sectionAgeGroup['label'] . " - " . $sectionAgeLevel['label'] . ")";
+            $newLabel = $competition['name'] . " - " . $season['season_name'] . " (" . $section['label'] . " - " . $competitionType['label'] . " - " . $sectionAgeGroup['short'] . " - " . $sectionAgeLevel['label'] . ")";
             $parameters['title'] = $newLabel;
         }
 
