@@ -28,7 +28,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
 	),
 	'types' => array(
 		'1' => array('showitem' => 'section, season, competition, team_home, team_guest, date, time, club_venue, game_spectators,
-		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_lineups, game_referees,
+		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_lineups, game_lineups,
 		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_referees, game_referees,
 		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_visibility, hidden, detail_link,
 		                            '),
