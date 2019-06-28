@@ -34,6 +34,11 @@ namespace Balumedien\Clubms\Domain\Model;
 class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 {
 
+	/**
+	 * @var \Balumedien\Clubms\Domain\Model\Section
+	 */
+	protected $section;
+
     /**
      * @var \Balumedien\Clubms\Domain\Model\Season
      */
@@ -84,6 +89,20 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * @var boolean
      */
     protected $detailLink;
+
+	/**
+	 * @return Section
+	 */
+	public function getSection() {
+		return $this->section;
+	}
+
+	/**
+	 * @param Section $section
+	 */
+	public function setSection($section) {
+		$this->section = $section;
+	}
 
     /**
      * @return Season

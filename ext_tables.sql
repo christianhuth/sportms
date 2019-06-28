@@ -584,6 +584,7 @@ CREATE TABLE tx_clubms_domain_model_game (
     uid int(11) NOT NULL auto_increment,
     pid int(11) DEFAULT '0' NOT NULL,
 
+    section int(11) DEFAULT '0' NOT NULL,
     season int(11) DEFAULT '0' NOT NULL,
     competition int(11) DEFAULT '0' NOT NULL,
     team_home int(11) DEFAULT '0' NOT NULL,

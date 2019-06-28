@@ -89,7 +89,25 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
 				'renderType' => 'inputDateTime',
 			),
 		),
-		
+
+		'section' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.section',
+			'config' => array(
+				'eval' => 'required',
+				'foreign_table' => 'tx_clubms_domain_model_section',
+				'foreign_table_where' => 'ORDER BY label ASC',
+				'items' => Array (
+					array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
+				),
+				'maxItems' => 1,
+				'minItems' => 1,
+				'renderType' => 'selectSingle',
+				'size' => 1,
+				'type' => 'select',
+			),
+			'onChange' => 'reload',
+		),
 		'season' => array(
             'exclude' => 1,
             'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.season',
