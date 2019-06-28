@@ -117,6 +117,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_team'] = array(
                 'size' => 1,
                 'type' => 'select',
             ),
+	        'onChange' => 'reload',
         ),
 		'section_age_group' => array(
 			'exclude' => 1,
@@ -132,6 +133,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_team'] = array(
 				'size' => 1,
 				'type' => 'select',
 			),
+			'onChange' => 'reload',
 		),
         'section_age_level' => array(
             'exclude' => 1,
