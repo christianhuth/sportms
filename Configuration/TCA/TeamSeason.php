@@ -17,6 +17,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_teamseason'] = array(
 		'hideTable' => TRUE,
 		'iconfile' => 'EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_teamseason.svg',
 		'label' => 'season',
+		'label_userFunc' => \Balumedien\Clubms\Configuration\TCA\UserFunc\UserFunc::class . '->teamSeasonLabel',
 		'searchFields' => '',
 		'sort_by' => 'season',
 		'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_teamseason',
