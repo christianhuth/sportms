@@ -104,7 +104,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_competition'] = array(
                 'size' => 1,
                 'type' => 'select',
             ),
-	        'onChange' => 'reload'
+	        'onChange' => 'reload',
         ),
         'competition_type' => array(
             'exclude' => 1,
@@ -131,35 +131,31 @@ $GLOBALS['TCA']['tx_clubms_domain_model_competition'] = array(
 				'eval' => 'required',
 				'foreign_table' => 'tx_clubms_domain_model_sectionagegroup',
 				'foreign_table_where' => ' AND tx_clubms_domain_model_sectionagegroup.section = ###REC_FIELD_section### ORDER BY label ASC',
-				'items' => array (
+				'items' => Array (
 					array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
 				),
-				'maxItems' => 1,
-				'minItems' => 1,
 				'renderType' => 'selectSingle',
 				'size' => 1,
 				'type' => 'select',
 			),
-			'onChange' => 'reload'
+			'onChange' => 'reload',
 		),
-        'section_age_level' => array(
-	        'displayCond' => 'FIELD:section_age_group:>:0',
-            'exclude' => 1,
-            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_competition.section_age_level',
-            'config' => array(
-                'eval' => 'required',
-                'foreign_table' => 'tx_clubms_domain_model_sectionagelevel',
-                'foreign_table_where' => ' AND tx_clubms_domain_model_sectionagelevel.section_age_group = ###REC_FIELD_section_age_group### ORDER BY label ASC',
-                'items' => array (
-                    array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
-                ),
-                'maxItems' => 1,
-                'minItems' => 1,
-                'renderType' => 'selectSingle',
-                'size' => 1,
-                'type' => 'select',
-            ),
-        ),
+		'section_age_level' => array(
+			'displayCond' => 'FIELD:section_age_group:>:0',
+			'exclude' => 1,
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_competition.section_age_level',
+			'config' => array(
+				'eval' => 'required',
+				'foreign_table' => 'tx_clubms_domain_model_sectionagelevel',
+				'foreign_table_where' => ' AND tx_clubms_domain_model_sectionagelevel.section_age_group = ###REC_FIELD_section_age_group### ORDER BY label ASC',
+				'items' => Array (
+					array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
+				),
+				'renderType' => 'selectSingle',
+				'size' => 1,
+				'type' => 'select',
+			),
+		),
 		'name' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_competition.name',
