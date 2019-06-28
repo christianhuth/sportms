@@ -14,6 +14,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_sectionagegroup'] = array(
 			'starttime' => 'starttime',
 			'endtime' => 'endtime',
 		),
+		'hideTable' => TRUE,
 		'iconfile' => 'EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_sectionagegroup.svg',
 		'label' => 'label',
         'label_userFunc' => \Balumedien\Clubms\Configuration\TCA\UserFunc\UserFunc::class . '->sectionAgeGroupLabel',
