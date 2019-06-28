@@ -470,6 +470,7 @@ CREATE TABLE tx_clubms_domain_model_competition (
 
     section int(11) DEFAULT '0' NOT NULL,
     competition_type int(11) DEFAULT '0' NOT NULL,
+    section_age_group int(11) DEFAULT '0' NOT NULL,
     section_age_level int(11) DEFAULT '0' NOT NULL,
 	name varchar(255) DEFAULT '0' NOT NULL,
 	name_short varchar(255) DEFAULT NULL,

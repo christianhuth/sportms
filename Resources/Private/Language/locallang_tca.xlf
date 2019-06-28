@@ -321,6 +321,9 @@
 			<trans-unit id="tx_clubms_domain_model_competition.competition_type">
 				<source>Wettbewerbsart</source>
 			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_competition.section_age_group">
+				<source>Altersgruppe</source>
+			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_competition.section_age_level">
 				<source>Altersstufe</source>
 			</trans-unit>

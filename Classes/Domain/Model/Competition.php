@@ -46,6 +46,11 @@ class Competition extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @var \Balumedien\Clubms\Domain\Model\Section
 	 */
 	protected $section;
+
+	/**
+	 * @var \Balumedien\Clubms\Domain\Model\SectionAgeGroup
+	 */
+	protected $sectionAgeGroup;
 	
 	/**
 	 * @var \Balumedien\Clubms\Domain\Model\SectionAgeLevel
@@ -66,6 +71,23 @@ class Competition extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
      * @var boolean
      */
     protected $detailLink;
+
+	public function __construct() {
+		//Do not remove the next line: It would break the functionality
+		$this->initStorageObjects();
+	}
+
+	/**
+	 * Initializes all ObjectStorage properties
+	 * Do not modify this method!
+	 * It will be rewritten on each save in the extension builder
+	 * You may modify the constructor of this class instead
+	 *
+	 * @return void
+	 */
+	protected function initStorageObjects(){
+		$this->competitionSeasons = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+	}
 
     /**
      * @return string
@@ -114,6 +136,20 @@ class Competition extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
     {
         $this->section = $section;
     }
+
+	/**
+	 * @return SectionAgeGroup
+	 */
+	public function getSectionAgeGroup() {
+		return $this->sectionAgeGroup;
+	}
+
+	/**
+	 * @param SectionAgeGroup $sectionAgeGroup
+	 */
+	public function setSectionAgeGroup($sectionAgeGroup) {
+		$this->sectionAgeGroup = $sectionAgeGroup;
+	}
 
     /**
      * @return SectionAgeLevel
