@@ -16,6 +16,7 @@
 
 			// Get data from repository
 			$myData = $sectionRepository->findAll();
+			\TYPO3\CMS\Core\Utility\DebugUtility::debug($myData, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			foreach ($myData as $data) {
 				// push it into the config array
 				array_push($fConfig['section'], array(
