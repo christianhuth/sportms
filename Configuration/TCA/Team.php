@@ -115,7 +115,6 @@ $GLOBALS['TCA']['tx_clubms_domain_model_team'] = array(
                 'items' => Array (
                     array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
                 ),
-	            #'itemsProcFunc' => \Balumedien\Clubms\Configuration\TCA\UserFunc\FlexFormUserFunc::class . '->section_Team',
                 'renderType' => 'selectSingle',
                 'size' => 1,
                 'type' => 'select',
