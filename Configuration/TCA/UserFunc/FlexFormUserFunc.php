@@ -13,6 +13,7 @@
 			// Get repository
 			$objectManager = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('TYPO3\CMS\Extbase\Object\ObjectManager');
 			$sectionRepository = $objectManager->get('Balumedien\Clubms\Domain\Repository\SectionRepository');
+			\TYPO3\CMS\Core\Utility\DebugUtility::debug($sectionRepository, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 
 			// Get data from repository
 			$myData = $sectionRepository->findAll();
