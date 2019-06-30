@@ -133,7 +133,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
             'config' => array(
                 'eval' => 'required',
                 'foreign_table' => 'tx_clubms_domain_model_competition',
-	            'foreign_table_where' => '  AND tx_clubms_domain_model_competition.uid IN (SELECT competition FROM tx_clubms_domain_model_competitionsection WHERE season = ###REC_FIELD_season###) 
+	            'foreign_table_where' => '  AND tx_clubms_domain_model_competition.uid IN (SELECT competition FROM tx_clubms_domain_model_competitionseason WHERE season = ###REC_FIELD_season###) 
 	                                        AND tx_clubms_domain_model_competition.section = ###REC_FIELD_section###
 	                                        ORDER BY label ASC',
                 'items' => Array (
