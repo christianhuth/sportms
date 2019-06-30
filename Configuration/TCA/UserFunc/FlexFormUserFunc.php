@@ -1,8 +1,6 @@
 <?php
 
-
 	namespace Balumedien\Clubms\Configuration\TCA\UserFunc;
-
 
 	class FlexFormUserFunc {
 
@@ -29,3 +27,5 @@
 		}
 
 	}
+
+?>
