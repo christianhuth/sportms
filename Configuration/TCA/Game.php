@@ -176,7 +176,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
             'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.team_guest',
             'config' => array(
                 'eval' => 'required',
-                'foreign_table' => 'tx_clubms_domain_model_teamseason',
+                'foreign_table' => 'tx_clubms_domain_model_team',
 	            'foreign_table_where' => '  AND tx_clubms_domain_model_team.uid IN 
 	                                            (SELECT uid_foreign FROM tx_clubms_competitionseason_teamseason_mm WHERE uid_local = 
 	                                                (SELECT uid FROM tx_clubms_domain_model_competitionseason WHERE competition = ###REC_FIELD_competition### AND season = ###REC_FIELD_season###)
