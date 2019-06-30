@@ -1,142 +1,176 @@
 <?php
 
-namespace Balumedien\Clubms\Domain\Model;
+	namespace Balumedien\Clubms\Domain\Model;
 
-/***************************************************************
- *
- *  Copyright notice
- *
- *  (c) 2015
- *
- *  All rights reserved
- *
- *  This script is part of the TYPO3 project. The TYPO3 project is
- *  free software; you can redistribute it and/or modify
- *  it under the terms of the GNU General Public License as published by
- *  the Free Software Foundation; either version 3 of the License, or
- *  (at your option) any later version.
- *
- *  The GNU General Public License can be found at
- *  http://www.gnu.org/copyleft/gpl.html.
- *
- *  This script is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU General Public License for more details.
- *
- *  This copyright notice MUST APPEAR in all copies of the script!
- ***************************************************************/
+	use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
+	use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 
-/**
- * CompetitionSeason
- */
-class CompetitionSeason extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
+	/***************************************************************
+	 *
+	 *  Copyright notice
+	 *
+	 *  (c) 2015
+	 *
+	 *  All rights reserved
+	 *
+	 *  This script is part of the TYPO3 project. The TYPO3 project is
+	 *  free software; you can redistribute it and/or modify
+	 *  it under the terms of the GNU General Public License as published by
+	 *  the Free Software Foundation; either version 3 of the License, or
+	 *  (at your option) any later version.
+	 *
+	 *  The GNU General Public License can be found at
+	 *  http://www.gnu.org/copyleft/gpl.html.
+	 *
+	 *  This script is distributed in the hope that it will be useful,
+	 *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+	 *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	 *  GNU General Public License for more details.
+	 *
+	 *  This copyright notice MUST APPEAR in all copies of the script!
+	 ***************************************************************/
 
-    /**
-     * @var \Balumedien\Clubms\Domain\Model\Competition
-     * @lazy
-     */
-    protected $competition;
+	/**
+	 * CompetitionSeason
+	 */
+	class CompetitionSeason extends AbstractEntity {
 
-    /**
-     * @var \Balumedien\Clubms\Domain\Model\Season
-     * @lazy
-     */
-    protected $season;
+		/**
+		 * @var Competition
+		 * @lazy
+		 */
+		protected $competition;
 
-    /**
-     * @var int
-     */
-    protected $maxTeams;
+		/**
+		 * @var Season
+		 * @lazy
+		 */
+		protected $season;
 
-    /**
-     * @var int
-     */
-    protected $gamedays;
+		/**
+		 * @var int
+		 */
+		protected $maxTeams;
 
-    /**
-     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\Game>
-     */
-    protected $games;
+		/**
+		 * @var int
+		 */
+		protected $gamedays;
 
-    /**
-     * @return Competition
-     */
-    public function getCompetition()
-    {
-        return $this->competition;
-    }
+		/**
+		 * competitionSeasonTeams
+		 *
+		 * @var ObjectStorage<\Balumedien\Clubms2\Domain\Model\TeamSeason>
+		 */
+		protected $competitionSeasonTeams;
 
-    /**
-     * @param Competition $competition
-     */
-    public function setCompetition($competition)
-    {
-        $this->competition = $competition;
-    }
+		/**
+		 * @var ObjectStorage<\Balumedien\Clubms\Domain\Model\Game>
+		 */
+		protected $games;
 
-    /**
-     * @return Season
-     */
-    public function getSeason()
-    {
-        return $this->season;
-    }
+		/**
+		 * __construct
+		 */
+		public function __construct() {
+			//Do not remove the next line: It would break the functionality
+			$this->initStorageObjects();
+		}
 
-    /**
-     * @param Season $season
-     */
-    public function setSeason($season)
-    {
-        $this->season = $season;
-    }
+		/**
+		 * Initializes all ObjectStorage properties
+		 * Do not modify this method!
+		 * It will be rewritten on each save in the extension builder
+		 * You may modify the constructor of this class instead
+		 *
+		 * @return void
+		 */
+		protected function initStorageObjects() {
+			$this->competitionSeasonTeams = new ObjectStorage();
+		}
 
-    /**
-     * @return int
-     */
-    public function getMaxTeams()
-    {
-        return $this->maxTeams;
-    }
+		/**
+		 * @return Competition
+		 */
+		public function getCompetition() {
+			return $this->competition;
+		}
 
-    /**
-     * @param int $maxTeams
-     */
-    public function setMaxTeams($maxTeams)
-    {
-        $this->maxTeams = $maxTeams;
-    }
+		/**
+		 * @param Competition $competition
+		 */
+		public function setCompetition($competition) {
+			$this->competition = $competition;
+		}
 
-    /**
-     * @return int
-     */
-    public function getGamedays()
-    {
-        return $this->gamedays;
-    }
+		/**
+		 * @return Season
+		 */
+		public function getSeason() {
+			return $this->season;
+		}
 
-    /**
-     * @param int $gamedays
-     */
-    public function setGamedays($gamedays)
-    {
-        $this->gamedays = $gamedays;
-    }
+		/**
+		 * @param Season $season
+		 */
+		public function setSeason($season) {
+			$this->season = $season;
+		}
 
-    /**
-     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
-     */
-    public function getGames()
-    {
-        return $this->games;
-    }
+		/**
+		 * @return int
+		 */
+		public function getMaxTeams() {
+			return $this->maxTeams;
+		}
 
-    /**
-     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $games
-     */
-    public function setGames($games)
-    {
-        $this->games = $games;
-    }
+		/**
+		 * @param int $maxTeams
+		 */
+		public function setMaxTeams($maxTeams) {
+			$this->maxTeams = $maxTeams;
+		}
 
-}
+		/**
+		 * @return int
+		 */
+		public function getGamedays() {
+			return $this->gamedays;
+		}
+
+		/**
+		 * @param int $gamedays
+		 */
+		public function setGamedays($gamedays) {
+			$this->gamedays = $gamedays;
+		}
+
+		/**
+		 * @return ObjectStorage
+		 */
+		public function getCompetitionSeasonTeams() {
+			return $this->competitionSeasonTeams;
+		}
+
+		/**
+		 * @param ObjectStorage $competitionSeasonTeams
+		 */
+		public function setCompetitionSeasonTeams($competitionSeasonTeams) {
+			$this->competitionSeasonTeams = $competitionSeasonTeams;
+		}
+
+		/**
+		 * @return ObjectStorage
+		 */
+		public function getGames() {
+			return $this->games;
+		}
+
+		/**
+		 * @param ObjectStorage $games
+		 */
+		public function setGames($games) {
+			$this->games = $games;
+		}
+
+	}
