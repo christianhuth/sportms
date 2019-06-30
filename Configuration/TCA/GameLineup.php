@@ -14,6 +14,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_gamelineup'] = array(
 			'starttime' => 'starttime',
 			'endtime' => 'endtime',
 		),
+		'hideTable' => TRUE,
 		'iconfile' => 'EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_game.svg',
 		'label' => 'label',
 		'searchFields' => '',
