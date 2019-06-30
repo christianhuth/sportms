@@ -21,11 +21,16 @@
 			$myData = $sectionRepository->findAll();
 			foreach ($myData as $data) {
 				// push it into the config array
-				array_push($fConfig['section'], array(
+				array_push($fConfig['items'], array(
 					$data['label'],
 					$data['uid']
 				));
 			}
+
+			array_push($fConfig['items'], array(
+				'Fussball',
+				'1'
+			));
 
 		}
 
