@@ -140,6 +140,7 @@
 					'type' => 'select',
 					'renderType' => 'selectMultipleSideBySide',
 					'foreign_table' => 'tx_clubms_domain_model_teamseason',
+					'foreign_table_where' => ' AND tx_clubms_domain_model_teamseason.season = ###FIELD_season### ORDER BY name ASC',
 					'MM' => 'tx_clubms_competitionseason_teamseason_mm',
 					'size' => 10,
 					'autoSizeMax' => 30,
