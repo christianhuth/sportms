@@ -513,6 +513,7 @@ CREATE TABLE tx_clubms_domain_model_competitionseason (
     season int(11) DEFAULT '0' NOT NULL,
     max_teams int(11) DEFAULT '0' NOT NULL,
     gamedays int(11) DEFAULT '0' NOT NULL,
+    competition_season_teams int(11) unsigned DEFAULT '0' NOT NULL,
     games int(11) DEFAULT NULL,
     detail_link tinyint(4) unsigned DEFAULT '0' NOT NULL,
 
