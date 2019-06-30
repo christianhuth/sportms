@@ -14,10 +14,9 @@
 			$objectManager = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('TYPO3\CMS\Extbase\Object\ObjectManager');
 			$sectionRepository = $objectManager->get('Balumedien\Clubms\Domain\Repository\SectionRepository');
 
-			var_dump($sectionRepository);
-
 			// Get data from repository
 			$myData = $sectionRepository->findAll();
+			var_dump($myData);
 			foreach ($myData as $data) {
 				// push it into the config array
 				array_push($fConfig['items'], array(
