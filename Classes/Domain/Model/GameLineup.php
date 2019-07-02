@@ -52,7 +52,7 @@ class GameLineup extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	protected $jerseyNumber;
 
 	/**
-	 * @var \Balumedien\Clubms\Domain\Model\Person
+	 * @var \Balumedien\Clubms\Domain\Model\TeamSeasonSquadMember
 	 */
 	protected $person;
 
@@ -105,19 +105,21 @@ class GameLineup extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 		$this->jerseyNumber = $jerseyNumber;
 	}
 
-	/**
-	 * @return Person
-	 */
-	public function getPerson() {
-		return $this->person;
-	}
+    /**
+     * @return TeamSeasonSquadMember
+     */
+    public function getPerson()
+    {
+        return $this->person;
+    }
 
-	/**
-	 * @param Person $person
-	 */
-	public function setPerson($person) {
-		$this->person = $person;
-	}
+    /**
+     * @param TeamSeasonSquadMember $person
+     */
+    public function setPerson($person)
+    {
+        $this->person = $person;
+    }
 
 	/**
 	 * @return SectionPosition
