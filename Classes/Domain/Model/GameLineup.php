@@ -40,10 +40,16 @@ class GameLineup extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	 */
 	protected $game;
 
+    /**
+     * @var \Balumedien\Clubms\Domain\Model\TeamSeason
+     * @lazy
+     */
+	protected $teamSeason;
+
 	/**
 	 * @var String
 	 */
-	protected $jersey_number;
+	protected $jerseyNumber;
 
 	/**
 	 * @var \Balumedien\Clubms\Domain\Model\Person
@@ -53,7 +59,7 @@ class GameLineup extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	/**
 	 * @var \Balumedien\Clubms\Domain\Model\SectionPosition
 	 */
-	protected $section_position;
+	protected $sectionPosition;
 
 	/**
 	 * @return Game
@@ -69,18 +75,34 @@ class GameLineup extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 		$this->game = $game;
 	}
 
+    /**
+     * @return TeamSeason
+     */
+    public function getTeamSeason()
+    {
+        return $this->teamSeason;
+    }
+
+    /**
+     * @param TeamSeason $teamSeason
+     */
+    public function setTeamSeason($teamSeason)
+    {
+        $this->teamSeason = $teamSeason;
+    }
+
 	/**
 	 * @return String
 	 */
 	public function getJerseyNumber() {
-		return $this->jersey_number;
+		return $this->jerseyNumber;
 	}
 
 	/**
-	 * @param String $jersey_number
+	 * @param String $jerseyNumber
 	 */
-	public function setJerseyNumber($jersey_number) {
-		$this->jersey_number = $jersey_number;
+	public function setJerseyNumber($jerseyNumber) {
+		$this->jerseyNumber = $jerseyNumber;
 	}
 
 	/**
@@ -101,14 +123,14 @@ class GameLineup extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	 * @return SectionPosition
 	 */
 	public function getSectionPosition() {
-		return $this->section_position;
+		return $this->sectionPosition;
 	}
 
 	/**
-	 * @param SectionPosition $section_position
+	 * @param SectionPosition $sectionPosition
 	 */
-	public function setSectionPosition($section_position) {
-		$this->section_position = $section_position;
+	public function setSectionPosition($sectionPosition) {
+		$this->sectionPosition = $sectionPosition;
 	}
 
 }
