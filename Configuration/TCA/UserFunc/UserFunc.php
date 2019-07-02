@@ -65,6 +65,14 @@
             $newLabel = $person['lastname'] . ", " . $person['firstname'];
             $parameters['title'] = $newLabel;
         }
+
+        public function gameRefereeLabel(&$parameters, $parentObject) {
+            $record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
+            $refereeJob = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_refereejob", $record['referee_job']);
+            $person = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_person", $record['person']);
+            $newLabel = $refereeJob['label'] . ": " . $person['lastname'] . ", " . $person['firstname'];
+            $parameters['title'] = $newLabel;
+        }
 		
 		public function phoneLabel(&$parameters, $parentObject) {
 			$record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
