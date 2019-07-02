@@ -135,7 +135,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
                 'foreign_table' => 'tx_clubms_domain_model_competitionseason',
 	            'foreign_table_where' => '  AND tx_clubms_domain_model_competitionseason.season = ###REC_FIELD_season###
 	                                        AND tx_clubms_domain_model_competitionseason.competition IN (SELECT competition FROM tx_clubms_domain_model_competition WHERE section = ###REC_FIELD_section###) 
-	                                        ORDER BY competition ASC',
+	                                        ORDER BY (SELECT ordering FROM tx_clubms_domain_model_competition) ASC',
                 'items' => Array (
                     array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
                 ),
