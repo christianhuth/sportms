@@ -248,6 +248,13 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
                 ),
                 'foreign_field' => 'game',
                 'foreign_table' => 'tx_clubms_domain_model_gamelineup',
+                'overrideChildTca' => [
+                    'config' => array(
+                        'foreign_table_where' => '  AND tx_clubms_domain_model_sectionposition.section_position_group IN
+				                                (SELECT uid FROM tx_clubms_domain_model_sectionpositiongroup WHERE section = ###REC_FIELD_section###)
+				                            ORDER BY tx_clubms_domain_model_sectionposition.sorting ASC',
+                    ),
+                ],
                 'type' => 'inline',
             ),
         ),
