@@ -107,22 +107,21 @@ $GLOBALS['TCA']['tx_clubms_domain_model_gamelineup'] = array(
 				'eval' => 'trim'
 			),
 		),
-		'person' => array(
-			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gamelineup.person',
-			'config' => array(
-				'eval' => 'required',
-				'foreign_table' => 'tx_clubms_domain_model_teamseasonsquadmember',
-                #'foreign_table_where' => 'AND tx_clubms_domain_model_teamseasonsquadmember.person IN (SELECT uid FROM tx_clubms_domain_model_person WHERE profile_player = 1) ORDER BY person ASC',
-				'items' => Array (
-					array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
-				),
-				'maxItems' => 1,
-				'renderType' => 'selectSingle',
-				'size' => 1,
-				'type' => 'select',
-			),
-		),
+        'person' => array(
+            'exclude' => 1,
+            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gamelineup.person',
+            'config' => array(
+                'foreign_table' => 'tx_clubms_domain_model_teamseasonsquadmember',
+                'foreign_table_where' => 'ORDER BY tx_clubms_domain_model_teamseasonsquadmember.person ASC',
+                'items' => array(
+                    array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
+                ),
+                'maxItems' => 1,
+                'renderType' => 'selectSingle',
+                'size' => 1,
+                'type' => 'select',
+            ),
+        ),
 		'section_position' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gamelineup.section_position',
