@@ -106,6 +106,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_gamelineup'] = array(
             'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gamelineup.person',
             'config' => array(
                 'foreign_table' => 'tx_clubms_domain_model_teamseasonsquadmember',
+                'foreign_table_where' => ' ORDER BY tx_clubms_domain_model_teamseasonsquadmember.ordering ASC',
                 'items' => array(
                     array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
                 ),
