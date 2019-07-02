@@ -132,10 +132,10 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
             'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.competition',
             'config' => array(
                 'eval' => 'required',
-                'foreign_table' => 'tx_clubms_domain_model_competition',
-	            'foreign_table_where' => '  AND tx_clubms_domain_model_competition.uid IN (SELECT competition FROM tx_clubms_domain_model_competitionseason WHERE season = ###REC_FIELD_season###) 
-	                                        AND tx_clubms_domain_model_competition.section = ###REC_FIELD_section###
-	                                        ORDER BY tx_clubms_domain_model_competition.name ASC',
+                'foreign_table' => 'tx_clubms_domain_model_competitionseason',
+	            'foreign_table_where' => '  AND tx_clubms_domain_model_competitionseason.season = ###REC_FIELD_season###
+	                                        AND tx_clubms_domain_model_competitionseason.competition IN (SELECT competition FROM tx_clubms_domain_model_competition WHERE section = ###REC_FIELD_section###) 
+	                                        ORDER BY season ASC',
                 'items' => Array (
                     array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
                 ),
