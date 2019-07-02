@@ -58,6 +58,13 @@
             $newLabel = $teamHome['name'] . " - " . $teamGuest['name'];
             $parameters['title'] = $newLabel;
         }
+
+        public function gameLineupLabel(&$parameters, $parentObject) {
+            $record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
+            $person = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_person", $record['person']);
+            $newLabel = $person['lastname'] . ", " . $person['firstname'];
+            $parameters['title'] = $newLabel;
+        }
 		
 		public function phoneLabel(&$parameters, $parentObject) {
 			$record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
