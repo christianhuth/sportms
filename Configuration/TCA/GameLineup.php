@@ -105,7 +105,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_gamelineup'] = array(
 			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gamelineup.person',
 			'config' => array(
 				'eval' => 'required',
-				'foreign_table' => 'tx_clubms_domain_model_teamseasonsquadmember',
+				'foreign_table' => 'tx_clubms_domain_model_person',
                 #'foreign_table_where' => 'AND tx_clubms_domain_model_teamseasonsquadmember.person IN (SELECT uid FROM tx_clubms_domain_model_person WHERE profile_player = 1) ORDER BY person ASC',
 				'items' => Array (
 					array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
@@ -121,7 +121,9 @@ $GLOBALS['TCA']['tx_clubms_domain_model_gamelineup'] = array(
 			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gamelineup.section_position',
 			'config' => array(
 				'foreign_table' => 'tx_clubms_domain_model_sectionposition',
-				'foreign_table_where' => 'ORDER BY tx_clubms_domain_model_sectionposition.sorting ASC',
+				'foreign_table_where' => '  AND tx_clubms_domain_model_sectionposition.section_position_group IN
+				                                (SELECT uid FROM tx_clubms_domain_model_sectionpositiongroup WHERE section = __row|game|section)
+				                            ORDER BY tx_clubms_domain_model_sectionposition.sorting ASC',
 				'items' => Array (
 					array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
 				),
