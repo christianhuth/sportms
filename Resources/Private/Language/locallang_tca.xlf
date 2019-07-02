@@ -820,7 +820,7 @@
 			<trans-unit id="tx_clubms_domain_model_team.club">
 				<source>Verein</source>
 			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_team.section">
+			<trans-unit id="tx_clubms_domain_model_team.club_section">
 				<source>Abteilung</source>
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_team.section_age_group">

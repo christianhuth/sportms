@@ -1211,7 +1211,7 @@ CREATE TABLE tx_clubms_domain_model_team (
 	pid int(11) DEFAULT '0' NOT NULL,
 
     club int(11) DEFAULT '0' NOT NULL,
-    section int(11) DEFAULT '0' NOT NULL,
+    club_section int(11) DEFAULT '0' NOT NULL,
     section_age_group int(11) DEFAULT '0' NOT NULL,
     section_age_level int(11) DEFAULT '0' NOT NULL,
 	name varchar(255) DEFAULT '' NOT NULL,
