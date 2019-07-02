@@ -38,9 +38,9 @@ class Team extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
     protected $club;
 
     /**
-     * @var \Balumedien\Clubms\Domain\Model\Section
+     * @var \Balumedien\Clubms\Domain\Model\ClubSection
      */
-    protected $section;
+    protected $clubSection;
 
 	/**
 	 * @var \Balumedien\Clubms\Domain\Model\SectionAgeGroup
@@ -107,19 +107,19 @@ class Team extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
     }
 
     /**
-     * @return Section
+     * @return ClubSection
      */
-    public function getSection()
+    public function getClubSection()
     {
-        return $this->section;
+        return $this->clubSection;
     }
 
     /**
-     * @param Section $section
+     * @param ClubSection $clubSection
      */
-    public function setSection($section)
+    public function setClubSection($clubSection)
     {
-        $this->section = $section;
+        $this->clubSection = $clubSection;
     }
 
 	/**
