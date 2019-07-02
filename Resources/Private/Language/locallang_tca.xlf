@@ -454,7 +454,7 @@
 			<trans-unit id="tx_clubms_domain_model_gamelineup">
 				<source>Aufstellung</source>
 			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_gamelineup.joursey_number">
+			<trans-unit id="tx_clubms_domain_model_gamelineup.jersey_number">
 				<source>Rückennummer</source>
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_gamelineup.person">
