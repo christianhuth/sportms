@@ -424,8 +424,11 @@
 			<trans-unit id="tx_clubms_domain_model_game.game_spectators">
 				<source>Zuschauerzahl</source>
 			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_game.game_lineups">
-				<source>Aufstellungen</source>
+			<trans-unit id="tx_clubms_domain_model_game.game_lineup_homes">
+				<source>Heimaufstellung</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_game.game_lineup_guests">
+				<source>Gastaufstellung</source>
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_game.game_referees">
 				<source>Schiedsrichter</source>
@@ -433,8 +436,11 @@
 			<trans-unit id="tx_clubms_domain_model_game.detail_link">
 				<source>Link auf Einzelansicht möglich?</source>
 			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_game.tab_lineups">
-				<source>Aufstellungen</source>
+			<trans-unit id="tx_clubms_domain_model_game.tab_lineup_homes">
+				<source>Heimaufstellung</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_game.tab_lineup_guests">
+				<source>Gastaufstellung</source>
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_game.tab_referees">
 				<source>Schiedsrichter</source>

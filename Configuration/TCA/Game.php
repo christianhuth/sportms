@@ -28,7 +28,8 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
 	),
 	'types' => array(
 		'1' => array('showitem' => 'section, season, competition, team_home, team_guest, date, time, club_venue, game_spectators,
-		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_lineups, game_lineups,
+		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_lineup_homes, game_lineup_homes,
+		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_lineup_guests, game_lineup_guests,
 		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_referees, game_referees,
 		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_visibility, hidden, detail_link,
 		                            '),
@@ -237,18 +238,33 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
             ),
         ),
 
-		'game_lineups' => array(
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.game_lineups',
-			'config' => array(
-				'appearance' => array(
-					'levelLinksPosition' => 'bottom',
-					'useSortable' => 1,
-				),
-				'foreign_field' => 'game',
-				'foreign_table' => 'tx_clubms_domain_model_gamelineup',
-				'type' => 'inline',
-			),
-		),
+        'game_lineup_homes' => array(
+            'displayCond' => 'FIELD:team_home:>:0',
+            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.game_lineup_homes',
+            'config' => array(
+                'appearance' => array(
+                    'levelLinksPosition' => 'bottom',
+                    'useSortable' => 1,
+                ),
+                'foreign_field' => 'game',
+                'foreign_table' => 'tx_clubms_domain_model_gamelineup',
+                'type' => 'inline',
+            ),
+        ),
+
+        'game_lineup_guests' => array(
+            'displayCond' => 'FIELD:team_home:>:0',
+            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.game_lineup_guests',
+            'config' => array(
+                'appearance' => array(
+                    'levelLinksPosition' => 'bottom',
+                    'useSortable' => 1,
+                ),
+                'foreign_field' => 'game',
+                'foreign_table' => 'tx_clubms_domain_model_gamelineup',
+                'type' => 'inline',
+            ),
+        ),
 
         'game_referees' => array(
             'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.game_referees',
