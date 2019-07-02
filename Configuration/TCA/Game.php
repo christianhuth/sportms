@@ -253,7 +253,9 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
                         'section_position' => array(
                             'config' => array(
                                 'foreign_table' => 'tx_clubms_domain_model_sectionposition',
-                                'foreign_table_where' => '',
+                                'foreign_table_where' => '  AND tx_clubms_domain_model_sectionposition.section_position_group IN
+				                                            (SELECT uid FROM tx_clubms_domain_model_sectionpositiongroup WHERE section = ###REC_FIELD_section###)
+				                                            ORDER BY tx_clubms_domain_model_sectionposition.sorting ASC',
                                 'items' => Array (
                                     array("KOMM SCHON!!!", ""),
                                 ),
