@@ -97,7 +97,10 @@
 			$record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
 			$person = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_person", $record['person']);
             $sectionPositionGroup = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_sectionpositiongroup", $record['section_position_group']);
-            $newLabel = $sectionPositionGroup['label'] . ": " . $person['lastname'] . ", " . $person['firstname'] . " (" . $record['squad_number'] . ")";
+            $newLabel = $sectionPositionGroup['label'] . ": " . $person['lastname'] . ", " . $person['firstname'];
+            if($record['squad_number'] != null) {
+                $newLabel .= " (" . $record['squad_number'] . ")";
+            }
 			$parameters['title'] = $newLabel;
 		}
 		
