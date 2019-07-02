@@ -128,7 +128,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_team'] = array(
 			'config' => array(
 				'eval' => 'required',
 				'foreign_table' => 'tx_clubms_domain_model_sectionagegroup',
-				'foreign_table_where' => ' AND tx_clubms_domain_model_sectionagegroup.section = ###REC_FIELD_section### ORDER BY section ASC',
+				'foreign_table_where' => ' AND tx_clubms_domain_model_sectionagegroup.section = (SELECT section FROM tx_clubms_domain_model_clubsection WHERE uid=###REC_FIELD_section###) ORDER BY section ASC',
 				'items' => Array (
 					array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
 				),
