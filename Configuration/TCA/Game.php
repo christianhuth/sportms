@@ -168,13 +168,19 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
             'onChange' => 'reload',
         ),
         'team_guest' => array(
-            'displayCond' => 'FIELD:competition:>:0',
+            'displayCond' => array(
+                'AND' => array(
+                    'FIELD:competition:>:0',
+                    'FIELD:team_home:>:0',
+                ),
+            ),
             'exclude' => 1,
             'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.team_guest',
             'config' => array(
                 'eval' => 'required',
                 'foreign_table' => 'tx_clubms_domain_model_teamseason',
                 'foreign_table_where' => '  AND tx_clubms_domain_model_teamseason.uid IN (SELECT uid_foreign FROM tx_clubms_competitionseason_teamseason_mm WHERE uid_local = ###REC_FIELD_competition###)
+                                            AND tx_clubms_domain_model_teamseason.uid != ###REC_FIELD_team_home###
 	                                        ORDER BY tx_clubms_domain_model_teamseason.team ASC',
                 'items' => Array (
                     array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
