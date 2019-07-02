@@ -106,7 +106,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_gamelineup'] = array(
 			'config' => array(
 				'eval' => 'required',
 				'foreign_table' => 'tx_clubms_domain_model_teamseasonsquadmember',
-				'foreign_table_where' => 'AND tx_clubms_domain_model_teamseasonsquadmember.person IN (SELECT uid FROM tx_clubms_domain_model_person WHERE profile_player = 1) ORDER BY person ASC',
+                #'foreign_table_where' => 'AND tx_clubms_domain_model_teamseasonsquadmember.person IN (SELECT uid FROM tx_clubms_domain_model_person WHERE profile_player = 1) ORDER BY person ASC',
 				'items' => Array (
 					array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
 				),
