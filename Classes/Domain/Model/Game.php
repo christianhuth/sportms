@@ -69,11 +69,17 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      */
     protected $time;
 
-	/**
-	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\GameLineup>
-	 * @cascade remove
-	 */
-	protected $gameLineups;
+    /**
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\GameLineup>
+     * @cascade remove
+     */
+    protected $gameLineupHomes;
+
+    /**
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\GameLineup>
+     * @cascade remove
+     */
+    protected $gameLineupGuests;
 
     /**
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\GameReferee>
@@ -206,19 +212,37 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
         $this->time = $time;
     }
 
-	/**
-	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
-	 */
-	public function getGameLineups() {
-		return $this->gameLineups;
-	}
+    /**
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+     */
+    public function getGameLineupHomes()
+    {
+        return $this->gameLineupHomes;
+    }
 
-	/**
-	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $gameLineups
-	 */
-	public function setGameLineups($gameLineups) {
-		$this->gameLineups = $gameLineups;
-	}
+    /**
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $gameLineupHomes
+     */
+    public function setGameLineupHomes($gameLineupHomes)
+    {
+        $this->gameLineupHomes = $gameLineupHomes;
+    }
+
+    /**
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+     */
+    public function getGameLineupGuests()
+    {
+        return $this->gameLineupGuests;
+    }
+
+    /**
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $gameLineupGuests
+     */
+    public function setGameLineupGuests($gameLineupGuests)
+    {
+        $this->gameLineupGuests = $gameLineupGuests;
+    }
 
     /**
      * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
