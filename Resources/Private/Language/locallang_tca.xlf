@@ -400,29 +400,29 @@
 			<trans-unit id="tx_clubms_domain_model_game.competition_season">
 				<source>Wettbewerb</source>
 			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_game.team_home">
-				<source>Heimmannschaft</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_game.team_guest">
-				<source>Gastmannschaft</source>
-			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_game.date">
 				<source>Datum</source>
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_game.time">
 				<source>Uhrzeit</source>
 			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_game.club_venue">
+			<trans-unit id="tx_clubms_domain_model_game.venue">
 				<source>Sportstätte</source>
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_game.game_spectators">
 				<source>Zuschauerzahl</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_game.team_home">
+				<source>Heimmannschaft</source>
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_game.game_lineup_homes">
 				<source>Heimaufstellung</source>
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_game.trainer_home">
 				<source>Heimtrainer</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_game.team_guest">
+				<source>Gastmannschaft</source>
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_game.game_lineup_guests">
 				<source>Gastaufstellung</source>
@@ -439,11 +439,14 @@
 			<trans-unit id="tx_clubms_domain_model_game.detail_link">
 				<source>Link auf Einzelansicht möglich?</source>
 			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_game.tab_details">
+				<source>Details</source>
+			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_game.tab_home">
-				<source>Heimmannschaft</source>
+				<source>Heim</source>
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_game.tab_guest">
-				<source>Gastmannschaft</source>
+				<source>Gast</source>
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_game.tab_referees">
 				<source>Schiedsrichter</source>
