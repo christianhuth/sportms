@@ -427,6 +427,9 @@
 			<trans-unit id="tx_clubms_domain_model_game.game_referees">
 				<source>Schiedsrichter</source>
 			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_game.game_reports">
+				<source>Spielberichte</source>
+			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_game.detail_link">
 				<source>Link auf Einzelansicht möglich?</source>
 			</trans-unit>
@@ -438,6 +441,9 @@
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_game.tab_referees">
 				<source>Schiedsrichter</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_game.tab_reports">
+				<source>Spielberichte</source>
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_game.tab_visibility">
 				<source>Sichtbarkeit</source>
@@ -474,6 +480,24 @@
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_gamereferee.referee_job">
 				<source>Schiedsrichteraufgabe</source>
+			</trans-unit>
+
+
+			<!-- Domain Model GameReport -->
+			<trans-unit id="tx_clubms_domain_model_gamereport">
+				<source>Spielbericht</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_gamereport.game">
+				<source>Spiel</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_gamereport.headline">
+				<source>Überschrift</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_gamereport.text">
+				<source>Bericht</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_gamereport.author">
+				<source>Autor</source>
 			</trans-unit>
 
 
