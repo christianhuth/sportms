@@ -166,7 +166,7 @@
 					'appearance' => array(
 						'levelLinksPosition' => 'bottom',
 					),
-					'foreign_field' => 'competition',
+					'foreign_field' => 'competition_season',
 					'foreign_table' => 'tx_clubms_domain_model_game',
 					'type' => 'inline',
 				),
