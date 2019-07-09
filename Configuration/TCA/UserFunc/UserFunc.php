@@ -78,6 +78,16 @@
             $newLabel = $refereeJob['label'] . ": " . $person['lastname'] . ", " . $person['firstname'];
             $parameters['title'] = $newLabel;
         }
+
+        public function mailLabel(&$parameters, $parentObject) {
+            $record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
+            $newLabel = $record['mail'];
+            if($record['mail_type']) {
+                $mailType = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_mailtype", $record['mail_type']);
+                $newLabel .= " (" . $mailType['label'] . ")";
+            }
+            $parameters['title'] = $newLabel;
+        }
 		
 		public function phoneLabel(&$parameters, $parentObject) {
 			$record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
