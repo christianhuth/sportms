@@ -10,7 +10,6 @@
 		'ctrl' => array(
 			'crdate' => 'crdate',
 			'cruser_id' => 'cruser_id',
-            'default_sortby' => 'ORDER BY season ASC',
 			'delete' => 'deleted',
 			'dividers2tabs' => TRUE,
 			'enablecolumns' => array(
@@ -23,7 +22,7 @@
             'label' => '',
 			'label_userFunc' => \Balumedien\Clubms\Configuration\TCA\UserFunc\UserFunc::class . '->CompetitionSeasonLabel',
 			'searchFields' => '',
-            #'sortby' => 'sorting',
+            'sortby' => 'sorting',
 			'title' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_competitionseason',
 			'tstamp' => 'tstamp',
 			'versioningWS' => TRUE,
