@@ -63,6 +63,11 @@ class TeamSeason extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 */
 	protected $teamSeasonSquadMembers;
 
+    /**
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\TeamSeasonSquadMember>
+     */
+    protected $teamSeasonSquadCaptains;
+
 	/**
 	 * @var	boolean
 	 */
@@ -89,6 +94,7 @@ class TeamSeason extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 		$this->images = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 		$this->teamSeasonOfficials = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 		$this->teamSeasonSquadMembers = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        $this->teamSeasonSquadCaptains = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 	}
 
     /**
@@ -183,6 +189,22 @@ class TeamSeason extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
     public function setTeamSeasonSquadMembers($teamSeasonSquadMembers)
     {
         $this->teamSeasonSquadMembers = $teamSeasonSquadMembers;
+    }
+
+    /**
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+     */
+    public function getTeamSeasonSquadCaptains()
+    {
+        return $this->teamSeasonSquadCaptains;
+    }
+
+    /**
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $teamSeasonSquadCaptains
+     */
+    public function setTeamSeasonSquadCaptains($teamSeasonSquadCaptains)
+    {
+        $this->teamSeasonSquadCaptains = $teamSeasonSquadCaptains;
     }
 
     /**
