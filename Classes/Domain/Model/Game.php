@@ -70,6 +70,16 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $time;
 
     /**
+     * @var \Balumedien\Clubms\Domain\Model\ClubVenue
+     */
+    protected $clubVenue;
+
+    /**
+     * @var int
+     */
+    protected $gameSpectators;
+
+    /**
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\GameLineup>
      * @cascade remove
      */
@@ -88,19 +98,35 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $gameReferees;
 
     /**
-     * @var \Balumedien\Clubms\Domain\Model\ClubVenue
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\GameReport>
+     * @cascade remove
      */
-    protected $clubVenue;
-
-    /**
-     * @var int
-     */
-    protected $gameSpectators;
+    protected $gameReports;
 
     /**
      * @var boolean
      */
     protected $detailLink;
+
+    public function __construct() {
+        //Do not remove the next line: It would break the functionality
+        $this->initStorageObjects();
+    }
+
+    /**
+     * Initializes all ObjectStorage properties
+     * Do not modify this method!
+     * It will be rewritten on each save in the extension builder
+     * You may modify the constructor of this class instead
+     *
+     * @return void
+     */
+    protected function initStorageObjects(){
+        $this->gameLineupHomes = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        $this->gameLineupGuests = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        $this->gameReferees = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        $this->gameReports = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+    }
 
 	/**
 	 * @return Section
@@ -213,6 +239,38 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     }
 
     /**
+     * @return ClubVenue
+     */
+    public function getClubVenue()
+    {
+        return $this->clubVenue;
+    }
+
+    /**
+     * @param ClubVenue $clubVenue
+     */
+    public function setClubVenue($clubVenue)
+    {
+        $this->clubVenue = $clubVenue;
+    }
+
+    /**
+     * @return int
+     */
+    public function getGameSpectators()
+    {
+        return $this->gameSpectators;
+    }
+
+    /**
+     * @param int $gameSpectators
+     */
+    public function setGameSpectators($gameSpectators)
+    {
+        $this->gameSpectators = $gameSpectators;
+    }
+
+    /**
      * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
      */
     public function getGameLineupHomes()
@@ -261,43 +319,27 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     }
 
     /**
-     * @return ClubVenue
-     */
-    public function getClubVenue()
-    {
-        return $this->clubVenue;
-    }
-
-    /**
-     * @param ClubVenue $clubVenue
-     */
-    public function setClubVenue($clubVenue)
-    {
-        $this->clubVenue = $clubVenue;
-    }
-
-    /**
-     * @return int
-     */
-    public function getGameSpectators()
-    {
-        return $this->gameSpectators;
-    }
-
-    /**
-     * @param int $gameSpectators
-     */
-    public function setGameSpectators($gameSpectators)
-    {
-        $this->gameSpectators = $gameSpectators;
-    }
-
-    /**
      * @return bool
      */
     public function isDetailLink()
     {
         return $this->detailLink;
+    }
+
+    /**
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+     */
+    public function getGameReports()
+    {
+        return $this->gameReports;
+    }
+
+    /**
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $gameReports
+     */
+    public function setGameReports($gameReports)
+    {
+        $this->gameReports = $gameReports;
     }
 
     /**
