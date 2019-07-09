@@ -433,11 +433,11 @@
 			<trans-unit id="tx_clubms_domain_model_game.detail_link">
 				<source>Link auf Einzelansicht möglich?</source>
 			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_game.tab_lineup_homes">
-				<source>Heimaufstellung</source>
+			<trans-unit id="tx_clubms_domain_model_game.tab_home">
+				<source>Heimmannschaft</source>
 			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_game.tab_lineup_guests">
-				<source>Gastaufstellung</source>
+			<trans-unit id="tx_clubms_domain_model_game.tab_guest">
+				<source>Gastmannschaft</source>
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_game.tab_referees">
 				<source>Schiedsrichter</source>
