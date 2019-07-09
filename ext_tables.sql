@@ -19,7 +19,7 @@ CREATE TABLE tx_clubms_domain_model_address (
 	club_ground int(11) DEFAULT NULL,
 	person int(11) DEFAULT NULL,
 	
-	ordering int(11) DEFAULT '0' NOT NULL,
+	sorting int(11) DEFAULT '0' NOT NULL,
 	
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
@@ -113,7 +113,7 @@ CREATE TABLE tx_clubms_domain_model_clubground (
 	year_of_building varchar(255) DEFAULT NULL,
 	club_venues int(11) DEFAULT NULL,
 	
-	ordering int(11) DEFAULT '0' NOT NULL,
+	sorting int(11) DEFAULT '0' NOT NULL,
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
@@ -151,8 +151,6 @@ CREATE TABLE tx_clubms_domain_model_clubmembers (
 
 	members varchar(255) DEFAULT '' NOT NULL,
 	date int(11) DEFAULT '0' NOT NULL,
-	
-	ordering int(11) DEFAULT '0' NOT NULL,
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
@@ -193,7 +191,7 @@ CREATE TABLE tx_clubms_domain_model_clubofficial (
 	startdate int(11) DEFAULT NULL,
 	enddate int(11) DEFAULT NULL,
 	
-	ordering int(11) DEFAULT '0' NOT NULL,
+	sorting int(11) DEFAULT '0' NOT NULL,
 	
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
@@ -272,7 +270,7 @@ CREATE TABLE tx_clubms_domain_model_clubsection (
 	urls int(11) DEFAULT NULL,
 	club_section_officials int(11) DEFAULT NULL,
 	
-	ordering int(11) DEFAULT '0' NOT NULL,
+	sorting int(11) DEFAULT '0' NOT NULL,
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
@@ -310,8 +308,6 @@ CREATE TABLE tx_clubms_domain_model_clubsectionmembers (
 
 	members varchar(255) DEFAULT '' NOT NULL,
 	date int(11) DEFAULT '0' NOT NULL,
-	
-	ordering int(11) DEFAULT '0' NOT NULL,
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
@@ -352,7 +348,7 @@ CREATE TABLE tx_clubms_domain_model_clubsectionofficial (
 	startdate int(11) DEFAULT NULL,
 	enddate int(11) DEFAULT NULL,
 
-	ordering int(11) DEFAULT '0' NOT NULL,
+	sorting int(11) DEFAULT '0' NOT NULL,
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
@@ -434,7 +430,7 @@ CREATE TABLE tx_clubms_domain_model_clubvenue (
 	surface int(11) DEFAULT '0' NOT NULL,
 	spectator_capacity varchar(255) DEFAULT '' NOT NULL,
 	
-	ordering int(11) DEFAULT '0' NOT NULL,
+	sorting int(11) DEFAULT '0' NOT NULL,
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
@@ -517,7 +513,7 @@ CREATE TABLE tx_clubms_domain_model_competitionseason (
     games int(11) DEFAULT NULL,
     detail_link tinyint(4) unsigned DEFAULT '1' NOT NULL,
 
-	ordering int(11) DEFAULT '0' NOT NULL,
+	sorting int(11) DEFAULT '0' NOT NULL,
 
     tstamp int(11) unsigned DEFAULT '0' NOT NULL,
     crdate int(11) unsigned DEFAULT '0' NOT NULL,
@@ -570,7 +566,7 @@ CREATE TABLE tx_clubms_domain_model_competitiontype (
 	
 	label varchar(255) DEFAULT NULL,
 	
-	ordering int(11) DEFAULT '0' NOT NULL,
+	sorting int(11) DEFAULT '0' NOT NULL,
 	
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
@@ -735,7 +731,7 @@ CREATE TABLE tx_clubms_domain_model_mail (
 	mail_type int(11) unsigned DEFAULT NULL,
 	public tinyint(4) unsigned DEFAULT '0' NULL,
 	
-	ordering int(11) DEFAULT '0' NOT NULL,
+	sorting int(11) DEFAULT '0' NOT NULL,
 	
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
@@ -837,7 +833,7 @@ CREATE TABLE tx_clubms_domain_model_person (
 	profile_official tinyint(4) unsigned DEFAULT '0' NOT NULL,
 	profile_referee tinyint(4) unsigned DEFAULT '0' NOT NULL,
 	
-	ordering int(11) DEFAULT '0' NOT NULL,
+	sorting int(11) DEFAULT '0' NOT NULL,
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
@@ -880,7 +876,7 @@ CREATE TABLE tx_clubms_domain_model_phone (
 	phone_type int(11) unsigned DEFAULT NULL,
 	public tinyint(4) unsigned DEFAULT '0' NOT NULL,
 	
-	ordering int(11) DEFAULT '0' NOT NULL,
+	sorting int(11) DEFAULT '0' NOT NULL,
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
@@ -1062,7 +1058,7 @@ CREATE TABLE tx_clubms_domain_model_sectionagegroup (
 	short varchar(255) DEFAULT NULL,
 	section_age_levels int(11) DEFAULT NULL,
 
-	ordering int(11) DEFAULT '0' NOT NULL,
+	sorting int(11) DEFAULT '0' NOT NULL,
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
@@ -1100,7 +1096,7 @@ CREATE TABLE tx_clubms_domain_model_sectionagelevel (
 	label varchar(255) DEFAULT NULL,
 	short varchar(255) DEFAULT NULL,
 
-	ordering int(11) DEFAULT '0' NOT NULL,
+	sorting int(11) DEFAULT '0' NOT NULL,
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
@@ -1262,6 +1258,8 @@ CREATE TABLE tx_clubms_domain_model_teamseason (
 	team_season_officials int(11) DEFAULT NULL,
 	team_season_squad_members int(11) DEFAULT NULL,
     detail_link tinyint(4) unsigned DEFAULT '1' NOT NULL,
+
+    sorting int(11) DEFAULT '0' NOT NULL,
 	
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
@@ -1302,7 +1300,7 @@ CREATE TABLE tx_clubms_domain_model_teamseasonofficial (
 	startdate int(11) DEFAULT NULL,
 	enddate int(11) DEFAULT NULL,
 	
-	ordering int(11) DEFAULT '0' NOT NULL,
+	sorting int(11) DEFAULT '0' NOT NULL,
 	
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
@@ -1377,6 +1375,8 @@ CREATE TABLE tx_clubms_domain_model_teamseasonpractice (
 	time_end varchar(255) DEFAULT '' NOT NULL,
 	club_venue int(11) DEFAULT '0' NOT NULL,
 	annotation varchar(255) DEFAULT '' NOT NULL,
+
+	sorting int(11) DEFAULT '0' NOT NULL,
 	
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
@@ -1460,7 +1460,7 @@ CREATE TABLE tx_clubms_domain_model_url (
 	url varchar(255) DEFAULT '0' NOT NULL,
 	public tinyint(4) unsigned DEFAULT '0' NOT NULL,
 	
-	ordering int(11) DEFAULT '0' NOT NULL,
+	sorting int(11) DEFAULT '0' NOT NULL,
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,

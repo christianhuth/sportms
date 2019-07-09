@@ -17,7 +17,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_season'] = array(
 		),
 		'iconfile' => 'EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_season.svg',
 		'label' => 'season_name',
-		'searchFields' => 'season_name, season_name_short, season_name_very_short',
+		'searchFields' => '',
 		'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_season',
 		'tstamp' => 'tstamp',
 		'versioningWS' => TRUE,

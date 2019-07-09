@@ -16,7 +16,6 @@ $GLOBALS['TCA']['tx_clubms_domain_model_competition'] = array(
 			'endtime' => 'endtime',
 		),
 		'iconfile' => 'EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_competition.svg',
-		'label' => '',
         'label_userFunc' => \Balumedien\Clubms\Configuration\TCA\UserFunc\UserFunc::class . '->CompetitionLabel',
 		'searchFields' => '',
 		'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_competition',

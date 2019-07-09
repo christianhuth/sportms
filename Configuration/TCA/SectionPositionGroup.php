@@ -7,7 +7,6 @@ $GLOBALS['TCA']['tx_clubms_domain_model_sectionpositiongroup'] = array(
 	'ctrl' => array(
 		'crdate' => 'crdate',
 		'cruser_id' => 'cruser_id',
-		'default_sortby' => 'ORDER BY sorting ASC',
 		'delete' => 'deleted',
 		'dividers2tabs' => TRUE,
 		'enablecolumns' => array(
