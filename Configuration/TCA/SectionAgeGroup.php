@@ -126,6 +126,15 @@ $GLOBALS['TCA']['tx_clubms_domain_model_sectionagegroup'] = array(
 			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_sectionagegroup.section_age_levels',
 			'config' => array(
 				'appearance' => array(
+                    'enabledControls' => [
+                        'info' => false,
+                        'new' => true,
+                        'sort' => false,
+                        'hide' => true,
+                        'dragdrop' => true,
+                        'delete' => true,
+                        'localize' => true,
+                    ],
 					'levelLinksPosition' => 'bottom',
 					'useSortable' => 1,
 				),
