@@ -193,7 +193,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_teamseason'] = array(
 
         'team_season_squad_captains' => array(
             'exclude' => true,
-            'label' => 'LLL:EXT:clubms2/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_teamseason.team_season_squad_captains',
+            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_teamseason.team_season_squad_captains',
             'config' => array(
                 'type' => 'select',
                 'renderType' => 'selectMultipleSideBySide',
