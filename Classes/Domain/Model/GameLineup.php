@@ -54,7 +54,7 @@ class GameLineup extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	/**
 	 * @var \Balumedien\Clubms\Domain\Model\TeamSeasonSquadMember
 	 */
-	protected $person;
+	protected $teamSeasonSquadMember;
 
 	/**
 	 * @var \Balumedien\Clubms\Domain\Model\SectionPosition
@@ -108,17 +108,17 @@ class GameLineup extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * @return TeamSeasonSquadMember
      */
-    public function getPerson()
+    public function getTeamSeasonSquadMember()
     {
-        return $this->person;
+        return $this->teamSeasonSquadMember;
     }
 
     /**
-     * @param TeamSeasonSquadMember $person
+     * @param TeamSeasonSquadMember $teamSeasonSquadMember
      */
-    public function setPerson($person)
+    public function setTeamSeasonSquadMember($teamSeasonSquadMember)
     {
-        $this->person = $person;
+        $this->teamSeasonSquadMember = $teamSeasonSquadMember;
     }
 
 	/**

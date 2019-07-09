@@ -28,7 +28,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_gamelineup'] = array(
 		'showRecordFieldList' => '',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'jersey_number, person, section_position'),
+		'1' => array('showitem' => 'game, jersey_number, team_season_squad_member, section_position'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -87,11 +87,21 @@ $GLOBALS['TCA']['tx_clubms_domain_model_gamelineup'] = array(
 			),
 		),
 
-		'game' => array(
-			'config' => array(
-				'type' => 'passthrough',
-			),
-		),
+        'game' => array(
+            'exclude' => 1,
+            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gamelineup.team_season_squad_member',
+            'config' => array(
+                'eval' => 'required',
+                'foreign_table' => 'tx_clubms_domain_model_game',
+                'items' => array(
+                    array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
+                ),
+                'maxItems' => 1,
+                'renderType' => 'selectSingle',
+                'size' => 1,
+                'type' => 'select',
+            ),
+        ),
 
 		'jersey_number' => array(
 			'exclude' => 1,
@@ -102,10 +112,11 @@ $GLOBALS['TCA']['tx_clubms_domain_model_gamelineup'] = array(
 				'eval' => 'trim'
 			),
 		),
-        'person' => array(
+        'team_season_squad_member' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gamelineup.person',
+            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gamelineup.team_season_squad_member',
             'config' => array(
+                'eval' => 'required',
                 'foreign_table' => 'tx_clubms_domain_model_teamseasonsquadmember',
                 'foreign_table_where' => ' ORDER BY tx_clubms_domain_model_teamseasonsquadmember.sorting ASC',
                 'items' => array(
