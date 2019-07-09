@@ -45,9 +45,9 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $season;
 
     /**
-     * @var \Balumedien\Clubms\Domain\Model\Competition
+     * @var \Balumedien\Clubms\Domain\Model\CompetitionSeason
      */
-    protected $competition;
+    protected $competitionSeason;
 
     /**
      * @var \Balumedien\Clubms\Domain\Model\Team
@@ -133,19 +133,19 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     }
 
     /**
-     * @return Competition
+     * @return CompetitionSeason
      */
-    public function getCompetition()
+    public function getCompetitionSeason()
     {
-        return $this->competition;
+        return $this->competitionSeason;
     }
 
     /**
-     * @param Competition $competition
+     * @param CompetitionSeason $competitionSeason
      */
-    public function setCompetition($competition)
+    public function setCompetitionSeason($competitionSeason)
     {
-        $this->competition = $competition;
+        $this->competitionSeason = $competitionSeason;
     }
 
     /**

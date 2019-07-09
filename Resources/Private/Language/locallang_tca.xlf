@@ -403,7 +403,7 @@
 			<trans-unit id="tx_clubms_domain_model_game.season">
 				<source>Saison</source>
 			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_game.competition">
+			<trans-unit id="tx_clubms_domain_model_game.competition_season">
 				<source>Wettbewerb</source>
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_game.team_home">
