@@ -44,7 +44,7 @@
 					</config>
 				</TCEforms>
 			</settings.scope.section.selectbox>
-			<settings.scope.agegroup.values>
+			<settings.scope.sectionagegroup.values>
 				<TCEforms>
 					<label>Altersgruppe</label>
 					<config>
@@ -54,16 +54,16 @@
 						<maxitems>3</maxitems>
 					</config>
 				</TCEforms>
-			</settings.scope.agegroup.values>
-			<settings.scope.agegroup.selectbox>
+			</settings.scope.sectionagegroup.values>
+			<settings.scope.sectionagegroup.selectbox>
 				<TCEforms>
 					<label>Selectbox für Altersgruppe?</label>
 					<config>
 						<type>check</type>
 					</config>
 				</TCEforms>
-			</settings.scope.agegroup.selectbox>
-			<settings.scope.agelevel.values>
+			</settings.scope.sectionagegroup.selectbox>
+			<settings.scope.sectionagelevel.values>
 				<TCEforms>
 					<label>Altersstufe</label>
 					<config>
@@ -73,15 +73,15 @@
 						<maxitems>3</maxitems>
 					</config>
 				</TCEforms>
-			</settings.scope.agelevel.values>
-			<settings.scope.agelevel.selectbox>
+			</settings.scope.sectionagelevel.values>
+			<settings.scope.sectionagelevel.selectbox>
 				<TCEforms>
 					<label>Selectbox für Altersstufe?</label>
 					<config>
 						<type>check</type>
 					</config>
 				</TCEforms>
-			</settings.scope.agelevel.selectbox>
+			</settings.scope.sectionagelevel.selectbox>
 		</el>
 	</ROOT>
 </T3DataStructure>
