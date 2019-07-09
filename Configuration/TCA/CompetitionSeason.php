@@ -33,7 +33,6 @@
 		'types' => array(
 			'1' => array('showitem' => 'season, max_teams, gamedays,
 									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_competitionseason.tab_teams, competition_season_teams,
-									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_competitionseason.tab_games, games,
 									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_competitionseason.tab_visibility, hidden, detail_link'),
 		),
 		'palettes' => array(
@@ -159,18 +158,6 @@
 					],
 				],
 			],
-
-			'games' => array(
-				'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_competitionseason.games',
-				'config' => array(
-					'appearance' => array(
-						'levelLinksPosition' => 'bottom',
-					),
-					'foreign_field' => 'competition_season',
-					'foreign_table' => 'tx_clubms_domain_model_game',
-					'type' => 'inline',
-				),
-			),
 
 			'detail_link' => array(
 				'exclude' => 1,

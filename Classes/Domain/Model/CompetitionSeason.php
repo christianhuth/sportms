@@ -65,11 +65,6 @@
 		protected $competitionSeasonTeams;
 
 		/**
-		 * @var ObjectStorage<\Balumedien\Clubms\Domain\Model\Game>
-		 */
-		protected $games;
-
-		/**
 		 * __construct
 		 */
 		public function __construct() {
@@ -157,20 +152,6 @@
 		 */
 		public function setCompetitionSeasonTeams($competitionSeasonTeams) {
 			$this->competitionSeasonTeams = $competitionSeasonTeams;
-		}
-
-		/**
-		 * @return ObjectStorage
-		 */
-		public function getGames() {
-			return $this->games;
-		}
-
-		/**
-		 * @param ObjectStorage $games
-		 */
-		public function setGames($games) {
-			$this->games = $games;
 		}
 
 	}

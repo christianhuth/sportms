@@ -366,17 +366,11 @@
 			<trans-unit id="tx_clubms_domain_model_competitionseason.competition_season_teams">
 				<source>Teilnehmende Mannschaften</source>
 			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_competitionseason.games">
-				<source>Spiele</source>
-			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_competitionseason.detail_link">
 				<source>Link auf Einzelansicht möglich?</source>
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_competitionseason.tab_teams">
 				<source>Mannschaften</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_competitionseason.tab_games">
-				<source>Spiele</source>
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_competitionseason.tab_visibility">
 				<source>Sichtbarkeit</source>
