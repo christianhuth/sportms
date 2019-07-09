@@ -1257,7 +1257,7 @@ CREATE TABLE tx_clubms_domain_model_teamseason (
     team_season_images varchar(255) DEFAULT NULL,
 	team_season_officials int(11) DEFAULT NULL,
 	team_season_squad_members int(11) DEFAULT NULL,
-    detail_link tinyint(4) unsigned DEFAULT '0' NOT NULL,
+    detail_link tinyint(4) unsigned DEFAULT '1' NOT NULL,
 	
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
