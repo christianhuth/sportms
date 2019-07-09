@@ -103,21 +103,11 @@ $GLOBALS['TCA']['tx_clubms_domain_model_club'] = array(
 		'colours' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_club.colours',
-            'config' => array (
-                'type' => 'input',
-                'size' => 10,
-                'wizards' => array(
-                    '_PADDING' => 2,
-                    'color' => array(
-                        'title' => 'Color:',
-                        'type' => 'colorbox',
-                        'dim' => '16×12',
-                        'tableStyle' => 'border:solid 1px black;',
-                        'script' => 'wizard_colorpicker.php',
-                        'JSopenParams' => 'height=300,width=250,status=0,menubar=0,scrollbars=1',
-                    ),
-                ),
-            )
+			'config' => array(
+				'eval' => 'trim',
+				'size' => 30,
+				'type' => 'input',
+			),
 		),
 		'date_of_founding' => array(
 			'exclude' => 1,
