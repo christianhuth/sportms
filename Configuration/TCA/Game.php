@@ -243,6 +243,15 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
             'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.game_lineup_homes',
             'config' => array(
                 'appearance' => array(
+                    'enabledControls' => [
+                        'info' => false,
+                        'new' => true,
+                        'sort' => false,
+                        'hide' => true,
+                        'dragdrop' => true,
+                        'delete' => true,
+                        'localize' => true,
+                    ],
                     'levelLinksPosition' => 'bottom',
                     'useSortable' => 1,
                 ),
@@ -274,6 +283,15 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
             'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.game_lineup_guests',
             'config' => array(
                 'appearance' => array(
+                    'enabledControls' => [
+                        'info' => false,
+                        'new' => true,
+                        'sort' => false,
+                        'hide' => true,
+                        'dragdrop' => true,
+                        'delete' => true,
+                        'localize' => true,
+                    ],
                     'levelLinksPosition' => 'bottom',
                     'useSortable' => 1,
                 ),
@@ -304,6 +322,15 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
             'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.game_referees',
             'config' => array(
                 'appearance' => array(
+                    'enabledControls' => [
+                        'info' => false,
+                        'new' => true,
+                        'sort' => false,
+                        'hide' => true,
+                        'dragdrop' => true,
+                        'delete' => true,
+                        'localize' => true,
+                    ],
                     'levelLinksPosition' => 'bottom',
                     'useSortable' => 1,
                 ),
