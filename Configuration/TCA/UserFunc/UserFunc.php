@@ -65,6 +65,9 @@
             $person = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_person", $teamSeasonSquadMember['person']);
             $sectionPosition = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_sectionposition", $record['section_position']);
             $newLabel = $sectionPosition['label_short'] . ": " . $person['lastname'] . ", " . $person['firstname'];
+            if($record['jersey_number']) {
+                $newLabel .= " (" . $record['jersey_number'] . ")";
+            }
             $parameters['title'] = $newLabel;
         }
 
