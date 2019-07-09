@@ -648,7 +648,7 @@ CREATE TABLE tx_clubms_domain_model_gamelineup (
     game int(11) DEFAULT '0' NOT NULL,
 
     jersey_number varchar(255) DEFAULT NULL,
-    person int(11) DEFAULT '0' NOT NULL,
+    team_season_squad_member int(11) DEFAULT '0' NOT NULL,
     section_position int(11) DEFAULT '0' NOT NULL,
 
 	sorting int(11) DEFAULT '0' NOT NULL,
