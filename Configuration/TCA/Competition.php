@@ -122,6 +122,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_competition'] = array(
                 'size' => 1,
                 'type' => 'select',
             ),
+            'onChange' => 'reload',
         ),
 		'section_age_group' => array(
 			'displayCond' => 'FIELD:section:>:0',
