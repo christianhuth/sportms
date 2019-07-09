@@ -293,7 +293,6 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
                 'size' => 1,
                 'type' => 'select',
             ),
-            'onChange' => 'reload',
         ),
 
         'game_lineup_guests' => array(
@@ -350,7 +349,6 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
                 'size' => 1,
                 'type' => 'select',
             ),
-            'onChange' => 'reload',
         ),
 
         'game_referees' => array(
