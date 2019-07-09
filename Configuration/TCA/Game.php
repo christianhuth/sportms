@@ -155,20 +155,22 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
             'exclude' => 1,
             'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.date',
             'config' => array(
-                'type' => 'input',
                 'eval' => 'date',
                 'placeholder' => 'dd-mm-yyyy',
                 'renderType' => 'inputDateTime',
+                'size' => '15',
+                'type' => 'input',
             ),
         ),
         'time' => array(
             'exclude' => 1,
             'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.time',
             'config' => array(
-                'type' => 'input',
                 'eval' => 'time',
                 'placeholder' => 'hh:mm',
                 'renderType' => 'inputDateTime',
+                'size' => '15',
+                'type' => 'input',
             ),
         ),
         'venue' => array(
