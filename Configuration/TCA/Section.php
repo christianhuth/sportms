@@ -103,6 +103,15 @@ $GLOBALS['TCA']['tx_clubms_domain_model_section'] = array(
 			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_section.section_position_groups',
 			'config' => array(
 				'appearance' => array(
+                    'enabledControls' => [
+                        'info' => false,
+                        'new' => true,
+                        'sort' => false,
+                        'hide' => true,
+                        'dragdrop' => true,
+                        'delete' => true,
+                        'localize' => true,
+                    ],
 					'levelLinksPosition' => 'bottom',
 					'useSortable' => 1,
 				),
@@ -115,6 +124,15 @@ $GLOBALS['TCA']['tx_clubms_domain_model_section'] = array(
 			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_section.section_age_groups',
 			'config' => array(
 				'appearance' => array(
+                    'enabledControls' => [
+                        'info' => false,
+                        'new' => true,
+                        'sort' => false,
+                        'hide' => true,
+                        'dragdrop' => true,
+                        'delete' => true,
+                        'localize' => true,
+                    ],
 					'levelLinksPosition' => 'bottom',
 					'useSortable' => 1,
 				),
