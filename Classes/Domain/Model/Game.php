@@ -86,10 +86,20 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $gameLineupHomes;
 
     /**
+     * @var \Balumedien\Clubms\Domain\Model\TeamSeasonOfficial
+     */
+    protected $trainerHome;
+
+    /**
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\GameLineup>
      * @cascade remove
      */
     protected $gameLineupGuests;
+
+    /**
+     * @var \Balumedien\Clubms\Domain\Model\TeamSeasonOfficial
+     */
+    protected $trainerGuest;
 
     /**
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\GameReferee>
@@ -287,6 +297,22 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     }
 
     /**
+     * @return TeamSeasonOfficial
+     */
+    public function getTrainerHome()
+    {
+        return $this->trainerHome;
+    }
+
+    /**
+     * @param TeamSeasonOfficial $trainerHome
+     */
+    public function setTrainerHome($trainerHome)
+    {
+        $this->trainerHome = $trainerHome;
+    }
+
+    /**
      * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
      */
     public function getGameLineupGuests()
@@ -300,6 +326,22 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setGameLineupGuests($gameLineupGuests)
     {
         $this->gameLineupGuests = $gameLineupGuests;
+    }
+
+    /**
+     * @return TeamSeasonOfficial
+     */
+    public function getTrainerGuest()
+    {
+        return $this->trainerGuest;
+    }
+
+    /**
+     * @param TeamSeasonOfficial $trainerGuest
+     */
+    public function setTrainerGuest($trainerGuest)
+    {
+        $this->trainerGuest = $trainerGuest;
     }
 
     /**
