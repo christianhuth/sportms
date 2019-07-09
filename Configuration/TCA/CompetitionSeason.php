@@ -10,7 +10,7 @@
 		'ctrl' => array(
 			'crdate' => 'crdate',
 			'cruser_id' => 'cruser_id',
-            'default_sortby' => 'season',
+            'default_sortby' => 'ORDER BY season ASC',
 			'delete' => 'deleted',
 			'dividers2tabs' => TRUE,
 			'enablecolumns' => array(
