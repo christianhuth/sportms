@@ -1241,6 +1241,7 @@ CREATE TABLE tx_clubms_domain_model_teamseason (
     team_season_images varchar(255) DEFAULT NULL,
 	team_season_officials int(11) DEFAULT NULL,
 	team_season_squad_members int(11) DEFAULT NULL,
+	team_season_squad_captains int(11) DEFAULT NULL,
     detail_link tinyint(4) unsigned DEFAULT '1' NOT NULL,
 
     sorting int(11) DEFAULT '0' NOT NULL,
