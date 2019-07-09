@@ -126,6 +126,15 @@ $GLOBALS['TCA']['tx_clubms_domain_model_clubsection'] = array(
 			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubsection.club_section_members',
 			'config' => array(
 				'appearance' => array(
+                    'enabledControls' => [
+                        'info' => false,
+                        'new' => true,
+                        'sort' => false,
+                        'hide' => true,
+                        'dragdrop' => false,
+                        'delete' => true,
+                        'localize' => true,
+                    ],
 					'levelLinksPosition' => 'bottom',
 					'useSortable' => 1,
 				),
@@ -139,6 +148,15 @@ $GLOBALS['TCA']['tx_clubms_domain_model_clubsection'] = array(
 			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubsection.addresses',
 			'config' => array(
 				'appearance' => array(
+                    'enabledControls' => [
+                        'info' => false,
+                        'new' => true,
+                        'sort' => false,
+                        'hide' => true,
+                        'dragdrop' => true,
+                        'delete' => true,
+                        'localize' => true,
+                    ],
 					'levelLinksPosition' => 'bottom',
 					'useSortable' => 1,
 				),
@@ -151,6 +169,15 @@ $GLOBALS['TCA']['tx_clubms_domain_model_clubsection'] = array(
             'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubsection.phones',
             'config' => array(
 				'appearance' => array(
+                    'enabledControls' => [
+                        'info' => false,
+                        'new' => true,
+                        'sort' => false,
+                        'hide' => true,
+                        'dragdrop' => true,
+                        'delete' => true,
+                        'localize' => true,
+                    ],
 					'levelLinksPosition' => 'bottom',
 					'useSortable' => 1,
 				),
@@ -163,6 +190,15 @@ $GLOBALS['TCA']['tx_clubms_domain_model_clubsection'] = array(
             'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubsection.mails',
             'config' => array(
 				'appearance' => array(
+                    'enabledControls' => [
+                        'info' => false,
+                        'new' => true,
+                        'sort' => false,
+                        'hide' => true,
+                        'dragdrop' => true,
+                        'delete' => true,
+                        'localize' => true,
+                    ],
 					'levelLinksPosition' => 'bottom',
 					'useSortable' => 1,
 				),
@@ -175,6 +211,15 @@ $GLOBALS['TCA']['tx_clubms_domain_model_clubsection'] = array(
 			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubsection.urls',
 			'config' => array(
 				'appearance' => array(
+                    'enabledControls' => [
+                        'info' => false,
+                        'new' => true,
+                        'sort' => false,
+                        'hide' => true,
+                        'dragdrop' => true,
+                        'delete' => true,
+                        'localize' => true,
+                    ],
 					'levelLinksPosition' => 'bottom',
 					'useSortable' => 1,
 				),
@@ -188,6 +233,15 @@ $GLOBALS['TCA']['tx_clubms_domain_model_clubsection'] = array(
 			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubsection.club_section_officials',
 			'config' => array(
 				'appearance' => array(
+                    'enabledControls' => [
+                        'info' => false,
+                        'new' => true,
+                        'sort' => false,
+                        'hide' => true,
+                        'dragdrop' => true,
+                        'delete' => true,
+                        'localize' => true,
+                    ],
 					'levelLinksPosition' => 'bottom',
 					'useSortable' => 1,
 				),
