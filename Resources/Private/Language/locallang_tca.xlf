@@ -865,6 +865,9 @@
 			<trans-unit id="tx_clubms_domain_model_teamseason.team_season_squad_members">
 				<source>Mannschaftskader</source>
 			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_teamseason.team_season_squad_captains">
+				<source>Mannschaftskapitäne</source>
+			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_teamseason.detail_link">
 				<source>Link auf Einzelansicht möglich?</source>
 			</trans-unit>

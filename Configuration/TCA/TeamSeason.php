@@ -30,7 +30,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_teamseason'] = array(
 	'types' => array(
 		'1' => array('showitem' => 'season, team_season_practices, team_season_images,
 									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_teamseason.tab_officials, team_season_officials,
-									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_teamseason.tab_squad_members, team_season_squad_members,
+									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_teamseason.tab_squad_members, team_season_squad_members, team_season_squad_captains,
 									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_teamseason.tab_visibility, hidden, detail_link'),
 	),
 	'palettes' => array(
@@ -190,6 +190,32 @@ $GLOBALS['TCA']['tx_clubms_domain_model_teamseason'] = array(
 				'type' => 'inline',
 			),
 		),
+
+        'team_season_squad_captains' => array(
+            'exclude' => true,
+            'label' => 'LLL:EXT:clubms2/Resources/Private/Language/locallang_db.xlf:tx_clubms_domain_model_teamseason.team_season_squad_captains',
+            'config' => array(
+                'type' => 'select',
+                'renderType' => 'selectMultipleSideBySide',
+                'foreign_table' => 'tx_clubms_domain_model_teamseasonsquadmember',
+                'MM' => 'tx_clubms_teamseason_teamseasonsquadmember_mm',
+                'size' => 10,
+                'autoSizeMax' => 30,
+                'maxitems' => 9999,
+                'multiple' => 0,
+                'fieldControl' => array(
+                    'editPopup' => array(
+                        'disabled' => false,
+                    ),
+                    'addRecord' => array(
+                        'disabled' => false,
+                    ),
+                    'listModule' => array(
+                        'disabled' => true,
+                    ),
+                ),
+            ),
+        ),
 		
 		'detail_link' => array(
 			'exclude' => 1,
