@@ -28,8 +28,8 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
 	),
 	'types' => array(
 		'1' => array('showitem' => 'section, season, competition_season, team_home, team_guest, date, time, club_venue, game_spectators,
-		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_home, game_lineup_homes,
-		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_guest, game_lineup_guests,
+		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_home, game_lineup_homes, trainer_home,
+		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_guest, game_lineup_guests, trainer_guest,
 		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_referees, game_referees,
 		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_reports, game_reports,
 		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_visibility, hidden, detail_link,
@@ -278,6 +278,23 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
                 'type' => 'inline',
             ),
         ),
+        'trainer_home' => array(
+            'exclude' => 1,
+            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.trainer_home',
+            'config' => array(
+                'foreign_table' => 'tx_clubms_domain_model_teamseasonofficial',
+                'foreign_table_where' => ' AND teamseason = ###REC_FIELD_team_home###',
+                'items' => Array (
+                    array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
+                ),
+                'maxItems' => 1,
+                'minItems' => 1,
+                'renderType' => 'selectSingle',
+                'size' => 1,
+                'type' => 'select',
+            ),
+            'onChange' => 'reload',
+        ),
 
         'game_lineup_guests' => array(
             'displayCond' => 'FIELD:team_home:>:0',
@@ -317,6 +334,23 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
                 #),
                 'type' => 'inline',
             ),
+        ),
+        'trainer_guest' => array(
+            'exclude' => 1,
+            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.trainer_guest',
+            'config' => array(
+                'foreign_table' => 'tx_clubms_domain_model_teamseasonofficial',
+                'foreign_table_where' => ' AND teamseason = ###REC_FIELD_team_guest###',
+                'items' => Array (
+                    array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
+                ),
+                'maxItems' => 1,
+                'minItems' => 1,
+                'renderType' => 'selectSingle',
+                'size' => 1,
+                'type' => 'select',
+            ),
+            'onChange' => 'reload',
         ),
 
         'game_referees' => array(

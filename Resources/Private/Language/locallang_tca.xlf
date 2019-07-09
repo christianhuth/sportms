@@ -421,8 +421,14 @@
 			<trans-unit id="tx_clubms_domain_model_game.game_lineup_homes">
 				<source>Heimaufstellung</source>
 			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_game.trainer_home">
+				<source>Heimtrainer</source>
+			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_game.game_lineup_guests">
 				<source>Gastaufstellung</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_game.trainer_guest">
+				<source>Gasttrainer</source>
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_game.game_referees">
 				<source>Schiedsrichter</source>
