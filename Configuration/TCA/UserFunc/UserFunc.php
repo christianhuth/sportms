@@ -63,7 +63,8 @@
             $record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
             $teamSeasonSquadMember = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_teamseasonsquadmember", $record['team_season_squad_member']);
             $person = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_person", $teamSeasonSquadMember['person']);
-            $newLabel = $person['lastname'] . ", " . $person['firstname'];
+            $sectionPosition = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_sectionposition", $record['section_position']);
+            $newLabel = $sectionPosition['label_short'] . ": " . $person['lastname'] . ", " . $person['firstname'];
             $parameters['title'] = $newLabel;
         }
 
