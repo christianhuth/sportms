@@ -81,7 +81,7 @@
 		
 		public function phoneLabel(&$parameters, $parentObject) {
 			$record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
-            $newLabel = $record['areaCode'] . " / " . $record['callingNumber'];
+            $newLabel = $record['area_code'] . " / " . $record['calling_number'];
 			$parameters['title'] = $newLabel;
 		}
 		
