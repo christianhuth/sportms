@@ -454,7 +454,7 @@
 			<trans-unit id="tx_clubms_domain_model_gamelineup.jersey_number">
 				<source>Rückennummer</source>
 			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_gamelineup.person">
+			<trans-unit id="tx_clubms_domain_model_gamelineup.team_season_squad_member">
 				<source>Person</source>
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_gamelineup.section_position">
