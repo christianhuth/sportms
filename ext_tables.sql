@@ -656,6 +656,8 @@ CREATE TABLE tx_clubms_domain_model_gamelineup (
     person int(11) DEFAULT '0' NOT NULL,
     section_position int(11) DEFAULT '0' NOT NULL,
 
+	sorting int(11) DEFAULT '0' NOT NULL,
+
     tstamp int(11) unsigned DEFAULT '0' NOT NULL,
     crdate int(11) unsigned DEFAULT '0' NOT NULL,
     cruser_id int(11) unsigned DEFAULT '0' NOT NULL,

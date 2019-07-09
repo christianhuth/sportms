@@ -19,6 +19,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_gamelineup'] = array(
 		'label' => '',
         'label_userFunc' => \Balumedien\Clubms\Configuration\TCA\UserFunc\UserFunc::class . '->GameLineupLabel',
 		'searchFields' => '',
+        'sortby' => 'ordering',
 		'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gamelineup',
 		'tstamp' => 'tstamp',
 		'versioningWS' => TRUE,
