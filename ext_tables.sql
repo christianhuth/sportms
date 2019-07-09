@@ -475,7 +475,7 @@ CREATE TABLE tx_clubms_domain_model_competition (
 	name varchar(255) DEFAULT '0' NOT NULL,
 	name_short varchar(255) DEFAULT NULL,
 	competition_seasons int(11) DEFAULT NULL,
-	detail_link tinyint(4) unsigned DEFAULT '0' NOT NULL,
+	detail_link tinyint(4) unsigned DEFAULT '1' NOT NULL,
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
