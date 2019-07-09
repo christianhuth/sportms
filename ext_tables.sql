@@ -828,7 +828,7 @@ CREATE TABLE tx_clubms_domain_model_person (
 	
 	hidden tinyint(4) unsigned DEFAULT '0' NOT NULL,
 	hidden_birthday tinyint(4) unsigned DEFAULT '0' NOT NULL,
-	detail_link tinyint(4) unsigned DEFAULT '0' NOT NULL,
+	detail_link tinyint(4) unsigned DEFAULT '1' NOT NULL,
 	profile_player tinyint(4) unsigned DEFAULT '0' NOT NULL,
 	profile_official tinyint(4) unsigned DEFAULT '0' NOT NULL,
 	profile_referee tinyint(4) unsigned DEFAULT '0' NOT NULL,

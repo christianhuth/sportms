@@ -378,6 +378,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_person'] = array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.detail_link',
 			'config' => array(
+			    'default' => '1',
 				'type' => 'check',
 			),
 		),
