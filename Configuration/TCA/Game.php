@@ -149,7 +149,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
             'onChange' => 'reload',
         ),
         'team_home' => array(
-            'displayCond' => 'FIELD:competition:>:0',
+            'displayCond' => 'FIELD:competition_season:>:0',
             'exclude' => 1,
             'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.team_home',
             'config' => array(
@@ -171,7 +171,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
         'team_guest' => array(
             'displayCond' => array(
                 'AND' => array(
-                    'FIELD:competition:>:0',
+                    'FIELD:competition_season:>:0',
                     'FIELD:team_home:>:0',
                 ),
             ),
