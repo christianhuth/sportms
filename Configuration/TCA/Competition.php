@@ -122,7 +122,6 @@ $GLOBALS['TCA']['tx_clubms_domain_model_competition'] = array(
                 'size' => 1,
                 'type' => 'select',
             ),
-            'onChange' => 'reload',
         ),
 		'section_age_group' => array(
 			'displayCond' => 'FIELD:section:>:0',
@@ -142,7 +141,12 @@ $GLOBALS['TCA']['tx_clubms_domain_model_competition'] = array(
 			'onChange' => 'reload',
 		),
 		'section_age_level' => array(
-			'displayCond' => 'FIELD:section_age_group:>:0',
+            'displayCond' => array(
+                'AND' => array(
+                    'FIELD:section:>:0',
+                    'FIELD:section_age_group:>:0',
+                ),
+            ),
 			'exclude' => 1,
 			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_competition.section_age_level',
 			'config' => array(
