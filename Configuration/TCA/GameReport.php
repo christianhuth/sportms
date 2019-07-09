@@ -108,7 +108,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_gamereport'] = array(
             'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gamereport.headline',
             'config' => array(
                 'type' => 'input',
-                'size' => 60,
+                'size' => 100,
                 'eval' => 'trim, required'
             ),
         ),
@@ -125,7 +125,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_gamereport'] = array(
             'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gamereport.author',
             'config' => array(
                 'type' => 'input',
-                'size' => 60,
+                'size' => 30,
                 'eval' => 'trim, required'
             ),
         ),
