@@ -82,6 +82,10 @@
 		public function phoneLabel(&$parameters, $parentObject) {
 			$record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
             $newLabel = $record['area_code'] . " / " . $record['calling_number'];
+            if($record['phone_type']) {
+                $phoneType = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_phonetype", $record['phone_type']);
+                $newLabel .= " (" . $phoneType['label'] . ")";
+            }
 			$parameters['title'] = $newLabel;
 		}
 		
