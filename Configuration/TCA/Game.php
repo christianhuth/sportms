@@ -40,7 +40,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
 	'palettes' => array(
         'date_time' => array('showitem' => 'date, time'),
         'venue_spectators' => array('showitem' => 'venue, spectators'),
-        'result_halfs' => array('showitem' => 'result_halfs_end_home', 'result_halfs_end_guest', 'result_halfs_half_home', 'result_halfs_half_guest'),
+        'result_halfs' => array('showitem' => 'result_halfs_end_home, result_halfs_end_guest, result_halfs_half_home, result_halfs_half_guest'),
 	),
 	'columns' => array(
 
