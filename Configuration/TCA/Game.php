@@ -29,7 +29,9 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
 	'types' => array(
 		'1' => array('showitem' => 'section, season, competition_season, 
 		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_details, status, --palette--;;date_time, --palette--;;venue_spectators,
-		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_result, played_in_halfs, --palette--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.palette_result_halfs;result_halfs,
+		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_result, 
+		                                --palette--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.palette_result_halfs;result_halfs,
+		                                --palette--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.palette_result_thirds;result_thirds,
 		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_home, team_season_home, game_lineup_homes, trainer_home,
 		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_guest, team_season_guest, game_lineup_guests, trainer_guest,
 		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_referees, game_referees,
@@ -41,6 +43,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
         'date_time' => array('showitem' => 'date, time'),
         'venue_spectators' => array('showitem' => 'venue, spectators'),
         'result_halfs' => array('showitem' => 'result_halfs_end_home, result_halfs_end_guest, result_halfs_half_home, result_halfs_half_guest'),
+        'result_thirds' => array('showitem' => 'result_thirds_end_home, result_thirds_end_guest, result_thirds_first_home, result_thirds_first_guest, result_thirds_second_home, result_thirds_second_guest, result_thirds_third_home, result_thirds_third_guest'),
 	),
 	'columns' => array(
 
@@ -264,6 +267,110 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
         'result_halfs_half_guest' => array(
             'exclude' => 1,
             'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.result_halfs_half_guest',
+            'config' => array(
+                'eval' => 'int, trim',
+                'range' => array(
+                    'lower' => '0',
+                    'upper' => '1000',
+                ),
+                'size' => 10,
+                'type' => 'input',
+            ),
+        ),
+        'result_thirds_end_home' => array(
+            'exclude' => 1,
+            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.result_thirds_end_home',
+            'config' => array(
+                'eval' => 'int, trim',
+                'range' => array(
+                    'lower' => '0',
+                    'upper' => '1000',
+                ),
+                'size' => 10,
+                'type' => 'input',
+            ),
+        ),
+        'result_thirds_end_guest' => array(
+            'exclude' => 1,
+            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.result_thirds_end_guest',
+            'config' => array(
+                'eval' => 'int, trim',
+                'range' => array(
+                    'lower' => '0',
+                    'upper' => '1000',
+                ),
+                'size' => 10,
+                'type' => 'input',
+            ),
+        ),
+        'result_thirds_first_home' => array(
+            'exclude' => 1,
+            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.result_thirds_first_home',
+            'config' => array(
+                'eval' => 'int, trim',
+                'range' => array(
+                    'lower' => '0',
+                    'upper' => '1000',
+                ),
+                'size' => 10,
+                'type' => 'input',
+            ),
+        ),
+        'result_thirds_first_guest' => array(
+            'exclude' => 1,
+            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.result_thirds_first_guest',
+            'config' => array(
+                'eval' => 'int, trim',
+                'range' => array(
+                    'lower' => '0',
+                    'upper' => '1000',
+                ),
+                'size' => 10,
+                'type' => 'input',
+            ),
+        ),
+        'result_thirds_second_home' => array(
+            'exclude' => 1,
+            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.result_thirds_second_home',
+            'config' => array(
+                'eval' => 'int, trim',
+                'range' => array(
+                    'lower' => '0',
+                    'upper' => '1000',
+                ),
+                'size' => 10,
+                'type' => 'input',
+            ),
+        ),
+        'result_thirds_second_guest' => array(
+            'exclude' => 1,
+            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.result_thirds_second_guest',
+            'config' => array(
+                'eval' => 'int, trim',
+                'range' => array(
+                    'lower' => '0',
+                    'upper' => '1000',
+                ),
+                'size' => 10,
+                'type' => 'input',
+            ),
+        ),
+        'result_thirds_third_home' => array(
+            'exclude' => 1,
+            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.result_thirds_third_home',
+            'config' => array(
+                'eval' => 'int, trim',
+                'range' => array(
+                    'lower' => '0',
+                    'upper' => '1000',
+                ),
+                'size' => 10,
+                'type' => 'input',
+            ),
+        ),
+        'result_thirds_third_guest' => array(
+            'exclude' => 1,
+            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.result_thirds_third_guest',
             'config' => array(
                 'eval' => 'int, trim',
                 'range' => array(
