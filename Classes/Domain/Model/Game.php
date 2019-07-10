@@ -90,6 +90,26 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $resultType;
 
     /**
+     * @var int
+     */
+    protected $resultHalfsEndHome;
+
+    /**
+     * @var int
+     */
+    protected $resultHalfsEndGuest;
+
+    /**
+     * @var int
+     */
+    protected $resultHalfsHalfHome;
+
+    /**
+     * @var int
+     */
+    protected $resultHalfsHalfGuest;
+
+    /**
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\GameLineup>
      * @cascade remove
      */
@@ -320,6 +340,70 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setResultType($resultType)
     {
         $this->resultType = $resultType;
+    }
+
+    /**
+     * @return int
+     */
+    public function getResultHalfsEndHome()
+    {
+        return $this->resultHalfsEndHome;
+    }
+
+    /**
+     * @param int $resultHalfsEndHome
+     */
+    public function setResultHalfsEndHome($resultHalfsEndHome)
+    {
+        $this->resultHalfsEndHome = $resultHalfsEndHome;
+    }
+
+    /**
+     * @return int
+     */
+    public function getResultHalfsEndGuest()
+    {
+        return $this->resultHalfsEndGuest;
+    }
+
+    /**
+     * @param int $resultHalfsEndGuest
+     */
+    public function setResultHalfsEndGuest($resultHalfsEndGuest)
+    {
+        $this->resultHalfsEndGuest = $resultHalfsEndGuest;
+    }
+
+    /**
+     * @return int
+     */
+    public function getResultHalfsHalfHome()
+    {
+        return $this->resultHalfsHalfHome;
+    }
+
+    /**
+     * @param int $resultHalfsHalfHome
+     */
+    public function setResultHalfsHalfHome($resultHalfsHalfHome)
+    {
+        $this->resultHalfsHalfHome = $resultHalfsHalfHome;
+    }
+
+    /**
+     * @return int
+     */
+    public function getResultHalfsHalfGuest()
+    {
+        return $this->resultHalfsHalfGuest;
+    }
+
+    /**
+     * @param int $resultHalfsHalfGuest
+     */
+    public function setResultHalfsHalfGuest($resultHalfsHalfGuest)
+    {
+        $this->resultHalfsHalfGuest = $resultHalfsHalfGuest;
     }
 
     /**
