@@ -89,8 +89,18 @@ $GLOBALS['TCA']['tx_clubms_domain_model_teamseasonofficial'] = array(
 		),
 
         'team_season' => array(
+            'exclude' => 1,
+            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_teamseasonofficial.team_season',
             'config' => array(
-                'type' => 'passthrough',
+                'eval' => 'required',
+                'foreign_table' => 'tx_clubms_domain_model_teamseason',
+                'items' => array(
+                    array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
+                ),
+                'maxItems' => 1,
+                'renderType' => 'selectSingle',
+                'size' => 1,
+                'type' => 'select',
             ),
         ),
 
