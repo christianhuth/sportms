@@ -193,6 +193,10 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
             'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.spectators',
             'config' => array(
                 'eval' => 'int, trim',
+                'range' => array(
+                    'lower' => '0',
+                    'upper' => '1000000',
+                ),
                 'size' => 10,
                 'type' => 'input',
             ),
