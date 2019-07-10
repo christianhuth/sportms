@@ -85,6 +85,11 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $spectators;
 
     /**
+     * @var int
+     */
+    protected $resultType;
+
+    /**
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\GameLineup>
      * @cascade remove
      */
@@ -299,6 +304,22 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setSpectators($spectators)
     {
         $this->spectators = $spectators;
+    }
+
+    /**
+     * @return int
+     */
+    public function getResultType()
+    {
+        return $this->resultType;
+    }
+
+    /**
+     * @param int $resultType
+     */
+    public function setResultType($resultType)
+    {
+        $this->resultType = $resultType;
     }
 
     /**
