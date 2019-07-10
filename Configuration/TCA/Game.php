@@ -7,7 +7,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
 	'ctrl' => array(
 		'crdate' => 'crdate',
 		'cruser_id' => 'cruser_id',
-		'default_sortby' => 'ORDER BY team_home ASC',
+		'default_sortby' => 'ORDER BY section ASC, competition_season ASC, team_season_home ASC',
 		'delete' => 'deleted',
 		'dividers2tabs' => TRUE,
 		'enablecolumns' => array(
@@ -218,7 +218,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
             'onChange' => 'reload',
         ),
         'game_lineup_homes' => array(
-            'displayCond' => 'FIELD:team_home:>:0',
+            'displayCond' => 'FIELD:team_season_home:>:0',
             'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.game_lineup_homes',
             'config' => array(
                 'appearance' => array(
@@ -261,7 +261,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
             'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.trainer_home',
             'config' => array(
                 'foreign_table' => 'tx_clubms_domain_model_teamseasonofficial',
-                'foreign_table_where' => ' AND team_season = ###REC_FIELD_team_home###',
+                'foreign_table_where' => ' AND team_season = ###REC_FIELD_team_season_home###',
                 'items' => Array (
                     array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
                 ),
@@ -300,7 +300,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
             'onChange' => 'reload',
         ),
         'game_lineup_guests' => array(
-            'displayCond' => 'FIELD:team_home:>:0',
+            'displayCond' => 'FIELD:team_season_home:>:0',
             'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.game_lineup_guests',
             'config' => array(
                 'appearance' => array(
