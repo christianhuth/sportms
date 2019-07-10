@@ -72,12 +72,12 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * @var \Balumedien\Clubms\Domain\Model\ClubVenue
      */
-    protected $clubVenue;
+    protected $venue;
 
     /**
      * @var int
      */
-    protected $gameSpectators;
+    protected $spectators;
 
     /**
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\GameLineup>
@@ -251,33 +251,33 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * @return ClubVenue
      */
-    public function getClubVenue()
+    public function getVenue()
     {
-        return $this->clubVenue;
+        return $this->venue;
     }
 
     /**
-     * @param ClubVenue $clubVenue
+     * @param ClubVenue $venue
      */
-    public function setClubVenue($clubVenue)
+    public function setVenue($venue)
     {
-        $this->clubVenue = $clubVenue;
+        $this->venue = $venue;
     }
 
     /**
      * @return int
      */
-    public function getGameSpectators()
+    public function getSpectators()
     {
-        return $this->gameSpectators;
+        return $this->spectators;
     }
 
     /**
-     * @param int $gameSpectators
+     * @param int $spectators
      */
-    public function setGameSpectators($gameSpectators)
+    public function setSpectators($spectators)
     {
-        $this->gameSpectators = $gameSpectators;
+        $this->spectators = $spectators;
     }
 
     /**

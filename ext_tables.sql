@@ -590,7 +590,7 @@ CREATE TABLE tx_clubms_domain_model_game (
     date int(11) unsigned DEFAULT NULL,
     time int(11) unsigned DEFAULT NULL,
     venue int(11) DEFAULT NULL,
-    game_spectators int(11) DEFAULT NULL,
+    spectators int(11) DEFAULT NULL,
     game_lineup_homes int(11) DEFAULT NULL,
     trainer_home int(11) DEFAULT NULL,
     game_lineup_guests int(11) DEFAULT NULL,

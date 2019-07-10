@@ -28,7 +28,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
 	),
 	'types' => array(
 		'1' => array('showitem' => 'section, season, competition_season, 
-		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_details, ;;1, venue, game_spectators,
+		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_details, --palette--;;date_time, venue_spectators,
 		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_home, team_season_home, game_lineup_homes, trainer_home,
 		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_guest, team_season_guest, game_lineup_guests, trainer_guest,
 		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_referees, game_referees,
@@ -37,7 +37,8 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
 		                            '),
 	),
 	'palettes' => array(
-		'1' => array('showitem' => 'date, time'),
+        'date_time' => array('showitem' => 'date, time'),
+        'venue_spectators' => array('showitem' => 'venue, spectators'),
 	),
 	'columns' => array(
 
@@ -187,9 +188,9 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
                 'type' => 'select',
             ),
         ),
-        'game_spectators' => array(
+        'spectators' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.game_spectators',
+            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.spectators',
             'config' => array(
                 'eval' => 'int, trim',
                 'size' => 10,
