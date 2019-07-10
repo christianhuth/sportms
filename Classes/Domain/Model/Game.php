@@ -50,14 +50,14 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $competitionSeason;
 
     /**
-     * @var \Balumedien\Clubms\Domain\Model\Team
+     * @var \Balumedien\Clubms\Domain\Model\TeamSeason
      */
-    protected $teamHome;
+    protected $teamSeasonHome;
 
     /**
-     * @var \Balumedien\Clubms\Domain\Model\Team
+     * @var \Balumedien\Clubms\Domain\Model\TeamSeason
      */
-    protected $teamGuest;
+    protected $teamSeasonGuest;
 
     /**
      * @var int
@@ -185,35 +185,35 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     }
 
     /**
-     * @return Team
+     * @return TeamSeason
      */
-    public function getTeamHome()
+    public function getTeamSeasonHome()
     {
-        return $this->teamHome;
+        return $this->teamSeasonHome;
     }
 
     /**
-     * @param Team $teamHome
+     * @param TeamSeason $teamSeasonHome
      */
-    public function setTeamHome($teamHome)
+    public function setTeamSeasonHome($teamSeasonHome)
     {
-        $this->teamHome = $teamHome;
+        $this->teamSeasonHome = $teamSeasonHome;
     }
 
     /**
-     * @return Team
+     * @return TeamSeason
      */
-    public function getTeamGuest()
+    public function getTeamSeasonGuest()
     {
-        return $this->teamGuest;
+        return $this->teamSeasonGuest;
     }
 
     /**
-     * @param Team $teamGuest
+     * @param TeamSeason $teamSeasonGuest
      */
-    public function setTeamGuest($teamGuest)
+    public function setTeamSeasonGuest($teamSeasonGuest)
     {
-        $this->teamGuest = $teamGuest;
+        $this->teamSeasonGuest = $teamSeasonGuest;
     }
 
     /**
