@@ -412,7 +412,7 @@
 			<trans-unit id="tx_clubms_domain_model_game.game_spectators">
 				<source>Zuschauerzahl</source>
 			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_game.team_home">
+			<trans-unit id="tx_clubms_domain_model_game.team_season_home">
 				<source>Heimmannschaft</source>
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_game.game_lineup_homes">
@@ -421,7 +421,7 @@
 			<trans-unit id="tx_clubms_domain_model_game.trainer_home">
 				<source>Heimtrainer</source>
 			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_game.team_guest">
+			<trans-unit id="tx_clubms_domain_model_game.team_season_guest">
 				<source>Gastmannschaft</source>
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_game.game_lineup_guests">
