@@ -62,6 +62,11 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * @var int
      */
+    protected $status;
+
+    /**
+     * @var int
+     */
     protected $date;
 
     /**
@@ -214,6 +219,22 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setTeamSeasonGuest($teamSeasonGuest)
     {
         $this->teamSeasonGuest = $teamSeasonGuest;
+    }
+
+    /**
+     * @return int
+     */
+    public function getStatus()
+    {
+        return $this->status;
+    }
+
+    /**
+     * @param int $status
+     */
+    public function setStatus($status)
+    {
+        $this->status = $status;
     }
 
     /**
