@@ -232,7 +232,6 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
                 'default' => '2',
                 'eval' => 'required',
                 'items' => array(
-                    array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", 0),
                     array('LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.result_type_halfs', 2),
                     array('LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.result_type_thirds', 3),
                     array('LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.result_type_quarters', 4),
