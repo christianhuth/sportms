@@ -29,7 +29,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
 	'types' => array(
 		'1' => array('showitem' => 'section, season, competition_season, 
 		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_details, status, --palette--;;date_time, --palette--;;venue_spectators,
-		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_result, played_in_halfs, --palette--;;result_halfs,
+		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_result, played_in_halfs, --palette--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.palette_result_halfs;result_halfs,
 		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_home, team_season_home, game_lineup_homes, trainer_home,
 		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_guest, team_season_guest, game_lineup_guests, trainer_guest,
 		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_referees, game_referees,
@@ -222,16 +222,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
             ),
         ),
 
-        'played_in_halfs' => array(
-            'exclude' => 1,
-            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.played_in_halfs',
-            'config' => array(
-                'default' => '0',
-                'type' => 'check',
-            ),
-        ),
         'result_halfs_end_home' => array(
-            'displayCond' => 'FIELD:played_in_halfs:>:0',
             'exclude' => 1,
             'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.result_halfs_end_home',
             'config' => array(
@@ -245,7 +236,6 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
             ),
         ),
         'result_halfs_end_guest' => array(
-            'displayCond' => 'FIELD:played_in_halfs:>:0',
             'exclude' => 1,
             'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.result_halfs_end_guest',
             'config' => array(
@@ -259,7 +249,6 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
             ),
         ),
         'result_halfs_half_home' => array(
-            'displayCond' => 'FIELD:played_in_halfs:>:0',
             'exclude' => 1,
             'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.result_halfs_half_home',
             'config' => array(
@@ -273,7 +262,6 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
             ),
         ),
         'result_halfs_half_guest' => array(
-            'displayCond' => 'FIELD:played_in_halfs:>:0',
             'exclude' => 1,
             'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.result_halfs_half_guest',
             'config' => array(
