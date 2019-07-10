@@ -242,6 +242,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
             'onChange' => 'reload',
         ),
         'result_halfs_end_home' => array(
+            'displayCond' => 'FIELD:result_type:=:2',
             'exclude' => 1,
             'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.result_halfs_end_home',
             'config' => array(
@@ -255,6 +256,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
             ),
         ),
         'result_halfs_end_guest' => array(
+            'displayCond' => 'FIELD:result_type:=:2',
             'exclude' => 1,
             'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.result_halfs_end_guest',
             'config' => array(
@@ -268,6 +270,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
             ),
         ),
         'result_halfs_half_home' => array(
+            'displayCond' => 'FIELD:result_type:=:2',
             'exclude' => 1,
             'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.result_halfs_half_home',
             'config' => array(
@@ -281,6 +284,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
             ),
         ),
         'result_halfs_half_guest' => array(
+            'displayCond' => 'FIELD:result_type:=:2',
             'exclude' => 1,
             'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.result_halfs_half_guest',
             'config' => array(
