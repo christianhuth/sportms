@@ -51,11 +51,14 @@
 
         public function gameLabel(&$parameters, $parentObject) {
             $record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
-            $teamSeasonHome = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_teamseason", $record['team_home']);
+            $competitionSeason = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_competitionseason", $record['competition_season']);
+            $competition = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_competition", $competitionSeason['competition']);
+            $season = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_season", $competitionSeason['season']);
+            $teamSeasonHome = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_teamseason", $record['team_season_home']);
             $teamHome = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_team", $teamSeasonHome['team']);
-            $teamSeasonGuest = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_teamseason", $record['team_guest']);
+            $teamSeasonGuest = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_teamseason", $record['team_season_guest']);
             $teamGuest = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_team", $teamSeasonGuest['team']);
-            $newLabel = $teamHome['name'] . " - " . $teamGuest['name'];
+            $newLabel = $competition['name'] . " (" . $season['season_name_very_short']. "): " . $teamHome['name'] . " - " . $teamGuest['name'];
             $parameters['title'] = $newLabel;
         }
 
