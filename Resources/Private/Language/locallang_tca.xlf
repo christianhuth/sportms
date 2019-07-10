@@ -439,6 +439,21 @@
 			<trans-unit id="tx_clubms_domain_model_game.spectators">
 				<source>Zuschauerzahl</source>
 			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_game.result_type">
+				<source>Ergebnisart</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_game.result_type_halfs">
+				<source>Halbzeiten</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_game.result_type_thirds">
+				<source>Drittel</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_game.result_type_quarters">
+				<source>Viertel</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_game.result_type_sets">
+				<source>Sätze</source>
+			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_game.result_halfs_end_home">
 				<source>Heimergebnis (Ende)</source>
 			</trans-unit>

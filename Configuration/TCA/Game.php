@@ -29,7 +29,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
 	'types' => array(
 		'1' => array('showitem' => 'section, season, competition_season, 
 		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_details, status, --palette--;;date_time, --palette--;;venue_spectators,
-		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_result, 
+		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_result, result_type,
 		                                --palette--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.palette_result_halfs;result_halfs,
 		                                --palette--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.palette_result_thirds;result_thirds,
 		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_home, team_season_home, game_lineup_homes, trainer_home,
@@ -225,6 +225,22 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
             ),
         ),
 
+        'result_type' => array(
+            'exclude' => 1,
+            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.result_type',
+            'config' => array(
+                'eval' => 'required',
+                'items' => array(
+                    array('LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.result_type_halfs', 2),
+                    array('LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.result_type_thirds', 3),
+                    array('LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.result_type_quarters', 4),
+                    array('LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.result_type_sets', 10),
+                ),
+                'renderType' => 'selectSingle',
+                'type' => 'select',
+            ),
+            'onChange' => 'reload',
+        ),
         'result_halfs_end_home' => array(
             'exclude' => 1,
             'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.result_halfs_end_home',
