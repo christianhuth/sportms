@@ -84,6 +84,12 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      */
     protected $spectators;
 
+	/**
+	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\GamePeriod>
+	 * @cascade remove
+	 */
+    protected $gamePeriods;
+
     /**
      * @var int
      */
@@ -422,6 +428,20 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         $this->spectators = $spectators;
     }
+
+	/**
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+	 */
+	public function getGamePeriods() {
+		return $this->gamePeriods;
+	}
+
+	/**
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $gamePeriods
+	 */
+	public function setGamePeriods($gamePeriods) {
+		$this->gamePeriods = $gamePeriods;
+	}
 
     /**
      * @return int
