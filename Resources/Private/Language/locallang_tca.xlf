@@ -439,8 +439,11 @@
 			<trans-unit id="tx_clubms_domain_model_game.spectators">
 				<source>Zuschauerzahl</source>
 			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_game.game_periods">
-				<source>Spielabschnitte</source>
+			<trans-unit id="tx_clubms_domain_model_game.period_count">
+				<source>Anzahl der Spielabschnitte</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_game.period_duration">
+				<source>Dauer der Spielabschnitte</source>
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_game.result_type">
 				<source>Ergebnisart</source>
