@@ -445,6 +445,24 @@
 			<trans-unit id="tx_clubms_domain_model_game.period_duration">
 				<source>Dauer der Spielabschnitte (in Minuten)</source>
 			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_game.result_end_regular_home">
+				<source>Heimergebnis (reguläre Spielzeit)</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_game.result_end_regular_guest">
+				<source>Gastergebnis (reguläre Spielzeit)</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_game.result_end_overtime_home">
+				<source>Heimergebnis (Verlängerung)</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_game.result_end_overtime_guest">
+				<source>Gastergebnis (Verlängerung)</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_game.result_end_penalty_home">
+				<source>Heimergebnis (Elfmeterschießen)</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_game.result_end_penalty_guest">
+				<source>Gastergebnis (Elfmeterschießen)</source>
+			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_game.result_type">
 				<source>Ergebnisart</source>
 			</trans-unit>
