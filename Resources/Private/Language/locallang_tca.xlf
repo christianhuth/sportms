@@ -481,23 +481,17 @@
 			<trans-unit id="tx_clubms_domain_model_game.result_type_sets">
 				<source>Sätze</source>
 			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_game.result_halfs_end_home">
-				<source>Heimergebnis (Ende)</source>
+			<trans-unit id="tx_clubms_domain_model_game.result_halfs_first_home">
+				<source>Heimergebnis (1. Halbzeit)</source>
 			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_game.result_halfs_end_guest">
-				<source>Gastergebnis (Ende)</source>
+			<trans-unit id="tx_clubms_domain_model_game.result_halfs_first_guest">
+				<source>Gastergebnis (1. Halbzeit)</source>
 			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_game.result_halfs_half_home">
-				<source>Heimergebnis (Halbzeit)</source>
+			<trans-unit id="tx_clubms_domain_model_game.result_halfs_second_home">
+				<source>Heimergebnis (2. Halbzeit)</source>
 			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_game.result_halfs_half_guest">
-				<source>Gastergebnis (Halbzeit)</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_game.result_thirds_end_home">
-				<source>Heimergebnis (Ende)</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_game.result_thirds_end_guest">
-				<source>Gastergebnis (Ende)</source>
+			<trans-unit id="tx_clubms_domain_model_game.result_halfs_second_guest">
+				<source>Gastergebnis (2. Halbzeit)</source>
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_game.result_thirds_first_home">
 				<source>Heimergebnis (1.Drittel)</source>
@@ -516,12 +510,6 @@
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_game.result_thirds_third_guest">
 				<source>Gastergebnis (3.Drittel)</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_game.result_fourths_end_home">
-				<source>Heimergebnis (Ende)</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_game.result_fourths_end_guest">
-				<source>Gastergebnis (Ende)</source>
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_game.result_fourths_first_home">
 				<source>Heimergebnis (1.Viertel)</source>
