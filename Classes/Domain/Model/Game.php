@@ -149,6 +149,56 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	 */
 	protected $resultThirdsThirdGuest;
 
+	/**
+	 * @var int
+	 */
+	protected $resultFourthsEndHome;
+
+	/**
+	 * @var int
+	 */
+	protected $resultFourthsEndGuest;
+
+	/**
+	 * @var int
+	 */
+	protected $resultFourthsFirstHome;
+
+	/**
+	 * @var int
+	 */
+	protected $resultFourthsFirstGuest;
+
+	/**
+	 * @var int
+	 */
+	protected $resultFourthsSecondHome;
+
+	/**
+	 * @var int
+	 */
+	protected $resultFourthsSecondGuest;
+
+	/**
+	 * @var int
+	 */
+	protected $resultFourthsThirdHome;
+
+	/**
+	 * @var int
+	 */
+	protected $resultFourthsThirdGuest;
+
+	/**
+	 * @var int
+	 */
+	protected $resultFourthsFourthHome;
+
+	/**
+	 * @var int
+	 */
+	protected $resultFourthsFourthGuest;
+
     /**
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\GameLineup>
      * @cascade remove
@@ -556,6 +606,146 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	 */
 	public function setResultThirdsThirdGuest($resultThirdsThirdGuest) {
 		$this->resultThirdsThirdGuest = $resultThirdsThirdGuest;
+	}
+
+	/**
+	 * @return int
+	 */
+	public function getResultFourthsEndHome() {
+		return $this->resultFourthsEndHome;
+	}
+
+	/**
+	 * @param int $resultFourthsEndHome
+	 */
+	public function setResultFourthsEndHome($resultFourthsEndHome) {
+		$this->resultFourthsEndHome = $resultFourthsEndHome;
+	}
+
+	/**
+	 * @return int
+	 */
+	public function getResultFourthsEndGuest() {
+		return $this->resultFourthsEndGuest;
+	}
+
+	/**
+	 * @param int $resultFourthsEndGuest
+	 */
+	public function setResultFourthsEndGuest($resultFourthsEndGuest) {
+		$this->resultFourthsEndGuest = $resultFourthsEndGuest;
+	}
+
+	/**
+	 * @return int
+	 */
+	public function getResultFourthsFirstHome() {
+		return $this->resultFourthsFirstHome;
+	}
+
+	/**
+	 * @param int $resultFourthsFirstHome
+	 */
+	public function setResultFourthsFirstHome($resultFourthsFirstHome) {
+		$this->resultFourthsFirstHome = $resultFourthsFirstHome;
+	}
+
+	/**
+	 * @return int
+	 */
+	public function getResultFourthsFirstGuest() {
+		return $this->resultFourthsFirstGuest;
+	}
+
+	/**
+	 * @param int $resultFourthsFirstGuest
+	 */
+	public function setResultFourthsFirstGuest($resultFourthsFirstGuest) {
+		$this->resultFourthsFirstGuest = $resultFourthsFirstGuest;
+	}
+
+	/**
+	 * @return int
+	 */
+	public function getResultFourthsSecondHome() {
+		return $this->resultFourthsSecondHome;
+	}
+
+	/**
+	 * @param int $resultFourthsSecondHome
+	 */
+	public function setResultFourthsSecondHome($resultFourthsSecondHome) {
+		$this->resultFourthsSecondHome = $resultFourthsSecondHome;
+	}
+
+	/**
+	 * @return int
+	 */
+	public function getResultFourthsSecondGuest() {
+		return $this->resultFourthsSecondGuest;
+	}
+
+	/**
+	 * @param int $resultFourthsSecondGuest
+	 */
+	public function setResultFourthsSecondGuest($resultFourthsSecondGuest) {
+		$this->resultFourthsSecondGuest = $resultFourthsSecondGuest;
+	}
+
+	/**
+	 * @return int
+	 */
+	public function getResultFourthsThirdHome() {
+		return $this->resultFourthsThirdHome;
+	}
+
+	/**
+	 * @param int $resultFourthsThirdHome
+	 */
+	public function setResultFourthsThirdHome($resultFourthsThirdHome) {
+		$this->resultFourthsThirdHome = $resultFourthsThirdHome;
+	}
+
+	/**
+	 * @return int
+	 */
+	public function getResultFourthsThirdGuest() {
+		return $this->resultFourthsThirdGuest;
+	}
+
+	/**
+	 * @param int $resultFourthsThirdGuest
+	 */
+	public function setResultFourthsThirdGuest($resultFourthsThirdGuest) {
+		$this->resultFourthsThirdGuest = $resultFourthsThirdGuest;
+	}
+
+	/**
+	 * @return int
+	 */
+	public function getResultFourthsFourthHome() {
+		return $this->resultFourthsFourthHome;
+	}
+
+	/**
+	 * @param int $resultFourthsFourthHome
+	 */
+	public function setResultFourthsFourthHome($resultFourthsFourthHome) {
+		$this->resultFourthsFourthHome = $resultFourthsFourthHome;
+	}
+
+	/**
+	 * @return int
+	 */
+	public function getResultFourthsFourthGuest() {
+		return $this->resultFourthsFourthGuest;
+	}
+
+	/**
+	 * @param int $resultFourthsFourthGuest
+	 */
+	public function setResultFourthsFourthGuest($resultFourthsFourthGuest) {
+		$this->resultFourthsFourthGuest = $resultFourthsFourthGuest;
 	}
 
     /**
