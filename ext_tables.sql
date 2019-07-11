@@ -592,6 +592,8 @@ CREATE TABLE tx_clubms_domain_model_game (
     time int(11) unsigned DEFAULT NULL,
     venue int(11) DEFAULT NULL,
     spectators int(11) DEFAULT NULL,
+    period_count int(11) DEFAULT NULL,
+    period_duration int(11) DEFAULT NULL,
     game_periods int(11) DEFAULT NULL,
     result_type int(11) DEFAULT '2' NOT NULL,
     result_halfs_end_home int(11) DEFAULT NULL,
