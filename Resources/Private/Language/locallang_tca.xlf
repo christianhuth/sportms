@@ -616,6 +616,9 @@
 			<trans-unit id="tx_clubms_domain_model_gameperiod.duration">
 				<source>Dauer</source>
 			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_gameperiod.palette_game_period">
+				<source>Spielabschnitt</source>
+			</trans-unit>
 
 
 			<!-- Domain Model GameReferee -->
