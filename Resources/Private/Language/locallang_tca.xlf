@@ -643,10 +643,10 @@
             <trans-unit id="tx_clubms_domain_model_gameresultset.number">
                 <source>Zähler</source>
             </trans-unit>
-            <trans-unit id="tx_clubms_domain_model_gameresultset.resultHome">
+            <trans-unit id="tx_clubms_domain_model_gameresultset.result_home">
                 <source>Heimergebnis</source>
             </trans-unit>
-            <trans-unit id="tx_clubms_domain_model_gameresultset.resultGuest">
+            <trans-unit id="tx_clubms_domain_model_gameresultset.result_guest">
                 <source>Gastergebnis</source>
             </trans-unit>
 
