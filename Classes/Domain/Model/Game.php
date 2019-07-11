@@ -100,6 +100,36 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	 */
     protected $gamePeriods;
 
+	/**
+	 * @var int
+	 */
+	protected $resultEndRegularHome;
+
+	/**
+	 * @var int
+	 */
+	protected $resultEndRegularGuest;
+
+	/**
+	 * @var int
+	 */
+	protected $resultEndOvertimeHome;
+
+	/**
+	 * @var int
+	 */
+	protected $resultEndOvertimeGuest;
+
+	/**
+	 * @var int
+	 */
+	protected $resultEndPenaltyHome;
+
+	/**
+	 * @var int
+	 */
+	protected $resultEndPenaltyGuest;
+
     /**
      * @var int
      */
@@ -479,6 +509,90 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	 */
 	public function setGamePeriods($gamePeriods) {
 		$this->gamePeriods = $gamePeriods;
+	}
+
+	/**
+	 * @return int
+	 */
+	public function getResultEndRegularHome() {
+		return $this->resultEndRegularHome;
+	}
+
+	/**
+	 * @param int $resultEndRegularHome
+	 */
+	public function setResultEndRegularHome($resultEndRegularHome) {
+		$this->resultEndRegularHome = $resultEndRegularHome;
+	}
+
+	/**
+	 * @return int
+	 */
+	public function getResultEndRegularGuest() {
+		return $this->resultEndRegularGuest;
+	}
+
+	/**
+	 * @param int $resultEndRegularGuest
+	 */
+	public function setResultEndRegularGuest($resultEndRegularGuest) {
+		$this->resultEndRegularGuest = $resultEndRegularGuest;
+	}
+
+	/**
+	 * @return int
+	 */
+	public function getResultEndOvertimeHome() {
+		return $this->resultEndOvertimeHome;
+	}
+
+	/**
+	 * @param int $resultEndOvertimeHome
+	 */
+	public function setResultEndOvertimeHome($resultEndOvertimeHome) {
+		$this->resultEndOvertimeHome = $resultEndOvertimeHome;
+	}
+
+	/**
+	 * @return int
+	 */
+	public function getResultEndOvertimeGuest() {
+		return $this->resultEndOvertimeGuest;
+	}
+
+	/**
+	 * @param int $resultEndOvertimeGuest
+	 */
+	public function setResultEndOvertimeGuest($resultEndOvertimeGuest) {
+		$this->resultEndOvertimeGuest = $resultEndOvertimeGuest;
+	}
+
+	/**
+	 * @return int
+	 */
+	public function getResultEndPenaltyHome() {
+		return $this->resultEndPenaltyHome;
+	}
+
+	/**
+	 * @param int $resultEndPenaltyHome
+	 */
+	public function setResultEndPenaltyHome($resultEndPenaltyHome) {
+		$this->resultEndPenaltyHome = $resultEndPenaltyHome;
+	}
+
+	/**
+	 * @return int
+	 */
+	public function getResultEndPenaltyGuest() {
+		return $this->resultEndPenaltyGuest;
+	}
+
+	/**
+	 * @param int $resultEndPenaltyGuest
+	 */
+	public function setResultEndPenaltyGuest($resultEndPenaltyGuest) {
+		$this->resultEndPenaltyGuest = $resultEndPenaltyGuest;
 	}
 
     /**
