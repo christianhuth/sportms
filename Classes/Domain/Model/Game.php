@@ -199,6 +199,12 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	 */
 	protected $resultFourthsFourthGuest;
 
+	/**
+	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\GameResultSet>
+	 * @cascade remove
+	 */
+	protected $resultSets;
+
     /**
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\GameLineup>
      * @cascade remove
@@ -252,6 +258,7 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * @return void
      */
     protected function initStorageObjects(){
+	    $this->resultSets = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
         $this->gameLineupHomes = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
         $this->gameLineupGuests = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
         $this->gameReferees = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
@@ -746,6 +753,20 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	 */
 	public function setResultFourthsFourthGuest($resultFourthsFourthGuest) {
 		$this->resultFourthsFourthGuest = $resultFourthsFourthGuest;
+	}
+
+	/**
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+	 */
+	public function getResultSets() {
+		return $this->resultSets;
+	}
+
+	/**
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $resultSets
+	 */
+	public function setResultSets($resultSets) {
+		$this->resultSets = $resultSets;
 	}
 
     /**
