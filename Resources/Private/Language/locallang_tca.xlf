@@ -451,6 +451,9 @@
 			<trans-unit id="tx_clubms_domain_model_game.result_end_regular_guest">
 				<source>Gastergebnis (reguläre Spielzeit)</source>
 			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_game.result_end_additional">
+				<source>Spiel nicht beendet nach regulärer Spielzeit?</source>
+			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_game.result_end_overtime_home">
 				<source>Heimergebnis (Verlängerung)</source>
 			</trans-unit>

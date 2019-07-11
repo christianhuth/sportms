@@ -319,7 +319,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
 				'type' => 'check',
 			),
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.detail_link',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.result_end_additional',
 			'onChange' => 'reload',
 		),
 		'result_end_overtime_home' => array(

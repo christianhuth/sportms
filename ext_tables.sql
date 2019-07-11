@@ -597,6 +597,7 @@ CREATE TABLE tx_clubms_domain_model_game (
     game_periods int(11) DEFAULT NULL,
     result_end_regular_home int(11) DEFAULT NULL,
     result_end_regular_guest int(11) DEFAULT NULL,
+    result_end_additional tinyint(4) unsigned DEFAULT '1' NOT NULL,
     result_end_overtime_home int(11) DEFAULT NULL,
     result_end_overtime_guest int(11) DEFAULT NULL,
     result_end_penalty_home int(11) DEFAULT NULL,
