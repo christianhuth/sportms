@@ -74,6 +74,12 @@
             $parameters['title'] = $newLabel;
         }
 
+		public function gamePeriodLabel(&$parameters, $parentObject) {
+			$record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
+			$newLabel = $record['label'] . " (" . $record['duration'] . " Minuten)";
+			$parameters['title'] = $newLabel;
+		}
+
         public function gameRefereeLabel(&$parameters, $parentObject) {
             $record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
             $refereeJob = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_refereejob", $record['referee_job']);
