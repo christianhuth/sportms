@@ -490,6 +490,36 @@
 			<trans-unit id="tx_clubms_domain_model_game.result_thirds_third_guest">
 				<source>Gastergebnis (3.Drittel)</source>
 			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_game.result_fourths_end_home">
+				<source>Heimergebnis (Ende)</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_game.result_fourths_end_guest">
+				<source>Gastergebnis (Ende)</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_game.result_fourths_first_home">
+				<source>Heimergebnis (1.Viertel)</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_game.result_fourths_first_guest">
+				<source>Gastergebnis (1.Viertel)</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_game.result_fourths_second_home">
+				<source>Heimergebnis (2.Viertel)</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_game.result_fourths_second_guest">
+				<source>Gastergebnis (2.Viertel)</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_game.result_fourths_third_home">
+				<source>Heimergebnis (3.Viertel)</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_game.result_fourths_third_guest">
+				<source>Gastergebnis (3.Viertel)</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_game.result_fourths_fourth_home">
+				<source>Heimergebnis (4.Viertel)</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_game.result_fourths_fourth_guest">
+				<source>Gastergebnis (4.Viertel)</source>
+			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_game.team_season_home">
 				<source>Heimmannschaft</source>
 			</trans-unit>
@@ -522,6 +552,9 @@
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_game.palette_result_thirds">
 				<source>Ergebnis nach Dritteln</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_game.palette_result_fourths">
+				<source>Ergebnis nach Vierteln</source>
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_game.tab_details">
 				<source>Details</source>

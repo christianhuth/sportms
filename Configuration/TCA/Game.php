@@ -32,6 +32,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
 		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_result, result_type,
 		                                --palette--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.palette_result_halfs;result_halfs,
 		                                --palette--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.palette_result_thirds;result_thirds,
+		                                --palette--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.palette_result_fourths;result_fourths,
 		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_home, team_season_home, game_lineup_homes, trainer_home,
 		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_guest, team_season_guest, game_lineup_guests, trainer_guest,
 		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_referees, game_referees,
@@ -43,7 +44,8 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
         'date_time' => array('showitem' => 'date, time'),
         'venue_spectators' => array('showitem' => 'venue, spectators'),
         'result_halfs' => array('showitem' => 'result_halfs_end_home, result_halfs_end_guest, result_halfs_half_home, result_halfs_half_guest'),
-        'result_thirds' => array('showitem' => 'result_thirds_end_home, result_thirds_end_guest, result_thirds_first_home, result_thirds_first_guest, result_thirds_second_home, result_thirds_second_guest, result_thirds_third_home, result_thirds_third_guest'),
+		'result_thirds' => array('showitem' => 'result_thirds_end_home, result_thirds_end_guest, result_thirds_first_home, result_thirds_first_guest, result_thirds_second_home, result_thirds_second_guest, result_thirds_third_home, result_thirds_third_guest'),
+		'result_fourths' => array('showitem' => 'result_fourths_end_home, result_fourths_end_guest, result_fourths_first_home, result_fourths_first_guest, result_fourths_second_home, result_fourths_second_guest, result_fourths_third_home, result_fourths_third_guest, result_fourths_fourth_home, result_fourths_fourth_guest'),
 	),
 	'columns' => array(
 
@@ -408,21 +410,171 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
                 'type' => 'input',
             ),
         ),
-        'result_thirds_third_guest' => array(
-            'displayCond' => 'FIELD:result_type:=:3',
-            'exclude' => 1,
-            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.result_thirds_third_guest',
-            'config' => array(
-	            'default' => null,
-	            'eval' => 'null',
-                'range' => array(
-                    'lower' => '0',
-                    'upper' => '1000',
-                ),
-                'size' => 10,
-                'type' => 'input',
-            ),
-        ),
+		'result_thirds_third_guest' => array(
+			'displayCond' => 'FIELD:result_type:=:3',
+			'exclude' => 1,
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.result_thirds_third_guest',
+			'config' => array(
+				'default' => null,
+				'eval' => 'null',
+				'range' => array(
+					'lower' => '0',
+					'upper' => '1000',
+				),
+				'size' => 10,
+				'type' => 'input',
+			),
+		),
+		'result_fourths_end_home' => array(
+			'displayCond' => 'FIELD:result_type:=:4',
+			'exclude' => 1,
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.result_fourths_end_home',
+			'config' => array(
+				'default' => null,
+				'eval' => 'null',
+				'range' => array(
+					'lower' => '0',
+					'upper' => '1000',
+				),
+				'size' => 10,
+				'type' => 'input',
+			),
+		),
+		'result_fourths_end_guest' => array(
+			'displayCond' => 'FIELD:result_type:=:4',
+			'exclude' => 1,
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.result_fourths_end_guest',
+			'config' => array(
+				'default' => null,
+				'eval' => 'null',
+				'range' => array(
+					'lower' => '0',
+					'upper' => '1000',
+				),
+				'size' => 10,
+				'type' => 'input',
+			),
+		),
+		'result_fourths_first_home' => array(
+			'displayCond' => 'FIELD:result_type:=:4',
+			'exclude' => 1,
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.result_fourths_first_home',
+			'config' => array(
+				'default' => null,
+				'eval' => 'null',
+				'range' => array(
+					'lower' => '0',
+					'upper' => '1000',
+				),
+				'size' => 10,
+				'type' => 'input',
+			),
+		),
+		'result_fourths_first_guest' => array(
+			'displayCond' => 'FIELD:result_type:=:4',
+			'exclude' => 1,
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.result_fourths_first_guest',
+			'config' => array(
+				'default' => null,
+				'eval' => 'null',
+				'range' => array(
+					'lower' => '0',
+					'upper' => '1000',
+				),
+				'size' => 10,
+				'type' => 'input',
+			),
+		),
+		'result_fourths_second_home' => array(
+			'displayCond' => 'FIELD:result_type:=:4',
+			'exclude' => 1,
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.result_fourths_second_home',
+			'config' => array(
+				'default' => null,
+				'eval' => 'null',
+				'range' => array(
+					'lower' => '0',
+					'upper' => '1000',
+				),
+				'size' => 10,
+				'type' => 'input',
+			),
+		),
+		'result_fourths_second_guest' => array(
+			'displayCond' => 'FIELD:result_type:=:4',
+			'exclude' => 1,
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.result_fourths_second_guest',
+			'config' => array(
+				'default' => null,
+				'eval' => 'null',
+				'range' => array(
+					'lower' => '0',
+					'upper' => '1000',
+				),
+				'size' => 10,
+				'type' => 'input',
+			),
+		),
+		'result_fourths_third_home' => array(
+			'displayCond' => 'FIELD:result_type:=:4',
+			'exclude' => 1,
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.result_fourths_third_home',
+			'config' => array(
+				'default' => null,
+				'eval' => 'null',
+				'range' => array(
+					'lower' => '0',
+					'upper' => '1000',
+				),
+				'size' => 10,
+				'type' => 'input',
+			),
+		),
+		'result_fourths_third_guest' => array(
+			'displayCond' => 'FIELD:result_type:=:4',
+			'exclude' => 1,
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.result_fourths_third_guest',
+			'config' => array(
+				'default' => null,
+				'eval' => 'null',
+				'range' => array(
+					'lower' => '0',
+					'upper' => '1000',
+				),
+				'size' => 10,
+				'type' => 'input',
+			),
+		),
+		'result_fourths_fourth_home' => array(
+			'displayCond' => 'FIELD:result_type:=:4',
+			'exclude' => 1,
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.result_fourths_fourth_home',
+			'config' => array(
+				'default' => null,
+				'eval' => 'null',
+				'range' => array(
+					'lower' => '0',
+					'upper' => '1000',
+				),
+				'size' => 10,
+				'type' => 'input',
+			),
+		),
+		'result_fourths_fourth_guest' => array(
+			'displayCond' => 'FIELD:result_type:=:4',
+			'exclude' => 1,
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.result_fourths_fourth_guest',
+			'config' => array(
+				'default' => null,
+				'eval' => 'null',
+				'range' => array(
+					'lower' => '0',
+					'upper' => '1000',
+				),
+				'size' => 10,
+				'type' => 'input',
+			),
+		),
 
         'team_season_home' => array(
             'displayCond' => 'FIELD:competition_season:>:0',
