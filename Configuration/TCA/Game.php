@@ -240,7 +240,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
                     array('LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.result_type_halfs', 2),
                     array('LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.result_type_thirds', 3),
                     array('LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.result_type_quarters', 4),
-                    array('LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.result_type_sets', 10),
+                    array('LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.result_type_sets', -10),
                 ),
                 'renderType' => 'selectSingle',
                 'type' => 'select',
@@ -578,6 +578,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
 			),
 		),
 		'result_sets' => array(
+			'displayCond' => 'FIELD:result_type:=:-10',
 			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.result_sets',
 			'config' => array(
 				'appearance' => array(
