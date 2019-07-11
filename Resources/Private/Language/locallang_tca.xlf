@@ -443,7 +443,7 @@
 				<source>Anzahl der Spielabschnitte</source>
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_game.period_duration">
-				<source>Dauer der Spielabschnitte</source>
+				<source>Dauer der Spielabschnitte (in Minuten)</source>
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_game.result_type">
 				<source>Ergebnisart</source>
@@ -555,6 +555,9 @@
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_game.detail_link">
 				<source>Link auf Einzelansicht möglich?</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_game.palette_periods">
+				<source>Spielabschnitte</source>
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_game.palette_result_halfs">
 				<source>Ergebnis nach Halbzeiten</source>
