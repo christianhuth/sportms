@@ -237,7 +237,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
 				'default' => null,
 				'eval' => 'null',
 				'range' => array(
-					'lower' => '0',
+					'lower' => '1',
 					'upper' => '1000',
 				),
 				'size' => 10,
@@ -251,7 +251,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
 				'default' => null,
 				'eval' => 'null',
 				'range' => array(
-					'lower' => '0',
+					'lower' => '1',
 					'upper' => '1000',
 				),
 				'size' => 10,
