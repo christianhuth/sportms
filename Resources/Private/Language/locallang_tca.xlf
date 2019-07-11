@@ -439,6 +439,9 @@
 			<trans-unit id="tx_clubms_domain_model_game.spectators">
 				<source>Zuschauerzahl</source>
 			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_game.game_periods">
+				<source>Spielabschnitte</source>
+			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_game.result_type">
 				<source>Ergebnisart</source>
 			</trans-unit>
@@ -600,6 +603,18 @@
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_gamelineup.section_position">
 				<source>Detailpositionen</source>
+			</trans-unit>
+
+
+			<!-- Domain Model GamePeriod -->
+			<trans-unit id="tx_clubms_domain_model_gameperiod">
+				<source>Spielabschnitt</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_gameperiod.label">
+				<source>Bezeichnung</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_gameperiod.duration">
+				<source>Dauer</source>
 			</trans-unit>
 
 
