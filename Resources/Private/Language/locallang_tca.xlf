@@ -577,6 +577,12 @@
 			<trans-unit id="tx_clubms_domain_model_game.palette_periods">
 				<source>Spielabschnitte</source>
 			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_game.palette_result_end_regular">
+				<source>Endergebnis nach regulärer Spielzeit</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_game.palette_result_end_additional">
+				<source>Endergebnis nach Verlängerung/Elfmeterschießen</source>
+			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_game.palette_result_halfs">
 				<source>Ergebnis nach Halbzeiten</source>
 			</trans-unit>
