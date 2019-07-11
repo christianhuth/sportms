@@ -85,6 +85,16 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $spectators;
 
 	/**
+	 * @var int
+	 */
+    protected $periodCount;
+
+	/**
+	 * @var int
+	 */
+    protected $periodDuration;
+
+	/**
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\GamePeriod>
 	 * @cascade remove
 	 */
@@ -428,6 +438,34 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         $this->spectators = $spectators;
     }
+
+	/**
+	 * @return int
+	 */
+	public function getPeriodCount() {
+		return $this->periodCount;
+	}
+
+	/**
+	 * @param int $periodCount
+	 */
+	public function setPeriodCount($periodCount) {
+		$this->periodCount = $periodCount;
+	}
+
+	/**
+	 * @return int
+	 */
+	public function getPeriodDuration() {
+		return $this->periodDuration;
+	}
+
+	/**
+	 * @param int $periodDuration
+	 */
+	public function setPeriodDuration($periodDuration) {
+		$this->periodDuration = $periodDuration;
+	}
 
 	/**
 	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
