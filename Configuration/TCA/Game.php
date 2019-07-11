@@ -33,6 +33,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
 		                                --palette--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.palette_result_halfs;result_halfs,
 		                                --palette--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.palette_result_thirds;result_thirds,
 		                                --palette--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.palette_result_fourths;result_fourths,
+		                                --palette--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.palette_result_sets;result_sets,
 		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_home, team_season_home, game_lineup_homes, trainer_home,
 		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_guest, team_season_guest, game_lineup_guests, trainer_guest,
 		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_referees, game_referees,
@@ -46,6 +47,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
         'result_halfs' => array('showitem' => 'result_halfs_end_home, result_halfs_end_guest, result_halfs_half_home, result_halfs_half_guest'),
 		'result_thirds' => array('showitem' => 'result_thirds_end_home, result_thirds_end_guest, result_thirds_first_home, result_thirds_first_guest, result_thirds_second_home, result_thirds_second_guest, result_thirds_third_home, result_thirds_third_guest'),
 		'result_fourths' => array('showitem' => 'result_fourths_end_home, result_fourths_end_guest, result_fourths_first_home, result_fourths_first_guest, result_fourths_second_home, result_fourths_second_guest, result_fourths_third_home, result_fourths_third_guest, result_fourths_fourth_home, result_fourths_fourth_guest'),
+		'result_sets' => array('showitem' => 'result_sets'),
 	),
 	'columns' => array(
 
@@ -573,6 +575,27 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
 				),
 				'size' => 10,
 				'type' => 'input',
+			),
+		),
+		'result_sets' => array(
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.result_sets',
+			'config' => array(
+				'appearance' => array(
+					'enabledControls' => [
+						'info' => false,
+						'new' => true,
+						'sort' => false,
+						'hide' => true,
+						'dragdrop' => true,
+						'delete' => true,
+						'localize' => true,
+					],
+					'levelLinksPosition' => 'bottom',
+					'useSortable' => 1,
+				),
+				'foreign_field' => 'game',
+				'foreign_table' => 'tx_clubms_domain_model_gameresultset',
+				'type' => 'inline',
 			),
 		),
 
