@@ -109,6 +109,46 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      */
     protected $resultHalfsHalfGuest;
 
+	/**
+	 * @var int
+	 */
+	protected $resultThirdsEndHome;
+
+	/**
+	 * @var int
+	 */
+	protected $resultThirdsEndGuest;
+
+	/**
+	 * @var int
+	 */
+	protected $resultThirdsFirstHome;
+
+	/**
+	 * @var int
+	 */
+	protected $resultThirdsFirstGuest;
+
+	/**
+	 * @var int
+	 */
+	protected $resultThirdsSecondHome;
+
+	/**
+	 * @var int
+	 */
+	protected $resultThirdsSecondGuest;
+
+	/**
+	 * @var int
+	 */
+	protected $resultThirdsThirdHome;
+
+	/**
+	 * @var int
+	 */
+	protected $resultThirdsThirdGuest;
+
     /**
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\GameLineup>
      * @cascade remove
@@ -405,6 +445,118 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         $this->resultHalfsHalfGuest = $resultHalfsHalfGuest;
     }
+
+	/**
+	 * @return int
+	 */
+	public function getResultThirdsEndHome() {
+		return $this->resultThirdsEndHome;
+	}
+
+	/**
+	 * @param int $resultThirdsEndHome
+	 */
+	public function setResultThirdsEndHome($resultThirdsEndHome) {
+		$this->resultThirdsEndHome = $resultThirdsEndHome;
+	}
+
+	/**
+	 * @return int
+	 */
+	public function getResultThirdsEndGuest() {
+		return $this->resultThirdsEndGuest;
+	}
+
+	/**
+	 * @param int $resultThirdsEndGuest
+	 */
+	public function setResultThirdsEndGuest($resultThirdsEndGuest) {
+		$this->resultThirdsEndGuest = $resultThirdsEndGuest;
+	}
+
+	/**
+	 * @return int
+	 */
+	public function getResultThirdsFirstHome() {
+		return $this->resultThirdsFirstHome;
+	}
+
+	/**
+	 * @param int $resultThirdsFirstHome
+	 */
+	public function setResultThirdsFirstHome($resultThirdsFirstHome) {
+		$this->resultThirdsFirstHome = $resultThirdsFirstHome;
+	}
+
+	/**
+	 * @return int
+	 */
+	public function getResultThirdsFirstGuest() {
+		return $this->resultThirdsFirstGuest;
+	}
+
+	/**
+	 * @param int $resultThirdsFirstGuest
+	 */
+	public function setResultThirdsFirstGuest($resultThirdsFirstGuest) {
+		$this->resultThirdsFirstGuest = $resultThirdsFirstGuest;
+	}
+
+	/**
+	 * @return int
+	 */
+	public function getResultThirdsSecondHome() {
+		return $this->resultThirdsSecondHome;
+	}
+
+	/**
+	 * @param int $resultThirdsSecondHome
+	 */
+	public function setResultThirdsSecondHome($resultThirdsSecondHome) {
+		$this->resultThirdsSecondHome = $resultThirdsSecondHome;
+	}
+
+	/**
+	 * @return int
+	 */
+	public function getResultThirdsSecondGuest() {
+		return $this->resultThirdsSecondGuest;
+	}
+
+	/**
+	 * @param int $resultThirdsSecondGuest
+	 */
+	public function setResultThirdsSecondGuest($resultThirdsSecondGuest) {
+		$this->resultThirdsSecondGuest = $resultThirdsSecondGuest;
+	}
+
+	/**
+	 * @return int
+	 */
+	public function getResultThirdsThirdHome() {
+		return $this->resultThirdsThirdHome;
+	}
+
+	/**
+	 * @param int $resultThirdsThirdHome
+	 */
+	public function setResultThirdsThirdHome($resultThirdsThirdHome) {
+		$this->resultThirdsThirdHome = $resultThirdsThirdHome;
+	}
+
+	/**
+	 * @return int
+	 */
+	public function getResultThirdsThirdGuest() {
+		return $this->resultThirdsThirdGuest;
+	}
+
+	/**
+	 * @param int $resultThirdsThirdGuest
+	 */
+	public function setResultThirdsThirdGuest($resultThirdsThirdGuest) {
+		$this->resultThirdsThirdGuest = $resultThirdsThirdGuest;
+	}
 
     /**
      * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
