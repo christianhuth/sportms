@@ -82,6 +82,12 @@
             $parameters['title'] = $newLabel;
         }
 
+		public function gameResultSetLabel(&$parameters, $parentObject) {
+			$record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
+			$newLabel = $record['number'] . ".Satz: " . $record['result_home'] . " : " . $record['result_guest'];
+			$parameters['title'] = $newLabel;
+		}
+
         public function mailLabel(&$parameters, $parentObject) {
             $record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
             $newLabel = $record['mail'];
