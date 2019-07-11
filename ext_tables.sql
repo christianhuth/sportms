@@ -768,9 +768,9 @@ CREATE TABLE tx_clubms_domain_model_gamereport (
 );
 
 #
-# Table structure for table 'tx_clubms_domain_model_gamelineup'
+# Table structure for table 'tx_clubms_domain_model_gameresultset'
 #
-CREATE TABLE tx_clubms_domain_model_gamelineup (
+CREATE TABLE tx_clubms_domain_model_gameresultset (
 
     uid int(11) NOT NULL auto_increment,
     pid int(11) DEFAULT '0' NOT NULL,
