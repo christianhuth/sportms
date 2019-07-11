@@ -111,6 +111,11 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	protected $resultEndRegularGuest;
 
 	/**
+	 * @var boolean
+	 */
+	protected $resultEndAdditional;
+
+	/**
 	 * @var int
 	 */
 	protected $resultEndOvertimeHome;
@@ -537,6 +542,20 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	 */
 	public function setResultEndRegularGuest($resultEndRegularGuest) {
 		$this->resultEndRegularGuest = $resultEndRegularGuest;
+	}
+
+	/**
+	 * @return bool
+	 */
+	public function isResultEndAdditional() {
+		return $this->resultEndAdditional;
+	}
+
+	/**
+	 * @param bool $resultEndAdditional
+	 */
+	public function setResultEndAdditional($resultEndAdditional) {
+		$this->resultEndAdditional = $resultEndAdditional;
 	}
 
 	/**
