@@ -143,32 +143,22 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * @var int
      */
-    protected $resultHalfsEndHome;
+    protected $resultHalfsFirstHome;
 
     /**
      * @var int
      */
-    protected $resultHalfsEndGuest;
+    protected $resultHalfsFirstGuest;
 
     /**
      * @var int
      */
-    protected $resultHalfsHalfHome;
+    protected $resultHalfsSecondHome;
 
     /**
      * @var int
      */
-    protected $resultHalfsHalfGuest;
-
-	/**
-	 * @var int
-	 */
-	protected $resultThirdsEndHome;
-
-	/**
-	 * @var int
-	 */
-	protected $resultThirdsEndGuest;
+    protected $resultHalfsSecondGuest;
 
 	/**
 	 * @var int
@@ -199,16 +189,6 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	 * @var int
 	 */
 	protected $resultThirdsThirdGuest;
-
-	/**
-	 * @var int
-	 */
-	protected $resultFourthsEndHome;
-
-	/**
-	 * @var int
-	 */
-	protected $resultFourthsEndGuest;
 
 	/**
 	 * @var int
@@ -630,96 +610,60 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
         $this->resultType = $resultType;
     }
 
-    /**
-     * @return int
-     */
-    public function getResultHalfsEndHome()
-    {
-        return $this->resultHalfsEndHome;
-    }
-
-    /**
-     * @param int $resultHalfsEndHome
-     */
-    public function setResultHalfsEndHome($resultHalfsEndHome)
-    {
-        $this->resultHalfsEndHome = $resultHalfsEndHome;
-    }
-
-    /**
-     * @return int
-     */
-    public function getResultHalfsEndGuest()
-    {
-        return $this->resultHalfsEndGuest;
-    }
-
-    /**
-     * @param int $resultHalfsEndGuest
-     */
-    public function setResultHalfsEndGuest($resultHalfsEndGuest)
-    {
-        $this->resultHalfsEndGuest = $resultHalfsEndGuest;
-    }
-
-    /**
-     * @return int
-     */
-    public function getResultHalfsHalfHome()
-    {
-        return $this->resultHalfsHalfHome;
-    }
-
-    /**
-     * @param int $resultHalfsHalfHome
-     */
-    public function setResultHalfsHalfHome($resultHalfsHalfHome)
-    {
-        $this->resultHalfsHalfHome = $resultHalfsHalfHome;
-    }
-
-    /**
-     * @return int
-     */
-    public function getResultHalfsHalfGuest()
-    {
-        return $this->resultHalfsHalfGuest;
-    }
-
-    /**
-     * @param int $resultHalfsHalfGuest
-     */
-    public function setResultHalfsHalfGuest($resultHalfsHalfGuest)
-    {
-        $this->resultHalfsHalfGuest = $resultHalfsHalfGuest;
-    }
-
 	/**
 	 * @return int
 	 */
-	public function getResultThirdsEndHome() {
-		return $this->resultThirdsEndHome;
+	public function getResultHalfsFirstHome() {
+		return $this->resultHalfsFirstHome;
 	}
 
 	/**
-	 * @param int $resultThirdsEndHome
+	 * @param int $resultHalfsFirstHome
 	 */
-	public function setResultThirdsEndHome($resultThirdsEndHome) {
-		$this->resultThirdsEndHome = $resultThirdsEndHome;
+	public function setResultHalfsFirstHome($resultHalfsFirstHome) {
+		$this->resultHalfsFirstHome = $resultHalfsFirstHome;
 	}
 
 	/**
 	 * @return int
 	 */
-	public function getResultThirdsEndGuest() {
-		return $this->resultThirdsEndGuest;
+	public function getResultHalfsFirstGuest() {
+		return $this->resultHalfsFirstGuest;
 	}
 
 	/**
-	 * @param int $resultThirdsEndGuest
+	 * @param int $resultHalfsFirstGuest
 	 */
-	public function setResultThirdsEndGuest($resultThirdsEndGuest) {
-		$this->resultThirdsEndGuest = $resultThirdsEndGuest;
+	public function setResultHalfsFirstGuest($resultHalfsFirstGuest) {
+		$this->resultHalfsFirstGuest = $resultHalfsFirstGuest;
+	}
+
+	/**
+	 * @return int
+	 */
+	public function getResultHalfsSecondHome() {
+		return $this->resultHalfsSecondHome;
+	}
+
+	/**
+	 * @param int $resultHalfsSecondHome
+	 */
+	public function setResultHalfsSecondHome($resultHalfsSecondHome) {
+		$this->resultHalfsSecondHome = $resultHalfsSecondHome;
+	}
+
+	/**
+	 * @return int
+	 */
+	public function getResultHalfsSecondGuest() {
+		return $this->resultHalfsSecondGuest;
+	}
+
+	/**
+	 * @param int $resultHalfsSecondGuest
+	 */
+	public function setResultHalfsSecondGuest($resultHalfsSecondGuest) {
+		$this->resultHalfsSecondGuest = $resultHalfsSecondGuest;
 	}
 
 	/**
@@ -804,34 +748,6 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	 */
 	public function setResultThirdsThirdGuest($resultThirdsThirdGuest) {
 		$this->resultThirdsThirdGuest = $resultThirdsThirdGuest;
-	}
-
-	/**
-	 * @return int
-	 */
-	public function getResultFourthsEndHome() {
-		return $this->resultFourthsEndHome;
-	}
-
-	/**
-	 * @param int $resultFourthsEndHome
-	 */
-	public function setResultFourthsEndHome($resultFourthsEndHome) {
-		$this->resultFourthsEndHome = $resultFourthsEndHome;
-	}
-
-	/**
-	 * @return int
-	 */
-	public function getResultFourthsEndGuest() {
-		return $this->resultFourthsEndGuest;
-	}
-
-	/**
-	 * @param int $resultFourthsEndGuest
-	 */
-	public function setResultFourthsEndGuest($resultFourthsEndGuest) {
-		$this->resultFourthsEndGuest = $resultFourthsEndGuest;
 	}
 
 	/**
