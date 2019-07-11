@@ -520,6 +520,9 @@
 			<trans-unit id="tx_clubms_domain_model_game.result_fourths_fourth_guest">
 				<source>Gastergebnis (4.Viertel)</source>
 			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_game.result_sets">
+				<source>Spielsatz</source>
+			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_game.team_season_home">
 				<source>Heimmannschaft</source>
 			</trans-unit>
