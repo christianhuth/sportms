@@ -22,8 +22,11 @@
 			array_push($config['items'], ['Fussball','1']);
 
 			$query = 'SELECT uid, person FROM tx_clubms_domain_model_teamseasonsquadmember';
+			array_push($config['items'], ['query','1']);
 			$result = mysqli_query($query);
+			array_push($config['items'], ['result','1']);
 			if(mysqli_num_rows($result)) {
+				array_push($config['items'], ['mysqli_num_rows','1']);
 				while($row = mysqli_fetch_assoc($result)) {
 					array_push($config['items'], [$row['person'], $row['uid']]);
 				}
