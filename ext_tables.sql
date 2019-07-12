@@ -710,6 +710,7 @@ CREATE TABLE tx_clubms_domain_model_gamelineup (
 
     game int(11) DEFAULT '0' NOT NULL,
     team varchar(255) DEFAULT '' NOT NULL,
+    type varchar(255) DEFAULT '' NOT NULL,
 
     jersey_number varchar(255) DEFAULT NULL,
     team_season_squad_member int(11) DEFAULT '0' NOT NULL,

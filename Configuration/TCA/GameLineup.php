@@ -107,6 +107,11 @@ $GLOBALS['TCA']['tx_clubms_domain_model_gamelineup'] = array(
 				'type' => 'passthrough',
 			),
 		),
+		'type' => array(
+			'config' => array(
+				'type' => 'passthrough',
+			),
+		),
 
 		'jersey_number' => array(
 			'exclude' => 1,
