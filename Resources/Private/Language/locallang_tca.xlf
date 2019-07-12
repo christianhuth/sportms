@@ -541,8 +541,11 @@
 			<trans-unit id="tx_clubms_domain_model_game.team_season_home">
 				<source>Heimmannschaft</source>
 			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_game.game_lineup_homes">
-				<source>Heimaufstellung</source>
+			<trans-unit id="tx_clubms_domain_model_game.game_lineup_home_starts">
+				<source>Startaufstellung</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_game.game_lineup_home_substitutes">
+				<source>Ersatzbank</source>
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_game.trainer_home">
 				<source>Heimtrainer</source>
@@ -550,8 +553,11 @@
 			<trans-unit id="tx_clubms_domain_model_game.team_season_guest">
 				<source>Gastmannschaft</source>
 			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_game.game_lineup_guests">
-				<source>Gastaufstellung</source>
+			<trans-unit id="tx_clubms_domain_model_game.game_lineup_guest_starts">
+				<source>Startaufstellung</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_game.game_lineup_guest_substitutes">
+				<source>Ersatzbank</source>
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_game.trainer_guest">
 				<source>Gasttrainer</source>

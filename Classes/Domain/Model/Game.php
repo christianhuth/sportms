@@ -236,11 +236,17 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	 */
 	protected $resultSets;
 
-    /**
-     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\GameLineup>
-     * @cascade remove
-     */
-    protected $gameLineupHomes;
+	/**
+	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\GameLineup>
+	 * @cascade remove
+	 */
+	protected $gameLineupHomeStarts;
+
+	/**
+	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\GameLineup>
+	 * @cascade remove
+	 */
+	protected $gameLineupHomeSubstitutes;
 
     /**
      * @var \Balumedien\Clubms\Domain\Model\TeamSeasonOfficial
@@ -251,7 +257,13 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\GameLineup>
      * @cascade remove
      */
-    protected $gameLineupGuests;
+    protected $gameLineupGuestStarts;
+
+	/**
+	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\GameLineup>
+	 * @cascade remove
+	 */
+	protected $gameLineupGuestSubstitutes;
 
     /**
      * @var \Balumedien\Clubms\Domain\Model\TeamSeasonOfficial
@@ -296,8 +308,10 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      */
     protected function initStorageObjects(){
 	    $this->resultSets = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-        $this->gameLineupHomes = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-        $this->gameLineupGuests = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+	    $this->gameLineupHomeStarts = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+	    $this->gameLineupHomeSubstitutes = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+	    $this->gameLineupGuestStarts = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+	    $this->gameLineupGuestSubstitutes = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 	    $this->gameChanges = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
         $this->gameReferees = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
         $this->gameReports = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
@@ -883,21 +897,33 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 		$this->resultSets = $resultSets;
 	}
 
-    /**
-     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
-     */
-    public function getGameLineupHomes()
-    {
-        return $this->gameLineupHomes;
-    }
+	/**
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+	 */
+	public function getGameLineupHomeStarts() {
+		return $this->gameLineupHomeStarts;
+	}
 
-    /**
-     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $gameLineupHomes
-     */
-    public function setGameLineupHomes($gameLineupHomes)
-    {
-        $this->gameLineupHomes = $gameLineupHomes;
-    }
+	/**
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $gameLineupHomeStarts
+	 */
+	public function setGameLineupHomeStarts($gameLineupHomeStarts) {
+		$this->gameLineupHomeStarts = $gameLineupHomeStarts;
+	}
+
+	/**
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+	 */
+	public function getGameLineupHomeSubstitutes() {
+		return $this->gameLineupHomeSubstitutes;
+	}
+
+	/**
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $gameLineupHomeSubstitutes
+	 */
+	public function setGameLineupHomeSubstitutes($gameLineupHomeSubstitutes) {
+		$this->gameLineupHomeSubstitutes = $gameLineupHomeSubstitutes;
+	}
 
     /**
      * @return TeamSeasonOfficial
@@ -915,21 +941,33 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
         $this->trainerHome = $trainerHome;
     }
 
-    /**
-     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
-     */
-    public function getGameLineupGuests()
-    {
-        return $this->gameLineupGuests;
-    }
+	/**
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+	 */
+	public function getGameLineupGuestStarts() {
+		return $this->gameLineupGuestStarts;
+	}
 
-    /**
-     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $gameLineupGuests
-     */
-    public function setGameLineupGuests($gameLineupGuests)
-    {
-        $this->gameLineupGuests = $gameLineupGuests;
-    }
+	/**
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $gameLineupGuestStarts
+	 */
+	public function setGameLineupGuestStarts($gameLineupGuestStarts) {
+		$this->gameLineupGuestStarts = $gameLineupGuestStarts;
+	}
+
+	/**
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+	 */
+	public function getGameLineupGuestSubstitutes() {
+		return $this->gameLineupGuestSubstitutes;
+	}
+
+	/**
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $gameLineupGuestSubstitutes
+	 */
+	public function setGameLineupGuestSubstitutes($gameLineupGuestSubstitutes) {
+		$this->gameLineupGuestSubstitutes = $gameLineupGuestSubstitutes;
+	}
 
     /**
      * @return TeamSeasonOfficial
