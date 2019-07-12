@@ -736,7 +736,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
 		            'columns' => array(
 			            'team_season_squad_member' => array(
 				            'config' => array(
-					            'foreign_table_where' => ' ###REC_FIELD_team_home###',
+					            'foreign_table_where' => ' ###REC_FIELD_team_season_home###',
 				            ),
 			            ),
 		            ),
@@ -810,7 +810,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
 		            'columns' => array(
 			            'team_season_squad_member' => array(
 				            'config' => array(
-					            'foreign_table_where' => ' ###REC_FIELD_team_guest###',
+					            'foreign_table_where' => ' ###REC_FIELD_team_season_guest###',
 				            ),
 			            ),
 		            ),
