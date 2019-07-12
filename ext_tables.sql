@@ -718,7 +718,7 @@ CREATE TABLE tx_clubms_domain_model_gamegoal (
     minute int(11) DEFAULT '0' NOT NULL,
     minute_additional int(11) DEFAULT '0' NOT NULL,
     scorer int(11) DEFAULT '0' NOT NULL,
-    assist int(11) DEFAULT '0' NOT NULL,
+    assist int(11) DEFAULT NULL,
     own_goal tinyint(4) DEFAULT '0' NOT NULL,
     goal_type int(11) DEFAULT NULL,
 
