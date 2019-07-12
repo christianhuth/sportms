@@ -176,8 +176,10 @@ $GLOBALS['TCA']['tx_clubms_domain_model_gamepunishment'] = array(
 				'renderType' => 'selectSingle',
 				'type' => 'select',
 			),
+			'onChange' => 'reload',
 		),
 		'duration' => array(
+			'displayCond' => 'FIELD:type:=:4',
 			'exclude' => 1,
 			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gamepunishment.duration',
 			'config' => array(

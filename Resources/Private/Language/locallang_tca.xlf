@@ -750,6 +750,75 @@
 			</trans-unit>
 
 
+			<!-- Domain Model GamePunishment -->
+			<trans-unit id="tx_clubms_domain_model_gamepunishment">
+				<source>Spielerstrafe</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_gamepunishment.game">
+				<source>Spiel</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_gamepunishment.period">
+				<source>Spielabschnitt</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_gamepunishment.minute">
+				<source>Spielminute</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_gamepunishment.minute_additional">
+				<source>Nachspielzeit</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_gamepunishment.punished_person">
+				<source>Bestrafte Person</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_gamepunishment.type">
+				<source>Art der Bestrafung</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_gamepunishment.type_yellow">
+				<source>Gelbe Karte</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_gamepunishment.type_yellowred">
+				<source>Gelbrote Karte</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_gamepunishment.type_red">
+				<source>Rote Karte</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_gamepunishment.type_time">
+				<source>Zeitstrafe</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_gamepunishment.duration">
+				<source>Dauer der (Zeit)Strafe</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_gamepunishment.reason">
+				<source>Grund der Bestrafung</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_gamepunishment.reason_foul">
+				<source>Foulspiel</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_gamepunishment.reason_beef">
+				<source>Meckern</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_gamepunishment.reason_insult">
+				<source>Beleidigung</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_gamepunishment.reason_violence">
+				<source>Tätlichkeit</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_gamepunishment.reason_hands">
+				<source>Handspiel</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_gamepunishment.reason_hoalding">
+				<source>Halten/Trikot ziehen</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_gamepunishment.reason_last_man">
+				<source>Notbremse</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_gamepunishment.reason_time_play">
+				<source>Zeitspiel</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_gamepunishment.reason_unsportsmanlike">
+				<source>Unsportlichkeit</source>
+			</trans-unit>
+
+
 			<!-- Domain Model GameReferee -->
 			<trans-unit id="tx_clubms_domain_model_gamereferee">
 				<source>Schiedsrichter</source>
