@@ -13,7 +13,7 @@
 			$databaseTable = "tx_clubms_domain_model_teamseasonsquadmember";
 			$queryBuilder = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Database\ConnectionPool::class)->getQueryBuilderForTable($databaseTable);
 			$data = $queryBuilder
-					->select('teamseasonsquadmember.uid', 'person.firstname', 'person.lastname')
+					->select('teamseasonsquadmember.uid', 'firstname', 'lastname')
 					->from($databaseTable, "teamseasonsquadmember")
 					->innerJoin(
 						$databaseTable,
