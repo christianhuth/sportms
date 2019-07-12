@@ -17,7 +17,7 @@
 			array_push($config['items'], ['Fussball','1']);
 
 			// Get data from repository
-			$myData = $teamSeasonSquadMemberRepository->findByTeamSeasonUid();
+			$myData = $teamSeasonSquadMemberRepository->findByTeamSeasonUid(1);
 
 			array_push($config['items'], ['myData: ' . sizeof($myData), sizeof($myData)]);
 
