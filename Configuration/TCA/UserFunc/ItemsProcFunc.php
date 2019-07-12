@@ -21,7 +21,7 @@
 
 			if($byUid) {
 				// push it into the config array
-				array_push($config['items'], [$byUid->getName(), $byUid->getUid()]);
+				array_push($config['items'], [$byUid->getPerson()->getLastname(), $byUid->getUid()]);
 			}
 
 			$byTeamSeasonUid = $teamSeasonSquadMemberRepository->findByTeamSeasonUid(1);
