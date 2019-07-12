@@ -11,15 +11,16 @@
 		public function team_season_squad_member_GameLineup(&$config) {
 
 			$databaseTable = "tx_clubms_domain_model_teamseasonsquadmember";
+			$joinTable = "tx_clubms_domain_model_person";
 			$queryBuilder = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Database\ConnectionPool::class)->getQueryBuilderForTable($databaseTable);
 			$queryBuilder
-				->select('teamseasonsquadmember.uid', 'firstname', 'lastname')
-				->from($databaseTable, "teamseasonsquadmember")
+				->select($databaseTable . '.uid', $joinTable . '.firstname', $joinTable . '.lastname')
+				->from($databaseTable)
 				->innerJoin(
 					$databaseTable,
-					"tx_clubms_domain_model_person",
-					"person",
-					$queryBuilder->expr()->eq('person.uid', $queryBuilder->quoteIdentifier($databaseTable . '.person'))
+					$joinTable,
+					$joinTable,
+					$queryBuilder->expr()->eq($joinTable . '.uid', $queryBuilder->quoteIdentifier($databaseTable . '.person'))
 				);
 
 			array_push($config['items'], [$queryBuilder->getSQL(), '0']);
