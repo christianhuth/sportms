@@ -5,6 +5,26 @@
 	class ItemsProcFunc {
 
 		/**
+		 * @var \Balumedien\Clubms\Domain\Repository\TeamSeasonSquadMemberRepository
+		 * @inject
+		 */
+		protected $teamSeasonSquadMemberRepository;
+
+		/**
+		 * @return \Balumedien\Clubms\Domain\Repository\TeamSeasonSquadMemberRepository
+		 */
+		public function getTeamSeasonSquadMemberRepository() {
+			return $this->teamSeasonSquadMemberRepository;
+		}
+
+		/**
+		 * @param \Balumedien\Clubms\Domain\Repository\TeamSeasonSquadMemberRepository $teamSeasonSquadMemberRepository
+		 */
+		public function setTeamSeasonSquadMemberRepository($teamSeasonSquadMemberRepository) {
+			$this->teamSeasonSquadMemberRepository = $teamSeasonSquadMemberRepository;
+		}
+
+		/**
 		 * @param array $config
 		 * @return void
 		 */
@@ -19,11 +39,10 @@
 
 			#var_dump("TEST2");
 
-
 			array_push($config['items'], ['Fussball','1']);
 
 			// Get data from repository
-			$myData = $teamSeasonSquadMemberRepository->findAll();
+			$myData = $this->getTeamSeasonSquadMemberRepository()->findAll();
 
 			array_push($config['items'], print_r($myData));
 			foreach ($myData as $data) {

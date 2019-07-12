@@ -44,11 +44,11 @@ class TeamController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 	 */
 	protected $teamRepository;
 
-    /**
-     * @var \Balumedien\Clubms\Domain\Repository\TeamSeasonRepository
-     * @inject
-     */
-    protected $teamSeasonRepository;
+	/**
+	 * @var \Balumedien\Clubms\Domain\Repository\TeamSeasonRepository
+	 * @inject
+	 */
+	protected $teamSeasonRepository;
 	
 	/**
 	 * @return void
