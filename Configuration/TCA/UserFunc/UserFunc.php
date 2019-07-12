@@ -101,6 +101,25 @@
 			$parameters['title'] = $newLabel;
 		}
 
+		public function gamePunishmentLabel(&$parameters, $parentObject) {
+			$record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
+			$teamSeasonSquadMemberPunished = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_teamseasonsquadmember", $record['punished_person']);
+			$person = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_person", $teamSeasonSquadMemberPunished['person']);
+			$newLabel = $person['lastname'] . ", " . $person['firstname'];
+			if($record['minute']) {
+				$newLabel .= " (" . $record['minute'] . ".)";
+			}
+			if($record['type']) {
+				switch ($record['type']) {
+					case 1: $newLabel .= ": " . "Gelbe Karte";
+					case 2: $newLabel .= ": " . "Gelbrote Karte";
+					case 3: $newLabel .= ": " . "Rote Karte";
+					case 4: $newLabel .= ": " . "Zeitstrafte";
+				}
+			}
+			$parameters['title'] = $newLabel;
+		}
+
         public function gameRefereeLabel(&$parameters, $parentObject) {
             $record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
             $refereeJob = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_refereejob", $record['referee_job']);
