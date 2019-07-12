@@ -134,9 +134,9 @@ $GLOBALS['TCA']['tx_clubms_domain_model_gamechange'] = array(
             'exclude' => 1,
             'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gamechange.person_in',
             'config' => array(
-                'eval' => 'required',
                 'foreign_table' => 'tx_clubms_domain_model_gamelineup',
-                'foreign_table_where' => '  ORDER BY tx_clubms_domain_model_gamelineup.jersey_number ASC',
+                'foreign_table_where' => '  AND tx_clubms_domain_model_gamelineup.game = ###REC_FIELD_game###
+                                            ORDER BY tx_clubms_domain_model_gamelineup.jersey_number ASC',
                 'items' => array(
                     array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
                 ),
@@ -150,9 +150,9 @@ $GLOBALS['TCA']['tx_clubms_domain_model_gamechange'] = array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gamechange.person_out',
 			'config' => array(
-				'eval' => 'required',
 				'foreign_table' => 'tx_clubms_domain_model_gamelineup',
-				'foreign_table_where' => '  ORDER BY tx_clubms_domain_model_gamelineup.jersey_number ASC',
+				'foreign_table_where' => '  AND tx_clubms_domain_model_gamelineup.game = ###REC_FIELD_game###
+											ORDER BY tx_clubms_domain_model_gamelineup.jersey_number ASC',
 				'items' => array(
 					array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
 				),
