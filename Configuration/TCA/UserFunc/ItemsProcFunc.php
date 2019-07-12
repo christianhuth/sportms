@@ -44,7 +44,6 @@
 			// Get data from repository
 			$myData = $this->getTeamSeasonSquadMemberRepository()->findAll();
 
-			array_push($config['items'], print_r($myData));
 			foreach ($myData as $data) {
 				// push it into the config array
 				array_push($config['items'], [$data['label'], $data['uid']]);
