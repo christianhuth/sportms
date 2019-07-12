@@ -40,10 +40,15 @@ class GameLineup extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	 */
 	protected $game;
 
-    /**
-     * @var string
-     */
+	/**
+	 * @var string
+	 */
 	protected $team;
+
+	/**
+	 * @var string
+	 */
+	protected $type;
 
 	/**
 	 * @var String
@@ -86,6 +91,20 @@ class GameLineup extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	 */
 	public function setTeam($team) {
 		$this->team = $team;
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getType() {
+		return $this->type;
+	}
+
+	/**
+	 * @param string $type
+	 */
+	public function setType($type) {
+		$this->type = $type;
 	}
 
 	/**
