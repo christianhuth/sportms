@@ -732,23 +732,6 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
                 ),
                 'foreign_field' => 'game',
                 'foreign_table' => 'tx_clubms_domain_model_gamelineup',
-                #'overrideChildTca' => array(
-                #    'columns' => array(
-                #        'team_season_squad_member' => array(
-                #            'config' => array(
-                #                'foreign_table_where' => '  AND tx_clubms_domain_model_teamseasonsquadmember.team_season = ###REC_FIELD_team_season_home###
-                #                                            ORDER BY tx_clubms_domain_model_teamseasonsquadmember.sorting ASC',
-                #            ),
-                #        ),
-                #        'section_position' => array(
-                #            'config' => array(
-                #                'foreign_table_where' => '  AND tx_clubms_domain_model_sectionposition.section_position_group IN
-				#                                            (SELECT uid FROM tx_clubms_domain_model_sectionpositiongroup WHERE section = ###REC_FIELD_section###)
-				#                                            ORDER BY tx_clubms_domain_model_sectionposition.sorting ASC',
-                #            ),
-                #        ),
-                #    ),
-                #),
                 'type' => 'inline',
             ),
         ),
@@ -814,23 +797,6 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
                 ),
                 'foreign_field' => 'game',
                 'foreign_table' => 'tx_clubms_domain_model_gamelineup',
-                #'overrideChildTca' => array(
-                #    'columns' => array(
-                #        'team_season_squad_member' => array(
-                #            'config' => array(
-                #                'foreign_table_where' => '  AND tx_clubms_domain_model_teamseasonsquadmember.team_season = ###REC_FIELD_team_season_guest###
-                #                                            ORDER BY tx_clubms_domain_model_teamseasonsquadmember.sorting ASC',
-                #            ),
-                #        ),
-                #        'section_position' => array(
-                #            'config' => array(
-                #                'foreign_table_where' => '  AND tx_clubms_domain_model_sectionposition.section_position_group IN
-				#                                            (SELECT uid FROM tx_clubms_domain_model_sectionpositiongroup WHERE section = ###REC_FIELD_section###)
-				#                                            ORDER BY tx_clubms_domain_model_sectionposition.sorting ASC',
-                #            ),
-                #        ),
-                #    ),
-                #),
                 'type' => 'inline',
             ),
         ),
