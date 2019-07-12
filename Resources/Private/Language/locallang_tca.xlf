@@ -609,6 +609,42 @@
 			</trans-unit>
 
 
+			<!-- Domain Model GameChange -->
+			<trans-unit id="tx_clubms_domain_model_gamechange">
+				<source>Wechsel</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_gamechange.game">
+				<source>Spiel</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_gamechange.period">
+				<source>Spielabschnitt</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_gamechange.minute">
+				<source>Spielminute</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_gamechange.minute_additional">
+				<source>Nachspielzeit</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_gamechange.person_in">
+				<source>Eingewechselte Person</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_gamechange.person_out">
+				<source>Ausgewechselte Person</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_gamechange.reason">
+				<source>Wechselgrund</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_gamechange.reason_performance">
+				<source>Leistung</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_gamechange.reason_tactics">
+				<source>Taktik</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_gamechange.reason_injury">
+				<source>Verletzung</source>
+			</trans-unit>
+
+
 			<!-- Domain Model GameLineup -->
 			<trans-unit id="tx_clubms_domain_model_gamelineup">
 				<source>Aufstellung</source>
