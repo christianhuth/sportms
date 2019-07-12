@@ -19,6 +19,8 @@
 
 			#var_dump("TEST2");
 
+			array_push($config['items'], ['Fussball','1']);
+
 			$query = 'SELECT uid, person FROM tx_clubms_domain_model_teamseasonsquadmember';
 			$result = mysqli_query($query);
 			if(mysqli_num_rows($result)) {
@@ -27,7 +29,7 @@
 				}
 			}
 
-				array_push($config['items'], ['Fussball','1']);
+			array_push($config['items'], ['Fussball','1']);
 
 			// Get data from repository
 			$myData = $teamSeasonSquadMemberRepository->findAll();
