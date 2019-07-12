@@ -81,11 +81,14 @@
 		}
 
         public function gameLineupLabel(&$parameters, $parentObject) {
-            $record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
+			$record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
             $teamSeasonSquadMember = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_teamseasonsquadmember", $record['team_season_squad_member']);
             $person = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_person", $teamSeasonSquadMember['person']);
-            $sectionPosition = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_sectionposition", $record['section_position']);
-            $newLabel = $sectionPosition['label_short'] . ": " . $person['lastname'] . ", " . $person['firstname'];
+            if($record['section_position']) {
+	            $sectionPosition = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_sectionposition", $record['section_position']);
+	            $newLabel = $sectionPosition['label_short'] . ": ";
+            }
+            $newLabel .= $person['lastname'] . ", " . $person['firstname'];
             if($record['jersey_number']) {
                 $newLabel .= " (" . $record['jersey_number'] . ")";
             }
