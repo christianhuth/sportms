@@ -64,9 +64,9 @@
 
 		public function gameChangeLabel(&$parameters, $parentObject) {
 			$record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
-			$gameLineupIn = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_gamelinup", $record['person_in']);
+			$gameLineupIn = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_gamelineup", $record['person_in']);
 			$teamSeasonSquadMemberIn = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_teamseasonsquadmember", $gameLineupIn['team_season_squad_member']);
-			$gameLineupOut = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_gamelinup", $record['person_out']);
+			$gameLineupOut = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_gamelineup", $record['person_out']);
 			$teamSeasonSquadMemberOut = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_teamseasonsquadmember", $gameLineupOut['team_season_squad_member']);
 			$personIn = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_person", $teamSeasonSquadMemberIn['person']);
 			$personOut = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_person", $teamSeasonSquadMemberOut['person']);
@@ -76,7 +76,7 @@
 
 		public function gameGoalLabel(&$parameters, $parentObject) {
 			$record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
-			$gameLineup = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_gamelinup", $record['scorer']);
+			$gameLineup = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_gamelineup", $record['scorer']);
 			$teamSeasonSquadMemberScorer = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_teamseasonsquadmember", $gameLineup['team_season_squad_member']);
 			$scorer = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_person", $teamSeasonSquadMemberScorer['person']);
 			$newLabel = $record['goal_home'] . ":" . $record['goal_guest'] . " - " . $scorer['lastname'] . ", " . $scorer['firstname'] . " (" . $record['minute'] . ".)";
@@ -106,7 +106,7 @@
 
 		public function gamePunishmentLabel(&$parameters, $parentObject) {
 			$record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
-			$gameLineup = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_gamelinup", $record['punished_person']);
+			$gameLineup = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_gamelineup", $record['punished_person']);
 			$teamSeasonSquadMemberPunished = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_teamseasonsquadmember", $gameLineup['team_season_squad_member']);
 			$person = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_person", $teamSeasonSquadMemberPunished['person']);
 			$newLabel = $person['lastname'] . ", " . $person['firstname'];
