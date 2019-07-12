@@ -671,7 +671,7 @@ CREATE TABLE tx_clubms_domain_model_gamechange (
 
     period int(11) DEFAULT NULL,
     minute int(11) DEFAULT '0' NOT NULL,
-    minute_additional int(11) DEFAULT '0' NOT NULL,
+    minute_additional int(11) DEFAULT NULL,
     person_in int(11) DEFAULT '0' NOT NULL,
     person_out int(11) DEFAULT '0' NOT NULL,
     reason int(11) DEFAULT NULL,
@@ -716,7 +716,7 @@ CREATE TABLE tx_clubms_domain_model_gamegoal (
     goal_guest int(11) DEFAULT '0' NOT NULL,
     period int(11) DEFAULT NULL,
     minute int(11) DEFAULT '0' NOT NULL,
-    minute_additional int(11) DEFAULT '0' NOT NULL,
+    minute_additional int(11) DEFAULT NULL,
     scorer int(11) DEFAULT '0' NOT NULL,
     assist int(11) DEFAULT NULL,
     own_goal tinyint(4) DEFAULT '0' NOT NULL,
