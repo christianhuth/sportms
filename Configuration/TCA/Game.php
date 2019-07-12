@@ -735,6 +735,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
 		            'team' => 'home'
 	            ),
                 'foreign_table' => 'tx_clubms_domain_model_gamelineup',
+                'foreign_unique' => 'team_season_squad_member',
                 'type' => 'inline',
             ),
         ),
