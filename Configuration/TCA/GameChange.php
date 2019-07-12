@@ -182,10 +182,10 @@ $GLOBALS['TCA']['tx_clubms_domain_model_gamechange'] = array(
 			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gamechange.reason',
 			'config' => array(
 				'items' => array(
-					array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
-					array('LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gamechange.reason_performance', 0),
-					array('LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gamechange.reason_tactics', 1),
-					array('LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gamechange.reason_injury', 2),
+					array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", 0),
+					array('LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gamechange.reason_performance', 1),
+					array('LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gamechange.reason_tactics', 2),
+					array('LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gamechange.reason_injury', 3),
 				),
 				'renderType' => 'selectSingle',
 				'type' => 'select',
