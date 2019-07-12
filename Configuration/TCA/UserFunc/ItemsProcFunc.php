@@ -28,7 +28,7 @@
 			$byTeamSeasonUid = $teamSeasonSquadMemberRepository->findByTeamSeasonUid(1);
 			array_push($config['items'], ['Fussball','1']);
 
-			array_push($config['items'], ['byTeamSeasonUid: ' . sizeof($byTeamSeasonUid), sizeof($byTeamSeasonUid)]);
+			#array_push($config['items'], ['byTeamSeasonUid: ' . sizeof($byTeamSeasonUid), sizeof($byTeamSeasonUid)]);
 
 			if(is_null($byTeamSeasonUid)) {
 				array_push($config['items'], ['null','2']);
@@ -37,7 +37,7 @@
 			if($byTeamSeasonUid) {
 				foreach ($byTeamSeasonUid as $data) {
 					// push it into the config array
-					array_push($config['items'], [$data->getName(), $data->getUid()]);
+					array_push($config['items'], [$data->getPerson()->getLastname(), $data->getUid()]);
 				}
 			} else {
 				array_push($config['items'], ['empty','2']);
