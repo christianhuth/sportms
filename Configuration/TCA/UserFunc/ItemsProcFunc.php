@@ -19,6 +19,8 @@
 
 			#var_dump("TEST2");
 
+			array_push($config['items'], ['Fussball','1']);
+
 			// Get data from repository
 			$myData = $teamSeasonSquadMemberRepository->findAll();
 			foreach ($myData as $data) {
