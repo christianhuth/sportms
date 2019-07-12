@@ -70,7 +70,7 @@
 			$teamSeasonSquadMemberOut = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_teamseasonsquadmember", $gameLineupOut['team_season_squad_member']);
 			$personIn = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_person", $teamSeasonSquadMemberIn['person']);
 			$personOut = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_person", $teamSeasonSquadMemberOut['person']);
-			$newLabel = $personIn['lastname'] . " <-> " . $personOut['lastname'] . " (" . $record['minute'] . ")";
+			$newLabel = $personIn['lastname'] . " <-> " . $personOut['lastname'] . " (" . $record['minute'] . ".)";
 			$parameters['title'] = $newLabel;
 		}
 
