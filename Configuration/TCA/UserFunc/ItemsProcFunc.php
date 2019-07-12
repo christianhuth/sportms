@@ -24,12 +24,18 @@
 			// Get data from repository
 			$myData = $teamRepository->findByUid(3);
 
-			foreach ($myData as $data) {
-				// push it into the config array
-				array_push($config['items'], [$data['person'], $data['uid']]);
+			if(is_null($myData)) {
+				array_push($config['items'], ['empty','2']);
+			} else {
+				foreach ($myData as $data) {
+					// push it into the config array
+					array_push($config['items'], [$data['name'], $data['uid']]);
+				}
 			}
 
-			array_push($config['items'], ['Fussball','1']);
+
+
+			array_push($config['items'], ['Fussball','3']);
 
 
 		}
