@@ -571,6 +571,9 @@
 			<trans-unit id="tx_clubms_domain_model_game.game_punishments">
 				<source>Spielerstrafen</source>
 			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_game.game_goals">
+				<source>Tore</source>
+			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_game.game_referees">
 				<source>Schiedsrichter</source>
 			</trans-unit>
@@ -615,6 +618,9 @@
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_game.tab_changes">
 				<source>Wechsel</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_game.tab_goals">
+				<source>Tore</source>
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_game.tab_referees">
 				<source>Schiedsrichter</source>
