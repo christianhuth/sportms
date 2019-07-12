@@ -5,26 +5,6 @@
 	class ItemsProcFunc {
 
 		/**
-		 * @var \Balumedien\Clubms\Domain\Repository\TeamSeasonSquadMemberRepository
-		 * @inject
-		 */
-		protected $teamSeasonSquadMemberRepository;
-
-		/**
-		 * @return \Balumedien\Clubms\Domain\Repository\TeamSeasonSquadMemberRepository
-		 */
-		public function getTeamSeasonSquadMemberRepository() {
-			return $this->teamSeasonSquadMemberRepository;
-		}
-
-		/**
-		 * @param \Balumedien\Clubms\Domain\Repository\TeamSeasonSquadMemberRepository $teamSeasonSquadMemberRepository
-		 */
-		public function setTeamSeasonSquadMemberRepository($teamSeasonSquadMemberRepository) {
-			$this->teamSeasonSquadMemberRepository = $teamSeasonSquadMemberRepository;
-		}
-
-		/**
 		 * @param array $config
 		 * @return void
 		 */
@@ -32,7 +12,7 @@
 
 			// Get repository
 			$objectManager = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('TYPO3\CMS\Extbase\Object\ObjectManager');
-			$this->setTeamSeasonSquadMemberRepository($objectManager->get('Balumedien\\Clubms\\Domain\\Repository\\TeamSeasonSquadMemberRepository'));
+			$teamRepository = $objectManager->get('Balumedien\\Clubms\\Domain\\Repository\\TeamRepository');
 
 			#\TYPO3\CMS\Core\Utility\DebugUtility::debug($config, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			#\TYPO3\CMS\Core\Utility\DebugUtility::debug($teamSeasonSquadMemberRepository, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
@@ -42,7 +22,7 @@
 			array_push($config['items'], ['Fussball','1']);
 
 			// Get data from repository
-			$myData = $this->getTeamSeasonSquadMemberRepository()->findByUid(3);
+			$myData = $teamRepository->findByUid(3);
 
 			foreach ($myData as $data) {
 				// push it into the config array
