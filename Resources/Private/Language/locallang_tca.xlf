@@ -671,7 +671,7 @@
 				<source>Person</source>
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_gamelineup.section_position">
-				<source>Detailpositionen</source>
+				<source>Detailposition</source>
 			</trans-unit>
 
 
