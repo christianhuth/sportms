@@ -13,19 +13,17 @@
 			$databaseTable = "tx_clubms_domain_model_teamseasonsquadmember";
 			$joinTable = "tx_clubms_domain_model_person";
 			$queryBuilder = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Database\ConnectionPool::class)->getQueryBuilderForTable($databaseTable);
-			$queryBuilder
-				->select($databaseTable . '.uid', $joinTable . '.firstname', $joinTable . '.lastname')
-				->from($databaseTable)
-				->innerJoin(
-					$databaseTable,
-					$joinTable,
-					$joinTable,
-					$queryBuilder->expr()->eq($joinTable . '.uid', $queryBuilder->quoteIdentifier($databaseTable . '.person'))
-				);
-
-			array_push($config['items'], [$queryBuilder->getSQL(), '0']);
-
-			$result = $queryBuilder->execute()->fetchAll();
+			$result = $queryBuilder
+						->select($databaseTable . '.uid', $joinTable . '.firstname', $joinTable . '.lastname')
+						->from($databaseTable)
+						->innerJoin(
+							$databaseTable,
+							$joinTable,
+							$joinTable,
+							$queryBuilder->expr()->eq($joinTable . '.uid', $queryBuilder->quoteIdentifier($databaseTable . '.person'))
+						)
+						->execute()
+						->fetchAll();
 
 			foreach ($result as $row) {
 				// push it into the config array
