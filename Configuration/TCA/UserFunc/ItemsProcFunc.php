@@ -37,7 +37,7 @@
 			if($byTeamSeasonUid) {
 				foreach ($byTeamSeasonUid as $data) {
 					// push it into the config array
-					array_push($config['items'], [$data->getPerson()->getLastname(), $data->getUid()]);
+					array_push($config['items'], ['Test', '5']);
 				}
 			} else {
 				array_push($config['items'], ['empty','2']);
