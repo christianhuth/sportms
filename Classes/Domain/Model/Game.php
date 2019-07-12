@@ -276,6 +276,12 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	 */
 	protected $gameChanges;
 
+	/**
+	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\GameGoal>
+	 * @cascade remove
+	 */
+	protected $gameGoals;
+
     /**
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\GameReferee>
      * @cascade remove
@@ -313,6 +319,7 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	    $this->gameLineupGuestStarts = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 	    $this->gameLineupGuestSubstitutes = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 	    $this->gameChanges = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+	    $this->gameGoals = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
         $this->gameReferees = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
         $this->gameReports = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
     }
@@ -999,6 +1006,20 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 		$this->gameChanges = $gameChanges;
 	}
 
+	/**
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+	 */
+	public function getGameGoals() {
+		return $this->gameGoals;
+	}
+
+	/**
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $gameGoals
+	 */
+	public function setGameGoals($gameGoals) {
+		$this->gameGoals = $gameGoals;
+	}
+
     /**
      * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
      */
@@ -1015,28 +1036,28 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
         $this->gameReferees = $gameReferees;
     }
 
+	/**
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+	 */
+	public function getGameReports()
+	{
+		return $this->gameReports;
+	}
+
+	/**
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $gameReports
+	 */
+	public function setGameReports($gameReports)
+	{
+		$this->gameReports = $gameReports;
+	}
+
     /**
      * @return bool
      */
     public function isDetailLink()
     {
         return $this->detailLink;
-    }
-
-    /**
-     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
-     */
-    public function getGameReports()
-    {
-        return $this->gameReports;
-    }
-
-    /**
-     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $gameReports
-     */
-    public function setGameReports($gameReports)
-    {
-        $this->gameReports = $gameReports;
     }
 
     /**
