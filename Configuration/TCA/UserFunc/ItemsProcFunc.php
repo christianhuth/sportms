@@ -18,8 +18,8 @@
 					->innerJoin(
 						$databaseTable,
 						"tx_clubms_domain_model_person",
-						"tx_clubms_domain_model_person",
-						$queryBuilder->expr()->eq('tx_clubms_domain_model_person.uid', $queryBuilder->quoteIdentifier($databaseTable . 'person'))
+						"person",
+						$queryBuilder->expr()->eq('person.uid', $queryBuilder->quoteIdentifier($databaseTable . '.person'))
 					)
 					->execute()
 					->fetchAll();
