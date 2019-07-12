@@ -16,6 +16,12 @@
 
 			array_push($config['items'], ['Fussball','1']);
 
+			$databaseTable = "tx_clubms_domain_model_teamseasonsquadmember";
+
+			$queryBuilder = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Database\ConnectionPool::class)->getQueryBuilderForTable($databaseTable);
+			$data = $queryBuilder->select('uid, person')->from($databaseTable);
+
+
 			// Get data from repository
 			$byUid = $teamSeasonSquadMemberRepository->findByUid(3);
 
@@ -30,13 +36,13 @@
 
 			#array_push($config['items'], ['byTeamSeasonUid: ' . sizeof($byTeamSeasonUid), sizeof($byTeamSeasonUid)]);
 
-			if(is_null($byTeamSeasonUid)) {
+			if(is_null($data)) {
 				array_push($config['items'], ['null','2']);
 			}
 
-			if($byTeamSeasonUid) {
-				array_push($config['items'], [count($byTeamSeasonUid), '2']);
-				foreach ($byTeamSeasonUid as $data) {
+			if($data) {
+				array_push($config['items'], [count($data), '2']);
+				foreach ($data as $data) {
 					// push it into the config array
 					array_push($config['items'], ['Test', '5']);
 				}
