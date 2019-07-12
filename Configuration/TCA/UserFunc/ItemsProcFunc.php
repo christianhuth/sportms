@@ -8,7 +8,7 @@
 		 * @param array $fConfig
 		 * @return void
 		 */
-		public function section_Team(&$fConfig) {
+		public function team_season_squad_member_GameLineup(&$fConfig) {
 
 			// Get repository
 			$objectManager = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('TYPO3\CMS\Extbase\Object\ObjectManager');
