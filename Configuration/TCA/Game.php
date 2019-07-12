@@ -37,8 +37,8 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
 		                                --palette--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.palette_result_thirds;result_thirds,
 		                                --palette--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.palette_result_fourths;result_fourths,
 		                                --palette--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.palette_result_sets;result_sets,
-		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_home, team_season_home, game_lineup_homes, trainer_home,
-		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_guest, team_season_guest, game_lineup_guests, trainer_guest,
+		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_home, team_season_home, game_lineup_home_starts, game_lineup_home_substitutes, trainer_home,
+		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_guest, team_season_guest, game_lineup_guest_starts, game_lineup_guest_substitutes, trainer_guest,
 		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_changes, game_changes,
 		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_referees, game_referees,
 		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_reports, game_reports,
@@ -713,9 +713,9 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
             ),
             'onChange' => 'reload',
         ),
-        'game_lineup_homes' => array(
+        'game_lineup_home_starts' => array(
             'displayCond' => 'FIELD:team_season_home:>:0',
-            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.game_lineup_homes',
+            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.game_lineup_home_starts',
             'config' => array(
                 'appearance' => array(
                     'enabledControls' => [
@@ -732,12 +732,39 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
                 ),
                 'foreign_field' => 'game',
 	            'foreign_match_fields' => array(
-		            'team' => 'home'
+		            'team' => 'home',
+		            'type' => 'start',
 	            ),
                 'foreign_table' => 'tx_clubms_domain_model_gamelineup',
                 'type' => 'inline',
             ),
         ),
+		'game_lineup_home_substitutes' => array(
+			'displayCond' => 'FIELD:team_season_home:>:0',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.game_lineup_home_substitutes',
+			'config' => array(
+				'appearance' => array(
+					'enabledControls' => [
+						'info' => false,
+						'new' => true,
+						'sort' => false,
+						'hide' => true,
+						'dragdrop' => true,
+						'delete' => true,
+						'localize' => true,
+					],
+					'levelLinksPosition' => 'bottom',
+					'useSortable' => 1,
+				),
+				'foreign_field' => 'game',
+				'foreign_match_fields' => array(
+					'team' => 'home',
+					'type' => 'substitute',
+				),
+				'foreign_table' => 'tx_clubms_domain_model_gamelineup',
+				'type' => 'inline',
+			),
+		),
         'trainer_home' => array(
             'exclude' => 1,
             'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.trainer_home',
@@ -781,31 +808,58 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
             ),
             'onChange' => 'reload',
         ),
-        'game_lineup_guests' => array(
-            'displayCond' => 'FIELD:team_season_home:>:0',
-            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.game_lineup_guests',
-            'config' => array(
-                'appearance' => array(
-                    'enabledControls' => [
-                        'info' => false,
-                        'new' => true,
-                        'sort' => false,
-                        'hide' => true,
-                        'dragdrop' => true,
-                        'delete' => true,
-                        'localize' => true,
-                    ],
-                    'levelLinksPosition' => 'bottom',
-                    'useSortable' => 1,
-                ),
-                'foreign_field' => 'game',
-                'foreign_match_fields' => array(
-                	'team' => 'guest'
-                ),
-                'foreign_table' => 'tx_clubms_domain_model_gamelineup',
-                'type' => 'inline',
-            ),
-        ),
+		'game_lineup_guest_starts' => array(
+			'displayCond' => 'FIELD:team_season_home:>:0',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.game_lineup_guest_starts',
+			'config' => array(
+				'appearance' => array(
+					'enabledControls' => [
+						'info' => false,
+						'new' => true,
+						'sort' => false,
+						'hide' => true,
+						'dragdrop' => true,
+						'delete' => true,
+						'localize' => true,
+					],
+					'levelLinksPosition' => 'bottom',
+					'useSortable' => 1,
+				),
+				'foreign_field' => 'game',
+				'foreign_match_fields' => array(
+					'team' => 'guest',
+					'type' => 'start',
+				),
+				'foreign_table' => 'tx_clubms_domain_model_gamelineup',
+				'type' => 'inline',
+			),
+		),
+		'game_lineup_guest_substitutes' => array(
+			'displayCond' => 'FIELD:team_season_home:>:0',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.game_lineup_guest_substitutes',
+			'config' => array(
+				'appearance' => array(
+					'enabledControls' => [
+						'info' => false,
+						'new' => true,
+						'sort' => false,
+						'hide' => true,
+						'dragdrop' => true,
+						'delete' => true,
+						'localize' => true,
+					],
+					'levelLinksPosition' => 'bottom',
+					'useSortable' => 1,
+				),
+				'foreign_field' => 'game',
+				'foreign_match_fields' => array(
+					'team' => 'guest',
+					'type' => 'substitute',
+				),
+				'foreign_table' => 'tx_clubms_domain_model_gamelineup',
+				'type' => 'inline',
+			),
+		),
         'trainer_guest' => array(
             'exclude' => 1,
             'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.trainer_guest',
