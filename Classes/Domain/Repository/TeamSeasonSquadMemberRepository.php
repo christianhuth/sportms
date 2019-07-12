@@ -11,7 +11,7 @@ class TeamSeasonSquadMemberRepository extends \TYPO3\CMS\Extbase\Persistence\Rep
 	 */
 	public function findByTeamSeasonUid($teamSeasonUid) {
 		$query = $this->createQuery();
-		$query->matching($query->equals('team_season', 1));
+		$query->matching($query->equals('team_season', $teamSeasonUid));
 		return $query->execute();
 	}
 
