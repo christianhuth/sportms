@@ -41,10 +41,9 @@ class GameLineup extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	protected $game;
 
     /**
-     * @var \Balumedien\Clubms\Domain\Model\TeamSeason
-     * @lazy
+     * @var string
      */
-	protected $teamSeason;
+	protected $team;
 
 	/**
 	 * @var String
@@ -75,21 +74,19 @@ class GameLineup extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 		$this->game = $game;
 	}
 
-    /**
-     * @return TeamSeason
-     */
-    public function getTeamSeason()
-    {
-        return $this->teamSeason;
-    }
+	/**
+	 * @return string
+	 */
+	public function getTeam() {
+		return $this->team;
+	}
 
-    /**
-     * @param TeamSeason $teamSeason
-     */
-    public function setTeamSeason($teamSeason)
-    {
-        $this->teamSeason = $teamSeason;
-    }
+	/**
+	 * @param string $team
+	 */
+	public function setTeam($team) {
+		$this->team = $team;
+	}
 
 	/**
 	 * @return String

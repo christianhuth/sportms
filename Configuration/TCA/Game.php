@@ -731,6 +731,9 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
                     'useSortable' => 1,
                 ),
                 'foreign_field' => 'game',
+	            'foreign_match_fields' => array(
+		            'team' => 'home'
+	            ),
                 'foreign_table' => 'tx_clubms_domain_model_gamelineup',
                 'type' => 'inline',
             ),
@@ -796,6 +799,9 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
                     'useSortable' => 1,
                 ),
                 'foreign_field' => 'game',
+                'foreign_match_fields' => array(
+                	'team' => 'guest'
+                ),
                 'foreign_table' => 'tx_clubms_domain_model_gamelineup',
                 'type' => 'inline',
             ),
