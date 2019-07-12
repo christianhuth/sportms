@@ -128,9 +128,10 @@ $GLOBALS['TCA']['tx_clubms_domain_model_gamegoal'] = array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gamegoal.period',
 			'config' => array(
+				'default' => null,
+				'eval' => 'null',
 				'type' => 'input',
 				'size' => 10,
-				'eval' => 'int, trim'
 			),
 		),
 		'minute' => array(
@@ -146,9 +147,10 @@ $GLOBALS['TCA']['tx_clubms_domain_model_gamegoal'] = array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gamegoal.minute_additional',
 			'config' => array(
+				'default' => null,
+				'eval' => 'null',
 				'type' => 'input',
 				'size' => 10,
-				'eval' => 'int, trim'
 			),
 		),
         'scorer' => array(
