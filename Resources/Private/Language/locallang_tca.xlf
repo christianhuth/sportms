@@ -556,6 +556,15 @@
 			<trans-unit id="tx_clubms_domain_model_game.trainer_guest">
 				<source>Gasttrainer</source>
 			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_game.game_goals">
+				<source>Tore</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_game.game_changes">
+				<source>Spielerwechsel</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_game.game_punishments">
+				<source>Spielerstrafen</source>
+			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_game.game_referees">
 				<source>Schiedsrichter</source>
 			</trans-unit>
