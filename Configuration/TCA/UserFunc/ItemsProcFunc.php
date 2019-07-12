@@ -31,7 +31,7 @@
 
 			if($data) {
 				array_push($config['items'], [count($data), '2']);
-				foreach ($data as $data) {
+				foreach ($data as $ydata) {
 					// push it into the config array
 					array_push($config['items'], ['Test', '5']);
 				}
