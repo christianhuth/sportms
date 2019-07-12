@@ -619,6 +619,9 @@
 			<trans-unit id="tx_clubms_domain_model_game.tab_goals">
 				<source>Tore</source>
 			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_game.tab_punishments">
+				<source>Strafen</source>
+			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_game.tab_referees">
 				<source>Schiedsrichter</source>
 			</trans-unit>
