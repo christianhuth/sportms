@@ -664,6 +664,9 @@
 			<trans-unit id="tx_clubms_domain_model_gamelineup.game">
 				<source>Spiel</source>
 			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_gamelineup.team">
+				<source>Mannschaft</source>
+			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_gamelineup.jersey_number">
 				<source>Rückennummer</source>
 			</trans-unit>
