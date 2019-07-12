@@ -28,10 +28,11 @@ $GLOBALS['TCA']['tx_clubms_domain_model_gamechange'] = array(
 		'showRecordFieldList' => '',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'game, period, minute, minute_additional, person_in, person_out, reason'),
+		'1' => array('showitem' => 'game, ---palette---;;time, ---palette---;;person_in_person_out, reason'),
 	),
 	'palettes' => array(
-		'1' => array('showitem' => ''),
+		'time' => array('showitem' => 'period, minute, minute_additional'),
+		'person_in_person_out' => array('showitem' => 'person_in, person_out'),
 	),
 	'columns' => array(
 
