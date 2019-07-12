@@ -21,17 +21,6 @@
 			$queryBuilder = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Database\ConnectionPool::class)->getQueryBuilderForTable($databaseTable);
 			$data = $queryBuilder->select('uid, person')->from($databaseTable);
 
-
-			// Get data from repository
-			$byUid = $teamSeasonSquadMemberRepository->findByUid(3);
-
-			if($byUid) {
-				// push it into the config array
-				array_push($config['items'], [$byUid->getPerson()->getLastname(), $byUid->getUid()]);
-			}
-
-			array_push($config['items'], ['Fussball','1']);
-			$byTeamSeasonUid = $teamSeasonSquadMemberRepository->findByTeamSeasonUid(1);
 			array_push($config['items'], ['Fussball','1']);
 
 			#array_push($config['items'], ['byTeamSeasonUid: ' . sizeof($byTeamSeasonUid), sizeof($byTeamSeasonUid)]);
