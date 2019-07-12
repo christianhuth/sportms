@@ -734,7 +734,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
                 'foreign_table' => 'tx_clubms_domain_model_gamelineup',
                 'overrideChildTca' => array(
                     'columns' => array(
-                        'person' => array(
+                        'team_season_squad_member' => array(
                             'config' => array(
                                 'foreign_table_where' => '  AND tx_clubms_domain_model_teamseasonsquadmember.team_season = ###REC_FIELD_team_season_home###
                                                             ORDER BY tx_clubms_domain_model_teamseasonsquadmember.sorting ASC',
@@ -816,7 +816,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
                 'foreign_table' => 'tx_clubms_domain_model_gamelineup',
                 'overrideChildTca' => array(
                     'columns' => array(
-                        'person' => array(
+                        'team_season_squad_member' => array(
                             'config' => array(
                                 'foreign_table_where' => '  AND tx_clubms_domain_model_teamseasonsquadmember.team_season = ###REC_FIELD_team_season_guest###
                                                             ORDER BY tx_clubms_domain_model_teamseasonsquadmember.sorting ASC',
