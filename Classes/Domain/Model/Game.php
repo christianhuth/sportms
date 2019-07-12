@@ -282,6 +282,12 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	 */
 	protected $gameGoals;
 
+	/**
+	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\GamePunishment>
+	 * @cascade remove
+	 */
+	protected $gamePunishments;
+
     /**
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\GameReferee>
      * @cascade remove
@@ -1018,6 +1024,20 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	 */
 	public function setGameGoals($gameGoals) {
 		$this->gameGoals = $gameGoals;
+	}
+
+	/**
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+	 */
+	public function getGamePunishments() {
+		return $this->gamePunishments;
+	}
+
+	/**
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $gamePunishments
+	 */
+	public function setGamePunishments($gamePunishments) {
+		$this->gamePunishments = $gamePunishments;
 	}
 
     /**
