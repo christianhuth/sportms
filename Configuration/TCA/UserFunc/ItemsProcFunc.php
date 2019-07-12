@@ -22,7 +22,7 @@
 			array_push($config['items'], ['Fussball','1']);
 
 			// Get data from repository
-			$myData = $teamRepository->findByUid(3);
+			$myData = $teamRepository->findAll();
 
 			#array_push($config['items'], ['myData', $myData]);
 
@@ -31,10 +31,9 @@
 			}
 
 			if($myData) {
-				array_push($config['items'], [$myData->getName(), $myData->getUid()]);
 				foreach ($myData as $data) {
 					// push it into the config array
-					array_push($config['items'], [$data['name'], $data['uid']]);
+					array_push($config['items'], [$data->getName(), $data->getUid()]);
 				}
 			} else {
 				array_push($config['items'], ['empty','2']);
