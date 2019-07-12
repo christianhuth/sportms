@@ -258,6 +258,12 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      */
     protected $trainerGuest;
 
+	/**
+	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\GameChange>
+	 * @cascade remove
+	 */
+	protected $gameChanges;
+
     /**
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\GameReferee>
      * @cascade remove
@@ -292,6 +298,7 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	    $this->resultSets = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
         $this->gameLineupHomes = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
         $this->gameLineupGuests = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+	    $this->gameChanges = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
         $this->gameReferees = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
         $this->gameReports = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
     }
@@ -939,6 +946,20 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         $this->trainerGuest = $trainerGuest;
     }
+
+	/**
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+	 */
+	public function getGameChanges() {
+		return $this->gameChanges;
+	}
+
+	/**
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $gameChanges
+	 */
+	public function setGameChanges($gameChanges) {
+		$this->gameChanges = $gameChanges;
+	}
 
     /**
      * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
