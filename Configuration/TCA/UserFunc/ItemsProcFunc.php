@@ -2,7 +2,7 @@
 
 	namespace Balumedien\Clubms\Configuration\TCA\UserFunc;
 
-	class FlexFormUserFunc {
+	class ItemsProcFunc {
 
 		/**
 		 * @param array $fConfig
@@ -13,7 +13,6 @@
 			// Get repository
 			$objectManager = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('TYPO3\CMS\Extbase\Object\ObjectManager');
 			$sectionRepository = $objectManager->get('Balumedien\Clubms\Domain\Repository\SectionRepository');
-
 
 			\TYPO3\CMS\Core\Utility\DebugUtility::debug($fConfig, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 

@@ -113,20 +113,15 @@ $GLOBALS['TCA']['tx_clubms_domain_model_gamelineup'] = array(
 			),
 		),
         'team_season_squad_member' => array(
-	        'exclude' => 1,
-	        'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gamelineup.team_season_squad_member',
-	        'config' => array(
-		        'eval' => 'required',
-		        'foreign_table' => 'tx_clubms_domain_model_teamseasonsquadmember',
-		        'foreign_table_where' => ' ORDER BY tx_clubms_domain_model_teamseasonsquadmember.sorting ASC',
-		        'items' => array(
-			        array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
-		        ),
-		        'maxItems' => 1,
-		        'renderType' => 'selectSingle',
-		        'size' => 1,
-		        'type' => 'select',
-	        ),
+            'exclude' => 1,
+            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gamelineup.team_season_squad_member',
+            'config' => array(
+	            'eval' => 'required',
+	            'itemsProcFunc' => '\Balumedien\Clubms\Configuration\TCA\UserFunc\ItemsProcFunc->section_Team',
+	            'renderType' => 'selectSingle',
+	            'size' => 1,
+	            'type' => 'select',
+            ),
         ),
 		'section_position' => array(
 			'exclude' => 1,
