@@ -24,7 +24,7 @@
 			// Get data from repository
 			$myData = $teamRepository->findAll();
 
-			#array_push($config['items'], ['myData', $myData]);
+			array_push($config['items'], ['myData: ' . sizeof($myData), sizeof($myData)]);
 
 			if(is_null($myData)) {
 				array_push($config['items'], ['null','2']);
