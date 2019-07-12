@@ -7,11 +7,11 @@ namespace Balumedien\Clubms\Domain\Repository;
 class TeamSeasonSquadMemberRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
 
 	/**
-	 * @param \Balumedien\Clubms\Domain\Model\TeamSeason $teamSeason
+	 * @param int $teamSeasonUid
 	 */
-	public function findByTeamSeasonUid($teamSeason) {
+	public function findByTeamSeasonUid($teamSeasonUid) {
 		$query = $this->createQuery();
-		$query->matching($query->contains('team_season', $teamSeason));
+		$query->matching($query->contains('team_season', $teamSeasonUid));
 		return $query->execute();
 	}
 
