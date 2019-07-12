@@ -5,21 +5,20 @@
 	class FlexFormUserFunc {
 
 		/**
-		 * Function for the attribute team_season_squad_member of the class GameLineup
 		 * @param array $fConfig
 		 * @return void
 		 */
-		public function team_season_squad_member_GameLineup(&$fConfig) {
+		public function section_Team(&$fConfig) {
 
 			// Get repository
 			$objectManager = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('TYPO3\CMS\Extbase\Object\ObjectManager');
-			$teamSeasonSquadMemberRepository = $objectManager->get('Balumedien\Clubms\Domain\Repository\TeamSeasonSquadMemberRepository');
+			$sectionRepository = $objectManager->get('Balumedien\Clubms\Domain\Repository\SectionRepository');
+
 
 			\TYPO3\CMS\Core\Utility\DebugUtility::debug($fConfig, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 
 			// Get data from repository
-			$myData = $teamSeasonSquadMemberRepository->findAll();
-			\TYPO3\CMS\Core\Utility\DebugUtility::debug($myData, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
+			$myData = $sectionRepository->findAll();
 			foreach ($myData as $data) {
 				// push it into the config array
 				array_push($fConfig['items'], array(
