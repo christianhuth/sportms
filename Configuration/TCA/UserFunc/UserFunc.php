@@ -111,10 +111,10 @@
 			}
 			if($record['type']) {
 				switch ($record['type']) {
-					case 1: $newLabel .= ": " . "Gelbe Karte";
-					case 2: $newLabel .= ": " . "Gelbrote Karte";
-					case 3: $newLabel .= ": " . "Rote Karte";
-					case 4: $newLabel .= ": " . "Zeitstrafte";
+					case 1: $newLabel .= ": " . "Gelbe Karte"; break;
+					case 2: $newLabel .= ": " . "Gelbrote Karte"; break;
+					case 3: $newLabel .= ": " . "Rote Karte"; break;
+					case 4: $newLabel .= ": " . "Zeitstrafte"; break;
 				}
 			}
 			$parameters['title'] = $newLabel;
