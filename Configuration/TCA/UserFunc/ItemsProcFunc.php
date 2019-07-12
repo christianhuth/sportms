@@ -12,7 +12,7 @@
 
 			// Get repository
 			$objectManager = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('TYPO3\CMS\Extbase\Object\ObjectManager');
-			$teamSeasonSquadMemberRepository = $objectManager->get('Balumedien\Clubms\Domain\Repository\TeamSeasonSquadMemberRepository');
+			$teamSeasonSquadMemberRepository = $objectManager->get('Balumedien\\Clubms\\Domain\\Repository\\TeamSeasonSquadMemberRepository');
 
 			array_push($config['items'], ['Fussball','1']);
 
