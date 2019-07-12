@@ -110,6 +110,10 @@ $GLOBALS['TCA']['tx_clubms_domain_model_gamechange'] = array(
 			'config' => array(
 				'default' => null,
 				'eval' => 'null',
+				'range' => array(
+					'lower' => 1,
+					'upper' => 1000,
+				),
 				'type' => 'input',
 				'size' => 10,
 			),
@@ -119,6 +123,10 @@ $GLOBALS['TCA']['tx_clubms_domain_model_gamechange'] = array(
 			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gamechange.minute',
 			'config' => array(
 				'eval' => 'int, required, trim',
+				'range' => array(
+					'lower' => 1,
+					'upper' => 1000,
+				),
 				'type' => 'input',
 				'size' => 10,
 			),
@@ -129,6 +137,10 @@ $GLOBALS['TCA']['tx_clubms_domain_model_gamechange'] = array(
 			'config' => array(
 				'default' => null,
 				'eval' => 'null',
+				'range' => array(
+					'lower' => 1,
+					'upper' => 1000,
+				),
 				'type' => 'input',
 				'size' => 10,
 			),
