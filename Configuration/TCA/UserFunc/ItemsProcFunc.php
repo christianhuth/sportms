@@ -31,6 +31,7 @@
 			}
 
 			if($myData) {
+				array_push($config['items'], [$myData['name'], $myData['uid']]);
 				foreach ($myData as $data) {
 					// push it into the config array
 					array_push($config['items'], [$data['name'], $data['uid']]);
