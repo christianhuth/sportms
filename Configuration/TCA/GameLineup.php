@@ -120,7 +120,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_gamelineup'] = array(
 	            'items' => array(
 		            array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
 	            ),
-	            'itemsProcFunc' => '\Balumedien\Clubms\Configuration\TCA\UserFunc\ItemsProcFunc->team_season_squad_member_GameLineup',
+	            'itemsProcFunc' => 'Balumedien\\Clubms\\Configuration\\TCA\\UserFunc\\ItemsProcFunc->team_season_squad_member_GameLineup',
 	            'renderType' => 'selectSingle',
 	            'size' => 1,
 	            'type' => 'select',
