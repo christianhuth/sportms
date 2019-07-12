@@ -18,17 +18,18 @@
 
 			// Get data from repository
 			$byUid = $teamSeasonSquadMemberRepository->findByUid(3);
-			$byTeamSeasonUid = $teamSeasonSquadMemberRepository->findByTeamSeasonUid(1);
-
-			array_push($config['items'], ['myData: ' . sizeof($byTeamSeasonUid), sizeof($byTeamSeasonUid)]);
-
-			if(is_null($byTeamSeasonUid)) {
-				array_push($config['items'], ['null','2']);
-			}
 
 			if($byUid) {
 				// push it into the config array
 				array_push($config['items'], [$byUid->getName(), $byUid->getUid()]);
+			}
+
+			$byTeamSeasonUid = $teamSeasonSquadMemberRepository->findByTeamSeasonUid(1);
+
+			array_push($config['items'], ['byTeamSeasonUid: ' . sizeof($byTeamSeasonUid), sizeof($byTeamSeasonUid)]);
+
+			if(is_null($byTeamSeasonUid)) {
+				array_push($config['items'], ['null','2']);
 			}
 
 			if($byTeamSeasonUid) {
