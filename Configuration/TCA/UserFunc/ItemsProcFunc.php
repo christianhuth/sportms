@@ -15,12 +15,18 @@
 			$data = $queryBuilder
 					->select('*')
 					->from($databaseTable)
+					->innerJoin(
+						$databaseTable,
+						"tx_clubms_domain_model_person",
+						"tx_clubms_domain_model_person",
+						$queryBuilder->expr()->eq('tx_clubms_domain_model_person.uid', $queryBuilder->quoteIdentifier($databaseTable . 'person'))
+					)
 					->execute()
 					->fetchAll();
 
 			foreach ($data as $ydata) {
 				// push it into the config array
-				array_push($config['items'], [$ydata['person'], $ydata['uid']]);
+				array_push($config['items'], [$ydata['lastname'] . ", " . $ydata['firstname'], $ydata['uid']]);
 			}
 
 		}
