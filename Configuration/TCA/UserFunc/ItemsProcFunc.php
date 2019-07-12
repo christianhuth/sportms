@@ -35,6 +35,7 @@
 			}
 
 			if($byTeamSeasonUid) {
+				array_push($config['items'], [count($byTeamSeasonUid), '2']);
 				foreach ($byTeamSeasonUid as $data) {
 					// push it into the config array
 					array_push($config['items'], ['Test', '5']);
