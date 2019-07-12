@@ -24,6 +24,8 @@
 			// Get data from repository
 			$myData = $teamRepository->findByUid(3);
 
+			array_push($config['items'], ['myData ' . count($myData), count($myData)]);
+
 			if(is_null($myData)) {
 				array_push($config['items'], ['empty','2']);
 			} else {
