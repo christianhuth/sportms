@@ -41,6 +41,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
 		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_guest, team_season_guest, game_lineup_guest_starts, game_lineup_guest_substitutes, trainer_guest,
 		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_changes, game_changes,
 		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_goals, game_goals,
+		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_punishments, game_punishments,
 		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_referees, game_referees,
 		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_reports, game_reports,
 		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_visibility, hidden, detail_link,
@@ -918,6 +919,28 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
 				),
 				'foreign_field' => 'game',
 				'foreign_table' => 'tx_clubms_domain_model_gamegoal',
+				'type' => 'inline',
+			),
+		),
+
+		'game_punishments' => array(
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.game_punishments',
+			'config' => array(
+				'appearance' => array(
+					'enabledControls' => [
+						'info' => false,
+						'new' => true,
+						'sort' => false,
+						'hide' => true,
+						'dragdrop' => true,
+						'delete' => true,
+						'localize' => true,
+					],
+					'levelLinksPosition' => 'bottom',
+					'useSortable' => 1,
+				),
+				'foreign_field' => 'game',
+				'foreign_table' => 'tx_clubms_domain_model_gamepunishment',
 				'type' => 'inline',
 			),
 		),
