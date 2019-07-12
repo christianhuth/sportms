@@ -663,6 +663,51 @@
 			</trans-unit>
 
 
+			<!-- Domain Model GameGoal -->
+			<trans-unit id="tx_clubms_domain_model_gamegoal">
+				<source>Tor</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_gamegoal.game">
+				<source>Spiel</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_gamegoal.goal_home">
+				<source>Spielstand (Heim)</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_gamegoal.goal_guest">
+				<source>Spielstand (Gast)</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_gamegoal.period">
+				<source>Spielabschnitt</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_gamegoal.minute">
+				<source>Spielminute</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_gamegoal.minute_additional">
+				<source>Nachspielzeit</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_gamegoal.scorer">
+				<source>Torschütze</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_gamegoal.assist">
+				<source>Vorlagengeber</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_gamegoal.own_goal">
+				<source>Eigentor?</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_gamegoal.goal_type">
+				<source>Torart</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_gamegoal.goal_type_penalty">
+				<source>Elfmeter</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_gamegoal.goal_type_freekick">
+				<source>Direkter Freistoß</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_gamegoal.goal_type_corner">
+				<source>Direkter Eckball</source>
+			</trans-unit>
+
+
 			<!-- Domain Model GameLineup -->
 			<trans-unit id="tx_clubms_domain_model_gamelineup">
 				<source>Aufstellung</source>
