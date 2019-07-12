@@ -17,16 +17,22 @@
 			array_push($config['items'], ['Fussball','1']);
 
 			// Get data from repository
-			$myData = $teamSeasonSquadMemberRepository->findByTeamSeasonUid(1);
+			$byUid = $teamSeasonSquadMemberRepository->findByUid(3);
+			$byTeamSeasonUid = $teamSeasonSquadMemberRepository->findByTeamSeasonUid(1);
 
-			array_push($config['items'], ['myData: ' . sizeof($myData), sizeof($myData)]);
+			array_push($config['items'], ['myData: ' . sizeof($byTeamSeasonUid), sizeof($byTeamSeasonUid)]);
 
-			if(is_null($myData)) {
+			if(is_null($byTeamSeasonUid)) {
 				array_push($config['items'], ['null','2']);
 			}
 
-			if($myData) {
-				foreach ($myData as $data) {
+			if($byUid) {
+				// push it into the config array
+				array_push($config['items'], [$byUid->getName(), $byUid->getUid()]);
+			}
+
+			if($byTeamSeasonUid) {
+				foreach ($byTeamSeasonUid as $data) {
 					// push it into the config array
 					array_push($config['items'], [$data->getName(), $data->getUid()]);
 				}
