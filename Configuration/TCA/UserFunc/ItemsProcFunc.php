@@ -12,17 +12,12 @@
 
 			// Get repository
 			$objectManager = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('TYPO3\CMS\Extbase\Object\ObjectManager');
-			$teamRepository = $objectManager->get('Balumedien\\Clubms\\Domain\\Repository\\TeamRepository');
-
-			#\TYPO3\CMS\Core\Utility\DebugUtility::debug($config, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
-			#\TYPO3\CMS\Core\Utility\DebugUtility::debug($teamSeasonSquadMemberRepository, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
-
-			#var_dump("TEST2");
+			$teamSeasonSquadMemberRepository = $objectManager->get('Balumedien\Clubms\Domain\Repository\TeamSeasonSquadMemberRepository');
 
 			array_push($config['items'], ['Fussball','1']);
 
 			// Get data from repository
-			$myData = $teamRepository->findAll();
+			$myData = $teamSeasonSquadMemberRepository->findByTeamSeasonUid();
 
 			array_push($config['items'], ['myData: ' . sizeof($myData), sizeof($myData)]);
 
@@ -38,10 +33,6 @@
 			} else {
 				array_push($config['items'], ['empty','2']);
 			}
-
-
-
-
 
 			array_push($config['items'], ['Fussball','3']);
 
