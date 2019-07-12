@@ -1668,7 +1668,7 @@ CREATE TABLE tx_clubms_domain_model_url (
 );
 
 #
-# Table structure for table 'tx_clubms2_competitionseason_teamseason_mm'
+# Table structure for table 'tx_clubms_competitionseason_teamseason_mm'
 #
 CREATE TABLE tx_clubms_competitionseason_teamseason_mm (
 
@@ -1685,7 +1685,7 @@ CREATE TABLE tx_clubms_competitionseason_teamseason_mm (
 );
 
 #
-# Table structure for table 'tx_clubms2_teamseason_teamseasonsquadmember_mm'
+# Table structure for table 'tx_clubms_teamseason_teamseasonsquadmember_mm'
 #
 CREATE TABLE tx_clubms_teamseason_teamseasonsquadmember_mm (
 
