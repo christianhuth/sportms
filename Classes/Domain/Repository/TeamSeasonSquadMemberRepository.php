@@ -12,6 +12,9 @@ class TeamSeasonSquadMemberRepository extends \TYPO3\CMS\Extbase\Persistence\Rep
 	public function findByTeamSeasonUid($teamSeasonUid) {
 		$query = $this->createQuery();
 		$query->matching($query->equals('team_season', $teamSeasonUid));
+		$queryParser = $this->objectManager->get(\TYPO3\CMS\Extbase\Persistence\Generic\Storage\Typo3DbQueryParser::class);
+		\TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($queryParser->convertQueryToDoctrineQueryBuilder($query)->getSQL());
+		\TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($queryParser->convertQueryToDoctrineQueryBuilder($query)->getParameters());
 		return $query->execute();
 	}
 
