@@ -106,6 +106,24 @@ $GLOBALS['TCA']['tx_clubms_domain_model_gamegoal'] = array(
             ),
         ),
 
+		'goal_home' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gamegoal.goal_home',
+			'config' => array(
+				'type' => 'input',
+				'size' => 10,
+				'eval' => 'int, required, trim'
+			),
+		),
+		'goal_guest' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gamegoal.goal_guest',
+			'config' => array(
+				'type' => 'input',
+				'size' => 10,
+				'eval' => 'int, required, trim'
+			),
+		),
 		'period' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gamegoal.period',
