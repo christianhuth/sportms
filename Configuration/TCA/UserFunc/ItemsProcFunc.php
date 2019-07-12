@@ -26,7 +26,7 @@
 				)
 				->where($queryBuilder->expr()->eq($databaseTable . '.team_season', $teamSeason));
 
-			array_push($config['items'], [$queryBuilder->getSQL(), '0']);
+			#array_push($config['items'], [$queryBuilder->getSQL(), '0']);
 
 			$result = $queryBuilder
 						->execute()
