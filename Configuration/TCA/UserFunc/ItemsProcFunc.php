@@ -12,9 +12,6 @@
 
 			$itemList = [];
 
-
-			#var_dump("TEST");
-
 			// Get repository
 			$objectManager = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('TYPO3\CMS\Extbase\Object\ObjectManager');
 			$teamSeasonSquadMemberRepository = $objectManager->get('Balumedien\Clubms\Domain\Repository\TeamSeasonSquadMemberRepository');
@@ -34,9 +31,10 @@
 	#			));
 	#		}
 
-			$itemList[0] = ['Fussball','1'];
-			$config['items'] = $itemList;
-			return $config;
+			array_push($config['items'], ['Fussball','1']);
+
+			#$config['items'] = $itemList;
+			#return $config;
 
 
 		}
