@@ -117,11 +117,12 @@ $GLOBALS['TCA']['tx_clubms_domain_model_gamelineup'] = array(
             'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gamelineup.team_season_squad_member',
             'config' => array(
                 'eval' => 'required',
-                'foreign_table' => 'tx_clubms_domain_model_teamseasonsquadmember',
-                'foreign_table_where' => ' ORDER BY tx_clubms_domain_model_teamseasonsquadmember.sorting ASC',
-                'items' => array(
-                    array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
-                ),
+                #'foreign_table' => 'tx_clubms_domain_model_teamseasonsquadmember',
+                #'foreign_table_where' => ' ORDER BY tx_clubms_domain_model_teamseasonsquadmember.sorting ASC',
+	            'itemsProcFunc' => 'Balumedien\Clubms\Configuration\TCA\UserFunc\FlexFormUserFunc->team_season_squad_member_GameLineup',
+	            #'items' => array(
+                #    array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
+                #),
                 'maxItems' => 1,
                 'renderType' => 'selectSingle',
                 'size' => 1,
