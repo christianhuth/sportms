@@ -42,11 +42,11 @@
 			array_push($config['items'], ['Fussball','1']);
 
 			// Get data from repository
-			$myData = $this->getTeamSeasonSquadMemberRepository()->findAll();
+			$myData = $this->getTeamSeasonSquadMemberRepository()->findByUid(3);
 
 			foreach ($myData as $data) {
 				// push it into the config array
-				array_push($config['items'], [$data['label'], $data['uid']]);
+				array_push($config['items'], [$data['person'], $data['uid']]);
 			}
 
 			array_push($config['items'], ['Fussball','1']);
