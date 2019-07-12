@@ -19,7 +19,11 @@
 			$databaseTable = "tx_clubms_domain_model_teamseasonsquadmember";
 
 			$queryBuilder = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Database\ConnectionPool::class)->getQueryBuilderForTable($databaseTable);
-			$data = $queryBuilder->select('uid, person')->from($databaseTable);
+			$data = $queryBuilder
+					->select('uid, person')
+					->from($databaseTable)
+					->execute()
+					->fetchAll();
 
 			array_push($config['items'], ['Fussball','1']);
 
