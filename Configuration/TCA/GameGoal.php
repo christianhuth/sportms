@@ -169,7 +169,6 @@ $GLOBALS['TCA']['tx_clubms_domain_model_gamegoal'] = array(
             'exclude' => 1,
             'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gamegoal.scorer',
             'config' => array(
-	            'eval' => 'required',
                 'foreign_table' => 'tx_clubms_domain_model_gamelineup',
                 'foreign_table_where' => '  AND tx_clubms_domain_model_gamelineup.game = ###REC_FIELD_game###
                                             ORDER BY tx_clubms_domain_model_gamelineup.jersey_number ASC',
