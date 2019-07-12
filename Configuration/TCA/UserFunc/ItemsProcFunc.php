@@ -24,7 +24,9 @@
 				array_push($config['items'], [$byUid->getPerson()->getLastname(), $byUid->getUid()]);
 			}
 
+			array_push($config['items'], ['Fussball','1']);
 			$byTeamSeasonUid = $teamSeasonSquadMemberRepository->findByTeamSeasonUid(1);
+			array_push($config['items'], ['Fussball','1']);
 
 			array_push($config['items'], ['byTeamSeasonUid: ' . sizeof($byTeamSeasonUid), sizeof($byTeamSeasonUid)]);
 
