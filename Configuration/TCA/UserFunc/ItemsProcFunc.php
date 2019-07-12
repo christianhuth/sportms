@@ -22,10 +22,10 @@
 
 			array_push($config['items'], ['Fussball','1']);
 
-			array_push($config['items'], $teamSeasonSquadMemberRepository);
-
 			// Get data from repository
 			$myData = $teamSeasonSquadMemberRepository->findAll();
+
+			array_push($config['items'], $myData);
 			foreach ($myData as $data) {
 				// push it into the config array
 				array_push($config['items'], [$data['label'], $data['uid']]);
