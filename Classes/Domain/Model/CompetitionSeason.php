@@ -48,16 +48,6 @@
 		protected $season;
 
 		/**
-		 * @var int
-		 */
-		protected $maxTeams;
-
-		/**
-		 * @var int
-		 */
-		protected $gamedays;
-
-		/**
 		 * competitionSeasonTeams
 		 *
 		 * @var ObjectStorage<\Balumedien\Clubms2\Domain\Model\TeamSeason>
@@ -110,34 +100,6 @@
 		 */
 		public function setSeason($season) {
 			$this->season = $season;
-		}
-
-		/**
-		 * @return int
-		 */
-		public function getMaxTeams() {
-			return $this->maxTeams;
-		}
-
-		/**
-		 * @param int $maxTeams
-		 */
-		public function setMaxTeams($maxTeams) {
-			$this->maxTeams = $maxTeams;
-		}
-
-		/**
-		 * @return int
-		 */
-		public function getGamedays() {
-			return $this->gamedays;
-		}
-
-		/**
-		 * @param int $gamedays
-		 */
-		public function setGamedays($gamedays) {
-			$this->gamedays = $gamedays;
 		}
 
 		/**

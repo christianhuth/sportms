@@ -31,7 +31,7 @@
 			'showRecordFieldList' => '',
 		),
 		'types' => array(
-			'1' => array('showitem' => 'season, max_teams, gamedays,
+			'1' => array('showitem' => 'season,
 									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_competitionseason.tab_teams, competition_season_teams,
 									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_competitionseason.tab_visibility, hidden, detail_link'),
 		),
@@ -111,24 +111,6 @@
 					'renderType' => 'selectSingle',
 					'size' => 1,
 					'type' => 'select',
-				),
-			),
-			'max_teams' => array(
-				'exclude' => 1,
-				'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_competitionseason.max_teams',
-				'config' => array(
-					'type' => 'input',
-					'size' => 30,
-					'eval' => 'int, trim'
-				),
-			),
-			'gamedays' => array(
-				'exclude' => 1,
-				'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_competitionseason.gamedays',
-				'config' => array(
-					'type' => 'input',
-					'size' => 30,
-					'eval' => 'int, trim'
 				),
 			),
 
