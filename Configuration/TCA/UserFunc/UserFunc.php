@@ -76,7 +76,7 @@
 			$record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
 			$teamSeasonSquadMemberScorer = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_teamseasonsquadmember", $record['scorer']);
 			$scorer = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_person", $teamSeasonSquadMemberScorer['person']);
-			$newLabel = $record['goals_home'] . ":" . $scorer['lastname'] . ", " . $scorer['firstname'] . " (" . $record['minute'] . ")";
+			$newLabel = $record['goal_home'] . ":" . $record['goal_guest'] . " - " . $scorer['lastname'] . ", " . $scorer['firstname'] . " (" . $record['minute'] . ".)";
 			$parameters['title'] = $newLabel;
 		}
 
