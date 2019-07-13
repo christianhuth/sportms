@@ -113,6 +113,27 @@
 					'type' => 'select',
 				),
 			),
+			'competition_season_gamedays' => array(
+				'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_competitionseason.competition_season_gamedays',
+				'config' => array(
+					'appearance' => array(
+						'enabledControls' => [
+							'info' => false,
+							'new' => true,
+							'sort' => false,
+							'hide' => true,
+							'dragdrop' => true,
+							'delete' => true,
+							'localize' => true,
+						],
+						'levelLinksPosition' => 'bottom',
+						'useSortable' => 1,
+					),
+					'foreign_field' => 'competition_season',
+					'foreign_table' => 'tx_clubms_domain_model_competitionseasongamedays',
+					'type' => 'inline',
+				),
+			),
 
 			'competition_season_teams' => [
 				'exclude' => true,

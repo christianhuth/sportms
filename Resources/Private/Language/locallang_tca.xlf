@@ -357,6 +357,9 @@
 			<trans-unit id="tx_clubms_domain_model_competitionseason.season">
 				<source>Saison</source>
 			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_competitionseason.competition_season_gamedays">
+				<source>Spieltage</source>
+			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_competitionseason.competition_season_teams">
 				<source>Teilnehmende Mannschaften</source>
 			</trans-unit>
