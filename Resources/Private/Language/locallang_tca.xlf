@@ -374,6 +374,27 @@
 			</trans-unit>
 
 
+            <!-- Domain Model CompetitionSeasonGameday -->
+			<trans-unit id="tx_clubms_domain_model_competitionseasongameday">
+				<source>Spieltag</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_competitionseasongameday.competition_season">
+				<source>Wettbewerbsinstanz</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_competitionseasongameday.label">
+				<source>Bezeichnung</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_competitionseasongameday.startdate">
+				<source>Startdatum</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_competitionseasongameday.enddate">
+				<source>Enddatum</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_competitionseasongameday.palette_startdate_enddate">
+				<source>Zeitraum</source>
+			</trans-unit>
+
+
 
 			<!-- Domain Model CompetitionType -->
 			<trans-unit id="tx_clubms_domain_model_competitiontype">
