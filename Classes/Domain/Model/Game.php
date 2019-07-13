@@ -64,6 +64,11 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      */
     protected $status;
 
+	/**
+	 * @var \Balumedien\Clubms\Domain\Model\CompetitionSeasonGameday
+	 */
+	protected $gameday;
+
     /**
      * @var int
      */
@@ -423,6 +428,20 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         $this->status = $status;
     }
+
+	/**
+	 * @return CompetitionSeasonGameday
+	 */
+	public function getGameday() {
+		return $this->gameday;
+	}
+
+	/**
+	 * @param CompetitionSeasonGameday $gameday
+	 */
+	public function setGameday($gameday) {
+		$this->gameday = $gameday;
+	}
 
     /**
      * @return int
