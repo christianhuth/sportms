@@ -36,7 +36,7 @@
 	class CompetitionSeason extends AbstractEntity {
 
 		/**
-		 * @var Competition
+		 * @var \Balumedien\Clubms\Domain\Model\Competition
 		 * @lazy
 		 */
 		protected $competition;
@@ -47,10 +47,13 @@
 		 */
 		protected $season;
 
-		/**
-		 * competitionSeasonTeams
-		 *
-		 * @var ObjectStorage<\Balumedien\Clubms2\Domain\Model\TeamSeason>
+		/**		 *
+		 * @var ObjectStorage<\Balumedien\Clubms\Domain\Model\CompetitionSeasonGameday>
+		 */
+		protected $competitionSeasonGamedays;
+
+		/**		 *
+		 * @var ObjectStorage<\Balumedien\Clubms\Domain\Model\TeamSeason>
 		 */
 		protected $competitionSeasonTeams;
 
@@ -71,6 +74,7 @@
 		 * @return void
 		 */
 		protected function initStorageObjects() {
+			$this->competitionSeasonGamedays = new ObjectStorage();
 			$this->competitionSeasonTeams = new ObjectStorage();
 		}
 
@@ -100,6 +104,20 @@
 		 */
 		public function setSeason($season) {
 			$this->season = $season;
+		}
+
+		/**
+		 * @return ObjectStorage
+		 */
+		public function getCompetitionSeasonGamedays() {
+			return $this->competitionSeasonGamedays;
+		}
+
+		/**
+		 * @param ObjectStorage $competitionSeasonGamedays
+		 */
+		public function setCompetitionSeasonGamedays($competitionSeasonGamedays) {
+			$this->competitionSeasonGamedays = $competitionSeasonGamedays;
 		}
 
 		/**
