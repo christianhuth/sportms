@@ -601,6 +601,9 @@
 			<trans-unit id="tx_clubms_domain_model_game.detail_link">
 				<source>Link auf Einzelansicht möglich?</source>
 			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_game.palette_gameday_date_time">
+				<source>Zeitraum</source>
+			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_game.palette_periods">
 				<source>Spielabschnitte</source>
 			</trans-unit>

@@ -28,7 +28,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
 	),
 	'types' => array(
 		'1' => array('showitem' => 'section, season, competition_season, 
-		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_details, status, --palette--;;date_time, --palette--;;venue_spectators, --palette--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.palette_periods;periods, game_periods,
+		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_details, status, --palette--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.palette_gameday_date_time;gameday_date_time, --palette--;;venue_spectators, --palette--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.palette_periods;periods, game_periods,
 		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_result, 
 		                                --palette--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.palette_result_end_regular;result_end_regular,
 		                                --palette--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.palette_result_end_additional;result_end_additional,
@@ -48,7 +48,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
 		                            '),
 	),
 	'palettes' => array(
-        'date_time' => array('showitem' => 'date, time'),
+        'gameday_date_time' => array('showitem' => 'gameday, date, time'),
         'venue_spectators' => array('showitem' => 'venue, spectators'),
         'periods' => array('showitem' => 'period_count, period_duration'),
 		'result_end_regular' => array('showitem' => 'result_end_regular_home, result_end_regular_guest, result_end_additional'),
@@ -188,6 +188,24 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
                 'type' => 'select',
             ),
         ),
+		'gameday' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.gameday',
+			'config' => array(
+				'eval' => 'required',
+				'foreign_table' => 'tx_clubms_domain_model_competitionseasongameday',
+				'foreign_table_where' => ' AND tx_clubms_domain_model_competitionseasongameday.competition_season = ###REC_FIELD_competition_season### ORDER BY sorting ASC',
+				'items' => Array (
+					array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
+				),
+				'maxItems' => 1,
+				'minItems' => 1,
+				'renderType' => 'selectSingle',
+				'size' => 1,
+				'type' => 'select',
+			),
+			'onChange' => 'reload',
+		),
         'date' => array(
             'exclude' => 1,
             'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.date',
