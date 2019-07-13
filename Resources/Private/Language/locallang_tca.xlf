@@ -445,6 +445,9 @@
 			<trans-unit id="tx_clubms_domain_model_game.status_uncompleted">
 				<source>Abgebrochen</source>
 			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_game.gameday">
+				<source>Spieltag</source>
+			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_game.date">
 				<source>Datum</source>
 			</trans-unit>
