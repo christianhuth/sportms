@@ -49,6 +49,23 @@
             $parameters['title'] = $newLabel;
         }
 
+		public function competitionSeasonGamedayLabel(&$parameters, $parentObject) {
+			$record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
+			$newLabel = $record['label'];
+			if($record['startdate'] || $record['enddate']) {
+				if($record['startdate']) {
+					$newLabel .= " (" . date("d.m.Y", $record['startdate']);
+					if($record['enddate']) {
+						$newLabel .= " - " . date("d.m.Y", $record['enddate']);
+					}
+					$newLabel .= ")";
+				} else {
+					$newLabel .= "( - " . date("d.m.Y", $record['enddate']) . ")";
+				}
+			}
+			$parameters['title'] = $newLabel;
+		}
+
         public function gameLabel(&$parameters, $parentObject) {
             $record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
             $competitionSeason = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_competitionseason", $record['competition_season']);
