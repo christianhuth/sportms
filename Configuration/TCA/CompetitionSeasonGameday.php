@@ -31,7 +31,7 @@
 			'showRecordFieldList' => '',
 		),
 		'types' => array(
-			'1' => array('showitem' => 'competition_season, label, --palette--;;startdate_enddate'),
+			'1' => array('showitem' => 'competition_season, label, --palette--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_competitionseasongameday.palette_startdate_enddate;startdate_enddate'),
 		),
 		'palettes' => array(
 			'startdate_enddate' => array('showitem' => 'startdate, enddate'),
