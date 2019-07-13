@@ -95,7 +95,7 @@
 				'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_competitionseasongameday.competition_season',
 				'config' => array(
 					'eval' => 'required',
-					'foreign_table' => 'tx_clubms_domain_model_competition_season',
+					'foreign_table' => 'tx_clubms_domain_model_competitionseason',
 					'items' => Array(
 						array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
 					),
