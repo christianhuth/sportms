@@ -130,7 +130,7 @@
 						'useSortable' => 1,
 					),
 					'foreign_field' => 'competition_season',
-					'foreign_table' => 'tx_clubms_domain_model_competitionseasongamedays',
+					'foreign_table' => 'tx_clubms_domain_model_competitionseasongameday',
 					'type' => 'inline',
 				),
 			),
