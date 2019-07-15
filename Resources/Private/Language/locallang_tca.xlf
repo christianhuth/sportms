@@ -1351,14 +1351,14 @@
 			<trans-unit id="tx_clubms_domain_model_venue.name">
 				<source>Bezeichnung</source>
 			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_venue.description">
-				<source>Beschreibung</source>
-			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_venue.address">
 				<source>Adresse</source>
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_venue.images">
 				<source>Bilder</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_venue.description">
+				<source>Beschreibung</source>
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_venue.date_of_building">
 				<source>Baudatum</source>
@@ -1374,15 +1374,6 @@
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_venue.spectator_capacity">
 				<source>Zuschauerkapazität</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_venue.tab_image">
-				<source>Bilder</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_venue.tab_details">
-				<source>Details</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_venue.tab_size">
-				<source>Ausmaße</source>
 			</trans-unit>
 
 

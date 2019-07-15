@@ -26,9 +26,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_venue'] = array(
 		'showRecordFieldList' => 'hidden, section',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'name, address, --palette--;;building, --palette--;;size,
-									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_venue.tab_image, images,
-									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_venue.tab_details, description'),
+		'1' => array('showitem' => 'name, address, images, description, --palette--;;building, --palette--;;size'),
 	),
 	'palettes' => array(
         'building' => array('showitem' => 'date_of_building, year_of_building'),
