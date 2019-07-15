@@ -28,7 +28,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_teamseasonpractice'] = array(
 		'showRecordFieldList' => 'season',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'day, time_start, time_end, club_venue, annotation,
+		'1' => array('showitem' => 'day, time_start, time_end, venue, annotation,
 									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_teamseasonpractice.tab_visibility, hidden'),
 	),
 	'palettes' => array(
@@ -124,11 +124,11 @@ $GLOBALS['TCA']['tx_clubms_domain_model_teamseasonpractice'] = array(
 			),
 		),
 		
-		'club_venue' => array(
+		'venue' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_teamseasonpractice.club_venue',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_teamseasonpractice.venue',
 			'config' => array(
-				'foreign_table' => 'tx_clubms_domain_model_clubvenue',
+				'foreign_table' => 'tx_clubms_domain_model_venue',
 				'foreign_table_where' => 'ORDER BY name ASC',
 				'items' => Array (
                     array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),

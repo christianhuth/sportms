@@ -60,7 +60,7 @@ class TeamSeasonPractice extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity 
 	/**
 	 * @var	\Balumedien\Clubms\Domain\Model\Venue
 	 */
-	protected $clubVenue;
+	protected $venue;
 
 	/**
 	 * @var	string
@@ -134,17 +134,17 @@ class TeamSeasonPractice extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity 
     /**
      * @return Venue
      */
-    public function getClubVenue()
+    public function getVenue()
     {
-        return $this->clubVenue;
+        return $this->venue;
     }
 
     /**
-     * @param Venue $clubVenue
+     * @param Venue $venue
      */
-    public function setClubVenue($clubVenue)
+    public function setVenue($venue)
     {
-        $this->clubVenue = $clubVenue;
+        $this->venue = $venue;
     }
 
     /**

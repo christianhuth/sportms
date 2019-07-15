@@ -1642,7 +1642,7 @@ CREATE TABLE tx_clubms_domain_model_teamseasonpractice (
 	day varchar(255) DEFAULT '' NOT NULL,
 	time_start varchar(255) DEFAULT '' NOT NULL,
 	time_end varchar(255) DEFAULT '' NOT NULL,
-	club_venue int(11) DEFAULT '0' NOT NULL,
+	venue int(11) DEFAULT '0' NOT NULL,
 	annotation varchar(255) DEFAULT '' NOT NULL,
 
 	sorting int(11) DEFAULT '0' NOT NULL,
