@@ -6,7 +6,11 @@
 		
 		public function addressLabel(&$parameters, $parentObject) {
 			$record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
-            $newLabel = $record['street'] . " " . $record['housenumber'] . " (" . $record['zipcode'] . " " . $record['location'] . ")";
+            $newLabel = $record['street'] . " " . $record['housenumber'] . " (";
+            if($record['zipcode']) {
+                $newLabel .= $record['zipcode'] . " ";
+            }
+            $newLabel .= $record['location'] . ")";
 			$parameters['title'] = $newLabel;
 		}
 
