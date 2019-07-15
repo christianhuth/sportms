@@ -408,54 +408,6 @@ CREATE TABLE tx_clubms_domain_model_clubsectionofficialjob (
 );
 
 #
-# Table structure for table 'tx_clubms_domain_model_clubvenue'
-#
-CREATE TABLE tx_clubms_domain_model_clubvenue (
-
-	uid int(11) NOT NULL auto_increment,
-	pid int(11) DEFAULT '0' NOT NULL,
-
-    club_ground int(11) DEFAULT '0' NOT NULL,
-
-	name varchar(255) DEFAULT '' NOT NULL,
-    description varchar(255) DEFAULT '' NOT NULL,
-	address int(11) DEFAULT NULL,
-	images varchar(255) DEFAULT NULL,
-	club_owned tinyint(4) unsigned DEFAULT '0' NOT NULL,
-	club_owned_since int(11) DEFAULT NULL,
-	date_of_building int(11) DEFAULT NULL,
-	year_of_building varchar(255) DEFAULT NULL,
-	dimensions varchar(255) DEFAULT '' NOT NULL,
-	surface int(11) DEFAULT '0' NOT NULL,
-	spectator_capacity varchar(255) DEFAULT '' NOT NULL,
-	
-	sorting int(11) DEFAULT '0' NOT NULL,
-
-	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
-	crdate int(11) unsigned DEFAULT '0' NOT NULL,
-	cruser_id int(11) unsigned DEFAULT '0' NOT NULL,
-	deleted tinyint(4) unsigned DEFAULT '0' NOT NULL,
-	hidden tinyint(4) unsigned DEFAULT '0' NOT NULL,
-	starttime int(11) unsigned DEFAULT '0' NOT NULL,
-	endtime int(11) unsigned DEFAULT '0' NOT NULL,
-
-	t3ver_oid int(11) DEFAULT '0' NOT NULL,
-	t3ver_id int(11) DEFAULT '0' NOT NULL,
-	t3ver_wsid int(11) DEFAULT '0' NOT NULL,
-	t3ver_label varchar(255) DEFAULT '' NOT NULL,
-	t3ver_state tinyint(4) DEFAULT '0' NOT NULL,
-	t3ver_stage int(11) DEFAULT '0' NOT NULL,
-	t3ver_count int(11) DEFAULT '0' NOT NULL,
-	t3ver_tstamp int(11) DEFAULT '0' NOT NULL,
-	t3ver_move_id int(11) DEFAULT '0' NOT NULL,
-
-	PRIMARY KEY (uid),
-	KEY parent (pid),
-	KEY t3ver_oid (t3ver_oid,t3ver_wsid),
-
-);
-
-#
 # Table structure for table 'tx_clubms_domain_model_competition'
 #
 CREATE TABLE tx_clubms_domain_model_competition (
@@ -1800,6 +1752,52 @@ CREATE TABLE tx_clubms_domain_model_url (
 	PRIMARY KEY (uid),
 	KEY parent (pid),
 	KEY t3ver_oid (t3ver_oid,t3ver_wsid),
+
+);
+
+
+
+#
+# Table structure for table 'tx_clubms_domain_model_venue'
+#
+CREATE TABLE tx_clubms_domain_model_venue (
+
+    uid int(11) NOT NULL auto_increment,
+    pid int(11) DEFAULT '0' NOT NULL,
+
+    name varchar(255) DEFAULT '' NOT NULL,
+    description varchar(255) DEFAULT '' NOT NULL,
+    address int(11) DEFAULT NULL,
+    images varchar(255) DEFAULT NULL,
+    date_of_building int(11) DEFAULT NULL,
+    year_of_building varchar(255) DEFAULT NULL,
+    dimensions varchar(255) DEFAULT '' NOT NULL,
+    surface int(11) DEFAULT '0' NOT NULL,
+    spectator_capacity varchar(255) DEFAULT '' NOT NULL,
+
+    sorting int(11) DEFAULT '0' NOT NULL,
+
+    tstamp int(11) unsigned DEFAULT '0' NOT NULL,
+    crdate int(11) unsigned DEFAULT '0' NOT NULL,
+    cruser_id int(11) unsigned DEFAULT '0' NOT NULL,
+    deleted tinyint(4) unsigned DEFAULT '0' NOT NULL,
+    hidden tinyint(4) unsigned DEFAULT '0' NOT NULL,
+    starttime int(11) unsigned DEFAULT '0' NOT NULL,
+    endtime int(11) unsigned DEFAULT '0' NOT NULL,
+
+    t3ver_oid int(11) DEFAULT '0' NOT NULL,
+    t3ver_id int(11) DEFAULT '0' NOT NULL,
+    t3ver_wsid int(11) DEFAULT '0' NOT NULL,
+    t3ver_label varchar(255) DEFAULT '' NOT NULL,
+    t3ver_state tinyint(4) DEFAULT '0' NOT NULL,
+    t3ver_stage int(11) DEFAULT '0' NOT NULL,
+    t3ver_count int(11) DEFAULT '0' NOT NULL,
+    t3ver_tstamp int(11) DEFAULT '0' NOT NULL,
+    t3ver_move_id int(11) DEFAULT '0' NOT NULL,
+
+    PRIMARY KEY (uid),
+    KEY parent (pid),
+    KEY t3ver_oid (t3ver_oid,t3ver_wsid),
 
 );
 
