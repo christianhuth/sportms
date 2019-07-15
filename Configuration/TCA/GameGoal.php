@@ -189,7 +189,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_gamegoal'] = array(
 				'foreign_table_where' => '  AND tx_clubms_domain_model_gamelineup.game = ###REC_FIELD_game###
 											ORDER BY tx_clubms_domain_model_gamelineup.jersey_number ASC',
 				'items' => array(
-					array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
+					array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", 0),
 				),
 				'maxItems' => 1,
 				'renderType' => 'selectSingle',
@@ -210,10 +210,10 @@ $GLOBALS['TCA']['tx_clubms_domain_model_gamegoal'] = array(
 			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gamegoal.goal_type',
 			'config' => array(
 				'items' => array(
-					array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
-					array('LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gamegoal.goal_type_penalty', 0),
-					array('LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gamegoal.goal_type_freekick', 1),
-					array('LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gamegoal.goal_type_corner', 2),
+					array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", 0),
+					array('LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gamegoal.goal_type_penalty', 1),
+					array('LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gamegoal.goal_type_freekick', 2),
+					array('LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gamegoal.goal_type_corner', 3),
 				),
 				'renderType' => 'selectSingle',
 				'type' => 'select',
