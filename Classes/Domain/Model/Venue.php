@@ -33,6 +33,11 @@ namespace Balumedien\Clubms\Domain\Model;
 class Venue extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 
     /**
+     * @var \Balumedien\Clubms\Domain\Model\Club
+     */
+    protected $club;
+
+    /**
      * @var string
      */
     protected $name;
@@ -77,6 +82,39 @@ class Venue extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
      * @var int
      */
     protected $spectatorCapacity;
+
+    public function __construct() {
+        //Do not remove the next line: It would break the functionality
+        $this->initStorageObjects();
+    }
+
+    /**
+     * Initializes all ObjectStorage properties
+     * Do not modify this method!
+     * It will be rewritten on each save in the extension builder
+     * You may modify the constructor of this class instead
+     *
+     * @return void
+     */
+    protected function initStorageObjects(){
+        $this->images = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+    }
+
+    /**
+     * @return Club
+     */
+    public function getClub()
+    {
+        return $this->club;
+    }
+
+    /**
+     * @param Club $club
+     */
+    public function setClub($club)
+    {
+        $this->club = $club;
+    }
 
     /**
      * @return string
