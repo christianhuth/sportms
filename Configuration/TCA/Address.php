@@ -92,9 +92,8 @@ $GLOBALS['TCA']['tx_clubms_domain_model_address'] = array(
 			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_address.street',
 			'config' => array(
                 'eval' => 'alpha, required, trim',
-				'type' => 'input',
-				'size' => 255,
-				'eval' => 'trim'
+                'size' => 255,
+                'type' => 'input',
 			),
 		),
 		'housenumber' => array(
@@ -120,9 +119,8 @@ $GLOBALS['TCA']['tx_clubms_domain_model_address'] = array(
             'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_address.location',
             'config' => array(
                 'eval' => 'alpha, required, trim',
-                'type' => 'input',
                 'size' => 255,
-                'eval' => 'trim'
+                'type' => 'input',
             ),
         ),
         'country' => array(
