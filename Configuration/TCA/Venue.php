@@ -113,7 +113,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_venue'] = array(
 					'levelLinksPosition' => 'bottom',
 					'useSortable' => 1,
 				),
-				'foreign_field' => 'club_ground',
+				'foreign_field' => 'venue',
 				'foreign_table' => 'tx_clubms_domain_model_address',
 				'maxitems' => 1,
 				'type' => 'inline',

@@ -18,6 +18,7 @@ CREATE TABLE tx_clubms_domain_model_address (
 	club_section int(11) DEFAULT NULL,
 	club_ground int(11) DEFAULT NULL,
 	person int(11) DEFAULT NULL,
+	venue int(11) DEFAULT NULL,
 	
 	sorting int(11) DEFAULT '0' NOT NULL,
 	
