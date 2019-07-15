@@ -91,7 +91,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_address'] = array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_address.street',
 			'config' => array(
-                'eval' => 'required',
+                'eval' => 'alpha, required, trim',
 				'type' => 'input',
 				'size' => 255,
 				'eval' => 'trim'
@@ -101,25 +101,25 @@ $GLOBALS['TCA']['tx_clubms_domain_model_address'] = array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_address.housenumber',
 			'config' => array(
-				'type' => 'input',
+                'eval' => 'trim, trim',
 				'size' => 255,
-				'eval' => 'trim'
+				'type' => 'input',
 			),
 		),
         'zipcode' => array(
             'exclude' => 1,
             'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_address.zipcode',
             'config' => array(
-                'type' => 'input',
+                'eval' => 'num, trim, trim',
                 'size' => 255,
-                'eval' => 'trim'
+                'type' => 'input',
             ),
         ),
         'location' => array(
             'exclude' => 1,
             'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_address.location',
             'config' => array(
-                'eval' => 'required',
+                'eval' => 'alpha, required, trim',
                 'type' => 'input',
                 'size' => 255,
                 'eval' => 'trim'
