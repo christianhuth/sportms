@@ -24,7 +24,9 @@
 					$joinTable,
 					$queryBuilder->expr()->eq($joinTable . '.uid', $queryBuilder->quoteIdentifier($databaseTable . '.person'))
 				)
-				->where($queryBuilder->expr()->eq($databaseTable . '.team_season', $teamSeason));
+				->where($queryBuilder->expr()->eq($databaseTable . '.team_season', $teamSeason))
+                ->orderBy('lastname', 'ASC')
+                ->addOrderBy('firstname', 'ASC');
 
 			array_push($config['items'], [$queryBuilder->getSQL(), '0']);
 
