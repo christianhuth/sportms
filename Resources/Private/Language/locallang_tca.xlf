@@ -1375,8 +1375,14 @@
 			<trans-unit id="tx_clubms_domain_model_venue.spectator_capacity">
 				<source>Zuschauerkapazität</source>
 			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_venue.tab_image">
+				<source>Bilder</source>
+			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_venue.tab_details">
 				<source>Details</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_venue.tab_size">
+				<source>Ausmaße</source>
 			</trans-unit>
 
 

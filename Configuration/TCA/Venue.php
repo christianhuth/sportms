@@ -27,9 +27,9 @@ $GLOBALS['TCA']['tx_clubms_domain_model_venue'] = array(
 	),
 	'types' => array(
 		'1' => array('showitem' => 'name, address, journey,
-									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_venue.image, images,
-									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_venue.details, description, date_of_building, year_of_building,
-									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_venue.size, dimensions, surface, spectator_capacity, parking, park_and_ride'),
+									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_venue.tab_image, images,
+									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_venue.tab_details, description, date_of_building, year_of_building,
+									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_venue.tab_size, dimensions, surface, spectator_capacity, parking, park_and_ride'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
