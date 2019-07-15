@@ -116,7 +116,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_venue'] = array(
 				'eval' => 'required',
 				'foreign_field' => 'club_ground',
 				'foreign_table' => 'tx_clubms_domain_model_address',
-				'maxItems' => '1',
+				'maxItems' => 1,
 				'type' => 'inline',
 			),
 		),
