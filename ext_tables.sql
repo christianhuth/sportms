@@ -111,7 +111,6 @@ CREATE TABLE tx_clubms_domain_model_clubground (
 	club_owned_since int(11) DEFAULT NULL,
 	date_of_building int(11) DEFAULT NULL,
 	year_of_building varchar(255) DEFAULT NULL,
-	club_venues int(11) DEFAULT NULL,
 	
 	sorting int(11) DEFAULT '0' NOT NULL,
 
