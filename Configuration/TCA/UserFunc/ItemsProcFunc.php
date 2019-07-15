@@ -28,7 +28,7 @@
                 ->orderBy('lastname', 'ASC')
                 ->addOrderBy('firstname', 'ASC');
 
-			array_push($config['items'], [$queryBuilder->getSQL(), '0']);
+			#array_push($config['items'], [$queryBuilder->getSQL(), '0']);
 
 			$result = $queryBuilder
 						->execute()
