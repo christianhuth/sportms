@@ -29,8 +29,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_clubground'] = array(
 	'types' => array(
 		'1' => array('showitem' => 'name, address, journey, description,
 									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubground.tab_images, images,
-									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubground.tab_details, club_owned, club_owned_since, date_of_building, year_of_building,
-									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubground.tab_venues, club_venues,'),
+									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubground.tab_details, club_owned, club_owned_since, date_of_building, year_of_building,'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -187,20 +186,6 @@ $GLOBALS['TCA']['tx_clubms_domain_model_clubground'] = array(
 				'eval' => 'date',
 				'placeholder' => 'dd-mm-yyyy',
 				'renderType' => 'inputDateTime',
-			),
-		),
-		
-		'club_venues' => array(
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubground.club_venues',
-			'config' => array(
-				'appearance' => array(
-					'levelLinksPosition' => 'bottom',
-					'useSortable' => 1,
-				),
-				'eval' => 'required',
-				'foreign_field' => 'club_ground',
-				'foreign_table' => 'tx_clubms_domain_model_clubvenue',
-				'type' => 'inline',
 			),
 		),
 		
