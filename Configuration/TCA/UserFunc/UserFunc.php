@@ -217,6 +217,17 @@
             }
 			$parameters['title'] = $newLabel;
 		}
+
+        public function venueLabel(&$parameters, $parentObject) {
+            $record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
+            $newLabel = '';
+            if($record['club']) {
+                $club = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_club", $record['club']);
+                $newLabel .= $club['name'] . " - ";
+            }
+            $newLabel .= $record['name'];
+            $parameters['title'] = $newLabel;
+        }
 		
 	}
 	
