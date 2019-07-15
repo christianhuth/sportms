@@ -28,14 +28,9 @@ namespace Balumedien\Clubms\Domain\Model;
  ***************************************************************/
 
 /**
- * ClubVenue
+ * Venue
  */
-class ClubVenue extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
-
-    /**
-     * @var \Balumedien\Clubms\Domain\Model\ClubGround
-     */
-    protected $clubGround;
+class Venue extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 
     /**
      * @var string
@@ -57,16 +52,6 @@ class ClubVenue extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
      * @lazy
      */
     protected $images;
-
-    /**
-     * @var boolean
-     */
-    protected $clubOwned;
-
-    /**
-     * @var int
-     */
-    protected $clubOwnedSince;
 
     /**
      * @var int
@@ -92,22 +77,6 @@ class ClubVenue extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
      * @var int
      */
     protected $spectatorCapacity;
-
-    /**
-     * @return ClubGround
-     */
-    public function getClubGround()
-    {
-        return $this->clubGround;
-    }
-
-    /**
-     * @param ClubGround $clubGround
-     */
-    public function setClubGround($clubGround)
-    {
-        $this->clubGround = $clubGround;
-    }
 
     /**
      * @return string
@@ -171,38 +140,6 @@ class ClubVenue extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
     public function setImages($images)
     {
         $this->images = $images;
-    }
-
-    /**
-     * @return bool
-     */
-    public function isClubOwned()
-    {
-        return $this->clubOwned;
-    }
-
-    /**
-     * @param bool $clubOwned
-     */
-    public function setClubOwned($clubOwned)
-    {
-        $this->clubOwned = $clubOwned;
-    }
-
-    /**
-     * @return int
-     */
-    public function getClubOwnedSince()
-    {
-        return $this->clubOwnedSince;
-    }
-
-    /**
-     * @param int $clubOwnedSince
-     */
-    public function setClubOwnedSince($clubOwnedSince)
-    {
-        $this->clubOwnedSince = $clubOwnedSince;
     }
 
     /**

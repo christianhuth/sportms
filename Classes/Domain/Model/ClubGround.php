@@ -85,7 +85,7 @@ class ClubGround extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
     protected $dateOfBuilding;
 
     /**
-     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\ClubVenue>
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\Venue>
      * @lazy
      * @cascade remove
      */

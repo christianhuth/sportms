@@ -80,7 +80,7 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $time;
 
     /**
-     * @var \Balumedien\Clubms\Domain\Model\ClubVenue
+     * @var \Balumedien\Clubms\Domain\Model\Venue
      */
     protected $venue;
 
@@ -476,7 +476,7 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     }
 
     /**
-     * @return ClubVenue
+     * @return Venue
      */
     public function getVenue()
     {
@@ -484,7 +484,7 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     }
 
     /**
-     * @param ClubVenue $venue
+     * @param Venue $venue
      */
     public function setVenue($venue)
     {

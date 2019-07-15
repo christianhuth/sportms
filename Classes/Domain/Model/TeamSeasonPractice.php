@@ -58,7 +58,7 @@ class TeamSeasonPractice extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity 
 	protected $timeEnd;
 
 	/**
-	 * @var	\Balumedien\Clubms\Domain\Model\ClubVenue
+	 * @var	\Balumedien\Clubms\Domain\Model\Venue
 	 */
 	protected $clubVenue;
 
@@ -132,7 +132,7 @@ class TeamSeasonPractice extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity 
     }
 
     /**
-     * @return ClubVenue
+     * @return Venue
      */
     public function getClubVenue()
     {
@@ -140,7 +140,7 @@ class TeamSeasonPractice extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity 
     }
 
     /**
-     * @param ClubVenue $clubVenue
+     * @param Venue $clubVenue
      */
     public function setClubVenue($clubVenue)
     {
