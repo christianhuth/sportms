@@ -232,7 +232,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
             'exclude' => 1,
             'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.venue',
             'config' => array(
-                'foreign_table' => 'tx_clubms_domain_model_clubvenue',
+                'foreign_table' => 'tx_clubms_domain_model_venue',
                 'foreign_table_where' => 'ORDER BY name ASC',
                 'items' => Array (
                     array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
