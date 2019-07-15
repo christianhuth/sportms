@@ -26,7 +26,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_venue'] = array(
 		'showRecordFieldList' => 'hidden, section',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'name, address, images, description, --palette--;;building, --palette--;;size'),
+		'1' => array('showitem' => 'club, name, address, images, description, --palette--;;building, --palette--;;size'),
 	),
 	'palettes' => array(
         'building' => array('showitem' => 'date_of_building, year_of_building'),
@@ -85,7 +85,22 @@ $GLOBALS['TCA']['tx_clubms_domain_model_venue'] = array(
 				'renderType' => 'inputDateTime',
 			),
 		),
-		
+
+        'club' => array(
+            'exclude' => 1,
+            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_venue.club',
+            'config' => array(
+                'foreign_table' => 'tx_clubms_domain_model_club',
+                'foreign_table_where' => 'ORDER BY name ASC',
+                'items' => Array (
+                    array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
+                ),
+                'maxItems' => 1,
+                'renderType' => 'selectSingle',
+                'size' => 1,
+                'type' => 'select',
+            ),
+        ),
 		'name' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_venue.name',

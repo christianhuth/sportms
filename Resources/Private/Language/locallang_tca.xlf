@@ -1348,6 +1348,9 @@
 			<trans-unit id="tx_clubms_domain_model_venue">
 				<source>Sportstätte</source>
 			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_venue.club">
+				<source>Verein</source>
+			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_venue.name">
 				<source>Bezeichnung</source>
 			</trans-unit>

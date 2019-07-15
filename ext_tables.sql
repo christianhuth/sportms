@@ -1766,6 +1766,7 @@ CREATE TABLE tx_clubms_domain_model_venue (
     uid int(11) NOT NULL auto_increment,
     pid int(11) DEFAULT '0' NOT NULL,
 
+    club int(11) DEFAULT NULL,
     name varchar(255) DEFAULT '' NOT NULL,
     description varchar(255) DEFAULT '' NOT NULL,
     address int(11) DEFAULT NULL,
