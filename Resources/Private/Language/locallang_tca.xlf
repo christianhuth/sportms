@@ -135,17 +135,11 @@
             <trans-unit id="tx_clubms_domain_model_clubground.date_of_building">
                 <source>Baudatum</source>
             </trans-unit>
-            <trans-unit id="tx_clubms_domain_model_clubground.club_venues">
-                <source>Sportstätten</source>
-            </trans-unit>
             <trans-unit id="tx_clubms_domain_model_clubground.tab_images">
                 <source>Bilder</source>
             </trans-unit>
             <trans-unit id="tx_clubms_domain_model_clubground.tab_details">
                 <source>Details</source>
-            </trans-unit>
-            <trans-unit id="tx_clubms_domain_model_clubground.tab_venues">
-                <source>Sportstätten</source>
             </trans-unit>
 
 
@@ -266,48 +260,6 @@
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_clubsectionofficialjob.label">
 				<source>Bezeichnung</source>
-			</trans-unit>
-
-
-			<!-- Domain Model ClubVenue -->
-			<trans-unit id="tx_clubms_domain_model_clubvenue">
-				<source>Vereinsstätte</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_clubvenue.name">
-				<source>Bezeichnung</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_clubvenue.description">
-				<source>Beschreibung</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_clubvenue.address">
-				<source>Adresse</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_clubvenue.images">
-				<source>Bilder</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_clubvenue.club_owned">
-				<source>In Vereinsbesitz?</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_clubvenue.club_owned_since">
-				<source>In Vereinsbesitz seit</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_clubvenue.date_of_building">
-				<source>Baudatum</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_clubvenue.year_of_building">
-				<source>Baujahr</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_clubvenue.dimensions">
-				<source>Maße</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_clubvenue.surface">
-				<source>Bodenbelag</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_clubvenue.spectator_capacity">
-				<source>Zuschauerkapazität</source>
-			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_clubvenue.tab_details">
-				<source>Details</source>
 			</trans-unit>
 
 
@@ -1342,8 +1294,8 @@
 			<trans-unit id="tx_clubms_domain_model_teamseasonpractice.time_end">
 				<source>Endzeit</source>
 			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_teamseasonpractice.club_venue">
-				<source>Vereinsanlage</source>
+			<trans-unit id="tx_clubms_domain_model_teamseasonpractice.venue">
+				<source>Sportstätte</source>
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_teamseasonpractice.annotation">
 				<source>Anmerkung</source>
@@ -1389,6 +1341,42 @@
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_url.public">
 				<source>Öffentlich</source>
+			</trans-unit>
+
+
+			<!-- Domain Model Venue -->
+			<trans-unit id="tx_clubms_domain_model_venue">
+				<source>Sportstätte</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_venue.name">
+				<source>Bezeichnung</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_venue.description">
+				<source>Beschreibung</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_venue.address">
+				<source>Adresse</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_venue.images">
+				<source>Bilder</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_venue.date_of_building">
+				<source>Baudatum</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_venue.year_of_building">
+				<source>Baujahr</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_venue.dimensions">
+				<source>Maße</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_venue.surface">
+				<source>Bodenbelag</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_venue.spectator_capacity">
+				<source>Zuschauerkapazität</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_venue.tab_details">
+				<source>Details</source>
 			</trans-unit>
 
 
