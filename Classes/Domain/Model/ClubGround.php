@@ -85,13 +85,6 @@ class ClubGround extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
     protected $dateOfBuilding;
 
     /**
-     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\Venue>
-     * @lazy
-     * @cascade remove
-     */
-    protected $clubVenues;
-
-    /**
      * @return Club
      */
     public function getClub()
@@ -249,22 +242,6 @@ class ClubGround extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
     public function setDateOfBuilding($dateOfBuilding)
     {
         $this->dateOfBuilding = $dateOfBuilding;
-    }
-
-    /**
-     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
-     */
-    public function getClubVenues()
-    {
-        return $this->clubVenues;
-    }
-
-    /**
-     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $clubVenues
-     */
-    public function setClubVenues($clubVenues)
-    {
-        $this->clubVenues = $clubVenues;
     }
 
 }
