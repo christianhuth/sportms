@@ -198,7 +198,6 @@ $GLOBALS['TCA']['tx_clubms_domain_model_teamseason'] = array(
 				),
 				'foreign_field' => 'team_season',
 				'foreign_table' => 'tx_clubms_domain_model_teamseasonsquadmember',
-                'foreign_unique' => 'person',
 				'type' => 'inline',
 			),
 		),
