@@ -10,7 +10,7 @@
 		
 		public function findByClubUid($clubUid) {
 			$query = $this->createQuery();
-			$query->matching($query->contains('club', $clubUid));
+			$query->matching($query->equals('club', $clubUid));
 			return $query->execute();
 		}
 		
