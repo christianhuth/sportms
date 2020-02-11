@@ -81,6 +81,10 @@ class TeamController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
                 $season = $this->teamSeasonRepository->findLatestSeasonOfTeam($team);
             }
         }
+		
+		\TYPO3\CMS\Core\Utility\DebugUtility::debug($teamUid, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
+		\TYPO3\CMS\Core\Utility\DebugUtility::debug($team, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
+        
         // AT THIS POINT WE DEFINITELY HAVE TEAM AND SEASON OR WE DIED EARLIER
         $teamSeason = $this->teamSeasonRepository->findByTeamAndSeason($team, $season);
         $this->view->assign('teamSeason', $teamSeason);
