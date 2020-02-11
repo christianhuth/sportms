@@ -32,11 +32,7 @@ use TYPO3\CMS\Extbase\Annotation\Inject;
 /**
  * TeamSeasonController
  */
-class TeamSeasonController
-{
-
-    // TODO: PROBABLY DELETE THIS CONTROLLER
-    // ALL ACTIONS FOR TEAMS SEASON INSTANCES ARE TRIGGERED BY THEIR PARENT TEAM
+class TeamSeasonController {
 
     /**
      * @var \Balumedien\Clubms\Domain\Repository\TeamSeasonRepository
