@@ -34,19 +34,19 @@ class TeamController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 
     /**
      * @var \Balumedien\Clubms\Domain\Repository\SeasonRepository
-     * @inject
+     * @TYPO3\\CMS\\Extbase\\Annotation\\Inject
      */
     protected $seasonRepository;
 
 	/**
 	 * @var \Balumedien\Clubms\Domain\Repository\TeamRepository
-	 * @inject
+	 * @TYPO3\\CMS\\Extbase\\Annotation\\Inject
 	 */
 	protected $teamRepository;
 
 	/**
 	 * @var \Balumedien\Clubms\Domain\Repository\TeamSeasonRepository
-	 * @inject
+	 * @TYPO3\\CMS\\Extbase\\Annotation\\Inject
 	 */
 	protected $teamSeasonRepository;
 	

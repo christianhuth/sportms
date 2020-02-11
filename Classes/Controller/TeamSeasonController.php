@@ -39,7 +39,7 @@ class TeamSeasonController
 
     /**
      * @var \Balumedien\Clubms\Domain\Repository\TeamSeasonRepository
-     * @inject
+     * @TYPO3\\CMS\\Extbase\\Annotation\\Inject
      */
     protected $teamSeasonRepository;
 

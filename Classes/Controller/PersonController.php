@@ -35,7 +35,7 @@ class PersonController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
 
 	/**
 	 * @var \Balumedien\Clubms\Domain\Repository\PersonRepository
-	 * @inject
+	 * @TYPO3\\CMS\\Extbase\\Annotation\\Inject
 	 */
 	protected $personRepository;
 	
