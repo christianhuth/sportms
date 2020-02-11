@@ -841,7 +841,7 @@
             <trans-unit id="tx_clubms_domain_model_gameresultset.game">
                 <source>Spiel</source>
             </trans-unit>
-            <trans-unit id="tx_clubms_domain_model_gameresultset.number">
+            <trans-unit id="tx_clubms_domain_model_gameresultset.set_number">
                 <source>Satznummer</source>
             </trans-unit>
             <trans-unit id="tx_clubms_domain_model_gameresultset.result_home">

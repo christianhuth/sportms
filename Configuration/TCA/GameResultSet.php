@@ -31,7 +31,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_gameresultset'] = array(
 		'1' => array('showitem' => 'game, --palette--;;set'),
 	),
 	'palettes' => array(
-		'set' => array('showitem' => 'number, result_home, result_guest'),
+		'set' => array('showitem' => 'set_number, result_home, result_guest'),
 	),
 	'columns' => array(
 
@@ -103,9 +103,9 @@ $GLOBALS['TCA']['tx_clubms_domain_model_gameresultset'] = array(
             ),
         ),
 
-		'number' => array(
+		'set_number' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gameresultset.number',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gameresultset.set_number',
 			'config' => array(
 				'type' => 'input',
 				'size' => 10,

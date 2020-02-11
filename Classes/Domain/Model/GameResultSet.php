@@ -43,7 +43,7 @@
 		/**
 		 * @var int
 		 */
-		protected $number;
+		protected $setNumber;
 
 		/**
 		 * @var int
@@ -68,19 +68,19 @@
 		public function setGame($game) {
 			$this->game = $game;
 		}
-
+		
 		/**
 		 * @return int
 		 */
-		public function getNumber() {
-			return $this->number;
+		public function getSetNumber() {
+			return $this->setNumber;
 		}
-
+		
 		/**
-		 * @param int $number
+		 * @param int $setNumber
 		 */
-		public function setNumber($number) {
-			$this->number = $number;
+		public function setSetNumber($setNumber) {
+			$this->setNumber = $setNumber;
 		}
 
 		/**

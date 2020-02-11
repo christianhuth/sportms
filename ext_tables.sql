@@ -954,7 +954,7 @@ CREATE TABLE tx_clubms_domain_model_gameresultset (
 
     game int(11) DEFAULT '0' NOT NULL,
 
-    number int(11) DEFAULT '1' NOT NULL,
+    set_number int(11) DEFAULT '1' NOT NULL,
     result_home int(11) DEFAULT '0' NOT NULL,
     result_guest int(11) DEFAULT '0' NOT NULL,
 
