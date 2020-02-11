@@ -4,12 +4,13 @@
 		'Balumedien.' . $_EXTKEY,
 		'clubms',
 		array(
-			'Club' => 'list, detail, section',
-			'Competition' => 'list, detail',
-			'Game' => 'list, detail',
-			'Person' => 'list, detail',
-			'Season' => 'list, detail',
-			'Team' => 'list, detail',
+			'Club' => 'list, show, sections',
+			'Competition' => 'list, show',
+			'Game' => 'list, show',
+			'Person' => 'list, show',
+			'Season' => 'list, show',
+			'Team' => 'list, show',
+			'TeamSeason' => 'list, show',
 		),
 		array(
 		
