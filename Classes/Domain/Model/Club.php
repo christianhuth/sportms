@@ -139,15 +139,15 @@ class Club extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @return void
 	 */
 	protected function initStorageObjects(){
-        $this->clubMembers = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-        $this->images = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-        $this->addresses = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-        $this->phones = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-        $this->mails = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-        $this->urls = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-        $this->clubGrounds = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-		$this->clubSections = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-		$this->clubOfficials = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        $this->setClubMembers(\TYPO3\CMS\Extbase\Persistence\ObjectStorage);
+        $this->setImages(\TYPO3\CMS\Extbase\Persistence\ObjectStorage);
+        $this->setAddresses(\TYPO3\CMS\Extbase\Persistence\ObjectStorage);
+        $this->setPhones(\TYPO3\CMS\Extbase\Persistence\ObjectStorage);
+        $this->setMails(\TYPO3\CMS\Extbase\Persistence\ObjectStorage);
+        $this->setUrls(\TYPO3\CMS\Extbase\Persistence\ObjectStorage);
+        $this->setClubGrounds(\TYPO3\CMS\Extbase\Persistence\ObjectStorage);
+		$this->setClubSections(\TYPO3\CMS\Extbase\Persistence\ObjectStorage);
+		$this->setClubOfficials(\TYPO3\CMS\Extbase\Persistence\ObjectStorage);
 	}
 
     /**
@@ -325,22 +325,20 @@ class Club extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
     {
         $this->clubGrounds = $clubGrounds;
     }
-
-    /**
-     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
-     */
-    public function getClubSections()
-    {
-        return $this->clubSections;
-    }
-
-    /**
-     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $clubSections
-     */
-    public function setClubSections($clubSections)
-    {
-        $this->clubSections = $clubSections;
-    }
+	
+	/**
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+	 */
+	public function getClubSections() {
+		return $this->clubSections;
+	}
+	
+	/**
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $clubSections
+	 */
+	public function setClubSections($clubSections) {
+		$this->clubSections = $clubSections;
+	}
 
 	/**
 	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
