@@ -73,6 +73,7 @@ class TeamController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
                 // TODO: DIE IF NO TEAM IS SELECTED VIA FLEXFORM
             }
         }
+        /*
         if($season === null) {
             if($this->settings['single']['season']) {
                 $seasonUid = $this->settings['single']['season'];
@@ -82,11 +83,12 @@ class TeamController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
             }
         }
 		
-		\TYPO3\CMS\Core\Utility\DebugUtility::debug($teamUid, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
-		\TYPO3\CMS\Core\Utility\DebugUtility::debug($team, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
+		# \TYPO3\CMS\Core\Utility\DebugUtility::debug($teamUid, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
         
         // AT THIS POINT WE DEFINITELY HAVE TEAM AND SEASON OR WE DIED EARLIER
         #$teamSeason = $this->teamSeasonRepository->findByTeamAndSeason($team, $season);
+        */
+		\TYPO3\CMS\Core\Utility\DebugUtility::debug($team, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
         $this->view->assign('team', $team);
 	}
 
