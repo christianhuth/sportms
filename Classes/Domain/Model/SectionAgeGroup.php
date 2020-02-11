@@ -44,7 +44,7 @@ class SectionAgeGroup extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	
 	/**
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\SectionAgeLevel>
-	 * @lazy
+	 * @TYPO3\\CMS\\Extbase\\Annotation\\ORM\\Lazy
 	 * @cascade remove
 	 */
 	protected $sectionAgeLevels = '';

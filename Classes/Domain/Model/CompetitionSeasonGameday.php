@@ -37,7 +37,7 @@
 
 		/**
 		 * @var \Balumedien\Clubms\Domain\Model\CompetitionSeason
-		 * @lazy
+		 * @TYPO3\\CMS\\Extbase\\Annotation\\ORM\\Lazy
 		 */
 		protected $competitionSeason;
 

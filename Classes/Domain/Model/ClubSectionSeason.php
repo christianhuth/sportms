@@ -34,13 +34,13 @@ class ClubSectionSeason extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	
 	/**
 	 * @var \Balumedien\Clubms\Domain\Model\ClubSection
-	 * @lazy
+	 * @TYPO3\\CMS\\Extbase\\Annotation\\ORM\\Lazy
 	 */
 	protected $clubSection = '';
 	
 	/**
 	 * @var \Balumedien\Clubms\Domain\Model\Season
-	 * @lazy
+	 * @TYPO3\\CMS\\Extbase\\Annotation\\ORM\\Lazy
 	 */
 	protected $season = '';
 

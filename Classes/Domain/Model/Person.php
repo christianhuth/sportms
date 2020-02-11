@@ -139,28 +139,28 @@ class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	
 	/**
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\Address>
-	 * @lazy
+	 * @TYPO3\\CMS\\Extbase\\Annotation\\ORM\\Lazy
 	 * @cascade remove
 	 */
 	protected $addresses = '';
 	
 	/**
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\Phone>
-	 * @lazy
+	 * @TYPO3\\CMS\\Extbase\\Annotation\\ORM\\Lazy
 	 * @cascade remove
 	 */
 	protected $phones = '';
 	
 	/**
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\Mail>
-	 * @lazy
+	 * @TYPO3\\CMS\\Extbase\\Annotation\\ORM\\Lazy
 	 * @cascade remove
 	 */
 	protected $mails = '';
 	
 	/**
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\Url>
-	 * @lazy
+	 * @TYPO3\\CMS\\Extbase\\Annotation\\ORM\\Lazy
 	 * @cascade remove
 	 */
 	protected $urls = '';

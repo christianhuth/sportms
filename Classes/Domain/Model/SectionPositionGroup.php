@@ -36,7 +36,7 @@ class SectionPositionGroup extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntit
 
     /**
      * @var \Balumedien\Clubms\Domain\Model\Section
-     * @lazy
+     * @TYPO3\\CMS\\Extbase\\Annotation\\ORM\\Lazy
      */
     protected $section;
 
@@ -47,7 +47,7 @@ class SectionPositionGroup extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntit
 
     /**
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\SectionPosition>
-     * @lazy
+     * @TYPO3\\CMS\\Extbase\\Annotation\\ORM\\Lazy
      * @cascade remove
      */
     protected $sectionPositions;

@@ -37,7 +37,7 @@
 
 		/**
 		 * @var Game
-		 * @lazy
+		 * @TYPO3\\CMS\\Extbase\\Annotation\\ORM\\Lazy
 		 */
 		protected $game;
 

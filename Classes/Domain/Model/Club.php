@@ -54,62 +54,62 @@ class Club extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	
 	/**
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\ClubMembers>
-     * @lazy
+     * @TYPO3\\CMS\\Extbase\\Annotation\\ORM\\Lazy
 	 * @cascade remove
 	 */
 	protected $clubMembers;
 	
 	/**
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference>
-     * @lazy
+     * @TYPO3\\CMS\\Extbase\\Annotation\\ORM\\Lazy
 	 */
 	protected $images;
 	
 	/**
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\Address>
-	 * @lazy
+	 * @TYPO3\\CMS\\Extbase\\Annotation\\ORM\\Lazy
 	 * @cascade remove
 	 */
 	protected $addresses;
 	
 	/**
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\Phone>
-	 * @lazy
+	 * @TYPO3\\CMS\\Extbase\\Annotation\\ORM\\Lazy
 	 * @cascade remove
 	 */
 	protected $phones;
 	
 	/**
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\Mail>
-	 * @lazy
+	 * @TYPO3\\CMS\\Extbase\\Annotation\\ORM\\Lazy
 	 * @cascade remove
 	 */
 	protected $mails;
 	
 	/**
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\Url>
-	 * @lazy
+	 * @TYPO3\\CMS\\Extbase\\Annotation\\ORM\\Lazy
 	 * @cascade remove
 	 */
 	protected $urls;
 
     /**
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\ClubGround>
-     * @lazy
+     * @TYPO3\\CMS\\Extbase\\Annotation\\ORM\\Lazy
      * @cascade remove
      */
     protected $clubGrounds;
 	
 	/**
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\ClubSection>
-     * @lazy
+     * @TYPO3\\CMS\\Extbase\\Annotation\\ORM\\Lazy
 	 * @cascade remove
 	 */
 	protected $clubSections;
 
 	/**
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\ClubOfficial>
-	 * @lazy
+	 * @TYPO3\\CMS\\Extbase\\Annotation\\ORM\\Lazy
 	 * @cascade remove
 	 */
 	protected $clubOfficials;

@@ -34,7 +34,7 @@ class ClubOfficial extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 
     /**
      * @var \Balumedien\Clubms\Domain\Model\Club
-     * @lazy
+     * @TYPO3\\CMS\\Extbase\\Annotation\\ORM\\Lazy
      */
     protected $club;
 

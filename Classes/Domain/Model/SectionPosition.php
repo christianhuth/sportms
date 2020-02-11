@@ -35,7 +35,7 @@ class SectionPosition extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 {
     /**
      * @var \Balumedien\Clubms\Domain\Model\SectionPositionGroup
-     * @lazy
+     * @TYPO3\\CMS\\Extbase\\Annotation\\ORM\\Lazy
      */
     protected $sectionPositionGroup;
 

@@ -36,7 +36,7 @@ class GamePeriod extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
 	/**
 	 * @var \Balumedien\Clubms\Domain\Model\Game
-	 * @lazy
+	 * @TYPO3\\CMS\\Extbase\\Annotation\\ORM\\Lazy
 	 */
 	protected $game;
 

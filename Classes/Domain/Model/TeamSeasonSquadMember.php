@@ -34,7 +34,7 @@ class TeamSeasonSquadMember extends \TYPO3\CMS\Extbase\DomainObject\AbstractEnti
 
     /**
      * @var \Balumedien\Clubms\Domain\Model\TeamSeason
-     * @lazy
+     * @TYPO3\\CMS\\Extbase\\Annotation\\ORM\\Lazy
      */
     protected $teamSeason;
 
