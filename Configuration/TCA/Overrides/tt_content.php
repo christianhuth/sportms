@@ -5,7 +5,7 @@
 	 * Register Plugin in the Backend Plugin List
 	 */
 	\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
-		$_EXTKEY,					                        // Extension-Key
+		'clubms',					                        // Extension-Key
 		'clubms',					                        // Plugin-Name
 		'Club Management System',	                        // Plugin-Label
 		'EXT:clubms/Resources/Public/Icons/Extension.png'   // Extension Icon in Plugin Selection
