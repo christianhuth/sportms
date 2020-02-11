@@ -2,6 +2,8 @@
 
 namespace Balumedien\Clubms\Domain\Model;
 
+use TYPO3\CMS\Extbase\Annotation\ORM\Lazy;
+
 /***************************************************************
  *
  *  Copyright notice
@@ -34,60 +36,60 @@ class ClubSection extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	
 	/**
 	 * @var \Balumedien\Clubms\Domain\Model\Club
-	 * @TYPO3\\CMS\\Extbase\\Annotation\\ORM\\Lazy
+	 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
 	 */
 	protected $club;
 	
 	/**
 	 * @var \Balumedien\Clubms\Domain\Model\Section
-	 * @TYPO3\\CMS\\Extbase\\Annotation\\ORM\\Lazy
+	 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
 	 */
 	protected $section;
 	
 	/**
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference>
-     * @TYPO3\\CMS\\Extbase\\Annotation\\ORM\\Lazy
+     * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
 	 */
 	protected $images;
 	
 	/**
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\ClubSectionMembers>
-     * @TYPO3\\CMS\\Extbase\\Annotation\\ORM\\Lazy
+     * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
      * @TYPO3\\CMS\\Extbase\\Annotation\\ORM\\Cascade("remove")
 	 */
 	protected $clubSectionMembers;
 	
 	/**
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\Address>
-	 * @TYPO3\\CMS\\Extbase\\Annotation\\ORM\\Lazy
+	 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
 	 * @TYPO3\\CMS\\Extbase\\Annotation\\ORM\\Cascade("remove")
 	 */
 	protected $addresses;
 	
 	/**
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\Phone>
-	 * @TYPO3\\CMS\\Extbase\\Annotation\\ORM\\Lazy
+	 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
 	 * @TYPO3\\CMS\\Extbase\\Annotation\\ORM\\Cascade("remove")
 	 */
 	protected $phones;
 	
 	/**
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\Mail>
-	 * @TYPO3\\CMS\\Extbase\\Annotation\\ORM\\Lazy
+	 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
 	 * @TYPO3\\CMS\\Extbase\\Annotation\\ORM\\Cascade("remove")
 	 */
 	protected $mails;
 	
 	/**
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\Url>
-	 * @TYPO3\\CMS\\Extbase\\Annotation\\ORM\\Lazy
+	 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
 	 * @TYPO3\\CMS\\Extbase\\Annotation\\ORM\\Cascade("remove")
 	 */
 	protected $urls;
 	
 	/**
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\ClubSectionOfficial>
-	 * @TYPO3\\CMS\\Extbase\\Annotation\\ORM\\Lazy
+	 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
 	 * @TYPO3\\CMS\\Extbase\\Annotation\\ORM\\Cascade("remove")
 	 */
 	protected $clubSectionOfficials;

@@ -2,6 +2,8 @@
 
 namespace Balumedien\Clubms\Domain\Model;
 
+use TYPO3\CMS\Extbase\Annotation\ORM\Lazy;
+
 /***************************************************************
  *
  *  Copyright notice
@@ -34,13 +36,13 @@ class ClubSectionSeason extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	
 	/**
 	 * @var \Balumedien\Clubms\Domain\Model\ClubSection
-	 * @TYPO3\\CMS\\Extbase\\Annotation\\ORM\\Lazy
+	 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
 	 */
 	protected $clubSection = '';
 	
 	/**
 	 * @var \Balumedien\Clubms\Domain\Model\Season
-	 * @TYPO3\\CMS\\Extbase\\Annotation\\ORM\\Lazy
+	 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
 	 */
 	protected $season = '';
 

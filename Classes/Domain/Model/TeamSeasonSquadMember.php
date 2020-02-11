@@ -2,6 +2,8 @@
 
 namespace Balumedien\Clubms\Domain\Model;
 
+use TYPO3\CMS\Extbase\Annotation\ORM\Lazy;
+
 /***************************************************************
  *
  *  Copyright notice
@@ -34,7 +36,7 @@ class TeamSeasonSquadMember extends \TYPO3\CMS\Extbase\DomainObject\AbstractEnti
 
     /**
      * @var \Balumedien\Clubms\Domain\Model\TeamSeason
-     * @TYPO3\\CMS\\Extbase\\Annotation\\ORM\\Lazy
+     * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
      */
     protected $teamSeason;
 

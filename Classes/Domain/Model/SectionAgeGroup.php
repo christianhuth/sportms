@@ -2,6 +2,8 @@
 
 namespace Balumedien\Clubms\Domain\Model;
 
+use TYPO3\CMS\Extbase\Annotation\ORM\Lazy;
+
 /***************************************************************
  *
  *  Copyright notice
@@ -44,7 +46,7 @@ class SectionAgeGroup extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	
 	/**
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\SectionAgeLevel>
-	 * @TYPO3\\CMS\\Extbase\\Annotation\\ORM\\Lazy
+	 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
 	 * @TYPO3\\CMS\\Extbase\\Annotation\\ORM\\Cascade("remove")
 	 */
 	protected $sectionAgeLevels = '';

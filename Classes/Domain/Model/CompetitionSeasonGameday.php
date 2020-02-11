@@ -1,7 +1,8 @@
 <?php
 
 	namespace Balumedien\Clubms\Domain\Model;
-
+	
+	use TYPO3\CMS\Extbase\Annotation\ORM\Lazy;
 	use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 	use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 
@@ -37,7 +38,7 @@
 
 		/**
 		 * @var \Balumedien\Clubms\Domain\Model\CompetitionSeason
-		 * @TYPO3\\CMS\\Extbase\\Annotation\\ORM\\Lazy
+		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
 		 */
 		protected $competitionSeason;
 
