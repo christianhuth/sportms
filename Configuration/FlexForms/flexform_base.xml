@@ -138,6 +138,18 @@
 								<numIndex index="0">Mannschaft (Statistiken)</numIndex>
 								<numIndex index="1">Team->stats</numIndex>
 							</numIndex>
+							<numIndex index="32">
+								<numIndex index="0">Mannschaftsinstanzansichten</numIndex>
+								<numIndex index="1">--div--</numIndex>
+							</numIndex>
+							<numIndex index="33">
+								<numIndex index="0">Mannschaftinstanz (Einzelansicht)</numIndex>
+								<numIndex index="1">TeamSeason->show</numIndex>
+							</numIndex>
+							<numIndex index="34">
+								<numIndex index="0">Mannschaftinstanz (Listenansicht)</numIndex>
+								<numIndex index="1">TeamSeason->list</numIndex>
+							</numIndex>
 						</items>
 					</config>
 				</TCEforms>
