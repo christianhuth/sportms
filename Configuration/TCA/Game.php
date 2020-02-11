@@ -70,14 +70,14 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
 		),
         'hidden' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.hidden',
+            'label' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.hidden',
             'config' => array(
                 'type' => 'check',
             ),
         ),
 		'starttime' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.starttime',
+            'label' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:starttime_formlabel',
 			'config' => array(
 				'behaviour' => array(
 					'allowLanguageSynchronization' => TRUE,
@@ -95,7 +95,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
 		),
 		'endtime' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.endtime',
+            'label' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:endtime_formlabel',
 			'config' => array(
 				'behaviour' => array(
 					'allowLanguageSynchronization' => TRUE,
@@ -816,7 +816,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
                 'foreign_table' => 'tx_clubms_domain_model_teamseason',
                 'foreign_table_where' => '  AND tx_clubms_domain_model_teamseason.uid IN (SELECT uid_foreign FROM tx_clubms_competitionseason_teamseason_mm WHERE uid_local = ###REC_FIELD_competition_season###)
                                             AND tx_clubms_domain_model_teamseason.uid != ###REC_FIELD_team_season_home###
-	                                        ORDER BY tx_clubms_domain_model_teamseason.team ASC',
+											ORDER BY tx_clubms_domain_model_teamseason.team ASC',
                 'items' => Array (
                     array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
                 ),
@@ -885,7 +885,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
             'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.trainer_guest',
             'config' => array(
                 'foreign_table' => 'tx_clubms_domain_model_teamseasonofficial',
-                'foreign_table_where' => ' AND team_season = ###REC_FIELD_team_guest###',
+                'foreign_table_where' => ' AND team_season = ###REC_FIELD_team_season_guest###',
                 'items' => Array (
                     array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
                 ),

@@ -415,6 +415,9 @@
 			<trans-unit id="tx_clubms_domain_model_game.period_count">
 				<source>Anzahl der Spielabschnitte</source>
 			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_game.game_periods">
+				<source>Spielabschnitte</source>
+			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_game.period_duration">
 				<source>Dauer der Spielabschnitte (in Minuten)</source>
 			</trans-unit>
@@ -839,7 +842,7 @@
                 <source>Spiel</source>
             </trans-unit>
             <trans-unit id="tx_clubms_domain_model_gameresultset.number">
-                <source>Zähler</source>
+                <source>Satznummer</source>
             </trans-unit>
             <trans-unit id="tx_clubms_domain_model_gameresultset.result_home">
                 <source>Heimergebnis</source>

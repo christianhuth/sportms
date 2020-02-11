@@ -43,14 +43,14 @@ $GLOBALS['TCA']['tx_clubms_domain_model_competitiontype'] = array(
 		),
         'hidden' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.hidden',
+            'label' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.hidden',
             'config' => array(
                 'type' => 'check',
             ),
         ),
 		'starttime' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.starttime',
+            'label' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:starttime_formlabel',
 			'config' => array(
 				'behaviour' => array(
 					'allowLanguageSynchronization' => TRUE,
@@ -68,7 +68,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_competitiontype'] = array(
 		),
 		'endtime' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.endtime',
+            'label' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:endtime_formlabel',
 			'config' => array(
 				'behaviour' => array(
 					'allowLanguageSynchronization' => TRUE,

@@ -86,22 +86,22 @@ $GLOBALS['TCA']['tx_clubms_domain_model_gamelineup'] = array(
 				'renderType' => 'inputDateTime',
 			),
 		),
-
-        'game' => array(
-            'exclude' => 1,
-            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gamelineup.game',
-            'config' => array(
-                'eval' => 'required',
-                'foreign_table' => 'tx_clubms_domain_model_game',
-                'items' => array(
-                    array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
-                ),
-                'maxItems' => 1,
-                'renderType' => 'selectSingle',
-                'size' => 1,
-                'type' => 'select',
-            ),
-        ),
+		
+		'game' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gamelineup.game',
+			'config' => array(
+				'eval' => 'required',
+				'foreign_table' => 'tx_clubms_domain_model_game',
+				'items' => array(
+					array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
+				),
+				'maxItems' => 1,
+				'renderType' => 'selectSingle',
+				'size' => 1,
+				'type' => 'select',
+			),
+		),
 		'team' => array(
 			'config' => array(
 				'type' => 'passthrough',
@@ -112,7 +112,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_gamelineup'] = array(
 				'type' => 'passthrough',
 			),
 		),
-
+		
 		'jersey_number' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gamelineup.jersey_number',
@@ -122,21 +122,20 @@ $GLOBALS['TCA']['tx_clubms_domain_model_gamelineup'] = array(
 				'eval' => 'trim'
 			),
 		),
-        'team_season_squad_member' => array(
-            'exclude' => 1,
-            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gamelineup.team_season_squad_member',
-            'config' => array(
-	            'eval' => 'required',
-	            'foreign_table_where' => '1',
-	            'items' => array(
-		            array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
-	            ),
-	            'itemsProcFunc' => 'Balumedien\\Clubms\\Configuration\\TCA\\UserFunc\\ItemsProcFunc->team_season_squad_member_GameLineup',
-	            'renderType' => 'selectSingle',
-	            'size' => 1,
-	            'type' => 'select',
-            ),
-        ),
+		'team_season_squad_member' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gamelineup.team_season_squad_member',
+			'config' => array(
+				'eval' => '',
+				'items' => array(
+					array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
+				),
+				'itemsProcFunc' => 'Balumedien\\Clubms\\Configuration\\TCA\\UserFunc\\ItemsProcFunc->team_season_squad_member_GameLineup',
+				'renderType' => 'selectSingle',
+				'size' => 1,
+				'type' => 'select',
+			),
+		),
 		'section_position' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gamelineup.section_position',
