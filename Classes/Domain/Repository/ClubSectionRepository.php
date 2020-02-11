@@ -8,23 +8,41 @@
 			'sorting' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
 		];
 		
-		// repository wide settings
+		// Example for repository wide settings
 		public function initializeObject() {
 			
-			/** @var $defaultQuerySettings Tx_Extbase_Persistence_Typo3QuerySettings */
-			$defaultQuerySettings = $this->objectManager->get('Tx_Extbase_Persistence_Typo3QuerySettings');
+			/** @var $querySettings \TYPO3\CMS\Extbase\Persistence\Generic\Typo3QuerySettings */
+			$querySettings = $this->objectManager->get('TYPO3\\CMS\\Extbase\\Persistence\\Generic\\Typo3QuerySettings');
 			// go for $defaultQuerySettings = $this->createQuery()->getQuerySettings(); if you want to make use of the TS persistence.storagePid with defaultQuerySettings(), see #51529 for details
 			
 			// don't add the pid constraint
-			$defaultQuerySettings->setRespectStoragePage(FALSE);
+			$querySettings->setRespectStoragePage(FALSE);
+			
+			// set the storagePids to respect
+			$querySettings->setStoragePageIds(array(1, 26, 989));
 			
 			// don't add fields from enablecolumns constraint
-			$defaultQuerySettings->setRespectEnableFields(FALSE);
+			// this function is deprecated!
+			$querySettings->setRespectEnableFields(FALSE);
+			
+			// define the enablecolumn fields to be ignored
+			// if nothing else is given, all enableFields are ignored
+			$querySettings->setIgnoreEnableFields(TRUE);
+			
+			// define single fields to be ignored
+			$querySettings->setEnableFieldsToBeIgnored(array('disabled','starttime'));
+			
+			// add deleted rows to the result
+			$querySettings->setIncludeDeleted(TRUE);
 			
 			// don't add sys_language_uid constraint
-			$defaultQuerySettings->setRespectSysLanguage(FALSE);
+			$querySettings->setRespectSysLanguage(FALSE);
 			
-			$this->setDefaultQuerySettings($defaultQuerySettings);
+			// perform translation to dedicated language
+			$querySettings->setSysLanguageUid(42);
+			
+			$this->setDefaultQuerySettings($querySettings);
+			
 		}
 		
 	}

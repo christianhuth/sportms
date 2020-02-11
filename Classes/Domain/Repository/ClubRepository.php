@@ -4,7 +4,7 @@
 	
 	class ClubRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
 		
-		function findSectionsByUid(int $clubUid) {
+		function findSectionsByClubUid(int $clubUid) {
 			$query = $this->createQuery();
 			$query->matching($query->contains('Uid', $clubUid));
 			return $query->execute();
