@@ -68,6 +68,7 @@ class ClubController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 			$clubUid = $this->settings['single']['club'];
 			$club = $this->clubRepository->findByUid($clubUid);
 		}
+		\TYPO3\CMS\Core\Utility\DebugUtility::debug($club, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 		$this->view->assign('sections', $club->getClubSections());
 	}
 
