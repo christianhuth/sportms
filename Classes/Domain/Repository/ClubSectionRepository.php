@@ -4,7 +4,7 @@
 	
 	class ClubSectionRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
 		protected $defaultOrderings = [
-			'sorting' => QueryInterface::ORDER_ASCENDING,
+			'sorting' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
 		];
 	}
 	
