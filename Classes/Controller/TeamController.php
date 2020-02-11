@@ -36,7 +36,7 @@ class TeamController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 
     /**
      * @var \Balumedien\Clubms\Domain\Repository\SeasonRepository
-     * @TYPO3\\CMS\\Extbase\\Annotation\\Inject
+     * @TYPO3\CMS\Extbase\Annotation\Inject
      */
     protected $seasonRepository;
 
