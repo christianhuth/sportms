@@ -290,6 +290,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_club'] = array(
 					'useSortable' => 1,
 				),
 				'foreign_field' => 'club',
+				'foreign_sortby' => 'sorting',
 				'foreign_table' => 'tx_clubms_domain_model_clubsection',
 				'type' => 'inline',
 			),
