@@ -6,7 +6,7 @@
 		
 		function findSectionsByClubUid(int $clubUid) {
 			$query = $this->createQuery();
-			$query->matching($query->contains('Uid', $clubUid));
+			$query->matching($query->contains('uid', $clubUid));
 			return $query->execute();
 		}
 		
