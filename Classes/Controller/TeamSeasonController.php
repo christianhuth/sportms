@@ -32,7 +32,7 @@ use TYPO3\CMS\Extbase\Annotation\Inject;
 /**
  * TeamSeasonController
  */
-class TeamSeasonController {
+class TeamSeasonController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
 
     /**
      * @var \Balumedien\Clubms\Domain\Repository\TeamSeasonRepository
