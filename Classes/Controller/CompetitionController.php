@@ -2,7 +2,7 @@
 
 namespace Balumedien\Clubms\Controller;
 
-use TYPO3\CMS\Extbase\Annotation\Inject as inject;
+use TYPO3\CMS\Extbase\Annotation\Inject;
 
 /***************************************************************
  *
@@ -36,7 +36,7 @@ class CompetitionController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCont
 
 	/**
 	 * @var \Balumedien\Clubms\Domain\Repository\CompetitionRepository
-	 * @inject
+	 * @TYPO3\CMS\Extbase\Annotation\Inject
 	 */
 	protected $competitionRepository;
 	

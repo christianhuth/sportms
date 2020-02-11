@@ -2,7 +2,7 @@
 
 namespace Balumedien\Clubms\Controller;
 
-use TYPO3\CMS\Extbase\Annotation\Inject as inject;
+use TYPO3\CMS\Extbase\Annotation\Inject;
 
 /***************************************************************
  *
@@ -36,7 +36,7 @@ class PersonController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
 
 	/**
 	 * @var \Balumedien\Clubms\Domain\Repository\PersonRepository
-	 * @inject
+	 * @TYPO3\CMS\Extbase\Annotation\Inject
 	 */
 	protected $personRepository;
 	
