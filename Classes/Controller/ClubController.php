@@ -41,6 +41,12 @@ class ClubController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 	protected $clubRepository = null;
 	
 	/**
+	 * @var \Balumedien\Clubms\Domain\Repository\ClubSectionRepository
+	 * @TYPO3\CMS\Extbase\Annotation\Inject
+	 */
+	protected $clubSectionRepository = null;
+	
+	/**
 	 * @return void
 	 */
 	public function listAction() {
@@ -68,7 +74,9 @@ class ClubController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 			$clubUid = $this->settings['single']['club'];
 			$club = $this->clubRepository->findByUid($clubUid);
 		}
-		$clubSections = $this->clubRepository->findSectionsByClubUid($clubUid);
+		
+		$clubSections = $this->clubSectionRepository->findByClubUid($clubUid);
+		
 		$this->view->assign('club', $club);
 		$this->view->assign('clubSections', $clubSections);
 	}

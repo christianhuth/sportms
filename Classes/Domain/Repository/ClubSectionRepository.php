@@ -45,6 +45,12 @@
 			
 		}
 		
+		public function findByClubUid($clubUid) {
+			$query = $this->createQuery();
+			$query->matching($query->contains('club', $clubUid));
+			return $query->execute();
+		}
+		
 	}
 	
 ?>
