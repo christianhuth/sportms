@@ -35,7 +35,7 @@ class CompetitionController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCont
 
 	/**
 	 * @var \Balumedien\Clubms\Domain\Repository\CompetitionRepository
-	 * @TYPO3\\CMS\\Extbase\\Annotation\\Inject
+	 * @inject
 	 */
 	protected $competitionRepository;
 	

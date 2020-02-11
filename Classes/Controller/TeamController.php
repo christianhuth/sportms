@@ -2,7 +2,7 @@
 
 namespace Balumedien\Clubms\Controller;
 
-use TYPO3\CMS\Extbase\Annotation\Inject;
+use TYPO3\CMS\Extbase\Annotation\Inject as inject;
 
 /***************************************************************
  *
@@ -36,19 +36,19 @@ class TeamController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 
     /**
      * @var \Balumedien\Clubms\Domain\Repository\SeasonRepository
-     * @TYPO3\CMS\Extbase\Annotation\Inject
+     * @inject
      */
     protected $seasonRepository;
 
 	/**
 	 * @var \Balumedien\Clubms\Domain\Repository\TeamRepository
-	 * @TYPO3\CMS\Extbase\Annotation\Inject
+	 * @inject
 	 */
 	protected $teamRepository;
 
 	/**
 	 * @var \Balumedien\Clubms\Domain\Repository\TeamSeasonRepository
-	 * @TYPO3\CMS\Extbase\Annotation\Inject
+	 * @inject
 	 */
 	protected $teamSeasonRepository;
 	

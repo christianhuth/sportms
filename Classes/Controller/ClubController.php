@@ -35,7 +35,7 @@ class ClubController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 
 	/**
 	 * @var \Balumedien\Clubms\Domain\Repository\ClubRepository
-	 * @TYPO3\\CMS\\Extbase\\Annotation\\Inject
+	 * @inject
 	 */
 	protected $clubRepository = null;
 	
