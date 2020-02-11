@@ -4,7 +4,4 @@
 		die('Access denied.');
 	}
 	
-	// Add Static Template File
-	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript', 'Club Management System');
-	
 ?>

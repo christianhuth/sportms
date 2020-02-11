@@ -1,15 +1,20 @@
 <?php
 	defined('TYPO3_MODE') or die();
 	
+	$_EXTKEY = 'clubms';
+	
 	/***************
 	 * Register Plugin in the Backend Plugin List
 	 */
 	\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
-		'clubms',					                        // Extension-Key
+		$_EXTKEY,					                        // Extension-Key
 		'clubms',					                        // Plugin-Name
 		'Club Management System',	                        // Plugin-Label
 		'EXT:clubms/Resources/Public/Icons/Extension.png'   // Extension Icon in Plugin Selection
 	);
+	
+	// Add Static Template File
+	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript', 'Club Management System');
 	
 	$extensionName = strtolower(\TYPO3\CMS\Core\Utility\GeneralUtility::underscoredToUpperCamelCase($_EXTKEY));
 	$pluginName = strtolower('clubms');
