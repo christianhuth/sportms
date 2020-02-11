@@ -48,7 +48,7 @@ class SectionPositionGroup extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntit
     /**
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\SectionPosition>
      * @TYPO3\\CMS\\Extbase\\Annotation\\ORM\\Lazy
-     * @cascade remove
+     * @TYPO3\\CMS\\Extbase\\Annotation\\ORM\\Cascade("remove")
      */
     protected $sectionPositions;
 

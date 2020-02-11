@@ -69,7 +69,7 @@ class Team extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 
 	/**
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\TeamSeason>
-     * @cascade remove
+     * @TYPO3\\CMS\\Extbase\\Annotation\\ORM\\Cascade("remove")
 	 */
 	protected $teamSeasons;
 	
