@@ -2,6 +2,7 @@
 
 namespace Balumedien\Clubms\Domain\Model;
 
+use TYPO3\CMS\Extbase\Annotation\ORM\Cascade;
 use TYPO3\CMS\Extbase\Annotation\ORM\Lazy;
 
 /***************************************************************
@@ -142,28 +143,28 @@ class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\Address>
 	 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
-	 * @TYPO3\\CMS\\Extbase\\Annotation\\ORM\\Cascade("remove")
+	 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
 	 */
 	protected $addresses = '';
 	
 	/**
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\Phone>
 	 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
-	 * @TYPO3\\CMS\\Extbase\\Annotation\\ORM\\Cascade("remove")
+	 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
 	 */
 	protected $phones = '';
 	
 	/**
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\Mail>
 	 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
-	 * @TYPO3\\CMS\\Extbase\\Annotation\\ORM\\Cascade("remove")
+	 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
 	 */
 	protected $mails = '';
 	
 	/**
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\Url>
 	 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
-	 * @TYPO3\\CMS\\Extbase\\Annotation\\ORM\\Cascade("remove")
+	 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
 	 */
 	protected $urls = '';
 

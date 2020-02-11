@@ -2,6 +2,8 @@
 
 namespace Balumedien\Clubms\Domain\Model;
 
+use TYPO3\CMS\Extbase\Annotation\ORM\Cascade;
+
 /***************************************************************
  *
  *  Copyright notice
@@ -69,7 +71,7 @@ class Team extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 
 	/**
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\TeamSeason>
-     * @TYPO3\\CMS\\Extbase\\Annotation\\ORM\\Cascade("remove")
+     * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
 	 */
 	protected $teamSeasons;
 	

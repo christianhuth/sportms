@@ -1,7 +1,8 @@
 <?php
 
-
 namespace Balumedien\Clubms\Domain\Model;
+
+use TYPO3\CMS\Extbase\Annotation\ORM\Cascade;
 
 /***************************************************************
  *
@@ -101,7 +102,7 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
 	/**
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\GamePeriod>
-	 * @TYPO3\\CMS\\Extbase\\Annotation\\ORM\\Cascade("remove")
+	 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
 	 */
     protected $gamePeriods;
 
@@ -237,19 +238,19 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
 	/**
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\GameResultSet>
-	 * @TYPO3\\CMS\\Extbase\\Annotation\\ORM\\Cascade("remove")
+	 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
 	 */
 	protected $resultSets;
 
 	/**
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\GameLineup>
-	 * @TYPO3\\CMS\\Extbase\\Annotation\\ORM\\Cascade("remove")
+	 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
 	 */
 	protected $gameLineupHomeStarts;
 
 	/**
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\GameLineup>
-	 * @TYPO3\\CMS\\Extbase\\Annotation\\ORM\\Cascade("remove")
+	 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
 	 */
 	protected $gameLineupHomeSubstitutes;
 
@@ -260,13 +261,13 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\GameLineup>
-     * @TYPO3\\CMS\\Extbase\\Annotation\\ORM\\Cascade("remove")
+     * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
      */
     protected $gameLineupGuestStarts;
 
 	/**
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\GameLineup>
-	 * @TYPO3\\CMS\\Extbase\\Annotation\\ORM\\Cascade("remove")
+	 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
 	 */
 	protected $gameLineupGuestSubstitutes;
 
@@ -277,31 +278,31 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
 	/**
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\GameChange>
-	 * @TYPO3\\CMS\\Extbase\\Annotation\\ORM\\Cascade("remove")
+	 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
 	 */
 	protected $gameChanges;
 
 	/**
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\GameGoal>
-	 * @TYPO3\\CMS\\Extbase\\Annotation\\ORM\\Cascade("remove")
+	 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
 	 */
 	protected $gameGoals;
 
 	/**
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\GamePunishment>
-	 * @TYPO3\\CMS\\Extbase\\Annotation\\ORM\\Cascade("remove")
+	 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
 	 */
 	protected $gamePunishments;
 
     /**
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\GameReferee>
-     * @TYPO3\\CMS\\Extbase\\Annotation\\ORM\\Cascade("remove")
+     * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
      */
     protected $gameReferees;
 
     /**
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\GameReport>
-     * @TYPO3\\CMS\\Extbase\\Annotation\\ORM\\Cascade("remove")
+     * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
      */
     protected $gameReports;
 
