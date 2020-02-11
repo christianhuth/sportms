@@ -1,7 +1,8 @@
 <?php
 
-
 namespace Balumedien\Clubms\Controller;
+
+use TYPO3\CMS\Extbase\Annotation\Inject;
 
 /***************************************************************
  *
