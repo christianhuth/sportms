@@ -7,8 +7,7 @@
                     {squadMember.jerseyNumber}
                 </f:then>
                 <f:else>
-                    <f:format.crop maxCharacters="1" append="">{squadMember.person.firstname}</f:format.crop>
-                    <f:format.crop maxCharacters="1" append="">{squadMember.person.lastname}</f:format.crop>
+                    <f:spaceless><f:format.crop maxCharacters="1" append="">{squadMember.person.firstname}</f:format.crop><f:format.crop maxCharacters="1" append="">{squadMember.person.lastname}</f:format.crop></f:spaceless>
                 </f:else>
             </f:if>
         </div>
