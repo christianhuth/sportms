@@ -13,6 +13,7 @@
 
 
         <f:if condition="{teamSeason.teamSeasonSquadMembers}">
+            <f:debug>{teamSeason.teamSeasonSquadMembers}</f:debug>
             <div class="tx-clubms-team-season-squad">
                 <f:groupedFor each="{teamSeason.teamSeasonSquadMembers}" as="squadMembersByPosition" groupBy="section_position_group" groupKey="section_position_group">
                     {section_position_group}
