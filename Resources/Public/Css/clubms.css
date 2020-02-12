@@ -115,6 +115,23 @@
 	height: auto;
 	max-width: 100%;
 }
+.tx-clubms-teamseason-squadmember .tx-clubms-teamseason-squad-position h3 {
+	color: var(--regular-red);
+	display: inline-block;
+	font-size: 23px;
+	font-weight: bold;
+	line-height: 1;
+	margin-bottom: 0px;
+	text-transform: uppercase;
+}
+.tx-clubms-teamseason-squadmember .tx-clubms-teamseason-squad-position h3:before {
+	content: "ll";
+	font-family: sans-serif;
+	font-weight: 500;
+	letter-spacing: 1px;
+	margin-right: 10px;
+	text-transform: none;
+}
 .tx-clubms-teamseason-squadmember .squadmember-info {
 	background-color: #E7E7E7;
 	font-weight: bold;
