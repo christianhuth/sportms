@@ -136,6 +136,9 @@
 .tx-clubms-teamseason-squad .tx-clubms-teamseason-squad-position-seperator {
 	margin-bottom: 100px;
 }
+.tx-clubms-teamseason-squadmember {
+	margin-bottom: 35px;
+}
 .tx-clubms-teamseason-squadmember .squadmember-info {
 	background-color: #E7E7E7;
 	font-weight: bold;
