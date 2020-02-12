@@ -32,6 +32,56 @@
 	width: 100%;
 }
 
+.tx_clubms_club_sections .row {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display:         flex;
+	flex-wrap: wrap;
+}
+
+.tx_clubms_club_sections .row .container > [class*='col-'] {
+	display: flex;
+	flex-direction: column;
+}
+
+.abteilungsaufzaehlung-outer {
+	padding: 0.5%;
+}
+
+.abteilungsaufzaehlung-inner {
+	border-radius: 5px;
+	background: #fff;
+	border: 1px solid rgba(217,217,217,.6);
+	border-top-color: rgba(217, 217, 217, 0.6);
+	border-top-style: solid;
+	border-top-width: 1px;
+	border-top: 0;
+	padding: 0;
+	width: 100%;
+}
+
+.abteilungsaufzaehlung-inner .image,
+.abteilungsaufzaehlung-inner .image img {
+	height: auto !important;
+	width: 100%;
+}
+
+.abteilungsaufzaehlung-inner .info {
+	font-size: 14px;
+	padding: 10px 20px;
+	position: relative;
+}
+
+.abteilungsaufzaehlung-inner a {
+	color: black;
+}
+
+.abteilungsaufzaehlung-inner a:hover {
+	color: var(--regular-red);
+}
+
+
 /*
  *
  * PERSON
