@@ -2,6 +2,7 @@
 @import url("competition.css");
 @import url("person.css");
 @import url("team.css");
+@import url("teamseason.css");
 
 #tx_clubms_container {
 	font-family: arial !important;
