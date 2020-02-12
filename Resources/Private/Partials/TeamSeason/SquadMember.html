@@ -1,19 +1,21 @@
 <div class="tx-clubms-teamseason-squadmember col-xs-6 col-sm-4 col-md-3">
-    <div class="squadmember-image"></div>
-    <div class="squadmember-info">
-        <div class="squadmember-jerseynumber">
-            <f:if condition="{squadMember.jerseyNumber}">
-                <f:then>
-                    {squadMember.jerseyNumber}
-                </f:then>
-                <f:else>
-                    <f:spaceless><f:format.crop maxCharacters="1" append="">{squadMember.person.firstname}</f:format.crop><f:format.crop maxCharacters="1" append="">{squadMember.person.lastname}</f:format.crop></f:spaceless>
-                </f:else>
-            </f:if>
+    <f:link.action action="show" controller="person" additionalParams="{tx_clubms: '{person: squadMember.person.uid}'}">
+        <div class="squadmember-image"></div>
+        <div class="squadmember-info">
+            <div class="squadmember-jerseynumber">
+                <f:if condition="{squadMember.jerseyNumber}">
+                    <f:then>
+                        {squadMember.jerseyNumber}
+                    </f:then>
+                    <f:else>
+                        <f:spaceless><f:format.crop maxCharacters="1" append="">{squadMember.person.firstname}</f:format.crop><f:format.crop maxCharacters="1" append="">{squadMember.person.lastname}</f:format.crop></f:spaceless>
+                    </f:else>
+                </f:if>
+            </div>
+            <div class="squadmember-name">
+                <span class="squadmember-firstname">{squadMember.person.firstname}</span>
+                <span class="squadmember-lastname">{squadMember.person.lastname}</span>
+            </div>
         </div>
-        <div class="squadmember-name">
-            <span class="squadmember-firstname">{squadMember.person.firstname}</span>
-            <span class="squadmember-lastname">{squadMember.person.lastname}</span>
-        </div>
-    </div>
+    </f:link.action>
 </div>
