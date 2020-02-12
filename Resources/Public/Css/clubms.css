@@ -115,6 +115,13 @@
 	height: auto;
 	max-width: 100%;
 }
+.tx-clubms-teamseason-squadmember .squadmember-info {
+	background-color: #FBFBFB;
+	font-weight: bold;
+	padding: 5% 7.5%;
+	font-size: 1rem;
+	color: #333;
+}
 .tx-clubms-teamseason-squadmember .squadmember-jerseynumber {
 	display: inline-block;
 	color: #c00;
@@ -122,11 +129,15 @@
 	text-align: left;
 	margin-right: .125em;
 }
+.tx-clubms-teamseason-squadmember .squadmember-name {
+	display: inline-block;
+}
 .tx-clubms-teamseason-squadmember .squadmember-firstname,
 .tx-clubms-teamseason-squadmember .squadmember-lastname {
 	color:#333;
 	font-size: 15px;
 	font-size: .9375rem;
+	font-weight: normal;
 	display: block;
 	text-transform: uppercase;
 	margin-left: 0;
@@ -134,5 +145,6 @@
 .tx-clubms-teamseason-squadmember .squadmember-lastname {
 	color: #c00;
 	font-size: 1.125rem;
+	font-weight: bold;
 	line-height: 1em;
 }
