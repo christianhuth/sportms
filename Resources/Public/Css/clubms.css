@@ -115,7 +115,7 @@
 	height: auto;
 	max-width: 100%;
 }
-.tx-clubms-teamseason-squadmember .tx-clubms-teamseason-squad-position h3 {
+.tx-clubms-teamseason-squad .tx-clubms-teamseason-squad-position h3 {
 	color: var(--regular-red);
 	display: inline-block;
 	font-size: 23px;
