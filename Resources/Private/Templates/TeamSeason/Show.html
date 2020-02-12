@@ -13,10 +13,9 @@
 
 
         <f:if condition="{teamSeason.teamSeasonSquadMembers}">
-            <f:debug>{teamSeason.teamSeasonSquadMembers}</f:debug>
             <div class="tx-clubms-team-season-squad">
                 <f:groupedFor each="{teamSeason.teamSeasonSquadMembers}" as="squadMembersByPosition" groupBy="sectionPositionGroup" groupKey="sectionPositionGroup">
-                    {section_position_group}
+                    {section_position_group.label}
                     <f:for each="{squadMembersByPosition}" as="squadMember">
                         <f:render partial="TeamSeason/SquadMember" arguments="{squadMember: squadMember}" />
                     </f:for>
