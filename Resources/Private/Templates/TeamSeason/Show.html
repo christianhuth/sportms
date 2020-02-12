@@ -2,23 +2,28 @@
 
     <div class="tx-clubms-team-season-show">
 
-        <div class="row">
+        <div class="tx-clubms-team-season-image"><f:image image="{teamSeason.teamSeasonImages.0}"/></div>
 
-            <div class="tx-clubms-team-season-image"><f:image image="{teamSeason.teamSeasonImages.0}"/></div>
+        <f:render partial="TeamSeason/Practices" arguments="{practices: teamSeason.teamSeasonPractices}" />
 
-            <f:render partial="TeamSeason/Practices" arguments="{practices: teamSeason.teamSeasonPractices}" />
+        <f:if condition="{teamSeason.teamSeasonOfficials}">
+            <div class="tx-clubms-team-season-officials">
+            </div>
+        </f:if>
 
-            <f:if condition="{teamSeason.teamSeasonSquadMembers}">
-                <div class="tx-clubms-team-season-squad">
-                    <f:for each="{teamSeason.teamSeasonSquadMembers}" as="squadMember">
-                        <f:render partial="TeamSeason/SquadMember" arguments="{squadMember: squadMember}" />
-                    </f:for>
-                </div>
-            </f:if>
 
-            <f:debug>{teamSeason}</f:debug>
+        <f:if condition="{teamSeason.teamSeasonSquadMembers}">
+            <div class="tx-clubms-team-season-squad">
+                <f:for each="{teamSeason.teamSeasonSquadMembers}" as="squadMember">
+                    <f:render partial="TeamSeason/SquadMember" arguments="{squadMember: squadMember}" />
+                </f:for>
+            </div>
+        </f:if>
 
-        </div>
+        <f:if condition="{teamSeason.teamSeasonSquadCaptains}">
+            <div class="tx-clubms-team-season-squad-captains">
+            </div>
+        </f:if>
 
     </div>
 
