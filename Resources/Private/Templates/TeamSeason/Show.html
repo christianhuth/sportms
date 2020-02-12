@@ -1,21 +1,21 @@
 <div id="tx-clubms-container">
 
-    <div class="tx-clubms-team-season-show">
+    <div class="tx-clubms-teamseason-show">
 
-        <div class="tx-clubms-team-season-image"><f:image image="{teamSeason.teamSeasonImages.0}"/></div>
+        <div class="tx-clubms-teamseason-image"><f:image image="{teamSeason.teamSeasonImages.0}"/></div>
 
         <f:render partial="TeamSeason/Practices" arguments="{practices: teamSeason.teamSeasonPractices}" />
 
         <f:if condition="{teamSeason.teamSeasonOfficials}">
-            <div class="tx-clubms-team-season-officials">
+            <div class="tx-clubms-teamseason-officials">
             </div>
         </f:if>
 
 
         <f:if condition="{teamSeason.teamSeasonSquadMembers}">
-            <div class="tx-clubms-team-season-squad">
+            <div class="tx-clubms-teamseason-squad">
                 <f:groupedFor each="{teamSeason.teamSeasonSquadMembers}" as="squadMembersByPosition" groupBy="sectionPositionGroup" groupKey="sectionPositionGroup">
-                    {sectionPositionGroup.label}
+                    <div class="tx-clubms-teamseason-position">{sectionPositionGroup.label}</div>
                     <f:for each="{squadMembersByPosition}" as="squadMember">
                         <f:render partial="TeamSeason/SquadMember" arguments="{squadMember: squadMember}" />
                     </f:for>
@@ -27,7 +27,7 @@
         </f:if>
 
         <f:if condition="{teamSeason.teamSeasonSquadCaptains}">
-            <div class="tx-clubms-team-season-squad-captains">
+            <div class="tx-clubms-teamseason-squad-captains">
             </div>
         </f:if>
 
