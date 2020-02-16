@@ -32,6 +32,10 @@
 	width: 100%;
 }
 
+.tx_clubms_club_sections {
+	margin-bottom: 75px;
+}
+
 .tx_clubms_club_sections .row {
 	display: -webkit-box;
 	display: -webkit-flex;

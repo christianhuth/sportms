@@ -9,38 +9,7 @@
 			<th>Einzelansicht</th>
 		</tr>
 		<f:for each="{clubs}" as="club">
-			<f:debug>{settings}</f:debug>
-			<tr>
-				<td><f:if condition="{club.images}"><f:image src="{club.images.0.uid}" width="150" height="100" treatIdAsReference="1" /></f:if></td>
-				<td>{club.name}</td>
-				<td>
-					<f:if condition="{club.dateOfFounding}">
-						<f:then>
-							<f:format.date format="d.m.Y">{club.dateOfFounding}</f:format.date>
-						</f:then>
-						<f:else>
-							<f:if condition="{club.yearOfFounding}">
-								{club.yearOfFounding}
-							</f:if>
-						</f:else>
-					</f:if>
-				</td>
-				<td><f:count>{club.clubMembers}</f:count></td>
-				<td>
-					<f:if condition="{club.clubSections}">
-						<ul>
-							<f:for each="{club.clubSections}" as="clubSection">
-								<li>{clubSection.section.label}</li>
-							</f:for>
-						</ul>
-					</f:if>
-				</td>
-				<td>
-					<f:if condition="{club.detailLink}">
-						<f:link.action controller="Club" action="show" arguments="{club: club.uid}" pageUid="{settings.club.showPid}">LINK</f:link.action>
-					</f:if>
-				</td>
-			</tr>
+			<f:render partial="Club/ListItem" arguments="{club: club}" />
 		</f:for>
 	</table>
 </f:if>
