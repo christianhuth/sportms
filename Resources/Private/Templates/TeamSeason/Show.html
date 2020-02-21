@@ -1,8 +1,9 @@
 <div id="tx-clubms-container">
 
     <div class="tx-clubms-teamseason-show">
-
-        <div class="tx-clubms-teamseason-image"><f:image image="{teamSeason.teamSeasonImages.0}"/></div>
+	
+		
+		<div class="tx-clubms-teamseason-image"><a href="{f:uri.image(image: teamSeason.teamSeasonImages.0)}" class="t3colorbox" rel="lightbox[clubms]"><f:image image="{teamSeason.teamSeasonImages.0}"/></a></div>
 
         <f:render partial="TeamSeason/Practices" arguments="{practices: teamSeason.teamSeasonPractices}" />
 
