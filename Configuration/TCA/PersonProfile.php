@@ -28,7 +28,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_personprofile'] = array(
 		'showRecordFieldList' => '',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'section, profiletype, images'),
+		'1' => array('showitem' => 'section, profile_type, profile_images'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -109,7 +109,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_personprofile'] = array(
 				'type' => 'select',
 			),
 		),
-		'profiletype' => array(
+		'profile_type' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_personprofile.profiletype',
 			'config' => array(
@@ -124,7 +124,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_personprofile'] = array(
 				'type' => 'select',
 			),
 		),
-		'images' => array(
+		'profile_images' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_personprofile.images',
 			'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(

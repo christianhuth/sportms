@@ -1066,7 +1066,7 @@
 			<trans-unit id="tx_clubms_domain_model_personprofile.profiletype_referee">
 				<source>Schiedsrichterin</source>
 			</trans-unit>
-			<trans-unit id="tx_clubms_domain_model_personprofile.images">
+			<trans-unit id="tx_clubms_domain_model_personprofile.profile_images">
 				<source>Profilbild(er)</source>
 			</trans-unit>
 
