@@ -374,8 +374,8 @@ $GLOBALS['TCA']['tx_clubms_domain_model_person'] = array(
 				'type' => 'slug',
 				'prependSlash' => false,
 				'generatorOptions' => [
-					'fields' => ['name'],
-					'prefixParentPageSlug' => true,
+					'fields' => ['lastname', 'firstname'],
+					'prefixParentPageSlug' => false,
 					'replacements' => [
 						'/' => '',
 					],
