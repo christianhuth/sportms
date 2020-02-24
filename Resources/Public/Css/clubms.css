@@ -151,6 +151,7 @@
 .tx-clubms-teamseason-squad .tx-clubms-teamseason-squad-position-seperator {
 	margin-bottom: 50px;
 }
+.tx-clubms-teamseason-squad-position-officials,
 .tx-clubms-teamseason-squad-position-members {
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -159,11 +160,13 @@
 	flex-wrap: wrap;
 	float: left;
 }
+.tx-clubms-teamseason-official,
 .tx-clubms-teamseason-squadmember {
 	display: flex;
 	flex-direction: column;
 	margin-bottom: 35px;
 }
+.tx-clubms-teamseason-official .official-image img,
 .tx-clubms-teamseason-squadmember .squadmember-image img {
 	height: auto !important;
 	max-width: 100%;
