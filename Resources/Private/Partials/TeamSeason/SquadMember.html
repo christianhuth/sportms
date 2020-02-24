@@ -6,7 +6,7 @@
                 <f:then>
                     <f:for each="{squadMember.person.personProfiles}" as="personProfile">
                         <f:if condition="{personProfile.section} == {squadMember.teamSeason.team.clubSection.section}">
-                            <f:image image="{personProfile.profileImages.0}"/><f:debug>{squadMember}</f:debug>
+                            <f:image image="{personProfile.profileImages.0}"/>
                         </f:if>
                     </f:for>
                 </f:then>
@@ -24,9 +24,9 @@
         </div>
         <div class="squadmember-info">
             <div class="squadmember-jerseynumber">
-                <f:if condition="{squadMember.jerseyNumber}">
+                <f:if condition="{squadMember.squadNumber}">
                     <f:then>
-                        {squadMember.jerseyNumber}
+                        {squadMember.squadNumber}
                     </f:then>
                     <f:else>
                         <f:spaceless><f:format.crop maxCharacters="1" append="">{squadMember.person.firstname}</f:format.crop><f:format.crop maxCharacters="1" append="">{squadMember.person.lastname}</f:format.crop></f:spaceless>
