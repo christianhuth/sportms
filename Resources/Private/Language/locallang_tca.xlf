@@ -1054,6 +1054,9 @@
 			<trans-unit id="tx_clubms_domain_model_personprofile.section">
 				<source>Abteilung</source>
 			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_personprofile.profiletype">
+				<source>Profilart</source>
+			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_personprofile.profiletype_official">
 				<source>FunktionärIn</source>
 			</trans-unit>
