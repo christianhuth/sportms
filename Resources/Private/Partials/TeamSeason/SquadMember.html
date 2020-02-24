@@ -5,7 +5,7 @@
             <f:if condition="{squadMember.person.personProfiles}">
                 <f:then>
                     <f:for each="{squadMember.person.personProfiles}" as="personProfile">
-                        <f:if condition="{personProfile.section == squadMember.teamSeason.team.clubSection.section} && {personProfile.profileType == player}">
+                        <f:if condition="{personProfile.section == squadMember.teamSeason.team.clubSection.section} && {personProfile.profileType} == player">
                             <f:then>
                                 <f:image image="{personProfile.profileImages.0}"/>
                             </f:then>
