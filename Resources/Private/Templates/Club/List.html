@@ -1,12 +1,11 @@
 <f:if condition="{clubs}">
 	<table>
 		<tr>
-			<th>Logo</th>
-			<th>Name</th>
-			<th>Gründung</th>
-			<th>Mitglieder</th>
+			<th>Verein</th>
+			<th>Informationen</th>
+			<th>Vereinsgelände</th>
 			<th>Abteilungen</th>
-			<th>Einzelansicht</th>
+			<th>Mannschaften</th>
 		</tr>
 		<f:for each="{clubs}" as="club">
 			<f:render partial="Club/ListItem" arguments="{club: club}" />

@@ -1,32 +1,51 @@
 
 <tr>
-	<td><f:if condition="{club.images}"><f:image src="{club.images.0.uid}" width="150" height="100" treatIdAsReference="1" /></f:if></td>
 	<td>{club.name}</td>
 	<td>
-		<f:if condition="{club.dateOfFounding}">
+		<f:if condition="{club.detailLink}">
 			<f:then>
-				<f:format.date format="d.m.Y">{club.dateOfFounding}</f:format.date>
+				<f:link.action controller="Club" action="show" arguments="{club: club}" pageUid="{settings.club.showPid}">Weitere Informationen</f:link.action>
 			</f:then>
 			<f:else>
-				<f:if condition="{club.yearOfFounding}">
-					{club.yearOfFounding}
-				</f:if>
+				Weitere Informationen
 			</f:else>
 		</f:if>
 	</td>
-	<td><f:count>{club.clubMembers}</f:count></td>
+	<td>
+		<f:debug>{club}</f:debug>
+	</td>
 	<td>
 		<f:if condition="{club.clubSections}">
-			<ul>
-				<f:for each="{club.clubSections}" as="clubSection">
-					<li>{clubSection.section.label}</li>
-				</f:for>
-			</ul>
+			<f:then>
+				<ul>
+					<f:for each="{club.clubSections}" as="clubSection">
+						<li>{clubSection.section.label}</li>
+					</f:for>
+				</ul>
+			</f:then>
+			<f:else>
+				Abteilungen
+			</f:else>
 		</f:if>
 	</td>
 	<td>
-		<f:if condition="{club.detailLink}">
-			<f:link.action controller="Club" action="show" arguments="{club: club.uid}" pageUid="{settings.club.showPid}">LINK</f:link.action>
+		<f:if condition="{club.clubSections}">
+			<f:then>
+				<ul>
+					<f:for each="{club.clubSections}" as="clubSection">
+						<li>{clubSection.section.label}</li>
+						<ul>
+							<f:debug>{clubSection}</f:debug>
+							<f:for each="{clubSection.team}" as="team">
+								<li>{clubSection.section.label}</li>
+							</f:for>
+						</ul>
+					</f:for>
+				</ul>
+			</f:then>
+			<f:else>
+				Mannschaften
+			</f:else>
 		</f:if>
 	</td>
 </tr>
