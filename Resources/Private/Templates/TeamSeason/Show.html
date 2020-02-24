@@ -12,13 +12,12 @@
             </div>
         </f:if>
 
-        <f:debug>{settings}</f:debug>
-
         <f:if condition="{teamSeason.teamSeasonSquadMembers}">
             <div class="tx-clubms-teamseason-squad">
                 <f:groupedFor each="{teamSeason.teamSeasonSquadMembers}" as="squadMembersByPosition" groupBy="sectionPositionGroup" groupKey="sectionPositionGroup">
                     <div class="tx-clubms-teamseason-squad-position col-xs-12"><h3>{sectionPositionGroup.label}</h3></div>
-                    <f:for each="{squadMembersByPosition}" as="squadMember">
+                    <f:for each="{squadMembersByPosition}" as="squadMember" iteration="iterator">
+                        <f:if condition="iterator.isFirst"><f:debug>{squadMember}</f:debug></f:if>
                         <f:render partial="TeamSeason/SquadMember" arguments="{squadMember: squadMember, settings: settings}" />
                     </f:for>
                     <div class="tx-clubms-teamseason-squad-position-seperator col-xs-12"></div>
