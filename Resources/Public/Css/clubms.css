@@ -172,6 +172,7 @@
 	max-width: 100%;
 	width: 100%;
 }
+.tx-clubms-teamseason-official .official-info,
 .tx-clubms-teamseason-squadmember .squadmember-info {
 	background-color: #E7E7E7;
 	font-weight: bold;
@@ -179,6 +180,7 @@
 	font-size: 1rem;
 	color: #333;
 }
+.tx-clubms-teamseason-official .official-jerseynumber,
 .tx-clubms-teamseason-squadmember .squadmember-jerseynumber {
 	display: inline-block;
 	color: #c00;
@@ -186,10 +188,13 @@
 	text-align: left;
 	margin-right: .125em;
 }
+.tx-clubms-teamseason-official .official-name,
 .tx-clubms-teamseason-squadmember .squadmember-name {
 	display: inline-block;
 }
+.tx-clubms-teamseason-official .official-firstname,
 .tx-clubms-teamseason-squadmember .squadmember-firstname,
+.tx-clubms-teamseason-official .official-lastname,
 .tx-clubms-teamseason-squadmember .squadmember-lastname {
 	color:#333;
 	font-size: 15px;
@@ -199,6 +204,7 @@
 	text-transform: uppercase;
 	margin-left: 0;
 }
+.tx-clubms-teamseason-official .official-lastname,
 .tx-clubms-teamseason-squadmember .squadmember-lastname {
 	color: #c00;
 	font-size: 1.125rem;

@@ -22,13 +22,13 @@
                 </f:else>
             </f:if>
         </div>
-        <div class="squadmember-info">
-            <div class="squadmember-jerseynumber">
-                <f:spaceless><f:format.crop maxCharacters="1" append="">{squadMember.person.firstname}</f:format.crop><f:format.crop maxCharacters="1" append="">{squadMember.person.lastname}</f:format.crop></f:spaceless>
+        <div class="official-info">
+            <div class="official-jerseynumber">
+                <f:spaceless><f:format.crop maxCharacters="1" append="">{teamSeasonOfficial.person.firstname}</f:format.crop><f:format.crop maxCharacters="1" append="">{teamSeasonOfficial.person.lastname}</f:format.crop></f:spaceless>
             </div>
-            <div class="squadmember-name">
-                <span class="squadmember-firstname">{teamSeasonOfficial.person.firstname}</span>
-                <span class="squadmember-lastname">{teamSeasonOfficial.person.lastname}</span>
+            <div class="official-name">
+                <span class="official-firstname">{teamSeasonOfficial.person.firstname}</span>
+                <span class="official-lastname">{teamSeasonOfficial.person.lastname}</span>
             </div>
         </div>
     </f:link.action>
