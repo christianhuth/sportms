@@ -126,7 +126,12 @@ $GLOBALS['TCA']['tx_clubms_domain_model_personprofile'] = array(
 			'onChange' => 'reload',
 		),
 		'section_position_group' => array(
-			'displayCond' => 'FIELD:section:>:0',
+			'displayCond' => array(
+				'AND' => array(
+					'FIELD:profile_type:=:player',
+					'FIELD:section:>:0',
+				),
+			),
 			'exclude' => 1,
 			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_personprofile.section_position_group',
 			'config' => array(
