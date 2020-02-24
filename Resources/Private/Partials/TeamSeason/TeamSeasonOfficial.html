@@ -3,16 +3,16 @@
     <f:link.action controller="Person" action="show" additionalParams="{tx_clubms_clubms: '{person: teamSeasonOfficial.person, section: teamSeasonOfficial.teamSeason.team.clubSection.section, profile: \"official\"}'}" pageUid="{settings.person.showPid}">
         <div class="official-image">
             <f:debug>{teamSeasonOfficial}</f:debug>
-            <f:if condition="{squadMember.person.personProfiles}">
+            <f:if condition="{teamSeasonOfficial.person.personProfiles}">
                 <f:then>
-                    <f:for each="{squadMember.person.personProfiles}" as="personProfile">
-                        <f:if condition="({personProfile.section} == {squadMember.teamSeason.team.clubSection.section}) && ({personProfile.profileType} == 'player') && {personProfile.profileImages.0}">
+                    <f:for each="{teamSeasonOfficial.person.personProfiles}" as="personProfile">
+                        <f:if condition="({personProfile.section} == {teamSeasonOfficial.teamSeason.team.clubSection.section}) && ({personProfile.profileType} == 'player') && {personProfile.profileImages.0}">
                             <f:image image="{personProfile.profileImages.0}"/>
                         </f:if>
                     </f:for>
                 </f:then>
                 <f:else>
-                    <f:if condition="{squadMember.person.gender} == 'm'">
+                    <f:if condition="{teamSeasonOfficial.person.gender} == 'm'">
                         <f:then>
                             <f:image src="{settings.person.dummyImageMale}"/>
                         </f:then>
@@ -25,25 +25,11 @@
         </div>
         <div class="squadmember-info">
             <div class="squadmember-jerseynumber">
-                <f:if condition="{squadMember.squadNumber}">
-                    <f:then>
-                        <f:if condition="{squadMember.squadNumber} > 9">
-                            <f:then>
-                                {squadMember.squadNumber}
-                            </f:then>
-                            <f:else>
-                                0{squadMember.squadNumber}
-                            </f:else>
-                        </f:if>
-                    </f:then>
-                    <f:else>
-                        <f:spaceless><f:format.crop maxCharacters="1" append="">{squadMember.person.firstname}</f:format.crop><f:format.crop maxCharacters="1" append="">{squadMember.person.lastname}</f:format.crop></f:spaceless>
-                    </f:else>
-                </f:if>
+                <f:spaceless><f:format.crop maxCharacters="1" append="">{squadMember.person.firstname}</f:format.crop><f:format.crop maxCharacters="1" append="">{squadMember.person.lastname}</f:format.crop></f:spaceless>
             </div>
             <div class="squadmember-name">
-                <span class="squadmember-firstname">{squadMember.person.firstname}</span>
-                <span class="squadmember-lastname">{squadMember.person.lastname}</span>
+                <span class="squadmember-firstname">{teamSeasonOfficial.person.firstname}</span>
+                <span class="squadmember-lastname">{teamSeasonOfficial.person.lastname}</span>
             </div>
         </div>
     </f:link.action>
