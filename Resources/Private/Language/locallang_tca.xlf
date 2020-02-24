@@ -1036,6 +1036,9 @@
 			<trans-unit id="tx_clubms_domain_model_person.tab_contact">
 				<source>Kontaktinformationen</source>
 			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.tab_profiles">
+				<source>Profile</source>
+			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_person.tab_visibility">
 				<source>Sichtbarkeit</source>
 			</trans-unit>

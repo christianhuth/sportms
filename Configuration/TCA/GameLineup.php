@@ -45,7 +45,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_gamelineup'] = array(
 		),
         'hidden' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.hidden',
+            'label' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.hidden',
             'config' => array(
                 'type' => 'check',
             ),
