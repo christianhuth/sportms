@@ -143,9 +143,6 @@
 .tx-clubms-teamseason-squadmember {
 	margin-bottom: 35px;
 }
-.tx-clubms-teamseason-squadmember a:hover {
-	opacity: 1;
-}
 .tx-clubms-teamseason-squadmember .squadmember-image img {
 	height: auto !important;
 	max-width: 100%;
