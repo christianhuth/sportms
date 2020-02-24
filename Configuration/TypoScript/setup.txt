@@ -29,9 +29,9 @@ plugin.tx_clubms {
             showPid = {$plugin.tx_clubms.settings.club.showPid}
         }
 
-        clubsection {
-            listPid = {$plugin.tx_clubms.settings.clubsection.listPid}
-            showPid = {$plugin.tx_clubms.settings.clubsection.showPid}
+        clubSection {
+            listPid = {$plugin.tx_clubms.settings.clubSection.listPid}
+            showPid = {$plugin.tx_clubms.settings.clubSection.showPid}
         }
 
         competition {
@@ -57,9 +57,9 @@ plugin.tx_clubms {
             showPid = {$plugin.tx_clubms.settings.team.showPid}
         }
 
-        teamseason {
-            listPid = {$plugin.tx_clubms.settings.teamseason.listPid}
-            showPid = {$plugin.tx_clubms.settings.teamseason.showPid}
+        teamSeason {
+            listPid = {$plugin.tx_clubms.settings.teamSeason.listPid}
+            showPid = {$plugin.tx_clubms.settings.teamSeason.showPid}
         }
 
     }
