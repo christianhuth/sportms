@@ -107,6 +107,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_personprofile'] = array(
 				'renderType' => 'selectSingle',
 				'type' => 'select',
 			),
+			'onChange' => 'reload',
 		),
 		'section' => array(
 			'exclude' => 1,
