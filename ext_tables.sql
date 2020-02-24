@@ -1097,7 +1097,9 @@ CREATE TABLE tx_clubms_domain_model_person (
 	phones int(11) DEFAULT NULL,
 	mails int(11) DEFAULT NULL,
 	urls int(11) DEFAULT NULL,
-	
+
+    person_profiles int(11) DEFAULT NULL,
+
 	hidden tinyint(4) unsigned DEFAULT '0' NOT NULL,
 	hidden_birthday tinyint(4) unsigned DEFAULT '0' NOT NULL,
 	detail_link tinyint(4) unsigned DEFAULT '1' NOT NULL,
@@ -1128,6 +1130,45 @@ CREATE TABLE tx_clubms_domain_model_person (
 	PRIMARY KEY (uid),
 	KEY parent (pid),
 	KEY t3ver_oid (t3ver_oid,t3ver_wsid),
+
+);
+
+
+
+#
+# Table structure for table 'tx_clubms_domain_model_personprofile'
+#
+CREATE TABLE tx_clubms_domain_model_personprofile (
+
+    uid int(11) NOT NULL auto_increment,
+    pid int(11) DEFAULT '0' NOT NULL,
+
+    person int(11) DEFAULT '0' NOT NULL,
+    section int(11) DEFAULT '0' NOT NULL,
+    profiletype int(11) DEFAULT '0' NOT NULL,
+    images varchar(255) DEFAULT NULL,
+
+    tstamp int(11) unsigned DEFAULT '0' NOT NULL,
+    crdate int(11) unsigned DEFAULT '0' NOT NULL,
+    cruser_id int(11) unsigned DEFAULT '0' NOT NULL,
+    deleted tinyint(4) unsigned DEFAULT '0' NOT NULL,
+    hidden tinyint(4) unsigned DEFAULT '0' NOT NULL,
+    starttime int(11) unsigned DEFAULT '0' NOT NULL,
+    endtime int(11) unsigned DEFAULT '0' NOT NULL,
+
+    t3ver_oid int(11) DEFAULT '0' NOT NULL,
+    t3ver_id int(11) DEFAULT '0' NOT NULL,
+    t3ver_wsid int(11) DEFAULT '0' NOT NULL,
+    t3ver_label varchar(255) DEFAULT '' NOT NULL,
+    t3ver_state tinyint(4) DEFAULT '0' NOT NULL,
+    t3ver_stage int(11) DEFAULT '0' NOT NULL,
+    t3ver_count int(11) DEFAULT '0' NOT NULL,
+    t3ver_tstamp int(11) DEFAULT '0' NOT NULL,
+    t3ver_move_id int(11) DEFAULT '0' NOT NULL,
+
+    PRIMARY KEY (uid),
+    KEY parent (pid),
+    KEY t3ver_oid (t3ver_oid,t3ver_wsid),
 
 );
 
