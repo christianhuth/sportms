@@ -5,9 +5,10 @@
 		'clubms',
 		array(
 			'Club' => 'list, show, sections',
+			'ClubSection' => 'list, show',
 			'Competition' => 'list, show',
 			'Game' => 'list, show',
-			'Person' => 'list, show',
+			'Person' => 'list, show, official, player, referee',
 			'Season' => 'list, show',
 			'Team' => 'list, show',
 			'TeamSeason' => 'list, show',
