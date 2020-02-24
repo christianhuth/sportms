@@ -27,7 +27,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_venue'] = array(
 		'showRecordFieldList' => 'hidden, section',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'club, name, address, images, description, --palette--;;building, --palette--;;size'),
+		'1' => array('showitem' => 'club, name, address, images, description, --palette--;;building, --palette--;;size, slug'),
 	),
 	'palettes' => array(
         'building' => array('showitem' => 'date_of_building, year_of_building'),
@@ -201,6 +201,25 @@ $GLOBALS['TCA']['tx_clubms_domain_model_venue'] = array(
 				'eval' => 'int, trim',
 			),
 		),
+		
+		'slug' => [
+			'exclude' => true,
+			'label' => 'URL Segment',
+			'config' => [
+				'default' => '',
+				'fallbackCharacter' => '-',
+				'generatorOptions' => [
+					'fields' => ['uid', 'club', 'name'],
+					'fieldSeparator' => '_',
+					'prefixParentPageSlug' => false,
+					'replacements' => [
+						'/' => '-',
+					],
+				],
+				'prependSlash' => false,
+				'type' => 'slug',
+			],
+		],
 		
 	),
 );

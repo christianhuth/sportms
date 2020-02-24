@@ -1783,6 +1783,7 @@ CREATE TABLE tx_clubms_domain_model_venue (
     dimensions varchar(255) DEFAULT '' NOT NULL,
     surface int(11) DEFAULT '0' NOT NULL,
     spectator_capacity varchar(255) DEFAULT '' NOT NULL,
+    slug varchar(2048) DEFAULT '',
 
     sorting int(11) DEFAULT '0' NOT NULL,
 
