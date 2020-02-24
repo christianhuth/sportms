@@ -359,10 +359,8 @@ $GLOBALS['TCA']['tx_clubms_domain_model_person'] = array(
         'urls' => array(
             'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.urls',
             'config' => array(
-				'appearance' => array(
-					'useSortable' => 1,
-				),
 				'foreign_field' => 'person',
+				'foreign_sortby' => 'section',
 				'foreign_table' => 'tx_clubms_domain_model_url',
 				'type' => 'inline',
             ),
