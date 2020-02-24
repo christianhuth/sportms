@@ -1,7 +1,12 @@
 <div class="tx-clubms-teamseason-squadmember col-xs-6 col-sm-4 col-md-3">
     <!-- TODO: REPLACE pageUid with generic pageUid of this action -->
-    <f:link.action controller="Person" action="show" additionalParams="{tx_clubms_clubms: '{person: squadMember.person, section: squadMember.teamSeason.team.clubSection.section, profile: \"player\"}'}" pageUid="2147">
-        <div class="squadmember-image"></div>
+    <f:link.action controller="Person" action="show" additionalParams="{tx_clubms_clubms: '{person: squadMember.person, section: squadMember.teamSeason.team.clubSection.section, profile: \"player\"}'}" pageUid="{settings.person.showPid}">
+        <div class="squadmember-image">
+            <f:if condition="{squadMember}">
+
+
+            </f:if>
+        </div>
         <div class="squadmember-info">
             <div class="squadmember-jerseynumber">
                 <f:if condition="{squadMember.jerseyNumber}">
