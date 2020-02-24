@@ -32,7 +32,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_club'] = array(
 									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_club.tab_grounds, club_grounds,
 									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_club.tab_sections, club_sections,
 									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_club.tab_officials, club_officials,
-									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_club.tab_visibility, hidden, detail_link'),
+									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_club.tab_visibility, hidden, detail_link, slug'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -317,6 +317,25 @@ $GLOBALS['TCA']['tx_clubms_domain_model_club'] = array(
 				'type' => 'inline',
 			),
 		),
+		
+		'slug' => [
+			'exclude' => true,
+			'label' => 'URL Segment',
+			'config' => [
+				'default' => '',
+				'fallbackCharacter' => '-',
+				'generatorOptions' => [
+					'fields' => ['name'],
+					'fieldSeparator' => '-',
+					'prefixParentPageSlug' => false,
+					'replacements' => [
+						'/' => '',
+					],
+				],
+				'prependSlash' => false,
+				'type' => 'slug',
+			],
+		],
 		
 		'detail_link' => array(
 			'exclude' => 1,

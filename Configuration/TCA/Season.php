@@ -26,7 +26,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_season'] = array(
 		'showRecordFieldList' => 'hidden, season_name, season_name_short, season_name_very_short', 'startdate', 'enddate',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'season_name, season_name_short, season_name_very_short,
+		'1' => array('showitem' => 'season_name, season_name_short, season_name_very_short, slug,
 									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_season.tab_dates, startdate, enddate,
 									'),
 	),
@@ -137,6 +137,25 @@ $GLOBALS['TCA']['tx_clubms_domain_model_season'] = array(
 				'renderType' => 'inputDateTime',
 			),
 		),
+		
+		'slug' => [
+			'exclude' => true,
+			'label' => 'URL Segment',
+			'config' => [
+				'default' => '',
+				'fallbackCharacter' => '-',
+				'generatorOptions' => [
+					'fields' => ['season_name'],
+					'fieldSeparator' => '-',
+					'prefixParentPageSlug' => false,
+					'replacements' => [
+						'/' => '',
+					],
+				],
+				'prependSlash' => false,
+				'type' => 'slug',
+			],
+		],
 		
 	),
 );

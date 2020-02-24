@@ -68,6 +68,7 @@ CREATE TABLE tx_clubms_domain_model_club (
     club_sections int(11) DEFAULT NULL,
     club_officials int(11) DEFAULT NULL,
 	detail_link tinyint(4) unsigned DEFAULT '1' NOT NULL,
+    slug varchar(2048) DEFAULT '',
 	
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
@@ -1253,6 +1254,7 @@ CREATE TABLE tx_clubms_domain_model_season (
 	season_name_very_short varchar(255) DEFAULT NULL,
 	startdate int(11) unsigned DEFAULT NULL,
 	enddate int(11) unsigned DEFAULT NULL,
+    slug varchar(2048) DEFAULT '',
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
@@ -1290,6 +1292,7 @@ CREATE TABLE tx_clubms_domain_model_section (
 	images varchar(255) DEFAULT NULL,
     section_position_groups int(11) DEFAULT NULL,
     section_age_groups int(11) DEFAULT NULL,
+    slug varchar(2048) DEFAULT '',
 	
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
@@ -1496,6 +1499,7 @@ CREATE TABLE tx_clubms_domain_model_team (
     hidden tinyint(4) unsigned DEFAULT '0' NOT NULL,
 	starttime int(11) unsigned DEFAULT '0' NOT NULL,
 	endtime int(11) unsigned DEFAULT '0' NOT NULL,
+    slug varchar(2048) DEFAULT '',
 
 	t3ver_oid int(11) DEFAULT '0' NOT NULL,
 	t3ver_id int(11) DEFAULT '0' NOT NULL,

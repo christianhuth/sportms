@@ -28,7 +28,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_team'] = array(
 	'types' => array(
 		'1' => array('showitem' => 'club, club_section, section_age_group, section_age_level, name, dummy,
 									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_team.tab_seasons, team_seasons,
-									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_team.tab_visibility, hidden, detail_link'),
+									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_team.tab_visibility, hidden, detail_link, slug'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -191,6 +191,25 @@ $GLOBALS['TCA']['tx_clubms_domain_model_team'] = array(
 				'type' => 'inline',
 			),
 		),
+		
+		'slug' => [
+			'exclude' => true,
+			'label' => 'URL Segment',
+			'config' => [
+				'default' => '',
+				'fallbackCharacter' => '-',
+				'generatorOptions' => [
+					'fields' => ['name'],
+					'fieldSeparator' => '-',
+					'prefixParentPageSlug' => false,
+					'replacements' => [
+						'/' => '',
+					],
+				],
+				'prependSlash' => false,
+				'type' => 'slug',
+			],
+		],
 		
 		'detail_link' => array(
 			'exclude' => 1,

@@ -26,7 +26,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_section'] = array(
 		'showRecordFieldList' => 'label',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'label, images, section_position_groups, section_age_groups'),
+		'1' => array('showitem' => 'label, images, section_position_groups, section_age_groups, slug'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -141,6 +141,25 @@ $GLOBALS['TCA']['tx_clubms_domain_model_section'] = array(
 				'type' => 'inline',
 			),
 		),
+		
+		'slug' => [
+			'exclude' => true,
+			'label' => 'URL Segment',
+			'config' => [
+				'default' => '',
+				'fallbackCharacter' => '-',
+				'generatorOptions' => [
+					'fields' => ['label'],
+					'fieldSeparator' => '-',
+					'prefixParentPageSlug' => false,
+					'replacements' => [
+						'/' => '',
+					],
+				],
+				'prependSlash' => false,
+				'type' => 'slug',
+			],
+		],
 		
 	),
 );
