@@ -4,15 +4,15 @@
 	<td>
 		<f:if condition="{club.detailLink}">
 			<f:then>
-				<f:link.action controller="Club" action="show" arguments="{club: club}" pageUid="{settings.club.showPid}">Weitere Informationen</f:link.action>
+				<f:link.action controller="Club" action="show" arguments="{club: club}" pageUid="{settings.club.showPid}">Informationen</f:link.action>
 			</f:then>
 			<f:else>
-				Weitere Informationen
+				Informationen
 			</f:else>
 		</f:if>
 	</td>
 	<td>
-		<f:debug>{club}</f:debug>
+		<!--<f:debug>{club}</f:debug>-->
 	</td>
 	<td>
 		<f:if condition="{club.clubSections}">
