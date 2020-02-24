@@ -127,6 +127,7 @@
 	font-size: 85%;
 	margin: 0;
 }
+.tx-clubms-teamseason-officials .tx-clubms-teamseason-officials h3,
 .tx-clubms-teamseason-squad .tx-clubms-teamseason-squad-position h3 {
 	color: #C30D00;
 	display: inline-block;
@@ -137,6 +138,7 @@
 	margin-bottom: 0px;
 	text-transform: uppercase;
 }
+.tx-clubms-teamseason-officials .tx-clubms-teamseason-officials h3:before,
 .tx-clubms-teamseason-squad .tx-clubms-teamseason-squad-position h3:before {
 	content: "ll";
 	font-family: sans-serif;
@@ -145,6 +147,7 @@
 	margin-right: 10px;
 	text-transform: none;
 }
+.tx-clubms-teamseason-officials .tx-clubms-teamseason-officials-seperator,
 .tx-clubms-teamseason-squad .tx-clubms-teamseason-squad-position-seperator {
 	margin-bottom: 50px;
 }
