@@ -121,9 +121,10 @@
 }
 .tx-clubms-teamseason-image-description {
 	background-color: #E7E7E7;
-	padding: 5px;
+	padding: 8px 10px;
 }
 .tx-clubms-teamseason-image-description p {
+	font-size: 85%;
 	margin: 0;
 }
 .tx-clubms-teamseason-squad .tx-clubms-teamseason-squad-position h3 {
