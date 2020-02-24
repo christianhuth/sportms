@@ -7,7 +7,7 @@
 				<f:link.action controller="Club" action="show" arguments="{club: club}" pageUid="{settings.club.showPid}">Informationen</f:link.action>
 			</f:then>
 			<f:else>
-				Informationen
+				Keine Informationen
 			</f:else>
 		</f:if>
 	</td>
@@ -18,12 +18,20 @@
 			<f:then>
 				<ul>
 					<f:for each="{club.clubSections}" as="clubSection">
-						<li>{clubSection.section.label}</li>
+						<f:if condition="{club.detailLink}">
+							<f:then>
+								<f:link.action controller="ClubSection" action="show" arguments="{clubSection: clubSection}" pageUid="{settings.clubSection.showPid}"><li>{clubSection.section.label}</li></f:link.action>
+							</f:then>
+							<f:else>
+								<li>{clubSection.section.label}</li>
+							</f:else>
+						</f:if>
+
 					</f:for>
 				</ul>
 			</f:then>
 			<f:else>
-				Abteilungen
+				Keine Abteilungen
 			</f:else>
 		</f:if>
 	</td>
