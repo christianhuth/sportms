@@ -372,7 +372,6 @@ $GLOBALS['TCA']['tx_clubms_domain_model_person'] = array(
 			'label' => 'URL Segment',
 			'config' => [
 				'default' => '',
-				'eval' => 'required',
 				'fallbackCharacter' => '-',
 				'generatorOptions' => [
 					'fields' => ['lastname', 'firstname'],
