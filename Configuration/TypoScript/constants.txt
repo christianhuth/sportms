@@ -1,10 +1,10 @@
 # customsubcategory=club=Settings: Club
-# customsubcategory=clubsection=Settings: ClubSection
+# customsubcategory=clubSection=Settings: ClubSection
 # customsubcategory=competition=Settings: Competition
 # customsubcategory=game=Settings: Game
 # customsubcategory=person=Settings: Person
 # customsubcategory=team=Settings: Team
-# customsubcategory=teamseason=Settings: TeamSeason
+# customsubcategory=teamSeason=Settings: TeamSeason
 
 plugin.tx_clubms {
 
@@ -28,10 +28,10 @@ plugin.tx_clubms {
             showPid =
         }
 
-        clubsection {
-            # cat=plugin.tx_clubms/clubsection; type=int; label=Default PID of ClubSection->List
+        clubSection {
+            # cat=plugin.tx_clubms/clubSection; type=int; label=Default PID of ClubSection->List
             listPid =
-            # cat=plugin.tx_clubms/clubsection; type=int; label=Default PID of ClubSection->Show
+            # cat=plugin.tx_clubms/clubSection; type=int; label=Default PID of ClubSection->Show
             showPid =
         }
 
@@ -69,10 +69,10 @@ plugin.tx_clubms {
             showPid =
         }
 
-        teamseason {
-            # cat=plugin.tx_clubms/teamseason; type=int; label=Default PID of TeamSeason->List
+        teamSeason {
+            # cat=plugin.tx_clubms/teamSeason; type=int; label=Default PID of TeamSeason->List
             listPid =
-            # cat=plugin.tx_clubms/teamseason; type=int; label=Default PID of TeamSeason->Show
+            # cat=plugin.tx_clubms/teamSeason; type=int; label=Default PID of TeamSeason->Show
             showPid =
         }
 
