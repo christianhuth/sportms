@@ -60,6 +60,10 @@ plugin.tx_clubms {
             playerPid =
             # cat=plugin.tx_clubms/person; type=int; label=Default PID of Person->Referee
             refereePid =
+            # cat=plugin.tx_clubms/person; type=int; label=Path to default dummy image for a male person
+            dummyImageMale = EXT:clubms/Resources/Public/Images/person-male.jpg
+            # cat=plugin.tx_clubms/person; type=int; label=Path to default dummy image for a female person
+            dummyImageFemale = EXT:clubms/Resources/Public/Images/person-female.jpg
         }
 
         team {

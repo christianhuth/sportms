@@ -50,6 +50,8 @@ plugin.tx_clubms {
             officialPid = {$plugin.tx_clubms.settings.person.officialPid}
             playerPid = {$plugin.tx_clubms.settings.person.playerPid}
             refereePid = {$plugin.tx_clubms.settings.person.refereePid}
+            dummyImageMale = {$plugin.tx_clubms.settings.person.dummyImageMale}
+            dummyImageFemale = {$plugin.tx_clubms.settings.person.dummyImageFemale}
         }
 
         team {
