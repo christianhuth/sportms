@@ -119,6 +119,10 @@
 	height: auto;
 	max-width: 100%;
 }
+.tx-clubms-teamseason-image-description {
+	background-color: var(--regular-gray);
+	padding: 5px;
+}
 .tx-clubms-teamseason-squad .tx-clubms-teamseason-squad-position h3 {
 	color: var(--regular-red);
 	display: inline-block;
