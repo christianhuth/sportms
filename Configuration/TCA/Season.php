@@ -149,7 +149,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_season'] = array(
 					'fieldSeparator' => '-',
 					'prefixParentPageSlug' => false,
 					'replacements' => [
-						'/' => '',
+						'/' => '-',
 					],
 				],
 				'prependSlash' => false,
