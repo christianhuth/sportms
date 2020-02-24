@@ -28,7 +28,8 @@ $GLOBALS['TCA']['tx_clubms_domain_model_personprofile'] = array(
 		'showRecordFieldList' => '',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'profile_type, section, section_position_group, section_position, profile_images'),
+		'1' => array('showitem' => 'profile_type, section, section_position_group, section_position,
+									---div---;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_personprofile.tab_images, profile_images'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
