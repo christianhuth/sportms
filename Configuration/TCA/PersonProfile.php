@@ -28,7 +28,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_personprofile'] = array(
 		'showRecordFieldList' => '',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'section, profile_type, profile_images'),
+		'1' => array('showitem' => 'profile_type, section, section_position_group, section_position, profile_images'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -93,6 +93,21 @@ $GLOBALS['TCA']['tx_clubms_domain_model_personprofile'] = array(
 			),
 		),
 		
+		'profile_type' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_personprofile.profiletype',
+			'config' => array(
+				'eval' => 'required',
+				'items' => array(
+					array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
+					array('LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_personprofile.profiletype_official', 'official'),
+					array('LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_personprofile.profiletype_player', 'player'),
+					array('LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_personprofile.profiletype_referee', 'referee'),
+				),
+				'renderType' => 'selectSingle',
+				'type' => 'select',
+			),
+		),
 		'section' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_personprofile.section',
@@ -109,18 +124,36 @@ $GLOBALS['TCA']['tx_clubms_domain_model_personprofile'] = array(
 				'type' => 'select',
 			),
 		),
-		'profile_type' => array(
+		'section_position_group' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_personprofile.profiletype',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_personprofile.section_position_group',
 			'config' => array(
-				'eval' => 'required',
-				'items' => array(
+				'foreign_table' => 'tx_clubms_domain_model_sectionpositiongroup',
+				'foreign_table_where' => 'ORDER BY tx_clubms_domain_model_sectionpositiongroup.sorting ASC',
+				'items' => Array (
 					array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
-					array('LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_personprofile.profiletype_official', 'official'),
-					array('LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_personprofile.profiletype_player', 'player'),
-					array('LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_personprofile.profiletype_referee', 'referee'),
 				),
+				'maxItems' => 1,
 				'renderType' => 'selectSingle',
+				'size' => 1,
+				'type' => 'select',
+			),
+			'onChange' => 'reload',
+		),
+		'section_position' => array(
+			'displayCond' => 'FIELD:section_position_group:>:0',
+			'exclude' => 1,
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_personprofile.section_position',
+			'config' => array(
+				'foreign_table' => 'tx_clubms_domain_model_sectionposition',
+				'foreign_table_where' => '  AND tx_clubms_domain_model_sectionposition.section_position_group = ###REC_FIELD_section_position_group###
+                                            ORDER BY tx_clubms_domain_model_sectionposition.sorting ASC',
+				'items' => Array (
+					array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
+				),
+				'maxItems' => 1,
+				'renderType' => 'selectSingle',
+				'size' => 1,
 				'type' => 'select',
 			),
 		),

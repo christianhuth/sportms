@@ -38,14 +38,24 @@ class PersonProfile extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	protected $person;
 	
 	/**
+	 * @var string
+	 */
+	protected $profileType;
+	
+	/**
 	 * @var \Balumedien\Clubms\Domain\Model\Section
 	 */
 	protected $section;
 	
 	/**
-	 * @var string
+	 * @var \Balumedien\Clubms\Domain\Model\SectionPositionGroup
 	 */
-	protected $profileType;
+	protected $sectionPositionGroup;
+	
+	/**
+	 * @var \Balumedien\Clubms\Domain\Model\SectionPosition
+	 */
+	protected $sectionPosition;
 	
 	/**
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference>
@@ -88,6 +98,20 @@ class PersonProfile extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	}
 	
 	/**
+	 * @return string
+	 */
+	public function getProfileType() {
+		return $this->profileType;
+	}
+	
+	/**
+	 * @param string $profileType
+	 */
+	public function setProfileType($profileType) {
+		$this->profileType = $profileType;
+	}
+	
+	/**
 	 * @return Section
 	 */
 	public function getSection() {
@@ -102,17 +126,31 @@ class PersonProfile extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	}
 	
 	/**
-	 * @return string
+	 * @return SectionPositionGroup
 	 */
-	public function getProfileType() {
-		return $this->profileType;
+	public function getSectionPositionGroup() {
+		return $this->sectionPositionGroup;
 	}
 	
 	/**
-	 * @param string $profileType
+	 * @param SectionPositionGroup $sectionPositionGroup
 	 */
-	public function setProfileType($profileType) {
-		$this->profileType = $profileType;
+	public function setSectionPositionGroup($sectionPositionGroup) {
+		$this->sectionPositionGroup = $sectionPositionGroup;
+	}
+	
+	/**
+	 * @return SectionPosition
+	 */
+	public function getSectionPosition() {
+		return $this->sectionPosition;
+	}
+	
+	/**
+	 * @param SectionPosition $sectionPosition
+	 */
+	public function setSectionPosition($sectionPosition) {
+		$this->sectionPosition = $sectionPosition;
 	}
 	
 	/**

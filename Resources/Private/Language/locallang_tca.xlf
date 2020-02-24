@@ -1054,6 +1054,12 @@
 			<trans-unit id="tx_clubms_domain_model_personprofile.section">
 				<source>Abteilung</source>
 			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_personprofile.section_position_group">
+				<source>Position</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_personprofile.section_position">
+				<source>Detailposition</source>
+			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_personprofile.profiletype">
 				<source>Profilart</source>
 			</trans-unit>
