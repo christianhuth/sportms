@@ -26,6 +26,13 @@ plugin.tx_clubms {
             showPid =
         }
 
+        clubsection {
+            # cat=plugin.tx_clubms/clubsection; type=int; label=Default PID of ClubSection->List
+            listPid =
+            # cat=plugin.tx_clubms/clubsection; type=int; label=Default PID of ClubSection->Show
+            showPid =
+        }
+
         competition {
             # cat=plugin.tx_clubms/competition; type=int; label=Default PID of Competition->List
             listPid =
@@ -43,6 +50,8 @@ plugin.tx_clubms {
         person {
             # cat=plugin.tx_clubms/person; type=int; label=Default PID of Person->List
             listPid =
+            # cat=plugin.tx_clubms/person; type=int; label=Default PID of Person->Show
+            showPid =
             # cat=plugin.tx_clubms/person; type=int; label=Default PID of Person->Official
             officialPid =
             # cat=plugin.tx_clubms/person; type=int; label=Default PID of Person->Player
@@ -55,6 +64,13 @@ plugin.tx_clubms {
             # cat=plugin.tx_clubms/team; type=int; label=Default PID of Team->List
             listPid =
             # cat=plugin.tx_clubms/team; type=int; label=Default PID of Team->Show
+            showPid =
+        }
+
+        teamseason {
+            # cat=plugin.tx_clubms/teamseason; type=int; label=Default PID of TeamSeason->List
+            listPid =
+            # cat=plugin.tx_clubms/teamseason; type=int; label=Default PID of TeamSeason->Show
             showPid =
         }
 
