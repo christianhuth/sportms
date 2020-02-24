@@ -44,7 +44,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
 		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_punishments, game_punishments,
 		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_referees, game_referees,
 		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_reports, game_reports,
-		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_visibility, hidden, detail_link,
+		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.tab_visibility, hidden, detail_link, slug
 		                            '),
 	),
 	'palettes' => array(
@@ -1012,6 +1012,25 @@ $GLOBALS['TCA']['tx_clubms_domain_model_game'] = array(
                 'type' => 'check',
             ),
         ),
+		
+		'slug' => [
+			'exclude' => true,
+			'label' => 'URL Segment',
+			'config' => [
+				'default' => '',
+				'fallbackCharacter' => '-',
+				'generatorOptions' => [
+					'fields' => ['uid', ['team_season_home', 'team_season_guest']],
+					'fieldSeparator' => '-',
+					'prefixParentPageSlug' => false,
+					'replacements' => [
+						'/' => '-',
+					],
+				],
+				'prependSlash' => false,
+				'type' => 'slug',
+			],
+		],
 		
 	),
 );
