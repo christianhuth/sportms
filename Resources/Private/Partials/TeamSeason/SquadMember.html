@@ -26,7 +26,14 @@
             <div class="squadmember-jerseynumber">
                 <f:if condition="{squadMember.squadNumber}">
                     <f:then>
-                        {squadMember.squadNumber}
+                        <f:if condition="{squadMember.squadNumber} > 9">
+                            <f:then>
+                                {squadMember.squadNumber}
+                            </f:then>
+                            <f:else>
+                                0{squadMember.squadNumber}
+                            </f:else>
+                        </f:if>
                     </f:then>
                     <f:else>
                         <f:spaceless><f:format.crop maxCharacters="1" append="">{squadMember.person.firstname}</f:format.crop><f:format.crop maxCharacters="1" append="">{squadMember.person.lastname}</f:format.crop></f:spaceless>
