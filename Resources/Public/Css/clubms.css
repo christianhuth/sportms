@@ -123,6 +123,9 @@
 	background-color: #E7E7E7;
 	padding: 5px;
 }
+.tx-clubms-teamseason-image-description p {
+	margin: 0;
+}
 .tx-clubms-teamseason-squad .tx-clubms-teamseason-squad-position h3 {
 	color: #C30D00;
 	display: inline-block;
