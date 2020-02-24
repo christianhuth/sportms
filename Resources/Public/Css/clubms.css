@@ -154,6 +154,7 @@
 	display: -ms-flexbox;
 	display:         flex;
 	flex-wrap: wrap;
+	float: left;
 }
 .tx-clubms-teamseason-squadmember {
 	display: flex;
