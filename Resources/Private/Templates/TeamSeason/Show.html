@@ -5,6 +5,7 @@
 		
 		<div class="tx-clubms-teamseason-image">
             <a href="{f:uri.image(image: teamSeason.teamSeasonImages.0)}" class="t3colorbox" rel="lightbox[clubms]"><f:image image="{teamSeason.teamSeasonImages.0}"/></a>
+            <f:debug>{teamSeason.teamSeasonImages.0.properties}</f:debug>
             <f:if condition="{teamSeason.teamSeasonImages.0.properties.description}">
                 <div class="tx-clubms-teamseason-image-description">{teamSeason.teamSeasonImages.0.properties.description}</div>
             </f:if>
