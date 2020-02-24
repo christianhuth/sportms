@@ -19,7 +19,7 @@
 					<f:for each="{club.clubSections}" as="clubSection">
 						<f:if condition="{club.detailLink}">
 							<f:then>
-								<f:link.action controller="ClubSection" action="show" arguments="{clubSection: clubSection}" pageUid="{settings.clubSection.showPid}"><li>{clubSection.section.label}</li></f:link.action>
+								<f:link.action controller="ClubSection" action="show" arguments="{club: clubSection.club, section: clubSection.section}" pageUid="{settings.clubSection.showPid}"><li>{clubSection.section.label}</li></f:link.action>
 							</f:then>
 							<f:else>
 								<li>{clubSection.section.label}</li>
