@@ -2,9 +2,17 @@
 
     <f:link.action controller="Person" action="show" additionalParams="{tx_clubms_clubms: '{person: squadMember.person, section: squadMember.teamSeason.team.clubSection.section, profile: \"player\"}'}" pageUid="{settings.person.showPid}">
         <div class="squadmember-image">
-            <f:if condition="{squadMember}">
-
-
+            <f:if condition="{squadMember.personProfiles}">
+                <f:then>
+                    <f:for each="{squadMember.personProfiles}" as="personProfile">
+                        <f:if condition="{personProfile.section} == {squadMember.teamSeason.team.clubSection.section}">
+                            <f:debug>{personProfile.profileImages.0}</f:debug>
+                        </f:if>
+                    </f:for>
+                </f:then>
+                <f:else>
+                    <!-- TODO: add dummy image -->
+                </f:else>
             </f:if>
         </div>
         <div class="squadmember-info">
