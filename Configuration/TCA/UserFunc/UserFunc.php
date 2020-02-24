@@ -172,7 +172,7 @@
 		public function personProfileLabel(&$parameters, $parentObject) {
 			$record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
 			$section = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_section", $record['section']);
-			$profiletype = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_section", $record['profiletype']);
+			$profiletype = $record['profiletype'];
 			switch($profiletype) {
 				case "official": $profiletype = "FunktionärIn"; break;
 				case "player": $profiletype = "SpielerIn"; break;
