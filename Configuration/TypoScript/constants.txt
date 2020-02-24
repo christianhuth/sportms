@@ -1,8 +1,10 @@
 # customsubcategory=club=Settings: Club
+# customsubcategory=clubsection=Settings: ClubSection
 # customsubcategory=competition=Settings: Competition
 # customsubcategory=game=Settings: Game
 # customsubcategory=person=Settings: Person
 # customsubcategory=team=Settings: Team
+# customsubcategory=teamseason=Settings: TeamSeason
 
 plugin.tx_clubms {
 
