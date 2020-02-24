@@ -167,6 +167,13 @@ class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
 	 */
 	protected $urls = '';
+	
+	/**
+	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\PersonProfile>
+	 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
+	 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
+	 */
+	protected $personProfiles = '';
 
     /**
 	 * @var boolean
@@ -192,6 +199,30 @@ class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @var boolean
      */
     protected $profileReferee = '';
+	
+	/**
+	 * TeamSeason constructor.
+	 */
+	public function __construct() {
+		//Do not remove the next line: It would break the functionality
+		$this->initStorageObjects();
+	}
+	
+	/**
+	 * Initializes all ObjectStorage properties
+	 * Do not modify this method!
+	 * It will be rewritten on each save in the extension builder
+	 * You may modify the constructor of this class instead
+	 *
+	 * @return void
+	 */
+	protected function initStorageObjects() {
+		$this->addresses = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+		$this->phones = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+		$this->mails = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+		$this->urls = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+		$this->personProfiles = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+	}
 
     /**
      * @return string
@@ -592,6 +623,20 @@ class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
     {
         $this->urls = $urls;
     }
+	
+	/**
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+	 */
+	public function getPersonProfiles() {
+		return $this->personProfiles;
+	}
+	
+	/**
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $personProfiles
+	 */
+	public function setPersonProfiles($personProfiles) {
+		$this->personProfiles = $personProfiles;
+	}
 
     /**
      * @return bool
