@@ -369,7 +369,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_person'] = array(
         ),
 		
 		'person_profiles' => array(
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.person_profiles',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.person_profile',
 			'config' => array(
 				'appearance' => array(
 					'useSortable' => 1,

@@ -89,8 +89,9 @@ $GLOBALS['TCA']['tx_clubms_domain_model_personprofile'] = array(
 		
 		'section' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubsection.section',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_personprofile.section',
 			'config' => array(
+				'eval' => 'required',
 				'foreign_table' => 'tx_clubms_domain_model_section',
 				'foreign_table_where' => 'ORDER BY tx_clubms_domain_model_section.label ASC',
 				'items' => array(
@@ -106,6 +107,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_personprofile'] = array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_personprofile.profiletype',
 			'config' => array(
+				'eval' => 'required',
 				'items' => array(
 					array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
 					array('LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_personprofile.profiletype_official', 'official'),
@@ -118,7 +120,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_personprofile'] = array(
 		),
 		'images' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_club.images',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_personprofile.images',
 			'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
 				'image',
 				array(

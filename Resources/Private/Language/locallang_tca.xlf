@@ -1015,6 +1015,9 @@
 			<trans-unit id="tx_clubms_domain_model_person.urls">
 				<source>Webseiten</source>
 			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_person.person_profile">
+				<source>Profil</source>
+			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_person.hidden_birthday">
 				<source>Geburtsdatum verbergen</source>
 			</trans-unit>
@@ -1048,6 +1051,9 @@
 			<trans-unit id="tx_clubms_domain_model_personprofile">
 				<source>Profil</source>
 			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_personprofile.section">
+				<source>Abteilung</source>
+			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_personprofile.profiletype_official">
 				<source>FunktionärIn</source>
 			</trans-unit>
@@ -1056,6 +1062,9 @@
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_personprofile.profiletype_referee">
 				<source>Schiedsrichterin</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_personprofile.images">
+				<source>Profilbild(er)</source>
 			</trans-unit>
 
 
