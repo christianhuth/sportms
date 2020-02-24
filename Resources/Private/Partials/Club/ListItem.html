@@ -31,17 +31,6 @@
 	<td><!--
 		<f:if condition="{club.clubSections}">
 			<f:then>
-				<ul>
-					<f:for each="{club.clubSections}" as="clubSection">
-						<li>{clubSection.section.label}</li>
-						<ul>
-							<f:debug>{clubSection}</f:debug>
-							<f:for each="{clubSection.team}" as="team">
-								<li>{clubSection.section.label}</li>
-							</f:for>
-						</ul>
-					</f:for>
-				</ul>
 			</f:then>
 			<f:else>
 				Mannschaften
