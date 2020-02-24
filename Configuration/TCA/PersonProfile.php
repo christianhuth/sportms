@@ -87,6 +87,12 @@ $GLOBALS['TCA']['tx_clubms_domain_model_personprofile'] = array(
 			),
 		),
 		
+		'person' => array(
+			'config' => array(
+				'type' => 'passthrough',
+			),
+		),
+		
 		'section' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_personprofile.section',
