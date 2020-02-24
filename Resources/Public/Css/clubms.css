@@ -146,6 +146,11 @@
 .tx-clubms-teamseason-squadmember a:hover {
 	opacity: 1;
 }
+.tx-clubms-teamseason-squadmember .squadmember-image img {
+	height: auto !important;
+	max-width: 100%;
+	width: 100%;
+}
 .tx-clubms-teamseason-squadmember .squadmember-info {
 	background-color: #E7E7E7;
 	font-weight: bold;
