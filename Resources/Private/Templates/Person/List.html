@@ -20,7 +20,7 @@
 						<f:case value="f">weiblich</f:case>
 					</f:switch>
 				</td>
-				<td><f:if condition="{person.detailLink}"><f:link.action action="show" arguments="{uid: person}">LINK</f:link.action></f:if></td>
+				<td><f:if condition="{person.detailLink}"><f:link.action action="show" arguments="{person: person}">LINK</f:link.action></f:if></td>
 			</tr>
 		</f:for>
 	</table>
