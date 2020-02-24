@@ -123,13 +123,15 @@ $GLOBALS['TCA']['tx_clubms_domain_model_personprofile'] = array(
 				'size' => 1,
 				'type' => 'select',
 			),
+			'onChange' => 'reload',
 		),
 		'section_position_group' => array(
+			'displayCond' => 'FIELD:section:>:0',
 			'exclude' => 1,
 			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_personprofile.section_position_group',
 			'config' => array(
 				'foreign_table' => 'tx_clubms_domain_model_sectionpositiongroup',
-				'foreign_table_where' => 'ORDER BY tx_clubms_domain_model_sectionpositiongroup.sorting ASC',
+				'foreign_table_where' => 'section = ###REC_section### ORDER BY tx_clubms_domain_model_sectionpositiongroup.sorting ASC',
 				'items' => Array (
 					array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
 				),
