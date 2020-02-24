@@ -19,6 +19,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_personprofile'] = array(
         'label' => '',
         'label_userFunc' => \Balumedien\Clubms\Configuration\TCA\UserFunc\UserFunc::class . '->personProfileLabel',
         'searchFields' => '',
+        'sortBy' => 'sorting',
         'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_personprofile',
         'tstamp' => 'tstamp',
 		'versioningWS' => TRUE,
