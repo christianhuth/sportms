@@ -169,6 +169,13 @@
             $parameters['title'] = $newLabel;
         }
 		
+		public function personProfileLabel(&$parameters, $parentObject) {
+			$record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
+			$section = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_section", $record['section']);
+			$newLabel = $section['label'];
+			$parameters['title'] = $newLabel;
+		}
+		
 		public function phoneLabel(&$parameters, $parentObject) {
 			$record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
             $newLabel = $record['area_code'] . " / " . $record['calling_number'];

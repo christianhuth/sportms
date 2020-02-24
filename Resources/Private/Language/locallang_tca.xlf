@@ -1041,6 +1041,21 @@
 			</trans-unit>
 
 
+			<!-- Domain Model PersonProfile -->
+			<trans-unit id="tx_clubms_domain_model_personprofile">
+				<source>Profil</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_personprofile.profiletype_official">
+				<source>FunktionärIn</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_personprofile.profiletype_player">
+				<source>SpielerIn</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_personprofile.profiletype_referee">
+				<source>Schiedsrichterin</source>
+			</trans-unit>
+
+
 			<!-- Domain Model Phone -->
 			<trans-unit id="tx_clubms_domain_model_phone">
 				<source>Telefonnummer</source>
