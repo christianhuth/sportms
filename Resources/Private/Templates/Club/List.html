@@ -8,6 +8,7 @@
 			<th>Mannschaften</th>
 		</tr>
 		<f:for each="{clubs}" as="club">
+			<f:debug>{club}</f:debug>
 			<f:render partial="Club/ListItem" arguments="{club: club, settings: settings}" />
 		</f:for>
 	</table>

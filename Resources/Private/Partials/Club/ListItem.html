@@ -17,7 +17,6 @@
 			<f:then>
 				<ul>
 					<f:for each="{club.clubSections}" as="clubSection" iteration="iterator">
-						<f:if condition="iterator.isFirst"><f:debug>{clubSection}</f:debug></f:if>
 						<f:link.action controller="ClubSection" action="show" arguments="{club: clubSection.club, section: clubSection.section}" pageUid="{settings.clubSection.showPid}"><li>{clubSection.section.label}</li></f:link.action>
 					</f:for>
 				</ul>
