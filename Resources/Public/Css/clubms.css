@@ -167,18 +167,19 @@
 	margin-bottom: 35px;
 	position: relative;
 }
-.tx-clubms-teamseason-official a::before {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	margin-top: -13px;
-	margin-left: -13px;
+.tx-clubms-teamseason-official a::after {
+	background-color: rgba(195, 13, 0, 0.7);
+	content: '';
+	height: 100%;
+	left: 0;
 	opacity: 0;
-	pointer-events: none;
-	z-index: 9000;
+	position: absolute;
+	top: 0;
 	transition: 0.4s;
+	width: 100%;
+	z-index: 100;
 }
-.tx-clubms-teamseason-official a:hover::before {
+.tx-clubms-teamseason-official a:hover::after {
 	opacity: 1;
 }
 .tx-clubms-teamseason-official .official-image img,
