@@ -22,11 +22,12 @@
 						<li><f:link.action controller="ClubSection" action="show" arguments="{club: clubSection.club, section: clubSection.section}" pageUid="{settings.clubSection.showPid}">{clubSection.section.label}</f:link.action></li>
 						<f:if condition="{clubSection.teams}">
 							<f:then>
-								<ul>
-									<f:for each="{clubSection.teams}" as="team">
-										<li><f:link.action controller="Team" action="show" arguments="{team: team}" pageUid="{settings.team.showPid}">{team.name}</f:link.action></li>
+									<f:for each="{clubSection.teams}" as="team" iteration="iterator2">
+										<f:link.action controller="Team" action="show" arguments="{team: team}" pageUid="{settings.team.showPid}">{team.name}</f:link.action>
+										<f:if condition="!iterator2.isLast">
+											,
+										</f:if>
 									</f:for>
-								</ul>
 							</f:then>
 							<f:else>
 							</f:else>
