@@ -157,8 +157,8 @@
 	margin-right: 10px;
 	text-transform: none;
 }
-.tx-clubms-teamseason-image, .tx-clubms-teamseason-image-seperator,
-.tx-clubms-teamseason-practices, .tx-clubms-teamseason-practices-seperator,
+.tx-clubms-teamseason-image .tx-clubms-teamseason-image-seperator,
+.tx-clubms-teamseason-practices .tx-clubms-teamseason-practices-seperator,
 .tx-clubms-teamseason-officials .tx-clubms-teamseason-officials-seperator,
 .tx-clubms-teamseason-squad .tx-clubms-teamseason-squad-position-seperator {
 	margin-bottom: 50px;
