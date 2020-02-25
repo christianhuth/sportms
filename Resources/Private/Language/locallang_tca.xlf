@@ -213,11 +213,17 @@
 			<trans-unit id="tx_clubms_domain_model_clubsection.club_section_officials">
 				<source>Abteilungsfunktionärstätigkeiten</source>
 			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_clubsection.team">
+				<source>Mannschaft</source>
+			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_clubsection.tab_contact">
 				<source>Kontaktinformationen</source>
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_clubsection.tab_officials">
 				<source>Abteilungsfunktionäre</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_clubsection.tab_teams">
+				<source>Mannschaften</source>
 			</trans-unit>
 
 

@@ -30,7 +30,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_clubsection'] = array(
 		'1' => array('showitem' => 'section, images, club_section_members,
 									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubsection.tab_contact, addresses, phones, mails, urls,
 									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubsection.tab_officials, club_section_officials,
-									--div--;Teams, teams'),
+									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubsection.tab_teams, teams'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -253,7 +253,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_clubsection'] = array(
 		),
 		
 		'teams' => array(
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubsection.teams',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubsection.team',
 			'config' => array(
 				'appearance' => array(
 					'enabledControls' => [
