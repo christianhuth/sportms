@@ -179,7 +179,8 @@
 	padding: 4px;
 	position: relative;
 }
-.tx-clubms-teamseason-official a::after {
+.tx-clubms-teamseason-official a::after,
+.tx-clubms-teamseason-squadmember a::after {
 	background-color: rgba(195, 13, 0, 0.7);
 	content: '';
 	height: 100%;
@@ -191,7 +192,8 @@
 	width: 100%;
 	z-index: 100;
 }
-.tx-clubms-teamseason-official a:hover::after {
+.tx-clubms-teamseason-official a:hover::after,
+.tx-clubms-teamseason-squadmember a:hover::after {
 	opacity: 1;
 }
 .tx-clubms-teamseason-official .official-image img,
