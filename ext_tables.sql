@@ -270,6 +270,7 @@ CREATE TABLE tx_clubms_domain_model_clubsection (
 	mails int(11) DEFAULT NULL,
 	urls int(11) DEFAULT NULL,
 	club_section_officials int(11) DEFAULT NULL,
+    teams int(11) DEFAULT NULL,
 	
 	sorting int(11) DEFAULT '0' NOT NULL,
 
