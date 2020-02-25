@@ -127,6 +127,9 @@
 	font-size: 85%;
 	margin: 0;
 }
+.tx-clubms-teamseason-practices table {
+	width: 100%;
+}
 .tx-clubms-teamseason-practices,
 .tx-clubms-teamseason-officials,
 .tx-clubms-teamseason-squad-position,
