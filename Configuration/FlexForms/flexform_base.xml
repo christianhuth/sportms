@@ -12,6 +12,7 @@
 					<onChange>reload</onChange>
 					<config>
 						<type>select</type>
+						<renderType>selectCheckBox</renderType>
 						<items type="array">
 							<numIndex index="1">
 								<numIndex index="0">Vereinsansichten</numIndex>
