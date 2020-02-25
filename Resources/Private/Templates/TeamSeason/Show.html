@@ -1,7 +1,6 @@
 <div id="tx-clubms-container">
 
     <div class="tx-clubms-teamseason-show">
-	
 		
 		<div class="tx-clubms-teamseason-image">
             <a href="{f:uri.image(image: teamSeason.teamSeasonImages.0)}" class="t3colorbox" rel="lightbox[clubms]"><f:image image="{teamSeason.teamSeasonImages.0}"/></a>
@@ -13,9 +12,7 @@
         <div class="tx-clubms-teamseason-practices">
             <div class="tx-clubms-teamseason-practices col-xs-12"><h3>Trainingszeiten</h3></div>
             <table>
-                <for each="{teamSeason.teamSeasonPractices}" as="teamSeasonPractice">
-                    <f:debug>{teamSeason.teamSeasonPractices}</f:debug>
-                </for>
+                <f:debug>{teamSeason.teamSeasonPractices}</f:debug>
             </table>
         </div>
 
