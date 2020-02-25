@@ -16,7 +16,6 @@
             <div class="tx-clubms-teamseason-practices">
                 <div class="tx-clubms-teamseason-practices col-xs-12"><h3>Trainingszeiten</h3></div>
                 <table>
-                    <f:debug>{teamSeason.teamSeasonPractices}</f:debug>
                     <f:for each="{teamSeason.teamSeasonPractices}" as="teamSeasonPractice">
                         <f:render partial="TeamSeason/TeamSeasonPractice" arguments="{teamSeasonPractice: teamSeasonPractice}" />
                     </f:for>
