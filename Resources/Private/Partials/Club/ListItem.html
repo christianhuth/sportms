@@ -36,7 +36,7 @@
 							<f:then>
 								<ul>
 									<f:for each="{clubSection.teams}" as="team">
-										<f:debug>{settings.team.showPid}</f:debug>
+										<f:debug>{settings}</f:debug>
 										<li><f:link.action controller="Team" action="show" arguments="{team: team}" pageUid="{settings.team.showPid}">{team.name}</f:link.action></li>
 									</f:for>
 								</ul>
