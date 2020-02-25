@@ -46,12 +46,12 @@ class TeamSeasonPractice extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity 
 	protected $day;
 
 	/**
-	 * @var	int
+	 * @var	string
 	 */
 	protected $timeStart;
 
 	/**
-	 * @var int
+	 * @var string
 	 */
 	protected $timeEnd;
 
@@ -96,38 +96,34 @@ class TeamSeasonPractice extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity 
     {
         $this->day = $day;
     }
-
-    /**
-     * @return int
-     */
-    public function getTimeStart()
-    {
-        return $this->timeStart;
-    }
-
-    /**
-     * @param int $timeStart
-     */
-    public function setTimeStart($timeStart)
-    {
-        $this->timeStart = $timeStart;
-    }
-
-    /**
-     * @return int
-     */
-    public function getTimeEnd()
-    {
-        return $this->timeEnd;
-    }
-
-    /**
-     * @param int $timeEnd
-     */
-    public function setTimeEnd($timeEnd)
-    {
-        $this->timeEnd = $timeEnd;
-    }
+	
+	/**
+	 * @return string
+	 */
+	public function getTimeStart() {
+		return $this->timeStart;
+	}
+	
+	/**
+	 * @param string $timeStart
+	 */
+	public function setTimeStart($timeStart) {
+		$this->timeStart = $timeStart;
+	}
+	
+	/**
+	 * @return string
+	 */
+	public function getTimeEnd() {
+		return $this->timeEnd;
+	}
+	
+	/**
+	 * @param string $timeEnd
+	 */
+	public function setTimeEnd($timeEnd) {
+		$this->timeEnd = $timeEnd;
+	}
 
     /**
      * @return Venue
