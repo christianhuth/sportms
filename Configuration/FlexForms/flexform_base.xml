@@ -9,10 +9,9 @@
 			<switchableControllerActions>
 				<TCEforms>
 					<label>Darstellungselemente</label>
-					<onChange>reload</onChange>
 					<config>
 						<type>select</type>
-						<renderType>selectMultipleSideBySide</renderType>
+						<renderType>selectTree</renderType>
 						<items type="array">
 							<numIndex index="1">
 								<numIndex index="0">Vereinsansichten</numIndex>
