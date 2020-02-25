@@ -11,7 +11,7 @@
 					<label>Darstellungselemente</label>
 					<config>
 						<type>select</type>
-						<renderType>selectTree</renderType>
+						<renderType>selectSingleBox</renderType>
 						<items type="array">
 							<numIndex index="1">
 								<numIndex index="0">Vereinsansichten</numIndex>
