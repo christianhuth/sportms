@@ -1,7 +1,16 @@
 <tr>
 	<td>
 		<f:if condition="{club.images.0}">
-			<f:image image="{club.images.0}" maxHeight="50"/>
+			<f:if condition="{club.detailLink}">
+				<f:then>
+					<f:link.action controller="Club" action="show" arguments="{club: club}" pageUid="{settings.club.showPid}">
+						<f:image image="{club.images.0}" maxHeight="50"/>
+					</f:link.action>
+				</f:then>
+				<f:else>
+					<f:image image="{club.images.0}" maxHeight="50"/>
+				</f:else>
+			</f:if>
 		</f:if>
 	</td>
 	<td>
