@@ -133,7 +133,7 @@
 }
 .tx-clubms-teamseason-officials .tx-clubms-teamseason-officials h3,
 .tx-clubms-teamseason-squad .tx-clubms-teamseason-squad-position h3,
-.tx-clubms-teamseason-officials .tx-clubms-teamseason-squad-captains h3 {
+.tx-clubms-teamseason-squad-captains .tx-clubms-teamseason-squad-captains h3 {
 	color: #C30D00;
 	display: inline-block;
 	font-family: sans-serif;
@@ -145,7 +145,7 @@
 }
 .tx-clubms-teamseason-officials .tx-clubms-teamseason-officials h3:before,
 .tx-clubms-teamseason-squad .tx-clubms-teamseason-squad-position h3:before,
-.tx-clubms-teamseason-squad .tx-clubms-teamseason-squad-captains h3:before {
+.tx-clubms-teamseason-squad-captains .tx-clubms-teamseason-squad-captains h3:before {
 	content: "ll";
 	font-family: sans-serif;
 	font-weight: 500;
