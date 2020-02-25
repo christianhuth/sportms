@@ -11,7 +11,7 @@
 					<label>Darstellungselemente</label>
 					<config>
 						<type>select</type>
-						<renderType>selectSingleBox</renderType>
+						<renderType>selectMultipleSideBySide</renderType>
 						<items type="array">
 							<numIndex index="1">
 								<numIndex index="0">Vereinsansichten</numIndex>
