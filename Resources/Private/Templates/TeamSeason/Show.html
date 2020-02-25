@@ -10,7 +10,16 @@
             </f:if>
         </div>
 
-        <f:render partial="TeamSeason/Practices" arguments="{practices: teamSeason.teamSeasonPractices}" />
+        <div class="tx-clubms-teamseason-practices">
+            <table>
+                <tr>
+                    <th colspan="4">Trainingszeiten</th>
+                </tr>
+                <for each="{teamSeason.teamSeasonPractices}" as="teamSeasonPractice">
+                    <f:render partial="TeamSeason/Practice" arguments="{teamSeasonPractice: teamSeasonPractice}" />
+                </for>
+            </table>
+        </div>
 
         <f:if condition="{teamSeason.teamSeasonOfficials}">
             <div class="tx-clubms-teamseason-officials">
