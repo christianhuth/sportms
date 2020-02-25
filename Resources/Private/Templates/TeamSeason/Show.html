@@ -15,6 +15,7 @@
                 <f:debug>{teamSeason.teamSeasonOfficials}</f:debug>
                 <f:debug>{teamSeason.teamSeasonPractices}</f:debug>
                 <for each="{teamSeason.teamSeasonPractices}" as="teamSeasonPractice">
+                    <f:render partial="TeamSeason/TeamSeasonPractice" arguments="{teamSeasonPractice: teamSeasonPractice}" />
                 </for>
             </table>
         </div>
