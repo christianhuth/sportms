@@ -155,7 +155,7 @@
 			</switchableControllerActions>
 
 			<!-- startingpoint -->
-			<persistence.storagePid>
+			<settings.storagePid>
 				<TCEforms>
 					<label>LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.startingpoint</label>
 					<config>
@@ -167,10 +167,10 @@
 						<minitems>0</minitems>
 					</config>
 				</TCEforms>
-			</persistence.storagePid>
+			</settings.storagePid>
 
 			<!-- recursive -->
-			<persistence.recursive>
+			<settings.recursive>
 				<TCEforms>
 					<label>LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.recursive</label>
 					<config>
@@ -208,7 +208,7 @@
 						</items>
 					</config>
 				</TCEforms>
-			</persistence.recursive>
+			</settings.recursive>
 
 		</el>
 	</ROOT>
