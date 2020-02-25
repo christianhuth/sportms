@@ -39,8 +39,8 @@
         </f:if>
 
         <f:if condition="{teamSeason.teamSeasonSquadCaptains}">
-            <div class="tx-clubms-teamseason-squadcaptains">
-                <div class="tx-clubms-teamseason-squadcaptains col-xs-12"><h3>Mannschaftskapitäne</h3></div>
+            <div class="tx-clubms-teamseason-squad-captains">
+                <div class="tx-clubms-teamseason-squad-captains col-xs-12"><h3>Mannschaftskapitäne</h3></div>
                 <f:for each="{teamSeason.teamSeasonSquadCaptains}" as="squadCaptain" iteration="iterator">
                     <f:render partial="TeamSeason/SquadCaptain" arguments="{squadCaptain: squadCaptain, settings: settings, position: iterator.index}" />
                 </f:for>
