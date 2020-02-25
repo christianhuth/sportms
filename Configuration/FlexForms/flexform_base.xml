@@ -150,6 +150,12 @@
 								<numIndex index="1">TeamSeason->list</numIndex>
 							</numIndex>
 						</items>
+						<multiSelectFilterItems>
+							<numIndex index="0">
+								<numIndex index="0">""</numIndex>
+								<numIndex index="1">""</numIndex>
+							</numIndex>
+						</multiSelectFilterItems>
 					</config>
 				</TCEforms>
 			</switchableControllerActions>
