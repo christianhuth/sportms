@@ -1,35 +1,36 @@
 <div class="tx-clubms-teamseason-official col-xs-4 col-sm-3 col-md-3">
-
-    <f:link.action controller="Person" action="show" additionalParams="{tx_clubms_clubms: '{person: teamSeasonOfficial.person, section: teamSeasonOfficial.teamSeason.team.clubSection.section, profile: \"official\"}'}" pageUid="{settings.person.showPid}">
-        <div class="official-image">
-            <f:if condition="{teamSeasonOfficial.person.personProfiles}">
-                <f:then>
-                    <f:for each="{teamSeasonOfficial.person.personProfiles}" as="personProfile">
-                        <f:if condition="({personProfile.section} == {teamSeasonOfficial.teamSeason.team.clubSection.section}) && ({personProfile.profileType} == 'official') && {personProfile.profileImages.0}">
-                            <f:image image="{personProfile.profileImages.0}"/>
+    <div class="tx-clubms-teamseason-official-wrapper">
+        <f:link.action controller="Person" action="show" additionalParams="{tx_clubms_clubms: '{person: teamSeasonOfficial.person, section: teamSeasonOfficial.teamSeason.team.clubSection.section, profile: \"official\"}'}" pageUid="{settings.person.showPid}">
+            <div class="official-image">
+                <f:if condition="{teamSeasonOfficial.person.personProfiles}">
+                    <f:then>
+                        <f:for each="{teamSeasonOfficial.person.personProfiles}" as="personProfile">
+                            <f:if condition="({personProfile.section} == {teamSeasonOfficial.teamSeason.team.clubSection.section}) && ({personProfile.profileType} == 'official') && {personProfile.profileImages.0}">
+                                <f:image image="{personProfile.profileImages.0}"/>
+                            </f:if>
+                        </f:for>
+                    </f:then>
+                    <f:else>
+                        <f:if condition="{teamSeasonOfficial.person.gender} == 'm'">
+                            <f:then>
+                                <f:image src="{settings.person.dummyImageMale}"/>
+                            </f:then>
+                            <f:else>
+                                <f:image src="{settings.person.dummyImageFemale}"/>
+                            </f:else>
                         </f:if>
-                    </f:for>
-                </f:then>
-                <f:else>
-                    <f:if condition="{teamSeasonOfficial.person.gender} == 'm'">
-                        <f:then>
-                            <f:image src="{settings.person.dummyImageMale}"/>
-                        </f:then>
-                        <f:else>
-                            <f:image src="{settings.person.dummyImageFemale}"/>
-                        </f:else>
-                    </f:if>
-                </f:else>
-            </f:if>
-        </div>
-        <div class="official-info">
-            <div class="official-jerseynumber">
-                <f:spaceless><f:format.crop maxCharacters="1" append="">{teamSeasonOfficial.person.firstname}</f:format.crop><f:format.crop maxCharacters="1" append="">{teamSeasonOfficial.person.lastname}</f:format.crop></f:spaceless>
+                    </f:else>
+                </f:if>
             </div>
-            <div class="official-name">
-                <span class="official-firstname">{teamSeasonOfficial.person.firstname}</span>
-                <span class="official-lastname">{teamSeasonOfficial.person.lastname}</span>
+            <div class="official-info">
+                <div class="official-jerseynumber">
+                    <f:spaceless><f:format.crop maxCharacters="1" append="">{teamSeasonOfficial.person.firstname}</f:format.crop><f:format.crop maxCharacters="1" append="">{teamSeasonOfficial.person.lastname}</f:format.crop></f:spaceless>
+                </div>
+                <div class="official-name">
+                    <span class="official-firstname">{teamSeasonOfficial.person.firstname}</span>
+                    <span class="official-lastname">{teamSeasonOfficial.person.lastname}</span>
+                </div>
             </div>
-        </div>
-    </f:link.action>
+        </f:link.action>
+    </div>
 </div>
