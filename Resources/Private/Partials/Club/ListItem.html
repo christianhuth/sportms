@@ -6,7 +6,7 @@
 				<f:link.action controller="Club" action="show" arguments="{club: club}" pageUid="{settings.club.showPid}">Informationen</f:link.action>
 			</f:then>
 			<f:else>
-				Keine Informationen
+				Keine Informationen vorhanden
 			</f:else>
 		</f:if>
 	</td>
@@ -17,23 +17,43 @@
 			<f:then>
 				<ul>
 					<f:for each="{club.clubSections}" as="clubSection" iteration="iterator">
-						<f:link.action controller="ClubSection" action="show" arguments="{club: clubSection.club, section: clubSection.section}" pageUid="{settings.clubSection.showPid}"><li>{clubSection.section.label}</li></f:link.action>
+						<li><f:link.action controller="ClubSection" action="show" arguments="{club: clubSection.club, section: clubSection.section}" pageUid="{settings.clubSection.showPid}">{clubSection.section.label}</f:link.action></li>
 					</f:for>
 				</ul>
 			</f:then>
 			<f:else>
-				Keine Abteilungen
+				Keine Abteilungen vorhanden
 			</f:else>
 		</f:if>
 	</td>
-	<td><!--
+	<td>
 		<f:if condition="{club.clubSections}">
 			<f:then>
+				<ul>
+					<f:for each="{club.clubSections}" as="clubSection" iteration="iterator">
+						<li><f:link.action controller="ClubSection" action="show" arguments="{club: clubSection.club, section: clubSection.section}" pageUid="{settings.clubSection.showPid}">{clubSection.section.label}</f:link.action></li>
+						<f:if condition="{clubSection.teams}">
+							<f:then>
+								<ul>
+									<f:for each="{clubSection.teams}" as="team">
+										<li><f:link.action controller="Team" action="show" arguments="{team: team}" pageUid="{settings.team.showPid}">{team.name}</f:link.action></li>
+									</f:for>
+								</ul>
+							</f:then>
+							<f:else>
+								<ul>
+									<li>Keine Mannschaften vorhanden</li>
+								</ul>
+							</f:else>
+						</f:if>
+					</f:for>
+				</ul>
 			</f:then>
 			<f:else>
-				Mannschaften
+				<ul>
+					<li>Keine Mannschaften vorhanden</li>
+				</ul>
 			</f:else>
 		</f:if>
-		-->
 	</td>
 </tr>
