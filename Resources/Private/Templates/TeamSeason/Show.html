@@ -12,11 +12,9 @@
         <div class="tx-clubms-teamseason-practices">
             <div class="tx-clubms-teamseason-practices col-xs-12"><h3>Trainingszeiten</h3></div>
             <table>
-                <f:debug>{teamSeason.teamSeasonOfficials}</f:debug>
-                <f:debug>{teamSeason.teamSeasonPractices}</f:debug>
-                <for each="{teamSeason.teamSeasonPractices}" as="teamSeasonPractice">
+                <f:for each="{teamSeason.teamSeasonPractices}" as="teamSeasonPractice">
                     <f:render partial="TeamSeason/TeamSeasonPractice" arguments="{teamSeasonPractice: teamSeasonPractice}" />
-                </for>
+                </f:for>
             </table>
         </div>
 
