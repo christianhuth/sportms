@@ -175,7 +175,7 @@
 .tx-clubms-teamseason-squadmember {
 	display: flex;
 	flex-direction: column;
-	margin-bottom: 35px;
+	margin-bottom: 0;
 	padding: 4px;
 	position: relative;
 }
