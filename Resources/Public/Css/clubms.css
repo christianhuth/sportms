@@ -127,11 +127,13 @@
 	font-size: 85%;
 	margin: 0;
 }
+.tx-clubms-teamseason-practices,
 .tx-clubms-teamseason-officials,
 .tx-clubms-teamseason-squad-position,
 .tx-clubms-teamseason-squad-captains {
 	padding: 0;
 }
+.tx-clubms-teamseason-practices .tx-clubms-teamseason-practices h3,
 .tx-clubms-teamseason-officials .tx-clubms-teamseason-officials h3,
 .tx-clubms-teamseason-squad .tx-clubms-teamseason-squad-position h3,
 .tx-clubms-teamseason-squad-captains .tx-clubms-teamseason-squad-captains h3 {
@@ -144,6 +146,7 @@
 	margin-bottom: 0px;
 	text-transform: uppercase;
 }
+.tx-clubms-teamseason-practices .tx-clubms-teamseason-practices h3:before,
 .tx-clubms-teamseason-officials .tx-clubms-teamseason-officials h3:before,
 .tx-clubms-teamseason-squad .tx-clubms-teamseason-squad-position h3:before,
 .tx-clubms-teamseason-squad-captains .tx-clubms-teamseason-squad-captains h3:before {
