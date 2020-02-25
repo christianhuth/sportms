@@ -3,15 +3,14 @@
 		<f:if condition="{club.images.0}">
 			<f:image image="{club.images.0}" maxHeight="50"/>
 		</f:if>
-		{club.name}
 	</td>
 	<td>
 		<f:if condition="{club.detailLink}">
 			<f:then>
-				<f:link.action controller="Club" action="show" arguments="{club: club}" pageUid="{settings.club.showPid}">Informationen</f:link.action>
+				<f:link.action controller="Club" action="show" arguments="{club: club}" pageUid="{settings.club.showPid}">{club.name}</f:link.action>
 			</f:then>
 			<f:else>
-				Keine Informationen vorhanden
+				{club.name}
 			</f:else>
 		</f:if>
 	</td>
