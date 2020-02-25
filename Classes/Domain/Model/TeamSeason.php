@@ -51,7 +51,6 @@ class TeamSeason extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 
     /**
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference>
-     * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
      */
     protected $teamSeasonImages;
 
@@ -93,7 +92,7 @@ class TeamSeason extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 */
 	protected function initStorageObjects() {
 		$this->teamSeasonPractices = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-		$this->images = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+		$this->teamSeasonImages = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 		$this->teamSeasonOfficials = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 		$this->teamSeasonSquadMembers = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
         $this->teamSeasonSquadCaptains = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
