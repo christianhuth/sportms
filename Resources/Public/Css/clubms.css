@@ -132,6 +132,7 @@
 }
 .tx-clubms-teamseason-practices table tr td {
 	text-align: center;
+	width: 25%;
 }
 .tx-clubms-teamseason-practices table tr td:first-of-type {
 	font-weight: bold;
