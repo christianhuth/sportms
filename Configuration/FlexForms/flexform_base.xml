@@ -8,7 +8,7 @@
 		<el>
 			<switchableControllerActions>
 				<TCEforms>
-					<label>Darstellungselemente</label>
+					<label>Mögliche Ansichten</label>
 					<config>
 						<type>select</type>
 						<renderType>selectCheckBox</renderType>
