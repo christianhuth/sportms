@@ -18,20 +18,6 @@
 				<ul>
 					<f:for each="{club.clubSections}" as="clubSection" iteration="iterator">
 						<li><f:link.action controller="ClubSection" action="show" arguments="{club: clubSection.club, section: clubSection.section}" pageUid="{settings.clubSection.showPid}">{clubSection.section.label}</f:link.action></li>
-					</f:for>
-				</ul>
-			</f:then>
-			<f:else>
-				Keine Abteilungen vorhanden
-			</f:else>
-		</f:if>
-	</td>
-	<td>
-		<f:if condition="{club.clubSections}">
-			<f:then>
-				<ul>
-					<f:for each="{club.clubSections}" as="clubSection" iteration="iterator">
-						<li><f:link.action controller="ClubSection" action="show" arguments="{club: clubSection.club, section: clubSection.section}" pageUid="{settings.clubSection.showPid}">{clubSection.section.label}</f:link.action></li>
 						<f:if condition="{clubSection.teams}">
 							<f:then>
 								<ul>
@@ -41,9 +27,6 @@
 								</ul>
 							</f:then>
 							<f:else>
-								<ul>
-									<li>Keine Mannschaften vorhanden</li>
-								</ul>
 							</f:else>
 						</f:if>
 					</f:for>
@@ -51,7 +34,7 @@
 			</f:then>
 			<f:else>
 				<ul>
-					<li>Keine Mannschaften vorhanden</li>
+					<li>Keine Abteilungen vorhanden</li>
 				</ul>
 			</f:else>
 		</f:if>
