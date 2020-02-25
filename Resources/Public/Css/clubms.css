@@ -127,7 +127,8 @@
 	font-size: 85%;
 	margin: 0;
 }
-.tx-clubms-teamseason-officials {
+.tx-clubms-teamseason-officials,
+.tx-clubms-teamseason-squad {
 	padding: 0;
 }
 .tx-clubms-teamseason-officials .tx-clubms-teamseason-officials h3,
@@ -162,6 +163,13 @@
 	display:         flex;
 	flex-wrap: wrap;
 	float: left;
+}
+.tx-clubms-teamseason-official-wrapper a,
+.tx-clubms-teamseason-squadmember-wrapper a {
+	display: block;
+	height: 100%;
+	width: 100%;
+	position: relative;
 }
 .tx-clubms-teamseason-official,
 .tx-clubms-teamseason-squadmember {
