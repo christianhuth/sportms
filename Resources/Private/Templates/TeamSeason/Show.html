@@ -1,22 +1,29 @@
 <div id="tx-clubms-container">
 
     <div class="tx-clubms-teamseason-show">
-		
-		<div class="tx-clubms-teamseason-image">
-            <a href="{f:uri.image(image: teamSeason.teamSeasonImages.0)}" class="t3colorbox" rel="lightbox[clubms]"><f:image image="{teamSeason.teamSeasonImages.0}"/></a>
-            <f:if condition="{teamSeason.teamSeasonImages.0.originalResource.description}">
-                <div class="tx-clubms-teamseason-image-description"><f:format.html>{teamSeason.teamSeasonImages.0.originalResource.description}</f:format.html></div>
-            </f:if>
-        </div>
 
-        <div class="tx-clubms-teamseason-practices">
-            <div class="tx-clubms-teamseason-practices col-xs-12"><h3>Trainingszeiten</h3></div>
-            <table>
-                <f:for each="{teamSeason.teamSeasonPractices}" as="teamSeasonPractice">
-                    <f:render partial="TeamSeason/TeamSeasonPractice" arguments="{teamSeasonPractice: teamSeasonPractice}" />
-                </f:for>
-            </table>
-        </div>
+        <f:if condition="{teamSeason.teamSeasonImages}">
+            <div class="tx-clubms-teamseason-image">
+                <a href="{f:uri.image(image: teamSeason.teamSeasonImages.0)}" class="t3colorbox" rel="lightbox[clubms]"><f:image image="{teamSeason.teamSeasonImages.0}"/></a>
+                <f:if condition="{teamSeason.teamSeasonImages.0.originalResource.description}">
+                    <div class="tx-clubms-teamseason-image-description"><f:format.html>{teamSeason.teamSeasonImages.0.originalResource.description}</f:format.html></div>
+                </f:if>
+                <div class="tx-clubms-teamseason-image-seperator col-xs-12"></div>
+            </div>
+        </f:if>
+
+        <f:if condition="{teamSeason.teamSeasonPractices}">
+            <div class="tx-clubms-teamseason-practices">
+                <div class="tx-clubms-teamseason-practices col-xs-12"><h3>Trainingszeiten</h3></div>
+                <table>
+                    <f:debug>{teamSeason.teamSeasonPractices}</f:debug>
+                    <f:for each="{teamSeason.teamSeasonPractices}" as="teamSeasonPractice">
+                        <f:render partial="TeamSeason/TeamSeasonPractice" arguments="{teamSeasonPractice: teamSeasonPractice}" />
+                    </f:for>
+                </table>
+                <div class="tx-clubms-teamseason-practices-seperator col-xs-12"></div>
+            </div>
+        </f:if>
 
         <f:if condition="{teamSeason.teamSeasonOfficials}">
             <div class="tx-clubms-teamseason-officials">
