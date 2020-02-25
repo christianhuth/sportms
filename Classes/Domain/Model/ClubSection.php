@@ -96,6 +96,13 @@ class ClubSection extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	protected $clubSectionOfficials;
 	
 	/**
+	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\Team>
+	 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
+	 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
+	 */
+	protected $teams;
+	
+	/**
 	 * __construct
 	 */
 	public function __construct() {
@@ -119,6 +126,7 @@ class ClubSection extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 		$this->mails = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 		$this->urls = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 		$this->clubSectionOfficials = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+		$this->teams = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 	}
 
     /**
@@ -261,6 +269,20 @@ class ClubSection extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 */
 	public function setClubSectionOfficials($clubSectionOfficials) {
 		$this->clubSectionOfficials = $clubSectionOfficials;
+	}
+	
+	/**
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+	 */
+	public function getTeams() {
+		return $this->teams;
+	}
+	
+	/**
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $teams
+	 */
+	public function setTeams($teams) {
+		$this->teams = $teams;
 	}
 	
 }
