@@ -4,6 +4,13 @@
 		<TCEforms>
 			<sheetTitle>LLL:EXT:clubms/Resources/Private/Language/locallang_flexform.xlf:tx_clubms_flexform.sheet.scope</sheetTitle>
 		</TCEforms>
+		<displayCond>
+			<OR>
+				<numIndex index="0">FIELD:base.switchableControllerActions:=:Competition->list</numIndex>
+				<numIndex index="1">FIELD:base.switchableControllerActions:=:Team->list</numIndex>
+				<numIndex index="2">FIELD:base.switchableControllerActions:=:TeamSeason->list</numIndex>
+			</OR>
+		</displayCond>
 		<type>array</type>
 		<el>
 			<settings.scope.season.values>
