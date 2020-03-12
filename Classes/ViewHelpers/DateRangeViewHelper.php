@@ -25,7 +25,7 @@
 			$enddate = new \DateTime();
 			$enddate->setTimestamp($this->arguments['enddate']);
 			
-			$diff = $enddate->diff($startdate)->format("%a");
+			$diff = $enddate->diff($startdate)->format($this->arguments['format']);
 			
 			$interval = new \DateInterval('P1D'); // 1 Day
 			$dateRange = new \DatePeriod($startdate, $interval, $enddate);
