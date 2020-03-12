@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<T3DataStructure>
+	<ROOT>
+		<TCEforms>
+			<sheetTitle>Verein</sheetTitle>
+		</TCEforms>
+		<displayCond>
+			<OR>
+				<numIndex index="0">FIELD:base.switchableControllerActions:=:ClubSection->show</numIndex>
+				<numIndex index="1">FIELD:base.switchableControllerActions:=:ClubSection->list</numIndex>
+			</OR>
+		</displayCond>
+		<type>array</type>
+		<el>
+			<settings.clubSection.showPid>
+				<TCEforms>
+					<label>Vereinsabteilung (Einzelansicht)</label>
+					<config>
+						<type>group</type>
+						<internal_type>db</internal_type>
+						<allowed>pages</allowed>
+						<size>1</size>
+						<maxitems>1</maxitems>
+						<minitems>0</minitems>
+					</config>
+				</TCEforms>
+			</settings.clubSection.showPid>
+			<settings.clubSection.listPid>
+				<TCEforms>
+					<label>Vereinsabteilung (Listenansicht)</label>
+					<config>
+						<type>group</type>
+						<internal_type>db</internal_type>
+						<allowed>pages</allowed>
+						<size>1</size>
+						<maxitems>1</maxitems>
+						<minitems>0</minitems>
+					</config>
+				</TCEforms>
+			</settings.clubSection.listPid>
+			<settings.clubSection.uid>
+				<TCEforms>
+					<label>Zeige folgende Vereinsabteilung</label>
+					<config>
+						<type>group</type>
+						<internal_type>db</internal_type>
+						<allowed>tx_clubms_domain_model_clubsection</allowed>
+						<size>1</size>
+						<maxItems>1</maxItems>
+						<minItems>0</minItems>
+						<show_thumbs>1</show_thumbs>
+					</config>
+				</TCEforms>
+			</settings.clubSection.uid>
+		</el>
+	</ROOT>
+</T3DataStructure>
