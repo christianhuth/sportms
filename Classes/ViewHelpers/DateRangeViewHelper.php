@@ -10,7 +10,7 @@
 		public function initializeArguments() {
 			parent::initializeArguments();
 			$this->registerArgument('startdate', 'string', 'start date', true);
-			$this->registerArgument('enddate', 'string', 'end date', true);
+			$this->registerArgument('enddate', 'string', 'end date', false);
 			$this->registerArgument('format', 'string', 'format of the date range', true);
 		}
 		
@@ -23,7 +23,12 @@
 			$startdate->setTimestamp($this->arguments['startdate']);
 			
 			$enddate = new \DateTime();
-			$enddate->setTimestamp($this->arguments['enddate']);
+			if($this->arguments['enddate']) {
+				$enddate->setTimestamp($this->arguments['enddate']);
+			} else {
+				$enddate->setTimestamp(time());
+			}
+			
 			$enddate->add(new \DateInterval('P1D'));
 			
 			$diff = $enddate->diff($startdate)->format($this->arguments['format']);
