@@ -10,7 +10,6 @@
 				<TCEforms>
 					<label>Pfad zur CSS-Datei</label>
 					<config>
-						<checkbox>1</checkbox>
 						<default>{view.cssFile}</default>
 						<type>input</type>
 						<size>30</size>
@@ -21,7 +20,6 @@
 				<TCEforms>
 					<label>Pfad zu den Layouts</label>
 					<config>
-						<checkbox>1</checkbox>
 						<default>{settings.view.cssFile}</default>
 						<type>input</type>
 						<size>30</size>
@@ -32,7 +30,6 @@
 				<TCEforms>
 					<label>Pfad zu den Partials</label>
 					<config>
-						<checkbox>1</checkbox>
 						<default></default>
 						<type>input</type>
 						<size>30</size>
@@ -43,7 +40,6 @@
 				<TCEforms>
 					<label>Pfad zu den Templates</label>
 					<config>
-						<checkbox>1</checkbox>
 						<default></default>
 						<type>input</type>
 						<size>30</size>
