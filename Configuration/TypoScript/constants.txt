@@ -12,6 +12,8 @@
 
 # customsubcategory=persistence=Persistence
 
+# customsubcategory=view=View
+
 plugin.tx_clubms {
 
     persistence {
@@ -22,8 +24,6 @@ plugin.tx_clubms {
     }
 
     settings {
-        # cat=plugin.tx_clubms/file; type=string; label=Path to css file (FE)
-        cssFile = EXT:clubms/Resources/Public/Css/clubms.css
 
         club {
             # cat=plugin.tx_clubms/club; type=int+; label=Default PID of Club->list
@@ -107,11 +107,13 @@ plugin.tx_clubms {
     }
 
     view {
-        # cat=plugin.tx_clubms/file; type=string; label=Path to template layouts (FE)
+        # cat=plugin.tx_clubms/view; type=string; label=Path to css file (FE)
+        cssFile = EXT:clubms/Resources/Public/Css/clubms.css
+        # cat=plugin.tx_clubms/view; type=string; label=Path to template layouts (FE)
         layoutRootPath = EXT:clubms/Resources/Private/Layouts/
-        # cat=plugin.tx_clubms/file; type=string; label=Path to template partials (FE)
+        # cat=plugin.tx_clubms/view; type=string; label=Path to template partials (FE)
         partialRootPath = EXT:clubms/Resources/Private/Partials/
-        # cat=plugin.tx_clubms/file; type=string; label=Path to template root (FE)
+        # cat=plugin.tx_clubms/view; type=string; label=Path to template root (FE)
         templateRootPath = EXT:clubms/Resources/Private/Templates/
     }
 

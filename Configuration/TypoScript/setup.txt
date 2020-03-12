@@ -10,8 +10,6 @@ plugin.tx_clubms {
     # ====================================
     settings {
 
-        cssFile = {$plugin.tx_clubms.settings.cssFile}
-
         club {
             listPid = {$plugin.tx_clubms.settings.club.listPid}
             showPid = {$plugin.tx_clubms.settings.club.showPid}
@@ -71,6 +69,7 @@ plugin.tx_clubms {
     }
 
     view {
+        cssFile = {$plugin.tx_clubms.view.cssFile}
         layoutRootPaths {
             0 = EXT:clubms/Resources/Private/Layouts/
             1 = {$plugin.tx_clubms.view.layoutRootPath}
