@@ -45,7 +45,7 @@
                     <f:if condition="{clubOfficial.enddate}">
                         <f:then>
                             <f:debug>{clubOfficial.enddate}</f:debug>
-                            <v:format.dateRange start="{clubOfficial.startdate}" end="{clubOfficial.enddate}" return="d"/> Tage
+                            <v:format.dateRange start="{clubOfficial.startdate}" end="{clubOfficial.enddate}" return="days"/> Tage
                             <f:format.date format="d" base="{clubOfficial.enddate}">-{clubOfficial.startdate}</f:format.date> Tage
                         </f:then>
                         <f:else>
