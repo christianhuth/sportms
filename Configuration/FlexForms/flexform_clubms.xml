@@ -3,7 +3,7 @@
 	<sheets>
 		<sDEF>EXT:clubms/Configuration/FlexForms/flexform_base.xml</sDEF>
 		<scope>EXT:clubms/Configuration/FlexForms/flexform_scope.xml</scope>
-		<sEx>EXT:clubms/Configuration/FlexForms/flexform_single.xml</sEx>
-		<sEx>EXT:clubms/Configuration/FlexForms/flexform_club.xml</sEx>
+		<single>EXT:clubms/Configuration/FlexForms/flexform_single.xml</single>
+		<club>EXT:clubms/Configuration/FlexForms/flexform_club.xml</club>
 	</sheets>
 </T3DataStructure>
