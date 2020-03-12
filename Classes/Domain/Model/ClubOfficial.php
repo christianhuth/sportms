@@ -36,6 +36,7 @@ class ClubOfficial extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 
     /**
      * @var \Balumedien\Clubms\Domain\Model\Club
+     * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
      */
     protected $club;
 
@@ -58,16 +59,16 @@ class ClubOfficial extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
      * @var int
      */
     protected $enddate;
-
+	
 	/**
-	 * @return Club
+	 * @return \Balumedien\Clubms\Domain\Model\Club
 	 */
 	public function getClub() {
 		return $this->club;
 	}
-
+	
 	/**
-	 * @param Club $club
+	 * @param \Balumedien\Clubms\Domain\Model\Club $club
 	 */
 	public function setClub($club) {
 		$this->club = $club;
