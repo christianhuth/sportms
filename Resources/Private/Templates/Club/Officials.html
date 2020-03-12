@@ -6,6 +6,8 @@
 
 <f:section name="default">
 
+    <f:debug>{settings.jobsSelectbox}</f:debug>
+
     <f:if condition="{settings.clubsSelectbox} || {settings.jobsSelectbox}">
         <f:form controller="Club" action="officials">
             <f:if condition="{settings.clubsSelectbox}">
