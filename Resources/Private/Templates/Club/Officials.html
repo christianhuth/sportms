@@ -44,9 +44,7 @@
                 <td class="club-official-duration">
                     <f:if condition="{clubOfficial.enddate}">
                         <f:then>
-                            <f:debug>{clubOfficial.enddate}</f:debug>
-                            <clubms:DateRange startdate="{clubOfficial.startdate}" enddate="{clubOfficial.enddate}" format="%a"/>
-                            <f:format.date format="d" base="{f:format.date(date: clubOfficial.enddate, format: 'Y-m-d')}">-{f:format.date(date: clubOfficial.startdate, format: 'Y-m-d')}</f:format.date> Tage
+                            <clubms:DateRange startdate="{clubOfficial.startdate}" enddate="{clubOfficial.enddate}" format="%a"/> Tage
                         </f:then>
                         <f:else>
                             -
