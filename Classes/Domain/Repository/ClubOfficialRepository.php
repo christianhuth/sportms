@@ -18,7 +18,7 @@
 			$query = $this->createQuery();
 			$constraints = [];
 			if($clubs) {
-				$constraints[] = $query->equals('club', $clubs);
+				$constraints[] = $query->in('club', explode(",", $clubs));
 			}
 			if($clubOfficialJobs) {
 				$constraints[] = $query->in('club_official_job', explode(",", $clubOfficialJobs));
