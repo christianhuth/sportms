@@ -27,8 +27,6 @@
 			$interval = new \DateInterval('P1D'); // 1 Day
 			$dateRange = new \DatePeriod($startdate, $interval, $enddate);
 			
-			var_dump($dateRange);
-			
 			return $dateRange;
 		}
 		
