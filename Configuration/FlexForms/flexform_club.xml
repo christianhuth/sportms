@@ -58,6 +58,16 @@
 					</config>
 				</TCEforms>
 			</settings.club.officials.jobs>
+			<settings.club.officials.jobs.selectbox>
+				<TCEforms>
+					<label>Selectbox für Funktionärstätigkeiten?</label>
+					<config>
+						<default>1</default>
+						<renderType>checkboxToggle</renderType>
+						<type>check</type>
+					</config>
+				</TCEforms>
+			</settings.club.officials.jobs.selectbox>
 		</el>
 	</ROOT>
 </T3DataStructure>
