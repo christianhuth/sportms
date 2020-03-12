@@ -8,10 +8,11 @@
 		<el>
 			<switchableControllerActions>
 				<TCEforms>
-					<label>Mögliche Ansichten</label>
+					<label>Gewählte Ansicht</label>
+					<onChange>reload</onChange>
 					<config>
 						<type>select</type>
-						<renderType>selectCheckBox</renderType>
+						<renderType>selectSingle</renderType>
 						<items type="array">
 							<numIndex index="1">
 								<numIndex index="0">Vereinsansichten</numIndex>
