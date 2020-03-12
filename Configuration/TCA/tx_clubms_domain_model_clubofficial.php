@@ -3,7 +3,7 @@ if (!defined ('TYPO3_MODE')) {
 	die ('Access denied.');
 }
 
-$tx_clubms_domain_model_clubofficial = array(
+return array(
 	'ctrl' => array(
 		'crdate' => 'crdate',
 		'cruser_id' => 'cruser_id',
