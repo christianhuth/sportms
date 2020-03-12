@@ -4,5 +4,6 @@
 		<sDEF>EXT:clubms/Configuration/FlexForms/flexform_base.xml</sDEF>
 		<scope>EXT:clubms/Configuration/FlexForms/flexform_scope.xml</scope>
 		<sEx>EXT:clubms/Configuration/FlexForms/flexform_single.xml</sEx>
+		<sEx>EXT:clubms/Configuration/FlexForms/flexform_club.xml</sEx>
 	</sheets>
 </T3DataStructure>
