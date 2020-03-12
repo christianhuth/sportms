@@ -19,6 +19,7 @@
 		 * @throws \Exception
 		 */
 		public function render() {
+			
 			$startdate = new \DateTime();
 			$startdate->setTimestamp($this->arguments['startdate']);
 			
@@ -28,12 +29,11 @@
 			} else {
 				$enddate->setTimestamp(time());
 			}
-			
 			$enddate->add(new \DateInterval('P1D'));
 			
-			$diff = $enddate->diff($startdate)->format($this->arguments['format']);
+			$dateRange = $enddate->diff($startdate)->format($this->arguments['format']);
+			return $dateRange;
 			
-			return $diff;
 		}
 		
 	}
