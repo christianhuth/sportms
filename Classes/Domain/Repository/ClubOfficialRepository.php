@@ -6,8 +6,8 @@
 		
 		// Order by BE sorting
 		protected $defaultOrderings = array(
-			'club.name' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
-			'club_official_job.label' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING
+			'club' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
+			'club_official_job' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING
 		);
 	
 	}
