@@ -92,10 +92,13 @@ class ClubController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 		$currentOfficialsOnly = $this->settings['club']['officials']['currentOfficialsOnly'];
 		\TYPO3\CMS\Core\Utility\DebugUtility::debug($currentOfficialsOnly, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 		
+		$clubOfficials = $this->clubOfficialRepository->findAll($clubs, $jobs);
+		
 		$this->view->assign('clubs', $clubs);
 		$this->view->assign('clubsSelectbox', $clubsSelectbox);
 		$this->view->assign('jobs', $jobs);
 		$this->view->assign('jobsSelectbox', $jobsSelectbox);
+		$this->view->assign('clubOfficials', $clubOfficials);
 		
 	}
 	
