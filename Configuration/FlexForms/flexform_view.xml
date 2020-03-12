@@ -11,7 +11,7 @@
 					<label>Pfad zur CSS-Datei</label>
 					<config>
 						<checkbox>1</checkbox>
-						<default></default>
+						<default>{view.cssFile}</default>
 						<type>input</type>
 						<size>30</size>
 					</config>
@@ -22,7 +22,7 @@
 					<label>Pfad zu den Layouts</label>
 					<config>
 						<checkbox>1</checkbox>
-						<default></default>
+						<default>{settings.view.cssFile}</default>
 						<type>input</type>
 						<size>30</size>
 					</config>
