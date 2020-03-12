@@ -28,9 +28,6 @@
 			
 			$diff = $enddate->diff($startdate)->format($this->arguments['format']);
 			
-			$interval = new \DateInterval('P1D'); // 1 Day
-			$dateRange = new \DatePeriod($startdate, $interval, $enddate);
-			
 			return $diff;
 		}
 		
