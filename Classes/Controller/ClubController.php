@@ -41,6 +41,12 @@ class ClubController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 	protected $clubRepository = null;
 	
 	/**
+	 * @var \Balumedien\Clubms\Domain\Repository\ClubOfficialRepository
+	 * @TYPO3\CMS\Extbase\Annotation\Inject
+	 */
+	protected $clubOfficialRepository = null;
+	
+	/**
 	 * @var \Balumedien\Clubms\Domain\Repository\ClubOfficialJobRepository
 	 * @TYPO3\CMS\Extbase\Annotation\Inject
 	 */
@@ -86,7 +92,11 @@ class ClubController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 		$currentOfficialsOnly = $this->settings['club']['officials']['currentOfficialsOnly'];
 		\TYPO3\CMS\Core\Utility\DebugUtility::debug($currentOfficialsOnly, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 		
-		#$this->view->assign('clubOfficials', $club->getClubOfficials());
+		$this->view->assign('clubs', $clubs);
+		$this->view->assign('clubsSelectbox', $clubsSelectbox);
+		$this->view->assign('jobs', $jobs);
+		$this->view->assign('jobsSelectbox', $jobsSelectbox);
+		
 	}
 	
 	/**
