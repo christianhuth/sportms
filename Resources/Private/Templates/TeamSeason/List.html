@@ -1,25 +1,30 @@
-<f:if condition="{teamSeasons}">
-	<table>
-		<tr>
-			<th>Mannschaftsname</th>
-			<th>Verein</th>
-			<th>Abteilung</th>
-			<th>Altersstufe</th>
-			<th>Spielfrei</th>
-			<th>Anzahl</th>
-			<th>Einzelansicht</th>
-		</tr>
-		<f:for each="{teamsSeasons}" as="teamSeason">
-			<f:debug>{teamSeason}</f:debug>
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
+
+	<f:if condition="{teamSeasons}">
+		<table>
 			<tr>
-				<td>{teamSeason.team.name}</td>
-				<td>{teamSeason.team.club.name}</td>
-				<td>{teamSeason.team.section.label}</td>
-				<td>{teamSeason.team.ageLevel.label}</td>
-				<td>{teamSeason.team.dummy}</td>
-				<td><f:count>{team.teamSeason}</f:count></td>
-				<td><f:if condition="{team.detailLink}"><f:link.action action="detail" arguments="{uid: team}">LINK</f:link.action></f:if></td>
+				<th>Mannschaftsname</th>
+				<th>Verein</th>
+				<th>Abteilung</th>
+				<th>Altersstufe</th>
+				<th>Spielfrei</th>
+				<th>Anzahl</th>
+				<th>Einzelansicht</th>
 			</tr>
-		</f:for>
-	</table>
-</f:if>
+			<f:for each="{teamsSeasons}" as="teamSeason">
+				<f:debug>{teamSeason}</f:debug>
+				<tr>
+					<td>{teamSeason.team.name}</td>
+					<td>{teamSeason.team.club.name}</td>
+					<td>{teamSeason.team.section.label}</td>
+					<td>{teamSeason.team.ageLevel.label}</td>
+					<td>{teamSeason.team.dummy}</td>
+					<td><f:count>{team.teamSeason}</f:count></td>
+					<td><f:if condition="{team.detailLink}"><f:link.action action="detail" arguments="{uid: team}">LINK</f:link.action></f:if></td>
+				</tr>
+			</f:for>
+		</table>
+	</f:if>
+
+</html>

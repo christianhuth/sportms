@@ -1,12 +1,15 @@
-<f:if condition="{clubs}">
-	<table>
-		<tr>
-			<th>Logo</th>
-			<th>Verein</th>
-			<th>Abteilungen und Mannschaften</th>
-		</tr>
-		<f:for each="{clubs}" as="club">
-			<f:render partial="Club/ListItem" arguments="{club: club, settings: settings}" />
-		</f:for>
-	</table>
-</f:if>
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
+	<f:if condition="{clubs}">
+		<table>
+			<tr>
+				<th>Logo</th>
+				<th>Verein</th>
+				<th>Abteilungen und Mannschaften</th>
+			</tr>
+			<f:for each="{clubs}" as="club">
+				<f:render partial="Club/ListItem" arguments="{club: club, settings: settings}" />
+			</f:for>
+		</table>
+	</f:if>
+</html>

@@ -1,64 +1,69 @@
-<div id="tx-clubms-container">
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
 
-    <div class="tx-clubms-teamseason-show">
+    <div id="tx-clubms-container">
 
-        <f:if condition="{teamSeason.teamSeasonImages}">
-            <div class="tx-clubms-teamseason-image">
-                <a href="{f:uri.image(image: teamSeason.teamSeasonImages.0)}" class="t3colorbox" rel="lightbox[clubms]"><f:image image="{teamSeason.teamSeasonImages.0}"/></a>
-                <f:if condition="{teamSeason.teamSeasonImages.0.originalResource.description}">
-                    <div class="tx-clubms-teamseason-image-description"><f:format.html>{teamSeason.teamSeasonImages.0.originalResource.description}</f:format.html></div>
-                </f:if>
-                <div class="tx-clubms-teamseason-image-seperator col-xs-12"></div>
-            </div>
-        </f:if>
+        <div class="tx-clubms-teamseason-show">
 
-        <f:if condition="{teamSeason.teamSeasonPractices}">
-            <div class="tx-clubms-teamseason-practices">
-                <div class="tx-clubms-teamseason-practices col-xs-12"><h3>Trainingszeiten</h3></div>
-                <table>
-                    <f:for each="{teamSeason.teamSeasonPractices}" as="teamSeasonPractice">
-                        <f:render partial="TeamSeason/TeamSeasonPractice" arguments="{teamSeasonPractice: teamSeasonPractice}" />
-                    </f:for>
-                </table>
-                <div class="tx-clubms-teamseason-practices-seperator col-xs-12"></div>
-            </div>
-        </f:if>
-
-        <f:if condition="{teamSeason.teamSeasonOfficials}">
-            <div class="tx-clubms-teamseason-officials">
-                <div class="tx-clubms-teamseason-officials col-xs-12"><h3>Trainerstab</h3></div>
-                <div class="tx-clubms-teamseason-officials-members">
-                    <f:for each="{teamSeason.teamSeasonOfficials}" as="teamSeasonOfficial">
-                        <f:render partial="TeamSeason/TeamSeasonOfficial" arguments="{teamSeasonOfficial: teamSeasonOfficial, settings: settings}" />
-                    </f:for>
+            <f:if condition="{teamSeason.teamSeasonImages}">
+                <div class="tx-clubms-teamseason-image">
+                    <a href="{f:uri.image(image: teamSeason.teamSeasonImages.0)}" class="t3colorbox" rel="lightbox[clubms]"><f:image image="{teamSeason.teamSeasonImages.0}"/></a>
+                    <f:if condition="{teamSeason.teamSeasonImages.0.originalResource.description}">
+                        <div class="tx-clubms-teamseason-image-description"><f:format.html>{teamSeason.teamSeasonImages.0.originalResource.description}</f:format.html></div>
+                    </f:if>
+                    <div class="tx-clubms-teamseason-image-seperator col-xs-12"></div>
                 </div>
-                <div class="tx-clubms-teamseason-officials-seperator col-xs-12"></div>
-            </div>
-        </f:if>
+            </f:if>
 
-        <f:if condition="{teamSeason.teamSeasonSquadMembers}">
-            <div class="tx-clubms-teamseason-squad">
-                <f:groupedFor each="{teamSeason.teamSeasonSquadMembers}" as="squadMembersByPosition" groupBy="sectionPositionGroup" groupKey="sectionPositionGroup">
-                    <div class="tx-clubms-teamseason-squad-position col-xs-12"><h3>{sectionPositionGroup.label}</h3></div>
-                    <div class="tx-clubms-teamseason-squad-position-members">
-                        <f:for each="{squadMembersByPosition}" as="squadMember">
-                            <f:render partial="TeamSeason/SquadMember" arguments="{squadMember: squadMember, settings: settings}" />
+            <f:if condition="{teamSeason.teamSeasonPractices}">
+                <div class="tx-clubms-teamseason-practices">
+                    <div class="tx-clubms-teamseason-practices col-xs-12"><h3>Trainingszeiten</h3></div>
+                    <table>
+                        <f:for each="{teamSeason.teamSeasonPractices}" as="teamSeasonPractice">
+                            <f:render partial="TeamSeason/TeamSeasonPractice" arguments="{teamSeasonPractice: teamSeasonPractice}" />
+                        </f:for>
+                    </table>
+                    <div class="tx-clubms-teamseason-practices-seperator col-xs-12"></div>
+                </div>
+            </f:if>
+
+            <f:if condition="{teamSeason.teamSeasonOfficials}">
+                <div class="tx-clubms-teamseason-officials">
+                    <div class="tx-clubms-teamseason-officials col-xs-12"><h3>Trainerstab</h3></div>
+                    <div class="tx-clubms-teamseason-officials-members">
+                        <f:for each="{teamSeason.teamSeasonOfficials}" as="teamSeasonOfficial">
+                            <f:render partial="TeamSeason/TeamSeasonOfficial" arguments="{teamSeasonOfficial: teamSeasonOfficial, settings: settings}" />
                         </f:for>
                     </div>
-                    <div class="tx-clubms-teamseason-squad-position-seperator col-xs-12"></div>
-                </f:groupedFor>
-            </div>
-        </f:if>
+                    <div class="tx-clubms-teamseason-officials-seperator col-xs-12"></div>
+                </div>
+            </f:if>
 
-        <f:if condition="{teamSeason.teamSeasonSquadCaptains}">
-            <div class="tx-clubms-teamseason-squad-captains">
-                <div class="tx-clubms-teamseason-squad-captains col-xs-12"><h3>Mannschaftskapitäne</h3></div>
-                <f:for each="{teamSeason.teamSeasonSquadCaptains}" as="squadCaptain" iteration="iterator">
-                    <f:render partial="TeamSeason/SquadCaptain" arguments="{squadCaptain: squadCaptain, settings: settings, position: iterator.index}" />
-                </f:for>
-            </div>
-        </f:if>
+            <f:if condition="{teamSeason.teamSeasonSquadMembers}">
+                <div class="tx-clubms-teamseason-squad">
+                    <f:groupedFor each="{teamSeason.teamSeasonSquadMembers}" as="squadMembersByPosition" groupBy="sectionPositionGroup" groupKey="sectionPositionGroup">
+                        <div class="tx-clubms-teamseason-squad-position col-xs-12"><h3>{sectionPositionGroup.label}</h3></div>
+                        <div class="tx-clubms-teamseason-squad-position-members">
+                            <f:for each="{squadMembersByPosition}" as="squadMember">
+                                <f:render partial="TeamSeason/SquadMember" arguments="{squadMember: squadMember, settings: settings}" />
+                            </f:for>
+                        </div>
+                        <div class="tx-clubms-teamseason-squad-position-seperator col-xs-12"></div>
+                    </f:groupedFor>
+                </div>
+            </f:if>
+
+            <f:if condition="{teamSeason.teamSeasonSquadCaptains}">
+                <div class="tx-clubms-teamseason-squad-captains">
+                    <div class="tx-clubms-teamseason-squad-captains col-xs-12"><h3>Mannschaftskapitäne</h3></div>
+                    <f:for each="{teamSeason.teamSeasonSquadCaptains}" as="squadCaptain" iteration="iterator">
+                        <f:render partial="TeamSeason/SquadCaptain" arguments="{squadCaptain: squadCaptain, settings: settings, position: iterator.index}" />
+                    </f:for>
+                </div>
+            </f:if>
+
+        </div>
 
     </div>
 
-</div>
+</html>
