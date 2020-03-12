@@ -45,7 +45,10 @@
                     <f:if condition="{clubOfficial.enddate}">
                         <f:then>
                             <f:debug>{clubOfficial.enddate}</f:debug>
-                            <clubms:DateRange startdate="{clubOfficial.startdate}" enddate="{clubOfficial.enddate}"/>
+                            <!--<clubms:DateRange startdate="{clubOfficial.startdate}" enddate="{clubOfficial.enddate}"/>-->
+                            <f:for each="{clubms:DateRange(startdate:'{clubOfficial.startdate}', enddate:'{clubOfficial.enddate}')}" as="dates">
+                                <f:format.date format="%d.%m.%Y">{dates}</f:format.date> <br/>
+                            </f:for>
                             <f:format.date format="d" base="{f:format.date(date: clubOfficial.enddate, format: 'Y-m-d')}">-{f:format.date(date: clubOfficial.startdate, format: 'Y-m-d')}</f:format.date> Tage
                         </f:then>
                         <f:else>
