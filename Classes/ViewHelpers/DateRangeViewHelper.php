@@ -9,8 +9,8 @@
 		 */
 		public function initializeArguments() {
 			parent::initializeArguments();
-			$this->registerArgument('startdate', 'int', 'start date', true);
-			$this->registerArgument('enddate', 'int', 'end date', true);
+			$this->registerArgument('startdate', 'string', 'start date', true);
+			$this->registerArgument('enddate', 'string', 'end date', true);
 		}
 		
 		/**
