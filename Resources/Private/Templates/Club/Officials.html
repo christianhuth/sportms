@@ -2,6 +2,9 @@
       xmlns:clubms="Balumedien\Clubms\ViewHelpers"
       data-namespace-typo3-fluid="true">
 
+<f:form >
+    <f:form.select name="clubs" options="{clubOfficials}" optionValueField="club" optionLabelField="club.name" />
+</f:form>
 
 <div class="table-responsive">
     <table class="table table-bordered table-hover table-striped">
