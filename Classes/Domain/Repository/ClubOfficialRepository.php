@@ -16,6 +16,14 @@
 	
 		public function findAll($clubs = null, $clubOfficialJobs = null) {
 			$query = $this->createQuery();
+			$constraints = [];
+			if($clubs) {
+				$constraints[] = $query->contains('club', $clubs);
+			}
+			if($clubOfficialJobs) {
+				$constraints[] = $query->contains('club_official_job', $clubOfficialJobs);
+			}
+			$query->matching($query->logicalAnd($constraints));
 			return $query->execute();
 		}
 		
