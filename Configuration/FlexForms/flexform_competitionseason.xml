@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<T3DataStructure>
+	<ROOT>
+		<TCEforms>
+			<sheetTitle>Wettbewerbsinstanz</sheetTitle>
+		</TCEforms>
+		<displayCond>
+			<OR>
+				<numIndex index="0">FIELD:base.switchableControllerActions:=:CompetitionSeason->show</numIndex>
+				<numIndex index="1">FIELD:base.switchableControllerActions:=:CompetitionSeason->list</numIndex>
+				<numIndex index="2">FIELD:base.switchableControllerActions:=:CompetitionSeason->games</numIndex>
+				<numIndex index="3">FIELD:base.switchableControllerActions:=:CompetitionSeason->teams</numIndex>
+			</OR>
+		</displayCond>
+		<type>array</type>
+		<el>
+			<settings.competitionseason.showPid>
+				<TCEforms>
+					<label>Wettbewerbsinstanz (Einzelansicht)</label>
+					<config>
+						<type>group</type>
+						<internal_type>db</internal_type>
+						<allowed>pages</allowed>
+						<size>1</size>
+						<maxitems>1</maxitems>
+						<minitems>0</minitems>
+					</config>
+				</TCEforms>
+			</settings.competitionseason.showPid>
+			<settings.competitionseason.listPid>
+				<TCEforms>
+					<label>Wettbewerbsinstanz (Listenansicht)</label>
+					<config>
+						<type>group</type>
+						<internal_type>db</internal_type>
+						<allowed>pages</allowed>
+						<size>1</size>
+						<maxitems>1</maxitems>
+						<minitems>0</minitems>
+					</config>
+				</TCEforms>
+			</settings.competitionseason.listPid>
+			<settings.competitionseason.uid>
+				<TCEforms>
+					<label>Zeige folgende Wettbewerbsinstanz</label>
+					<config>
+						<type>group</type>
+						<internal_type>db</internal_type>
+						<allowed>tx_clubms_domain_model_competitionseason</allowed>
+						<size>1</size>
+						<maxItems>1</maxItems>
+						<minItems>0</minItems>
+						<show_thumbs>1</show_thumbs>
+					</config>
+				</TCEforms>
+			</settings.competitionseason.uid>
+		</el>
+	</ROOT>
+</T3DataStructure>

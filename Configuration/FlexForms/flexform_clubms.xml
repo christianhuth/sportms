@@ -5,5 +5,8 @@
 		<scope>EXT:clubms/Configuration/FlexForms/flexform_scope.xml</scope>
 		<club>EXT:clubms/Configuration/FlexForms/flexform_club.xml</club>
 		<clubsection>EXT:clubms/Configuration/FlexForms/flexform_clubsection.xml</clubsection>
+		<competition>EXT:clubms/Configuration/FlexForms/flexform_competition.xml</competition>
+		<competitionseason>EXT:clubms/Configuration/FlexForms/flexform_competitionseason.xml</competitionseason>
+		<game>EXT:clubms/Configuration/FlexForms/flexform_game.xml</game>
 	</sheets>
 </T3DataStructure>
