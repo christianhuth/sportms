@@ -1,4 +1,5 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:clubms="Balumedien\Clubms\ViewHelpers"
       data-namespace-typo3-fluid="true">
 
 
@@ -44,6 +45,7 @@
                     <f:if condition="{clubOfficial.enddate}">
                         <f:then>
                             <f:debug>{clubOfficial.enddate}</f:debug>
+                            <clubms:DateRange startdate="{clubOfficial.startdate}" enddate="{clubOfficial.enddate}"/>
                             <f:format.date format="d" base="{f:format.date(date: clubOfficial.enddate, format: 'Y-m-d')}">-{f:format.date(date: clubOfficial.startdate, format: 'Y-m-d')}</f:format.date> Tage
                         </f:then>
                         <f:else>
