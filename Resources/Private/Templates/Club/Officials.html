@@ -45,7 +45,7 @@
                     <f:if condition="{clubOfficial.enddate}">
                         <f:then>
                             <f:debug>{clubOfficial.enddate}</f:debug>
-                            <v:format.dateRange start="{clubOfficial.startdate}" end="{clubOfficial.enddate}" intervalFormat="NULL" format="'d'" startFormat="NULL" endFormat="NULL" glue="'-'" spaceGlue="1" return="[mixed]">
+                            <v:format.dateRange start="{clubOfficial.startdate}" end="{clubOfficial.enddate}" intervalFormat="NULL" format="'d'" startFormat="u" endFormat="u" glue="'-'" spaceGlue="1" return="[mixed]">
                                 <!-- tag content - may be ignored! -->
                             </v:format.dateRange>
                             <f:format.date format="d" base="{clubOfficial.enddate}">-{clubOfficial.startdate}</f:format.date> Tage
