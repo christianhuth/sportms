@@ -43,7 +43,7 @@
                 <td class="club-official-duration">
                     <f:if condition="{clubOfficial.enddate}">
                         <f:then>
-                            <f:format.date format="d">{clubOfficial.enddate} - {clubOfficial.startdate}</f:format.date> Tage
+                            <f:format.date format="d" base="{clubOfficial.enddate}">-{clubOfficial.startdate}</f:format.date> Tage
                         </f:then>
                         <f:else>
                             -
