@@ -42,6 +42,12 @@
 			<settings.club.uid>
 				<TCEforms>
 					<label>Zeige folgenden Verein</label>
+					<displayCond>
+						<OR>
+							<numIndex index="0">FIELD:base.switchableControllerActions:=:Club->show</numIndex>
+							<numIndex index="2">FIELD:base.switchableControllerActions:=:Club->sections</numIndex>
+						</OR>
+					</displayCond>
 					<config>
 						<type>group</type>
 						<internal_type>db</internal_type>
