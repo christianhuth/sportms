@@ -15,7 +15,7 @@
 		);
 	
 		public function findAll($clubs = null, $clubOfficialJobs = null) {
-			$queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getQueryBuilderForTable('tx_clubms_domain_model_clubofficial')->createQueryBuilder();
+			$queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getQueryBuilderForTable('tx_clubms_domain_model_clubofficial');
 			$queryBuilder->select('*')->from('tx_clubms_domain_model_clubofficial');
 			return $queryBuilder->execute();
 		}
