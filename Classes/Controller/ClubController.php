@@ -61,12 +61,11 @@ class ClubController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 	}
 	
 	/**
-	 * @param \Balumedien\Clubms\Domain\Model\Club $club club item
+	 *
 	 */
 	public function officialsAction() {
-		$clubUid = $this->settings['club']['officials'];
-		$club = $this->clubRepository->findByUid($clubUid);
-		$this->view->assign('clubOfficials', $club->getClubOfficials());
+		$clubs = $this->settings['club']['officials']['clubs'];
+		#$this->view->assign('clubOfficials', $club->getClubOfficials());
 	}
 	
 	/**
