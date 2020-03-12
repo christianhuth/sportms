@@ -11,7 +11,7 @@
 		// Order by BE sorting
 		protected $defaultOrderings = array(
 			'club' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
-			'clubOfficialJob.label' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING
+			'sorting' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING
 		);
 	
 		public function findAll($clubs = null, $clubOfficialJobs = null) {

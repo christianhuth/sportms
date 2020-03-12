@@ -1,8 +1,17 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
       data-namespace-typo3-fluid="true">
-
-    <f:for each="{clubOfficials}" as="clubOfficial">
-        <f:debug>{clubOfficial}</f:debug>
-    </f:for>
-
+    <table>
+        <tr>
+            <th>Funktion</th>
+            <th>Person</th>
+            <th>Amtsantritt</th>
+        </tr>
+        <f:for each="{clubOfficials}" as="clubOfficial">
+            <tr>
+                <td>{clubOfficial.clubOfficialJob.label}</td>
+                <td>{clubOfficial.person.firstname} {clubOfficial.person.lastname}</td>
+                <td>{clubOfficial.startdate}</td>
+            </tr>
+        </f:for>
+    </table>
 </html>
