@@ -9,6 +9,7 @@
             <th>Person</th>
             <th>Amtsantritt</th>
             <th>Amtsende</th>
+            <th>Amtszeit</th>
         </tr>
         <f:for each="{clubOfficials}" as="clubOfficial">
             <tr>
@@ -32,6 +33,17 @@
                     <f:if condition="{clubOfficial.enddate}">
                         <f:then>
                             <f:format.date format="d.m.Y">{clubOfficial.enddate}</f:format.date>
+                        </f:then>
+                        <f:else>
+                            -
+                        </f:else>
+                    </f:if>
+                </td>
+
+                <td class="club-official-duration">
+                    <f:if condition="{clubOfficial.enddate}">
+                        <f:then>
+                            <f:format.date format="d">{clubOfficial.enddate} - {clubOfficial.startdate}</f:format.date> Tage
                         </f:then>
                         <f:else>
                             -
