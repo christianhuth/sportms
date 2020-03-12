@@ -4,7 +4,7 @@
 	
 	use TYPO3\CMS\Core\Utility\GeneralUtility;
 	use TYPO3\CMS\Core\Database\ConnectionPool;
-	use TYPO3\CMS\Extbase\Persistence;
+	use TYPO3\CMS\Extbase\Persistence\Repository;
 	
 	class ClubOfficialRepository extends Repository {
 		
