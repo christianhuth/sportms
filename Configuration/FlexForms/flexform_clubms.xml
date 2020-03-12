@@ -3,7 +3,6 @@
 	<sheets>
 		<base>EXT:clubms/Configuration/FlexForms/flexform_base.xml</base>
 		<scope>EXT:clubms/Configuration/FlexForms/flexform_scope.xml</scope>
-		<single>EXT:clubms/Configuration/FlexForms/flexform_single.xml</single>
 		<club>EXT:clubms/Configuration/FlexForms/flexform_club.xml</club>
 		<clubsection>EXT:clubms/Configuration/FlexForms/flexform_clubsection.xml</clubsection>
 	</sheets>
