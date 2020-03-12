@@ -78,22 +78,16 @@ class ClubController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 	public function officialsAction() {
 		
 		$clubs = $this->settings['club']['officials']['clubs'];
-		\TYPO3\CMS\Core\Utility\DebugUtility::debug($clubs, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 		
 		$clubsSelectbox = $this->settings['club']['officials']['clubsSelectbox'];
-		\TYPO3\CMS\Core\Utility\DebugUtility::debug($clubsSelectbox, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 		
 		$jobs = $this->settings['club']['officials']['jobs'];
-		\TYPO3\CMS\Core\Utility\DebugUtility::debug($jobs, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 		
 		$jobsSelectbox = $this->settings['club']['officials']['jobsSelectbox'];
-		\TYPO3\CMS\Core\Utility\DebugUtility::debug($jobsSelectbox, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 		
 		$currentOfficialsOnly = $this->settings['club']['officials']['currentOfficialsOnly'];
-		\TYPO3\CMS\Core\Utility\DebugUtility::debug($currentOfficialsOnly, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 		
-		$clubOfficials = $this->clubOfficialRepository->findAll($clubs, $jobs);
-		\TYPO3\CMS\Core\Utility\DebugUtility::debug($clubOfficials, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
+		$clubOfficials = $this->clubOfficialRepository->findAll($clubs, $jobs, $currentOfficialsOnly);
 		
 		$this->view->assign('clubs', $clubs);
 		$this->view->assign('clubsSelectbox', $clubsSelectbox);

@@ -14,7 +14,7 @@
 			'sorting' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING
 		);
 	
-		public function findAll($clubs = null, $clubOfficialJobs = null) {
+		public function findAll($clubs = null, $clubOfficialJobs = null, $currentOfficialsOnly = false) {
 			$query = $this->createQuery();
 			$constraints = [];
 			if($clubs) {
