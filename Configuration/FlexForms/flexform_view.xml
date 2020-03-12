@@ -10,7 +10,7 @@
 				<TCEforms>
 					<label>Pfad zur CSS-Datei</label>
 					<config>
-						<default>{view.cssFile}</default>
+						<default></default>
 						<type>input</type>
 						<size>30</size>
 					</config>
@@ -20,7 +20,7 @@
 				<TCEforms>
 					<label>Pfad zu den Layouts</label>
 					<config>
-						<default>{settings.view.cssFile}</default>
+						<default></default>
 						<type>input</type>
 						<size>30</size>
 					</config>
