@@ -21,7 +21,6 @@
 						<OR>
 							<numIndex index="0">FIELD:base.switchableControllerActions:=:Club->show</numIndex>
 							<numIndex index="2">FIELD:base.switchableControllerActions:=:Club->sections</numIndex>
-							<numIndex index="2">FIELD:base.switchableControllerActions:=:Club->officials</numIndex>
 						</OR>
 					</displayCond>
 					<config>
@@ -35,6 +34,28 @@
 					</config>
 				</TCEforms>
 			</settings.club.uid>
+			<settings.club.officials.clubs>
+				<TCEforms>
+					<label>Welche Vereine sollen angezeigt werden?</label>
+					<displayCond>FIELD:base.switchableControllerActions:=:Club->officials</displayCond>
+					<config>
+						<foreign_table>tx_clubms_domain_model_club</foreign_table>
+						<foreign_table_where>ORDER BY name ASC</foreign_table_where>
+						<renderType>selectMultipleSideBySide</renderType>
+						<type>select</type>
+					</config>
+				</TCEforms>
+			</settings.club.officials.clubs>
+			<settings.club.officials.clubs.selectbox>
+				<TCEforms>
+					<label>Selectbox für Vereine?</label>
+					<config>
+						<default>1</default>
+						<renderType>checkboxToggle</renderType>
+						<type>check</type>
+					</config>
+				</TCEforms>
+			</settings.club.officials.clubs.selectbox>
 			<settings.club.officials.currentOfficialsOnly>
 				<TCEforms>
 					<label>Zeige nur die aktuellen Funktionäre des Vereins</label>
