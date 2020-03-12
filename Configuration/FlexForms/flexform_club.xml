@@ -59,7 +59,29 @@
 					</config>
 				</TCEforms>
 			</settings.club.uid>
-			<settings.club.showSections>
+			<settings.club.showClubInformation>
+				<TCEforms>
+					<label>Zeige nur die Informationen des Vereins</label>
+					<displayCond>FIELD:base.switchableControllerActions:=:Club->show</displayCond>
+					<config>
+						<default>1</default>
+						<renderType>checkboxToggle</renderType>
+						<type>check</type>
+					</config>
+				</TCEforms>
+			</settings.club.showClubInformation>
+			<settings.club.showClubGrounds>
+				<TCEforms>
+					<label>Zeige das Vereinsgelände des Vereins</label>
+					<displayCond>FIELD:base.switchableControllerActions:=:Club->show</displayCond>
+					<config>
+						<default>1</default>
+						<renderType>checkboxToggle</renderType>
+						<type>check</type>
+					</config>
+				</TCEforms>
+			</settings.club.showClubGrounds>
+			<settings.club.showClubSections>
 				<TCEforms>
 					<label>Zeige die Abteilungen des Vereins</label>
 					<displayCond>FIELD:base.switchableControllerActions:=:Club->show</displayCond>
@@ -69,7 +91,29 @@
 						<type>check</type>
 					</config>
 				</TCEforms>
-			</settings.club.showSections>
+			</settings.club.showClubSections>
+			<settings.club.showClubOfficials>
+				<TCEforms>
+					<label>Zeige die Funktionäre des Vereins</label>
+					<displayCond>FIELD:base.switchableControllerActions:=:Club->show</displayCond>
+					<config>
+						<default>1</default>
+						<renderType>checkboxToggle</renderType>
+						<type>check</type>
+					</config>
+				</TCEforms>
+			</settings.club.showClubOfficials>
+			<settings.club.showCurrentClubOfficialsOnly>
+				<TCEforms>
+					<label>Zeige nur die aktuellen Funktionäre des Vereins</label>
+					<displayCond>FIELD:base.switchableControllerActions:=:Club->show</displayCond>
+					<config>
+						<default>0</default>
+						<renderType>checkboxToggle</renderType>
+						<type>check</type>
+					</config>
+				</TCEforms>
+			</settings.club.showCurrentClubOfficialsOnly>
 		</el>
 	</ROOT>
 </T3DataStructure>
