@@ -23,7 +23,9 @@
 			if($clubOfficialJobs) {
 				$constraints[] = $query->contains('club_official_job', $clubOfficialJobs);
 			}
-			$query->matching($query->logicalAnd($constraints));
+			if($constraints) {
+				$query->matching($query->logicalAnd($constraints));
+			}
 			return $query->execute();
 		}
 		
