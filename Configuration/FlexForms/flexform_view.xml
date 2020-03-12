@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<T3DataStructure>
+	<ROOT>
+		<TCEforms>
+			<sheetTitle>View</sheetTitle>
+		</TCEforms>
+		<type>array</type>
+		<el>
+			<settings.view.cssFile>
+				<TCEforms>
+					<label>Pfad zur CSS-Datei</label>
+					<config>
+						<checkbox>1</checkbox>
+						<default></default>
+						<type>input</type>
+						<size>15</size>
+					</config>
+				</TCEforms>
+			</settings.view.cssFile>
+			<settings.view.layoutRootPath>
+				<TCEforms>
+					<label>Pfad zu den Layouts</label>
+					<config>
+						<checkbox>1</checkbox>
+						<default></default>
+						<type>input</type>
+						<size>15</size>
+					</config>
+				</TCEforms>
+			</settings.view.layoutRootPath>
+			<settings.view.partialRootPath>
+				<TCEforms>
+					<label>Pfad zu den Partials</label>
+					<config>
+						<checkbox>1</checkbox>
+						<default></default>
+						<type>input</type>
+						<size>15</size>
+					</config>
+				</TCEforms>
+			</settings.view.partialRootPath>
+			<settings.view.templateRootPath>
+				<TCEforms>
+					<label>Pfad zu den Templates</label>
+					<config>
+						<checkbox>1</checkbox>
+						<default></default>
+						<type>input</type>
+						<size>15</size>
+					</config>
+				</TCEforms>
+			</settings.view.templateRootPath>
+		</el>
+	</ROOT>
+</T3DataStructure>
