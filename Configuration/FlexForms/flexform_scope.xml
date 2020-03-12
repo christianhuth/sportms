@@ -32,6 +32,7 @@
 					<config>
 						<type>select</type>
 						<foreign_table>tx_clubms_domain_model_section</foreign_table>
+						<foreign_table_where>ORDER BY label ASC</foreign_table_where>
 						<size>5</size>
 						<maxitems>3</maxitems>
 					</config>
