@@ -2,8 +2,8 @@
       xmlns:clubms="Balumedien\Clubms\ViewHelpers"
       data-namespace-typo3-fluid="true">
 
-<f:form >
-    <f:form.select name="clubs" prependOptionValue="" prependOptionLabel="Alle" options="{clubOfficials}" optionValueField="club.uid" optionLabelField="club.name" />
+<f:form action="Officials" controller="Club">
+    <f:form.select name="clubs" prependOptionValue="" prependOptionLabel="Alle" options="{clubOfficials}" optionValueField="club.uid" optionLabelField="club.name"/>
     <f:form.submit value="Los"/>
 </f:form>
 
