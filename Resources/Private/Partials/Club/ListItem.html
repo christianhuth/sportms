@@ -1,55 +1,60 @@
-<tr>
-	<td>
-		<f:if condition="{club.images.0}">
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
+
+	<tr>
+		<td>
+			<f:if condition="{club.images.0}">
+				<f:if condition="{club.detailLink}">
+					<f:then>
+						<f:link.action controller="Club" action="show" arguments="{club: club}" pageUid="{settings.club.showPid}">
+							<f:image image="{club.images.0}" maxHeight="50"/>
+						</f:link.action>
+					</f:then>
+					<f:else>
+						<f:image image="{club.images.0}" maxHeight="50"/>
+					</f:else>
+				</f:if>
+			</f:if>
+		</td>
+		<td>
 			<f:if condition="{club.detailLink}">
 				<f:then>
-					<f:link.action controller="Club" action="show" arguments="{club: club}" pageUid="{settings.club.showPid}">
-						<f:image image="{club.images.0}" maxHeight="50"/>
-					</f:link.action>
+					<f:link.action controller="Club" action="show" arguments="{club: club}" pageUid="{settings.club.showPid}">{club.name}</f:link.action>
 				</f:then>
 				<f:else>
-					<f:image image="{club.images.0}" maxHeight="50"/>
+					{club.name}
 				</f:else>
 			</f:if>
-		</f:if>
-	</td>
-	<td>
-		<f:if condition="{club.detailLink}">
-			<f:then>
-				<f:link.action controller="Club" action="show" arguments="{club: club}" pageUid="{settings.club.showPid}">{club.name}</f:link.action>
-			</f:then>
-			<f:else>
-				{club.name}
-			</f:else>
-		</f:if>
-	</td>
-	<td>
-		<f:if condition="{club.clubSections}">
-			<f:then>
-				<ul>
-					<f:for each="{club.clubSections}" as="clubSection" iteration="iterator">
-						<li><f:link.action controller="ClubSection" action="show" arguments="{club: clubSection.club, section: clubSection.section}" pageUid="{settings.clubSection.showPid}">{clubSection.section.label}</f:link.action></li>
-						<f:if condition="{clubSection.teams}">
-							<f:then>
-									<f:for each="{clubSection.teams}" as="team" iteration="iterator2">
-										<f:link.action controller="Team" action="show" arguments="{team: team}" pageUid="{settings.team.showPid}">{team.name}</f:link.action>
-										<f:if condition="iterator2.isLast">
-											<f:then></f:then>
-											<f:else>, </f:else>
-										</f:if>
-									</f:for>
-							</f:then>
-							<f:else>
-							</f:else>
-						</f:if>
-					</f:for>
-				</ul>
-			</f:then>
-			<f:else>
-				<ul>
-					<li>Keine Abteilungen vorhanden</li>
-				</ul>
-			</f:else>
-		</f:if>
-	</td>
-</tr>
+		</td>
+		<td>
+			<f:if condition="{club.clubSections}">
+				<f:then>
+					<ul>
+						<f:for each="{club.clubSections}" as="clubSection" iteration="iterator">
+							<li><f:link.action controller="ClubSection" action="show" arguments="{club: clubSection.club, section: clubSection.section}" pageUid="{settings.clubSection.showPid}">{clubSection.section.label}</f:link.action></li>
+							<f:if condition="{clubSection.teams}">
+								<f:then>
+										<f:for each="{clubSection.teams}" as="team" iteration="iterator2">
+											<f:link.action controller="Team" action="show" arguments="{team: team}" pageUid="{settings.team.showPid}">{team.name}</f:link.action>
+											<f:if condition="iterator2.isLast">
+												<f:then></f:then>
+												<f:else>, </f:else>
+											</f:if>
+										</f:for>
+								</f:then>
+								<f:else>
+								</f:else>
+							</f:if>
+						</f:for>
+					</ul>
+				</f:then>
+				<f:else>
+					<ul>
+						<li>Keine Abteilungen vorhanden</li>
+					</ul>
+				</f:else>
+			</f:if>
+		</td>
+	</tr>
+
+</html>
