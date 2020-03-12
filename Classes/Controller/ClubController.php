@@ -54,7 +54,7 @@ class ClubController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 	public function showAction(\Balumedien\Clubms\Domain\Model\Club $club = null) {
 		if($club === null) {
 			// TODO: CHECK IF SETTINGS IS SET ELSE DIE
-			$clubUid = $this->settings['single']['club'];
+			$clubUid = $this->settings['club']['uid'];
 			$club = $this->clubRepository->findByUid($clubUid);
 		}
 		$this->view->assign('club', $club);
@@ -65,7 +65,7 @@ class ClubController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 	 */
 	public function sectionsAction(\Balumedien\Clubms\Domain\Model\Club $club = null) {
 		if($club === null) {
-			$clubUid = $this->settings['single']['club'];
+			$clubUid = $this->settings['club']['uid'];
 			$club = $this->clubRepository->findByUid($clubUid);
 		}
 		$this->view->assign('club', $club);
