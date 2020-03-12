@@ -6,9 +6,14 @@
 
 <f:section name="default">
 
-    <f:if condition="{settings.clubsSelectbox}">
+    <f:if condition="{settings.clubsSelectbox} || {settings.jobsSelectbox}">
         <f:form controller="Club" action="officials">
-            <f:form.select name="clubs" prependOptionValue="" prependOptionLabel="Alle" options="{clubOfficials}" optionValueField="club.uid" optionLabelField="club.name"/>
+            <f:if condition="{settings.clubsSelectbox}">
+                <f:form.select name="clubs" prependOptionValue="" prependOptionLabel="Alle" options="{clubOfficials}" optionValueField="club.uid" optionLabelField="club.name"/>
+            </f:if>
+            <f:if condition="{settings.jobsSelectbox}">
+                <f:form.select name="clubs" prependOptionValue="" prependOptionLabel="Alle" options="{clubOfficials}" optionValueField="club_official_job.uid" optionLabelField="club_official_job.label"/>
+            </f:if>
             <f:form.submit value="Los"/>
         </f:form>
     </f:if>
