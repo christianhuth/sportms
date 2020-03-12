@@ -339,18 +339,38 @@ class Club extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	public function setClubSections($clubSections) {
 		$this->clubSections = $clubSections;
 	}
+	
+	/**
+	 * Adds a ClubOfficial
+	 *
+	 * @param \Balumedien\Clubms\Domain\Model\ClubOfficial $clubOfficial
+	 * @return void
+	 */
+	public function addClubOfficial(\Balumedien\Clubms\Domain\Model\ClubOfficial $clubOfficial) {
+		$this->clubOfficials->attach($clubOfficial);
+	}
+	
+	/**
+	 * Removes a ClubOfficial
+	 *
+	 * @param \Balumedien\Clubms\Domain\Model\ClubOfficial $clubOfficialToRemove The ClubOfficial to be removed
+	 * @return void
+	 */
+	public function removeClubOfficial(\Balumedien\Clubms\Domain\Model\ClubOfficial $clubOfficialToRemove) {
+		$this->clubOfficials->detach($clubOfficialToRemove);
+	}
 
 	/**
-	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\ClubOfficial>
 	 */
 	public function getClubOfficials() {
 		return $this->clubOfficials;
 	}
 
 	/**
-	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $clubOfficials
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\ClubOfficial>
 	 */
-	public function setClubOfficials($clubOfficials) {
+	public function setClubOfficials(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $clubOfficials) {
 		$this->clubOfficials = $clubOfficials;
 	}
 
