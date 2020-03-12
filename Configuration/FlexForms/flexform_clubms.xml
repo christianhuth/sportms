@@ -5,6 +5,6 @@
 		<scope>EXT:clubms/Configuration/FlexForms/flexform_scope.xml</scope>
 		<single>EXT:clubms/Configuration/FlexForms/flexform_single.xml</single>
 		<club>EXT:clubms/Configuration/FlexForms/flexform_club.xml</club>
-		<club>EXT:clubms/Configuration/FlexForms/flexform_clubsection.xml</club>
+		<clubsection>EXT:clubms/Configuration/FlexForms/flexform_clubsection.xml</clubsection>
 	</sheets>
 </T3DataStructure>
