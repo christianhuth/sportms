@@ -4,6 +4,7 @@
 		<TCEforms>
 			<sheetTitle>Verein</sheetTitle>
 		</TCEforms>
+		<displayCond>FIELD:switchableControllerActions:=:Club->show</displayCond>
 		<type>array</type>
 		<el>
 			<settings.club.showPid>
