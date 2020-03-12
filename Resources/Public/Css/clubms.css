@@ -88,6 +88,19 @@
 
 /*
  *
+ * CLUB
+ *
+ */
+.tx-clubms .tx-clubms-container .club-official-startdate,
+.tx-clubms .tx-clubms-container .club-official-enddate,
+.tx-clubms .tx-clubms-container .club-official-duration {
+	text-align: center;
+}
+
+
+
+/*
+ *
  * PERSON
  *
  */
