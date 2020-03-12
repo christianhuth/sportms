@@ -19,7 +19,7 @@
 		 */
 		public function render() {
 			$startdate = new DateTime();
-			$startdate->setTimestamp($this->arguments['startdate']));
+			$startdate->setTimestamp($this->arguments['startdate']);
 			$enddate = new DateTime($this->arguments['enddate']);
 			
 			$interval = new DateInterval('P1D'); // 1 Day
