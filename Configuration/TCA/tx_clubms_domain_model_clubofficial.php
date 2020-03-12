@@ -90,7 +90,6 @@ return array(
 
         'club' => array(
             'config' => array(
-	            'foreign_table' => 'tx_clubms_domain_model_club',
                 'type' => 'passthrough',
             ),
         ),
