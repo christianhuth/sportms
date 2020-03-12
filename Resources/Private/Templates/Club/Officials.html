@@ -6,10 +6,12 @@
 
 <f:section name="default">
 
-    <f:form controller="Club" action="officials">
-        <f:form.select name="clubs" prependOptionValue="" prependOptionLabel="Alle" options="{clubOfficials}" optionValueField="club.uid" optionLabelField="club.name"/>
-        <f:form.submit value="Los"/>
-    </f:form>
+    <f:if condition="{settings.clubsSelectbox}">
+        <f:form controller="Club" action="officials">
+            <f:form.select name="clubs" prependOptionValue="" prependOptionLabel="Alle" options="{clubOfficials}" optionValueField="club.uid" optionLabelField="club.name"/>
+            <f:form.submit value="Los"/>
+        </f:form>
+    </f:if>
 
     <div class="table-responsive">
         <table class="table table-bordered table-hover table-striped">
