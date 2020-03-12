@@ -64,6 +64,7 @@
 					<label>Zeige die Abteilungen des Vereins</label>
 					<displayCond>FIELD:base.switchableControllerActions:=:Club->show</displayCond>
 					<config>
+						<default>1</default>
 						<type>check</type>
 					</config>
 				</TCEforms>
