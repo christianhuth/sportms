@@ -1,6 +1,8 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
       data-namespace-typo3-fluid="true">
 
+
+
     <table>
         <tr>
             <th>Funktion</th>
@@ -11,7 +13,7 @@
             <tr>
                 <td>{clubOfficial.clubOfficialJob.label}</td>
 
-                <td><f:link.action action="show" controller="Person" additionalParams="{tx_clubms_clubms: '{person: clubOfficial.person, section: 1, profile: \"official\"}'}" pageUid="{settings.person.showPid}">{clubOfficial.person.firstname} {clubOfficial.person.lastname}</f:link.action></td>
+                <td><f:link.action action="show" controller="Person" additionalParams="{tx_clubms_clubms: '{person: clubOfficial.person, profile: \"official\"}'}" pageUid="{settings.person.showPid}">{clubOfficial.person.firstname} {clubOfficial.person.lastname}</f:link.action></td>
                 <td>
                     <f:format.date>{clubOfficial.startdate}</f:format.date>
                 </td>
