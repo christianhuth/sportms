@@ -1,20 +1,8 @@
 plugin.tx_clubms {
 
-    view {
-        templateRootPaths {
-                0 = EXT:clubms/Resources/Private/Templates/
-                1 = {$plugin.tx_clubms.view.templateRootPath}
-        }
-
-        partialRootPaths {
-                0 = EXT:clubms/Resources/Private/Partials/
-                1 = {$plugin.tx_clubms.view.partialRootPath}
-        }
-
-        layoutRootPaths {
-                0 = EXT:clubms/Resources/Private/Layouts/
-                1 = {$plugin.tx_clubms.view.layoutRootPath}
-        }
+    persistence {
+        storagePid = {$plugin.tx_clubms.persistence.storagePid}
+        recursive = {$plugin.tx_clubms.persistence.recursive}
     }
 
     # ====================================
@@ -39,6 +27,11 @@ plugin.tx_clubms {
             showPid = {$plugin.tx_clubms.settings.competition.showPid}
         }
 
+        competitionSeason {
+            listPid = {$plugin.tx_clubms.settings.competitionSeason.listPid}
+            showPid = {$plugin.tx_clubms.settings.competitionSeason.showPid}
+        }
+
         game {
             listPid = {$plugin.tx_clubms.settings.game.listPid}
             showPid = {$plugin.tx_clubms.settings.game.showPid}
@@ -47,11 +40,17 @@ plugin.tx_clubms {
         person {
             listPid = {$plugin.tx_clubms.settings.person.listPid}
             showPid = {$plugin.tx_clubms.settings.person.showPid}
-            officialPid = {$plugin.tx_clubms.settings.person.officialPid}
-            playerPid = {$plugin.tx_clubms.settings.person.playerPid}
-            refereePid = {$plugin.tx_clubms.settings.person.refereePid}
             dummyImageMale = {$plugin.tx_clubms.settings.person.dummyImageMale}
             dummyImageFemale = {$plugin.tx_clubms.settings.person.dummyImageFemale}
+        }
+
+        season {
+            listPid = {$plugin.tx_clubms.settings.season.listPid}
+        }
+
+        section {
+            listPid = {$plugin.tx_clubms.settings.section.listPid}
+            showPid = {$plugin.tx_clubms.settings.section.showPid}
         }
 
         team {
@@ -64,11 +63,26 @@ plugin.tx_clubms {
             showPid = {$plugin.tx_clubms.settings.teamSeason.showPid}
         }
 
+        venue {
+            listPid = {$plugin.tx_clubms.settings.venue.listPid}
+            showPid = {$plugin.tx_clubms.settings.venue.showPid}
+        }
+
     }
 
-	persistence {
-		storagePid = {$plugin.tx_clubms.persistence.storagePid}
-		recursive = {$plugin.tx_clubms.persistence.recursive}
-	}
+    view {
+        layoutRootPaths {
+            0 = EXT:clubms/Resources/Private/Layouts/
+            1 = {$plugin.tx_clubms.view.layoutRootPath}
+        }
+        partialRootPaths {
+            0 = EXT:clubms/Resources/Private/Partials/
+            1 = {$plugin.tx_clubms.view.partialRootPath}
+        }
+        templateRootPaths {
+            0 = EXT:clubms/Resources/Private/Templates/
+            1 = {$plugin.tx_clubms.view.templateRootPath}
+        }
+    }
 
 }
