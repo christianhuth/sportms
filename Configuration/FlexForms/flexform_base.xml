@@ -14,7 +14,7 @@
 						<type>select</type>
 						<renderType>selectSingle</renderType>
 						<items type="array">
-							<numIndex index="0">
+							<numIndex index="1">
 								<numIndex index="0">Bitte auswählen</numIndex>
 								<numIndex index="1">--div--</numIndex>
 							</numIndex>
