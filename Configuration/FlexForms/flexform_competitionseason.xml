@@ -14,32 +14,6 @@
 		</displayCond>
 		<type>array</type>
 		<el>
-			<settings.competitionseason.showPid>
-				<TCEforms>
-					<label>Wettbewerbsinstanz (Einzelansicht)</label>
-					<config>
-						<type>group</type>
-						<internal_type>db</internal_type>
-						<allowed>pages</allowed>
-						<size>1</size>
-						<maxitems>1</maxitems>
-						<minitems>0</minitems>
-					</config>
-				</TCEforms>
-			</settings.competitionseason.showPid>
-			<settings.competitionseason.listPid>
-				<TCEforms>
-					<label>Wettbewerbsinstanz (Listenansicht)</label>
-					<config>
-						<type>group</type>
-						<internal_type>db</internal_type>
-						<allowed>pages</allowed>
-						<size>1</size>
-						<maxitems>1</maxitems>
-						<minitems>0</minitems>
-					</config>
-				</TCEforms>
-			</settings.competitionseason.listPid>
 			<settings.competitionseason.uid>
 				<TCEforms>
 					<label>Zeige folgende Wettbewerbsinstanz</label>

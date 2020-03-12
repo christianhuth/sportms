@@ -63,6 +63,18 @@ class ClubController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 	/**
 	 * @param \Balumedien\Clubms\Domain\Model\Club $club club item
 	 */
+	public function officialsAction(\Balumedien\Clubms\Domain\Model\Club $club = null) {
+		if($club === null) {
+			// TODO: CHECK IF SETTINGS IS SET ELSE DIE
+			$clubUid = $this->settings['club']['uid'];
+			$club = $this->clubRepository->findByUid($clubUid);
+		}
+		$this->view->assign('clubOfficials', $club->getClubOfficials());
+	}
+	
+	/**
+	 * @param \Balumedien\Clubms\Domain\Model\Club $club club item
+	 */
 	public function sectionsAction(\Balumedien\Clubms\Domain\Model\Club $club = null) {
 		if($club === null) {
 			$clubUid = $this->settings['club']['uid'];

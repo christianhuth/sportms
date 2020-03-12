@@ -30,6 +30,10 @@
 								<numIndex index="0">Verein (Abteilungen)</numIndex>
 								<numIndex index="1">Club->sections</numIndex>
 							</numIndex>
+							<numIndex index="103">
+								<numIndex index="0">Verein (Funktionäre)</numIndex>
+								<numIndex index="1">Club->officials</numIndex>
+							</numIndex>
 							<numIndex index="110">
 								<numIndex index="0">Vereinsabteilung</numIndex>
 								<numIndex index="1">--div--</numIndex>

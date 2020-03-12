@@ -13,32 +13,6 @@
 		</displayCond>
 		<type>array</type>
 		<el>
-			<settings.club.showPid>
-				<TCEforms>
-					<label>Verein (Einzelansicht)</label>
-					<config>
-						<type>group</type>
-						<internal_type>db</internal_type>
-						<allowed>pages</allowed>
-						<size>1</size>
-						<maxitems>1</maxitems>
-						<minitems>0</minitems>
-					</config>
-				</TCEforms>
-			</settings.club.showPid>
-			<settings.club.listPid>
-				<TCEforms>
-					<label>Verein (Listenansicht)</label>
-					<config>
-						<type>group</type>
-						<internal_type>db</internal_type>
-						<allowed>pages</allowed>
-						<size>1</size>
-						<maxitems>1</maxitems>
-						<minitems>0</minitems>
-					</config>
-				</TCEforms>
-			</settings.club.listPid>
 			<settings.club.uid>
 				<TCEforms>
 					<label>Zeige folgenden Verein</label>
@@ -59,61 +33,28 @@
 					</config>
 				</TCEforms>
 			</settings.club.uid>
-			<settings.club.showClubInformation>
-				<TCEforms>
-					<label>Zeige nur die Informationen des Vereins</label>
-					<displayCond>FIELD:base.switchableControllerActions:=:Club->show</displayCond>
-					<config>
-						<default>1</default>
-						<renderType>checkboxToggle</renderType>
-						<type>check</type>
-					</config>
-				</TCEforms>
-			</settings.club.showClubInformation>
-			<settings.club.showClubGrounds>
-				<TCEforms>
-					<label>Zeige das Vereinsgelände des Vereins</label>
-					<displayCond>FIELD:base.switchableControllerActions:=:Club->show</displayCond>
-					<config>
-						<default>1</default>
-						<renderType>checkboxToggle</renderType>
-						<type>check</type>
-					</config>
-				</TCEforms>
-			</settings.club.showClubGrounds>
-			<settings.club.showClubSections>
-				<TCEforms>
-					<label>Zeige die Abteilungen des Vereins</label>
-					<displayCond>FIELD:base.switchableControllerActions:=:Club->show</displayCond>
-					<config>
-						<default>1</default>
-						<renderType>checkboxToggle</renderType>
-						<type>check</type>
-					</config>
-				</TCEforms>
-			</settings.club.showClubSections>
-			<settings.club.showClubOfficials>
-				<TCEforms>
-					<label>Zeige die Funktionäre des Vereins</label>
-					<displayCond>FIELD:base.switchableControllerActions:=:Club->show</displayCond>
-					<config>
-						<default>1</default>
-						<renderType>checkboxToggle</renderType>
-						<type>check</type>
-					</config>
-				</TCEforms>
-			</settings.club.showClubOfficials>
-			<settings.club.showCurrentClubOfficialsOnly>
+			<settings.club.officials.currentOfficialsOnly>
 				<TCEforms>
 					<label>Zeige nur die aktuellen Funktionäre des Vereins</label>
-					<displayCond>FIELD:base.switchableControllerActions:=:Club->show</displayCond>
+					<displayCond>FIELD:base.switchableControllerActions:=:Club->officials</displayCond>
 					<config>
 						<default>0</default>
 						<renderType>checkboxToggle</renderType>
 						<type>check</type>
 					</config>
 				</TCEforms>
-			</settings.club.showCurrentClubOfficialsOnly>
+			</settings.club.officials.currentOfficialsOnly>
+			<settings.club.officials.jobs>
+				<TCEforms>
+					<label>Welche Funktionärstätigkeiten sollen angezeigt werden?</label>
+					<displayCond>FIELD:base.switchableControllerActions:=:Club->officials</displayCond>
+					<config>
+						<foreign_table>tx_clubms_domain_model_clubofficialjob</foreign_table>
+						<renderType>selectMultipleSideBySide</renderType>
+						<type>select</type>
+					</config>
+				</TCEforms>
+			</settings.club.officials.jobs>
 		</el>
 	</ROOT>
 </T3DataStructure>
