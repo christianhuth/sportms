@@ -12,10 +12,12 @@
         </tr>
         <f:for each="{clubOfficials}" as="clubOfficial">
             <tr>
-                <td>{clubOfficial.clubOfficialJob.label}</td>
 
-                <td><f:link.action action="show" controller="Person" additionalParams="{tx_clubms_clubms: '{person: clubOfficial.person, profile: \"official\"}'}" pageUid="{settings.person.showPid}">{clubOfficial.person.firstname} {clubOfficial.person.lastname}</f:link.action></td>
-                <td>
+                <td class="club-official-officialjob">{clubOfficial.clubOfficialJob.label}</td>
+
+                <td class="club-official-person"><f:link.action action="show" controller="Person" additionalParams="{tx_clubms_clubms: '{person: clubOfficial.person, profile: \"official\"}'}" pageUid="{settings.person.showPid}">{clubOfficial.person.firstname} {clubOfficial.person.lastname}</f:link.action></td>
+
+                <td class="club-official-startdate">
                     <f:if condition="{clubOfficial.startdate}">
                         <f:then>
                             <f:format.date format="d.m.Y">{clubOfficial.startdate}</f:format.date>
@@ -25,16 +27,18 @@
                         </f:else>
                     </f:if>
                 </td>
-                <td>
+
+                <td class="club-official-enddate">
                     <f:if condition="{clubOfficial.enddate}">
                         <f:then>
                             <f:format.date format="d.m.Y">{clubOfficial.enddate}</f:format.date>
                         </f:then>
                         <f:else>
-                            unbekannt
+                            -
                         </f:else>
                     </f:if>
                 </td>
+
             </tr>
         </f:for>
     </table>
