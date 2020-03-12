@@ -8,6 +8,7 @@
             <th>Funktion</th>
             <th>Person</th>
             <th>Amtsantritt</th>
+            <th>Amtsende</th>
         </tr>
         <f:for each="{clubOfficials}" as="clubOfficial">
             <tr>
@@ -15,7 +16,24 @@
 
                 <td><f:link.action action="show" controller="Person" additionalParams="{tx_clubms_clubms: '{person: clubOfficial.person, profile: \"official\"}'}" pageUid="{settings.person.showPid}">{clubOfficial.person.firstname} {clubOfficial.person.lastname}</f:link.action></td>
                 <td>
-                    <f:format.date>{clubOfficial.startdate}</f:format.date>
+                    <f:if condition="{clubOfficial.startdate}">
+                        <f:then>
+                            <f:format.date format="d.m.Y">{clubOfficial.startdate}</f:format.date>
+                        </f:then>
+                        <f:else>
+                            unbekannt
+                        </f:else>
+                    </f:if>
+                </td>
+                <td>
+                    <f:if condition="{clubOfficial.enddate}">
+                        <f:then>
+                            <f:format.date format="d.m.Y">{clubOfficial.enddate}</f:format.date>
+                        </f:then>
+                        <f:else>
+                            unbekannt
+                        </f:else>
+                    </f:if>
                 </td>
             </tr>
         </f:for>
