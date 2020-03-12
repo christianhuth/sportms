@@ -18,10 +18,10 @@
 			$query = $this->createQuery();
 			$constraints = [];
 			if($clubs) {
-				$constraints[] = $query->contains('club', $clubs);
+				$constraints[] = $query->equals('club', $clubs);
 			}
 			if($clubOfficialJobs) {
-				$constraints[] = $query->contains('club_official_job', $clubOfficialJobs);
+				$constraints[] = $query->equals('club_official_job', $clubOfficialJobs);
 			}
 			if($constraints) {
 				$query->matching($query->logicalAnd($constraints));
