@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <T3DataStructure>
 	<sheets>
-		<sDEF>EXT:clubms/Configuration/FlexForms/flexform_base.xml</sDEF>
+		<base>EXT:clubms/Configuration/FlexForms/flexform_base.xml</base>
 		<scope>EXT:clubms/Configuration/FlexForms/flexform_scope.xml</scope>
 		<single>EXT:clubms/Configuration/FlexForms/flexform_single.xml</single>
 		<club>EXT:clubms/Configuration/FlexForms/flexform_club.xml</club>
