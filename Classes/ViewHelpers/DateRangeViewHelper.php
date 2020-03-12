@@ -24,6 +24,7 @@
 			
 			$enddate = new \DateTime();
 			$enddate->setTimestamp($this->arguments['enddate']);
+			$enddate->add(new DateInterval('P1D'));
 			
 			$diff = $enddate->diff($startdate)->format($this->arguments['format']);
 			
