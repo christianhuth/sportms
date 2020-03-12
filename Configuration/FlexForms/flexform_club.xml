@@ -59,6 +59,15 @@
 					</config>
 				</TCEforms>
 			</settings.club.uid>
+			<settings.club.showSections>
+				<TCEforms>
+					<label>Zeige die Abteilungen des Vereins</label>
+					<displayCond><numIndex index="0">FIELD:base.switchableControllerActions:=:Club->show</numIndex></displayCond>
+					<config>
+						<type>check</type>
+					</config>
+				</TCEforms>
+			</settings.club.showSections>
 		</el>
 	</ROOT>
 </T3DataStructure>
