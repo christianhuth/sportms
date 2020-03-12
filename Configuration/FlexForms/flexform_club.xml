@@ -58,7 +58,7 @@
 			</settings.club.officials.clubs.selectbox>
 			<settings.club.officials.currentOfficialsOnly>
 				<TCEforms>
-					<label>Zeige nur die aktuellen Funktionäre des Vereins</label>
+					<label>Zeige nur die aktuellen Funktionäre</label>
 					<displayCond>FIELD:base.switchableControllerActions:=:Club->officials</displayCond>
 					<config>
 						<default>0</default>
