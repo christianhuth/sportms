@@ -36,7 +36,6 @@ class ClubOfficial extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 
     /**
      * @var \Balumedien\Clubms\Domain\Model\Club
-     * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
      */
     protected $club;
 
@@ -70,45 +69,44 @@ class ClubOfficial extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * @param \Balumedien\Clubms\Domain\Model\Club $club
 	 */
-	public function setClub($club) {
+	public function setClub(\Balumedien\Clubms\Domain\Model\Club $club) {
 		$this->club = $club;
 	}
 
     /**
      * @return Person
      */
-    public function getPerson()
-    {
+    public function getPerson() {
         return $this->person;
     }
 
     /**
      * @param Person $person
+     * @return void
      */
-    public function setPerson($person)
-    {
+    public function setPerson($person)  {
         $this->person = $person;
     }
 
 	/**
-	 * @return ClubOfficialJob
+	 * @return \Balumedien\Clubms\Domain\Model\ClubOfficialJob ClubOfficialJob
 	 */
 	public function getClubOfficialJob() {
 		return $this->clubOfficialJob;
 	}
 
 	/**
-	 * @param ClubOfficialJob $clubOfficialJob
+	 * @param \Balumedien\Clubms\Domain\Model\ClubOfficialJob $clubOfficialJob
+	 * @return void
 	 */
-	public function setClubOfficialJob($clubOfficialJob) {
+	public function setClubOfficialJob(\Balumedien\Clubms\Domain\Model\ClubOfficialJob $clubOfficialJob) {
 		$this->clubOfficialJob = $clubOfficialJob;
 	}
 
     /**
      * @return int
      */
-    public function getStartdate()
-    {
+    public function getStartdate() {
         return $this->startdate;
     }
 
