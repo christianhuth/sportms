@@ -46,16 +46,6 @@
 					</config>
 				</TCEforms>
 			</settings.club.officials.clubs>
-			<settings.club.officials.clubsSelectbox>
-				<TCEforms>
-					<label>Selectbox für Vereine?</label>
-					<config>
-						<default>1</default>
-						<renderType>checkboxToggle</renderType>
-						<type>check</type>
-					</config>
-				</TCEforms>
-			</settings.club.officials.clubsSelectbox>
 			<settings.club.officials.currentOfficialsOnly>
 				<TCEforms>
 					<label>Zeige nur die aktuellen Funktionäre</label>
@@ -79,16 +69,6 @@
 					</config>
 				</TCEforms>
 			</settings.club.officials.jobs>
-			<settings.club.officials.jobsSelectbox>
-				<TCEforms>
-					<label>Selectbox für Funktionärstätigkeiten?</label>
-					<config>
-						<default>1</default>
-						<renderType>checkboxToggle</renderType>
-						<type>check</type>
-					</config>
-				</TCEforms>
-			</settings.club.officials.jobsSelectbox>
 		</el>
 	</ROOT>
 </T3DataStructure>
