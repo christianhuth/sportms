@@ -78,21 +78,11 @@ class ClubController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 	public function officialsAction() {
 		
 		$clubs = $this->settings['club']['officials']['clubs'];
-		
-		$clubsSelectbox = $this->settings['club']['officials']['clubsSelectbox'];
-		
 		$jobs = $this->settings['club']['officials']['jobs'];
-		
-		$jobsSelectbox = $this->settings['club']['officials']['jobsSelectbox'];
-		
 		$currentOfficialsOnly = $this->settings['club']['officials']['currentOfficialsOnly'];
 		
 		$clubOfficials = $this->clubOfficialRepository->findAll($clubs, $jobs, $currentOfficialsOnly);
 		
-		$this->view->assign('clubs', $clubs);
-		#$this->view->assign('settings.officials.clubsSelectbox', $clubsSelectbox);
-		$this->view->assign('jobs', $jobs);
-		#$this->view->assign('settings.officials.jobsSelectbox', $jobsSelectbox);
 		$this->view->assign('clubOfficials', $clubOfficials);
 		
 	}
