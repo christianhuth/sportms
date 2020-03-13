@@ -12,7 +12,7 @@
                 <f:form.select name="clubs" prependOptionValue="" prependOptionLabel="Alle" options="{clubOfficials}" optionValueField="club.uid" optionLabelField="club.name"/>
             </f:if>
             <f:if condition="{settings.club.officials.jobsSelectbox}">
-                <f:form.select name="clubs" prependOptionValue="" prependOptionLabel="Alle" options="{clubOfficials}" optionValueField="club_official_job.uid" optionLabelField="club_official_job.label"/>
+                <f:form.select name="clubs" prependOptionValue="" prependOptionLabel="Alle" options="{clubOfficials}" optionValueField="clubOfficialJob.uid" optionLabelField="clubOfficialJob.label"/>
             </f:if>
             <f:form.submit value="Los"/>
         </f:form>
