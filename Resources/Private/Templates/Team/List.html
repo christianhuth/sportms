@@ -4,8 +4,8 @@
 <f:layout name="default"/>
 
 <f:section name="default">
-    <f:if condition="{teams}">
         <table class="table table-bordered table-hover table-striped">
+            <thead>
             <tr>
                 <th>Mannschaftsname</th>
                 <th>Verein</th>
@@ -15,26 +15,34 @@
                 <th>Anzahl</th>
                 <th>Einzelansicht</th>
             </tr>
-            <f:for as="team" each="{teams}">
-                <f:debug>{team}</f:debug>
-                <tr>
-                    <td>{team.name}</td>
-                    <td>{team.club.name}</td>
-                    <td>{team.section.label}</td>
-                    <td>{team.ageLevel.label}</td>
-                    <td>{team.dummy}</td>
-                    <td>
-                        <f:count>{team.teamSeason}</f:count>
-                    </td>
-                    <td>
-                        <f:if condition="{team.detailLink}">
-                            <f:link.action action="detail" arguments="{uid: team}">LINK</f:link.action>
-                        </f:if>
-                    </td>
-                </tr>
-            </f:for>
+            </thead>
+            <tbody>
+            <f:if condition="{teams}">
+                <f:then>
+                <f:for as="team" each="{teams}">
+                    <tr>
+                        <td>{team.name}</td>
+                        <td>{team.club.name}</td>
+                        <td>{team.section.label}</td>
+                        <td>{team.ageLevel.label}</td>
+                        <td>{team.dummy}</td>
+                        <td>
+                            <f:count>{team.teamSeason}</f:count>
+                        </td>
+                        <td>
+                            <f:if condition="{team.detailLink}">
+                                <f:link.action action="detail" arguments="{uid: team}">LINK</f:link.action>
+                            </f:if>
+                        </td>
+                    </tr>
+                </f:for>
+                </f:then>
+                <f:else>
+                    <td colspan="7">Keine Mannschaften gefunden</td>
+                </f:else>
+            </f:if>
+            </tbody>
         </table>
-    </f:if>
 </f:section>
 
 </html>
