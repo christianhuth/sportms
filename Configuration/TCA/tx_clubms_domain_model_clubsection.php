@@ -7,7 +7,7 @@ return array(
 	'ctrl' => array(
 		'crdate' => 'crdate',
 		'cruser_id' => 'cruser_id',
-		'default_sortby' => ' ORDER BY tx_clubms_domain_model_section.label ASC',
+		#'default_sortby' => ' ORDER BY tx_clubms_domain_model_section.label ASC',
 		'delete' => 'deleted',
 		'dividers2tabs' => TRUE,
 		'enablecolumns' => array(
