@@ -1,8 +1,8 @@
 <html data-namespace-typo3-fluid="true"
+      v:schemaLocation="https://fluidtypo3.org/schemas/vhs-master.xsd"
       xmlns:clubms="Balumedien\Clubms\ViewHelpers"
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
-      v:schemaLocation="https://fluidtypo3.org/schemas/vhs-master.xsd">
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers">
 
 <f:layout name="default"/>
 
@@ -34,13 +34,7 @@
                             <td>{person.lastname}</td>
                             <td>{person.firstname}</td>
                             <td>{person.nickname}</td>
-                            <td><v:resource.record
-                                    table="sys_language"
-                                    field="title"
-                                    uid="{person.nationality}"
-                                    as="languageTitle">
-                                {languageTitle}
-                            </v:resource.record></td>
+                            <td>{person.nationality}</td>
                             <td>
                                 <clubms:link.action Person="{person}">LINK</clubms:link.action>
                             </td>
