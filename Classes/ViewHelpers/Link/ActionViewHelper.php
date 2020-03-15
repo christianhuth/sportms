@@ -8,19 +8,19 @@
 		 * @var \TYPO3\CMS\Extbase\Object\ObjectManager
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
-		private $objectManager;
+		protected $objectManager;
 		
 		/**
 		 * @var \TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
-		private $configurationManager;
+		protected $configurationManager;
 		
 		/**
 		 * @var array
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
-		private $settings;
+		protected $settings;
 		
 		/**
 		 * @return \TYPO3\CMS\Extbase\Object\ObjectManager
@@ -32,7 +32,7 @@
 		/**
 		 * @param \TYPO3\CMS\Extbase\Object\ObjectManager $objectManager
 		 */
-		private function setObjectManager(\TYPO3\CMS\Extbase\Object\ObjectManager $objectManager): void {
+		protected function setObjectManager(\TYPO3\CMS\Extbase\Object\ObjectManager $objectManager): void {
 			$this->objectManager = $objectManager;
 		}
 		
@@ -46,7 +46,7 @@
 		/**
 		 * @param \TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface $configurationManager
 		 */
-		private function setConfigurationManager(\TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface $configurationManager): void {
+		protected function setConfigurationManager(\TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface $configurationManager): void {
 			$this->configurationManager = $configurationManager;
 		}
 		
@@ -60,7 +60,7 @@
 		/**
 		 * @param array $settings
 		 */
-		private function setSettings(array $settings): void {
+		protected function setSettings(array $settings): void {
 			$this->settings = $settings;
 		}
 		
@@ -73,7 +73,7 @@
 		}
 		
 		# Needed so we can fill $this->getSettings()
-		private function initSettings() {
+		protected function initSettings() {
 			$configurationManager = $this->objectManager->get('TYPO3\CMS\Extbase\Configuration\ConfigurationManager');
 			$this->setSettings($configurationManager->getConfiguration(\TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface::CONFIGURATION_TYPE_SETTINGS, 'Clubms', 'clubms'));
 		}
