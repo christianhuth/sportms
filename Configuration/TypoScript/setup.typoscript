@@ -1,11 +1,5 @@
 plugin.tx_clubms {
 
-    css {
-        pathToCssFile = {$plugin.tx_clubms.css.pathToCssFile}
-        mainClass = {$plugin.tx_clubms.css.mainClass}
-        wrapperClass = {$plugin.tx_clubms.css.wrapperClass}
-    }
-
     persistence {
         storagePid = {$plugin.tx_clubms.persistence.storagePid}
         recursive = {$plugin.tx_clubms.persistence.recursive}
@@ -14,6 +8,12 @@ plugin.tx_clubms {
     # ====================================
     # Settings available inside Controller and View by accessing $this->settings or {settings.xyz}
     # ====================================
+    settings.css {
+        pathToCssFile = {$plugin.tx_clubms.settings.css.pathToCssFile}
+        mainClass = {$plugin.tx_clubms.settings.css.mainClass}
+        wrapperClass = {$plugin.tx_clubms.settings.css.wrapperClass}
+    }
+
     settings {
 
         club {
@@ -79,10 +79,12 @@ plugin.tx_clubms {
             0 = EXT:clubms/Resources/Private/Layouts/
             1 = {$plugin.tx_clubms.view.layoutRootPath}
         }
+
         partialRootPaths {
             0 = EXT:clubms/Resources/Private/Partials/
             1 = {$plugin.tx_clubms.view.partialRootPath}
         }
+
         templateRootPaths {
             0 = EXT:clubms/Resources/Private/Templates/
             1 = {$plugin.tx_clubms.view.templateRootPath}
