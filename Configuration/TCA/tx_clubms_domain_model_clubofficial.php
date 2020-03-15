@@ -146,7 +146,7 @@ return array(
 			),
 			'exclude' => 1,
 			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubofficial.until_today',
-			'onchange' => 'reload',
+			'onChange' => 'reload',
 		),
         'enddate' => array(
 	        'config' => array(
