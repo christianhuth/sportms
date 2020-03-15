@@ -11,7 +11,6 @@
             <thead>
             <tr>
                 <th>Abteilung</th>
-                <th>Bilder</th>
                 <th>Altersgruppen und -stufen</th>
                 <th>Positionen</th>
             </tr>
@@ -28,7 +27,21 @@
                                 <f:debug>{section}</f:debug>
                                 <f:if condition="{section.sectionAgeGroups}">
                                     <f:then>
-
+                                        <f:for as="sectionAgeGroup" each="{section.sectionAgeGroups}">
+                                            <ul>
+                                                <li>{sectionAgeGroup.label}
+                                                    <f:if condition="{sectionAgeGroup.sectionAgeLevels}">
+                                                        <f:then>
+                                                            <ul>
+                                                                <f:for as="sectionAgeLevel" each="{sectionAgeGroup.sectionAgeLevels}">
+                                                                    <li>{sectionAgeLevel.label}</li>
+                                                                </f:for>
+                                                            </ul>
+                                                        </f:then>
+                                                    </f:if>
+                                                </li>
+                                            </ul>
+                                        </f:for>
                                     </f:then>
                                     <f:else>
                                         -
