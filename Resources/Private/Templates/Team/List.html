@@ -23,7 +23,7 @@
                     <f:for as="team" each="{teams}">
                         <tr>
                             <td>
-                                <f:link.action action="show" arguments="{club: team.club}" controller="Club" pageUid="{settings.club.showPid}">{team.club.name}</f:link.action>
+                                <clubms:link.action Club="{team.club}">{team.club.name}</clubms:link.action>
                             </td>
                             <td>
                                 <clubms:link.action Section="{team.clubSection.section}">{team.clubSection.section.label}</clubms:link.action>
