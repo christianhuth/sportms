@@ -68,7 +68,7 @@
 		public function dbStatsAction() {
 			
 			/* Domain Model Club */
-			$clubCount = $this->clubRepository->findAll()->count();
+			$clubCount = $this->clubRepository->findAll();
 			$this->view->assign('clubCount', $clubCount);
 			
 			/* Domain Model Competition */
