@@ -49,6 +49,7 @@
 			<settings.club.officials.clubsSelectbox>
 				<TCEforms>
 					<label>Selectbox für Vereine?</label>
+					<displayCond>FIELD:base.switchableControllerActions:=:Club->officials</displayCond>
 					<config>
 						<default>1</default>
 						<renderType>checkboxToggle</renderType>
@@ -71,6 +72,7 @@
 			<settings.club.officials.jobsSelectbox>
 				<TCEforms>
 					<label>Selectbox für Funktionärstätigkeiten?</label>
+					<displayCond>FIELD:base.switchableControllerActions:=:Club->officials</displayCond>
 					<config>
 						<default>1</default>
 						<renderType>checkboxToggle</renderType>
