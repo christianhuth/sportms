@@ -23,6 +23,7 @@
 			if($clubOfficialJobs) {
 				$constraints[] = $query->in('club_official_job', explode(",", $clubOfficialJobs));
 			}
+			$constraints[] = $query->equals('untilToday', $currentOfficialsOnly);
 			if($constraints) {
 				$query->matching($query->logicalAnd($constraints));
 			}
