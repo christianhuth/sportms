@@ -38,7 +38,7 @@
 			$controller = $this->arguments['controller'];
 			$extensionName = "clubms";
 			$pluginName = "clubms";
-			$pageUid = (int) $this->settings['Section']['showPid'] ? : NULL;
+			$pageUid = (int) $this->settings['section']['showPid'] ? : NULL;
 			
 			$pageType = (int) $this->arguments['pageType'];
 			$noCache = (bool) $this->arguments['noCache'];
