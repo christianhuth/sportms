@@ -191,6 +191,7 @@ CREATE TABLE tx_clubms_domain_model_clubofficial (
     club_official_job int(11) DEFAULT '0' NOT NULL,
 	startdate int(11) DEFAULT NULL,
 	enddate int(11) DEFAULT NULL,
+    until_today tinyint(4) unsigned DEFAULT '0' NOT NULL,
 	
 	sorting int(11) DEFAULT '0' NOT NULL,
 	

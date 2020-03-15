@@ -171,6 +171,9 @@
 			<trans-unit id="tx_clubms_domain_model_clubofficial.enddate">
 				<source>Enddatum</source>
 			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_clubofficial.until_today">
+				<source>Wird bis heute ausgeführt?</source>
+			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_clubofficial.tab_date">
 				<source>Zeitraum</source>
 			</trans-unit>

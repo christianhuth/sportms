@@ -29,7 +29,7 @@ return array(
 	),
 	'types' => array(
 		'1' => array('showitem' => 'club_official_job, person, 
-		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubofficial.tab_date, startdate, enddate,'),
+		                            --div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubofficial.tab_date, startdate, until_today, enddate'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -129,26 +129,36 @@ return array(
         ),
 
         'startdate' => array(
+	        'config' => array(
+		        'type' => 'input',
+		        'size' => 8,
+		        'eval' => 'date',
+		        'placeholder' => 'dd-mm-yyyy',
+		        'renderType' => 'inputDateTime',
+	        ),
             'exclude' => 1,
             'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubofficial.startdate',
-            'config' => array(
-                'type' => 'input',
-                'size' => 8,
-                'eval' => 'date',
-                'placeholder' => 'dd-mm-yyyy',
-				'renderType' => 'inputDateTime',
-            ),
         ),
+		'until_today' => array(
+			'config' => array(
+				'renderType' => 'checkboxToggle',
+				'type' => 'check',
+			),
+			'exclude' => 1,
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubofficial.until_today',
+			'onchange' => 'reload',
+		),
         'enddate' => array(
+	        'config' => array(
+		        'type' => 'input',
+		        'size' => 8,
+		        'eval' => 'date',
+		        'placeholder' => 'dd-mm-yyyy',
+		        'renderType' => 'inputDateTime',
+	        ),
+	        'displayCond' => 'FIELD:until_today:=:0',
             'exclude' => 1,
             'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubofficial.enddate',
-            'config' => array(
-                'type' => 'input',
-                'size' => 8,
-                'eval' => 'date',
-                'placeholder' => 'dd-mm-yyyy',
-				'renderType' => 'inputDateTime',
-            ),
         ),
 		
 	),
