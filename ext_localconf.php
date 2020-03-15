@@ -7,11 +7,14 @@
 			'Club' => 'list, show, sections',
 			'ClubSection' => 'list, show',
 			'Competition' => 'list, show',
+			'CompetitionSeason' => 'list, show',
 			'Game' => 'list, show',
-			'Person' => 'list, show, official, player, referee',
+			'Person' => 'list, show',
+			'PersonProfile' => 'list, show',
 			'Season' => 'list, show',
 			'Team' => 'list, show',
 			'TeamSeason' => 'list, show',
+			'Venue' => 'list, show',
 		),
 		array(
 		
