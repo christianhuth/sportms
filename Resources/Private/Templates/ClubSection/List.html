@@ -1,0 +1,45 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:clubms="Balumedien\Clubms\ViewHelpers"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<f:layout name="default"/>
+
+<f:section name="default">
+
+    <div class="tx-clubms-clubsection-list">
+        <table class="table table-bordered table-hover table-striped">
+            <thead>
+            <tr>
+                <th>Verein</th>
+                <th>Abteilung</th>
+                <th>Mannschaften</th>
+            </tr>
+            </thead>
+            <tbody>
+            <f:if condition="{clubSections}">
+                <f:then>
+                    <f:for as="clubSection" each="{clubSections}">
+                        <tr>
+                            <td>
+                                <clubms:link.action Club="{clubSection.club}">{clubSection.club.name}</clubms:link.action>
+                            </td>
+                            <td>
+                                <clubms:link.action ClubSection="{clubSection}">{clubSection.section.label}</clubms:link.action>
+                            </td>
+                            <td>
+                                <f:count>{clubSection.teams}</f:count>
+                            </td>
+                        </tr>
+                    </f:for>
+                </f:then>
+                <f:else>
+                    <td colspan="3">Keine Vereinsabteilungen gefunden.</td>
+                </f:else>
+            </f:if>
+            </tbody>
+        </table>
+    </div>
+
+</f:section>
+
+</html>
