@@ -21,7 +21,7 @@
             <f:then>
                 <f:for as="team" each="{teams}">
                     <tr>
-                        <td>{team.clubSection.section.label}</td>
+                        <td><f:link.action action="show" controller="Section" pageUid="{settings.section.showPid}" arguments="{section: team.clubSection.section}">{team.clubSection.section.label}</f:link.action></td>
                         <td>{team.club.name}</td>
                         <td>{team.name}</td>
                         <td>{team.ageLevel.label}</td>
