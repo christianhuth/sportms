@@ -82,6 +82,7 @@
 		 * @return string Rendered link
 		 */
 		public function renderLink($action = null, $controller = null, $pageUid = null, $parameters = null) {
+			\TYPO3\CMS\Core\Utility\DebugUtility::debug($parameters, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			$extensionName = "clubms";
 			$pluginName = "clubms";
 			$pageType = (int) $this->arguments['pageType'];
