@@ -5,18 +5,17 @@
 
 <f:section name="default">
 
-    <f:if condition="{seasons}">
-        <ul>
-            <li>
-                <f:translate key="tx_clubms_domain_model_person.lastname"/>
-                ,
-                <f:translate key="tx_clubms_domain_model_person.firstname"/>
-            </li>
-            <f:for as="season" each="{seasons}">
-                <li>{season.season_name}, {season.season_name_short}, {season.season_name_very_short}</li>
-            </f:for>
-        </ul>
-    </f:if>
+    <div class="tx-clubms-season-list">
+
+        <f:if condition="{seasons}">
+            <ul>
+                <f:for as="season" each="{seasons}">
+                    <li>{season.seasonName}, {season.seasonNameShort}, {season.seasonNameVeryShort}</li>
+                </f:for>
+            </ul>
+        </f:if>
+
+    </div>
 
 </f:section>
 
