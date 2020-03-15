@@ -1,32 +1,50 @@
-<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-	  data-namespace-typo3-fluid="true">
+<html data-namespace-typo3-fluid="true"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
-	<f:if condition="{persons}">
-		<table>
-			<tr>
-				<th><f:translate key="tx_clubms_domain_model_person.name"/></th>
-				<th><f:translate key="tx_clubms_domain_model_person.nickname"/></th>
-				<th><f:translate key="tx_clubms_domain_model_person.placeOfBirth"/></th>
-				<th><f:translate key="tx_clubms_domain_model_person.nationality"/></th>
-				<th><f:translate key="tx_clubms_domain_model_person.gender"/></th>
-				<th>Einzelansicht</th>
-			</tr>
-			<f:for each="{persons}" as="person">
-				<tr>
-					<td>{person.lastname}, {person.firstname}</td>
-					<td>{person.nickname}</td>
-					<td>{person.placeOfBirth}</td>
-					<td>{person.nationality}</td>
-					<td>
-						<f:switch expression="{person.gender}">
-							<f:case value="m">männlich</f:case>
-							<f:case value="f">weiblich</f:case>
-						</f:switch>
-					</td>
-					<td><f:if condition="{person.detailLink}"><f:link.action action="show" arguments="{person: person}">LINK</f:link.action></f:if></td>
-				</tr>
-			</f:for>
-		</table>
-	</f:if>
+<f:layout name="default"/>
 
+<f:section name="default">
+
+    <f:if condition="{persons}">
+        <table>
+            <tr>
+                <th>
+                    <f:translate key="tx_clubms_domain_model_person.name"/>
+                </th>
+                <th>
+                    <f:translate key="tx_clubms_domain_model_person.nickname"/>
+                </th>
+                <th>
+                    <f:translate key="tx_clubms_domain_model_person.placeOfBirth"/>
+                </th>
+                <th>
+                    <f:translate key="tx_clubms_domain_model_person.nationality"/>
+                </th>
+                <th>
+                    <f:translate key="tx_clubms_domain_model_person.gender"/>
+                </th>
+                <th>Einzelansicht</th>
+            </tr>
+            <f:for as="person" each="{persons}">
+                <tr>
+                    <td>{person.lastname}, {person.firstname}</td>
+                    <td>{person.nickname}</td>
+                    <td>{person.placeOfBirth}</td>
+                    <td>{person.nationality}</td>
+                    <td>
+                        <f:switch expression="{person.gender}">
+                            <f:case value="m">männlich</f:case>
+                            <f:case value="f">weiblich</f:case>
+                        </f:switch>
+                    </td>
+                    <td>
+                        <f:if condition="{person.detailLink}">
+                            <f:link.action action="show" arguments="{person: person}">LINK</f:link.action>
+                        </f:if>
+                    </td>
+                </tr>
+            </f:for>
+        </table>
+    </f:if>
+</f:section>
 </html>

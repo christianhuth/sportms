@@ -1,13 +1,23 @@
-<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-	  data-namespace-typo3-fluid="true">
+<html data-namespace-typo3-fluid="true"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
-	<f:if condition="{seasons}">
-		<ul>
-			<li><f:translate key="tx_clubms_domain_model_person.lastname"/>, <f:translate key="tx_clubms_domain_model_person.firstname"/></li>
-			<f:for each="{seasons}" as="season">
-				<li>{season.season_name}, {season.season_name_short}, {season.season_name_very_short}</li>
-			</f:for>
-		</ul>
-	</f:if>
+<f:layout name="default"/>
+
+<f:section name="default">
+
+    <f:if condition="{seasons}">
+        <ul>
+            <li>
+                <f:translate key="tx_clubms_domain_model_person.lastname"/>
+                ,
+                <f:translate key="tx_clubms_domain_model_person.firstname"/>
+            </li>
+            <f:for as="season" each="{seasons}">
+                <li>{season.season_name}, {season.season_name_short}, {season.season_name_very_short}</li>
+            </f:for>
+        </ul>
+    </f:if>
+
+</f:section>
 
 </html>
