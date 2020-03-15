@@ -112,20 +112,23 @@
 	background-color: var(--regular-gray);
 	padding: 10px;
 }
-.tx-clubms .tx-clubms-container .tx-clubms-clubms-dbstats .tx-clubms-dbstat img {
+.tx-clubms .tx-clubms-container .tx-clubms-clubms-dbstats .tx-clubms-dbstat .tx-clubms-dbstat-image img {
 	background-color: white;
 	height: auto !important;
 	max-width: 100%;
 	padding: 15px;
 }
+.tx-clubms .tx-clubms-container .tx-clubms-clubms-dbstats .tx-clubms-dbstat .tx-clubms-dbstat-label {
+	text-align: center;
+}
 
 
 
-/*
- *
- * PERSON
- *
- */
+	/*
+     *
+     * PERSON
+     *
+     */
 #tx-clubms-container .tx-clubms-person-show table {
 	font-size: 12px;
 	line-height: 20px;

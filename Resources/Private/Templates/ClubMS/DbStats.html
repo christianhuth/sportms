@@ -8,26 +8,46 @@
     <div class="tx-clubms-clubms-dbstats">
         <div class="col-xs-4 tx-clubms-dbstat">
             <f:link.action action="list" controller="Person" pageUid="{settings.person.listPid}">
-                <div class="col-xs-12"><f:image src="EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_person.svg"/></div>
-                <div class="col-xs-12">{personCount} Personen</div>
+                <div class="col-xs-12 tx-clubms-dbstat-image">
+                    <f:image src="EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_person.svg"/>
+                </div>
+                <div class="col-xs-12 tx-clubms-dbstat-label">{personCount} Personen</div>
             </f:link.action>
         </div>
         <div class="col-xs-4 tx-clubms-dbstat">
-            <div class="col-xs-12"><f:image src="EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_club.svg"/></div>
-            <div class="col-xs-12"><f:link.action action="list" controller="Club" pageUid="{settings.club.listPid}">{clubCount} Vereine</f:link.action></div>
+            <f:link.action action="list" controller="Club" pageUid="{settings.club.listPid}">
+                <div class="col-xs-12 tx-clubms-dbstat-image">
+                    <f:image src="EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_club.svg"/>
+                </div>
+                <div class="col-xs-12 tx-clubms-dbstat-label">{clubCount} Vereine</div>
+            </f:link.action>
         </div>
         <div class="col-xs-4 tx-clubms-dbstat">
-            <div class="col-xs-12"><f:image src="EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_team.svg"/></div>
-            <div class="col-xs-12"><f:link.action action="list" controller="Team" pageUid="{settings.team.listPid}">{teamCount} Mannschaften</f:link.action></div>
+            <f:link.action action="list" controller="Team" pageUid="{settings.team.listPid}">
+                <div class="col-xs-12 tx-clubms-dbstat-image">
+                    <f:image src="EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_team.svg"/>
+                </div>
+                <div class="col-xs-12 tx-clubms-dbstat-label">{teamCount} Mannschaften</div>
+            </f:link.action>
         </div>
         <div class="col-xs-2"></div>
         <div class="col-xs-4 tx-clubms-dbstat">
-            <div class="col-xs-12"><f:image src="EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_game.svg"/></div>
-            <div class="col-xs-12"><f:link.action action="list" controller="Game" pageUid="{settings.game.listPid}">{gameCount} Spiele</f:link.action></div>
+            <f:link.action action="list" controller="Game" pageUid="{settings.game.listPid}">
+                <div class="col-xs-12 tx-clubms-dbstat-image">
+                    <f:image src="EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_game.svg"/>
+                </div>
+                <div class="col-xs-12 tx-clubms-dbstat-label">
+                    {gameCount} Spiele
+                </div>
+            </f:link.action>
         </div>
         <div class="col-xs-4 tx-clubms-dbstat">
-            <div class="col-xs-12"><f:image src="EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_competition.svg"/></div>
-            <div class="col-xs-12"><f:link.action action="list" controller="Competition" pageUid="{settings.competition.listPid}">{competitionCount} Wettbewerbe</f:link.action></div>
+            <f:link.action action="list" controller="Competition" pageUid="{settings.competition.listPid}">
+                <div class="col-xs-12 tx-clubms-dbstat-image">
+                    <f:image src="EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_competition.svg"/>
+                </div>
+                <div class="col-xs-12 tx-clubms-dbstat-label">{competitionCount} Wettbewerbe</div>
+            </f:link.action>
         </div>
         <div class="col-xs-2"></div>
     </div>
