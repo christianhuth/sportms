@@ -5,8 +5,9 @@
 
 <f:section name="default">
 
-    <f:if condition="{competitions}">
+    <div class="tx-clubms-competition-list">
         <table class="table table-bordered table-hover table-striped">
+            <thead>
             <tr>
                 <th>
                     <f:translate key="tx_clubms_domain_model_competition.name"/>
@@ -25,20 +26,27 @@
                 </th>
                 <th>Einzelansicht</th>
             </tr>
-            <f:for as="competition" each="{competitions}">
-                <tr>
-                    <td>{competition.name}</td>
-                    <td>{competition.short}</td>
-                    <td>{competition.section.label}</td>
-                    <td>{competition.ageLevel.label}</td>
-                    <td>{competition.competitionType}</td>
-                    <td>
-                        <f:link.action action="detail" arguments="{uid: competition}">LINK</f:link.action>
-                    </td>
-                </tr>
-            </f:for>
+            </thead>
+            <tbody>
+            <f:if condition="{competitions}">
+                <f:for as="competition" each="{competitions}">
+                    <f:then>
+                    <tr>
+                        <td>{competition.name}</td>
+                        <td>{competition.short}</td>
+                        <td>{competition.section.label}</td>
+                        <td>{competition.ageLevel.label}</td>
+                        <td>{competition.competitionType}</td>
+                    </tr>
+                    </f:then>
+                    <f:else>
+                        <td colspan="5">Keine Wettbewerbe gefunden.</td>
+                    </f:else>
+                </f:for>
+            </f:if>
+            </tbody>
         </table>
-    </f:if>
+    </div>
 
 </f:section>
 
