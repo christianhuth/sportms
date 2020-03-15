@@ -48,7 +48,30 @@
                                     </f:else>
                                 </f:if>
                             </td>
-                            <td></td>
+                            <td>
+                                <f:if condition="{section.sectionPositionGroups}">
+                                    <f:then>
+                                        <f:for as="sectionPositionGroup" each="{section.sectionPositionGroups}">
+                                            <ul>
+                                                <li>{sectionPositionGroup.label}
+                                                    <f:if condition="{sectionPositionGroup.sectionPositions}">
+                                                        <f:then>
+                                                            <ul>
+                                                                <f:for as="sectionPosition" each="{sectionPositionGroup.sectionPositions}">
+                                                                    <li>{sectionPosition.label}</li>
+                                                                </f:for>
+                                                            </ul>
+                                                        </f:then>
+                                                    </f:if>
+                                                </li>
+                                            </ul>
+                                        </f:for>
+                                    </f:then>
+                                    <f:else>
+                                        -
+                                    </f:else>
+                                </f:if>
+                            </td>
                         </tr>
                     </f:for>
                 </f:then>
