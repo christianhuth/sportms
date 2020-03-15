@@ -22,7 +22,7 @@
 		}
 		
 		/**
-		 * @param \Balumedien\Clubms\Domain\Model\Competition $competition competition item
+		 * @param \Balumedien\Clubms\Domain\Model\Competition $competition
 		 */
 		public function showAction(\Balumedien\Clubms\Domain\Model\Competition $competition = NULL) {
 			if($competition === NULL) {
