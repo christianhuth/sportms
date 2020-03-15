@@ -1,3 +1,7 @@
+# customsubcategory=css=CSS
+
+# customsubcategory=persistence=Persistence
+
 # customsubcategory=club=Settings: Club
 # customsubcategory=clubSection=Settings: ClubSection
 # customsubcategory=competition=Settings: Competition
@@ -10,11 +14,18 @@
 # customsubcategory=teamSeason=Settings: TeamSeason
 # customsubcategory=venue=Settings: Venue
 
-# customsubcategory=persistence=Persistence
-
 # customsubcategory=view=View
 
 plugin.tx_clubms {
+
+    css {
+        # cat=plugin.tx_clubms/css; type=string; label=Path to css file
+        pathToCssFile = EXT:clubms/Resources/Public/Css/clubms.css
+        # cat=plugin.tx_clubms/css; type=string; label=Main class for template
+        mainClass = tx-clubms
+        # cat=plugin.tx_clubms/css; type=string; label=Wrapper class for template
+        wrapperClass = tx-clubms-container
+    }
 
     persistence {
         # cat=plugin.tx_clubms/persistence; type=int+; label=Default storage PID
@@ -107,8 +118,6 @@ plugin.tx_clubms {
     }
 
     view {
-        # cat=plugin.tx_clubms/view; type=string; label=Path to css file (FE)
-        cssFile = EXT:clubms/Resources/Public/Css/clubms.css
         # cat=plugin.tx_clubms/view; type=string; label=Path to template layouts (FE)
         layoutRootPath = EXT:clubms/Resources/Private/Layouts/
         # cat=plugin.tx_clubms/view; type=string; label=Path to template partials (FE)

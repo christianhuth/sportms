@@ -1,5 +1,11 @@
 plugin.tx_clubms {
 
+    css {
+        pathToCssFile = {$plugin.tx_clubms.css.pathToCssFile}
+        mainClass = {$plugin.tx_clubms.css.mainClass}
+        wrapperClass = {$plugin.tx_clubms.css.wrapperClass}
+    }
+
     persistence {
         storagePid = {$plugin.tx_clubms.persistence.storagePid}
         recursive = {$plugin.tx_clubms.persistence.recursive}
@@ -69,7 +75,6 @@ plugin.tx_clubms {
     }
 
     view {
-        cssFile = {$plugin.tx_clubms.view.cssFile}
         layoutRootPaths {
             0 = EXT:clubms/Resources/Private/Layouts/
             1 = {$plugin.tx_clubms.view.layoutRootPath}
