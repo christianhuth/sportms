@@ -29,6 +29,7 @@
 				case 10: return "Skorpion";
 				case 11: return "Schütze";
 				case 12: return "Steinbock";
+				default: return "";
 			}
 		}
 		
