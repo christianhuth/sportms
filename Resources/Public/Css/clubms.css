@@ -106,6 +106,8 @@
  *
  */
 .tx-clubms .tx-clubms-container .tx-clubms-clubms-dbstats .tx-clubms-dbstat {
+}
+.tx-clubms .tx-clubms-container .tx-clubms-clubms-dbstats .tx-clubms-dbstat div {
 	background-color: var(--regular-gray);
 	padding: 10px;
 }
