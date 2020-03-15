@@ -11,37 +11,28 @@
             <table class="table table-bordered table-hover table-striped">
                 <tr>
                     <th>
-                        <f:translate key="tx_clubms_domain_model_person.name"/>
+                        <f:translate key="tx_clubms_domain_model_person.lastname"/>
+                    </th>
+                    <th>
+                        <f:translate key="tx_clubms_domain_model_person.firstname"/>
                     </th>
                     <th>
                         <f:translate key="tx_clubms_domain_model_person.nickname"/>
                     </th>
                     <th>
-                        <f:translate key="tx_clubms_domain_model_person.placeOfBirth"/>
-                    </th>
-                    <th>
                         <f:translate key="tx_clubms_domain_model_person.nationality"/>
-                    </th>
-                    <th>
-                        <f:translate key="tx_clubms_domain_model_person.gender"/>
                     </th>
                     <th>Einzelansicht</th>
                 </tr>
                 <f:for as="person" each="{persons}">
                     <tr>
-                        <td>{person.lastname}, {person.firstname}</td>
+                        <td>{person.lastname}</td>
+                        <td>{person.firstname}</td>
                         <td>{person.nickname}</td>
-                        <td>{person.placeOfBirth}</td>
                         <td>{person.nationality}</td>
                         <td>
-                            <f:switch expression="{person.gender}">
-                                <f:case value="m">männlich</f:case>
-                                <f:case value="f">weiblich</f:case>
-                            </f:switch>
-                        </td>
-                        <td>
                             <f:if condition="{person.detailLink}">
-                                <f:link.action action="show" arguments="{person: person}">LINK</f:link.action>
+                                <f:link.action action="show" controller="Person" pageUid="{settings.person.showPid}" arguments="{person: person}">LINK</f:link.action>
                             </f:if>
                         </td>
                     </tr>
