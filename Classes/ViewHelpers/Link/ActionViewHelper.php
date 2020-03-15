@@ -82,7 +82,6 @@
 		 * @return string Rendered link
 		 */
 		public function renderLink($action = null, $controller = null, $pageUid = null, $parameters = null) {
-			\TYPO3\CMS\Core\Utility\DebugUtility::debug($parameters, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			$extensionName = "clubms";
 			$pluginName = "clubms";
 			$pageType = (int) $this->arguments['pageType'];
@@ -96,8 +95,6 @@
 			$addQueryString = (bool) $this->arguments['addQueryString'];
 			$argumentsToBeExcludedFromQueryString = (array) $this->arguments['argumentsToBeExcludedFromQueryString'];
 			$addQueryStringMethod = $this->arguments['addQueryStringMethod'];
-			$parameters = $this->arguments['arguments'];
-			\TYPO3\CMS\Core\Utility\DebugUtility::debug($parameters, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			$uriBuilder = $this->renderingContext->getControllerContext()->getUriBuilder();
 			$uri = $uriBuilder->reset()->setTargetPageUid($pageUid)->setTargetPageType($pageType)->setNoCache($noCache)->setUseCacheHash(!$noCacheHash)->setSection($section)->setFormat($format)->setLinkAccessRestrictedPages($linkAccessRestrictedPages)->setArguments($additionalParams)->setCreateAbsoluteUri($absolute)->setAddQueryString($addQueryString)->setArgumentsToBeExcludedFromQueryString($argumentsToBeExcludedFromQueryString)->setAddQueryStringMethod($addQueryStringMethod)->uriFor($action, $parameters, $controller, $extensionName, $pluginName);
 			$this->tag->addAttribute('href', $uri);
