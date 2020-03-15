@@ -9,7 +9,7 @@
 		 */
 		public function initializeArguments() {
 			parent::initializeArguments();
-			$this->registerArgument('address', 'string', 'the address', true);
+			$this->registerArgument('Address', '\Balumedien\Clubms\Domain\Model\Address', 'the address to show', true);
 		}
 		
 		/**
