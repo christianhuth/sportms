@@ -10,7 +10,7 @@
 		 */
 		public function initializeArguments() {
 			parent::initializeArguments();
-			$this->registerArgument('clubMsSection', '\Balumedien\Clubms\Domain\Model\Section', 'section to show', false);
+			$this->registerArgument('Section', '\Balumedien\Clubms\Domain\Model\Section', 'section to show', false);
 		}
 		
 		/**
