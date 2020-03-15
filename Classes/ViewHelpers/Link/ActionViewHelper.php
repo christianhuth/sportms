@@ -12,7 +12,7 @@
 		
 		/**
 		 * @var \TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface
-		 * @inject
+		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
 		protected $configurationManager;
 		
@@ -21,6 +21,7 @@
 		 */
 		public function initializeArguments() {
 			parent::initializeArguments();
+			$this->registerArgument('section', '\Balumedien\Clubms\Domain\Model\Section', 'section to show', false);
 		}
 		
 		/**
