@@ -145,7 +145,7 @@
 			$pageUid = $this->arguments['pageUid'] ? (int) $this->arguments['pageUid'] : (int) $this->getSettings()[lcfirst($controller)][$action . 'Pid'] ? : NULL;
 			$parameters = $this->arguments['arguments'] ? $this->arguments['arguments'] : array();
 			if($this->getClubMsDomainModel() != null) {
-				if($this->getClubMsDomainModel() != "ClubSection" && $this->getClubMsDomainModel() != "ClubSection" != "CompetitionSeason" && $this->getClubMsDomainModel() != "TeamSeason") {
+				if($this->getClubMsDomainModel() != "ClubSection" && $this->getClubMsDomainModel() != "CompetitionSeason" && $this->getClubMsDomainModel() != "TeamSeason") {
 					$parameters[lcfirst($this->getClubMsDomainModel())] = $this->arguments[$this->getClubMsDomainModel()];
 				}
 			}
