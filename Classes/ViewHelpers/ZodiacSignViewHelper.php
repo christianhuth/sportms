@@ -18,8 +18,7 @@
 		public function render() {
 			$localizationUtility = new \TYPO3\CMS\Extbase\Utility\LocalizationUtility;
 			$langKey = 'tx_clubms_domain_model_person.zodiac_sign_' . $this->arguments['zodiacSign'];
-			$translatedZodiacSign = $localizationUtility->translate($langKey, "clubms");
-			return $translatedZodiacSign;
+			return $localizationUtility->translate($langKey, "clubms");
 		}
 		
 	}

@@ -55,66 +55,7 @@
                         <f:translate key="tx_clubms_domain_model_person.zodiacSign"/>
                     </td>
                     <td class="content">
-                        <f:if condition="{0: person.zodiacSign} == {0: '1'}">
-                            <f:then>
-                                <f:translate key="tx_clubms_domain_model_person.zodiacSign_1"/>
-                            </f:then>
-                        </f:if>
-                        <f:if condition="{0: person.zodiacSign} == {0: '2'}">
-                            <f:then>
-                                <f:translate key="tx_clubms_domain_model_person.zodiacSign_2"/>
-                            </f:then>
-                        </f:if>
-                        <f:if condition="{0: person.zodiacSign} == {0: '3'}">
-                            <f:then>
-                                <f:translate key="tx_clubms_domain_model_person.zodiacSign_3"/>
-                            </f:then>
-                        </f:if>
-                        <f:if condition="{0: person.zodiacSign} == {0: '4'}">
-                            <f:then>
-                                <f:translate key="tx_clubms_domain_model_person.zodiacSign_4"/>
-                            </f:then>
-                        </f:if>
-                        <f:if condition="{0: person.zodiacSign} == {0: '5'}">
-                            <f:then>
-                                <f:translate key="tx_clubms_domain_model_person.zodiacSign_5"/>
-                            </f:then>
-                        </f:if>
-                        <f:if condition="{0: person.zodiacSign} == {0: '6'}">
-                            <f:then>
-                                <f:translate key="tx_clubms_domain_model_person.zodiacSign_6"/>
-                            </f:then>
-                        </f:if>
-                        <f:if condition="{0: person.zodiacSign} == {0: '7'}">
-                            <f:then>
-                                <f:translate key="tx_clubms_domain_model_person.zodiacSign_7"/>
-                            </f:then>
-                        </f:if>
-                        <f:if condition="{0: person.zodiacSign} == {0: '8'}">
-                            <f:then>
-                                <f:translate key="tx_clubms_domain_model_person.zodiacSign_8"/>
-                            </f:then>
-                        </f:if>
-                        <f:if condition="{0: person.zodiacSign} == {0: '9'}">
-                            <f:then>
-                                <f:translate key="tx_clubms_domain_model_person.zodiacSign_9"/>
-                            </f:then>
-                        </f:if>
-                        <f:if condition="{0: person.zodiacSign} == {0: '10'}">
-                            <f:then>
-                                <f:translate key="tx_clubms_domain_model_person.zodiacSign_10"/>
-                            </f:then>
-                        </f:if>
-                        <f:if condition="{0: person.zodiacSign} == {0: '11'}">
-                            <f:then>
-                                <f:translate key="tx_clubms_domain_model_person.zodiacSign_11"/>
-                            </f:then>
-                        </f:if>
-                        <f:if condition="{0: person.zodiacSign} == {0: '12'}">
-                            <f:then>
-                                <f:translate key="tx_clubms_domain_model_person.zodiacSign_12"/>
-                            </f:then>
-                        </f:if>
+                        <clubms:zodiacSign zodiacSign="{person.zodiacSign}"/>
                     </td>
                 </tr>
             </f:if>
