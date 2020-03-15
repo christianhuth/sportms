@@ -27,6 +27,14 @@
 			$newLabel = $officialJob['label'] . ": " . $person['firstname'] . " " . $person['lastname'];
 			$parameters['title'] = $newLabel;
 		}
+		
+		public function clubSectionLabel(&$parameters, $parentObject) {
+			$record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
+			$club = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_club", $record['club']);
+			$section = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_clubms_domain_model_section", $record['section']);
+			$newLabel = $club['name'] . ": " . $section['label'];
+			$parameters['title'] = $newLabel;
+		}
 
 		public function clubSectionOfficialLabel(&$parameters, $parentObject) {
 			$record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
