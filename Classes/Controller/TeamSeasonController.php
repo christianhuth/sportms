@@ -63,27 +63,5 @@ class TeamSeasonController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContr
 	    	// TODO: ERROR HANDLING
 	    }
     }
-    
-    public function showActionByTeamAndSeason(\Balumedien\Clubms\Domain\Model\Team $team = null, \Balumedien\Clubms\Domain\Model\Season $season = null) {
-	    if($team === null) {
-		    if($this->settings['single']['team']) {
-			    $teamUid = $this->settings['single']['team'];
-			    $team = $this->teamRepository->findByUid($teamUid);
-		    } else {
-			    // TODO: DIE IF NO TEAM IS SELECTED VIA FLEXFORM
-		    }
-	    }
-	    if($season === null) {
-		    if($this->settings['single']['season']) {
-			    $seasonUid = $this->settings['single']['season'];
-			    $season = $this->seasonRepository->findByUid($seasonUid);
-		    } else {
-			    $season = $this->teamSeasonRepository->findLatestSeasonOfTeam($team);
-		    }
-	    }
-	    // AT THIS POINT WE DEFINITELY HAVE TEAM AND SEASON OR WE DIED EARLIER
-	    $teamSeason = $this->teamSeasonRepository->findByTeamAndSeason($team, $season);
-	    $this->view->assign('teamSeason', $teamSeason);
-    }
 
 }
