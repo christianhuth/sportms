@@ -20,7 +20,7 @@
 			$action = "show";
 			$controller = "Section";
 			$pageUid = (int) $this->getSettings()['section']['showPid'] ? : NULL;
-			parent::render($action, $controller, $pageUid);
+			$this->renderLink($action, $controller, $pageUid);
 		}
 		
 	}

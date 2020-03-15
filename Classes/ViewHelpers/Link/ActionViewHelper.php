@@ -81,7 +81,7 @@
 		/**
 		 * @return string Rendered link
 		 */
-		public function render($action = null, $controller = null, $pageUid = null) {
+		public function renderLink($action = null, $controller = null, $pageUid = null) {
 			$extensionName = "clubms";
 			$pluginName = "clubms";
 			$pageType = (int) $this->arguments['pageType'];
