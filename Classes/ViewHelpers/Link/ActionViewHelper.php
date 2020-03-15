@@ -128,13 +128,14 @@
 		 * @return string Rendered link
 		 */
 		public function render() {
-			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->arguments, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
+			$this->initListOfClubMsDomainModels();
 			foreach($this->getListOfClubMsDomainModels() as $clubMsDomainModel) {
 				if($this->arguments[$clubMsDomainModel]) {
 					$this->setClubMsDomainModel($clubMsDomainModel);
 					break;
 				}
 			}
+			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->arguments, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			$extensionName = "clubms";
 			$pluginName = "clubms";
 			$action = "show";
