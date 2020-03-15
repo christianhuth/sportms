@@ -27,7 +27,7 @@
                                 <clubms:link.action ClubSection="{clubSection}">{clubSection.section.label}</clubms:link.action>
                             </td>
                             <td>
-                                <f:count>{clubSection.teams}</f:count>
+                                <clubms:link.action action="list" controller="ClubSection"><f:count>{clubSection.teams}</f:count></clubms:link.action>
                             </td>
                         </tr>
                     </f:for>
