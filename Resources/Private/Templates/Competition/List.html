@@ -21,6 +21,7 @@
                 <th>
                     <f:translate key="tx_clubms_domain_model_competition.competitionType"/>
                 </th>
+                <th>Wettbewerbsinstanzen</th>
             </tr>
             </thead>
             <tbody>
@@ -32,6 +33,7 @@
                             <td><f:link.action action="show" controller="Competition" pageUid="{settings.competition.showPid}" arguments="{competition: competition}">{competition.name}</f:link.action></td>
                             <td>{competition.ageLevel.label}</td>
                             <td>{competition.competitionType}</td>
+                            <td><f:count>{competition.competitionSeasons}</f:count></td>
                         </tr>
                     </f:for>
                 </f:then>
