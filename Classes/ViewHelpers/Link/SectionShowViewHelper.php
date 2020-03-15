@@ -20,7 +20,7 @@
 			$action = "show";
 			$controller = "Section";
 			$pageUid = (int) $this->getSettings()['section']['showPid'] ? : NULL;
-			$parameters['section'] = $this->arguments['clubMsSection'];
+			$parameters['section'] = $this->arguments['Section'];
 			return $this->renderLink($action, $controller, $pageUid, $parameters);
 		}
 		
