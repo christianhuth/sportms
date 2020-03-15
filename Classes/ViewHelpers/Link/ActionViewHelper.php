@@ -149,9 +149,9 @@
 					$parameters[lcfirst($this->getClubMsDomainModel())] = $this->arguments[$this->getClubMsDomainModel()];
 				} else {
 					switch($this->getClubMsDomainModel()) {
-						case "ClubSection":
-						case "CompetitionSeason":
-						case "TeamSeason": \TYPO3\CMS\Core\Utility\DebugUtility::debug($this->arguments[$clubMsDomainModel], 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__); break;
+						case "ClubSection": $parameters['club'] = $this->arguments[$clubMsDomainModel]['club']; $parameters['section'] = $this->arguments[$clubMsDomainModel]['section']; break;
+						case "CompetitionSeason": $parameters['competition'] = $this->arguments[$clubMsDomainModel]['competition']; $parameters['season'] = $this->arguments[$clubMsDomainModel]['season']; break;
+						case "TeamSeason": $parameters['team'] = $this->arguments[$clubMsDomainModel]['team']; $parameters['season'] = $this->arguments[$clubMsDomainModel]['season']; break;
 					}
 				}
 			}
