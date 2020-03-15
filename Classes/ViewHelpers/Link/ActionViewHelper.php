@@ -108,6 +108,7 @@
 			parent::initializeArguments();
 			$this->initSettings();
 			$this->initListOfClubMsDomainModels();
+			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->getListOfClubMsDomainModels(), 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			foreach($this->getListOfClubMsDomainModels() as $clubMsDomainModel) {
 				$this->registerArgument($clubMsDomainModel, '\Balumedien\Clubms\Domain\Model\\' . $clubMsDomainModel, strtolower($clubMsDomainModel) . ' to show', false);
 			}
