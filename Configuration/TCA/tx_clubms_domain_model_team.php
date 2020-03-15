@@ -200,7 +200,7 @@ return array(
 				'eval' => 'uniqueInSite',
 				'fallbackCharacter' => '-',
 				'generatorOptions' => [
-					'fields' => ['name', 'section_age_level.slug'],
+					'fields' => ['name', 'section_age_level'],
 					'fieldSeparator' => '-',
 					'prefixParentPageSlug' => false,
 					'replacements' => [
