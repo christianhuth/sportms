@@ -106,6 +106,7 @@
  *
  */
 .tx-clubms .tx-clubms-container .tx-clubms-clubms-dbstats .tx-clubms-dbstat {
+	margin-bottom: 25px;
 }
 .tx-clubms .tx-clubms-container .tx-clubms-clubms-dbstats .tx-clubms-dbstat div {
 	background-color: var(--regular-gray);
