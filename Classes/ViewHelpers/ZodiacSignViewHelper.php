@@ -16,6 +16,16 @@
 		 * @return string
 		 */
 		public function render() {
+			
+			$localizationUtility = new \TYPO3\CMS\Extbase\Utility\LocalizationUtility;
+			
+			$langKey = 'tx_clubms_domain_model_person.zodiac_sign_' . $this->arguments['zodiacSign'];
+			$translatedZodiacSign = $localizationUtility->translate($langKey, "clubms");
+			
+			return $translatedZodiacSign;
+
+			
+			
 			switch($this->arguments['zodiacSign']) {
 				case 1: return "Wassermann";
 				case 2: return "Fische";
