@@ -290,7 +290,7 @@ return array(
 					'useSortable' => 0,
 				),
 				'foreign_field' => 'club',
-				'foreign_sortby' => 'sorting',
+				#'foreign_sortby' => 'sorting',
 				'foreign_table' => 'tx_clubms_domain_model_clubsection',
 				'foreign_table_where' => ' ORDER BY tx_clubms_domain_model_section.label ASC',
 				'type' => 'inline',
