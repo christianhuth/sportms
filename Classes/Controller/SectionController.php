@@ -28,33 +28,29 @@ namespace Balumedien\Clubms\Controller;
  ***************************************************************/
 
 /**
- * CompetitionController
+ * SectionController
  */
-class CompetitionController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
+class SectionController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
 
-	/**
-	 * @var \Balumedien\Clubms\Domain\Repository\CompetitionRepository
-	 * @TYPO3\CMS\Extbase\Annotation\Inject
-	 */
-	protected $competitionRepository;
+    /**
+     * @var \Balumedien\Clubms\Domain\Repository\SectionRepository
+     * @TYPO3\CMS\Extbase\Annotation\Inject
+     */
+    protected $sectionRepository;
 	
 	/**
 	 * @return void
 	 */
 	public function listAction() {
-		$competitions = $this->competitionRepository->findAll();
-		$this->view->assign('competitions', $competitions);
+		$sections = $this->sectionRepository->findAll();
+		$this->view->assign('sections', $sections);
 	}
 
     /**
-     * @param \Balumedien\Clubms\Domain\Model\Competition $competition competition item
+     * @param \Balumedien\Clubms\Domain\Model\Section $game
      */
-    public function showAction(\Balumedien\Clubms\Domain\Model\Competition $competition = null) {
-        if($competition === null) {
-            $competitionUid = $this->settings['single']['competition'];
-            $competition = $this->competitionRepository->findByUid($competitionUid);
-        }
-        $this->view->assign('competition', $competition);
-    }
+	public function showAction(\Balumedien\Clubms\Domain\Model\Section $section = null) {
+        $this->view->assign('section', $section);
+	}
 
 }
