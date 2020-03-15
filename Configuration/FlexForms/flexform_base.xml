@@ -122,6 +122,18 @@
 								<numIndex index="0">Saison (Listenansicht)</numIndex>
 								<numIndex index="1">Season->list</numIndex>
 							</numIndex>
+							<numIndex index="170">
+								<numIndex index="0">Abteilung</numIndex>
+								<numIndex index="1">--div--</numIndex>
+							</numIndex>
+							<numIndex index="171">
+								<numIndex index="0">Abteilung (Einzelansicht)</numIndex>
+								<numIndex index="1">Section->show</numIndex>
+							</numIndex>
+							<numIndex index="172">
+								<numIndex index="0">Abteilung (Listenansicht)</numIndex>
+								<numIndex index="1">Section->list</numIndex>
+							</numIndex>
 							<numIndex index="180">
 								<numIndex index="0">Mannschaft</numIndex>
 								<numIndex index="1">--div--</numIndex>
