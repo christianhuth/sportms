@@ -5,6 +5,18 @@
 	class ActionViewHelper extends \TYPO3\CMS\Fluid\ViewHelpers\Link\ActionViewHelper {
 		
 		/**
+		 * @var \TYPO3\CMS\Extbase\Object\ObjectManager
+		 * @inject
+		 */
+		public $objectManager;
+		
+		/**
+		 * @var \TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface
+		 * @inject
+		 */
+		protected $configurationManager;
+		
+		/**
 		 * Arguments initialization
 		 */
 		public function initializeArguments() {
@@ -15,11 +27,17 @@
 		 * @return string Rendered link
 		 */
 		public function render() {
+			
+			# Needed so we can access $this->settings
+			$configurationManager = $this->objectManager->get('TYPO3\CMS\Extbase\Configuration\ConfigurationManager');
+			$settings = $configurationManager->getConfiguration(\TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface::CONFIGURATION_TYPE_SETTINGS, 'Clubms', 'clubms');
+			
 			$action = $this->arguments['action'];
 			$controller = $this->arguments['controller'];
-			$extensionName = $this->arguments['extensionName'];
-			$pluginName = $this->arguments['pluginName'];
-			$pageUid = (int) $this->arguments['pageUid'] ? : NULL;
+			$extensionName = "clubms";
+			$pluginName = "clubms";
+			$pageUid = (int) $this->settings['Section']['showPid'] ? : NULL;
+			
 			$pageType = (int) $this->arguments['pageType'];
 			$noCache = (bool) $this->arguments['noCache'];
 			$noCacheHash = (bool) $this->arguments['noCacheHash'];
