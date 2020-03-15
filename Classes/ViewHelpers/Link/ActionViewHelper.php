@@ -111,7 +111,7 @@
 				$name = $clubMsDomainModel;
 				$type = '\Balumedien\Clubms\Domain\Model\\' . $clubMsDomainModel;
 				$description = strtolower($clubMsDomainModel) . ' to show';
-				$this->registerArgument($name, $type, $description, false);
+				$this->registerArgument($name, "", $description, false);
 			}
 		}
 		
