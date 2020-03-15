@@ -197,6 +197,7 @@ return array(
 			'label' => 'URL Segment',
 			'config' => [
 				'default' => '',
+				'eval' => 'uniqueInSite',
 				'fallbackCharacter' => '-',
 				'generatorOptions' => [
 					'fields' => ['name', 'section_age_level.slug'],
