@@ -326,14 +326,14 @@ return array(
 				'eval' => 'uniqueInSite',
 				'fallbackCharacter' => '-',
 				'generatorOptions' => [
-					'fields' => ['name', 'uid'],
+					'fields' => ['name'],
 					'fieldSeparator' => '/',
 					'prefixParentPageSlug' => false,
 					'replacements' => [
 						'/' => '',
 					],
 				],
-				'prependSlash' => TRUE,
+				'prependSlash' => FALSE,
 				'type' => 'slug',
 			],
 		],
