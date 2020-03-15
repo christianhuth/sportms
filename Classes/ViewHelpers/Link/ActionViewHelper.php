@@ -8,28 +8,28 @@
 		 * @var \TYPO3\CMS\Extbase\Object\ObjectManager
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
-		private $objectManager;
+		protected $objectManager;
 		
 		/**
 		 * @var \TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
-		private $configurationManager;
+		protected $configurationManager;
 		
 		/**
 		 * @var array
 		 */
-		private $settings;
+		protected $settings;
 		
 		/**
 		 * @var array
 		 */
-		private $listOfClubMsDomainModels;
+		protected $listOfClubMsDomainModels;
 		
 		/**
 		 * @var string
 		 */
-		private $clubMsDomainModel;
+		protected $clubMsDomainModel;
 		
 		/**
 		 * @return \TYPO3\CMS\Extbase\Object\ObjectManager
