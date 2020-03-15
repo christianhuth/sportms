@@ -91,7 +91,7 @@
 		 * @return string
 		 */
 		public function getClubMsDomainModel(): string {
-			return $this->clubMsDomainModel;
+			return $this->clubMsDomainModel ? $this->clubMsDomainModel : "";
 		}
 		
 		/**
