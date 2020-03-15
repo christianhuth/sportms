@@ -8,19 +8,28 @@
 		 * @var \TYPO3\CMS\Extbase\Object\ObjectManager
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
-		protected $objectManager;
+		private $objectManager;
 		
 		/**
 		 * @var \TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
-		protected $configurationManager;
+		private $configurationManager;
 		
 		/**
 		 * @var array
-		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
-		protected $settings;
+		private $settings;
+		
+		/**
+		 * @var array
+		 */
+		private $listOfClubMsDomainModels;
+		
+		/**
+		 * @var string
+		 */
+		private $clubMsDomainModel;
 		
 		/**
 		 * @return \TYPO3\CMS\Extbase\Object\ObjectManager
@@ -65,11 +74,46 @@
 		}
 		
 		/**
+		 * @return array
+		 */
+		public function getListOfClubMsDomainModels(): array {
+			return $this->listOfClubMsDomainModels;
+		}
+		
+		/**
+		 * @param array $listOfClubMsDomainModels
+		 */
+		public function setListOfClubMsDomainModels(array $listOfClubMsDomainModels): void {
+			$this->listOfClubMsDomainModels = $listOfClubMsDomainModels;
+		}
+		
+		/**
+		 * @return string
+		 */
+		public function getClubMsDomainModel(): string {
+			return $this->clubMsDomainModel;
+		}
+		
+		/**
+		 * @param string $clubMsDomainModel
+		 */
+		public function setClubMsDomainModel(string $clubMsDomainModel): void {
+			$this->clubMsDomainModel = $clubMsDomainModel;
+		}
+		
+		/**
 		 * Arguments initialization
 		 */
 		public function initializeArguments() {
 			parent::initializeArguments();
 			$this->initSettings();
+			foreach($this->getListOfClubMsDomainModels() as $clubMsDomainModel) {
+				$this->registerArgument($clubMsDomainModel, '\Balumedien\Clubms\Domain\Model\\' . $clubMsDomainModel, strtolower($clubMsDomainModel) . ' to show', false);
+				if($this->arguments[strtolower($clubMsDomainModel)]) {
+					$this->setClubMsDomainModel(strtolower($clubMsDomainModel));
+					break;
+				}
+			}
 		}
 		
 		# Needed so we can fill $this->getSettings()
@@ -81,9 +125,14 @@
 		/**
 		 * @return string Rendered link
 		 */
-		public function renderLink($action = null, $controller = null, $pageUid = null, $parameters = null) {
+		public function render() {
 			$extensionName = "clubms";
 			$pluginName = "clubms";
+			$action = "show";
+			$controller = $this->getClubMsDomainModel();
+			$pageUid = (int) $this->getSettings()[strtolower($this->getClubMsDomainModel())][$action . 'Pid'] ? : NULL;
+			$parameters = array();
+			$parameters[strtolower($this->getClubMsDomainModel())] = $this->arguments[$this->getClubMsDomainModel()];
 			$pageType = (int) $this->arguments['pageType'];
 			$noCache = (bool) $this->arguments['noCache'];
 			$noCacheHash = (bool) $this->arguments['noCacheHash'];
