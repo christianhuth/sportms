@@ -19,9 +19,9 @@
                 <tbody>
                 <f:for as="season" each="{seasons}">
                     <tr>
-                        <td>{season.seasonName}</td>
-                        <td>{season.seasonNameShort}</td>
-                        <td>{season.seasonNameVeryShort}</td>
+                        <td><f:link.action action="show" controller="Season" pageUid="{settings.season.showPid}" arguments="{season: season}">{season.seasonName}</f:link.action></td>
+                        <td><f:link.action action="show" controller="Season" pageUid="{settings.season.showPid}" arguments="{season: season}">{season.seasonNameShort}</f:link.action></td>
+                        <td><f:link.action action="show" controller="Season" pageUid="{settings.season.showPid}" arguments="{season: season}">{season.seasonNameShort}</f:link.action></td>
                     </tr>
                 </f:for>
                 </tbody>
