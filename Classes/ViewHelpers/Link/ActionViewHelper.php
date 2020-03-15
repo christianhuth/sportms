@@ -128,7 +128,7 @@
 		
 		private function initListOfClubMsDomainModels() {
 			$ListOfClubMsDomainModels = "Club, ClubSection, Competition, CompetitionSeason, Game, Person, Season, Section, Team, TeamSeason, Venue";
-			$this->setListOfClubMsDomainModels(explode(",", $ListOfClubMsDomainModels));
+			$this->setListOfClubMsDomainModels(explode(",", trim($ListOfClubMsDomainModels)));
 		}
 		
 		/**
