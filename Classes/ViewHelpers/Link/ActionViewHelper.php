@@ -130,8 +130,8 @@
 		public function render() {
 			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->arguments, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			foreach($this->getListOfClubMsDomainModels() as $clubMsDomainModel) {
-				if($this->arguments[strtolower($clubMsDomainModel)]) {
-					$this->setClubMsDomainModel(strtolower($clubMsDomainModel));
+				if($this->arguments[$clubMsDomainModel]) {
+					$this->setClubMsDomainModel($clubMsDomainModel);
 					break;
 				}
 			}
