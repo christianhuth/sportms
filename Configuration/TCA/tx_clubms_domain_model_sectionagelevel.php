@@ -29,7 +29,7 @@ return array(
 		'showRecordFieldList' => 'label, short',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'label, short'),
+		'1' => array('showitem' => 'label, short, slug'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -116,6 +116,26 @@ return array(
 				'type' => 'input',
 			),
 		),
+		
+		'slug' => [
+			'exclude' => true,
+			'label' => 'URL Segment',
+			'config' => [
+				'default' => '',
+				'eval' => 'uniqueInSite',
+				'fallbackCharacter' => '-',
+				'generatorOptions' => [
+					'fields' => ['label'],
+					'fieldSeparator' => '-',
+					'prefixParentPageSlug' => FALSE,
+					'replacements' => [
+						'/' => '',
+					],
+				],
+				'prependSlash' => FALSE,
+				'type' => 'slug',
+			],
+		],
 		
 	),
 );
