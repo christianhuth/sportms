@@ -147,6 +147,12 @@
 			if($this->getClubMsDomainModel() != null) {
 				if($this->getClubMsDomainModel() != "ClubSection" && $this->getClubMsDomainModel() != "CompetitionSeason" && $this->getClubMsDomainModel() != "TeamSeason") {
 					$parameters[lcfirst($this->getClubMsDomainModel())] = $this->arguments[$this->getClubMsDomainModel()];
+				} else {
+					switch($this->getClubMsDomainModel()) {
+						case "ClubSection":
+						case "CompetitionSeason":
+						case "TeamSeason": \TYPO3\CMS\Core\Utility\DebugUtility::debug($this->arguments[$clubMsDomainModel], 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__); break;
+					}
 				}
 			}
 			$pageType = (int) $this->arguments['pageType'];
