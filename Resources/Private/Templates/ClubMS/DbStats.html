@@ -4,23 +4,25 @@
 <f:layout name="default"/>
 
 <f:section name="default">
-    <div class="col-xs-1"></div>
-    <div class="col-xs-2">
-        <f:link.action action="list" controller="Club" pageUid="{settings.club.listPid}">{clubCount} Vereine</f:link.action>
+
+    <div class="tx-clubms-clubms-dbstats">
+        <div class="col-xs-1"></div>
+        <div class="col-xs-2 tx-clubms-dbstat">
+            <div class="col-xs-12"><f:image src="EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_club.svg"/></div>
+            <div class="col-xs-12"><f:link.action action="list" controller="Club" pageUid="{settings.club.listPid}">{clubCount} Vereine</f:link.action></div>
+        </div>
+        <div class="col-xs-2 tx-clubms-dbstat">
+            <f:link.action action="list" controller="Competition" pageUid="{settings.competition.listPid}">{competitionCount} Wettbewerbe</f:link.action>
+        </div>
+        <div class="col-xs-2 tx-clubms-dbstat">
+            <f:link.action action="list" controller="Game" pageUid="{settings.game.listPid}">{gameCount} Spiele</f:link.action>
+        </div>
+        <div class="col-xs-2 tx-clubms-dbstat">
+            <f:link.action action="list" controller="Person" pageUid="{settings.person.listPid}">{personCount} Personen</f:link.action>
+        </div>
+        <div class="col-xs-1 tx-clubms-dbstat"></div>
     </div>
-    <div class="col-xs-2">
-        <f:link.action action="list" controller="Competition" pageUid="{settings.competition.listPid}">{competitionCount} Wettbewerbe</f:link.action>
-    </div>
-    <div class="col-xs-2">
-        <f:link.action action="list" controller="Game" pageUid="{settings.game.listPid}">{gameCount} Spiele</f:link.action>
-    </div>
-    <div class="col-xs-2">
-        <f:link.action action="list" controller="Person" pageUid="{settings.person.listPid}">{personCount} Personen</f:link.action>
-    </div>
-    <div class="col-xs-2">
-        <f:link.action action="list" controller="Team" pageUid="{settings.team.listPid}">{teamCount} Mannschaften</f:link.action>
-    </div>
-    <div class="col-xs-1"></div>
+
 </f:section>
 
 </html>
