@@ -110,7 +110,7 @@
 			foreach($this->getListOfClubMsDomainModels() as $clubMsDomainModel) {
 				$name = $clubMsDomainModel;
 				$type = "string";
-				$description = strtolower($clubMsDomainModel) . ' to show';
+				$description = lcfirst($clubMsDomainModel) . ' to show';
 				$this->registerArgument($name, $type, $description, false);
 			}
 		}
@@ -142,10 +142,10 @@
 			$pluginName = "clubms";
 			$action = $this->arguments['action'] ? $this->arguments['action'] : "show";
 			$controller = $this->arguments['controller'] ? $this->arguments['controller'] : $this->getClubMsDomainModel();
-			$pageUid = $this->arguments['pageUid'] ? (int) $this->arguments['pageUid'] : (int) $this->getSettings()[strtolower($controller)][$action . 'Pid'] ? : NULL;
+			$pageUid = $this->arguments['pageUid'] ? (int) $this->arguments['pageUid'] : (int) $this->getSettings()[lcfirst($controller)][$action . 'Pid'] ? : NULL;
 			$parameters = $this->arguments['arguments'] ? $this->arguments['arguments'] : array();
 			if($this->getClubMsDomainModel() != null) {
-				$parameters[strtolower($this->getClubMsDomainModel())] = $this->arguments[$this->getClubMsDomainModel()];
+				$parameters[lcfirst($this->getClubMsDomainModel())] = $this->arguments[$this->getClubMsDomainModel()];
 			}
 			$pageType = (int) $this->arguments['pageType'];
 			$noCache = (bool) $this->arguments['noCache'];
