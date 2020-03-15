@@ -24,7 +24,7 @@
         <f:if condition="{teamSeason.teamSeasonPractices}">
             <div class="tx-clubms-teamseason-practices">
                 <div class="tx-clubms-teamseason-practices col-xs-12"><h3>Trainingszeiten</h3></div>
-                <table>
+                <table class="table table-bordered table-hover table-striped">
                     <f:for as="teamSeasonPractice" each="{teamSeason.teamSeasonPractices}">
                         <f:render arguments="{teamSeasonPractice: teamSeasonPractice}"
                                   partial="TeamSeason/TeamSeasonPractice"/>
