@@ -149,7 +149,7 @@
 					$parameters[lcfirst($this->getClubMsDomainModel())] = $this->arguments[$this->getClubMsDomainModel()];
 				} else {
 					switch($this->getClubMsDomainModel()) {
-						case "ClubSection": $parameters['club'] = $this->arguments[$clubMsDomainModel]['club']; $parameters['section'] = $this->arguments[$clubMsDomainModel]['section']; break;
+						case "ClubSection": $parameters['club'] = $this->arguments[$clubMsDomainModel]->getClub(); $parameters['section'] = $this->arguments[$clubMsDomainModel]->getSection(); break;
 						case "CompetitionSeason": $parameters['competition'] = $this->arguments[$clubMsDomainModel]['competition']; $parameters['season'] = $this->arguments[$clubMsDomainModel]['season']; break;
 						case "TeamSeason": $parameters['team'] = $this->arguments[$clubMsDomainModel]['team']; $parameters['season'] = $this->arguments[$clubMsDomainModel]['season']; break;
 					}
