@@ -8,13 +8,61 @@
 		 * @var \TYPO3\CMS\Extbase\Object\ObjectManager
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
-		public $objectManager;
+		private $objectManager;
 		
 		/**
 		 * @var \TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
-		protected $configurationManager;
+		private $configurationManager;
+		
+		/**
+		 * @var array
+		 * @TYPO3\CMS\Extbase\Annotation\Inject
+		 */
+		private $settings;
+		
+		/**
+		 * @return \TYPO3\CMS\Extbase\Object\ObjectManager
+		 */
+		private function getObjectManager(): \TYPO3\CMS\Extbase\Object\ObjectManager {
+			return $this->objectManager;
+		}
+		
+		/**
+		 * @param \TYPO3\CMS\Extbase\Object\ObjectManager $objectManager
+		 */
+		private function setObjectManager(\TYPO3\CMS\Extbase\Object\ObjectManager $objectManager): void {
+			$this->objectManager = $objectManager;
+		}
+		
+		/**
+		 * @return \TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface
+		 */
+		private function getConfigurationManager(): \TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface {
+			return $this->configurationManager;
+		}
+		
+		/**
+		 * @param \TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface $configurationManager
+		 */
+		private function setConfigurationManager(\TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface $configurationManager): void {
+			$this->configurationManager = $configurationManager;
+		}
+		
+		/**
+		 * @return array
+		 */
+		private function getSettings(): array {
+			return $this->settings;
+		}
+		
+		/**
+		 * @param array $settings
+		 */
+		private function setSettings(array $settings): void {
+			$this->settings = $settings;
+		}
 		
 		/**
 		 * Arguments initialization
@@ -22,6 +70,13 @@
 		public function initializeArguments() {
 			parent::initializeArguments();
 			$this->registerArgument('clubMsSection', '\Balumedien\Clubms\Domain\Model\Section', 'section to show', false);
+			$this->initSettings();
+		}
+		
+		# Needed so we can access $settings
+		private function initSettings() {
+			$configurationManager = $this->objectManager->get('TYPO3\CMS\Extbase\Configuration\ConfigurationManager');
+			$this->setSettings($configurationManager->getConfiguration(\TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface::CONFIGURATION_TYPE_SETTINGS, 'Clubms', 'clubms'));
 		}
 		
 		/**
@@ -29,15 +84,13 @@
 		 */
 		public function render() {
 			
-			# Needed so we can access $settings
-			$configurationManager = $this->objectManager->get('TYPO3\CMS\Extbase\Configuration\ConfigurationManager');
-			$settings = $configurationManager->getConfiguration(\TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface::CONFIGURATION_TYPE_SETTINGS, 'Clubms', 'clubms');
-			
 			$action = $this->arguments['action'];
 			$controller = $this->arguments['controller'];
 			$extensionName = "clubms";
 			$pluginName = "clubms";
-			$pageUid = (int) $settings['section']['showPid'] ? : NULL;
+			
+			$pageUid = (int) $this->getSettings()['section']['showPid'] ? : NULL;
+			\TYPO3\CMS\Core\Utility\DebugUtility::debug($pageUid, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			
 			$pageType = (int) $this->arguments['pageType'];
 			$noCache = (bool) $this->arguments['noCache'];
