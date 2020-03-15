@@ -28,7 +28,7 @@
 		 */
 		public function render() {
 			
-			# Needed so we can access $this->settings
+			# Needed so we can access $settings
 			$configurationManager = $this->objectManager->get('TYPO3\CMS\Extbase\Configuration\ConfigurationManager');
 			$settings = $configurationManager->getConfiguration(\TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface::CONFIGURATION_TYPE_SETTINGS, 'Clubms', 'clubms');
 			
@@ -38,7 +38,7 @@
 			$controller = $this->arguments['controller'];
 			$extensionName = "clubms";
 			$pluginName = "clubms";
-			$pageUid = (int) $this->settings['section']['showPid'] ? : NULL;
+			$pageUid = (int) $settings['section']['showPid'] ? : NULL;
 			
 			$pageType = (int) $this->arguments['pageType'];
 			$noCache = (bool) $this->arguments['noCache'];
