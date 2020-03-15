@@ -13,7 +13,6 @@
             <th>Altersstufe</th>
             <th>Spielfrei</th>
             <th>Anzahl</th>
-            <th>Einzelansicht</th>
         </tr>
         </thead>
         <tbody>
@@ -22,23 +21,18 @@
                 <f:for as="team" each="{teams}">
                     <tr>
                         <td><f:link.action action="show" controller="Section" pageUid="{settings.section.showPid}" arguments="{section: team.clubSection.section}">{team.clubSection.section.label}</f:link.action></td>
-                        <td>{team.club.name}</td>
-                        <td>{team.name}</td>
+                        <td><f:link.action action="show" controller="Club" pageUid="{settings.club.showPid}" arguments="{club: team.club}">{team.club.name}</f:link.action></td>
+                        <td><f:link.action action="show" controller="Team" pageUid="{settings.team.showPid}" arguments="{team: team}">{team.name}</f:link.action></td>
                         <td>{team.ageLevel.label}</td>
                         <td>{team.dummy}</td>
                         <td>
-                            <f:count>{team.teamSeason}</f:count>
-                        </td>
-                        <td>
-                            <f:if condition="{team.detailLink}">
-                                <f:link.action action="detail" arguments="{uid: team}">LINK</f:link.action>
-                            </f:if>
+                            <f:count>{team.teamSeasons}</f:count>
                         </td>
                     </tr>
                 </f:for>
             </f:then>
             <f:else>
-                <td colspan="7">Keine Mannschaften gefunden</td>
+                <td colspan="6">Keine Mannschaften gefunden</td>
             </f:else>
         </f:if>
         </tbody>
