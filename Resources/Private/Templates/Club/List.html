@@ -1,15 +1,20 @@
-<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-	  data-namespace-typo3-fluid="true">
-	<f:if condition="{clubs}">
-		<table>
-			<tr>
-				<th>Logo</th>
-				<th>Verein</th>
-				<th>Abteilungen und Mannschaften</th>
-			</tr>
-			<f:for each="{clubs}" as="club">
-				<f:render partial="Club/ListItem" arguments="{club: club, settings: settings}" />
-			</f:for>
-		</table>
-	</f:if>
+<html data-namespace-typo3-fluid="true"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<f:layout name="default"/>
+
+<f:section name="default">
+    <f:if condition="{clubs}">
+        <table>
+            <tr>
+                <th>Logo</th>
+                <th>Verein</th>
+                <th>Abteilungen und Mannschaften</th>
+            </tr>
+            <f:for as="club" each="{clubs}">
+                <f:render arguments="{club: club, settings: settings}" partial="Club/ListItem"/>
+            </f:for>
+        </table>
+    </f:if>
+</f:section>
 </html>

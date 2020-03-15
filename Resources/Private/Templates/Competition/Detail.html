@@ -1,80 +1,97 @@
-<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-	  data-namespace-typo3-fluid="true">
+<html data-namespace-typo3-fluid="true"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
-	<div id="tx_clubms_container">
+<f:layout name="default"/>
 
-		<div class="tx_clubms_club_show">
+<f:section name="default">
 
-			<h2 id="personal" class="headline"><f:translate key="tx_clubms_domain_model_club.personalData"/></h2>
-			<table>
-				<tbody>
+    <div class="tx_clubms_club_show">
 
-					<f:debug>{club}</f:debug>
+        <h2 class="headline" id="personal">
+            <f:translate key="tx_clubms_domain_model_club.personalData"/>
+        </h2>
+        <table>
+            <tbody>
 
-					<f:if condition="{club.name}">
-						<tr>
-							<td class="label"><f:translate key="tx_clubms_domain_model_club.name" /></td>
-							<td class="content">{club.name}</td>
-						</tr>
-					</f:if>
+            <f:debug>{club}</f:debug>
 
-					<f:if condition="{club.colours}">
-						<tr>
-							<td class="label"><f:translate key="tx_clubms_domain_model_club.colours" /></td>
-							<td class="content">{club.colours}</td>
-						</tr>
-					</f:if>
+            <f:if condition="{club.name}">
+                <tr>
+                    <td class="label">
+                        <f:translate key="tx_clubms_domain_model_club.name"/>
+                    </td>
+                    <td class="content">{club.name}</td>
+                </tr>
+            </f:if>
 
-					<f:if condition="{club.dateOfFounding}">
-						<tr>
-							<td class="label"><f:translate key="tx_clubms_domain_model_club.dateOfFounding" /></td>
-							<td class="content">{club.dateOfFounding}</td>
-						</tr>
-					</f:if>
+            <f:if condition="{club.colours}">
+                <tr>
+                    <td class="label">
+                        <f:translate key="tx_clubms_domain_model_club.colours"/>
+                    </td>
+                    <td class="content">{club.colours}</td>
+                </tr>
+            </f:if>
 
-					<f:if condition="{club.yearOfFounding}">
-						<tr>
-							<td class="label"><f:translate key="tx_clubms_domain_model_club.yearOfFounding" /></td>
-							<td class="content">{club.yearOfFounding}</td>
-						</tr>
-					</f:if>
+            <f:if condition="{club.dateOfFounding}">
+                <tr>
+                    <td class="label">
+                        <f:translate key="tx_clubms_domain_model_club.dateOfFounding"/>
+                    </td>
+                    <td class="content">{club.dateOfFounding}</td>
+                </tr>
+            </f:if>
 
-					<f:if condition="{club.members}">
-						<tr>
-							<td class="label"><f:translate key="tx_clubms_domain_model_club.members" /></td>
-							<td class="content">
-								<f:for each="{club.members}" as="member">
-									<span>{member.date}</span>: {member.members}<br/>
-								</f:for>
-							</td>
-						</tr>
-					</f:if>
+            <f:if condition="{club.yearOfFounding}">
+                <tr>
+                    <td class="label">
+                        <f:translate key="tx_clubms_domain_model_club.yearOfFounding"/>
+                    </td>
+                    <td class="content">{club.yearOfFounding}</td>
+                </tr>
+            </f:if>
 
-					<f:if condition="{club.images}">
-						<tr>
-							<td class="label"><f:translate key="tx_clubms_domain_model_club.images" /></td>
-							<td class="content">
-								<f:for each="{club.images}" iteration="imagesIteration" as="image">
-									<f:image src="{image.uid}" alt="" treatIdAsReference="1" />
-								</f:for>
-							</td>
-						</tr>
-					</f:if>
+            <f:if condition="{club.members}">
+                <tr>
+                    <td class="label">
+                        <f:translate key="tx_clubms_domain_model_club.members"/>
+                    </td>
+                    <td class="content">
+                        <f:for as="member" each="{club.members}">
+                            <span>{member.date}</span>: {member.members}<br/>
+                        </f:for>
+                    </td>
+                </tr>
+            </f:if>
 
-					<f:if condition="{club.clubSections}">
-						<f:for each="{club.clubSections}" as="clubSection">
-							<tr>
-								<td class="label"><f:translate key="tx_clubms_domain_model_club.nickname" /></td>
-								<td class="content">{clubSection.label}</td>
-							</tr>
-						</f:for>
-					</f:if>
+            <f:if condition="{club.images}">
+                <tr>
+                    <td class="label">
+                        <f:translate key="tx_clubms_domain_model_club.images"/>
+                    </td>
+                    <td class="content">
+                        <f:for as="image" each="{club.images}" iteration="imagesIteration">
+                            <f:image alt="" src="{image.uid}" treatIdAsReference="1"/>
+                        </f:for>
+                    </td>
+                </tr>
+            </f:if>
 
-				</tbody>
-			</table>
+            <f:if condition="{club.clubSections}">
+                <f:for as="clubSection" each="{club.clubSections}">
+                    <tr>
+                        <td class="label">
+                            <f:translate key="tx_clubms_domain_model_club.nickname"/>
+                        </td>
+                        <td class="content">{clubSection.label}</td>
+                    </tr>
+                </f:for>
+            </f:if>
 
-		</div>
+            </tbody>
+        </table>
 
-	</div>
+    </div>
+</f:section>
 
 </html>
