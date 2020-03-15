@@ -34,7 +34,7 @@
                             <td>{person.lastname}</td>
                             <td>{person.firstname}</td>
                             <td>{person.nickname}</td>
-                            <td>{person.nationality}</td>
+                            <td><clubms:zodiacSign zodiacSign="{person.zodiacSign}"/>{person.nationality}</td>
                             <td>
                                 <clubms:link.action Person="{person}">LINK</clubms:link.action>
                             </td>
