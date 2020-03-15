@@ -65,7 +65,7 @@
 		/**
 		 * @return void
 		 */
-		public function statsAction() {
+		public function dbStatsAction() {
 			
 			/* Domain Model Club */
 			$clubCount = $this->clubRepository->findAll()->count();
