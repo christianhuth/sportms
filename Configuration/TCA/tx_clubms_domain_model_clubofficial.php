@@ -141,6 +141,7 @@ return array(
         ),
 		'until_today' => array(
 			'config' => array(
+				'default' => '1',
 				'renderType' => 'checkboxToggle',
 				'type' => 'check',
 			),
