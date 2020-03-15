@@ -325,8 +325,8 @@ return array(
 				'default' => '',
 				'fallbackCharacter' => '-',
 				'generatorOptions' => [
-					'fields' => ['uid', 'name'],
-					'fieldSeparator' => '-',
+					'fields' => ['name', 'uid'],
+					'fieldSeparator' => '/',
 					'prefixParentPageSlug' => false,
 					'replacements' => [
 						'/' => '',
