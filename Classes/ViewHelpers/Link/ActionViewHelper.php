@@ -106,7 +106,6 @@
 		 */
 		public function initializeArguments() {
 			parent::initializeArguments();
-			$this->initSettings();
 			$this->initListOfClubMsDomainModels();
 			foreach($this->getListOfClubMsDomainModels() as $clubMsDomainModel) {
 				$this->registerArgument($clubMsDomainModel, '\Balumedien\Clubms\Domain\Model\\' . $clubMsDomainModel, strtolower($clubMsDomainModel) . ' to show', false);
@@ -128,6 +127,7 @@
 		 * @return string Rendered link
 		 */
 		public function render() {
+			$this->initSettings();
 			$this->initListOfClubMsDomainModels();
 			foreach($this->getListOfClubMsDomainModels() as $clubMsDomainModel) {
 				if($this->arguments[$clubMsDomainModel]) {
