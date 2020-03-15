@@ -32,7 +32,7 @@
                             <td><f:link.action action="show" controller="Section" pageUid="{settings.section.showPid}" arguments="{section: competition.section}">{competition.section.label}</f:link.action></td>
                             <td><f:link.action action="show" controller="Competition" pageUid="{settings.competition.showPid}" arguments="{competition: competition}">{competition.name}</f:link.action></td>
                             <td>{competition.sectionAgeLevel.label}</td>
-                            <td>{competition.competitionType}</td>
+                            <td>{competition.competitionType.label}</td>
                             <td><f:count>{competition.competitionSeasons}</f:count></td>
                         </tr>
                     </f:for>
