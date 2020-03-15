@@ -1151,6 +1151,7 @@ CREATE TABLE tx_clubms_domain_model_personprofile (
     section_position_group int(11) DEFAULT NULL,
     section_position int(11) DEFAULT NULL,
     profile_images varchar(255) DEFAULT NULL,
+    slug varchar(2048) DEFAULT '',
 
     tstamp int(11) unsigned DEFAULT '0' NOT NULL,
     crdate int(11) unsigned DEFAULT '0' NOT NULL,
@@ -1263,6 +1264,7 @@ CREATE TABLE tx_clubms_domain_model_refereejob (
 	pid int(11) DEFAULT '0' NOT NULL,
 	
 	label varchar(255) DEFAULT '0' NOT NULL,
+    slug varchar(2048) DEFAULT '',
 	
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
@@ -1377,6 +1379,7 @@ CREATE TABLE tx_clubms_domain_model_sectionagegroup (
 	label varchar(255) DEFAULT NULL,
 	short varchar(255) DEFAULT NULL,
 	section_age_levels int(11) DEFAULT NULL,
+    slug varchar(2048) DEFAULT '',
 
 	sorting int(11) DEFAULT '0' NOT NULL,
 
@@ -1415,6 +1418,7 @@ CREATE TABLE tx_clubms_domain_model_sectionagelevel (
 	section_age_group int(11) DEFAULT NULL,
 	label varchar(255) DEFAULT NULL,
 	short varchar(255) DEFAULT NULL,
+    slug varchar(2048) DEFAULT '',
 
 	sorting int(11) DEFAULT '0' NOT NULL,
 
