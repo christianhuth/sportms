@@ -4,7 +4,8 @@
 <f:layout name="default"/>
 
 <f:section name="default">
-    <div class="col-xs-2 col-xs-offset-1">
+    <div class="col-xs-1"></div>
+    <div class="col-xs-2">
         <f:link.action action="list" controller="Club" pageUid="{settings.club.listPid}">{clubCount} Vereine</f:link.action>
     </div>
     <div class="col-xs-2">
@@ -16,9 +17,10 @@
     <div class="col-xs-2">
         <f:link.action action="list" controller="Person" pageUid="{settings.person.listPid}">{personCount} Personen</f:link.action>
     </div>
-    <div class="col-xs-2 col-xs-offset-1">
+    <div class="col-xs-2">
         <f:link.action action="list" controller="Team" pageUid="{settings.team.listPid}">{teamCount} Mannschaften</f:link.action>
     </div>
+    <div class="col-xs-1"></div>
 </f:section>
 
 </html>
