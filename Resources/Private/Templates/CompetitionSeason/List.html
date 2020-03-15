@@ -24,14 +24,16 @@
                     <f:for as="competitionSeason" each="{competitionSeasons}">
                         <tr>
                             <td>
-                                <clubms:link.sectionShow Section="{competitionSeason.competition.section}">{competitionSeason.competition.section.label}</clubms:link.sectionShow>
+                                <clubms:link.action Section="{competitionSeason.competition.section}">{competitionSeason.competition.section.label}</clubms:link.action>
                             </td>
                             <td>
-                                <clubms:link.competitionShow Competition="{competitionSeason.competition}">{competitionSeason.competition.name}</clubms:link.competitionShow>
+                                <clubms:link.action Competition="{competitionSeason.competition}">{competitionSeason.competition.name}</clubms:link.action>
                             </td>
                             <td>{competitionSeason.competition.sectionAgeLevel.label}</td>
                             <td>{competitionSeason.competition.competitionType.label}</td>
-                            <td>{competitionSeason.season.seasonName}</td>
+                            <td>
+                                <clubms:link.action Season="{competitionSeason.season}">{competitionSeason.season.seasonName}</clubms:link.action>
+                            </td>
                         </tr>
                     </f:for>
                 </f:then>
