@@ -22,11 +22,19 @@
                 <f:then>
                     <f:for as="teamSeason" each="{teamSeasons}">
                         <tr>
-                            <td><clubms:link.action Club="{teamSeason.team.club}">{teamSeason.team.club.name}</clubms:link.action></td>
-                            <td><clubms:link.action ClubSection="{teamSeason.team.clubSection}">{teamSeason.team.clubSection.section.label}</clubms:link.action></td>
-                            <td><clubms:link.action Team="{teamSeason.team}">{teamSeason.team.name}</clubms:link.action></td>
+                            <td>
+                                <clubms:link.action Club="{teamSeason.team.club}">{teamSeason.team.club.name}</clubms:link.action>
+                            </td>
+                            <td>
+                                <clubms:link.action ClubSection="{teamSeason.team.clubSection}">{teamSeason.team.clubSection.section.label}</clubms:link.action>
+                            </td>
+                            <td>
+                                <clubms:link.action Team="{teamSeason.team}">{teamSeason.team.name}</clubms:link.action>
+                            </td>
                             <td>{teamSeason.team.sectionAgeLevel.label}</td>
-                            <td><clubms:link.action TeamSeason="{teamSeason}">{teamSeason.season.seasonName}</clubms:link.action></td>
+                            <td>
+                                <clubms:link.action TeamSeason="{teamSeason}">{teamSeason.season.seasonName}</clubms:link.action>
+                            </td>
                         </tr>
                     </f:for>
                 </f:then>
