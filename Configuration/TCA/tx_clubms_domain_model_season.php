@@ -143,9 +143,10 @@ return array(
 			'label' => 'URL Segment',
 			'config' => [
 				'default' => '',
+				'eval' => 'uniqueInSite',
 				'fallbackCharacter' => '-',
 				'generatorOptions' => [
-					'fields' => ['uid', 'season_name'],
+					'fields' => ['season_name'],
 					'fieldSeparator' => '-',
 					'prefixParentPageSlug' => false,
 					'replacements' => [
