@@ -1,4 +1,5 @@
 <html data-namespace-typo3-fluid="true"
+      xmlns:clubms="Balumedien\Clubms\ViewHelpers"
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <f:layout name="default"/>
@@ -29,8 +30,8 @@
                 <f:then>
                     <f:for as="competition" each="{competitions}">
                         <tr>
-                            <td><f:link.action action="show" controller="Section" pageUid="{settings.section.showPid}" arguments="{section: competition.section}">{competition.section.label}</f:link.action></td>
-                            <td><f:link.action action="show" controller="Competition" pageUid="{settings.competition.showPid}" arguments="{competition: competition}">{competition.name}</f:link.action></td>
+                            <td><clubms:link.action Section="{competition.section}">{competition.section.label}</clubms:link.action></td>
+                            <td><clubms:link.action Competition="{competition}">{competition.name}</clubms:link.action></td>
                             <td>{competition.sectionAgeLevel.label}</td>
                             <td>{competition.competitionType.label}</td>
                             <td><f:count>{competition.competitionSeasons}</f:count></td>

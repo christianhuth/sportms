@@ -1,4 +1,5 @@
 <html data-namespace-typo3-fluid="true"
+      xmlns:clubms="Balumedien\Clubms\ViewHelpers"
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <f:layout name="default"/>
@@ -19,9 +20,9 @@
                 <tbody>
                 <f:for as="season" each="{seasons}">
                     <tr>
-                        <td><f:link.action action="show" controller="Season" pageUid="{settings.season.showPid}" arguments="{season: season}">{season.seasonName}</f:link.action></td>
-                        <td><f:link.action action="show" controller="Season" pageUid="{settings.season.showPid}" arguments="{season: season}">{season.seasonNameShort}</f:link.action></td>
-                        <td><f:link.action action="show" controller="Season" pageUid="{settings.season.showPid}" arguments="{season: season}">{season.seasonNameShort}</f:link.action></td>
+                        <td><clubms:link.action Season="{season}">{season.seasonName}</clubms:link.action></td>
+                        <td><clubms:link.action Season="{season}">{season.seasonNameShort}</clubms:link.action></td>
+                        <td><clubms:link.action Season="{season}">{season.seasonNameShort}</clubms:link.action></td>
                     </tr>
                 </f:for>
                 </tbody>

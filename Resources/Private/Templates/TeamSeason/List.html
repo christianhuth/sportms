@@ -1,4 +1,5 @@
 <html data-namespace-typo3-fluid="true"
+      xmlns:clubms="Balumedien\Clubms\ViewHelpers"
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <f:layout name="default"/>
@@ -10,7 +11,7 @@
             <thead>
             <tr>
                 <th>Verein</th>
-                <th>Abteilung</th>
+                <th>Vereinsabteilung</th>
                 <th>Mannschaftsname</th>
                 <th>Altersstufe</th>
                 <th>Saison</th>
@@ -21,11 +22,11 @@
                 <f:then>
                     <f:for as="teamSeason" each="{teamSeasons}">
                         <tr>
-                            <td>{teamSeason.team.club.name}</td>
-                            <td>{teamSeason.team.clubSection.section.label}</td>
-                            <td>{teamSeason.team.name}</td>
+                            <td><clubms:link.action Club="{teamSeason.team.club}">{teamSeason.team.club.name}</clubms:link.action></td>
+                            <td><clubms:link.action ClubSection="{teamSeason.team.clubSection}">{teamSeason.team.clubSection.section.label}</clubms:link.action></td>
+                            <td><clubms:link.action Team="{teamSeason.team}">{teamSeason.team.name}</clubms:link.action></td>
                             <td>{teamSeason.team.sectionAgeLevel.label}</td>
-                            <td>{teamSeason.season.seasonName}</td>
+                            <td><clubms:link.action TeamSeason="{teamSeason}">{teamSeason.season.seasonName}</clubms:link.action></td>
                         </tr>
                     </f:for>
                 </f:then>
