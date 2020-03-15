@@ -27,6 +27,20 @@
                             <td>
                                 <clubms:link.action Section="{game.section}">{game.Section.name}</clubms:link.action>
                             </td>
+                            <td>
+                                <clubms:link.action Competition="{game.competitionSeason.competition}">{game.competitionSeason.competiton.label}</clubms:link.action>
+                            </td>
+                            <td>
+                                <clubms:link.action Season="{game.competitionSeason.season}">{game.competitionSeason.season.seasonName}</clubms:link.action>
+                            </td>
+                            <td>{game.gameday.label}</td>
+                            <td><f:format.date format="%d.%m.%Y">{game.date}</f:format.date></td>
+                            <td>{game.teamSeasonHome.team.name}</td>
+                            <td>-</td>
+                            <td>{game.teamSeasonGuest.team.name}</td>
+                            <td>
+                                <clubms:link.action Game="{game}">{game.resultEndRegularHome} : {game.resultEndRegularGuest}</clubms:link.action>
+                            </td>
                         </tr>
                     </f:for>
                 </f:then>
