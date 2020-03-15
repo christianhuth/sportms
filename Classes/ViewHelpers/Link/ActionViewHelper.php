@@ -108,7 +108,10 @@
 			parent::initializeArguments();
 			$this->initListOfClubMsDomainModels();
 			foreach($this->getListOfClubMsDomainModels() as $clubMsDomainModel) {
-				$this->registerArgument($clubMsDomainModel, '\Balumedien\Clubms\Domain\Model\\' . $clubMsDomainModel, strtolower($clubMsDomainModel) . ' to show', false);
+				$name = $clubMsDomainModel;
+				$type = '\Balumedien\Clubms\Domain\Model\\' . $clubMsDomainModel;
+				$description = strtolower($clubMsDomainModel) . ' to show';
+				$this->registerArgument($name, $type, $description, false);
 			}
 		}
 		
