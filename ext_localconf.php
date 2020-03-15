@@ -5,7 +5,7 @@
 		'clubms',
 		array(
 			'ClubMS' => 'dbStats',
-			'Club' => 'list, show, sections',
+			'Club' => 'list, officials, sections, show',
 			'ClubSection' => 'list, show',
 			'Competition' => 'list, show',
 			'CompetitionSeason' => 'list, show',
