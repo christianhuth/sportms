@@ -25,7 +25,7 @@
 		/**
 		 * @return \TYPO3\CMS\Extbase\Object\ObjectManager
 		 */
-		private function getObjectManager(): \TYPO3\CMS\Extbase\Object\ObjectManager {
+		protected function getObjectManager(): \TYPO3\CMS\Extbase\Object\ObjectManager {
 			return $this->objectManager;
 		}
 		
@@ -39,7 +39,7 @@
 		/**
 		 * @return \TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface
 		 */
-		private function getConfigurationManager(): \TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface {
+		protected function getConfigurationManager(): \TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface {
 			return $this->configurationManager;
 		}
 		
@@ -53,7 +53,7 @@
 		/**
 		 * @return array
 		 */
-		private function getSettings(): array {
+		protected function getSettings(): array {
 			return $this->settings;
 		}
 		
@@ -69,11 +69,10 @@
 		 */
 		public function initializeArguments() {
 			parent::initializeArguments();
-			$this->registerArgument('clubMsSection', '\Balumedien\Clubms\Domain\Model\Section', 'section to show', false);
 			$this->initSettings();
 		}
 		
-		# Needed so we can access $settings
+		# Needed so we can fill $this->getSettings()
 		private function initSettings() {
 			$configurationManager = $this->objectManager->get('TYPO3\CMS\Extbase\Configuration\ConfigurationManager');
 			$this->setSettings($configurationManager->getConfiguration(\TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface::CONFIGURATION_TYPE_SETTINGS, 'Clubms', 'clubms'));
@@ -82,16 +81,9 @@
 		/**
 		 * @return string Rendered link
 		 */
-		public function render() {
-			
-			$action = $this->arguments['action'];
-			$controller = $this->arguments['controller'];
+		public function render($action = null, $controller = null, $pageUid = null) {
 			$extensionName = "clubms";
 			$pluginName = "clubms";
-			
-			$pageUid = (int) $this->getSettings()['section']['showPid'] ? : NULL;
-			\TYPO3\CMS\Core\Utility\DebugUtility::debug($pageUid, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
-			
 			$pageType = (int) $this->arguments['pageType'];
 			$noCache = (bool) $this->arguments['noCache'];
 			$noCacheHash = (bool) $this->arguments['noCacheHash'];
