@@ -6,12 +6,14 @@
 
 <f:section name="default">
 
-    <div class="tx_clubms_person_show">
+    <div class="tx-clubms-person-show">
 
-        <h2 class="headline" id="personal">
-            <f:translate key="tx_clubms_domain_model_person.personalData"/>
-        </h2>
         <table class="table table-bordered table-hover table-striped">
+            <thead>
+            <tr>
+                <th colspan="2"><f:translate key="tx_clubms_domain_model_person.personalData"/></th>
+            </tr>
+            </thead>
             <tbody>
 
             <f:if condition="{person.firstname}">
