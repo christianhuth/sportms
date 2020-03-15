@@ -109,9 +109,9 @@
 			$this->initListOfClubMsDomainModels();
 			foreach($this->getListOfClubMsDomainModels() as $clubMsDomainModel) {
 				$name = $clubMsDomainModel;
-				$type = '\Balumedien\Clubms\Domain\Model\\' . $clubMsDomainModel;
+				$type = "string";
 				$description = strtolower($clubMsDomainModel) . ' to show';
-				$this->registerArgument($name, "string", $description, false);
+				$this->registerArgument($name, $type, $description, false);
 			}
 		}
 		
