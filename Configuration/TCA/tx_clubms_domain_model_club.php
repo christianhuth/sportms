@@ -333,7 +333,7 @@ return array(
 						'/' => '',
 					],
 				],
-				'prependSlash' => false,
+				'prependSlash' => TRUE,
 				'type' => 'slug',
 			],
 		],
