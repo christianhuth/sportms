@@ -8,11 +8,24 @@
     <div class="tx-clubms-season-list">
 
         <f:if condition="{seasons}">
-            <ul>
+            <table class="table table-bordered table-hover table-striped">
+                <thead>
+                <tr>
+                    <th>Bezeichnung</th>
+                    <th>Kurze Bezeichnung</th>
+                    <th>Sehr kurze Bezeichnung</th>
+                </tr>
+                </thead>
+                <tbody>
                 <f:for as="season" each="{seasons}">
-                    <li>{season.seasonName}, {season.seasonNameShort}, {season.seasonNameVeryShort}</li>
+                    <tr>
+                        <td>{season.seasonName}</td>
+                        <td>{season.seasonNameShort}</td>
+                        <td>{season.seasonNameVeryShort}</td>
+                    </tr>
                 </f:for>
-            </ul>
+                </tbody>
+            </table>
         </f:if>
 
     </div>
