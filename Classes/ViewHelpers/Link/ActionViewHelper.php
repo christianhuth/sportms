@@ -140,8 +140,8 @@
 			}
 			$extensionName = "clubms";
 			$pluginName = "clubms";
-			$action = $this->arguments['action'] ? (int) $this->arguments['action'] : "show";
-			$controller = $this->arguments['controller'] ? (int) $this->arguments['controller'] : $this->getClubMsDomainModel();
+			$action = $this->arguments['action'] ? $this->arguments['action'] : "show";
+			$controller = $this->arguments['controller'] ? $this->arguments['controller'] : $this->getClubMsDomainModel();
 			$pageUid = $this->arguments['pageUid'] ? (int) $this->arguments['pageUid'] : (int) $this->getSettings()[strtolower($controller)][$action . 'Pid'] ? : NULL;
 			$parameters = $this->arguments['arguments'] ? $this->arguments['arguments'] : array();
 			if($this->getClubMsDomainModel() != null) {
