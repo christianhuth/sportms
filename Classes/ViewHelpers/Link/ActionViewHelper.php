@@ -8,96 +8,96 @@
 		 * @var \TYPO3\CMS\Extbase\Object\ObjectManager
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
-		protected $objectManager;
+		public $objectManager;
 		
 		/**
 		 * @var \TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
-		protected $configurationManager;
+		public $configurationManager;
 		
 		/**
 		 * @var array
 		 */
-		protected $settings;
+		public $settings;
 		
 		/**
 		 * @var array
 		 */
-		protected $listOfClubMsDomainModels;
+		public $listOfClubMsDomainModels;
 		
 		/**
 		 * @var string
 		 */
-		protected $clubMsDomainModel;
+		public $clubMsDomainModel;
 		
 		/**
 		 * @return \TYPO3\CMS\Extbase\Object\ObjectManager
 		 */
-		private function getObjectManager(): \TYPO3\CMS\Extbase\Object\ObjectManager {
+		public function getObjectManager(): \TYPO3\CMS\Extbase\Object\ObjectManager {
 			return $this->objectManager;
 		}
 		
 		/**
 		 * @param \TYPO3\CMS\Extbase\Object\ObjectManager $objectManager
 		 */
-		private function setObjectManager(\TYPO3\CMS\Extbase\Object\ObjectManager $objectManager): void {
+		public function setObjectManager(\TYPO3\CMS\Extbase\Object\ObjectManager $objectManager): void {
 			$this->objectManager = $objectManager;
 		}
 		
 		/**
 		 * @return \TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface
 		 */
-		private function getConfigurationManager(): \TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface {
+		public function getConfigurationManager(): \TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface {
 			return $this->configurationManager;
 		}
 		
 		/**
 		 * @param \TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface $configurationManager
 		 */
-		private function setConfigurationManager(\TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface $configurationManager): void {
+		public function setConfigurationManager(\TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface $configurationManager): void {
 			$this->configurationManager = $configurationManager;
 		}
 		
 		/**
 		 * @return array
 		 */
-		private function getSettings(): array {
+		public function getSettings(): array {
 			return $this->settings;
 		}
 		
 		/**
 		 * @param array $settings
 		 */
-		private function setSettings(array $settings): void {
+		public function setSettings(array $settings): void {
 			$this->settings = $settings;
 		}
 		
 		/**
 		 * @return array
 		 */
-		private function getListOfClubMsDomainModels(): array {
+		public function getListOfClubMsDomainModels(): array {
 			return $this->listOfClubMsDomainModels;
 		}
 		
 		/**
 		 * @param array $listOfClubMsDomainModels
 		 */
-		private function setListOfClubMsDomainModels(array $listOfClubMsDomainModels): void {
+		public function setListOfClubMsDomainModels(array $listOfClubMsDomainModels): void {
 			$this->listOfClubMsDomainModels = $listOfClubMsDomainModels;
 		}
 		
 		/**
 		 * @return string
 		 */
-		private function getClubMsDomainModel(): string {
+		public function getClubMsDomainModel(): string {
 			return $this->clubMsDomainModel;
 		}
 		
 		/**
 		 * @param string $clubMsDomainModel
 		 */
-		private function setClubMsDomainModel(string $clubMsDomainModel): void {
+		public function setClubMsDomainModel(string $clubMsDomainModel): void {
 			$this->clubMsDomainModel = $clubMsDomainModel;
 		}
 		
@@ -114,12 +114,12 @@
 		}
 		
 		# Needed so we can fill $this->getSettings()
-		private function initSettings() {
+		public function initSettings() {
 			$configurationManager = $this->objectManager->get('TYPO3\CMS\Extbase\Configuration\ConfigurationManager');
 			$this->setSettings($configurationManager->getConfiguration(\TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface::CONFIGURATION_TYPE_SETTINGS, 'Clubms', 'clubms'));
 		}
 		
-		private function initListOfClubMsDomainModels() {
+		public function initListOfClubMsDomainModels() {
 			$ListOfClubMsDomainModels = "Club, ClubSection, Competition, CompetitionSeason, Game, Person, Season, Section, Team, TeamSeason, Venue";
 			$this->setListOfClubMsDomainModels(explode(",", str_replace(" ", "", trim($ListOfClubMsDomainModels))));
 		}
