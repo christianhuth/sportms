@@ -10,13 +10,10 @@
             <thead>
             <tr>
                 <th>
-                    <f:translate key="tx_clubms_domain_model_competition.name"/>
-                </th>
-                <th>
-                    <f:translate key="tx_clubms_domain_model_competition.short"/>
-                </th>
-                <th>
                     <f:translate key="tx_clubms_domain_model_competition.section"/>
+                </th>
+                <th>
+                    <f:translate key="tx_clubms_domain_model_competition.name"/>
                 </th>
                 <th>
                     <f:translate key="tx_clubms_domain_model_competition.ageLevel"/>
@@ -31,9 +28,8 @@
                 <f:then>
                     <f:for as="competition" each="{competitions}">
                         <tr>
-                            <td>{competition.name}</td>
-                            <td>{competition.short}</td>
-                            <td>{competition.section.label}</td>
+                            <td><f:link.action action="show" controller="Section" pageUid="{settings.section.showPid}" arguments="{section: competition.section}">{competition.section.label}</f:link.action></td>
+                            <td><f:link.action action="show" controller="Competition" pageUid="{settings.competition.showPid}" arguments="{competition: competition}">{competition.name}</f:link.action></td>
                             <td>{competition.ageLevel.label}</td>
                             <td>{competition.competitionType}</td>
                         </tr>
