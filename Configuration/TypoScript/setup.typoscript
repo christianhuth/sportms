@@ -50,6 +50,7 @@ plugin.tx_clubms {
 
         season {
             listPid = {$plugin.tx_clubms.settings.season.listPid}
+            showPid = {$plugin.tx_clubms.settings.season.showPid}
         }
 
         section {
