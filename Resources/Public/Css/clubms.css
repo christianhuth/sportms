@@ -106,7 +106,7 @@
  *
  */
 .tx-clubms .tx-clubms-container .tx-clubms-clubms-dbstats .tx-clubms-dbstat {
-	margin-bottom: 25px;
+	margin: 25px 0;
 }
 .tx-clubms .tx-clubms-container .tx-clubms-clubms-dbstats .tx-clubms-dbstat .tx-clubms-dbstat-image,
 .tx-clubms .tx-clubms-container .tx-clubms-clubms-dbstats .tx-clubms-dbstat .tx-clubms-dbstat-label {
