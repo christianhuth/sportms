@@ -11,8 +11,7 @@
             <th>Verein</th>
             <th>Mannschaftsname</th>
             <th>Altersstufe</th>
-            <th>Spielfrei</th>
-            <th>Anzahl</th>
+            <th>Teaminstanzen</th>
         </tr>
         </thead>
         <tbody>
@@ -24,7 +23,6 @@
                         <td><f:link.action action="show" controller="Club" pageUid="{settings.club.showPid}" arguments="{club: team.club}">{team.club.name}</f:link.action></td>
                         <td><f:link.action action="show" controller="Team" pageUid="{settings.team.showPid}" arguments="{team: team}">{team.name}</f:link.action></td>
                         <td>{team.ageLevel.label}</td>
-                        <td>{team.dummy}</td>
                         <td>
                             <f:count>{team.teamSeasons}</f:count>
                         </td>
@@ -32,7 +30,7 @@
                 </f:for>
             </f:then>
             <f:else>
-                <td colspan="6">Keine Mannschaften gefunden</td>
+                <td colspan="5">Keine Mannschaften gefunden</td>
             </f:else>
         </f:if>
         </tbody>
