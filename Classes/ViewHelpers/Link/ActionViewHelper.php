@@ -34,70 +34,70 @@
 		/**
 		 * @return \TYPO3\CMS\Extbase\Object\ObjectManager
 		 */
-		protected function getObjectManager(): \TYPO3\CMS\Extbase\Object\ObjectManager {
+		private function getObjectManager(): \TYPO3\CMS\Extbase\Object\ObjectManager {
 			return $this->objectManager;
 		}
 		
 		/**
 		 * @param \TYPO3\CMS\Extbase\Object\ObjectManager $objectManager
 		 */
-		protected function setObjectManager(\TYPO3\CMS\Extbase\Object\ObjectManager $objectManager): void {
+		private function setObjectManager(\TYPO3\CMS\Extbase\Object\ObjectManager $objectManager): void {
 			$this->objectManager = $objectManager;
 		}
 		
 		/**
 		 * @return \TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface
 		 */
-		protected function getConfigurationManager(): \TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface {
+		private function getConfigurationManager(): \TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface {
 			return $this->configurationManager;
 		}
 		
 		/**
 		 * @param \TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface $configurationManager
 		 */
-		protected function setConfigurationManager(\TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface $configurationManager): void {
+		private function setConfigurationManager(\TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface $configurationManager): void {
 			$this->configurationManager = $configurationManager;
 		}
 		
 		/**
 		 * @return array
 		 */
-		protected function getSettings(): array {
+		private function getSettings(): array {
 			return $this->settings;
 		}
 		
 		/**
 		 * @param array $settings
 		 */
-		protected function setSettings(array $settings): void {
+		private function setSettings(array $settings): void {
 			$this->settings = $settings;
 		}
 		
 		/**
 		 * @return array
 		 */
-		public function getListOfClubMsDomainModels(): array {
+		private function getListOfClubMsDomainModels(): array {
 			return $this->listOfClubMsDomainModels;
 		}
 		
 		/**
 		 * @param array $listOfClubMsDomainModels
 		 */
-		public function setListOfClubMsDomainModels(array $listOfClubMsDomainModels): void {
+		private function setListOfClubMsDomainModels(array $listOfClubMsDomainModels): void {
 			$this->listOfClubMsDomainModels = $listOfClubMsDomainModels;
 		}
 		
 		/**
 		 * @return string
 		 */
-		public function getClubMsDomainModel(): string {
+		private function getClubMsDomainModel(): string {
 			return $this->clubMsDomainModel;
 		}
 		
 		/**
 		 * @param string $clubMsDomainModel
 		 */
-		public function setClubMsDomainModel(string $clubMsDomainModel): void {
+		private function setClubMsDomainModel(string $clubMsDomainModel): void {
 			$this->clubMsDomainModel = $clubMsDomainModel;
 		}
 		
@@ -107,6 +107,7 @@
 		public function initializeArguments() {
 			parent::initializeArguments();
 			$this->initSettings();
+			$this->initListOfClubMsDomainModels();
 			foreach($this->getListOfClubMsDomainModels() as $clubMsDomainModel) {
 				$this->registerArgument($clubMsDomainModel, '\Balumedien\Clubms\Domain\Model\\' . $clubMsDomainModel, strtolower($clubMsDomainModel) . ' to show', false);
 				if($this->arguments[strtolower($clubMsDomainModel)]) {
@@ -117,9 +118,14 @@
 		}
 		
 		# Needed so we can fill $this->getSettings()
-		protected function initSettings() {
+		private function initSettings() {
 			$configurationManager = $this->objectManager->get('TYPO3\CMS\Extbase\Configuration\ConfigurationManager');
 			$this->setSettings($configurationManager->getConfiguration(\TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface::CONFIGURATION_TYPE_SETTINGS, 'Clubms', 'clubms'));
+		}
+		
+		private function initListOfClubMsDomainModels() {
+			$ListOfClubMsDomainModels = "Club, ClubSection, Competition, CompetitionSeason, Game, Person, Season, Section, Team, TeamSeason, Venue";
+			$this->setListOfClubMsDomainModels(explode(",", $ListOfClubMsDomainModels));
 		}
 		
 		/**
