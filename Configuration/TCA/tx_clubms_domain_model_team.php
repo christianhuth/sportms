@@ -199,7 +199,7 @@ return array(
 				'default' => '',
 				'fallbackCharacter' => '-',
 				'generatorOptions' => [
-					'fields' => ['name', 'section_age_level.label'],
+					'fields' => ['name', 'section_age_level.slug'],
 					'fieldSeparator' => '-',
 					'prefixParentPageSlug' => false,
 					'replacements' => [
