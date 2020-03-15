@@ -25,8 +25,7 @@
                                 <clubms:link.action Section="{section}">{section.label}</clubms:link.action>
                             </td>
                             <td>
-                            </td>
-                            <td>
+                                <f:debug>{section}</f:debug>
                                 <f:if condition="{section.sectionAgeGroups}">
                                     <f:then>
 
@@ -36,7 +35,7 @@
                                     </f:else>
                                 </f:if>
                             </td>
-                            <td>{team.sectionAgeLevel.label}</td>
+                            <td></td>
                         </tr>
                     </f:for>
                 </f:then>
