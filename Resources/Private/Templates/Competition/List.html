@@ -29,20 +29,20 @@
             </thead>
             <tbody>
             <f:if condition="{competitions}">
-                <f:for as="competition" each="{competitions}">
-                    <f:then>
-                    <tr>
-                        <td>{competition.name}</td>
-                        <td>{competition.short}</td>
-                        <td>{competition.section.label}</td>
-                        <td>{competition.ageLevel.label}</td>
-                        <td>{competition.competitionType}</td>
-                    </tr>
-                    </f:then>
-                    <f:else>
-                        <td colspan="5">Keine Wettbewerbe gefunden.</td>
-                    </f:else>
-                </f:for>
+                <f:then>
+                    <f:for as="competition" each="{competitions}">
+                        <tr>
+                            <td>{competition.name}</td>
+                            <td>{competition.short}</td>
+                            <td>{competition.section.label}</td>
+                            <td>{competition.ageLevel.label}</td>
+                            <td>{competition.competitionType}</td>
+                        </tr>
+                    </f:for>
+                </f:then>
+                <f:else>
+                    <td colspan="5">Keine Wettbewerbe gefunden.</td>
+                </f:else>
             </f:if>
             </tbody>
         </table>
