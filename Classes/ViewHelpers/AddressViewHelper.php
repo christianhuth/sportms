@@ -18,7 +18,7 @@
 		public function render(): string {
 			$address = $this->arguments['address'];
 			$street = $address['street'];
-			return $street;
+			return $address;
 		}
 		
 	}
