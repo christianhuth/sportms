@@ -18,7 +18,6 @@
 		 */
 		public function listAction() {
 			$teamSeasons = $this->teamSeasonRepository->findAll();
-			\TYPO3\CMS\Core\Utility\DebugUtility::debug($teamSeasons, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			$this->view->assign('teamSeasons', $teamSeasons);
 		}
 		
