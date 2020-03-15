@@ -26,7 +26,7 @@
                                 <f:link.action action="show" arguments="{club: team.club}" controller="Club" pageUid="{settings.club.showPid}">{team.club.name}</f:link.action>
                             </td>
                             <td>
-                                <f:link.action action="show" arguments="{section: team.clubSection.section}" controller="Section" pageUid="{settings.section.showPid}">{team.clubSection.section.label}</f:link.action>
+                                <clubms:link.action Section="{team.clubSection.section}">{team.clubSection.section.label}</clubms:link.action>
                             </td>
                             <td>
                                 <clubms:link.action Team="{team}">{team.name}</clubms:link.action>
