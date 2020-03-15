@@ -13,6 +13,7 @@
 			'Person' => 'list, show',
 			'PersonProfile' => 'list, show',
 			'Season' => 'list, show',
+			'Section' => 'list, show',
 			'Team' => 'list, show',
 			'TeamSeason' => 'list, show',
 			'Venue' => 'list, show',
