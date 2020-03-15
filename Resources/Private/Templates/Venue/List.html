@@ -1,0 +1,52 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:clubms="Balumedien\Clubms\ViewHelpers"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<f:layout name="default"/>
+
+<f:section name="default">
+
+    <div class="tx-clubms-venue-list">
+        <table class="table table-bordered table-hover table-striped">
+            <thead>
+            <tr>
+                <th>Bezeichnung</th>
+                <th>Adresse</th>
+                <th>Zugehöriger Verein</th>
+            </tr>
+            </thead>
+            <tbody>
+            <f:if condition="{venues}">
+                <f:then>
+                    <f:for as="venue" each="{venues}">
+                        <tr>
+                            <td>
+                                <clubms:link.action Venue="{venue}">{venue.name}</clubms:link.action>
+                            </td>
+                            <td>
+                                <clubms:address Address="{venue.address}"/>
+                            </td>
+                            <td>
+                                <f:if>
+                                    <f:then>
+                                        <clubms:link.action Club="{venue.club}">{venue.club.name}</clubms:link.action>
+                                    </f:then>
+                                    <f:else>
+                                        -
+                                    </f:else>
+                                </f:if>
+                            </td>
+                        </tr>
+                    </f:for>
+                </f:then>
+                <f:else>
+                    <td colspan="3">Keine Sportstätten gefunden</td>
+                </f:else>
+            </f:if>
+            </tbody>
+        </table>
+    </div>
+
+</f:section>
+
+</html>
