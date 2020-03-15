@@ -190,10 +190,10 @@
 
 			<!-- Domain Model ClubSection -->
 			<trans-unit id="tx_clubms_domain_model_clubsection">
-				<source>Abteilung</source>
+				<source>Vereinsabteilung</source>
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_clubsection.section">
-				<source>Abteilung</source>
+				<source>Vereinsabteilung</source>
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_clubsection.images">
 				<source>Bilder</source>
