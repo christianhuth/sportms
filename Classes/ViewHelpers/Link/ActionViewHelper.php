@@ -111,13 +111,6 @@
 			foreach($this->getListOfClubMsDomainModels() as $clubMsDomainModel) {
 				$this->registerArgument($clubMsDomainModel, '\Balumedien\Clubms\Domain\Model\\' . $clubMsDomainModel, strtolower($clubMsDomainModel) . ' to show', false);
 			}
-			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->arguments, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
-			foreach($this->getListOfClubMsDomainModels() as $clubMsDomainModel) {
-				if($this->arguments[strtolower($clubMsDomainModel)]) {
-					$this->setClubMsDomainModel(strtolower($clubMsDomainModel));
-					break;
-				}
-			}
 		}
 		
 		# Needed so we can fill $this->getSettings()
@@ -135,6 +128,13 @@
 		 * @return string Rendered link
 		 */
 		public function render() {
+			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->arguments, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
+			foreach($this->getListOfClubMsDomainModels() as $clubMsDomainModel) {
+				if($this->arguments[strtolower($clubMsDomainModel)]) {
+					$this->setClubMsDomainModel(strtolower($clubMsDomainModel));
+					break;
+				}
+			}
 			$extensionName = "clubms";
 			$pluginName = "clubms";
 			$action = "show";
