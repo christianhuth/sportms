@@ -23,7 +23,8 @@
                             <td>
                                 <clubms:link.action Venue="{venue}">{venue.name}</clubms:link.action>
                             </td>
-                            <td><f:render partial="Address/Show" arguments="{address: venue.address}"/>
+                            <td>
+                                <f:render arguments="{address: venue.address}" partial="Address/Show"/>
                             </td>
                             <td>
                                 <f:if condition="{venue.club}">

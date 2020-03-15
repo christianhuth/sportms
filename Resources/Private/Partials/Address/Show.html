@@ -1,10 +1,14 @@
 <html data-namespace-typo3-fluid="true"
-      xmlns:clubms="Balumedien\Clubms\ViewHelpers"
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <f:if condition="{address}">
-    {address.street} {address.housenumber}<br/>
-    {address.zipcode} {address.location}
+    <f:then>
+        {address.street} {address.housenumber}<br/>
+        {address.zipcode} {address.location}
+    </f:then>
+    <f:else>
+        -
+    </f:else>
 </f:if>
 
 </html>
