@@ -4,6 +4,7 @@
 		'Balumedien.' . $_EXTKEY,
 		'clubms',
 		array(
+			'ClubMS' => 'dbStats',
 			'Club' => 'list, show, sections',
 			'ClubSection' => 'list, show',
 			'Competition' => 'list, show',
