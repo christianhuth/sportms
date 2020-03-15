@@ -385,9 +385,10 @@ return array(
 			'label' => 'URL Segment',
 			'config' => [
 				'default' => '',
+				'eval' => 'uniqueInSite',
 				'fallbackCharacter' => '-',
 				'generatorOptions' => [
-					'fields' => ['uid', 'lastname', 'firstname'],
+					'fields' => ['lastname', 'firstname'],
 					'fieldSeparator' => '-',
 					'prefixParentPageSlug' => false,
 					'replacements' => [
