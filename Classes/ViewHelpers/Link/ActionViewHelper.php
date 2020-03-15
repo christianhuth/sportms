@@ -144,7 +144,9 @@
 			$controller = $this->arguments['controller'] ? (int) $this->arguments['controller'] : $this->getClubMsDomainModel();
 			$pageUid = $this->arguments['pageUid'] ? (int) $this->arguments['pageUid'] : (int) $this->getSettings()[strtolower($controller)][$action . 'Pid'] ? : NULL;
 			$parameters = $this->arguments['arguments'] ? $this->arguments['arguments'] : array();
-			$parameters[strtolower($this->getClubMsDomainModel())] = $this->arguments[$this->getClubMsDomainModel()];
+			if($parameters == null) {
+				$parameters[strtolower($this->getClubMsDomainModel())] = $this->arguments[$this->getClubMsDomainModel()];
+			}
 			$pageType = (int) $this->arguments['pageType'];
 			$noCache = (bool) $this->arguments['noCache'];
 			$noCacheHash = (bool) $this->arguments['noCacheHash'];
