@@ -4,11 +4,21 @@
 <f:layout name="default"/>
 
 <f:section name="default">
-    <div class="col-xs-2 col-xs-offset-1"><f:link.action controller="Club" action="list" pageUid="{settings.club.listPid}">{clubCount}Vereine</f:link.action></div>
-    <div class="col-xs-2">{competitionCount} Wettbewerbe</div>
-    <div class="col-xs-2">{gameCount} Spiele</div>
-    <div class="col-xs-2">{personCount}Personen</div>
-    <div class="col-xs-2 col-xs-offset-1">{teamCount}Mannschaften</div>
+    <div class="col-xs-2 col-xs-offset-1">
+        <f:link.action action="list" controller="Club" pageUid="{settings.club.listPid}">{clubCount} Vereine</f:link.action>
+    </div>
+    <div class="col-xs-2">
+        <f:link.action action="list" controller="Competition" pageUid="{settings.competition.listPid}">{competitionCount} Wettbewerbe</f:link.action>
+    </div>
+    <div class="col-xs-2">
+        <f:link.action action="list" controller="Game" pageUid="{settings.game.listPid}">{gameCount} Spiele</f:link.action>
+    </div>
+    <div class="col-xs-2">
+        <f:link.action action="list" controller="Person" pageUid="{settings.person.listPid}">{personCount} Personen</f:link.action>
+    </div>
+    <div class="col-xs-2 col-xs-offset-1">
+        <f:link.action action="list" controller="Team" pageUid="{settings.team.listPid}">{teamCount} Mannschaften</f:link.action>
+    </div>
 </f:section>
 
 </html>
