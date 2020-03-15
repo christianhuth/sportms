@@ -3,30 +3,31 @@ if (!defined ('TYPO3_MODE')) {
 	die ('Access denied.');
 }
 
-$GLOBALS['TCA']['tx_clubms_domain_model_teamseasonofficialjob'] = array(
-	'ctrl' => array(
-		'crdate' => 'crdate',
-		'cruser_id' => 'cruser_id',
-		'default_sortby' => 'ORDER BY label ASC',
-		'delete' => 'deleted',
-		'dividers2tabs' => TRUE,
-		'enablecolumns' => array(
-			'disabled' => 'hidden',
-			'starttime' => 'starttime',
-			'endtime' => 'endtime',
-		),
-		'iconfile' => 'EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_teamseasonofficialjob.svg',
-		'label' => 'label',
-		'searchFields' => '',
-		'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_teamseasonofficialjob',
-		'tstamp' => 'tstamp',
-		'versioningWS' => TRUE,
-	),
+return array(
+    'ctrl' => array(
+        'crdate' => 'crdate',
+        'cruser_id' => 'cruser_id',
+        'delete' => 'deleted',
+        'dividers2tabs' => TRUE,
+        'enablecolumns' => array(
+            'disabled' => 'hidden',
+            'starttime' => 'starttime',
+            'endtime' => 'endtime',
+        ),
+		'hideTable' => TRUE,
+		'iconfile' => 'EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_url.svg',
+        'label' => 'url',
+        'searchFields' => '',
+		'sortby' => 'sorting',
+        'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_url',
+        'tstamp' => 'tstamp',
+        'versioningWS' => TRUE,
+    ),
 	'interface' => array(
-		'showRecordFieldList' => 'label',
+		'showRecordFieldList' => '',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'label'),
+		'1' => array('showitem' => 'url, public,'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -55,15 +56,15 @@ $GLOBALS['TCA']['tx_clubms_domain_model_teamseasonofficialjob'] = array(
 				'behaviour' => array(
 					'allowLanguageSynchronization' => TRUE,
 				),
-				'type' => 'input',
-				'size' => 13,
-				'eval' => 'datetime',
 				'checkbox' => 0,
 				'default' => 0,
+				'eval' => 'datetime',
 				'range' => array(
 					'lower' => mktime(0, 0, 0, date('m'), date('d'), date('Y'))
 				),
 				'renderType' => 'inputDateTime',
+				'size' => 13,
+				'type' => 'input',
 			),
 		),
 		'endtime' => array(
@@ -85,13 +86,21 @@ $GLOBALS['TCA']['tx_clubms_domain_model_teamseasonofficialjob'] = array(
 			),
 		),
 		
-		'label' => array(
+		'url' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_teamseasonofficialjob.label',
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_url.url',
 			'config' => array(
+				'eval' => 'domainname, required, trim',
+				'renderType' => 'inputLink',
+				'size' => 255,
 				'type' => 'input',
-				'size' => 30,
-				'eval' => 'trim, required'
+			),
+		),
+		'public' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_url.public',
+			'config' => array(
+				'type' => 'check',
 			),
 		),
 		
