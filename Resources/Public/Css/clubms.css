@@ -113,8 +113,10 @@
 	padding: 10px;
 }
 .tx-clubms .tx-clubms-container .tx-clubms-clubms-dbstats .tx-clubms-dbstat img {
+	background-color: white;
 	height: auto !important;
 	max-width: 100%;
+	padding: 15px;
 }
 
 
