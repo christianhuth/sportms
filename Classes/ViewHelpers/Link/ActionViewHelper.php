@@ -135,7 +135,6 @@
 					break;
 				}
 			}
-			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->arguments, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			$extensionName = "clubms";
 			$pluginName = "clubms";
 			$action = "show";
