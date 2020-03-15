@@ -108,7 +108,8 @@
 .tx-clubms .tx-clubms-container .tx-clubms-clubms-dbstats .tx-clubms-dbstat {
 	margin-bottom: 25px;
 }
-.tx-clubms .tx-clubms-container .tx-clubms-clubms-dbstats .tx-clubms-dbstat div {
+.tx-clubms .tx-clubms-container .tx-clubms-clubms-dbstats .tx-clubms-dbstat .tx-clubms-dbstat-image,
+.tx-clubms .tx-clubms-container .tx-clubms-clubms-dbstats .tx-clubms-dbstat .tx-clubms-dbstat-label {
 	background-color: var(--regular-gray);
 	padding: 10px;
 }
@@ -119,6 +120,7 @@
 	padding: 15px;
 }
 .tx-clubms .tx-clubms-container .tx-clubms-clubms-dbstats .tx-clubms-dbstat .tx-clubms-dbstat-label {
+	padding-top: 0;
 	text-align: center;
 }
 
