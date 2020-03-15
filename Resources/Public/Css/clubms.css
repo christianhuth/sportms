@@ -105,7 +105,12 @@
  * CLUBMS
  *
  */
+.tx-clubms .tx-clubms-container .tx-clubms-clubms-dbstats .tx-clubms-dbstat {
+	background-color: var(--regular-gray);
+	padding: 10px;
+}
 .tx-clubms .tx-clubms-container .tx-clubms-clubms-dbstats .tx-clubms-dbstat img {
+	height: auto !important;
 	max-width: 100%;
 }
 
