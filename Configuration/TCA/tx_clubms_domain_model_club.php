@@ -328,7 +328,7 @@ return array(
 				'generatorOptions' => [
 					'fields' => ['name'],
 					'fieldSeparator' => '/',
-					'prefixParentPageSlug' => false,
+					'prefixParentPageSlug' => FALSE,
 					'replacements' => [
 						'/' => '',
 					],

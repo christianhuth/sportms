@@ -216,16 +216,17 @@ return array(
 			'label' => 'URL Segment',
 			'config' => [
 				'default' => '',
+				'eval' => 'uniqueInSite',
 				'fallbackCharacter' => '-',
 				'generatorOptions' => [
-					'fields' => ['uid', 'name'],
+					'fields' => ['name'],
 					'fieldSeparator' => '-',
-					'prefixParentPageSlug' => false,
+					'prefixParentPageSlug' => FALSE,
 					'replacements' => [
 						'/' => '',
 					],
 				],
-				'prependSlash' => false,
+				'prependSlash' => FALSE,
 				'type' => 'slug',
 			],
 		],
