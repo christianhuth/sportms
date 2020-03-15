@@ -5,7 +5,7 @@
 
 <f:section name="default">
 
-    <f:debug>{teamsSeasons}</f:debug>
+    <f:debug>{teamSeasons}</f:debug>
 
     <div class="tx-clubms-teamseason-list">
         <table class="table table-bordered table-hover table-striped">
@@ -21,7 +21,7 @@
             <tbody>
             <f:if condition="{teamSeasons}">
                 <f:then>
-                    <f:for as="teamSeason" each="{teamsSeasons}">
+                    <f:for as="teamSeason" each="{teamSeasons}">
                         <tr>
                             <td>{teamSeason.team.club.name}</td>
                             <td>{teamSeason.team.clubSection.section.label}</td>
