@@ -147,16 +147,17 @@ return array(
 			'label' => 'URL Segment',
 			'config' => [
 				'default' => '',
+				'eval' => 'uniqueInPid',
 				'fallbackCharacter' => '-',
 				'generatorOptions' => [
-					'fields' => ['uid', 'label'],
+					'fields' => ['label'],
 					'fieldSeparator' => '-',
-					'prefixParentPageSlug' => false,
+					'prefixParentPageSlug' => FALSE,
 					'replacements' => [
 						'/' => '',
 					],
 				],
-				'prependSlash' => false,
+				'prependSlash' => FALSE,
 				'type' => 'slug',
 			],
 		],
