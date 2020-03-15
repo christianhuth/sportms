@@ -111,7 +111,7 @@
 			foreach($this->getListOfClubMsDomainModels() as $clubMsDomainModel) {
 				$this->registerArgument($clubMsDomainModel, '\Balumedien\Clubms\Domain\Model\\' . $clubMsDomainModel, strtolower($clubMsDomainModel) . ' to show', false);
 			}
-			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->arguments(), 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
+			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->arguments, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			foreach($this->getListOfClubMsDomainModels() as $clubMsDomainModel) {
 				if($this->arguments[strtolower($clubMsDomainModel)]) {
 					$this->setClubMsDomainModel(strtolower($clubMsDomainModel));
