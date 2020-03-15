@@ -33,7 +33,7 @@
 		protected $sectionAgeLevel;
 		
 		/**
-		 * @var string
+		 * @var \Balumedien\Clubms\Domain\Model\CompetitionType
 		 */
 		protected $competitionType;
 		
@@ -137,16 +137,16 @@
 		}
 		
 		/**
-		 * @return string
+		 * @return CompetitionType
 		 */
-		public function getCompetitionType() {
+		public function getCompetitionType(): CompetitionType {
 			return $this->competitionType;
 		}
 		
 		/**
-		 * @param string $competitionType
+		 * @param CompetitionType $competitionType
 		 */
-		public function setCompetitionType($competitionType) {
+		public function setCompetitionType(CompetitionType $competitionType): void {
 			$this->competitionType = $competitionType;
 		}
 		
