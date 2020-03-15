@@ -69,6 +69,7 @@
 			
 			/* Domain Model Club */
 			$clubCount = $this->clubRepository->findAll();
+			\TYPO3\CMS\Core\Utility\DebugUtility::debug($clubCount, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			$this->view->assign('clubCount', $clubCount);
 			
 			/* Domain Model Competition */
