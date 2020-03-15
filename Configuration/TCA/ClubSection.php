@@ -265,7 +265,7 @@ $GLOBALS['TCA']['tx_clubms_domain_model_clubsection'] = array(
 						'delete' => true,
 						'localize' => true,
 					],
-					'levelLinksPosition' => 'bottom',
+					'levelLinksPosition' => 'none',
 					'useSortable' => 1,
 				),
 				'foreign_field' => 'club_section',
