@@ -18,14 +18,13 @@
 		public function render() {
 			
 			$localizationUtility = new \TYPO3\CMS\Extbase\Utility\LocalizationUtility;
+			\TYPO3\CMS\Core\Utility\DebugUtility::debug($localizationUtility, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			
 			$langKey = 'tx_clubms_domain_model_person.zodiac_sign_' . $this->arguments['zodiacSign'];
 			\TYPO3\CMS\Core\Utility\DebugUtility::debug($langKey, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			$translatedZodiacSign = $localizationUtility->translate($langKey, "clubms");
 			\TYPO3\CMS\Core\Utility\DebugUtility::debug($translatedZodiacSign, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			return $translatedZodiacSign;
-
-			
 			
 			switch($this->arguments['zodiacSign']) {
 				case 1: return "Wassermann";
