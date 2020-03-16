@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<T3DataStructure>
+	<ROOT>
+		<TCEforms>
+			<sheetTitle>Abteilung</sheetTitle>
+		</TCEforms>
+		<type>array</type>
+		<el>
+			<settings.section.uid>
+				<TCEforms>
+					<label>Zeige folgende Abteilung</label>
+					<displayCond>FIELD:base.switchableControllerActions:=:Section->show</displayCond>
+					<config>
+						<type>group</type>
+						<internal_type>db</internal_type>
+						<allowed>tx_clubms_domain_model_section</allowed>
+						<size>1</size>
+						<maxItems>1</maxItems>
+						<minItems>0</minItems>
+						<show_thumbs>1</show_thumbs>
+					</config>
+				</TCEforms>
+			</settings.section.uid>
+			<settings.section.sections>
+				<TCEforms>
+					<label>Welche Abteilungen sollen angezeigt werden?</label>
+					<displayCond>
+						<OR>
+							<numIndex index="0">FIELD:base.switchableControllerActions:=:ClubSection->list</numIndex>
+							<numIndex index="1">FIELD:base.switchableControllerActions:=:Competition->list</numIndex>
+							<numIndex index="2">FIELD:base.switchableControllerActions:=:CompetitionSeason->list</numIndex>
+							<numIndex index="3">FIELD:base.switchableControllerActions:=:Game->list</numIndex>
+							<numIndex index="4">FIELD:base.switchableControllerActions:=:Team->list</numIndex>
+							<numIndex index="5">FIELD:base.switchableControllerActions:=:TeamSeason->list</numIndex>
+						</OR>
+					</displayCond>
+					<config>
+						<foreign_table>tx_clubms_domain_model_section</foreign_table>
+						<foreign_table_where>ORDER BY label ASC</foreign_table_where>
+						<renderType>selectMultipleSideBySide</renderType>
+						<type>select</type>
+					</config>
+				</TCEforms>
+			</settings.section.sections>
+			<settings.section.sectionsSelectbox>
+				<TCEforms>
+					<label>Selectbox für Abteilungen?</label>
+					<displayCond>
+						<OR>
+							<numIndex index="0">FIELD:base.switchableControllerActions:=:ClubSection->list</numIndex>
+							<numIndex index="1">FIELD:base.switchableControllerActions:=:Competition->list</numIndex>
+							<numIndex index="2">FIELD:base.switchableControllerActions:=:CompetitionSeason->list</numIndex>
+							<numIndex index="3">FIELD:base.switchableControllerActions:=:Game->list</numIndex>
+							<numIndex index="4">FIELD:base.switchableControllerActions:=:Team->list</numIndex>
+							<numIndex index="5">FIELD:base.switchableControllerActions:=:TeamSeason->list</numIndex>
+						</OR>
+					</displayCond>
+					<config>
+						<default>1</default>
+						<renderType>checkboxToggle</renderType>
+						<type>check</type>
+					</config>
+				</TCEforms>
+			</settings.section.sectionsSelectbox>
+		</el>
+	</ROOT>
+</T3DataStructure>
