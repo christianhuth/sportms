@@ -141,7 +141,7 @@
 					'renderType' => 'selectMultipleSideBySide',
 					'foreign_table' => 'tx_clubms_domain_model_teamseason',
 					'foreign_table_where' => '  AND tx_clubms_domain_model_teamseason.season = ###REC_FIELD_season###
-												AND tx_clubms_domain_model_teamseason.team IN (SELECT uid FROM tx_clubms_domain_model_team WHERE section_age_level IN (SELECT section_age_level FROM tx_clubms_domain_model_competition WHERE uid = ###RED_FIELD_competition###))
+												AND tx_clubms_domain_model_teamseason.team IN (SELECT uid FROM tx_clubms_domain_model_team WHERE section_age_level IN (SELECT section_age_level FROM tx_clubms_domain_model_competition WHERE uid = ###REC_FIELD_competition###))
 												ORDER BY team ASC',
 					'MM' => 'tx_clubms_competitionseason_teamseason_mm',
 					'size' => 10,
