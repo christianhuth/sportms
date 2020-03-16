@@ -53,7 +53,7 @@ class GameLineup extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	protected $type;
 
 	/**
-	 * @var String
+	 * @var string
 	 */
 	protected $jerseyNumber;
 
@@ -110,14 +110,14 @@ class GameLineup extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	}
 
 	/**
-	 * @return String
+	 * @return string
 	 */
 	public function getJerseyNumber() {
 		return $this->jerseyNumber;
 	}
 
 	/**
-	 * @param String $jerseyNumber
+	 * @param string $jerseyNumber
 	 */
 	public function setJerseyNumber($jerseyNumber) {
 		$this->jerseyNumber = $jerseyNumber;
