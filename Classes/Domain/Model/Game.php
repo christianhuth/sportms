@@ -63,6 +63,16 @@
 		protected $venue;
 		
 		/**
+		 * @var int
+		 */
+		protected $spectators;
+		
+		/**
+		 * @var int
+		 */
+		protected $periodCount;
+		
+		/**
 		 * @var boolean
 		 */
 		protected $detailLink;
