@@ -38,6 +38,13 @@
 		protected $status;
 		
 		/**
+		 * @var \Balumedien\Clubms\Domain\Model\CompetitionSeasonGameday
+		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
+		 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
+		 */
+		protected $gameday;
+		
+		/**
 		 * @var boolean
 		 */
 		protected $detailLink;
