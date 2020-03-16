@@ -22,7 +22,7 @@
 			$sectionsFilter = $this->settings['section']['sections'];
 			$sectionAgeGroupsFilter = $this->settings['section']['sectionAgeGroups'];
 			$sectionAgeLevelsFilter = $this->settings['section']['sectionAgeLevels'];
-			$teams = $this->teamRepository->findAll($teamsFilter, $sectionsFilter, $clubsFilter, $sectionAgeGroupsFilter, $sectionAgeLevelsFilter);
+			$teams = $this->teamRepository->findAll($teamsFilter, $clubsFilter, $sectionsFilter, $sectionAgeGroupsFilter, $sectionAgeLevelsFilter);
 			$this->view->assign('teams', $teams);
 		}
 		

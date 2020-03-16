@@ -11,7 +11,7 @@
 				$constraints[] = $query->in('uid', explode(',', $teamsFilter));
 			}
 			if($sectionsFilter) {
-				$constraints[] = $query->in('section', explode(',', $sectionsFilter));
+				$constraints[] = $query->in('clubSection.section', explode(',', $sectionsFilter));
 			}
 			if($clubsFilter) {
 				$constraints[] = $query->in('club', explode(',', $clubsFilter));
