@@ -15,7 +15,7 @@
 				$withClubOnly = true;
 			}
 			if($withClubOnly) {
-				$constraints[] = $query->logicalNot($query->equals('club', NULL));
+				$constraints[] = $query->logicalNot($query->equals('club', 0));
 			}
 			if($constraints) {
 				$query->matching($query->logicalAnd($constraints));
