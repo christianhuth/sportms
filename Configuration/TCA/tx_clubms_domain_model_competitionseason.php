@@ -89,12 +89,24 @@
 					'renderType' => 'inputDateTime',
 				),
 			),
-
+			
 			'competition' => array(
+				'exclude' => 1,
+				'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_competitionseason.competition',
 				'config' => array(
-					'type' => 'passthrough',
+					'eval' => 'required',
+					'foreign_table' => 'tx_clubms_domain_model_competition',
+					'foreign_table_where' => 'ORDER BY name ASC',
+					'items' => Array (
+						array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
+					),
+					'maxItems' => 1,
+					'renderType' => 'selectSingle',
+					'size' => 1,
+					'type' => 'select',
 				),
 			),
+
 			'season' => array(
 				'exclude' => 1,
 				'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_competitionseason.season',
