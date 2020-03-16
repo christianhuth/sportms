@@ -141,9 +141,13 @@
 			$extensionName = "clubms";
 			$pluginName = "clubms";
 			$action = $this->arguments['action'] ? $this->arguments['action'] : "show";
+			$showView = ($action == "show") ? ($this->arguments['showView'] ? $this->arguments['showView'] : "index") : NULL;
 			$controller = $this->arguments['controller'] ? $this->arguments['controller'] : $this->getClubMsDomainModel();
 			$pageUid = $this->arguments['pageUid'] ? (int) $this->arguments['pageUid'] : (int) $this->getSettings()[lcfirst($controller)][$action . 'Pid'] ? : NULL;
 			$parameters = $this->arguments['arguments'] ? $this->arguments['arguments'] : array();
+			if($showView) {
+				$parameters['showView'] = $showView;
+			}
 			if($this->getClubMsDomainModel() != null) {
 				if($this->getClubMsDomainModel() != "ClubSection" && $this->getClubMsDomainModel() != "CompetitionSeason" && $this->getClubMsDomainModel() != "TeamSeason") {
 					$parameters[lcfirst($this->getClubMsDomainModel())] = $this->arguments[$this->getClubMsDomainModel()];
