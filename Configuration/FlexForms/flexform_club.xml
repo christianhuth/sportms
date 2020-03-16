@@ -26,10 +26,15 @@
 					</config>
 				</TCEforms>
 			</settings.club.uid>
-			<settings.club.officials.clubs>
+			<settings.club.clubs>
 				<TCEforms>
 					<label>Welche Vereine sollen angezeigt werden?</label>
-					<displayCond>FIELD:base.switchableControllerActions:=:Club->officials</displayCond>
+					<displayCond>
+						<OR>
+							<numIndex index="0">FIELD:base.switchableControllerActions:=:Club->officials</numIndex>
+							<numIndex index="0">FIELD:base.switchableControllerActions:=:Venue->list</numIndex>
+						</OR>
+					</displayCond>
 					<config>
 						<foreign_table>tx_clubms_domain_model_club</foreign_table>
 						<foreign_table_where>ORDER BY name ASC</foreign_table_where>
@@ -37,8 +42,8 @@
 						<type>select</type>
 					</config>
 				</TCEforms>
-			</settings.club.officials.clubs>
-			<settings.club.officials.clubsSelectbox>
+			</settings.club.clubs>
+			<settings.club.clubsSelectbox>
 				<TCEforms>
 					<label>Selectbox für Vereine?</label>
 					<displayCond>FIELD:base.switchableControllerActions:=:Club->officials</displayCond>
@@ -48,7 +53,7 @@
 						<type>check</type>
 					</config>
 				</TCEforms>
-			</settings.club.officials.clubsSelectbox>
+			</settings.club.clubsSelectbox>
 			<settings.club.officials.jobs>
 				<TCEforms>
 					<label>Welche Funktionärstätigkeiten sollen angezeigt werden?</label>
