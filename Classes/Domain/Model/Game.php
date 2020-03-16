@@ -78,6 +78,223 @@
 		protected $periodDuration;
 		
 		/**
+		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\GamePeriod>
+		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
+		 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
+		 */
+		protected $gamePeriods;
+		
+		/**
+		 * @var int
+		 */
+		protected $resultEndRegularHome;
+		
+		/**
+		 * @var int
+		 */
+		protected $resultEndRegularGuest;
+		
+		/**
+		 * @var boolean
+		 */
+		protected $resultEndAdditional;
+		
+		/**
+		 * @var int
+		 */
+		protected $resultEndOvertimeHome;
+		
+		/**
+		 * @var int
+		 */
+		protected $resultEndOvertimeGuest;
+		
+		/**
+		 * @var int
+		 */
+		protected $resultEndPenaltyHome;
+		
+		/**
+		 * @var int
+		 */
+		protected $resultEndPenaltyGuest;
+		
+		/**
+		 * @var int
+		 */
+		protected $resultType;
+		
+		/**
+		 * @var int
+		 */
+		protected $resultHalfsFirstHome;
+		
+		/**
+		 * @var int
+		 */
+		protected $resultHalfsFirstGuest;
+		
+		/**
+		 * @var int
+		 */
+		protected $resultHalfsSecondHome;
+		
+		/**
+		 * @var int
+		 */
+		protected $resultHalfsSecondGuest;
+		
+		/**
+		 * @var int
+		 */
+		protected $resultThirdsFirstHome;
+		
+		/**
+		 * @var int
+		 */
+		protected $resultThirdsFirstGuest;
+		
+		/**
+		 * @var int
+		 */
+		protected $resultThirdsSecondHome;
+		
+		/**
+		 * @var int
+		 */
+		protected $resultThirdsSecondGuest;
+		
+		/**
+		 * @var int
+		 */
+		protected $resultThirdsThirdHome;
+		
+		/**
+		 * @var int
+		 */
+		protected $resultThirdsThirdGuest;
+		
+		/**
+		 * @var int
+		 */
+		protected $resultFourthsFirstHome;
+		
+		/**
+		 * @var int
+		 */
+		protected $resultFourthsFirstGuest;
+		
+		/**
+		 * @var int
+		 */
+		protected $resultFourthsSecondHome;
+		
+		/**
+		 * @var int
+		 */
+		protected $resultFourthsSecondGuest;
+		
+		/**
+		 * @var int
+		 */
+		protected $resultFourthsThirdHome;
+		
+		/**
+		 * @var int
+		 */
+		protected $resultFourthsThirdGuest;
+		
+		/**
+		 * @var int
+		 */
+		protected $resultFourthsFourthHome;
+		
+		/**
+		 * @var int
+		 */
+		protected $resultFourthsFourthGuest;
+		
+		/**
+		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\GameResultSet>
+		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
+		 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
+		 */
+		protected $resultSets;
+		
+		/**
+		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\GameLineup>
+		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
+		 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
+		 */
+		protected $gameLineupHomeStarts;
+		
+		/**
+		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\GameLineup>
+		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
+		 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
+		 */
+		protected $gameLineupHomeSubstitutes;
+		
+		/**
+		 * @var \Balumedien\Clubms\Domain\Model\TeamSeasonOfficial
+		 */
+		protected $trainerHome;
+		
+		/**
+		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\GameLineup>
+		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
+		 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
+		 */
+		protected $gameLineupGuestStarts;
+		
+		/**
+		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\GameLineup>
+		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
+		 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
+		 */
+		protected $gameLineupGuestSubstitutes;
+		
+		/**
+		 * @var \Balumedien\Clubms\Domain\Model\TeamSeasonOfficial
+		 */
+		protected $trainerGuest;
+		
+		/**
+		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\GameChange>
+		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
+		 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
+		 */
+		protected $gameChanges;
+		
+		/**
+		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\GameGoal>
+		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
+		 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
+		 */
+		protected $gameGoals;
+		
+		/**
+		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\GamePunishment>
+		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
+		 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
+		 */
+		protected $gamePunishments;
+		
+		/**
+		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\GameReferee>
+		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
+		 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
+		 */
+		protected $gameReferees;
+		
+		/**
+		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\GameReport>
+		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
+		 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
+		 */
+		protected $gameReports;
+		
+		/**
 		 * @var boolean
 		 */
 		protected $detailLink;
