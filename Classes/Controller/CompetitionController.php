@@ -17,7 +17,12 @@
 		 * @return void
 		 */
 		public function listAction() {
-			$competitions = $this->competitionRepository->findAll();
+			$competitionsFilter = $this->settings['competition']['competitions'];
+			$competitionTypesFilter = $this->settings['competition']['competitionTypes'];
+			$sectionsFilter = $this->settings['section']['sections'];
+			$sectionAgeGroupsFilter = $this->settings['section']['sectionAgeGroups'];
+			$sectionAgeLevelsFilter = $this->settings['section']['sectionAgeLevels'];
+			$competitions = $this->competitionRepository->findAll($competitionsFilter, $competitionTypesFilter, $sectionsFilter, $sectionAgeGroupsFilter, $sectionAgeLevelsFilter);
 			$this->view->assign('competitions', $competitions);
 		}
 		
