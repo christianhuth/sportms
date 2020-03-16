@@ -254,7 +254,7 @@ return array(
 						'disabled' => true,
 					],
 					'listModule' => [
-						'disabled' => false,
+						'disabled' => true,
 					],
 				],
 			],

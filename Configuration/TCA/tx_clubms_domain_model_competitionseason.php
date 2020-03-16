@@ -149,10 +149,10 @@
 					'multiple' => 0,
 					'fieldControl' => [
 						'editPopup' => [
-							'disabled' => false,
+							'disabled' => true,
 						],
 						'addRecord' => [
-							'disabled' => false,
+							'disabled' => true,
 						],
 						'listModule' => [
 							'disabled' => true,
