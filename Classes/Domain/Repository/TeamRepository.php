@@ -10,11 +10,14 @@
 			if($teamsFilter) {
 				$constraints[] = $query->in('uid', explode(',', $teamsFilter));
 			}
+			if($clubsFilter) {
+				$constraints[] = $query->in('club', explode(',', $clubsFilter));
+			}
 			if($sectionsFilter) {
 				$constraints[] = $query->in('clubSection.section', explode(',', $sectionsFilter));
 			}
-			if($clubsFilter) {
-				$constraints[] = $query->in('club', explode(',', $clubsFilter));
+			if($sectionAgeGroupsFilter) {
+				$constraints[] = $query->in('sectionAgeGroup', explode(',', $sectionsFilter));
 			}
 			if($constraints) {
 				$query->matching($query->logicalAnd($constraints));
