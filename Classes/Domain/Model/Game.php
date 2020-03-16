@@ -73,6 +73,11 @@
 		protected $periodCount;
 		
 		/**
+		 * @var int
+		 */
+		protected $periodDuration;
+		
+		/**
 		 * @var boolean
 		 */
 		protected $detailLink;
