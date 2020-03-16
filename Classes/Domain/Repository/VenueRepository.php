@@ -8,10 +8,10 @@
 			$query = $this->createQuery();
 			$constraints = [];
 			if($venuesFilter) {
-				$constraints[] = $query->in('uid', explode(",", $venuesFilter));
+				$constraints[] = $query->in('uid', explode(',', $venuesFilter));
 			}
 			if($clubsFilter) {
-				$constraints[] = $query->in('club', explode(",", $clubsFilter));
+				$constraints[] = $query->in('club', explode(',', $clubsFilter));
 				$withClubOnly = true;
 			}
 			if($withClubOnly) {
