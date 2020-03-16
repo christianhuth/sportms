@@ -57,6 +57,12 @@
 		protected $time;
 		
 		/**
+		 * @var \Balumedien\Clubms\Domain\Model\Venue
+		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
+		 */
+		protected $venue;
+		
+		/**
 		 * @var boolean
 		 */
 		protected $detailLink;
