@@ -31,7 +31,7 @@ return array(
 		'1' => array('showitem' => 'season, team_season_practices, team_season_images,
 									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_teamseason.tab_officials, team_season_officials,
 									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_teamseason.tab_squad_members, team_season_squad_members, team_season_squad_captains,
-									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tcx.xlf:tx_clubms_domain_model_teamseason.tab_competitions, competition_season_teams,
+									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_teamseason.tab_competitions, competition_season_teams,
 									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_teamseason.tab_visibility, hidden, detail_link'),
 	),
 	'palettes' => array(
