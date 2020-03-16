@@ -85,6 +85,136 @@
 		protected $gamePeriods;
 		
 		/**
+		 * @var int
+		 */
+		protected $resultEndRegularHome;
+		
+		/**
+		 * @var int
+		 */
+		protected $resultEndRegularGuest;
+		
+		/**
+		 * @var boolean
+		 */
+		protected $resultEndAdditional;
+		
+		/**
+		 * @var int
+		 */
+		protected $resultEndOvertimeHome;
+		
+		/**
+		 * @var int
+		 */
+		protected $resultEndOvertimeGuest;
+		
+		/**
+		 * @var int
+		 */
+		protected $resultEndPenaltyHome;
+		
+		/**
+		 * @var int
+		 */
+		protected $resultEndPenaltyGuest;
+		
+		/**
+		 * @var int
+		 */
+		protected $resultType;
+		
+		/**
+		 * @var int
+		 */
+		protected $resultHalfsFirstHome;
+		
+		/**
+		 * @var int
+		 */
+		protected $resultHalfsFirstGuest;
+		
+		/**
+		 * @var int
+		 */
+		protected $resultHalfsSecondHome;
+		
+		/**
+		 * @var int
+		 */
+		protected $resultHalfsSecondGuest;
+		
+		/**
+		 * @var int
+		 */
+		protected $resultThirdsFirstHome;
+		
+		/**
+		 * @var int
+		 */
+		protected $resultThirdsFirstGuest;
+		
+		/**
+		 * @var int
+		 */
+		protected $resultThirdsSecondHome;
+		
+		/**
+		 * @var int
+		 */
+		protected $resultThirdsSecondGuest;
+		
+		/**
+		 * @var int
+		 */
+		protected $resultThirdsThirdHome;
+		
+		/**
+		 * @var int
+		 */
+		protected $resultThirdsThirdGuest;
+		
+		/**
+		 * @var int
+		 */
+		protected $resultFourthsFirstHome;
+		
+		/**
+		 * @var int
+		 */
+		protected $resultFourthsFirstGuest;
+		
+		/**
+		 * @var int
+		 */
+		protected $resultFourthsSecondHome;
+		
+		/**
+		 * @var int
+		 */
+		protected $resultFourthsSecondGuest;
+		
+		/**
+		 * @var int
+		 */
+		protected $resultFourthsThirdHome;
+		
+		/**
+		 * @var int
+		 */
+		protected $resultFourthsThirdGuest;
+		
+		/**
+		 * @var int
+		 */
+		protected $resultFourthsFourthHome;
+		
+		/**
+		 * @var int
+		 */
+		protected $resultFourthsFourthGuest;
+		
+		/**
 		 * @var boolean
 		 */
 		protected $detailLink;
