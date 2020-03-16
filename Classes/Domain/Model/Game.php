@@ -38,11 +38,6 @@
 		protected $status;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Model\CompetitionSeasonGameday
-		 */
-		protected $gameday;
-		
-		/**
 		 * @var boolean
 		 */
 		protected $detailLink;
