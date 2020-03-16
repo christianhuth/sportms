@@ -142,7 +142,6 @@
 			$pluginName = "clubms";
 			$action = $this->arguments['action'] ? $this->arguments['action'] : "show";
 			$showView = ($action == "show") ? ($this->arguments['showView'] ? $this->arguments['showView'] : "index") : NULL;
-			\TYPO3\CMS\Core\Utility\DebugUtility::debug($showView, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			$controller = $this->arguments['controller'] ? $this->arguments['controller'] : $this->getClubMsDomainModel();
 			$pageUid = $this->arguments['pageUid'] ? (int) $this->arguments['pageUid'] : (int) $this->getSettings()[lcfirst($controller)][$action . 'Pid'] ? : NULL;
 			$parameters = $this->arguments['arguments'] ? $this->arguments['arguments'] : array();
