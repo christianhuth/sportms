@@ -29,7 +29,7 @@
 			'showRecordFieldList' => '',
 		),
 		'types' => array(
-			'1' => array('showitem' => 'season, competition_season_gamedays,
+			'1' => array('showitem' => 'competition, season, competition_season_gamedays,
 									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_competitionseason.tab_teams, competition_season_teams,
 									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_competitionseason.tab_visibility, hidden, detail_link'),
 		),
