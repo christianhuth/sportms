@@ -40,6 +40,13 @@
 		protected $status;
 		
 		/**
+		 * @var \Balumedien\Clubms\Domain\Model\CompetitionSeasonGameday
+		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
+		 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
+		 */
+		protected $gameday;
+		
+		/**
 		 * @var int
 		 */
 		protected $date;
@@ -185,16 +192,16 @@
 		}
 		
 		/**
-		 * @return CompetitionSeasonGameday
+		 * @return \Balumedien\Clubms\Domain\Model\CompetitionSeasonGameday
 		 */
 		public function getGameday() {
 			return $this->gameday;
 		}
 		
 		/**
-		 * @param CompetitionSeasonGameday $gameday
+		 * @param \Balumedien\Clubms\Domain\Model\CompetitionSeasonGameday $gameday
 		 */
-		public function setGameday($gameday) {
+		public function setGameday(\Balumedien\Clubms\Domain\Model\CompetitionSeasonGameday $gameday) {
 			$this->gameday = $gameday;
 		}
 		
