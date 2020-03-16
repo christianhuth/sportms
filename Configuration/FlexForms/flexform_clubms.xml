@@ -9,6 +9,5 @@
 		<competitionseason>EXT:clubms/Configuration/FlexForms/flexform_competitionseason.xml</competitionseason>
 		<game>EXT:clubms/Configuration/FlexForms/flexform_game.xml</game>
 		<venue>EXT:clubms/Configuration/FlexForms/flexform_venue.xml</venue>
-		<view>EXT:clubms/Configuration/FlexForms/flexform_view.xml</view>
 	</sheets>
 </T3DataStructure>
