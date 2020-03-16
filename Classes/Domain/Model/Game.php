@@ -40,6 +40,37 @@
 		protected $status;
 		
 		/**
+		 * @var int
+		 */
+		protected $date;
+		
+		/**
+		 * @var int
+		 */
+		protected $time;
+		
+		/**
+		 * @var \Balumedien\Clubms\Domain\Model\Venue
+		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
+		 */
+		protected $venue;
+		
+		/**
+		 * @var int
+		 */
+		protected $spectators;
+		
+		/**
+		 * @var int
+		 */
+		protected $periodCount;
+		
+		/**
+		 * @var int
+		 */
+		protected $periodDuration;
+		
+		/**
 		 * @var boolean
 		 */
 		protected $detailLink;
