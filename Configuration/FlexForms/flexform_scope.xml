@@ -26,26 +26,6 @@
 					</config>
 				</TCEforms>
 			</settings.scope.season.selectbox>
-			<settings.scope.sectionagegroup.values>
-				<TCEforms>
-					<label>Altersgruppe</label>
-					<config>
-						<type>select</type>
-						<foreign_table>tx_clubms_domain_model_sectionagegroup</foreign_table>
-						<foreign_table_where>ORDER BY tx_clubms_domain_model_sectionagegroup.sorting ASC</foreign_table_where>
-						<size>5</size>
-						<maxitems>3</maxitems>
-					</config>
-				</TCEforms>
-			</settings.scope.sectionagegroup.values>
-			<settings.scope.sectionagegroup.selectbox>
-				<TCEforms>
-					<label>Selectbox für Altersgruppe?</label>
-					<config>
-						<type>check</type>
-					</config>
-				</TCEforms>
-			</settings.scope.sectionagegroup.selectbox>
 			<settings.scope.sectionagelevel.values>
 				<TCEforms>
 					<label>Altersstufe</label>
