@@ -37,7 +37,7 @@
 			if($teamsFilter) {
 				$constraints[] = $query->logicalOr(
 					$query->in('teamSeasonHome.team', explode(',', $teamsFilter)),
-					$query->in('teamSeasonGuest.team', explode(',', $teamsFilter)),
+					$query->in('teamSeasonGuest.team', explode(',', $teamsFilter))
 				);
 			}
 			if($constraints) {
