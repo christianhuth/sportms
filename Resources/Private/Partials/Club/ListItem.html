@@ -33,12 +33,12 @@
                 <ul>
                     <f:for as="clubSection" each="{club.clubSections}" iteration="iterator">
                         <li>
-                            <f:link.action action="show" arguments="{club: clubSection.club, section: clubSection.section}" controller="ClubSection" pageUid="{settings.clubSection.showPid}">{clubSection.section.label}</f:link.action>
+                            <clubms:link.action ClubSection="{clubSection}">{clubSection.section.label}</clubms:link.action>
                         </li>
                         <f:if condition="{clubSection.teams}">
                             <f:then>
                                 <f:for as="team" each="{clubSection.teams}" iteration="iterator2">
-                                    <f:link.action action="show" arguments="{team: team}" controller="Team" pageUid="{settings.team.showPid}">{team.name}</f:link.action>
+                                    <clubms:link.action Team="{team}">{team.name}</clubms:link.action>
                                     <f:if condition="iterator2.isLast">
                                         <f:then></f:then>
                                         <f:else>,</f:else>
