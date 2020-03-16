@@ -51,16 +51,16 @@
 		}
 
 		/**
-		 * @return Competition
+		 * @return \Balumedien\Clubms\Domain\Model\Competition
 		 */
 		public function getCompetition() {
 			return $this->competition;
 		}
 
 		/**
-		 * @param Competition $competition
+		 * @param \Balumedien\Clubms\Domain\Model\Competition $competition
 		 */
-		public function setCompetition($competition) {
+		public function setCompetition(\Balumedien\Clubms\Domain\Model\Competition $competition) {
 			$this->competition = $competition;
 		}
 
