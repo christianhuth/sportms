@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<T3DataStructure>
+	<ROOT>
+		<TCEforms>
+			<sheetTitle>Sportstätte</sheetTitle>
+		</TCEforms>
+		<displayCond>
+			<OR>
+				<numIndex index="0">FIELD:base.switchableControllerActions:=:Venue->show</numIndex>
+				<numIndex index="1">FIELD:base.switchableControllerActions:=:Venue->list</numIndex>
+			</OR>
+		</displayCond>
+		<type>array</type>
+		<el>
+			<settings.venue.uid>
+				<TCEforms>
+					<label>Zeige folgende Sportstätte</label>
+					<displayCond>
+						<OR>
+							<numIndex index="0">FIELD:base.switchableControllerActions:=:Venue->show</numIndex>
+						</OR>
+					</displayCond>
+					<config>
+						<type>group</type>
+						<internal_type>db</internal_type>
+						<allowed>tx_clubms_domain_model_venue</allowed>
+						<size>1</size>
+						<maxItems>1</maxItems>
+						<minItems>0</minItems>
+						<show_thumbs>1</show_thumbs>
+					</config>
+				</TCEforms>
+			</settings.venue.uid>
+			<settings.venue.venues>
+				<TCEforms>
+					<label>Welche Sportstätten sollen angezeigt werden?</label>
+					<displayCond>FIELD:base.switchableControllerActions:=:Venue->list</displayCond>
+					<config>
+						<foreign_table>tx_clubms_domain_model_venue</foreign_table>
+						<foreign_table_where>ORDER BY name ASC</foreign_table_where>
+						<renderType>selectMultipleSideBySide</renderType>
+						<type>select</type>
+					</config>
+				</TCEforms>
+			</settings.venue.venues>
+			<settings.venue.withClubOnly>
+				<TCEforms>
+					<label>Zeige nur Sportstätten von Vereinen</label>
+					<displayCond>FIELD:base.switchableControllerActions:=:Venue->list</displayCond>
+					<config>
+						<default>0</default>
+						<renderType>checkboxToggle</renderType>
+						<type>check</type>
+					</config>
+				</TCEforms>
+			</settings.venue.withClubOnly>
+		</el>
+	</ROOT>
+</T3DataStructure>
