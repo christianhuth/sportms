@@ -7,9 +7,9 @@
 		<competition>EXT:clubms/Configuration/FlexForms/flexform_competition.xml</competition>
 		<competitionseason>EXT:clubms/Configuration/FlexForms/flexform_competitionseason.xml</competitionseason>
 		<game>EXT:clubms/Configuration/FlexForms/flexform_game.xml</game>
-		<season>EXT:clubms/Configuration/FlexForms/flexform_season.xml</season>
 		<section>EXT:clubms/Configuration/FlexForms/flexform_section.xml</section>
 		<team>EXT:clubms/Configuration/FlexForms/flexform_team.xml</team>
 		<venue>EXT:clubms/Configuration/FlexForms/flexform_venue.xml</venue>
+		<season>EXT:clubms/Configuration/FlexForms/flexform_season.xml</season>
 	</sheets>
 </T3DataStructure>
