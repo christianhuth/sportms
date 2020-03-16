@@ -313,15 +313,15 @@
 		 * @return void
 		 */
 		protected function initStorageObjects() {
-			$this->resultSets = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-			$this->gameLineupHomeStarts = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-			$this->gameLineupHomeSubstitutes = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-			$this->gameLineupGuestStarts = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-			$this->gameLineupGuestSubstitutes = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-			$this->gameChanges = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-			$this->gameGoals = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-			$this->gameReferees = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-			$this->gameReports = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+			$this->setResultSets(\TYPO3\CMS\Extbase\Persistence\ObjectStorage());
+			$this->setGameLineupHomeStarts(\TYPO3\CMS\Extbase\Persistence\ObjectStorage());
+			$this->setGameLineupHomeSubstitutes(\TYPO3\CMS\Extbase\Persistence\ObjectStorage());
+			$this->setGameLineupGuestStarts(\TYPO3\CMS\Extbase\Persistence\ObjectStorage());
+			$this->setGameLineupGuestSubstitutes(\TYPO3\CMS\Extbase\Persistence\ObjectStorage());
+			$this->setGameChanges(\TYPO3\CMS\Extbase\Persistence\ObjectStorage());
+			$this->setGameGoals(\TYPO3\CMS\Extbase\Persistence\ObjectStorage());
+			$this->setGameReferees(\TYPO3\CMS\Extbase\Persistence\ObjectStorage());
+			$this->setGameReports(\TYPO3\CMS\Extbase\Persistence\ObjectStorage());
 		}
 		
 		/**
