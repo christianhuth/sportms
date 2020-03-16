@@ -8,7 +8,7 @@
 			$query = $this->createQuery();
 			$constraints = [];
 			if($competitionsFilter) {
-				$constraints[] = $query->in('uid', explode(',', $competitionTypesFilter));
+				$constraints[] = $query->in('uid', explode(',', $competitionsFilter));
 			}
 			if($competitionTypesFilter) {
 				$constraints[] = $query->in('competition_type', explode(',', $competitionTypesFilter));
