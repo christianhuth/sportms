@@ -4,23 +4,26 @@
 	
 	class TeamSeasonRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
 		
-		public function findAll($teamSeasonsFilter = null, $teamsFilter = null, $clubsFilter = null, $sectionsFilter = null, $sectionAgeGroupsFilter = null, $sectionAgeLevelsFilter = null) {
+		public function findAll($teamsFilter = null, $clubsFilter = null, $sectionsFilter = null, $sectionAgeGroupsFilter = null, $sectionAgeLevelsFilter = null, $seasonsFilter = null) {
 			$query = $this->createQuery();
 			$constraints = [];
 			if($teamsFilter) {
-				$constraints[] = $query->in('uid', explode(',', $teamsFilter));
+				$constraints[] = $query->in('team', explode(',', $teamsFilter));
 			}
 			if($clubsFilter) {
-				$constraints[] = $query->in('club', explode(',', $clubsFilter));
+				$constraints[] = $query->in('team.club', explode(',', $clubsFilter));
 			}
 			if($sectionsFilter) {
-				$constraints[] = $query->in('clubSection.section', explode(',', $sectionsFilter));
+				$constraints[] = $query->in('team.clubSection.section', explode(',', $sectionsFilter));
 			}
 			if($sectionAgeGroupsFilter) {
-				$constraints[] = $query->in('section_age_group', explode(',', $sectionAgeGroupsFilter));
+				$constraints[] = $query->in('team.sectionAgeGroup', explode(',', $sectionAgeGroupsFilter));
 			}
 			if($sectionAgeLevelsFilter) {
-				$constraints[] = $query->in('section_age_level', explode(',', $sectionAgeLevelsFilter));
+				$constraints[] = $query->in('team.sectionAgeLevel', explode(',', $sectionAgeLevelsFilter));
+			}
+			if($seasonsFilter) {
+				$constraints[] = $query->in('season', explode(',', $seasonsFilter));
 			}
 			if($constraints) {
 				$query->matching($query->logicalAnd($constraints));
