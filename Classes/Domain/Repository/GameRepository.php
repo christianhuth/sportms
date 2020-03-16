@@ -26,7 +26,7 @@
 				$constraints[] = $query->in('season', explode(',', $seasonsFilter));
 			}
 			if($competitionSeasonGamedaysFilter) {
-				$constraints[] = $query->in('competition_season_gameday', explode(',', $competitionSeasonGamedaysFilter));
+				$constraints[] = $query->in('gameday', explode(',', $competitionSeasonGamedaysFilter));
 			}
 			if($clubsFilter) {
 				$constraints[] = $query->logicalOr(
