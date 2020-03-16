@@ -142,7 +142,6 @@
 					'foreign_table' => 'tx_clubms_domain_model_teamseason',
 					'foreign_table_where' => ' AND tx_clubms_domain_model_teamseason.season = ###REC_FIELD_season### ORDER BY team ASC',
 					'MM' => 'tx_clubms_competitionseason_teamseason_mm',
-					'MM_opposite_field' => 'competition_season_teams',
 					'size' => 10,
 					'autoSizeMax' => 30,
 					'maxitems' => 9999,
