@@ -1273,6 +1273,9 @@
 			<trans-unit id="tx_clubms_domain_model_teamseason">
 				<source>Mannschafts-Instanz</source>
 			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_teamseason.team">
+				<source>Mannschaft</source>
+			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_teamseason.season">
 				<source>Saison</source>
 			</trans-unit>
