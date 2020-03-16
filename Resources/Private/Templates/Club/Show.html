@@ -15,7 +15,7 @@
 
                 <f:if condition="{club.name}">
                     <tr>
-                        <td class="label">
+                        <td>
                             <f:translate key="tx_clubms_domain_model_club.name"/>
                         </td>
                         <td class="content">{club.name}</td>
@@ -24,7 +24,7 @@
 
                 <f:if condition="{club.colours}">
                     <tr>
-                        <td class="label">
+                        <td>
                             <f:translate key="tx_clubms_domain_model_club.colours"/>
                         </td>
                         <td class="content">{club.colours}</td>
@@ -33,7 +33,7 @@
 
                 <f:if condition="{club.dateOfFounding}">
                     <tr>
-                        <td class="label">
+                        <td>
                             <f:translate key="tx_clubms_domain_model_club.dateOfFounding"/>
                         </td>
                         <td class="content">{club.dateOfFounding}</td>
@@ -42,7 +42,7 @@
 
                 <f:if condition="{club.yearOfFounding}">
                     <tr>
-                        <td class="label">
+                        <td>
                             <f:translate key="tx_clubms_domain_model_club.yearOfFounding"/>
                         </td>
                         <td class="content">{club.yearOfFounding}</td>
@@ -51,7 +51,7 @@
 
                 <f:if condition="{club.members}">
                     <tr>
-                        <td class="label">
+                        <td>
                             <f:translate key="tx_clubms_domain_model_club.members"/>
                         </td>
                         <td class="content">
@@ -64,7 +64,7 @@
 
                 <f:if condition="{club.images}">
                     <tr>
-                        <td class="label">
+                        <td>
                             <f:translate key="tx_clubms_domain_model_club.images"/>
                         </td>
                         <td class="content">
@@ -78,7 +78,7 @@
                 <f:if condition="{club.clubSections}">
                     <f:for as="clubSection" each="{club.clubSections}">
                         <tr>
-                            <td class="label">
+                            <td>
                                 <f:translate key="tx_clubms_domain_model_club.nickname"/>
                             </td>
                             <td class="content">{clubSection.label}</td>
