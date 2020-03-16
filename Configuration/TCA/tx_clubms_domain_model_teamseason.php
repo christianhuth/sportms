@@ -31,6 +31,7 @@ return array(
 		'1' => array('showitem' => 'season, team_season_practices, team_season_images,
 									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_teamseason.tab_officials, team_season_officials,
 									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_teamseason.tab_squad_members, team_season_squad_members, team_season_squad_captains,
+									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tcx.xlf:tx_clubms_domain_model_teamseason.tab_competitions, competition_season_teams,
 									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_teamseason.tab_visibility, hidden, detail_link'),
 	),
 	'palettes' => array(
@@ -230,6 +231,33 @@ return array(
                 ),
             ),
         ),
+		
+		'competition_season_teams' => [
+			'exclude' => true,
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_teamseason.competition_season_teams',
+			'config' => [
+				'type' => 'select',
+				'renderType' => 'selectMultipleSideBySide',
+				'foreign_table' => 'tx_clubms_domain_model_competitionseason',
+				'foreign_table_where' => ' AND tx_clubms_domain_model_competitionseason.season = ###REC_FIELD_season### ORDER BY competition ASC',
+				'MM' => 'tx_clubms_competitionseason_teamseason_mm',
+				'size' => 10,
+				'autoSizeMax' => 30,
+				'maxitems' => 9999,
+				'multiple' => 0,
+				'fieldControl' => [
+					'editPopup' => [
+						'disabled' => true,
+					],
+					'addRecord' => [
+						'disabled' => true,
+					],
+					'listModule' => [
+						'disabled' => false,
+					],
+				],
+			],
+		],
 		
 		'detail_link' => array(
 			'exclude' => 1,
