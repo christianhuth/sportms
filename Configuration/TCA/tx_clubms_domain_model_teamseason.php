@@ -239,7 +239,9 @@ return array(
 				'type' => 'select',
 				'renderType' => 'selectMultipleSideBySide',
 				'foreign_table' => 'tx_clubms_domain_model_competitionseason',
-				'foreign_table_where' => ' AND tx_clubms_domain_model_competitionseason.season = ###REC_FIELD_season### ORDER BY competition ASC',
+				'foreign_table_where' => '  AND tx_clubms_domain_model_competitionseason.season = ###REC_FIELD_season###
+											AND tx_clubms_domain_model_competitionseason.competition IN (SELECT uid FROM tx_clubms_domain_model_competition WHERE section_age_level IN (SELECT section_age_level FROM tx_clubms_domain_model_team WHERE uid = ###REC_FIELD_team###))
+											ORDER BY competition ASC',
 				'MM' => 'tx_clubms_competitionseason_teamseason_mm',
 				'MM_opposite_field' => 'competition_season_teams',
 				'size' => 10,
