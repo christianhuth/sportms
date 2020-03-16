@@ -50,7 +50,7 @@
 		 */
 		public function officialsAction(\Balumedien\Clubms\Domain\Model\Club $club = NULL) {
 			
-			$clubs = $this->settings['club']['officials']['clubs'];
+			$clubs = $this->settings['club']['clubs'];
 			$jobs = $this->settings['club']['officials']['jobs'];
 			$currentOfficialsOnly = $this->settings['club']['officials']['currentOfficialsOnly'];
 			
