@@ -325,100 +325,100 @@
 		}
 		
 		/**
-		 * @return Section
+		 * @return \Balumedien\Clubms\Domain\Model\Section
 		 */
-		public function getSection(): Section {
+		public function getSection(): \Balumedien\Clubms\Domain\Model\Section {
 			return $this->section;
 		}
 		
 		/**
-		 * @param Section $section
+		 * @param \Balumedien\Clubms\Domain\Model\Section $section
 		 */
-		public function setSection(Section $section): void {
+		public function setSection(\Balumedien\Clubms\Domain\Model\Section $section): void {
 			$this->section = $section;
 		}
 		
 		/**
-		 * @return Season
+		 * @return \Balumedien\Clubms\Domain\Model\Season
 		 */
-		public function getSeason(): Season {
+		public function getSeason(): \Balumedien\Clubms\Domain\Model\Section {
 			return $this->season;
 		}
 		
 		/**
-		 * @param Season $season
+		 * @param \Balumedien\Clubms\Domain\Model\Season $season
 		 */
-		public function setSeason(Season $season): void {
+		public function setSeason(\Balumedien\Clubms\Domain\Model\Season $season): void {
 			$this->season = $season;
 		}
 		
 		/**
-		 * @return CompetitionSeason
+		 * @return \Balumedien\Clubms\Domain\Model\CompetitionSeason
 		 */
-		public function getCompetitionSeason(): CompetitionSeason {
+		public function getCompetitionSeason(): \Balumedien\Clubms\Domain\Model\CompetitionSeason {
 			return $this->competitionSeason;
 		}
 		
 		/**
-		 * @param CompetitionSeason $competitionSeason
+		 * @param \Balumedien\Clubms\Domain\Model\CompetitionSeason $competitionSeason
 		 */
-		public function setCompetitionSeason(CompetitionSeason $competitionSeason): void {
+		public function setCompetitionSeason(\Balumedien\Clubms\Domain\Model\CompetitionSeason $competitionSeason): void {
 			$this->competitionSeason = $competitionSeason;
 		}
 		
 		/**
-		 * @return TeamSeason
+		 * @return \Balumedien\Clubms\Domain\Model\TeamSeason
 		 */
-		public function getTeamSeasonHome(): TeamSeason {
+		public function getTeamSeasonHome(): \Balumedien\Clubms\Domain\Model\TeamSeason {
 			return $this->teamSeasonHome;
 		}
 		
 		/**
-		 * @param TeamSeason $teamSeasonHome
+		 * @param \Balumedien\Clubms\Domain\Model\TeamSeason $teamSeasonHome
 		 */
-		public function setTeamSeasonHome(TeamSeason $teamSeasonHome): void {
+		public function setTeamSeasonHome(\Balumedien\Clubms\Domain\Model\TeamSeason $teamSeasonHome): void {
 			$this->teamSeasonHome = $teamSeasonHome;
 		}
 		
 		/**
-		 * @return TeamSeason
+		 * @return \Balumedien\Clubms\Domain\Model\TeamSeason
 		 */
-		public function getTeamSeasonGuest(): TeamSeason {
+		public function getTeamSeasonGuest(): \Balumedien\Clubms\Domain\Model\TeamSeason {
 			return $this->teamSeasonGuest;
 		}
 		
 		/**
-		 * @param TeamSeason $teamSeasonGuest
+		 * @param \Balumedien\Clubms\Domain\Model\TeamSeason $teamSeasonGuest
 		 */
-		public function setTeamSeasonGuest(TeamSeason $teamSeasonGuest): void {
+		public function setTeamSeasonGuest(\Balumedien\Clubms\Domain\Model\TeamSeason $teamSeasonGuest): void {
 			$this->teamSeasonGuest = $teamSeasonGuest;
 		}
 		
 		/**
 		 * @return int
 		 */
-		public function getStatus() {
+		public function getStatus(): int {
 			return $this->status;
 		}
 		
 		/**
 		 * @param int $status
 		 */
-		public function setStatus($status) {
+		public function setStatus(int $status): void {
 			$this->status = $status;
 		}
 		
 		/**
 		 * @return \Balumedien\Clubms\Domain\Model\CompetitionSeasonGameday
 		 */
-		public function getGameday() {
+		public function getGameday(): \Balumedien\Clubms\Domain\Model\CompetitionSeasonGameday {
 			return $this->gameday;
 		}
 		
 		/**
 		 * @param \Balumedien\Clubms\Domain\Model\CompetitionSeasonGameday $gameday
 		 */
-		public function setGameday(\Balumedien\Clubms\Domain\Model\CompetitionSeasonGameday $gameday) {
+		public function setGameday(\Balumedien\Clubms\Domain\Model\CompetitionSeasonGameday $gameday): void {
 			$this->gameday = $gameday;
 		}
 		
@@ -432,7 +432,7 @@
 		/**
 		 * @param int $date
 		 */
-		public function setDate($date) {
+		public function setDate(int $date) {
 			$this->date = $date;
 		}
 		
@@ -446,7 +446,7 @@
 		/**
 		 * @param int $time
 		 */
-		public function setTime($time) {
+		public function setTime(int $time) {
 			$this->time = $time;
 		}
 		
@@ -474,7 +474,7 @@
 		/**
 		 * @param int $spectators
 		 */
-		public function setSpectators($spectators) {
+		public function setSpectators(int $spectators) {
 			$this->spectators = $spectators;
 		}
 		
@@ -488,7 +488,7 @@
 		/**
 		 * @param int $periodCount
 		 */
-		public function setPeriodCount($periodCount) {
+		public function setPeriodCount(int $periodCount) {
 			$this->periodCount = $periodCount;
 		}
 		
@@ -502,7 +502,7 @@
 		/**
 		 * @param int $periodDuration
 		 */
-		public function setPeriodDuration($periodDuration) {
+		public function setPeriodDuration(int $periodDuration) {
 			$this->periodDuration = $periodDuration;
 		}
 		
@@ -516,7 +516,7 @@
 		/**
 		 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $gamePeriods
 		 */
-		public function setGamePeriods($gamePeriods) {
+		public function setGamePeriods(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $gamePeriods) {
 			$this->gamePeriods = $gamePeriods;
 		}
 		
@@ -530,7 +530,7 @@
 		/**
 		 * @param int $resultEndRegularHome
 		 */
-		public function setResultEndRegularHome($resultEndRegularHome) {
+		public function setResultEndRegularHome(int $resultEndRegularHome) {
 			$this->resultEndRegularHome = $resultEndRegularHome;
 		}
 		
@@ -544,7 +544,7 @@
 		/**
 		 * @param int $resultEndRegularGuest
 		 */
-		public function setResultEndRegularGuest($resultEndRegularGuest) {
+		public function setResultEndRegularGuest(int $resultEndRegularGuest) {
 			$this->resultEndRegularGuest = $resultEndRegularGuest;
 		}
 		
@@ -558,7 +558,7 @@
 		/**
 		 * @param bool $resultEndAdditional
 		 */
-		public function setResultEndAdditional($resultEndAdditional) {
+		public function setResultEndAdditional(int $resultEndAdditional) {
 			$this->resultEndAdditional = $resultEndAdditional;
 		}
 		
@@ -572,7 +572,7 @@
 		/**
 		 * @param int $resultEndOvertimeHome
 		 */
-		public function setResultEndOvertimeHome($resultEndOvertimeHome) {
+		public function setResultEndOvertimeHome(int $resultEndOvertimeHome) {
 			$this->resultEndOvertimeHome = $resultEndOvertimeHome;
 		}
 		
@@ -586,7 +586,7 @@
 		/**
 		 * @param int $resultEndOvertimeGuest
 		 */
-		public function setResultEndOvertimeGuest($resultEndOvertimeGuest) {
+		public function setResultEndOvertimeGuest(int $resultEndOvertimeGuest) {
 			$this->resultEndOvertimeGuest = $resultEndOvertimeGuest;
 		}
 		
@@ -600,7 +600,7 @@
 		/**
 		 * @param int $resultEndPenaltyHome
 		 */
-		public function setResultEndPenaltyHome($resultEndPenaltyHome) {
+		public function setResultEndPenaltyHome(int $resultEndPenaltyHome) {
 			$this->resultEndPenaltyHome = $resultEndPenaltyHome;
 		}
 		
@@ -614,7 +614,7 @@
 		/**
 		 * @param int $resultEndPenaltyGuest
 		 */
-		public function setResultEndPenaltyGuest($resultEndPenaltyGuest) {
+		public function setResultEndPenaltyGuest(int $resultEndPenaltyGuest) {
 			$this->resultEndPenaltyGuest = $resultEndPenaltyGuest;
 		}
 		
@@ -628,7 +628,7 @@
 		/**
 		 * @param int $resultType
 		 */
-		public function setResultType($resultType) {
+		public function setResultType(int $resultType) {
 			$this->resultType = $resultType;
 		}
 		
@@ -642,7 +642,7 @@
 		/**
 		 * @param int $resultHalfsFirstHome
 		 */
-		public function setResultHalfsFirstHome($resultHalfsFirstHome) {
+		public function setResultHalfsFirstHome(int $resultHalfsFirstHome) {
 			$this->resultHalfsFirstHome = $resultHalfsFirstHome;
 		}
 		
@@ -656,7 +656,7 @@
 		/**
 		 * @param int $resultHalfsFirstGuest
 		 */
-		public function setResultHalfsFirstGuest($resultHalfsFirstGuest) {
+		public function setResultHalfsFirstGuest(int $resultHalfsFirstGuest) {
 			$this->resultHalfsFirstGuest = $resultHalfsFirstGuest;
 		}
 		
@@ -670,7 +670,7 @@
 		/**
 		 * @param int $resultHalfsSecondHome
 		 */
-		public function setResultHalfsSecondHome($resultHalfsSecondHome) {
+		public function setResultHalfsSecondHome(int $resultHalfsSecondHome) {
 			$this->resultHalfsSecondHome = $resultHalfsSecondHome;
 		}
 		
@@ -684,7 +684,7 @@
 		/**
 		 * @param int $resultHalfsSecondGuest
 		 */
-		public function setResultHalfsSecondGuest($resultHalfsSecondGuest) {
+		public function setResultHalfsSecondGuest(int $resultHalfsSecondGuest) {
 			$this->resultHalfsSecondGuest = $resultHalfsSecondGuest;
 		}
 		
@@ -698,7 +698,7 @@
 		/**
 		 * @param int $resultThirdsFirstHome
 		 */
-		public function setResultThirdsFirstHome($resultThirdsFirstHome) {
+		public function setResultThirdsFirstHome(int $resultThirdsFirstHome) {
 			$this->resultThirdsFirstHome = $resultThirdsFirstHome;
 		}
 		
@@ -712,7 +712,7 @@
 		/**
 		 * @param int $resultThirdsFirstGuest
 		 */
-		public function setResultThirdsFirstGuest($resultThirdsFirstGuest) {
+		public function setResultThirdsFirstGuest(int $resultThirdsFirstGuest) {
 			$this->resultThirdsFirstGuest = $resultThirdsFirstGuest;
 		}
 		
@@ -726,7 +726,7 @@
 		/**
 		 * @param int $resultThirdsSecondHome
 		 */
-		public function setResultThirdsSecondHome($resultThirdsSecondHome) {
+		public function setResultThirdsSecondHome(int $resultThirdsSecondHome) {
 			$this->resultThirdsSecondHome = $resultThirdsSecondHome;
 		}
 		
@@ -740,7 +740,7 @@
 		/**
 		 * @param int $resultThirdsSecondGuest
 		 */
-		public function setResultThirdsSecondGuest($resultThirdsSecondGuest) {
+		public function setResultThirdsSecondGuest(int $resultThirdsSecondGuest) {
 			$this->resultThirdsSecondGuest = $resultThirdsSecondGuest;
 		}
 		
@@ -754,7 +754,7 @@
 		/**
 		 * @param int $resultThirdsThirdHome
 		 */
-		public function setResultThirdsThirdHome($resultThirdsThirdHome) {
+		public function setResultThirdsThirdHome(int $resultThirdsThirdHome) {
 			$this->resultThirdsThirdHome = $resultThirdsThirdHome;
 		}
 		
@@ -768,7 +768,7 @@
 		/**
 		 * @param int $resultThirdsThirdGuest
 		 */
-		public function setResultThirdsThirdGuest($resultThirdsThirdGuest) {
+		public function setResultThirdsThirdGuest(int $resultThirdsThirdGuest) {
 			$this->resultThirdsThirdGuest = $resultThirdsThirdGuest;
 		}
 		
@@ -782,7 +782,7 @@
 		/**
 		 * @param int $resultFourthsFirstHome
 		 */
-		public function setResultFourthsFirstHome($resultFourthsFirstHome) {
+		public function setResultFourthsFirstHome(int $resultFourthsFirstHome) {
 			$this->resultFourthsFirstHome = $resultFourthsFirstHome;
 		}
 		
@@ -796,7 +796,7 @@
 		/**
 		 * @param int $resultFourthsFirstGuest
 		 */
-		public function setResultFourthsFirstGuest($resultFourthsFirstGuest) {
+		public function setResultFourthsFirstGuest(int $resultFourthsFirstGuest) {
 			$this->resultFourthsFirstGuest = $resultFourthsFirstGuest;
 		}
 		
@@ -810,7 +810,7 @@
 		/**
 		 * @param int $resultFourthsSecondHome
 		 */
-		public function setResultFourthsSecondHome($resultFourthsSecondHome) {
+		public function setResultFourthsSecondHome(int $resultFourthsSecondHome) {
 			$this->resultFourthsSecondHome = $resultFourthsSecondHome;
 		}
 		
@@ -824,7 +824,7 @@
 		/**
 		 * @param int $resultFourthsSecondGuest
 		 */
-		public function setResultFourthsSecondGuest($resultFourthsSecondGuest) {
+		public function setResultFourthsSecondGuest(int $resultFourthsSecondGuest) {
 			$this->resultFourthsSecondGuest = $resultFourthsSecondGuest;
 		}
 		
@@ -838,7 +838,7 @@
 		/**
 		 * @param int $resultFourthsThirdHome
 		 */
-		public function setResultFourthsThirdHome($resultFourthsThirdHome) {
+		public function setResultFourthsThirdHome(int $resultFourthsThirdHome) {
 			$this->resultFourthsThirdHome = $resultFourthsThirdHome;
 		}
 		
@@ -852,7 +852,7 @@
 		/**
 		 * @param int $resultFourthsThirdGuest
 		 */
-		public function setResultFourthsThirdGuest($resultFourthsThirdGuest) {
+		public function setResultFourthsThirdGuest(int $resultFourthsThirdGuest) {
 			$this->resultFourthsThirdGuest = $resultFourthsThirdGuest;
 		}
 		
@@ -866,7 +866,7 @@
 		/**
 		 * @param int $resultFourthsFourthHome
 		 */
-		public function setResultFourthsFourthHome($resultFourthsFourthHome) {
+		public function setResultFourthsFourthHome(int $resultFourthsFourthHome) {
 			$this->resultFourthsFourthHome = $resultFourthsFourthHome;
 		}
 		
@@ -880,7 +880,7 @@
 		/**
 		 * @param int $resultFourthsFourthGuest
 		 */
-		public function setResultFourthsFourthGuest($resultFourthsFourthGuest) {
+		public function setResultFourthsFourthGuest(int $resultFourthsFourthGuest) {
 			$this->resultFourthsFourthGuest = $resultFourthsFourthGuest;
 		}
 		
@@ -894,7 +894,7 @@
 		/**
 		 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $resultSets
 		 */
-		public function setResultSets($resultSets) {
+		public function setResultSets(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $resultSets) {
 			$this->resultSets = $resultSets;
 		}
 		
@@ -908,7 +908,7 @@
 		/**
 		 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $gameLineupHomeStarts
 		 */
-		public function setGameLineupHomeStarts($gameLineupHomeStarts) {
+		public function setGameLineupHomeStarts( \TYPO3\CMS\Extbase\Persistence\ObjectStorage$gameLineupHomeStarts) {
 			$this->gameLineupHomeStarts = $gameLineupHomeStarts;
 		}
 		
@@ -922,7 +922,7 @@
 		/**
 		 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $gameLineupHomeSubstitutes
 		 */
-		public function setGameLineupHomeSubstitutes($gameLineupHomeSubstitutes) {
+		public function setGameLineupHomeSubstitutes(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $gameLineupHomeSubstitutes) {
 			$this->gameLineupHomeSubstitutes = $gameLineupHomeSubstitutes;
 		}
 		
@@ -934,9 +934,9 @@
 		}
 		
 		/**
-		 * @param TeamSeasonOfficial $trainerHome
+		 * @param \Balumedien\Clubms\Domain\Model\TeamSeasonOfficial $trainerHome
 		 */
-		public function setTrainerHome($trainerHome) {
+		public function setTrainerHome(\Balumedien\Clubms\Domain\Model\TeamSeasonOfficial $trainerHome) {
 			$this->trainerHome = $trainerHome;
 		}
 		
@@ -950,7 +950,7 @@
 		/**
 		 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $gameLineupGuestStarts
 		 */
-		public function setGameLineupGuestStarts($gameLineupGuestStarts) {
+		public function setGameLineupGuestStarts(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $gameLineupGuestStarts) {
 			$this->gameLineupGuestStarts = $gameLineupGuestStarts;
 		}
 		
@@ -964,7 +964,7 @@
 		/**
 		 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $gameLineupGuestSubstitutes
 		 */
-		public function setGameLineupGuestSubstitutes($gameLineupGuestSubstitutes) {
+		public function setGameLineupGuestSubstitutes(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $gameLineupGuestSubstitutes) {
 			$this->gameLineupGuestSubstitutes = $gameLineupGuestSubstitutes;
 		}
 		
@@ -976,9 +976,9 @@
 		}
 		
 		/**
-		 * @param TeamSeasonOfficial $trainerGuest
+		 * @param \Balumedien\Clubms\Domain\Model\TeamSeasonOfficial $trainerGuest
 		 */
-		public function setTrainerGuest($trainerGuest) {
+		public function setTrainerGuest(\Balumedien\Clubms\Domain\Model\TeamSeasonOfficial $trainerGuest) {
 			$this->trainerGuest = $trainerGuest;
 		}
 		
@@ -992,7 +992,7 @@
 		/**
 		 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $gameChanges
 		 */
-		public function setGameChanges($gameChanges) {
+		public function setGameChanges(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $gameChanges) {
 			$this->gameChanges = $gameChanges;
 		}
 		
@@ -1006,7 +1006,7 @@
 		/**
 		 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $gameGoals
 		 */
-		public function setGameGoals($gameGoals) {
+		public function setGameGoals(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $gameGoals) {
 			$this->gameGoals = $gameGoals;
 		}
 		
@@ -1020,7 +1020,7 @@
 		/**
 		 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $gamePunishments
 		 */
-		public function setGamePunishments($gamePunishments) {
+		public function setGamePunishments(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $gamePunishments) {
 			$this->gamePunishments = $gamePunishments;
 		}
 		
@@ -1034,7 +1034,7 @@
 		/**
 		 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $gameReferees
 		 */
-		public function setGameReferees($gameReferees) {
+		public function setGameReferees(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $gameReferees) {
 			$this->gameReferees = $gameReferees;
 		}
 		
@@ -1048,7 +1048,7 @@
 		/**
 		 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $gameReports
 		 */
-		public function setGameReports($gameReports) {
+		public function setGameReports(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $gameReports) {
 			$this->gameReports = $gameReports;
 		}
 		
