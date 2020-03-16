@@ -4,9 +4,12 @@
 	
 	class VenueRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
 		
-		public function findAll($clubsFilter = null, $withClubOnly = false) {
+		public function findAll($venuesFilter = null, $clubsFilter = null, $withClubOnly = false) {
 			$query = $this->createQuery();
 			$constraints = [];
+			if($venuesFilter) {
+				$constraints[] = $query->in('uid', explode(",", $venuesFilter));
+			}
 			if($clubsFilter) {
 				$constraints[] = $query->in('club', explode(",", $clubsFilter));
 			}

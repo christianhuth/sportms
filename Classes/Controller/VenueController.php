@@ -18,8 +18,9 @@
 		 */
 		public function listAction() {
 			$clubsFilter = $this->settings['club']['clubs'];
-			$withClubOnly = $this->settings['vanue']['withClubOnly'];
-			$venues = $this->venueRepository->findAll($clubsFilter, $withClubOnly);
+			$venuesFilter = $this->settings['venue']['venues'];
+			$withClubOnly = $this->settings['venue']['withClubOnly'];
+			$venues = $this->venueRepository->findAll($venuesFilter, $clubsFilter, $withClubOnly);
 			$this->view->assign('venues', $venues);
 		}
 		
