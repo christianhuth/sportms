@@ -1,60 +1,41 @@
 <?php
-
-namespace Balumedien\Clubms\Controller;
-
-/***************************************************************
- *
- *  Copyright notice
- *
- *  (c) 2015
- *
- *  All rights reserved
- *
- *  This script is part of the TYPO3 project. The TYPO3 project is
- *  free software; you can redistribute it and/or modify
- *  it under the terms of the GNU General Public License as published by
- *  the Free Software Foundation; either version 3 of the License, or
- *  (at your option) any later version.
- *
- *  The GNU General Public License can be found at
- *  http://www.gnu.org/copyleft/gpl.html.
- *
- *  This script is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU General Public License for more details.
- *
- *  This copyright notice MUST APPEAR in all copies of the script!
- ***************************************************************/
-
-/**
- * CompetitionSeasonController
- */
-class CompetitionSeasonController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
-
-	/**
-	 * @var \Balumedien\Clubms\Domain\Repository\CompetitionSeasonRepository
-	 * @TYPO3\CMS\Extbase\Annotation\Inject
-	 */
-	protected $competitionSeasonRepository;
+	
+	namespace Balumedien\Clubms\Controller;
 	
 	/**
-	 * @return void
+	 * CompetitionSeasonController
 	 */
-	public function listAction() {
-		$competitionSeasons = $this->competitionSeasonRepository->findAll();
-		$this->view->assign('competitionSeasons', $competitionSeasons);
+	class CompetitionSeasonController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
+		
+		/**
+		 * @var \Balumedien\Clubms\Domain\Repository\CompetitionSeasonRepository
+		 * @TYPO3\CMS\Extbase\Annotation\Inject
+		 */
+		protected $competitionSeasonRepository;
+		
+		/**
+		 * @return void
+		 */
+		public function listAction() {
+			$competitionsFilter = $this->settings['competition']['competitions'];
+			$competitionTypesFilter = $this->settings['competition']['competitionTypes'];
+			$sectionsFilter = $this->settings['section']['sections'];
+			$sectionAgeGroupsFilter = $this->settings['section']['sectionAgeGroups'];
+			$sectionAgeLevelsFilter = $this->settings['section']['sectionAgeLevels'];
+			$seasonsFilter = $this->settings['season']['seasons'];
+			$competitionSeasons = $this->competitionSeasonRepository->findAll($competitionsFilter, $competitionTypesFilter, $sectionsFilter, $sectionAgeGroupsFilter, $sectionAgeLevelsFilter, $seasonsFilter);
+			$this->view->assign('competitionSeasons', $competitionSeasons);
+		}
+		
+		/**
+		 * @param \Balumedien\Clubms\Domain\Model\CompetitionSeason $competitionSeason
+		 */
+		public function showAction(\Balumedien\Clubms\Domain\Model\CompetitionSeason $competitionSeason = NULL) {
+			if($competitionSeason === NULL) {
+				$competitionSeasonUid = $this->settings['competitionSeason']['uid'];
+				$competitionSeason = $this->competitionSeasonRepository->findByUid($competitionSeasonUid);
+			}
+			$this->view->assign('competitionSeason', $competitionSeason);
+		}
+		
 	}
-
-    /**
-     * @param \Balumedien\Clubms\Domain\Model\CompetitionSeason $competitionSeason
-     */
-    public function showAction(\Balumedien\Clubms\Domain\Model\CompetitionSeason $competitionSeason = null) {
-        if($competitionSeason === null) {
-            $competitionSeasonUid = $this->settings['competitionSeason']['uid'];
-	        $competitionSeason = $this->competitionSeasonRepository->findByUid($competitionSeasonUid);
-        }
-        $this->view->assign('competitionSeason', $competitionSeason);
-    }
-
-}
