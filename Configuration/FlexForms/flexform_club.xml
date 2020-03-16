@@ -32,7 +32,7 @@
 					<displayCond>
 						<OR>
 							<numIndex index="0">FIELD:base.switchableControllerActions:=:Club->officials</numIndex>
-							<numIndex index="0">FIELD:base.switchableControllerActions:=:Venue->list</numIndex>
+							<numIndex index="1">FIELD:base.switchableControllerActions:=:Venue->list</numIndex>
 						</OR>
 					</displayCond>
 					<config>
