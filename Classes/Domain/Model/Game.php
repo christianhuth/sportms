@@ -78,6 +78,13 @@
 		protected $periodDuration;
 		
 		/**
+		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\GamePeriod>
+		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
+		 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
+		 */
+		protected $gamePeriods;
+		
+		/**
 		 * @var boolean
 		 */
 		protected $detailLink;
