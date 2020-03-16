@@ -17,7 +17,7 @@
 				$constraints[] = $query->in('clubSection.section', explode(',', $sectionsFilter));
 			}
 			if($sectionAgeGroupsFilter) {
-				$constraints[] = $query->in('sectionAgeLevel.sectionAgeGroup', explode(',', $sectionsFilter));
+				$constraints[] = $query->in('section_age_group', explode(',', $sectionsFilter));
 			}
 			if($constraints) {
 				$query->matching($query->logicalAnd($constraints));
