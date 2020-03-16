@@ -53,7 +53,7 @@ class GameReferee extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $refereeJob;
 
     /**
-     * @return Game
+     * @return \Balumedien\Clubms\Domain\Model\Game
      */
     public function getGame()
     {
@@ -61,9 +61,9 @@ class GameReferee extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     }
 
     /**
-     * @param Game $game
+     * @param \Balumedien\Clubms\Domain\Model\Game $game
      */
-    public function setGame($game)
+    public function setGame(\Balumedien\Clubms\Domain\Model\Game $game)
     {
         $this->game = $game;
     }

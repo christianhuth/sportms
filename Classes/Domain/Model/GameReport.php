@@ -58,7 +58,7 @@ class GameReport extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $author;
 
     /**
-     * @return Game
+     * @return \Balumedien\Clubms\Domain\Model\Game
      */
     public function getGame()
     {
@@ -66,9 +66,9 @@ class GameReport extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     }
 
     /**
-     * @param Game $game
+     * @param \Balumedien\Clubms\Domain\Model\Game $game
      */
-    public function setGame($game)
+    public function setGame(\Balumedien\Clubms\Domain\Model\Game $game)
     {
         $this->game = $game;
     }

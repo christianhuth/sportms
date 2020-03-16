@@ -36,7 +36,7 @@
 	class GameResultSet extends AbstractEntity {
 
 		/**
-		 * @var Game
+		 * @var \Balumedien\Clubms\Domain\Model\Game
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
 		 */
 		protected $game;
@@ -57,16 +57,16 @@
 		protected $resultGuest;
 
 		/**
-		 * @return Game
+		 * @return \Balumedien\Clubms\Domain\Model\Game
 		 */
 		public function getGame() {
 			return $this->game;
 		}
 
 		/**
-		 * @param Game $game
+		 * @param \Balumedien\Clubms\Domain\Model\Game $game
 		 */
-		public function setGame($game) {
+		public function setGame(\Balumedien\Clubms\Domain\Model\Game $game) {
 			$this->game = $game;
 		}
 		

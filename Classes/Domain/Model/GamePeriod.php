@@ -25,16 +25,16 @@
 		protected $duration;
 		
 		/**
-		 * @return Game
+		 * @return \Balumedien\Clubms\Domain\Model\Game
 		 */
 		public function getGame() {
 			return $this->game;
 		}
 		
 		/**
-		 * @param Game $game
+		 * @param \Balumedien\Clubms\Domain\Model\Game $game
 		 */
-		public function setGame($game) {
+		public function setGame(\Balumedien\Clubms\Domain\Model\Game $game) {
 			$this->game = $game;
 		}
 		
