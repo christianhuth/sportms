@@ -12,6 +12,7 @@
 			}
 			if($clubsFilter) {
 				$constraints[] = $query->in('club', explode(",", $clubsFilter));
+				$withClubOnly = true;
 			}
 			if($withClubOnly) {
 				$constraints[] = $query->logicalNot($query->equals('club', NULL));
