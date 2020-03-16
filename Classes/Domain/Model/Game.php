@@ -9,11 +9,13 @@
 		
 		/**
 		 * @var \Balumedien\Clubms\Domain\Model\Section
+		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
 		 */
 		protected $section;
 		
 		/**
 		 * @var \Balumedien\Clubms\Domain\Model\Season
+		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
 		 */
 		protected $season;
 		
@@ -36,13 +38,6 @@
 		 * @var int
 		 */
 		protected $status;
-		
-		/**
-		 * @var \Balumedien\Clubms\Domain\Model\CompetitionSeasonGameday
-		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
-		 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
-		 */
-		protected $gameday;
 		
 		/**
 		 * @var boolean
