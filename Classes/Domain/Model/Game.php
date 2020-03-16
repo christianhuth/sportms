@@ -89,7 +89,7 @@
 		/**
 		 * @return \Balumedien\Clubms\Domain\Model\Section
 		 */
-		public function getSection(): \Balumedien\Clubms\Domain\Model\Section {
+		public function getSection() {
 			return $this->section;
 		}
 		
@@ -103,7 +103,7 @@
 		/**
 		 * @return \Balumedien\Clubms\Domain\Model\Season
 		 */
-		public function getSeason(): \Balumedien\Clubms\Domain\Model\Section {
+		public function getSeason() {
 			return $this->season;
 		}
 		
@@ -117,7 +117,7 @@
 		/**
 		 * @return \Balumedien\Clubms\Domain\Model\CompetitionSeason
 		 */
-		public function getCompetitionSeason(): \Balumedien\Clubms\Domain\Model\CompetitionSeason {
+		public function getCompetitionSeason() {
 			return $this->competitionSeason;
 		}
 		
@@ -131,7 +131,7 @@
 		/**
 		 * @return \Balumedien\Clubms\Domain\Model\TeamSeason
 		 */
-		public function getTeamSeasonHome(): \Balumedien\Clubms\Domain\Model\TeamSeason {
+		public function getTeamSeasonHome() {
 			return $this->teamSeasonHome;
 		}
 		
@@ -145,7 +145,7 @@
 		/**
 		 * @return \Balumedien\Clubms\Domain\Model\TeamSeason
 		 */
-		public function getTeamSeasonGuest(): \Balumedien\Clubms\Domain\Model\TeamSeason {
+		public function getTeamSeasonGuest() {
 			return $this->teamSeasonGuest;
 		}
 		
@@ -173,7 +173,7 @@
 		/**
 		 * @return \Balumedien\Clubms\Domain\Model\CompetitionSeasonGameday
 		 */
-		public function getGameday(): \Balumedien\Clubms\Domain\Model\CompetitionSeasonGameday {
+		public function getGameday() {
 			return $this->gameday;
 		}
 		
