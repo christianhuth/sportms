@@ -4,17 +4,12 @@
 		<TCEforms>
 			<sheetTitle>Spiel</sheetTitle>
 		</TCEforms>
-		<displayCond>
-			<OR>
-				<numIndex index="0">FIELD:base.switchableControllerActions:=:Game->show</numIndex>
-				<numIndex index="1">FIELD:base.switchableControllerActions:=:Game->list</numIndex>
-			</OR>
-		</displayCond>
 		<type>array</type>
 		<el>
 			<settings.game.uid>
 				<TCEforms>
 					<label>Zeige folgendes Spiel</label>
+					<displayCond>FIELD:base.switchableControllerActions:=:Game->show</displayCond>
 					<config>
 						<type>group</type>
 						<internal_type>db</internal_type>
