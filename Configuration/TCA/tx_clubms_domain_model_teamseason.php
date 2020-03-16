@@ -238,7 +238,7 @@ return array(
 			'config' => [
 				'type' => 'select',
 				'renderType' => 'selectMultipleSideBySide',
-				'foreign_field' => 'uid_local',
+				'foreign_field' => 'uid_foreign',
 				'foreign_table' => 'tx_clubms_domain_model_competitionseason',
 				'foreign_table_where' => ' AND tx_clubms_domain_model_competitionseason.season = ###REC_FIELD_season### ORDER BY competition ASC',
 				'MM' => 'tx_clubms_competitionseason_teamseason_mm',
