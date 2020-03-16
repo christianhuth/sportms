@@ -4,7 +4,7 @@
 
 	class TeamRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
 		
-		public function findAll($teamsFilter = null, $sectionsFilter = null, $clubsFilter = null, $sectionAgeGroupsFilter = null, $sectionAgeLevelsFilter = null) {
+		public function findAll($teamsFilter = null, $clubsFilter = null, $sectionsFilter = null, $sectionAgeGroupsFilter = null, $sectionAgeLevelsFilter = null) {
 			$query = $this->createQuery();
 			$constraints = [];
 			if($teamsFilter) {
