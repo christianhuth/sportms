@@ -227,16 +227,16 @@
 		}
 		
 		/**
-		 * @return Venue
+		 * @return \Balumedien\Clubms\Domain\Model\Venue
 		 */
 		public function getVenue() {
 			return $this->venue;
 		}
 		
 		/**
-		 * @param Venue $venue
+		 * @param \Balumedien\Clubms\Domain\Model\Venue $venue
 		 */
-		public function setVenue($venue) {
+		public function setVenue(\Balumedien\Clubms\Domain\Model\Venue $venue) {
 			$this->venue = $venue;
 		}
 		
