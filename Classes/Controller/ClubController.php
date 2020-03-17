@@ -37,8 +37,11 @@
 		 * Use this method to solve tasks which all actions have in common, when VIEW-Context is needed
 		 */
 		public function initializeActions() {
+			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->settings, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			$this->determineShowView($this->model);
+			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->settings, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			$this->determineShowViews($this->model, 'index,officials,sections');
+			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->settings, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			$this->view->assign('settings', $this->settings);
 		}
 		
