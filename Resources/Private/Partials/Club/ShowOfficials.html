@@ -2,9 +2,7 @@
       xmlns:clubms="Balumedien\Clubms\ViewHelpers"
       data-namespace-typo3-fluid="true">
 
-<f:layout name="default" />
-
-<f:section name="default">
+<div class="tx-clubms-club-show-officials">
 
     <f:if condition="{settings.club.officials.clubsSelectbox} || {settings.club.officials.jobsSelectbox}">
         <f:form controller="Club" action="officials">
@@ -83,6 +81,6 @@
         </table>
     </div>
 
-</f:section>
+</div>
 
 </html>
