@@ -19,13 +19,15 @@
 		 */
 		protected $clubOfficialRepository = NULL;
 		
+		public function initializeAction() {
+			$this->mergeRequestWithSettings();
+		}
+		
 		/**
 		 * @return void
 		 */
 		public function listAction() {
-			
 			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->request->getArguments(), 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
-			
 			$clubs = $this->clubRepository->findAll($this->getClubsFilter());
 			$this->view->assign('clubs', $clubs);
 		}
@@ -35,15 +37,6 @@
 		 * @param \Balumedien\Clubms\Domain\Model\Club $club club item
 		 */
 		public function showAction(\Balumedien\Clubms\Domain\Model\Club $club = NULL) {
-			
-			$listOfArguments = 'showView';
-			foreach(explode(',', $listOfArguments) as $argument) {
-				if($this->request->hasArgument($argument)) {
-					$this->request->getArgument($argument) ? $this->settings[$argument]['showView'] = $this->request->getArgument($argument) : $this->settings[$argument]['showView'];
-				}
-			}
-			$this->view->assign('settings', $this->settings);
-			
 			if($club === NULL) {
 				// TODO: CHECK IF SETTINGS IS SET ELSE DIE
 				$clubUid = $this->settings['club']['uid'];
