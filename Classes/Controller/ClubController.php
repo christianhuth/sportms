@@ -48,6 +48,7 @@
 			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->settings, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			
 			$this->determineShowView('club');
+			$this->settings['club']['showView'] = ($this->settings['club']['showView']) ? : 'index';
 			$this->view->assign('settings', $this->settings);
 			
 			if($club === NULL) {
