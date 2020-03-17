@@ -20,9 +20,7 @@
 		protected $clubOfficialRepository = NULL;
 		
 		public function initializeAction() {
-			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->settings, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			$this->mergeRequestWithSettings();
-			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->settings, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 		}
 		
 		/**
@@ -30,7 +28,6 @@
 		 */
 		public function listAction() {
 			$this->view->assign('settings', $this->settings);
-			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->request->getArguments(), 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			$clubs = $this->clubRepository->findAll($this->getClubsFilter());
 			$this->view->assign('clubs', $clubs);
 		}
