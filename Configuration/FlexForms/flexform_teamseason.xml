@@ -2,29 +2,29 @@
 <T3DataStructure>
 	<ROOT>
 		<TCEforms>
-			<sheetTitle>Spiel</sheetTitle>
+			<sheetTitle>Mannschaftsinstanz</sheetTitle>
 		</TCEforms>
 		<type>array</type>
 		<el>
-			<settings.game.uid>
+			<settings.teamseason.uid>
 				<TCEforms>
-					<label>Zeige folgendes Spiel</label>
-					<displayCond>FIELD:base.switchableControllerActions:=:Game->show</displayCond>
+					<label>Zeige folgende Mannschaftsinstanz</label>
+					<displayCond>FIELD:base.switchableControllerActions:=:TeamSeason->show</displayCond>
 					<config>
 						<type>group</type>
 						<internal_type>db</internal_type>
-						<allowed>tx_clubms_domain_model_game</allowed>
+						<allowed>tx_clubms_domain_model_teamseason</allowed>
 						<size>1</size>
 						<maxItems>1</maxItems>
 						<minItems>0</minItems>
 						<show_thumbs>1</show_thumbs>
 					</config>
 				</TCEforms>
-			</settings.game.uid>
-			<settings.game.showView>
+			</settings.teamseason.uid>
+			<settings.teamseason.showView>
 				<TCEforms>
 					<label>Gezeigte Einzelansicht</label>
-					<displayCond>FIELD:base.switchableControllerActions:=:Game->show</displayCond>
+					<displayCond>FIELD:base.switchableControllerActions:=:TeamSeason->show</displayCond>
 					<config>
 						<type>select</type>
 						<renderType>selectSingle</renderType>
@@ -34,26 +34,18 @@
 								<numIndex index="1">index</numIndex>
 							</numIndex>
 							<numIndex index="2">
-								<numIndex index="0">History</numIndex>
-								<numIndex index="1">history</numIndex>
+								<numIndex index="0">Games</numIndex>
+								<numIndex index="1">games</numIndex>
 							</numIndex>
 							<numIndex index="3">
-								<numIndex index="0">Report</numIndex>
-								<numIndex index="1">report</numIndex>
-							</numIndex>
-							<numIndex index="4">
-								<numIndex index="0">Stats</numIndex>
-								<numIndex index="1">stats</numIndex>
-							</numIndex>
-							<numIndex index="5">
-								<numIndex index="0">Ticker</numIndex>
-								<numIndex index="1">Ticker</numIndex>
+								<numIndex index="0">Goals</numIndex>
+								<numIndex index="1">goals</numIndex>
 							</numIndex>
 						</items>
 					</config>
 					<onChange>reload</onChange>
 				</TCEforms>
-			</settings.game.showView>
+			</settings.teamseason.showView>
 		</el>
 	</ROOT>
 </T3DataStructure>

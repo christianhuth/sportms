@@ -21,6 +21,35 @@
 					</config>
 				</TCEforms>
 			</settings.team.uid>
+			<settings.team.showView>
+				<TCEforms>
+					<label>Gezeigte Einzelansicht</label>
+					<displayCond>FIELD:base.switchableControllerActions:=:Team->show</displayCond>
+					<config>
+						<type>select</type>
+						<renderType>selectSingle</renderType>
+						<items type="array">
+							<numIndex index="0">
+								<numIndex index="0">Index</numIndex>
+								<numIndex index="1">index</numIndex>
+							</numIndex>
+							<numIndex index="2">
+								<numIndex index="0">Competitions</numIndex>
+								<numIndex index="1">competitions</numIndex>
+							</numIndex>
+							<numIndex index="3">
+								<numIndex index="0">Games</numIndex>
+								<numIndex index="1">games</numIndex>
+							</numIndex>
+							<numIndex index="4">
+								<numIndex index="0">Stats</numIndex>
+								<numIndex index="1">stats</numIndex>
+							</numIndex>
+						</items>
+					</config>
+					<onChange>reload</onChange>
+				</TCEforms>
+			</settings.team.showView>
 			<settings.team.teams>
 				<TCEforms>
 					<label>Welche Teams sollen angezeigt werden?</label>
