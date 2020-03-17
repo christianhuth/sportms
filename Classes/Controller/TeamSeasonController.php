@@ -33,11 +33,11 @@
 		 */
 		public function showAction(\Balumedien\Clubms\Domain\Model\TeamSeason $teamSeason = NULL) {
 			
-			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->settings, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
-			
 			($this->request->getArgument('team')) ? $this->settings['team']['uid'] = $this->request->getArgument('team') : $this->settings['team']['uid'];
 			($this->request->getArgument('season')) ? $this->settings['season']['uid'] = $this->request->getArgument('season') : $this->settings['season']['uid'];
 			$this->view->assign('settings', $this->settings);
+			
+			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->settings, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			
 			if($teamSeason === NULL) {
 				$teamSeason = $this->teamSeasonRepository->findByTeamAndSeason($this->settings['team']['uid'], $this->settings['season']['uid']);
