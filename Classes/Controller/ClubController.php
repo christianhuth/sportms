@@ -35,9 +35,10 @@
 		}
 		
 		/**
+		 * @param string $showView
 		 * @param \Balumedien\Clubms\Domain\Model\Club $club club item
 		 */
-		public function showAction(\Balumedien\Clubms\Domain\Model\Club $club = NULL) {
+		public function showAction(string $showView = "index", \Balumedien\Clubms\Domain\Model\Club $club = NULL) {
 			if($club === NULL) {
 				// TODO: CHECK IF SETTINGS IS SET ELSE DIE
 				$clubUid = $this->settings['club']['uid'];
