@@ -34,6 +34,7 @@
 		 */
 		public function initializeActions() {
 			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->view, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
+			$this->determineShowView('club', $this->settings, $this->view);
 			$this->view->assign('settings', $this->settings);
 		}
 		
@@ -55,9 +56,8 @@
 		 */
 		public function showAction(\Balumedien\Clubms\Domain\Model\Club $club = NULL) {
 			
-			#$this->determineShowView('club', $this->settings, $this->view);
-			$this->settings['club']['showView'] = ($this->settings['club']['showView']) ? : 'index';
-			$this->view->assign('settings', $this->settings);
+			#$this->settings['club']['showView'] = ($this->settings['club']['showView']) ? : 'index';
+			#$this->view->assign('settings', $this->settings);
 			
 			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->settings, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			
