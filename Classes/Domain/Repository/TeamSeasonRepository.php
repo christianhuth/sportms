@@ -31,14 +31,14 @@
 			return $query->execute();
 		}
 		
-		public function findByTeamAndSeason(\Balumedien\Clubms\Domain\Model\Team $team, \Balumedien\Clubms\Domain\Model\Season $season) {
+		public function findByTeamUidAndSeasonUid($teamUid, $seasonUid) {
 			$query = $this->createQuery();
 			$constraints = [];
-			if($team) {
-				$constraints[] = $query->in('team', $team);
+			if($teamUid) {
+				$constraints[] = $query->equals('team', $teamUid);
 			}
-			if($season) {
-				$constraints[] = $query->in('season', $season);
+			if($seasonUid) {
+				$constraints[] = $query->equals('season', $seasonUid);
 			}
 			if($constraints) {
 				$query->matching($query->logicalAnd($constraints));
