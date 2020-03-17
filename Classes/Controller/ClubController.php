@@ -27,6 +27,7 @@
 		
 		public function initializeActions() {
 			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->view, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
+			$this->view->assign('settings', $this->settings);
 		}
 		
 		/**
