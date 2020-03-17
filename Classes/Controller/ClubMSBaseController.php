@@ -39,7 +39,7 @@
 			foreach($listOfRequestArguments as $argument) {
 				$explodedArgument = explode(',', $argument);
 				if($this->request->hasArgument($explodedArgument[0])) {
-					$settings[$explodedArgument[1]][$explodedArgument[2]] = $this->request->getArgument($explodedArgument[0]);
+					$this->settings[$explodedArgument[1]][$explodedArgument[2]] = $this->request->getArgument($explodedArgument[0]);
 				}
 			}
 		}
