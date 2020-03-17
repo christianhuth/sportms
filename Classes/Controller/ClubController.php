@@ -45,7 +45,7 @@
 		 */
 		public function showAction(\Balumedien\Clubms\Domain\Model\Club $club = NULL) {
 			
-			$this->determineShowView('club', $this->settings);
+			$this->determineShowView('club', $this->settings, $this->view);
 			#$this->settings['club']['showView'] = ($this->settings['club']['showView']) ? : 'index';
 			#$this->view->assign('settings', );
 			

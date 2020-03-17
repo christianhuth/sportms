@@ -48,8 +48,9 @@
 		
 		}
 		
-		protected function determineShowView($model, &$settings): void {
+		protected function determineShowView($model, &$settings, &$view): void {
 			$settings['club']['showView'] = ($settings[$model]['showView']) ? : 'index';
+			$view->assign($settings);
 		}
 		
 	}
