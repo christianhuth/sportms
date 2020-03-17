@@ -48,7 +48,7 @@
 			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->settings[$model]['showViews'], 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			foreach(explode(',', $listOfPossibleShowViews) AS $showView) {
 				\TYPO3\CMS\Core\Utility\DebugUtility::debug($showView, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
-				$this->settings[$model]['showView'][$showView] = strpos($this->settings[$model]['showViews'], $showView) >= 0;
+				$this->settings[$model]['showView'][$showView] = strpos($this->settings[$model]['showViews'], $showView) !== FALSE;
 			}
 		}
 		
