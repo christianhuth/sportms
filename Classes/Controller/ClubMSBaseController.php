@@ -29,7 +29,7 @@
 		}
 		
 		protected function mergeRequestWithSettings() {
-			$listOfRequestArguments = ['club,selected','showView,showView'];
+			$listOfRequestArguments = ['selectClub,selected','showView,showView'];
 			foreach($listOfRequestArguments as $argument) {
 				$explodedArgument = explode(',', $argument);
 				if($this->request->hasArgument($explodedArgument[0])) {
