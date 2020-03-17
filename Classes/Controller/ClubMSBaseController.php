@@ -34,12 +34,15 @@
 		
 		protected function mergeRequestsWithSettings(): void {
 			$listOfMappings = array();
-			$listOfMappings[] = ['selectClub', ['club', 'selected']];
-			$listOfMappings[] = ['showView', ['club', ['showView', 'current']]];
+			$listOfMappings[] = ['selectClub', ['club']['selected']];
+			$listOfMappings[] = ['showView', ['club']['showView']['current']];
 			foreach($listOfMappings as $mapping) {
-				if(count($mapping) === 2) {
-					$this->mergeRequestWithSetting($mapping[0], $mapping[1]);
+				if($this->request->hasArgument($mapping[0])) {
+					$this->settings[$mapping[1]] = $this->request->getArgument($mapping[0]);
 				}
+				#if(count($mapping) === 2) {
+				#	$this->mergeRequestWithSetting($mapping[0], $mapping[1]);
+				#}
 			}
 		}
 		
