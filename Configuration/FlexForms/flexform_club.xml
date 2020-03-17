@@ -23,7 +23,7 @@
             </settings.club.uid>
             <settings.club.showView>
 				<TCEforms>
-					<label>Gezeigte Einzelansicht</label>
+					<label>Einzelansichten</label>
 					<displayCond>FIELD:base.switchableControllerActions:=:Club->show</displayCond>
 					<config>
 						<type>select</type>
