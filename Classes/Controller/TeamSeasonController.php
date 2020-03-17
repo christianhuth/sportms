@@ -34,8 +34,6 @@
 		 */
 		public function showAction(\Balumedien\Clubms\Domain\Model\Team $team = NULL, \Balumedien\Clubms\Domain\Model\Season $season = NULL): void {
 			
-			#\Balumedien\Clubms\Domain\Model\TeamSeason $teamSeason = NULL
-			
 			$listOfArguments = 'season,team';
 			
 			foreach(explode(',', $listOfArguments) as $argument) {
@@ -45,16 +43,9 @@
 			}
 			$this->view->assign('settings', $this->settings);
 			
-			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->settings, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
-			
 			$teamSeason = $this->teamSeasonRepository->findByTeamUidAndSeasonUid($this->settings['team']['uid'], $this->settings['season']['uid']);
+			$this->view->assign('teamSeason', $teamSeason[0]);
 			
-			\TYPO3\CMS\Core\Utility\DebugUtility::debug($teamSeason, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
-			if($teamSeason != NULL) {
-				$this->view->assign('teamSeason', $teamSeason[0]);
-			} else {
-				// TODO: ERROR HANDLING
-			}
 		}
 		
 	}
