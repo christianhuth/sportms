@@ -160,7 +160,7 @@
 				}
 			}
 			$pageType = (int) $this->arguments['pageType'];
-			$noCache = (bool) $this->arguments['noCache'];
+			$noCache = (bool) 1;
 			$noCacheHash = (bool) 1;
 			$section = (string) $this->arguments['section'];
 			$format = (string) $this->arguments['format'];
