@@ -37,9 +37,6 @@
 			
 			$this->initializeActions();
 			
-			$this->view->assign('settings', $this->settings);
-			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->settings, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
-			
 			if($this->settings['club']['clubsSelectbox']) {
 				$clubsSelectbox = $this->clubRepository->findAll($this->getClubsFilter(FALSE));
 				$this->view->assign('clubsSelectbox', $clubsSelectbox);
