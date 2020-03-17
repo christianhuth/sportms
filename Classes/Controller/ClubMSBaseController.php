@@ -37,10 +37,8 @@
 			$listOfMappings[] = ['selectClub', ['club', 'selected']];
 			$listOfMappings[] = ['showView', ['club', ['showView', 'current']]];
 			foreach($listOfMappings as $mapping) {
-				$explodedMapping = explode(',', $mapping);
-				\TYPO3\CMS\Core\Utility\DebugUtility::debug(count($explodedMapping), 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
-				if(count($explodedMapping) === 2) {
-					$this->mergeRequestWithSetting($explodedMapping[0], $explodedMapping[1]);
+				if(count($mapping) === 2) {
+					$this->mergeRequestWithSetting($mapping[0], $mapping[1]);
 				}
 			}
 		}
