@@ -60,7 +60,6 @@
 					<label>Welche Teams sollen angezeigt werden?</label>
 					<displayCond>
 						<OR>
-							<numIndex index="0">FIELD:base.switchableControllerActions:=:Club->list</numIndex>
 							<numIndex index="1">FIELD:base.switchableControllerActions:=:ClubSection->list</numIndex>
 							<numIndex index="2">FIELD:base.switchableControllerActions:=:Game->list</numIndex>
 							<numIndex index="3">FIELD:base.switchableControllerActions:=:Team->list</numIndex>
