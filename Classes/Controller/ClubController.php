@@ -5,7 +5,7 @@
 	/**
 	 * ClubController
 	 */
-	class ClubController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
+	class ClubController extends ClubMSBaseController {
 		
 		/**
 		 * @var \Balumedien\Clubms\Domain\Repository\ClubRepository
@@ -23,8 +23,7 @@
 		 * @return void
 		 */
 		public function listAction() {
-			$clubsFilter = $this->settings['club']['clubs'];
-			$clubs = $this->clubRepository->findAll($clubsFilter);
+			$clubs = $this->clubRepository->findAll($this->getClubsFilter());
 			$this->view->assign('clubs', $clubs);
 		}
 		
