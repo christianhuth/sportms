@@ -1,6 +1,6 @@
 <?php
 	
-	namespace Balumedien\Clubms\ViewHelpers;
+	namespace Balumedien\Clubms\ViewHelpers\Club;
 	
 	class SelectViewHelper extends \TYPO3\CMS\Fluid\ViewHelpers\Form\SelectViewHelper {
 		
