@@ -1,105 +1,125 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <T3DataStructure>
-	<ROOT>
-		<TCEforms>
-			<sheetTitle>Verein</sheetTitle>
-		</TCEforms>
-		<type>array</type>
-		<el>
-			<settings.club.uid>
-				<TCEforms>
-					<label>Zeige folgenden Verein</label>
-					<displayCond>
-						<OR>
-							<numIndex index="0">FIELD:base.switchableControllerActions:=:Club->show</numIndex>
-						</OR>
-					</displayCond>
-					<config>
-						<type>group</type>
-						<internal_type>db</internal_type>
-						<allowed>tx_clubms_domain_model_club</allowed>
-						<size>1</size>
-						<maxItems>1</maxItems>
-						<minItems>0</minItems>
-						<show_thumbs>1</show_thumbs>
-					</config>
-				</TCEforms>
-			</settings.club.uid>
-			<settings.club.clubs>
-				<TCEforms>
-					<label>Welche Vereine sollen angezeigt werden?</label>
-					<displayCond>
-						<OR>
-							<numIndex index="0">FIELD:base.switchableControllerActions:=:Club->list</numIndex>
-							<numIndex index="1">FIELD:base.switchableControllerActions:=:ClubSection->list</numIndex>
-							<numIndex index="2">FIELD:base.switchableControllerActions:=:Game->list</numIndex>
-							<numIndex index="3">FIELD:base.switchableControllerActions:=:Team->list</numIndex>
-							<numIndex index="4">FIELD:base.switchableControllerActions:=:TeamSeason->list</numIndex>
-							<numIndex index="5">FIELD:base.switchableControllerActions:=:Venue->list</numIndex>
-						</OR>
-					</displayCond>
-					<config>
-						<foreign_table>tx_clubms_domain_model_club</foreign_table>
-						<foreign_table_where>ORDER BY name ASC</foreign_table_where>
-						<renderType>selectMultipleSideBySide</renderType>
-						<type>select</type>
-					</config>
-				</TCEforms>
-			</settings.club.clubs>
-			<settings.club.clubsSelectbox>
-				<TCEforms>
-					<label>Selectbox für Vereine?</label>
-					<displayCond>
-						<OR>
-							<numIndex index="0">FIELD:base.switchableControllerActions:=:Club->list</numIndex>
-							<numIndex index="1">FIELD:base.switchableControllerActions:=:ClubSection->list</numIndex>
-							<numIndex index="2">FIELD:base.switchableControllerActions:=:Game->list</numIndex>
-							<numIndex index="3">FIELD:base.switchableControllerActions:=:Team->list</numIndex>
-							<numIndex index="4">FIELD:base.switchableControllerActions:=:TeamSeason->list</numIndex>
-							<numIndex index="5">FIELD:base.switchableControllerActions:=:Venue->list</numIndex>
-						</OR>
-					</displayCond>
-					<config>
-						<default>1</default>
-						<renderType>checkboxToggle</renderType>
-						<type>check</type>
-					</config>
-				</TCEforms>
-			</settings.club.clubsSelectbox>
-			<settings.club.officials.jobs>
-				<TCEforms>
-					<label>Welche Funktionärstätigkeiten sollen angezeigt werden?</label>
-					<displayCond>FIELD:base.switchableControllerActions:=:Club->officials</displayCond>
-					<config>
-						<foreign_table>tx_clubms_domain_model_clubofficialjob</foreign_table>
-						<foreign_table_where>ORDER BY label ASC</foreign_table_where>
-						<renderType>selectMultipleSideBySide</renderType>
-						<type>select</type>
-					</config>
-				</TCEforms>
-			</settings.club.officials.jobs>
-			<settings.club.officials.jobsSelectbox>
-				<TCEforms>
-					<label>Selectbox für Funktionärstätigkeiten?</label>
-					<displayCond>FIELD:base.switchableControllerActions:=:Club->officials</displayCond>
-					<config>
-						<default>1</default>
-						<renderType>checkboxToggle</renderType>
-						<type>check</type>
-					</config>
-				</TCEforms>
-			</settings.club.officials.jobsSelectbox>
-			<settings.club.officials.currentOfficialsOnly>
-				<TCEforms>
-					<label>Zeige nur die aktuellen Funktionäre</label>
-					<displayCond>FIELD:base.switchableControllerActions:=:Club->officials</displayCond>
-					<config>
-						<default>0</default>
-						<renderType>checkboxToggle</renderType>
-						<type>check</type>
-					</config>
-				</TCEforms>
-			</settings.club.officials.currentOfficialsOnly>
-		</el>
-	</ROOT>
+    <ROOT>
+        <TCEforms>
+            <sheetTitle>Verein</sheetTitle>
+        </TCEforms>
+        <type>array</type>
+        <el>
+            <settings.club.uid>
+                <TCEforms>
+                    <label>Zeige folgenden Verein</label>
+                    <displayCond>FIELD:base.switchableControllerActions:=:Club->show</displayCond>
+                    <config>
+                        <type>select</type>
+                        <renderType>selectSingle</renderType>
+                        <items type="array">
+							<numIndex index="0">
+								<numIndex index="0">Index</numIndex>
+								<numIndex index="1">index</numIndex>
+							</numIndex>
+							<numIndex index="2">
+								<numIndex index="0">Officials</numIndex>
+								<numIndex index="1">officials</numIndex>
+							</numIndex>
+							<numIndex index="3">
+								<numIndex index="0">Sections</numIndex>
+								<numIndex index="1">sections</numIndex>
+							</numIndex>
+                        </items>
+                    </config>
+                </TCEforms>
+            </settings.club.uid>
+            <settings.club.showView>
+                <TCEforms>
+                    <label>Gezeigte Einzelansicht</label>
+                    <displayCond>FIELD:base.switchableControllerActions:=:Club->show</displayCond>
+                    <config>
+                        <type>group</type>
+                        <internal_type>db</internal_type>
+                        <allowed>tx_clubms_domain_model_club</allowed>
+                        <size>1</size>
+                        <maxItems>1</maxItems>
+                        <minItems>0</minItems>
+                        <show_thumbs>1</show_thumbs>
+                    </config>
+                </TCEforms>
+            </settings.club.showView>
+            <settings.club.clubs>
+                <TCEforms>
+                    <label>Welche Vereine sollen angezeigt werden?</label>
+                    <displayCond>
+                        <OR>
+                            <numIndex index="0">FIELD:base.switchableControllerActions:=:Club->list</numIndex>
+                            <numIndex index="1">FIELD:base.switchableControllerActions:=:ClubSection->list</numIndex>
+                            <numIndex index="2">FIELD:base.switchableControllerActions:=:Game->list</numIndex>
+                            <numIndex index="3">FIELD:base.switchableControllerActions:=:Team->list</numIndex>
+                            <numIndex index="4">FIELD:base.switchableControllerActions:=:TeamSeason->list</numIndex>
+                            <numIndex index="5">FIELD:base.switchableControllerActions:=:Venue->list</numIndex>
+                        </OR>
+                    </displayCond>
+                    <config>
+                        <foreign_table>tx_clubms_domain_model_club</foreign_table>
+                        <foreign_table_where>ORDER BY name ASC</foreign_table_where>
+                        <renderType>selectMultipleSideBySide</renderType>
+                        <type>select</type>
+                    </config>
+                </TCEforms>
+            </settings.club.clubs>
+            <settings.club.clubsSelectbox>
+                <TCEforms>
+                    <label>Selectbox für Vereine?</label>
+                    <displayCond>
+                        <OR>
+                            <numIndex index="0">FIELD:base.switchableControllerActions:=:Club->list</numIndex>
+                            <numIndex index="1">FIELD:base.switchableControllerActions:=:ClubSection->list</numIndex>
+                            <numIndex index="2">FIELD:base.switchableControllerActions:=:Game->list</numIndex>
+                            <numIndex index="3">FIELD:base.switchableControllerActions:=:Team->list</numIndex>
+                            <numIndex index="4">FIELD:base.switchableControllerActions:=:TeamSeason->list</numIndex>
+                            <numIndex index="5">FIELD:base.switchableControllerActions:=:Venue->list</numIndex>
+                        </OR>
+                    </displayCond>
+                    <config>
+                        <default>1</default>
+                        <renderType>checkboxToggle</renderType>
+                        <type>check</type>
+                    </config>
+                </TCEforms>
+            </settings.club.clubsSelectbox>
+            <settings.club.officials.jobs>
+                <TCEforms>
+                    <label>Welche Funktionärstätigkeiten sollen angezeigt werden?</label>
+                    <displayCond>FIELD:base.switchableControllerActions:=:Club->officials</displayCond>
+                    <config>
+                        <foreign_table>tx_clubms_domain_model_clubofficialjob</foreign_table>
+                        <foreign_table_where>ORDER BY label ASC</foreign_table_where>
+                        <renderType>selectMultipleSideBySide</renderType>
+                        <type>select</type>
+                    </config>
+                </TCEforms>
+            </settings.club.officials.jobs>
+            <settings.club.officials.jobsSelectbox>
+                <TCEforms>
+                    <label>Selectbox für Funktionärstätigkeiten?</label>
+                    <displayCond>FIELD:base.switchableControllerActions:=:Club->officials</displayCond>
+                    <config>
+                        <default>1</default>
+                        <renderType>checkboxToggle</renderType>
+                        <type>check</type>
+                    </config>
+                </TCEforms>
+            </settings.club.officials.jobsSelectbox>
+            <settings.club.officials.currentOfficialsOnly>
+                <TCEforms>
+                    <label>Zeige nur die aktuellen Funktionäre</label>
+                    <displayCond>FIELD:base.switchableControllerActions:=:Club->officials</displayCond>
+                    <config>
+                        <default>0</default>
+                        <renderType>checkboxToggle</renderType>
+                        <type>check</type>
+                    </config>
+                </TCEforms>
+            </settings.club.officials.currentOfficialsOnly>
+        </el>
+    </ROOT>
 </T3DataStructure>
