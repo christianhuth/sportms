@@ -9,8 +9,8 @@
 		 */
 		public function initializeArguments() {
 			parent::initializeArguments();
-			$this->registerTagAttribute('clubs', 'string', 'The Clubs to be shown in the select form', FALSE);
-			$this->registerTagAttribute('clubSections', 'string', 'The ClubsSections from which the clubs should be shown in the select form', FALSE);
+			$this->registerTagAttribute('clubs', 'array', 'The Clubs to be shown in the select form', FALSE);
+			$this->registerTagAttribute('clubSections', 'array', 'The ClubsSections from which the clubs should be shown in the select form', FALSE);
 		}
 		
 		/**
