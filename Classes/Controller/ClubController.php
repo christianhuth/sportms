@@ -2,6 +2,8 @@
 	
 	namespace Balumedien\Clubms\Controller;
 	
+	use TYPO3\CMS\Extbase\Mvc\View\ViewInterface;
+	
 	/**
 	 * ClubController
 	 */
@@ -20,13 +22,14 @@
 		protected $clubOfficialRepository = NULL;
 		
 		public function initializeAction() {
-			$this->mergeRequestWithSettings($this->settings, $this->view);
+			$this->mergeRequestWithSettings();
 		}
 		
 		/**
 		 * @return void
 		 */
 		public function listAction() {
+			#$this->view->assign('settings', );
 			
 			if($this->settings['club']['clubsSelectbox']) {
 				$clubsSelectbox = $this->clubRepository->findAll($this->getClubsFilter(FALSE));
