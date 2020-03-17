@@ -35,7 +35,7 @@
 				$this->view->assign('clubsSelectbox', $clubsSelectbox);
 			}
 			
-			$clubs = $this->clubRepository->findAll($this->getClubsFilter(FALSE));
+			$clubs = $this->clubRepository->findAll($this->getClubsFilter());
 			$this->view->assign('clubs', $clubs);
 			
 		}
