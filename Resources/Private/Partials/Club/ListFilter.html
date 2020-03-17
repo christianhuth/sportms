@@ -3,7 +3,9 @@
 
 <div class="tx-clubms-list-filter">
     <f:form action="list" controller="Club" method="POST" noCacheHash="TRUE" pageUid="{settings.club.listPid}">
-        <f:render arguments="{_all}" partial="Select/Club"/>
+        <f:if condition="{settings.club.clubsSelectbox}">
+            <f:render arguments="{_all}" partial="Select/Club"/>
+        </f:if>
         <f:form.submit value="Los"/>
     </f:form>
 </div>
