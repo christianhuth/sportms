@@ -110,7 +110,7 @@
                     <displayCond>
                         <AND>
                             <numIndex index="0">FIELD:base.switchableControllerActions:=:Club->show</numIndex>
-                            <numIndex index="1">FIELD:club.settings.club.showView:REQ:officials</numIndex>
+                            <numIndex index="1">FIELD:club.settings.club.showView:IN:officials</numIndex>
                         </AND>
                     </displayCond>
                     <config>
