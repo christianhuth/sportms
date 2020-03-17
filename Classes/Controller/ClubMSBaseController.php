@@ -51,7 +51,7 @@
 		}
 		
 		protected function determineShowView($model): void {
-			$this->settings[$model]['showView'] = ($this->settings[$model]['showView']) ? : ($this->settings[$model]['showViews']) ? explode(',', $this->settings[$model]['showViews'])[0] : 'index';
+			$this->settings[$model]['showView']['current'] = ($this->settings[$model]['showView']) ? : ($this->settings[$model]['showViews']) ? explode(',', $this->settings[$model]['showViews'])[0] : 'index';
 		}
 		
 	}
