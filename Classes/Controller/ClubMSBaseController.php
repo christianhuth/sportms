@@ -45,7 +45,7 @@
 		}
 		
 		protected function determineShowView($model): string {
-			return ($this->settings[$model]['showView']) ? : 'index';
+			$this->settings['club']['showView'] = ($this->settings[$model]['showView']) ? : 'index';
 		}
 		
 	}
