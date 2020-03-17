@@ -9,6 +9,8 @@
 	 */
 	class ClubController extends ClubMSBaseController {
 		
+		private const MODEL='club';
+		
 		/**
 		 * @var \Balumedien\Clubms\Domain\Repository\ClubRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
@@ -33,9 +35,8 @@
 		 * Use this method to solve tasks which all actions have in common, when VIEW-Context is needed
 		 */
 		public function initializeActions() {
-			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->view, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
-			$this->determineShowView('club');
-			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->view, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
+			$this->determineShowView(MODEL);
+			$this->determineShowViews(MODEL, 'index,officials,sections');
 			$this->view->assign('settings', $this->settings);
 		}
 		

@@ -44,12 +44,14 @@
 			}
 		}
 		
-		protected function determineShowViews($model) {
-		
+		protected function determineShowViews($model, $listOfPossibleShowViews): void {
+			foreach(explode(',', $listOfPossibleShowViews) AS $showView) {
+				$this->settings[$model]['showView'][$showView] = (strpos($this->settings[$model]['showViews'], $showView)) ? TRUE : FALSE;
+			}
 		}
 		
 		protected function determineShowView($model): void {
-			$this->settings['club']['showView'] = ($this->settings[$model]['showView']) ? : ($this->settings[$model]['showViews']) ? explode(',', $this->settings[$model]['showViews'])[0] : 'index';
+			$this->settings[$model]['showView'] = ($this->settings[$model]['showView']) ? : ($this->settings[$model]['showViews']) ? explode(',', $this->settings[$model]['showViews'])[0] : 'index';
 		}
 		
 	}
