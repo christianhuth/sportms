@@ -145,7 +145,7 @@
 			$controller = $this->arguments['controller'] ? $this->arguments['controller'] : $this->getClubMsDomainModel();
 			$pageUid = $this->arguments['pageUid'] ? (int) $this->arguments['pageUid'] : (int) $this->getSettings()[lcfirst($controller)][$action . 'Pid'] ? : NULL;
 			$parameters = $this->arguments['arguments'] ? $this->arguments['arguments'] : array();
-			if($action == "show") {
+			if(($action == "show") && ($showView)) {
 				$parameters['showView'] = $showView;
 			}
 			if($this->getClubMsDomainModel() != null) {
