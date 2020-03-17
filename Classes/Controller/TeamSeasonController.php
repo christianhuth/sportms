@@ -48,6 +48,8 @@
 			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->settings, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			
 			$teamSeason = $this->teamSeasonRepository->findByTeamUidAndSeasonUid($this->settings['team']['uid'], $this->settings['season']['uid']);
+			
+			\TYPO3\CMS\Core\Utility\DebugUtility::debug($teamSeason, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			if($teamSeason != NULL) {
 				$this->view->assign('teamSeason', $teamSeason[0]);
 			} else {
