@@ -46,6 +46,7 @@
 		public function showAction(\Balumedien\Clubms\Domain\Model\Club $club = NULL) {
 			
 			$this->determineShowView('club');
+			$this->view->assign('settings', $this->settings);
 			
 			if($club === NULL) {
 				// TODO: CHECK IF SETTINGS IS SET ELSE DIE
