@@ -29,11 +29,13 @@
 		}
 		
 		protected function mergeRequestWithSettings() {
-			$listOfRequestArguments = ['selectClub,selected','showView,showView'];
+			$listOfRequestArguments = array();
+			$listOfRequestArguments[] = ['selectClub,club,selected'];
+			$listOfRequestArguments[] = ['showView,club,showView'];
 			foreach($listOfRequestArguments as $argument) {
 				$explodedArgument = explode(',', $argument);
 				if($this->request->hasArgument($explodedArgument[0])) {
-					$this->request->getArgument($explodedArgument[0]) ? $this->settings[$explodedArgument[0]][$explodedArgument[1]] = $this->request->getArgument($explodedArgument[0]) : $this->settings[$explodedArgument[0]][$explodedArgument[1]];
+					$this->settings[$explodedArgument[1]][$explodedArgument[2]] = $this->request->getArgument($explodedArgument[0]);
 				}
 			}
 		}
