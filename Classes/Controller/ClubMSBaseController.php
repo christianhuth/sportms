@@ -55,7 +55,7 @@
 		
 		protected function determineShowViews($model, $listOfPossibleShowViews): void {
 			foreach(explode(',', $listOfPossibleShowViews) AS $showView) {
-				$this->settings[$model]['showView'][$showView] = strpos($this->settings[$model]['showViews'], $showView) !== FALSE;
+				$this->settings[$model]['showView'][$showView] = ($this->settings[$model]['showViews']) ? strpos($this->settings[$model]['showViews'], $showView) !== FALSE : FALSE;
 			}
 		}
 		
