@@ -2,8 +2,6 @@
       xmlns:clubms="Balumedien\Clubms\ViewHelpers"
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
-<f:for as="team" each="{clubSection.teams}">
-    <f:render partial="Team/ListItem" arguments="{team: team}"/>
-</f:for>
+    <f:render partial="Team/List" arguments="{teams: teams}"/>
 
 </html>
