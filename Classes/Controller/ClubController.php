@@ -24,7 +24,7 @@
 		 */
 		public function listAction() {
 			
-			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->getArguments(), 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
+			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->request->getArguments(), 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			
 			$clubs = $this->clubRepository->findAll($this->getClubsFilter());
 			$this->view->assign('clubs', $clubs);
