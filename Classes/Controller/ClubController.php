@@ -26,7 +26,6 @@
 		}
 		
 		public function initializeActions() {
-			$this->view->assign('settings', $this->settings);
 		}
 		
 		/**
@@ -34,7 +33,7 @@
 		 */
 		public function listAction() {
 			
-			$this->initializeActions();
+			$this->view->assign('settings', $this->settings);
 			
 			if($this->settings['club']['clubsSelectbox']) {
 				$clubsSelectbox = $this->clubRepository->findAll($this->getClubsFilter(FALSE));
