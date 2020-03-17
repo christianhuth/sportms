@@ -31,6 +31,7 @@
 		protected function mergeRequestWithSettings() {
 			$listOfRequestArguments = array();
 			$listOfRequestArguments[] = 'selectClub,club,selected';
+			$listOfRequestArguments[] = 'selectClub,club,clubs';
 			$listOfRequestArguments[] = 'showView,club,showView';
 			foreach($listOfRequestArguments as $argument) {
 				$explodedArgument = explode(',', $argument);
