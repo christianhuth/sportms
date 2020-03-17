@@ -37,8 +37,8 @@
 			$listOfMappings[] = ['selectClub', ['club']['selected']];
 			$listOfMappings[] = ['showView', ['club']['showView']['current']];
 			foreach($listOfMappings as $mapping) {
+				\TYPO3\CMS\Core\Utility\DebugUtility::debug($mapping, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 				if($this->request->hasArgument($mapping[0])) {
-					\TYPO3\CMS\Core\Utility\DebugUtility::debug($mapping[0], 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 					\TYPO3\CMS\Core\Utility\DebugUtility::debug($mapping[1], 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 					$this->settings[$mapping[1]] = $this->request->getArgument($mapping[0]);
 				}
