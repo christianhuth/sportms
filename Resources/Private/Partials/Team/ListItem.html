@@ -1,0 +1,21 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:clubms="Balumedien\Clubms\ViewHelpers"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<tr>
+    <td>
+        <clubms:link.action Club="{team.club}">{team.club.name}</clubms:link.action>
+    </td>
+    <td>
+        <clubms:link.action ClubSection="{team.clubSection}" arguments="{club: team.clubSection.club, section: team.clubSection.section}">{team.clubSection.section.label}</clubms:link.action>
+    </td>
+    <td>
+        <clubms:link.action Team="{team}">{team.name}</clubms:link.action>
+    </td>
+    <td>{team.sectionAgeLevel.label}</td>
+    <td>
+        <f:count>{team.teamSeasons}</f:count>
+    </td>
+</tr>
+
+</html>
