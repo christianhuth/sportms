@@ -1,0 +1,24 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<f:layout name="default"/>
+
+<f:section name="default">
+    <div class="tx-clubms-clubsection-show">
+        <f:render arguments="{_all}" section="{settings.clubsection.showView}"/>
+    </div>
+</f:section>
+
+<f:section name="index">
+    <f:render arguments="{_all}" partial="ClubSection/ShowIndex"/>
+</f:section>
+
+<f:section name="officials">
+    <f:render arguments="{_all}" partial="ClubSection/ShowOfficials"/>
+</f:section>
+
+<f:section name="teams">
+    <f:render arguments="{_all}" partial="ClubSection/ShowTeams"/>
+</f:section>
+
+</html>
