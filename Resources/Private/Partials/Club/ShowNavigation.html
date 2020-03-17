@@ -3,9 +3,15 @@
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <ul>
-    <li><clubms:link.action Club="{club}" Show="index">Index</clubms:link.action></li>
-    <li><clubms:link.action Club="{club}" Show="officials">Officials</clubms:link.action></li>
-    <li><clubms:link.action Club="{club}" Show="sections">Sections</clubms:link.action></li>
+    <f:if condition="{settings.club.showView.index}">
+        <li><clubms:link.action Club="{club}" Show="index">Index</clubms:link.action></li>
+    </f:if>
+    <f:if condition="{settings.club.showView.officials}">
+        <li><clubms:link.action Club="{club}" Show="officials">Officials</clubms:link.action></li>
+    </f:if>
+    <f:if condition="{settings.club.showView.sections}">
+        <li><clubms:link.action Club="{club}" Show="sections">Sections</clubms:link.action></li>
+    </f:if>
 </ul>
 
 </html>
