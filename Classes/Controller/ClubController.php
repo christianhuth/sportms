@@ -20,12 +20,6 @@
 		protected $clubOfficialRepository = NULL;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Repository\ClubOfficialJobRepository
-		 * @TYPO3\CMS\Extbase\Annotation\Inject
-		 */
-		protected $clubOfficialJobRepository = NULL;
-		
-		/**
 		 * @return void
 		 */
 		public function listAction() {
