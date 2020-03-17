@@ -38,6 +38,7 @@
 			$listOfMappings[] = ['showView', ['club', ['showView', 'current']]];
 			foreach($listOfMappings as $mapping) {
 				if(count($mapping) === 2) {
+					\TYPO3\CMS\Core\Utility\DebugUtility::debug($mapping[0], 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 					$this->mergeRequestWithSetting($mapping[0], $mapping[1]);
 				}
 			}
@@ -49,6 +50,7 @@
 				if(is_array($setting[1])) {
 					return $this->mergeRequestWithSetting($request, $setting[1]);
 				} else if($this->request->hasArgument($request)) {
+					\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->request->getArgument($request), 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 					$this->settings[$setting[0]][$setting[1]] = $this->request->getArgument($request);
 				}
 			} else {
