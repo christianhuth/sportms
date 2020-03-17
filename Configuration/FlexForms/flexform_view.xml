@@ -6,7 +6,7 @@
 		</TCEforms>
 		<type>array</type>
 		<el>
-			<settings.view.cssFile>
+			<view.cssFile>
 				<TCEforms>
 					<label>Pfad zur CSS-Datei</label>
 					<config>
@@ -15,8 +15,8 @@
 						<size>30</size>
 					</config>
 				</TCEforms>
-			</settings.view.cssFile>
-			<settings.view.layoutRootPath>
+			</view.cssFile>
+			<view.layoutRootPath>
 				<TCEforms>
 					<label>Pfad zu den Layouts</label>
 					<config>
@@ -25,8 +25,8 @@
 						<size>30</size>
 					</config>
 				</TCEforms>
-			</settings.view.layoutRootPath>
-			<settings.view.partialRootPath>
+			</view.layoutRootPath>
+			<view.partialRootPath>
 				<TCEforms>
 					<label>Pfad zu den Partials</label>
 					<config>
@@ -35,8 +35,8 @@
 						<size>30</size>
 					</config>
 				</TCEforms>
-			</settings.view.partialRootPath>
-			<settings.view.templateRootPath>
+			</view.partialRootPath>
+			<view.templateRootPath>
 				<TCEforms>
 					<label>Pfad zu den Templates</label>
 					<config>
@@ -45,7 +45,7 @@
 						<size>30</size>
 					</config>
 				</TCEforms>
-			</settings.view.templateRootPath>
+			</view.templateRootPath>
 		</el>
 	</ROOT>
 </T3DataStructure>
