@@ -45,6 +45,7 @@
 		}
 		
 		protected function mergeRequestWithSetting(string $request, array $setting) {
+			\TYPO3\CMS\Core\Utility\DebugUtility::debug($setting, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			if(is_array($setting)) {
 				return $this->mergeRequestWithSetting($request, $setting[0]);
 			} else {
@@ -59,10 +60,7 @@
 		}
 		
 		protected function determineShowView($model): void {
-			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->settings, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			$this->settings[$model]['showView']['current'] = ($this->settings[$model]['showView']['current']) ? : ($this->settings[$model]['showViews']) ? explode(',', $this->settings[$model]['showViews'])[0] : 'index';
-			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->settings, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
-			\TYPO3\CMS\Core\Utility\DebugUtility::debug(explode(',', $this->settings[$model]['showViews'])[0], 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 		}
 		
 	}
