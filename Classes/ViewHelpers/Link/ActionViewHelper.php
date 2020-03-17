@@ -113,6 +113,7 @@
 				$description = lcfirst($clubMsDomainModel) . ' to show';
 				$this->registerArgument($name, $type, $description, false);
 			}
+			$this->registerArgument("Show", "string", "Show View to show", false);
 		}
 		
 		# Needed so we can fill $this->getSettings()
@@ -141,7 +142,7 @@
 			$extensionName = "clubms";
 			$pluginName = "clubms";
 			$action = $this->arguments['action'] ? $this->arguments['action'] : "show";
-			$showView = ($action == "show") ? ($this->arguments['showView'] ? $this->arguments['showView'] : "index") : NULL;
+			$showView = ($action == "show") ? ($this->arguments['Show'] ? $this->arguments['Show'] : "index") : NULL;
 			$controller = $this->arguments['controller'] ? $this->arguments['controller'] : $this->getClubMsDomainModel();
 			$pageUid = $this->arguments['pageUid'] ? (int) $this->arguments['pageUid'] : (int) $this->getSettings()[lcfirst($controller)][$action . 'Pid'] ? : NULL;
 			$parameters = $this->arguments['arguments'] ? $this->arguments['arguments'] : array();
