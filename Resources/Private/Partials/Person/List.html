@@ -1,0 +1,47 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:clubms="Balumedien\Clubms\ViewHelpers"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<table class="table table-bordered table-hover table-striped">
+    <thead>
+    <tr>
+        <th>
+            <f:translate key="tx_clubms_domain_model_person.lastname"/>
+        </th>
+        <th>
+            <f:translate key="tx_clubms_domain_model_person.firstname"/>
+        </th>
+        <th>
+            <f:translate key="tx_clubms_domain_model_person.nickname"/>
+        </th>
+        <th>
+            <f:translate key="tx_clubms_domain_model_person.nationality"/>
+        </th>
+        <th>Einzelansicht</th>
+    </tr>
+    </thead>
+    <tbody>
+    <f:if condition="{persons}">
+        <f:then>
+            <f:for as="person" each="{persons}">
+                <tr>
+                    <td>{person.lastname}</td>
+                    <td>{person.firstname}</td>
+                    <td>{person.nickname}</td>
+                    <td>{person.nationality}</td>
+                    <td>
+                        <clubms:link.action Person="{person}">LINK</clubms:link.action>
+                    </td>
+                </tr>
+            </f:for>
+        </f:then>
+        <f:else>
+            <tr>
+                <td colspan="5">Keine Personen gefunden.</td>
+            </tr>
+        </f:else>
+    </f:if>
+    </tbody>
+</table>
+
+</html>

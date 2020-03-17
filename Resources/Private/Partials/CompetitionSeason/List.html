@@ -1,0 +1,41 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:clubms="Balumedien\Clubms\ViewHelpers"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<table class="table table-bordered table-hover table-striped">
+    <thead>
+    <tr>
+        <th>Abteilung</th>
+        <th>Wettbewerbsname</th>
+        <th>Altersstufe</th>
+        <th>Wettbewerbstyp</th>
+        <th>Saison</th>
+    </tr>
+    </thead>
+    <tbody>
+    <f:if condition="{competitionSeasons}">
+        <f:then>
+            <f:for as="competitionSeason" each="{competitionSeasons}">
+                <tr>
+                    <td>
+                        <clubms:link.action Section="{competitionSeason.competition.section}">{competitionSeason.competition.section.label}</clubms:link.action>
+                    </td>
+                    <td>
+                        <clubms:link.action Competition="{competitionSeason.competition}">{competitionSeason.competition.name}</clubms:link.action>
+                    </td>
+                    <td>{competitionSeason.competition.sectionAgeLevel.label}</td>
+                    <td>{competitionSeason.competition.competitionType.label}</td>
+                    <td>
+                        <clubms:link.action Season="{competitionSeason.season}">{competitionSeason.season.seasonName}</clubms:link.action>
+                    </td>
+                </tr>
+            </f:for>
+        </f:then>
+        <f:else>
+            <td colspan="5">Keine Wettbewerbsinstanzen gefunden.</td>
+        </f:else>
+    </f:if>
+    </tbody>
+</table>
+
+</html>

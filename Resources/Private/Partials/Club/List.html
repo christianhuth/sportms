@@ -4,23 +4,22 @@
 <table class="table table-bordered table-hover table-striped">
     <thead>
     <tr>
+        <th>Logo</th>
         <th>Verein</th>
-        <th>Abteilung</th>
-        <th>Mannschaftsname</th>
-        <th>Altersgruppe</th>
-        <th>Altersstufe</th>
-        <th>Teaminstanzen</th>
+        <th>Abteilungen und Mannschaften</th>
     </tr>
     </thead>
     <tbody>
-    <f:if condition="{teams}">
+    <f:if condition="{clubs}">
         <f:then>
-            <f:for as="team" each="{teams}">
-                <f:render arguments="{team: team}" partial="Team/ListItem"/>
+            <f:for as="club" each="{clubs}">
+                <f:render arguments="{club: club, settings: settings}" partial="Club/ListItem"/>
             </f:for>
         </f:then>
         <f:else>
-            <td colspan="5">Keine Mannschaften gefunden</td>
+            <tr>
+                <td colspan="3">Keine Vereine gefunden.</td>
+            </tr>
         </f:else>
     </f:if>
     </tbody>

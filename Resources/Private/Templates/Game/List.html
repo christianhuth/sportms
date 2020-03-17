@@ -1,57 +1,12 @@
 <html data-namespace-typo3-fluid="true"
-      xmlns:clubms="Balumedien\Clubms\ViewHelpers"
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <f:layout name="default"/>
 
 <f:section name="default">
-
     <div class="tx-clubms-game-list">
-        <table class="table table-bordered table-hover table-striped">
-            <thead>
-            <tr>
-                <th>Abteilung</th>
-                <th>Wettbewerb</th>
-                <th>Saison</th>
-                <th colspan="3">Begegnung</th>
-                <th>Ergebnis</th>
-            </tr>
-            </thead>
-            <tbody>
-            <f:if condition="{games}">
-                <f:then>
-                    <f:for as="game" each="{games}">
-                        <tr>
-                            <td>
-                                <clubms:link.action Section="{game.section}">{game.section.label}</clubms:link.action>
-                            </td>
-                            <td>
-                                <clubms:link.action Competition="{game.competitionSeason.competition}">{game.competitionSeason.competition.name}</clubms:link.action>
-                            </td>
-                            <td>
-                                <clubms:link.action Season="{game.competitionSeason.season}">{game.competitionSeason.season.seasonName}</clubms:link.action>
-                            </td>
-                            <td>
-                                <clubms:link.action TeamSeason="{game.teamSeasonHome}">{game.teamSeasonHome.team.name}</clubms:link.action>
-                            </td>
-                            <td>-</td>
-                            <td>
-                                <clubms:link.action TeamSeason="{game.teamSeasonGuest}">{game.teamSeasonGuest.team.name}</clubms:link.action>
-                            </td>
-                            <td>
-                                <clubms:link.action Game="{game}">{game.resultEndRegularHome} : {game.resultEndRegularGuest}</clubms:link.action>
-                            </td>
-                        </tr>
-                    </f:for>
-                </f:then>
-                <f:else>
-                    <td colspan="9">Keine Spiele gefunden.</td>
-                </f:else>
-            </f:if>
-            </tbody>
-        </table>
+        <f:render arguments="{_all}" partial="Game/List"/>
     </div>
-
 </f:section>
 
 </html>

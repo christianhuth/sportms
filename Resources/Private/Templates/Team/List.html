@@ -1,11 +1,12 @@
 <html data-namespace-typo3-fluid="true"
-      xmlns:clubms="Balumedien\Clubms\ViewHelpers"
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <f:layout name="default"/>
 
 <f:section name="default">
-    <f:render partial="Team/List" arguments="{_all}"/>
+    <div class="tx-clubms-team-list">
+        <f:render arguments="{_all}" partial="Team/List"/>
+    </div>
 </f:section>
 
 </html>
