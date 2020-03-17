@@ -70,14 +70,6 @@
 								<numIndex index="0">Wettbewerbsinstanz (Listenansicht)</numIndex>
 								<numIndex index="1">CompetitionSeason->list</numIndex>
 							</numIndex>
-							<numIndex index="133">
-								<numIndex index="0">Wettbewerbsinstanz (Spiele)</numIndex>
-								<numIndex index="1">CompetitionSeason->games</numIndex>
-							</numIndex>
-							<numIndex index="133">
-								<numIndex index="0">Wettbewerbsinstanz (Mannschaften)</numIndex>
-								<numIndex index="1">CompetitionSeason->teams</numIndex>
-							</numIndex>
 							<numIndex index="140">
 								<numIndex index="0">Spiel</numIndex>
 								<numIndex index="1">--div--</numIndex>

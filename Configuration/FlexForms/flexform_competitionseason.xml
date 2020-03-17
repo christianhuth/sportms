@@ -21,6 +21,31 @@
 					</config>
 				</TCEforms>
 			</settings.competitionseason.uid>
+			<settings.competitionseason.showView>
+				<TCEforms>
+					<label>Gezeigte Einzelansicht</label>
+					<displayCond>FIELD:base.switchableControllerActions:=:CompetitionSeason->show</displayCond>
+					<config>
+						<type>select</type>
+						<renderType>selectSingle</renderType>
+						<items type="array">
+							<numIndex index="0">
+								<numIndex index="0">Index</numIndex>
+								<numIndex index="1">index</numIndex>
+							</numIndex>
+							<numIndex index="2">
+								<numIndex index="0">Games</numIndex>
+								<numIndex index="1">games</numIndex>
+							</numIndex>
+							<numIndex index="3">
+								<numIndex index="0">Teams</numIndex>
+								<numIndex index="1">teams</numIndex>
+							</numIndex>
+						</items>
+					</config>
+					<onChange>reload</onChange>
+				</TCEforms>
+			</settings.competitionseason.showView>
 			<settings.competitionseason.competitionSeasonGameDays>
 				<TCEforms>
 					<label>Welche Spieltage sollen angezeigt werden?</label>
