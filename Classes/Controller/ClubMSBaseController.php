@@ -8,6 +8,10 @@
 			return $this->settings['club']['clubs'];
 		}
 		
+		protected function getSeasonsFilter() {
+			return $this->settings['season']['seasons'];
+		}
+		
 		protected function getTeamsFilter() {
 			return $this->settings['team']['teams'];
 		}

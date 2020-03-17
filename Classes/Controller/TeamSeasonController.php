@@ -20,8 +20,7 @@
 			$sectionsFilter = $this->settings['section']['sections'];
 			$sectionAgeGroupsFilter = $this->settings['section']['sectionAgeGroups'];
 			$sectionAgeLevelsFilter = $this->settings['section']['sectionAgeLevels'];
-			$seasonsFilter = $this->settings['season']['seasons'];
-			$teamSeasons = $this->teamSeasonRepository->findAll($this->getTeamsFilter(), $this->getClubsFilter(), $sectionsFilter, $sectionAgeGroupsFilter, $sectionAgeLevelsFilter, $seasonsFilter);
+			$teamSeasons = $this->teamSeasonRepository->findAll($this->getTeamsFilter(), $this->getClubsFilter(), $sectionsFilter, $sectionAgeGroupsFilter, $sectionAgeLevelsFilter, $this->getSeasonsFilter());
 			$this->view->assign('teamSeasons', $teamSeasons);
 		}
 		
