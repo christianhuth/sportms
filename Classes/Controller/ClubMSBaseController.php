@@ -41,9 +41,6 @@
 				if(count($explodedMapping) === 2 && is_array($explodedMapping[1])) {
 					$this->mergeRequestWithSetting($explodedMapping[0], $explodedMapping[1]);
 				}
-				#if($this->request->hasArgument($explodedMapping[0])) {
-				#	$this->settings[$explodedMapping[1]][$explodedMapping[2]] = $this->request->getArgument($explodedMapping[0]);
-				#}
 			}
 		}
 		
