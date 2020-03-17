@@ -25,11 +25,16 @@
 			$this->mergeRequestWithSettings();
 		}
 		
+		public function initializeActions() {
+			$this->view->assign('settings', $this->settings);
+		}
+		
 		/**
 		 * @return void
 		 */
 		public function listAction() {
-			#$this->view->assign('settings', );
+			
+			$this->initializeActions();
 			
 			if($this->settings['club']['clubsSelectbox']) {
 				$clubsSelectbox = $this->clubRepository->findAll($this->getClubsFilter(FALSE));
