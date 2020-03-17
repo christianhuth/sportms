@@ -5,7 +5,7 @@
 	/**
 	 * TeamSeasonController
 	 */
-	class TeamSeasonController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
+	class TeamSeasonController extends ClubMSBaseController {
 		
 		/**
 		 * @var \Balumedien\Clubms\Domain\Repository\TeamSeasonRepository
@@ -17,7 +17,7 @@
 		 * @return void
 		 */
 		public function listAction() {
-			$teamsFilter = $this->settings['team']['teams'];
+			$teamsFilter = $this->getTeamsFilter();
 			$clubsFilter = $this->settings['club']['clubs'];
 			$sectionsFilter = $this->settings['section']['sections'];
 			$sectionAgeGroupsFilter = $this->settings['section']['sectionAgeGroups'];
