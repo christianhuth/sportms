@@ -39,21 +39,14 @@
 		 * @param \Balumedien\Clubms\Domain\Model\Club $club club item
 		 */
 		public function showAction(string $showView = "index", \Balumedien\Clubms\Domain\Model\Club $club = NULL) {
-			
-			\TYPO3\CMS\Core\Utility\DebugUtility::debug($showView, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
-			
-			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->settings, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			$this->settings['club']['showView'] = $showView;
-			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->settings, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			$this->view->assign('settings', $this->settings);
-			
 			if($club === NULL) {
 				// TODO: CHECK IF SETTINGS IS SET ELSE DIE
 				$clubUid = $this->settings['club']['uid'];
 				$club = $this->clubRepository->findByUid($clubUid);
 			}
 			$this->view->assign('club', $club);
-			
 		}
 		
 		/**
