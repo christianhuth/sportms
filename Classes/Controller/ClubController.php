@@ -41,11 +41,10 @@
 		public function showAction(\Balumedien\Clubms\Domain\Model\Club $club = NULL) {
 			
 			($this->request->getArgument('showView')) ? $this->settings['club']['showView'] = $this->request->getArgument('showView') : $this->settings['club']['showView'];
+			$this->view->assign('settings', $this->settings);
 			
 			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->settings['club']['showView'], 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			
-			#$this->settings['club']['showView'] = $showView;
-			#$this->view->assign('settings', $this->settings);
 			if($club === NULL) {
 				// TODO: CHECK IF SETTINGS IS SET ELSE DIE
 				$clubUid = $this->settings['club']['uid'];
