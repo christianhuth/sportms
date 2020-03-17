@@ -38,7 +38,7 @@
 			$listOfMappings[] = ['showView', ['club', ['showView', 'current']]];
 			foreach($listOfMappings as $mapping) {
 				$explodedMapping = explode(',', $mapping);
-				if(count($explodedMapping) === 2 && is_array($explodedMapping[1])) {
+				if(count($explodedMapping) === 2) {
 					$this->mergeRequestWithSetting($explodedMapping[0], $explodedMapping[1]);
 				}
 			}
