@@ -51,7 +51,10 @@
 		}
 		
 		protected function determineShowView($model): void {
+			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->settings, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			$this->settings[$model]['showView']['current'] = ($this->settings[$model]['showView']['current']) ? : ($this->settings[$model]['showViews']) ? explode(',', $this->settings[$model]['showViews'])[0] : 'index';
+			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->settings, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
+			\TYPO3\CMS\Core\Utility\DebugUtility::debug(explode(',', $this->settings[$model]['showViews'])[0], 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 		}
 		
 	}
