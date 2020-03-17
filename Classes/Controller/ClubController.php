@@ -22,6 +22,7 @@
 		protected $clubOfficialRepository = NULL;
 		
 		public function initializeAction() {
+			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->view, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			$this->mergeRequestWithSettings();
 		}
 		
@@ -34,7 +35,6 @@
 		public function listAction() {
 			
 			$this->view->assign('settings', $this->settings);
-			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->request->getArguments(), 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->settings, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			
 			if($this->settings['club']['clubsSelectbox']) {
