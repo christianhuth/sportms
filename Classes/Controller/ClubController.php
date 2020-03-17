@@ -44,6 +44,7 @@
 			$this->view->assign('settings', $this->settings);
 			
 			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->settings['club']['showView'], 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
+			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->request->getArgument('showView'), 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			
 			if($club === NULL) {
 				// TODO: CHECK IF SETTINGS IS SET ELSE DIE
