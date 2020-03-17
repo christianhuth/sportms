@@ -30,13 +30,10 @@
 		
 		protected function mergeRequestWithSettings() {
 			$listOfRequestArguments = array();
-			$listOfRequestArguments[] = ['selectClub,club,selected'];
-			$listOfRequestArguments[] = ['showView,club,showView'];
+			$listOfRequestArguments[] = 'selectClub,club,selected';
+			$listOfRequestArguments[] = 'showView,club,showView';
 			foreach($listOfRequestArguments as $argument) {
 				$explodedArgument = explode(',', $argument);
-				\TYPO3\CMS\Core\Utility\DebugUtility::debug($explodedArgument[0], 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
-				\TYPO3\CMS\Core\Utility\DebugUtility::debug($explodedArgument[1], 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
-				\TYPO3\CMS\Core\Utility\DebugUtility::debug($explodedArgument[2], 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 				if($this->request->hasArgument($explodedArgument[0])) {
 					$this->settings[$explodedArgument[1]][$explodedArgument[2]] = $this->request->getArgument($explodedArgument[0]);
 				}
