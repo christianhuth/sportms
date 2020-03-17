@@ -43,7 +43,7 @@
 			}
 		}
 		
-		protected function mergeRequestWithSetting(string $request, array $setting) {
+		protected function mergeRequestWithSetting(string $request, $setting) {
 			if(is_array($setting)) {
 				return $this->mergeRequestWithSetting($request, $setting[0]);
 			} else {
