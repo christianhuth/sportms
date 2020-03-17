@@ -31,6 +31,21 @@
 			return $query->execute();
 		}
 		
+		public function findByTeamAndSeason(\Balumedien\Clubms\Domain\Model\Team $team, \Balumedien\Clubms\Domain\Model\Season $season) {
+			$query = $this->createQuery();
+			$constraints = [];
+			if($team) {
+				$constraints[] = $query->in('team', $team);
+			}
+			if($season) {
+				$constraints[] = $query->in('season', $season);
+			}
+			if($constraints) {
+				$query->matching($query->logicalAnd($constraints));
+			}
+			return $query->execute();
+		}
+		
 		public function findAllByTeam(\Balumedien\Clubms\Domain\Model\Team $team) {
 		
 		}

@@ -32,11 +32,13 @@
 		 * @param \Balumedien\Clubms\Domain\Model\Season $season season item
 		 */
 		public function showAction(\Balumedien\Clubms\Domain\Model\TeamSeason $teamSeason = NULL) {
+			
+			($this->request->getArgument('team')) ? $this->settings['team']['uid'] = $this->request->getArgument('team') : $this->settings['team']['uid'];
+			($this->request->getArgument('season')) ? $this->settings['season']['uid'] = $this->request->getArgument('season') : $this->settings['season']['uid'];
+			$this->view->assign('settings', $this->settings);
+			
 			if($teamSeason === NULL) {
-				if($this->settings['single']['teamseason']) {
-					$teamSeasonUid = $this->settings['single']['teamseason'];
-					$teamSeason = $this->teamSeasonRepository->findByUid($teamSeasonUid);
-				}
+				$teamSeason = $this->teamSeasonRepository->findByTeamAndSeason($this->settings['team']['uid'], $this->settings['season']['uid']);
 			}
 			if($teamSeason != NULL) {
 				$this->view->assign('teamSeason', $teamSeason);
