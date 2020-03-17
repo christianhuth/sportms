@@ -93,7 +93,7 @@
                     <displayCond>
                         <AND>
                             <numIndex index="0">FIELD:base.switchableControllerActions:=:Club->show</numIndex>
-                            <numIndex index="1">FIELD:club.settings.club.showView:=:officials</numIndex>
+                            <numIndex index="1">FIELD:club.settings.club.showViews:=:officials</numIndex>
                         </AND>
                     </displayCond>
                     <config>
@@ -110,7 +110,7 @@
                     <displayCond>
                         <AND>
                             <numIndex index="0">FIELD:base.switchableControllerActions:=:Club->show</numIndex>
-                            <numIndex index="1">FIELD:club.settings.club.showView:=:officials</numIndex>
+                            <numIndex index="1">FIELD:club.settings.club.showView:REQ:officials</numIndex>
                         </AND>
                     </displayCond>
                     <config>
