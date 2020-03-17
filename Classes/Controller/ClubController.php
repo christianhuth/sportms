@@ -35,15 +35,12 @@
 		}
 		
 		/**
-		 * @param \Balumedien\Clubms\Domain\Model\Club $club
-		 * @throws \TYPO3\CMS\Extbase\Mvc\Exception\NoSuchArgumentException
+		 * @param string $showView
+		 * @param \Balumedien\Clubms\Domain\Model\Club $club club item
 		 */
 		public function showAction(\Balumedien\Clubms\Domain\Model\Club $club = NULL) {
-			
-			$showView = ($this->request->getArgument('showView')) ? $this->request->getArgument('showView') : $this->settings['club']['showView'];
-			
-			\TYPO3\CMS\Core\Utility\DebugUtility::debug($showView, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
-			
+			#$this->settings['club']['showView'] = $showView;
+			#$this->view->assign('settings', $this->settings);
 			if($club === NULL) {
 				// TODO: CHECK IF SETTINGS IS SET ELSE DIE
 				$clubUid = $this->settings['club']['uid'];
