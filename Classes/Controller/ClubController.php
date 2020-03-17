@@ -9,7 +9,7 @@
 	 */
 	class ClubController extends ClubMSBaseController {
 		
-		private const MODEL='club';
+		protected $model = 'club';
 		
 		/**
 		 * @var \Balumedien\Clubms\Domain\Repository\ClubRepository
@@ -23,6 +23,8 @@
 		 */
 		protected $clubOfficialRepository = NULL;
 		
+		
+		
 		/**
 		 * Initializes the controller before invoking an action method.
 		 * Use this method to solve tasks which all actions have in common.
@@ -35,8 +37,8 @@
 		 * Use this method to solve tasks which all actions have in common, when VIEW-Context is needed
 		 */
 		public function initializeActions() {
-			$this->determineShowView(MODEL);
-			$this->determineShowViews(MODEL, 'index,officials,sections');
+			$this->determineShowView($this->model);
+			$this->determineShowViews($this->model, 'index,officials,sections');
 			$this->view->assign('settings', $this->settings);
 		}
 		
