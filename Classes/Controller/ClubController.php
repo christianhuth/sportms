@@ -33,7 +33,12 @@
 		 */
 		public function showAction(\Balumedien\Clubms\Domain\Model\Club $club = NULL) {
 			
-			($this->request->getArgument('showView')) ? $this->settings['club']['showView'] = $this->request->getArgument('showView') : $this->settings['club']['showView'];
+			$listOfArguments = 'showView';
+			foreach(explode(',', $listOfArguments) as $argument) {
+				if($this->request->hasArgument($argument)) {
+					$this->request->getArgument($argument) ? $this->settings[$argument]['showView'] = $this->request->getArgument($argument) : $this->settings[$argument]['showView'];
+				}
+			}
 			$this->view->assign('settings', $this->settings);
 			
 			if($club === NULL) {

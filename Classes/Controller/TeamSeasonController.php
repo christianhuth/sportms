@@ -29,7 +29,6 @@
 		public function showAction(\Balumedien\Clubms\Domain\Model\Team $team = NULL, \Balumedien\Clubms\Domain\Model\Season $season = NULL): void {
 			
 			$listOfArguments = 'season,team';
-			
 			foreach(explode(',', $listOfArguments) as $argument) {
 				if($this->request->hasArgument($argument)) {
 					$this->request->getArgument($argument) ? $this->settings[$argument]['uid'] = $this->request->getArgument($argument) : $this->settings[$argument]['uid'];
