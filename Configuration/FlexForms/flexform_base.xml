@@ -130,18 +130,6 @@
 								<numIndex index="0">Mannschaft (Listenansicht)</numIndex>
 								<numIndex index="1">Team->list</numIndex>
 							</numIndex>
-							<numIndex index="183">
-								<numIndex index="0">Mannschaft (Spiele)</numIndex>
-								<numIndex index="1">Team->games</numIndex>
-							</numIndex>
-							<numIndex index="184">
-								<numIndex index="0">Mannschaft (Geschichte)</numIndex>
-								<numIndex index="1">Team->history</numIndex>
-							</numIndex>
-							<numIndex index="185">
-								<numIndex index="0">Mannschaft (Statistiken)</numIndex>
-								<numIndex index="1">Team->stats</numIndex>
-							</numIndex>
 							<numIndex index="190">
 								<numIndex index="0">Mannschaftsinstanz</numIndex>
 								<numIndex index="1">--div--</numIndex>
@@ -153,14 +141,6 @@
 							<numIndex index="192">
 								<numIndex index="0">Mannschaftinstanz (Listenansicht)</numIndex>
 								<numIndex index="1">TeamSeason->list</numIndex>
-							</numIndex>
-							<numIndex index="193">
-								<numIndex index="0">Mannschaftsinstanz (Spiele)</numIndex>
-								<numIndex index="1">TeamSeason->games</numIndex>
-							</numIndex>
-							<numIndex index="194">
-								<numIndex index="0">Mannschaftsinstanz (Tore)</numIndex>
-								<numIndex index="1">TeamSeason->goals</numIndex>
 							</numIndex>
 							<numIndex index="200">
 								<numIndex index="0">Sportstätte</numIndex>
