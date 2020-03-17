@@ -31,7 +31,7 @@
 			return $query->execute();
 		}
 		
-		public function findByTeamUidAndSeasonUid($teamUid, $seasonUid) {
+		public function findByTeamUidAndSeasonUid(int $teamUid, int $seasonUid) {
 			$query = $this->createQuery();
 			$constraints = [];
 			if($teamUid) {
@@ -43,6 +43,10 @@
 			if($constraints) {
 				$query->matching($query->logicalAnd($constraints));
 			}
+			# Folgender Schnippel debugged eine Query, die in der Variable $query gespeichert ist
+			$queryParser = $this->objectManager->get(\TYPO3\CMS\Extbase\Persistence\Generic\Storage\Typo3DbQueryParser::class);
+			\TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($queryParser->convertQueryToDoctrineQueryBuilder($query)->getSQL());
+			\TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($queryParser->convertQueryToDoctrineQueryBuilder($query)->getParameters());
 			return $query->execute();
 		}
 		
