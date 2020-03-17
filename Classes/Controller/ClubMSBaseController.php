@@ -4,8 +4,8 @@
 	
 	class ClubMSBaseController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
 		
-		protected function getClubsFilter() {
-			return $this->settings['club']['clubs'];
+		protected function getClubsFilter($useSelected = TRUE) {
+			return $this->getFilter('club');
 		}
 		
 		protected function getSeasonsFilter() {
@@ -26,6 +26,10 @@
 		
 		protected function getTeamsFilter() {
 			return $this->settings['team']['teams'];
+		}
+		
+		protected function getFilter($model, $useSelected) {
+			return ($useSelected) ? $this->settings[$model]['selected'] : $this->settings[$model][$model . 's'];
 		}
 		
 		protected function mergeRequestWithSettings() {
