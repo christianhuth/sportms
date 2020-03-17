@@ -48,8 +48,8 @@
 			if(is_array($setting)) {
 				if(is_array($setting[1])) {
 					return $this->mergeRequestWithSetting($request, $setting[1]);
-				} else {
-					return $this->settings[$setting[0]][$setting[1]] = ($this->request->hasArgument($request)) ? $this->request->getArgument($request) : $this->settings[$setting[0]][$setting[1]];
+				} else if($this->request->hasArgument($request)) {
+					$this->settings[$setting[0]][$setting[1]] = $this->request->getArgument($request);
 				}
 			} else {
 			}
