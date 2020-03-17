@@ -43,7 +43,7 @@
 			}
 		}
 		
-		protected function mergeRequestWithSetting(string $request, array $setting, array $position = null) {
+		protected function mergeRequestWithSetting(string $request, array $setting, array $position = array()) {
 			$position = array_push($position, array($setting[0]));
 			\TYPO3\CMS\Core\Utility\DebugUtility::debug($setting[0], 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			\TYPO3\CMS\Core\Utility\DebugUtility::debug($position, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
