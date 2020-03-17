@@ -28,7 +28,7 @@
 		 */
 		public function listAction() {
 			$this->view->assign('settings', $this->settings);
-			$clubs = $this->clubRepository->findAll($this->getClubsFilter());
+			$clubs = $this->clubRepository->findAll($this->getClubsFilter(FALSE));
 			$this->view->assign('clubs', $clubs);
 		}
 		
