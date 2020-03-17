@@ -17,10 +17,7 @@
 		 * @return void
 		 */
 		public function listAction() {
-			$sectionsFilter = $this->settings['section']['sections'];
-			$sectionAgeGroupsFilter = $this->settings['section']['sectionAgeGroups'];
-			$sectionAgeLevelsFilter = $this->settings['section']['sectionAgeLevels'];
-			$teamSeasons = $this->teamSeasonRepository->findAll($this->getTeamsFilter(), $this->getClubsFilter(), $sectionsFilter, $sectionAgeGroupsFilter, $sectionAgeLevelsFilter, $this->getSeasonsFilter());
+			$teamSeasons = $this->teamSeasonRepository->findAll($this->getTeamsFilter(), $this->getClubsFilter(), $this->getSectionsFilter(), $this->getSectionAgeGroupsFilter(), $this->getSectionAgeLevelsFilter(), $this->getSeasonsFilter());
 			$this->view->assign('teamSeasons', $teamSeasons);
 		}
 		

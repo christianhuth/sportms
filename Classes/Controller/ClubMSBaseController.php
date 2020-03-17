@@ -11,6 +11,18 @@
 		protected function getSeasonsFilter() {
 			return $this->settings['season']['seasons'];
 		}
+	
+		protected function getSectionsFilter() {
+			return $this->settings['section']['sections'];
+		}
+		
+		protected function getSectionAgeGroupsFilter() {
+			return $this->settings['section']['sectionAgeGroups'];
+		}
+		
+		protected function getSectionAgeLevelsFilter() {
+			return $this->settings['section']['sectionAgeLevels'];
+		}
 		
 		protected function getTeamsFilter() {
 			return $this->settings['team']['teams'];
