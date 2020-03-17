@@ -21,10 +21,17 @@
 		 */
 		protected $clubOfficialRepository = NULL;
 		
+		/**
+		 * Initializes the controller before invoking an action method.
+		 * Use this method to solve tasks which all actions have in common.
+		 */
 		public function initializeAction() {
 			$this->mergeRequestWithSettings();
 		}
 		
+		/**
+		 * Use this method to solve tasks which all actions have in common, when VIEW-Context is needed
+		 */
 		public function initializeActions() {
 			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->view, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			$this->view->assign('settings', $this->settings);
@@ -34,17 +41,13 @@
 		 * @return void
 		 */
 		public function listAction() {
-			
 			$this->initializeActions();
-			
 			if($this->settings['club']['clubsSelectbox']) {
 				$clubsSelectbox = $this->clubRepository->findAll($this->getClubsFilter(FALSE));
 				$this->view->assign('clubsSelectbox', $clubsSelectbox);
 			}
-			
 			$clubs = $this->clubRepository->findAll($this->getClubsFilter());
 			$this->view->assign('clubs', $clubs);
-			
 		}
 		
 		/**
