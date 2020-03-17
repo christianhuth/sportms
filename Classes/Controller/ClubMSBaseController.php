@@ -30,7 +30,7 @@
 		
 		protected function getFilter($model, $useSelected) {
 			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->settings[$model][$model . 's'], 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
-			return ($useSelected === TRUE) ? $this->settings[$model]['selected'] : $this->settings[$model][$model . 's'];
+			return ($useSelected) ? $this->settings[$model]['selected'] : $this->settings[$model][$model . 's'];
 		}
 		
 		protected function mergeRequestWithSettings() {

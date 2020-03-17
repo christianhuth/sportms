@@ -4,7 +4,7 @@
 <div class="tx-clubms-list-filter">
     <f:form action="list" controller="Club" extensionName="clubms" method="POST" noCache="TRUE" noCacheHash="TRUE" pageUid="{settings.club.listPid}" pluginName="clubms">
         <f:if condition="{settings.club.clubsSelectbox}">
-            <f:render arguments="{_all}" partial="Select/Club"/>
+            <f:render arguments="{clubsSelectbox: clubsSelectbox, clubSelected: settings.club.selected}" partial="Select/Club"/>
         </f:if>
         <f:form.submit value="Los"/>
     </f:form>
