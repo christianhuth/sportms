@@ -32,16 +32,17 @@
 			return ($useSelected) ? $this->settings[$model]['selected'] : $this->settings[$model][$model . 's'];
 		}
 		
-		protected function mergeRequestWithSettings() {
+		protected function mergeRequestWithSettings(&$settings, &$view) {
 			$listOfRequestArguments = array();
 			$listOfRequestArguments[] = 'selectClub,club,selected';
 			$listOfRequestArguments[] = 'showView,club,showView';
 			foreach($listOfRequestArguments as $argument) {
 				$explodedArgument = explode(',', $argument);
 				if($this->request->hasArgument($explodedArgument[0])) {
-					$this->settings[$explodedArgument[1]][$explodedArgument[2]] = $this->request->getArgument($explodedArgument[0]);
+					$settings[$explodedArgument[1]][$explodedArgument[2]] = $this->request->getArgument($explodedArgument[0]);
 				}
 			}
+			$view->assign('settings', $settings);
 		}
 		
 		protected function determineShowViews($model, &$settings) {

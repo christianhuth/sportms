@@ -20,15 +20,13 @@
 		protected $clubOfficialRepository = NULL;
 		
 		public function initializeAction() {
-			$this->mergeRequestWithSettings();
+			$this->mergeRequestWithSettings($this->settings, $this->view);
 		}
 		
 		/**
 		 * @return void
 		 */
 		public function listAction() {
-			
-			$this->view->assign('settings', $this->settings);
 			
 			if($this->settings['club']['clubsSelectbox']) {
 				$clubsSelectbox = $this->clubRepository->findAll($this->getClubsFilter(FALSE));
