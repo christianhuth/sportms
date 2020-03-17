@@ -30,7 +30,7 @@
 				$clubSectionUid = $this->settings['clubSection']['uid'];
 				$clubSection = $this->clubSectionRepository->findByUid($clubSectionUid);
 			}
-			$this->view->assign('clubSection', $clubSectionUid);
+			$this->view->assign('clubSection', $clubSection);
 		}
 		
 	}
