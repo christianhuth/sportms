@@ -4,8 +4,7 @@
 <f:layout name="default"/>
 
 <f:section name="default">
-    <f:debug>{settings}</f:debug>
-    <f:render section="index" />
+    <f:render section="index" arguments="{club: club, settings: settings}"/>
 </f:section>
 
 <f:section name="index">
