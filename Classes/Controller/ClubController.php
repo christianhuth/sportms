@@ -20,7 +20,9 @@
 		protected $clubOfficialRepository = NULL;
 		
 		public function initializeAction() {
+			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->settings, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			$this->mergeRequestWithSettings();
+			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->settings, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 		}
 		
 		/**
