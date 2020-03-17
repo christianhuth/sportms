@@ -9,6 +9,7 @@
 		<game>EXT:clubms/Configuration/FlexForms/flexform_game.xml</game>
 		<section>EXT:clubms/Configuration/FlexForms/flexform_section.xml</section>
 		<team>EXT:clubms/Configuration/FlexForms/flexform_team.xml</team>
+		<teamseason>EXT:clubms/Configuration/FlexForms/flexform_teamseason.xml</teamseason>
 		<venue>EXT:clubms/Configuration/FlexForms/flexform_venue.xml</venue>
 		<season>EXT:clubms/Configuration/FlexForms/flexform_season.xml</season>
 	</sheets>
