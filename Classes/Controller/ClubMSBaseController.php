@@ -32,15 +32,26 @@
 			return ($useSelected) ? $this->settings[$model]['selected'] : $this->settings[$model][$model . 's'];
 		}
 		
-		protected function mergeRequestWithSettings() {
-			$listOfRequestArguments = array();
-			$listOfRequestArguments[] = 'selectClub,club,selected';
-			$listOfRequestArguments[] = 'showView,club,showView';
-			foreach($listOfRequestArguments as $argument) {
-				$explodedArgument = explode(',', $argument);
-				if($this->request->hasArgument($explodedArgument[0])) {
-					$this->settings[$explodedArgument[1]][$explodedArgument[2]] = $this->request->getArgument($explodedArgument[0]);
+		protected function mergeRequestsWithSettings() {
+			$listOfMappings = array();
+			$listOfMappings[] = ['selectClub', ['club', 'selected']];
+			$listOfMappings[] = ['showView', ['club', ['showView', 'current']]];
+			foreach($listOfMappings as $mapping) {
+				$explodedMapping = explode(',', $mapping);
+				if(count($explodedMapping) === 2 && is_array($explodedMapping[1])) {
+					$this->mergeRequestWithSetting($explodedMapping[0], $explodedMapping[1]);
 				}
+				#if($this->request->hasArgument($explodedMapping[0])) {
+				#	$this->settings[$explodedMapping[1]][$explodedMapping[2]] = $this->request->getArgument($explodedMapping[0]);
+				#}
+			}
+		}
+		
+		protected function mergeRequestWithSetting(string $request, array $setting) {
+			if(is_array($setting)) {
+				return $this->mergeRequestWithSetting($request, $setting[0]);
+			} else {
+				return $this->settings[$setting] = $this->request->getArgument($request);
 			}
 		}
 		

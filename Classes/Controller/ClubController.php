@@ -30,7 +30,7 @@
 		 * Use this method to solve tasks which all actions have in common.
 		 */
 		public function initializeAction() {
-			$this->mergeRequestWithSettings();
+			$this->mergeRequestsWithSettings();
 		}
 		
 		/**
