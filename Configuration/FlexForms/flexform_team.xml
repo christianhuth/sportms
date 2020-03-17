@@ -9,7 +9,12 @@
 			<settings.team.uid>
 				<TCEforms>
 					<label>Zeige folgendes Team</label>
-					<displayCond>FIELD:base.switchableControllerActions:=:Team->show</displayCond>
+					<displayCond>
+						<OR>
+							<numIndex index="1">FIELD:base.switchableControllerActions:=:Team->show</numIndex>
+							<numIndex index="2">FIELD:base.switchableControllerActions:=:TeamSeason->show</numIndex>
+						</OR>
+					</displayCond>
 					<config>
 						<type>group</type>
 						<internal_type>db</internal_type>

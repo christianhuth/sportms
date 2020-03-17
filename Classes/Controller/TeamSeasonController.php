@@ -30,11 +30,19 @@
 		/**
 		 * @param \Balumedien\Clubms\Domain\Model\Team $team team item
 		 * @param \Balumedien\Clubms\Domain\Model\Season $season season item
+		 * @throws \TYPO3\CMS\Extbase\Mvc\Exception\NoSuchArgumentException
 		 */
-		public function showAction(\Balumedien\Clubms\Domain\Model\TeamSeason $teamSeason = NULL) {
+		public function showAction(\Balumedien\Clubms\Domain\Model\TeamSeason $teamSeason = NULL): void {
 			
-			($this->request->getArgument('team')) ? $this->settings['team']['uid'] = $this->request->getArgument('team') : $this->settings['team']['uid'];
-			($this->request->getArgument('season')) ? $this->settings['season']['uid'] = $this->request->getArgument('season') : $this->settings['season']['uid'];
+			
+			
+			
+			if($this->request->hasArgument) {
+			
+			}
+			
+			$this->request->getArgument('team') ? $this->settings['team']['uid'] = $this->request->getArgument('team') : $this->settings['team']['uid'];
+			$this->request->getArgument('season') ? $this->settings['season']['uid'] = $this->request->getArgument('season') : $this->settings['season']['uid'];
 			$this->view->assign('settings', $this->settings);
 			
 			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->settings, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
