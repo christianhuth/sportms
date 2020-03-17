@@ -5,7 +5,7 @@
 	class ClubMSBaseController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
 		
 		protected function getClubsFilter($useSelected = TRUE) {
-			return $this->getFilter('club');
+			return $this->getFilter('club', $useSelected);
 		}
 		
 		protected function getSeasonsFilter() {
