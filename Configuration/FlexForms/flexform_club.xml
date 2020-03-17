@@ -107,7 +107,12 @@
             <settings.club.officials.jobsSelectbox>
                 <TCEforms>
                     <label>Selectbox für Funktionärstätigkeiten?</label>
-                    <displayCond>FIELD:base.switchableControllerActions:=:Club->officials</displayCond>
+                    <displayCond>
+                        <AND>
+                            <numIndex index="0">FIELD:base.switchableControllerActions:=:Club->show</numIndex>
+                            <numIndex index="1">FIELD:club.settings.club.showView:=:officials</numIndex>
+                        </AND>
+                    </displayCond>
                     <config>
                         <default>1</default>
                         <renderType>checkboxToggle</renderType>
@@ -118,7 +123,12 @@
             <settings.club.officials.currentOfficialsOnly>
                 <TCEforms>
                     <label>Zeige nur die aktuellen Funktionäre</label>
-                    <displayCond>FIELD:base.switchableControllerActions:=:Club->officials</displayCond>
+                    <displayCond>
+                        <AND>
+                            <numIndex index="0">FIELD:base.switchableControllerActions:=:Club->show</numIndex>
+                            <numIndex index="1">FIELD:club.settings.club.showView:=:officials</numIndex>
+                        </AND>
+                    </displayCond>
                     <config>
                         <default>0</default>
                         <renderType>checkboxToggle</renderType>
