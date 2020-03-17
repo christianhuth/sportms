@@ -1,5 +1,7 @@
 # customsubcategory=css=CSS
 
+# customsubcategory=features=Features
+
 # customsubcategory=persistence=Persistence
 
 # customsubcategory=club=Settings: Club
@@ -17,6 +19,15 @@
 # customsubcategory=view=View
 
 plugin.tx_clubms {
+
+    features {
+        # cat=plugin.tx_clubms/features; type=boolean; label=Ignore the enable fields in backend. Default is false.
+        ignoreAllEnableFieldsInBe = 0
+        # cat=plugin.tx_clubms/features; type=boolean; label=Do not force a cHash for arguments used in actions. If this is turned on, all requests with arguments but no, or an invalid cHash, are handled as pageNotFoundOnCHashError. Default is true
+        requireCHashArgumentForActionArguments = 1
+        # cat=plugin.tx_clubms/features; type=boolean; label=Skip default arguments in URLs. If a link to the default controller or action is created, the parameters are omitted. Default is false.
+        skipDefaultArguments = 0
+    }
 
     persistence {
         # cat=plugin.tx_clubms/persistence; type=int+; label=Default storage PID

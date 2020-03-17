@@ -1,5 +1,11 @@
 plugin.tx_clubms {
 
+    features {
+        ignoreAllEnableFieldsInBe = {$plugin.tx_clubms.features.ignoreAllEnableFieldsInBe}
+        requireCHashArgumentForActionArguments = {$plugin.tx_clubms.features.requireCHashArgumentForActionArguments}
+        skipDefaultArguments = {$plugin.tx_clubms.features.skipDefaultArguments}
+    }
+
     persistence {
         storagePid = {$plugin.tx_clubms.persistence.storagePid}
         recursive = {$plugin.tx_clubms.persistence.recursive}
