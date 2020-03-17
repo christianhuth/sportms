@@ -27,7 +27,7 @@
 					<displayCond>FIELD:base.switchableControllerActions:=:Club->show</displayCond>
 					<config>
 						<type>select</type>
-						<renderType>selectSingle</renderType>
+                        <renderType>selectMultipleSideBySide</renderType>
 						<items type="array">
 							<numIndex index="0">
 								<numIndex index="0">Index</numIndex>
