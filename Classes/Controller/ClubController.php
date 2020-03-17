@@ -39,6 +39,11 @@
 		 * @param \Balumedien\Clubms\Domain\Model\Club $club club item
 		 */
 		public function showAction(\Balumedien\Clubms\Domain\Model\Club $club = NULL) {
+			
+			($this->request->getArgument('showView')) ? $this->settings['club']['showView'] = $this->request->getArgument('showView') : $this->settings['club']['showView'];
+			
+			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->settings['club']['showView'], 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
+			
 			#$this->settings['club']['showView'] = $showView;
 			#$this->view->assign('settings', $this->settings);
 			if($club === NULL) {
