@@ -36,11 +36,6 @@
 					$this->request->getArgument($explodedArgument[0]) ? $this->settings[$explodedArgument[0]][$explodedArgument[1]] = $this->request->getArgument($explodedArgument[0]) : $this->settings[$explodedArgument[0]][$explodedArgument[1]];
 				}
 			}
-			$this->assignSettingsToView();
-		}
-		
-		protected function assignSettingsToView() {
-			$this->view->assign('settings', $this->settings);
 		}
 		
 	}

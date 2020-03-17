@@ -21,6 +21,7 @@
 		
 		public function initializeAction() {
 			$this->mergeRequestWithSettings();
+			$this->view->assign('settings', $this->settings);
 		}
 		
 		/**
