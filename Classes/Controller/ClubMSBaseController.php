@@ -38,6 +38,8 @@
 			$listOfMappings[] = ['showView', ['club']['showView']['current']];
 			foreach($listOfMappings as $mapping) {
 				if($this->request->hasArgument($mapping[0])) {
+					\TYPO3\CMS\Core\Utility\DebugUtility::debug($mapping[0], 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
+					\TYPO3\CMS\Core\Utility\DebugUtility::debug($mapping[1], 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 					$this->settings[$mapping[1]] = $this->request->getArgument($mapping[0]);
 				}
 				#if(count($mapping) === 2) {
