@@ -47,7 +47,7 @@
 			if(is_array($setting)) {
 				return $this->mergeRequestWithSetting($request, $setting[0]);
 			} else {
-				return $this->settings[$setting] = $this->request->getArgument($request);
+				return $this->settings[$setting] = ($this->request->hasArgument($request)) ? $this->request->getArgument($request) : $this->settings[$setting];
 			}
 		}
 		
