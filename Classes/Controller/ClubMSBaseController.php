@@ -4,11 +4,11 @@
 	
 	class ClubMSBaseController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
 	
-		protected function getClubsFilter(): array {
+		protected function getClubsFilter() {
 			return $this->settings['club']['clubs'];
 		}
 		
-		protected function getTeamsFilter(): array {
+		protected function getTeamsFilter() {
 			return $this->settings['team']['teams'];
 		}
 		
