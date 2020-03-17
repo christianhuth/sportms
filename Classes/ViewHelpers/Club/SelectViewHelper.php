@@ -16,7 +16,7 @@
 		/**
 		 */
 		public function render() {
-			
+			$this->arguments['options'] = $this->arguments['clubs'];
 			parent::render();
 		}
 		
