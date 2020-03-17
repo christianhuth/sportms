@@ -1,6 +1,8 @@
 <html data-namespace-typo3-fluid="true"
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
+<f:render arguments="{_all}" partial="Club/ShowNavigation"/>
+
 <div class="tx-clubms-club-show-index">
 
     <table class="table table-bordered table-hover table-striped">
@@ -82,7 +84,7 @@
         </tbody>
     </table>
 
-    <f:link.action action="show" controller="Club" arguments="{club: club, showView: 'officials'}" pageUid="{settings.club.showPid}">OFFICIALS</f:link.action>
+    <f:link.action action="show" arguments="{club: club, showView: 'officials'}" controller="Club" pageUid="{settings.club.showPid}">OFFICIALS</f:link.action>
 
 </div>
 
