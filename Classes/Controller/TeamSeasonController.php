@@ -43,7 +43,7 @@
 				$teamSeason = $this->teamSeasonRepository->findByTeamUidAndSeasonUid($this->settings['team']['uid'], $this->settings['season']['uid']);
 			}
 			if($teamSeason != NULL) {
-				$this->view->assign('teamSeason', $teamSeason);
+				$this->view->assign('teamSeason', $teamSeason[0]);
 			} else {
 				// TODO: ERROR HANDLING
 			}
