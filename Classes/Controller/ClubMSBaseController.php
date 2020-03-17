@@ -38,6 +38,7 @@
 			$listOfMappings[] = ['showView', ['club', ['showView', 'current']]];
 			foreach($listOfMappings as $mapping) {
 				$explodedMapping = explode(',', $mapping);
+				\TYPO3\CMS\Core\Utility\DebugUtility::debug(count($explodedMapping), 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 				if(count($explodedMapping) === 2) {
 					$this->mergeRequestWithSetting($explodedMapping[0], $explodedMapping[1]);
 				}
@@ -45,7 +46,6 @@
 		}
 		
 		protected function mergeRequestWithSetting(string $request, array $setting) {
-			\TYPO3\CMS\Core\Utility\DebugUtility::debug($setting, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			if(is_array($setting)) {
 				return $this->mergeRequestWithSetting($request, $setting[0]);
 			} else {
