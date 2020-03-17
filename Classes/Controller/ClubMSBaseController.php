@@ -34,7 +34,7 @@
 		
 		protected function mergeRequestsWithSettings(): void {
 			$listOfMappings = array();
-			$listOfMappings[] = ['selectClub', ['club']['selected']];
+			$listOfMappings[] = ['selectClub', array(['club']['selected'])];
 			$listOfMappings[] = ['showView', ['club']['showView']['current']];
 			foreach($listOfMappings as $mapping) {
 				\TYPO3\CMS\Core\Utility\DebugUtility::debug($mapping, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
