@@ -160,8 +160,8 @@
 				}
 			}
 			$pageType = (int) $this->arguments['pageType'];
-			$noCache = (bool) 1;
-			$noCacheHash = (bool) 1;
+			$noCache = (bool) $this->arguments['noCache'];
+			$noCacheHash = (bool) 0;
 			$section = (string) $this->arguments['section'];
 			$format = (string) $this->arguments['format'];
 			$linkAccessRestrictedPages = (bool) $this->arguments['linkAccessRestrictedPages'];
