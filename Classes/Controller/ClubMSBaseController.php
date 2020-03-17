@@ -44,4 +44,8 @@
 			}
 		}
 		
+		protected function determineShowView($model): string {
+			return ($this->settings[$model]['showView']) ? : 'index';
+		}
+		
 	}

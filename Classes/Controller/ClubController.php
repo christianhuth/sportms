@@ -44,7 +44,9 @@
 		 * @param \Balumedien\Clubms\Domain\Model\Club $club
 		 */
 		public function showAction(\Balumedien\Clubms\Domain\Model\Club $club = NULL) {
-			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->settings, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
+			
+			$this->determineShowView('club');
+			
 			if($club === NULL) {
 				// TODO: CHECK IF SETTINGS IS SET ELSE DIE
 				$clubUid = $this->settings['club']['uid'];

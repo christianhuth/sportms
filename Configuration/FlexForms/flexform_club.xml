@@ -21,9 +21,9 @@
 					</config>
 				</TCEforms>
             </settings.club.uid>
-            <settings.club.showView>
+            <settings.club.showViews>
 				<TCEforms>
-					<label>Einzelansichten</label>
+					<label>Zeige folgende Einzelansichten</label>
 					<displayCond>FIELD:base.switchableControllerActions:=:Club->show</displayCond>
 					<config>
 						<type>select</type>
@@ -45,7 +45,7 @@
 					</config>
                     <onChange>reload</onChange>
 				</TCEforms>
-            </settings.club.showView>
+            </settings.club.showViews>
             <settings.club.clubs>
                 <TCEforms>
                     <label>Welche Vereine sollen angezeigt werden?</label>
