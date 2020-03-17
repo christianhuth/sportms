@@ -27,9 +27,17 @@
 		 * @return void
 		 */
 		public function listAction() {
+			
 			$this->view->assign('settings', $this->settings);
+			
+			if($this->settings['club']['clubsSelectbox']) {
+				$clubsSelectbox = $this->clubRepository->findAll($this->getClubsFilter(FALSE));
+				$this->view->assign('clubsSelectbox', $clubsSelectbox);
+			}
+			
 			$clubs = $this->clubRepository->findAll($this->getClubsFilter(FALSE));
 			$this->view->assign('clubs', $clubs);
+			
 		}
 		
 		/**
