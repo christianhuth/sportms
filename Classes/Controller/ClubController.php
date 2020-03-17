@@ -39,12 +39,16 @@
 		 * @param \Balumedien\Clubms\Domain\Model\Club $club club item
 		 */
 		public function showAction(string $showView = "index", \Balumedien\Clubms\Domain\Model\Club $club = NULL) {
+			
+			$this->settings['club']['showView'] = $showView;
+			
 			if($club === NULL) {
 				// TODO: CHECK IF SETTINGS IS SET ELSE DIE
 				$clubUid = $this->settings['club']['uid'];
 				$club = $this->clubRepository->findByUid($clubUid);
 			}
 			$this->view->assign('club', $club);
+			
 		}
 		
 		/**
