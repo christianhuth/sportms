@@ -38,9 +38,9 @@
 		 * @param string $showView
 		 * @param \Balumedien\Clubms\Domain\Model\Club $club club item
 		 */
-		public function showAction(string $showView = "index", \Balumedien\Clubms\Domain\Model\Club $club = NULL) {
-			$this->settings['club']['showView'] = $showView;
-			$this->view->assign('settings', $this->settings);
+		public function showAction(\Balumedien\Clubms\Domain\Model\Club $club = NULL) {
+			#$this->settings['club']['showView'] = $showView;
+			#$this->view->assign('settings', $this->settings);
 			if($club === NULL) {
 				// TODO: CHECK IF SETTINGS IS SET ELSE DIE
 				$clubUid = $this->settings['club']['uid'];
