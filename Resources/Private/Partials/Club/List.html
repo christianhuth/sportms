@@ -2,12 +2,7 @@
       xmlns:clubms="Balumedien\Clubms\ViewHelpers"
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
-<div class="tx-clubms-list-filter">
-    <f:form>
-        <f:form.select name="Clubms[club]" options="{clubs}" optionLabelField="name" optionValueField="uid" sortByOptionLabel="TRUE"/>
-        <f:form.submit value="Los"/>
-    </f:form>
-</div>
+<f:render partial="Club/ListFilter"/>
 
 <table class="table table-bordered table-hover table-striped">
     <thead>
