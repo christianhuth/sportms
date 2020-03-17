@@ -35,12 +35,12 @@
 
                             <td class="club-official-officialjob">{clubOfficial.clubOfficialJob.label}</td>
 
-                            <td class="club-official-person"><f:link.action action="show" controller="Person" additionalParams="{tx_clubms_clubms: '{person: club.clubOfficial.person, profile: \"official\"}'}" pageUid="{settings.person.showPid}">{club.clubOfficial.person.firstname} {club.clubOfficial.person.lastname}</f:link.action></td>
+                            <td class="club-official-person"><f:link.action action="show" controller="Person" additionalParams="{tx_clubms_clubms: '{person: clubOfficial.person, profile: \"official\"}'}" pageUid="{settings.person.showPid}">{clubOfficial.person.firstname} {clubOfficial.person.lastname}</f:link.action></td>
 
                             <td class="club-official-startdate">
-                                <f:if condition="{club.clubOfficial.startdate}">
+                                <f:if condition="{clubOfficial.startdate}">
                                     <f:then>
-                                        <f:format.date format="d.m.Y">{club.clubOfficial.startdate}</f:format.date>
+                                        <f:format.date format="d.m.Y">{clubOfficial.startdate}</f:format.date>
                                     </f:then>
                                     <f:else>
                                         -
@@ -49,9 +49,9 @@
                             </td>
 
                             <td class="club-official-enddate">
-                                <f:if condition="{club.clubOfficial.enddate}">
+                                <f:if condition="{clubOfficial.enddate}">
                                     <f:then>
-                                        <f:format.date format="d.m.Y">{club.clubOfficial.enddate}</f:format.date>
+                                        <f:format.date format="d.m.Y">{clubOfficial.enddate}</f:format.date>
                                     </f:then>
                                     <f:else>
                                         -
@@ -60,9 +60,9 @@
                             </td>
 
                             <td class="club-official-duration">
-                                <f:if condition="{club.clubOfficial.startdate}">
+                                <f:if condition="{clubOfficial.startdate}">
                                     <f:then>
-                                        <clubms:DateRange startdate="{club.clubOfficial.startdate}" enddate="{club.clubOfficial.enddate}" format="%a"/> Tage
+                                        <clubms:DateRange startdate="{clubOfficial.startdate}" enddate="{clubOfficial.enddate}" format="%a"/> Tage
                                     </f:then>
                                     <f:else>
                                         -
