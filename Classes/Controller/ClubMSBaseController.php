@@ -43,11 +43,15 @@
 			}
 		}
 		
-		protected function mergeRequestWithSetting(string $request, $setting) {
+		protected function mergeRequestWithSetting(string $request, array $setting) {
+			\TYPO3\CMS\Core\Utility\DebugUtility::debug($setting, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			if(is_array($setting)) {
-				return $this->mergeRequestWithSetting($request, $setting[0]);
+				if(is_array($setting[1])) {
+					return $this->mergeRequestWithSetting($request, $setting[1]);
+				} else {
+					return $this->settings[$setting[0]][$setting[1]] = ($this->request->hasArgument($request)) ? $this->request->getArgument($request) : $this->settings[$setting[0]][$setting[1]];
+				}
 			} else {
-				return $this->settings[$setting] = ($this->request->hasArgument($request)) ? $this->request->getArgument($request) : $this->settings[$setting];
 			}
 		}
 		
