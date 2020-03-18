@@ -38,10 +38,8 @@
 			$listOfMappings['showView'] = 'club.showView.current';
 			foreach($listOfMappings as $requestArgument => $mappingPath) {
 				if($this->request->hasArgument($requestArgument)) {
-					\TYPO3\CMS\Core\Utility\DebugUtility::debug($mappingPath, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 					$mappedRequest = $this->mapRequestValueToSettingPath($this->request->getArgument($requestArgument), $mappingPath);
-					array_merge($this->settings, $mappedRequest);
-					\TYPO3\CMS\Core\Utility\DebugUtility::debug($mappedRequest, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
+					\TYPO3\CMS\Core\Utility\DebugUtility::debug(array_merge($this->settings, $mappedRequest), 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 				}
 			}
 		}
