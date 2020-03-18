@@ -28,7 +28,7 @@
 		 * @param string $sorting
 		 * @return string
 		 */
-		public function render(): string {
+		public function render(): ?string {
 			$nationality = $this->arguments['nationality'];
 			if($nationality) {
 				\TYPO3\CMS\Core\Utility\DebugUtility::debug($nationality, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
