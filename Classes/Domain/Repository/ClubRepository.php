@@ -21,7 +21,7 @@
 			$constraints = [];
 			if($clubSections) {
 				foreach($clubSections AS $clubSection) {
-					$constraints[] = $query->in('uid', $clubSection->getUid());
+					$constraints[] = $query->equals('uid', $clubSection->getUid());
 				}
 			}
 			if($constraints) {
