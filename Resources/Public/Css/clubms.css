@@ -1,5 +1,9 @@
+#tx-clubms {
+	display: block;
+}
+
 #tx-clubms-container {
-	font-family: arial !important;
+	font-family: sans-serif;
 }
 
 #tx-clubms-container table {
