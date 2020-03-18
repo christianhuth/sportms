@@ -43,7 +43,7 @@
 			}
 		}
 		
-		protected function mapRequestToSetting(string $requestValue, array &$positionInSettings, array &$settings): void {
+		protected function mapRequestToSetting(string $requestValue, array &$positionInSettings, array &$settings) {
 			
 			$currentPositionByKey = array_key_first($positionInSettings);
 			\TYPO3\CMS\Core\Utility\DebugUtility::debug($currentPositionByKey, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
