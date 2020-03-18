@@ -49,7 +49,7 @@
 			if($positionOfPathSeperator !== FALSE) {
 				$currentKey = substr($mappingPath, 0, $positionOfPathSeperator);
 				$newMappingPath = substr($mappingPath, $positionOfPathSeperator + 1);
-				$mappedSettings = array($currentKey => $this->mapRequestValueToSettingPath($requestValue, $newMappingPath));
+				return array($currentKey => $this->mapRequestValueToSettingPath($requestValue, $newMappingPath));
 			} else {
 				$currentKey = $mappingPath;
 				return array($currentKey => $requestValue);
