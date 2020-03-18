@@ -47,10 +47,11 @@
 			
 			$currentPositionByKey = array_key_first($positionInSettings);
 			if(is_array($positionInSettings[$currentPositionByKey])) {
-				$this->mapRequestToSetting($requestValue, $positionInSettings[$currentPositionByKey], $settings);
+				$this->mapRequestToSetting($requestValue, $positionInSettings[$currentPositionByKey], $settings[$currentPositionByKey]);
 			} else {
-				$positionInSettings[$currentPositionByKey] = $requestValue;
+				$settings[$currentPositionByKey] = $requestValue;
 			}
+			
 			\TYPO3\CMS\Core\Utility\DebugUtility::debug($positionInSettings, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			
 			
