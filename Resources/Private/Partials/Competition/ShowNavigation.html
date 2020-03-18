@@ -1,0 +1,19 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:clubms="Balumedien\Clubms\ViewHelpers"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<f:if condition="{settings.competition.showNavigation.enabled}">
+    <ul>
+        <f:if condition="{settings.competition.showNavigation.index}">
+            <li><clubms:link.action Club="{club}" Show="index">Start</clubms:link.action></li>
+        </f:if>
+        <f:if condition="{settings.competition.showNavigation.games}">
+            <li><clubms:link.action Club="{club}" Show="games">Spiele</clubms:link.action></li>
+        </f:if>
+        <f:if condition="{settings.competition.showNavigation.teams}">
+            <li><clubms:link.action Club="{club}" Show="teams">Mannschaften</clubms:link.action></li>
+        </f:if>
+    </ul>
+</f:if>
+
+</html>

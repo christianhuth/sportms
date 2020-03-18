@@ -1,0 +1,16 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<f:layout name="default"/>
+
+<f:section name="default">
+    <div class="tx-clubms-season-show">
+        <f:render arguments="{_all}" section="{settings.season.showView.current}"/>
+    </div>
+</f:section>
+
+<f:section name="index">
+    <f:render arguments="{_all}" partial="Season/ShowIndex"/>
+</f:section>
+
+</html>
