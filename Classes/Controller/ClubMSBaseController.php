@@ -50,11 +50,11 @@
 				$this->mapRequestToSetting($requestValue, $positionInSettings[$currentPositionByKey], $settings);
 			} else {
 				$positionInSettings[$currentPositionByKey] = $requestValue;
+				\TYPO3\CMS\Core\Utility\DebugUtility::debug($positionInSettings, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			}
 			
 			
 			
-			\TYPO3\CMS\Core\Utility\DebugUtility::debug($positionInSettings, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			
 			
 			
