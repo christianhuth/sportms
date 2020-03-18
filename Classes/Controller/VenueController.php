@@ -16,13 +16,30 @@
 		protected $venueRepository;
 		
 		/**
+		 * Initializes the controller before invoking an action method.
+		 * Use this method to solve tasks which all actions have in common.
+		 */
+		public function initializeAction() {
+			$this->mapRequestsToSettings();
+		}
+		
+		/**
+		 * Use this method to solve tasks which all actions have in common, when VIEW-Context is needed
+		 */
+		public function initializeActions() {
+			$listOfPossibleShowViews = 'index';
+			$this->determineShowView($this->model);
+			$this->determineShowViews($this->model, $listOfPossibleShowViews);
+			$this->determineShowNavigationViews($this->model, $listOfPossibleShowViews);
+			$this->view->assign('settings', $this->settings);
+		}
+		
+		/**
 		 * @return void
 		 */
 		public function listAction() {
-			$clubsFilter = $this->settings['club']['clubs'];
-			$venuesFilter = $this->settings['venue']['venues'];
-			$withClubOnly = $this->settings['venue']['withClubOnly'];
-			$venues = $this->venueRepository->findAll($venuesFilter, $clubsFilter, $withClubOnly);
+			$this->initializeActions();
+			$venues = $this->venueRepository->findAll($this->getVenuesFilter(), $this->getClubsFilter(), $this->getVenuesWithClubOnlyFilter());
 			$this->view->assign('venues', $venues);
 		}
 		
@@ -30,6 +47,7 @@
 		 * @param \Balumedien\Clubms\Domain\Model\Venue $venue
 		 */
 		public function showAction(\Balumedien\Clubms\Domain\Model\Venue $venue = NULL) {
+			$this->initializeActions();
 			$this->view->assign('venue', $venue);
 		}
 		

@@ -44,6 +44,14 @@
 			return $this->getFilter('team', 'teams', $useSelected);
 		}
 		
+		protected function getVenuesFilter($useSelected = TRUE) {
+			return $this->getFilter('venue', 'venues', $useSelected);
+		}
+		
+		protected function getVenuesWithClubOnlyFilter($useSelected = TRUE) {
+			return $this->getFilter('venue', 'withClubOnly', $useSelected);
+		}
+		
 		protected function getFilter($key1, $key2, $useSelected) {
 			return ($useSelected && ($this->settings[$key1]['selected'])) ? $this->settings[$key1]['selected']: $this->settings[$key1][$key2];
 		}
