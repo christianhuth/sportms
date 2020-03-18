@@ -56,4 +56,10 @@
 			}
 		}
 		
+		protected function determineShowNavigationViews($model, $listOfPossibleShowViews): void {
+			foreach(explode(',', $listOfPossibleShowViews) AS $showView) {
+				$this->settings[$model]['showNavigation'][$showView] = ($this->settings[$model]['showNavigation']['views']) ? strpos($this->settings[$model]['showViews'], $showView) !== FALSE : TRUE;
+			}
+		}
+		
 	}
