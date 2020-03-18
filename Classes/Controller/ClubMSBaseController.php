@@ -61,6 +61,10 @@
 			if($this->request->hasArgument('selectClub')) {
 				$this->settings['club']['selected'] = $this->request->getArgument('selectClub');
 			}
+			/* selectSection */
+			if($this->request->hasArgument('selectSection')) {
+				$this->settings['section']['selected'] = $this->request->getArgument('selectSection');
+			}
 			/* ShowView */
 			if($this->request->hasArgument('showView') && $this->request->hasArgument('controller')) {
 				$model = strtolower($this->request->getArgument('controller'));
