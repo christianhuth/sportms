@@ -39,7 +39,7 @@
 		 */
 		public function listAction() {
 			$this->initializeActions();
-			$clubSections = $this->clubSectionRepository->findAll();
+			$clubSections = $this->clubSectionRepository->findAll($this->getClubsFilter(), $this->getSectionsFilter());
 			$this->view->assign('clubSections', $clubSections);
 		}
 		
