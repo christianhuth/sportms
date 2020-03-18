@@ -4,22 +4,12 @@
 		<TCEforms>
 			<sheetTitle>Sportstätte</sheetTitle>
 		</TCEforms>
-		<displayCond>
-			<OR>
-				<numIndex index="0">FIELD:base.switchableControllerActions:=:Venue->show</numIndex>
-				<numIndex index="1">FIELD:base.switchableControllerActions:=:Venue->list</numIndex>
-			</OR>
-		</displayCond>
 		<type>array</type>
 		<el>
 			<settings.venue.uid>
 				<TCEforms>
 					<label>Zeige folgende Sportstätte</label>
-					<displayCond>
-						<OR>
-							<numIndex index="0">FIELD:base.switchableControllerActions:=:Venue->show</numIndex>
-						</OR>
-					</displayCond>
+					<displayCond>FIELD:base.switchableControllerActions:=:Venue->show</displayCond>
 					<config>
 						<type>group</type>
 						<internal_type>db</internal_type>
@@ -31,6 +21,63 @@
 					</config>
 				</TCEforms>
 			</settings.venue.uid>
+			<settings.venue.showViews>
+				<TCEforms>
+					<label>Erlaube folgende Einzelansichten</label>
+					<displayCond>FIELD:base.switchableControllerActions:=:Venue->show</displayCond>
+					<config>
+						<type>select</type>
+						<renderType>selectMultipleSideBySide</renderType>
+						<items type="array">
+							<numIndex index="0">
+								<numIndex index="0">Index</numIndex>
+								<numIndex index="1">index</numIndex>
+							</numIndex>
+							<numIndex index="1">
+								<numIndex index="0">Games</numIndex>
+								<numIndex index="1">games</numIndex>
+							</numIndex>
+						</items>
+					</config>
+				</TCEforms>
+			</settings.venue.showViews>
+			<settings.venue.showNavigation.enabled>
+				<TCEforms>
+					<label>Navigation für Einzelansichten?</label>
+					<displayCond>FIELD:base.switchableControllerActions:=:Venue->show</displayCond>
+					<config>
+						<default>1</default>
+						<renderType>checkboxToggle</renderType>
+						<type>check</type>
+					</config>
+					<onChange>reload</onChange>
+				</TCEforms>
+			</settings.venue.showNavigation.enabled>
+			<settings.venue.showNavigation.views>
+				<TCEforms>
+					<label>Zeige folgende Navigationselemente</label>
+					<displayCond>
+						<AND>
+							<numIndex index="0">FIELD:base.switchableControllerActions:=:Venue->show</numIndex>
+							<numIndex index="1">FIELD:venue.settings.venue.showNavigation.enabled:REQ:TRUE</numIndex>
+						</AND>
+					</displayCond>
+					<config>
+						<type>select</type>
+						<renderType>selectMultipleSideBySide</renderType>
+						<items type="array">
+							<numIndex index="0">
+								<numIndex index="0">Index</numIndex>
+								<numIndex index="1">index</numIndex>
+							</numIndex>
+							<numIndex index="1">
+								<numIndex index="0">Games</numIndex>
+								<numIndex index="1">games</numIndex>
+							</numIndex>
+						</items>
+					</config>
+				</TCEforms>
+			</settings.venue.showNavigation.views>
 			<settings.venue.venues>
 				<TCEforms>
 					<label>Welche Sportstätten sollen angezeigt werden?</label>
