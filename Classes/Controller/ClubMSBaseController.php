@@ -37,10 +37,10 @@
 			$listOfMappings[] = ['selectClub', array('club'=>array('selected'=>''))];
 			$listOfMappings[] = ['showView', array('club' => array('showView' => array('current'=>'')))];
 			foreach($listOfMappings as $mapping) {
-				\TYPO3\CMS\Core\Utility\DebugUtility::debug($mapping, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 				if($this->request->hasArgument($mapping[0])) {
+					$mapping[1] = $this->request->getArgument($mapping[0]);
 					\TYPO3\CMS\Core\Utility\DebugUtility::debug($mapping[1], 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
-					$this->settings[$mapping[1]] = $this->request->getArgument($mapping[0]);
+					array_push($this->settings[], $mapping[1]);
 				}
 				#if(count($mapping) === 2) {
 				#	$this->mergeRequestWithSetting($mapping[0], $mapping[1]);
