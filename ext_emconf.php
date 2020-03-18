@@ -5,7 +5,7 @@
 		'description' => '',
 		'category' => 'plugin',
 		'author' => 'Christian Knell',
-		'author_email' => 'christian.knell@balumedien.de',
+		'author_email' => 'christian@knell.it',
 		'state' => 'beta',
 		'internal' => '',
 		'uploadfolder' => '0',
@@ -15,7 +15,7 @@
 		'constraints' => array(
 			'depends' => array(
 				'static_info_tables' => '',
-				'typo3' => '6.2',
+				'typo3' => '9.5',
 			),
 			'conflicts' => array(
 			),
