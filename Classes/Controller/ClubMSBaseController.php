@@ -39,8 +39,7 @@
 			foreach($listOfMappings as $requestArgument => $mappingPath) {
 				if($this->request->hasArgument($requestArgument)) {
 					$mappedRequest = $this->mapRequestValueToSettingPath($this->request->getArgument($requestArgument), $mappingPath);
-					\TYPO3\CMS\Core\Utility\DebugUtility::debug($mappedRequest, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
-					\TYPO3\CMS\Core\Utility\DebugUtility::debug(array_merge_recursive($this->settings, $mappedRequest), 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
+					$this->settings = array_merge_recursive($this->settings, $mappedRequest);
 				}
 			}
 		}
