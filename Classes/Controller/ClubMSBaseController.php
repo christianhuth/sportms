@@ -51,6 +51,8 @@
 			\TYPO3\CMS\Core\Utility\DebugUtility::debug($positionInSettings[$currentPositionByKey], 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			if(is_array($positionInSettings[$currentPositionByKey])) {
 				return $this->mapRequestToSetting($requestValue, $positionInSettings[$currentPositionByKey], $settings);
+			} else {
+				return null;
 			}
 			
 			
