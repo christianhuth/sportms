@@ -87,55 +87,6 @@
                     </config>
                 </TCEforms>
             </settings.club.clubsSelectbox>
-            <settings.club.officials.jobs>
-                <TCEforms>
-                    <label>Welche Funktionärstätigkeiten sollen angezeigt werden?</label>
-                    <displayCond>
-                        <AND>
-                            <numIndex index="0">FIELD:base.switchableControllerActions:=:Club->show</numIndex>
-                            <numIndex index="1">FIELD:club.settings.club.showViews:IN:officials</numIndex>
-                        </AND>
-                    </displayCond>
-                    <config>
-                        <foreign_table>tx_clubms_domain_model_clubofficialjob</foreign_table>
-                        <foreign_table_where>ORDER BY label ASC</foreign_table_where>
-                        <renderType>selectMultipleSideBySide</renderType>
-                        <type>select</type>
-                    </config>
-                </TCEforms>
-            </settings.club.officials.jobs>
-            <settings.club.officials.jobsSelectbox>
-                <TCEforms>
-                    <label>Selectbox für Funktionärstätigkeiten?</label>
-                    <displayCond>
-                        <AND>
-                            <numIndex index="0">FIELD:base.switchableControllerActions:=:Club->show</numIndex>
-                            <numIndex index="1">FIELD:club.settings.club.showViews:IN:officials</numIndex>
-                        </AND>
-                    </displayCond>
-                    <config>
-                        <default>1</default>
-                        <renderType>checkboxToggle</renderType>
-                        <type>check</type>
-                    </config>
-                </TCEforms>
-            </settings.club.officials.jobsSelectbox>
-            <settings.club.officials.currentOfficialsOnly>
-                <TCEforms>
-                    <label>Zeige nur die aktuellen Funktionäre</label>
-                    <displayCond>
-                        <AND>
-                            <numIndex index="0">FIELD:base.switchableControllerActions:=:Club->show</numIndex>
-                            <numIndex index="1">FIELD:club.settings.club.showViews:IN:officials</numIndex>
-                        </AND>
-                    </displayCond>
-                    <config>
-                        <default>0</default>
-                        <renderType>checkboxToggle</renderType>
-                        <type>check</type>
-                    </config>
-                </TCEforms>
-            </settings.club.officials.currentOfficialsOnly>
         </el>
     </ROOT>
 </T3DataStructure>
