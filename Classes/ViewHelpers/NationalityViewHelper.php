@@ -28,7 +28,7 @@
 		 * @param string $sorting
 		 * @return array
 		 */
-		public function render(): array {
+		public function render() {
 			$key = $this->arguments['key'];
 			$country = $this->countryRepository->findByUid($key);
 			return $country;
