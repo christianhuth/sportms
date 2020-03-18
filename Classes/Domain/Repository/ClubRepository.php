@@ -16,6 +16,20 @@
 			return $query->execute();
 		}
 		
+		public function findAllByClubSections($clubSections) {
+			$query = $this->createQuery();
+			$constraints = [];
+			if($clubSections) {
+				foreach($clubSections AS $clubSection) {
+					$constraints[] = $query->in('uid', $clubSection->getUid());
+				}
+			}
+			if($constraints) {
+				$query->matching($query->logicalAnd($constraints));
+			}
+			return $query->execute();
+		}
+		
 	}
 	
 ?>

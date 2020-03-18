@@ -16,6 +16,18 @@
 		protected $clubSectionRepository;
 		
 		/**
+		 * @var \Balumedien\Clubms\Domain\Repository\ClubRepository
+		 * @TYPO3\CMS\Extbase\Annotation\Inject
+		 */
+		protected $clubRepository;
+		
+		/**
+		 * @var \Balumedien\Clubms\Domain\Repository\SectionRepository
+		 * @TYPO3\CMS\Extbase\Annotation\Inject
+		 */
+		protected $sectionRepository;
+		
+		/**
 		 * Initializes the controller before invoking an action method.
 		 * Use this method to solve tasks which all actions have in common.
 		 */
@@ -41,6 +53,18 @@
 			$this->initializeActions();
 			$clubSections = $this->clubSectionRepository->findAll($this->getClubsFilter(), $this->getSectionsFilter());
 			$this->view->assign('clubSections', $clubSections);
+			/* FRONTEND FILTERS */
+			if($this->settings['club']['clubsSelectbox'] || $this->settings['section']['sectionsSelectbox']) {
+				$clubSectionUids = $this->clubSectionRepository->findAll($this->getClubsFilter(), $this->getSectionsFilter());
+				if($this->settings['club']['clubsSelectbox']) {
+					$clubsSelectbox = $this->clubRepository->findAllByClubSections($clubSectionUids);
+					$this->view->assign('clubsSelectbox', $clubsSelectbox);
+				}
+				if($this->settings['section']['sectionsSelectbox']) {
+					$sectionsSelectbox = $this->sectionRepository->findAllByClubSectionUids($clubSectionUids);
+					$this->view->assign('sectionsSelectbox', $sectionsSelectbox);
+				}
+			}
 		}
 		
 		/**
