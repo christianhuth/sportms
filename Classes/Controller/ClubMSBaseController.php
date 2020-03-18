@@ -36,18 +36,22 @@
 			$listOfMappings = array();
 			$listOfMappings['selectClub'] = 'club.selected';
 			$listOfMappings['showView'] = 'club.showView.current';
-			foreach($listOfMappings as $requestArgument => $mapping) {
+			foreach($listOfMappings as $requestArgument => $mappingPath) {
 				if($this->request->hasArgument($requestArgument)) {
-					$this->mapRequestArgumentToSettingPath($this->request->getArgument($requestArgument), $mapping);
+					$this->mapRequestArgumentToSettingPath($this->request->getArgument($requestArgument), $mappingPath);
 				}
 			}
 		}
 		
-		protected function mapRequestArgumentToSettingPath(string $requestArgument, string $mapping): array {
-			$positionOfPathSeperator = strpos($mapping, '.');
+		protected function mapRequestArgumentToSettingPath(string $requestArgument, string $mappingPath): array {
+			$positionOfPathSeperator = strpos($mappingPath, '.');
 			\TYPO3\CMS\Core\Utility\DebugUtility::debug($positionOfPathSeperator, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			if($positionOfPathSeperator !== FALSE) {
-				$mappedSettings = array(substr($mapping, 0, $positionOfPathSeperator-1) => $this->mapRequestArgumentToSettingPath());
+				$currentKey = substr($mappingPath, 0, $positionOfPathSeperator - 1);
+				$newMappingPath = substr($mappingPath, $positionOfPathSeperator);
+				\TYPO3\CMS\Core\Utility\DebugUtility::debug($currentKey, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
+				\TYPO3\CMS\Core\Utility\DebugUtility::debug($newMappingPath, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
+				$mappedSettings = array($currentKey => $this->mapRequestArgumentToSettingPath());
 			} else {
 			
 			}
