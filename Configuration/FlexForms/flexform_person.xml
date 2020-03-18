@@ -81,12 +81,7 @@
             <settings.person.persons>
                 <TCEforms>
                     <label>Welche Personen sollen angezeigt werden?</label>
-                    <displayCond>
-                        <OR>
-                            <numIndex index="0">FIELD:base.switchableControllerActions:=:Person->list</numIndex>
-                            <numIndex index="4">FIELD:base.switchableControllerActions:=:TeamSeason->list</numIndex>
-                        </OR>
-                    </displayCond>
+                    <displayCond>FIELD:base.switchableControllerActions:=:Person->list</displayCond>
                     <config>
                         <foreign_table>tx_clubms_domain_model_person</foreign_table>
                         <foreign_table_where>ORDER BY lastname ASC, firstname ASC</foreign_table_where>
@@ -98,12 +93,7 @@
             <settings.person.personsSelectbox>
                 <TCEforms>
                     <label>Selectbox für Personen?</label>
-                    <displayCond>
-                        <OR>
-                            <numIndex index="0">FIELD:base.switchableControllerActions:=:Person->list</numIndex>
-                            <numIndex index="4">FIELD:base.switchableControllerActions:=:TeamSeason->list</numIndex>
-                        </OR>
-                    </displayCond>
+                    <displayCond>FIELD:base.switchableControllerActions:=:Person->list</displayCond>
                     <config>
                         <default>1</default>
                         <renderType>checkboxToggle</renderType>
