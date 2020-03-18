@@ -55,6 +55,7 @@
                         <renderType>checkboxToggle</renderType>
                         <type>check</type>
                     </config>
+                    <onChange>reload</onChange>
                 </TCEforms>
             </settings.club.showNavigation.enabled>
             <settings.club.showNavigation.views>
