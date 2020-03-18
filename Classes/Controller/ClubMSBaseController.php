@@ -39,7 +39,8 @@
 			foreach($listOfMappings as $requestArgument => $mappingPath) {
 				if($this->request->hasArgument($requestArgument)) {
 					$mappedRequest = $this->mapRequestValueToSettingPath($this->request->getArgument($requestArgument), $mappingPath);
-					$this->settings = array_merge_recursive($this->settings, $mappedRequest);
+					$this->settings['club']['showView']['current'] = $this->request->getArgument('showView');
+#					$this->settings = array_merge_recursive($this->settings, $mappedRequest);
 				}
 			}
 		}
