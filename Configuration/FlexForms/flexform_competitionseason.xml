@@ -6,32 +6,72 @@
 		</TCEforms>
 		<type>array</type>
 		<el>
-			<settings.competitionseason.showView>
+			<settings.competitionSeason.showViews>
 				<TCEforms>
-					<label>Gezeigte Einzelansicht</label>
+					<label>Erlaube folgende Einzelansichten</label>
 					<displayCond>FIELD:base.switchableControllerActions:=:CompetitionSeason->show</displayCond>
 					<config>
 						<type>select</type>
-						<renderType>selectSingle</renderType>
+						<renderType>selectMultipleSideBySide</renderType>
 						<items type="array">
 							<numIndex index="0">
 								<numIndex index="0">Index</numIndex>
 								<numIndex index="1">index</numIndex>
 							</numIndex>
-							<numIndex index="2">
+							<numIndex index="1">
 								<numIndex index="0">Games</numIndex>
 								<numIndex index="1">games</numIndex>
 							</numIndex>
-							<numIndex index="3">
+							<numIndex index="2">
 								<numIndex index="0">Teams</numIndex>
 								<numIndex index="1">teams</numIndex>
 							</numIndex>
 						</items>
 					</config>
+				</TCEforms>
+			</settings.competitionSeason.showViews>
+			<settings.competitionSeason.showNavigation.enabled>
+				<TCEforms>
+					<label>Navigation für Einzelansichten?</label>
+					<displayCond>FIELD:base.switchableControllerActions:=:CompetitionSeason->show</displayCond>
+					<config>
+						<default>1</default>
+						<renderType>checkboxToggle</renderType>
+						<type>check</type>
+					</config>
 					<onChange>reload</onChange>
 				</TCEforms>
-			</settings.competitionseason.showView>
-			<settings.competitionseason.competitionSeasonGameDays>
+			</settings.competitionSeason.showNavigation.enabled>
+			<settings.competitionSeason.showNavigation.views>
+				<TCEforms>
+					<label>Zeige folgende Navigationselemente</label>
+					<displayCond>
+						<AND>
+							<numIndex index="0">FIELD:base.switchableControllerActions:=:ClubSection->show</numIndex>
+							<numIndex index="1">FIELD:competitionSeason.settings.competitionSeason.showNavigation.enabled:REQ:TRUE</numIndex>
+						</AND>
+					</displayCond>
+					<config>
+						<type>select</type>
+						<renderType>selectMultipleSideBySide</renderType>
+						<items type="array">
+							<numIndex index="0">
+								<numIndex index="0">Index</numIndex>
+								<numIndex index="1">index</numIndex>
+							</numIndex>
+							<numIndex index="1">
+								<numIndex index="0">Games</numIndex>
+								<numIndex index="1">games</numIndex>
+							</numIndex>
+							<numIndex index="2">
+								<numIndex index="0">Teams</numIndex>
+								<numIndex index="1">teams</numIndex>
+							</numIndex>
+						</items>
+					</config>
+				</TCEforms>
+			</settings.competitionSeason.showNavigation.views>
+			<settings.competitionSeason.competitionSeasonGameDays>
 				<TCEforms>
 					<label>Welche Spieltage sollen angezeigt werden?</label>
 					<displayCond>
@@ -46,8 +86,8 @@
 						<type>select</type>
 					</config>
 				</TCEforms>
-			</settings.competitionseason.competitionSeasonGameDays>
-			<settings.competitionseason.competitionSeasonGameDaysSelectbox>
+			</settings.competitionSeason.competitionSeasonGameDays>
+			<settings.competitionSeason.competitionSeasonGameDaysSelectbox>
 				<TCEforms>
 					<label>Selectbox für Spieltage?</label>
 					<displayCond>
@@ -61,7 +101,7 @@
 						<type>check</type>
 					</config>
 				</TCEforms>
-			</settings.competitionseason.competitionSeasonGameDaysSelectbox>
+			</settings.competitionSeason.competitionSeasonGameDaysSelectbox>
 		</el>
 	</ROOT>
 </T3DataStructure>

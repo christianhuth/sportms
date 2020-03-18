@@ -18,11 +18,11 @@
 								<numIndex index="0">Index</numIndex>
 								<numIndex index="1">index</numIndex>
 							</numIndex>
-							<numIndex index="2">
+							<numIndex index="1">
 								<numIndex index="0">Officials</numIndex>
 								<numIndex index="1">officials</numIndex>
 							</numIndex>
-							<numIndex index="3">
+							<numIndex index="2">
 								<numIndex index="0">Teams</numIndex>
 								<numIndex index="1">teams</numIndex>
 							</numIndex>
@@ -59,11 +59,11 @@
 								<numIndex index="0">Index</numIndex>
 								<numIndex index="1">index</numIndex>
 							</numIndex>
-							<numIndex index="2">
+							<numIndex index="1">
 								<numIndex index="0">Officials</numIndex>
 								<numIndex index="1">officials</numIndex>
 							</numIndex>
-							<numIndex index="3">
+							<numIndex index="2">
 								<numIndex index="0">Teams</numIndex>
 								<numIndex index="1">teams</numIndex>
 							</numIndex>
