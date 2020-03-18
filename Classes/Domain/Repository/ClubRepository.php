@@ -20,13 +20,12 @@
 			$query = $this->createQuery();
 			$constraints = [];
 			if($clubSections) {
-				$constraints2 = [];
 				foreach($clubSections AS $clubSection) {
-					$constraints2[] = $query->equals('uid', $clubSection->getUid());
+					$constraints[] = $query->equals('uid', $clubSection->getUid());
 				}
 			}
 			if($constraints) {
-				$query->matching($query->logicalAnd($query->logicalOr($constraints2), $constraints));
+				$query->matching($query->logicalOr($constraints));
 			}
 			# Folgender Schnippel debugged eine Query, die in der Variable $query gespeichert ist
 			$queryParser = $this->objectManager->get(\TYPO3\CMS\Extbase\Persistence\Generic\Storage\Typo3DbQueryParser::class);
