@@ -49,7 +49,7 @@
 				return $this->mapRequestToSetting($request, array_pop(array_reverse($setting)), $resultArray);
 			} else {
 				$key = array_key_first($setting);
-				$setting[$key] = $request;
+				$setting[$key] = $this->request->getArgument($request);
 				\TYPO3\CMS\Core\Utility\DebugUtility::debug($setting, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			}
 		}
