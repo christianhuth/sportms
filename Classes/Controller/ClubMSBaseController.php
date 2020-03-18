@@ -34,8 +34,8 @@
 		
 		protected function mapRequestsToSettings(): void {
 			$listOfMappings = array();
-			$listOfMappings[] = ['selectClub', array('club' => array('selected' => ''))];
-			$listOfMappings[] = ['showView', array('club' => array('showView' => array('current'=>'')))];
+			$listOfMappings[] = ['selectClub', array('settings' => array('club' => array('selected' => '')))];
+			$listOfMappings[] = ['showView', array('settings' => array('club' => array('showView' => array('current'=>''))))];
 			foreach($listOfMappings as $mapping) {
 				if($this->request->hasArgument($mapping[0])) {
 					$this->mapRequestToSetting($this->request->getArgument($mapping[0]), $mapping[1], $this->settings);
