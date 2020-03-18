@@ -20,6 +20,10 @@
 			return $this->getFilter('competitionseason', 'competitionSeasonGameDays', $useSelected);
 		}
 		
+		protected function getPersonsFilter($useSelected = TRUE) {
+			return $this->getFilter('person', 'persons', $useSelected);
+		}
+		
 		protected function getSeasonsFilter($useSelected = TRUE) {
 			return $this->getFilter('season', 'seasons', $useSelected);
 		}

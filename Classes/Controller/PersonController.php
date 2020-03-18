@@ -27,7 +27,7 @@
 		 * Use this method to solve tasks which all actions have in common, when VIEW-Context is needed
 		 */
 		public function initializeActions() {
-			$listOfPossibleShowViews = 'index,officials,sections';
+			$listOfPossibleShowViews = 'index,officials';
 			$this->determineShowView($this->model);
 			$this->determineShowViews($this->model, $listOfPossibleShowViews);
 			$this->determineShowNavigationViews($this->model, $listOfPossibleShowViews);
@@ -38,14 +38,16 @@
 		 * @return void
 		 */
 		public function listAction() {
-			$persons = $this->personRepository->findAll();
+			$this->initializeActions();
+			$persons = $this->personRepository->findAll($this->getPersonsFilter());
 			$this->view->assign('persons', $persons);
 		}
 		
 		/**
-		 * @param \Balumedien\Clubms\Domain\Model\Person $person person item
+		 * @param \Balumedien\Clubms\Domain\Model\Person $person
 		 */
 		public function showAction(\Balumedien\Clubms\Domain\Model\Person $person = NULL) {
+			$this->initializeActions();
 			if($person === NULL) {
 				$personUid = $this->settings['single']['person'];
 				$person = $this->personRepository->findByUid($personUid);
