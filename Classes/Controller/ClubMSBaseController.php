@@ -46,16 +46,14 @@
 		protected function mapRequestToSetting(string $requestValue, array &$positionInSettings, array &$settings) {
 			
 			$currentPositionByKey = array_key_first($positionInSettings);
-			if(is_array($positionInSettings[$currentPositionByKey])) {
-				$this->mapRequestToSetting($requestValue, $positionInSettings[$currentPositionByKey], $settings);
-			} else {
-				$positionInSettings[$currentPositionByKey] = $requestValue;
-				\TYPO3\CMS\Core\Utility\DebugUtility::debug($positionInSettings, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
+			if(array_key_exists($currentPositionByKey, $settings)) {
+				if(is_array($positionInSettings[$currentPositionByKey])) {
+					$this->mapRequestToSetting($requestValue, $positionInSettings[$currentPositionByKey], $settings);
+				} else {
+					$positionInSettings[$currentPositionByKey] = $requestValue;
+				}
 			}
-			
-			
-			
-			
+			\TYPO3\CMS\Core\Utility\DebugUtility::debug($positionInSettings, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			
 			
 			
@@ -68,7 +66,6 @@
 				}
 				$key = array_key_first($setting);
 				$setting[$key] = $this->request->getArgument($request);
-				\TYPO3\CMS\Core\Utility\DebugUtility::debug($setting, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			}
 			*/
 		}
