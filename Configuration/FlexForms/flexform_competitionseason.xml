@@ -47,7 +47,7 @@
 					<label>Zeige folgende Navigationselemente</label>
 					<displayCond>
 						<AND>
-							<numIndex index="0">FIELD:base.switchableControllerActions:=:ClubSection->show</numIndex>
+							<numIndex index="0">FIELD:base.switchableControllerActions:=:CompetitionSeason->show</numIndex>
 							<numIndex index="1">FIELD:competitionSeason.settings.competitionSeason.showNavigation.enabled:REQ:TRUE</numIndex>
 						</AND>
 					</displayCond>
