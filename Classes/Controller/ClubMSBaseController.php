@@ -34,7 +34,7 @@
 		}
 		
 		protected function getFilter($model, $useSelected) {
-			return ($useSelected) ? $this->settings[$model]['selected'] : $this->settings[$model][$model . 's'];
+			return ($useSelected && ($this->settings[$model]['selected'])) ? $this->settings[$model]['selected']: $this->settings[$model][$model . 's'];
 		}
 		
 		protected function mapRequestsToSettings(): void {
