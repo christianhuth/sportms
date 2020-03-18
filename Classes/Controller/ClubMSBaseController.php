@@ -68,7 +68,7 @@
 			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->settings[$model]['showView']['current'], 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			if(!$this->settings[$model]['showView']['current']) {
 				\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->settings[$model]['showView']['current'], 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
-				$this->settings[$model]['showView']['current'] = ($this->settings[$model]['showViews']) ? explode(',', $this->settings[$model]['showViews'])[0] : 'index'
+				$this->settings[$model]['showView']['current'] = ($this->settings[$model]['showViews']) ? explode(',', $this->settings[$model]['showViews'])[0] : 'index';
 			}
 			
 			
