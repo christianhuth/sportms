@@ -41,12 +41,13 @@
 		 */
 		public function listAction() {
 			$this->initializeActions();
+			$clubs = $this->clubRepository->findAll($this->getClubsFilter());
+			$this->view->assign('clubs', $clubs);
+			/* FRONTEND FILTERS */
 			if($this->settings['club']['clubsSelectbox']) {
 				$clubsSelectbox = $this->clubRepository->findAll($this->getClubsFilter(FALSE));
 				$this->view->assign('clubsSelectbox', $clubsSelectbox);
 			}
-			$clubs = $this->clubRepository->findAll($this->getClubsFilter());
-			$this->view->assign('clubs', $clubs);
 		}
 		
 		/**
