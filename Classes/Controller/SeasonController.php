@@ -5,7 +5,7 @@
 	/**
 	 * SeasonController
 	 */
-	class SeasonController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
+	class SeasonController extends ClubMSBaseController {
 		
 		/**
 		 * @var \Balumedien\Clubms\Domain\Repository\SeasonRepository

@@ -5,7 +5,7 @@
 	/**
 	 * ClubMSController
 	 */
-	class ClubMSController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
+	class ClubMSController extends ClubMSBaseController {
 		
 		/**
 		 * @var \Balumedien\Clubms\Domain\Repository\ClubRepository

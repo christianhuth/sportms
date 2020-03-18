@@ -5,7 +5,7 @@
 	/**
 	 * VenueController
 	 */
-	class VenueController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
+	class VenueController extends ClubMSBaseController {
 		
 		/**
 		 * @var \Balumedien\Clubms\Domain\Repository\VenueRepository

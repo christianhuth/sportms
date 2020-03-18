@@ -5,7 +5,7 @@
 	/**
 	 * GameController
 	 */
-	class GameController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
+	class GameController extends ClubMSBaseController {
 		
 		/**
 		 * @var \Balumedien\Clubms\Domain\Repository\GameRepository

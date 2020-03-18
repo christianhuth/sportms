@@ -5,7 +5,7 @@
 	/**
 	 * CompetitionSeasonController
 	 */
-	class CompetitionSeasonController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
+	class CompetitionSeasonController extends ClubMSBaseController {
 		
 		/**
 		 * @var \Balumedien\Clubms\Domain\Repository\CompetitionSeasonRepository

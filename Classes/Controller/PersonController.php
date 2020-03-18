@@ -5,7 +5,7 @@
 	/**
 	 * PersonController
 	 */
-	class PersonController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
+	class PersonController extends ClubMSBaseController {
 		
 		protected $model = 'person';
 		
