@@ -46,7 +46,7 @@
 		protected function mapRequestToSetting(string $request, array $setting, array $resultArray = array()): array {
 			\TYPO3\CMS\Core\Utility\DebugUtility::debug($setting, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			if(is_array($setting[1])) {
-				return $this->mapRequestToSetting($request, $setting[1], $resultArray);
+				return $this->mapRequestToSetting($request, array_pop(array_reverse($setting)), $resultArray);
 			} else {
 				\TYPO3\CMS\Core\Utility\DebugUtility::debug($setting, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			}
