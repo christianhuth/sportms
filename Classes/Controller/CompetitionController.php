@@ -39,7 +39,7 @@
 		 */
 		public function listAction() {
 			$this->initializeActions();
-			$competitions = $this->competitionRepository->findAll($this->getCompetitionsFilter(), $competitionTypesFilter, $this->getSectionsFilter(), $this->getSectionAgeGroupsFilter(), $this->getSectionAgeLevelsFilter());
+			$competitions = $this->competitionRepository->findAll($this->getCompetitionsFilter(), $this->getCompetitionTypesFilter(), $this->getSectionsFilter(), $this->getSectionAgeGroupsFilter(), $this->getSectionAgeLevelsFilter());
 			$this->view->assign('competitions', $competitions);
 		}
 		

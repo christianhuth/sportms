@@ -16,7 +16,6 @@
 			return $this->getFilter('competition', 'competitionTypes', $useSelected);
 		}
 		
-		
 		protected function getSeasonsFilter($useSelected = TRUE) {
 			return $this->getFilter('season', 'seasons', $useSelected);
 		}
