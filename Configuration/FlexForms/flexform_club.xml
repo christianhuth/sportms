@@ -46,7 +46,18 @@
                     <onChange>reload</onChange>
 				</TCEforms>
             </settings.club.showViews>
-            <settings.club.showNavigation>
+            <settings.club.showNavigation.enabled>
+                <TCEforms>
+                    <label>Navigation für Einzelansichten?</label>
+                    <displayCond>FIELD:base.switchableControllerActions:=:Club->show</displayCond>
+                    <config>
+                        <default>1</default>
+                        <renderType>checkboxToggle</renderType>
+                        <type>check</type>
+                    </config>
+                </TCEforms>
+            </settings.club.showNavigation.enabled>
+            <settings.club.showNavigation.views>
                 <TCEforms>
                     <label>Zeige folgende Navigationselemente</label>
                     <displayCond>FIELD:base.switchableControllerActions:=:Club->show</displayCond>
@@ -70,7 +81,7 @@
                     </config>
                     <onChange>reload</onChange>
                 </TCEforms>
-            </settings.club.showNavigation>
+            </settings.club.showNavigation.views>
             <settings.club.clubs>
                 <TCEforms>
                     <label>Welche Vereine sollen angezeigt werden?</label>
