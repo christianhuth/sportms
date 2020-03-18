@@ -9,6 +9,7 @@
 		}
 		
 		protected function getCompetitionsFilter($useSelected = TRUE) {
+			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->getFilter('competition', $useSelected), 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			return $this->getFilter('competition', $useSelected);
 		}
 		
@@ -33,10 +34,6 @@
 		}
 		
 		protected function getFilter($model, $useSelected) {
-			\TYPO3\CMS\Core\Utility\DebugUtility::debug($model, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
-			\TYPO3\CMS\Core\Utility\DebugUtility::debug($useSelected, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
-			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->settings[$model]['selected'], 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
-			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->settings[$model][$model . 's'], 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			return ($useSelected) ? $this->settings[$model]['selected'] : $this->settings[$model][$model . 's'];
 		}
 		
