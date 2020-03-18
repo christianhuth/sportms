@@ -45,8 +45,12 @@
 		
 		protected function mapRequestToSetting(string $requestValue, array &$positionInSettings, array &$settings): void {
 			
-			$firstMappingKey = array_key_first($positionInSettings);
-			\TYPO3\CMS\Core\Utility\DebugUtility::debug($firstMappingKey, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
+			$currentPositionByKey = array_key_first($positionInSettings);
+			if(array_key_exists($currentPositionByKey)) {
+				if(is_array($positionInSettings[$currentPositionByKey])) {
+					\TYPO3\CMS\Core\Utility\DebugUtility::debug($positionInSettings[$currentPositionByKey], 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
+				}
+			}
 			
 			
 			
