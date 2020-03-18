@@ -7,11 +7,32 @@
 	 */
 	class PersonController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
 		
+		protected $model = 'person';
+		
 		/**
 		 * @var \Balumedien\Clubms\Domain\Repository\PersonRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
 		protected $personRepository;
+		
+		/**
+		 * Initializes the controller before invoking an action method.
+		 * Use this method to solve tasks which all actions have in common.
+		 */
+		public function initializeAction() {
+			$this->mapRequestsToSettings();
+		}
+		
+		/**
+		 * Use this method to solve tasks which all actions have in common, when VIEW-Context is needed
+		 */
+		public function initializeActions() {
+			$listOfPossibleShowViews = 'index,officials,sections';
+			$this->determineShowView($this->model);
+			$this->determineShowViews($this->model, $listOfPossibleShowViews);
+			$this->determineShowNavigationViews($this->model, $listOfPossibleShowViews);
+			$this->view->assign('settings', $this->settings);
+		}
 		
 		/**
 		 * @return void
