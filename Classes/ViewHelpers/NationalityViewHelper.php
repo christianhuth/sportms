@@ -2,9 +2,7 @@
 	
 	namespace Balumedien\Clubms\ViewHelpers;
 	
-	# SOURCE: https://github.com/in2code-de/femanager/blob/develop/Classes/ViewHelpers/Form/GetCountriesFromStaticInfoTablesViewHelper.php
-	
-	class NationalityViewHelper {
+	class NationalityViewHelper extends \TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper {
 		
 		/**
 		 * countryRepository
