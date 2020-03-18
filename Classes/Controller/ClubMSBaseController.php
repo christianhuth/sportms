@@ -39,12 +39,13 @@
 			foreach($listOfMappings as $requestArgument => $mappingPath) {
 				if($this->request->hasArgument($requestArgument)) {
 					\TYPO3\CMS\Core\Utility\DebugUtility::debug($mappingPath, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
-					$this->mapRequestValueToSettingPath($this->request->getArgument($requestArgument), $mappingPath);
+					$mappedRequest = $this->mapRequestValueToSettingPath($this->request->getArgument($requestArgument), $mappingPath);
+					\TYPO3\CMS\Core\Utility\DebugUtility::debug($mappedRequest, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 				}
 			}
 		}
 		
-		protected function mapRequestValueToSettingPath(string $requestValue, string $mappingPath) {
+		protected function mapRequestValueToSettingPath(string $requestValue, string $mappingPath): array {
 			$positionOfPathSeperator = strpos($mappingPath, '.');
 			if($positionOfPathSeperator !== FALSE) {
 				$currentKey = substr($mappingPath, 0, $positionOfPathSeperator);
@@ -54,7 +55,6 @@
 				$currentKey = $mappingPath;
 				return array($currentKey => $requestValue);
 			}
-			\TYPO3\CMS\Core\Utility\DebugUtility::debug($mappedSettings, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 		}
 		
 		protected function mapRequestToSetting(string $requestValue, array &$positionInSettings, array &$settings) {
