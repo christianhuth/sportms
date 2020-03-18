@@ -42,7 +42,6 @@
 			$this->determineShowViews($this->model, $listOfPossibleShowViews);
 			$this->determineShowNavigationViews($this->model, $listOfPossibleShowViews);
 			$this->view->assign('settings', $this->settings);
-			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->settings, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 		}
 		
 		/**
