@@ -37,6 +37,8 @@
 				$flagPath = 'EXT:core/Resources/Public/Icons/Flags/' . $isoCodeA2 . '.png';
 				$this->arguments['src'] = $flagPath;
 				return parent::render();
+			} else {
+				return null;
 			}
 		}
 		
