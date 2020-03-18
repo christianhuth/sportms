@@ -47,7 +47,7 @@
 			
 			$currentPositionByKey = array_key_first($positionInSettings);
 			if(is_array($positionInSettings[$currentPositionByKey])) {
-				return $this->mapRequestToSetting($requestValue, $positionInSettings[$currentPositionByKey], $settings);
+				$this->mapRequestToSetting($requestValue, $positionInSettings[$currentPositionByKey], $settings);
 			} else {
 				$positionInSettings[$currentPositionByKey] = $requestValue;
 			}
