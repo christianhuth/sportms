@@ -30,12 +30,14 @@
 		 */
 		public function render(): string {
 			$nationality = $this->arguments['nationality'];
-			\TYPO3\CMS\Core\Utility\DebugUtility::debug($nationality, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
-			$country = $this->countryRepository->findByUid($nationality);
-			$isoCodeA2 = $country->getIsoCodeA2();
-			$flagPath = 'EXT:core/Resources/Public/Icons/Flags/' . $isoCodeA2 . '.png';
-			$this->arguments['src'] = $flagPath;
-			return parent::render();
+			if($nationality) {
+				\TYPO3\CMS\Core\Utility\DebugUtility::debug($nationality, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
+				$country = $this->countryRepository->findByUid($nationality);
+				$isoCodeA2 = $country->getIsoCodeA2();
+				$flagPath = 'EXT:core/Resources/Public/Icons/Flags/' . $isoCodeA2 . '.png';
+				$this->arguments['src'] = $flagPath;
+				return parent::render();
+			}
 		}
 		
 		
