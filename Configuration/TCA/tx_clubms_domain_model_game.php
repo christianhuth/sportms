@@ -1010,6 +1010,7 @@ return array(
             'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.detail_link',
             'config' => array(
                 'default' => '1',
+                'renderType' => 'checkboxToggle',
                 'type' => 'check',
             ),
         ),
