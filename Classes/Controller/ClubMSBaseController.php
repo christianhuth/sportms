@@ -38,7 +38,7 @@
 			$listOfMappings['showView'] = 'club.showView.current';
 			foreach($listOfMappings as $requestArgument => $mappingPath) {
 				if($this->request->hasArgument($requestArgument)) {
-					$this->mapRequestArgumentToSettingPath($this->request->getArgument($requestArgument), $mappingPath);
+					$this->mapRequestValueToSettingPath($this->request->getArgument($requestArgument), $mappingPath);
 				}
 			}
 		}
