@@ -43,7 +43,6 @@
                             </numIndex>
                         </items>
                     </config>
-                    <onChange>reload</onChange>
                 </TCEforms>
             </settings.club.showViews>
             <settings.club.showNavigation.enabled>
