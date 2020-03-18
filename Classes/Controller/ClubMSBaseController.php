@@ -5,36 +5,35 @@
 	class ClubMSBaseController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
 		
 		protected function getClubsFilter($useSelected = TRUE) {
-			return $this->getFilter('club', $useSelected);
+			return $this->getFilter('club', 'clubs', $useSelected);
 		}
 		
 		protected function getCompetitionsFilter($useSelected = TRUE) {
-			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->getFilter('competition', $useSelected), 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
-			return $this->getFilter('competition', $useSelected);
+			return $this->getFilter('competition', 'competitions', $useSelected);
 		}
 		
-		protected function getSeasonsFilter() {
-			return $this->settings['season']['seasons'];
+		protected function getSeasonsFilter($useSelected = TRUE) {
+			return $this->getFilter('season', 'seasons', $useSelected);
 		}
 		
-		protected function getSectionsFilter() {
-			return $this->settings['section']['sections'];
+		protected function getSectionsFilter($useSelected = TRUE) {
+			return $this->getFilter('section', 'sections' $useSelected);
 		}
 		
-		protected function getSectionAgeGroupsFilter() {
-			return $this->settings['section']['sectionAgeGroups'];
+		protected function getSectionAgeGroupsFilter($useSelected = TRUE) {
+			return $this->getFilter('section', 'sectionAgeGroups', $useSelected);
 		}
 		
-		protected function getSectionAgeLevelsFilter() {
-			return $this->settings['section']['sectionAgeLevels'];
+		protected function getSectionAgeLevelsFilter($useSelected = TRUE) {
+			return $this->getFilter('section', 'sectionAgeLevels', $useSelected);
 		}
 		
-		protected function getTeamsFilter() {
-			return $this->settings['team']['teams'];
+		protected function getTeamsFilter($useSelected = TRUE) {
+			return $this->getFilter('team', 'teams', $useSelected);
 		}
 		
-		protected function getFilter($model, $useSelected) {
-			return ($useSelected && ($this->settings[$model]['selected'])) ? $this->settings[$model]['selected']: $this->settings[$model][$model . 's'];
+		protected function getFilter($key1, $key2, $useSelected) {
+			return ($useSelected && ($this->settings[$key1]['selected'])) ? $this->settings[$key1]['selected']: $this->settings[$key1][$key2];
 		}
 		
 		protected function mapRequestsToSettings(): void {
