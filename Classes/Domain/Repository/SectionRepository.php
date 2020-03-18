@@ -9,6 +9,18 @@
 			'label' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING
 		);
 		
+		public function findAll($sectionsFilter = null) {
+			$query = $this->createQuery();
+			$constraints = [];
+			if($sectionsFilter) {
+				$constraints[] = $query->in('uid', explode(',', $sectionsFilter));
+			}
+			if($constraints) {
+				$query->matching($query->logicalAnd($constraints));
+			}
+			return $query->execute();
+		}
+		
 	}
 	
 ?>
