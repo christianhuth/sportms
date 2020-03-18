@@ -85,7 +85,6 @@
                             </numIndex>
                         </items>
                     </config>
-                    <onChange>reload</onChange>
                 </TCEforms>
             </settings.club.showNavigation.views>
             <settings.club.clubs>
