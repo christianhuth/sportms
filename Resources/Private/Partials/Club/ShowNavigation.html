@@ -2,16 +2,18 @@
       xmlns:clubms="Balumedien\Clubms\ViewHelpers"
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
-<ul>
-    <f:if condition="{settings.club.showNavigation.index}">
-        <li><clubms:link.action Club="{club}" Show="index">Index</clubms:link.action></li>
-    </f:if>
-    <f:if condition="{settings.club.showNavigation.officials}">
-        <li><clubms:link.action Club="{club}" Show="officials">Officials</clubms:link.action></li>
-    </f:if>
-    <f:if condition="{settings.club.showNavigation.sections}">
-        <li><clubms:link.action Club="{club}" Show="sections">Sections</clubms:link.action></li>
-    </f:if>
-</ul>
+<f:if condition="{settings.club.showNavigation.enabled}">
+    <ul>
+        <f:if condition="{settings.club.showNavigation.index}">
+            <li><clubms:link.action Club="{club}" Show="index">Index</clubms:link.action></li>
+        </f:if>
+        <f:if condition="{settings.club.showNavigation.officials}">
+            <li><clubms:link.action Club="{club}" Show="officials">Officials</clubms:link.action></li>
+        </f:if>
+        <f:if condition="{settings.club.showNavigation.sections}">
+            <li><clubms:link.action Club="{club}" Show="sections">Sections</clubms:link.action></li>
+        </f:if>
+    </ul>
+</f:if>
 
 </html>
