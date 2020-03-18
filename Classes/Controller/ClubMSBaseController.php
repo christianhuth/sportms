@@ -34,7 +34,7 @@
 		
 		protected function mergeRequestsWithSettings(): void {
 			$listOfMappings = array();
-			$listOfMappings[] = ['selectClub', array(['club']['selected'])];
+			$listOfMappings[] = ['selectClub', array('club'=>array('selected'))];
 			$listOfMappings[] = ['showView', ['club']['showView']['current']];
 			foreach($listOfMappings as $mapping) {
 				\TYPO3\CMS\Core\Utility\DebugUtility::debug($mapping, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
@@ -46,6 +46,37 @@
 				#	$this->mergeRequestWithSetting($mapping[0], $mapping[1]);
 				#}
 			}
+		}
+		
+		/*
+		* Inserts a new key/value after the key in the array.
+		*
+		* @param $key
+		*   The key to insert after.
+		* @param $array
+		*   An array to insert in to.
+		* @param $new_key
+		*   The key to insert.
+		* @param $new_value
+		*   An value to insert.
+		*
+		* @return
+		*   The new array if the key exists, FALSE otherwise.
+		*
+		* @see array_insert_before()
+		*/
+		function array_insert_after($key, array &$array, $new_key, $new_value) {
+			if (array_key_exists($key, $array)) {
+				$new = array();
+				foreach ($array as $k => $value) {
+					$new[$k] = $value;
+					if ($k === $key) {
+						$new[$new_key] = $new_value;
+					}
+				}
+				return $new;
+			}
+			return FALSE;
 		}
 		
 		protected function mergeRequestWithSetting(string $request, array $setting, array $resultArray = array()) {
