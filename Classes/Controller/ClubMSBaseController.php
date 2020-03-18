@@ -40,6 +40,7 @@
 			/* ShowView */
 			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->request, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			if($this->request->hasArgument('controllerName')) {
+				\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->request, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 				$model = strtolower($this->request->getArgument('controllerName'));
 				\TYPO3\CMS\Core\Utility\DebugUtility::debug($model, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 				if($this->request->hasArgument('showView')) {
