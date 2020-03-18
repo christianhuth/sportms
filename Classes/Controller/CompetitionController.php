@@ -40,7 +40,6 @@
 		public function listAction() {
 			$this->initializeActions();
 			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->settings, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
-			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->getCompetitionsFilter(), 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			$competitionTypesFilter = $this->settings['competition']['competitionTypes'];
 			$sectionsFilter = $this->settings['section']['sections'];
 			$sectionAgeGroupsFilter = $this->settings['section']['sectionAgeGroups'];
