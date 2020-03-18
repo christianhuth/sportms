@@ -43,7 +43,7 @@
 			}
 		}
 		
-		protected function mapRequestArgumentToSettingPath(string $requestArgument, string $mappingPath): array {
+		protected function mapRequestArgumentToSettingPath(string $requestArgument, string $mappingPath) {
 			$positionOfPathSeperator = strpos($mappingPath, '.');
 			\TYPO3\CMS\Core\Utility\DebugUtility::debug($positionOfPathSeperator, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			if($positionOfPathSeperator !== FALSE) {
