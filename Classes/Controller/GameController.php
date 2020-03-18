@@ -16,19 +16,30 @@
 		protected $gameRepository;
 		
 		/**
+		 * Initializes the controller before invoking an action method.
+		 * Use this method to solve tasks which all actions have in common.
+		 */
+		public function initializeAction() {
+			$this->mapRequestsToSettings();
+		}
+		
+		/**
+		 * Use this method to solve tasks which all actions have in common, when VIEW-Context is needed
+		 */
+		public function initializeActions() {
+			$listOfPossibleShowViews = 'index,history,report,stats,ticket';
+			$this->determineShowView($this->model);
+			$this->determineShowViews($this->model, $listOfPossibleShowViews);
+			$this->determineShowNavigationViews($this->model, $listOfPossibleShowViews);
+			$this->view->assign('settings', $this->settings);
+		}
+		
+		/**
 		 * @return void
 		 */
 		public function listAction() {
-			$sectionsFilter = $this->settings['section']['sections'];
-			$sectionAgeGroupsFilter = $this->settings['section']['sectionAgeGroups'];
-			$sectionAgeLevelsFilter = $this->settings['section']['sectionAgeLevels'];
-			$competitionsFilter = $this->settings['competition']['competitions'];
-			$competitionTypesFilter = $this->settings['competition']['competitionTypes'];
-			$seasonsFilter = $this->settings['season']['seasons'];
-			$competitionSeasonGamedaysFilter = $this->settings['competitionseason']['competitionSeasonGameDays'];
-			$clubsFilter = $this->settings['club']['clubs'];
-			$teamsFilter = $this->settings['team']['teams'];
-			$games = $this->gameRepository->findAll($sectionsFilter, $sectionAgeGroupsFilter, $sectionAgeLevelsFilter, $competitionsFilter, $competitionTypesFilter, $seasonsFilter, $competitionSeasonGamedaysFilter, $clubsFilter, $teamsFilter);
+			$this->initializeActions();
+			$games = $this->gameRepository->findAll($this->getSeasonsFilter(), $this->getSectionAgeGroupsFilter(), $this->getSectionAgeLevelsFilter(), $this->getCompetitionsFilter(), $this->getCompetitionTypesFilter(), $this->getSeasonsFilter(), $this->getCompetitionSeasonGamedaysFilter(), $this->getClubsFilter(), $this->getTeamsFilter());
 			$this->view->assign('games', $games);
 		}
 		
@@ -36,6 +47,7 @@
 		 * @param \Balumedien\Clubms\Domain\Model\Game $game
 		 */
 		public function showAction(\Balumedien\Clubms\Domain\Model\Game $game = NULL) {
+			$this->initializeActions();
 			$this->view->assign('game', $game);
 		}
 		
