@@ -51,7 +51,7 @@
 				$newMappingPath = substr($mappingPath, $positionOfPathSeperator + 1);
 				\TYPO3\CMS\Core\Utility\DebugUtility::debug($currentKey, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 				\TYPO3\CMS\Core\Utility\DebugUtility::debug($newMappingPath, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
-				$mappedSettings = array($currentKey => $this->mapRequestArgumentToSettingPath($requestValue, $newMappingPath));
+				$mappedSettings = array($currentKey => $this->mapRequestValueToSettingPath($requestValue, $newMappingPath));
 				\TYPO3\CMS\Core\Utility\DebugUtility::debug($mappedSettings, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			} else {
 				$currentKey = $mappingPath;
