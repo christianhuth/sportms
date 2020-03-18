@@ -33,17 +33,17 @@
 		}
 		
 		protected function mapRequestsToSettings(): void {
-			
-			/* Club */
+			/* selectClub */
 			if($this->request->hasArgument('selectClub')) {
 				$this->settings['club']['selected'] = $this->request->getArgument('selectClub');
 			}
-			if($this->request->hasArgument('showView')) {
-				\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->request, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
-				$listOfMappings = array();
-				$listOfMappings['showView'] = 'club.showView.current';
+			/* ShowView */
+			if($this->request->hasArgument('controllerName')) {
+				$model = strtolower($this->request->getArgument('controllerName'));
+				if($this->request->hasArgument('showView')) {
+					$this->settings[$model]['showView']['current'] = $this->request->getArgument('showView');
+				}
 			}
-			
 		}
 		
 		protected function determineShowViews($model, $listOfPossibleShowViews): void {
