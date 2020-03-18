@@ -55,13 +55,12 @@
 			$this->view->assign('clubSections', $clubSections);
 			/* FRONTEND FILTERS */
 			if($this->settings['club']['clubsSelectbox'] || $this->settings['section']['sectionsSelectbox']) {
-				$clubSectionUids = $this->clubSectionRepository->findAll($this->getClubsFilter(), $this->getSectionsFilter());
 				if($this->settings['club']['clubsSelectbox']) {
-					$clubsSelectbox = $this->clubRepository->findAllByClubSections($clubSectionUids);
+					$clubsSelectbox = $this->clubRepository->findAllByClubSections($clubSections);
 					$this->view->assign('clubsSelectbox', $clubsSelectbox);
 				}
 				if($this->settings['section']['sectionsSelectbox']) {
-					$sectionsSelectbox = $this->sectionRepository->findAllByClubSectionUids($clubSectionUids);
+					$sectionsSelectbox = $this->sectionRepository->findAllByClubSections($clubSections);
 					$this->view->assign('sectionsSelectbox', $sectionsSelectbox);
 				}
 			}
