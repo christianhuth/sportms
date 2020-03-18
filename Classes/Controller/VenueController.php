@@ -7,6 +7,8 @@
 	 */
 	class VenueController extends ClubMSBaseController {
 		
+		protected $model = 'venue';
+		
 		/**
 		 * @var \Balumedien\Clubms\Domain\Repository\VenueRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject

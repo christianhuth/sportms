@@ -7,6 +7,8 @@
 	 */
 	class TeamSeasonController extends ClubMSBaseController {
 		
+		protected $model = 'teamSeason';
+		
 		/**
 		 * @var \Balumedien\Clubms\Domain\Repository\TeamSeasonRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject

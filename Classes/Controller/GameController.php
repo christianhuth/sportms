@@ -7,6 +7,8 @@
 	 */
 	class GameController extends ClubMSBaseController {
 		
+		protected $model = 'game';
+		
 		/**
 		 * @var \Balumedien\Clubms\Domain\Repository\GameRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject

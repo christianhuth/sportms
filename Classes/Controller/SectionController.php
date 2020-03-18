@@ -7,6 +7,8 @@
 	 */
 	class SectionController extends ClubMSBaseController {
 		
+		protected $model = 'section';
+		
 		/**
 		 * @var \Balumedien\Clubms\Domain\Repository\SectionRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject

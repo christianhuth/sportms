@@ -7,6 +7,8 @@
 	 */
 	class TeamController extends ClubMSBaseController {
 		
+		protected $model = 'team';
+		
 		/**
 		 * @var \Balumedien\Clubms\Domain\Repository\TeamRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
