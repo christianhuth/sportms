@@ -2,7 +2,7 @@
 	
 	namespace Balumedien\Clubms\ViewHelpers;
 	
-	class NationalityViewHelper extends \TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper {
+	class NationalityViewHelper extends \TYPO3\CMS\Fluid\ViewHelpers\ImageViewHelper {
 		
 		/**
 		 * countryRepository
@@ -19,19 +19,22 @@
 		 */
 		public function initializeArguments() {
 			parent::initializeArguments();
-			$this->registerArgument('key', 'string', 'static_info_table country uid', FALSE, 'isoCodeA3');
+			$this->registerArgument('nationality', 'string', 'static_info_table country uid', FALSE, 'isoCodeA3');
 		}
 		
 		/**
 		 * Build an country array
 		 *
 		 * @param string $sorting
-		 * @return array
+		 * @return string
 		 */
-		public function render() {
+		public function render(): string {
 			$key = $this->arguments['key'];
 			$country = $this->countryRepository->findByUid($key);
-			return $country;
+			$isoCodeA2 = $country->getIsoCodeA2();
+			$flagPath = 'EXT:core/Resources/Public/Icons/Flags/' . $isoCodeA2 . '.png';
+			$this->arguments['src'] = $flagPath;
+			return parent::render();
 		}
 		
 		
