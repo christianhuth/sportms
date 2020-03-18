@@ -47,8 +47,8 @@
 			$positionOfPathSeperator = strpos($mappingPath, '.');
 			\TYPO3\CMS\Core\Utility\DebugUtility::debug($positionOfPathSeperator, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			if($positionOfPathSeperator !== FALSE) {
-				$currentKey = substr($mappingPath, 0, $positionOfPathSeperator - 1);
-				$newMappingPath = substr($mappingPath, $positionOfPathSeperator);
+				$currentKey = substr($mappingPath, 0, $positionOfPathSeperator);
+				$newMappingPath = substr($mappingPath, $positionOfPathSeperator + 1);
 				\TYPO3\CMS\Core\Utility\DebugUtility::debug($currentKey, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 				\TYPO3\CMS\Core\Utility\DebugUtility::debug($newMappingPath, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 				$mappedSettings = array($currentKey => $this->mapRequestArgumentToSettingPath());
