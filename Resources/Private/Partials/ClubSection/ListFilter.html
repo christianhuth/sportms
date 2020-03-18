@@ -1,0 +1,20 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:clubms="Balumedien\Clubms\ViewHelpers"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<f:if condition="{settings.club.clubsSelectbox}">
+    <div class="tx-clubms-list-filter">
+        <f:form action="list" extensionName="clubms" method="POST" noCache="TRUE" noCacheHash="TRUE" pluginName="clubms">
+            <div class="form-row">
+                <div class="col-xs-10">
+                    <f:render arguments="{options: clubsSelectbox, value: settings.club.selected}" partial="Select/Club"/>
+                </div>
+                <div class="col-xs-2">
+                    <f:form.submit class="btn btn-primary" value="Los"/>
+                </div>
+            </div>
+        </f:form>
+    </div>
+</f:if>
+
+</html>
