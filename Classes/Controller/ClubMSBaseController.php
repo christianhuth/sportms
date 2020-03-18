@@ -11,7 +11,7 @@
 		protected function getSeasonsFilter() {
 			return $this->settings['season']['seasons'];
 		}
-	
+		
 		protected function getSectionsFilter() {
 			return $this->settings['section']['sections'];
 		}
@@ -33,28 +33,17 @@
 		}
 		
 		protected function mapRequestsToSettings(): void {
-			$listOfMappings = array();
-			$listOfMappings['selectClub'] = 'club.selected';
-			$listOfMappings['showView'] = 'club.showView.current';
-			foreach($listOfMappings as $requestArgument => $mappingPath) {
-				if($this->request->hasArgument($requestArgument)) {
-					$mappedRequest = $this->mapRequestValueToSettingPath($this->request->getArgument($requestArgument), $mappingPath);
-					#$this->settings['club']['showView']['current'] = $this->request->getArgument('showView');
-					$this->settings = array_merge_recursive($this->settings, $mappedRequest);
-				}
+			
+			/* Club */
+			if($this->request->hasArgument('selectClub')) {
+				$this->settings['club']['selected'] = $this->request->getArgument('selectClub');
 			}
-		}
-		
-		protected function mapRequestValueToSettingPath(string $requestValue, string $mappingPath): array {
-			$positionOfPathSeperator = strpos($mappingPath, '.');
-			if($positionOfPathSeperator !== FALSE) {
-				$currentKey = substr($mappingPath, 0, $positionOfPathSeperator);
-				$newMappingPath = substr($mappingPath, $positionOfPathSeperator + 1);
-				return array($currentKey => $this->mapRequestValueToSettingPath($requestValue, $newMappingPath));
-			} else {
-				$currentKey = $mappingPath;
-				return array($currentKey => $requestValue);
+			if($this->request->hasArgument('showView')) {
+				\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->request, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
+				$listOfMappings = array();
+				$listOfMappings['showView'] = 'club.showView.current';
 			}
+			
 		}
 		
 		protected function determineShowViews($model, $listOfPossibleShowViews): void {
