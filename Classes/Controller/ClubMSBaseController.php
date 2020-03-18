@@ -55,7 +55,7 @@
 				\TYPO3\CMS\Core\Utility\DebugUtility::debug($mappedSettings, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			} else {
 				$currentKey = $mappingPath;
-				array($currentKey => $requestValue);
+				return array($currentKey => $requestValue);
 			}
 		
 		}
