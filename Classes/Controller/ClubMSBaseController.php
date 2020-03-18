@@ -44,15 +44,11 @@
 		}
 		
 		protected function mapRequestToSetting(string $request, array $setting, array $resultArray = array()): array {
-			\TYPO3\CMS\Core\Utility\DebugUtility::debug(array_pop(array_reverse($setting)), 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
-			array_push($resultArray, array_pop(array_reverse($setting)));
-			\TYPO3\CMS\Core\Utility\DebugUtility::debug($setting[0], 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
-			\TYPO3\CMS\Core\Utility\DebugUtility::debug($resultArray, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
+			\TYPO3\CMS\Core\Utility\DebugUtility::debug($setting, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			if(is_array($setting[1])) {
 				return $this->mapRequestToSetting($request, $setting[1], $resultArray);
-			} else if($this->request->hasArgument($request)) {
-				#$this->settings[$position][$setting[1]] = $this->request->getArgument($request);
-				return array();
+			} else {
+				\TYPO3\CMS\Core\Utility\DebugUtility::debug($setting, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			}
 		}
 		
