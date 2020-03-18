@@ -4,13 +4,13 @@
 		<base>EXT:clubms/Configuration/FlexForms/flexform_base.xml</base>
 		<club>EXT:clubms/Configuration/FlexForms/flexform_club.xml</club>
 		<clubofficial>EXT:clubms/Configuration/FlexForms/flexform_clubofficial.xml</clubofficial>
-		<clubsection>EXT:clubms/Configuration/FlexForms/flexform_clubsection.xml</clubsection>
+		<clubSection>EXT:clubms/Configuration/FlexForms/flexform_clubsection.xml</clubSection>
 		<competition>EXT:clubms/Configuration/FlexForms/flexform_competition.xml</competition>
-		<competitionseason>EXT:clubms/Configuration/FlexForms/flexform_competitionseason.xml</competitionseason>
+		<competitionSeason>EXT:clubms/Configuration/FlexForms/flexform_competitionseason.xml</competitionSeason>
 		<game>EXT:clubms/Configuration/FlexForms/flexform_game.xml</game>
 		<section>EXT:clubms/Configuration/FlexForms/flexform_section.xml</section>
 		<team>EXT:clubms/Configuration/FlexForms/flexform_team.xml</team>
-		<teamseason>EXT:clubms/Configuration/FlexForms/flexform_teamseason.xml</teamseason>
+		<teamSeason>EXT:clubms/Configuration/FlexForms/flexform_teamseason.xml</teamSeason>
 		<venue>EXT:clubms/Configuration/FlexForms/flexform_venue.xml</venue>
 		<season>EXT:clubms/Configuration/FlexForms/flexform_season.xml</season>
 	</sheets>

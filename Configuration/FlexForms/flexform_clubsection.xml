@@ -63,7 +63,7 @@
 					<displayCond>
 						<AND>
 							<numIndex index="0">FIELD:base.switchableControllerActions:=:ClubSection->show</numIndex>
-							<numIndex index="1">FIELD:clubsection.settings.clubsection.showNavigation.enabled:REQ:TRUE</numIndex>
+							<numIndex index="1">FIELD:clubSection.settings.clubSection.showNavigation.enabled:REQ:TRUE</numIndex>
 						</AND>
 					</displayCond>
 					<config>
