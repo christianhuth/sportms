@@ -21,13 +21,13 @@
 					</config>
 				</TCEforms>
 			</settings.game.uid>
-			<settings.game.showView>
+			<settings.game.showViews>
 				<TCEforms>
-					<label>Gezeigte Einzelansicht</label>
+					<label>Erlaube folgende Einzelansichten</label>
 					<displayCond>FIELD:base.switchableControllerActions:=:Game->show</displayCond>
 					<config>
 						<type>select</type>
-						<renderType>selectSingle</renderType>
+						<renderType>selectMultipleSideBySide</renderType>
 						<items type="array">
 							<numIndex index="0">
 								<numIndex index="0">Index</numIndex>
@@ -51,9 +51,57 @@
 							</numIndex>
 						</items>
 					</config>
+				</TCEforms>
+			</settings.game.showViews>
+			<settings.game.showNavigation.enabled>
+				<TCEforms>
+					<label>Navigation für Einzelansichten?</label>
+					<displayCond>FIELD:base.switchableControllerActions:=:Game->show</displayCond>
+					<config>
+						<default>1</default>
+						<renderType>checkboxToggle</renderType>
+						<type>check</type>
+					</config>
 					<onChange>reload</onChange>
 				</TCEforms>
-			</settings.game.showView>
+			</settings.game.showNavigation.enabled>
+			<settings.game.showNavigation.views>
+				<TCEforms>
+					<label>Zeige folgende Navigationselemente</label>
+					<displayCond>
+						<AND>
+							<numIndex index="0">FIELD:base.switchableControllerActions:=:Game->show</numIndex>
+							<numIndex index="1">FIELD:game.settings.game.showNavigation.enabled:REQ:TRUE</numIndex>
+						</AND>
+					</displayCond>
+					<config>
+						<type>select</type>
+						<renderType>selectMultipleSideBySide</renderType>
+						<items type="array">
+							<numIndex index="0">
+								<numIndex index="0">Index</numIndex>
+								<numIndex index="1">index</numIndex>
+							</numIndex>
+							<numIndex index="2">
+								<numIndex index="0">History</numIndex>
+								<numIndex index="1">history</numIndex>
+							</numIndex>
+							<numIndex index="3">
+								<numIndex index="0">Report</numIndex>
+								<numIndex index="1">report</numIndex>
+							</numIndex>
+							<numIndex index="4">
+								<numIndex index="0">Stats</numIndex>
+								<numIndex index="1">stats</numIndex>
+							</numIndex>
+							<numIndex index="5">
+								<numIndex index="0">Ticker</numIndex>
+								<numIndex index="1">Ticker</numIndex>
+							</numIndex>
+						</items>
+					</config>
+				</TCEforms>
+			</settings.game.showNavigation.views>
 		</el>
 	</ROOT>
 </T3DataStructure>
