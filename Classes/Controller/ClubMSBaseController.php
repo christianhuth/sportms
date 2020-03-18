@@ -38,6 +38,7 @@
 			$listOfMappings['showView'] = 'club.showView.current';
 			foreach($listOfMappings as $requestArgument => $mappingPath) {
 				if($this->request->hasArgument($requestArgument)) {
+					\TYPO3\CMS\Core\Utility\DebugUtility::debug($mappingPath, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 					$this->mapRequestValueToSettingPath($this->request->getArgument($requestArgument), $mappingPath);
 				}
 			}
@@ -54,7 +55,6 @@
 				return array($currentKey => $requestValue);
 			}
 			\TYPO3\CMS\Core\Utility\DebugUtility::debug($mappedSettings, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
-		
 		}
 		
 		protected function mapRequestToSetting(string $requestValue, array &$positionInSettings, array &$settings) {
