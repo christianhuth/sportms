@@ -10,6 +10,7 @@
                         <f:render arguments="{options: clubsSelectbox, value: settings.club.selected}" partial="Select/Club"/>
                     </div>
                 </f:if>
+                <f:debug>{sectionsSelectbox}</f:debug>
                 <f:if condition="{settings.section.sectionsSelectbox}">
                     <div class="col-xs-12">
                         <f:render arguments="{options: sectionsSelectbox, value: settings.section.selected}" partial="Select/Section"/>
