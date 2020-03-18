@@ -40,6 +40,7 @@
 			$this->determineShowView($this->model);
 			$this->determineShowViews($this->model, 'index,officials,sections');
 			$this->view->assign('settings', $this->settings);
+			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->settings, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 		}
 		
 		/**
