@@ -6,21 +6,6 @@
 		</TCEforms>
 		<type>array</type>
 		<el>
-			<settings.teamseason.uid>
-				<TCEforms>
-					<label>Zeige folgende Mannschaftsinstanz</label>
-					<displayCond>FIELD:base.switchableControllerActions:=:TeamSeason->show</displayCond>
-					<config>
-						<type>group</type>
-						<internal_type>db</internal_type>
-						<allowed>tx_clubms_domain_model_teamseason</allowed>
-						<size>1</size>
-						<maxItems>1</maxItems>
-						<minItems>0</minItems>
-						<show_thumbs>1</show_thumbs>
-					</config>
-				</TCEforms>
-			</settings.teamseason.uid>
 			<settings.teamseason.showView>
 				<TCEforms>
 					<label>Gezeigte Einzelansicht</label>

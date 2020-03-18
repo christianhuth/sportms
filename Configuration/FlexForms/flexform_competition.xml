@@ -9,7 +9,12 @@
 			<settings.competition.uid>
 				<TCEforms>
 					<label>Zeige folgenden Wettbewerb</label>
-					<displayCond>FIELD:base.switchableControllerActions:=:Competition->show</displayCond>
+					<displayCond>
+						<OR>
+							<numIndex index="1">FIELD:base.switchableControllerActions:=:Competition->show</numIndex>
+							<numIndex index="2">FIELD:base.switchableControllerActions:=:CompetitionSeason->show</numIndex>
+						</OR>
+					</displayCond>
 					<config>
 						<type>group</type>
 						<internal_type>db</internal_type>

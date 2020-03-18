@@ -6,21 +6,6 @@
 		</TCEforms>
 		<type>array</type>
 		<el>
-			<settings.competitionseason.uid>
-				<TCEforms>
-					<label>Zeige folgende Wettbewerbsinstanz</label>
-					<displayCond>FIELD:base.switchableControllerActions:=:CompetitionSeason->show</displayCond>
-					<config>
-						<type>group</type>
-						<internal_type>db</internal_type>
-						<allowed>tx_clubms_domain_model_competitionseason</allowed>
-						<size>1</size>
-						<maxItems>1</maxItems>
-						<minItems>0</minItems>
-						<show_thumbs>1</show_thumbs>
-					</config>
-				</TCEforms>
-			</settings.competitionseason.uid>
 			<settings.competitionseason.showView>
 				<TCEforms>
 					<label>Gezeigte Einzelansicht</label>

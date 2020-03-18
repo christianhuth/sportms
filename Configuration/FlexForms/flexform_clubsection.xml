@@ -6,21 +6,6 @@
 		</TCEforms>
 		<type>array</type>
 		<el>
-			<settings.clubSection.uid>
-				<TCEforms>
-					<label>Zeige folgende Vereinsabteilung</label>
-					<displayCond>FIELD:base.switchableControllerActions:=:ClubSection->show</displayCond>
-					<config>
-						<type>group</type>
-						<internal_type>db</internal_type>
-						<allowed>tx_clubms_domain_model_clubsection</allowed>
-						<size>1</size>
-						<maxItems>1</maxItems>
-						<minItems>0</minItems>
-						<show_thumbs>1</show_thumbs>
-					</config>
-				</TCEforms>
-			</settings.clubSection.uid>
 			<settings.clubSection.showViews>
 				<TCEforms>
 					<label>Erlaube folgende Einzelansichten</label>
