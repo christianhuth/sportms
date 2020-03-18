@@ -55,7 +55,7 @@
 			$this->view->assign('clubSections', $clubSections);
 			/* FRONTEND FILTERS */
 			if($this->settings['club']['clubsSelectbox'] || $this->settings['section']['sectionsSelectbox']) {
-				$clubSections = $this->clubRepository->findAll($this->getClubsFilter(FALSE));
+				$clubSections = $this->clubSectionRepository->findAll($this->getClubsFilter(FALSE), $this->getSectionsFilter(FALSE));
 				if($this->settings['club']['clubsSelectbox']) {
 					$clubsSelectbox = $this->clubRepository->findAllByClubSections($clubSections);
 					$this->view->assign('clubsSelectbox', $clubsSelectbox);
