@@ -51,6 +51,7 @@
 				return $this->mapRequestToSetting($request, $setting[1], $resultArray);
 			} else if($this->request->hasArgument($request)) {
 				#$this->settings[$position][$setting[1]] = $this->request->getArgument($request);
+				return array();
 			}
 		}
 		
