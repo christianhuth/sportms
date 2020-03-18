@@ -5,9 +5,11 @@
     <div class="tx-clubms-list-filter">
         <f:form action="list" controller="Club" extensionName="clubms" method="POST" noCache="TRUE" noCacheHash="TRUE" pageUid="{settings.club.listPid}" pluginName="clubms">
             <div class="form-row">
-                <div class="col">
+                <div class="col-xs-10">
                     <f:render arguments="{options: clubsSelectbox, value: settings.club.selected}" partial="Select/Club"/>
-                    <f:form.submit value="Los"/>
+                </div>
+                <div class="col-xs-2">
+                    <f:form.submit class="btn btn-primary" value="Los"/>
                 </div>
             </div>
         </f:form>
