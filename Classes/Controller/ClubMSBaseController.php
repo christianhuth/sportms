@@ -38,14 +38,14 @@
 			$listOfMappings[] = ['showView', array('club' => array('showView' => array('current'=>'')))];
 			foreach($listOfMappings as $mapping) {
 				if($this->request->hasArgument($mapping[0])) {
-					\TYPO3\CMS\Core\Utility\DebugUtility::debug($mapping[1], 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 					$mappedRequest = $this->mapRequestToSetting($mapping[0], $mapping[1]);
 				}
 			}
 		}
 		
 		protected function mapRequestToSetting(string $request, array $setting, array $resultArray = array()): array {
-			array_push($resultArray, $setting[0]);
+			\TYPO3\CMS\Core\Utility\DebugUtility::debug(array_pop(array_reverse($setting)), 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
+			array_push($resultArray, array_pop(array_reverse($setting));
 			\TYPO3\CMS\Core\Utility\DebugUtility::debug($setting[0], 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			\TYPO3\CMS\Core\Utility\DebugUtility::debug($resultArray, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			if(is_array($setting[1])) {
