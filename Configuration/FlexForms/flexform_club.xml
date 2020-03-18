@@ -62,7 +62,7 @@
                     <label>Zeige folgende Navigationselemente</label>
                     <displayCond>
                         <AND>
-                            <numIndex index="1">FIELD:base.switchableControllerActions:=:Club->show</numIndex>
+                            <numIndex index="0">FIELD:base.switchableControllerActions:=:Club->show</numIndex>
                             <numIndex index="1">FIELD:club.settings.club.showNavigation.enabled:REQ:TRUE</numIndex>
                         </AND>
                     </displayCond>

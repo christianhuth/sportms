@@ -3,6 +3,7 @@
 	<ROOT>
 		<TCEforms>
 			<sheetTitle>Vereinsabteilung</sheetTitle>
+		</TCEforms>
 		<type>array</type>
 		<el>
 			<settings.clubSection.uid>
@@ -20,7 +21,7 @@
 					</config>
 				</TCEforms>
 			</settings.clubSection.uid>
-			<settings.club.showViews>
+			<settings.clubSection.showViews>
 				<TCEforms>
 					<label>Erlaube folgende Einzelansichten</label>
 					<displayCond>FIELD:base.switchableControllerActions:=:ClubSection->show</displayCond>
@@ -43,8 +44,8 @@
 						</items>
 					</config>
 				</TCEforms>
-			</settings.club.showViews>
-			<settings.clubsection.showNavigation.enabled>
+			</settings.clubSection.showViews>
+			<settings.clubSection.showNavigation.enabled>
 				<TCEforms>
 					<label>Navigation für Einzelansichten?</label>
 					<displayCond>FIELD:base.switchableControllerActions:=:ClubSection->show</displayCond>
@@ -55,13 +56,13 @@
 					</config>
 					<onChange>reload</onChange>
 				</TCEforms>
-			</settings.clubsection.showNavigation.enabled>
-			<settings.clubsection.showNavigation.views>
+			</settings.clubSection.showNavigation.enabled>
+			<settings.clubSection.showNavigation.views>
 				<TCEforms>
 					<label>Zeige folgende Navigationselemente</label>
 					<displayCond>
 						<AND>
-							<numIndex index="1">FIELD:base.switchableControllerActions:=:ClubSection->show</numIndex>
+							<numIndex index="0">FIELD:base.switchableControllerActions:=:ClubSection->show</numIndex>
 							<numIndex index="1">FIELD:clubsection.settings.clubsection.showNavigation.enabled:REQ:TRUE</numIndex>
 						</AND>
 					</displayCond>
@@ -84,7 +85,7 @@
 						</items>
 					</config>
 				</TCEforms>
-			</settings.clubsection.showNavigation.views>
+			</settings.clubSection.showNavigation.views>
 		</el>
 	</ROOT>
 </T3DataStructure>
