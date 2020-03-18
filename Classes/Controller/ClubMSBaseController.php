@@ -34,13 +34,24 @@
 		
 		protected function mapRequestsToSettings(): void {
 			$listOfMappings = array();
-			$listOfMappings[] = ['selectClub', array('settings' => array('club' => array('selected' => '')))];
-			$listOfMappings[] = ['showView', array('settings' => array('club' => array('showView' => array('current'=>''))))];
-			foreach($listOfMappings as $mapping) {
-				if($this->request->hasArgument($mapping[0])) {
-					$this->mapRequestToSetting($this->request->getArgument($mapping[0]), $mapping[1], $this->settings);
+			$listOfMappings['selectClub'] = 'club.selected';
+			$listOfMappings['showView'] = 'club.showView.current';
+			foreach($listOfMappings as $requestArgument => $mapping) {
+				if($this->request->hasArgument($requestArgument)) {
+					$this->mapRequestArgumentToSettingPath($this->request->getArgument($requestArgument), $mapping);
 				}
 			}
+		}
+		
+		protected function mapRequestArgumentToSettingPath(string $requestArgument, string $mapping): array {
+			$positionOfPathSeperator = strpos($mapping, '.');
+			\TYPO3\CMS\Core\Utility\DebugUtility::debug($positionOfPathSeperator, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
+			if($positionOfPathSeperator !== FALSE) {
+				$mappedSettings = $this->mapRequestArgumentToSettingPath();
+			} else {
+			
+			}
+		
 		}
 		
 		protected function mapRequestToSetting(string $requestValue, array &$positionInSettings, array &$settings) {
