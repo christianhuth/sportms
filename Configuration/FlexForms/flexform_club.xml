@@ -7,44 +7,44 @@
         <type>array</type>
         <el>
             <settings.club.uid>
-				<TCEforms>
-					<label>Zeige folgenden Verein</label>
-					<displayCond>FIELD:base.switchableControllerActions:=:Club->show</displayCond>
-					<config>
-						<type>group</type>
-						<internal_type>db</internal_type>
-						<allowed>tx_clubms_domain_model_club</allowed>
-						<size>1</size>
-						<maxItems>1</maxItems>
-						<minItems>0</minItems>
-						<show_thumbs>1</show_thumbs>
-					</config>
-				</TCEforms>
+                <TCEforms>
+                    <label>Zeige folgenden Verein</label>
+                    <displayCond>FIELD:base.switchableControllerActions:=:Club->show</displayCond>
+                    <config>
+                        <type>group</type>
+                        <internal_type>db</internal_type>
+                        <allowed>tx_clubms_domain_model_club</allowed>
+                        <size>1</size>
+                        <maxItems>1</maxItems>
+                        <minItems>0</minItems>
+                        <show_thumbs>1</show_thumbs>
+                    </config>
+                </TCEforms>
             </settings.club.uid>
             <settings.club.showViews>
-				<TCEforms>
-					<label>Erlaube folgende Einzelansichten</label>
-					<displayCond>FIELD:base.switchableControllerActions:=:Club->show</displayCond>
-					<config>
-						<type>select</type>
+                <TCEforms>
+                    <label>Erlaube folgende Einzelansichten</label>
+                    <displayCond>FIELD:base.switchableControllerActions:=:Club->show</displayCond>
+                    <config>
+                        <type>select</type>
                         <renderType>selectMultipleSideBySide</renderType>
-						<items type="array">
-							<numIndex index="0">
-								<numIndex index="0">Index</numIndex>
-								<numIndex index="1">index</numIndex>
-							</numIndex>
-							<numIndex index="2">
-								<numIndex index="0">Officials</numIndex>
-								<numIndex index="1">officials</numIndex>
-							</numIndex>
-							<numIndex index="3">
-								<numIndex index="0">Sections</numIndex>
-								<numIndex index="1">sections</numIndex>
-							</numIndex>
-						</items>
-					</config>
+                        <items type="array">
+                            <numIndex index="0">
+                                <numIndex index="0">Index</numIndex>
+                                <numIndex index="1">index</numIndex>
+                            </numIndex>
+                            <numIndex index="2">
+                                <numIndex index="0">Officials</numIndex>
+                                <numIndex index="1">officials</numIndex>
+                            </numIndex>
+                            <numIndex index="3">
+                                <numIndex index="0">Sections</numIndex>
+                                <numIndex index="1">sections</numIndex>
+                            </numIndex>
+                        </items>
+                    </config>
                     <onChange>reload</onChange>
-				</TCEforms>
+                </TCEforms>
             </settings.club.showViews>
             <settings.club.showNavigation.enabled>
                 <TCEforms>
@@ -60,7 +60,12 @@
             <settings.club.showNavigation.views>
                 <TCEforms>
                     <label>Zeige folgende Navigationselemente</label>
-                    <displayCond>FIELD:base.switchableControllerActions:=:Club->show</displayCond>
+                    <displayCond>
+                        <AND>
+                            <numIndex index="1">FIELD:base.switchableControllerActions:=:Club->show</numIndex>
+                            <numIndex index="1">FIELD:club.settings.club.showNavigation.enabled:REQ:TRUE</numIndex>
+                        </AND>
+                    </displayCond>
                     <config>
                         <type>select</type>
                         <renderType>selectMultipleSideBySide</renderType>
