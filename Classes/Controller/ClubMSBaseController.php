@@ -34,24 +34,39 @@
 		
 		protected function mapRequestsToSettings(): void {
 			$listOfMappings = array();
-			$listOfMappings[] = ['selectClub', array('club'=>array('selected'=>''))];
+			$listOfMappings[] = ['selectClub', array('club' => array('selected' => ''))];
 			$listOfMappings[] = ['showView', array('club' => array('showView' => array('current'=>'')))];
 			foreach($listOfMappings as $mapping) {
 				if($this->request->hasArgument($mapping[0])) {
-					$mappedRequest = $this->mapRequestToSetting($mapping[0], $mapping[1]);
+					$this->mapRequestToSetting($this->request->getArgument($mapping[0]), $mapping[1], $this->settings);
 				}
 			}
 		}
 		
-		protected function mapRequestToSetting(string $request, array &$setting, array $resultArray = array()): array {
-			\TYPO3\CMS\Core\Utility\DebugUtility::debug($setting, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
+		protected function mapRequestToSetting(string $requestValue, array &$positionInSettings, array &$settings): void {
+			
+			$firstMappingKey = array_key_first($positionInSettings);
+			\TYPO3\CMS\Core\Utility\DebugUtility::debug($firstMappingKey, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
+			
+			
+			
+			
+			
+			
+			
+			
+			/*
 			if(is_array(array_pop(array_reverse($setting)))) {
-				return $this->mapRequestToSetting($request, array_pop(array_reverse($setting)), $resultArray);
+				return $this->mapRequestToSetting($request, array_pop(array_reverse($setting)));
 			} else {
+				if(array_key_exists($setting)) {
+				
+				}
 				$key = array_key_first($setting);
 				$setting[$key] = $this->request->getArgument($request);
 				\TYPO3\CMS\Core\Utility\DebugUtility::debug($setting, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			}
+			*/
 		}
 		
 		protected function determineShowViews($model, $listOfPossibleShowViews): void {
