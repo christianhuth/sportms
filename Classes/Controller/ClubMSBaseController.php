@@ -8,6 +8,10 @@
 			return $this->getFilter('club', $useSelected);
 		}
 		
+		protected function getCompetitionsFilter($useSelected = TRUE) {
+			return $this->getFilter('competition', $useSelected);
+		}
+		
 		protected function getSeasonsFilter() {
 			return $this->settings['season']['seasons'];
 		}
