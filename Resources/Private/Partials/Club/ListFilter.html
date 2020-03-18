@@ -1,13 +1,17 @@
 <html data-namespace-typo3-fluid="true"
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
-<div class="tx-clubms-list-filter">
-    <f:form action="list" controller="Club" extensionName="clubms" method="POST" noCache="TRUE" noCacheHash="TRUE" pageUid="{settings.club.listPid}" pluginName="clubms">
-        <f:if condition="{settings.club.clubsSelectbox}">
-            <f:render arguments="{options: clubsSelectbox, value: settings.club.selected}" partial="Select/Club"/>
-        </f:if>
-        <f:form.submit value="Los"/>
-    </f:form>
-</div>
+<f:if condition="{settings.club.clubsSelectbox}">
+    <div class="tx-clubms-list-filter">
+        <f:form action="list" controller="Club" extensionName="clubms" method="POST" noCache="TRUE" noCacheHash="TRUE" pageUid="{settings.club.listPid}" pluginName="clubms">
+            <div class="form-row">
+                <div class="col">
+                    <f:render arguments="{options: clubsSelectbox, value: settings.club.selected}" partial="Select/Club"/>
+                    <f:form.submit value="Los"/>
+                </div>
+            </div>
+        </f:form>
+    </div>
+</f:if>
 
 </html>
