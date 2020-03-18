@@ -29,8 +29,8 @@
 		 * @return string
 		 */
 		public function render(): string {
-			$key = $this->arguments['key'];
-			$country = $this->countryRepository->findByUid($key);
+			$nationality = $this->arguments['nationality'];
+			$country = $this->countryRepository->findByUid($nationality);
 			$isoCodeA2 = $country->getIsoCodeA2();
 			$flagPath = 'EXT:core/Resources/Public/Icons/Flags/' . $isoCodeA2 . '.png';
 			$this->arguments['src'] = $flagPath;
