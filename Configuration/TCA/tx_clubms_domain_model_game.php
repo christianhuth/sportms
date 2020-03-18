@@ -829,7 +829,7 @@ return array(
             'onChange' => 'reload',
         ),
 		'game_lineup_guest_starts' => array(
-			'displayCond' => 'FIELD:team_season_home:>:0',
+			'displayCond' => 'FIELD:team_season_guest:>:0',
 			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.game_lineup_guest_starts',
 			'config' => array(
 				'appearance' => array(
@@ -855,7 +855,7 @@ return array(
 			),
 		),
 		'game_lineup_guest_substitutes' => array(
-			'displayCond' => 'FIELD:team_season_home:>:0',
+			'displayCond' => 'FIELD:team_season_guest:>:0',
 			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.game_lineup_guest_substitutes',
 			'config' => array(
 				'appearance' => array(
@@ -881,6 +881,7 @@ return array(
 			),
 		),
         'trainer_guest' => array(
+	        'displayCond' => 'FIELD:team_season_guest:>:0',
             'exclude' => 1,
             'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_game.trainer_guest',
             'config' => array(
