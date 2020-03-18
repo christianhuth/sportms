@@ -12,12 +12,17 @@
 			return $this->getFilter('competition', 'competitions', $useSelected);
 		}
 		
+		protected function getCompetitionTypesFilter($useSelected = TRUE) {
+			return $this->getFilter('competition', 'competitionTypes', $useSelected);
+		}
+		
+		
 		protected function getSeasonsFilter($useSelected = TRUE) {
 			return $this->getFilter('season', 'seasons', $useSelected);
 		}
 		
 		protected function getSectionsFilter($useSelected = TRUE) {
-			return $this->getFilter('section', 'sections' $useSelected);
+			return $this->getFilter('section', 'sections', $useSelected);
 		}
 		
 		protected function getSectionAgeGroupsFilter($useSelected = TRUE) {
