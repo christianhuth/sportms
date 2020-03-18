@@ -26,13 +26,13 @@
 					</config>
 				</TCEforms>
 			</settings.team.uid>
-			<settings.team.showView>
+			<settings.team.showViews>
 				<TCEforms>
-					<label>Gezeigte Einzelansicht</label>
+					<label>Erlaube folgende Einzelansichten</label>
 					<displayCond>FIELD:base.switchableControllerActions:=:Team->show</displayCond>
 					<config>
 						<type>select</type>
-						<renderType>selectSingle</renderType>
+						<renderType>selectMultipleSideBySide</renderType>
 						<items type="array">
 							<numIndex index="0">
 								<numIndex index="0">Index</numIndex>
@@ -52,9 +52,53 @@
 							</numIndex>
 						</items>
 					</config>
+				</TCEforms>
+			</settings.team.showViews>
+			<settings.team.showNavigation.enabled>
+				<TCEforms>
+					<label>Navigation für Einzelansichten?</label>
+					<displayCond>FIELD:base.switchableControllerActions:=:Team->show</displayCond>
+					<config>
+						<default>1</default>
+						<renderType>checkboxToggle</renderType>
+						<type>check</type>
+					</config>
 					<onChange>reload</onChange>
 				</TCEforms>
-			</settings.team.showView>
+			</settings.team.showNavigation.enabled>
+			<settings.team.showNavigation.views>
+				<TCEforms>
+					<label>Zeige folgende Navigationselemente</label>
+					<displayCond>
+						<AND>
+							<numIndex index="0">FIELD:base.switchableControllerActions:=:Team->show</numIndex>
+							<numIndex index="1">FIELD:team.settings.team.showNavigation.enabled:REQ:TRUE</numIndex>
+						</AND>
+					</displayCond>
+					<config>
+						<type>select</type>
+						<renderType>selectMultipleSideBySide</renderType>
+						<items type="array">
+							<numIndex index="0">
+								<numIndex index="0">Index</numIndex>
+								<numIndex index="1">index</numIndex>
+							</numIndex>
+							<numIndex index="2">
+								<numIndex index="0">Competitions</numIndex>
+								<numIndex index="1">competitions</numIndex>
+							</numIndex>
+							<numIndex index="3">
+								<numIndex index="0">Games</numIndex>
+								<numIndex index="1">games</numIndex>
+							</numIndex>
+							<numIndex index="4">
+								<numIndex index="0">Stats</numIndex>
+								<numIndex index="1">stats</numIndex>
+							</numIndex>
+						</items>
+					</config>
+				</TCEforms>
+			</settings.team.showNavigation.views>
 			<settings.team.teams>
 				<TCEforms>
 					<label>Welche Teams sollen angezeigt werden?</label>
