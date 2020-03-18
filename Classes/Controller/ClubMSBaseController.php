@@ -38,6 +38,7 @@
 			$listOfMappings[] = ['showView', array('club' => array('showView' => array('current'=>'')))];
 			foreach($listOfMappings as $mapping) {
 				if($this->request->hasArgument($mapping[0])) {
+					\TYPO3\CMS\Core\Utility\DebugUtility::debug($mapping[1], 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 					$mappedRequest = $this->mapRequestToSetting($mapping[0], $mapping[1]);
 				}
 			}
