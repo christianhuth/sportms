@@ -4,13 +4,18 @@
 <f:layout name="default"/>
 
 <f:section name="default">
-    <div class="tx-clubms-CONTROLLER-show">
-        <f:render arguments="{_all}" section="{settings.CONTROLLER.showView.current}"/>
+    <div class="tx-clubms-venue-show">
+        <f:render arguments="{_all}" partial="Venue/ShowNavigation"/>
+        <f:render arguments="{_all}" section="{settings.venue.showView.current}"/>
     </div>
 </f:section>
 
-<f:section name="SHOWVIEW">
-    <f:render arguments="{_all}" partial="CONTROLLER/ShowSHOWVIEW"/>
+<f:section name="index">
+    <f:render arguments="{_all}" partial="Venue/ShowIndex"/>
+</f:section>
+
+<f:section name="games">
+    <f:render arguments="{_all}" partial="Venue/ShowGames"/>
 </f:section>
 
 </html>
