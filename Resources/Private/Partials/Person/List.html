@@ -30,7 +30,7 @@
                     <td>{person.nickname}</td>
                     <td>{person.nationality}</td>
                     <td>
-                        <clubms:link.action Person="{person}">LINK</clubms:link.action>
+                        <clubms:link.action Person="{person}" Section="{person.personProfiles.0.section}">LINK</clubms:link.action>
                     </td>
                 </tr>
             </f:for>
