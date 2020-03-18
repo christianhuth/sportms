@@ -54,7 +54,7 @@
 			
 			
 			
-			\TYPO3\CMS\Core\Utility\DebugUtility::debug($positionInSettings[$currentPositionByKey], 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
+			\TYPO3\CMS\Core\Utility\DebugUtility::debug($positionInSettings, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			
 			
 			
