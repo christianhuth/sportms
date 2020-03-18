@@ -39,13 +39,7 @@
 		 */
 		public function listAction() {
 			$this->initializeActions();
-			$competitionsFilter = $this->settings['competition']['competitions'];
-			$competitionTypesFilter = $this->settings['competition']['competitionTypes'];
-			$sectionsFilter = $this->settings['section']['sections'];
-			$sectionAgeGroupsFilter = $this->settings['section']['sectionAgeGroups'];
-			$sectionAgeLevelsFilter = $this->settings['section']['sectionAgeLevels'];
-			$seasonsFilter = $this->settings['season']['seasons'];
-			$competitionSeasons = $this->competitionSeasonRepository->findAll($competitionsFilter, $competitionTypesFilter, $sectionsFilter, $sectionAgeGroupsFilter, $sectionAgeLevelsFilter, $seasonsFilter);
+			$competitionSeasons = $this->competitionSeasonRepository->findAll($this->getCompetitionsFilter(), $this->getCompetitionTypesFilter(), $this->getSectionsFilter(), $this->getSectionAgeGroupsFilter(), $this->getSectionAgeLevelsFilter(), $this->getSeasonsFilter());
 			$this->view->assign('competitionSeasons', $competitionSeasons);
 		}
 		
