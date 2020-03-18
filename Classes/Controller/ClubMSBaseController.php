@@ -47,7 +47,7 @@
 			$positionOfPathSeperator = strpos($mapping, '.');
 			\TYPO3\CMS\Core\Utility\DebugUtility::debug($positionOfPathSeperator, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			if($positionOfPathSeperator !== FALSE) {
-				$mappedSettings = $this->mapRequestArgumentToSettingPath();
+				$mappedSettings = array(substr($mapping, 0, $positionOfPathSeperator-1) => $this->mapRequestArgumentToSettingPath());
 			} else {
 			
 			}
