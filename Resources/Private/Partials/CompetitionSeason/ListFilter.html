@@ -8,9 +8,9 @@
     <div class="tx-clubms-list-filter well">
         <f:form action="list" class="form-horizontal" controller="CompetitionSeason" extensionName="clubms" method="POST" noCache="TRUE" noCacheHash="TRUE" pageUid="{settings.competitionSeason.listPid}" pluginName="clubms">
             <f:render arguments="{options: sectionsSelectbox,           settings: settings,     value: settings.section.selected}" partial="Form/Select/Section"/>
-            <f:render arguments="{options: sectionAgeGroupsSelectbox,   settings: settings,     value: settings.section.sectionAgeGroup.selected}" partial="Form/Select/SectionAgeGroup"/>
-            <f:render arguments="{options: sectionAgeLevelsSelectbox,   settings: settings,     value: settings.section.sectionAgeLevel.selected}" partial="Form/Select/SectionAgeLevel"/>
-            <f:render arguments="{options: competitionTypesSelectbox,   settings: settings,     value: settings.competition.competitionType.selected}" partial="Form/Select/CompetitionType"/>
+            <f:render arguments="{options: sectionAgeGroupsSelectbox,   settings: settings,     value: settings.sectionAgeGroup.selected}" partial="Form/Select/SectionAgeGroup"/>
+            <f:render arguments="{options: sectionAgeLevelsSelectbox,   settings: settings,     value: settings.sectionAgeLevel.selected}" partial="Form/Select/SectionAgeLevel"/>
+            <f:render arguments="{options: competitionTypesSelectbox,   settings: settings,     value: settings.competitionType.selected}" partial="Form/Select/CompetitionType"/>
             <f:render arguments="{options: competitionsSelectbox,       settings: settings,     value: settings.competition.selected}" partial="Form/Select/Competition"/>
             <f:render arguments="{options: seasonsSelectbox,            settings: settings,     value: settings.season.selected}" partial="Form/Select/Season"/>
             <f:render partial="Form/Submit"/>
