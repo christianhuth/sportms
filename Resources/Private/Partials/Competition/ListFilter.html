@@ -15,6 +15,16 @@
                         <f:render arguments="{options: sectionsSelectbox, value: settings.section.selected}" partial="Select/Section"/>
                     </div>
                 </f:if>
+                <f:if condition="{settings.section.sectionAgeGroupsSelectbox}">
+                    <div class="col-xs-12">
+                        <f:render arguments="{options: sectionAgeGroupsSelectbox, value: settings.section.sectionAgeGroup.selected}" partial="Select/SectionAgeGroup"/>
+                    </div>
+                </f:if>
+                <f:if condition="{settings.section.sectionAgeLevelsSelectbox}">
+                    <div class="col-xs-12">
+                        <f:render arguments="{options: sectionAgeLevelsSelectbox, value: settings.section.sectionAgeLevel.selected}" partial="Select/SectionAgeLevel"/>
+                    </div>
+                </f:if>
                 <div class="col-xs-4">
                     <f:form.submit class="btn btn-primary" value="Los"/>
                 </div>
