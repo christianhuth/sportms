@@ -29,7 +29,7 @@ return array(
 	'types' => array(
 		'1' => array('showitem' => 'section, competition_type, section_age_group, section_age_level, name, name_short, 
 									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_competition.tab_seasons, competition_seasons,
-									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_competition.tab_visibility, hidden, detail_link'),
+									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_competition.tab_visibility, hidden, detail_link, slug'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
