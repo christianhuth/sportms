@@ -3,7 +3,7 @@
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <tr>
-    <td>
+    <td class="tx-clubms-club-image">
         <f:if condition="{club.images.0}">
             <f:if condition="{club.detailLink}">
                 <f:then>
@@ -17,7 +17,7 @@
             </f:if>
         </f:if>
     </td>
-    <td>
+    <td class="tx-clubms-club-name">
         <f:if condition="{club.detailLink}">
             <f:then>
                 <clubms:link.action Club="{club}">{club.name}</clubms:link.action>
@@ -27,7 +27,7 @@
             </f:else>
         </f:if>
     </td>
-    <td>
+    <td class="tx-clubms-club-sections">
         <f:if condition="{club.clubSections}">
             <f:then>
                 <ul>
