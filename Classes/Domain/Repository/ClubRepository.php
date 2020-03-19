@@ -21,10 +21,13 @@
 		 * @return array|\TYPO3\CMS\Extbase\Persistence\QueryResultInterface
 		 * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
 		 */
-		public function findAllByUids(string $uids = null) {
-			\TYPO3\CMS\Core\Utility\DebugUtility::debug($uids, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
-			$query = $this->createQuery();
-			return $query->matching($query->logicalAnd($query->in('uid', explode(',', $uids))))->execute();
+		public function findAllByUids(string $uids) {
+			if(!uids) {
+				return $this->findAll();
+			} else {
+				$query = $this->createQuery();
+				return $query->matching($query->logicalAnd($query->in('uid', explode(',', $uids))))->execute();
+			}
 		}
 		
 		public function findAllByClubSections($clubSections) {
