@@ -84,10 +84,10 @@
 					$sectionsSelectbox = $this->sectionRepository->findAllByUids($this->getSectionsFilter(FALSE));
 					$this->view->assign('sectionsSelectbox', $sectionsSelectbox);
 					if($this->settings['section']['selected']) {
-						$sectionAgeGroupsSelectbox = $this->sectionAgeGroupRepository->findAll($this->getSectionAgeGroupsFilter(), $this->getSectionsFilter());
+						$sectionAgeGroupsSelectbox = $this->sectionAgeGroupRepository->findAll($this->getSectionAgeGroupsFilter(FALSE), $this->getSectionsFilter());
 						$this->view->assign('sectionAgeGroupsSelectbox', $sectionAgeGroupsSelectbox);
 						if($this->settings['sectionAgeGroup']['selected']) {
-							$sectionAgeLevelsSelectbox = $this->sectionAgeLevelRepository->findAll($this->getSectionAgeLevelsFilter(), $this->getSectionsFilter());
+							$sectionAgeLevelsSelectbox = $this->sectionAgeLevelRepository->findAll($this->getSectionAgeLevelsFilter(FALSE), $this->getSectionsFilter());
 							$this->view->assign('sectionAgeLevelsSelectbox', $sectionAgeLevelsSelectbox);
 						}
 					}
