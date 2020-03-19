@@ -219,6 +219,9 @@
 			<trans-unit id="tx_clubms_domain_model_clubsection.team">
 				<source>Mannschaft</source>
 			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_clubsection.detail_link">
+				<source>Link auf Einzelansicht möglich?</source>
+			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_clubsection.tab_contact">
 				<source>Kontaktinformationen</source>
 			</trans-unit>
@@ -227,6 +230,9 @@
 			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_clubsection.tab_teams">
 				<source>Mannschaften</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_clubsection.tab_visibility">
+				<source>Sichtbarkeit</source>
 			</trans-unit>
 
 
