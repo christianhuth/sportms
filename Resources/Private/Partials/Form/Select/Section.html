@@ -5,7 +5,10 @@
     <div class="form-group form-group-sm">
         <label class="hidden-xs col-sm-3 control-label">Abteilung:</label>
         <div class="col-xs-12 col-sm-9">
-            <f:form.select class="form-control" name="selectSection" optionLabelField="label" optionValueField="uid" options="{options}" prependOptionLabel="Alle Abteilungen" prependOptionValue="" sortByOptionLabel="TRUE" value="{value}"/>
+            <div class="input-group">
+                <span class="input-group-addon"><i class="clubmsicon clubmsicon-section"></i></span>
+                <f:form.select class="form-control" name="selectSection" optionLabelField="label" optionValueField="uid" options="{options}" prependOptionLabel="Alle Abteilungen" prependOptionValue="" sortByOptionLabel="TRUE" value="{value}"/>
+            </div>
         </div>
     </div>
 </f:if>

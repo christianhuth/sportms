@@ -10,6 +10,42 @@
     mask: url("/typo3conf/ext/clubms/Resources/Public/Icons/tx_clubms_domain_model_club.svg");
 }
 
+.clubmsicon.clubmsicon-competition {
+    mask: url("/typo3conf/ext/clubms/Resources/Public/Icons/tx_clubms_domain_model_competition.svg");
+}
+
+.clubmsicon.clubmsicon-competitionseasongameday {
+    mask: url("/typo3conf/ext/clubms/Resources/Public/Icons/tx_clubms_domain_model_competitionseasongameday.svg");
+}
+
+.clubmsicon.clubmsicon-competitiontype {
+    mask: url("/typo3conf/ext/clubms/Resources/Public/Icons/tx_clubms_domain_model_competitiontype.svg");
+}
+
+.clubmsicon.clubmsicon-season {
+    mask: url("/typo3conf/ext/clubms/Resources/Public/Icons/tx_clubms_domain_model_season.svg");
+}
+
+.clubmsicon.clubmsicon-section {
+    mask: url("/typo3conf/ext/clubms/Resources/Public/Icons/tx_clubms_domain_model_section.svg");
+}
+
+.clubmsicon.clubmsicon-sectionagegroup {
+    mask: url("/typo3conf/ext/clubms/Resources/Public/Icons/tx_clubms_domain_model_sectionagegroup.svg");
+}
+
+.clubmsicon.clubmsicon-sectionagelevel {
+    mask: url("/typo3conf/ext/clubms/Resources/Public/Icons/tx_clubms_domain_model_sectionagelevel.svg");
+}
+
+.clubmsicon.clubmsicon-team {
+    mask: url("/typo3conf/ext/clubms/Resources/Public/Icons/tx_clubms_domain_model_team.svg");
+}
+
+.clubmsicon.clubmsicon-venue {
+    mask: url("/typo3conf/ext/clubms/Resources/Public/Icons/tx_clubms_domain_model_venue.svg");
+}
+
 #tx-clubms #tx-clubms-container .tx-clubms-list-filter {
     background-color: var(--light-gray);
 }
