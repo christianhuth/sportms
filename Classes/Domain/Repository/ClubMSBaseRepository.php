@@ -9,7 +9,7 @@
 		 * @return array|\TYPO3\CMS\Extbase\Persistence\QueryResultInterface
 		 * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
 		 */
-		public function findAllByUids(string $uids) {
+		public function findAllByUids(string $uids = null) {
 			if(!$uids) {
 				return $this->findAll();
 			} else {
