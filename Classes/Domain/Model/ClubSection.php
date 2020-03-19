@@ -75,6 +75,11 @@
 		protected $teams;
 		
 		/**
+		 * @var bool
+		 */
+		protected $detailLink;
+		
+		/**
 		 * __construct
 		 */
 		public function __construct() {
@@ -239,6 +244,20 @@
 		 */
 		public function setTeams($teams) {
 			$this->teams = $teams;
+		}
+		
+		/**
+		 * @return bool
+		 */
+		public function isDetailLink(): bool {
+			return $this->detailLink;
+		}
+		
+		/**
+		 * @param bool $detailLink
+		 */
+		public function setDetailLink(bool $detailLink): void {
+			$this->detailLink = $detailLink;
 		}
 		
 	}
