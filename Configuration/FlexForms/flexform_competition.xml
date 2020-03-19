@@ -126,7 +126,7 @@
 					</config>
 				</TCEforms>
 			</settings.competition.competitionsSelectbox>
-			<settings.competition.competitionTypes>
+			<settings.competitionType.competitionTypes>
 				<TCEforms>
 					<label>Welche Wettbewerbsarten sollen angezeigt werden?</label>
 					<displayCond>
@@ -143,8 +143,8 @@
 						<type>select</type>
 					</config>
 				</TCEforms>
-			</settings.competition.competitionTypes>
-			<settings.competition.competitionTypesSelectbox>
+			</settings.competitionType.competitionTypes>
+			<settings.competitionType.competitionTypesSelectbox>
 				<TCEforms>
 					<label>Selectbox für Wettbewerbsarten?</label>
 					<displayCond>
@@ -160,7 +160,7 @@
 						<type>check</type>
 					</config>
 				</TCEforms>
-			</settings.competition.competitionTypesSelectbox>
+			</settings.competitionType.competitionTypesSelectbox>
 		</el>
 	</ROOT>
 </T3DataStructure>
