@@ -140,7 +140,6 @@
 				}
 			}
 			switch(getType($this->arguments[$this->clubMsDomainModel])) {
-				case "Club": if($this->arguments[$this->clubMsDomainModel]->isDetailLink()) { return null; } break;
 				case "Balumedien\Clubms\Domain\Model\Club": if($this->arguments[$this->clubMsDomainModel]->isDetailLink()) { return null; } break;
 			}
 			$extensionName = "clubms";
