@@ -1174,6 +1174,12 @@
 			<trans-unit id="tx_clubms_domain_model_section.section_age_groups">
 				<source>Altersgruppen</source>
 			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_section.detail_link">
+				<source>Link auf Einzelansicht möglich?</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_section.tab_visibility">
+				<source>Sichtbarkeit</source>
+			</trans-unit>
 
 
             <!-- Domain Model SectionAgeGroup -->
