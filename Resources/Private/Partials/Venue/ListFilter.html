@@ -3,7 +3,7 @@
 
 <f:if condition="{  settings.club.clubsSelectbox ||
                     settings.venue.withClubOnly}">
-    <div class="tx-clubms-list-filter">
+    <div class="tx-clubms-list-filter well">
         <f:form action="list" class="form-horizontal" controller="Venue" extensionName="clubms" method="POST" noCache="TRUE" noCacheHash="TRUE" pageUid="{settings.venue.listPid}" pluginName="clubms">
             <f:render arguments="{options: clubSelectbox,   settings: settings,     value: settings.club.selected}" partial="Form/Select/Club"/>
             <f:render arguments="{settings: settings}" partial="Form/VenueWithClubOnly"/>
