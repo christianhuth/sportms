@@ -26,7 +26,7 @@ return array(
 		'versioningWS' => TRUE,
     ),
 	'interface' => array(
-		'showRecordFieldList' => 'label, short',
+		'showRecordFieldList' => 'section_age_group, label, short',
 	),
 	'types' => array(
 		'1' => array('showitem' => 'label, short, slug'),
@@ -44,7 +44,6 @@ return array(
 				'max' => 255,
 			)
 		),
-		
 		'hidden' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.hidden',
@@ -52,7 +51,6 @@ return array(
 				'type' => 'check',
 			),
 		),
-		
 		'starttime' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.starttime',
@@ -71,7 +69,6 @@ return array(
 				'renderType' => 'inputDateTime',
 			),
 		),
-		
 		'endtime' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.endtime',
@@ -90,13 +87,23 @@ return array(
 				'renderType' => 'inputDateTime',
 			),
 		),
-
-		'section_age_group' => array (
-            'config' => array(
-                'type' => 'passthrough',
-            ),
-        ),
 		
+		'section_age_group' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_sectionagelevel.section_age_group',
+			'config' => array(
+				'eval' => 'required',
+				'foreign_table' => 'tx_clubms_domain_model_sectionagegroup',
+				'foreign_table_where' => 'ORDER BY name ASC',
+				'items' => Array (
+					array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
+				),
+				'renderType' => 'selectSingle',
+				'size' => 1,
+				'type' => 'select',
+			),
+			'onChange' => 'reload',
+		),
 		'label' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_sectionagelevel.label',
@@ -106,7 +113,6 @@ return array(
 				'type' => 'input',
 			),
 		),
-		
 		'short' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_sectionagelevel.short',
