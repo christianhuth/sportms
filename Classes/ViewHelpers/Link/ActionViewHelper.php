@@ -139,8 +139,9 @@
 					break;
 				}
 			}
-			if($this->arguments[$this->clubMsDomainModel]->isDetailLink()) {
-				return null;
+			switch($this->arguments[$this->clubMsDomainModel]->getType()) {
+				case "Club": if($this->arguments[$this->clubMsDomainModel]->isDetailLink()) { return null; } break;
+				case "Balumedien\Clubms\Domain\Model\Club": if($this->arguments[$this->clubMsDomainModel]->isDetailLink()) { return null; } break;
 			}
 			$extensionName = "clubms";
 			$pluginName = "clubms";
