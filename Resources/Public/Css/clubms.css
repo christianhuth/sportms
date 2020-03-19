@@ -1,104 +1,92 @@
 #tx-clubms {
-	display: block;
+    display: block;
 }
 
 #tx-clubms #tx-clubms-container {
-	font-family: sans-serif;
+    font-family: sans-serif;
+}
+
+.clubmsicon {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: "Glyphicons Halflings";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .clubmsicon.clubmsicon-club {
-	mask: url("EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_club.svg");
+    mask: url("EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_club.svg");
 }
 
 #tx-clubms #tx-clubms-container .tx-clubms-list-filter {
-	background-color: var(--light-gray);
+    background-color: var(--light-gray);
 }
 
 #tx-clubms #tx-clubms-container .tx-clubms-list-filter .form-group:last-of-type {
-	margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 #tx-clubms #tx-clubms-container .tx-clubms-list-filter .form-group .col-xs-0 {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 .tx_clubms_club_sections {
-	margin-bottom: 75px;
+    margin-bottom: 75px;
 }
 
 .tx_clubms_club_sections .row {
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display:         flex;
-	flex-wrap: wrap;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .tx_clubms_club_sections .row .container > [class*='col-'] {
-	display: flex;
-	flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .abteilungsaufzaehlung-outer {
-	padding: 0.5%;
+    padding: 0.5%;
 }
 
 .abteilungsaufzaehlung-inner {
-	border-radius: 5px;
-	background: #fff;
-	border: 1px solid rgba(217,217,217,.6);
-	border-top-color: rgba(217, 217, 217, 0.6);
-	border-top-style: solid;
-	border-top-width: 1px;
-	border-top: 0;
-	padding: 0;
-	width: 100%;
+    border-radius: 5px;
+    background: #fff;
+    border: 1px solid rgba(217, 217, 217, .6);
+    border-top-color: rgba(217, 217, 217, 0.6);
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top: 0;
+    padding: 0;
+    width: 100%;
 }
 
 .abteilungsaufzaehlung-inner .image,
 .abteilungsaufzaehlung-inner .image img {
-	height: auto !important;
-	width: 100%;
+    height: auto !important;
+    width: 100%;
 }
 
 .abteilungsaufzaehlung-inner .info {
-	font-size: 14px;
-	padding: 10px 20px;
-	position: relative;
+    font-size: 14px;
+    padding: 10px 20px;
+    position: relative;
 }
 
 .abteilungsaufzaehlung-inner a {
-	color: black;
+    color: black;
 }
 
 .abteilungsaufzaehlung-inner a:hover {
-	color: var(--regular-red);
+    color: var(--regular-red);
 }
 
 
@@ -110,10 +98,8 @@
 #tx-clubms #tx-clubms-container .club-official-startdate,
 #tx-clubms #tx-clubms-container .club-official-enddate,
 #tx-clubms #tx-clubms-container .club-official-duration {
-	text-align: center;
+    text-align: center;
 }
-
-
 
 
 /*
@@ -122,26 +108,30 @@
  *
  */
 #tx-clubms #tx-clubms-container .tx-clubms-clubms-dbstats .tx-clubms-dbstat {
-	margin: 25px 0 0 0;
+    margin: 25px 0 0 0;
 }
+
 #tx-clubms #tx-clubms-container .tx-clubms-clubms-dbstats .tx-clubms-dbstat:last-of-type {
-	margin-bottom: 25px;
+    margin-bottom: 25px;
 }
+
 #tx-clubms #tx-clubms-container .tx-clubms-clubms-dbstats .tx-clubms-dbstat .tx-clubms-dbstat-image,
 #tx-clubms #tx-clubms-container .tx-clubms-clubms-dbstats .tx-clubms-dbstat .tx-clubms-dbstat-label {
-	background-color: var(--regular-gray);
-	padding: 10px;
+    background-color: var(--regular-gray);
+    padding: 10px;
 }
+
 #tx-clubms #tx-clubms-container .tx-clubms-clubms-dbstats .tx-clubms-dbstat .tx-clubms-dbstat-image img {
-	background-color: white;
-	height: auto !important;
-	max-width: 100%;
-	padding: 15px;
-	width: 100%;
+    background-color: white;
+    height: auto !important;
+    max-width: 100%;
+    padding: 15px;
+    width: 100%;
 }
+
 #tx-clubms #tx-clubms-container .tx-clubms-clubms-dbstats .tx-clubms-dbstat .tx-clubms-dbstat-label {
-	padding-top: 0;
-	text-align: center;
+    padding-top: 0;
+    text-align: center;
 }
 
 
@@ -151,7 +141,7 @@
  *
  */
 #tx-clubms #tx-clubms-container #tx-clubms-club-list td.tx-clubms-club-image {
-	text-align: center;
+    text-align: center;
 }
 
 
@@ -161,15 +151,15 @@
  *
  */
 #tx-clubms-container .tx-clubms-person-show .label {
-	background-color: #d5d5d5;
-	border-bottom: 1px solid #ffffff;
-	border-radius: 0;
-	color: black;
-	display: table-cell;
-	font-size: 12px;
-	font-weight: bold;
-	padding: 5px 0 5px 9px;
-	text-align: left;
+    background-color: #d5d5d5;
+    border-bottom: 1px solid #ffffff;
+    border-radius: 0;
+    color: black;
+    display: table-cell;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 0 5px 9px;
+    text-align: left;
 }
 
 /*
@@ -178,147 +168,167 @@
  *
  */
 .tx-clubms-teamseason-image img {
-	height: auto;
-	max-width: 100%;
+    height: auto;
+    max-width: 100%;
 }
+
 .tx-clubms-teamseason-image-description {
-	background-color: #E7E7E7;
-	padding: 8px 10px;
+    background-color: #E7E7E7;
+    padding: 8px 10px;
 }
+
 .tx-clubms-teamseason-image-description p {
-	font-size: 85%;
-	margin: 0;
+    font-size: 85%;
+    margin: 0;
 }
+
 .tx-clubms-teamseason-practices table {
-	width: 100%;
+    width: 100%;
 }
+
 .tx-clubms-teamseason-practices table tr td {
-	text-align: center;
-	width: 25%;
+    text-align: center;
+    width: 25%;
 }
+
 .tx-clubms-teamseason-practices table tr td:first-of-type {
-	font-weight: bold;
-	text-align: left;
+    font-weight: bold;
+    text-align: left;
 }
+
 .tx-clubms-teamseason-practices,
 .tx-clubms-teamseason-officials,
 .tx-clubms-teamseason-squad-position,
 .tx-clubms-teamseason-squad-captains {
-	padding: 0;
+    padding: 0;
 }
+
 .tx-clubms-teamseason-practices .tx-clubms-teamseason-practices h3,
 .tx-clubms-teamseason-officials .tx-clubms-teamseason-officials h3,
 .tx-clubms-teamseason-squad .tx-clubms-teamseason-squad-position h3,
 .tx-clubms-teamseason-squad-captains .tx-clubms-teamseason-squad-captains h3 {
-	color: #C30D00;
-	display: inline-block;
-	font-family: sans-serif;
-	font-size: 23px;
-	font-weight: bold;
-	line-height: 1;
-	margin-bottom: 0px;
-	text-transform: uppercase;
+    color: #C30D00;
+    display: inline-block;
+    font-family: sans-serif;
+    font-size: 23px;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 0px;
+    text-transform: uppercase;
 }
+
 .tx-clubms-teamseason-practices .tx-clubms-teamseason-practices h3:before,
 .tx-clubms-teamseason-officials .tx-clubms-teamseason-officials h3:before,
 .tx-clubms-teamseason-squad .tx-clubms-teamseason-squad-position h3:before,
 .tx-clubms-teamseason-squad-captains .tx-clubms-teamseason-squad-captains h3:before {
-	content: "ll";
-	font-family: sans-serif;
-	font-weight: 500;
-	letter-spacing: 1px;
-	margin-right: 10px;
-	text-transform: none;
+    content: "ll";
+    font-family: sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-right: 10px;
+    text-transform: none;
 }
+
 .tx-clubms-teamseason-image .tx-clubms-teamseason-image-seperator,
 .tx-clubms-teamseason-practices .tx-clubms-teamseason-practices-seperator,
 .tx-clubms-teamseason-officials .tx-clubms-teamseason-officials-seperator,
 .tx-clubms-teamseason-squad .tx-clubms-teamseason-squad-position-seperator {
-	margin-bottom: 50px;
+    margin-bottom: 50px;
 }
+
 .tx-clubms-teamseason-squad-position-officials,
 .tx-clubms-teamseason-squad-position-members {
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display:         flex;
-	flex-wrap: wrap;
-	float: left;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    float: left;
 }
+
 .tx-clubms-teamseason-official-wrapper a,
 .tx-clubms-teamseason-squadmember-wrapper a {
-	display: block;
-	height: 100%;
-	width: 100%;
-	position: relative;
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: relative;
 }
+
 .tx-clubms-teamseason-official,
 .tx-clubms-teamseason-squadmember {
-	display: flex;
-	flex-direction: column;
-	margin-bottom: 0;
-	padding: 4px;
-	position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+    padding: 4px;
+    position: relative;
 }
+
 .tx-clubms-teamseason-official a::after,
 .tx-clubms-teamseason-squadmember a::after {
-	background-color: rgba(195, 13, 0, 0.7);
-	content: '';
-	height: 100%;
-	left: 0;
-	opacity: 0;
-	position: absolute;
-	top: 0;
-	transition: 0.4s;
-	width: 100%;
-	z-index: 100;
+    background-color: rgba(195, 13, 0, 0.7);
+    content: '';
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transition: 0.4s;
+    width: 100%;
+    z-index: 100;
 }
+
 .tx-clubms-teamseason-official a:hover::after,
 .tx-clubms-teamseason-squadmember a:hover::after {
-	opacity: 1;
+    opacity: 1;
 }
+
 .tx-clubms-teamseason-official .official-image img,
 .tx-clubms-teamseason-squadmember .squadmember-image img {
-	height: auto !important;
-	max-width: 100%;
-	width: 100%;
+    height: auto !important;
+    max-width: 100%;
+    width: 100%;
 }
+
 .tx-clubms-teamseason-official .official-info,
 .tx-clubms-teamseason-squadmember .squadmember-info {
-	background-color: #E7E7E7;
-	font-weight: bold;
-	padding: 5% 7.5%;
-	font-size: 1rem;
-	color: #333;
+    background-color: #E7E7E7;
+    font-weight: bold;
+    padding: 5% 7.5%;
+    font-size: 1rem;
+    color: #333;
 }
+
 .tx-clubms-teamseason-official .official-jerseynumber,
 .tx-clubms-teamseason-squadmember .squadmember-jerseynumber {
-	display: inline-block;
-	color: #c00;
-	font-size: 2.75rem;
-	text-align: left;
-	margin-right: .125em;
+    display: inline-block;
+    color: #c00;
+    font-size: 2.75rem;
+    text-align: left;
+    margin-right: .125em;
 }
+
 .tx-clubms-teamseason-official .official-name,
 .tx-clubms-teamseason-squadmember .squadmember-name {
-	display: inline-block;
+    display: inline-block;
 }
+
 .tx-clubms-teamseason-official .official-firstname,
 .tx-clubms-teamseason-squadmember .squadmember-firstname,
 .tx-clubms-teamseason-official .official-lastname,
 .tx-clubms-teamseason-squadmember .squadmember-lastname {
-	color:#333;
-	font-size: 15px;
-	font-size: .9375rem;
-	font-weight: normal;
-	display: block;
-	text-transform: uppercase;
-	margin-left: 0;
+    color: #333;
+    font-size: 15px;
+    font-size: .9375rem;
+    font-weight: normal;
+    display: block;
+    text-transform: uppercase;
+    margin-left: 0;
 }
+
 .tx-clubms-teamseason-official .official-lastname,
 .tx-clubms-teamseason-squadmember .squadmember-lastname {
-	color: #c00;
-	font-size: 1.125rem;
-	font-weight: bold;
-	line-height: 1em;
+    color: #c00;
+    font-size: 1.125rem;
+    font-weight: bold;
+    line-height: 1em;
 }
