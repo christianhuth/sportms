@@ -2,7 +2,7 @@
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <f:if condition="{settings.team.teamsSelectbox}">
-    <div class="form-group">
+    <div class="form-group form-group-sm">
         <label class="col-xs-12 col-sm-3 control-label">Team:</label>
         <div class="col-xs-12 col-sm-9">
             <f:form.select class="form-control" name="selectTeam" optionLabelField="name" optionValueField="uid" options="{options}" prependOptionLabel="Alle Teams" prependOptionValue="" sortByOptionLabel="TRUE" value="{value}"/>
