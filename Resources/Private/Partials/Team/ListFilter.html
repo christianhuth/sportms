@@ -1,14 +1,11 @@
 <html data-namespace-typo3-fluid="true"
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
-<f:if condition="{settings.club.clubsSelectbox ||
-                    settings.section.sectionsSelectbox}">
+<f:if condition="{  settings.section.sectionsSelectbox ||
+                    settings.club.clubsSelectbox}">
     <div class="tx-clubms-list-filter">
         <f:form action="list" controller="ClubSection" extensionName="clubms" method="POST" noCache="TRUE" noCacheHash="TRUE" pageUid="{settings.clubSection.listPid}" pluginName="clubms">
             <div class="form-row">
-                <f:if condition="{settings.club.clubsSelectbox}">
-                    <f:render arguments="{options: clubSelectbox, value: settings.club.selected}" partial="Select/Club"/>
-                </f:if>
                 <f:if condition="{settings.section.sectionsSelectbox}">
                     <f:render arguments="{options: sectionsSelectbox, value: settings.section.selected}" partial="Select/Section"/>
                 </f:if>
@@ -17,6 +14,9 @@
                 </f:if>
                 <f:if condition="{settings.section.sectionAgeLevelsSelectbox}">
                     <f:render arguments="{options: sectionAgeLevelsSelectbox, value: settings.section.sectionAgeLevel.selected}" partial="Select/SectionAgeLevel"/>
+                </f:if>
+                <f:if condition="{settings.club.clubsSelectbox}">
+                    <f:render arguments="{options: clubSelectbox, value: settings.club.selected}" partial="Select/Club"/>
                 </f:if>
                 <div class="col-xs-4">
                     <f:form.submit class="btn btn-primary" value="Los"/>
