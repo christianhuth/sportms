@@ -27,6 +27,11 @@
 		 */
 		protected $sectionAgeGroups;
 		
+		/**
+		 * @var bool
+		 */
+		protected $detailLink;
+		
 		public function __construct() {
 			//Do not remove the next line: It would break the functionality
 			$this->initStorageObjects();
@@ -100,6 +105,20 @@
 		 */
 		public function setSectionAgeGroups($sectionAgeGroups) {
 			$this->sectionAgeGroups = $sectionAgeGroups;
+		}
+		
+		/**
+		 * @return bool
+		 */
+		public function isDetailLink(): bool {
+			return $this->detailLink;
+		}
+		
+		/**
+		 * @param bool $detailLink
+		 */
+		public function setDetailLink(bool $detailLink): void {
+			$this->detailLink = $detailLink;
 		}
 		
 	}
