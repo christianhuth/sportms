@@ -57,8 +57,9 @@
 		}
 		
 		protected function mapRequestsToSettings(): void {
+			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->settings, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			/* SelectModel */
-			$listOfSelectModels = 'club,competition, season,section,team';
+			$listOfSelectModels = 'club,competition,season,section,team';
 			foreach(explode(',', $listOfSelectModels) AS $selectModel) {
 				if($this->request->hasArgument('select' . ucfirst($selectModel))) {
 					$this->settings[$selectModel]['selected'] = $this->request->getArgument('select' . ucfirst($selectModel));
