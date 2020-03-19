@@ -74,6 +74,8 @@
 					if($this->settings['section']['selected']) {
 						$sectionAgeGroupsSelectbox = $this->sectionAgeGroupRepository->findAllByUidsAndSection($this->getSectionAgeGroupsFilter(FALSE), $this->getSectionsFilter());
 						$this->view->assign('sectionAgeGroupsSelectbox', $sectionAgeGroupsSelectbox);
+						$sectionAgeLevelsSelectbox = $this->sectionAgeLevelsRepository->findAllByUidsAndSection($this->getSectionAgeLevelsFilter(FALSE), $this->getSectionsFilter());
+						$this->view->assign('sectionAgeLevelsSelectbox', $sectionAgeLevelsSelectbox);
 					}
 				}
 				if($this->settings['competition']['competitionTypesSelectbox']) {

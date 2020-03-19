@@ -13,7 +13,7 @@
 		}
 		
 		protected function getCompetitionTypesFilter($useSelected = TRUE) {
-			return $this->getFilter('competition', 'competitionTypes', $useSelected);
+			return $this->getFilter('competitionType', 'competitionTypes', $useSelected);
 		}
 		
 		protected function getCompetitionSeasonGamedaysFilter($useSelected = TRUE) {
@@ -48,17 +48,13 @@
 			return $this->getFilter('venue', 'venues', $useSelected);
 		}
 		
-		protected function getVenuesWithClubOnlyFilter($useSelected = TRUE) {
-			return $this->getFilter('venue', 'withClubOnly', $useSelected);
-		}
-		
 		protected function getFilter($key1, $key2, $useSelected) {
 			return ($useSelected && ($this->settings[$key1]['selected'])) ? $this->settings[$key1]['selected']: $this->settings[$key1][$key2];
 		}
 		
 		protected function mapRequestsToSettings(): void {
 			/* SelectModel */
-			$listOfSelectModels = 'club,competition,season,section,team';
+			$listOfSelectModels = 'club,competition,competitionType,season,section,sectionAgeGroup,sectionAgeLevel,team';
 			foreach(explode(',', $listOfSelectModels) AS $selectModel) {
 				if($this->request->hasArgument('select' . ucfirst($selectModel))) {
 					$this->settings[$selectModel]['selected'] = $this->request->getArgument('select' . ucfirst($selectModel));
