@@ -139,7 +139,10 @@
 					break;
 				}
 			}
-			if($this->arguments[$this->clubMsDomainModel]->isDetailLink()) { return null; }
+			if($this->arguments[$this->clubMsDomainModel]->isDetailLink()) {
+				$this->tagName = 'span';
+				return $this->tag->render();
+			}
 			$extensionName = "clubms";
 			$pluginName = "clubms";
 			$action = $this->arguments['action'] ? $this->arguments['action'] : "show";
