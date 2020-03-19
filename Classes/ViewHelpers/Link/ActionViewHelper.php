@@ -136,6 +136,7 @@
 			foreach($this->getListOfClubMsDomainModels() as $clubMsDomainModel) {
 				if($this->arguments[$clubMsDomainModel]) {
 					$this->setClubMsDomainModel($clubMsDomainModel);
+					\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->arguments[$clubMsDomainModel], 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 					break;
 				}
 			}
