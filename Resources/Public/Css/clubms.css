@@ -7,10 +7,7 @@
 }
 
 #tx-clubms #tx-clubms-container .tx-clubms-list-filter {
-	background-color: var(--regular-gray);
-	border-radius: 4px;
-	margin-bottom: 30px;
-	padding: 10px;
+	background-color: var(--light-gray);
 }
 
 #tx-clubms #tx-clubms-container .tx-clubms-list-filter .form-group:last-of-type {
