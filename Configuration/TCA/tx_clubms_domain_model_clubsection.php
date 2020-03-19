@@ -32,7 +32,8 @@ return array(
 		'1' => array('showitem' => 'section, images, club_section_members,
 									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubsection.tab_contact, addresses, phones, mails, urls,
 									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubsection.tab_officials, club_section_officials,
-									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubsection.tab_teams, teams'),
+									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubsection.tab_teams, teams,
+									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubsection.tab_visibility, hidden, detail_link'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -273,6 +274,15 @@ return array(
 				'foreign_field' => 'club_section',
 				'foreign_table' => 'tx_clubms_domain_model_team',
 				'type' => 'inline',
+			),
+		),
+		
+		'detail_link' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubsection.detail_link',
+			'config' => array(
+				'default' => '1',
+				'type' => 'check',
 			),
 		),
 		
