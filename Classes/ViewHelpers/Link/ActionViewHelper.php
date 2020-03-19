@@ -139,13 +139,11 @@
 					break;
 				}
 			}
-			if($this->getClubMsDomainModel() != "ClubSection" && $this->getClubMsDomainModel() != "CompetitionSeason" && $this->getClubMsDomainModel() != "TeamSeason") {
-				if(is_null($this->arguments[$this->clubMsDomainModel]) || !$this->arguments[$this->clubMsDomainModel]->isDetailLink()) {
-					$this->tagName = 'span';
-					$this->setTagBuilder(new \TYPO3Fluid\Fluid\Core\ViewHelper\TagBuilder($this->tagName));
-					$this->tag->setContent($this->renderChildren());
-					return $this->tag->render();
-				}
+			if(is_null($this->arguments[$this->clubMsDomainModel]) || !$this->arguments[$this->clubMsDomainModel]->isDetailLink()) {
+				$this->tagName = 'span';
+				$this->setTagBuilder(new \TYPO3Fluid\Fluid\Core\ViewHelper\TagBuilder($this->tagName));
+				$this->tag->setContent($this->renderChildren());
+				return $this->tag->render();
 			}
 			$extensionName = "clubms";
 			$pluginName = "clubms";
