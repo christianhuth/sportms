@@ -14,10 +14,6 @@ plugin.tx_clubms {
     # ====================================
     # Settings available inside Controller and View by accessing $this->settings or {settings.xyz}
     # ====================================
-    settings.css {
-        pathToCssFile = {$plugin.tx_clubms.settings.css.pathToCssFile}
-    }
-
     settings {
 
         club {
@@ -80,6 +76,8 @@ plugin.tx_clubms {
     }
 
     view {
+        pathToCssFile = {$plugin.tx_clubms.settings.css.pathToCssFile}
+
         layoutRootPaths {
             0 = EXT:clubms/Resources/Private/Layouts/
             1 = {$plugin.tx_clubms.view.layoutRootPath}
