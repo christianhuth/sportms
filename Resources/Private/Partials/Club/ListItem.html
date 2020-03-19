@@ -18,14 +18,7 @@
         </f:if>
     </td>
     <td class="tx-clubms-club-name">
-        <f:if condition="{club.detailLink}">
-            <f:then>
-                <clubms:link.action Club="{club}">{club.name}</clubms:link.action>
-            </f:then>
-            <f:else>
-                {club.name}
-            </f:else>
-        </f:if>
+        <clubms:link.action Club="{club}">{club.name}</clubms:link.action>
     </td>
     <td class="tx-clubms-club-sections">
         <f:if condition="{club.clubSections}">
