@@ -141,6 +141,7 @@
 			}
 			if($this->arguments[$this->clubMsDomainModel]->isDetailLink()) {
 				$this->tagName = 'span';
+				$this->setTagBuilder(new \TYPO3Fluid\Fluid\Core\ViewHelper\TagBuilder($this->tagName));
 				return $this->tag->render();
 			}
 			$extensionName = "clubms";
