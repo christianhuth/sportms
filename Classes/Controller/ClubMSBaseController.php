@@ -57,13 +57,12 @@
 		}
 		
 		protected function mapRequestsToSettings(): void {
-			/* selectClub */
-			if($this->request->hasArgument('selectClub')) {
-				$this->settings['club']['selected'] = $this->request->getArgument('selectClub');
-			}
-			/* selectSection */
-			if($this->request->hasArgument('selectSection')) {
-				$this->settings['section']['selected'] = $this->request->getArgument('selectSection');
+			/* SelectModel */
+			$listOfSelectModels = 'club,season,section';
+			foreach($listOfSelectModels AS $selectModel) {
+				if($this->request->hasArgument('select' . ucfirst($selectModel))) {
+					$this->settings[$selectModel]['selected'] = $this->request->getArgument('select' . ucfirst($selectModel));
+				}
 			}
 			/* ShowView */
 			if($this->request->hasArgument('showView') && $this->request->hasArgument('controller')) {
