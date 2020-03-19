@@ -58,6 +58,11 @@
 		 */
 		protected $spectatorCapacity;
 		
+		/**
+		 * @var bool
+		 */
+		protected $detailLink;
+		
 		public function __construct() {
 			//Do not remove the next line: It would break the functionality
 			$this->initStorageObjects();
@@ -213,6 +218,20 @@
 		 */
 		public function setSpectatorCapacity($spectatorCapacity) {
 			$this->spectatorCapacity = $spectatorCapacity;
+		}
+		
+		/**
+		 * @return bool
+		 */
+		public function isDetailLink(): bool {
+			return $this->detailLink;
+		}
+		
+		/**
+		 * @param bool $detailLink
+		 */
+		public function setDetailLink(bool $detailLink): void {
+			$this->detailLink = $detailLink;
 		}
 		
 	}
