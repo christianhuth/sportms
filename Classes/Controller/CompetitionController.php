@@ -72,7 +72,7 @@
 					$sectionsSelectbox = $this->sectionRepository->findAllByUids($this->getSectionsFilter(FALSE));
 					$this->view->assign('sectionsSelectbox', $sectionsSelectbox);
 					if($this->settings['section']['selected']) {
-						$sectionAgeGroupsSelectbox = $this->sectionAgeGroupRe->findAllByUids($this->getSectionAgeGroupsFilter(FALSE));
+						$sectionAgeGroupsSelectbox = $this->sectionAgeGroupRepository->findAllByUids($this->getSectionAgeGroupsFilter(FALSE));
 						$this->view->assign('sectionAgeGroupsSelectbox', $sectionAgeGroupsSelectbox);
 					}
 				}
