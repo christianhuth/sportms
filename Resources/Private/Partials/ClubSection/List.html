@@ -15,19 +15,7 @@
         <f:if condition="{clubSections}">
             <f:then>
                 <f:for as="clubSection" each="{clubSections}">
-                    <tr>
-                        <td>
-                            <clubms:link.action Club="{clubSection.club}">{clubSection.club.name}</clubms:link.action>
-                        </td>
-                        <td>
-                            <clubms:link.action ClubSection="{clubSection}">{clubSection.section.label}</clubms:link.action>
-                        </td>
-                        <td>
-                            <clubms:link.action action="list" arguments="{club: clubSection.club, section: clubSection.section}" controller="Team">
-                                <f:count>{clubSection.teams}</f:count>
-                            </clubms:link.action>
-                        </td>
-                    </tr>
+                    <f:render arguments="{clubSection: clubSection, settings: settings}" partial="ClubSection/ListItem"/>
                 </f:for>
             </f:then>
             <f:else>
