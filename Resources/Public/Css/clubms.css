@@ -1,9 +1,10 @@
-#tx-clubms {
+.clubmsicon {
+    background: var(--regular-red);
     display: block;
-}
-
-#tx-clubms #tx-clubms-container {
-    font-family: sans-serif;
+    height: 30px;
+    mask-position: center center;
+    mask-size: contain;
+    width: 30px;
 }
 
 .clubmsicon.clubmsicon-club {
@@ -42,8 +43,20 @@
     mask: url("/typo3conf/ext/clubms/Resources/Public/Icons/tx_clubms_domain_model_team.svg");
 }
 
+.clubmsicon.clubmsicon-url {
+    mask: url("/typo3conf/ext/clubms/Resources/Public/Icons/tx_clubms_domain_model_url.svg");
+}
+
 .clubmsicon.clubmsicon-venue {
     mask: url("/typo3conf/ext/clubms/Resources/Public/Icons/tx_clubms_domain_model_venue.svg");
+}
+
+#tx-clubms {
+    display: block;
+}
+
+#tx-clubms #tx-clubms-container {
+    font-family: sans-serif;
 }
 
 #tx-clubms #tx-clubms-container .tx-clubms-list-filter {
