@@ -66,7 +66,7 @@
 			}
 			/* ShowView */
 			if($this->request->hasArgument('showView') && $this->request->hasArgument('controller')) {
-				$model = strtolower($this->request->getArgument('controller'));
+				$model = lcfirst($this->request->getArgument('controller'));
 				$this->settings[$model]['showView']['current'] = $this->request->getArgument('showView');
 			}
 		}
