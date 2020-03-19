@@ -21,7 +21,7 @@
 		 * @return array|\TYPO3\CMS\Extbase\Persistence\QueryResultInterface
 		 * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
 		 */
-		public function findAllByUids(string $uids) {
+		public function findAllByUids($uids) {
 			\TYPO3\CMS\Core\Utility\DebugUtility::debug($uids, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			$query = $this->createQuery();
 			return $query->matching($query->logicalAnd($query->in('uid', explode(',', $uids))))->execute();
