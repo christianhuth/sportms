@@ -10,6 +10,7 @@
 		 * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
 		 */
 		public function findAllByUids(string $uids) {
+			\TYPO3\CMS\Core\Utility\DebugUtility::debug($uids, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			if(!$uids) {
 				return $this->findAll();
 			} else {
