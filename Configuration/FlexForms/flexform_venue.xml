@@ -90,17 +90,6 @@
 					</config>
 				</TCEforms>
 			</settings.venue.venues>
-			<settings.venue.withClubOnly>
-				<TCEforms>
-					<label>Zeige nur Sportstätten von Vereinen</label>
-					<displayCond>FIELD:base.switchableControllerActions:=:Venue->list</displayCond>
-					<config>
-						<default>0</default>
-						<renderType>checkboxToggle</renderType>
-						<type>check</type>
-					</config>
-				</TCEforms>
-			</settings.venue.withClubOnly>
 		</el>
 	</ROOT>
 </T3DataStructure>
