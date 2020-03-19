@@ -1,10 +1,12 @@
 <html data-namespace-typo3-fluid="true"
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
-<div class="form-row">
-    <div class="col-xs-12">
-        <f:form.select class="form-control" name="selectCompetition" optionLabelField="name" optionValueField="uid" options="{options}" prependOptionLabel="Alle Wettbewerbe" prependOptionValue="" sortByOptionLabel="TRUE" value="{value}"/>
+<f:if condition="{settings.competition.competitionsSelectbox}">
+    <div class="form-row">
+        <div class="col-xs-12">
+            <f:form.select class="form-control" name="selectCompetition" optionLabelField="name" optionValueField="uid" options="{options}" prependOptionLabel="Alle Wettbewerbe" prependOptionValue="" sortByOptionLabel="TRUE" value="{value}"/>
+        </div>
     </div>
-</div>
+</f:if>
 
 </html>

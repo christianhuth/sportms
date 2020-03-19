@@ -2,11 +2,13 @@
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <f:if condition="{settings.club.clubsSelectbox}">
-    <div class="form-row">
-        <div class="col-xs-12">
-            <f:form.select class="form-control" name="selectClub" optionLabelField="name" optionValueField="uid" options="{options}" prependOptionLabel="Alle Vereine" prependOptionValue="" sortByOptionLabel="TRUE" value="{value}"/>
+    <f:if condition="{settings.club.clubsSelectbox}">
+        <div class="form-row">
+            <div class="col-xs-12">
+                <f:form.select class="form-control" name="selectClub" optionLabelField="name" optionValueField="uid" options="{options}" prependOptionLabel="Alle Vereine" prependOptionValue="" sortByOptionLabel="TRUE" value="{value}"/>
+            </div>
         </div>
-    </div>
+    </f:if>
 </f:if>
 
 </html>

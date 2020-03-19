@@ -9,29 +9,13 @@
                     settings.season.seasonsSelextbox}">
     <div class="tx-clubms-list-filter">
         <f:form action="list" controller="ClubSection" extensionName="clubms" method="POST" noCache="TRUE" noCacheHash="TRUE" pageUid="{settings.clubSection.listPid}" pluginName="clubms">
-            <div class="form-row">
-                <f:if condition="{settings.section.sectionsSelectbox}">
-                    <f:render arguments="{options: sectionsSelectbox, value: settings.section.selected}" partial="Select/Section"/>
-                </f:if>
-                <f:if condition="{settings.section.sectionAgeGroupsSelectbox}">
-                    <f:render arguments="{options: sectionAgeGroupsSelectbox, value: settings.section.sectionAgeGroup.selected}" partial="Select/SectionAgeGroup"/>
-                </f:if>
-                <f:if condition="{settings.section.sectionAgeLevelsSelectbox}">
-                    <f:render arguments="{options: sectionAgeLevelsSelectbox, value: settings.section.sectionAgeLevel.selected}" partial="Select/SectionAgeLevel"/>
-                </f:if>
-                <f:if condition="{settings.club.clubsSelectbox}">
-                    <f:render arguments="{options: clubSelectbox, value: settings.club.selected}" partial="Select/Club"/>
-                </f:if>
-                <f:if condition="{settings.team.teamsSelectbox}">
-                    <f:render arguments="{options: teamsSelectbox, value: settings.team.selected}" partial="Select/Team"/>
-                </f:if>
-                <f:if condition="{settings.season.seasonsSelectbox}">
-                    <f:render arguments="{options: seasonsSelectbox, value: settings.season.selected}" partial="Select/Season"/>
-                </f:if>
-                <div class="col-xs-4">
-                    <f:form.submit class="btn btn-primary" value="Los"/>
-                </div>
-            </div>
+            <f:render arguments="{options: sectionsSelectbox,           settings: settings,     value: settings.section.selected}" partial="Form/Select/Section"/>
+            <f:render arguments="{options: sectionAgeGroupsSelectbox,   settings: settings,     value: settings.section.sectionAgeGroup.selected}" partial="Form/Select/SectionAgeGroup"/>
+            <f:render arguments="{options: sectionAgeLevelsSelectbox,   settings: settings,     value: settings.section.sectionAgeLevel.selected}" partial="Form/Select/SectionAgeLevel"/>
+            <f:render arguments="{options: clubSelectbox,               settings: settings,     value: settings.club.selected}" partial="Select/Club"/>
+            <f:render arguments="{options: teamsSelectbox,              settings: settings,     value: settings.team.selected}" partial="Select/Team"/>
+            <f:render arguments="{options: seasonsSelectbox,            settings: settings,     value: settings.season.selected}" partial="Select/Season"/>
+            <f:render partial="Form/Submit"/>
         </f:form>
     </div>
 </f:if>

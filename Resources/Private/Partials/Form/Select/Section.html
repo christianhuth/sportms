@@ -1,10 +1,12 @@
 <html data-namespace-typo3-fluid="true"
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
-<div class="form-row">
-    <div class="col-xs-12">
-        <f:form.select class="form-control" name="selectSection" optionLabelField="label" optionValueField="uid" options="{options}" prependOptionLabel="Alle Abteilungen" prependOptionValue="" sortByOptionLabel="TRUE" value="{value}"/>
+<f:if condition="{settings.section.sectionsSelectbox}">
+    <div class="form-row">
+        <div class="col-xs-12">
+            <f:form.select class="form-control" name="selectSection" optionLabelField="label" optionValueField="uid" options="{options}" prependOptionLabel="Alle Abteilungen" prependOptionValue="" sortByOptionLabel="TRUE" value="{value}"/>
+        </div>
     </div>
-</div>
+</f:if>
 
 </html>

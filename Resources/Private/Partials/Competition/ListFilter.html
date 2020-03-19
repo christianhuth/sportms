@@ -1,26 +1,17 @@
 <html data-namespace-typo3-fluid="true"
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
-<f:if condition="{settings.competition.competitionTypesSelectbox || settings.section.sectionsSelectbox || settings.section.sectionAgeGroupsSelectbox || settings.section.sectionAgeLevelsSelectbox}">
+<f:if condition="{  settings.section.sectionsSelectbox ||
+                    settings.section.sectionAgeGroupsSelectbox ||
+                    settings.section.sectionAgeLevelsSelectbox
+                    settings.competition.competitionTypesSelectbox}">
     <div class="tx-clubms-list-filter">
         <f:form action="list" controller="ClubSection" extensionName="clubms" method="POST" noCache="TRUE" noCacheHash="TRUE" pageUid="{settings.clubSection.listPid}" pluginName="clubms">
-            <div class="form-row">
-                <f:if condition="{settings.competition.competitionTypesSelectbox}">
-                    <f:render arguments="{options: competitionTypesSelectbox, value: settings.competition.competitionType.selected}" partial="Select/CompetitionType"/>
-                </f:if>
-                <f:if condition="{settings.section.sectionsSelectbox}">
-                    <f:render arguments="{options: sectionsSelectbox, value: settings.section.selected}" partial="Select/Section"/>
-                </f:if>
-                <f:if condition="{settings.section.sectionAgeGroupsSelectbox}">
-                    <f:render arguments="{options: sectionAgeGroupsSelectbox, value: settings.section.sectionAgeGroup.selected}" partial="Select/SectionAgeGroup"/>
-                </f:if>
-                <f:if condition="{settings.section.sectionAgeLevelsSelectbox}">
-                    <f:render arguments="{options: sectionAgeLevelsSelectbox, value: settings.section.sectionAgeLevel.selected}" partial="Select/SectionAgeLevel"/>
-                </f:if>
-                <div class="col-xs-4">
-                    <f:form.submit class="btn btn-primary" value="Los"/>
-                </div>
-            </div>
+            <f:render arguments="{options: sectionsSelectbox, settings: settings, value: settings.section.selected}" partial="Form/Select/Section"/>
+            <f:render arguments="{options: sectionAgeGroupsSelectbox, settings: settings, value: settings.section.sectionAgeGroup.selected}" partial="Form/Select/SectionAgeGroup"/>
+            <f:render arguments="{options: sectionAgeLevelsSelectbox, settings: settings, value: settings.section.sectionAgeLevel.selected}" partial="Form/Select/SectionAgeLevel"/>
+            <f:render arguments="{options: competitionTypesSelectbox, settings: settings, value: settings.competition.competitionType.selected}" partial="Select/CompetitionType"/>
+            <f:render partial="Form/Submit"/>
         </f:form>
     </div>
 </f:if>
