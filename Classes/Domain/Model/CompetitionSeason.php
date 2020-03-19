@@ -65,16 +65,16 @@
 		}
 
 		/**
-		 * @return Season
+		 * @return \Balumedien\Clubms\Domain\Model\Season
 		 */
-		public function getSeason() {
+		public function getSeason(): \Balumedien\Clubms\Domain\Model\Season {
 			return $this->season;
 		}
 
 		/**
-		 * @param Season $season
+		 * @param \Balumedien\Clubms\Domain\Model\Season $season
 		 */
-		public function setSeason($season) {
+		public function setSeason(\Balumedien\Clubms\Domain\Model\Season $season) {
 			$this->season = $season;
 		}
 
