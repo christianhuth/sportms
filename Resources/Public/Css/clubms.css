@@ -6,7 +6,7 @@
     font-family: sans-serif;
 }
 
-.input .clubmsicon {
+.input-group-addon .clubmsicon {
 	background: var(--regular-red;)
 	display: block;
 	height: 28px;
