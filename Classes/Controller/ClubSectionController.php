@@ -57,7 +57,7 @@
 			if($this->settings['club']['clubsSelectbox'] || $this->settings['section']['sectionsSelectbox']) {
 				$clubSections = $this->clubSectionRepository->findAll($this->getClubsFilter(FALSE), $this->getSectionsFilter(FALSE));
 				if($this->settings['club']['clubsSelectbox']) {
-					$clubsSelectbox = $this->clubRepository->findAllByClubSections($clubSections);
+					$clubsSelectbox = $this->clubRepository->findAllByUids($this->getClubsFilter(FALSE));
 					$this->view->assign('clubsSelectbox', $clubsSelectbox);
 				}
 				if($this->settings['section']['sectionsSelectbox']) {
