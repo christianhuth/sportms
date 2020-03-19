@@ -144,6 +144,8 @@
 				case "\Balumedien\Clubms\Domain\Model\Club": if(!$this->arguments[$this->clubMsDomainModel]->isDetailLink()) { return null; } break;
 				case "Balumedien\Clubms\Domain\Model\Club": if(!$this->arguments[$this->clubMsDomainModel]->isDetailLink()) { return null; } break;
 			}
+			
+				\TYPO3\CMS\Core\Utility\DebugUtility::debug(getType($this->arguments[$this->clubMsDomainModel]), 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			$extensionName = "clubms";
 			$pluginName = "clubms";
 			$action = $this->arguments['action'] ? $this->arguments['action'] : "show";
