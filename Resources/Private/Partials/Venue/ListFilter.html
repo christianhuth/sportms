@@ -5,17 +5,13 @@
                     settings.venue.withClubOnly}">
     <div class="tx-clubms-list-filter">
         <f:form action="list" controller="ClubSection" extensionName="clubms" method="POST" noCache="TRUE" noCacheHash="TRUE" pageUid="{settings.clubSection.listPid}" pluginName="clubms">
-            <div class="form-row">
-                <f:if condition="{settings.club.clubSelectbox}">
-                    <f:render arguments="{options: clubSelectbox, value: settings.club.selected}" partial="Select/Club"/>
-                </f:if>
-                <f:if condition="{settings.venue.withClubOnly}">
-                    <f:form.checkbox checked="{settings.venue.withClubOnly}" property="settings.venue.withClubOnly" value="settings.venue.withClubOnly"/>
-                </f:if>
-                <div class="col-xs-4">
-                    <f:form.submit class="btn btn-primary" value="Los"/>
-                </div>
-            </div>
+            <f:if condition="{settings.club.clubSelectbox}">
+                <f:render arguments="{options: clubSelectbox, value: settings.club.selected}" partial="Select/Club"/>
+            </f:if>
+            <f:if condition="{settings.venue.withClubOnly}">
+                <f:form.checkbox checked="{settings.venue.withClubOnly}" property="settings.venue.withClubOnly" value="settings.venue.withClubOnly"/>
+            </f:if>
+            <f:render partial="Form/Submit"/>
         </f:form>
     </div>
 </f:if>
