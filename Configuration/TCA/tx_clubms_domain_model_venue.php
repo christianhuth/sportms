@@ -27,7 +27,8 @@ return array(
 		'showRecordFieldList' => 'hidden, section',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'club, name, address, images, description, --palette--;;building, --palette--;;size, slug'),
+		'1' => array('showitem' => 'club, name, address, images, description, --palette--;;building, --palette--;;size,
+									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_venue.tab_visibility, hidden, detail_link, slug'),
 	),
 	'palettes' => array(
         'building' => array('showitem' => 'date_of_building, year_of_building'),
@@ -202,6 +203,14 @@ return array(
 			),
 		),
 		
+		'detail_link' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_club.detail_link',
+			'config' => array(
+				'default' => '1',
+				'type' => 'check',
+			),
+		),
 		'slug' => [
 			'exclude' => true,
 			'label' => 'URL Segment',
