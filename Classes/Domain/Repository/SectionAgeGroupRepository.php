@@ -9,8 +9,8 @@
 		);
 		
 		/**
-		 * @param string $uids
-		 * @param string $sections
+		 * @param string|null $uids
+		 * @param string|null $sections
 		 * @return array|\TYPO3\CMS\Extbase\Persistence\QueryResultInterface
 		 * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
 		 */

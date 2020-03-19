@@ -11,12 +11,12 @@
 		);
 		
 		/**
-		 * @param string $uids
-		 * @param int $section
+		 * @param string|null $uids
+		 * @param string|null $sections
 		 * @return array|\TYPO3\CMS\Extbase\Persistence\QueryResultInterface
 		 * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
 		 */
-		public function findAllByUidsAndSection(string $uids = null, string $sections = null) {
+		public function findAll(string $uids = null, string $sections = null) {
 			$query = $this->createQuery();
 			$constraints = [];
 			if($uids) {
