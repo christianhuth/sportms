@@ -16,6 +16,16 @@
 			return $query->execute();
 		}
 		
+		/**
+		 * @param string $uids
+		 * @return array|\TYPO3\CMS\Extbase\Persistence\QueryResultInterface
+		 * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
+		 */
+		public function findAllByUids(string $uids) {
+			$query = $this->createQuery();
+			return $query->matching($query->logicalAnd($query->in('uid', explode(',', $uids))))->execute();
+		}
+		
 		public function findAllByClubSections($clubSections) {
 			$query = $this->createQuery();
 			$constraints = [];
