@@ -9,23 +9,23 @@
 
 		/**
 		 * @var \Balumedien\Clubms\Domain\Model\Competition
-		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
 		 */
 		protected $competition;
 
 		/**
 		 * @var \Balumedien\Clubms\Domain\Model\Season
-		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
 		 */
 		protected $season;
 
 		/**
 		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\CompetitionSeasonGameday>
+		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
 		 */
 		protected $competitionSeasonGamedays;
 
 		/**
 		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\TeamSeason>
+		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
 		 */
 		protected $competitionSeasonTeams;
 
