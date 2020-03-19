@@ -5,8 +5,6 @@
 	class SectionAgeLevelRepository extends ClubMSBaseRepository {
 		
 		protected $defaultOrderings = array(
-			'sectionAgeGroup.section.label' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
-			'sectionAgeGroup.sorting' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
 			'sorting' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
 		);
 		
