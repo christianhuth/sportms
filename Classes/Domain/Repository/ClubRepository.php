@@ -4,6 +4,11 @@
 	
 	class ClubRepository extends ClubMSBaseRepository {
 		
+		// Order by BE sorting
+		protected $defaultOrderings = array(
+			'name' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING
+		);
+		
 		public function findAllByClubSections($clubSections) {
 			$query = $this->createQuery();
 			$constraints = [];
