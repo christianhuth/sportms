@@ -6,7 +6,7 @@
 	font-family: sans-serif;
 }
 
-.clubmsicon .clubmsicon-club {
+.clubmsicon.clubmsicon-club {
 	mask: url("/typo3conf/ext/clubms/Resources/Public/Icons/tx_clubms_domain_model_club.svg");
 }
 
