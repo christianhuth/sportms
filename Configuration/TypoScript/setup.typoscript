@@ -16,8 +16,6 @@ plugin.tx_clubms {
     # ====================================
     settings.css {
         pathToCssFile = {$plugin.tx_clubms.settings.css.pathToCssFile}
-        mainClass = {$plugin.tx_clubms.settings.css.mainClass}
-        wrapperClass = {$plugin.tx_clubms.settings.css.wrapperClass}
     }
 
     settings {

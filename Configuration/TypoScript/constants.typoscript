@@ -39,10 +39,6 @@ plugin.tx_clubms {
     settings.css {
         # cat=plugin.tx_clubms/css; type=string; label=Path to css file
         pathToCssFile = EXT:clubms/Resources/Public/Css/clubms.css
-        # cat=plugin.tx_clubms/css; type=string; label=Main class for template
-        mainClass = tx-clubms
-        # cat=plugin.tx_clubms/css; type=string; label=Wrapper class for template
-        wrapperClass = tx-clubms-container
     }
 
     settings {
