@@ -19,14 +19,14 @@
 		 * Initializes the controller before invoking an action method.
 		 * Use this method to solve tasks which all actions have in common.
 		 */
-		public function initializeAction() {
+		public function initializeAction(): void {
 			$this->mapRequestsToSettings();
 		}
 		
 		/**
 		 * Use this method to solve tasks which all actions have in common, when VIEW-Context is needed
 		 */
-		public function initializeActions() {
+		public function initializeActions(): void {
 			$listOfPossibleShowViews = 'index,officials';
 			$this->determineShowView($this->model);
 			$this->determineShowViews($this->model, $listOfPossibleShowViews);
@@ -36,17 +36,18 @@
 		
 		/**
 		 * @return void
+		 * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
 		 */
-		public function listAction() {
+		public function listAction(): void {
 			$this->initializeActions();
-			$persons = $this->personRepository->findAll($this->getPersonsFilter());
+			$persons = $this->personRepository->findAllByUids($this->getPersonsFilter());
 			$this->view->assign('persons', $persons);
 		}
 		
 		/**
 		 * @param \Balumedien\Clubms\Domain\Model\Person $person
 		 */
-		public function showAction(\Balumedien\Clubms\Domain\Model\Person $person = NULL) {
+		public function showAction(\Balumedien\Clubms\Domain\Model\Person $person = NULL): void {
 			$this->initializeActions();
 			if($person === NULL) {
 				$personUid = $this->settings['single']['person'];
