@@ -49,8 +49,7 @@
 			$this->view->assign('venues', $venues);
 			/* FRONTEND FILTERS */
 			if($this->settings['club']['clubsSelectbox']) {
-				$venues = $this->venueRepository->findAll($this->getClubsFilter(FALSE));
-				$clubsSelectbox = $this->clubRepository->findAllByClubSections($venues);
+				$clubsSelectbox = $this->clubRepository->findAllByUids($this->getClubsFilter(FALSE));
 				$this->view->assign('clubsSelectbox', $clubsSelectbox);
 			}
 		}
