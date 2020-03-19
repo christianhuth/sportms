@@ -23,16 +23,16 @@
 		protected $short;
 		
 		/**
-		 * @return SectionAgeGroup
+		 * @return \Balumedien\Clubms\Domain\Model\SectionAgeGroup
 		 */
-		public function getSectionAgeGroup() {
+		public function getSectionAgeGroup(): \Balumedien\Clubms\Domain\Model\SectionAgeGroup {
 			return $this->sectionAgeGroup;
 		}
 		
 		/**
-		 * @param SectionAgeGroup $sectionAgeGroup
+		 * @param \Balumedien\Clubms\Domain\Model\SectionAgeGroup $sectionAgeGroup
 		 */
-		public function setSectionAgeGroup($sectionAgeGroup) {
+		public function setSectionAgeGroup(\Balumedien\Clubms\Domain\Model\SectionAgeGroup $sectionAgeGroup): void {
 			$this->sectionAgeGroup = $sectionAgeGroup;
 		}
 		
@@ -40,7 +40,7 @@
 		 * Returns the label of the ageLevel
 		 * @return string
 		 */
-		public function getLabel() {
+		public function getLabel(): string {
 			return $this->label;
 		}
 		
@@ -48,21 +48,21 @@
 		 * Sets the label of the ageLevel
 		 * @param string
 		 */
-		public function setLabel($label) {
+		public function setLabel($label): void {
 			$this->label = $label;
 		}
 		
 		/**
 		 * @return string
 		 */
-		public function getShort() {
+		public function getShort(): string {
 			return $this->short;
 		}
 		
 		/**
 		 * @param string $short
 		 */
-		public function setShort($short) {
+		public function setShort($short): void {
 			$this->short = $short;
 		}
 		
