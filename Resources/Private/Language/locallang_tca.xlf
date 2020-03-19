@@ -1153,8 +1153,14 @@
 			<trans-unit id="tx_clubms_domain_model_season.enddate">
 				<source>Enddatum</source>
 			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_season.detail_link">
+				<source>Link auf Einzelansicht möglich?</source>
+			</trans-unit>
 			<trans-unit id="tx_clubms_domain_model_season.tab_dates">
 				<source>Daten</source>
+			</trans-unit>
+			<trans-unit id="tx_clubms_domain_model_season.tab_visibility">
+				<source>Sichtbarkeit</source>
 			</trans-unit>
 
 

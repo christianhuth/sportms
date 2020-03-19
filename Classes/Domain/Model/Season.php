@@ -43,6 +43,11 @@
 		protected $enddate;
 		
 		/**
+		 * @var bool
+		 */
+		protected $detailLink;
+		
+		/**
 		 * @return string
 		 */
 		public function getSeasonName() {
@@ -110,6 +115,20 @@
 		 */
 		public function setEnddate($enddate) {
 			$this->enddate = $enddate;
+		}
+		
+		/**
+		 * @return bool
+		 */
+		public function isDetailLink(): bool {
+			return $this->detailLink;
+		}
+		
+		/**
+		 * @param bool $detailLink
+		 */
+		public function setDetailLink(bool $detailLink): void {
+			$this->detailLink = $detailLink;
 		}
 		
 	}
