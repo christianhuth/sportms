@@ -4,11 +4,11 @@
 	
 	class ClubRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
 		
-		public function findAll($clubsFilter = null) {
+		public function findAll($clubUids = null) {
 			$query = $this->createQuery();
 			$constraints = [];
-			if($clubsFilter) {
-				$constraints[] = $query->in('uid', explode(",", $clubsFilter));
+			if($clubUids) {
+				$constraints[] = $query->in('uid', explode(",", $clubUids));
 			}
 			if($constraints) {
 				$query->matching($query->logicalAnd($constraints));

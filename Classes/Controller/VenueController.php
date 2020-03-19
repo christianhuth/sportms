@@ -16,6 +16,12 @@
 		protected $venueRepository;
 		
 		/**
+		 * @var \Balumedien\Clubms\Domain\Repository\ClubRepository
+		 * @TYPO3\CMS\Extbase\Annotation\Inject
+		 */
+		protected $clubRepository;
+		
+		/**
 		 * Initializes the controller before invoking an action method.
 		 * Use this method to solve tasks which all actions have in common.
 		 */
@@ -41,6 +47,12 @@
 			$this->initializeActions();
 			$venues = $this->venueRepository->findAll($this->getVenuesFilter(), $this->getClubsFilter(), $this->getVenuesWithClubOnlyFilter());
 			$this->view->assign('venues', $venues);
+			/* FRONTEND FILTERS */
+			if($this->settings['club']['clubsSelectbox']) {
+				$venues = $this->venueRepository->findAll($this->getClubsFilter(FALSE));
+				$clubsSelectbox = $this->clubRepository->findAllByClubSections($venues);
+				$this->view->assign('clubsSelectbox', $clubsSelectbox);
+			}
 		}
 		
 		/**
