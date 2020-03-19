@@ -32,7 +32,7 @@
                             <f:then>
                                 <f:for as="team" each="{clubSection.teams}" iteration="iterator2">
                                     <clubms:link.action Team="{team}">{team.name}</clubms:link.action>
-                                    <f:if condition="iterator2.isLast">
+                                    <f:if condition="{iterator2.isLast}">
                                         <f:then></f:then>
                                         <f:else>,</f:else>
                                     </f:if>
