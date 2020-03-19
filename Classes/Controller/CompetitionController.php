@@ -16,6 +16,18 @@
 		protected $competitionRepository;
 		
 		/**
+		 * @var \Balumedien\Clubms\Domain\Repository\CompetitionTypeRepository
+		 * @TYPO3\CMS\Extbase\Annotation\Inject
+		 */
+		protected $competitionTypeRepository;
+		
+		/**
+		 * @var \Balumedien\Clubms\Domain\Repository\SectionRepository
+		 * @TYPO3\CMS\Extbase\Annotation\Inject
+		 */
+		protected $sectionRepository;
+		
+		/**
 		 * Initializes the controller before invoking an action method.
 		 * Use this method to solve tasks which all actions have in common.
 		 */
@@ -36,17 +48,29 @@
 		
 		/**
 		 * @return void
+		 * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
 		 */
-		public function listAction() {
+		public function listAction(): void {
 			$this->initializeActions();
 			$competitions = $this->competitionRepository->findAll($this->getCompetitionsFilter(), $this->getCompetitionTypesFilter(), $this->getSectionsFilter(), $this->getSectionAgeGroupsFilter(), $this->getSectionAgeLevelsFilter());
 			$this->view->assign('competitions', $competitions);
+			/* FRONTEND FILTERS */
+			if($this->settings['section\'][\'sectionsSelectbox'] || $this->settings['competition']['competitionTypesSelectbox']) {
+				if($this->settings['section']['sectionsSelectbox']) {
+					$sectionsSelectbox = $this->sectionRepository->findAllByUids($this->getSectionsFilter(FALSE));
+					$this->view->assign('sectionsSelectbox', $sectionsSelectbox);
+				}
+				if($this->settings['competition']['competitionTypesSelectbox']) {
+					$competitionTypesSelectbox = $this->competitionTypeRepository->findAllByUids($this->getCompetitionTypesFilter(FALSE));
+					$this->view->assign('competitionTypesSelectbox', $competitionTypesSelectbox);
+				}
+			}
 		}
 		
 		/**
 		 * @param \Balumedien\Clubms\Domain\Model\Competition $competition
 		 */
-		public function showAction(\Balumedien\Clubms\Domain\Model\Competition $competition = NULL) {
+		public function showAction(\Balumedien\Clubms\Domain\Model\Competition $competition = NULL): void {
 			$this->initializeActions();
 			if($competition === NULL) {
 				$competitionUid = $this->settings['competition']['uid'];
