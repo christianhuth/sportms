@@ -28,6 +28,18 @@
 		protected $sectionRepository;
 		
 		/**
+		 * @var \Balumedien\Clubms\Domain\Repository\SectionAgeGroupRepository
+		 * @TYPO3\CMS\Extbase\Annotation\Inject
+		 */
+		protected $sectionAgeGroupRepository;
+		
+		/**
+		 * @var \Balumedien\Clubms\Domain\Repository\SectionAgeLevelRepository
+		 * @TYPO3\CMS\Extbase\Annotation\Inject
+		 */
+		protected $sectionAgeLevelRepository;
+		
+		/**
 		 * Initializes the controller before invoking an action method.
 		 * Use this method to solve tasks which all actions have in common.
 		 */
@@ -59,6 +71,10 @@
 				if($this->settings['section']['sectionsSelectbox']) {
 					$sectionsSelectbox = $this->sectionRepository->findAllByUids($this->getSectionsFilter(FALSE));
 					$this->view->assign('sectionsSelectbox', $sectionsSelectbox);
+					if($this->settings['section']['selected']) {
+						$sectionAgeGroupsSelectbox = $this->sectionAgeGroupRe->findAllByUids($this->getSectionAgeGroupsFilter(FALSE));
+						$this->view->assign('sectionAgeGroupsSelectbox', $sectionAgeGroupsSelectbox);
+					}
 				}
 				if($this->settings['competition']['competitionTypesSelectbox']) {
 					$competitionTypesSelectbox = $this->competitionTypeRepository->findAllByUids($this->getCompetitionTypesFilter(FALSE));
