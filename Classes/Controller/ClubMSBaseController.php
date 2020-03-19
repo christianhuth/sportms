@@ -58,7 +58,7 @@
 		
 		protected function mapRequestsToSettings(): void {
 			/* SelectModel */
-			$listOfSelectModels = 'club,season,section';
+			$listOfSelectModels = 'club,competition, season,section,team';
 			foreach(explode(',', $listOfSelectModels) AS $selectModel) {
 				if($this->request->hasArgument('select' . ucfirst($selectModel))) {
 					$this->settings[$selectModel]['selected'] = $this->request->getArgument('select' . ucfirst($selectModel));
