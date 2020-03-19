@@ -8,6 +8,8 @@
 
 .clubmsicon.clubmsicon-club {
     mask: url("/typo3conf/ext/clubms/Resources/Public/Icons/tx_clubms_domain_model_club.svg");
+	mask-position: center center;
+	mask-size: contain;
 }
 
 #tx-clubms #tx-clubms-container .tx-clubms-list-filter {
