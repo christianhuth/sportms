@@ -78,7 +78,7 @@
 						$this->view->assign('sectionAgeLevelsSelectbox', $sectionAgeLevelsSelectbox);
 					}
 				}
-				if($this->settings['competition']['competitionTypesSelectbox']) {
+				if($this->settings['competitionType']['competitionTypesSelectbox']) {
 					$competitionTypesSelectbox = $this->competitionTypeRepository->findAllByUids($this->getCompetitionTypesFilter(FALSE));
 					$this->view->assign('competitionTypesSelectbox', $competitionTypesSelectbox);
 				}
