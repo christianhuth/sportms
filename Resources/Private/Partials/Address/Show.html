@@ -3,12 +3,30 @@
 
 <f:if condition="{address}">
     <f:then>
-        {address.street} {address.housenumber}<br/>
-        {address.zipcode} {address.location}
+        <f:if condition="{size}">
+            <f:then>
+                <f:render section="{size}"/>
+            </f:then>
+            <f:else>
+                <f:render section="normal"/>
+            </f:else>
+        </f:if>
     </f:then>
     <f:else>
         -
     </f:else>
 </f:if>
+
+<f:section name="normal">
+    {address.street} {address.housenumber}<br/>
+    {address.zipcode} {address.location}
+</f:section>
+
+<f:section name="full">
+    {address.street} {address.housenumber}<br/>
+    {address.zipcode} {address.location}<br/>
+    {address.region}<br/>
+    {address.country}
+</f:section>
 
 </html>
