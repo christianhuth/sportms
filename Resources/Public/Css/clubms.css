@@ -7,12 +7,14 @@
 }
 
 .form-group .clubmsicon {
+	background: var(--regular-red;)
 	display: block;
-	width: 6px;
+	height: 28px;
+	width: 28px;
 }
 
 .clubmsicon.clubmsicon-club {
-    mask: url("/typ3conf/ext/clubms/Resources/Public/Icons/tx_clubms_domain_model_club.svg");
+    mask: url("/typo3conf/ext/clubms/Resources/Public/Icons/tx_clubms_domain_model_club.svg");
 }
 
 #tx-clubms #tx-clubms-container .tx-clubms-list-filter {
@@ -26,6 +28,10 @@
 #tx-clubms #tx-clubms-container .tx-clubms-list-filter .form-group .col-xs-0 {
     margin: 0;
     padding: 0;
+}
+
+#tx-clubms #tx-clubms-container .tx-clubms-list-filter .input-group-addon {
+	padding: 0;
 }
 
 
