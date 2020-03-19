@@ -151,7 +151,7 @@
 		}
 		
 		/**
-		 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+		 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage|null
 		 */
 		public function getCompetitionSeasons(): \TYPO3\CMS\Extbase\Persistence\ObjectStorage {
 			return $this->competitionSeasons;
