@@ -111,9 +111,9 @@
 				$name = $clubMsDomainModel;
 				$type = "string";
 				$description = lcfirst($clubMsDomainModel) . ' to show';
-				$this->registerArgument($name, $type, $description, false);
+				$this->registerArgument($name, $type, $description, FALSE);
 			}
-			$this->registerArgument("Show", "string", "Show View to show", false);
+			$this->registerArgument("Show", "string", "Show View to show", FALSE);
 		}
 		
 		# Needed so we can fill $this->getSettings()
@@ -139,14 +139,11 @@
 					break;
 				}
 			}
-			if(!is_null($this->arguments[$this->clubMsDomainModel])) {
-				if(!$this->arguments[$this->clubMsDomainModel]->isDetailLink()) {
-					
-					$this->tagName = 'span';
-					$this->setTagBuilder(new \TYPO3Fluid\Fluid\Core\ViewHelper\TagBuilder($this->tagName));
-					$this->tag->setContent($this->renderChildren());
-					return $this->tag->render();
-				}
+			if(is_null($this->arguments[$this->clubMsDomainModel]) || !$this->arguments[$this->clubMsDomainModel]->isDetailLink()) {
+				$this->tagName = 'span';
+				$this->setTagBuilder(new \TYPO3Fluid\Fluid\Core\ViewHelper\TagBuilder($this->tagName));
+				$this->tag->setContent($this->renderChildren());
+				return $this->tag->render();
 			}
 			$extensionName = "clubms";
 			$pluginName = "clubms";
@@ -158,14 +155,23 @@
 			if(($action == "show") && ($showView)) {
 				$parameters['showView'] = $showView;
 			}
-			if($this->getClubMsDomainModel() != null) {
+			if($this->getClubMsDomainModel() != NULL) {
 				if($this->getClubMsDomainModel() != "ClubSection" && $this->getClubMsDomainModel() != "CompetitionSeason" && $this->getClubMsDomainModel() != "TeamSeason") {
 					$parameters[lcfirst($this->getClubMsDomainModel())] = $this->arguments[$this->getClubMsDomainModel()];
 				} else {
 					switch($this->getClubMsDomainModel()) {
-						case "ClubSection": $parameters['club'] = $this->arguments[$clubMsDomainModel]->getClub(); $parameters['section'] = $this->arguments[$clubMsDomainModel]->getSection(); break;
-						case "CompetitionSeason": $parameters['competition'] = $this->arguments[$clubMsDomainModel]->getCompetition(); $parameters['season'] = $this->arguments[$clubMsDomainModel]->getSeason(); break;
-						case "TeamSeason": $parameters['team'] = $this->arguments[$clubMsDomainModel]->getTeam(); $parameters['season'] = $this->arguments[$clubMsDomainModel]->getSeason(); break;
+						case "ClubSection":
+							$parameters['club'] = $this->arguments[$clubMsDomainModel]->getClub();
+							$parameters['section'] = $this->arguments[$clubMsDomainModel]->getSection();
+							break;
+						case "CompetitionSeason":
+							$parameters['competition'] = $this->arguments[$clubMsDomainModel]->getCompetition();
+							$parameters['season'] = $this->arguments[$clubMsDomainModel]->getSeason();
+							break;
+						case "TeamSeason":
+							$parameters['team'] = $this->arguments[$clubMsDomainModel]->getTeam();
+							$parameters['season'] = $this->arguments[$clubMsDomainModel]->getSeason();
+							break;
 					}
 				}
 			}
