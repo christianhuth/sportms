@@ -69,6 +69,7 @@
 				$model = strtolower($this->request->getArgument('controller'));
 				$this->settings[$model]['showView']['current'] = $this->request->getArgument('showView');
 			}
+			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->settings, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 		}
 		
 		protected function determineShowViews($model, $listOfPossibleShowViews): void {
