@@ -139,12 +139,6 @@
 					break;
 				}
 			}
-			if(is_null($this->arguments[$this->clubMsDomainModel]) || !$this->arguments[$this->clubMsDomainModel]->isDetailLink()) {
-				$this->tagName = 'span';
-				$this->setTagBuilder(new \TYPO3Fluid\Fluid\Core\ViewHelper\TagBuilder($this->tagName));
-				$this->tag->setContent($this->renderChildren());
-				return $this->tag->render();
-			}
 			$extensionName = "clubms";
 			$pluginName = "clubms";
 			$action = $this->arguments['action'] ? $this->arguments['action'] : "show";
@@ -159,6 +153,12 @@
 				if($this->getClubMsDomainModel() != "ClubSection" && $this->getClubMsDomainModel() != "CompetitionSeason" && $this->getClubMsDomainModel() != "TeamSeason") {
 					$parameters[lcfirst($this->getClubMsDomainModel())] = $this->arguments[$this->getClubMsDomainModel()];
 				} else {
+					if(is_null($this->arguments[$this->clubMsDomainModel]) || !$this->arguments[$this->clubMsDomainModel]->isDetailLink()) {
+						$this->tagName = 'span';
+						$this->setTagBuilder(new \TYPO3Fluid\Fluid\Core\ViewHelper\TagBuilder($this->tagName));
+						$this->tag->setContent($this->renderChildren());
+						return $this->tag->render();
+					}
 					switch($this->getClubMsDomainModel()) {
 						case "ClubSection":
 							$parameters['club'] = $this->arguments[$clubMsDomainModel]->getClub();
