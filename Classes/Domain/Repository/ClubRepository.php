@@ -2,13 +2,13 @@
 	
 	namespace Balumedien\Clubms\Domain\Repository;
 	
-	class ClubRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
+	class ClubRepository extends ClubMSBaseRepository {
 		
 		public function findAll($clubUids = null) {
 			$query = $this->createQuery();
 			$constraints = [];
 			if($clubUids) {
-				$constraints[] = $query->in('uid', explode(",", $clubUids));
+				$constraints[] = $query->in('uid', explode(',', $clubUids));
 			}
 			if($constraints) {
 				$query->matching($query->logicalAnd($constraints));

@@ -2,8 +2,6 @@
 	
 	namespace Balumedien\Clubms\Controller;
 	
-	use TYPO3\CMS\Extbase\Mvc\View\ViewInterface;
-	
 	/**
 	 * ClubController
 	 */
