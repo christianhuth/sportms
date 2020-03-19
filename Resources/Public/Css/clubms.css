@@ -2,9 +2,42 @@
 	display: block;
 }
 
-#tx-clubms-container {
+#tx-clubms #tx-clubms-container {
 	font-family: sans-serif;
 }
+
+#tx-clubms #tx-clubms-container .tx-clubms-list-filter {
+	background-color: var(--regular-gray);
+	border-radius: 4px;
+	margin-bottom: 30px;
+	padding: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .tx_clubms_club_sections {
 	margin-bottom: 75px;
