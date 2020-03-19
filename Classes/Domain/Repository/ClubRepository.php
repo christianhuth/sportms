@@ -22,7 +22,7 @@
 		 * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
 		 */
 		public function findAllByUids(string $uids) {
-			if(!uids) {
+			if(!$uids) {
 				return $this->findAll();
 			} else {
 				$query = $this->createQuery();
