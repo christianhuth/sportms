@@ -6,7 +6,7 @@
                     settings.section.sectionAgeLevelsSelectbox
                     settings.competition.competitionTypesSelectbox}">
     <div class="tx-clubms-list-filter">
-        <f:form action="list" controller="ClubSection" extensionName="clubms" method="POST" noCache="TRUE" noCacheHash="TRUE" pageUid="{settings.clubSection.listPid}" pluginName="clubms">
+        <f:form action="list" class="form-horizontal"controller="ClubSection" extensionName="clubms" method="POST" noCache="TRUE" noCacheHash="TRUE" pageUid="{settings.clubSection.listPid}" pluginName="clubms">
             <f:render arguments="{options: sectionsSelectbox, settings: settings, value: settings.section.selected}" partial="Form/Select/Section"/>
             <f:render arguments="{options: sectionAgeGroupsSelectbox, settings: settings, value: settings.section.sectionAgeGroup.selected}" partial="Form/Select/SectionAgeGroup"/>
             <f:render arguments="{options: sectionAgeLevelsSelectbox, settings: settings, value: settings.section.sectionAgeLevel.selected}" partial="Form/Select/SectionAgeLevel"/>
