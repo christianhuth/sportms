@@ -139,7 +139,9 @@
 					break;
 				}
 			}
-			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->arguments[$this->clubMsDomainModel], 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
+			if($this->arguments[$this->clubMsDomainModel]->isDetailLink()) {
+				return null;
+			}
 			$extensionName = "clubms";
 			$pluginName = "clubms";
 			$action = $this->arguments['action'] ? $this->arguments['action'] : "show";
