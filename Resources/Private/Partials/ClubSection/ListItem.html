@@ -3,16 +3,16 @@
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <tr>
-    <td>
+    <td class="tx-clubms-section-label">
         <clubms:link.action Section="{clubSection.section}">{clubSection.section.label}</clubms:link.action>
     </td>
-    <td>
+    <td class="tx-clubms-club-name">
         <clubms:link.action Club="{clubSection.club}">{clubSection.club.name}</clubms:link.action>
     </td>
-    <td>
+    <td class="tx-clubms-section-label">
         <clubms:link.action ClubSection="{clubSection}">{clubSection.section.label}</clubms:link.action>
     </td>
-    <td>
+    <td class="tx-clubms-clubsection-teams">
         <clubms:link.action action="list" arguments="{club: clubSection.club, section: clubSection.section}" controller="Team">
             <f:count>{clubSection.teams}</f:count>
         </clubms:link.action>
