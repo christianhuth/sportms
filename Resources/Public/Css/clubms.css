@@ -7,7 +7,7 @@
 }
 
 .clubmsicon.clubmsicon-club {
-	mask: url("/typo3conf/ext/clubms/Resources/Public/Icons/tx_clubms_domain_model_club.svg");
+	mask: url("EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_club.svg");
 }
 
 #tx-clubms #tx-clubms-container .tx-clubms-list-filter {
