@@ -4,7 +4,6 @@
 	
 	class CompetitionSeasonRepository extends ClubMSBaseRepository {
 		
-		// Order by BE sorting
 		protected $defaultOrderings = array(
 			'competition.section.label' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
 			'competition.name' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,

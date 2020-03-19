@@ -4,7 +4,6 @@
 	
 	class VenueRepository extends ClubMSBaseRepository {
 		
-		// Order by BE sorting
 		protected $defaultOrderings = array(
 			'club.name' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
 			'name' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,

@@ -4,6 +4,18 @@
 	
 	class GameRepository extends ClubMSBaseRepository {
 		
+		protected $defaultOrderings = array(
+			'section.label' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
+			'competition.name' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
+			'competition.competitionType.label' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
+			'competition.sectionAgeGroup.label' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
+			'competition.sectionAgeLevel.label' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
+			'season.seasonName' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
+			'gameday' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
+			'teamSeasonHome.team.name' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
+			'teamSeasonGuest.team.name' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
+		);
+		
 		public function findAll($sectionsFilter = NULL, $sectionAgeGroupsFilter = NULL, $sectionAgeLevelsFilter = NULL, $competitionsFilter = NULL, $competitionTypesFilter = NULL, $seasonsFilter = NULL, $competitionSeasonGamedaysFilter = NULL, $clubsFilter = NULL, $teamsFilter = NULL) {
 			$query = $this->createQuery();
 			$constraints = [];
