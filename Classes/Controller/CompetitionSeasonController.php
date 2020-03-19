@@ -95,10 +95,12 @@
 				if($this->settings['competition']['competitionsSelectbox']) {
 					$competitionsSelectbox = $this->competitionRepository->findAll($this->getCompetitionsFilter(FALSE), $this->getCompetitionTypesFilter(FALSE), $this->getSectionsFilter(FALSE), $this->getSectionAgeGroupsFilter(FALSE), $this->getSectionAgeLevelsFilter(FALSE));
 					$this->view->assign('competitionsSelectbox', $competitionsSelectbox);
-				}
-				if($this->settings['competitionType']['competitionTypesSelectbox']) {
-					$competitionTypesSelectbox = $this->competitionTypeRepository->findAll($this->getCompetitionTypesFilter(FALSE));
-					$this->view->assign('competitionTypesSelectbox', $competitionTypesSelectbox);
+					if($this->settings['competition']['selected']) {
+						if($this->settings['competitionType']['competitionTypesSelectbox']) {
+							$competitionTypesSelectbox = $this->competitionTypeRepository->findAll($this->getCompetitionTypesFilter(FALSE));
+							$this->view->assign('competitionTypesSelectbox', $competitionTypesSelectbox);
+						}
+					}
 				}
 				if($this->settings['season']['seasonsSelectbox']) {
 					$seasonsSelectbox = $this->seasonRepository->findAll($this->getSeasonsFilter(FALSE));
