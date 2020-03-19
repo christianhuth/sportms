@@ -139,13 +139,14 @@
 					break;
 				}
 			}
-			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->arguments[$this->clubMsDomainModel], 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
-			if(!$this->arguments[$this->clubMsDomainModel]->isDetailLink()) {
-				
-				$this->tagName = 'span';
-				$this->setTagBuilder(new \TYPO3Fluid\Fluid\Core\ViewHelper\TagBuilder($this->tagName));
-				$this->tag->setContent($this->renderChildren());
-				return $this->tag->render();
+			if(!is_null($this->arguments[$this->clubMsDomainModel])) {
+				if(!$this->arguments[$this->clubMsDomainModel]->isDetailLink()) {
+					
+					$this->tagName = 'span';
+					$this->setTagBuilder(new \TYPO3Fluid\Fluid\Core\ViewHelper\TagBuilder($this->tagName));
+					$this->tag->setContent($this->renderChildren());
+					return $this->tag->render();
+				}
 			}
 			$extensionName = "clubms";
 			$pluginName = "clubms";
