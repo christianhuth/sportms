@@ -5,10 +5,10 @@
     <f:then>
         <f:if condition="{size}">
             <f:then>
-                <f:render section="{size}"/>
+                <f:render section="{size}" arguments="{_all}"/>
             </f:then>
             <f:else>
-                <f:render section="normal"/>
+                <f:render section="normal" arguments="{_all}"/>
             </f:else>
         </f:if>
     </f:then>
