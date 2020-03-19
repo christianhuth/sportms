@@ -33,11 +33,11 @@
 		}
 		
 		protected function getSectionAgeGroupsFilter($useSelected = TRUE) {
-			return $this->getFilter('section', 'sectionAgeGroups', $useSelected);
+			return $this->getFilter('sectionAgeGroup', 'sectionAgeGroups', $useSelected);
 		}
 		
 		protected function getSectionAgeLevelsFilter($useSelected = TRUE) {
-			return $this->getFilter('section', 'sectionAgeLevels', $useSelected);
+			return $this->getFilter('sectionAgeLevel', 'sectionAgeLevels', $useSelected);
 		}
 		
 		protected function getTeamsFilter($useSelected = TRUE) {
