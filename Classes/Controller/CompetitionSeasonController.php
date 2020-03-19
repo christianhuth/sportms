@@ -97,7 +97,7 @@
 					$this->view->assign('competitionTypesSelectbox', $competitionTypesSelectbox);
 				}
 				if($this->settings['competition']['competitionsSelectbox']) {
-					$competitionsSelectbox = $this->competitionRepository->findAll($this->getCompetitionsFilter(FALSE), $this->getCompetitionTypesFilter(), $this->getSectionsFilter(FALSE), $this->getSectionAgeGroupsFilter(FALSE), $this->getSectionAgeLevelsFilter(FALSE));
+					$competitionsSelectbox = $this->competitionRepository->findAll($this->getCompetitionsFilter(FALSE), $this->getCompetitionTypesFilter(), $this->getSectionsFilter(), $this->getSectionAgeGroupsFilter(), $this->getSectionAgeLevelsFilter());
 					$this->view->assign('competitionsSelectbox', $competitionsSelectbox);
 				}
 				if($this->settings['season']['seasonsSelectbox']) {
