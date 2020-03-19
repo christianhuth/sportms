@@ -48,20 +48,20 @@
 		
 		/**
 		 * @return void
+		 * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
 		 */
-		public function listAction() {
+		public function listAction(): void {
 			$this->initializeActions();
 			$clubSections = $this->clubSectionRepository->findAll($this->getClubsFilter(), $this->getSectionsFilter());
 			$this->view->assign('clubSections', $clubSections);
 			/* FRONTEND FILTERS */
 			if($this->settings['club']['clubsSelectbox'] || $this->settings['section']['sectionsSelectbox']) {
-				$clubSections = $this->clubSectionRepository->findAll($this->getClubsFilter(FALSE), $this->getSectionsFilter(FALSE));
 				if($this->settings['club']['clubsSelectbox']) {
 					$clubsSelectbox = $this->clubRepository->findAllByUids($this->getClubsFilter(FALSE));
 					$this->view->assign('clubsSelectbox', $clubsSelectbox);
 				}
 				if($this->settings['section']['sectionsSelectbox']) {
-					$sectionsSelectbox = $this->sectionRepository->findAllByClubSections($clubSections);
+					$sectionsSelectbox = $this->sectionRepository->findAllByUids($this->getSectionsFilter(FALSE));
 					$this->view->assign('sectionsSelectbox', $sectionsSelectbox);
 				}
 			}
