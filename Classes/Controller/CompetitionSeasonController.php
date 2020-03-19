@@ -16,17 +16,47 @@
 		protected $competitionSeasonRepository;
 		
 		/**
+		 * @var \Balumedien\Clubms\Domain\Repository\CompetitionRepository
+		 * @TYPO3\CMS\Extbase\Annotation\Inject
+		 */
+		protected $competitionRepository;
+		
+		/**
+		 * @var \Balumedien\Clubms\Domain\Repository\CompetitionTypeRepository
+		 * @TYPO3\CMS\Extbase\Annotation\Inject
+		 */
+		protected $competitionTypeRepository;
+		
+		/**
+		 * @var \Balumedien\Clubms\Domain\Repository\SectionRepository
+		 * @TYPO3\CMS\Extbase\Annotation\Inject
+		 */
+		protected $sectionRepository;
+		
+		/**
+		 * @var \Balumedien\Clubms\Domain\Repository\SectionAgeGroupRepository
+		 * @TYPO3\CMS\Extbase\Annotation\Inject
+		 */
+		protected $sectionAgeGroupRepository;
+		
+		/**
+		 * @var \Balumedien\Clubms\Domain\Repository\SectionAgeLevelRepository
+		 * @TYPO3\CMS\Extbase\Annotation\Inject
+		 */
+		protected $sectionAgeLevelRepository;
+		
+		/**
 		 * Initializes the controller before invoking an action method.
 		 * Use this method to solve tasks which all actions have in common.
 		 */
-		public function initializeAction() {
+		public function initializeAction(): void {
 			$this->mapRequestsToSettings();
 		}
 		
 		/**
 		 * Use this method to solve tasks which all actions have in common, when VIEW-Context is needed
 		 */
-		public function initializeActions() {
+		public function initializeActions(): void {
 			$listOfPossibleShowViews = 'index,games,teams';
 			$this->determineShowView($this->model);
 			$this->determineShowViews($this->model, $listOfPossibleShowViews);
@@ -36,17 +66,37 @@
 		
 		/**
 		 * @return void
+		 * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
 		 */
-		public function listAction() {
+		public function listAction(): void {
 			$this->initializeActions();
 			$competitionSeasons = $this->competitionSeasonRepository->findAll($this->getCompetitionsFilter(), $this->getCompetitionTypesFilter(), $this->getSectionsFilter(), $this->getSectionAgeGroupsFilter(), $this->getSectionAgeLevelsFilter(), $this->getSeasonsFilter());
 			$this->view->assign('competitionSeasons', $competitionSeasons);
+			/* FRONTEND FILTERS */
+			if($this->settings['section']['sectionsSelectbox'] || $this->settings['competition']['competitionTypesSelectbox'] || $this->settings['season']['seasonsSelectbox']) {
+				if($this->settings['section']['sectionsSelectbox']) {
+					$sectionsSelectbox = $this->sectionRepository->findAllByUids($this->getSectionsFilter(FALSE));
+					$this->view->assign('sectionsSelectbox', $sectionsSelectbox);
+					if($this->settings['section']['selected']) {
+						$sectionAgeGroupsSelectbox = $this->sectionAgeGroupRepository->findAllByUidsAndSection($this->getSectionAgeGroupsFilter(FALSE), $this->getSectionsFilter());
+						$this->view->assign('sectionAgeGroupsSelectbox', $sectionAgeGroupsSelectbox);
+						if($this->settings['sectionAgeGroup']['selected']) {
+							$sectionAgeLevelsSelectbox = $this->sectionAgeLevelRepository->findAllByUidsAndSection($this->getSectionAgeLevelsFilter(FALSE), $this->getSectionsFilter());
+							$this->view->assign('sectionAgeLevelsSelectbox', $sectionAgeLevelsSelectbox);
+						}
+					}
+				}
+				if($this->settings['competitionType']['competitionTypesSelectbox']) {
+					$competitionTypesSelectbox = $this->competitionTypeRepository->findAllByUids($this->getCompetitionTypesFilter(FALSE));
+					$this->view->assign('competitionTypesSelectbox', $competitionTypesSelectbox);
+				}
+			}
 		}
 		
 		/**
 		 * @param \Balumedien\Clubms\Domain\Model\CompetitionSeason $competitionSeason
 		 */
-		public function showAction(\Balumedien\Clubms\Domain\Model\CompetitionSeason $competitionSeason = NULL) {
+		public function showAction(\Balumedien\Clubms\Domain\Model\CompetitionSeason $competitionSeason = NULL): void {
 			$this->initializeActions();
 			if($competitionSeason === NULL) {
 				$competitionSeasonUid = $this->settings['competitionSeason']['uid'];
