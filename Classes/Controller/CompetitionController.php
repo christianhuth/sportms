@@ -55,7 +55,7 @@
 			$competitions = $this->competitionRepository->findAll($this->getCompetitionsFilter(), $this->getCompetitionTypesFilter(), $this->getSectionsFilter(), $this->getSectionAgeGroupsFilter(), $this->getSectionAgeLevelsFilter());
 			$this->view->assign('competitions', $competitions);
 			/* FRONTEND FILTERS */
-			if($this->settings['section\'][\'sectionsSelectbox'] || $this->settings['competition']['competitionTypesSelectbox']) {
+			if($this->settings['section']['sectionsSelectbox'] || $this->settings['competition']['competitionTypesSelectbox']) {
 				if($this->settings['section']['sectionsSelectbox']) {
 					$sectionsSelectbox = $this->sectionRepository->findAllByUids($this->getSectionsFilter(FALSE));
 					$this->view->assign('sectionsSelectbox', $sectionsSelectbox);
