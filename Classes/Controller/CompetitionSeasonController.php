@@ -46,6 +46,12 @@
 		protected $sectionAgeLevelRepository;
 		
 		/**
+		 * @var \Balumedien\Clubms\Domain\Repository\SeasonRepository
+		 * @TYPO3\CMS\Extbase\Annotation\Inject
+		 */
+		protected $seasonRepository;
+		
+		/**
 		 * Initializes the controller before invoking an action method.
 		 * Use this method to solve tasks which all actions have in common.
 		 */
@@ -86,9 +92,17 @@
 						}
 					}
 				}
+				if($this->settings['competition']['competitionsSelectbox']) {
+					$competitionsSelectbox = $this->competitionRepository->findAll($this->getCompetitionsFilter(FALSE), $this->getCompetitionTypesFilter(FALSE), $this->getSectionsFilter(FALSE), $this->getSectionAgeGroupsFilter(FALSE), $this->getSectionAgeLevelsFilter(FALSE));
+					$this->view->assign('competitionsSelectbox', $competitionsSelectbox);
+				}
 				if($this->settings['competitionType']['competitionTypesSelectbox']) {
-					$competitionTypesSelectbox = $this->competitionTypeRepository->findAllByUids($this->getCompetitionTypesFilter(FALSE));
+					$competitionTypesSelectbox = $this->competitionTypeRepository->findAll($this->getCompetitionTypesFilter(FALSE));
 					$this->view->assign('competitionTypesSelectbox', $competitionTypesSelectbox);
+				}
+				if($this->settings['season']['seasonsSelectbox']) {
+					$seasonsSelectbox = $this->seasonRepository->findAll($this->getSeasonsFilter(FALSE));
+					$this->view->assign('seasonsSelectbox', $seasonsSelectbox);
 				}
 			}
 		}

@@ -23,10 +23,6 @@
 			return $query->execute();
 		}
 		
-		public function findClubUidsByClubSections(array $clubSections) {
-		
-		}
-		
 	}
 	
 ?>

@@ -9,18 +9,14 @@
 			'name' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
 		);
 		
-		public function findAll($venuesFilter = null, $clubsFilter = null, $withClubOnly = false) {
+		public function findAll($venueUids = null, $clubUids = null) {
 			$query = $this->createQuery();
 			$constraints = [];
-			if($venuesFilter) {
-				$constraints[] = $query->in('uid', explode(',', $venuesFilter));
+			if($venueUids) {
+				$constraints[] = $query->in('uid', explode(',', $venueUids));
 			}
-			if($clubsFilter) {
-				$constraints[] = $query->in('club', explode(',', $clubsFilter));
-				$withClubOnly = true;
-			}
-			if($withClubOnly) {
-				$constraints[] = $query->logicalNot($query->equals('club', 0));
+			if($clubUids) {
+				$constraints[] = $query->in('club', explode(',', $clubUids));
 			}
 			if($constraints) {
 				$query->matching($query->logicalAnd($constraints));

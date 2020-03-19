@@ -13,26 +13,26 @@
 			'season.seasonName' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING,
 		);
 		
-		public function findAll($competitionsFilter = null, $competitionTypesFilter = null, $sectionsFilter = null, $sectionAgeGroupsFilter = null, $sectionAgeLevelsFilter = null, $seasonsFilter = null) {
+		public function findAll(string $competitionUids = null, string $competitionTypeUids = null, string $sectionsUids = null, string $sectionAgeGroupUids = null, string $sectionAgeLevelUids = null, string $seasonUids = null) {
 			$query = $this->createQuery();
 			$constraints = [];
-			if($competitionsFilter) {
-				$constraints[] = $query->in('competition', explode(',', $competitionsFilter));
+			if($competitionUids) {
+				$constraints[] = $query->in('competition', explode(',', $competitionUids));
 			}
-			if($competitionTypesFilter) {
-				$constraints[] = $query->in('competition.competitionType', explode(',', $competitionTypesFilter));
+			if($competitionTypeUids) {
+				$constraints[] = $query->in('competition.competitionType', explode(',', $competitionTypeUids));
 			}
-			if($sectionsFilter) {
-				$constraints[] = $query->in('competition.section', explode(',', $sectionsFilter));
+			if($sectionsUids) {
+				$constraints[] = $query->in('competition.section', explode(',', $sectionsUids));
 			}
-			if($sectionAgeGroupsFilter) {
-				$constraints[] = $query->in('competition.sectionAgeGroup', explode(',', $sectionAgeGroupsFilter));
+			if($sectionAgeGroupUids) {
+				$constraints[] = $query->in('competition.sectionAgeGroup', explode(',', $sectionAgeGroupUids));
 			}
-			if($sectionAgeLevelsFilter) {
-				$constraints[] = $query->in('competition.sectionAgeLevel', explode(',', $sectionAgeLevelsFilter));
+			if($sectionAgeLevelUids) {
+				$constraints[] = $query->in('competition.sectionAgeLevel', explode(',', $sectionAgeLevelUids));
 			}
-			if($seasonsFilter) {
-				$constraints[] = $query->in('season', explode(',', $seasonsFilter));
+			if($seasonUids) {
+				$constraints[] = $query->in('season', explode(',', $seasonUids));
 			}
 			if($constraints) {
 				$query->matching($query->logicalAnd($constraints));
@@ -41,5 +41,3 @@
 		}
 		
 	}
-	
-?>
