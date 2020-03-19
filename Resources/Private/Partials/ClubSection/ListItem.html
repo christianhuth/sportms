@@ -10,7 +10,7 @@
         <clubms:link.action Club="{clubSection.club}">{clubSection.club.name}</clubms:link.action>
     </td>
     <td>
-        <clubms:link.action ClubSection="{clubSection}">{clubSection}</clubms:link.action>
+        <clubms:link.action ClubSection="{clubSection}">{clubSection.section.label}</clubms:link.action>
     </td>
     <td>
         <clubms:link.action action="list" arguments="{club: clubSection.club, section: clubSection.section}" controller="Team">
