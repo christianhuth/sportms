@@ -136,10 +136,10 @@
 			foreach($this->getListOfClubMsDomainModels() as $clubMsDomainModel) {
 				if($this->arguments[$clubMsDomainModel]) {
 					$this->setClubMsDomainModel($clubMsDomainModel);
-					\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->arguments[$clubMsDomainModel], 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 					break;
 				}
 			}
+			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->arguments[$this->clubMsDomainModel], 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			$extensionName = "clubms";
 			$pluginName = "clubms";
 			$action = $this->arguments['action'] ? $this->arguments['action'] : "show";
