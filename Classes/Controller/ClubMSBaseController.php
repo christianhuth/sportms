@@ -17,7 +17,7 @@
 		}
 		
 		protected function getCompetitionSeasonGamedaysFilter($useSelected = TRUE) {
-			return $this->getFilter('competitionseason', 'competitionSeasonGameDays', $useSelected);
+			return $this->getFilter('competitionSeason', 'competitionSeasonGameDays', $useSelected);
 		}
 		
 		protected function getPersonsFilter($useSelected = TRUE) {
