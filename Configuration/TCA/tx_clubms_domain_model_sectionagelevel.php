@@ -26,7 +26,7 @@ return array(
 		'versioningWS' => TRUE,
     ),
 	'interface' => array(
-		'showRecordFieldList' => 'section_age_group, label, short',
+		'showRecordFieldList' => 'section_age_group, label, short, slug',
 	),
 	'types' => array(
 		'1' => array('showitem' => 'label, short, slug'),

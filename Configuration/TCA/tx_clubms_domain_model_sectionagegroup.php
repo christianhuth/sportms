@@ -27,7 +27,7 @@ return array(
 		'showRecordFieldList' => 'label, short',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'section, label, short, section_age_levels'),
+		'1' => array('showitem' => 'section, label, short, slug , section_age_levels'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -111,7 +111,6 @@ return array(
 				'type' => 'input',
 			),
 		),
-		
 		'short' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_sectionagegroup.short',
@@ -143,6 +142,26 @@ return array(
 				'type' => 'inline',
 			),
 		),
+		
+		'slug' => [
+			'exclude' => true,
+			'label' => 'URL Segment',
+			'config' => [
+				'default' => '',
+				'eval' => 'uniqueInSite',
+				'fallbackCharacter' => '-',
+				'generatorOptions' => [
+					'fields' => ['label'],
+					'fieldSeparator' => '-',
+					'prefixParentPageSlug' => FALSE,
+					'replacements' => [
+						'/' => '',
+					],
+				],
+				'prependSlash' => FALSE,
+				'type' => 'slug',
+			],
+		],
 		
 	),
 );
