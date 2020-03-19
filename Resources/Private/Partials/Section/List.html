@@ -2,78 +2,80 @@
       xmlns:clubms="Balumedien\Clubms\ViewHelpers"
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
-<table class="table table-bordered table-hover table-striped">
-    <thead>
-    <tr>
-        <th>Abteilung</th>
-        <th>Altersgruppen und -stufen</th>
-        <th>Positionen</th>
-    </tr>
-    </thead>
-    <tbody>
-    <f:if condition="{sections}">
-        <f:then>
-            <f:for as="section" each="{sections}">
-                <tr>
-                    <td>
-                        <clubms:link.action Section="{section}">{section.label}</clubms:link.action>
-                    </td>
-                    <td>
-                        <f:if condition="{section.sectionAgeGroups}">
-                            <f:then>
-                                <f:for as="sectionAgeGroup" each="{section.sectionAgeGroups}">
-                                    <ul>
-                                        <li>{sectionAgeGroup.label}
-                                            <f:if condition="{sectionAgeGroup.sectionAgeLevels}">
-                                                <f:then>
-                                                    <ul>
-                                                        <f:for as="sectionAgeLevel" each="{sectionAgeGroup.sectionAgeLevels}">
-                                                            <li>{sectionAgeLevel.label}</li>
-                                                        </f:for>
-                                                    </ul>
-                                                </f:then>
-                                            </f:if>
-                                        </li>
-                                    </ul>
-                                </f:for>
-                            </f:then>
-                            <f:else>
-                                <center>-</center>
-                            </f:else>
-                        </f:if>
-                    </td>
-                    <td>
-                        <f:if condition="{section.sectionPositionGroups}">
-                            <f:then>
-                                <f:for as="sectionPositionGroup" each="{section.sectionPositionGroups}">
-                                    <ul>
-                                        <li>{sectionPositionGroup.label}
-                                            <f:if condition="{sectionPositionGroup.sectionPositions}">
-                                                <f:then>
-                                                    <ul>
-                                                        <f:for as="sectionPosition" each="{sectionPositionGroup.sectionPositions}">
-                                                            <li>{sectionPosition.label}</li>
-                                                        </f:for>
-                                                    </ul>
-                                                </f:then>
-                                            </f:if>
-                                        </li>
-                                    </ul>
-                                </f:for>
-                            </f:then>
-                            <f:else>
-                                <center>-</center>
-                            </f:else>
-                        </f:if>
-                    </td>
-                </tr>
-            </f:for>
-        </f:then>
-        <f:else>
-            <td colspan="3">Keine Abteilungen gefunden</td>
-        </f:else>
-    </f:if>
-    </tbody>
-</table>
+<div class="table-responsive">
+    <table class="table table-bordered table-hover table-striped">
+        <thead>
+        <tr>
+            <th>Abteilung</th>
+            <th>Altersgruppen und -stufen</th>
+            <th>Positionen</th>
+        </tr>
+        </thead>
+        <tbody>
+        <f:if condition="{sections}">
+            <f:then>
+                <f:for as="section" each="{sections}">
+                    <tr>
+                        <td>
+                            <clubms:link.action Section="{section}">{section.label}</clubms:link.action>
+                        </td>
+                        <td>
+                            <f:if condition="{section.sectionAgeGroups}">
+                                <f:then>
+                                    <f:for as="sectionAgeGroup" each="{section.sectionAgeGroups}">
+                                        <ul>
+                                            <li>{sectionAgeGroup.label}
+                                                <f:if condition="{sectionAgeGroup.sectionAgeLevels}">
+                                                    <f:then>
+                                                        <ul>
+                                                            <f:for as="sectionAgeLevel" each="{sectionAgeGroup.sectionAgeLevels}">
+                                                                <li>{sectionAgeLevel.label}</li>
+                                                            </f:for>
+                                                        </ul>
+                                                    </f:then>
+                                                </f:if>
+                                            </li>
+                                        </ul>
+                                    </f:for>
+                                </f:then>
+                                <f:else>
+                                    <center>-</center>
+                                </f:else>
+                            </f:if>
+                        </td>
+                        <td>
+                            <f:if condition="{section.sectionPositionGroups}">
+                                <f:then>
+                                    <f:for as="sectionPositionGroup" each="{section.sectionPositionGroups}">
+                                        <ul>
+                                            <li>{sectionPositionGroup.label}
+                                                <f:if condition="{sectionPositionGroup.sectionPositions}">
+                                                    <f:then>
+                                                        <ul>
+                                                            <f:for as="sectionPosition" each="{sectionPositionGroup.sectionPositions}">
+                                                                <li>{sectionPosition.label}</li>
+                                                            </f:for>
+                                                        </ul>
+                                                    </f:then>
+                                                </f:if>
+                                            </li>
+                                        </ul>
+                                    </f:for>
+                                </f:then>
+                                <f:else>
+                                    <center>-</center>
+                                </f:else>
+                            </f:if>
+                        </td>
+                    </tr>
+                </f:for>
+            </f:then>
+            <f:else>
+                <td colspan="3">Keine Abteilungen gefunden</td>
+            </f:else>
+        </f:if>
+        </tbody>
+    </table>
+</div>
 
 </html>

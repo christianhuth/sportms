@@ -2,42 +2,44 @@
       xmlns:clubms="Balumedien\Clubms\ViewHelpers"
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
-<table class="table table-bordered table-hover table-striped">
-    <thead>
-    <tr>
-        <th>Verein</th>
-        <th>Vereinsabteilung</th>
-        <th>Mannschaftsname</th>
-        <th>Altersstufe</th>
-        <th>Saison</th>
-    </tr>
-    </thead>
-    <tbody>
-    <f:if condition="{teamSeasons}">
-        <f:then>
-            <f:for as="teamSeason" each="{teamSeasons}">
-                <tr>
-                    <td>
-                        <clubms:link.action Club="{teamSeason.team.club}">{teamSeason.team.club.name}</clubms:link.action>
-                    </td>
-                    <td>
-                        <clubms:link.action ClubSection="{teamSeason.team.clubSection}">{teamSeason.team.clubSection.section.label}</clubms:link.action>
-                    </td>
-                    <td>
-                        <clubms:link.action Team="{teamSeason.team}">{teamSeason.team.name}</clubms:link.action>
-                    </td>
-                    <td>{teamSeason.team.sectionAgeLevel.label}</td>
-                    <td>
-                        <clubms:link.action TeamSeason="{teamSeason}">{teamSeason.season.seasonName}</clubms:link.action>
-                    </td>
-                </tr>
-            </f:for>
-        </f:then>
-        <f:else>
-            <td colspan="5">Keine Mannschaftsinstanzen gefunden.</td>
-        </f:else>
-    </f:if>
-    </tbody>
-</table>
+<div class="table-responsive">
+    <table class="table table-bordered table-hover table-striped">
+        <thead>
+        <tr>
+            <th>Verein</th>
+            <th>Vereinsabteilung</th>
+            <th>Mannschaftsname</th>
+            <th>Altersstufe</th>
+            <th>Saison</th>
+        </tr>
+        </thead>
+        <tbody>
+        <f:if condition="{teamSeasons}">
+            <f:then>
+                <f:for as="teamSeason" each="{teamSeasons}">
+                    <tr>
+                        <td>
+                            <clubms:link.action Club="{teamSeason.team.club}">{teamSeason.team.club.name}</clubms:link.action>
+                        </td>
+                        <td>
+                            <clubms:link.action ClubSection="{teamSeason.team.clubSection}">{teamSeason.team.clubSection.section.label}</clubms:link.action>
+                        </td>
+                        <td>
+                            <clubms:link.action Team="{teamSeason.team}">{teamSeason.team.name}</clubms:link.action>
+                        </td>
+                        <td>{teamSeason.team.sectionAgeLevel.label}</td>
+                        <td>
+                            <clubms:link.action TeamSeason="{teamSeason}">{teamSeason.season.seasonName}</clubms:link.action>
+                        </td>
+                    </tr>
+                </f:for>
+            </f:then>
+            <f:else>
+                <td colspan="5">Keine Mannschaftsinstanzen gefunden.</td>
+            </f:else>
+        </f:if>
+        </tbody>
+    </table>
+</div>
 
 </html>
