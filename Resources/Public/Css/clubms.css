@@ -6,20 +6,13 @@
     font-family: sans-serif;
 }
 
-.clubmsicon {
-    position: relative;
-    top: 1px;
-    display: inline-block;
-    font-family: "Glyphicons Halflings";
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+.form-group .clubmsicon {
+	display: block;
+	width: 6px;
 }
 
 .clubmsicon.clubmsicon-club {
-    mask: url("EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_club.svg");
+    mask: url("/typ3conf/ext/clubms/Resources/Public/Icons/tx_clubms_domain_model_club.svg");
 }
 
 #tx-clubms #tx-clubms-container .tx-clubms-list-filter {
