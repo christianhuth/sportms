@@ -272,6 +272,7 @@ CREATE TABLE tx_clubms_domain_model_clubsection (
 	urls int(11) DEFAULT NULL,
 	club_section_officials int(11) DEFAULT NULL,
     teams int(11) DEFAULT NULL,
+    detail_link tinyint(4) unsigned DEFAULT '1' NOT NULL,
 	
 	sorting int(11) DEFAULT '0' NOT NULL,
 
