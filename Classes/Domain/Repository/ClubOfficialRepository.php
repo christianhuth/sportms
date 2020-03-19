@@ -2,11 +2,7 @@
 	
 	namespace Balumedien\Clubms\Domain\Repository;
 	
-	use TYPO3\CMS\Core\Utility\GeneralUtility;
-	use TYPO3\CMS\Core\Database\ConnectionPool;
-	use TYPO3\CMS\Extbase\Persistence\Repository;
-	
-	class ClubOfficialRepository extends Repository {
+	class ClubOfficialRepository extends ClubMSBaseRepository {
 		
 		// Order by BE sorting
 		protected $defaultOrderings = array(

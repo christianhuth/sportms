@@ -2,7 +2,7 @@
 	
 	namespace Balumedien\Clubms\Domain\Repository;
 	
-	class GameRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
+	class GameRepository extends ClubMSBaseRepository {
 		
 		public function findAll($sectionsFilter = NULL, $sectionAgeGroupsFilter = NULL, $sectionAgeLevelsFilter = NULL, $competitionsFilter = NULL, $competitionTypesFilter = NULL, $seasonsFilter = NULL, $competitionSeasonGamedaysFilter = NULL, $clubsFilter = NULL, $teamsFilter = NULL) {
 			$query = $this->createQuery();

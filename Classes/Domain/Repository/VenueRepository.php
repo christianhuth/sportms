@@ -2,7 +2,7 @@
 	
 	namespace Balumedien\Clubms\Domain\Repository;
 	
-	class VenueRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
+	class VenueRepository extends ClubMSBaseRepository {
 		
 		public function findAll($venuesFilter = null, $clubsFilter = null, $withClubOnly = false) {
 			$query = $this->createQuery();

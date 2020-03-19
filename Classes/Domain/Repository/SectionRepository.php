@@ -2,7 +2,7 @@
 	
 	namespace Balumedien\Clubms\Domain\Repository;
 	
-	class SectionRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
+	class SectionRepository extends ClubMSBaseRepository {
 		
 		// Order by BE sorting
 		protected $defaultOrderings = array(
