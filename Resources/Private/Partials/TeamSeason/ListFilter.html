@@ -5,6 +5,7 @@
                     settings.section.sectionAgeGroupsSelectbox ||
                     settings.section.sectionAgeLevelsSelectbox ||
                     settings.club.clubsSelectbox ||
+                    settings.team.teamsSelectbox ||
                     settings.season.seasonsSelextbox}">
     <div class="tx-clubms-list-filter">
         <f:form action="list" controller="ClubSection" extensionName="clubms" method="POST" noCache="TRUE" noCacheHash="TRUE" pageUid="{settings.clubSection.listPid}" pluginName="clubms">
@@ -20,6 +21,9 @@
                 </f:if>
                 <f:if condition="{settings.club.clubsSelectbox}">
                     <f:render arguments="{options: clubSelectbox, value: settings.club.selected}" partial="Select/Club"/>
+                </f:if>
+                <f:if condition="{settings.team.teamsSelectbox}">
+                    <f:render arguments="{options: teamsSelectbox, value: settings.team.selected}" partial="Select/Team"/>
                 </f:if>
                 <f:if condition="{settings.season.seasonsSelectbox}">
                     <f:render arguments="{options: seasonsSelectbox, value: settings.season.selected}" partial="Select/Season"/>
