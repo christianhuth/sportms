@@ -2,12 +2,12 @@
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <f:if condition="{  settings.section.sectionsSelectbox ||
-                    settings.competition.competitionsSelectbox ||
                     settings.competitionType.competitionTypesSelectbox ||
-                    settings.season.seasonsSelectbox ||
-                    settings.competitionSeasonGameday.competitionSeasonGamedaysSelectbox ||
+                    settings.competition.competitionsSelectbox ||
                     settings.club.clubsSelectbox ||
-                    settings.team.teamsSelectbox}">
+                    settings.team.teamsSelectbox ||
+                    settings.season.seasonsSelectbox ||
+                    settings.competitionSeasonGameday.competitionSeasonGamedaysSelectbox}">
     <div class="tx-clubms-list-filter well">
         <f:form action="list" class="form-horizontal" controller="Game" extensionName="clubms" method="POST" noCache="TRUE" noCacheHash="TRUE" pageUid="{settings.game.listPid}" pluginName="clubms">
             <f:render arguments="{options: sectionsSelectbox,                   settings: settings,     value: settings.section.selected}" partial="Form/Select/Section"/>
