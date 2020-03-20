@@ -9,7 +9,7 @@
 			'name' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
 		);
 		
-		public function findAll($venueUids = null, $clubUids = null) {
+		public function findAll(string $venueUids = null, string $clubUids = null) {
 			$query = $this->createQuery();
 			$constraints = [];
 			if($venueUids) {

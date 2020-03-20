@@ -16,6 +16,30 @@
 		protected $teamRepository;
 		
 		/**
+		 * @var \Balumedien\Clubms\Domain\Repository\ClubRepository
+		 * @TYPO3\CMS\Extbase\Annotation\Inject
+		 */
+		protected $clubRepository;
+		
+		/**
+		 * @var \Balumedien\Clubms\Domain\Repository\SectionRepository
+		 * @TYPO3\CMS\Extbase\Annotation\Inject
+		 */
+		protected $sectionRepository;
+		
+		/**
+		 * @var \Balumedien\Clubms\Domain\Repository\SectionAgeGroupRepository
+		 * @TYPO3\CMS\Extbase\Annotation\Inject
+		 */
+		protected $sectionAgeGroupRepository;
+		
+		/**
+		 * @var \Balumedien\Clubms\Domain\Repository\SectionAgeLevelRepository
+		 * @TYPO3\CMS\Extbase\Annotation\Inject
+		 */
+		protected $sectionAgeLevelRepository;
+		
+		/**
 		 * Initializes the controller before invoking an action method.
 		 * Use this method to solve tasks which all actions have in common.
 		 */

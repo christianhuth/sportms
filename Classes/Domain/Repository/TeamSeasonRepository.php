@@ -13,26 +13,26 @@
 			'season.seasonName' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING,
 		);
 		
-		public function findAll($teamsFilter = null, $clubsFilter = null, $sectionsFilter = null, $sectionAgeGroupsFilter = null, $sectionAgeLevelsFilter = null, $seasonsFilter = null) {
+		public function findAll(string $teamUids = null, string $clubUids = null, string $sectionUids = null, string $sectionAgeGroupUids = null, string $sectionAgeLevelUids = null, string $seasonUids = null) {
 			$query = $this->createQuery();
 			$constraints = [];
-			if($teamsFilter) {
-				$constraints[] = $query->in('team', explode(',', $teamsFilter));
+			if($teamUids) {
+				$constraints[] = $query->in('team', explode(',', $teamUids));
 			}
-			if($clubsFilter) {
-				$constraints[] = $query->in('team.club', explode(',', $clubsFilter));
+			if($clubUids) {
+				$constraints[] = $query->in('team.club', explode(',', $clubUids));
 			}
-			if($sectionsFilter) {
-				$constraints[] = $query->in('team.clubSection.section', explode(',', $sectionsFilter));
+			if($sectionUids) {
+				$constraints[] = $query->in('team.clubSection.section', explode(',', $sectionUids));
 			}
-			if($sectionAgeGroupsFilter) {
-				$constraints[] = $query->in('team.sectionAgeGroup', explode(',', $sectionAgeGroupsFilter));
+			if($sectionAgeGroupUids) {
+				$constraints[] = $query->in('team.sectionAgeGroup', explode(',', $sectionAgeGroupUids));
 			}
-			if($sectionAgeLevelsFilter) {
-				$constraints[] = $query->in('team.sectionAgeLevel', explode(',', $sectionAgeLevelsFilter));
+			if($sectionAgeLevelUids) {
+				$constraints[] = $query->in('team.sectionAgeLevel', explode(',', $sectionAgeLevelUids));
 			}
-			if($seasonsFilter) {
-				$constraints[] = $query->in('season', explode(',', $seasonsFilter));
+			if($seasonUids) {
+				$constraints[] = $query->in('season', explode(',', $seasonUids));
 			}
 			if($constraints) {
 				$query->matching($query->logicalAnd($constraints));

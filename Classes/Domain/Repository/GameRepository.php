@@ -16,7 +16,7 @@
 			'teamSeasonGuest.team.name' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
 		);
 		
-		public function findAll($sectionsFilter = NULL, $sectionAgeGroupsFilter = NULL, $sectionAgeLevelsFilter = NULL, $competitionsFilter = NULL, $competitionTypesFilter = NULL, $seasonsFilter = NULL, $competitionSeasonGamedaysFilter = NULL, $clubsFilter = NULL, $teamsFilter = NULL) {
+		public function findAll(string $sectionsFilter = NULL, string $sectionAgeGroupsFilter = NULL, string $sectionAgeLevelsFilter = NULL, string $competitionsFilter = NULL, string $competitionTypesFilter = NULL, string $seasonsFilter = NULL, string $competitionSeasonGamedaysFilter = NULL, string $clubsFilter = NULL, string $teamsFilter = NULL) {
 			$query = $this->createQuery();
 			$constraints = [];
 			if($sectionsFilter) {

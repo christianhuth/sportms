@@ -12,7 +12,7 @@
 			'sectionAgeLevel.label' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
 		);
 		
-		public function findAll(string $competitionUids = null, $competitionTypeUids = null, $sectionUids = null, $sectionAgeGroupUids = null, $sectionAgeLevelUids = null) {
+		public function findAll(string $competitionUids = null, string $competitionTypeUids = null, string $sectionUids = null, string $sectionAgeGroupUids = null, string $sectionAgeLevelUids = null) {
 			$query = $this->createQuery();
 			$constraints = [];
 			if($competitionUids) {
