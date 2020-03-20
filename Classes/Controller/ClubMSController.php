@@ -11,58 +11,59 @@
 		 * @var \Balumedien\Clubms\Domain\Repository\ClubRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
-		protected $clubRepository = null;
+		protected $clubRepository = NULL;
 		
 		/**
 		 * @var \Balumedien\Clubms\Domain\Repository\CompetitionRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
-		protected $competitionRepository = null;
+		protected $competitionRepository = NULL;
 		
 		/**
 		 * @var \Balumedien\Clubms\Domain\Repository\GameRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
-		protected $gameRepository = null;
+		protected $gameRepository = NULL;
 		
 		/**
 		 * @var \Balumedien\Clubms\Domain\Repository\PersonRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
-		protected $personRepository = null;
+		protected $personRepository = NULL;
 		
 		/**
 		 * @var \Balumedien\Clubms\Domain\Repository\TeamRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
-		protected $teamRepository = null;
+		protected $teamRepository = NULL;
 		
 		/**
 		 * @return void
 		 */
 		public function dbStatsAction() {
 			
-			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->settings, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
+			$dbStats = $this->settings['dbStats'];
 			
 			/* Domain Model Club */
-			$clubCount = $this->clubRepository->findAll()->count();
-			$this->view->assign('clubCount', $clubCount);
-			
+			if(strpos($dbStats, 'Club') !== FALSE) {
+				$this->view->assign('clubCount', $this->clubRepository->findAll()->count());
+			}
 			/* Domain Model Competition */
-			$competitionCount = $this->competitionRepository->findAll()->count();
-			$this->view->assign('competitionCount', $competitionCount);
-			
+			if(strpos($dbStats, 'Competition') !== FALSE) {
+				$this->view->assign('competitionCount', $this->competitionRepository->findAll()->count());
+			}
 			/* Domain Model Game */
-			$gameCount = $this->gameRepository->findAll()->count();
-			$this->view->assign('gameCount', $gameCount);
-			
+			if(strpos($dbStats, 'Game') !== FALSE) {
+				$this->view->assign('gameCount', $this->gameRepository->findAll()->count());
+			}
 			/* Domain Model Person */
-			$personCount = $this->personRepository->findAll()->count();
-			$this->view->assign('personCount', $personCount);
-			
+			if(strpos($dbStats, 'Person') !== FALSE) {
+				$this->view->assign('personCount', $this->personRepository->findAll()->count());
+			}
 			/* Domain Model Team */
-			$teamCount = $this->teamRepository->findAll()->count();
-			$this->view->assign('teamCount', $teamCount);
+			if(strpos($dbStats, 'Team') !== FALSE) {
+				$this->view->assign('teamCount', $this->teamRepository->findAll()->count());
+			}
 			
 		}
 		
