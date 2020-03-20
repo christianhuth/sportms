@@ -9,7 +9,6 @@
         <label class="hidden-xs col-sm-3 control-label">Team:</label>
         <div class="col-xs-12 col-sm-9">
             <div class="input-group">
-                <f:debug>{settings}</f:debug>
                 <span class="input-group-addon"><i class="clubmsicon clubmsicon-team"></i></span>
                 <f:form.select class="form-control" name="selectTeam" optionLabelField="name" optionValueField="uid" prependOptionLabel="Alle Teams" prependOptionValue="" value="{value}">
                     <f:groupedFor as="teamsByClubSection" each="{options}" groupBy="clubSection" groupKey="clubSection">
