@@ -42,6 +42,8 @@
 		 */
 		public function dbStatsAction() {
 			
+			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->settings, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
+			
 			/* Domain Model Club */
 			$clubCount = $this->clubRepository->findAll()->count();
 			$this->view->assign('clubCount', $clubCount);
