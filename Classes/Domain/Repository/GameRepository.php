@@ -16,41 +16,41 @@
 			'teamSeasonGuest.team.name' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
 		);
 		
-		public function findAll(string $sectionsFilter = NULL, string $sectionAgeGroupsFilter = NULL, string $sectionAgeLevelsFilter = NULL, string $competitionsFilter = NULL, string $competitionTypesFilter = NULL, string $seasonsFilter = NULL, string $competitionSeasonGamedaysFilter = NULL, string $clubsFilter = NULL, string $teamsFilter = NULL) {
+		public function findAll(string $sectionUids = NULL, string $sectionAgeGroupUids = NULL, string $sectionAgeLevelUids = NULL, string $competitionTypeUids = NULL, string $competitionUids = NULL, string $clubUids = NULL, string $teamUids = NULL, string $seasonUids = NULL, string $competitionSeasonGamedayUids = NULL) {
 			$query = $this->createQuery();
 			$constraints = [];
-			if($sectionsFilter) {
-				$constraints[] = $query->in('competitionSeason.competition.section', explode(',', $sectionsFilter));
+			if($sectionUids) {
+				$constraints[] = $query->in('competitionSeason.competition.section', explode(',', $sectionUids));
 			}
-			if($sectionAgeGroupsFilter) {
-				$constraints[] = $query->in('competitionSeason.competition.sectionAgeGroup', explode(',', $sectionAgeGroupsFilter));
+			if($sectionAgeGroupUids) {
+				$constraints[] = $query->in('competitionSeason.competition.sectionAgeGroup', explode(',', $sectionAgeGroupUids));
 			}
-			if($sectionAgeLevelsFilter) {
-				$constraints[] = $query->in('competitionSeason.competition.sectionAgeLevel', explode(',', $sectionAgeLevelsFilter));
+			if($sectionAgeLevelUids) {
+				$constraints[] = $query->in('competitionSeason.competition.sectionAgeLevel', explode(',', $sectionAgeLevelUids));
 			}
-			if($competitionsFilter) {
-				$constraints[] = $query->in('competitionSeason.competition', explode(',', $competitionsFilter));
+			if($competitionTypeUids) {
+				$constraints[] = $query->in('competitionSeason.competition.competitionType', explode(',', $competitionTypeUids));
 			}
-			if($competitionTypesFilter) {
-				$constraints[] = $query->in('competitionSeason.competition.competitionType', explode(',', $competitionTypesFilter));
+			if($competitionUids) {
+				$constraints[] = $query->in('competitionSeason.competition', explode(',', $competitionUids));
 			}
-			if($seasonsFilter) {
-				$constraints[] = $query->in('season', explode(',', $seasonsFilter));
-			}
-			if($competitionSeasonGamedaysFilter) {
-				$constraints[] = $query->in('gameday', explode(',', $competitionSeasonGamedaysFilter));
-			}
-			if($clubsFilter) {
+			if($clubUids) {
 				$constraints[] = $query->logicalOr(
-					$query->in('teamSeasonHome.team.club', explode(',', $clubsFilter)),
-					$query->in('teamSeasonGuest.team.club', explode(',', $clubsFilter))
+					$query->in('teamSeasonHome.team.club', explode(',', $clubUids)),
+					$query->in('teamSeasonGuest.team.club', explode(',', $clubUids))
 				);
 			}
-			if($teamsFilter) {
+			if($teamUids) {
 				$constraints[] = $query->logicalOr(
-					$query->in('teamSeasonHome.team', explode(',', $teamsFilter)),
-					$query->in('teamSeasonGuest.team', explode(',', $teamsFilter))
+					$query->in('teamSeasonHome.team', explode(',', $teamUids)),
+					$query->in('teamSeasonGuest.team', explode(',', $teamUids))
 				);
+			}
+			if($seasonUids) {
+				$constraints[] = $query->in('season', explode(',', $seasonUids));
+			}
+			if($competitionSeasonGamedayUids) {
+				$constraints[] = $query->in('gameday', explode(',', $competitionSeasonGamedayUids));
 			}
 			if($constraints) {
 				$query->matching($query->logicalAnd($constraints));
@@ -59,5 +59,3 @@
 		}
 		
 	}
-	
-	?>

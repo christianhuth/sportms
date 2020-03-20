@@ -39,7 +39,7 @@
 		 */
 		public function listAction() {
 			$this->initializeActions();
-			$games = $this->gameRepository->findAll($this->getSeasonsFilter(), $this->getSectionAgeGroupsFilter(), $this->getSectionAgeLevelsFilter(), $this->getCompetitionsFilter(), $this->getCompetitionTypesFilter(), $this->getSeasonsFilter(), $this->getCompetitionSeasonGamedaysFilter(), $this->getClubsFilter(), $this->getTeamsFilter());
+			$games = $this->gameRepository->findAll($this->getSectionsFilter(), $this->getSectionAgeGroupsFilter(), $this->getSectionAgeLevelsFilter(), $this->getCompetitionTypesFilter(), $this->getCompetitionsFilter(), $this->getClubsFilter(), $this->getTeamsFilter(), $this->getSeasonsFilter(), $this->getCompetitionSeasonGamedaysFilter());
 			$this->view->assign('games', $games);
 		}
 		
