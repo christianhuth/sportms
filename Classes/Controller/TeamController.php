@@ -68,7 +68,7 @@
 			/* FRONTEND FILTERS */
 			if($this->settings['section']['sectionsSelectbox'] || $this->settings['club']['clubsSelectbox']) {
 				if($this->settings['section']['sectionsSelectbox']) {
-					$sectionsSelectbox = $this->sectionRepository->findAllByUids($this->getSectionsFilter(FALSE));
+					$sectionsSelectbox = $this->sectionRepository->findAll($this->getSectionsFilter(FALSE));
 					$this->view->assign('sectionsSelectbox', $sectionsSelectbox);
 					if($this->settings['section']['selected']) {
 						$sectionAgeGroupsSelectbox = $this->sectionAgeGroupRepository->findAll($this->getSectionAgeGroupsFilter(FALSE), $this->getSectionsFilter());
