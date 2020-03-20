@@ -157,21 +157,21 @@
  * CLUBMS
  *
  */
-#tx-clubms #tx-clubms-container .tx-clubms-clubms-dbstats .tx-clubms-dbstat {
+#tx-clubms #tx-clubms-container #tx-clubms-clubms-dbstats .tx-clubms-dbstat {
     margin: 25px 0 0 0;
 }
 
-#tx-clubms #tx-clubms-container .tx-clubms-clubms-dbstats .tx-clubms-dbstat:last-of-type {
+#tx-clubms #tx-clubms-container #tx-clubms-clubms-dbstats .tx-clubms-dbstat:last-of-type {
     margin-bottom: 25px;
 }
 
-#tx-clubms #tx-clubms-container .tx-clubms-clubms-dbstats .tx-clubms-dbstat .tx-clubms-dbstat-image,
-#tx-clubms #tx-clubms-container .tx-clubms-clubms-dbstats .tx-clubms-dbstat .tx-clubms-dbstat-label {
+#tx-clubms #tx-clubms-container #tx-clubms-clubms-dbstats .tx-clubms-dbstat .tx-clubms-dbstat-image,
+#tx-clubms #tx-clubms-container #tx-clubms-clubms-dbstats .tx-clubms-dbstat .tx-clubms-dbstat-label {
     background-color: var(--regular-gray);
     padding: 10px;
 }
 
-#tx-clubms #tx-clubms-container .tx-clubms-clubms-dbstats .tx-clubms-dbstat .tx-clubms-dbstat-image img {
+#tx-clubms #tx-clubms-container #tx-clubms-clubms-dbstats .tx-clubms-dbstat .tx-clubms-dbstat-image img {
     background-color: white;
     height: auto !important;
     max-width: 100%;
@@ -179,7 +179,7 @@
     width: 100%;
 }
 
-#tx-clubms #tx-clubms-container .tx-clubms-clubms-dbstats .tx-clubms-dbstat .tx-clubms-dbstat-label {
+#tx-clubms #tx-clubms-container #tx-clubms-clubms-dbstats .tx-clubms-dbstat .tx-clubms-dbstat-label {
     padding-top: 0;
     text-align: center;
 }
