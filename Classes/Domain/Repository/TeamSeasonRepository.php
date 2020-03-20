@@ -13,12 +13,9 @@
 			'season.seasonName' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING,
 		);
 		
-		public function findAll(string $teamUids = null, string $sectionUids = null, string $sectionAgeGroupUids = null, string $sectionAgeLevelUids = null, string $clubUids = null, string $seasonUids = null) {
+		public function findAll(string $sectionUids = null, string $sectionAgeGroupUids = null, string $sectionAgeLevelUids = null, string $clubUids = null, string $teamUids = null, string $seasonUids = null) {
 			$query = $this->createQuery();
 			$constraints = [];
-			if($teamUids) {
-				$constraints[] = $query->in('team', explode(',', $teamUids));
-			}
 			if($sectionUids) {
 				$constraints[] = $query->in('team.clubSection.section', explode(',', $sectionUids));
 			}
@@ -30,6 +27,9 @@
 			}
 			if($clubUids) {
 				$constraints[] = $query->in('team.club', explode(',', $clubUids));
+			}
+			if($teamUids) {
+				$constraints[] = $query->in('team', explode(',', $teamUids));
 			}
 			if($seasonUids) {
 				$constraints[] = $query->in('season', explode(',', $seasonUids));
