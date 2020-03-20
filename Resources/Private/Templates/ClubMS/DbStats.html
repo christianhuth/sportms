@@ -37,6 +37,9 @@
         <f:if condition="{clubOfficialCount}">
             <f:render arguments="{action: 'list', controller: 'ClubOfficial', count: clubOfficialCount, label: 'Vereinsfunktionärstätigkeiten'}" partial="ClubMS/DbStatsItem"/>
         </f:if>
+        <f:if condition="{clubOfficialJobCount}">
+            <f:render arguments="{action: 'list', controller: 'ClubOfficialJob', count: clubOfficialJobCount, label: 'Vereinsfunktionen'}" partial="ClubMS/DbStatsItem"/>
+        </f:if>
     </div>
 
 </f:section>

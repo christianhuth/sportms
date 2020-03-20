@@ -106,6 +106,38 @@
 			if(strpos($dbStats, 'Club') !== FALSE) {
 				$this->view->assign('clubCount', $this->clubRepository->findAll()->count());
 			}
+			/* Domain Model ClubGround */
+			if(strpos($dbStats, 'ClubGround') !== FALSE) {
+				$this->view->assign('clubGroundCount', $this->clubGroundRepository->findAll()->count());
+			}
+			/* Domain Model ClubMembers */
+			if(strpos($dbStats, 'ClubMembers') !== FALSE) {
+				$this->view->assign('clubMembersCount', $this->clubMembersRepository->findAll()->count());
+			}
+			/* Domain Model ClubOfficial */
+			if(strpos($dbStats, 'ClubOfficial') !== FALSE) {
+				$this->view->assign('clubOfficialCount', $this->clubOfficialRepository->findAll()->count());
+			}
+			/* Domain Model ClubOfficialJob */
+			if(strpos($dbStats, 'ClubOfficialJob') !== FALSE) {
+				$this->view->assign('clubOfficialJobCount', $this->clubOfficialJobRepository->findAll()->count());
+			}
+			/* Domain Model ClubSection */
+			if(strpos($dbStats, 'ClubSection') !== FALSE) {
+				$this->view->assign('clubSectionCount', $this->clubSectionRepository->findAll()->count());
+			}
+			/* Domain Model ClubSectionMembers */
+			if(strpos($dbStats, 'ClubSectionMembers') !== FALSE) {
+				$this->view->assign('clubSectionMembersCount', $this->clubSectionMembersRepository->findAll()->count());
+			}
+			/* Domain Model ClubSectionOfficial */
+			if(strpos($dbStats, 'ClubSectionOfficial') !== FALSE) {
+				$this->view->assign('clubSectionOfficialCount', $this->clubSectionOfficialRepository->findAll()->count());
+			}
+			/* Domain Model ClubSectionOfficialJob */
+			if(strpos($dbStats, 'ClubSectionOfficialJob') !== FALSE) {
+				$this->view->assign('clubSectionOfficialJobCount', $this->clubSectionOfficialJobRepository->findAll()->count());
+			}
 			/* Domain Model Competition */
 			if(strpos($dbStats, 'Competition') !== FALSE) {
 				$this->view->assign('competitionCount', $this->competitionRepository->findAll()->count());
