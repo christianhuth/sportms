@@ -81,7 +81,7 @@
 					}
 				}
 				if($this->settings['club']['clubsSelectbox']) {
-					$clubsSelectbox = $this->competitionTypeRepository->findAll($this->getCompetitionTypesFilter(FALSE));
+					$clubsSelectbox = $this->clubRepository->findAll($this->getClubsFilter(FALSE));
 					$this->view->assign('clubsSelectbox', $clubsSelectbox);
 				}
 			}
