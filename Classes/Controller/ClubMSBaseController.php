@@ -60,6 +60,10 @@
 					$this->settings[$selectModel]['selected'] = $this->request->getArgument('select' . ucfirst($selectModel));
 				}
 			}
+			/* BugFix, if the sectionAgeGroup has been cleared but not the sectionAgeLevel */
+			if(!$this->settings['sectionAgeGroup']['selected']) {
+				$this->settings['sectionAgeLevel']['selected'] = '';
+			}
 			/* ShowView */
 			if($this->request->hasArgument('showView') && $this->request->hasArgument('controller')) {
 				$model = lcfirst($this->request->getArgument('controller'));
