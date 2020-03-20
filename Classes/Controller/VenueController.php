@@ -45,7 +45,7 @@
 		 */
 		public function listAction() {
 			$this->initializeActions();
-			$venues = $this->venueRepository->findAll($this->getVenuesFilter(), $this->getClubsFilter(), $this->getVenuesWithClubOnlyFilter());
+			$venues = $this->venueRepository->findAll($this->getVenuesFilter(), $this->getClubsFilter());
 			$this->view->assign('venues', $venues);
 			/* FRONTEND FILTERS */
 			if($this->settings['club']['clubsSelectbox']) {
