@@ -65,6 +65,25 @@
 			$this->initializeActions();
 			$teams = $this->teamRepository->findAll($this->getTeamsFilter(), $this->getClubsFilter(), $this->getSectionsFilter(), $this->getSectionAgeGroupsFilter(), $this->getSectionAgeLevelsFilter());
 			$this->view->assign('teams', $teams);
+			/* FRONTEND FILTERS */
+			if($this->settings['section']['sectionsSelectbox'] || $this->settings['club']['clubsSelectbox']) {
+				if($this->settings['section']['sectionsSelectbox']) {
+					$sectionsSelectbox = $this->sectionRepository->findAllByUids($this->getSectionsFilter(FALSE));
+					$this->view->assign('sectionsSelectbox', $sectionsSelectbox);
+					if($this->settings['section']['selected']) {
+						$sectionAgeGroupsSelectbox = $this->sectionAgeGroupRepository->findAll($this->getSectionAgeGroupsFilter(FALSE), $this->getSectionsFilter());
+						$this->view->assign('sectionAgeGroupsSelectbox', $sectionAgeGroupsSelectbox);
+						if($this->settings['sectionAgeGroup']['selected']) {
+							$sectionAgeLevelsSelectbox = $this->sectionAgeLevelRepository->findAll($this->getSectionAgeLevelsFilter(FALSE), $this->getSectionAgeGroupsFilter(), $this->getSectionsFilter());
+							$this->view->assign('sectionAgeLevelsSelectbox', $sectionAgeLevelsSelectbox);
+						}
+					}
+				}
+				if($this->settings['club']['clubsSelectbox']) {
+					$clubsSelectbox = $this->competitionTypeRepository->findAll($this->getCompetitionTypesFilter(FALSE));
+					$this->view->assign('clubsSelectbox', $clubsSelectbox);
+				}
+			}
 		}
 		
 		/**

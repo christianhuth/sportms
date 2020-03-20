@@ -40,7 +40,7 @@
 		 */
 		public function listAction(): void {
 			$this->initializeActions();
-			$clubs = $this->clubRepository->findAllByUids($this->getClubsFilter());
+			$clubs = $this->clubRepository->findAll($this->getClubsFilter());
 			$this->view->assign('clubs', $clubs);
 		}
 		
