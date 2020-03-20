@@ -28,6 +28,15 @@
         <f:if condition="{addressCount}">
             <f:render arguments="{action: 'list', controller: 'Address', count: addressCount, label: 'Adressen'}" partial="ClubMS/DbStatsItem"/>
         </f:if>
+        <f:if condition="{clubGroundCount}">
+            <f:render arguments="{action: 'list', controller: 'ClubGround', count: clubGroundCount, label: 'Vereinsgelände'}" partial="ClubMS/DbStatsItem"/>
+        </f:if>
+        <f:if condition="{clubMembersCount}">
+            <f:render arguments="{action: 'list', controller: 'ClubMembers', count: clubMembersCount, label: 'Vereinsmitgliederzählungen'}" partial="ClubMS/DbStatsItem"/>
+        </f:if>
+        <f:if condition="{clubOfficialCount}">
+            <f:render arguments="{action: 'list', controller: 'ClubOfficial', count: clubOfficialCount, label: 'Vereinsfunktionärstätigkeiten'}" partial="ClubMS/DbStatsItem"/>
+        </f:if>
     </div>
 
 </f:section>

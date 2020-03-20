@@ -20,6 +20,54 @@
 		protected $clubRepository = NULL;
 		
 		/**
+		 * @var \Balumedien\Clubms\Domain\Repository\ClubGroundRepository
+		 * @TYPO3\CMS\Extbase\Annotation\Inject
+		 */
+		protected $clubGroundRepository = NULL;
+		
+		/**
+		 * @var \Balumedien\Clubms\Domain\Repository\ClubMembersRepository
+		 * @TYPO3\CMS\Extbase\Annotation\Inject
+		 */
+		protected $clubMembersRepository = NULL;
+		
+		/**
+		 * @var \Balumedien\Clubms\Domain\Repository\ClubOfficialRepository
+		 * @TYPO3\CMS\Extbase\Annotation\Inject
+		 */
+		protected $clubOfficialRepository = NULL;
+		
+		/**
+		 * @var \Balumedien\Clubms\Domain\Repository\ClubOfficialJobRepository
+		 * @TYPO3\CMS\Extbase\Annotation\Inject
+		 */
+		protected $clubOfficialJobRepository = NULL;
+		
+		/**
+		 * @var \Balumedien\Clubms\Domain\Repository\ClubSectionRepository
+		 * @TYPO3\CMS\Extbase\Annotation\Inject
+		 */
+		protected $clubSectionRepository = NULL;
+		
+		/**
+		 * @var \Balumedien\Clubms\Domain\Repository\ClubSectionMembersRepository
+		 * @TYPO3\CMS\Extbase\Annotation\Inject
+		 */
+		protected $clubSectionMembersRepository = NULL;
+		
+		/**
+		 * @var \Balumedien\Clubms\Domain\Repository\ClubSectionOfficialRepository
+		 * @TYPO3\CMS\Extbase\Annotation\Inject
+		 */
+		protected $clubSectionOfficialRepository = NULL;
+		
+		/**
+		 * @var \Balumedien\Clubms\Domain\Repository\ClubSectionOfficialJobRepository
+		 * @TYPO3\CMS\Extbase\Annotation\Inject
+		 */
+		protected $clubSectionOfficialJobRepository = NULL;
+		
+		/**
 		 * @var \Balumedien\Clubms\Domain\Repository\CompetitionRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
