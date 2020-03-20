@@ -25,6 +25,9 @@
             <f:render arguments="{action: 'list', controller: 'Competition', count: competitionCount, label: 'Wettbewerbe'}" partial="ClubMS/DbStatsItem"/>
         </f:if>
         <div class="col-xs-3 col-sm-3 col-md-2"></div>
+        <f:if condition="{addressCount}">
+            <f:render arguments="{action: 'list', controller: 'Address', count: addressCount, label: 'Adressen'}" partial="ClubMS/DbStatsItem"/>
+        </f:if>
     </div>
 
 </f:section>
