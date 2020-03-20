@@ -12,7 +12,7 @@
 			$query = $this->createQuery();
 			$constraints = [];
 			if($competitionTypeUids) {
-				$constraints[] = $query->in('uid', explode(",", $competitionTypeUids));
+				$constraints[] = $query->in('uid', explode(',', $competitionTypeUids));
 			}
 			if($constraints) {
 				$query->matching($query->logicalAnd($constraints));

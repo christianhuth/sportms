@@ -43,14 +43,14 @@
 		 * Initializes the controller before invoking an action method.
 		 * Use this method to solve tasks which all actions have in common.
 		 */
-		public function initializeAction() {
+		public function initializeAction(): void {
 			$this->mapRequestsToSettings();
 		}
 		
 		/**
 		 * Use this method to solve tasks which all actions have in common, when VIEW-Context is needed
 		 */
-		public function initializeActions() {
+		public function initializeActions(): void {
 			$listOfPossibleShowViews = 'index,competitions,games,stats';
 			$this->determineShowView($this->model);
 			$this->determineShowViews($this->model, $listOfPossibleShowViews);
@@ -60,10 +60,11 @@
 		
 		/**
 		 * @return void
+		 * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
 		 */
-		public function listAction() {
+		public function listAction(): void {
 			$this->initializeActions();
-			$teams = $this->teamRepository->findAll($this->getTeamsFilter(), $this->getClubsFilter(), $this->getSectionsFilter(), $this->getSectionAgeGroupsFilter(), $this->getSectionAgeLevelsFilter());
+			$teams = $this->teamRepository->findAll($this->getTeamsFilter(), $this->getSectionsFilter(), $this->getSectionAgeGroupsFilter(), $this->getSectionAgeLevelsFilter(), $this->getClubsFilter());
 			$this->view->assign('teams', $teams);
 			/* FRONTEND FILTERS */
 			if($this->settings['section']['sectionsSelectbox'] || $this->settings['club']['clubsSelectbox']) {

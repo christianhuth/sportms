@@ -12,14 +12,11 @@
 			'name' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
 		);
 		
-		public function findAll(string $teamUids = null, string $clubUids = null, string $sectionUids = null, string $sectionAgeGroupUids = null, string $sectionAgeLevelUids = null) {
+		public function findAll(string $teamUids = null, string $sectionUids = null, string $sectionAgeGroupUids = null, string $sectionAgeLevelUids = null, string $clubUids = null) {
 			$query = $this->createQuery();
 			$constraints = [];
 			if($teamUids) {
 				$constraints[] = $query->in('uid', explode(',', $teamUids));
-			}
-			if($clubUids) {
-				$constraints[] = $query->in('club', explode(',', $clubUids));
 			}
 			if($sectionUids) {
 				$constraints[] = $query->in('clubSection.section', explode(',', $sectionUids));
@@ -29,6 +26,9 @@
 			}
 			if($sectionAgeLevelUids) {
 				$constraints[] = $query->in('section_age_level', explode(',', $sectionAgeLevelUids));
+			}
+			if($clubUids) {
+				$constraints[] = $query->in('club', explode(',', $clubUids));
 			}
 			if($constraints) {
 				$query->matching($query->logicalAnd($constraints));
