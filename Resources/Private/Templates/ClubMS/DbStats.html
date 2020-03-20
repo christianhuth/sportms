@@ -8,7 +8,7 @@
 
     <div id="tx-clubms-clubms-dbstats">
         <f:if condition="{personCount}">
-            <f:render arguments="{action: list, controller: Person, count: personCount, label: Personen}" partial="ClubMS/DbStatsItem"/>
+            <f:render arguments="{action: 'list', controller: 'Person', count: personCount, label: 'Personen'}" partial="ClubMS/DbStatsItem"/>
         </f:if>
         <f:if condition="{clubCount}">
             <div class="col-xs-6 col-sm-6 col-md-4 tx-clubms-dbstat">
