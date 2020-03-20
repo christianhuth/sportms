@@ -139,16 +139,24 @@
 					break;
 				}
 			}
-			if(is_null($this->arguments[$this->clubMsDomainModel]) || !$this->arguments[$this->clubMsDomainModel]->isDetailLink()) {
-				$this->tagName = 'span';
-				$this->setTagBuilder(new \TYPO3Fluid\Fluid\Core\ViewHelper\TagBuilder($this->tagName));
-				$this->tag->setContent($this->renderChildren());
-				return $this->tag->render();
+			$extensionName = 'clubms';
+			$pluginName = 'clubms';
+			$action = $this->arguments['action'] ? $this->arguments['action'] : 'show';
+			$showView = ($action === 'show') ? ($this->arguments['Show'] ? $this->arguments['Show'] : 'index') : NULL;
+			
+			if($showView === 'show') {
+				if(is_null($this->arguments[$this->clubMsDomainModel]) || !$this->arguments[$this->clubMsDomainModel]->isDetailLink()) {
+					$this->tagName = 'span';
+					$this->setTagBuilder(new \TYPO3Fluid\Fluid\Core\ViewHelper\TagBuilder($this->tagName));
+					$this->tag->setContent($this->renderChildren());
+					return $this->tag->render();
+				}
 			}
-			$extensionName = "clubms";
-			$pluginName = "clubms";
-			$action = $this->arguments['action'] ? $this->arguments['action'] : "show";
-			$showView = ($action == "show") ? ($this->arguments['Show'] ? $this->arguments['Show'] : "index") : NULL;
+			
+			
+			
+			
+			
 			$controller = $this->arguments['controller'] ? $this->arguments['controller'] : $this->getClubMsDomainModel();
 			$pageUid = $this->arguments['pageUid'] ? (int) $this->arguments['pageUid'] : (int) $this->getSettings()[lcfirst($controller)][$action . 'Pid'] ? : NULL;
 			$parameters = $this->arguments['arguments'] ? $this->arguments['arguments'] : array();
