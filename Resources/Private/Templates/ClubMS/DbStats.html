@@ -11,24 +11,10 @@
             <f:render arguments="{action: 'list', controller: 'Person', count: personCount, label: 'Personen'}" partial="ClubMS/DbStatsItem"/>
         </f:if>
         <f:if condition="{clubCount}">
-            <div class="col-xs-6 col-sm-6 col-md-4 tx-clubms-dbstat">
-                <clubms:link.action action="list" controller="Club">
-                    <div class="col-xs-12 tx-clubms-dbstat-image">
-                        <f:image src="EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_club.svg"/>
-                    </div>
-                    <div class="col-xs-12 tx-clubms-dbstat-label">{clubCount} Vereine</div>
-                </clubms:link.action>
-            </div>
+            <f:render arguments="{action: 'list', controller: 'Club', count: clubCount, label: 'Vereine'}" partial="ClubMS/DbStatsItem"/>
         </f:if>
         <f:if condition="{teamCount}">
-            <div class="col-xs-6 col-sm-6 col-md-4 tx-clubms-dbstat">
-                <clubms:link.action action="list" controller="Team">
-                    <div class="col-xs-12 tx-clubms-dbstat-image">
-                        <f:image src="EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_team.svg"/>
-                    </div>
-                    <div class="col-xs-12 tx-clubms-dbstat-label">{teamCount} Mannschaften</div>
-                </clubms:link.action>
-            </div>
+            <f:render arguments="{action: 'list', controller: 'Team', count: teamCount, label: 'Teams'}" partial="ClubMS/DbStatsItem"/>
         </f:if>
         <div class="col-xs-0 col-sm-0 col-md-2"></div>
         <f:if condition="{gameCount}">
