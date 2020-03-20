@@ -96,7 +96,7 @@
 					$this->view->assign('clubsSelectbox', $clubsSelectbox);
 				}
 				if($this->settings['team']['teamsSelectbox']) {
-					$teamsSelectbox = $this->teamRepository->findAll($this->getTeamsFilter(FALSE));
+					$teamsSelectbox = $this->teamRepository->findAll($this->getTeamsFilter(FALSE), $this->getSeasonsFilter(), $this->getSectionAgeGroupsFilter(), $this->getSectionAgeLevelsFilter(), $this->getClubsFilter());
 					$this->view->assign('teamsSelectbox', $teamsSelectbox);
 				}
 				if($this->settings['season']['seasonsSelectbox']) {
