@@ -64,6 +64,10 @@
 			if(!$this->settings['sectionAgeGroup']['selected']) {
 				$this->settings['sectionAgeLevel']['selected'] = '';
 			}
+			/* BugFix, if the sectionPositionGroup has been cleared but not the sectionPosition */
+			if(!$this->settings['sectionPositionGroup']['selected']) {
+				$this->settings['sectionPosition']['selected'] = '';
+			}
 			/* ShowView */
 			if($this->request->hasArgument('showView') && $this->request->hasArgument('controller')) {
 				$model = lcfirst($this->request->getArgument('controller'));
