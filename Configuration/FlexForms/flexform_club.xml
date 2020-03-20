@@ -24,7 +24,12 @@
             <settings.club.showViews>
                 <TCEforms>
                     <label>Erlaube folgende Einzelansichten</label>
-                    <displayCond>FIELD:base.switchableControllerActions:=:Club->show</displayCond>
+                    <displayCond>
+                        <OR>
+                            <numIndex index="1">FIELD:base.switchableControllerActions:=:Club->show</numIndex>
+                            <numIndex index="2">FIELD:base.switchableControllerActions:=:ClubSection->show</numIndex>
+                        </OR>
+                    </displayCond>
                     <config>
                         <type>select</type>
                         <renderType>selectMultipleSideBySide</renderType>

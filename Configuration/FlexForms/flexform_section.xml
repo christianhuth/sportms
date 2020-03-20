@@ -9,7 +9,12 @@
 			<settings.section.uid>
 				<TCEforms>
 					<label>Zeige folgende Abteilung</label>
-					<displayCond>FIELD:base.switchableControllerActions:=:Section->show</displayCond>
+					<displayCond>
+						<OR>
+							<numIndex index="1">FIELD:base.switchableControllerActions:=:ClubSection->show</numIndex>
+							<numIndex index="2">FIELD:base.switchableControllerActions:=:Section->show</numIndex>
+						</OR>
+					</displayCond>
 					<config>
 						<type>group</type>
 						<internal_type>db</internal_type>
