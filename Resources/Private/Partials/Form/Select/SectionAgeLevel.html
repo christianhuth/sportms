@@ -7,7 +7,14 @@
         <div class="col-xs-12 col-sm-9">
             <div class="input-group">
                 <span class="input-group-addon"><i class="clubmsicon clubmsicon-sectionagelevel"></i></span>
-                <f:form.select class="form-control" name="selectSectionAgeLevel" optionLabelField="label" optionValueField="uid" options="{options}" prependOptionLabel="Alle Altersstufen" prependOptionValue="" value="{value}"/>
+                <f:form.select class="form-control" name="selectSectionAgeLevel" optionLabelField="label" optionValueField="uid" prependOptionLabel="Alle Altersstufen" prependOptionValue="" value="{value}">
+                    <f:groupedFor as="sectionAgeLevelsBySection" each="{options}" groupBy="section" groupKey="section">
+                        <f:form.select.optgroup class="form-control" label="{section.label}" title="{section.label}"/>
+                        <f:for as="sectionAgeLevelBySection" each="{sectionAgeLevelsBySection}">
+                            <f:form.select.option value="{sectionAgeLevelBySection.uid}">{sectionAgeLevelBySection.label}</f:form.select.option>
+                        </f:for>
+                    </f:groupedFor>
+                </f:form.select>
             </div>
         </div>
     </div>
