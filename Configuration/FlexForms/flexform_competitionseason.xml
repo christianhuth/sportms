@@ -71,7 +71,7 @@
 					</config>
 				</TCEforms>
 			</settings.competitionSeason.showNavigation.views>
-			<settings.competitionSeason.competitionSeasonGameDays>
+			<settings.competitionSeasonGameDay.competitionSeasonGameDays>
 				<TCEforms>
 					<label>Welche Spieltage sollen angezeigt werden?</label>
 					<displayCond>
@@ -86,8 +86,8 @@
 						<type>select</type>
 					</config>
 				</TCEforms>
-			</settings.competitionSeason.competitionSeasonGameDays>
-			<settings.competitionSeason.competitionSeasonGameDaysSelectbox>
+			</settings.competitionSeasonGameDay.competitionSeasonGameDays>
+			<settings.competitionSeasonGameDay.competitionSeasonGameDaysSelectbox>
 				<TCEforms>
 					<label>Selectbox für Spieltage?</label>
 					<displayCond>
@@ -101,7 +101,7 @@
 						<type>check</type>
 					</config>
 				</TCEforms>
-			</settings.competitionSeason.competitionSeasonGameDaysSelectbox>
+			</settings.competitionSeasonGameDay.competitionSeasonGameDaysSelectbox>
 		</el>
 	</ROOT>
 </T3DataStructure>
