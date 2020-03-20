@@ -3,8 +3,8 @@
 
 <f:debug>{settings}</f:debug>
 
-<f:if condition="{  settings.section.sectionsSelectbox ||
-                    settings.club.clubsSelectbox}">
+<f:if condition="{settings.section.sectionsSelectbox} ||
+                 {settings.club.clubsSelectbox}">
     <div class="tx-clubms-list-filter well">
         <f:form action="list" class="form-horizontal" controller="Team" extensionName="clubms" method="POST" noCache="TRUE" noCacheHash="TRUE" pageUid="{settings.team.listPid}" pluginName="clubms">
             <f:render arguments="{options: sectionsSelectbox,           settings: settings,     value: settings.section.selected}" partial="Form/Select/Section"/>
