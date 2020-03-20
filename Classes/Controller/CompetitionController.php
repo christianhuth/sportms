@@ -69,7 +69,7 @@
 			/* FRONTEND FILTERS */
 			if($this->settings['section']['sectionsSelectbox'] || $this->settings['competition']['competitionTypesSelectbox']) {
 				if($this->settings['section']['sectionsSelectbox']) {
-					$sectionsSelectbox = $this->sectionRepository->findAllByUids($this->getSectionsFilter(FALSE));
+					$sectionsSelectbox = $this->sectionRepository->findAll($this->getSectionsFilter(FALSE));
 					$this->view->assign('sectionsSelectbox', $sectionsSelectbox);
 					if($this->settings['section']['selected']) {
 						$sectionAgeGroupsSelectbox = $this->sectionAgeGroupRepository->findAll($this->getSectionAgeGroupsFilter(FALSE), $this->getSectionsFilter());
@@ -81,7 +81,7 @@
 					}
 				}
 				if($this->settings['competitionType']['competitionTypesSelectbox']) {
-					$competitionTypesSelectbox = $this->competitionTypeRepository->findAllByUids($this->getCompetitionTypesFilter(FALSE));
+					$competitionTypesSelectbox = $this->competitionTypeRepository->findAll($this->getCompetitionTypesFilter(FALSE));
 					$this->view->assign('competitionTypesSelectbox', $competitionTypesSelectbox);
 				}
 			}
