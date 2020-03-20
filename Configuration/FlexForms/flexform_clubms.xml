@@ -14,5 +14,6 @@
 		<teamSeason>EXT:clubms/Configuration/FlexForms/flexform_teamseason.xml</teamSeason>
 		<venue>EXT:clubms/Configuration/FlexForms/flexform_venue.xml</venue>
 		<season>EXT:clubms/Configuration/FlexForms/flexform_season.xml</season>
+		<view>EXT:clubms/Configuration/FlexForms/flexform_view.xml</view>
 	</sheets>
 </T3DataStructure>
