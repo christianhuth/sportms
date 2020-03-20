@@ -7,6 +7,22 @@
         <div class="col-xs-12 col-sm-9">
             <div class="input-group">
                 <span class="input-group-addon"><i class="clubmsicon clubmsicon-team"></i></span>
+                <f:form.select class="form-control" name="selectTeam" optionLabelField="name" optionValueField="uid" prependOptionLabel="Alle Teams" prependOptionValue="" value="{value}">
+                    <f:groupedFor as="teamsByClubSection" each="{options}" groupBy="clubSection" groupKey="clubSection">
+                        <f:form.select.optgroup class="form-control" label="{clubSection}" title="{clubSection}"/>
+                        <f:for as="teamByClubSection" each="{teamsByClubSection}">
+                            <f:form.select.option value="{teamByClubSection.uid}">{teamByClubSection.name}</f:form.select.option>
+                        </f:for>
+                    </f:groupedFor>
+                </f:form.select>
+                <f:if condition="{settings.section.selected && !settings.club.selected}">
+                    <f:then>
+
+                    </f:then>
+                    <f:else>
+
+                    </f:else>
+                </f:if>
                 <f:form.select class="form-control" name="selectTeam" optionLabelField="name" optionValueField="uid" options="{options}" prependOptionLabel="Alle Teams" prependOptionValue="" sortByOptionLabel="TRUE" value="{value}"/>
             </div>
         </div>
