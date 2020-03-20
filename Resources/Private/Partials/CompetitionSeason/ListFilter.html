@@ -1,10 +1,10 @@
 <html data-namespace-typo3-fluid="true"
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
-<f:if condition="{  settings.section.sectionsSelectbox ||
-                    settings.competition.competitionsSelectbox ||
-                    settings.competition.competitionTypesSelectbox ||
-                    settings.season.seasonsSelectbox}">
+<f:if condition="{settings.section.sectionsSelectbox} ||
+                 {settings.competition.competitionsSelectbox} ||
+                 {settings.competitionTyp3.competitionTypesSelectbox} ||
+                 {settings.season.seasonsSelectbox}">
     <div class="tx-clubms-list-filter well">
         <f:form action="list" class="form-horizontal" controller="CompetitionSeason" extensionName="clubms" method="POST" noCache="TRUE" noCacheHash="TRUE" pageUid="{settings.competitionSeason.listPid}" pluginName="clubms">
             <f:render arguments="{options: sectionsSelectbox,           settings: settings,     value: settings.section.selected}" partial="Form/Select/Section"/>

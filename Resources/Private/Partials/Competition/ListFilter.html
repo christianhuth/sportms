@@ -1,8 +1,8 @@
 <html data-namespace-typo3-fluid="true"
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
-<f:if condition="{  settings.section.sectionsSelectbox ||
-                    settings.competitionType.competitionTypesSelectbox}">
+<f:if condition="{settings.section.sectionsSelectbox} ||
+                 {settings.competitionType.competitionTypesSelectbox}">
     <div class="tx-clubms-list-filter well">
         <f:form action="list" class="form-horizontal"controller="Competition" extensionName="clubms" method="POST" noCache="TRUE" noCacheHash="TRUE" pageUid="{settings.competition.listPid}" pluginName="clubms">
             <f:render arguments="{options: sectionsSelectbox,           settings: settings,     value: settings.section.selected}" partial="Form/Select/Section"/>
