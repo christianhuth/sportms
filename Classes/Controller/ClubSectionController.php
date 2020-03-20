@@ -57,11 +57,11 @@
 			/* FRONTEND FILTERS */
 			if($this->settings['club']['clubsSelectbox'] || $this->settings['section']['sectionsSelectbox']) {
 				if($this->settings['club']['clubsSelectbox']) {
-					$clubsSelectbox = $this->clubRepository->findAllByUids($this->getClubsFilter(FALSE));
+					$clubsSelectbox = $this->clubRepository->findAll($this->getClubsFilter(FALSE));
 					$this->view->assign('clubsSelectbox', $clubsSelectbox);
 				}
 				if($this->settings['section']['sectionsSelectbox']) {
-					$sectionsSelectbox = $this->sectionRepository->findAllByUids($this->getSectionsFilter(FALSE));
+					$sectionsSelectbox = $this->sectionRepository->findAll($this->getSectionsFilter(FALSE));
 					$this->view->assign('sectionsSelectbox', $sectionsSelectbox);
 				}
 			}
