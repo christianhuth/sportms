@@ -7,8 +7,7 @@
         <div class="col-xs-12 col-sm-9">
             <div class="input-group">
                 <span class="input-group-addon"><i class="clubmsicon clubmsicon-competition"></i></span>
-                <f:form.select class="form-control" name="selectCompetition" optionLabelField="name" optionValueField="uid" prependOptionLabel="Alle Altersgruppen" prependOptionValue="" value="{value}">
-                    <f:form.select.option value="">Alle Wettbewerbe</f:form.select.option>
+                <f:form.select class="form-control" name="selectCompetition" optionLabelField="name" optionValueField="uid" prependOptionLabel="Alle Wettbewerbe" prependOptionValue="" value="{value}">
                     <f:groupedFor as="competitionsBySection" each="{options}" groupBy="section" groupKey="section">
                         <f:form.select.optgroup class="form-control" label="{section.label}" title="{section.label}"/>
                         <f:for as="competitionBySection" each="{competitionsBySection}">
