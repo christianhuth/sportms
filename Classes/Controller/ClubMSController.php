@@ -8,6 +8,12 @@
 	class ClubMSController extends ClubMSBaseController {
 		
 		/**
+		 * @var \Balumedien\Clubms\Domain\Repository\AddressRepository
+		 * @TYPO3\CMS\Extbase\Annotation\Inject
+		 */
+		protected $addressRepository = NULL;
+		
+		/**
 		 * @var \Balumedien\Clubms\Domain\Repository\ClubRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
@@ -44,6 +50,10 @@
 			
 			$dbStats = $this->settings['dbStats'];
 			
+			/* Domain Model Address */
+			if(strpos($dbStats, 'Address') !== FALSE) {
+				$this->view->assign('addressCount', $this->addressRepository->findAll()->count());
+			}
 			/* Domain Model Club */
 			if(strpos($dbStats, 'Club') !== FALSE) {
 				$this->view->assign('clubCount', $this->clubRepository->findAll()->count());

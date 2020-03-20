@@ -1,0 +1,14 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:clubms="Balumedien\Clubms\ViewHelpers"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<div class="col-xs-6 col-sm-6 col-md-4 tx-clubms-dbstat">
+    <clubms:link.action action="{action}" controller="{controller}">
+        <div class="col-xs-12 tx-clubms-dbstat-image">
+            <f:image src="EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_{controller -> f:format.case(mode: lower)}.svg"/>
+        </div>
+        <div class="col-xs-12 tx-clubms-dbstat-label">{count} {label}</div>
+    </clubms:link.action>
+</div>
+
+</html>
