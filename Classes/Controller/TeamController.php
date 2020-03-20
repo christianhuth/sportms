@@ -16,12 +16,6 @@
 		protected $teamRepository;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Repository\ClubRepository
-		 * @TYPO3\CMS\Extbase\Annotation\Inject
-		 */
-		protected $clubRepository;
-		
-		/**
 		 * @var \Balumedien\Clubms\Domain\Repository\SectionRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
@@ -38,6 +32,12 @@
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
 		protected $sectionAgeLevelRepository;
+		
+		/**
+		 * @var \Balumedien\Clubms\Domain\Repository\ClubRepository
+		 * @TYPO3\CMS\Extbase\Annotation\Inject
+		 */
+		protected $clubRepository;
 		
 		/**
 		 * Initializes the controller before invoking an action method.
