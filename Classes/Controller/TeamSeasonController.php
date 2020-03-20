@@ -16,6 +16,42 @@
 		protected $teamSeasonRepository;
 		
 		/**
+		 * @var \Balumedien\Clubms\Domain\Repository\SectionRepository
+		 * @TYPO3\CMS\Extbase\Annotation\Inject
+		 */
+		protected $sectionRepository;
+		
+		/**
+		 * @var \Balumedien\Clubms\Domain\Repository\SectionAgeGroupRepository
+		 * @TYPO3\CMS\Extbase\Annotation\Inject
+		 */
+		protected $sectionAgeGroupRepository;
+		
+		/**
+		 * @var \Balumedien\Clubms\Domain\Repository\SectionAgeLevelRepository
+		 * @TYPO3\CMS\Extbase\Annotation\Inject
+		 */
+		protected $sectionAgeLevelRepository;
+		
+		/**
+		 * @var \Balumedien\Clubms\Domain\Repository\ClubRepository
+		 * @TYPO3\CMS\Extbase\Annotation\Inject
+		 */
+		protected $clubRepository;
+		
+		/**
+		 * @var \Balumedien\Clubms\Domain\Repository\TeamRepository
+		 * @TYPO3\CMS\Extbase\Annotation\Inject
+		 */
+		protected $teamRepository;
+		
+		/**
+		 * @var \Balumedien\Clubms\Domain\Repository\SeasonRepository
+		 * @TYPO3\CMS\Extbase\Annotation\Inject
+		 */
+		protected $seasonRepository;
+		
+		/**
 		 * Initializes the controller before invoking an action method.
 		 * Use this method to solve tasks which all actions have in common.
 		 */
@@ -41,6 +77,33 @@
 			$this->initializeActions();
 			$teamSeasons = $this->teamSeasonRepository->findAll($this->getTeamsFilter(), $this->getClubsFilter(), $this->getSectionsFilter(), $this->getSectionAgeGroupsFilter(), $this->getSectionAgeLevelsFilter(), $this->getSeasonsFilter());
 			$this->view->assign('teamSeasons', $teamSeasons);
+			/* FRONTEND FILTERS */
+			if($this->settings['section']['sectionsSelectbox'] || $this->settings['club']['clubsSelectbox'] ) {
+				if($this->settings['section']['sectionsSelectbox']) {
+					$sectionsSelectbox = $this->sectionRepository->findAll($this->getSectionsFilter(FALSE));
+					$this->view->assign('sectionsSelectbox', $sectionsSelectbox);
+					if($this->settings['section']['selected']) {
+						$sectionAgeGroupsSelectbox = $this->sectionAgeGroupRepository->findAll($this->getSectionAgeGroupsFilter(FALSE), $this->getSectionsFilter());
+						$this->view->assign('sectionAgeGroupsSelectbox', $sectionAgeGroupsSelectbox);
+						if($this->settings['sectionAgeGroup']['selected']) {
+							$sectionAgeLevelsSelectbox = $this->sectionAgeLevelRepository->findAll($this->getSectionAgeLevelsFilter(FALSE), $this->getSectionAgeGroupsFilter(), $this->getSectionsFilter());
+							$this->view->assign('sectionAgeLevelsSelectbox', $sectionAgeLevelsSelectbox);
+						}
+					}
+				}
+				if($this->settings['club']['clubsSelectbox']) {
+					$clubsSelectbox = $this->clubRepository->findAll($this->getClubsFilter(FALSE));
+					$this->view->assign('clubsSelectbox', $clubsSelectbox);
+				}
+				if($this->settings['team']['teamsSelectbox']) {
+					$teamsSelectbox = $this->teamRepository->findAll($this->getTeamsFilter(FALSE));
+					$this->view->assign('teamsSelectbox', $teamsSelectbox);
+				}
+				if($this->settings['season']['seasonsSelectbox']) {
+					$seasonsSelectbox = $this->seasonRepository->findAll($this->getSeasonsFilter(FALSE));
+					$this->view->assign('seasonsSelectbox', $seasonsSelectbox);
+				}
+			}
 		}
 		
 		/**

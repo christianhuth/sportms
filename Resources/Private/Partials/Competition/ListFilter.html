@@ -2,13 +2,13 @@
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <f:if condition="{  settings.section.sectionsSelectbox ||
-                    settings.competition.competitionTypesSelectbox}">
+                    settings.competitionType.competitionTypesSelectbox}">
     <div class="tx-clubms-list-filter well">
         <f:form action="list" class="form-horizontal"controller="Competition" extensionName="clubms" method="POST" noCache="TRUE" noCacheHash="TRUE" pageUid="{settings.competition.listPid}" pluginName="clubms">
-            <f:render arguments="{options: sectionsSelectbox, settings: settings, value: settings.section.selected}" partial="Form/Select/Section"/>
-            <f:render arguments="{options: sectionAgeGroupsSelectbox, settings: settings, value: settings.sectionAgeGroup.selected}" partial="Form/Select/SectionAgeGroup"/>
-            <f:render arguments="{options: sectionAgeLevelsSelectbox, settings: settings, value: settings.sectionAgeLevel.selected}" partial="Form/Select/SectionAgeLevel"/>
-            <f:render arguments="{options: competitionTypesSelectbox, settings: settings, value: settings.competitionType.selected}" partial="Form/Select/CompetitionType"/>
+            <f:render arguments="{options: sectionsSelectbox,           settings: settings,     value: settings.section.selected}" partial="Form/Select/Section"/>
+            <f:render arguments="{options: sectionAgeGroupsSelectbox,   settings: settings,     value: settings.sectionAgeGroup.selected}" partial="Form/Select/SectionAgeGroup"/>
+            <f:render arguments="{options: sectionAgeLevelsSelectbox,   settings: settings,     value: settings.sectionAgeLevel.selected}" partial="Form/Select/SectionAgeLevel"/>
+            <f:render arguments="{options: competitionTypesSelectbox,   settings: settings,     value: settings.competitionType.selected}" partial="Form/Select/CompetitionType"/>
             <f:render partial="Form/Submit"/>
         </f:form>
     </div>
