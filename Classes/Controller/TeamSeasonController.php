@@ -72,13 +72,14 @@
 		
 		/**
 		 * @return void
+		 * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
 		 */
-		public function listAction() {
+		public function listAction(): void {
 			$this->initializeActions();
 			$teamSeasons = $this->teamSeasonRepository->findAll($this->getSectionsFilter(), $this->getSectionAgeGroupsFilter(), $this->getSectionAgeLevelsFilter(), $this->getClubsFilter(), $this->getTeamsFilter(), $this->getSeasonsFilter());
 			$this->view->assign('teamSeasons', $teamSeasons);
 			/* FRONTEND FILTERS */
-			if($this->settings['section']['sectionsSelectbox'] || $this->settings['club']['clubsSelectbox'] ) {
+			if($this->settings['section']['sectionsSelectbox'] || $this->settings['club']['clubsSelectbox'] || $this->settings['team']['teamsSelectbox'] || $this->settings['season']['seasonsSelectbox']) {
 				if($this->settings['section']['sectionsSelectbox']) {
 					$sectionsSelectbox = $this->sectionRepository->findAll($this->getSectionsFilter(FALSE));
 					$this->view->assign('sectionsSelectbox', $sectionsSelectbox);
