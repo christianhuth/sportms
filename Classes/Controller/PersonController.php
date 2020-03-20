@@ -40,7 +40,7 @@
 		 */
 		public function listAction(): void {
 			$this->initializeActions();
-			$persons = $this->personRepository->findAllByUids($this->getPersonsFilter());
+			$persons = $this->personRepository->findAll($this->getPersonsFilter());
 			$this->view->assign('persons', $persons);
 		}
 		

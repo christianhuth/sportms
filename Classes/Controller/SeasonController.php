@@ -40,7 +40,7 @@
 		 */
 		public function listAction(): void {
 			$this->initializeActions();
-			$seasons = $this->seasonRepository->findAllByUids($this->getSeasonsFilter());
+			$seasons = $this->seasonRepository->findAll($this->getSeasonsFilter());
 			$this->view->assign('seasons', $seasons);
 		}
 		
