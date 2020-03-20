@@ -12,15 +12,9 @@
 			'sectionAgeLevel.label' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
 		);
 		
-		public function findAll(string $competitionUids = null, string $competitionTypeUids = null, string $sectionUids = null, string $sectionAgeGroupUids = null, string $sectionAgeLevelUids = null) {
+		public function findAll(string $sectionUids = null, string $sectionAgeGroupUids = null, string $sectionAgeLevelUids = null, string $competitionTypeUids = null, string $competitionUids = null) {
 			$query = $this->createQuery();
 			$constraints = [];
-			if($competitionUids) {
-				$constraints[] = $query->in('uid', explode(',', $competitionUids));
-			}
-			if($competitionTypeUids) {
-				$constraints[] = $query->in('competition_type', explode(',', $competitionTypeUids));
-			}
 			if($sectionUids) {
 				$constraints[] = $query->in('section', explode(',', $sectionUids));
 			}
@@ -29,6 +23,12 @@
 			}
 			if($sectionAgeLevelUids) {
 				$constraints[] = $query->in('section_age_level', explode(',', $sectionAgeLevelUids));
+			}
+			if($competitionTypeUids) {
+				$constraints[] = $query->in('competition_type', explode(',', $competitionTypeUids));
+			}
+			if($competitionUids) {
+				$constraints[] = $query->in('uid', explode(',', $competitionUids));
 			}
 			if($constraints) {
 				$query->matching($query->logicalAnd($constraints));

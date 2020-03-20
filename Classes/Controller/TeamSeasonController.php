@@ -83,11 +83,11 @@
 				if($this->settings['section']['sectionsSelectbox']) {
 					$sectionsSelectbox = $this->sectionRepository->findAll($this->getSectionsFilter(FALSE));
 					$this->view->assign('sectionsSelectbox', $sectionsSelectbox);
-					if($this->settings['section']['selected']) {
-						$sectionAgeGroupsSelectbox = $this->sectionAgeGroupRepository->findAll($this->getSectionAgeGroupsFilter(FALSE), $this->getSectionsFilter());
+					if($this->settings['section']['selected'] && $this->settings['sectionAgeGroup']['sectionAgeGroupsSelectbox']) {
+						$sectionAgeGroupsSelectbox = $this->sectionAgeGroupRepository->findAll($this->getSectionsFilter(), $this->getSectionAgeGroupsFilter(FALSE));
 						$this->view->assign('sectionAgeGroupsSelectbox', $sectionAgeGroupsSelectbox);
-						if($this->settings['sectionAgeGroup']['selected']) {
-							$sectionAgeLevelsSelectbox = $this->sectionAgeLevelRepository->findAll($this->getSectionAgeLevelsFilter(FALSE), $this->getSectionAgeGroupsFilter(), $this->getSectionsFilter());
+						if($this->settings['sectionAgeGroup']['selected'] && $this->settings['sectionAgeLevel']['sectionAgeLevelsSelectbox']) {
+							$sectionAgeLevelsSelectbox = $this->sectionAgeLevelRepository->findAll($this->getSectionsFilter(), $this->getSectionAgeGroupsFilter(), $this->getSectionAgeLevelsFilter(FALSE));
 							$this->view->assign('sectionAgeLevelsSelectbox', $sectionAgeLevelsSelectbox);
 						}
 					}
@@ -97,7 +97,7 @@
 					$this->view->assign('clubsSelectbox', $clubsSelectbox);
 				}
 				if($this->settings['team']['teamsSelectbox']) {
-					$teamsSelectbox = $this->teamRepository->findAll($this->getTeamsFilter(FALSE), $this->getSeasonsFilter(), $this->getSectionAgeGroupsFilter(), $this->getSectionAgeLevelsFilter(), $this->getClubsFilter());
+					$teamsSelectbox = $this->teamRepository->findAll($this->getSectionsFilter(), $this->getSectionAgeGroupsFilter(), $this->getSectionAgeLevelsFilter(), $this->getClubsFilter(), $this->getTeamsFilter(FALSE));
 					$this->view->assign('teamsSelectbox', $teamsSelectbox);
 				}
 				if($this->settings['season']['seasonsSelectbox']) {

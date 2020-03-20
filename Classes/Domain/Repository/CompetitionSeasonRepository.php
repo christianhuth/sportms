@@ -13,15 +13,9 @@
 			'season.seasonName' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING,
 		);
 		
-		public function findAll(string $competitionUids = null, string $competitionTypeUids = null, string $sectionsUids = null, string $sectionAgeGroupUids = null, string $sectionAgeLevelUids = null, string $seasonUids = null) {
+		public function findAll(string $sectionsUids = null, string $sectionAgeGroupUids = null, string $sectionAgeLevelUids = null, string $competitionTypeUids = null, string $competitionUids = null, string $seasonUids = null) {
 			$query = $this->createQuery();
 			$constraints = [];
-			if($competitionUids) {
-				$constraints[] = $query->in('competition', explode(',', $competitionUids));
-			}
-			if($competitionTypeUids) {
-				$constraints[] = $query->in('competition.competitionType', explode(',', $competitionTypeUids));
-			}
 			if($sectionsUids) {
 				$constraints[] = $query->in('competition.section', explode(',', $sectionsUids));
 			}
@@ -30,6 +24,12 @@
 			}
 			if($sectionAgeLevelUids) {
 				$constraints[] = $query->in('competition.sectionAgeLevel', explode(',', $sectionAgeLevelUids));
+			}
+			if($competitionTypeUids) {
+				$constraints[] = $query->in('competition.competitionType', explode(',', $competitionTypeUids));
+			}
+			if($competitionUids) {
+				$constraints[] = $query->in('competition', explode(',', $competitionUids));
 			}
 			if($seasonUids) {
 				$constraints[] = $query->in('season', explode(',', $seasonUids));

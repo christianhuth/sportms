@@ -1,7 +1,7 @@
 <html data-namespace-typo3-fluid="true"
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
-<f:if condition="{settings.competitionSeasonGameday.competitionSeasonGamedaysSelectbox}">
+<f:if condition="{settings.competition.selected} && {settings.season.selected} && {settings.competitionSeasonGameday.competitionSeasonGamedaysSelectbox}">
     <div class="form-group form-group-sm">
         <label class="hidden-xs col-sm-3 control-label">Spieltag:</label>
         <div class="col-xs-12 col-sm-9">

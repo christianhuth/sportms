@@ -9,19 +9,19 @@
 		);
 		
 		/**
-		 * @param string|null $uids
-		 * @param string|null $sections
+		 * @param string|null $sectionUids
+		 * @param string|null $sectionAgeGroupUids
 		 * @return array|\TYPO3\CMS\Extbase\Persistence\QueryResultInterface
 		 * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
 		 */
-		public function findAll(string $uids = null, string $sections = null) {
+		public function findAll(string $sectionUids = null, string $sectionAgeGroupUids = null) {
 			$query = $this->createQuery();
 			$constraints = [];
-			if($uids) {
-				$constraints[] = $query->in('uid', explode(',', $uids));
+			if($sectionUids) {
+				$constraints[] = $query->in('section', explode(',', $sectionUids));
 			}
-			if($sections) {
-				$constraints[] = $query->in('section', explode(',', $sections));
+			if($sectionAgeGroupUids) {
+				$constraints[] = $query->in('uid', explode(',', $sectionAgeGroupUids));
 			}
 			if($constraints) {
 				$query->matching($query->logicalAnd($constraints));

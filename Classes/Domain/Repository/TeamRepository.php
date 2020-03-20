@@ -12,7 +12,7 @@
 			'name' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
 		);
 		
-		public function findAll(string $teamUids = null, string $sectionUids = null, string $sectionAgeGroupUids = null, string $sectionAgeLevelUids = null, string $clubUids = null) {
+		public function findAll(string $sectionUids = null, string $sectionAgeGroupUids = null, string $sectionAgeLevelUids = null, string $clubUids = null, string $teamUids = null) {
 			$query = $this->createQuery();
 			$constraints = [];
 			if($teamUids) {

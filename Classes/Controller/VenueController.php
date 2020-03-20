@@ -10,16 +10,16 @@
 		protected $model = 'venue';
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Repository\VenueRepository
-		 * @TYPO3\CMS\Extbase\Annotation\Inject
-		 */
-		protected $venueRepository;
-		
-		/**
 		 * @var \Balumedien\Clubms\Domain\Repository\ClubRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
 		protected $clubRepository;
+		
+		/**
+		 * @var \Balumedien\Clubms\Domain\Repository\VenueRepository
+		 * @TYPO3\CMS\Extbase\Annotation\Inject
+		 */
+		protected $venueRepository;
 		
 		/**
 		 * Initializes the controller before invoking an action method.
@@ -45,7 +45,7 @@
 		 */
 		public function listAction() {
 			$this->initializeActions();
-			$venues = $this->venueRepository->findAll($this->getVenuesFilter(), $this->getClubsFilter());
+			$venues = $this->venueRepository->findAll($this->getClubsFilter(), $this->getVenuesFilter());
 			$this->view->assign('venues', $venues);
 			/* FRONTEND FILTERS */
 			if($this->settings['club']['clubsSelectbox']) {

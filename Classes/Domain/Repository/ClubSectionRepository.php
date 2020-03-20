@@ -8,14 +8,14 @@
 			'sorting' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
 		];
 		
-		public function findAll(string $clubUids = null, string $sectionUids = null) {
+		public function findAll(string $sectionUids = null, string $clubUids = null) {
 			$query = $this->createQuery();
 			$constraints = [];
-			if($clubUids) {
-				$constraints[] = $query->in('club', explode(",", $clubUids));
-			}
 			if($sectionUids) {
 				$constraints[] = $query->in('section', explode(",", $sectionUids));
+			}
+			if($clubUids) {
+				$constraints[] = $query->in('club', explode(",", $clubUids));
 			}
 			if($constraints) {
 				$query->matching($query->logicalAnd($constraints));

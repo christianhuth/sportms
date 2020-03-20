@@ -16,16 +16,16 @@
 		protected $clubSectionRepository;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Repository\ClubRepository
-		 * @TYPO3\CMS\Extbase\Annotation\Inject
-		 */
-		protected $clubRepository;
-		
-		/**
 		 * @var \Balumedien\Clubms\Domain\Repository\SectionRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
 		protected $sectionRepository;
+		
+		/**
+		 * @var \Balumedien\Clubms\Domain\Repository\ClubRepository
+		 * @TYPO3\CMS\Extbase\Annotation\Inject
+		 */
+		protected $clubRepository;
 		
 		/**
 		 * Initializes the controller before invoking an action method.
@@ -52,17 +52,17 @@
 		 */
 		public function listAction(): void {
 			$this->initializeActions();
-			$clubSections = $this->clubSectionRepository->findAll($this->getClubsFilter(), $this->getSectionsFilter());
+			$clubSections = $this->clubSectionRepository->findAll($this->getSectionsFilter(), $this->getClubsFilter());
 			$this->view->assign('clubSections', $clubSections);
 			/* FRONTEND FILTERS */
 			if($this->settings['club']['clubsSelectbox'] || $this->settings['section']['sectionsSelectbox']) {
-				if($this->settings['club']['clubsSelectbox']) {
-					$clubsSelectbox = $this->clubRepository->findAll($this->getClubsFilter(FALSE));
-					$this->view->assign('clubsSelectbox', $clubsSelectbox);
-				}
 				if($this->settings['section']['sectionsSelectbox']) {
 					$sectionsSelectbox = $this->sectionRepository->findAll($this->getSectionsFilter(FALSE));
 					$this->view->assign('sectionsSelectbox', $sectionsSelectbox);
+				}
+				if($this->settings['club']['clubsSelectbox']) {
+					$clubsSelectbox = $this->clubRepository->findAll($this->getClubsFilter(FALSE));
+					$this->view->assign('clubsSelectbox', $clubsSelectbox);
 				}
 			}
 		}

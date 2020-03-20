@@ -16,18 +16,6 @@
 		protected $competitionSeasonRepository;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Repository\CompetitionRepository
-		 * @TYPO3\CMS\Extbase\Annotation\Inject
-		 */
-		protected $competitionRepository;
-		
-		/**
-		 * @var \Balumedien\Clubms\Domain\Repository\CompetitionTypeRepository
-		 * @TYPO3\CMS\Extbase\Annotation\Inject
-		 */
-		protected $competitionTypeRepository;
-		
-		/**
 		 * @var \Balumedien\Clubms\Domain\Repository\SectionRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
@@ -44,6 +32,18 @@
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
 		protected $sectionAgeLevelRepository;
+		
+		/**
+		 * @var \Balumedien\Clubms\Domain\Repository\CompetitionTypeRepository
+		 * @TYPO3\CMS\Extbase\Annotation\Inject
+		 */
+		protected $competitionTypeRepository;
+		
+		/**
+		 * @var \Balumedien\Clubms\Domain\Repository\CompetitionRepository
+		 * @TYPO3\CMS\Extbase\Annotation\Inject
+		 */
+		protected $competitionRepository;
 		
 		/**
 		 * @var \Balumedien\Clubms\Domain\Repository\SeasonRepository
@@ -76,18 +76,18 @@
 		 */
 		public function listAction(): void {
 			$this->initializeActions();
-			$competitionSeasons = $this->competitionSeasonRepository->findAll($this->getCompetitionsFilter(), $this->getCompetitionTypesFilter(), $this->getSectionsFilter(), $this->getSectionAgeGroupsFilter(), $this->getSectionAgeLevelsFilter(), $this->getSeasonsFilter());
+			$competitionSeasons = $this->competitionSeasonRepository->findAll($this->getSectionsFilter(), $this->getSectionAgeGroupsFilter(), $this->getSectionAgeLevelsFilter(), $this->getCompetitionTypesFilter(), $this->getCompetitionsFilter(), $this->getSeasonsFilter());
 			$this->view->assign('competitionSeasons', $competitionSeasons);
 			/* FRONTEND FILTERS */
-			if($this->settings['section']['sectionsSelectbox'] || $this->settings['competition']['competitionTypesSelectbox'] || $this->settings['season']['seasonsSelectbox']) {
+			if($this->settings['section']['sectionsSelectbox'] || $this->settings['competitionType']['competitionTypesSelectbox'] || $this->settings['competition']['competitionsSelectbox'] || $this->settings['season']['seasonsSelectbox']) {
 				if($this->settings['section']['sectionsSelectbox']) {
 					$sectionsSelectbox = $this->sectionRepository->findAll($this->getSectionsFilter(FALSE));
 					$this->view->assign('sectionsSelectbox', $sectionsSelectbox);
-					if($this->settings['section']['selected']) {
-						$sectionAgeGroupsSelectbox = $this->sectionAgeGroupRepository->findAll($this->getSectionAgeGroupsFilter(FALSE), $this->getSectionsFilter());
+					if($this->settings['section']['selected'] && $this->settings['sectionAgeGroup']['sectionAgeGroupsSelectbox']) {
+						$sectionAgeGroupsSelectbox = $this->sectionAgeGroupRepository->findAll($this->getSectionsFilter(), $this->getSectionAgeGroupsFilter(FALSE));
 						$this->view->assign('sectionAgeGroupsSelectbox', $sectionAgeGroupsSelectbox);
-						if($this->settings['sectionAgeGroup']['selected']) {
-							$sectionAgeLevelsSelectbox = $this->sectionAgeLevelRepository->findAll($this->getSectionAgeLevelsFilter(FALSE), $this->getSectionAgeGroupsFilter(), $this->getSectionsFilter());
+						if($this->settings['sectionAgeGroup']['selected'] && $this->settings['sectionAgeLevel']['sectionAgeLevelsSelectbox']) {
+							$sectionAgeLevelsSelectbox = $this->sectionAgeLevelRepository->findAll($this->getSectionsFilter(), $this->getSectionAgeGroupsFilter(), $this->getSectionAgeLevelsFilter(FALSE));
 							$this->view->assign('sectionAgeLevelsSelectbox', $sectionAgeLevelsSelectbox);
 						}
 					}
@@ -97,7 +97,7 @@
 					$this->view->assign('competitionTypesSelectbox', $competitionTypesSelectbox);
 				}
 				if($this->settings['competition']['competitionsSelectbox']) {
-					$competitionsSelectbox = $this->competitionRepository->findAll($this->getCompetitionsFilter(FALSE), $this->getCompetitionTypesFilter(), $this->getSectionsFilter(), $this->getSectionAgeGroupsFilter(), $this->getSectionAgeLevelsFilter());
+					$competitionsSelectbox = $this->competitionRepository->findAll($this->getSectionsFilter(), $this->getSectionAgeGroupsFilter(), $this->getSectionAgeLevelsFilter(), $this->getCompetitionTypesFilter(), $this->getCompetitionsFilter(FALSE));
 					$this->view->assign('competitionsSelectbox', $competitionsSelectbox);
 				}
 				if($this->settings['season']['seasonsSelectbox']) {
