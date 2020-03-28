@@ -9,7 +9,7 @@
 	\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
 		$_EXTKEY,					                        // Extension-Key
 		'sportms',					                        // Plugin-Name
-		'Club Management System',	                        // Plugin-Label
+		'Sport Management System',	                        // Plugin-Label
 		'EXT:sportms/Resources/Public/Icons/Extension.svg'   // Extension Icon in Plugin Selection
 	);
 	
