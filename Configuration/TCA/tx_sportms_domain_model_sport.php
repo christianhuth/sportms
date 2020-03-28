@@ -28,7 +28,7 @@ return array(
 		'showRecordFieldList' => 'label',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'label, is_team_sport, is_individual_sport, sport_types,
+		'1' => array('showitem' => 'label, --palette--;;team_individual, sport_types,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab_visibility,
 		                                --palette--;;visible,
 		                                --palette--;;visible_date,
@@ -36,6 +36,7 @@ return array(
 									'),
 	),
 	'palettes' => array(
+		'team_individual' => array('showitem' => 'is_team_sport, is_individual_sport'),
 		'visible' => array('showitem' => 'hidden, slug'),
 		'visible_date' => array('showitem' => 'starttime, endtime'),
 	),
