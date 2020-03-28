@@ -10,7 +10,7 @@
 		$_EXTKEY,					                        // Extension-Key
 		'sportms',					                        // Plugin-Name
 		'Club Management System',	                        // Plugin-Label
-		'EXT:sportms/Resources/Public/Icons/Extension.png'   // Extension Icon in Plugin Selection
+		'EXT:sportms/Resources/Public/Icons/Extension.svg'   // Extension Icon in Plugin Selection
 	);
 	
 	// Add Static Template File
