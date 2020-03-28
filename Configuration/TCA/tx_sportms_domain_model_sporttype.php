@@ -161,6 +161,33 @@ return array(
 				'eval' => 'trim, required'
 			),
 		),
+		'sports' => array(
+			'exclude' => true,
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sport.sport_types',
+			'config' => array(
+				'type' => 'select',
+				'renderType' => 'selectMultipleSideBySide',
+				'foreign_table' => 'tx_sportms_domain_model_sport',
+				'foreign_table_where' => ' ORDER BY tx_sportms_domain_model_sport.label ASC',
+				'MM' => 'tx_sportms_sport_sporttype_mm',
+				'MM_opposite_field' => 'sports',
+				'size' => 10,
+				'autoSizeMax' => 30,
+				'maxitems' => 9999,
+				'multiple' => 0,
+				'fieldControl' => array(
+					'editPopup' => array(
+						'disabled' => false,
+					),
+					'addRecord' => array(
+						'disabled' => false,
+					),
+					'listModule' => array(
+						'disabled' => true,
+					),
+				),
+			),
+		),
 		
 	),
 );
