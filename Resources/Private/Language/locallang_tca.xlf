@@ -1251,6 +1251,15 @@
 			</trans-unit>
 
 
+			<!-- Domain Model SportType -->
+			<trans-unit id="tx_sportms_domain_model_sporttype">
+				<source>Sporttyp</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_sporttype.label">
+				<source>Bezeichnung</source>
+			</trans-unit>
+
+
 			<!-- Domain Model Team -->
 			<trans-unit id="tx_sportms_domain_model_team">
 				<source>Mannschaft</source>
