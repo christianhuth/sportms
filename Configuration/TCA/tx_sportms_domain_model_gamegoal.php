@@ -30,7 +30,9 @@ return array(
 		'showRecordFieldList' => '',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'game, ---palette---;;goal, ---palette---;;time, ---palette---;;scorer_assist, ---palette---;;goal_details'),
+		'1' => array('showitem' => 'game, ---palette---;;goal, ---palette---;;time, ---palette---;;scorer_assist, ---palette---;;goal_details,
+		                            --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab_language, sys_language_uid, l10n_parent, l10n_diffsource,
+		                            '),
 	),
 	'palettes' => array(
 		'goal' => array('showitem' => 'goal_home, goal_guest'),
@@ -39,6 +41,7 @@ return array(
 		'goal_details' => array('showitem' => 'own_goal, goal_type'),
 	),
 	'columns' => array(
+		
         'sys_language_uid' => [
             'exclude' => true,
             'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.language',
