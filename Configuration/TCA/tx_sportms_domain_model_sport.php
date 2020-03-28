@@ -168,6 +168,7 @@ return array(
 				'type' => 'select',
 				'renderType' => 'selectMultipleSideBySide',
 				'foreign_table' => 'tx_sportms_domain_model_sporttype',
+				'foreign_table_where' => ' ORDER BY tx_sportms_domain_model_sporttype.label ASC',
 				'MM' => 'tx_sportms_sport_sporttype_mm',
 				'size' => 10,
 				'autoSizeMax' => 30,
