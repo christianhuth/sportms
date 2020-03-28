@@ -34,7 +34,7 @@ return array(
 	'columns' => array(
 
 		't3ver_label' => array(
-			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.versionLabel',
+			'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.versionLabel',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -43,14 +43,14 @@ return array(
 		),
         'hidden' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.hidden',
+            'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.visible',
             'config' => array(
                 'type' => 'check',
             ),
         ),
 		'starttime' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.starttime',
+			'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.starttime',
 			'config' => array(
 				'behaviour' => array(
 					'allowLanguageSynchronization' => TRUE,
@@ -68,7 +68,7 @@ return array(
 		),
 		'endtime' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.endtime',
+			'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.endtime',
 			'config' => array(
 				'behaviour' => array(
 					'allowLanguageSynchronization' => TRUE,
@@ -94,6 +94,25 @@ return array(
 				'eval' => 'trim, required'
 			),
 		),
+		
+		'slug' => [
+			'exclude' => true,
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.slug',
+			'config' => [
+				'default' => '',
+				'fallbackCharacter' => '-',
+				'generatorOptions' => [
+					'fields' => ['uid', 'club', 'name'],
+					'fieldSeparator' => '_',
+					'prefixParentPageSlug' => false,
+					'replacements' => [
+						'/' => '-',
+					],
+				],
+				'prependSlash' => false,
+				'type' => 'slug',
+			],
+		],
 		
 	),
 );
