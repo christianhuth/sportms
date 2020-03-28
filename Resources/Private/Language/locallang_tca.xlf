@@ -15,6 +15,9 @@
 			<trans-unit id="tx_sportms_general.slug">
 				<source>Sprechende URL</source>
 			</trans-unit>
+			<trans-unit id="tx_sportms_general.tab_language">
+				<source>Sprache</source>
+			</trans-unit>
 			<trans-unit id="tx_sportms_general.tab_visibility">
 				<source>Sichtbarkeit</source>
 			</trans-unit>
