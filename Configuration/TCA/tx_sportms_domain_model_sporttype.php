@@ -9,7 +9,6 @@ return array(
 		'cruser_id' => 'cruser_id',
 		'default_sortby' => 'ORDER BY label ASC',
 		'delete' => 'deleted',
-		'dividers2tabs' => TRUE,
 		'enablecolumns' => array(
 			'disabled' => 'hidden',
 			'starttime' => 'starttime',
@@ -17,8 +16,11 @@ return array(
 		),
 		'iconfile' => 'EXT:sportms/Resources/Public/Icons/tx_sportms_domain_model_sporttype.svg',
 		'label' => 'label',
+		'languageField' => 'sys_language_uid',
 		'searchFields' => '',
 		'title'	=> 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sporttype',
+		'transOrigDiffSourceField' => 'l10n_diffsource',
+		'transOrigPointerField' => 'l10n_parent',
 		'tstamp' => 'tstamp',
 		'versioningWS' => TRUE,
 	),
@@ -46,7 +48,8 @@ return array(
 				'max' => 255,
 			)
 		),
-        'hidden' => [
+		
+		'hidden' => [
 			'exclude' => true,
 			'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.visible',
 			'config' => [
@@ -61,6 +64,25 @@ return array(
 				],
 			],
 		],
+		'slug' => [
+			'exclude' => true,
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.slug',
+			'config' => [
+				'default' => '',
+				'fallbackCharacter' => '-',
+				'generatorOptions' => [
+					'fields' => ['uid', 'club', 'name'],
+					'fieldSeparator' => '_',
+					'prefixParentPageSlug' => false,
+					'replacements' => [
+						'/' => '-',
+					],
+				],
+				'prependSlash' => false,
+				'type' => 'slug',
+			],
+		],
+		
 		'starttime' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.starttime',
@@ -107,25 +129,6 @@ return array(
 				'eval' => 'trim, required'
 			),
 		),
-		
-		'slug' => [
-			'exclude' => true,
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.slug',
-			'config' => [
-				'default' => '',
-				'fallbackCharacter' => '-',
-				'generatorOptions' => [
-					'fields' => ['uid', 'club', 'name'],
-					'fieldSeparator' => '_',
-					'prefixParentPageSlug' => false,
-					'replacements' => [
-						'/' => '-',
-					],
-				],
-				'prependSlash' => false,
-				'type' => 'slug',
-			],
-		],
 		
 	),
 );

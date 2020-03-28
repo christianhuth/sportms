@@ -9,7 +9,6 @@ return array(
 		'cruser_id' => 'cruser_id',
 		'default_sortby' => 'ORDER BY section ASC, competition_season ASC, team_season_home ASC',
 		'delete' => 'deleted',
-		'dividers2tabs' => TRUE,
 		'enablecolumns' => array(
 			'disabled' => 'hidden',
 			'starttime' => 'starttime',

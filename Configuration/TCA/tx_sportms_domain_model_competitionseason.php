@@ -9,7 +9,6 @@
 			'crdate' => 'crdate',
 			'cruser_id' => 'cruser_id',
 			'delete' => 'deleted',
-			'dividers2tabs' => TRUE,
 			'enablecolumns' => array(
 				'disabled' => 'hidden',
 				'starttime' => 'starttime',
