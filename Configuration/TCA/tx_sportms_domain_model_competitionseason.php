@@ -9,6 +9,9 @@
 			'crdate' => 'crdate',
 			'cruser_id' => 'cruser_id',
 			'delete' => 'deleted',
+        'languageField' => 'sys_language_uid',
+        'transOrigDiffSourceField' => 'l10n_diffsource',
+        'transOrigPointerField' => 'l10n_parent',
 			'enablecolumns' => array(
 				'disabled' => 'hidden',
 				'starttime' => 'starttime',

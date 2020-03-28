@@ -9,6 +9,9 @@ return array(
 		'cruser_id' => 'cruser_id',
 		'default_sortby' => 'ORDER BY period ASC, minute ASC, minute_additional ASC',
 		'delete' => 'deleted',
+        'languageField' => 'sys_language_uid',
+        'transOrigDiffSourceField' => 'l10n_diffsource',
+        'transOrigPointerField' => 'l10n_parent',
 		'enablecolumns' => array(
 			'disabled' => 'hidden',
 			'starttime' => 'starttime',
