@@ -110,7 +110,7 @@ return array(
 				'default' => '',
 				'fallbackCharacter' => '-',
 				'generatorOptions' => [
-					'fields' => ['uid', 'club', 'name'],
+					'fields' => ['label'],
 					'fieldSeparator' => '_',
 					'prefixParentPageSlug' => false,
 					'replacements' => [
