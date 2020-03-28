@@ -27,11 +27,14 @@ return array(
 	),
 	'types' => array(
 		'1' => array('showitem' => 'label,
-									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab_visibility, hidden, starttime, endtime, slug
+									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab_visibility,
+		                                --palette--;;visible,
+		                                --palette--;;visible_date,
 									'),
 	),
 	'palettes' => array(
-		'1' => array('showitem' => ''),
+		'visible' => array('showitem' => 'hidden, slug'),
+		'visible_date' => array('showitem' => 'starttime, endtime'),
 	),
 	'columns' => array(
 
