@@ -76,147 +76,147 @@
 		 *
 		 * @return void
 		 */
-		protected function initStorageObjects() {
+		protected function initStorageObjects(): void {
 			$this->images = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 		}
 		
 		/**
-		 * @return Club
+		 * @return \Balumedien\Sportms\Domain\Model\Club
 		 */
-		public function getClub() {
+		public function getClub(): \Balumedien\Sportms\Domain\Model\Club {
 			return $this->club;
 		}
 		
 		/**
-		 * @param Club $club
+		 * @param \Balumedien\Sportms\Domain\Model\Club $club
 		 */
-		public function setClub($club) {
+		public function setClub(\Balumedien\Sportms\Domain\Model\Club $club): void {
 			$this->club = $club;
 		}
 		
 		/**
 		 * @return string
 		 */
-		public function getName() {
+		public function getName(): string {
 			return $this->name;
 		}
 		
 		/**
 		 * @param string $name
 		 */
-		public function setName($name) {
+		public function setName(string $name): void {
 			$this->name = $name;
 		}
 		
 		/**
 		 * @return string
 		 */
-		public function getDescription() {
+		public function getDescription(): string {
 			return $this->description;
 		}
 		
 		/**
 		 * @param string $description
 		 */
-		public function setDescription($description) {
+		public function setDescription(string $description): void {
 			$this->description = $description;
 		}
 		
 		/**
-		 * @return Address
+		 * @return \Balumedien\Sportms\Domain\Model\Address
 		 */
-		public function getAddress() {
+		public function getAddress(): \Balumedien\Sportms\Domain\Model\Address {
 			return $this->address;
 		}
 		
 		/**
-		 * @param Address $address
+		 * @param \Balumedien\Sportms\Domain\Model\Address $address
 		 */
-		public function setAddress($address) {
+		public function setAddress(\Balumedien\Sportms\Domain\Model\Address $address): void {
 			$this->address = $address;
 		}
 		
 		/**
 		 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
 		 */
-		public function getImages() {
+		public function getImages(): \TYPO3\CMS\Extbase\Persistence\ObjectStorage {
 			return $this->images;
 		}
 		
 		/**
 		 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $images
 		 */
-		public function setImages($images) {
+		public function setImages(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $images): void {
 			$this->images = $images;
 		}
 		
 		/**
 		 * @return int
 		 */
-		public function getYearOfBuilding() {
+		public function getYearOfBuilding(): int {
 			return $this->yearOfBuilding;
 		}
 		
 		/**
 		 * @param int $yearOfBuilding
 		 */
-		public function setYearOfBuilding($yearOfBuilding) {
+		public function setYearOfBuilding(int $yearOfBuilding): void {
 			$this->yearOfBuilding = $yearOfBuilding;
 		}
 		
 		/**
 		 * @return int
 		 */
-		public function getDateOfBuilding() {
+		public function getDateOfBuilding(): int {
 			return $this->dateOfBuilding;
 		}
 		
 		/**
 		 * @param int $dateOfBuilding
 		 */
-		public function setDateOfBuilding($dateOfBuilding) {
+		public function setDateOfBuilding(int $dateOfBuilding): void {
 			$this->dateOfBuilding = $dateOfBuilding;
 		}
 		
 		/**
 		 * @return string
 		 */
-		public function getDimensions() {
+		public function getDimensions(): string {
 			return $this->dimensions;
 		}
 		
 		/**
 		 * @param string $dimensions
 		 */
-		public function setDimensions($dimensions) {
+		public function setDimensions(string $dimensions): void {
 			$this->dimensions = $dimensions;
 		}
 		
 		/**
 		 * @return string
 		 */
-		public function getSurface() {
+		public function getSurface(): string {
 			return $this->surface;
 		}
 		
 		/**
 		 * @param string $surface
 		 */
-		public function setSurface($surface) {
+		public function setSurface($surface): void {
 			$this->surface = $surface;
 		}
 		
 		/**
 		 * @return int
 		 */
-		public function getSpectatorCapacity() {
+		public function getSpectatorCapacity(): int {
 			return $this->spectatorCapacity;
 		}
 		
 		/**
 		 * @param int $spectatorCapacity
 		 */
-		public function setSpectatorCapacity($spectatorCapacity) {
+		public function setSpectatorCapacity(int $spectatorCapacity): void {
 			$this->spectatorCapacity = $spectatorCapacity;
 		}
 		

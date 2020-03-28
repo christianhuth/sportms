@@ -1,98 +1,67 @@
 <?php
-
-namespace Balumedien\Sportms\Domain\Model;
-
-/***************************************************************
- *
- *  Copyright notice
- *
- *  (c) 2015
- *
- *  All rights reserved
- *
- *  This script is part of the TYPO3 project. The TYPO3 project is
- *  free software; you can redistribute it and/or modify
- *  it under the terms of the GNU General Public License as published by
- *  the Free Software Foundation; either version 3 of the License, or
- *  (at your option) any later version.
- *
- *  The GNU General Public License can be found at
- *  http://www.gnu.org/copyleft/gpl.html.
- *
- *  This script is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU General Public License for more details.
- *
- *  This copyright notice MUST APPEAR in all copies of the script!
- ***************************************************************/
-
-/**
- * Mail
- */
-class Mail extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
-
+	
+	namespace Balumedien\Sportms\Domain\Model;
+	
 	/**
-	 * @var string
+	 * Mail
 	 */
-	protected $mail;
-
-	/**
-	 * @var \Balumedien\Sportms\Domain\Model\MailType
-	 */
-	protected $mailType;
-
-	/**
-	 * @var boolean
-	 */
-	protected $public;
-
-    /**
-     * @return string
-     */
-    public function getMail()
-    {
-        return $this->mail;
-    }
-
-    /**
-     * @param string $mail
-     */
-    public function setMail($mail)
-    {
-        $this->mail = $mail;
-    }
-
-    /**
-     * @return MailType
-     */
-    public function getMailType()
-    {
-        return $this->mailType;
-    }
-
-    /**
-     * @param MailType $mailType
-     */
-    public function setMailType($mailType)
-    {
-        $this->mailType = $mailType;
-    }
-
-    /**
-     * @return bool
-     */
-    public function isPublic()
-    {
-        return $this->public;
-    }
-
-    /**
-     * @param bool $public
-     */
-    public function setPublic($public)
-    {
-        $this->public = $public;
-    }
-
-}
+	class Mail extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
+		
+		/**
+		 * @var string
+		 */
+		protected $mail;
+		
+		/**
+		 * @var \Balumedien\Sportms\Domain\Model\MailType
+		 */
+		protected $mailType;
+		
+		/**
+		 * @var boolean
+		 */
+		protected $public;
+		
+		/**
+		 * @return string
+		 */
+		public function getMail(): string {
+			return $this->mail;
+		}
+		
+		/**
+		 * @param string $mail
+		 */
+		public function setMail($mail): void {
+			$this->mail = $mail;
+		}
+		
+		/**
+		 * @return \Balumedien\Sportms\Domain\Model\MailType
+		 */
+		public function getMailType(): \Balumedien\Sportms\Domain\Model\MailType {
+			return $this->mailType;
+		}
+		
+		/**
+		 * @param \Balumedien\Sportms\Domain\Model\MailType $mailType
+		 */
+		public function setMailType(\Balumedien\Sportms\Domain\Model\MailType $mailType): void {
+			$this->mailType = $mailType;
+		}
+		
+		/**
+		 * @return bool
+		 */
+		public function isPublic(): bool {
+			return $this->public;
+		}
+		
+		/**
+		 * @param bool $public
+		 */
+		public function setPublic($public): void {
+			$this->public = $public;
+		}
+		
+	}

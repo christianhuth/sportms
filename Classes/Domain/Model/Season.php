@@ -8,36 +8,26 @@
 	class Season extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 		
 		/**
-		 * season_name
-		 *
 		 * @var string
 		 */
 		protected $seasonName = '';
 		
 		/**
-		 * season_name_short
-		 *
 		 * @var string
 		 */
 		protected $seasonNameShort = '';
 		
 		/**
-		 * season_name_very_short
-		 *
 		 * @var string
 		 */
 		protected $seasonNameVeryShort = '';
 		
 		/**
-		 * startdate
-		 *
 		 * @var int
 		 */
 		protected $startdate;
 		
 		/**
-		 * enddate
-		 *
 		 * @var int
 		 */
 		protected $enddate;
@@ -50,70 +40,70 @@
 		/**
 		 * @return string
 		 */
-		public function getSeasonName() {
+		public function getSeasonName(): string {
 			return $this->seasonName;
 		}
 		
 		/**
 		 * @param string $seasonName
 		 */
-		public function setSeasonName($seasonName) {
+		public function setSeasonName(string $seasonName): void {
 			$this->seasonName = $seasonName;
 		}
 		
 		/**
 		 * @return string
 		 */
-		public function getSeasonNameShort() {
+		public function getSeasonNameShort(): string {
 			return $this->seasonNameShort;
 		}
 		
 		/**
 		 * @param string $seasonNameShort
 		 */
-		public function setSeasonNameShort($seasonNameShort) {
+		public function setSeasonNameShort($seasonNameShort): void {
 			$this->seasonNameShort = $seasonNameShort;
 		}
 		
 		/**
 		 * @return string
 		 */
-		public function getSeasonNameVeryShort() {
+		public function getSeasonNameVeryShort(): string {
 			return $this->seasonNameVeryShort;
 		}
 		
 		/**
 		 * @param string $seasonNameVeryShort
 		 */
-		public function setSeasonNameVeryShort($seasonNameVeryShort) {
+		public function setSeasonNameVeryShort($seasonNameVeryShort): void {
 			$this->seasonNameVeryShort = $seasonNameVeryShort;
 		}
 		
 		/**
 		 * @return int
 		 */
-		public function getStartdate() {
+		public function getStartdate(): int {
 			return $this->startdate;
 		}
 		
 		/**
 		 * @param int $startdate
 		 */
-		public function setStartdate($startdate) {
+		public function setStartdate($startdate): void {
 			$this->startdate = $startdate;
 		}
 		
 		/**
 		 * @return int
 		 */
-		public function getEnddate() {
+		public function getEnddate(): int {
 			return $this->enddate;
 		}
 		
 		/**
 		 * @param int $enddate
 		 */
-		public function setEnddate($enddate) {
+		public function setEnddate($enddate): void {
 			$this->enddate = $enddate;
 		}
 		
