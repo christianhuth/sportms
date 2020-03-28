@@ -512,7 +512,17 @@ CREATE TABLE tx_sportms_domain_model_sectionpositiongroup (
 );
 
 #
-# Table structure for table 'tx_sportms_domain_model_mailtype'
+# Table structure for table 'tx_sportms_domain_model_sport'
+#
+CREATE TABLE tx_sportms_domain_model_sport (
+    label varchar(255) DEFAULT NULL,
+    is_team_sport tinyint(4) unsigned DEFAULT '0' NOT NULL,
+    is_individual_sport tinyint(4) unsigned DEFAULT '0' NOT NULL,
+    slug varchar(2048) DEFAULT '',
+);
+
+#
+# Table structure for table 'tx_sportms_domain_model_sporttype'
 #
 CREATE TABLE tx_sportms_domain_model_sporttype (
     label varchar(255) DEFAULT NULL,

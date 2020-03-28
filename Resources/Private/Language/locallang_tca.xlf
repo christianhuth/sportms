@@ -1222,8 +1222,14 @@
 			<trans-unit id="tx_sportms_domain_model_sport.label">
 				<source>Bezeichnung</source>
 			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_sport.label">
-				<source>Bezeichnung</source>
+			<trans-unit id="tx_sportms_domain_model_sport.isTeamSport">
+				<source>Mannschaftssport?</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_sport.isIndividualSport">
+				<source>Einzelsport?</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_sport.sportTypes">
+				<source>Sporttypen</source>
 			</trans-unit>
 
 
@@ -1234,14 +1240,8 @@
 			<trans-unit id="tx_sportms_domain_model_sporttype.label">
 				<source>Bezeichnung</source>
 			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_sporttype.isTeamSport">
-				<source>Mannschaftssport?</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_sporttype.isIndividualSport">
-				<source>Einzelsport?</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_sporttype.sportTypes">
-				<source>Sporttypen</source>
+			<trans-unit id="tx_sportms_domain_model_sporttype.sports">
+				<source>Sportarten</source>
 			</trans-unit>
 
 
