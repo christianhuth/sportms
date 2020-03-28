@@ -106,42 +106,35 @@ return array(
 				],
 			],
 		],
-		'starttime' => array(
-			'exclude' => 1,
-			'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.starttime',
-			'config' => array(
-				'behaviour' => array(
-					'allowLanguageSynchronization' => TRUE,
-				),
-				'type' => 'input',
-				'size' => 13,
-				'eval' => 'datetime',
-				'checkbox' => 0,
-				'default' => 0,
-				'range' => array(
-					'lower' => mktime(0, 0, 0, date('m'), date('d'), date('Y'))
-				),
-				'renderType' => 'inputDateTime',
-			),
-		),
-		'endtime' => array(
-			'exclude' => 1,
-			'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.endtime',
-			'config' => array(
-				'behaviour' => array(
-					'allowLanguageSynchronization' => TRUE,
-				),
-				'type' => 'input',
-				'size' => 13,
-				'eval' => 'datetime',
-				'checkbox' => 0,
-				'default' => 0,
-				'range' => array(
-					'lower' => mktime(0, 0, 0, date('m'), date('d'), date('Y'))
-				),
-				'renderType' => 'inputDateTime',
-			),
-		),
+		'starttime' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.starttime',
+            'config' => [
+                'type' => 'input',
+                'renderType' => 'inputDateTime',
+                'eval' => 'datetime,int',
+                'default' => 0,
+                'behaviour' => [
+                    'allowLanguageSynchronization' => true
+                ]
+            ],
+        ],
+		'endtime' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.endtime',
+            'config' => [
+                'type' => 'input',
+                'renderType' => 'inputDateTime',
+                'eval' => 'datetime,int',
+                'default' => 0,
+                'range' => [
+                    'upper' => mktime(0, 0, 0, 1, 1, 2038)
+                ],
+                'behaviour' => [
+                    'allowLanguageSynchronization' => true
+                ]
+            ],
+        ],
 
         'club' => array(
             'config' => array(
