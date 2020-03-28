@@ -31,7 +31,7 @@
 		'types' => array(
 			'1' => array('showitem' => 'competition, season, competition_season_gamedays,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_competitionseason.tab_teams, competition_season_teams,
-									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_competitionseason.tab_visibility, hidden, detail_link'),
+									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab_visibility, hidden, detail_link'),
 		),
 		'palettes' => array(
 			'1' => array('showitem' => ''),
@@ -176,7 +176,7 @@
 
 			'detail_link' => array(
 				'exclude' => 1,
-				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_competitionseason.detail_link',
+				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.detail_link',
 				'config' => array(
 				    'default' => '1',
 					'type' => 'check',

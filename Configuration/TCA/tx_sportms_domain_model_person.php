@@ -32,7 +32,7 @@ return array(
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.tab_personal, weight, height, size_of_shoe, hander, footer, family_status, graduation, job, characteristics, hobbies, favorite_dish, favorite_drink,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.tab_contact, addresses, phones, mails, urls,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.tab_profiles, person_profiles,
-									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.tab_visibility, hidden, hidden_birthday, detail_link, profile_player, profile_official, profile_referee, slug'),
+									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab_visibility, hidden, hidden_birthday, detail_link, profile_player, profile_official, profile_referee, slug'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -382,7 +382,7 @@ return array(
 		
 		'slug' => [
 			'exclude' => true,
-			'label' => 'URL Segment',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.slug',
 			'config' => [
 				'default' => '',
 				'eval' => 'uniqueInSite',
@@ -409,7 +409,7 @@ return array(
 		),
 		'detail_link' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.detail_link',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.detail_link',
 			'config' => array(
 			    'default' => '1',
 				'type' => 'check',

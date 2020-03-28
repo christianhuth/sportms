@@ -28,7 +28,7 @@ return array(
 	'types' => array(
 		'1' => array('showitem' => 'season_name, season_name_short, season_name_very_short,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_season.tab_dates, startdate, enddate
-									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_season.tab_visibility, hidden, detail_link, slug'),
+									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab_visibility, hidden, detail_link, slug'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -140,7 +140,7 @@ return array(
 		
 		'detail_link' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_club.detail_link',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.detail_link',
 			'config' => array(
 				'default' => '1',
 				'type' => 'check',
@@ -148,7 +148,7 @@ return array(
 		),
 		'slug' => [
 			'exclude' => true,
-			'label' => 'URL Segment',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.slug',
 			'config' => [
 				'default' => '',
 				'eval' => 'uniqueInSite',

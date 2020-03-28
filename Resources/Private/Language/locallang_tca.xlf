@@ -6,8 +6,17 @@
 
 
             <!-- General -->
+			<trans-unit id="tx_sportms_general.detail_link">
+				<source>Link auf Einzelansicht möglich?</source>
+			</trans-unit>
 			<trans-unit id="tx_sportms_general.select">
 				<source>Bitte wählen</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_general.slug">
+				<source>Sprechende URL</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_general.tab_visibility">
+				<source>Sichtbarkeit</source>
 			</trans-unit>
 
 
@@ -81,9 +90,6 @@
 			<trans-unit id="tx_sportms_domain_model_club.club_officials">
 				<source>Vereinsfunktionärstätigkeiten</source>
 			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_club.detail_link">
-				<source>Link auf Einzelansicht möglich?</source>
-			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_club.tab_images">
 				<source>Bilder</source>
 			</trans-unit>
@@ -98,9 +104,6 @@
 			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_club.tab_officials">
 				<source>Vereinsfunktionäre</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_club.tab_visibility">
-				<source>Sichtbarkeit</source>
 			</trans-unit>
 
 
@@ -219,9 +222,6 @@
 			<trans-unit id="tx_sportms_domain_model_clubsection.team">
 				<source>Mannschaft</source>
 			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_clubsection.detail_link">
-				<source>Link auf Einzelansicht möglich?</source>
-			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_clubsection.tab_contact">
 				<source>Kontaktinformationen</source>
 			</trans-unit>
@@ -230,9 +230,6 @@
 			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_clubsection.tab_teams">
 				<source>Mannschaften</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_clubsection.tab_visibility">
-				<source>Sichtbarkeit</source>
 			</trans-unit>
 
 
@@ -303,14 +300,8 @@
 			<trans-unit id="tx_sportms_domain_model_competition.competition_seasons">
 				<source>Saison-Instanzen</source>
 			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_competition.detail_link">
-				<source>Link auf Einzelansicht möglich?</source>
-			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_competition.tab_seasons">
 				<source>Saison-Instanzen</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_competition.tab_visibility">
-				<source>Sichtbarkeit</source>
 			</trans-unit>
 
 
@@ -330,14 +321,8 @@
 			<trans-unit id="tx_sportms_domain_model_competitionseason.competition_season_teams">
 				<source>Teilnehmende Mannschaften</source>
 			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_competitionseason.detail_link">
-				<source>Link auf Einzelansicht möglich?</source>
-			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_competitionseason.tab_teams">
 				<source>Mannschaften</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_competitionseason.tab_visibility">
-				<source>Sichtbarkeit</source>
 			</trans-unit>
 
 
@@ -568,9 +553,6 @@
 			<trans-unit id="tx_sportms_domain_model_game.game_reports">
 				<source>Spielberichte</source>
 			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_game.detail_link">
-				<source>Link auf Einzelansicht möglich?</source>
-			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_game.palette_gameday_date_time">
 				<source>Zeitraum</source>
 			</trans-unit>
@@ -621,9 +603,6 @@
 			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_game.tab_reports">
 				<source>Spielberichte</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_game.tab_visibility">
-				<source>Sichtbarkeit</source>
 			</trans-unit>
 
 
@@ -1036,9 +1015,6 @@
 			<trans-unit id="tx_sportms_domain_model_person.hidden_birthday">
 				<source>Geburtsdatum verbergen</source>
 			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_person.detail_link">
-				<source>Link auf Einzelansicht möglich?</source>
-			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_person.profile_player">
 				<source>Spieler-Profil?</source>
 			</trans-unit>
@@ -1056,9 +1032,6 @@
 			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_person.tab_profiles">
 				<source>Profile</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_person.tab_visibility">
-				<source>Sichtbarkeit</source>
 			</trans-unit>
 
 
@@ -1153,14 +1126,8 @@
 			<trans-unit id="tx_sportms_domain_model_season.enddate">
 				<source>Enddatum</source>
 			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_season.detail_link">
-				<source>Link auf Einzelansicht möglich?</source>
-			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_season.tab_dates">
 				<source>Daten</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_season.tab_visibility">
-				<source>Sichtbarkeit</source>
 			</trans-unit>
 
 
@@ -1179,12 +1146,6 @@
 			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_section.section_age_groups">
 				<source>Altersgruppen</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_section.detail_link">
-				<source>Link auf Einzelansicht möglich?</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_section.tab_visibility">
-				<source>Sichtbarkeit</source>
 			</trans-unit>
 
 
@@ -1251,12 +1212,33 @@
 			</trans-unit>
 
 
+			<!-- Domain Model Sport -->
+			<trans-unit id="tx_sportms_domain_model_sport">
+				<source>Sportart</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_sport.label">
+				<source>Bezeichnung</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_sport.label">
+				<source>Bezeichnung</source>
+			</trans-unit>
+
+
 			<!-- Domain Model SportType -->
 			<trans-unit id="tx_sportms_domain_model_sporttype">
 				<source>Sporttyp</source>
 			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_sporttype.label">
 				<source>Bezeichnung</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_sporttype.isTeamSport">
+				<source>Mannschaftssport?</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_sporttype.isIndividualSport">
+				<source>Einzelsport?</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_sporttype.sportTypes">
+				<source>Sporttypen</source>
 			</trans-unit>
 
 
@@ -1285,14 +1267,8 @@
 			<trans-unit id="tx_sportms_domain_model_team.team_seasons">
 				<source>Saison-Instanzen</source>
 			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_team.detail_link">
-				<source>Link auf Einzelansicht möglich?</source>
-			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_team.tab_seasons">
 				<source>Saison-Instanzen</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_team.tab_visibility">
-				<source>Sichtbarkeit</source>
 			</trans-unit>
 
 
@@ -1324,9 +1300,6 @@
 			<trans-unit id="tx_sportms_domain_model_teamseason.competition_season_teams">
 				<source>Wettbewerbe</source>
 			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_teamseason.detail_link">
-				<source>Link auf Einzelansicht möglich?</source>
-			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_teamseason.tab_officials">
 				<source>Mannschaftsfunktionäre</source>
 			</trans-unit>
@@ -1335,9 +1308,6 @@
 			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_teamseason.tab_competitions">
 				<source>Wettbewerbe</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_teamseason.tab_visibility">
-				<source>Sichtbarkeit</source>
 			</trans-unit>
 
 
@@ -1387,9 +1357,6 @@
 			<trans-unit id="tx_sportms_domain_model_teamseasonpractice.annotation">
 				<source>Anmerkung</source>
 			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_teamseasonpractice.tab_visibility">
-				<source>Sichtbarkeit</source>
-			</trans-unit>
 
 
 			<!-- Domain Model TeamSeasonSquadMember -->
@@ -1413,9 +1380,6 @@
 			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_teamseasonsquadmember.tab_transfer">
 				<source>Transfer</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_teamseasonsquadmember.tab_visibility">
-				<source>Sichtbarkeit</source>
 			</trans-unit>
 
 
@@ -1464,12 +1428,6 @@
 			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_venue.spectator_capacity">
 				<source>Zuschauerkapazität</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_venue.detail_link">
-				<source>Link auf Einzelansicht möglich?</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_venue.tab_visibility">
-				<source>Sichtbarkeit</source>
 			</trans-unit>
 
 

@@ -29,7 +29,7 @@ return array(
 	),
 	'types' => array(
 		'1' => array('showitem' => 'day, time_start, time_end, venue, annotation,
-									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_teamseasonpractice.tab_visibility, hidden'),
+									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab_visibility, hidden'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),

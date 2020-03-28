@@ -27,7 +27,7 @@ return array(
 	),
 	'types' => array(
 		'1' => array('showitem' => 'label, images, section_position_groups, section_age_groups,
-									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_section.tab_visibility, hidden, detail_link, slug'),
+									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab_visibility, hidden, detail_link, slug'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -145,7 +145,7 @@ return array(
 		
 		'detail_link' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_section.detail_link',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.detail_link',
 			'config' => array(
 				'default' => '1',
 				'type' => 'check',
@@ -153,7 +153,7 @@ return array(
 		),
 		'slug' => [
 			'exclude' => true,
-			'label' => 'URL Segment',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.slug',
 			'config' => [
 				'default' => '',
 				'eval' => 'uniqueInPid',

@@ -125,7 +125,7 @@ return array(
 		
 		'slug' => [
 			'exclude' => true,
-			'label' => 'URL Segment',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.slug',
 			'config' => [
 				'default' => '',
 				'eval' => 'uniqueInSite',
