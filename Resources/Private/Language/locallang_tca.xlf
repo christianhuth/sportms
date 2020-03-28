@@ -1222,13 +1222,13 @@
 			<trans-unit id="tx_sportms_domain_model_sport.label">
 				<source>Bezeichnung</source>
 			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_sport.isTeamSport">
+			<trans-unit id="tx_sportms_domain_model_sport.is_team_sport">
 				<source>Mannschaftssport?</source>
 			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_sport.isIndividualSport">
+			<trans-unit id="tx_sportms_domain_model_sport.is_individual_sport">
 				<source>Einzelsport?</source>
 			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_sport.sportTypes">
+			<trans-unit id="tx_sportms_domain_model_sport.sport_types">
 				<source>Sporttypen</source>
 			</trans-unit>
 
