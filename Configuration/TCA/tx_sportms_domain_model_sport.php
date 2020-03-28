@@ -28,7 +28,7 @@ return array(
 		'showRecordFieldList' => 'label',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'label,
+		'1' => array('showitem' => 'label, sport_types,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab_visibility,
 		                                --palette--;;visible,
 		                                --palette--;;visible_date,
