@@ -28,7 +28,7 @@ return array(
 		'showRecordFieldList' => 'label',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'label, sport_types,
+		'1' => array('showitem' => 'label, is_team_sport, is_individual_sport, sport_types,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab_visibility,
 		                                --palette--;;visible,
 		                                --palette--;;visible_date,
@@ -161,6 +161,22 @@ return array(
 				'eval' => 'trim, required'
 			),
 		),
+		'is_team_sport' => [
+			'exclude' => true,
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sport.is_team_sport',
+			'config' => [
+				'type' => 'check',
+				'renderType' => 'checkboxToggle',
+			],
+		],
+		'is_individual_sport' => [
+			'exclude' => true,
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sport.is_individual_sport',
+			'config' => [
+				'type' => 'check',
+				'renderType' => 'checkboxToggle',
+			],
+		],
 		'sport_types' => array(
 			'exclude' => true,
 			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sport.sport_types',
