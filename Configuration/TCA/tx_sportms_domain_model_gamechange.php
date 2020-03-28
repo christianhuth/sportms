@@ -101,7 +101,7 @@ return array(
                 'eval' => 'required',
                 'foreign_table' => 'tx_sportms_domain_model_game',
                 'items' => array(
-                    array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", 0),
+                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', 0),
                 ),
                 'maxItems' => 1,
                 'renderType' => 'selectSingle',
@@ -159,7 +159,7 @@ return array(
                 'foreign_table_where' => '  AND tx_sportms_domain_model_gamelineup.game = ###REC_FIELD_game###
                                             ORDER BY tx_sportms_domain_model_gamelineup.jersey_number ASC',
                 'items' => array(
-                    array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", 0),
+                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', 0),
                 ),
                 'maxItems' => 1,
                 'renderType' => 'selectSingle',
@@ -175,7 +175,7 @@ return array(
 				'foreign_table_where' => '  AND tx_sportms_domain_model_gamelineup.game = ###REC_FIELD_game###
 											ORDER BY tx_sportms_domain_model_gamelineup.jersey_number ASC',
 				'items' => array(
-					array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", 0),
+					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', 0),
 				),
 				'maxItems' => 1,
 				'renderType' => 'selectSingle',
@@ -188,7 +188,7 @@ return array(
 			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_gamechange.reason',
 			'config' => array(
 				'items' => array(
-					array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", 0),
+					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', 0),
 					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_gamechange.reason_performance', 1),
 					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_gamechange.reason_tactics', 2),
 					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_gamechange.reason_injury', 3),
