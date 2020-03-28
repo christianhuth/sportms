@@ -1,6 +1,6 @@
 <?php
 
-namespace Balumedien\Clubms\Domain\Model;
+namespace Balumedien\Sportms\Domain\Model;
 
 /***************************************************************
  *
@@ -33,7 +33,7 @@ namespace Balumedien\Clubms\Domain\Model;
 class PersonProfile extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	
 	/**
-	 * @var \Balumedien\Clubms\Domain\Model\Person
+	 * @var \Balumedien\Sportms\Domain\Model\Person
 	 */
 	protected $person;
 	
@@ -43,17 +43,17 @@ class PersonProfile extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	protected $profileType;
 	
 	/**
-	 * @var \Balumedien\Clubms\Domain\Model\Section
+	 * @var \Balumedien\Sportms\Domain\Model\Section
 	 */
 	protected $section;
 	
 	/**
-	 * @var \Balumedien\Clubms\Domain\Model\SectionPositionGroup
+	 * @var \Balumedien\Sportms\Domain\Model\SectionPositionGroup
 	 */
 	protected $sectionPositionGroup;
 	
 	/**
-	 * @var \Balumedien\Clubms\Domain\Model\SectionPosition
+	 * @var \Balumedien\Sportms\Domain\Model\SectionPosition
 	 */
 	protected $sectionPosition;
 	

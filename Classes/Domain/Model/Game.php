@@ -1,6 +1,6 @@
 <?php
 	
-	namespace Balumedien\Clubms\Domain\Model;
+	namespace Balumedien\Sportms\Domain\Model;
 	
 	/**
 	 * Game
@@ -8,29 +8,29 @@
 	class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Model\Section
+		 * @var \Balumedien\Sportms\Domain\Model\Section
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
 		 */
 		protected $section;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Model\Season
+		 * @var \Balumedien\Sportms\Domain\Model\Season
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
 		 */
 		protected $season;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Model\CompetitionSeason
+		 * @var \Balumedien\Sportms\Domain\Model\CompetitionSeason
 		 */
 		protected $competitionSeason;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Model\TeamSeason
+		 * @var \Balumedien\Sportms\Domain\Model\TeamSeason
 		 */
 		protected $teamSeasonHome;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Model\TeamSeason
+		 * @var \Balumedien\Sportms\Domain\Model\TeamSeason
 		 */
 		protected $teamSeasonGuest;
 		
@@ -40,7 +40,7 @@
 		protected $status;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Model\CompetitionSeasonGameday
+		 * @var \Balumedien\Sportms\Domain\Model\CompetitionSeasonGameday
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
 		 */
@@ -57,7 +57,7 @@
 		protected $time;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Model\Venue
+		 * @var \Balumedien\Sportms\Domain\Model\Venue
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
 		 */
 		protected $venue;
@@ -78,7 +78,7 @@
 		protected $periodDuration;
 		
 		/**
-		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\GamePeriod>
+		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\GamePeriod>
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
 		 */
@@ -215,80 +215,80 @@
 		protected $resultFourthsFourthGuest;
 		
 		/**
-		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\GameResultSet>
+		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\GameResultSet>
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
 		 */
 		protected $resultSets;
 		
 		/**
-		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\GameLineup>
+		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\GameLineup>
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
 		 */
 		protected $gameLineupHomeStarts;
 		
 		/**
-		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\GameLineup>
+		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\GameLineup>
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
 		 */
 		protected $gameLineupHomeSubstitutes;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Model\TeamSeasonOfficial
+		 * @var \Balumedien\Sportms\Domain\Model\TeamSeasonOfficial
 		 */
 		protected $trainerHome;
 		
 		/**
-		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\GameLineup>
+		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\GameLineup>
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
 		 */
 		protected $gameLineupGuestStarts;
 		
 		/**
-		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\GameLineup>
+		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\GameLineup>
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
 		 */
 		protected $gameLineupGuestSubstitutes;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Model\TeamSeasonOfficial
+		 * @var \Balumedien\Sportms\Domain\Model\TeamSeasonOfficial
 		 */
 		protected $trainerGuest;
 		
 		/**
-		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\GameChange>
+		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\GameChange>
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
 		 */
 		protected $gameChanges;
 		
 		/**
-		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\GameGoal>
+		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\GameGoal>
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
 		 */
 		protected $gameGoals;
 		
 		/**
-		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\GamePunishment>
+		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\GamePunishment>
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
 		 */
 		protected $gamePunishments;
 		
 		/**
-		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\GameReferee>
+		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\GameReferee>
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
 		 */
 		protected $gameReferees;
 		
 		/**
-		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\GameReport>
+		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\GameReport>
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
 		 */
@@ -325,72 +325,72 @@
 		}
 		
 		/**
-		 * @return \Balumedien\Clubms\Domain\Model\Section
+		 * @return \Balumedien\Sportms\Domain\Model\Section
 		 */
 		public function getSection() {
 			return $this->section;
 		}
 		
 		/**
-		 * @param \Balumedien\Clubms\Domain\Model\Section $section
+		 * @param \Balumedien\Sportms\Domain\Model\Section $section
 		 */
-		public function setSection(\Balumedien\Clubms\Domain\Model\Section $section): void {
+		public function setSection(\Balumedien\Sportms\Domain\Model\Section $section): void {
 			$this->section = $section;
 		}
 		
 		/**
-		 * @return \Balumedien\Clubms\Domain\Model\Season
+		 * @return \Balumedien\Sportms\Domain\Model\Season
 		 */
 		public function getSeason() {
 			return $this->season;
 		}
 		
 		/**
-		 * @param \Balumedien\Clubms\Domain\Model\Season $season
+		 * @param \Balumedien\Sportms\Domain\Model\Season $season
 		 */
-		public function setSeason(\Balumedien\Clubms\Domain\Model\Season $season): void {
+		public function setSeason(\Balumedien\Sportms\Domain\Model\Season $season): void {
 			$this->season = $season;
 		}
 		
 		/**
-		 * @return \Balumedien\Clubms\Domain\Model\CompetitionSeason
+		 * @return \Balumedien\Sportms\Domain\Model\CompetitionSeason
 		 */
 		public function getCompetitionSeason() {
 			return $this->competitionSeason;
 		}
 		
 		/**
-		 * @param \Balumedien\Clubms\Domain\Model\CompetitionSeason $competitionSeason
+		 * @param \Balumedien\Sportms\Domain\Model\CompetitionSeason $competitionSeason
 		 */
-		public function setCompetitionSeason(\Balumedien\Clubms\Domain\Model\CompetitionSeason $competitionSeason): void {
+		public function setCompetitionSeason(\Balumedien\Sportms\Domain\Model\CompetitionSeason $competitionSeason): void {
 			$this->competitionSeason = $competitionSeason;
 		}
 		
 		/**
-		 * @return \Balumedien\Clubms\Domain\Model\TeamSeason
+		 * @return \Balumedien\Sportms\Domain\Model\TeamSeason
 		 */
 		public function getTeamSeasonHome() {
 			return $this->teamSeasonHome;
 		}
 		
 		/**
-		 * @param \Balumedien\Clubms\Domain\Model\TeamSeason $teamSeasonHome
+		 * @param \Balumedien\Sportms\Domain\Model\TeamSeason $teamSeasonHome
 		 */
-		public function setTeamSeasonHome(\Balumedien\Clubms\Domain\Model\TeamSeason $teamSeasonHome): void {
+		public function setTeamSeasonHome(\Balumedien\Sportms\Domain\Model\TeamSeason $teamSeasonHome): void {
 			$this->teamSeasonHome = $teamSeasonHome;
 		}
 		
 		/**
-		 * @return \Balumedien\Clubms\Domain\Model\TeamSeason
+		 * @return \Balumedien\Sportms\Domain\Model\TeamSeason
 		 */
 		public function getTeamSeasonGuest() {
 			return $this->teamSeasonGuest;
 		}
 		
 		/**
-		 * @param \Balumedien\Clubms\Domain\Model\TeamSeason $teamSeasonGuest
+		 * @param \Balumedien\Sportms\Domain\Model\TeamSeason $teamSeasonGuest
 		 */
-		public function setTeamSeasonGuest(\Balumedien\Clubms\Domain\Model\TeamSeason $teamSeasonGuest): void {
+		public function setTeamSeasonGuest(\Balumedien\Sportms\Domain\Model\TeamSeason $teamSeasonGuest): void {
 			$this->teamSeasonGuest = $teamSeasonGuest;
 		}
 		
@@ -409,16 +409,16 @@
 		}
 		
 		/**
-		 * @return \Balumedien\Clubms\Domain\Model\CompetitionSeasonGameday
+		 * @return \Balumedien\Sportms\Domain\Model\CompetitionSeasonGameday
 		 */
 		public function getGameday() {
 			return $this->gameday;
 		}
 		
 		/**
-		 * @param \Balumedien\Clubms\Domain\Model\CompetitionSeasonGameday $gameday
+		 * @param \Balumedien\Sportms\Domain\Model\CompetitionSeasonGameday $gameday
 		 */
-		public function setGameday(\Balumedien\Clubms\Domain\Model\CompetitionSeasonGameday $gameday): void {
+		public function setGameday(\Balumedien\Sportms\Domain\Model\CompetitionSeasonGameday $gameday): void {
 			$this->gameday = $gameday;
 		}
 		
@@ -451,16 +451,16 @@
 		}
 		
 		/**
-		 * @return \Balumedien\Clubms\Domain\Model\Venue
+		 * @return \Balumedien\Sportms\Domain\Model\Venue
 		 */
 		public function getVenue() {
 			return $this->venue;
 		}
 		
 		/**
-		 * @param \Balumedien\Clubms\Domain\Model\Venue $venue
+		 * @param \Balumedien\Sportms\Domain\Model\Venue $venue
 		 */
-		public function setVenue(\Balumedien\Clubms\Domain\Model\Venue $venue) {
+		public function setVenue(\Balumedien\Sportms\Domain\Model\Venue $venue) {
 			$this->venue = $venue;
 		}
 		
@@ -934,9 +934,9 @@
 		}
 		
 		/**
-		 * @param \Balumedien\Clubms\Domain\Model\TeamSeasonOfficial $trainerHome
+		 * @param \Balumedien\Sportms\Domain\Model\TeamSeasonOfficial $trainerHome
 		 */
-		public function setTrainerHome(\Balumedien\Clubms\Domain\Model\TeamSeasonOfficial $trainerHome) {
+		public function setTrainerHome(\Balumedien\Sportms\Domain\Model\TeamSeasonOfficial $trainerHome) {
 			$this->trainerHome = $trainerHome;
 		}
 		
@@ -976,9 +976,9 @@
 		}
 		
 		/**
-		 * @param \Balumedien\Clubms\Domain\Model\TeamSeasonOfficial $trainerGuest
+		 * @param \Balumedien\Sportms\Domain\Model\TeamSeasonOfficial $trainerGuest
 		 */
-		public function setTrainerGuest(\Balumedien\Clubms\Domain\Model\TeamSeasonOfficial $trainerGuest) {
+		public function setTrainerGuest(\Balumedien\Sportms\Domain\Model\TeamSeasonOfficial $trainerGuest) {
 			$this->trainerGuest = $trainerGuest;
 		}
 		

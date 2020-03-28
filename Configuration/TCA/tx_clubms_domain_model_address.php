@@ -15,12 +15,12 @@ return array(
             'endtime' => 'endtime',
         ),
 		'hideTable' => TRUE,
-		'iconfile' => 'EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_address.svg',
+		'iconfile' => 'EXT:sportms/Resources/Public/Icons/tx_sportms_domain_model_address.svg',
 		'label' => '',
-		'label_userFunc' => \Balumedien\Clubms\Configuration\TCA\UserFunc\UserFunc::class . '->addressLabel',
+		'label_userFunc' => \Balumedien\Sportms\Configuration\TCA\UserFunc\UserFunc::class . '->addressLabel',
         'searchFields' => '',
 		'sortby' => 'sorting',
-        'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_address',
+        'title'	=> 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_address',
         'tstamp' => 'tstamp',
 		'versioningWS' => TRUE,
     ),
@@ -89,7 +89,7 @@ return array(
 
 		'street' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_address.street',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_address.street',
 			'config' => array(
                 'eval' => 'required',
                 'size' => 255,
@@ -98,7 +98,7 @@ return array(
 		),
 		'housenumber' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_address.housenumber',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_address.housenumber',
 			'config' => array(
                 'eval' => 'trim, trim',
 				'size' => 255,
@@ -107,7 +107,7 @@ return array(
 		),
         'zipcode' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_address.zipcode',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_address.zipcode',
             'config' => array(
                 'eval' => 'num, trim, trim',
                 'size' => 255,
@@ -116,7 +116,7 @@ return array(
         ),
         'location' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_address.location',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_address.location',
             'config' => array(
                 'eval' => 'required',
                 'size' => 255,
@@ -125,12 +125,12 @@ return array(
         ),
         'country' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_address.country',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_address.country',
             'config' => array(
                 'eval' => 'required',
 				'foreign_table' => 'static_countries',
 				'items' => Array (
-                    array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
+                    array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", ""),
 				),
 				'maxItems' => 1,
 				'renderType' => 'selectSingle',
@@ -140,7 +140,7 @@ return array(
         ),
         'region' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_address.region',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_address.region',
             'config' => array(
                 'type' => 'input',
                 'size' => 255,
@@ -149,7 +149,7 @@ return array(
         ),
         'public' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_address.public',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_address.public',
             'config' => array(
                 'type' => 'check',
             ),

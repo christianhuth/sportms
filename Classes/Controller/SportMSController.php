@@ -1,92 +1,92 @@
 <?php
 	
-	namespace Balumedien\Clubms\Controller;
+	namespace Balumedien\Sportms\Controller;
 	
 	/**
-	 * ClubMSController
+	 * SportMSController
 	 */
-	class ClubMSController extends ClubMSBaseController {
+	class SportMSController extends SportMSBaseController {
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Repository\AddressRepository
+		 * @var \Balumedien\Sportms\Domain\Repository\AddressRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
 		protected $addressRepository = NULL;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Repository\ClubRepository
+		 * @var \Balumedien\Sportms\Domain\Repository\ClubRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
 		protected $clubRepository = NULL;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Repository\ClubGroundRepository
+		 * @var \Balumedien\Sportms\Domain\Repository\ClubGroundRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
 		protected $clubGroundRepository = NULL;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Repository\ClubMembersRepository
+		 * @var \Balumedien\Sportms\Domain\Repository\ClubMembersRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
 		protected $clubMembersRepository = NULL;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Repository\ClubOfficialRepository
+		 * @var \Balumedien\Sportms\Domain\Repository\ClubOfficialRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
 		protected $clubOfficialRepository = NULL;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Repository\ClubOfficialJobRepository
+		 * @var \Balumedien\Sportms\Domain\Repository\ClubOfficialJobRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
 		protected $clubOfficialJobRepository = NULL;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Repository\ClubSectionRepository
+		 * @var \Balumedien\Sportms\Domain\Repository\ClubSectionRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
 		protected $clubSectionRepository = NULL;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Repository\ClubSectionMembersRepository
+		 * @var \Balumedien\Sportms\Domain\Repository\ClubSectionMembersRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
 		protected $clubSectionMembersRepository = NULL;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Repository\ClubSectionOfficialRepository
+		 * @var \Balumedien\Sportms\Domain\Repository\ClubSectionOfficialRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
 		protected $clubSectionOfficialRepository = NULL;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Repository\ClubSectionOfficialJobRepository
+		 * @var \Balumedien\Sportms\Domain\Repository\ClubSectionOfficialJobRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
 		protected $clubSectionOfficialJobRepository = NULL;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Repository\CompetitionRepository
+		 * @var \Balumedien\Sportms\Domain\Repository\CompetitionRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
 		protected $competitionRepository = NULL;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Repository\GameRepository
+		 * @var \Balumedien\Sportms\Domain\Repository\GameRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
 		protected $gameRepository = NULL;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Repository\PersonRepository
+		 * @var \Balumedien\Sportms\Domain\Repository\PersonRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
 		protected $personRepository = NULL;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Repository\TeamRepository
+		 * @var \Balumedien\Sportms\Domain\Repository\TeamRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
 		protected $teamRepository = NULL;

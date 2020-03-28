@@ -16,11 +16,11 @@ return array(
 			'endtime' => 'endtime',
 		),
 		'hideTable' => TRUE,
-		'iconfile' => 'EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_gamechange.svg',
+		'iconfile' => 'EXT:sportms/Resources/Public/Icons/tx_sportms_domain_model_gamechange.svg',
         'label' => '',
-        'label_userFunc' => \Balumedien\Clubms\Configuration\TCA\UserFunc\UserFunc::class . '->GameChangeLabel',
+        'label_userFunc' => \Balumedien\Sportms\Configuration\TCA\UserFunc\UserFunc::class . '->GameChangeLabel',
 		'searchFields' => '',
-		'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gamechange',
+		'title'	=> 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_gamechange',
 		'tstamp' => 'tstamp',
 		'versioningWS' => TRUE,
 	),
@@ -90,12 +90,12 @@ return array(
 
         'game' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gamechange.game',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_gamechange.game',
             'config' => array(
                 'eval' => 'required',
-                'foreign_table' => 'tx_clubms_domain_model_game',
+                'foreign_table' => 'tx_sportms_domain_model_game',
                 'items' => array(
-                    array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", 0),
+                    array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", 0),
                 ),
                 'maxItems' => 1,
                 'renderType' => 'selectSingle',
@@ -106,7 +106,7 @@ return array(
 
 		'period' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gamechange.period',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_gamechange.period',
 			'config' => array(
 				'default' => null,
 				'eval' => 'null',
@@ -120,7 +120,7 @@ return array(
 		),
 		'minute' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gamechange.minute',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_gamechange.minute',
 			'config' => array(
 				'eval' => 'int, required, trim',
 				'range' => array(
@@ -133,7 +133,7 @@ return array(
 		),
 		'minute_additional' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gamechange.minute_additional',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_gamechange.minute_additional',
 			'config' => array(
 				'default' => null,
 				'eval' => 'null',
@@ -147,13 +147,13 @@ return array(
 		),
         'person_in' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gamechange.person_in',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_gamechange.person_in',
             'config' => array(
-                'foreign_table' => 'tx_clubms_domain_model_gamelineup',
-                'foreign_table_where' => '  AND tx_clubms_domain_model_gamelineup.game = ###REC_FIELD_game###
-                                            ORDER BY tx_clubms_domain_model_gamelineup.jersey_number ASC',
+                'foreign_table' => 'tx_sportms_domain_model_gamelineup',
+                'foreign_table_where' => '  AND tx_sportms_domain_model_gamelineup.game = ###REC_FIELD_game###
+                                            ORDER BY tx_sportms_domain_model_gamelineup.jersey_number ASC',
                 'items' => array(
-                    array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", 0),
+                    array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", 0),
                 ),
                 'maxItems' => 1,
                 'renderType' => 'selectSingle',
@@ -163,13 +163,13 @@ return array(
         ),
 		'person_out' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gamechange.person_out',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_gamechange.person_out',
 			'config' => array(
-				'foreign_table' => 'tx_clubms_domain_model_gamelineup',
-				'foreign_table_where' => '  AND tx_clubms_domain_model_gamelineup.game = ###REC_FIELD_game###
-											ORDER BY tx_clubms_domain_model_gamelineup.jersey_number ASC',
+				'foreign_table' => 'tx_sportms_domain_model_gamelineup',
+				'foreign_table_where' => '  AND tx_sportms_domain_model_gamelineup.game = ###REC_FIELD_game###
+											ORDER BY tx_sportms_domain_model_gamelineup.jersey_number ASC',
 				'items' => array(
-					array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", 0),
+					array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", 0),
 				),
 				'maxItems' => 1,
 				'renderType' => 'selectSingle',
@@ -179,13 +179,13 @@ return array(
 		),
 		'reason' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gamechange.reason',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_gamechange.reason',
 			'config' => array(
 				'items' => array(
-					array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", 0),
-					array('LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gamechange.reason_performance', 1),
-					array('LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gamechange.reason_tactics', 2),
-					array('LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gamechange.reason_injury', 3),
+					array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", 0),
+					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_gamechange.reason_performance', 1),
+					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_gamechange.reason_tactics', 2),
+					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_gamechange.reason_injury', 3),
 				),
 				'renderType' => 'selectSingle',
 				'type' => 'select',

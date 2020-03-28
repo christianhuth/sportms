@@ -1,6 +1,6 @@
 <?php
 
-	namespace Balumedien\Clubms\Domain\Model;
+	namespace Balumedien\Sportms\Domain\Model;
 	
 	use TYPO3\CMS\Extbase\Annotation\ORM\Lazy;
 	use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
@@ -37,7 +37,7 @@
 	class CompetitionSeasonGameday extends AbstractEntity {
 
 		/**
-		 * @var \Balumedien\Clubms\Domain\Model\CompetitionSeason
+		 * @var \Balumedien\Sportms\Domain\Model\CompetitionSeason
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
 		 */
 		protected $competitionSeason;

@@ -1,6 +1,6 @@
 <?php
 	
-	namespace Balumedien\Clubms\Domain\Model;
+	namespace Balumedien\Sportms\Domain\Model;
 	
 	/**
 	 * Section
@@ -18,12 +18,12 @@
 		protected $images;
 		
 		/**
-		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\SectionPositionGroup>
+		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\SectionPositionGroup>
 		 */
 		protected $sectionPositionGroups;
 		
 		/**
-		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\SectionAgeGroup>
+		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\SectionAgeGroup>
 		 */
 		protected $sectionAgeGroups;
 		

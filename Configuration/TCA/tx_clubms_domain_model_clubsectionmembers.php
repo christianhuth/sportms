@@ -16,10 +16,10 @@ return array(
             'endtime' => 'endtime',
         ),
 		'hideTable' => TRUE,
-		'iconfile' => 'EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_clubsectionmembers.svg',
+		'iconfile' => 'EXT:sportms/Resources/Public/Icons/tx_sportms_domain_model_clubsectionmembers.svg',
         'label' => 'date',
         'searchFields' => '',
-        'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubsectionmembers',
+        'title'	=> 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_clubsectionmembers',
         'tstamp' => 'tstamp',
 		'versioningWS' => TRUE,
     ),
@@ -94,7 +94,7 @@ return array(
 
         'members' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubsectionmembers.members',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_clubsectionmembers.members',
             'config' => array(
                 'type' => 'input',
                 'size' => 30,
@@ -103,7 +103,7 @@ return array(
         ),
 		'date' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubsectionmembers.date',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_clubsectionmembers.date',
 			'config' => array(
 				'type' => 'input',
 				'size' => 8,

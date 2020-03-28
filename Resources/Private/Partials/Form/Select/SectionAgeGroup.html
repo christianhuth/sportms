@@ -6,7 +6,7 @@
         <label class="hidden-xs col-sm-3 control-label">Altersgruppe:</label>
         <div class="col-xs-12 col-sm-9">
             <div class="input-group">
-                <span class="input-group-addon"><i class="clubmsicon clubmsicon-sectionagegroup"></i></span>
+                <span class="input-group-addon"><i class="sportmsicon sportmsicon-sectionagegroup"></i></span>
                 <f:form.select class="form-control" name="selectSectionAgeGroup" optionLabelField="label" optionValueField="uid" prependOptionLabel="Alle Altersgruppen" prependOptionValue="" value="{value}">
                     <f:groupedFor as="sectionAgeGroupsBySection" each="{options}" groupBy="section" groupKey="section">
                         <f:form.select.optgroup class="form-control" label="{section.label}" title="{section.label}"/>

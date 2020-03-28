@@ -15,12 +15,12 @@ return array(
             'endtime' => 'endtime',
         ),
 		'hideTable' => TRUE,
-		'iconfile' => 'EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_personprofile.svg',
+		'iconfile' => 'EXT:sportms/Resources/Public/Icons/tx_sportms_domain_model_personprofile.svg',
         'label' => '',
-        'label_userFunc' => \Balumedien\Clubms\Configuration\TCA\UserFunc\UserFunc::class . '->personProfileLabel',
+        'label_userFunc' => \Balumedien\Sportms\Configuration\TCA\UserFunc\UserFunc::class . '->personProfileLabel',
         'searchFields' => '',
         'sortBy' => 'sorting',
-        'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_personprofile',
+        'title'	=> 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_personprofile',
         'tstamp' => 'tstamp',
 		'versioningWS' => TRUE,
     ),
@@ -29,7 +29,7 @@ return array(
 	),
 	'types' => array(
 		'1' => array('showitem' => 'profile_type, section, section_position_group, section_position,
-									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_personprofile.tab_images, profile_images'),
+									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_personprofile.tab_images, profile_images'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -96,14 +96,14 @@ return array(
 		
 		'profile_type' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_personprofile.profiletype',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_personprofile.profiletype',
 			'config' => array(
 				'eval' => 'required',
 				'items' => array(
-					array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
-					array('LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_personprofile.profiletype_official', 'official'),
-					array('LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_personprofile.profiletype_player', 'player'),
-					array('LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_personprofile.profiletype_referee', 'referee'),
+					array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", ""),
+					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_personprofile.profiletype_official', 'official'),
+					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_personprofile.profiletype_player', 'player'),
+					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_personprofile.profiletype_referee', 'referee'),
 				),
 				'renderType' => 'selectSingle',
 				'type' => 'select',
@@ -112,13 +112,13 @@ return array(
 		),
 		'section' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_personprofile.section',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_personprofile.section',
 			'config' => array(
 				'eval' => 'required',
-				'foreign_table' => 'tx_clubms_domain_model_section',
-				'foreign_table_where' => 'ORDER BY tx_clubms_domain_model_section.label ASC',
+				'foreign_table' => 'tx_sportms_domain_model_section',
+				'foreign_table_where' => 'ORDER BY tx_sportms_domain_model_section.label ASC',
 				'items' => array(
-					array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
+					array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", ""),
 				),
 				'maxItems' => 1,
 				'renderType' => 'selectSingle',
@@ -135,13 +135,13 @@ return array(
 				),
 			),
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_personprofile.section_position_group',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_personprofile.section_position_group',
 			'config' => array(
-				'foreign_table' => 'tx_clubms_domain_model_sectionpositiongroup',
+				'foreign_table' => 'tx_sportms_domain_model_sectionpositiongroup',
 				'foreign_sortby' => 'sorting',
-				'foreign_table_where' => ' AND tx_clubms_domain_model_sectionpositiongroup.section = ###REC_FIELD_section###',
+				'foreign_table_where' => ' AND tx_sportms_domain_model_sectionpositiongroup.section = ###REC_FIELD_section###',
 				'items' => Array (
-					array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
+					array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", ""),
 				),
 				'maxItems' => 1,
 				'renderType' => 'selectSingle',
@@ -153,13 +153,13 @@ return array(
 		'section_position' => array(
 			'displayCond' => 'FIELD:section_position_group:>:0',
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_personprofile.section_position',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_personprofile.section_position',
 			'config' => array(
-				'foreign_table' => 'tx_clubms_domain_model_sectionposition',
-				'foreign_table_where' => '  AND tx_clubms_domain_model_sectionposition.section_position_group = ###REC_FIELD_section_position_group###
-                                            ORDER BY tx_clubms_domain_model_sectionposition.sorting ASC',
+				'foreign_table' => 'tx_sportms_domain_model_sectionposition',
+				'foreign_table_where' => '  AND tx_sportms_domain_model_sectionposition.section_position_group = ###REC_FIELD_section_position_group###
+                                            ORDER BY tx_sportms_domain_model_sectionposition.sorting ASC',
 				'items' => Array (
-					array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
+					array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", ""),
 				),
 				'maxItems' => 1,
 				'renderType' => 'selectSingle',
@@ -169,7 +169,7 @@ return array(
 		),
 		'profile_images' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_personprofile.profile_images',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_personprofile.profile_images',
 			'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
 				'image',
 				array(

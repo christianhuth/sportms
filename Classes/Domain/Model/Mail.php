@@ -1,6 +1,6 @@
 <?php
 
-namespace Balumedien\Clubms\Domain\Model;
+namespace Balumedien\Sportms\Domain\Model;
 
 /***************************************************************
  *
@@ -38,7 +38,7 @@ class Mail extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	protected $mail;
 
 	/**
-	 * @var \Balumedien\Clubms\Domain\Model\MailType
+	 * @var \Balumedien\Sportms\Domain\Model\MailType
 	 */
 	protected $mailType;
 

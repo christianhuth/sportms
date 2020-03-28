@@ -13,7 +13,7 @@
 					<config>
 						<type>group</type>
 						<internal_type>db</internal_type>
-						<allowed>tx_clubms_domain_model_venue</allowed>
+						<allowed>tx_sportms_domain_model_venue</allowed>
 						<size>1</size>
 						<maxItems>1</maxItems>
 						<minItems>0</minItems>
@@ -83,7 +83,7 @@
 					<label>Welche Sportstätten sollen angezeigt werden?</label>
 					<displayCond>FIELD:base.switchableControllerActions:=:Venue->list</displayCond>
 					<config>
-						<foreign_table>tx_clubms_domain_model_venue</foreign_table>
+						<foreign_table>tx_sportms_domain_model_venue</foreign_table>
 						<foreign_table_where>ORDER BY name ASC</foreign_table_where>
 						<renderType>selectMultipleSideBySide</renderType>
 						<type>select</type>

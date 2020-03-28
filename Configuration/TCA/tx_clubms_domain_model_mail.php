@@ -15,12 +15,12 @@ return array(
             'endtime' => 'endtime',
         ),
 		'hideTable' => TRUE,
-		'iconfile' => 'EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_mail.svg',
+		'iconfile' => 'EXT:sportms/Resources/Public/Icons/tx_sportms_domain_model_mail.svg',
         'label' => '',
-        'label_userFunc' => \Balumedien\Clubms\Configuration\TCA\UserFunc\UserFunc::class . '->mailLabel',
+        'label_userFunc' => \Balumedien\Sportms\Configuration\TCA\UserFunc\UserFunc::class . '->mailLabel',
         'searchFields' => '',
 		'sortby' => 'sorting',
-        'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_mail',
+        'title'	=> 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_mail',
         'tstamp' => 'tstamp',
 		'versioningWS' => TRUE,
     ),
@@ -89,7 +89,7 @@ return array(
 		
 		'mail' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_mail.mail',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_mail.mail',
 			'config' => array(
 				'eval' => 'email, required, trim',
 				'size' => 255,
@@ -98,12 +98,12 @@ return array(
 		),
 		'mail_type' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_mail.mail_type',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_mail.mail_type',
 			'config' => array(
-				'foreign_table' => 'tx_clubms_domain_model_mailtype',
+				'foreign_table' => 'tx_sportms_domain_model_mailtype',
 				'foreign_table_where' => 'ORDER BY label ASC',
 				'items' => array(
-                    array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", 0),
+                    array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", 0),
                 ),
 				'maxItems' => 1,
 				'minItems' => 1,
@@ -114,7 +114,7 @@ return array(
 		),
 		'public' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_mail.public',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_mail.public',
 			'config' => array(
 				'type' => 'check',
 			),

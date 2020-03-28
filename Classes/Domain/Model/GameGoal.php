@@ -1,7 +1,7 @@
 <?php
 	
 	
-	namespace Balumedien\Clubms\Domain\Model;
+	namespace Balumedien\Sportms\Domain\Model;
 	
 	/**
 	 * GameGoal
@@ -9,7 +9,7 @@
 	class GameGoal extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Model\Game
+		 * @var \Balumedien\Sportms\Domain\Model\Game
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
 		 */
 		protected $game;
@@ -40,12 +40,12 @@
 		protected $minuteAdditional;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Model\TeamSeasonSquadMember
+		 * @var \Balumedien\Sportms\Domain\Model\TeamSeasonSquadMember
 		 */
 		protected $scorer;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Model\TeamSeasonSquadMember
+		 * @var \Balumedien\Sportms\Domain\Model\TeamSeasonSquadMember
 		 */
 		protected $assist;
 		
@@ -60,16 +60,16 @@
 		protected $goalType;
 		
 		/**
-		 * @return \Balumedien\Clubms\Domain\Model\Game
+		 * @return \Balumedien\Sportms\Domain\Model\Game
 		 */
 		public function getGame() {
 			return $this->game;
 		}
 		
 		/**
-		 * @param \Balumedien\Clubms\Domain\Model\Game $game
+		 * @param \Balumedien\Sportms\Domain\Model\Game $game
 		 */
-		public function setGame(\Balumedien\Clubms\Domain\Model\Game $game) {
+		public function setGame(\Balumedien\Sportms\Domain\Model\Game $game) {
 			$this->game = $game;
 		}
 		

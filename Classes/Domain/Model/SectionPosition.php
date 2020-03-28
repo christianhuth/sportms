@@ -1,6 +1,6 @@
 <?php
 
-namespace Balumedien\Clubms\Domain\Model;
+namespace Balumedien\Sportms\Domain\Model;
 
 use TYPO3\CMS\Extbase\Annotation\ORM\Lazy;
 
@@ -35,7 +35,7 @@ use TYPO3\CMS\Extbase\Annotation\ORM\Lazy;
 class SectionPosition extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 {
     /**
-     * @var \Balumedien\Clubms\Domain\Model\SectionPositionGroup
+     * @var \Balumedien\Sportms\Domain\Model\SectionPositionGroup
      * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
      */
     protected $sectionPositionGroup;

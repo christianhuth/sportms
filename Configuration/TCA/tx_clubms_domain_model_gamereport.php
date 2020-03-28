@@ -15,11 +15,11 @@ return array(
 			'endtime' => 'endtime',
 		),
         'hideTable' => TRUE,
-		'iconfile' => 'EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_gamereport.svg',
+		'iconfile' => 'EXT:sportms/Resources/Public/Icons/tx_sportms_domain_model_gamereport.svg',
         'label' => 'headline',
 		'searchFields' => '',
 		'sortby' => 'sorting',
-		'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gamereport',
+		'title'	=> 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_gamereport',
 		'tstamp' => 'tstamp',
 		'versioningWS' => TRUE,
 	),
@@ -88,12 +88,12 @@ return array(
 
         'game' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gamereport.game',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_gamereport.game',
             'config' => array(
                 'eval' => 'required',
-                'foreign_table' => 'tx_clubms_domain_model_game',
+                'foreign_table' => 'tx_sportms_domain_model_game',
                 'items' => Array (
-                    array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
+                    array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", ""),
                 ),
                 'maxItems' => 1,
                 'minItems' => 1,
@@ -105,7 +105,7 @@ return array(
 
         'headline' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gamereport.headline',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_gamereport.headline',
             'config' => array(
                 'eval' => 'trim, required',
                 'size' => 100,
@@ -114,7 +114,7 @@ return array(
         ),
         'text' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gamereport.text',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_gamereport.text',
             'config' => array(
                 'enableRichtext' => true,
                 'eval' => 'trim, required',
@@ -123,7 +123,7 @@ return array(
         ),
         'author' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_gamereport.author',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_gamereport.author',
             'config' => array(
                 'eval' => 'trim',
                 'size' => 30,

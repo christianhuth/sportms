@@ -15,12 +15,12 @@ return array(
 			'endtime' => 'endtime',
 		),
 		'hideTable' => TRUE,
-		'iconfile' => 'EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_teamseason.svg',
+		'iconfile' => 'EXT:sportms/Resources/Public/Icons/tx_sportms_domain_model_teamseason.svg',
         'label' => '',
-		'label_userFunc' => \Balumedien\Clubms\Configuration\TCA\UserFunc\UserFunc::class . '->teamSeasonLabel',
+		'label_userFunc' => \Balumedien\Sportms\Configuration\TCA\UserFunc\UserFunc::class . '->teamSeasonLabel',
 		'searchFields' => '',
 		'sortby' => 'sorting',
-		'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_teamseason',
+		'title'	=> 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_teamseason',
 		'tstamp' => 'tstamp',
 		'versioningWS' => TRUE,
 	),
@@ -29,10 +29,10 @@ return array(
 	),
 	'types' => array(
 		'1' => array('showitem' => 'team, season, team_season_practices, team_season_images,
-									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_teamseason.tab_officials, team_season_officials,
-									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_teamseason.tab_squad_members, team_season_squad_members, team_season_squad_captains,
-									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_teamseason.tab_competitions, competition_season_teams,
-									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_teamseason.tab_visibility, hidden, detail_link'),
+									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_teamseason.tab_officials, team_season_officials,
+									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_teamseason.tab_squad_members, team_season_squad_members, team_season_squad_captains,
+									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_teamseason.tab_competitions, competition_season_teams,
+									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_teamseason.tab_visibility, hidden, detail_link'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -93,13 +93,13 @@ return array(
 
         'team' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_teamseason.team',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_teamseason.team',
             'config' => array(
                 'eval' => 'required',
-                'foreign_table' => 'tx_clubms_domain_model_team',
+                'foreign_table' => 'tx_sportms_domain_model_team',
                 'foreign_table_where' => 'ORDER BY name ASC',
                 'items' => Array (
-                    array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
+                    array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", ""),
                 ),
                 'maxItems' => 1,
                 'renderType' => 'selectSingle',
@@ -110,13 +110,13 @@ return array(
 
 		'season' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_teamseason.season',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_teamseason.season',
 			'config' => array(
 				'eval' => 'required',
-				'foreign_table' => 'tx_clubms_domain_model_season',
+				'foreign_table' => 'tx_sportms_domain_model_season',
 				'foreign_table_where' => 'ORDER BY season_name DESC',
 				'items' => Array (
-                    array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
+                    array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", ""),
 				),
 				'maxItems' => 1,
 				'renderType' => 'selectSingle',
@@ -125,7 +125,7 @@ return array(
 			),
 		),
 		'team_season_practices' => array(
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_teamseason.team_season_practices',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_teamseason.team_season_practices',
 			'config' => array(
 				'appearance' => array(
                     'enabledControls' => [
@@ -141,13 +141,13 @@ return array(
                     'useSortable' => 1,
 				),
 				'foreign_field' => 'team_season',
-				'foreign_table' => 'tx_clubms_domain_model_teamseasonpractice',
+				'foreign_table' => 'tx_sportms_domain_model_teamseasonpractice',
 				'type' => 'inline',
 			),
 		),
         'team_season_images' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_teamseason.team_season_images',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_teamseason.team_season_images',
             'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
                 'image',
                 array(
@@ -160,7 +160,7 @@ return array(
         ),
 		
 		'team_season_officials' => array(
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_teamseason.team_season_officials',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_teamseason.team_season_officials',
 			'config' => array(
 				'appearance' => array(
                     'enabledControls' => [
@@ -177,13 +177,13 @@ return array(
 				),
 				'foreign_field' => 'team_season',
 				'foreign_sortby' => 'sorting',
-				'foreign_table' => 'tx_clubms_domain_model_teamseasonofficial',
+				'foreign_table' => 'tx_sportms_domain_model_teamseasonofficial',
 				'type' => 'inline',
 			),
 		),
 		
 		'team_season_squad_members' => array(
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_teamseason.team_season_squad_members',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_teamseason.team_season_squad_members',
 			'config' => array(
 				'appearance' => array(
                     'enabledControls' => [
@@ -200,20 +200,20 @@ return array(
 				),
 				'foreign_field' => 'team_season',
 				'foreign_sortby' => 'sorting',
-				'foreign_table' => 'tx_clubms_domain_model_teamseasonsquadmember',
+				'foreign_table' => 'tx_sportms_domain_model_teamseasonsquadmember',
 				'type' => 'inline',
 			),
 		),
 
         'team_season_squad_captains' => array(
             'exclude' => true,
-            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_teamseason.team_season_squad_captains',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_teamseason.team_season_squad_captains',
             'config' => array(
                 'type' => 'select',
                 'renderType' => 'selectMultipleSideBySide',
-                'foreign_table' => 'tx_clubms_domain_model_teamseasonsquadmember',
-                'foreign_table_where' => ' AND tx_clubms_domain_model_teamseasonsquadmember.team_season = ###THIS_UID### ',
-                'MM' => 'tx_clubms_teamseason_teamseasonsquadmember_mm',
+                'foreign_table' => 'tx_sportms_domain_model_teamseasonsquadmember',
+                'foreign_table_where' => ' AND tx_sportms_domain_model_teamseasonsquadmember.team_season = ###THIS_UID### ',
+                'MM' => 'tx_sportms_teamseason_teamseasonsquadmember_mm',
                 'size' => 10,
                 'autoSizeMax' => 30,
                 'maxitems' => 9999,
@@ -234,15 +234,15 @@ return array(
 		
 		'competition_season_teams' => [
 			'exclude' => true,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_teamseason.competition_season_teams',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_teamseason.competition_season_teams',
 			'config' => [
 				'type' => 'select',
 				'renderType' => 'selectMultipleSideBySide',
-				'foreign_table' => 'tx_clubms_domain_model_competitionseason',
-				'foreign_table_where' => '  AND tx_clubms_domain_model_competitionseason.season = ###REC_FIELD_season###
-											AND tx_clubms_domain_model_competitionseason.competition IN (SELECT uid FROM tx_clubms_domain_model_competition WHERE section_age_level IN (SELECT section_age_level FROM tx_clubms_domain_model_team WHERE uid = ###REC_FIELD_team###))
+				'foreign_table' => 'tx_sportms_domain_model_competitionseason',
+				'foreign_table_where' => '  AND tx_sportms_domain_model_competitionseason.season = ###REC_FIELD_season###
+											AND tx_sportms_domain_model_competitionseason.competition IN (SELECT uid FROM tx_sportms_domain_model_competition WHERE section_age_level IN (SELECT section_age_level FROM tx_sportms_domain_model_team WHERE uid = ###REC_FIELD_team###))
 											ORDER BY competition ASC',
-				'MM' => 'tx_clubms_competitionseason_teamseason_mm',
+				'MM' => 'tx_sportms_competitionseason_teamseason_mm',
 				'MM_opposite_field' => 'competition_season_teams',
 				'size' => 10,
 				'autoSizeMax' => 30,
@@ -264,7 +264,7 @@ return array(
 		
 		'detail_link' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_teamseason.detail_link',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_teamseason.detail_link',
 			'config' => array(
 			    'default' => '1',
 				'type' => 'check',

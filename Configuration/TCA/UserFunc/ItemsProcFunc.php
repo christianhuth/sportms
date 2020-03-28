@@ -1,6 +1,6 @@
 <?php
 	
-	namespace Balumedien\Clubms\Configuration\TCA\UserFunc;
+	namespace Balumedien\Sportms\Configuration\TCA\UserFunc;
 	
 	class ItemsProcFunc {
 		
@@ -25,7 +25,7 @@
 				#$uid = $config['row']['uid'];
 				#file_put_contents("/homepages/17/d76951472/htdocs/www/team_season_squad_member_GameLineup.log", $uid);
 				
-				$gameTable = "tx_clubms_domain_model_game";
+				$gameTable = "tx_sportms_domain_model_game";
 				$queryBuilder = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Database\ConnectionPool::class)->getQueryBuilderForTable($gameTable);
 				$queryBuilder	->select($gameTable . '.' . $teamSeasonColumn)
 								->from($gameTable)
@@ -33,8 +33,8 @@
 				$result = $queryBuilder->execute()->fetchAll();
 				$teamSeasonId = $result[0][$teamSeasonColumn];
 				
-				$teamseasonsquadmemberTable = "tx_clubms_domain_model_teamseasonsquadmember";
-				$personTable = "tx_clubms_domain_model_person";
+				$teamseasonsquadmemberTable = "tx_sportms_domain_model_teamseasonsquadmember";
+				$personTable = "tx_sportms_domain_model_person";
 				
 				$queryBuilder = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Database\ConnectionPool::class)->getQueryBuilderForTable($teamseasonsquadmemberTable);
 				$queryBuilder	->select($teamseasonsquadmemberTable . '.uid', $personTable . '.firstname', $personTable . '.lastname')

@@ -1,6 +1,6 @@
 <?php
 	
-	namespace Balumedien\Clubms\Domain\Model;
+	namespace Balumedien\Sportms\Domain\Model;
 	
 	/**
 	 * SectionPositionGroup
@@ -8,7 +8,7 @@
 	class SectionPositionGroup extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Model\Section
+		 * @var \Balumedien\Sportms\Domain\Model\Section
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
 		 */
 		protected $section;
@@ -19,7 +19,7 @@
 		protected $label;
 		
 		/**
-		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\SectionPosition>
+		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\SectionPosition>
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
 		 */

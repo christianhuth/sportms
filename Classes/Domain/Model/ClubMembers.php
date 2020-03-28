@@ -1,6 +1,6 @@
 <?php
 	
-	namespace Balumedien\Clubms\Domain\Model;
+	namespace Balumedien\Sportms\Domain\Model;
 	
 	/***************************************************************
 	 *

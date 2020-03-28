@@ -1,0 +1,384 @@
+.sportmsicon {
+    background: var(--regular-red);
+    display: block;
+    height: 30px;
+    mask-position: center center;
+    mask-size: contain;
+    width: 30px;
+}
+
+.sportmsicon.sportmsicon-club {
+    mask: url("/typo3conf/ext/sportms/Resources/Public/Icons/tx_sportms_domain_model_club.svg");
+}
+
+.sportmsicon.sportmsicon-competition {
+    mask: url("/typo3conf/ext/sportms/Resources/Public/Icons/tx_sportms_domain_model_competition.svg");
+}
+
+.sportmsicon.sportmsicon-competitionseasongameday {
+    mask: url("/typo3conf/ext/sportms/Resources/Public/Icons/tx_sportms_domain_model_competitionseasongameday.svg");
+}
+
+.sportmsicon.sportmsicon-competitiontype {
+    mask: url("/typo3conf/ext/sportms/Resources/Public/Icons/tx_sportms_domain_model_competitiontype.svg");
+}
+
+.sportmsicon.sportmsicon-season {
+    mask: url("/typo3conf/ext/sportms/Resources/Public/Icons/tx_sportms_domain_model_season.svg");
+}
+
+.sportmsicon.sportmsicon-section {
+    mask: url("/typo3conf/ext/sportms/Resources/Public/Icons/tx_sportms_domain_model_section.svg");
+}
+
+.sportmsicon.sportmsicon-sectionagegroup {
+    mask: url("/typo3conf/ext/sportms/Resources/Public/Icons/tx_sportms_domain_model_sectionagegroup.svg");
+}
+
+.sportmsicon.sportmsicon-sectionagelevel {
+    mask: url("/typo3conf/ext/sportms/Resources/Public/Icons/tx_sportms_domain_model_sectionagelevel.svg");
+}
+
+.sportmsicon.sportmsicon-team {
+    mask: url("/typo3conf/ext/sportms/Resources/Public/Icons/tx_sportms_domain_model_team.svg");
+}
+
+.sportmsicon.sportmsicon-url {
+    mask: url("/typo3conf/ext/sportms/Resources/Public/Icons/tx_sportms_domain_model_url.svg");
+}
+
+.sportmsicon.sportmsicon-venue {
+    mask: url("/typo3conf/ext/sportms/Resources/Public/Icons/tx_sportms_domain_model_venue.svg");
+}
+
+#tx-sportms {
+    display: block;
+}
+
+#tx-sportms #tx-sportms-container {
+    font-family: sans-serif;
+}
+
+#tx-sportms #tx-sportms-container .tx-sportms-list-filter {
+    background-color: var(--light-gray);
+}
+
+#tx-sportms #tx-sportms-container .tx-sportms-list-filter .form-group:last-of-type {
+    margin-bottom: 0;
+}
+
+#tx-sportms #tx-sportms-container .tx-sportms-list-filter .form-group .col-xs-0 {
+    margin: 0;
+    padding: 0;
+}
+
+#tx-sportms #tx-sportms-container .tx-sportms-list-filter .input-group-addon {
+	padding: 4px;
+}
+
+#tx-sportms #tx-sportms-container .tx-sportms-list-filter .input-group-addon .sportmsicon {
+	background: var(--regular-red);
+	display: block;
+	height: 20px;
+	mask-position: center center;
+	mask-size: contain;
+	width: 20px;
+}
+
+
+.tx_sportms_club_sections {
+    margin-bottom: 75px;
+}
+
+.tx_sportms_club_sections .row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tx_sportms_club_sections .row .container > [class*='col-'] {
+    display: flex;
+    flex-direction: column;
+}
+
+.abteilungsaufzaehlung-outer {
+    padding: 0.5%;
+}
+
+.abteilungsaufzaehlung-inner {
+    border-radius: 5px;
+    background: #fff;
+    border: 1px solid rgba(217, 217, 217, .6);
+    border-top-color: rgba(217, 217, 217, 0.6);
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.abteilungsaufzaehlung-inner .image,
+.abteilungsaufzaehlung-inner .image img {
+    height: auto !important;
+    width: 100%;
+}
+
+.abteilungsaufzaehlung-inner .info {
+    font-size: 14px;
+    padding: 10px 20px;
+    position: relative;
+}
+
+.abteilungsaufzaehlung-inner a {
+    color: black;
+}
+
+.abteilungsaufzaehlung-inner a:hover {
+    color: var(--regular-red);
+}
+
+
+/*
+ *
+ * CLUB
+ *
+ */
+#tx-sportms #tx-sportms-container .club-official-startdate,
+#tx-sportms #tx-sportms-container .club-official-enddate,
+#tx-sportms #tx-sportms-container .club-official-duration {
+    text-align: center;
+}
+
+
+/*
+ *
+ * SPORTMS
+ *
+ */
+#tx-sportms #tx-sportms-container #tx-sportms-sportms-dbstats .tx-sportms-dbstat {
+    margin: 25px 0 0 0;
+}
+
+#tx-sportms #tx-sportms-container #tx-sportms-sportms-dbstats .tx-sportms-dbstat:last-of-type {
+    margin-bottom: 25px;
+}
+
+#tx-sportms #tx-sportms-container #tx-sportms-sportms-dbstats .tx-sportms-dbstat .tx-sportms-dbstat-image,
+#tx-sportms #tx-sportms-container #tx-sportms-sportms-dbstats .tx-sportms-dbstat .tx-sportms-dbstat-label {
+    background-color: var(--regular-gray);
+    padding: 10px;
+}
+
+#tx-sportms #tx-sportms-container #tx-sportms-sportms-dbstats .tx-sportms-dbstat .tx-sportms-dbstat-image img {
+    background-color: white;
+    height: auto !important;
+    max-width: 100%;
+    padding: 15px;
+    width: 100%;
+}
+
+#tx-sportms #tx-sportms-container #tx-sportms-sportms-dbstats .tx-sportms-dbstat .tx-sportms-dbstat-label {
+    padding-top: 0;
+    text-align: center;
+}
+
+
+/*
+ *
+ * CLUBSECTION
+ *
+ */
+#tx-sportms #tx-sportms-container #tx-sportms-club-list td.tx-sportms-club-image {
+    text-align: center;
+}
+
+
+/*
+ *
+ * PERSON
+ *
+ */
+#tx-sportms-container .tx-sportms-person-show .label {
+    background-color: #d5d5d5;
+    border-bottom: 1px solid #ffffff;
+    border-radius: 0;
+    color: black;
+    display: table-cell;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 0 5px 9px;
+    text-align: left;
+}
+
+/*
+ *
+ * TEAMSEASON
+ *
+ */
+.tx-sportms-teamseason-image img {
+    height: auto;
+    max-width: 100%;
+}
+
+.tx-sportms-teamseason-image-description {
+    background-color: #E7E7E7;
+    padding: 8px 10px;
+}
+
+.tx-sportms-teamseason-image-description p {
+    font-size: 85%;
+    margin: 0;
+}
+
+.tx-sportms-teamseason-practices table {
+    width: 100%;
+}
+
+.tx-sportms-teamseason-practices table tr td {
+    text-align: center;
+    width: 25%;
+}
+
+.tx-sportms-teamseason-practices table tr td:first-of-type {
+    font-weight: bold;
+    text-align: left;
+}
+
+.tx-sportms-teamseason-practices,
+.tx-sportms-teamseason-officials,
+.tx-sportms-teamseason-squad-position,
+.tx-sportms-teamseason-squad-captains {
+    padding: 0;
+}
+
+.tx-sportms-teamseason-practices .tx-sportms-teamseason-practices h3,
+.tx-sportms-teamseason-officials .tx-sportms-teamseason-officials h3,
+.tx-sportms-teamseason-squad .tx-sportms-teamseason-squad-position h3,
+.tx-sportms-teamseason-squad-captains .tx-sportms-teamseason-squad-captains h3 {
+    color: #C30D00;
+    display: inline-block;
+    font-family: sans-serif;
+    font-size: 23px;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 0px;
+    text-transform: uppercase;
+}
+
+.tx-sportms-teamseason-practices .tx-sportms-teamseason-practices h3:before,
+.tx-sportms-teamseason-officials .tx-sportms-teamseason-officials h3:before,
+.tx-sportms-teamseason-squad .tx-sportms-teamseason-squad-position h3:before,
+.tx-sportms-teamseason-squad-captains .tx-sportms-teamseason-squad-captains h3:before {
+    content: "ll";
+    font-family: sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-right: 10px;
+    text-transform: none;
+}
+
+.tx-sportms-teamseason-image .tx-sportms-teamseason-image-seperator,
+.tx-sportms-teamseason-practices .tx-sportms-teamseason-practices-seperator,
+.tx-sportms-teamseason-officials .tx-sportms-teamseason-officials-seperator,
+.tx-sportms-teamseason-squad .tx-sportms-teamseason-squad-position-seperator {
+    margin-bottom: 50px;
+}
+
+.tx-sportms-teamseason-squad-position-officials,
+.tx-sportms-teamseason-squad-position-members {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    float: left;
+}
+
+.tx-sportms-teamseason-official-wrapper a,
+.tx-sportms-teamseason-squadmember-wrapper a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.tx-sportms-teamseason-official,
+.tx-sportms-teamseason-squadmember {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+    padding: 4px;
+    position: relative;
+}
+
+.tx-sportms-teamseason-official a::after,
+.tx-sportms-teamseason-squadmember a::after {
+    background-color: rgba(195, 13, 0, 0.7);
+    content: '';
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transition: 0.4s;
+    width: 100%;
+    z-index: 100;
+}
+
+.tx-sportms-teamseason-official a:hover::after,
+.tx-sportms-teamseason-squadmember a:hover::after {
+    opacity: 1;
+}
+
+.tx-sportms-teamseason-official .official-image img,
+.tx-sportms-teamseason-squadmember .squadmember-image img {
+    height: auto !important;
+    max-width: 100%;
+    width: 100%;
+}
+
+.tx-sportms-teamseason-official .official-info,
+.tx-sportms-teamseason-squadmember .squadmember-info {
+    background-color: #E7E7E7;
+    font-weight: bold;
+    padding: 5% 7.5%;
+    font-size: 1rem;
+    color: #333;
+}
+
+.tx-sportms-teamseason-official .official-jerseynumber,
+.tx-sportms-teamseason-squadmember .squadmember-jerseynumber {
+    display: inline-block;
+    color: #c00;
+    font-size: 2.75rem;
+    text-align: left;
+    margin-right: .125em;
+}
+
+.tx-sportms-teamseason-official .official-name,
+.tx-sportms-teamseason-squadmember .squadmember-name {
+    display: inline-block;
+}
+
+.tx-sportms-teamseason-official .official-firstname,
+.tx-sportms-teamseason-squadmember .squadmember-firstname,
+.tx-sportms-teamseason-official .official-lastname,
+.tx-sportms-teamseason-squadmember .squadmember-lastname {
+    color: #333;
+    font-size: 15px;
+    font-size: .9375rem;
+    font-weight: normal;
+    display: block;
+    text-transform: uppercase;
+    margin-left: 0;
+}
+
+.tx-sportms-teamseason-official .official-lastname,
+.tx-sportms-teamseason-squadmember .squadmember-lastname {
+    color: #c00;
+    font-size: 1.125rem;
+    font-weight: bold;
+    line-height: 1em;
+}

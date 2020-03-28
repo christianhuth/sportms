@@ -1,6 +1,6 @@
 <?php
 	
-	namespace Balumedien\Clubms\ViewHelpers\Link;
+	namespace Balumedien\Sportms\ViewHelpers\Link;
 	
 	class ActionViewHelper extends \TYPO3\CMS\Fluid\ViewHelpers\Link\ActionViewHelper {
 		
@@ -24,12 +24,12 @@
 		/**
 		 * @var array
 		 */
-		public $listOfClubMsDomainModels;
+		public $listOfSportMsDomainModels;
 		
 		/**
 		 * @var string
 		 */
-		public $clubMsDomainModel;
+		public $sportMsDomainModel;
 		
 		/**
 		 * @return \TYPO3\CMS\Extbase\Object\ObjectManager
@@ -76,29 +76,29 @@
 		/**
 		 * @return array
 		 */
-		public function getListOfClubMsDomainModels(): array {
-			return $this->listOfClubMsDomainModels;
+		public function getListOfSportMsDomainModels(): array {
+			return $this->listOfSportMsDomainModels;
 		}
 		
 		/**
-		 * @param array $listOfClubMsDomainModels
+		 * @param array $listOfSportMSDomainModels
 		 */
-		public function setListOfClubMsDomainModels(array $listOfClubMsDomainModels): void {
-			$this->listOfClubMsDomainModels = $listOfClubMsDomainModels;
+		public function setListOfSportMsDomainModels(array $listOfSportMSDomainModels): void {
+			$this->listOfSportMsDomainModels = $listOfSportMSDomainModels;
 		}
 		
 		/**
 		 * @return string
 		 */
-		public function getClubMsDomainModel(): string {
-			return $this->clubMsDomainModel ? $this->clubMsDomainModel : "";
+		public function getSportMsDomainModel(): string {
+			return $this->sportMsDomainModel ? $this->sportMsDomainModel : "";
 		}
 		
 		/**
-		 * @param string $clubMsDomainModel
+		 * @param string $sportMsDomainModel
 		 */
-		public function setClubMsDomainModel(string $clubMsDomainModel): void {
-			$this->clubMsDomainModel = $clubMsDomainModel;
+		public function setSportMsDomainModel(string $sportMsDomainModel): void {
+			$this->sportMsDomainModel = $sportMsDomainModel;
 		}
 		
 		/**
@@ -106,11 +106,11 @@
 		 */
 		public function initializeArguments() {
 			parent::initializeArguments();
-			$this->initListOfClubMsDomainModels();
-			foreach($this->getListOfClubMsDomainModels() as $clubMsDomainModel) {
-				$name = $clubMsDomainModel;
+			$this->initListOfSportMsDomainModels();
+			foreach($this->getListOfSportMsDomainModels() as $sportMsDomainModel) {
+				$name = $sportMsDomainModel;
 				$type = "string";
-				$description = lcfirst($clubMsDomainModel) . ' to show';
+				$description = lcfirst($sportMsDomainModel) . ' to show';
 				$this->registerArgument($name, $type, $description, FALSE);
 			}
 			$this->registerArgument("Show", "string", "Show View to show", FALSE);
@@ -119,12 +119,12 @@
 		# Needed so we can fill $this->getSettings()
 		public function initSettings() {
 			$configurationManager = $this->objectManager->get('TYPO3\CMS\Extbase\Configuration\ConfigurationManager');
-			$this->setSettings($configurationManager->getConfiguration(\TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface::CONFIGURATION_TYPE_SETTINGS, 'Clubms', 'clubms'));
+			$this->setSettings($configurationManager->getConfiguration(\TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface::CONFIGURATION_TYPE_SETTINGS, 'Sportms', 'sportms'));
 		}
 		
-		public function initListOfClubMsDomainModels() {
-			$ListOfClubMsDomainModels = "Club, ClubSection, Competition, CompetitionSeason, Game, Person, Season, Section, Team, TeamSeason, Venue";
-			$this->setListOfClubMsDomainModels(explode(",", str_replace(" ", "", trim($ListOfClubMsDomainModels))));
+		public function initListOfSportMsDomainModels() {
+			$ListOfSportMsDomainModels = "Club, ClubSection, Competition, CompetitionSeason, Game, Person, Season, Section, Team, TeamSeason, Venue";
+			$this->setListOfSportMsDomainModels(explode(",", str_replace(" ", "", trim($ListOfSportMsDomainModels))));
 		}
 		
 		/**
@@ -132,20 +132,20 @@
 		 */
 		public function render() {
 			$this->initSettings();
-			$this->initListOfClubMsDomainModels();
-			foreach($this->getListOfClubMsDomainModels() as $clubMsDomainModel) {
-				if($this->arguments[$clubMsDomainModel]) {
-					$this->setClubMsDomainModel($clubMsDomainModel);
+			$this->initListOfSportMsDomainModels();
+			foreach($this->getListOfSportMsDomainModels() as $sportMsDomainModel) {
+				if($this->arguments[$sportMsDomainModel]) {
+					$this->setSportMsDomainModel($sportMsDomainModel);
 					break;
 				}
 			}
-			$extensionName = 'clubms';
-			$pluginName = 'clubms';
+			$extensionName = 'sportms';
+			$pluginName = 'sportms';
 			$action = $this->arguments['action'] ? $this->arguments['action'] : 'show';
 			$showView = ($action === 'show') ? ($this->arguments['Show'] ? $this->arguments['Show'] : 'index') : NULL;
 			
 			if($showView === 'show') {
-				if(is_null($this->arguments[$this->clubMsDomainModel]) || !$this->arguments[$this->clubMsDomainModel]->isDetailLink()) {
+				if(is_null($this->arguments[$this->sportMsDomainModel]) || !$this->arguments[$this->sportMsDomainModel]->isDetailLink()) {
 					$this->tagName = 'span';
 					$this->setTagBuilder(new \TYPO3Fluid\Fluid\Core\ViewHelper\TagBuilder($this->tagName));
 					$this->tag->setContent($this->renderChildren());
@@ -153,32 +153,28 @@
 				}
 			}
 			
-			
-			
-			
-			
-			$controller = $this->arguments['controller'] ? $this->arguments['controller'] : $this->getClubMsDomainModel();
+			$controller = $this->arguments['controller'] ? $this->arguments['controller'] : $this->getSportMsDomainModel();
 			$pageUid = $this->arguments['pageUid'] ? (int) $this->arguments['pageUid'] : (int) $this->getSettings()[lcfirst($controller)][$action . 'Pid'] ? : NULL;
 			$parameters = $this->arguments['arguments'] ? $this->arguments['arguments'] : array();
 			if(($action == "show") && ($showView)) {
 				$parameters['showView'] = $showView;
 			}
-			if($this->getClubMsDomainModel() != NULL) {
-				if($this->getClubMsDomainModel() != "ClubSection" && $this->getClubMsDomainModel() != "CompetitionSeason" && $this->getClubMsDomainModel() != "TeamSeason") {
-					$parameters[lcfirst($this->getClubMsDomainModel())] = $this->arguments[$this->getClubMsDomainModel()];
+			if($this->getSportMsDomainModel() != NULL) {
+				if($this->getSportMsDomainModel() != "ClubSection" && $this->getSportMsDomainModel() != "CompetitionSeason" && $this->getSportMsDomainModel() != "TeamSeason") {
+					$parameters[lcfirst($this->getSportMsDomainModel())] = $this->arguments[$this->getSportMsDomainModel()];
 				} else {
-					switch($this->getClubMsDomainModel()) {
+					switch($this->getSportMsDomainModel()) {
 						case "ClubSection":
-							$parameters['club'] = $this->arguments[$clubMsDomainModel]->getClub();
-							$parameters['section'] = $this->arguments[$clubMsDomainModel]->getSection();
+							$parameters['club'] = $this->arguments[$sportMsDomainModel]->getClub();
+							$parameters['section'] = $this->arguments[$sportMsDomainModel]->getSection();
 							break;
 						case "CompetitionSeason":
-							$parameters['competition'] = $this->arguments[$clubMsDomainModel]->getCompetition();
-							$parameters['season'] = $this->arguments[$clubMsDomainModel]->getSeason();
+							$parameters['competition'] = $this->arguments[$sportMsDomainModel]->getCompetition();
+							$parameters['season'] = $this->arguments[$sportMsDomainModel]->getSeason();
 							break;
 						case "TeamSeason":
-							$parameters['team'] = $this->arguments[$clubMsDomainModel]->getTeam();
-							$parameters['season'] = $this->arguments[$clubMsDomainModel]->getSeason();
+							$parameters['team'] = $this->arguments[$sportMsDomainModel]->getTeam();
+							$parameters['season'] = $this->arguments[$sportMsDomainModel]->getSeason();
 							break;
 					}
 				}

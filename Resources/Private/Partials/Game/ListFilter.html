@@ -8,8 +8,8 @@
                     settings.team.teamsSelectbox ||
                     settings.season.seasonsSelectbox ||
                     settings.competitionSeasonGameday.competitionSeasonGamedaysSelectbox}">
-    <div class="tx-clubms-list-filter well">
-        <f:form action="list" class="form-horizontal" controller="Game" extensionName="clubms" method="POST" noCache="TRUE" noCacheHash="TRUE" pageUid="{settings.game.listPid}" pluginName="clubms">
+    <div class="tx-sportms-list-filter well">
+        <f:form action="list" class="form-horizontal" controller="Game" extensionName="sportms" method="POST" noCache="TRUE" noCacheHash="TRUE" pageUid="{settings.game.listPid}" pluginName="sportms">
             <f:render arguments="{options: sectionsSelectbox,                   settings: settings,     value: settings.section.selected}" partial="Form/Select/Section"/>
             <f:render arguments="{options: sectionAgeGroupsSelectbox,           settings: settings,     value: settings.sectionAgeGroup.selected}" partial="Form/Select/SectionAgeGroup"/>
             <f:render arguments="{options: sectionAgeLevelsSelectbox,           settings: settings,     value: settings.sectionAgeLevel.selected}" partial="Form/Select/SectionAgeLevel"/>

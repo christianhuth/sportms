@@ -1,7 +1,7 @@
 <?php
 	
 	$EM_CONF[$_EXTKEY] = array(
-		'title' => 'Club Management System',
+		'title' => 'Sport Management System',
 		'description' => '',
 		'category' => 'plugin',
 		'author' => 'Christian Knell',

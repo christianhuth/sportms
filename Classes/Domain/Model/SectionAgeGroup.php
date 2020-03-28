@@ -1,6 +1,6 @@
 <?php
 	
-	namespace Balumedien\Clubms\Domain\Model;
+	namespace Balumedien\Sportms\Domain\Model;
 	
 	/**
 	 * SectionAgeGroup
@@ -8,7 +8,7 @@
 	class SectionAgeGroup extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Model\Section
+		 * @var \Balumedien\Sportms\Domain\Model\Section
 		 */
 		protected $section = '';
 		
@@ -23,23 +23,23 @@
 		protected $short = '';
 		
 		/**
-		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\SectionAgeLevel>
+		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\SectionAgeLevel>
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
 		 */
 		protected $sectionAgeLevels = '';
 		
 		/**
-		 * @return \Balumedien\Clubms\Domain\Model\Section
+		 * @return \Balumedien\Sportms\Domain\Model\Section
 		 */
-		public function getSection(): \Balumedien\Clubms\Domain\Model\Section {
+		public function getSection(): \Balumedien\Sportms\Domain\Model\Section {
 			return $this->section;
 		}
 		
 		/**
-		 * @param \Balumedien\Clubms\Domain\Model\Section $section
+		 * @param \Balumedien\Sportms\Domain\Model\Section $section
 		 */
-		public function setSection(\Balumedien\Clubms\Domain\Model\Section $section): void {
+		public function setSection(\Balumedien\Sportms\Domain\Model\Section $section): void {
 			$this->section = $section;
 		}
 		

@@ -1,6 +1,6 @@
 <?php
 	
-	namespace Balumedien\Clubms\ViewHelpers;
+	namespace Balumedien\Sportms\ViewHelpers;
 	
 	class DateRangeViewHelper extends \TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper {
 		

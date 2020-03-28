@@ -1,15 +1,15 @@
 <html data-namespace-typo3-fluid="true"
-      xmlns:clubms="Balumedien\Clubms\ViewHelpers"
+      xmlns:sportms="Balumedien\Sportms\ViewHelpers"
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <tr>
-    <td class="tx-clubms-club-image">
+    <td class="tx-sportms-club-image">
         <f:if condition="{club.images.0}">
             <f:if condition="{club.detailLink}">
                 <f:then>
-                    <clubms:link.action Club="{club}">
+                    <sportms:link.action Club="{club}">
                         <f:image image="{club.images.0}" maxHeight="50"/>
-                    </clubms:link.action>
+                    </sportms:link.action>
                 </f:then>
                 <f:else>
                     <f:image image="{club.images.0}" maxHeight="50"/>
@@ -17,16 +17,16 @@
             </f:if>
         </f:if>
     </td>
-    <td class="tx-clubms-club-name">
-        <clubms:link.action Club="{club}">{club.name}</clubms:link.action>
+    <td class="tx-sportms-club-name">
+        <sportms:link.action Club="{club}">{club.name}</sportms:link.action>
     </td>
-    <td class="tx-clubms-club-sections">
+    <td class="tx-sportms-club-sections">
         <f:if condition="{club.clubSections}">
             <f:then>
                 <ul>
                     <f:for as="clubSection" each="{club.clubSections}" iteration="iterator">
                         <li>
-                            <clubms:link.action ClubSection="{clubSection}">{clubSection.section.label}</clubms:link.action>
+                            <sportms:link.action ClubSection="{clubSection}">{clubSection.section.label}</sportms:link.action>
                         </li>
                     </f:for>
                 </ul>

@@ -1,16 +1,16 @@
 <?php
 	
-	namespace Balumedien\Clubms\Controller;
+	namespace Balumedien\Sportms\Controller;
 	
 	/**
 	 * PersonController
 	 */
-	class PersonController extends ClubMSBaseController {
+	class PersonController extends SportMSBaseController {
 		
 		protected $model = 'person';
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Repository\PersonRepository
+		 * @var \Balumedien\Sportms\Domain\Repository\PersonRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
 		protected $personRepository;
@@ -45,9 +45,9 @@
 		}
 		
 		/**
-		 * @param \Balumedien\Clubms\Domain\Model\Person $person
+		 * @param \Balumedien\Sportms\Domain\Model\Person $person
 		 */
-		public function showAction(\Balumedien\Clubms\Domain\Model\Person $person = NULL): void {
+		public function showAction(\Balumedien\Sportms\Domain\Model\Person $person = NULL): void {
 			$this->initializeActions();
 			if($person === NULL) {
 				$personUid = $this->settings['single']['person'];

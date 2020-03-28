@@ -1,7 +1,7 @@
 <html data-namespace-typo3-fluid="true"
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
-<div class="tx-clubms-club-show-index">
+<div class="tx-sportms-club-show-index">
 
     <table class="table table-bordered table-hover table-striped">
         <tbody>
@@ -9,7 +9,7 @@
         <f:if condition="{club.name}">
             <tr>
                 <td>
-                    <f:translate key="tx_clubms_domain_model_club.name"/>
+                    <f:translate key="tx_sportms_domain_model_club.name"/>
                 </td>
                 <td class="content">{club.name}</td>
             </tr>
@@ -18,7 +18,7 @@
         <f:if condition="{club.colours}">
             <tr>
                 <td>
-                    <f:translate key="tx_clubms_domain_model_club.colours"/>
+                    <f:translate key="tx_sportms_domain_model_club.colours"/>
                 </td>
                 <td class="content">{club.colours}</td>
             </tr>
@@ -27,7 +27,7 @@
         <f:if condition="{club.dateOfFounding}">
             <tr>
                 <td>
-                    <f:translate key="tx_clubms_domain_model_club.dateOfFounding"/>
+                    <f:translate key="tx_sportms_domain_model_club.dateOfFounding"/>
                 </td>
                 <td class="content">{club.dateOfFounding}</td>
             </tr>
@@ -36,7 +36,7 @@
         <f:if condition="{club.yearOfFounding}">
             <tr>
                 <td>
-                    <f:translate key="tx_clubms_domain_model_club.yearOfFounding"/>
+                    <f:translate key="tx_sportms_domain_model_club.yearOfFounding"/>
                 </td>
                 <td class="content">{club.yearOfFounding}</td>
             </tr>
@@ -45,7 +45,7 @@
         <f:if condition="{club.members}">
             <tr>
                 <td>
-                    <f:translate key="tx_clubms_domain_model_club.members"/>
+                    <f:translate key="tx_sportms_domain_model_club.members"/>
                 </td>
                 <td class="content">
                     <f:for as="member" each="{club.members}">
@@ -58,7 +58,7 @@
         <f:if condition="{club.images}">
             <tr>
                 <td>
-                    <f:translate key="tx_clubms_domain_model_club.images"/>
+                    <f:translate key="tx_sportms_domain_model_club.images"/>
                 </td>
                 <td class="content">
                     <f:for as="image" each="{club.images}" iteration="imagesIteration">
@@ -72,7 +72,7 @@
             <f:for as="clubSection" each="{club.clubSections}">
                 <tr>
                     <td>
-                        <f:translate key="tx_clubms_domain_model_club.nickname"/>
+                        <f:translate key="tx_sportms_domain_model_club.nickname"/>
                     </td>
                     <td class="content">{clubSection.label}</td>
                 </tr>

@@ -1,5 +1,5 @@
 <html data-namespace-typo3-fluid="true"
-      xmlns:clubms="Balumedien\Clubms\ViewHelpers"
+      xmlns:sportms="Balumedien\Sportms\ViewHelpers"
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <div class="table-responsive">
@@ -7,16 +7,16 @@
         <thead>
         <tr>
             <th>
-                <f:translate key="tx_clubms_domain_model_person.lastname"/>
+                <f:translate key="tx_sportms_domain_model_person.lastname"/>
             </th>
             <th>
-                <f:translate key="tx_clubms_domain_model_person.firstname"/>
+                <f:translate key="tx_sportms_domain_model_person.firstname"/>
             </th>
             <th>
-                <f:translate key="tx_clubms_domain_model_person.nickname"/>
+                <f:translate key="tx_sportms_domain_model_person.nickname"/>
             </th>
             <th>
-                <f:translate key="tx_clubms_domain_model_person.nationality"/>
+                <f:translate key="tx_sportms_domain_model_person.nationality"/>
             </th>
             <th>Einzelansicht</th>
         </tr>
@@ -30,10 +30,10 @@
                         <td>{person.firstname}</td>
                         <td>{person.nickname}</td>
                         <td>
-                            <clubms:nationality nationality="{person.nationality}"/>
+                            <sportms:nationality nationality="{person.nationality}"/>
                         </td>
                         <td>
-                            <clubms:link.action Person="{person}" arguments="{profile: person.personProfiles.0.profileType, section: person.personProfiles.0.section}">LINK</clubms:link.action>
+                            <sportms:link.action Person="{person}" arguments="{profile: person.personProfiles.0.profileType, section: person.personProfiles.0.section}">LINK</sportms:link.action>
                         </td>
                     </tr>
                 </f:for>

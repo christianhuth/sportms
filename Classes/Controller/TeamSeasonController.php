@@ -1,52 +1,52 @@
 <?php
 	
-	namespace Balumedien\Clubms\Controller;
+	namespace Balumedien\Sportms\Controller;
 	
 	/**
 	 * TeamSeasonController
 	 */
-	class TeamSeasonController extends ClubMSBaseController {
+	class TeamSeasonController extends SportMSBaseController {
 		
 		protected $model = 'teamSeason';
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Repository\TeamSeasonRepository
+		 * @var \Balumedien\Sportms\Domain\Repository\TeamSeasonRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
 		protected $teamSeasonRepository;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Repository\SectionRepository
+		 * @var \Balumedien\Sportms\Domain\Repository\SectionRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
 		protected $sectionRepository;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Repository\SectionAgeGroupRepository
+		 * @var \Balumedien\Sportms\Domain\Repository\SectionAgeGroupRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
 		protected $sectionAgeGroupRepository;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Repository\SectionAgeLevelRepository
+		 * @var \Balumedien\Sportms\Domain\Repository\SectionAgeLevelRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
 		protected $sectionAgeLevelRepository;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Repository\ClubRepository
+		 * @var \Balumedien\Sportms\Domain\Repository\ClubRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
 		protected $clubRepository;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Repository\TeamRepository
+		 * @var \Balumedien\Sportms\Domain\Repository\TeamRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
 		protected $teamRepository;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Repository\SeasonRepository
+		 * @var \Balumedien\Sportms\Domain\Repository\SeasonRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
 		protected $seasonRepository;
@@ -108,10 +108,10 @@
 		}
 		
 		/**
-		 * @param \Balumedien\Clubms\Domain\Model\TeamSeason|null $teamSeason
+		 * @param \Balumedien\Sportms\Domain\Model\TeamSeason|null $teamSeason
 		 * @throws \TYPO3\CMS\Extbase\Mvc\Exception\NoSuchArgumentException
 		 */
-		public function showAction(\Balumedien\Clubms\Domain\Model\TeamSeason $teamSeason = NULL): void {
+		public function showAction(\Balumedien\Sportms\Domain\Model\TeamSeason $teamSeason = NULL): void {
 			$this->initializeActions();
 			if($teamSeason === NULL) {
 				$listOfArguments = 'season,team';

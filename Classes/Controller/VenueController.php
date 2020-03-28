@@ -1,22 +1,22 @@
 <?php
 	
-	namespace Balumedien\Clubms\Controller;
+	namespace Balumedien\Sportms\Controller;
 	
 	/**
 	 * VenueController
 	 */
-	class VenueController extends ClubMSBaseController {
+	class VenueController extends SportMSBaseController {
 		
 		protected $model = 'venue';
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Repository\ClubRepository
+		 * @var \Balumedien\Sportms\Domain\Repository\ClubRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
 		protected $clubRepository;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Repository\VenueRepository
+		 * @var \Balumedien\Sportms\Domain\Repository\VenueRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
 		protected $venueRepository;
@@ -55,9 +55,9 @@
 		}
 		
 		/**
-		 * @param \Balumedien\Clubms\Domain\Model\Venue $venue
+		 * @param \Balumedien\Sportms\Domain\Model\Venue $venue
 		 */
-		public function showAction(\Balumedien\Clubms\Domain\Model\Venue $venue = NULL) {
+		public function showAction(\Balumedien\Sportms\Domain\Model\Venue $venue = NULL) {
 			$this->initializeActions();
 			$this->view->assign('venue', $venue);
 		}

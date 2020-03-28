@@ -1,12 +1,12 @@
 mod.wizards.newContentElement.wizardItems.plugins {
 	elements {
-		clubms {
-			icon = EXT:clubms/Resources/Public/Icons/Extension.png
-			title = LLL:EXT:clubms/Resources/Private/Language/locallang_be.xlf:CE_title
-			description = LLL:EXT:clubms/Resources/Private/Language/locallang_be.xlf:CE_description
+		sportms {
+			icon = EXT:sportms/Resources/Public/Icons/Extension.png
+			title = LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:CE_title
+			description = LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:CE_description
 			tt_content_defValues {
 				CType = list
-				list_type = clubms_clubms
+				list_type = sportms_sportms
 			}
 		}
 	}

@@ -1,40 +1,40 @@
 <?php
 	
-	namespace Balumedien\Clubms\Controller;
+	namespace Balumedien\Sportms\Controller;
 	
 	/**
 	 * CompetitionController
 	 */
-	class CompetitionController extends ClubMSBaseController {
+	class CompetitionController extends SportMSBaseController {
 		
 		protected $model = 'competition';
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Repository\CompetitionRepository
+		 * @var \Balumedien\Sportms\Domain\Repository\CompetitionRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
 		protected $competitionRepository;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Repository\SectionRepository
+		 * @var \Balumedien\Sportms\Domain\Repository\SectionRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
 		protected $sectionRepository;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Repository\SectionAgeGroupRepository
+		 * @var \Balumedien\Sportms\Domain\Repository\SectionAgeGroupRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
 		protected $sectionAgeGroupRepository;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Repository\SectionAgeLevelRepository
+		 * @var \Balumedien\Sportms\Domain\Repository\SectionAgeLevelRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
 		protected $sectionAgeLevelRepository;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Repository\CompetitionTypeRepository
+		 * @var \Balumedien\Sportms\Domain\Repository\CompetitionTypeRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
 		protected $competitionTypeRepository;
@@ -88,9 +88,9 @@
 		}
 		
 		/**
-		 * @param \Balumedien\Clubms\Domain\Model\Competition $competition
+		 * @param \Balumedien\Sportms\Domain\Model\Competition $competition
 		 */
-		public function showAction(\Balumedien\Clubms\Domain\Model\Competition $competition = NULL): void {
+		public function showAction(\Balumedien\Sportms\Domain\Model\Competition $competition = NULL): void {
 			$this->initializeActions();
 			if($competition === NULL) {
 				$competitionUid = $this->settings['competition']['uid'];

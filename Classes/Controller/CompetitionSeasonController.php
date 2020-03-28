@@ -1,52 +1,52 @@
 <?php
 	
-	namespace Balumedien\Clubms\Controller;
+	namespace Balumedien\Sportms\Controller;
 	
 	/**
 	 * CompetitionSeasonController
 	 */
-	class CompetitionSeasonController extends ClubMSBaseController {
+	class CompetitionSeasonController extends SportMSBaseController {
 		
 		protected $model = 'competitionSeason';
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Repository\CompetitionSeasonRepository
+		 * @var \Balumedien\Sportms\Domain\Repository\CompetitionSeasonRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
 		protected $competitionSeasonRepository;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Repository\SectionRepository
+		 * @var \Balumedien\Sportms\Domain\Repository\SectionRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
 		protected $sectionRepository;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Repository\SectionAgeGroupRepository
+		 * @var \Balumedien\Sportms\Domain\Repository\SectionAgeGroupRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
 		protected $sectionAgeGroupRepository;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Repository\SectionAgeLevelRepository
+		 * @var \Balumedien\Sportms\Domain\Repository\SectionAgeLevelRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
 		protected $sectionAgeLevelRepository;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Repository\CompetitionTypeRepository
+		 * @var \Balumedien\Sportms\Domain\Repository\CompetitionTypeRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
 		protected $competitionTypeRepository;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Repository\CompetitionRepository
+		 * @var \Balumedien\Sportms\Domain\Repository\CompetitionRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
 		protected $competitionRepository;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Repository\SeasonRepository
+		 * @var \Balumedien\Sportms\Domain\Repository\SeasonRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
 		protected $seasonRepository;
@@ -108,9 +108,9 @@
 		}
 		
 		/**
-		 * @param \Balumedien\Clubms\Domain\Model\CompetitionSeason $competitionSeason
+		 * @param \Balumedien\Sportms\Domain\Model\CompetitionSeason $competitionSeason
 		 */
-		public function showAction(\Balumedien\Clubms\Domain\Model\CompetitionSeason $competitionSeason = NULL): void {
+		public function showAction(\Balumedien\Sportms\Domain\Model\CompetitionSeason $competitionSeason = NULL): void {
 			$this->initializeActions();
 			if($competitionSeason === NULL) {
 				$competitionSeasonUid = $this->settings['competitionSeason']['uid'];

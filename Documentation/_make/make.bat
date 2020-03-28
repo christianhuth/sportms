@@ -6,7 +6,7 @@ if "%SPHINXOPTS%" == "" (
 	set SPHINXOPTS=-c . -a -E -w ./_not_versioned/warnings.txt
 )
 if "%SPHINXBUILD%" == "" (
-	set SPHINXBUILD=/kunden/homepages/17/d76951472/htdocs/www/clubms.tsv-lauf.de/typo3temp/tx_sphinx/sphinx-doc/bin/sphinx-build
+	set SPHINXBUILD=/kunden/homepages/17/d76951472/htdocs/www/sportms.tsv-lauf.de/typo3temp/tx_sphinx/sphinx-doc/bin/sphinx-build
 )
 set PAPER=a4
 set BUILDDIR=build

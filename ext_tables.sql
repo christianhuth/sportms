@@ -1,7 +1,7 @@
 #
-# Table structure for table 'tx_clubms_domain_model_address'
+# Table structure for table 'tx_sportms_domain_model_address'
 #
-CREATE TABLE tx_clubms_domain_model_address (
+CREATE TABLE tx_sportms_domain_model_address (
 
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
@@ -47,9 +47,9 @@ CREATE TABLE tx_clubms_domain_model_address (
 );
 
 #
-# Table structure for table 'tx_clubms_domain_model_club'
+# Table structure for table 'tx_sportms_domain_model_club'
 #
-CREATE TABLE tx_clubms_domain_model_club (
+CREATE TABLE tx_sportms_domain_model_club (
 
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
@@ -95,9 +95,9 @@ CREATE TABLE tx_clubms_domain_model_club (
 );
 
 #
-# Table structure for table 'tx_clubms_domain_model_clubground'
+# Table structure for table 'tx_sportms_domain_model_clubground'
 #
-CREATE TABLE tx_clubms_domain_model_clubground (
+CREATE TABLE tx_sportms_domain_model_clubground (
 
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
@@ -141,9 +141,9 @@ CREATE TABLE tx_clubms_domain_model_clubground (
 );
 
 #
-# Table structure for table 'tx_clubms_domain_model_clubmembers'
+# Table structure for table 'tx_sportms_domain_model_clubmembers'
 #
-CREATE TABLE tx_clubms_domain_model_clubmembers (
+CREATE TABLE tx_sportms_domain_model_clubmembers (
 
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
@@ -178,9 +178,9 @@ CREATE TABLE tx_clubms_domain_model_clubmembers (
 );
 
 #
-# Table structure for table 'tx_clubms_domain_model_clubofficial'
+# Table structure for table 'tx_sportms_domain_model_clubofficial'
 #
-CREATE TABLE tx_clubms_domain_model_clubofficial (
+CREATE TABLE tx_sportms_domain_model_clubofficial (
 
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
@@ -220,9 +220,9 @@ CREATE TABLE tx_clubms_domain_model_clubofficial (
 );
 
 #
-# Table structure for table 'tx_clubms_domain_model_clubofficialjob'
+# Table structure for table 'tx_sportms_domain_model_clubofficialjob'
 #
-CREATE TABLE tx_clubms_domain_model_clubofficialjob (
+CREATE TABLE tx_sportms_domain_model_clubofficialjob (
 
     uid int(11) NOT NULL auto_increment,
     pid int(11) DEFAULT '0' NOT NULL,
@@ -254,9 +254,9 @@ CREATE TABLE tx_clubms_domain_model_clubofficialjob (
 );
 
 #
-# Table structure for table 'tx_clubms_domain_model_clubsection'
+# Table structure for table 'tx_sportms_domain_model_clubsection'
 #
-CREATE TABLE tx_clubms_domain_model_clubsection (
+CREATE TABLE tx_sportms_domain_model_clubsection (
 
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
@@ -301,9 +301,9 @@ CREATE TABLE tx_clubms_domain_model_clubsection (
 );
 
 #
-# Table structure for table 'tx_clubms_domain_model_clubsectionmembers'
+# Table structure for table 'tx_sportms_domain_model_clubsectionmembers'
 #
-CREATE TABLE tx_clubms_domain_model_clubsectionmembers (
+CREATE TABLE tx_sportms_domain_model_clubsectionmembers (
 
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
@@ -338,9 +338,9 @@ CREATE TABLE tx_clubms_domain_model_clubsectionmembers (
 );
 
 #
-# Table structure for table 'tx_clubms_domain_model_clubsectionofficial'
+# Table structure for table 'tx_sportms_domain_model_clubsectionofficial'
 #
-CREATE TABLE tx_clubms_domain_model_clubsectionofficial (
+CREATE TABLE tx_sportms_domain_model_clubsectionofficial (
 
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
@@ -379,9 +379,9 @@ CREATE TABLE tx_clubms_domain_model_clubsectionofficial (
 );
 
 #
-# Table structure for table 'tx_clubms_domain_model_clubsectionofficialjob'
+# Table structure for table 'tx_sportms_domain_model_clubsectionofficialjob'
 #
-CREATE TABLE tx_clubms_domain_model_clubsectionofficialjob (
+CREATE TABLE tx_sportms_domain_model_clubsectionofficialjob (
 
     uid int(11) NOT NULL auto_increment,
     pid int(11) DEFAULT '0' NOT NULL,
@@ -413,9 +413,9 @@ CREATE TABLE tx_clubms_domain_model_clubsectionofficialjob (
 );
 
 #
-# Table structure for table 'tx_clubms_domain_model_competition'
+# Table structure for table 'tx_sportms_domain_model_competition'
 #
-CREATE TABLE tx_clubms_domain_model_competition (
+CREATE TABLE tx_sportms_domain_model_competition (
 
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
@@ -455,9 +455,9 @@ CREATE TABLE tx_clubms_domain_model_competition (
 );
 
 #
-# Table structure for table 'tx_clubms_domain_model_competitionseason'
+# Table structure for table 'tx_sportms_domain_model_competitionseason'
 #
-CREATE TABLE tx_clubms_domain_model_competitionseason (
+CREATE TABLE tx_sportms_domain_model_competitionseason (
 
     uid int(11) NOT NULL auto_increment,
     pid int(11) DEFAULT '0' NOT NULL,
@@ -495,9 +495,9 @@ CREATE TABLE tx_clubms_domain_model_competitionseason (
 );
 
 #
-# Table structure for table 'tx_clubms_domain_model_competitionseasongameday'
+# Table structure for table 'tx_sportms_domain_model_competitionseasongameday'
 #
-CREATE TABLE tx_clubms_domain_model_competitionseasongameday (
+CREATE TABLE tx_sportms_domain_model_competitionseasongameday (
 
     uid int(11) NOT NULL auto_increment,
     pid int(11) DEFAULT '0' NOT NULL,
@@ -535,9 +535,9 @@ CREATE TABLE tx_clubms_domain_model_competitionseasongameday (
 );
 
 #
-# Table structure for table 'tx_clubms_domain_model_competitiontype'
+# Table structure for table 'tx_sportms_domain_model_competitiontype'
 #
-CREATE TABLE tx_clubms_domain_model_competitiontype (
+CREATE TABLE tx_sportms_domain_model_competitiontype (
 
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
@@ -571,9 +571,9 @@ CREATE TABLE tx_clubms_domain_model_competitiontype (
 );
 
 #
-# Table structure for table 'tx_clubms_domain_model_game'
+# Table structure for table 'tx_sportms_domain_model_game'
 #
-CREATE TABLE tx_clubms_domain_model_game (
+CREATE TABLE tx_sportms_domain_model_game (
 
     uid int(11) NOT NULL auto_increment,
     pid int(11) DEFAULT '0' NOT NULL,
@@ -658,9 +658,9 @@ CREATE TABLE tx_clubms_domain_model_game (
 );
 
 #
-# Table structure for table 'tx_clubms_domain_model_gamechange'
+# Table structure for table 'tx_sportms_domain_model_gamechange'
 #
-CREATE TABLE tx_clubms_domain_model_gamechange (
+CREATE TABLE tx_sportms_domain_model_gamechange (
 
     uid int(11) NOT NULL auto_increment,
     pid int(11) DEFAULT '0' NOT NULL,
@@ -701,9 +701,9 @@ CREATE TABLE tx_clubms_domain_model_gamechange (
 );
 
 #
-# Table structure for table 'tx_clubms_domain_model_gamechange'
+# Table structure for table 'tx_sportms_domain_model_gamechange'
 #
-CREATE TABLE tx_clubms_domain_model_gamegoal (
+CREATE TABLE tx_sportms_domain_model_gamegoal (
 
     uid int(11) NOT NULL auto_increment,
     pid int(11) DEFAULT '0' NOT NULL,
@@ -747,9 +747,9 @@ CREATE TABLE tx_clubms_domain_model_gamegoal (
 );
 
 #
-# Table structure for table 'tx_clubms_domain_model_gamelineup'
+# Table structure for table 'tx_sportms_domain_model_gamelineup'
 #
-CREATE TABLE tx_clubms_domain_model_gamelineup (
+CREATE TABLE tx_sportms_domain_model_gamelineup (
 
     uid int(11) NOT NULL auto_increment,
     pid int(11) DEFAULT '0' NOT NULL,
@@ -789,9 +789,9 @@ CREATE TABLE tx_clubms_domain_model_gamelineup (
 );
 
 #
-# Table structure for table 'tx_clubms_domain_model_gameperiod'
+# Table structure for table 'tx_sportms_domain_model_gameperiod'
 #
-CREATE TABLE tx_clubms_domain_model_gameperiod (
+CREATE TABLE tx_sportms_domain_model_gameperiod (
 
     uid int(11) NOT NULL auto_increment,
     pid int(11) DEFAULT '0' NOT NULL,
@@ -828,9 +828,9 @@ CREATE TABLE tx_clubms_domain_model_gameperiod (
 );
 
 #
-# Table structure for table 'tx_clubms_domain_model_gamepunishment'
+# Table structure for table 'tx_sportms_domain_model_gamepunishment'
 #
-CREATE TABLE tx_clubms_domain_model_gamepunishment (
+CREATE TABLE tx_sportms_domain_model_gamepunishment (
 
     uid int(11) NOT NULL auto_increment,
     pid int(11) DEFAULT '0' NOT NULL,
@@ -872,9 +872,9 @@ CREATE TABLE tx_clubms_domain_model_gamepunishment (
 );
 
 #
-# Table structure for table 'tx_clubms_domain_model_gamereferee'
+# Table structure for table 'tx_sportms_domain_model_gamereferee'
 #
-CREATE TABLE tx_clubms_domain_model_gamereferee (
+CREATE TABLE tx_sportms_domain_model_gamereferee (
 
     uid int(11) NOT NULL auto_increment,
     pid int(11) DEFAULT '0' NOT NULL,
@@ -911,9 +911,9 @@ CREATE TABLE tx_clubms_domain_model_gamereferee (
 );
 
 #
-# Table structure for table 'tx_clubms_domain_model_gamereport'
+# Table structure for table 'tx_sportms_domain_model_gamereport'
 #
-CREATE TABLE tx_clubms_domain_model_gamereport (
+CREATE TABLE tx_sportms_domain_model_gamereport (
 
     uid int(11) NOT NULL auto_increment,
     pid int(11) DEFAULT '0' NOT NULL,
@@ -951,9 +951,9 @@ CREATE TABLE tx_clubms_domain_model_gamereport (
 );
 
 #
-# Table structure for table 'tx_clubms_domain_model_gameresultset'
+# Table structure for table 'tx_sportms_domain_model_gameresultset'
 #
-CREATE TABLE tx_clubms_domain_model_gameresultset (
+CREATE TABLE tx_sportms_domain_model_gameresultset (
 
     uid int(11) NOT NULL auto_increment,
     pid int(11) DEFAULT '0' NOT NULL,
@@ -991,9 +991,9 @@ CREATE TABLE tx_clubms_domain_model_gameresultset (
 );
 
 #
-# Table structure for table 'tx_clubms_domain_model_mail'
+# Table structure for table 'tx_sportms_domain_model_mail'
 #
-CREATE TABLE tx_clubms_domain_model_mail (
+CREATE TABLE tx_sportms_domain_model_mail (
 	
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
@@ -1033,9 +1033,9 @@ CREATE TABLE tx_clubms_domain_model_mail (
 );
 
 #
-# Table structure for table 'tx_clubms_domain_model_mailtype'
+# Table structure for table 'tx_sportms_domain_model_mailtype'
 #
-CREATE TABLE tx_clubms_domain_model_mailtype (
+CREATE TABLE tx_sportms_domain_model_mailtype (
 
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
@@ -1067,9 +1067,9 @@ CREATE TABLE tx_clubms_domain_model_mailtype (
 );
 
 #
-# Table structure for table 'tx_clubms_domain_model_person'
+# Table structure for table 'tx_sportms_domain_model_person'
 #
-CREATE TABLE tx_clubms_domain_model_person (
+CREATE TABLE tx_sportms_domain_model_person (
 
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
@@ -1139,9 +1139,9 @@ CREATE TABLE tx_clubms_domain_model_person (
 
 
 #
-# Table structure for table 'tx_clubms_domain_model_personprofile'
+# Table structure for table 'tx_sportms_domain_model_personprofile'
 #
-CREATE TABLE tx_clubms_domain_model_personprofile (
+CREATE TABLE tx_sportms_domain_model_personprofile (
 
     uid int(11) NOT NULL auto_increment,
     pid int(11) DEFAULT '0' NOT NULL,
@@ -1179,9 +1179,9 @@ CREATE TABLE tx_clubms_domain_model_personprofile (
 );
 
 #
-# Table structure for table 'tx_clubms_domain_model_phone'
+# Table structure for table 'tx_sportms_domain_model_phone'
 #
-CREATE TABLE tx_clubms_domain_model_phone (
+CREATE TABLE tx_sportms_domain_model_phone (
 
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
@@ -1223,9 +1223,9 @@ CREATE TABLE tx_clubms_domain_model_phone (
 );
 
 #
-# Table structure for table 'tx_clubms_domain_model_phonetype'
+# Table structure for table 'tx_sportms_domain_model_phonetype'
 #
-CREATE TABLE tx_clubms_domain_model_phonetype (
+CREATE TABLE tx_sportms_domain_model_phonetype (
 
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
@@ -1257,9 +1257,9 @@ CREATE TABLE tx_clubms_domain_model_phonetype (
 );
 
 #
-# Table structure for table 'tx_clubms_domain_model_refereejob'
+# Table structure for table 'tx_sportms_domain_model_refereejob'
 #
-CREATE TABLE tx_clubms_domain_model_refereejob (
+CREATE TABLE tx_sportms_domain_model_refereejob (
 
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
@@ -1292,9 +1292,9 @@ CREATE TABLE tx_clubms_domain_model_refereejob (
 );
 
 #
-# Table structure for table 'tx_clubms_domain_model_season'
+# Table structure for table 'tx_sportms_domain_model_season'
 #
-CREATE TABLE tx_clubms_domain_model_season (
+CREATE TABLE tx_sportms_domain_model_season (
 
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
@@ -1332,9 +1332,9 @@ CREATE TABLE tx_clubms_domain_model_season (
 );
 
 #
-# Table structure for table 'tx_clubms_domain_model_section'
+# Table structure for table 'tx_sportms_domain_model_section'
 #
-CREATE TABLE tx_clubms_domain_model_section (
+CREATE TABLE tx_sportms_domain_model_section (
 
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
@@ -1371,9 +1371,9 @@ CREATE TABLE tx_clubms_domain_model_section (
 );
 
 #
-# Table structure for table 'tx_clubms_domain_model_sectionagegroup'
+# Table structure for table 'tx_sportms_domain_model_sectionagegroup'
 #
-CREATE TABLE tx_clubms_domain_model_sectionagegroup (
+CREATE TABLE tx_sportms_domain_model_sectionagegroup (
 
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
@@ -1411,9 +1411,9 @@ CREATE TABLE tx_clubms_domain_model_sectionagegroup (
 );
 
 #
-# Table structure for table 'tx_clubms_domain_model_sectionagelevel'
+# Table structure for table 'tx_sportms_domain_model_sectionagelevel'
 #
-CREATE TABLE tx_clubms_domain_model_sectionagelevel (
+CREATE TABLE tx_sportms_domain_model_sectionagelevel (
 
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
@@ -1450,9 +1450,9 @@ CREATE TABLE tx_clubms_domain_model_sectionagelevel (
 );
 
 #
-# Table structure for table 'tx_clubms_domain_model_sectionposition'
+# Table structure for table 'tx_sportms_domain_model_sectionposition'
 #
-CREATE TABLE tx_clubms_domain_model_sectionposition (
+CREATE TABLE tx_sportms_domain_model_sectionposition (
 
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
@@ -1491,9 +1491,9 @@ CREATE TABLE tx_clubms_domain_model_sectionposition (
 );
 
 #
-# Table structure for table 'tx_clubms_domain_model_sectionpositiongroup'
+# Table structure for table 'tx_sportms_domain_model_sectionpositiongroup'
 #
-CREATE TABLE tx_clubms_domain_model_sectionpositiongroup (
+CREATE TABLE tx_sportms_domain_model_sectionpositiongroup (
 
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
@@ -1530,9 +1530,9 @@ CREATE TABLE tx_clubms_domain_model_sectionpositiongroup (
 );
 
 #
-# Table structure for table 'tx_clubms_domain_model_team'
+# Table structure for table 'tx_sportms_domain_model_team'
 #
-CREATE TABLE tx_clubms_domain_model_team (
+CREATE TABLE tx_sportms_domain_model_team (
 
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
@@ -1572,9 +1572,9 @@ CREATE TABLE tx_clubms_domain_model_team (
 );
 
 #
-# Table structure for table 'tx_clubms_domain_model_teamseason'
+# Table structure for table 'tx_sportms_domain_model_teamseason'
 #
-CREATE TABLE tx_clubms_domain_model_teamseason (
+CREATE TABLE tx_sportms_domain_model_teamseason (
 
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
@@ -1616,9 +1616,9 @@ CREATE TABLE tx_clubms_domain_model_teamseason (
 );
 
 #
-# Table structure for table 'tx_clubms_domain_model_teamseasonofficial'
+# Table structure for table 'tx_sportms_domain_model_teamseasonofficial'
 #
-CREATE TABLE tx_clubms_domain_model_teamseasonofficial (
+CREATE TABLE tx_sportms_domain_model_teamseasonofficial (
 
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
@@ -1657,9 +1657,9 @@ CREATE TABLE tx_clubms_domain_model_teamseasonofficial (
 );
 
 #
-# Table structure for table 'tx_clubms_domain_model_teamseasonofficialjob'
+# Table structure for table 'tx_sportms_domain_model_teamseasonofficialjob'
 #
-CREATE TABLE tx_clubms_domain_model_teamseasonofficialjob (
+CREATE TABLE tx_sportms_domain_model_teamseasonofficialjob (
 
     uid int(11) NOT NULL auto_increment,
     pid int(11) DEFAULT '0' NOT NULL,
@@ -1691,9 +1691,9 @@ CREATE TABLE tx_clubms_domain_model_teamseasonofficialjob (
 );
 
 #
-# Table structure for table 'tx_clubms_domain_model_teamseasonpractice'
+# Table structure for table 'tx_sportms_domain_model_teamseasonpractice'
 #
-CREATE TABLE tx_clubms_domain_model_teamseasonpractice (
+CREATE TABLE tx_sportms_domain_model_teamseasonpractice (
 
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
@@ -1733,9 +1733,9 @@ CREATE TABLE tx_clubms_domain_model_teamseasonpractice (
 );
 
 #
-# Table structure for table 'tx_clubms_domain_model_teamseasonsquadmember'
+# Table structure for table 'tx_sportms_domain_model_teamseasonsquadmember'
 #
-CREATE TABLE tx_clubms_domain_model_teamseasonsquadmember (
+CREATE TABLE tx_sportms_domain_model_teamseasonsquadmember (
 
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
@@ -1776,9 +1776,9 @@ CREATE TABLE tx_clubms_domain_model_teamseasonsquadmember (
 );
 
 #
-# Table structure for table 'tx_clubms_domain_model_url'
+# Table structure for table 'tx_sportms_domain_model_url'
 #
-CREATE TABLE tx_clubms_domain_model_url (
+CREATE TABLE tx_sportms_domain_model_url (
 
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
@@ -1819,9 +1819,9 @@ CREATE TABLE tx_clubms_domain_model_url (
 
 
 #
-# Table structure for table 'tx_clubms_domain_model_venue'
+# Table structure for table 'tx_sportms_domain_model_venue'
 #
-CREATE TABLE tx_clubms_domain_model_venue (
+CREATE TABLE tx_sportms_domain_model_venue (
 
     uid int(11) NOT NULL auto_increment,
     pid int(11) DEFAULT '0' NOT NULL,
@@ -1866,9 +1866,9 @@ CREATE TABLE tx_clubms_domain_model_venue (
 );
 
 #
-# Table structure for table 'tx_clubms_competitionseason_teamseason_mm'
+# Table structure for table 'tx_sportms_competitionseason_teamseason_mm'
 #
-CREATE TABLE tx_clubms_competitionseason_teamseason_mm (
+CREATE TABLE tx_sportms_competitionseason_teamseason_mm (
 
     uid_local int(11) unsigned DEFAULT '0' NOT NULL,
     uid_foreign int(11) unsigned DEFAULT '0' NOT NULL,
@@ -1883,9 +1883,9 @@ CREATE TABLE tx_clubms_competitionseason_teamseason_mm (
 );
 
 #
-# Table structure for table 'tx_clubms_teamseason_teamseasonsquadmember_mm'
+# Table structure for table 'tx_sportms_teamseason_teamseasonsquadmember_mm'
 #
-CREATE TABLE tx_clubms_teamseason_teamseasonsquadmember_mm (
+CREATE TABLE tx_sportms_teamseason_teamseasonsquadmember_mm (
 
 	uid_local int(11) unsigned DEFAULT '0' NOT NULL,
 	uid_foreign int(11) unsigned DEFAULT '0' NOT NULL,

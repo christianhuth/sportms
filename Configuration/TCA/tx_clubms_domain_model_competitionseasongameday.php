@@ -16,12 +16,12 @@
 				'endtime' => 'endtime',
 			),
 			'hideTable' => TRUE,
-			'iconfile' => 'EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_competitionseasongameday.svg',
+			'iconfile' => 'EXT:sportms/Resources/Public/Icons/tx_sportms_domain_model_competitionseasongameday.svg',
             'label' => '',
-			'label_userFunc' => \Balumedien\Clubms\Configuration\TCA\UserFunc\UserFunc::class . '->CompetitionSeasonGamedayLabel',
+			'label_userFunc' => \Balumedien\Sportms\Configuration\TCA\UserFunc\UserFunc::class . '->CompetitionSeasonGamedayLabel',
 			'searchFields' => '',
             'sortby' => 'sorting',
-			'title' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_competitionseasongameday',
+			'title' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_competitionseasongameday',
 			'tstamp' => 'tstamp',
 			'versioningWS' => TRUE,
 		),
@@ -29,7 +29,7 @@
 			'showRecordFieldList' => '',
 		),
 		'types' => array(
-			'1' => array('showitem' => 'competition_season, label, --palette--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_competitionseasongameday.palette_startdate_enddate;startdate_enddate'),
+			'1' => array('showitem' => 'competition_season, label, --palette--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_competitionseasongameday.palette_startdate_enddate;startdate_enddate'),
 		),
 		'palettes' => array(
 			'startdate_enddate' => array('showitem' => 'startdate, enddate'),
@@ -90,12 +90,12 @@
 
 			'competition_season' => array(
 				'exclude' => 1,
-				'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_competitionseasongameday.competition_season',
+				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_competitionseasongameday.competition_season',
 				'config' => array(
 					'eval' => 'required',
-					'foreign_table' => 'tx_clubms_domain_model_competitionseason',
+					'foreign_table' => 'tx_sportms_domain_model_competitionseason',
 					'items' => Array(
-						array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
+						array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", ""),
 					),
 					'maxItems' => 1,
 					'renderType' => 'selectSingle',
@@ -106,7 +106,7 @@
 
 			'label' => array(
 				'exclude' => 1,
-				'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_competitionseasongameday.label',
+				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_competitionseasongameday.label',
 				'config' => array(
 					'type' => 'input',
 					'size' => 30,
@@ -115,7 +115,7 @@
 			),
 			'startdate' => array(
 				'exclude' => 1,
-				'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_competitionseasongameday.startdate',
+				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_competitionseasongameday.startdate',
 				'config' => array(
 					'type' => 'input',
 					'size' => 10,
@@ -126,7 +126,7 @@
 			),
 			'enddate' => array(
 				'exclude' => 1,
-				'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_competitionseasongameday.enddate',
+				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_competitionseasongameday.enddate',
 				'config' => array(
 					'type' => 'input',
 					'size' => 10,

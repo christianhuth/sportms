@@ -1,8 +1,8 @@
 <?php
 	
-	namespace Balumedien\Clubms\Domain\Repository;
+	namespace Balumedien\Sportms\Domain\Repository;
 	
-	class SectionAgeLevelRepository extends ClubMSBaseRepository {
+	class SectionAgeLevelRepository extends SportMSBaseRepository {
 		
 		protected $defaultOrderings = array(
 			'sectionAgeGroup.section.label' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,

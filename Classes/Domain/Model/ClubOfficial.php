@@ -1,6 +1,6 @@
 <?php
 	
-	namespace Balumedien\Clubms\Domain\Model;
+	namespace Balumedien\Sportms\Domain\Model;
 	
 	/**
 	 * ClubOfficial
@@ -8,18 +8,18 @@
 	class ClubOfficial extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Model\Club
+		 * @var \Balumedien\Sportms\Domain\Model\Club
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
 		 */
 		protected $club;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Model\Person
+		 * @var \Balumedien\Sportms\Domain\Model\Person
 		 */
 		protected $person;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Model\ClubOfficialJob
+		 * @var \Balumedien\Sportms\Domain\Model\ClubOfficialJob
 		 */
 		protected $clubOfficialJob;
 		
@@ -39,16 +39,16 @@
 		protected $untilToday;
 		
 		/**
-		 * @return \Balumedien\Clubms\Domain\Model\Club
+		 * @return \Balumedien\Sportms\Domain\Model\Club
 		 */
 		public function getClub() {
 			return $this->club;
 		}
 		
 		/**
-		 * @param \Balumedien\Clubms\Domain\Model\Club $club
+		 * @param \Balumedien\Sportms\Domain\Model\Club $club
 		 */
-		public function setClub(\Balumedien\Clubms\Domain\Model\Club $club) {
+		public function setClub(\Balumedien\Sportms\Domain\Model\Club $club) {
 			$this->club = $club;
 		}
 		
@@ -68,17 +68,17 @@
 		}
 		
 		/**
-		 * @return \Balumedien\Clubms\Domain\Model\ClubOfficialJob ClubOfficialJob
+		 * @return \Balumedien\Sportms\Domain\Model\ClubOfficialJob ClubOfficialJob
 		 */
 		public function getClubOfficialJob() {
 			return $this->clubOfficialJob;
 		}
 		
 		/**
-		 * @param \Balumedien\Clubms\Domain\Model\ClubOfficialJob $clubOfficialJob
+		 * @param \Balumedien\Sportms\Domain\Model\ClubOfficialJob $clubOfficialJob
 		 * @return void
 		 */
-		public function setClubOfficialJob(\Balumedien\Clubms\Domain\Model\ClubOfficialJob $clubOfficialJob) {
+		public function setClubOfficialJob(\Balumedien\Sportms\Domain\Model\ClubOfficialJob $clubOfficialJob) {
 			$this->clubOfficialJob = $clubOfficialJob;
 		}
 		

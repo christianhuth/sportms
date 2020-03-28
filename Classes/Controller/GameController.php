@@ -1,70 +1,70 @@
 <?php
 	
-	namespace Balumedien\Clubms\Controller;
+	namespace Balumedien\Sportms\Controller;
 	
 	/**
 	 * GameController
 	 */
-	class GameController extends ClubMSBaseController {
+	class GameController extends SportMSBaseController {
 		
 		protected $model = 'game';
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Repository\GameRepository
+		 * @var \Balumedien\Sportms\Domain\Repository\GameRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
 		protected $gameRepository;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Repository\SectionRepository
+		 * @var \Balumedien\Sportms\Domain\Repository\SectionRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
 		protected $sectionRepository;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Repository\SectionAgeGroupRepository
+		 * @var \Balumedien\Sportms\Domain\Repository\SectionAgeGroupRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
 		protected $sectionAgeGroupRepository;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Repository\SectionAgeLevelRepository
+		 * @var \Balumedien\Sportms\Domain\Repository\SectionAgeLevelRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
 		protected $sectionAgeLevelRepository;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Repository\CompetitionTypeRepository
+		 * @var \Balumedien\Sportms\Domain\Repository\CompetitionTypeRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
 		protected $competitionTypeRepository;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Repository\CompetitionRepository
+		 * @var \Balumedien\Sportms\Domain\Repository\CompetitionRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
 		protected $competitionRepository;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Repository\ClubRepository
+		 * @var \Balumedien\Sportms\Domain\Repository\ClubRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
 		protected $clubRepository;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Repository\TeamRepository
+		 * @var \Balumedien\Sportms\Domain\Repository\TeamRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
 		protected $teamRepository;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Repository\SeasonRepository
+		 * @var \Balumedien\Sportms\Domain\Repository\SeasonRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
 		protected $seasonRepository;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Repository\CompetitionSeasonRepository
+		 * @var \Balumedien\Sportms\Domain\Repository\CompetitionSeasonRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
 		protected $competitionSeasonRepository;
@@ -139,9 +139,9 @@
 		}
 		
 		/**
-		 * @param \Balumedien\Clubms\Domain\Model\Game $game
+		 * @param \Balumedien\Sportms\Domain\Model\Game $game
 		 */
-		public function showAction(\Balumedien\Clubms\Domain\Model\Game $game = NULL) {
+		public function showAction(\Balumedien\Sportms\Domain\Model\Game $game = NULL) {
 			$this->initializeActions();
 			$this->view->assign('game', $game);
 		}

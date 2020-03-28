@@ -1,6 +1,6 @@
 <?php
 	
-	namespace Balumedien\Clubms\Domain\Model;
+	namespace Balumedien\Sportms\Domain\Model;
 	
 	/**
 	 * TeamSeason
@@ -8,17 +8,17 @@
 	class TeamSeason extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Model\Team
+		 * @var \Balumedien\Sportms\Domain\Model\Team
 		 */
 		protected $team;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Model\Season
+		 * @var \Balumedien\Sportms\Domain\Model\Season
 		 */
 		protected $season;
 		
 		/**
-		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\TeamSeasonPractice>
+		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\TeamSeasonPractice>
 		 */
 		protected $teamSeasonPractices;
 		
@@ -28,17 +28,17 @@
 		protected $teamSeasonImages;
 		
 		/**
-		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\TeamSeasonOfficial>
+		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\TeamSeasonOfficial>
 		 */
 		protected $teamSeasonOfficials;
 		
 		/**
-		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\TeamSeasonSquadMember>
+		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\TeamSeasonSquadMember>
 		 */
 		protected $teamSeasonSquadMembers;
 		
 		/**
-		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\TeamSeasonSquadMember>
+		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\TeamSeasonSquadMember>
 		 */
 		protected $teamSeasonSquadCaptains;
 		

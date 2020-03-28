@@ -2,122 +2,122 @@
 
 # customsubcategory=persistence=Persistence
 
-# customsubcategory=clubms=ClubMS
+# customsubcategory=sportms=SportMS
 
 # customsubcategory=view=View
 
-plugin.tx_clubms {
+plugin.tx_sportms {
 
     features {
-        # cat=plugin.tx_clubms/features; type=boolean; label=Ignore the enable fields in backend. Default is false.
+        # cat=plugin.tx_sportms/features; type=boolean; label=Ignore the enable fields in backend. Default is false.
         ignoreAllEnableFieldsInBe = 0
-        # cat=plugin.tx_clubms/features; type=boolean; label=Do not force a cHash for arguments used in actions. If this is turned on, all requests with arguments but no, or an invalid cHash, are handled as pageNotFoundOnCHashError. Default is true
+        # cat=plugin.tx_sportms/features; type=boolean; label=Do not force a cHash for arguments used in actions. If this is turned on, all requests with arguments but no, or an invalid cHash, are handled as pageNotFoundOnCHashError. Default is true
         requireCHashArgumentForActionArguments = 1
-        # cat=plugin.tx_clubms/features; type=boolean; label=Skip default arguments in URLs. If a link to the default controller or action is created, the parameters are omitted. Default is false.
+        # cat=plugin.tx_sportms/features; type=boolean; label=Skip default arguments in URLs. If a link to the default controller or action is created, the parameters are omitted. Default is false.
         skipDefaultArguments = 0
     }
 
     persistence {
-        # cat=plugin.tx_clubms/persistence; type=int+; label=Default storage PID
+        # cat=plugin.tx_sportms/persistence; type=int+; label=Default storage PID
         storagePid =
-        # cat=plugin.tx_clubms/persistence; type=int+; label=Recursion level of storage PID
+        # cat=plugin.tx_sportms/persistence; type=int+; label=Recursion level of storage PID
         recursive = 1
     }
 
     settings {
 
         club {
-            # cat=plugin.tx_clubms/clubms; type=int+; label=Default PID of Club->list
+            # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Club->list
             listPid =
-            # cat=plugin.tx_clubms/clubms; type=int+; label=Default PID of Club->show
+            # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Club->show
             showPid =
         }
 
         clubSection {
-            # cat=plugin.tx_clubms/clubms; type=int+; label=Default PID of ClubSection->list
+            # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of ClubSection->list
             listPid =
-            # cat=plugin.tx_clubms/clubms; type=int+; label=Default PID of ClubSection->show
+            # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of ClubSection->show
             showPid =
         }
 
         competition {
-            # cat=plugin.tx_clubms/clubms; type=int+; label=Default PID of Competition->list
+            # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Competition->list
             listPid =
-            # cat=plugin.tx_clubms/clubms; type=int+; label=Default PID of Competition->show
+            # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Competition->show
             showPid =
         }
 
         competitionSeason {
-            # cat=plugin.tx_clubms/clubms; type=int+; label=Default PID of competitionSeason->list
+            # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of competitionSeason->list
             listPid =
-            # cat=plugin.tx_clubms/clubms; type=int+; label=Default PID of competitionSeason->show
+            # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of competitionSeason->show
             showPid =
         }
 
         game {
-            # cat=plugin.tx_clubms/clubms; type=int+; label=Default PID of Game->list
+            # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Game->list
             listPid =
-            # cat=plugin.tx_clubms/clubms; type=int+; label=Default PID of Game->show
+            # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Game->show
             showPid =
         }
 
         person {
-            # cat=plugin.tx_clubms/clubms; type=int+; label=Default PID of Person->list
+            # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Person->list
             listPid =
-            # cat=plugin.tx_clubms/clubms; type=int+; label=Default PID of Person->show
+            # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Person->show
             showPid =
-            # cat=plugin.tx_clubms/clubms; type=string; label=Path to default dummy image for a male person
-            dummyImageMale = EXT:clubms/Resources/Public/Images/person-male.jpg
-            # cat=plugin.tx_clubms/clubms; type=string; label=Path to default dummy image for a female person
-            dummyImageFemale = EXT:clubms/Resources/Public/Images/person-female.jpg
+            # cat=plugin.tx_sportms/sportms; type=string; label=Path to default dummy image for a male person
+            dummyImageMale = EXT:sportms/Resources/Public/Images/person-male.jpg
+            # cat=plugin.tx_sportms/sportms; type=string; label=Path to default dummy image for a female person
+            dummyImageFemale = EXT:sportms/Resources/Public/Images/person-female.jpg
         }
 
         season {
-            # cat=plugin.tx_clubms/clubms; type=int+; label=Default PID of Season->list
+            # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Season->list
             listPid =
-            # cat=plugin.tx_clubms/clubms; type=int+; label=Default PID of Season->show
+            # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Season->show
             showPid =
         }
 
         section {
-            # cat=plugin.tx_clubms/clubms; type=int+; label=Default PID of Section->list
+            # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Section->list
             listPid =
-            # cat=plugin.tx_clubms/clubms; type=int+; label=Default PID of Section->show
+            # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Section->show
             showPid =
         }
 
         team {
-            # cat=plugin.tx_clubms/clubms; type=int+; label=Default PID of Team->list
+            # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Team->list
             listPid =
-            # cat=plugin.tx_clubms/clubms; type=int+; label=Default PID of Team->show
+            # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Team->show
             showPid =
         }
 
         teamSeason {
-            # cat=plugin.tx_clubms/clubms; type=int+; label=Default PID of TeamSeason->list
+            # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of TeamSeason->list
             listPid =
-            # cat=plugin.tx_clubms/clubms; type=int+; label=Default PID of TeamSeason->show
+            # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of TeamSeason->show
             showPid =
         }
 
         venue {
-            # cat=plugin.tx_clubms/clubms; type=int+; label=Default PID of Venue->list
+            # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Venue->list
             listPid =
-            # cat=plugin.tx_clubms/clubms; type=int+; label=Default PID of Venue->show
+            # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Venue->show
             showPid =
         }
 
     }
 
     view {
-        # cat=plugin.tx_clubms/view; type=string; label=Path to css file
-        pathToCssFile = EXT:clubms/Resources/Public/Css/clubms.css
-        # cat=plugin.tx_clubms/view; type=string; label=Path to template layouts (FE)
-        layoutRootPath = EXT:clubms/Resources/Private/Layouts/
-        # cat=plugin.tx_clubms/view; type=string; label=Path to template partials (FE)
-        partialRootPath = EXT:clubms/Resources/Private/Partials/
-        # cat=plugin.tx_clubms/view; type=string; label=Path to template root (FE)
-        templateRootPath = EXT:clubms/Resources/Private/Templates/
+        # cat=plugin.tx_sportms/view; type=string; label=Path to css file
+        pathToCssFile = EXT:sportms/Resources/Public/Css/sportms.css
+        # cat=plugin.tx_sportms/view; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:sportms/Resources/Private/Layouts/
+        # cat=plugin.tx_sportms/view; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:sportms/Resources/Private/Partials/
+        # cat=plugin.tx_sportms/view; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:sportms/Resources/Private/Templates/
     }
 
 }

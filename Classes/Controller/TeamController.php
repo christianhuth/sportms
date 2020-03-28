@@ -1,40 +1,40 @@
 <?php
 	
-	namespace Balumedien\Clubms\Controller;
+	namespace Balumedien\Sportms\Controller;
 	
 	/**
 	 * TeamController
 	 */
-	class TeamController extends ClubMSBaseController {
+	class TeamController extends SportMSBaseController {
 		
 		protected $model = 'team';
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Repository\TeamRepository
+		 * @var \Balumedien\Sportms\Domain\Repository\TeamRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
 		protected $teamRepository;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Repository\SectionRepository
+		 * @var \Balumedien\Sportms\Domain\Repository\SectionRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
 		protected $sectionRepository;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Repository\SectionAgeGroupRepository
+		 * @var \Balumedien\Sportms\Domain\Repository\SectionAgeGroupRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
 		protected $sectionAgeGroupRepository;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Repository\SectionAgeLevelRepository
+		 * @var \Balumedien\Sportms\Domain\Repository\SectionAgeLevelRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
 		protected $sectionAgeLevelRepository;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Repository\ClubRepository
+		 * @var \Balumedien\Sportms\Domain\Repository\ClubRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
 		protected $clubRepository;
@@ -88,9 +88,9 @@
 		}
 		
 		/**
-		 * @param \Balumedien\Clubms\Domain\Model\Team $team
+		 * @param \Balumedien\Sportms\Domain\Model\Team $team
 		 */
-		public function showAction(\Balumedien\Clubms\Domain\Model\Team $team = NULL) {
+		public function showAction(\Balumedien\Sportms\Domain\Model\Team $team = NULL) {
 			$this->initializeActions();
 			if($team === NULL) {
 				if($this->settings['team']['uid']) {

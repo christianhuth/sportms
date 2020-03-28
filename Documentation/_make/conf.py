@@ -189,7 +189,7 @@ html_static_path = ['../_static']
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'clubmsdoc'
+htmlhelp_basename = 'sportmsdoc'
 
 
 # -- Options for LaTeX output ----------------------------------------------
@@ -209,7 +209,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    ('Index', 'clubms.tex', u'Club Management System',
+    ('Index', 'sportms.tex', u'Club Management System',
      u'Christian Knell', 'manual'),
 ]
 
@@ -250,7 +250,7 @@ latex_documents = [
 # would mean that specific document would be compressed
 # regardless of the global pdf_compressed setting.
 pdf_documents = [
-    ('Index', 'clubms', u'Club Management System',
+    ('Index', 'sportms', u'Club Management System',
      u'Christian Knell'),
 ]
 
@@ -338,7 +338,7 @@ pdf_fit_background_mode = 'scale'
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('Index', 'clubms', u'Club Management System',
+    ('Index', 'sportms', u'Club Management System',
      [u'Christian Knell'], 1)
 ]
 
@@ -352,7 +352,7 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    ('Index', 'clubms', u'Club Management System',
+    ('Index', 'sportms', u'Club Management System',
      u'Christian Knell', 'Club Management System', 'One line description of project.',
      'Miscellaneous'),
 ]

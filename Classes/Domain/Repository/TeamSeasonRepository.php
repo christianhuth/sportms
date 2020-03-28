@@ -1,8 +1,8 @@
 <?php
 	
-	namespace Balumedien\Clubms\Domain\Repository;
+	namespace Balumedien\Sportms\Domain\Repository;
 	
-	class TeamSeasonRepository extends ClubMSBaseRepository {
+	class TeamSeasonRepository extends SportMSBaseRepository {
 		
 		protected $defaultOrderings = array(
 			'team.club.name' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
@@ -55,11 +55,11 @@
 			return $query->execute();
 		}
 		
-		public function findAllByTeam(\Balumedien\Clubms\Domain\Model\Team $team) {
+		public function findAllByTeam(\Balumedien\Sportms\Domain\Model\Team $team) {
 		
 		}
 		
-		public function findAllBySeason(\Balumedien\Clubms\Domain\Model\Season $season) {
+		public function findAllBySeason(\Balumedien\Sportms\Domain\Model\Season $season) {
 		
 		}
 		

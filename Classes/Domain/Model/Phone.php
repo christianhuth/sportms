@@ -1,6 +1,6 @@
 <?php
 
-namespace Balumedien\Clubms\Domain\Model;
+namespace Balumedien\Sportms\Domain\Model;
 
 /***************************************************************
  *
@@ -48,7 +48,7 @@ class Phone extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
     protected $internationalAreaCode;
 
     /**
-     * @var \Balumedien\Clubms\Domain\Model\PhoneType
+     * @var \Balumedien\Sportms\Domain\Model\PhoneType
      */
     protected $phoneType;
 	

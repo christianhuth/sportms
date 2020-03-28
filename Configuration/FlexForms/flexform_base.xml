@@ -2,7 +2,7 @@
 <T3DataStructure>
 	<ROOT>
 		<TCEforms>
-			<sheetTitle>LLL:EXT:clubms/Resources/Private/Language/locallang_flexform.xlf:tx_clubms_flexform.sheet.general</sheetTitle>
+			<sheetTitle>LLL:EXT:sportms/Resources/Private/Language/locallang_flexform.xlf:tx_sportms_flexform.sheet.general</sheetTitle>
 		</TCEforms>
 		<type>array</type>
 		<el>
@@ -15,12 +15,12 @@
 						<renderType>selectSingle</renderType>
 						<items type="array">
 							<numIndex index="00">
-								<numIndex index="0">clubMS</numIndex>
+								<numIndex index="0">sportMS</numIndex>
 								<numIndex index="1">--div--</numIndex>
 							</numIndex>
 							<numIndex index="01">
-								<numIndex index="0">clubMS Datenbank-Statistiken</numIndex>
-								<numIndex index="1">ClubMS->dbStats</numIndex>
+								<numIndex index="0">sportMS Datenbank-Statistiken</numIndex>
+								<numIndex index="1">SportMS->dbStats</numIndex>
 							</numIndex>
 							<numIndex index="100">
 								<numIndex index="0">Verein</numIndex>
@@ -183,7 +183,7 @@
 						<renderType>selectSingle</renderType>
 						<items type="array">
 							<numIndex index="1" type="array">
-								<numIndex index="0">LLL:EXT:clubms/Resources/Private/Language/locallang_flexform.xlf:tx_clubms_flexform.sheet.general.recursive.I.inherit</numIndex>
+								<numIndex index="0">LLL:EXT:sportms/Resources/Private/Language/locallang_flexform.xlf:tx_sportms_flexform.sheet.general.recursive.I.inherit</numIndex>
 								<numIndex index="1"></numIndex>
 							</numIndex>
 							<numIndex index="2" type="array">

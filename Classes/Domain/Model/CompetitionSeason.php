@@ -1,6 +1,6 @@
 <?php
 
-	namespace Balumedien\Clubms\Domain\Model;
+	namespace Balumedien\Sportms\Domain\Model;
 
 	/**
 	 * CompetitionSeason
@@ -8,23 +8,23 @@
 	class CompetitionSeason extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 
 		/**
-		 * @var \Balumedien\Clubms\Domain\Model\Competition
+		 * @var \Balumedien\Sportms\Domain\Model\Competition
 		 */
 		protected $competition;
 
 		/**
-		 * @var \Balumedien\Clubms\Domain\Model\Season
+		 * @var \Balumedien\Sportms\Domain\Model\Season
 		 */
 		protected $season;
 
 		/**
-		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\CompetitionSeasonGameday>
+		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\CompetitionSeasonGameday>
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
 		 */
 		protected $competitionSeasonGamedays;
 
 		/**
-		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\TeamSeason>
+		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\TeamSeason>
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
 		 */
 		protected $competitionSeasonTeams;
@@ -51,30 +51,30 @@
 		}
 
 		/**
-		 * @return \Balumedien\Clubms\Domain\Model\Competition
+		 * @return \Balumedien\Sportms\Domain\Model\Competition
 		 */
 		public function getCompetition() {
 			return $this->competition;
 		}
 
 		/**
-		 * @param \Balumedien\Clubms\Domain\Model\Competition $competition
+		 * @param \Balumedien\Sportms\Domain\Model\Competition $competition
 		 */
-		public function setCompetition(\Balumedien\Clubms\Domain\Model\Competition $competition) {
+		public function setCompetition(\Balumedien\Sportms\Domain\Model\Competition $competition) {
 			$this->competition = $competition;
 		}
 
 		/**
-		 * @return \Balumedien\Clubms\Domain\Model\Season
+		 * @return \Balumedien\Sportms\Domain\Model\Season
 		 */
-		public function getSeason(): \Balumedien\Clubms\Domain\Model\Season {
+		public function getSeason(): \Balumedien\Sportms\Domain\Model\Season {
 			return $this->season;
 		}
 
 		/**
-		 * @param \Balumedien\Clubms\Domain\Model\Season $season
+		 * @param \Balumedien\Sportms\Domain\Model\Season $season
 		 */
-		public function setSeason(\Balumedien\Clubms\Domain\Model\Season $season) {
+		public function setSeason(\Balumedien\Sportms\Domain\Model\Season $season) {
 			$this->season = $season;
 		}
 

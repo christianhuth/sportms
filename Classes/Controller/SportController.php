@@ -1,16 +1,16 @@
 <?php
 	
-	namespace Balumedien\Clubms\Controller;
+	namespace Balumedien\Sportms\Controller;
 	
 	/**
-	 * ClubController
+	 * SportController
 	 */
-	class ClubController extends ClubMSBaseController {
+	class SportController extends SportMSBaseController {
 		
 		protected $model = 'club';
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Repository\ClubRepository
+		 * @var \Balumedien\Sportms\Domain\Repository\ClubRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
 		protected $clubRepository;
@@ -45,9 +45,9 @@
 		}
 		
 		/**
-		 * @param \Balumedien\Clubms\Domain\Model\Club $club
+		 * @param \Balumedien\Sportms\Domain\Model\Club $club
 		 */
-		public function showAction(\Balumedien\Clubms\Domain\Model\Club $club = NULL): void {
+		public function showAction(\Balumedien\Sportms\Domain\Model\Club $club = NULL): void {
 			$this->initializeActions();
 			if($club === NULL) {
 				// TODO: CHECK IF SETTINGS IS SET ELSE DIE

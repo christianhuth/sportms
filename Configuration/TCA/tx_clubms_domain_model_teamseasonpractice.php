@@ -15,12 +15,12 @@ return array(
 			'endtime' => 'endtime',
 		),
 		'hideTable' => TRUE,
-		'iconfile' => 'EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_teamseasonpractice.svg',
+		'iconfile' => 'EXT:sportms/Resources/Public/Icons/tx_sportms_domain_model_teamseasonpractice.svg',
         'label' => '',
-		'label_userFunc' => \Balumedien\Clubms\Configuration\TCA\UserFunc\UserFunc::class . '->teamSeasonPracticeLabel',
+		'label_userFunc' => \Balumedien\Sportms\Configuration\TCA\UserFunc\UserFunc::class . '->teamSeasonPracticeLabel',
 		'searchFields' => '',
 		'sortby' => 'sorting',
-		'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_teamseasonpractice',
+		'title'	=> 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_teamseasonpractice',
 		'tstamp' => 'tstamp',
 		'versioningWS' => TRUE,
 	),
@@ -29,7 +29,7 @@ return array(
 	),
 	'types' => array(
 		'1' => array('showitem' => 'day, time_start, time_end, venue, annotation,
-									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_teamseasonpractice.tab_visibility, hidden'),
+									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_teamseasonpractice.tab_visibility, hidden'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -96,7 +96,7 @@ return array(
 		
 		'day' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_teamseasonpractice.day',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_teamseasonpractice.day',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -106,7 +106,7 @@ return array(
 		
 		'time_start' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_teamseasonpractice.time_start',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_teamseasonpractice.time_start',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -116,7 +116,7 @@ return array(
 		
 		'time_end' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_teamseasonpractice.time_end',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_teamseasonpractice.time_end',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -126,12 +126,12 @@ return array(
 		
 		'venue' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_teamseasonpractice.venue',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_teamseasonpractice.venue',
 			'config' => array(
-				'foreign_table' => 'tx_clubms_domain_model_venue',
+				'foreign_table' => 'tx_sportms_domain_model_venue',
 				'foreign_table_where' => 'ORDER BY name ASC',
 				'items' => Array (
-                    array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
+                    array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", ""),
 				),
 				'maxItems' => 1,
 				'minItems' => 1,
@@ -143,7 +143,7 @@ return array(
 		
 		'annotation' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_teamseasonpractice.annotation',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_teamseasonpractice.annotation',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,

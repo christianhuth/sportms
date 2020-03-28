@@ -1,8 +1,8 @@
 <?php
 
-    namespace Balumedien\Clubms\Domain\Repository;
+    namespace Balumedien\Sportms\Domain\Repository;
 
-    class SeasonRepository extends ClubMSBaseRepository {
+    class SeasonRepository extends SportMSBaseRepository {
 	   
 	    protected $defaultOrderings = array(
 		    'season_name' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING

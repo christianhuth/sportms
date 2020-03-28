@@ -1,0 +1,46 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<f:layout name="default"/>
+
+<f:section name="default">
+
+    <div id="tx-sportms-sportms-dbstats">
+        <f:if condition="{personCount}">
+            <f:render arguments="{action: 'list', controller: 'Person', count: personCount, label: 'Personen'}" partial="SportMS/DbStatsItem"/>
+        </f:if>
+        <f:if condition="{clubCount}">
+            <f:render arguments="{action: 'list', controller: 'Club', count: clubCount, label: 'Vereine'}" partial="SportMS/DbStatsItem"/>
+        </f:if>
+        <f:if condition="{teamCount}">
+            <f:render arguments="{action: 'list', controller: 'Team', count: teamCount, label: 'Teams'}" partial="SportMS/DbStatsItem"/>
+        </f:if>
+        <div class="col-xs-0 col-sm-0 col-md-2"></div>
+        <f:if condition="{gameCount}">
+            <f:render arguments="{action: 'list', controller: 'Game', count: gameCount, label: 'Spiele'}" partial="SportMS/DbStatsItem"/>
+        </f:if>
+        <div class="col-xs-3 col-sm-3 col-md-0"></div>
+        <f:if condition="{competitionCount}">
+            <f:render arguments="{action: 'list', controller: 'Competition', count: competitionCount, label: 'Wettbewerbe'}" partial="SportMS/DbStatsItem"/>
+        </f:if>
+        <div class="col-xs-3 col-sm-3 col-md-2"></div>
+        <f:if condition="{addressCount}">
+            <f:render arguments="{action: 'list', controller: 'Address', count: addressCount, label: 'Adressen'}" partial="SportMS/DbStatsItem"/>
+        </f:if>
+        <f:if condition="{clubGroundCount}">
+            <f:render arguments="{action: 'list', controller: 'ClubGround', count: clubGroundCount, label: 'Vereinsgelände'}" partial="SportMS/DbStatsItem"/>
+        </f:if>
+        <f:if condition="{clubMembersCount}">
+            <f:render arguments="{action: 'list', controller: 'ClubMembers', count: clubMembersCount, label: 'Vereinsmitgliederzählungen'}" partial="SportMS/DbStatsItem"/>
+        </f:if>
+        <f:if condition="{clubOfficialCount}">
+            <f:render arguments="{action: 'list', controller: 'ClubOfficial', count: clubOfficialCount, label: 'Vereinsfunktionärstätigkeiten'}" partial="SportMS/DbStatsItem"/>
+        </f:if>
+        <f:if condition="{clubOfficialJobCount}">
+            <f:render arguments="{action: 'list', controller: 'ClubOfficialJob', count: clubOfficialJobCount, label: 'Vereinsfunktionen'}" partial="SportMS/DbStatsItem"/>
+        </f:if>
+    </div>
+
+</f:section>
+
+</html>

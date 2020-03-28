@@ -1,8 +1,8 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-      xmlns:clubms="Balumedien\Clubms\ViewHelpers"
+      xmlns:sportms="Balumedien\Sportms\ViewHelpers"
       data-namespace-typo3-fluid="true">
 
-<div class="tx-clubms-club-show-officials">
+<div class="tx-sportms-club-show-officials">
 
     <f:if condition="{settings.club.officials.clubsSelectbox} || {settings.club.officials.jobsSelectbox}">
         <f:form controller="Club" action="officials">
@@ -35,7 +35,7 @@
 
                             <td class="club-official-officialjob">{clubOfficial.clubOfficialJob.label}</td>
 
-                            <td class="club-official-person"><f:link.action action="show" controller="Person" additionalParams="{tx_clubms_clubms: '{person: clubOfficial.person, profile: \"official\"}'}" pageUid="{settings.person.showPid}">{clubOfficial.person.firstname} {clubOfficial.person.lastname}</f:link.action></td>
+                            <td class="club-official-person"><f:link.action action="show" controller="Person" additionalParams="{tx_sportms_sportms: '{person: clubOfficial.person, profile: \"official\"}'}" pageUid="{settings.person.showPid}">{clubOfficial.person.firstname} {clubOfficial.person.lastname}</f:link.action></td>
 
                             <td class="club-official-startdate">
                                 <f:if condition="{clubOfficial.startdate}">
@@ -62,7 +62,7 @@
                             <td class="club-official-duration">
                                 <f:if condition="{clubOfficial.startdate}">
                                     <f:then>
-                                        <clubms:DateRange startdate="{clubOfficial.startdate}" enddate="{clubOfficial.enddate}" format="%a"/> Tage
+                                        <sportms:DateRange startdate="{clubOfficial.startdate}" enddate="{clubOfficial.enddate}" format="%a"/> Tage
                                     </f:then>
                                     <f:else>
                                         -

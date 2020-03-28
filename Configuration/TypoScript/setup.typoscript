@@ -1,14 +1,14 @@
-plugin.tx_clubms {
+plugin.tx_sportms {
 
     features {
-        ignoreAllEnableFieldsInBe = {$plugin.tx_clubms.features.ignoreAllEnableFieldsInBe}
-        requireCHashArgumentForActionArguments = {$plugin.tx_clubms.features.requireCHashArgumentForActionArguments}
-        skipDefaultArguments = {$plugin.tx_clubms.features.skipDefaultArguments}
+        ignoreAllEnableFieldsInBe = {$plugin.tx_sportms.features.ignoreAllEnableFieldsInBe}
+        requireCHashArgumentForActionArguments = {$plugin.tx_sportms.features.requireCHashArgumentForActionArguments}
+        skipDefaultArguments = {$plugin.tx_sportms.features.skipDefaultArguments}
     }
 
     persistence {
-        storagePid = {$plugin.tx_clubms.persistence.storagePid}
-        recursive = {$plugin.tx_clubms.persistence.recursive}
+        storagePid = {$plugin.tx_sportms.persistence.storagePid}
+        recursive = {$plugin.tx_sportms.persistence.recursive}
     }
 
     # ====================================
@@ -17,80 +17,80 @@ plugin.tx_clubms {
     settings {
 
         club {
-            listPid = {$plugin.tx_clubms.settings.club.listPid}
-            showPid = {$plugin.tx_clubms.settings.club.showPid}
+            listPid = {$plugin.tx_sportms.settings.club.listPid}
+            showPid = {$plugin.tx_sportms.settings.club.showPid}
         }
 
         clubSection {
-            listPid = {$plugin.tx_clubms.settings.clubSection.listPid}
-            showPid = {$plugin.tx_clubms.settings.clubSection.showPid}
+            listPid = {$plugin.tx_sportms.settings.clubSection.listPid}
+            showPid = {$plugin.tx_sportms.settings.clubSection.showPid}
         }
 
         competition {
-            listPid = {$plugin.tx_clubms.settings.competition.listPid}
-            showPid = {$plugin.tx_clubms.settings.competition.showPid}
+            listPid = {$plugin.tx_sportms.settings.competition.listPid}
+            showPid = {$plugin.tx_sportms.settings.competition.showPid}
         }
 
         competitionSeason {
-            listPid = {$plugin.tx_clubms.settings.competitionSeason.listPid}
-            showPid = {$plugin.tx_clubms.settings.competitionSeason.showPid}
+            listPid = {$plugin.tx_sportms.settings.competitionSeason.listPid}
+            showPid = {$plugin.tx_sportms.settings.competitionSeason.showPid}
         }
 
         game {
-            listPid = {$plugin.tx_clubms.settings.game.listPid}
-            showPid = {$plugin.tx_clubms.settings.game.showPid}
+            listPid = {$plugin.tx_sportms.settings.game.listPid}
+            showPid = {$plugin.tx_sportms.settings.game.showPid}
         }
 
         person {
-            listPid = {$plugin.tx_clubms.settings.person.listPid}
-            showPid = {$plugin.tx_clubms.settings.person.showPid}
-            dummyImageMale = {$plugin.tx_clubms.settings.person.dummyImageMale}
-            dummyImageFemale = {$plugin.tx_clubms.settings.person.dummyImageFemale}
+            listPid = {$plugin.tx_sportms.settings.person.listPid}
+            showPid = {$plugin.tx_sportms.settings.person.showPid}
+            dummyImageMale = {$plugin.tx_sportms.settings.person.dummyImageMale}
+            dummyImageFemale = {$plugin.tx_sportms.settings.person.dummyImageFemale}
         }
 
         season {
-            listPid = {$plugin.tx_clubms.settings.season.listPid}
-            showPid = {$plugin.tx_clubms.settings.season.showPid}
+            listPid = {$plugin.tx_sportms.settings.season.listPid}
+            showPid = {$plugin.tx_sportms.settings.season.showPid}
         }
 
         section {
-            listPid = {$plugin.tx_clubms.settings.section.listPid}
-            showPid = {$plugin.tx_clubms.settings.section.showPid}
+            listPid = {$plugin.tx_sportms.settings.section.listPid}
+            showPid = {$plugin.tx_sportms.settings.section.showPid}
         }
 
         team {
-            listPid = {$plugin.tx_clubms.settings.team.listPid}
-            showPid = {$plugin.tx_clubms.settings.team.showPid}
+            listPid = {$plugin.tx_sportms.settings.team.listPid}
+            showPid = {$plugin.tx_sportms.settings.team.showPid}
         }
 
         teamSeason {
-            listPid = {$plugin.tx_clubms.settings.teamSeason.listPid}
-            showPid = {$plugin.tx_clubms.settings.teamSeason.showPid}
+            listPid = {$plugin.tx_sportms.settings.teamSeason.listPid}
+            showPid = {$plugin.tx_sportms.settings.teamSeason.showPid}
         }
 
         venue {
-            listPid = {$plugin.tx_clubms.settings.venue.listPid}
-            showPid = {$plugin.tx_clubms.settings.venue.showPid}
+            listPid = {$plugin.tx_sportms.settings.venue.listPid}
+            showPid = {$plugin.tx_sportms.settings.venue.showPid}
         }
 
     }
 
     view {
-        pathToCssFile = {$plugin.tx_clubms.settings.css.pathToCssFile}
+        pathToCssFile = {$plugin.tx_sportms.settings.css.pathToCssFile}
 
         layoutRootPaths {
-            0 = EXT:clubms/Resources/Private/Layouts/
-            1 = {$plugin.tx_clubms.view.layoutRootPath}
+            0 = EXT:sportms/Resources/Private/Layouts/
+            1 = {$plugin.tx_sportms.view.layoutRootPath}
         }
 
         partialRootPaths {
-            0 = EXT:clubms/Resources/Private/Partials/
-            1 = {$plugin.tx_clubms.view.partialRootPath}
+            0 = EXT:sportms/Resources/Private/Partials/
+            1 = {$plugin.tx_sportms.view.partialRootPath}
         }
 
         templateRootPaths {
-            0 = EXT:clubms/Resources/Private/Templates/
-            1 = {$plugin.tx_clubms.view.templateRootPath}
+            0 = EXT:sportms/Resources/Private/Templates/
+            1 = {$plugin.tx_sportms.view.templateRootPath}
         }
     }
 

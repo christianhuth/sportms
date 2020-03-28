@@ -9,7 +9,7 @@
             <settings.dbStats>
                 <TCEforms>
                     <label>Für welche Datenmodelle sollen Statistiken berechnet werden?</label>
-                    <displayCond>FIELD:base.switchableControllerActions:=:ClubMS->dbStats</displayCond>
+                    <displayCond>FIELD:base.switchableControllerActions:=:SportMS->dbStats</displayCond>
                     <config>
                         <items type="array">
                             <numIndex index="0">

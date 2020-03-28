@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Balumedien\Clubms\Domain\Model;
+namespace Balumedien\Sportms\Domain\Model;
 
 use TYPO3\CMS\Extbase\Annotation\ORM\Lazy;
 
@@ -37,7 +37,7 @@ class GameReport extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 {
 
     /**
-     * @var \Balumedien\Clubms\Domain\Model\Game
+     * @var \Balumedien\Sportms\Domain\Model\Game
      * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
      */
     protected $game;
@@ -58,7 +58,7 @@ class GameReport extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $author;
 
     /**
-     * @return \Balumedien\Clubms\Domain\Model\Game
+     * @return \Balumedien\Sportms\Domain\Model\Game
      */
     public function getGame()
     {
@@ -66,9 +66,9 @@ class GameReport extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     }
 
     /**
-     * @param \Balumedien\Clubms\Domain\Model\Game $game
+     * @param \Balumedien\Sportms\Domain\Model\Game $game
      */
-    public function setGame(\Balumedien\Clubms\Domain\Model\Game $game)
+    public function setGame(\Balumedien\Sportms\Domain\Model\Game $game)
     {
         $this->game = $game;
     }

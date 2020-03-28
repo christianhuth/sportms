@@ -1,16 +1,16 @@
 <?php
 	
-	namespace Balumedien\Clubms\Controller;
+	namespace Balumedien\Sportms\Controller;
 	
 	/**
 	 * SectionController
 	 */
-	class SectionController extends ClubMSBaseController {
+	class SectionController extends SportMSBaseController {
 		
 		protected $model = 'section';
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Repository\SectionRepository
+		 * @var \Balumedien\Sportms\Domain\Repository\SectionRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
 		protected $sectionRepository;
@@ -44,9 +44,9 @@
 		}
 		
 		/**
-		 * @param \Balumedien\Clubms\Domain\Model\Section $game
+		 * @param \Balumedien\Sportms\Domain\Model\Section $game
 		 */
-		public function showAction(\Balumedien\Clubms\Domain\Model\Section $section = NULL) {
+		public function showAction(\Balumedien\Sportms\Domain\Model\Section $section = NULL) {
 			$this->initializeActions();
 			$this->view->assign('section', $section);
 		}

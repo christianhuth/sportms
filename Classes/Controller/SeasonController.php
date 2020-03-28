@@ -1,16 +1,16 @@
 <?php
 	
-	namespace Balumedien\Clubms\Controller;
+	namespace Balumedien\Sportms\Controller;
 	
 	/**
 	 * SeasonController
 	 */
-	class SeasonController extends ClubMSBaseController {
+	class SeasonController extends SportMSBaseController {
 		
 		protected $model = 'season';
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Repository\SeasonRepository
+		 * @var \Balumedien\Sportms\Domain\Repository\SeasonRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
 		protected $seasonRepository;
@@ -45,9 +45,9 @@
 		}
 		
 		/**
-		 * @param \Balumedien\Clubms\Domain\Model\Season $season
+		 * @param \Balumedien\Sportms\Domain\Model\Season $season
 		 */
-		public function showAction(\Balumedien\Clubms\Domain\Model\Season $season = NULL): void {
+		public function showAction(\Balumedien\Sportms\Domain\Model\Season $season = NULL): void {
 			$this->initializeActions();
 			$this->view->assign('season', $season);
 		}

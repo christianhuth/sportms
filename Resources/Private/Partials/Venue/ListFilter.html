@@ -2,8 +2,8 @@
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <f:if condition="{settings.club.clubsSelectbox}">
-    <div class="tx-clubms-list-filter well">
-        <f:form action="list" class="form-horizontal" controller="Venue" extensionName="clubms" method="POST" noCache="TRUE" noCacheHash="TRUE" pageUid="{settings.venue.listPid}" pluginName="clubms">
+    <div class="tx-sportms-list-filter well">
+        <f:form action="list" class="form-horizontal" controller="Venue" extensionName="sportms" method="POST" noCache="TRUE" noCacheHash="TRUE" pageUid="{settings.venue.listPid}" pluginName="sportms">
             <f:render arguments="{options: clubsSelectbox,   settings: settings,     value: settings.club.selected}" partial="Form/Select/Club"/>
             <f:render partial="Form/Submit"/>
         </f:form>

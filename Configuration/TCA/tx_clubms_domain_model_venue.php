@@ -14,12 +14,12 @@ return array(
 			'starttime' => 'starttime',
 			'endtime' => 'endtime',
 		),
-		'iconfile' => 'EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_venue.svg',
+		'iconfile' => 'EXT:sportms/Resources/Public/Icons/tx_sportms_domain_model_venue.svg',
 		'label' => '',
-        'label_userFunc' => \Balumedien\Clubms\Configuration\TCA\UserFunc\UserFunc::class . '->VenueLabel',
+        'label_userFunc' => \Balumedien\Sportms\Configuration\TCA\UserFunc\UserFunc::class . '->VenueLabel',
 		'searchFields' => '',
 		'sortby' => 'sorting',
-		'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_venue',
+		'title'	=> 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_venue',
 		'tstamp' => 'tstamp',
 		'versioningWS' => TRUE,
 	),
@@ -28,7 +28,7 @@ return array(
 	),
 	'types' => array(
 		'1' => array('showitem' => 'club, name, address, images, description, --palette--;;building, --palette--;;size,
-									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_venue.tab_visibility, hidden, detail_link, slug'),
+									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_venue.tab_visibility, hidden, detail_link, slug'),
 	),
 	'palettes' => array(
         'building' => array('showitem' => 'date_of_building, year_of_building'),
@@ -90,12 +90,12 @@ return array(
 
         'club' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_venue.club',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_venue.club',
             'config' => array(
-                'foreign_table' => 'tx_clubms_domain_model_club',
+                'foreign_table' => 'tx_sportms_domain_model_club',
                 'foreign_table_where' => 'ORDER BY name ASC',
                 'items' => Array (
-                    array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
+                    array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", ""),
                 ),
                 'maxItems' => 1,
                 'renderType' => 'selectSingle',
@@ -105,7 +105,7 @@ return array(
         ),
 		'name' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_venue.name',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_venue.name',
 			'config' => array(
 				'eval' => 'required, trim',
 				'size' => 30,
@@ -114,7 +114,7 @@ return array(
 		),
         'description' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_venue.description',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_venue.description',
             'config' => array(
                 'cols' => '40',
                 'rows' => '15',
@@ -122,14 +122,14 @@ return array(
             ),
         ),
 		'address' => array(
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_venue.address',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_venue.address',
 			'config' => array(
 				'appearance' => array(
 					'levelLinksPosition' => 'bottom',
 					'useSortable' => 1,
 				),
 				'foreign_field' => 'venue',
-				'foreign_table' => 'tx_clubms_domain_model_address',
+				'foreign_table' => 'tx_sportms_domain_model_address',
 				'maxitems' => 1,
 				'type' => 'inline',
 			),
@@ -151,7 +151,7 @@ return array(
 
 		'date_of_building' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_venue.date_of_building',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_venue.date_of_building',
 			'config' => array(
 				'type' => 'input',
 				'size' => 8,
@@ -162,7 +162,7 @@ return array(
 		),
 		'year_of_building' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_venue.year_of_building',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_venue.year_of_building',
 			'config' => array(
 				'eval' => 'trim',
 				'size' => 5,
@@ -172,7 +172,7 @@ return array(
 		
 		'dimensions' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_venue.dimensions',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_venue.dimensions',
 			'config' => array(
 				'type' => 'input',
 				'size' => 12,
@@ -181,10 +181,10 @@ return array(
 		),
 		'surface' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_venue.surface',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_venue.surface',
 			'config' => array(
 				'items' => array(
-                    array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
+                    array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", ""),
 					array('Halle', '1'),
 					array('Kunstrasen', '2'),
 					array('Rasen', '3'),
@@ -195,7 +195,7 @@ return array(
 		),
 		'spectator_capacity' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_venue.spectator_capacity',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_venue.spectator_capacity',
 			'config' => array(
 				'type' => 'input',
 				'size' => 6,
@@ -205,7 +205,7 @@ return array(
 		
 		'detail_link' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_club.detail_link',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_club.detail_link',
 			'config' => array(
 				'default' => '1',
 				'type' => 'check',

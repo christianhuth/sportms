@@ -15,11 +15,11 @@ return array(
 			'endtime' => 'endtime',
 		),
 		'hideTable' => TRUE,
-		'iconfile' => 'EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_sectionagegroup.svg',
+		'iconfile' => 'EXT:sportms/Resources/Public/Icons/tx_sportms_domain_model_sectionagegroup.svg',
 		'label' => 'label',
 		'searchFields' => '',
 		'sortby' => 'sorting',
-		'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_sectionagegroup',
+		'title'	=> 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sectionagegroup',
 		'tstamp' => 'tstamp',
 		'versioningWS' => TRUE,
     ),
@@ -88,13 +88,13 @@ return array(
 
         'section' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_sectionagegroup.section',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sectionagegroup.section',
             'config' => array(
                 'eval' => 'required',
-                'foreign_table' => 'tx_clubms_domain_model_section',
+                'foreign_table' => 'tx_sportms_domain_model_section',
                 'foreign_table_where' => 'ORDER BY label ASC',
                 'items' => Array (
-                    array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
+                    array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", ""),
                 ),
                 'maxItems' => 1,
                 'renderType' => 'selectSingle',
@@ -104,7 +104,7 @@ return array(
         ),
 		'label' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_sectionagegroup.label',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sectionagegroup.label',
 			'config' => array(
 				'eval' => 'required, trim',
 				'size' => 255,
@@ -113,7 +113,7 @@ return array(
 		),
 		'short' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_sectionagegroup.short',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sectionagegroup.short',
 			'config' => array(
 				'eval' => 'trim',
 				'size' => 255,
@@ -122,7 +122,7 @@ return array(
 		),
 		
 		'section_age_levels' => array(
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_sectionagegroup.section_age_levels',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sectionagegroup.section_age_levels',
 			'config' => array(
 				'appearance' => array(
                     'enabledControls' => [
@@ -138,7 +138,7 @@ return array(
 					'useSortable' => 1,
 				),
 				'foreign_field' => 'section_age_group',
-				'foreign_table' => 'tx_clubms_domain_model_sectionagelevel',
+				'foreign_table' => 'tx_sportms_domain_model_sectionagelevel',
 				'type' => 'inline',
 			),
 		),

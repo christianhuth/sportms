@@ -1,6 +1,6 @@
 <?php
 	
-	namespace Balumedien\Clubms\Domain\Model;
+	namespace Balumedien\Sportms\Domain\Model;
 	
 	/**
 	 * Team
@@ -8,22 +8,22 @@
 	class Team extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Model\Club
+		 * @var \Balumedien\Sportms\Domain\Model\Club
 		 */
 		protected $club;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Model\ClubSection
+		 * @var \Balumedien\Sportms\Domain\Model\ClubSection
 		 */
 		protected $clubSection;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Model\SectionAgeGroup
+		 * @var \Balumedien\Sportms\Domain\Model\SectionAgeGroup
 		 */
 		protected $sectionAgeGroup;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Model\SectionAgeLevel
+		 * @var \Balumedien\Sportms\Domain\Model\SectionAgeLevel
 		 */
 		protected $sectionAgeLevel;
 		
@@ -43,7 +43,7 @@
 		protected $detailLink;
 		
 		/**
-		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\TeamSeason>
+		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\TeamSeason>
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
 		 */
 		protected $teamSeasons;

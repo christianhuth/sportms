@@ -1,6 +1,6 @@
 <?php
 	
-	namespace Balumedien\Clubms\Domain\Model;
+	namespace Balumedien\Sportms\Domain\Model;
 	
 	/**
 	 * ClubGround
@@ -8,7 +8,7 @@
 	class ClubGround extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Model\Club
+		 * @var \Balumedien\Sportms\Domain\Model\Club
 		 */
 		protected $club;
 		
@@ -18,7 +18,7 @@
 		protected $name;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Model\Address
+		 * @var \Balumedien\Sportms\Domain\Model\Address
 		 */
 		protected $address;
 		

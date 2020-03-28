@@ -1,8 +1,8 @@
 <?php
 	
-	namespace Balumedien\Clubms\Domain\Repository;
+	namespace Balumedien\Sportms\Domain\Repository;
 	
-	class ClubRepository extends ClubMSBaseRepository {
+	class SportRepository extends SportMSBaseRepository {
 		
 		protected $defaultOrderings = array(
 			'name' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING

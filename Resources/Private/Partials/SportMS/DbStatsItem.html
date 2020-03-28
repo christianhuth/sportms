@@ -1,0 +1,14 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:sportms="Balumedien\Sportms\ViewHelpers"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<div class="col-xs-6 col-sm-6 col-md-4 tx-sportms-dbstat">
+    <sportms:link.action action="{action}" controller="{controller}">
+        <div class="col-xs-12 tx-sportms-dbstat-image">
+            <f:image src="EXT:sportms/Resources/Public/Icons/tx_sportms_domain_model_{controller -> f:format.case(mode: 'lower')}.svg"/>
+        </div>
+        <div class="col-xs-12 tx-sportms-dbstat-label">{count} {label}</div>
+    </sportms:link.action>
+</div>
+
+</html>

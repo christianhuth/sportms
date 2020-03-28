@@ -1,19 +1,19 @@
 <html data-namespace-typo3-fluid="true"
-      xmlns:clubms="Balumedien\Clubms\ViewHelpers"
+      xmlns:sportms="Balumedien\Sportms\ViewHelpers"
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <tr>
-    <td class="tx-clubms-club-name">
-        <clubms:link.action Club="{team.club}">{team.club.name}</clubms:link.action>
+    <td class="tx-sportms-club-name">
+        <sportms:link.action Club="{team.club}">{team.club.name}</sportms:link.action>
     </td>
-    <td class="tx-clubms-clubsection-label">
-        <clubms:link.action ClubSection="{team.clubSection}" arguments="{club: team.clubSection.club, section: team.clubSection.section}">{team.clubSection.section.label}</clubms:link.action>
+    <td class="tx-sportms-clubsection-label">
+        <sportms:link.action ClubSection="{team.clubSection}" arguments="{club: team.clubSection.club, section: team.clubSection.section}">{team.clubSection.section.label}</sportms:link.action>
     </td>
-    <td class="tx-clubms-clubsection-label">
-        <clubms:link.action Team="{team}">{team.name}</clubms:link.action>
+    <td class="tx-sportms-clubsection-label">
+        <sportms:link.action Team="{team}">{team.name}</sportms:link.action>
     </td>
-    <td class="tx-clubms-clubsection-label">{team.sectionAgeGroup.label}</td>
-    <td class="tx-clubms-clubsection-label">{team.sectionAgeLevel.label}</td>
+    <td class="tx-sportms-clubsection-label">{team.sectionAgeGroup.label}</td>
+    <td class="tx-sportms-clubsection-label">{team.sectionAgeLevel.label}</td>
 </tr>
 
 </html>

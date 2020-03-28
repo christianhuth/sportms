@@ -10,7 +10,7 @@ conf.py:
   release: 0.0.2
   latex_documents:
   - - Index
-    - clubms.tex
+    - sportms.tex
     - Club Management System
     - Christian Knell
     - manual

@@ -80,7 +80,7 @@
 						</OR>
 					</displayCond>
 					<config>
-						<foreign_table>tx_clubms_domain_model_competitionseasongameday</foreign_table>
+						<foreign_table>tx_sportms_domain_model_competitionseasongameday</foreign_table>
 						<foreign_table_where>ORDER BY label ASC</foreign_table_where>
 						<renderType>selectMultipleSideBySide</renderType>
 						<type>select</type>

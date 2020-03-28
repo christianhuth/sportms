@@ -1,6 +1,6 @@
 <?php
 	
-	namespace Balumedien\Clubms\ViewHelpers;
+	namespace Balumedien\Sportms\ViewHelpers;
 	
 	class ZodiacSignViewHelper extends \TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper {
 		
@@ -17,8 +17,8 @@
 		 */
 		public function render() {
 			$localizationUtility = new \TYPO3\CMS\Extbase\Utility\LocalizationUtility;
-			$langKey = 'tx_clubms_domain_model_person.zodiac_sign_' . $this->arguments['zodiacSign'];
-			return $localizationUtility->translate($langKey, "clubms");
+			$langKey = 'tx_sportms_domain_model_person.zodiac_sign_' . $this->arguments['zodiacSign'];
+			return $localizationUtility->translate($langKey, "sportms");
 		}
 		
 	}

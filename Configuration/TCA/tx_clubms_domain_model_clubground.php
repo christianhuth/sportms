@@ -15,11 +15,11 @@ return array(
             'endtime' => 'endtime',
         ),
 		'hideTable' => TRUE,
-		'iconfile' => 'EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_clubground.svg',
+		'iconfile' => 'EXT:sportms/Resources/Public/Icons/tx_sportms_domain_model_clubground.svg',
         'label' => 'name',
         'searchFields' => '',
 		'sortby' => 'sorting',
-        'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubground',
+        'title'	=> 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_clubground',
         'tstamp' => 'tstamp',
 		'versioningWS' => TRUE,
     ),
@@ -28,8 +28,8 @@ return array(
 	),
 	'types' => array(
 		'1' => array('showitem' => 'name, address, journey, description,
-									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubground.tab_images, images,
-									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubground.tab_details, club_owned, club_owned_since, date_of_building, year_of_building,'),
+									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_clubground.tab_images, images,
+									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_clubground.tab_details, club_owned, club_owned_since, date_of_building, year_of_building,'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -96,7 +96,7 @@ return array(
 		
 		'name' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubground.name',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_clubground.name',
 			'config' => array(
 				'eval' => 'required, trim',
 				'size' => 30,
@@ -104,7 +104,7 @@ return array(
 			),
 		),
 		'address' => array(
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubground.address',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_clubground.address',
 			'config' => array(
 				'appearance' => array(
 					'levelLinksPosition' => 'bottom',
@@ -112,14 +112,14 @@ return array(
 				),
 				'eval' => 'required',
 				'foreign_field' => 'club_ground',
-				'foreign_table' => 'tx_clubms_domain_model_address',
+				'foreign_table' => 'tx_sportms_domain_model_address',
                 'maxitems' => 1,
 				'type' => 'inline',
 			),
 		),
 		'journey' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubground.journey',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_clubground.journey',
 			'config' => array(
 				'cols' => '40',
 				'rows' => '15',
@@ -128,7 +128,7 @@ return array(
 		),
         'description' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubground.description',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_clubground.description',
             'config' => array(
                 'cols' => '40',
                 'rows' => '15',
@@ -138,7 +138,7 @@ return array(
 		
 		'images' => array(
 				'exclude' => 1,
-				'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubground.images',
+				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_clubground.images',
 				'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
 					'image',
 					array(
@@ -152,14 +152,14 @@ return array(
 		
 		'club_owned' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubground.club_owned',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_clubground.club_owned',
 			'config' => array(
 				'type' => 'check',
 			),
 		),
 		'club_owned_since' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubground.club_owned_since',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_clubground.club_owned_since',
 			'config' => array(
 				'type' => 'input',
 				'size' => 8,
@@ -170,7 +170,7 @@ return array(
 		),
 		'year_of_building' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubground.year_of_building',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_clubground.year_of_building',
 			'config' => array(
 				'eval' => 'trim',
 				'size' => 5,
@@ -179,7 +179,7 @@ return array(
 		),
 		'date_of_building' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_clubground.date_of_building',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_clubground.date_of_building',
 			'config' => array(
 				'type' => 'input',
 				'size' => 8,

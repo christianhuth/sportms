@@ -1,5 +1,5 @@
 <html data-namespace-typo3-fluid="true"
-      xmlns:clubms="Balumedien\Clubms\ViewHelpers"
+      xmlns:sportms="Balumedien\Sportms\ViewHelpers"
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <div class="table-responsive">
@@ -19,15 +19,15 @@
                 <f:for as="competitionSeason" each="{competitionSeasons}">
                     <tr>
                         <td>
-                            <clubms:link.action Section="{competitionSeason.competition.section}">{competitionSeason.competition.section.label}</clubms:link.action>
+                            <sportms:link.action Section="{competitionSeason.competition.section}">{competitionSeason.competition.section.label}</sportms:link.action>
                         </td>
                         <td>
-                            <clubms:link.action Competition="{competitionSeason.competition}">{competitionSeason.competition.name}</clubms:link.action>
+                            <sportms:link.action Competition="{competitionSeason.competition}">{competitionSeason.competition.name}</sportms:link.action>
                         </td>
                         <td>{competitionSeason.competition.sectionAgeLevel.label}</td>
                         <td>{competitionSeason.competition.competitionType.label}</td>
                         <td>
-                            <clubms:link.action Season="{competitionSeason.season}">{competitionSeason.season.seasonName}</clubms:link.action>
+                            <sportms:link.action Season="{competitionSeason.season}">{competitionSeason.season.seasonName}</sportms:link.action>
                         </td>
                     </tr>
                 </f:for>

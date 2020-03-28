@@ -1,5 +1,5 @@
 <html data-namespace-typo3-fluid="true"
-      xmlns:clubms="Balumedien\Clubms\ViewHelpers"
+      xmlns:sportms="Balumedien\Sportms\ViewHelpers"
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <div class="table-responsive">
@@ -19,23 +19,23 @@
                 <f:for as="game" each="{games}">
                     <tr>
                         <td>
-                            <clubms:link.action Section="{game.section}">{game.section.label}</clubms:link.action>
+                            <sportms:link.action Section="{game.section}">{game.section.label}</sportms:link.action>
                         </td>
                         <td>
-                            <clubms:link.action Competition="{game.competitionSeason.competition}">{game.competitionSeason.competition.name}</clubms:link.action>
+                            <sportms:link.action Competition="{game.competitionSeason.competition}">{game.competitionSeason.competition.name}</sportms:link.action>
                         </td>
                         <td>
-                            <clubms:link.action Season="{game.competitionSeason.season}">{game.competitionSeason.season.seasonName}</clubms:link.action>
+                            <sportms:link.action Season="{game.competitionSeason.season}">{game.competitionSeason.season.seasonName}</sportms:link.action>
                         </td>
                         <td>
-                            <clubms:link.action TeamSeason="{game.teamSeasonHome}">{game.teamSeasonHome.team.name}</clubms:link.action>
+                            <sportms:link.action TeamSeason="{game.teamSeasonHome}">{game.teamSeasonHome.team.name}</sportms:link.action>
                         </td>
                         <td>-</td>
                         <td>
-                            <clubms:link.action TeamSeason="{game.teamSeasonGuest}">{game.teamSeasonGuest.team.name}</clubms:link.action>
+                            <sportms:link.action TeamSeason="{game.teamSeasonGuest}">{game.teamSeasonGuest.team.name}</sportms:link.action>
                         </td>
                         <td>
-                            <clubms:link.action Game="{game}">{game.resultEndRegularHome} : {game.resultEndRegularGuest}</clubms:link.action>
+                            <sportms:link.action Game="{game}">{game.resultEndRegularHome} : {game.resultEndRegularGuest}</sportms:link.action>
                         </td>
                     </tr>
                 </f:for>

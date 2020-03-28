@@ -13,7 +13,7 @@
 					<config>
 						<type>group</type>
 						<internal_type>db</internal_type>
-						<allowed>tx_clubms_domain_model_game</allowed>
+						<allowed>tx_sportms_domain_model_game</allowed>
 						<size>1</size>
 						<maxItems>1</maxItems>
 						<minItems>0</minItems>

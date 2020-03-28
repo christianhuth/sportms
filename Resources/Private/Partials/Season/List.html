@@ -1,5 +1,5 @@
 <html data-namespace-typo3-fluid="true"
-      xmlns:clubms="Balumedien\Clubms\ViewHelpers"
+      xmlns:sportms="Balumedien\Sportms\ViewHelpers"
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <div class="table-responsive">
@@ -17,13 +17,13 @@
                 <f:for as="season" each="{seasons}">
                     <tr>
                         <td>
-                            <clubms:link.action Season="{season}">{season.seasonName}</clubms:link.action>
+                            <sportms:link.action Season="{season}">{season.seasonName}</sportms:link.action>
                         </td>
                         <td>
-                            <clubms:link.action Season="{season}">{season.seasonNameShort}</clubms:link.action>
+                            <sportms:link.action Season="{season}">{season.seasonNameShort}</sportms:link.action>
                         </td>
                         <td>
-                            <clubms:link.action Season="{season}">{season.seasonNameShort}</clubms:link.action>
+                            <sportms:link.action Season="{season}">{season.seasonNameShort}</sportms:link.action>
                         </td>
                     </tr>
                 </f:for>

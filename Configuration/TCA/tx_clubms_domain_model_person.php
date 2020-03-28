@@ -15,12 +15,12 @@ return array(
             'starttime' => 'starttime',
             'endtime' => 'endtime',
         ),
-		'iconfile' => 'EXT:clubms/Resources/Public/Icons/tx_clubms_domain_model_person.svg',
+		'iconfile' => 'EXT:sportms/Resources/Public/Icons/tx_sportms_domain_model_person.svg',
         'label' => 'lastname',
 		'label_alt' => 'firstname',
 		'label_alt_force' => 1,
         'searchFields' => ',',
-        'title'	=> 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person',
+        'title'	=> 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person',
         'tstamp' => 'tstamp',
 		'versioningWS' => TRUE,
     ),
@@ -29,10 +29,10 @@ return array(
 	),
 	'types' => array(
 		'1' => array('showitem' => 'firstname, lastname, birthname, nickname, date_of_birth, zodiac_sign, place_of_birth, nationality, gender,
-									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.tab_personal, weight, height, size_of_shoe, hander, footer, family_status, graduation, job, characteristics, hobbies, favorite_dish, favorite_drink,
-									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.tab_contact, addresses, phones, mails, urls,
-									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.tab_profiles, person_profiles,
-									--div--;LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.tab_visibility, hidden, hidden_birthday, detail_link, profile_player, profile_official, profile_referee, slug'),
+									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.tab_personal, weight, height, size_of_shoe, hander, footer, family_status, graduation, job, characteristics, hobbies, favorite_dish, favorite_drink,
+									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.tab_contact, addresses, phones, mails, urls,
+									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.tab_profiles, person_profiles,
+									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.tab_visibility, hidden, hidden_birthday, detail_link, profile_player, profile_official, profile_referee, slug'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -93,7 +93,7 @@ return array(
 
 		'firstname' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.firstname',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.firstname',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -102,7 +102,7 @@ return array(
 		),
 		'lastname' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.lastname',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.lastname',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -111,7 +111,7 @@ return array(
 		),
 		'birthname' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.birthname',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.birthname',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -120,7 +120,7 @@ return array(
 		),
         'nickname' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.nickname',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.nickname',
             'config' => array(
                 'type' => 'input',
                 'size' => 30,
@@ -129,7 +129,7 @@ return array(
         ),
         'date_of_birth' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.date_of_birth',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.date_of_birth',
             'config' => array(
                 'type' => 'input',
                 'size' => 8,
@@ -140,22 +140,22 @@ return array(
         ),
         'zodiac_sign' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.zodiac_sign',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.zodiac_sign',
             'config' => array(
 				'items' => Array (
-                    array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
-					array('LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.zodiac_sign_1', 1),
-					array('LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.zodiac_sign_2', 2),
-					array('LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.zodiac_sign_3', 3),
-					array('LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.zodiac_sign_4', 4),
-					array('LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.zodiac_sign_5', 5),
-					array('LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.zodiac_sign_6', 6),
-					array('LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.zodiac_sign_7', 7),
-					array('LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.zodiac_sign_8', 8),
-					array('LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.zodiac_sign_9', 9),
-					array('LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.zodiac_sign_10', 10),
-					array('LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.zodiac_sign_11', 11),
-					array('LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.zodiac_sign_12', 12),
+                    array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", ""),
+					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.zodiac_sign_1', 1),
+					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.zodiac_sign_2', 2),
+					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.zodiac_sign_3', 3),
+					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.zodiac_sign_4', 4),
+					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.zodiac_sign_5', 5),
+					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.zodiac_sign_6', 6),
+					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.zodiac_sign_7', 7),
+					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.zodiac_sign_8', 8),
+					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.zodiac_sign_9', 9),
+					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.zodiac_sign_10', 10),
+					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.zodiac_sign_11', 11),
+					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.zodiac_sign_12', 12),
 				),
 				'maxItems' => 1,
 				'renderType' => 'selectSingle',
@@ -165,7 +165,7 @@ return array(
         ),
         'place_of_birth' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.place_of_birth',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.place_of_birth',
             'config' => array(
                 'type' => 'input',
                 'size' => 30,
@@ -174,11 +174,11 @@ return array(
         ),
         'nationality' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.nationality',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.nationality',
             'config' => array(
 				'foreign_table' => 'static_countries',
 				'items' => Array (
-                    array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
+                    array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", ""),
 				),
 				'maxItems' => 1,
 				'renderType' => 'selectSingle',
@@ -188,12 +188,12 @@ return array(
         ),
         'gender' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.gender',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.gender',
             'config' => array(
 				'items' => array(
-                    array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
-					array('LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.gender_male', 'm'),
-					array('LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.gender_female', 'f'),
+                    array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", ""),
+					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.gender_male', 'm'),
+					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.gender_female', 'f'),
 				),
                 'renderType' => 'selectSingle',
 				'type' => 'select',
@@ -202,7 +202,7 @@ return array(
 		
         'weight' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.weight',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.weight',
             'config' => array(
                 'eval' => 'double2, trim',
                 'size' => 3,
@@ -211,7 +211,7 @@ return array(
         ),
         'height' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.height',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.height',
             'config' => array(
                 'eval' => 'double2, trim',
                 'size' => 3,
@@ -220,7 +220,7 @@ return array(
         ),
         'size_of_shoe' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.size_of_shoe',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.size_of_shoe',
             'config' => array(
                 'eval' => 'trim',
                 'size' => 3,
@@ -229,13 +229,13 @@ return array(
         ),
         'footer' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.footer',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.footer',
             'config' => array(
 				'items' => Array (
-                    array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
-					array('LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.footer_1', 1),
-					array('LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.footer_2', 2),
-					array('LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.footer_3', 3),
+                    array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", ""),
+					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.footer_1', 1),
+					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.footer_2', 2),
+					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.footer_3', 3),
 				),
 				'maxItems' => 1,
 				'renderType' => 'selectSingle',
@@ -245,13 +245,13 @@ return array(
         ),
         'hander' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.hander',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.hander',
             'config' => array(
 				'items' => Array (
-                    array("LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_general.select", ""),
-					array('LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.hander_1', 1),
-					array('LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.hander_2', 2),
-					array('LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.hander_3', 3),
+                    array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", ""),
+					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.hander_1', 1),
+					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.hander_2', 2),
+					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.hander_3', 3),
 				),
 				'maxItems' => 1,
 				'renderType' => 'selectSingle',
@@ -261,7 +261,7 @@ return array(
         ),
         'family_status' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.family_status',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.family_status',
             'config' => array(
                 'type' => 'input',
 				'size' => 30,
@@ -270,7 +270,7 @@ return array(
         ),
         'graduation' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.graduation',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.graduation',
             'config' => array(
                 'type' => 'input',
 				'size' => 30,
@@ -279,7 +279,7 @@ return array(
         ),
         'job' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.job',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.job',
             'config' => array(
                 'type' => 'input',
 				'size' => 30,
@@ -288,7 +288,7 @@ return array(
         ),
         'characteristics' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.characteristics',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.characteristics',
             'config' => array(
                 'type' => 'input',
 				'size' => 30,
@@ -297,7 +297,7 @@ return array(
         ),
         'hobbies' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.hobbies',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.hobbies',
             'config' => array(
                 'type' => 'input',
 				'size' => 30,
@@ -306,7 +306,7 @@ return array(
         ),
         'favorite_dish' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.favorite_dish',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.favorite_dish',
             'config' => array(
                 'type' => 'input',
 				'size' => 30,
@@ -315,7 +315,7 @@ return array(
         ),
         'favorite_drink' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.favorite_drink',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.favorite_drink',
             'config' => array(
                 'type' => 'input',
 				'size' => 30,
@@ -324,58 +324,58 @@ return array(
         ),
 		
         'addresses' => array(
-            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.addresses',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.addresses',
             'config' => array(
 				'appearance' => array(
 					'useSortable' => 1,
 				),
 				'foreign_field' => 'person',
-				'foreign_table' => 'tx_clubms_domain_model_address',
+				'foreign_table' => 'tx_sportms_domain_model_address',
 				'type' => 'inline',
             ),
         ),
         'phones' => array(
-            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.phones',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.phones',
             'config' => array(
 				'appearance' => array(
 					'useSortable' => 1,
 				),
 				'foreign_field' => 'person',
-				'foreign_table' => 'tx_clubms_domain_model_phone',
+				'foreign_table' => 'tx_sportms_domain_model_phone',
 				'type' => 'inline',
             ),
         ),
         'mails' => array(
-            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.mails',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.mails',
             'config' => array(
 				'appearance' => array(
 					'useSortable' => 1,
 				),
 				'foreign_field' => 'person',
-				'foreign_table' => 'tx_clubms_domain_model_mail',
+				'foreign_table' => 'tx_sportms_domain_model_mail',
 				'type' => 'inline',
             ),
         ),
         'urls' => array(
-            'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.urls',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.urls',
             'config' => array(
 	            'appearance' => array(
 		            'useSortable' => 1,
 	            ),
 				'foreign_field' => 'person',
-				'foreign_table' => 'tx_clubms_domain_model_url',
+				'foreign_table' => 'tx_sportms_domain_model_url',
 				'type' => 'inline',
             ),
         ),
 		
 		'person_profiles' => array(
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.person_profile',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.person_profile',
 			'config' => array(
 				'appearance' => array(
 					'useSortable' => 1,
 				),
 				'foreign_field' => 'person',
-				'foreign_table' => 'tx_clubms_domain_model_personprofile',
+				'foreign_table' => 'tx_sportms_domain_model_personprofile',
 				'type' => 'inline',
 			),
 		),
@@ -402,14 +402,14 @@ return array(
 		
 		'hidden_birthday' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.hidden_birthday',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.hidden_birthday',
 			'config' => array(
 				'type' => 'check',
 			),
 		),
 		'detail_link' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.detail_link',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.detail_link',
 			'config' => array(
 			    'default' => '1',
 				'type' => 'check',
@@ -417,21 +417,21 @@ return array(
 		),
 		'profile_player' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.profile_player',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.profile_player',
 			'config' => array(
 				'type' => 'check',
 			),
 		),
 		'profile_official' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.profile_official',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.profile_official',
 			'config' => array(
 				'type' => 'check',
 			),
 		),
 		'profile_referee' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:clubms/Resources/Private/Language/locallang_tca.xlf:tx_clubms_domain_model_person.profile_referee',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.profile_referee',
 			'config' => array(
 				'type' => 'check',
 			),

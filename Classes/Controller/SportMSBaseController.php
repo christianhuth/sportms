@@ -1,8 +1,8 @@
 <?php
 	
-	namespace Balumedien\Clubms\Controller;
+	namespace Balumedien\Sportms\Controller;
 	
-	class ClubMSBaseController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
+	class SportMSBaseController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
 		
 		protected function getClubsFilter($useSelected = TRUE) {
 			return $this->getFilter('club', 'clubs', $useSelected);

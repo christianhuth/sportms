@@ -1,5 +1,5 @@
 <html data-namespace-typo3-fluid="true"
-      xmlns:clubms="Balumedien\Clubms\ViewHelpers"
+      xmlns:sportms="Balumedien\Sportms\ViewHelpers"
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <div class="table-responsive">
@@ -17,7 +17,7 @@
                 <f:for as="section" each="{sections}">
                     <tr>
                         <td>
-                            <clubms:link.action Section="{section}">{section.label}</clubms:link.action>
+                            <sportms:link.action Section="{section}">{section.label}</sportms:link.action>
                         </td>
                         <td>
                             <f:if condition="{section.sectionAgeGroups}">

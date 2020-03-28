@@ -1,6 +1,6 @@
 <?php
 
-namespace Balumedien\Clubms\Domain\Model;
+namespace Balumedien\Sportms\Domain\Model;
 
 use TYPO3\CMS\Extbase\Annotation\ORM\Lazy;
 
@@ -35,18 +35,18 @@ use TYPO3\CMS\Extbase\Annotation\ORM\Lazy;
 class ClubSectionOfficial extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 
     /**
-     * @var \Balumedien\Clubms\Domain\Model\ClubSection
+     * @var \Balumedien\Sportms\Domain\Model\ClubSection
      * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
      */
     protected $clubSection;
 
 	/**
-	 * @var \Balumedien\Clubms\Domain\Model\Person
+	 * @var \Balumedien\Sportms\Domain\Model\Person
 	 */
 	protected $person;
 
 	/**
-	 * @var \Balumedien\Clubms\Domain\Model\ClubSectionOfficialJob
+	 * @var \Balumedien\Sportms\Domain\Model\ClubSectionOfficialJob
 	 */
 	protected $clubSectionOfficialJob;
 

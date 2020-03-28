@@ -1,6 +1,6 @@
 <?php
 	
-	namespace Balumedien\Clubms\Domain\Model;
+	namespace Balumedien\Sportms\Domain\Model;
 	
 	/**
 	 * Competition
@@ -18,27 +18,27 @@
 		protected $nameShort;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Model\Section
+		 * @var \Balumedien\Sportms\Domain\Model\Section
 		 */
 		protected $section;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Model\SectionAgeGroup
+		 * @var \Balumedien\Sportms\Domain\Model\SectionAgeGroup
 		 */
 		protected $sectionAgeGroup;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Model\SectionAgeLevel
+		 * @var \Balumedien\Sportms\Domain\Model\SectionAgeLevel
 		 */
 		protected $sectionAgeLevel;
 		
 		/**
-		 * @var \Balumedien\Clubms\Domain\Model\CompetitionType
+		 * @var \Balumedien\Sportms\Domain\Model\CompetitionType
 		 */
 		protected $competitionType;
 		
 		/**
-		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Clubms\Domain\Model\CompetitionSeason>
+		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\CompetitionSeason>
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
 		 */
