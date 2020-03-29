@@ -19,7 +19,7 @@
 		 * @var \Balumedien\Sportms\Domain\Repository\SportRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
-		protected $sectionRepository;
+		protected $sportRepository;
 		
 		/**
 		 * @var \Balumedien\Sportms\Domain\Repository\ClubRepository
@@ -52,13 +52,13 @@
 		 */
 		public function listAction(): void {
 			$this->initializeActions();
-			$clubSections = $this->clubSectionRepository->findAll($this->getSectionsFilter(), $this->getClubsFilter());
+			$clubSections = $this->clubSectionRepository->findAll($this->getSportsFilter(), $this->getClubsFilter());
 			$this->view->assign('clubSections', $clubSections);
 			/* FRONTEND FILTERS */
-			if($this->settings['club']['clubsSelectbox'] || $this->settings['section']['sectionsSelectbox']) {
-				if($this->settings['section']['sectionsSelectbox']) {
-					$sectionsSelectbox = $this->sectionRepository->findAll($this->getSectionsFilter(FALSE));
-					$this->view->assign('sectionsSelectbox', $sectionsSelectbox);
+			if($this->settings['club']['clubsSelectbox'] || $this->settings['sport']['sportsSelectbox']) {
+				if($this->settings['sport']['sportsSelectbox']) {
+					$sportsSelectbox = $this->sportRepository->findAll($this->getSportsFilter(FALSE));
+					$this->view->assign('sportsSelectbox', $sportsSelectbox);
 				}
 				if($this->settings['club']['clubsSelectbox']) {
 					$clubsSelectbox = $this->clubRepository->findAll($this->getClubsFilter(FALSE));
