@@ -10,7 +10,7 @@
 		/**
 		 * @var \Balumedien\Sportms\Domain\Model\SportAgeGroup
 		 */
-		protected $sectionAgeGroup;
+		protected $sportAgeGroup;
 		
 		/**
 		 * @var string
@@ -25,15 +25,15 @@
 		/**
 		 * @return \Balumedien\Sportms\Domain\Model\SportAgeGroup
 		 */
-		public function getSectionAgeGroup(): \Balumedien\Sportms\Domain\Model\SportAgeGroup {
-			return $this->sectionAgeGroup;
+		public function getSportAgeGroup(): \Balumedien\Sportms\Domain\Model\SportAgeGroup {
+			return $this->sportAgeGroup;
 		}
 		
 		/**
-		 * @param \Balumedien\Sportms\Domain\Model\SportAgeGroup $sectionAgeGroup
+		 * @param \Balumedien\Sportms\Domain\Model\SportAgeGroup $sportAgeGroup
 		 */
-		public function setSectionAgeGroup(\Balumedien\Sportms\Domain\Model\SportAgeGroup $sectionAgeGroup): void {
-			$this->sectionAgeGroup = $sectionAgeGroup;
+		public function setSportAgeGroup(\Balumedien\Sportms\Domain\Model\SportAgeGroup $sportAgeGroup): void {
+			$this->sportAgeGroup = $sportAgeGroup;
 		}
 		
 		/**

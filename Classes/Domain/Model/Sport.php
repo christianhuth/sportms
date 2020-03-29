@@ -29,6 +29,13 @@
 		 */
 		protected $sportTypes;
 		
+		/**
+		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\SportAgeGroup>
+		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
+		 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
+		 */
+		protected $sportAgeGroups = '';
+		
 		public function __construct() {
 			//Do not remove the next line: It would break the functionality
 			$this->initStorageObjects();
@@ -44,6 +51,7 @@
 		 */
 		protected function initStorageObjects(): void {
 			$this->sportTypes = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+			$this->sportAgeGroups = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 		}
 		
 		/**
@@ -100,6 +108,20 @@
 		 */
 		public function setSportTypes(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $sportTypes): void {
 			$this->sportTypes = $sportTypes;
+		}
+		
+		/**
+		 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+		 */
+		public function getSportAgeGroups(): \TYPO3\CMS\Extbase\Persistence\ObjectStorage {
+			return $this->sportAgeGroups;
+		}
+		
+		/**
+		 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $sportAgeGroups
+		 */
+		public function setSportAgeGroups(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $sportAgeGroups): void {
+			$this->sportAgeGroups = $sportAgeGroups;
 		}
 		
 	}
