@@ -157,27 +157,6 @@ return array(
 				'eval' => 'trim, required'
 			),
 		),
-		'sport_positions' => array(
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sportpositiongroup.sport_positions',
-			'config' => array(
-				'appearance' => array(
-                    'enabledControls' => [
-                        'info' => false,
-                        'new' => true,
-                        'sort' => false,
-                        'hide' => true,
-                        'dragdrop' => true,
-                        'delete' => true,
-                        'localize' => true,
-                    ],
-					'levelLinksPosition' => 'bottom',
-					'useSortable' => 1,
-				),
-				'foreign_field' => 'sport_position_group',
-				'foreign_table' => 'tx_sportms_domain_model_sportposition',
-				'type' => 'inline',
-			),
-		),
 		
 	),
 );
