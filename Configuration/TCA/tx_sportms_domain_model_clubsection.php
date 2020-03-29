@@ -140,6 +140,7 @@ return array(
 	        'exclude' => 1,
 	        'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_clubsection.club',
 	        'config' => array(
+	        	'eval' => 'required',
 		        'foreign_table' => 'tx_sportms_domain_model_club',
 		        'foreign_table_where' => 'ORDER BY tx_sportms_domain_model_club.name ASC',
 		        'items' => array(
