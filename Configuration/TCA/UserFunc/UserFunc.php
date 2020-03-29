@@ -45,10 +45,10 @@
 
         public function competitionLabel(&$parameters, $parentObject) {
             $record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
-            $section = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_sportms_domain_model_section", $record['section']);
+            $sport = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_sportms_domain_model_sport", $record['$sport']);
             $competitionType = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_sportms_domain_model_competitiontype", $record['competition_type']);
-            $sectionAgeLevel = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_sportms_domain_model_sectionagelevel", $record['section_age_level']);
-            $newLabel = $record['name'] . " (" . $section['label'] . " - " . $competitionType['label'] . " - " . $sectionAgeLevel['label'] . ")";
+            $sectionAgeLevel = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_sportms_domain_model_sportagelevel", $record['sport_age_level']);
+            $newLabel = $record['name'] . " (" . $sport['label'] . " - " . $competitionType['label'] . " - " . $sectionAgeLevel['label'] . ")";
             $parameters['title'] = $newLabel;
         }
 
