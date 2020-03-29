@@ -31,7 +31,7 @@ return array(
 		'showRecordFieldList' => '',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'club, sports, label, images, club_section_members,
+		'1' => array('showitem' => 'club, label, sports, images, club_section_members,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_clubsection.tab_contact, addresses, phones, mails, urls,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_clubsection.tab_officials, club_section_officials,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab_visibility, hidden, detail_link,
@@ -152,6 +152,15 @@ return array(
 		        'type' => 'select',
 	        ),
         ),
+		'label' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sport.label',
+			'config' => array(
+				'eval' => 'trim, required',
+				'size' => 30,
+				'type' => 'input',
+			),
+		),
 		'sports' => array(
 			'exclude' => true,
 			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_clubsection.sports',
@@ -166,15 +175,6 @@ return array(
 				'maxitems' => 9999,
 				'minitems' => 0,
 				'multiple' => 0,
-			),
-		),
-		'label' => array(
-			'exclude' => 1,
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sport.label',
-			'config' => array(
-				'eval' => 'trim, required',
-				'size' => 30,
-				'type' => 'input',
 			),
 		),
 		'images' => array(
