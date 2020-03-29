@@ -453,14 +453,15 @@ return array(
 				'type' => 'check',
 			),
 		),
-		'detail_link' => array(
-			'exclude' => 1,
+		'detail_link' => [
+			'exclude' => true,
 			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.detail_link',
-			'config' => array(
-			    'default' => '1',
+			'config' => [
+				'default' => '1',
+				'renderType' => 'checkboxToggle',
 				'type' => 'check',
-			),
-		),
+			],
+		],
 		'profile_player' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.profile_player',

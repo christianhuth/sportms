@@ -183,14 +183,15 @@ return array(
 			),
 		),
 		
-		'detail_link' => array(
-			'exclude' => 1,
+		'detail_link' => [
+			'exclude' => true,
 			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.detail_link',
-			'config' => array(
+			'config' => [
 				'default' => '1',
+				'renderType' => 'checkboxToggle',
 				'type' => 'check',
-			),
-		),
+			],
+		],
 		'slug' => [
 			'exclude' => true,
 			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.slug',
