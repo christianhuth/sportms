@@ -323,8 +323,8 @@ return array(
 				'appearance' => array(
                     'enabledControls' => [
                         'info' => true,
-                        'new' => false,
-                        'sort' => false,
+                        'new' => true,
+                        'sort' => true,
                         'hide' => true,
                         'dragdrop' => true,
                         'delete' => true,
