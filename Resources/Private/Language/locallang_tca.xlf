@@ -87,6 +87,9 @@
 			<trans-unit id="tx_sportms_domain_model_club.club_grounds">
 				<source>Vereinsgelände</source>
 			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_club.club_sections">
+				<source>Abteilungen</source>
+			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_club.club_officials">
 				<source>Vereinsfunktionärstätigkeiten</source>
 			</trans-unit>
@@ -98,6 +101,9 @@
 			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_club.tab_grounds">
 				<source>Vereinsgelände</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_club.tab_sections">
+				<source>Abteilungen</source>
 			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_club.tab_officials">
 				<source>Vereinsfunktionäre</source>
