@@ -165,23 +165,25 @@ return array(
 			),
 		),
 		'is_team_sport' => [
-			'exclude' => true,
+			'exclude' => TRUE,
 			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sport.is_team_sport',
 			'config' => [
+				'default' => FALSE,
 				'type' => 'check',
 				'renderType' => 'checkboxToggle',
 			],
 		],
 		'is_individual_sport' => [
-			'exclude' => true,
+			'exclude' => TRUE,
 			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sport.is_individual_sport',
 			'config' => [
+				'default' => FALSE,
 				'type' => 'check',
 				'renderType' => 'checkboxToggle',
 			],
 		],
 		'sport_types' => array(
-			'exclude' => true,
+			'exclude' => TRUE,
 			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sport.sport_types',
 			'config' => array(
 				'type' => 'select',
@@ -196,6 +198,7 @@ return array(
 			),
 		),
 		'sport_age_groups' => array(
+			'exclude' => TRUE,
 			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sport.sport_age_groups',
 			'config' => array(
 				'appearance' => array(
@@ -217,6 +220,7 @@ return array(
 			),
 		),
 		'sport_position_groups' => array(
+			'exclude' => TRUE,
 			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sport.sport_position_groups',
 			'config' => array(
 				'appearance' => array(
