@@ -1,10 +1,10 @@
 .sportmsicon {
     background: var(--regular-red);
     display: block;
-    height: 30px;
+    height: 16px;
     mask-position: center center !important;
     mask-size: contain !important;
-    width: 30px;
+    width: 16px;
 }
 
 .sportmsicon.sportmsicon-club {
