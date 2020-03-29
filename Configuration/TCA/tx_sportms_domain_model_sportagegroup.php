@@ -29,7 +29,7 @@ return array(
 		'showRecordFieldList' => 'label, short',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'section, label, short, slug , section_age_levels,
+		'1' => array('showitem' => 'sport, label, short, slug, sport_age_levels,
 		                            --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab_language, sys_language_uid, l10n_parent, l10n_diffsource,
 		                            '),
 	),
@@ -166,8 +166,8 @@ return array(
 			),
 		),
 		
-		'section_age_levels' => array(
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sportagegroup.section_age_levels',
+		'sport_age_levels' => array(
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sportagegroup.sport_age_levels',
 			'config' => array(
 				'appearance' => array(
                     'enabledControls' => [
@@ -182,8 +182,8 @@ return array(
 					'levelLinksPosition' => 'bottom',
 					'useSortable' => 1,
 				),
-				'foreign_field' => 'section_age_group',
-				'foreign_table' => 'tx_sportms_domain_model_sectionagelevel',
+				'foreign_field' => 'sport_age_group',
+				'foreign_table' => 'tx_sportms_domain_model_sportagelevel',
 				'type' => 'inline',
 			),
 		),
