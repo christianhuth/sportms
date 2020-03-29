@@ -32,7 +32,6 @@ return array(
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_club.tab_images, images,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_club.tab_contact, addresses, phones, mails, urls,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_club.tab_grounds, club_grounds,
-									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_club.tab_sections, club_sections,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_club.tab_officials, club_officials,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab_visibility, hidden, detail_link, slug,
 		                            --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab_language, sys_language_uid, l10n_parent, l10n_diffsource,
@@ -316,29 +315,6 @@ return array(
                 'type' => 'inline',
             ),
         ),
-		
-		'club_sections' => array(
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_club.club_sections',
-			'config' => array(
-				'appearance' => array(
-                    'enabledControls' => [
-                        'info' => false,
-                        'new' => true,
-                        'sort' => false,
-                        'hide' => true,
-                        'dragdrop' => true,
-                        'delete' => true,
-                        'localize' => true,
-                    ],
-					'levelLinksPosition' => 'bottom',
-					'useSortable' => 1,
-				),
-				'foreign_field' => 'club',
-				'foreign_sortby' => 'sorting',
-				'foreign_table' => 'tx_sportms_domain_model_clubsection',
-				'type' => 'inline',
-			),
-		),
 
 		'club_officials' => array(
 			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_club.club_officials',
