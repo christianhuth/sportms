@@ -72,7 +72,7 @@ return array(
 				'items' => [
 					['', 0],
 				],
-				'foreign_table' => 'tx_test_domain_model_test',
+				'foreign_table' => 'tx_sportms_domain_model_sport',
 				'foreign_table_where' => 'AND {#tx_sportms_domain_model_sport}.{#pid}=###CURRENT_PID### AND {#tx_sportms_domain_model_sport}.{#sys_language_uid} IN (-1,0)',
 			],
 		],
@@ -216,6 +216,28 @@ return array(
 				),
 				'foreign_field' => 'sport',
 				'foreign_table' => 'tx_sportms_domain_model_sportagegroup',
+				'type' => 'inline',
+			),
+		),
+		'sport_position_groups' => array(
+			'exclude' => TRUE,
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sport.sport_position_groups',
+			'config' => array(
+				'appearance' => array(
+					'enabledControls' => [
+						'info' => false,
+						'new' => true,
+						'sort' => false,
+						'hide' => true,
+						'dragdrop' => true,
+						'delete' => true,
+						'localize' => true,
+					],
+					'levelLinksPosition' => 'bottom',
+					'useSortable' => 1,
+				),
+				'foreign_field' => 'sport',
+				'foreign_table' => 'tx_sportms_domain_model_sportpositiongroup',
 				'type' => 'inline',
 			),
 		),
