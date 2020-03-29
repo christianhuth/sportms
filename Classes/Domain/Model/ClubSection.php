@@ -14,10 +14,15 @@
 		protected $club;
 		
 		/**
-		 * @var \Balumedien\Sportms\Domain\Model\Section
+		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\Sport>
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
 		 */
-		protected $section;
+		protected $sports;
+		
+		/**
+		 * @var string
+		 */
+		protected $label;
 		
 		/**
 		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference>
@@ -96,6 +101,7 @@
 		 * @return void
 		 */
 		protected function initStorageObjects() {
+			$this->sports = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 			$this->images = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 			$this->clubSectionMembers = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 			$this->addresses = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
@@ -107,31 +113,45 @@
 		}
 		
 		/**
-		 * @return Club
+		 * @return \Balumedien\Sportms\Domain\Model\Club
 		 */
-		public function getClub() {
+		public function getClub(): \Balumedien\Sportms\Domain\Model\Club {
 			return $this->club;
 		}
 		
 		/**
-		 * @param Club $club
+		 * @param \Balumedien\Sportms\Domain\Model\Club $club
 		 */
-		public function setClub($club) {
+		public function setClub(\Balumedien\Sportms\Domain\Model\Club $club): void {
 			$this->club = $club;
 		}
 		
 		/**
-		 * @return Section
+		 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
 		 */
-		public function getSection() {
-			return $this->section;
+		public function getSports(): \TYPO3\CMS\Extbase\Persistence\ObjectStorage {
+			return $this->sports;
 		}
 		
 		/**
-		 * @param Section $section
+		 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $sports
 		 */
-		public function setSection($section) {
-			$this->section = $section;
+		public function setSports(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $sports): void {
+			$this->sports = $sports;
+		}
+		
+		/**
+		 * @return string
+		 */
+		public function getLabel(): string {
+			return $this->label;
+		}
+		
+		/**
+		 * @param string $label
+		 */
+		public function setLabel(string $label): void {
+			$this->label = $label;
 		}
 		
 		/**
