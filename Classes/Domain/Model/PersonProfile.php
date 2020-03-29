@@ -23,12 +23,12 @@
 		protected $section;
 		
 		/**
-		 * @var \Balumedien\Sportms\Domain\Model\SectionPositionGroup
+		 * @var \Balumedien\Sportms\Domain\Model\SportPositionGroup
 		 */
 		protected $sectionPositionGroup;
 		
 		/**
-		 * @var \Balumedien\Sportms\Domain\Model\SectionPosition
+		 * @var \Balumedien\Sportms\Domain\Model\SportPosition
 		 */
 		protected $sectionPosition;
 		
@@ -101,28 +101,28 @@
 		}
 		
 		/**
-		 * @return SectionPositionGroup
+		 * @return SportPositionGroup
 		 */
 		public function getSectionPositionGroup() {
 			return $this->sectionPositionGroup;
 		}
 		
 		/**
-		 * @param SectionPositionGroup $sectionPositionGroup
+		 * @param SportPositionGroup $sectionPositionGroup
 		 */
 		public function setSectionPositionGroup($sectionPositionGroup) {
 			$this->sectionPositionGroup = $sectionPositionGroup;
 		}
 		
 		/**
-		 * @return SectionPosition
+		 * @return SportPosition
 		 */
 		public function getSectionPosition() {
 			return $this->sectionPosition;
 		}
 		
 		/**
-		 * @param SectionPosition $sectionPosition
+		 * @param SportPosition $sectionPosition
 		 */
 		public function setSectionPosition($sectionPosition) {
 			$this->sectionPosition = $sectionPosition;

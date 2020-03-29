@@ -1140,57 +1140,6 @@
 			</trans-unit>
 
 
-			<!-- Domain Model Section -->
-			<trans-unit id="tx_sportms_domain_model_section">
-				<source>Abteilung</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_section.label">
-				<source>Bezeichnung</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_section.images">
-				<source>Bilder</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_section.section_position_groups">
-				<source>Positionen</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_section.section_age_groups">
-				<source>Altersgruppen</source>
-			</trans-unit>
-
-
-			<!-- Domain Model SectionPosition -->
-			<trans-unit id="tx_sportms_domain_model_sectionposition">
-				<source>Position</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_sectionposition.label">
-				<source>Bezeichnung</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_sectionposition.label_short">
-				<source>Abkürzung</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_sectionposition.x_position">
-				<source>Position X-Achse</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_sectionposition.y_position">
-				<source>Position Y-Achse</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_sectionposition.tab_representation">
-				<source>Darstellung</source>
-			</trans-unit>
-
-
-			<!-- Domain Model SectionPositionGroup -->
-			<trans-unit id="tx_sportms_domain_model_sectionpositiongroup">
-				<source>Position</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_sectionpositiongroup.label">
-				<source>Bezeichnung</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_sectionpositiongroup.section_positions">
-				<source>Detailpositionen</source>
-			</trans-unit>
-
-
 			<!-- Domain Model Sport -->
 			<trans-unit id="tx_sportms_domain_model_sport">
 				<source>Sportart</source>
@@ -1207,14 +1156,17 @@
 			<trans-unit id="tx_sportms_domain_model_sport.sport_types">
 				<source>Sporttypen</source>
 			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_sport.sport_position_groups">
-				<source>Positionen</source>
-			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_sport.sport_age_groups">
 				<source>Altersgruppen</source>
 			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_sport.sport_position_groups">
+				<source>Positionsgruppen</source>
+			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_sport.tab_sport_age_groups">
 				<source>Altersgruppen</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_sport.tab_sport_position_groups">
+				<source>Positionsgruppen</source>
 			</trans-unit>
 
 
@@ -1251,6 +1203,39 @@
 			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_sportagelevel.short">
 				<source>Kurzform</source>
+			</trans-unit>
+
+
+			<!-- Domain Model SportPosition -->
+			<trans-unit id="tx_sportms_domain_model_sportposition">
+				<source>Position</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_sportposition.label">
+				<source>Bezeichnung</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_sportposition.label_short">
+				<source>Abkürzung</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_sportposition.x_position">
+				<source>Position X-Achse</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_sportposition.y_position">
+				<source>Position Y-Achse</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_sportposition.tab_representation">
+				<source>Darstellung</source>
+			</trans-unit>
+
+
+			<!-- Domain Model SportPositionGroup -->
+			<trans-unit id="tx_sportms_domain_model_sportpositiongroup">
+				<source>Positionsgruppe</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_sportpositiongroup.label">
+				<source>Bezeichnung</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_sportpositiongroup.sport_positions">
+				<source>Positionen</source>
 			</trans-unit>
 
 

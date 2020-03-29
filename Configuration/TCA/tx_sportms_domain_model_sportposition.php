@@ -17,19 +17,21 @@ return array(
 			'endtime' => 'endtime',
 		),
 		'hideTable' => TRUE,
-		'iconfile' => 'EXT:sportms/Resources/Public/Icons/tx_sportms_domain_model_sectionpositiongroup.svg',
-		'label' => 'label',
+		'iconfile' => 'EXT:sportms/Resources/Public/Icons/tx_sportms_domain_model_sportposition.svg',
+        'label' => '',
+		'label_userFunc' => \Balumedien\Sportms\Configuration\TCA\UserFunc\UserFunc::class . '->sportPositionLabel',
 		'searchFields' => '',
 		'sortby' => 'sorting',
-		'title'	=> 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sectionpositiongroup',
+		'title'	=> 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sportposition',
 		'tstamp' => 'tstamp',
 		'versioningWS' => TRUE,
 	),
 	'interface' => array(
-		'showRecordFieldList' => 'label',
+		'showRecordFieldList' => 'label, label_short, x_position, y_position',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'label, section_positions,
+		'1' => array('showitem' => 'label, label_short, 
+									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sportposition.tab_representation, x_position, y_position,
 		                            --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab_language, sys_language_uid, l10n_parent, l10n_diffsource,
 		                            '),
 	),
@@ -130,40 +132,58 @@ return array(
                 ]
             ],
         ],
-
-		'section' => array(
-		    'config' => array(
-		        'type' => 'passthrough',
-            ),
-        ),
+		
+		'sport_position_group' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sportposition.sport_position_group',
+			'config' => array(
+				'eval' => 'required',
+				'foreign_table' => 'tx_sportms_domain_model_sportpositiongroup',
+				'foreign_table_where' => 'ORDER BY label ASC',
+				'items' => Array (
+					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ''),
+				),
+				'renderType' => 'selectSingle',
+				'size' => 1,
+				'type' => 'select',
+			),
+			'onChange' => 'reload',
+		),
 		'label' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sectionpositiongroup.label',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sportposition.label',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
 				'eval' => 'trim, required'
 			),
 		),
-		'section_positions' => array(
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sectionpositiongroup.section_positions',
+		'label_short' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sportposition.label_short',
 			'config' => array(
-				'appearance' => array(
-                    'enabledControls' => [
-                        'info' => false,
-                        'new' => true,
-                        'sort' => false,
-                        'hide' => true,
-                        'dragdrop' => true,
-                        'delete' => true,
-                        'localize' => true,
-                    ],
-					'levelLinksPosition' => 'bottom',
-					'useSortable' => 1,
-				),
-				'foreign_field' => 'section_position_group',
-				'foreign_table' => 'tx_sportms_domain_model_sectionposition',
-				'type' => 'inline',
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'trim, required'
+			),
+		),
+		
+		'x_position' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sportposition.x_position',
+			'config' => array(
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'alphanum, trim'
+			),
+		),
+		'y_position' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sportposition.y_position',
+			'config' => array(
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'alphanum, trim'
 			),
 		),
 		

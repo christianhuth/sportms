@@ -30,6 +30,7 @@ return array(
 	'types' => array(
 		'1' => array('showitem' => 'label, --palette--;;team_individual, sport_types,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sport.tab_sport_age_groups, sport_age_groups,
+									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sport.tab_sport_position_groups, sport_position_groups,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab_visibility,
 		                                --palette--;;visible,
 		                                --palette--;;visible_date,
@@ -212,6 +213,27 @@ return array(
 				),
 				'foreign_field' => 'sport',
 				'foreign_table' => 'tx_sportms_domain_model_sportagegroup',
+				'type' => 'inline',
+			),
+		),
+		'sport_position_groups' => array(
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sport.sport_position_groups',
+			'config' => array(
+				'appearance' => array(
+					'enabledControls' => [
+						'info' => false,
+						'new' => true,
+						'sort' => false,
+						'hide' => true,
+						'dragdrop' => true,
+						'delete' => true,
+						'localize' => true,
+					],
+					'levelLinksPosition' => 'bottom',
+					'useSortable' => 1,
+				),
+				'foreign_field' => 'sport',
+				'foreign_table' => 'tx_sportms_domain_model_sportpositiongroup',
 				'type' => 'inline',
 			),
 		),

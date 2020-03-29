@@ -63,7 +63,7 @@ class GameLineup extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	protected $teamSeasonSquadMember;
 
 	/**
-	 * @var \Balumedien\Sportms\Domain\Model\SectionPosition
+	 * @var \Balumedien\Sportms\Domain\Model\SportPosition
 	 */
 	protected $sectionPosition;
 
@@ -140,14 +140,14 @@ class GameLineup extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     }
 
 	/**
-	 * @return SectionPosition
+	 * @return SportPosition
 	 */
 	public function getSectionPosition() {
 		return $this->sectionPosition;
 	}
 
 	/**
-	 * @param SectionPosition $sectionPosition
+	 * @param SportPosition $sectionPosition
 	 */
 	public function setSectionPosition($sectionPosition) {
 		$this->sectionPosition = $sectionPosition;

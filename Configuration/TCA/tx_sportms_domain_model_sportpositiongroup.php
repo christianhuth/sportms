@@ -17,21 +17,19 @@ return array(
 			'endtime' => 'endtime',
 		),
 		'hideTable' => TRUE,
-		'iconfile' => 'EXT:sportms/Resources/Public/Icons/tx_sportms_domain_model_sectionposition.svg',
-        'label' => '',
-		'label_userFunc' => \Balumedien\Sportms\Configuration\TCA\UserFunc\UserFunc::class . '->sectionPositionLabel',
+		'iconfile' => 'tx_sportms_domain_model_sportpositiongroup.svg',
+		'label' => 'label',
 		'searchFields' => '',
 		'sortby' => 'sorting',
-		'title'	=> 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sectionposition',
+		'title'	=> 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sectionpositiongroup',
 		'tstamp' => 'tstamp',
 		'versioningWS' => TRUE,
 	),
 	'interface' => array(
-		'showRecordFieldList' => 'label, label_short, x_position, y_position',
+		'showRecordFieldList' => 'label',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'label, label_short, 
-									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sectionposition.tab_representation, x_position, y_position,
+		'1' => array('showitem' => 'label, section_positions,
 		                            --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab_language, sys_language_uid, l10n_parent, l10n_diffsource,
 		                            '),
 	),
@@ -68,8 +66,8 @@ return array(
                 'items' => [
                     ['', 0],
                 ],
-                'foreign_table' => 'tx_test_domain_model_test',
-                'foreign_table_where' => 'AND {#tx_test_domain_model_test}.{#pid}=###CURRENT_PID### AND {#tx_test_domain_model_test}.{#sys_language_uid} IN (-1,0)',
+                'foreign_table' => 'tx_test_domain_model_sportpositiongroup',
+                'foreign_table_where' => 'AND {#tx_test_domain_model_sportpositiongroup}.{#pid}=###CURRENT_PID### AND {#tx_test_domain_model_sportpositiongroup}.{#sys_language_uid} IN (-1,0)',
             ],
         ],
         'l10n_diffsource' => [
@@ -133,49 +131,39 @@ return array(
             ],
         ],
 
-		'section_position_group' => array(
-            'config' => array(
-                'type' => 'passthrough',
+		'section' => array(
+		    'config' => array(
+		        'type' => 'passthrough',
             ),
         ),
-		
 		'label' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sectionposition.label',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sectionpositiongroup.label',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
 				'eval' => 'trim, required'
 			),
 		),
-		
-		'label_short' => array(
-			'exclude' => 1,
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sectionposition.label_short',
+		'section_positions' => array(
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sectionpositiongroup.section_positions',
 			'config' => array(
-				'type' => 'input',
-				'size' => 30,
-				'eval' => 'trim, required'
-			),
-		),
-		
-		'x_position' => array(
-			'exclude' => 1,
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sectionposition.x_position',
-			'config' => array(
-				'type' => 'input',
-				'size' => 30,
-				'eval' => 'alphanum, trim'
-			),
-		),
-		
-		'y_position' => array(
-			'exclude' => 1,
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sectionposition.y_position',
-			'config' => array(
-				'type' => 'input',
-				'size' => 30,
-				'eval' => 'alphanum, trim'
+				'appearance' => array(
+                    'enabledControls' => [
+                        'info' => false,
+                        'new' => true,
+                        'sort' => false,
+                        'hide' => true,
+                        'dragdrop' => true,
+                        'delete' => true,
+                        'localize' => true,
+                    ],
+					'levelLinksPosition' => 'bottom',
+					'useSortable' => 1,
+				),
+				'foreign_field' => 'section_position_group',
+				'foreign_table' => 'tx_sportms_domain_model_sectionposition',
+				'type' => 'inline',
 			),
 		),
 		

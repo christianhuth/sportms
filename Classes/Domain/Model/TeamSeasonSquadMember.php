@@ -46,12 +46,12 @@ class TeamSeasonSquadMember extends \TYPO3\CMS\Extbase\DomainObject\AbstractEnti
     protected $person;
 
     /**
-     * @var \Balumedien\Sportms\Domain\Model\SectionPositionGroup
+     * @var \Balumedien\Sportms\Domain\Model\SportPositionGroup
      */
     protected $sectionPositionGroup;
 
     /**
-     * @var \Balumedien\Sportms\Domain\Model\SectionPosition
+     * @var \Balumedien\Sportms\Domain\Model\SportPosition
      */
     protected $sectionPosition;
 	
@@ -103,7 +103,7 @@ class TeamSeasonSquadMember extends \TYPO3\CMS\Extbase\DomainObject\AbstractEnti
     }
 
     /**
-     * @return SectionPositionGroup
+     * @return SportPositionGroup
      */
     public function getSectionPositionGroup()
     {
@@ -111,7 +111,7 @@ class TeamSeasonSquadMember extends \TYPO3\CMS\Extbase\DomainObject\AbstractEnti
     }
 
     /**
-     * @param SectionPositionGroup $sectionPositionGroup
+     * @param SportPositionGroup $sectionPositionGroup
      */
     public function setSectionPositionGroup($sectionPositionGroup)
     {
@@ -119,7 +119,7 @@ class TeamSeasonSquadMember extends \TYPO3\CMS\Extbase\DomainObject\AbstractEnti
     }
 
     /**
-     * @return SectionPosition
+     * @return SportPosition
      */
     public function getSectionPosition()
     {
@@ -127,7 +127,7 @@ class TeamSeasonSquadMember extends \TYPO3\CMS\Extbase\DomainObject\AbstractEnti
     }
 
     /**
-     * @param SectionPosition $sectionPosition
+     * @param SportPosition $sectionPosition
      */
     public function setSectionPosition($sectionPosition)
     {
