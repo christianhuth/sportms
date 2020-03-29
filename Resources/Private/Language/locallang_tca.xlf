@@ -1264,13 +1264,13 @@
 			<trans-unit id="tx_sportms_domain_model_team.club">
 				<source>Verein</source>
 			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_team.club_section">
-				<source>Abteilung</source>
+			<trans-unit id="tx_sportms_domain_model_team.sport">
+				<source>Sportart</source>
 			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_team.section_age_group">
+			<trans-unit id="tx_sportms_domain_model_team.sport_age_group">
 				<source>Altersgruppe</source>
 			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_team.section_age_level">
+			<trans-unit id="tx_sportms_domain_model_team.sport_age_level">
 				<source>Altersstufe</source>
 			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_team.name">

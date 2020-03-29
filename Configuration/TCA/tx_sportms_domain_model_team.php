@@ -147,18 +147,16 @@ return array(
                 'size' => 1,
                 'type' => 'select',
             ),
-            'onChange' => 'reload',
         ),
-        'club_section' => array(
-	        'displayCond' => 'FIELD:club:>:0',
+        'sport' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_team.club_section',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_team.sport',
             'config' => array(
                 'eval' => 'required',
-                'foreign_table' => 'tx_sportms_domain_model_clubsection',
-                'foreign_table_where' => ' AND tx_sportms_domain_model_clubsection.club = ###REC_FIELD_club### ORDER BY tx_sportms_domain_model_clubsection.sorting ASC',
+                'foreign_table' => 'tx_sportms_domain_model_sport',
+                'foreign_default_sortby' => 'sorting',
                 'items' => Array (
-                    array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", ""),
+                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ''),
                 ),
                 'renderType' => 'selectSingle',
                 'size' => 1,
@@ -166,16 +164,16 @@ return array(
             ),
 	        'onChange' => 'reload',
         ),
-		'section_age_group' => array(
-			'displayCond' => 'FIELD:club_section:>:0',
+		'sport_age_group' => array(
+			'displayCond' => 'FIELD:sport:>:0',
 			'exclude' => 1,
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_team.section_age_group',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_team.sport_age_group',
 			'config' => array(
 				'eval' => 'required',
-				'foreign_table' => 'tx_sportms_domain_model_sectionagegroup',
-				'foreign_table_where' => ' AND tx_sportms_domain_model_sectionagegroup.section = (SELECT section FROM tx_sportms_domain_model_clubsection WHERE uid=###REC_FIELD_club_section###) ORDER BY section ASC',
+				'foreign_table' => 'tx_sportms_domain_model_sportagegroup',
+				'foreign_table_where' => ' AND tx_sportms_domain_model_sportagegroup.section = ###REC_FIELD_sport###) ORDER BY tx_sportms_domain_model_sportagegroup.label ASC',
 				'items' => Array (
-					array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", ""),
+					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ''),
 				),
 				'renderType' => 'selectSingle',
 				'size' => 1,
@@ -183,16 +181,16 @@ return array(
 			),
 			'onChange' => 'reload',
 		),
-        'section_age_level' => array(
-	        'displayCond' => 'FIELD:section_age_group:>:0',
+        'sport_age_level' => array(
+	        'displayCond' => 'FIELD:sport_age_group:>:0',
             'exclude' => 1,
-            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_team.section_age_level',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_team.sport_age_level',
             'config' => array(
                 'eval' => 'required',
-                'foreign_table' => 'tx_sportms_domain_model_sectionagelevel',
-                'foreign_table_where' => ' AND tx_sportms_domain_model_sectionagelevel.section_age_group = ###REC_FIELD_section_age_group### ORDER BY label ASC',
+                'foreign_table' => 'tx_sportms_domain_model_sportagelevel',
+                'foreign_table_where' => ' AND tx_sportms_domain_model_sportagelevel.sport_age_group = ###REC_FIELD_sport_age_group### ORDER BY tx_sportms_domain_model_sportagelevel.label ASC',
                 'items' => Array (
-                    array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", ""),
+                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ''),
                 ),
                 'renderType' => 'selectSingle',
                 'size' => 1,
