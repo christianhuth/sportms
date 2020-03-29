@@ -34,7 +34,6 @@ return array(
 		'1' => array('showitem' => 'club, sports, label, images, club_section_members,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_clubsection.tab_contact, addresses, phones, mails, urls,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_clubsection.tab_officials, club_section_officials,
-									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_clubsection.tab_teams, teams,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab_visibility, hidden, detail_link,
 		                            --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab_language, sys_language_uid, l10n_parent, l10n_diffsource,
 		                            '),
@@ -316,28 +315,6 @@ return array(
 				),
 				'foreign_field' => 'club_section',
 				'foreign_table' => 'tx_sportms_domain_model_clubsectionofficial',
-				'type' => 'inline',
-			),
-		),
-		
-		'teams' => array(
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_clubsection.team',
-			'config' => array(
-				'appearance' => array(
-					'enabledControls' => [
-						'info' => false,
-						'new' => true,
-						'sort' => false,
-						'hide' => true,
-						'dragdrop' => true,
-						'delete' => true,
-						'localize' => true,
-					],
-					'levelLinksPosition' => 'none',
-					'useSortable' => 1,
-				),
-				'foreign_field' => 'club_section',
-				'foreign_table' => 'tx_sportms_domain_model_team',
 				'type' => 'inline',
 			),
 		),
