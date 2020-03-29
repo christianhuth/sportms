@@ -1229,6 +1229,9 @@
 				<source>Kurzform</source>
 			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_sportagegroup.sport_age_levels">
+				<source>Altersstufe</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_sportagegroup.tab_sport_age_levels">
 				<source>Altersstufen</source>
 			</trans-unit>
 
