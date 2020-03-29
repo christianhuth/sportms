@@ -160,14 +160,10 @@
 				$parameters['showView'] = $showView;
 			}
 			if($this->getSportMsDomainModel() != NULL) {
-				if($this->getSportMsDomainModel() != "ClubSection" && $this->getSportMsDomainModel() != "CompetitionSeason" && $this->getSportMsDomainModel() != "TeamSeason") {
+				if($this->getSportMsDomainModel() != "CompetitionSeason" && $this->getSportMsDomainModel() != "TeamSeason") {
 					$parameters[lcfirst($this->getSportMsDomainModel())] = $this->arguments[$this->getSportMsDomainModel()];
 				} else {
 					switch($this->getSportMsDomainModel()) {
-						case "ClubSection":
-							$parameters['club'] = $this->arguments[$sportMsDomainModel]->getClub();
-							$parameters['section'] = $this->arguments[$sportMsDomainModel]->getSection();
-							break;
 						case "CompetitionSeason":
 							$parameters['competition'] = $this->arguments[$sportMsDomainModel]->getCompetition();
 							$parameters['season'] = $this->arguments[$sportMsDomainModel]->getSeason();
