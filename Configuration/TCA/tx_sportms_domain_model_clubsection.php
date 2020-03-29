@@ -106,6 +106,7 @@ return array(
 				],
 			],
 		],
+		
 		'starttime' => [
             'exclude' => true,
             'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.starttime',
@@ -164,6 +165,7 @@ return array(
 				'size' => 10,
 				'autoSizeMax' => 30,
 				'maxitems' => 9999,
+				'minitems' => 0,
 				'multiple' => 0,
 			),
 		),
@@ -171,9 +173,9 @@ return array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sport.label',
 			'config' => array(
-				'type' => 'input',
+				'eval' => 'trim, required',
 				'size' => 30,
-				'eval' => 'trim, required'
+				'type' => 'input',
 			),
 		),
 		'images' => array(
