@@ -2,8 +2,8 @@
     background: var(--regular-red);
     display: block;
     height: 30px;
-    mask-position: center center;
-    mask-size: contain;
+    mask-position: center center !important;
+    mask-size: contain !important;
     width: 30px;
 }
 
