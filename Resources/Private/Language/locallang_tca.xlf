@@ -201,8 +201,11 @@
 			<trans-unit id="tx_sportms_domain_model_clubsection.club">
 				<source>Verein</source>
 			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_clubsection.section">
-				<source>Vereinsabteilung</source>
+			<trans-unit id="tx_sportms_domain_model_clubsection.sports">
+				<source>Sportarten</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_clubsection.label">
+				<source>Bezeichnung</source>
 			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_clubsection.images">
 				<source>Bilder</source>

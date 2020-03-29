@@ -31,7 +31,7 @@ return array(
 		'showRecordFieldList' => '',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'club, sports, images, club_section_members,
+		'1' => array('showitem' => 'club, sports, label, images, club_section_members,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_clubsection.tab_contact, addresses, phones, mails, urls,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_clubsection.tab_officials, club_section_officials,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_clubsection.tab_teams, teams,
@@ -152,20 +152,28 @@ return array(
 		        'type' => 'select',
 	        ),
         ),
-		
 		'sports' => array(
-			'exclude' => 1,
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_clubsection.section',
+			'exclude' => true,
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_clubsection.sports',
 			'config' => array(
-				'foreign_table' => 'tx_sportms_domain_model_section',
-				'foreign_table_where' => 'ORDER BY tx_sportms_domain_model_section.label ASC',
-				'items' => array(
-                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ""),
-                ),
-				'maxItems' => 1,
-				'renderType' => 'selectSingle',
-				'size' => 1,
 				'type' => 'select',
+				'renderType' => 'selectMultipleSideBySide',
+				'foreign_table' => 'tx_sportms_domain_model_sport',
+				'foreign_table_where' => ' ORDER BY tx_sportms_domain_model_sport.label ASC',
+				'MM' => 'tx_sportms_clubsection_sport_mm',
+				'size' => 10,
+				'autoSizeMax' => 30,
+				'maxitems' => 9999,
+				'multiple' => 0,
+			),
+		),
+		'label' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sport.label',
+			'config' => array(
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'trim, required'
 			),
 		),
 		'images' => array(
