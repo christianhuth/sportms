@@ -209,7 +209,7 @@ return array(
 					'levelLinksPosition' => 'bottom',
 					'useSortable' => 1,
 				),
-				'foreign_field' => 'section',
+				'foreign_field' => 'sport',
 				'foreign_table' => 'tx_sportms_domain_model_sportagegroup',
 				'type' => 'inline',
 			),
