@@ -138,7 +138,7 @@ return array(
 			'config' => array(
 				'eval' => 'required',
 				'foreign_table' => 'tx_sportms_domain_model_sportagegroup',
-				'foreign_table_where' => 'ORDER BY name ASC',
+				'foreign_table_where' => 'ORDER BY label ASC',
 				'items' => Array (
 					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ''),
 				),

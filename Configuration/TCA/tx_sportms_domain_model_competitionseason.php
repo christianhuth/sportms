@@ -70,8 +70,8 @@
 	                'items' => [
 	                    ['', 0],
 	                ],
-	                'foreign_table' => 'tx_test_domain_model_test',
-	                'foreign_table_where' => 'AND {#tx_test_domain_model_test}.{#pid}=###CURRENT_PID### AND {#tx_test_domain_model_test}.{#sys_language_uid} IN (-1,0)',
+	                'foreign_table' => 'tx_sportms_domain_model_competitionseason',
+	                'foreign_table_where' => 'AND {#tx_sportms_domain_model_competitionseason}.{#pid}=###CURRENT_PID### AND {#tx_sportms_domain_model_competitionseason}.{#sys_language_uid} IN (-1,0)',
 	            ],
 	        ],
 	        'l10n_diffsource' => [

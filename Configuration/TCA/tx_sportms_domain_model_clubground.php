@@ -69,8 +69,8 @@ return array(
                 'items' => [
                     ['', 0],
                 ],
-                'foreign_table' => 'tx_test_domain_model_test',
-                'foreign_table_where' => 'AND {#tx_test_domain_model_test}.{#pid}=###CURRENT_PID### AND {#tx_test_domain_model_test}.{#sys_language_uid} IN (-1,0)',
+                'foreign_table' => 'tx_sportms_domain_model_clubground',
+                'foreign_table_where' => 'AND {#tx_sportms_domain_model_clubground}.{#pid}=###CURRENT_PID### AND {#tx_sportms_domain_model_clubground}.{#sys_language_uid} IN (-1,0)',
             ],
         ],
         'l10n_diffsource' => [
