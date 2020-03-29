@@ -193,10 +193,10 @@ return array(
 				'multiple' => 0,
 				'fieldControl' => array(
 					'editPopup' => array(
-						'disabled' => false,
+						'disabled' => true,
 					),
 					'addRecord' => array(
-						'disabled' => false,
+						'disabled' => true,
 					),
 					'listModule' => array(
 						'disabled' => true,
