@@ -1213,6 +1213,9 @@
 			<trans-unit id="tx_sportms_domain_model_sport.sport_age_groups">
 				<source>Altersgruppen</source>
 			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_sport.tab_sport_age_groups">
+				<source>Altersgruppen</source>
+			</trans-unit>
 
 
 			<!-- Domain Model SportAgeGroup -->
@@ -1229,7 +1232,7 @@
 				<source>Kurzform</source>
 			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_sportagegroup.sport_age_levels">
-				<source>Altersstufe</source>
+				<source>Altersstufen</source>
 			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_sportagegroup.tab_sport_age_levels">
 				<source>Altersstufen</source>
