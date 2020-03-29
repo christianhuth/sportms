@@ -26,10 +26,10 @@ return array(
 		'versioningWS' => TRUE,
 	),
 	'interface' => array(
-		'showRecordFieldList' => 'section, section_age_group, section_age_level, competition_type, name, slug',
+		'showRecordFieldList' => 'sport, sport_age_group, sport_age_level, competition_type, name, slug',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'section, section_age_group, section_age_level, competition_type, name, name_short,
+		'1' => array('showitem' => 'sport, sport_age_group, sport_age_level, competition_type, name, name_short,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_competition.tab_seasons, competition_seasons,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab_visibility, hidden, detail_link, slug,
 		                            --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab_language, sys_language_uid, l10n_parent, l10n_diffsource,
