@@ -1231,10 +1231,16 @@
 			<trans-unit id="tx_sportms_domain_model_sportpositiongroup">
 				<source>Positionsgruppe</source>
 			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_sportpositiongroup.sport">
+				<source>Sportart</source>
+			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_sportpositiongroup.label">
 				<source>Bezeichnung</source>
 			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_sportpositiongroup.sport_positions">
+				<source>Positionen</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_sportpositiongroup.tab_sport_positions">
 				<source>Positionen</source>
 			</trans-unit>
 
