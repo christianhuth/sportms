@@ -1,10 +1,10 @@
 .sportmsicon {
     background: var(--regular-red);
     display: block;
-    height: 16px;
+    height: 20px;
     mask-position: center center !important;
     mask-size: contain !important;
-    width: 16px;
+    width: 20px;
 }
 
 .sportmsicon.sportmsicon-club {
@@ -55,32 +55,32 @@
     mask: url("/typo3conf/ext/sportms/Resources/Public/Icons/tx_sportms_domain_model_venue.svg");
 }
 
-#tx-sportms {
+.tx-sportms {
     display: block;
 }
 
-#tx-sportms #tx-sportms-container {
+.tx-sportms .tx-sportms-container {
     font-family: sans-serif;
 }
 
-#tx-sportms #tx-sportms-container .tx-sportms-list-filter {
+.tx-sportms .tx-sportms-container .tx-sportms-list-filter {
     background-color: var(--light-gray);
 }
 
-#tx-sportms #tx-sportms-container .tx-sportms-list-filter .form-group:last-of-type {
+.tx-sportms .tx-sportms-container .tx-sportms-list-filter .form-group:last-of-type {
     margin-bottom: 0;
 }
 
-#tx-sportms #tx-sportms-container .tx-sportms-list-filter .form-group .col-xs-0 {
+.tx-sportms .tx-sportms-container .tx-sportms-list-filter .form-group .col-xs-0 {
     margin: 0;
     padding: 0;
 }
 
-#tx-sportms #tx-sportms-container .tx-sportms-list-filter .input-group-addon {
+.tx-sportms .tx-sportms-container .tx-sportms-list-filter .input-group-addon {
 	padding: 4px;
 }
 
-#tx-sportms #tx-sportms-container .tx-sportms-list-filter .input-group-addon .sportmsicon {
+.tx-sportms .tx-sportms-container .tx-sportms-list-filter .input-group-addon .sportmsicon {
 	background: var(--regular-red);
 	display: block;
 	height: 20px;
@@ -149,9 +149,9 @@
  * CLUB
  *
  */
-#tx-sportms #tx-sportms-container .club-official-startdate,
-#tx-sportms #tx-sportms-container .club-official-enddate,
-#tx-sportms #tx-sportms-container .club-official-duration {
+.tx-sportms .tx-sportms-container .club-official-startdate,
+.tx-sportms .tx-sportms-container .club-official-enddate,
+.tx-sportms .tx-sportms-container .club-official-duration {
     text-align: center;
 }
 
@@ -161,21 +161,21 @@
  * SPORTMS
  *
  */
-#tx-sportms #tx-sportms-container #tx-sportms-sportms-dbstats .tx-sportms-dbstat {
+.tx-sportms .tx-sportms-container .tx-sportms-sportms-dbstats .tx-sportms-dbstat {
     margin: 25px 0 0 0;
 }
 
-#tx-sportms #tx-sportms-container #tx-sportms-sportms-dbstats .tx-sportms-dbstat:last-of-type {
+.tx-sportms .tx-sportms-container .tx-sportms-sportms-dbstats .tx-sportms-dbstat:last-of-type {
     margin-bottom: 25px;
 }
 
-#tx-sportms #tx-sportms-container #tx-sportms-sportms-dbstats .tx-sportms-dbstat .tx-sportms-dbstat-image,
-#tx-sportms #tx-sportms-container #tx-sportms-sportms-dbstats .tx-sportms-dbstat .tx-sportms-dbstat-label {
+.tx-sportms .tx-sportms-container .tx-sportms-sportms-dbstats .tx-sportms-dbstat .tx-sportms-dbstat-image,
+.tx-sportms .tx-sportms-container .tx-sportms-sportms-dbstats .tx-sportms-dbstat .tx-sportms-dbstat-label {
     background-color: var(--regular-gray);
     padding: 10px;
 }
 
-#tx-sportms #tx-sportms-container #tx-sportms-sportms-dbstats .tx-sportms-dbstat .tx-sportms-dbstat-image img {
+.tx-sportms .tx-sportms-container .tx-sportms-sportms-dbstats .tx-sportms-dbstat .tx-sportms-dbstat-image img {
     background-color: white;
     height: auto !important;
     max-width: 100%;
@@ -183,7 +183,7 @@
     width: 100%;
 }
 
-#tx-sportms #tx-sportms-container #tx-sportms-sportms-dbstats .tx-sportms-dbstat .tx-sportms-dbstat-label {
+.tx-sportms .tx-sportms-container .tx-sportms-sportms-dbstats .tx-sportms-dbstat .tx-sportms-dbstat-label {
     padding-top: 0;
     text-align: center;
 }
@@ -194,7 +194,7 @@
  * CLUBSECTION
  *
  */
-#tx-sportms #tx-sportms-container #tx-sportms-club-list td.tx-sportms-club-image {
+.tx-sportms .tx-sportms-container .tx-sportms-club-list td.tx-sportms-club-image {
     text-align: center;
 }
 
@@ -204,7 +204,7 @@
  * PERSON
  *
  */
-#tx-sportms-container .tx-sportms-person-show .label {
+.tx-sportms-container .tx-sportms-person-show .label {
     background-color: #d5d5d5;
     border-bottom: 1px solid #ffffff;
     border-radius: 0;
