@@ -11,6 +11,10 @@
     mask: url("/typo3conf/ext/sportms/Resources/Public/Icons/tx_sportms_domain_model_club.svg");
 }
 
+.sportmsicon.sportmsicon-clubsection {
+    mask: url("/typo3conf/ext/sportms/Resources/Public/Icons/tx_sportms_domain_model_clubsection.svg");
+}
+
 .sportmsicon.sportmsicon-competition {
     mask: url("/typo3conf/ext/sportms/Resources/Public/Icons/tx_sportms_domain_model_competition.svg");
 }
@@ -27,16 +31,16 @@
     mask: url("/typo3conf/ext/sportms/Resources/Public/Icons/tx_sportms_domain_model_season.svg");
 }
 
-.sportmsicon.sportmsicon-section {
-    mask: url("/typo3conf/ext/sportms/Resources/Public/Icons/tx_sportms_domain_model_section.svg");
+.sportmsicon.sportmsicon-sport {
+    mask: url("/typo3conf/ext/sportms/Resources/Public/Icons/tx_sportms_domain_model_sport.svg");
 }
 
-.sportmsicon.sportmsicon-sectionagegroup {
-    mask: url("/typo3conf/ext/sportms/Resources/Public/Icons/tx_sportms_domain_model_sectionagegroup.svg");
+.sportmsicon.sportmsicon-sportagegroup {
+    mask: url("/typo3conf/ext/sportms/Resources/Public/Icons/tx_sportms_domain_model_sportagegroup.svg");
 }
 
-.sportmsicon.sportmsicon-sectionagelevel {
-    mask: url("/typo3conf/ext/sportms/Resources/Public/Icons/tx_sportms_domain_model_sectionagelevel.svg");
+.sportmsicon.sportmsicon-sportagelevel {
+    mask: url("/typo3conf/ext/sportms/Resources/Public/Icons/tx_sportms_domain_model_sportagelevel.svg");
 }
 
 .sportmsicon.sportmsicon-team {
