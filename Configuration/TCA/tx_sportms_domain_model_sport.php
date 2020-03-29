@@ -28,7 +28,7 @@ return array(
 		'showRecordFieldList' => 'label',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'label, --palette--;;team_individual, sport_types,
+		'1' => array('showitem' => 'label, --palette--;;team_individual, sport_types, sport_age_groups,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab_visibility,
 		                                --palette--;;visible,
 		                                --palette--;;visible_date,
@@ -191,6 +191,27 @@ return array(
 				'autoSizeMax' => 30,
 				'maxitems' => 9999,
 				'multiple' => 0,
+			),
+		),
+		'sport_age_groups' => array(
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sport.sport_age_groups',
+			'config' => array(
+				'appearance' => array(
+					'enabledControls' => [
+						'info' => false,
+						'new' => true,
+						'sort' => false,
+						'hide' => true,
+						'dragdrop' => true,
+						'delete' => true,
+						'localize' => true,
+					],
+					'levelLinksPosition' => 'bottom',
+					'useSortable' => 1,
+				),
+				'foreign_field' => 'section',
+				'foreign_table' => 'tx_sportms_domain_model_sportagegroup',
+				'type' => 'inline',
 			),
 		),
 		
