@@ -7,7 +7,7 @@
         <thead>
         <tr>
             <th>
-                <f:translate key="tx_sportms_domain_model_competition.section"/>
+                <f:translate key="tx_sportms_domain_model_competition.sport"/>
             </th>
             <th>
                 <f:translate key="tx_sportms_domain_model_competition.name"/>
@@ -27,12 +27,12 @@
                 <f:for as="competition" each="{competitions}">
                     <tr>
                         <td>
-                            <sportms:link.action Section="{competition.section}">{competition.section.label}</sportms:link.action>
+                            {competition.sport.label}
                         </td>
                         <td>
                             <sportms:link.action Competition="{competition}">{competition.name}</sportms:link.action>
                         </td>
-                        <td>{competition.sectionAgeLevel.label}</td>
+                        <td>{competition.sportAgeLevel.label}</td>
                         <td>{competition.competitionType.label}</td>
                         <td>
                             <f:count>{competition.competitionSeasons}</f:count>
