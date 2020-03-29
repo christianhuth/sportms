@@ -1243,6 +1243,9 @@
 			<trans-unit id="tx_sportms_domain_model_sportagelevel">
 				<source>Altersstufe</source>
 			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_sportagelevel.sport_age_group">
+				<source>Altersgruppe</source>
+			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_sportagelevel.label">
 				<source>Bezeichnung</source>
 			</trans-unit>
