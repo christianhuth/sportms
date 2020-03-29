@@ -50,12 +50,10 @@ plugin.tx_sportms {
 
         season {
             listPid = {$plugin.tx_sportms.settings.season.listPid}
-            showPid = {$plugin.tx_sportms.settings.season.showPid}
         }
 
-        section {
-            listPid = {$plugin.tx_sportms.settings.section.listPid}
-            showPid = {$plugin.tx_sportms.settings.section.showPid}
+        sport {
+            listPid = {$plugin.tx_sportms.settings.sport.listPid}
         }
 
         team {

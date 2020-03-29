@@ -75,15 +75,11 @@ plugin.tx_sportms {
         season {
             # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Season->list
             listPid =
-            # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Season->show
-            showPid =
         }
 
-        section {
-            # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Section->list
+        sport {
+            # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Sport->list
             listPid =
-            # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Section->show
-            showPid =
         }
 
         team {

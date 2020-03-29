@@ -123,7 +123,7 @@
 		}
 		
 		public function initListOfSportMsDomainModels() {
-			$ListOfSportMsDomainModels = "Club, ClubSection, Competition, CompetitionSeason, Game, Person, Season, Section, Team, TeamSeason, Venue";
+			$ListOfSportMsDomainModels = "Club, ClubSection, Competition, CompetitionSeason, Game, Person, Season, Sport, Team, TeamSeason, Venue";
 			$this->setListOfSportMsDomainModels(explode(",", str_replace(" ", "", trim($ListOfSportMsDomainModels))));
 		}
 		

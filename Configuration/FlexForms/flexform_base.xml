@@ -98,10 +98,6 @@
 								<numIndex index="0">Saison</numIndex>
 								<numIndex index="1">--div--</numIndex>
 							</numIndex>
-							<numIndex index="161">
-								<numIndex index="0">Saison (Einzelansicht)</numIndex>
-								<numIndex index="1">Season->show</numIndex>
-							</numIndex>
 							<numIndex index="162">
 								<numIndex index="0">Saison (Listenansicht)</numIndex>
 								<numIndex index="1">Season->list</numIndex>
@@ -109,10 +105,6 @@
 							<numIndex index="170">
 								<numIndex index="0">Sportart</numIndex>
 								<numIndex index="1">--div--</numIndex>
-							</numIndex>
-							<numIndex index="171">
-								<numIndex index="0">Sportart (Einzelansicht)</numIndex>
-								<numIndex index="1">Sport->show</numIndex>
 							</numIndex>
 							<numIndex index="172">
 								<numIndex index="0">Sportart (Listenansicht)</numIndex>
