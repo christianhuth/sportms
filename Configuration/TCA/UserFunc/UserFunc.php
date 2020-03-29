@@ -210,6 +210,12 @@
 			$newLabel = $record['label'] . " (" . $record['short'] . ")";
 			$parameters['title'] = $newLabel;
 		}
+		
+		public function sportAgeLevelLabel(&$parameters, $parentObject) {
+			$record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
+			$newLabel = $record['label'] . " (" . $record['short'] . ")";
+			$parameters['title'] = $newLabel;
+		}
 
 		public function teamSeasonLabel(&$parameters, $parentObject) {
 			$record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
