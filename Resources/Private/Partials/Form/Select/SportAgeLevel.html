@@ -1,0 +1,23 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<f:if condition="{settings.sportAgeGroup.selected} && {settings.sportAgeLevel.sportAgeLevelsSelectbox}">
+    <div class="form-group form-group-sm">
+        <label class="hidden-xs col-sm-3 control-label">Altersstufe:</label>
+        <div class="col-xs-12 col-sm-9">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="sportmsicon sportmsicon-sportagelevel"></i></span>
+                <f:form.select class="form-control" name="selectSportAgeLevel" optionLabelField="label" optionValueField="uid" prependOptionLabel="Alle Altersstufen" prependOptionValue="" value="{value}">
+                    <f:groupedFor as="sportAgeLevelsBySportAgeGroup" each="{options}" groupBy="sportAgeGroup" groupKey="sportAgeGroup">
+                        <f:form.select.optgroup class="form-control" label="{sportAgeGroup.label}" title="{sportAgeGroup.label}"/>
+                        <f:for as="sportAgeLevelBySportAgeGroup" each="{sportAgeLevelsBySportAgeGroup}">
+                            <f:form.select.option value="{sportAgeLevelsBySportAgeGroup.uid}">{sportAgeLevelsBySportAgeGroup.label}</f:form.select.option>
+                        </f:for>
+                    </f:groupedFor>
+                </f:form.select>
+            </div>
+        </div>
+    </div>
+</f:if>
+
+</html>
