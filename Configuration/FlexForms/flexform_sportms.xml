@@ -10,7 +10,7 @@
 		<competitionSeason>EXT:sportms/Configuration/FlexForms/flexform_competitionseason.xml</competitionSeason>
 		<game>EXT:sportms/Configuration/FlexForms/flexform_game.xml</game>
 		<person>EXT:sportms/Configuration/FlexForms/flexform_person.xml</person>
-		<section>EXT:sportms/Configuration/FlexForms/flexform_section.xml</section>
+		<sport>EXT:sportms/Configuration/FlexForms/flexform_sport.xml</sport>
 		<team>EXT:sportms/Configuration/FlexForms/flexform_team.xml</team>
 		<teamSeason>EXT:sportms/Configuration/FlexForms/flexform_teamseason.xml</teamSeason>
 		<venue>EXT:sportms/Configuration/FlexForms/flexform_venue.xml</venue>

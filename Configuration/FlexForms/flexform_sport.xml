@@ -2,62 +2,62 @@
 <T3DataStructure>
 	<ROOT>
 		<TCEforms>
-			<sheetTitle>Abteilung</sheetTitle>
+			<sheetTitle>Sportart</sheetTitle>
 		</TCEforms>
 		<type>array</type>
 		<el>
-			<settings.section.uid>
+			<settings.sport.uid>
 				<TCEforms>
-					<label>Zeige folgende Abteilung</label>
+					<label>Zeige folgende Sportart</label>
 					<displayCond>
 						<OR>
 							<numIndex index="1">FIELD:base.switchableControllerActions:=:ClubSection->show</numIndex>
-							<numIndex index="2">FIELD:base.switchableControllerActions:=:Section->show</numIndex>
+							<numIndex index="2">FIELD:base.switchableControllerActions:=:Sport->show</numIndex>
 						</OR>
 					</displayCond>
 					<config>
 						<type>group</type>
 						<internal_type>db</internal_type>
-						<allowed>tx_sportms_domain_model_section</allowed>
+						<allowed>tx_sportms_domain_model_sport</allowed>
 						<size>1</size>
 						<maxItems>1</maxItems>
 						<minItems>0</minItems>
 						<show_thumbs>1</show_thumbs>
 					</config>
 				</TCEforms>
-			</settings.section.uid>
-			<settings.section.sections>
+			</settings.sport.uid>
+			<settings.sport.sports>
 				<TCEforms>
-					<label>Welche Abteilungen sollen angezeigt werden?</label>
+					<label>Welche Sportarten sollen angezeigt werden?</label>
 					<displayCond>
 						<OR>
 							<numIndex index="0">FIELD:base.switchableControllerActions:=:ClubSection->list</numIndex>
 							<numIndex index="1">FIELD:base.switchableControllerActions:=:Competition->list</numIndex>
 							<numIndex index="2">FIELD:base.switchableControllerActions:=:CompetitionSeason->list</numIndex>
 							<numIndex index="3">FIELD:base.switchableControllerActions:=:Game->list</numIndex>
-							<numIndex index="4">FIELD:base.switchableControllerActions:=:Section->list</numIndex>
+							<numIndex index="4">FIELD:base.switchableControllerActions:=:Sport->list</numIndex>
 							<numIndex index="5">FIELD:base.switchableControllerActions:=:Team->list</numIndex>
 							<numIndex index="6">FIELD:base.switchableControllerActions:=:TeamSeason->list</numIndex>
 						</OR>
 					</displayCond>
 					<config>
-						<foreign_table>tx_sportms_domain_model_section</foreign_table>
+						<foreign_table>tx_sportms_domain_model_sport</foreign_table>
 						<foreign_table_where>ORDER BY label ASC</foreign_table_where>
 						<renderType>selectMultipleSideBySide</renderType>
 						<type>select</type>
 					</config>
 				</TCEforms>
-			</settings.section.sections>
-			<settings.section.sectionsSelectbox>
+			</settings.sport.sports>
+			<settings.sport.sportsSelectbox>
 				<TCEforms>
-					<label>Selectbox für Abteilungen?</label>
+					<label>Selectbox für Sportarten?</label>
 					<displayCond>
 						<OR>
 							<numIndex index="0">FIELD:base.switchableControllerActions:=:ClubSection->list</numIndex>
 							<numIndex index="1">FIELD:base.switchableControllerActions:=:Competition->list</numIndex>
 							<numIndex index="2">FIELD:base.switchableControllerActions:=:CompetitionSeason->list</numIndex>
 							<numIndex index="3">FIELD:base.switchableControllerActions:=:Game->list</numIndex>
-							<numIndex index="4">FIELD:base.switchableControllerActions:=:Section->list</numIndex>
+							<numIndex index="4">FIELD:base.switchableControllerActions:=:Sport->list</numIndex>
 							<numIndex index="5">FIELD:base.switchableControllerActions:=:Team->list</numIndex>
 							<numIndex index="6">FIELD:base.switchableControllerActions:=:TeamSeason->list</numIndex>
 						</OR>
@@ -68,8 +68,8 @@
 						<type>check</type>
 					</config>
 				</TCEforms>
-			</settings.section.sectionsSelectbox>
-			<settings.sectionAgeGroup.sectionAgeGroups>
+			</settings.sport.sportsSelectbox>
+			<settings.sportAgeGroup.sportAgeGroups>
 				<TCEforms>
 					<label>Welche Altersgruppen sollen angezeigt werden?</label>
 					<displayCond>
@@ -78,20 +78,20 @@
 							<numIndex index="1">FIELD:base.switchableControllerActions:=:Competition->list</numIndex>
 							<numIndex index="2">FIELD:base.switchableControllerActions:=:CompetitionSeason->list</numIndex>
 							<numIndex index="3">FIELD:base.switchableControllerActions:=:Game->list</numIndex>
-							<numIndex index="4">FIELD:base.switchableControllerActions:=:Section->list</numIndex>
+							<numIndex index="4">FIELD:base.switchableControllerActions:=:Sport->list</numIndex>
 							<numIndex index="5">FIELD:base.switchableControllerActions:=:Team->list</numIndex>
 							<numIndex index="6">FIELD:base.switchableControllerActions:=:TeamSeason->list</numIndex>
 						</OR>
 					</displayCond>
 					<config>
-						<foreign_table>tx_sportms_domain_model_sectionagegroup</foreign_table>
+						<foreign_table>tx_sportms_domain_model_sportagegroup</foreign_table>
 						<foreign_table_where>ORDER BY label ASC</foreign_table_where>
 						<renderType>selectMultipleSideBySide</renderType>
 						<type>select</type>
 					</config>
 				</TCEforms>
-			</settings.sectionAgeGroup.sectionAgeGroups>
-			<settings.sectionAgeGroup.sectionAgeGroupsSelectbox>
+			</settings.sportAgeGroup.sportAgeGroups>
+			<settings.sportAgeGroup.sportAgeGroupsSelectbox>
 				<TCEforms>
 					<label>Selectbox für Altersgruppen?</label>
 					<displayCond>
@@ -100,7 +100,7 @@
 							<numIndex index="1">FIELD:base.switchableControllerActions:=:Competition->list</numIndex>
 							<numIndex index="2">FIELD:base.switchableControllerActions:=:CompetitionSeason->list</numIndex>
 							<numIndex index="3">FIELD:base.switchableControllerActions:=:Game->list</numIndex>
-							<numIndex index="4">FIELD:base.switchableControllerActions:=:Section->list</numIndex>
+							<numIndex index="4">FIELD:base.switchableControllerActions:=:Sport->list</numIndex>
 							<numIndex index="5">FIELD:base.switchableControllerActions:=:Team->list</numIndex>
 							<numIndex index="6">FIELD:base.switchableControllerActions:=:TeamSeason->list</numIndex>
 						</OR>
@@ -111,8 +111,8 @@
 						<type>check</type>
 					</config>
 				</TCEforms>
-			</settings.sectionAgeGroup.sectionAgeGroupsSelectbox>
-			<settings.sectionAgeLevel.sectionAgeLevels>
+			</settings.sportAgeGroup.sportAgeGroupsSelectbox>
+			<settings.sportAgeLevel.sportAgeLevels>
 				<TCEforms>
 					<label>Welche Alterstufen sollen angezeigt werden?</label>
 					<displayCond>
@@ -121,20 +121,20 @@
 							<numIndex index="1">FIELD:base.switchableControllerActions:=:Competition->list</numIndex>
 							<numIndex index="2">FIELD:base.switchableControllerActions:=:CompetitionSeason->list</numIndex>
 							<numIndex index="3">FIELD:base.switchableControllerActions:=:Game->list</numIndex>
-							<numIndex index="4">FIELD:base.switchableControllerActions:=:Section->list</numIndex>
+							<numIndex index="4">FIELD:base.switchableControllerActions:=:Sport->list</numIndex>
 							<numIndex index="5">FIELD:base.switchableControllerActions:=:Team->list</numIndex>
 							<numIndex index="6">FIELD:base.switchableControllerActions:=:TeamSeason->list</numIndex>
 						</OR>
 					</displayCond>
 					<config>
-						<foreign_table>tx_sportms_domain_model_sectionagelevel</foreign_table>
+						<foreign_table>tx_sportms_domain_model_sportagelevel</foreign_table>
 						<foreign_table_where>ORDER BY label ASC</foreign_table_where>
 						<renderType>selectMultipleSideBySide</renderType>
 						<type>select</type>
 					</config>
 				</TCEforms>
-			</settings.sectionAgeLevel.sectionAgeLevels>
-			<settings.sectionAgeLevel.sectionAgeLevelsSelectbox>
+			</settings.sportAgeLevel.sportAgeLevels>
+			<settings.sportAgeLevel.sportAgeLevelsSelectbox>
 				<TCEforms>
 					<label>Selectbox für Alterstufen?</label>
 					<displayCond>
@@ -143,7 +143,7 @@
 							<numIndex index="1">FIELD:base.switchableControllerActions:=:Competition->list</numIndex>
 							<numIndex index="2">FIELD:base.switchableControllerActions:=:CompetitionSeason->list</numIndex>
 							<numIndex index="3">FIELD:base.switchableControllerActions:=:Game->list</numIndex>
-							<numIndex index="4">FIELD:base.switchableControllerActions:=:Section->list</numIndex>
+							<numIndex index="4">FIELD:base.switchableControllerActions:=:Sport->list</numIndex>
 							<numIndex index="5">FIELD:base.switchableControllerActions:=:Team->list</numIndex>
 							<numIndex index="6">FIELD:base.switchableControllerActions:=:TeamSeason->list</numIndex>
 						</OR>
@@ -154,7 +154,7 @@
 						<type>check</type>
 					</config>
 				</TCEforms>
-			</settings.sectionAgeLevel.sectionAgeLevelsSelectbox>
+			</settings.sportAgeLevel.sportAgeLevelsSelectbox>
 		</el>
 	</ROOT>
 </T3DataStructure>
