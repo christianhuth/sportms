@@ -171,7 +171,7 @@ return array(
 			'config' => array(
 				'eval' => 'required',
 				'foreign_table' => 'tx_sportms_domain_model_sportagegroup',
-				'foreign_table_where' => ' AND tx_sportms_domain_model_sportagegroup.section = ###REC_FIELD_sport###) ORDER BY tx_sportms_domain_model_sportagegroup.label ASC',
+				'foreign_table_where' => ' AND tx_sportms_domain_model_sportagegroup.sport = ###REC_FIELD_sport###) ORDER BY tx_sportms_domain_model_sportagegroup.label ASC',
 				'items' => Array (
 					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ''),
 				),
