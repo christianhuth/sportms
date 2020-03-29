@@ -198,6 +198,9 @@
 			<trans-unit id="tx_sportms_domain_model_clubsection">
 				<source>Vereinsabteilung</source>
 			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_clubsection.club">
+				<source>Verein</source>
+			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_clubsection.section">
 				<source>Vereinsabteilung</source>
 			</trans-unit>
