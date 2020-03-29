@@ -135,10 +135,10 @@ CREATE TABLE tx_sportms_domain_model_clubsectionofficialjob (
 # Table structure for table 'tx_sportms_domain_model_competition'
 #
 CREATE TABLE tx_sportms_domain_model_competition (
-    section int(11) DEFAULT '0' NOT NULL,
+    sport int(11) DEFAULT '0' NOT NULL,
+    sport_age_group int(11) DEFAULT '0' NOT NULL,
+    sport_age_level int(11) DEFAULT '0' NOT NULL,
     competition_type int(11) DEFAULT '0' NOT NULL,
-    section_age_group int(11) DEFAULT '0' NOT NULL,
-    section_age_level int(11) DEFAULT '0' NOT NULL,
 	name varchar(255) DEFAULT '0' NOT NULL,
 	name_short varchar(255) DEFAULT NULL,
 	competition_seasons int(11) DEFAULT NULL,

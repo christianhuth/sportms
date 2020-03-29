@@ -288,17 +288,17 @@
 			<trans-unit id="tx_sportms_domain_model_competition">
 				<source>Wettbewerb</source>
 			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_competition.section">
-				<source>Abteilung</source>
+			<trans-unit id="tx_sportms_domain_model_competition.sport">
+				<source>Sportart</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_competition.sport_age_group">
+				<source>Altersgruppe</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_competition.sport_age_level">
+				<source>Altersstufe</source>
 			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_competition.competition_type">
 				<source>Wettbewerbsart</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_competition.section_age_group">
-				<source>Altersgruppe</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_competition.section_age_level">
-				<source>Altersstufe</source>
 			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_competition.name">
 				<source>Wettbewerbsname</source>
@@ -370,8 +370,8 @@
 			<trans-unit id="tx_sportms_domain_model_game">
 				<source>Spiel</source>
 			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_game.section">
-				<source>Abteilung</source>
+			<trans-unit id="tx_sportms_domain_model_game.sport">
+				<source>Sportart</source>
 			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_game.season">
 				<source>Saison</source>
@@ -715,8 +715,8 @@
 			<trans-unit id="tx_sportms_domain_model_gamelineup.team_season_squad_member">
 				<source>Person</source>
 			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_gamelineup.section_position">
-				<source>Detailposition</source>
+			<trans-unit id="tx_sportms_domain_model_gamelineup.sport_position">
+				<source>Position</source>
 			</trans-unit>
 
 
@@ -1048,14 +1048,14 @@
 			<trans-unit id="tx_sportms_domain_model_personprofile">
 				<source>Profil</source>
 			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_personprofile.section">
-				<source>Abteilung</source>
+			<trans-unit id="tx_sportms_domain_model_personprofile.sport">
+				<source>Sportart</source>
 			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_personprofile.section_position_group">
+			<trans-unit id="tx_sportms_domain_model_personprofile.sport_position_group">
+				<source>Positionsgruppe</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_personprofile.sport_position">
 				<source>Position</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_personprofile.section_position">
-				<source>Detailposition</source>
 			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_personprofile.profiletype">
 				<source>Profilart</source>
@@ -1378,11 +1378,11 @@
 			<trans-unit id="tx_sportms_domain_model_teamseasonsquadmember.person">
 				<source>Spieler/Spielerin</source>
 			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_teamseasonsquadmember.section_position_group">
-				<source>Position</source>
+			<trans-unit id="tx_sportms_domain_model_teamseasonsquadmember.sport_position_group">
+				<source>Positionsgruppe</source>
 			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_teamseasonsquadmember.section_position">
-				<source>Detailposition</source>
+			<trans-unit id="tx_sportms_domain_model_teamseasonsquadmember.sport_position">
+				<source>Position</source>
 			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_teamseasonsquadmember.squad_number">
 				<source>Rückennummer</source>

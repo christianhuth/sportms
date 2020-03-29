@@ -95,58 +95,58 @@
 		}
 		
 		/**
-		 * @return Sport
+		 * @return \Balumedien\Sportms\Domain\Model\Sport
 		 */
-		public function getSport(): Sport {
+		public function getSport(): \Balumedien\Sportms\Domain\Model\Sport {
 			return $this->sport;
 		}
 		
 		/**
-		 * @param Sport $sport
+		 * @param \Balumedien\Sportms\Domain\Model\Sport $sport
 		 */
-		public function setSport(Sport $sport): void {
+		public function setSport(\Balumedien\Sportms\Domain\Model\Sport $sport): void {
 			$this->sport = $sport;
 		}
 		
 		/**
-		 * @return SportAgeGroup
+		 * @return \Balumedien\Sportms\Domain\Model\SportAgeGroup
 		 */
-		public function getSportAgeGroup(): SportAgeGroup {
+		public function getSportAgeGroup(): \Balumedien\Sportms\Domain\Model\SportAgeGroup {
 			return $this->sportAgeGroup;
 		}
 		
 		/**
-		 * @param SportAgeGroup $sportAgeGroup
+		 * @param \Balumedien\Sportms\Domain\Model\SportAgeGroup $sportAgeGroup
 		 */
-		public function setSportAgeGroup(SportAgeGroup $sportAgeGroup): void {
+		public function setSportAgeGroup(\Balumedien\Sportms\Domain\Model\SportAgeGroup $sportAgeGroup): void {
 			$this->sportAgeGroup = $sportAgeGroup;
 		}
 		
 		/**
-		 * @return SportAgeLevel
+		 * @return \Balumedien\Sportms\Domain\Model\SportAgeLevel
 		 */
-		public function getSportAgeLevel(): SportAgeLevel {
+		public function getSportAgeLevel(): \Balumedien\Sportms\Domain\Model\SportAgeLevel {
 			return $this->sportAgeLevel;
 		}
 		
 		/**
-		 * @param SportAgeLevel $sportAgeLevel
+		 * @param \Balumedien\Sportms\Domain\Model\SportAgeLevel $sportAgeLevel
 		 */
-		public function setSportAgeLevel(SportAgeLevel $sportAgeLevel): void {
+		public function setSportAgeLevel(\Balumedien\Sportms\Domain\Model\SportAgeLevel $sportAgeLevel): void {
 			$this->sportAgeLevel = $sportAgeLevel;
 		}
 		
 		/**
-		 * @return CompetitionType
+		 * @return \Balumedien\Sportms\Domain\Model\CompetitionType
 		 */
-		public function getCompetitionType(): CompetitionType {
+		public function getCompetitionType(): \Balumedien\Sportms\Domain\Model\CompetitionType {
 			return $this->competitionType;
 		}
 		
 		/**
-		 * @param CompetitionType $competitionType
+		 * @param \Balumedien\Sportms\Domain\Model\CompetitionType $competitionType
 		 */
-		public function setCompetitionType(CompetitionType $competitionType): void {
+		public function setCompetitionType(\Balumedien\Sportms\Domain\Model\CompetitionType $competitionType): void {
 			$this->competitionType = $competitionType;
 		}
 		
