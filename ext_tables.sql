@@ -468,29 +468,6 @@ CREATE TABLE tx_sportms_domain_model_section (
 );
 
 #
-# Table structure for table 'tx_sportms_domain_model_sectionagegroup'
-#
-CREATE TABLE tx_sportms_domain_model_sectionagegroup (
-	section int(11) DEFAULT NULL,
-	label varchar(255) DEFAULT NULL,
-	short varchar(255) DEFAULT NULL,
-	section_age_levels int(11) DEFAULT NULL,
-    slug varchar(2048) DEFAULT '',
-	sorting int(11) DEFAULT '0' NOT NULL,
-);
-
-#
-# Table structure for table 'tx_sportms_domain_model_sectionagelevel'
-#
-CREATE TABLE tx_sportms_domain_model_sectionagelevel (
-	section_age_group int(11) DEFAULT NULL,
-	label varchar(255) DEFAULT NULL,
-	short varchar(255) DEFAULT NULL,
-    slug varchar(2048) DEFAULT '',
-	sorting int(11) DEFAULT '0' NOT NULL,
-);
-
-#
 # Table structure for table 'tx_sportms_domain_model_sectionposition'
 #
 CREATE TABLE tx_sportms_domain_model_sectionposition (
@@ -520,7 +497,32 @@ CREATE TABLE tx_sportms_domain_model_sport (
     is_team_sport tinyint(4) unsigned DEFAULT '0' NOT NULL,
     is_individual_sport tinyint(4) unsigned DEFAULT '0' NOT NULL,
     sport_types int(11) DEFAULT NULL,
+    sport_position_groups int(11) DEFAULT NULL,
+    sport_age_groups int(11) DEFAULT NULL,
     slug varchar(2048) DEFAULT '',
+);
+
+#
+# Table structure for table 'tx_sportms_domain_model_sportagegroup'
+#
+CREATE TABLE tx_sportms_domain_model_sportagegroup (
+    sport int(11) DEFAULT NULL,
+    label varchar(255) DEFAULT NULL,
+    short varchar(255) DEFAULT NULL,
+    sport_age_levels int(11) DEFAULT NULL,
+    slug varchar(2048) DEFAULT '',
+    sorting int(11) DEFAULT '0' NOT NULL,
+);
+
+#
+# Table structure for table 'tx_sportms_domain_model_sportagelevel'
+#
+CREATE TABLE tx_sportms_domain_model_sportagelevel (
+    sport_age_group int(11) DEFAULT NULL,
+    label varchar(255) DEFAULT NULL,
+    short varchar(255) DEFAULT NULL,
+    slug varchar(2048) DEFAULT '',
+    sorting int(11) DEFAULT '0' NOT NULL,
 );
 
 #

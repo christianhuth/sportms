@@ -23,7 +23,7 @@
 		protected $sectionPositionGroups;
 		
 		/**
-		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\SectionAgeGroup>
+		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\SportAgeGroup>
 		 */
 		protected $sectionAgeGroups;
 		

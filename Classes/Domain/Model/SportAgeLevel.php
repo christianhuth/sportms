@@ -3,12 +3,12 @@
 	namespace Balumedien\Sportms\Domain\Model;
 	
 	/**
-	 * SectionAgeLevel
+	 * SportAgeLevel
 	 */
-	class SectionAgeLevel extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
+	class SportAgeLevel extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 		
 		/**
-		 * @var \Balumedien\Sportms\Domain\Model\SectionAgeGroup
+		 * @var \Balumedien\Sportms\Domain\Model\SportAgeGroup
 		 */
 		protected $sectionAgeGroup;
 		
@@ -23,16 +23,16 @@
 		protected $short;
 		
 		/**
-		 * @return \Balumedien\Sportms\Domain\Model\SectionAgeGroup
+		 * @return \Balumedien\Sportms\Domain\Model\SportAgeGroup
 		 */
-		public function getSectionAgeGroup(): \Balumedien\Sportms\Domain\Model\SectionAgeGroup {
+		public function getSectionAgeGroup(): \Balumedien\Sportms\Domain\Model\SportAgeGroup {
 			return $this->sectionAgeGroup;
 		}
 		
 		/**
-		 * @param \Balumedien\Sportms\Domain\Model\SectionAgeGroup $sectionAgeGroup
+		 * @param \Balumedien\Sportms\Domain\Model\SportAgeGroup $sectionAgeGroup
 		 */
-		public function setSectionAgeGroup(\Balumedien\Sportms\Domain\Model\SectionAgeGroup $sectionAgeGroup): void {
+		public function setSectionAgeGroup(\Balumedien\Sportms\Domain\Model\SportAgeGroup $sectionAgeGroup): void {
 			$this->sectionAgeGroup = $sectionAgeGroup;
 		}
 		

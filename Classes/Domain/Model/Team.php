@@ -18,12 +18,12 @@
 		protected $clubSection;
 		
 		/**
-		 * @var \Balumedien\Sportms\Domain\Model\SectionAgeGroup
+		 * @var \Balumedien\Sportms\Domain\Model\SportAgeGroup
 		 */
 		protected $sectionAgeGroup;
 		
 		/**
-		 * @var \Balumedien\Sportms\Domain\Model\SectionAgeLevel
+		 * @var \Balumedien\Sportms\Domain\Model\SportAgeLevel
 		 */
 		protected $sectionAgeLevel;
 		
@@ -94,28 +94,28 @@
 		}
 		
 		/**
-		 * @return SectionAgeGroup
+		 * @return SportAgeGroup
 		 */
 		public function getSectionAgeGroup() {
 			return $this->sectionAgeGroup;
 		}
 		
 		/**
-		 * @param SectionAgeGroup $sectionAgeGroup
+		 * @param SportAgeGroup $sectionAgeGroup
 		 */
 		public function setSectionAgeGroup($sectionAgeGroup) {
 			$this->sectionAgeGroup = $sectionAgeGroup;
 		}
 		
 		/**
-		 * @return SectionAgeLevel
+		 * @return SportAgeLevel
 		 */
 		public function getSectionAgeLevel() {
 			return $this->sectionAgeLevel;
 		}
 		
 		/**
-		 * @param SectionAgeLevel $sectionAgeLevel
+		 * @param SportAgeLevel $sectionAgeLevel
 		 */
 		public function setSectionAgeLevel($sectionAgeLevel) {
 			$this->sectionAgeLevel = $sectionAgeLevel;

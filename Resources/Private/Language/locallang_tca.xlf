@@ -1158,32 +1158,32 @@
 			</trans-unit>
 
 
-            <!-- Domain Model SectionAgeGroup -->
-			<trans-unit id="tx_sportms_domain_model_sectionagegroup">
+            <!-- Domain Model SportAgeGroup -->
+			<trans-unit id="tx_sportms_domain_model_sportagegroup">
 				<source>Altersgruppe</source>
 			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_sectionagegroup.section">
-				<source>Abteilung</source>
+			<trans-unit id="tx_sportms_domain_model_sportagegroup.sport">
+				<source>Sportart</source>
 			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_sectionagegroup.label">
+			<trans-unit id="tx_sportms_domain_model_sportagegroup.label">
 				<source>Bezeichnung</source>
 			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_sectionagegroup.short">
+			<trans-unit id="tx_sportms_domain_model_sportagegroup.short">
 				<source>Kurzform</source>
 			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_sectionagegroup.section_age_levels">
+			<trans-unit id="tx_sportms_domain_model_sportagegroup.section_age_levels">
 				<source>Altersstufen</source>
 			</trans-unit>
 
 
-            <!-- Domain Model SectionAgeLevel -->
-			<trans-unit id="tx_sportms_domain_model_sectionagelevel">
+            <!-- Domain Model SportAgeLevel -->
+			<trans-unit id="tx_sportms_domain_model_sportagelevel">
 				<source>Altersstufe</source>
 			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_sectionagelevel.label">
+			<trans-unit id="tx_sportms_domain_model_sportagelevel.label">
 				<source>Bezeichnung</source>
 			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_sectionagelevel.short">
+			<trans-unit id="tx_sportms_domain_model_sportagelevel.short">
 				<source>Kurzform</source>
 			</trans-unit>
 
