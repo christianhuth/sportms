@@ -17,7 +17,7 @@ return array(
 			'endtime' => 'endtime',
 		),
 		'hideTable' => TRUE,
-		'iconfile' => 'tx_sportms_domain_model_sportpositiongroup.svg',
+		'iconfile' => 'EXT:sportms/Resources/Public/Icons/tx_sportms_domain_model_sportpositiongroup.svg',
 		'label' => 'label',
 		'searchFields' => '',
 		'sortby' => 'sorting',
