@@ -16,19 +16,19 @@
 		protected $gameRepository;
 		
 		/**
-		 * @var \Balumedien\Sportms\Domain\Repository\SectionRepository
+		 * @var \Balumedien\Sportms\Domain\Repository\SportRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
 		protected $sectionRepository;
 		
 		/**
-		 * @var \Balumedien\Sportms\Domain\Repository\SectionAgeGroupRepository
+		 * @var \Balumedien\Sportms\Domain\Repository\SportAgeGroupRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
 		protected $sectionAgeGroupRepository;
 		
 		/**
-		 * @var \Balumedien\Sportms\Domain\Repository\SectionAgeLevelRepository
+		 * @var \Balumedien\Sportms\Domain\Repository\SportAgeLevelRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
 		protected $sectionAgeLevelRepository;

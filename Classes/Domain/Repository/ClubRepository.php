@@ -2,17 +2,17 @@
 	
 	namespace Balumedien\Sportms\Domain\Repository;
 	
-	class SectionRepository extends SportMSBaseRepository {
+	class ClubRepository extends SportMSBaseRepository {
 		
 		protected $defaultOrderings = array(
-			'label' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING
+			'name' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING
 		);
 		
-		public function findAll(string $sectionUids = null) {
+		public function findAll(string $clubUids = null) {
 			$query = $this->createQuery();
 			$constraints = [];
-			if($sectionUids) {
-				$constraints[] = $query->in('uid', explode(",", $sectionUids));
+			if($clubUids) {
+				$constraints[] = $query->in('uid', explode(",", $clubUids));
 			}
 			if($constraints) {
 				$query->matching($query->logicalAnd($constraints));

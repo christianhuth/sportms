@@ -7,27 +7,27 @@
 	 */
 	class SportController extends SportMSBaseController {
 		
-		protected $model = 'club';
+		protected $model = 'sport';
 		
 		/**
-		 * @var \Balumedien\Sportms\Domain\Repository\ClubRepository
+		 * @var \Balumedien\Sportms\Domain\Repository\SportRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
-		protected $clubRepository;
+		protected $sportRepository;
 		
 		/**
 		 * Initializes the controller before invoking an action method.
 		 * Use this method to solve tasks which all actions have in common.
 		 */
-		public function initializeAction(): void {
+		public function initializeAction() {
 			$this->mapRequestsToSettings();
 		}
 		
 		/**
 		 * Use this method to solve tasks which all actions have in common, when VIEW-Context is needed
 		 */
-		public function initializeActions(): void {
-			$listOfPossibleShowViews = 'index,officials,sections';
+		public function initializeActions() {
+			$listOfPossibleShowViews = 'index';
 			$this->determineShowView($this->model);
 			$this->determineShowViews($this->model, $listOfPossibleShowViews);
 			$this->determineShowNavigationViews($this->model, $listOfPossibleShowViews);
@@ -36,25 +36,19 @@
 		
 		/**
 		 * @return void
-		 * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
 		 */
-		public function listAction(): void {
+		public function listAction() {
 			$this->initializeActions();
-			$clubs = $this->clubRepository->findAll($this->getClubsFilter());
-			$this->view->assign('clubs', $clubs);
+			$sports = $this->sportRepository->findAll($this->getSportsFilter());
+			$this->view->assign('sports', $sports);
 		}
 		
 		/**
-		 * @param \Balumedien\Sportms\Domain\Model\Club $club
+		 * @param \Balumedien\Sportms\Domain\Model\Sport $sport
 		 */
-		public function showAction(\Balumedien\Sportms\Domain\Model\Club $club = NULL): void {
+		public function showAction(\Balumedien\Sportms\Domain\Model\Sport $sport = NULL) {
 			$this->initializeActions();
-			if($club === NULL) {
-				// TODO: CHECK IF SETTINGS IS SET ELSE DIE
-				$clubUid = $this->settings['club']['uid'];
-				$club = $this->clubRepository->findByUid($clubUid);
-			}
-			$this->view->assign('club', $club);
+			$this->view->assign('sport', $sport);
 		}
 		
 	}

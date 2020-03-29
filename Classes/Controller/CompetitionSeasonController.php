@@ -16,22 +16,22 @@
 		protected $competitionSeasonRepository;
 		
 		/**
-		 * @var \Balumedien\Sportms\Domain\Repository\SectionRepository
+		 * @var \Balumedien\Sportms\Domain\Repository\SportRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
-		protected $sectionRepository;
+		protected $sportRepository;
 		
 		/**
-		 * @var \Balumedien\Sportms\Domain\Repository\SectionAgeGroupRepository
+		 * @var \Balumedien\Sportms\Domain\Repository\SportAgeGroupRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
-		protected $sectionAgeGroupRepository;
+		protected $sportAgeGroupRepository;
 		
 		/**
-		 * @var \Balumedien\Sportms\Domain\Repository\SectionAgeLevelRepository
+		 * @var \Balumedien\Sportms\Domain\Repository\SportAgeLevelRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
-		protected $sectionAgeLevelRepository;
+		protected $sportAgeLevelRepository;
 		
 		/**
 		 * @var \Balumedien\Sportms\Domain\Repository\CompetitionTypeRepository

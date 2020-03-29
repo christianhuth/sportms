@@ -5,28 +5,28 @@
 	class GameRepository extends SportMSBaseRepository {
 		
 		protected $defaultOrderings = array(
-			'section.label' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
+			'sport.label' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
 			'competitionSeason.competition.name' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
 			'competitionSeason.competition.competitionType.label' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
-			'competitionSeason.competition.sectionAgeGroup.label' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
-			'competitionSeason.competition.sectionAgeLevel.label' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
+			'competitionSeason.competition.sportAgeGroup.label' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
+			'competitionSeason.competition.sportAgeLevel.label' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
 			'season.seasonName' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
 			'gameday' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
 			'teamSeasonHome.team.name' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
 			'teamSeasonGuest.team.name' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
 		);
 		
-		public function findAll(string $sectionUids = NULL, string $sectionAgeGroupUids = NULL, string $sectionAgeLevelUids = NULL, string $competitionTypeUids = NULL, string $competitionUids = NULL, string $clubUids = NULL, string $teamUids = NULL, string $seasonUids = NULL, string $competitionSeasonGamedayUids = NULL) {
+		public function findAll(string $sportUids = NULL, string $sportAgeGroupUids = NULL, string $sportAgeLevelUids = NULL, string $competitionTypeUids = NULL, string $competitionUids = NULL, string $clubUids = NULL, string $teamUids = NULL, string $seasonUids = NULL, string $competitionSeasonGamedayUids = NULL) {
 			$query = $this->createQuery();
 			$constraints = [];
-			if($sectionUids) {
-				$constraints[] = $query->in('competitionSeason.competition.section', explode(',', $sectionUids));
+			if($sportUids) {
+				$constraints[] = $query->in('competitionSeason.competition.sport', explode(',', $sportUids));
 			}
-			if($sectionAgeGroupUids) {
-				$constraints[] = $query->in('competitionSeason.competition.sectionAgeGroup', explode(',', $sectionAgeGroupUids));
+			if($sportAgeGroupUids) {
+				$constraints[] = $query->in('competitionSeason.competition.sportAgeGroup', explode(',', $sportAgeGroupUids));
 			}
-			if($sectionAgeLevelUids) {
-				$constraints[] = $query->in('competitionSeason.competition.sectionAgeLevel', explode(',', $sectionAgeLevelUids));
+			if($sportAgeLevelUids) {
+				$constraints[] = $query->in('competitionSeason.competition.sportAgeLevel', explode(',', $sportAgeLevelUids));
 			}
 			if($competitionTypeUids) {
 				$constraints[] = $query->in('competitionSeason.competition.competitionType', explode(',', $competitionTypeUids));

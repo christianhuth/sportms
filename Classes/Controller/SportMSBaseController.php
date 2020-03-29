@@ -28,16 +28,16 @@
 			return $this->getFilter('season', 'seasons', $useSelected);
 		}
 		
-		protected function getSectionsFilter($useSelected = TRUE) {
-			return $this->getFilter('section', 'sections', $useSelected);
+		protected function getSportsFilter($useSelected = TRUE) {
+			return $this->getFilter('sport', 'sports', $useSelected);
 		}
 		
-		protected function getSectionAgeGroupsFilter($useSelected = TRUE) {
-			return $this->getFilter('sectionAgeGroup', 'sectionAgeGroups', $useSelected);
+		protected function getSportAgeGroupsFilter($useSelected = TRUE) {
+			return $this->getFilter('sportAgeGroup', 'sportAgeGroups', $useSelected);
 		}
 		
-		protected function getSectionAgeLevelsFilter($useSelected = TRUE) {
-			return $this->getFilter('sectionAgeLevel', 'sectionAgeLevels', $useSelected);
+		protected function getSportAgeLevelsFilter($useSelected = TRUE) {
+			return $this->getFilter('sportAgeLevel', 'sportAgeLevels', $useSelected);
 		}
 		
 		protected function getTeamsFilter($useSelected = TRUE) {
@@ -54,19 +54,19 @@
 		
 		protected function mapRequestsToSettings(): void {
 			/* SelectModel */
-			$listOfSelectModels = 'section,sectionAgeGroup,sectionAgeLevel,competitionType,competition,club,team,season,competitionSeasonGameday';
+			$listOfSelectModels = 'sport,sportAgeGroup,sportAgeLevel,competitionType,competition,club,team,season,competitionSeasonGameday';
 			foreach(explode(',', $listOfSelectModels) AS $selectModel) {
 				if($this->request->hasArgument('select' . ucfirst($selectModel))) {
 					$this->settings[$selectModel]['selected'] = $this->request->getArgument('select' . ucfirst($selectModel));
 				}
 			}
-			/* BugFix, if the sectionAgeGroup has been cleared but not the sectionAgeLevel */
-			if(!$this->settings['sectionAgeGroup']['selected']) {
-				$this->settings['sectionAgeLevel']['selected'] = '';
+			/* BugFix, if the sportAgeGroup has been cleared but not the sportAgeLevel */
+			if(!$this->settings['sportAgeGroup']['selected']) {
+				$this->settings['sportAgeLevel']['selected'] = '';
 			}
-			/* BugFix, if the sectionPositionGroup has been cleared but not the sectionPosition */
-			if(!$this->settings['sectionPositionGroup']['selected']) {
-				$this->settings['sectionPosition']['selected'] = '';
+			/* BugFix, if the sportPositionGroup has been cleared but not the sportPosition */
+			if(!$this->settings['sportPositionGroup']['selected']) {
+				$this->settings['sportPosition']['selected'] = '';
 			}
 			/* ShowView */
 			if($this->request->hasArgument('showView') && $this->request->hasArgument('controller')) {

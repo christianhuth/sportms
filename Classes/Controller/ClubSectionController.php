@@ -3,9 +3,9 @@
 	namespace Balumedien\Sportms\Controller;
 	
 	/**
-	 * SportSectionController
+	 * ClubSectionController
 	 */
-	class SportSectionController extends SportMSBaseController {
+	class ClubSectionController extends SportMSBaseController {
 		
 		protected $model = 'clubSection';
 		
@@ -16,7 +16,7 @@
 		protected $clubSectionRepository;
 		
 		/**
-		 * @var \Balumedien\Sportms\Domain\Repository\SectionRepository
+		 * @var \Balumedien\Sportms\Domain\Repository\SportRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
 		protected $sectionRepository;

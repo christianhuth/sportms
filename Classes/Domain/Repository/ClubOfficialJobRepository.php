@@ -2,7 +2,7 @@
 	
 	namespace Balumedien\Sportms\Domain\Repository;
 	
-	class SportOfficialJobRepository extends SportMSBaseRepository {
+	class ClubOfficialJobRepository extends SportMSBaseRepository {
 		
 		protected $defaultOrderings = [
 			'label' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,

@@ -2,7 +2,7 @@
 	
 	namespace Balumedien\Sportms\Domain\Repository;
 	
-	class SportMembersRepository extends SportMSBaseRepository {
+	class ClubSectionMembersRepository extends SportMSBaseRepository {
 		
 	}
 	

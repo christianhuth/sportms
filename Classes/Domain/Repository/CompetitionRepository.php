@@ -5,24 +5,24 @@
 	class CompetitionRepository extends SportMSBaseRepository {
 		
 		protected $defaultOrderings = array(
-			'section.label' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
+			'sport.label' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
 			'name' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
 			'competitionType.label' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
-			'sectionAgeGroup.label' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
-			'sectionAgeLevel.label' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
+			'sportAgeGroup.label' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
+			'sportAgeLevel.label' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
 		);
 		
-		public function findAll(string $sectionUids = null, string $sectionAgeGroupUids = null, string $sectionAgeLevelUids = null, string $competitionTypeUids = null, string $competitionUids = null) {
+		public function findAll(string $sportUids = null, string $sportAgeGroupUids = null, string $sportAgeLevelUids = null, string $competitionTypeUids = null, string $competitionUids = null) {
 			$query = $this->createQuery();
 			$constraints = [];
-			if($sectionUids) {
-				$constraints[] = $query->in('section', explode(',', $sectionUids));
+			if($sportUids) {
+				$constraints[] = $query->in('sport', explode(',', $sportUids));
 			}
-			if($sectionAgeGroupUids) {
-				$constraints[] = $query->in('section_age_group', explode(',', $sectionAgeGroupUids));
+			if($sportAgeGroupUids) {
+				$constraints[] = $query->in('sport_age_group', explode(',', $sportAgeGroupUids));
 			}
-			if($sectionAgeLevelUids) {
-				$constraints[] = $query->in('section_age_level', explode(',', $sectionAgeLevelUids));
+			if($sportAgeLevelUids) {
+				$constraints[] = $query->in('sport_age_level', explode(',', $sportAgeLevelUids));
 			}
 			if($competitionTypeUids) {
 				$constraints[] = $query->in('competition_type', explode(',', $competitionTypeUids));
