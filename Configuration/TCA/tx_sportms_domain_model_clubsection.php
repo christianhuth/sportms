@@ -31,7 +31,7 @@ return array(
 		'showRecordFieldList' => '',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'section, images, club_section_members,
+		'1' => array('showitem' => 'club, sports, images, club_section_members,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_clubsection.tab_contact, addresses, phones, mails, urls,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_clubsection.tab_officials, club_section_officials,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_clubsection.tab_teams, teams,
@@ -137,19 +137,29 @@ return array(
         ],
 
         'club' => array(
-            'config' => array(
-                'type' => 'passthrough',
-            ),
+	        'exclude' => 1,
+	        'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_clubsection.club',
+	        'config' => array(
+		        'foreign_table' => 'tx_sportms_domain_model_club',
+		        'foreign_table_where' => 'ORDER BY tx_sportms_domain_model_club.name ASC',
+		        'items' => array(
+			        array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ""),
+		        ),
+		        'maxItems' => 1,
+		        'renderType' => 'selectSingle',
+		        'size' => 1,
+		        'type' => 'select',
+	        ),
         ),
 		
-		'section' => array(
+		'sports' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_clubsection.section',
 			'config' => array(
 				'foreign_table' => 'tx_sportms_domain_model_section',
 				'foreign_table_where' => 'ORDER BY tx_sportms_domain_model_section.label ASC',
 				'items' => array(
-                    array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", ""),
+                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ""),
                 ),
 				'maxItems' => 1,
 				'renderType' => 'selectSingle',
