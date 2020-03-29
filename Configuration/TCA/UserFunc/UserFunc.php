@@ -31,8 +31,7 @@
 		public function clubSectionLabel(&$parameters, $parentObject) {
 			$record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
 			$club = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_sportms_domain_model_club", $record['club']);
-			$section = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_sportms_domain_model_section", $record['section']);
-			$newLabel = $club['name'] . ": " . $section['label'];
+			$newLabel = $club['name'] . ": " . $record['label'];
 			$parameters['title'] = $newLabel;
 		}
 
