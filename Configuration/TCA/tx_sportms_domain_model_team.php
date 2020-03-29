@@ -154,7 +154,7 @@ return array(
             'config' => array(
                 'eval' => 'required',
                 'foreign_table' => 'tx_sportms_domain_model_sport',
-                'foreign_default_sortby' => 'sorting',
+                'foreign_table_where' => ' ORDER BY tx_sportms_domain_model_sport.label ASC',
                 'items' => Array (
                     array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ''),
                 ),
