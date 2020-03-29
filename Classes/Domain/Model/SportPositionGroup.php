@@ -9,7 +9,6 @@
 		
 		/**
 		 * @var \Balumedien\Sportms\Domain\Model\Sport
-		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
 		 */
 		protected $sport;
 		
