@@ -191,17 +191,6 @@ return array(
 				'autoSizeMax' => 30,
 				'maxitems' => 9999,
 				'multiple' => 0,
-				'fieldControl' => array(
-					'editPopup' => array(
-						'disabled' => true,
-					),
-					'addRecord' => array(
-						'disabled' => true,
-					),
-					'listModule' => array(
-						'disabled' => true,
-					),
-				),
 			),
 		),
 		
