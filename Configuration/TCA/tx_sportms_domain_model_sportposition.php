@@ -30,7 +30,7 @@ return array(
 		'showRecordFieldList' => 'label, label_short, x_position, y_position',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'label, label_short, 
+		'1' => array('showitem' => 'sport_position_group, label, label_short,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sportposition.tab_representation, x_position, y_position,
 		                            --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab_language, sys_language_uid, l10n_parent, l10n_diffsource,
 		                            '),
@@ -69,7 +69,7 @@ return array(
                     ['', 0],
                 ],
                 'foreign_table' => 'tx_test_domain_model_test',
-                'foreign_table_where' => 'AND {#tx_test_domain_model_test}.{#pid}=###CURRENT_PID### AND {#tx_test_domain_model_test}.{#sys_language_uid} IN (-1,0)',
+                'foreign_table_where' => 'AND {#tx_sportms_domain_model_sportposition}.{#pid}=###CURRENT_PID### AND {#tx_sportms_domain_model_sportposition}.{#sys_language_uid} IN (-1,0)',
             ],
         ],
         'l10n_diffsource' => [
