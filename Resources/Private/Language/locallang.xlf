@@ -49,8 +49,8 @@
 			<trans-unit id="tx_sportms_domain_model_competition.short">
 				<source>Kurzform</source>
 			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_competition.section">
-				<source>Abteilung</source>
+			<trans-unit id="tx_sportms_domain_model_competition.sport">
+				<source>Sportart</source>
 			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_competition.ageGroup">
 				<source>Altersgruppe</source>
