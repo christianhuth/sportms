@@ -18,19 +18,19 @@
 		protected $nameShort;
 		
 		/**
-		 * @var \Balumedien\Sportms\Domain\Model\Section
+		 * @var \Balumedien\Sportms\Domain\Model\Sport
 		 */
-		protected $section;
+		protected $sport;
 		
 		/**
 		 * @var \Balumedien\Sportms\Domain\Model\SportAgeGroup
 		 */
-		protected $sectionAgeGroup;
+		protected $sportAgeGroup;
 		
 		/**
 		 * @var \Balumedien\Sportms\Domain\Model\SportAgeLevel
 		 */
-		protected $sectionAgeLevel;
+		protected $sportAgeLevel;
 		
 		/**
 		 * @var \Balumedien\Sportms\Domain\Model\CompetitionType
@@ -62,78 +62,78 @@
 		 *
 		 * @return void
 		 */
-		protected function initStorageObjects() {
-			$this->setCompetitionSeasons(\TYPO3\CMS\Extbase\Persistence\ObjectStorage);
+		protected function initStorageObjects(): void {
+			$this->setCompetitionSeasons(new \TYPO3\CMS\Extbase\Persistence\ObjectStorage());
 		}
 		
 		/**
 		 * @return string
 		 */
-		public function getName() {
+		public function getName(): string {
 			return $this->name;
 		}
 		
 		/**
 		 * @param string $name
 		 */
-		public function setName($name) {
+		public function setName(string $name): void {
 			$this->name = $name;
 		}
 		
 		/**
 		 * @return string
 		 */
-		public function getNameShort() {
+		public function getNameShort(): string {
 			return $this->nameShort;
 		}
 		
 		/**
 		 * @param string $nameShort
 		 */
-		public function setNameShort($nameShort) {
+		public function setNameShort(string $nameShort): void {
 			$this->nameShort = $nameShort;
 		}
 		
 		/**
-		 * @return Section
+		 * @return Sport
 		 */
-		public function getSection() {
-			return $this->section;
+		public function getSport(): Sport {
+			return $this->sport;
 		}
 		
 		/**
-		 * @param Section $section
+		 * @param Sport $sport
 		 */
-		public function setSection($section) {
-			$this->section = $section;
+		public function setSport(Sport $sport): void {
+			$this->sport = $sport;
 		}
 		
 		/**
 		 * @return SportAgeGroup
 		 */
-		public function getSectionAgeGroup() {
-			return $this->sectionAgeGroup;
+		public function getSportAgeGroup(): SportAgeGroup {
+			return $this->sportAgeGroup;
 		}
 		
 		/**
-		 * @param SportAgeGroup $sectionAgeGroup
+		 * @param SportAgeGroup $sportAgeGroup
 		 */
-		public function setSectionAgeGroup($sectionAgeGroup) {
-			$this->sectionAgeGroup = $sectionAgeGroup;
+		public function setSportAgeGroup(SportAgeGroup $sportAgeGroup): void {
+			$this->sportAgeGroup = $sportAgeGroup;
 		}
 		
 		/**
 		 * @return SportAgeLevel
 		 */
-		public function getSectionAgeLevel() {
-			return $this->sectionAgeLevel;
+		public function getSportAgeLevel(): SportAgeLevel {
+			return $this->sportAgeLevel;
 		}
 		
 		/**
-		 * @param SportAgeLevel $sectionAgeLevel
+		 * @param SportAgeLevel $sportAgeLevel
 		 */
-		public function setSectionAgeLevel($sectionAgeLevel) {
-			$this->sectionAgeLevel = $sectionAgeLevel;
+		public function setSportAgeLevel(SportAgeLevel $sportAgeLevel): void {
+			$this->sportAgeLevel = $sportAgeLevel;
 		}
 		
 		/**
@@ -167,14 +167,14 @@
 		/**
 		 * @return bool
 		 */
-		public function isDetailLink() {
+		public function isDetailLink(): bool {
 			return $this->detailLink;
 		}
 		
 		/**
 		 * @param bool $detailLink
 		 */
-		public function setDetailLink($detailLink) {
+		public function setDetailLink(bool $detailLink): void {
 			$this->detailLink = $detailLink;
 		}
 		
