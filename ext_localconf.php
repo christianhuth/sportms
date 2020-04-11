@@ -41,6 +41,4 @@
 		'<INCLUDE_TYPOSCRIPT: source="FILE:EXT:sportms/Configuration/TSconfig/ContentElementWizard.txt">'
 	);
 
-
-
 ?>
