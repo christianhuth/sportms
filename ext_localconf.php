@@ -4,21 +4,15 @@
 		'Balumedien.' . $_EXTKEY,
 		'sportms',
 		array(
+			'SportMS' => 'dbStats',
+			'Club' => 'list',
+			'Competition' => 'list, showIndex',
+			'Game' => 'list, showIndex',
+			'Person' => 'list, showIndex',
+			'Sport' => 'list, showIndex',
+			'Team' => 'list, showIndex',
 		),
 		array(
-			'SportMS' => 'dbStats',
-			'Club' => 'list, show',
-			'ClubSection' => 'list, show',
-			'Competition' => 'list, show',
-			'CompetitionSeason' => 'list, show',
-			'Game' => 'list, show',
-			'Person' => 'list, show',
-			'PersonProfile' => 'list, show',
-			'Season' => 'list, show',
-			'Sport' => 'list, show',
-			'Team' => 'list, show',
-			'TeamSeason' => 'list, show',
-			'Venue' => 'list, show',
 		)
 	);
 	
