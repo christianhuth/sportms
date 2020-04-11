@@ -26,7 +26,7 @@ return array(
 		'versioningWS' => TRUE,
     ),
 	'interface' => array(
-		'showRecordFieldList' => 'name, club, club_section, team_seasons',
+		'showRecordFieldList' => 'name, club, sport, team_seasons',
 	),
 	'types' => array(
 		'1' => array('showitem' => 'club, sport, sport_age_group, sport_age_level, name, dummy,
