@@ -7,7 +7,7 @@
 	 * Register Plugin in the Backend Plugin List
 	 */
 	\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
-		$_EXTKEY,					                        // Extension-Key
+		$_EXTKEY,					                                    // Extension-Key
 		'sportms',					                        // Plugin-Name
 		'Sport Management System',	                        // Plugin-Label
 		'EXT:sportms/Resources/Public/Icons/Extension.svg'   // Extension Icon in Plugin Selection
