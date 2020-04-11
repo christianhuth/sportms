@@ -8,10 +8,10 @@
 	class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 		
 		/**
-		 * @var \Balumedien\Sportms\Domain\Model\Section
+		 * @var \Balumedien\Sportms\Domain\Model\Sport
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
 		 */
-		protected $section;
+		protected $sport;
 		
 		/**
 		 * @var \Balumedien\Sportms\Domain\Model\Season
@@ -325,17 +325,17 @@
 		}
 		
 		/**
-		 * @return \Balumedien\Sportms\Domain\Model\Section
+		 * @return Sport
 		 */
-		public function getSection() {
-			return $this->section;
+		public function getSport(): Sport {
+			return $this->sport;
 		}
 		
 		/**
-		 * @param \Balumedien\Sportms\Domain\Model\Section $section
+		 * @param Sport $sport
 		 */
-		public function setSection(\Balumedien\Sportms\Domain\Model\Section $section): void {
-			$this->section = $section;
+		public function setSport(Sport $sport): void {
+			$this->sport = $sport;
 		}
 		
 		/**

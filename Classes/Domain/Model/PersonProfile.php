@@ -18,19 +18,19 @@
 		protected $profileType;
 		
 		/**
-		 * @var \Balumedien\Sportms\Domain\Model\Section
+		 * @var \Balumedien\Sportms\Domain\Model\Sport
 		 */
-		protected $section;
+		protected $sport;
 		
 		/**
 		 * @var \Balumedien\Sportms\Domain\Model\SportPositionGroup
 		 */
-		protected $sectionPositionGroup;
+		protected $sportPositionGroup;
 		
 		/**
 		 * @var \Balumedien\Sportms\Domain\Model\SportPosition
 		 */
-		protected $sectionPosition;
+		protected $sportPosition;
 		
 		/**
 		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference>
@@ -87,45 +87,45 @@
 		}
 		
 		/**
-		 * @return Section
+		 * @return Sport
 		 */
-		public function getSection() {
-			return $this->section;
+		public function getSport(): Sport {
+			return $this->sport;
 		}
 		
 		/**
-		 * @param Section $section
+		 * @param Sport $sport
 		 */
-		public function setSection($section) {
-			$this->section = $section;
+		public function setSport(Sport $sport): void {
+			$this->sport = $sport;
 		}
 		
 		/**
 		 * @return SportPositionGroup
 		 */
-		public function getSectionPositionGroup() {
-			return $this->sectionPositionGroup;
+		public function getSportPositionGroup(): SportPositionGroup {
+			return $this->sportPositionGroup;
 		}
 		
 		/**
-		 * @param SportPositionGroup $sectionPositionGroup
+		 * @param SportPositionGroup $sportPositionGroup
 		 */
-		public function setSectionPositionGroup($sectionPositionGroup) {
-			$this->sectionPositionGroup = $sectionPositionGroup;
+		public function setSportPositionGroup(SportPositionGroup $sportPositionGroup): void {
+			$this->sportPositionGroup = $sportPositionGroup;
 		}
 		
 		/**
 		 * @return SportPosition
 		 */
-		public function getSectionPosition() {
-			return $this->sectionPosition;
+		public function getSportPosition(): SportPosition {
+			return $this->sportPosition;
 		}
 		
 		/**
-		 * @param SportPosition $sectionPosition
+		 * @param SportPosition $sportPosition
 		 */
-		public function setSectionPosition($sectionPosition) {
-			$this->sectionPosition = $sectionPosition;
+		public function setSportPosition(SportPosition $sportPosition): void {
+			$this->sportPosition = $sportPosition;
 		}
 		
 		/**

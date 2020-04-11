@@ -137,24 +137,24 @@
                                 <numIndex index="1">Season</numIndex>
                             </numIndex>
                             <numIndex index="33">
-                                <numIndex index="0">Section</numIndex>
-                                <numIndex index="1">Section</numIndex>
+                                <numIndex index="0">Sport</numIndex>
+                                <numIndex index="1">Sport</numIndex>
                             </numIndex>
                             <numIndex index="34">
-                                <numIndex index="0">SectionAgeGroup</numIndex>
-                                <numIndex index="1">SectionAgeGroup</numIndex>
+                                <numIndex index="0">SportAgeGroup</numIndex>
+                                <numIndex index="1">SportAgeGroup</numIndex>
                             </numIndex>
                             <numIndex index="35">
-                                <numIndex index="0">SectionAgeLevel</numIndex>
-                                <numIndex index="1">SectionAgeLevel</numIndex>
+                                <numIndex index="0">SportAgeLevel</numIndex>
+                                <numIndex index="1">SportAgeLevel</numIndex>
                             </numIndex>
                             <numIndex index="36">
-                                <numIndex index="0">SectionPosition</numIndex>
-                                <numIndex index="1">SectionPosition</numIndex>
+                                <numIndex index="0">SportPosition</numIndex>
+                                <numIndex index="1">SportPosition</numIndex>
                             </numIndex>
                             <numIndex index="37">
-                                <numIndex index="0">SectionPositionGroup</numIndex>
-                                <numIndex index="1">SectionPositionGroup</numIndex>
+                                <numIndex index="0">SportPositionGroup</numIndex>
+                                <numIndex index="1">SportPositionGroup</numIndex>
                             </numIndex>
                             <numIndex index="38">
                                 <numIndex index="0">Team</numIndex>

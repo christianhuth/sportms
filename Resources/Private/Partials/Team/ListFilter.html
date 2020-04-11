@@ -5,9 +5,9 @@
                  {settings.club.clubsSelectbox}">
     <div class="tx-sportms-list-filter well">
         <f:form action="list" class="form-horizontal" controller="Team" extensionName="sportms" method="POST" noCache="TRUE" noCacheHash="TRUE" pageUid="{settings.team.listPid}" pluginName="sportms">
-            <f:render arguments="{options: sectionsSelectbox,           settings: settings,     value: settings.section.selected}" partial="Form/Select/Section"/>
-            <f:render arguments="{options: sectionAgeGroupsSelectbox,   settings: settings,     value: settings.sectionAgeGroup.selected}" partial="Form/Select/SectionAgeGroup"/>
-            <f:render arguments="{options: sectionAgeLevelsSelectbox,   settings: settings,     value: settings.sectionAgeLevel.selected}" partial="Form/Select/SectionAgeLevel"/>
+            <f:render arguments="{options: sectionsSelectbox,           settings: settings,     value: settings.section.selected}" partial="Form/Select/Sport"/>
+            <f:render arguments="{options: sectionAgeGroupsSelectbox,   settings: settings,     value: settings.sectionAgeGroup.selected}" partial="Form/Select/SportAgeGroup"/>
+            <f:render arguments="{options: sectionAgeLevelsSelectbox,   settings: settings,     value: settings.sectionAgeLevel.selected}" partial="Form/Select/SportAgeLevel"/>
             <f:render arguments="{options: clubsSelectbox,              settings: settings,     value: settings.club.selected}" partial="Form/Select/Club"/>
             <f:render partial="Form/Submit"/>
         </f:form>
