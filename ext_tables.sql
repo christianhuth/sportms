@@ -181,7 +181,7 @@ CREATE TABLE tx_sportms_domain_model_competitiontype (
 # Table structure for table 'tx_sportms_domain_model_game'
 #
 CREATE TABLE tx_sportms_domain_model_game (
-    section int(11) DEFAULT '0' NOT NULL,
+    sport int(11) DEFAULT '0' NOT NULL,
     season int(11) DEFAULT '0' NOT NULL,
     competition_season int(11) DEFAULT '0' NOT NULL,
     team_season_home int(11) DEFAULT '0' NOT NULL,
