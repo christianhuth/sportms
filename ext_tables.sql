@@ -389,8 +389,7 @@ CREATE TABLE tx_sportms_domain_model_person (
 	profile_player tinyint(4) unsigned DEFAULT '0' NOT NULL,
 	profile_official tinyint(4) unsigned DEFAULT '0' NOT NULL,
 	profile_referee tinyint(4) unsigned DEFAULT '0' NOT NULL,
-    slug varchar(2048) DEFAULT '',
-	sorting int(11) DEFAULT '0' NOT NULL
+    slug varchar(2048) DEFAULT ''
 );
 
 
