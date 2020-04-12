@@ -11,11 +11,6 @@ CREATE TABLE tx_sportms_domain_model_address (
 	public tinyint(4) unsigned DEFAULT '0' NOT NULL,
 	foreign_uid int(11) DEFAULT 0 NOT NULL,
 	foreign_table varchar(255) DEFAULT '' NOT NULL,
-	club int(11) DEFAULT NULL,
-	club_section int(11) DEFAULT NULL,
-	club_ground int(11) DEFAULT NULL,
-	person int(11) DEFAULT NULL,
-	venue int(11) DEFAULT NULL,
 	sorting int(11) DEFAULT '0' NOT NULL
 );
 
