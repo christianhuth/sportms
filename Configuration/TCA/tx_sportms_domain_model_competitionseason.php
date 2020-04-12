@@ -8,7 +8,7 @@
 		'ctrl' => array(
 			'crdate' => 'crdate',
 			'cruser_id' => 'cruser_id',
-			'default_sortby' => 'ORDER BY (SELECT season_name FROM tx_sportms_domain_model_season WHERE tx_sportms_domain_model_season.uid = tx_sportms_domain_model_competitionseason.season) DESC',
+			'default_sortby' => 'ORDER BY SELECT season_name FROM tx_sportms_domain_model_season WHERE tx_sportms_domain_model_season.uid = tx_sportms_domain_model_competitionseason.season DESC',
 			'delete' => 'deleted',
 			'enablecolumns' => array(
 				'disabled' => 'hidden',
