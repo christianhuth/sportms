@@ -244,8 +244,7 @@ CREATE TABLE tx_sportms_domain_model_gamechange (
     minute_additional int(11) DEFAULT NULL,
     person_in int(11) DEFAULT '0' NOT NULL,
     person_out int(11) DEFAULT '0' NOT NULL,
-    reason int(11) DEFAULT NULL,
-    sorting int(11) DEFAULT '0' NOT NULL
+    reason int(11) DEFAULT NULL
 );
 
 #
@@ -261,8 +260,7 @@ CREATE TABLE tx_sportms_domain_model_gamegoal (
     scorer int(11) DEFAULT '0' NOT NULL,
     assist int(11) DEFAULT NULL,
     own_goal tinyint(4) DEFAULT '0' NOT NULL,
-    goal_type int(11) DEFAULT NULL,
-    sorting int(11) DEFAULT '0' NOT NULL
+    goal_type int(11) DEFAULT NULL
 );
 
 #
@@ -299,8 +297,7 @@ CREATE TABLE tx_sportms_domain_model_gamepunishment (
     punished_person int(11) DEFAULT '0' NOT NULL,
     type int(11) DEFAULT NULL,
     duration int(11) DEFAULT NULL,
-    reason int(11) DEFAULT NULL,
-    sorting int(11) DEFAULT '0' NOT NULL
+    reason int(11) DEFAULT NULL
 );
 
 #
