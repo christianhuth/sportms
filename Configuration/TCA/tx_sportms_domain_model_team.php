@@ -20,7 +20,7 @@ return array(
         ),
 		'iconfile' => 'EXT:sportms/Resources/Public/Icons/tx_sportms_domain_model_team.svg',
         'label' => 'name',
-        'searchFields' => '',
+        'searchFields' => 'name',
         'title'	=> 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_team',
         'tstamp' => 'tstamp',
 		'versioningWS' => TRUE,
