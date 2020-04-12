@@ -242,6 +242,7 @@ return array(
                 ),
                 'foreign_field' => 'competition',
                 'foreign_table' => 'tx_sportms_domain_model_competitionseason',
+                'foreign_table_where' => ' ORDER BY (SELECT season_name FROM tx_sportms_domain_model_season WHERE tx_sportms_domain_model_competitionseason.season = tx_sportms_domain_model_season.uid) DESC',
                 'type' => 'inline',
             ),
         ),
