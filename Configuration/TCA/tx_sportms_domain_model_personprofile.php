@@ -31,7 +31,7 @@ return array(
 		'showRecordFieldList' => '',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'profile_type, section, section_position_group, section_position,
+		'1' => array('showitem' => 'profile_type, sport, sport_position_group, sport_position,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_personprofile.tab_images, profile_images,
 		                            --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab_language, sys_language_uid, l10n_parent, l10n_diffsource,
 		                            '),
@@ -156,13 +156,13 @@ return array(
 			),
 			'onChange' => 'reload',
 		),
-		'section' => array(
+		'sport' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_personprofile.section',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_personprofile.sport',
 			'config' => array(
 				'eval' => 'required',
-				'foreign_table' => 'tx_sportms_domain_model_section',
-				'foreign_table_where' => 'ORDER BY tx_sportms_domain_model_section.label ASC',
+				'foreign_table' => 'tx_sportms_domain_model_sport',
+				'foreign_table_where' => 'ORDER BY tx_sportms_domain_model_sport.label ASC',
 				'items' => array(
 					array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", ""),
 				),
@@ -173,21 +173,21 @@ return array(
 			),
 			'onChange' => 'reload',
 		),
-		'section_position_group' => array(
+		'sport_position_group' => array(
 			'displayCond' => array(
 				'AND' => array(
 					'FIELD:profile_type:=:player',
-					'FIELD:section:>:0',
+					'FIELD:sport:>:0',
 				),
 			),
 			'exclude' => 1,
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_personprofile.section_position_group',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_personprofile.sport_position_group',
 			'config' => array(
-				'foreign_table' => 'tx_sportms_domain_model_sectionpositiongroup',
+				'foreign_table' => 'tx_sportms_domain_model_sportpositiongroup',
 				'foreign_sortby' => 'sorting',
-				'foreign_table_where' => ' AND tx_sportms_domain_model_sectionpositiongroup.section = ###REC_FIELD_section###',
+				'foreign_table_where' => ' AND tx_sportms_domain_model_sportpositiongroup.sport = ###REC_FIELD_sport###',
 				'items' => Array (
-					array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", ""),
+					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ''),
 				),
 				'maxItems' => 1,
 				'renderType' => 'selectSingle',
@@ -196,16 +196,16 @@ return array(
 			),
 			'onChange' => 'reload',
 		),
-		'section_position' => array(
-			'displayCond' => 'FIELD:section_position_group:>:0',
+		'sport_position' => array(
+			'displayCond' => 'FIELD:sport_position_group:>:0',
 			'exclude' => 1,
 			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_personprofile.section_position',
 			'config' => array(
-				'foreign_table' => 'tx_sportms_domain_model_sectionposition',
-				'foreign_table_where' => '  AND tx_sportms_domain_model_sectionposition.section_position_group = ###REC_FIELD_section_position_group###
-                                            ORDER BY tx_sportms_domain_model_sectionposition.sorting ASC',
+				'foreign_table' => 'tx_sportms_domain_model_sportposition',
+				'foreign_table_where' => '  AND tx_sportms_domain_model_sportposition.sport_position_group = ###REC_FIELD_sport_position_group###
+                                            ORDER BY tx_sportms_domain_model_sportposition.sorting ASC',
 				'items' => Array (
-					array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", ""),
+					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ''),
 				),
 				'maxItems' => 1,
 				'renderType' => 'selectSingle',

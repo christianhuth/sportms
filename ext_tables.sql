@@ -272,7 +272,7 @@ CREATE TABLE tx_sportms_domain_model_gamelineup (
     type varchar(255) DEFAULT '' NOT NULL,
     jersey_number varchar(255) DEFAULT NULL,
     team_season_squad_member int(11) DEFAULT '0' NOT NULL,
-    section_position int(11) DEFAULT '0' NOT NULL,
+    sport_position int(11) DEFAULT '0' NOT NULL,
 	sorting int(11) DEFAULT '0' NOT NULL
 );
 
@@ -398,8 +398,8 @@ CREATE TABLE tx_sportms_domain_model_personprofile (
     person int(11) DEFAULT '0' NOT NULL,
     profile_type varchar(255) DEFAULT '' NOT NULL,
     section int(11) DEFAULT '0' NOT NULL,
-    section_position_group int(11) DEFAULT NULL,
-    section_position int(11) DEFAULT NULL,
+    sport_position_group int(11) DEFAULT NULL,
+    sport_position int(11) DEFAULT NULL,
     profile_images varchar(255) DEFAULT NULL,
     slug varchar(2048) DEFAULT ''
 );
@@ -582,8 +582,8 @@ CREATE TABLE tx_sportms_domain_model_teamseasonpractice (
 CREATE TABLE tx_sportms_domain_model_teamseasonsquadmember (
     team_season int(11) DEFAULT '0' NOT NULL,
 	person int(11) DEFAULT '0' NOT NULL,
-    section_position_group int(11) DEFAULT NULL,
-    section_position int(11) DEFAULT NULL,
+    sport_position_group int(11) DEFAULT NULL,
+    sport_position int(11) DEFAULT NULL,
     squad_number varchar(255) DEFAULT NULL,
 	new_signing tinyint(4) unsigned DEFAULT '0' NOT NULL,
 	leaving tinyint(4) unsigned DEFAULT '0' NOT NULL,
