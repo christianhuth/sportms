@@ -285,7 +285,7 @@ return array(
 				'renderType' => 'selectMultipleSideBySide',
 				'foreign_table' => 'tx_sportms_domain_model_competitionseason',
 				'foreign_table_where' => '  AND tx_sportms_domain_model_competitionseason.season = ###REC_FIELD_season###
-											AND tx_sportms_domain_model_competitionseason.competition IN (SELECT uid FROM tx_sportms_domain_model_competition WHERE section_age_level IN (SELECT section_age_level FROM tx_sportms_domain_model_team WHERE uid = ###REC_FIELD_team###))
+											AND tx_sportms_domain_model_competitionseason.competition IN (SELECT uid FROM tx_sportms_domain_model_competition WHERE sport_age_level IN (SELECT sport_age_level FROM tx_sportms_domain_model_team WHERE uid = ###REC_FIELD_team###))
 											ORDER BY competition ASC',
 				'MM' => 'tx_sportms_competitionseason_teamseason_mm',
 				'MM_opposite_field' => 'competition_season_teams',
