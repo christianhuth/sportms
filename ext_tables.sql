@@ -628,8 +628,7 @@ CREATE TABLE tx_sportms_domain_model_venue (
     surface int(11) DEFAULT '0' NOT NULL,
     spectator_capacity varchar(255) DEFAULT '' NOT NULL,
     detail_link tinyint(4) unsigned DEFAULT '1' NOT NULL,
-    slug varchar(2048) DEFAULT '',
-    sorting int(11) DEFAULT '0' NOT NULL
+    slug varchar(2048) DEFAULT ''
 );
 
 #
