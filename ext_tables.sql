@@ -14,7 +14,7 @@ CREATE TABLE tx_sportms_domain_model_address (
 	club_ground int(11) DEFAULT NULL,
 	person int(11) DEFAULT NULL,
 	venue int(11) DEFAULT NULL,
-	sorting int(11) DEFAULT '0' NOT NULL,
+	sorting int(11) DEFAULT '0' NOT NULL
 );
 
 #
@@ -35,7 +35,7 @@ CREATE TABLE tx_sportms_domain_model_club (
     club_sections int(11) DEFAULT NULL,
     club_officials int(11) DEFAULT NULL,
 	detail_link tinyint(4) unsigned DEFAULT '1' NOT NULL,
-    slug varchar(2048) DEFAULT '',
+    slug varchar(2048) DEFAULT ''
 );
 
 #
@@ -52,7 +52,7 @@ CREATE TABLE tx_sportms_domain_model_clubground (
 	club_owned_since int(11) DEFAULT NULL,
 	date_of_building int(11) DEFAULT NULL,
 	year_of_building varchar(255) DEFAULT NULL,
-	sorting int(11) DEFAULT '0' NOT NULL,
+	sorting int(11) DEFAULT '0' NOT NULL
 );
 
 #
@@ -74,14 +74,14 @@ CREATE TABLE tx_sportms_domain_model_clubofficial (
 	startdate int(11) DEFAULT NULL,
 	enddate int(11) DEFAULT NULL,
     until_today tinyint(4) unsigned DEFAULT '0' NOT NULL,
-	sorting int(11) DEFAULT '0' NOT NULL,
+	sorting int(11) DEFAULT '0' NOT NULL
 );
 
 #
 # Table structure for table 'tx_sportms_domain_model_clubofficialjob'
 #
 CREATE TABLE tx_sportms_domain_model_clubofficialjob (
-    label varchar(255) DEFAULT NULL,
+    label varchar(255) DEFAULT NULL
 );
 
 #
@@ -100,7 +100,7 @@ CREATE TABLE tx_sportms_domain_model_clubsection (
 	club_section_officials int(11) DEFAULT NULL,
     teams int(11) DEFAULT NULL,
     detail_link tinyint(4) unsigned DEFAULT '1' NOT NULL,
-	sorting int(11) DEFAULT '0' NOT NULL,
+	sorting int(11) DEFAULT '0' NOT NULL
 );
 
 #
@@ -109,7 +109,7 @@ CREATE TABLE tx_sportms_domain_model_clubsection (
 CREATE TABLE tx_sportms_domain_model_clubsectionmembers (
 	club_section int(11) DEFAULT '0' NOT NULL,
 	members varchar(255) DEFAULT '' NOT NULL,
-	date int(11) DEFAULT '0' NOT NULL,
+	date int(11) DEFAULT '0' NOT NULL
 );
 
 #
@@ -121,14 +121,14 @@ CREATE TABLE tx_sportms_domain_model_clubsectionofficial (
     club_section_official_job int(11) DEFAULT '0' NOT NULL,
 	startdate int(11) DEFAULT NULL,
 	enddate int(11) DEFAULT NULL,
-	sorting int(11) DEFAULT '0' NOT NULL,
+	sorting int(11) DEFAULT '0' NOT NULL
 );
 
 #
 # Table structure for table 'tx_sportms_domain_model_clubsectionofficialjob'
 #
 CREATE TABLE tx_sportms_domain_model_clubsectionofficialjob (
-    label varchar(255) DEFAULT NULL,
+    label varchar(255) DEFAULT NULL
 );
 
 #
@@ -143,7 +143,7 @@ CREATE TABLE tx_sportms_domain_model_competition (
 	name_short varchar(255) DEFAULT NULL,
 	competition_seasons int(11) DEFAULT NULL,
 	detail_link tinyint(4) unsigned DEFAULT '1' NOT NULL,
-    slug varchar(2048) DEFAULT '',
+    slug varchar(2048) DEFAULT ''
 );
 
 #
@@ -155,7 +155,7 @@ CREATE TABLE tx_sportms_domain_model_competitionseason (
     competition_season_gamedays int(11) DEFAULT NULL,
     competition_season_teams int(11) DEFAULT NULL,
     detail_link tinyint(4) unsigned DEFAULT '1' NOT NULL,
-	sorting int(11) DEFAULT '0' NOT NULL,
+	sorting int(11) DEFAULT '0' NOT NULL
 );
 
 #
@@ -166,7 +166,7 @@ CREATE TABLE tx_sportms_domain_model_competitionseasongameday (
     label varchar(255) DEFAULT '' NOT NULL,
     startdate int(11) unsigned DEFAULT NULL,
     enddate int(11) unsigned DEFAULT NULL,
-    sorting int(11) DEFAULT '0' NOT NULL,
+    sorting int(11) DEFAULT '0' NOT NULL
 );
 
 #
@@ -174,7 +174,7 @@ CREATE TABLE tx_sportms_domain_model_competitionseasongameday (
 #
 CREATE TABLE tx_sportms_domain_model_competitiontype (
 	label varchar(255) DEFAULT NULL,
-	sorting int(11) DEFAULT '0' NOT NULL,
+	sorting int(11) DEFAULT '0' NOT NULL
 );
 
 #
@@ -234,7 +234,7 @@ CREATE TABLE tx_sportms_domain_model_game (
     game_referees int(11) DEFAULT NULL,
     game_reports int(11) DEFAULT NULL,
     detail_link tinyint(4) unsigned DEFAULT '1' NOT NULL,
-    slug varchar(2048) DEFAULT '',
+    slug varchar(2048) DEFAULT ''
 );
 
 #
@@ -248,7 +248,7 @@ CREATE TABLE tx_sportms_domain_model_gamechange (
     person_in int(11) DEFAULT '0' NOT NULL,
     person_out int(11) DEFAULT '0' NOT NULL,
     reason int(11) DEFAULT NULL,
-    sorting int(11) DEFAULT '0' NOT NULL,
+    sorting int(11) DEFAULT '0' NOT NULL
 );
 
 #
@@ -265,7 +265,7 @@ CREATE TABLE tx_sportms_domain_model_gamegoal (
     assist int(11) DEFAULT NULL,
     own_goal tinyint(4) DEFAULT '0' NOT NULL,
     goal_type int(11) DEFAULT NULL,
-    sorting int(11) DEFAULT '0' NOT NULL,
+    sorting int(11) DEFAULT '0' NOT NULL
 );
 
 #
@@ -278,7 +278,7 @@ CREATE TABLE tx_sportms_domain_model_gamelineup (
     jersey_number varchar(255) DEFAULT NULL,
     team_season_squad_member int(11) DEFAULT '0' NOT NULL,
     section_position int(11) DEFAULT '0' NOT NULL,
-	sorting int(11) DEFAULT '0' NOT NULL,
+	sorting int(11) DEFAULT '0' NOT NULL
 );
 
 #
@@ -288,7 +288,7 @@ CREATE TABLE tx_sportms_domain_model_gameperiod (
     game int(11) DEFAULT '0' NOT NULL,
     label varchar(255) DEFAULT NULL,
     duration int(11) DEFAULT '0' NOT NULL,
-    sorting int(11) DEFAULT '0' NOT NULL,
+    sorting int(11) DEFAULT '0' NOT NULL
 );
 
 #
@@ -303,7 +303,7 @@ CREATE TABLE tx_sportms_domain_model_gamepunishment (
     type int(11) DEFAULT NULL,
     duration int(11) DEFAULT NULL,
     reason int(11) DEFAULT NULL,
-    sorting int(11) DEFAULT '0' NOT NULL,
+    sorting int(11) DEFAULT '0' NOT NULL
 );
 
 #
@@ -313,7 +313,7 @@ CREATE TABLE tx_sportms_domain_model_gamereferee (
     game int(11) unsigned DEFAULT '0' NOT NULL,
     person int(11) unsigned DEFAULT '0' NOT NULL,
     referee_job int(11) unsigned DEFAULT NULL,
-    sorting int(11) DEFAULT '0' NOT NULL,
+    sorting int(11) DEFAULT '0' NOT NULL
 );
 
 #
@@ -324,7 +324,7 @@ CREATE TABLE tx_sportms_domain_model_gamereport (
     headline varchar(255) DEFAULT NULL,
     text varchar(255) DEFAULT NULL,
     author varchar(255) DEFAULT NULL,
-	sorting int(11) DEFAULT '0' NOT NULL,
+	sorting int(11) DEFAULT '0' NOT NULL
 );
 
 #
@@ -335,7 +335,7 @@ CREATE TABLE tx_sportms_domain_model_gameresultset (
     set_number int(11) DEFAULT '1' NOT NULL,
     result_home int(11) DEFAULT '0' NOT NULL,
     result_guest int(11) DEFAULT '0' NOT NULL,
-    sorting int(11) DEFAULT '0' NOT NULL,
+    sorting int(11) DEFAULT '0' NOT NULL
 );
 
 #
@@ -348,14 +348,14 @@ CREATE TABLE tx_sportms_domain_model_mail (
 	mail varchar(255) DEFAULT '' NOT NULL,
 	mail_type int(11) unsigned DEFAULT NULL,
 	public tinyint(4) unsigned DEFAULT '0' NULL,
-	sorting int(11) DEFAULT '0' NOT NULL,
+	sorting int(11) DEFAULT '0' NOT NULL
 );
 
 #
 # Table structure for table 'tx_sportms_domain_model_mailtype'
 #
 CREATE TABLE tx_sportms_domain_model_mailtype (
-	label varchar(255) DEFAULT NULL,
+	label varchar(255) DEFAULT NULL
 );
 
 #
@@ -394,7 +394,7 @@ CREATE TABLE tx_sportms_domain_model_person (
 	profile_official tinyint(4) unsigned DEFAULT '0' NOT NULL,
 	profile_referee tinyint(4) unsigned DEFAULT '0' NOT NULL,
     slug varchar(2048) DEFAULT '',
-	sorting int(11) DEFAULT '0' NOT NULL,
+	sorting int(11) DEFAULT '0' NOT NULL
 );
 
 
@@ -409,7 +409,7 @@ CREATE TABLE tx_sportms_domain_model_personprofile (
     section_position_group int(11) DEFAULT NULL,
     section_position int(11) DEFAULT NULL,
     profile_images varchar(255) DEFAULT NULL,
-    slug varchar(2048) DEFAULT '',
+    slug varchar(2048) DEFAULT ''
 );
 
 #
@@ -424,14 +424,14 @@ CREATE TABLE tx_sportms_domain_model_phone (
 	international_area_code varchar(255) DEFAULT '' NOT NULL,
 	phone_type int(11) unsigned DEFAULT NULL,
 	public tinyint(4) unsigned DEFAULT '0' NOT NULL,
-	sorting int(11) DEFAULT '0' NOT NULL,
+	sorting int(11) DEFAULT '0' NOT NULL
 );
 
 #
 # Table structure for table 'tx_sportms_domain_model_phonetype'
 #
 CREATE TABLE tx_sportms_domain_model_phonetype (
-	label varchar(255) DEFAULT NULL,
+	label varchar(255) DEFAULT NULL
 );
 
 #
@@ -439,7 +439,7 @@ CREATE TABLE tx_sportms_domain_model_phonetype (
 #
 CREATE TABLE tx_sportms_domain_model_refereejob (
 	label varchar(255) DEFAULT '0' NOT NULL,
-    slug varchar(2048) DEFAULT '',
+    slug varchar(2048) DEFAULT ''
 );
 
 #
@@ -452,7 +452,7 @@ CREATE TABLE tx_sportms_domain_model_season (
 	startdate int(11) unsigned DEFAULT NULL,
 	enddate int(11) unsigned DEFAULT NULL,
     detail_link tinyint(4) unsigned DEFAULT '1' NOT NULL,
-    slug varchar(2048) DEFAULT '',
+    slug varchar(2048) DEFAULT ''
 );
 
 #
@@ -465,7 +465,7 @@ CREATE TABLE tx_sportms_domain_model_sport (
     sport_types int(11) DEFAULT NULL,
     sport_age_groups int(11) DEFAULT NULL,
     sport_position_groups int(11) DEFAULT NULL,
-    slug varchar(2048) DEFAULT '',
+    slug varchar(2048) DEFAULT ''
 );
 
 #
@@ -477,7 +477,7 @@ CREATE TABLE tx_sportms_domain_model_sportagegroup (
     short varchar(255) DEFAULT NULL,
     sport_age_levels int(11) DEFAULT NULL,
     slug varchar(2048) DEFAULT '',
-    sorting int(11) DEFAULT '0' NOT NULL,
+    sorting int(11) DEFAULT '0' NOT NULL
 );
 
 #
@@ -488,7 +488,7 @@ CREATE TABLE tx_sportms_domain_model_sportagelevel (
     label varchar(255) DEFAULT NULL,
     short varchar(255) DEFAULT NULL,
     slug varchar(2048) DEFAULT '',
-    sorting int(11) DEFAULT '0' NOT NULL,
+    sorting int(11) DEFAULT '0' NOT NULL
 );
 
 #
@@ -500,7 +500,7 @@ CREATE TABLE tx_sportms_domain_model_sportposition (
     label_short varchar(255) DEFAULT NULL,
     x_position int(11) DEFAULT NULL,
     y_position int(11) DEFAULT NULL,
-    sorting int(11) DEFAULT '0' NOT NULL,
+    sorting int(11) DEFAULT '0' NOT NULL
 );
 
 #
@@ -510,7 +510,7 @@ CREATE TABLE tx_sportms_domain_model_sportpositiongroup (
     sport int(11) DEFAULT '0' NOT NULL,
     label varchar(255) DEFAULT NULL,
     sport_positions int(11) DEFAULT NULL,
-    sorting int(11) DEFAULT '0' NOT NULL,
+    sorting int(11) DEFAULT '0' NOT NULL
 );
 
 #
@@ -519,7 +519,7 @@ CREATE TABLE tx_sportms_domain_model_sportpositiongroup (
 CREATE TABLE tx_sportms_domain_model_sporttype (
     label varchar(255) DEFAULT NULL,
     sports int(11) DEFAULT NULL,
-    slug varchar(2048) DEFAULT '',
+    slug varchar(2048) DEFAULT ''
 );
 
 #
@@ -534,7 +534,7 @@ CREATE TABLE tx_sportms_domain_model_team (
 	dummy tinyint(4) unsigned DEFAULT '0' NOT NULL,
     detail_link tinyint(4) unsigned DEFAULT '1' NOT NULL,
 	team_seasons int(11) DEFAULT NULL,
-    slug varchar(2048) DEFAULT '',
+    slug varchar(2048) DEFAULT ''
 );
 
 #
@@ -550,7 +550,7 @@ CREATE TABLE tx_sportms_domain_model_teamseason (
 	team_season_squad_captains int(11) DEFAULT NULL,
     competition_season_teams int(11) DEFAULT NULL,
     detail_link tinyint(4) unsigned DEFAULT '1' NOT NULL,
-    sorting int(11) DEFAULT '0' NOT NULL,
+    sorting int(11) DEFAULT '0' NOT NULL
 );
 
 #
@@ -562,14 +562,14 @@ CREATE TABLE tx_sportms_domain_model_teamseasonofficial (
 	team_season_official_job int(11) DEFAULT '0' NOT NULL,
 	startdate int(11) DEFAULT NULL,
 	enddate int(11) DEFAULT NULL,
-	sorting int(11) DEFAULT '0' NOT NULL,
+	sorting int(11) DEFAULT '0' NOT NULL
 );
 
 #
 # Table structure for table 'tx_sportms_domain_model_teamseasonofficialjob'
 #
 CREATE TABLE tx_sportms_domain_model_teamseasonofficialjob (
-    label varchar(255) DEFAULT NULL,
+    label varchar(255) DEFAULT NULL
 );
 
 #
@@ -582,7 +582,7 @@ CREATE TABLE tx_sportms_domain_model_teamseasonpractice (
 	time_end varchar(255) DEFAULT '' NOT NULL,
 	venue int(11) DEFAULT '0' NOT NULL,
 	annotation varchar(255) DEFAULT '' NOT NULL,
-	sorting int(11) DEFAULT '0' NOT NULL,
+	sorting int(11) DEFAULT '0' NOT NULL
 );
 
 #
@@ -596,7 +596,7 @@ CREATE TABLE tx_sportms_domain_model_teamseasonsquadmember (
     squad_number varchar(255) DEFAULT NULL,
 	new_signing tinyint(4) unsigned DEFAULT '0' NOT NULL,
 	leaving tinyint(4) unsigned DEFAULT '0' NOT NULL,
-	sorting int(11) DEFAULT NULL,
+	sorting int(11) DEFAULT NULL
 );
 
 #
@@ -608,7 +608,7 @@ CREATE TABLE tx_sportms_domain_model_url (
     person int(11) DEFAULT NULL,
 	url varchar(255) DEFAULT '0' NOT NULL,
 	public tinyint(4) unsigned DEFAULT '0' NOT NULL,
-	sorting int(11) DEFAULT '0' NOT NULL,
+	sorting int(11) DEFAULT '0' NOT NULL
 );
 
 
@@ -629,7 +629,7 @@ CREATE TABLE tx_sportms_domain_model_venue (
     spectator_capacity varchar(255) DEFAULT '' NOT NULL,
     detail_link tinyint(4) unsigned DEFAULT '1' NOT NULL,
     slug varchar(2048) DEFAULT '',
-    sorting int(11) DEFAULT '0' NOT NULL,
+    sorting int(11) DEFAULT '0' NOT NULL
 );
 
 #
