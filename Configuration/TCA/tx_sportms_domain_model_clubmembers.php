@@ -31,7 +31,7 @@ return array(
 		'showRecordFieldList' => '',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'members, date,
+		'1' => array('showitem' => 'club, members, date,
 		                            --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab_language, sys_language_uid, l10n_parent, l10n_diffsource,
 		                            '),
 	),
@@ -135,12 +135,23 @@ return array(
                 'renderType' => 'inputDateTime',
             ),
         ),
-
-        'club' => array(
-            'config' => array(
-                'type' => 'passthrough',
-            ),
-        ),
+		
+		'club' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_clubmembers.club',
+			'config' => array(
+				'eval' => 'required',
+				'foreign_table' => 'tx_sportms_domain_model_club',
+				'foreign_table_where' => 'ORDER BY tx_sportms_domain_model_club.name ASC',
+				'items' => array(
+					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ""),
+				),
+				'maxItems' => 1,
+				'renderType' => 'selectSingle',
+				'size' => 1,
+				'type' => 'select',
+			),
+		),
 
         'members' => array(
             'exclude' => 1,
@@ -148,7 +159,7 @@ return array(
             'config' => array(
                 'type' => 'input',
                 'size' => 30,
-                'eval' => 'required, trim'
+                'eval' => 'int, required, trim'
             ),
         ),
 		'date' => array(
