@@ -238,7 +238,7 @@ return array(
                         'localize' => true,
                     ],
                     'levelLinksPosition' => 'bottom',
-                    'useSortable' => 1,
+                    #'useSortable' => 1,
                 ),
                 'foreign_field' => 'competition',
                 'foreign_table' => 'tx_sportms_domain_model_competitionseason',
