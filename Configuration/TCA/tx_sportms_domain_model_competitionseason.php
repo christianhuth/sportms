@@ -8,7 +8,6 @@
 		'ctrl' => array(
 			'crdate' => 'crdate',
 			'cruser_id' => 'cruser_id',
-			'default_sortby' => 'ORDER BY \(SELECT tx_sportms_domain_model_season.season_name FROM tx_sportms_domain_model_season WHERE tx_sportms_domain_model_season.uid = tx_sportms_domain_model_competitionseason.season\) DESC',
 			'delete' => 'deleted',
 			'enablecolumns' => array(
 				'disabled' => 'hidden',
@@ -21,7 +20,7 @@
 			'label_userFunc' => \Balumedien\Sportms\Configuration\TCA\UserFunc\UserFunc::class . '->CompetitionSeasonLabel',
 			'languageField' => 'sys_language_uid',
 			'searchFields' => '',
-            #'sortby' => 'sorting',
+            'sortby' => 'sorting',
 			'title' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_competitionseason',
 			'transOrigDiffSourceField' => 'l10n_diffsource',
 			'transOrigPointerField' => 'l10n_parent',
