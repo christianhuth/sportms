@@ -22,7 +22,7 @@ return array(
         'label' => 'lastname',
 		'label_alt' => 'firstname',
 		'label_alt_force' => 1,
-        'searchFields' => ',',
+        'searchFields' => 'lastname, firstname, birthname, nickname',
         'title'	=> 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person',
         'tstamp' => 'tstamp',
 		'versioningWS' => TRUE,
