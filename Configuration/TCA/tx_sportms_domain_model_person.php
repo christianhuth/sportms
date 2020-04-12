@@ -375,8 +375,10 @@ return array(
 				'appearance' => array(
 					'useSortable' => 1,
 				),
-				'foreign_field' => 'person',
-				'foreign_table' => 'tx_sportms_domain_model_address',
+	            'foreign_field' => 'foreign_uid',
+	            'foreign_sortby' => 'sorting',
+	            'foreign_table' => 'tx_sportms_domain_model_address',
+	            'foreign_table_field' => 'foreign_table',
 				'type' => 'inline',
             ),
         ),
