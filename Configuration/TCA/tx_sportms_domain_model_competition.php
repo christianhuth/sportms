@@ -20,7 +20,7 @@ return array(
 		'iconfile' => 'EXT:sportms/Resources/Public/Icons/tx_sportms_domain_model_competition.svg',
         'label' => '',
         'label_userFunc' => \Balumedien\Sportms\Configuration\TCA\UserFunc\UserFunc::class . '->CompetitionLabel',
-		'searchFields' => '',
+		'searchFields' => 'name, name_short',
 		'title'	=> 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_competition',
 		'tstamp' => 'tstamp',
 		'versioningWS' => TRUE,

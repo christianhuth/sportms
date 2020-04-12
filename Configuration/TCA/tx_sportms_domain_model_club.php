@@ -17,7 +17,7 @@ return array(
 		'iconfile' => 'EXT:sportms/Resources/Public/Icons/tx_sportms_domain_model_club.svg',
 		'label' => 'name',
 		'languageField' => 'sys_language_uid',
-		'searchFields' => ',',
+		'searchFields' => 'name',
 		'title'	=> 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_club',
 		'transOrigDiffSourceField' => 'l10n_diffsource',
 		'transOrigPointerField' => 'l10n_parent',

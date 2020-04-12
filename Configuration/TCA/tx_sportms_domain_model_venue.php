@@ -7,6 +7,7 @@ return array(
 	'ctrl' => array(
 		'crdate' => 'crdate',
 		'cruser_id' => 'cruser_id',
+		'default_sortby' => 'name',
 		'delete' => 'deleted',
         'languageField' => 'sys_language_uid',
         'transOrigDiffSourceField' => 'l10n_diffsource',
@@ -20,7 +21,6 @@ return array(
 		'label' => '',
         'label_userFunc' => \Balumedien\Sportms\Configuration\TCA\UserFunc\UserFunc::class . '->VenueLabel',
 		'searchFields' => '',
-		'sortby' => 'sorting',
 		'title'	=> 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_venue',
 		'tstamp' => 'tstamp',
 		'versioningWS' => TRUE,
