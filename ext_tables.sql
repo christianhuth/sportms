@@ -59,9 +59,9 @@ CREATE TABLE tx_sportms_domain_model_clubground (
 # Table structure for table 'tx_sportms_domain_model_clubmembers'
 #
 CREATE TABLE tx_sportms_domain_model_clubmembers (
-	club int(11) DEFAULT '0' NOT NULL,
-	members int(11) DEFAULT '' NOT NULL,
-	date int(11) DEFAULT '0' NOT NULL
+	club int(11) DEFAULT 0 NOT NULL,
+	members int(11) DEFAULT 0 NOT NULL,
+	date int(11) DEFAULT 0 NOT NULL
 );
 
 #
