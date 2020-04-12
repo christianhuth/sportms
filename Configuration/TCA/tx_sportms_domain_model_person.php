@@ -373,6 +373,16 @@ return array(
             'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.addresses',
             'config' => array(
 				'appearance' => array(
+					'enabledControls' => [
+						'info' => false,
+						'new' => true,
+						'sort' => false,
+						'hide' => true,
+						'dragdrop' => true,
+						'delete' => true,
+						'localize' => true,
+					],
+					'levelLinksPosition' => 'bottom',
 					'useSortable' => 1,
 				),
 	            'foreign_field' => 'foreign_uid',
@@ -386,6 +396,16 @@ return array(
             'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.phones',
             'config' => array(
 				'appearance' => array(
+					'enabledControls' => [
+						'info' => false,
+						'new' => true,
+						'sort' => false,
+						'hide' => true,
+						'dragdrop' => true,
+						'delete' => true,
+						'localize' => true,
+					],
+					'levelLinksPosition' => 'bottom',
 					'useSortable' => 1,
 				),
 	            'foreign_field' => 'foreign_uid',
@@ -399,6 +419,16 @@ return array(
             'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.mails',
             'config' => array(
 				'appearance' => array(
+					'enabledControls' => [
+						'info' => false,
+						'new' => true,
+						'sort' => false,
+						'hide' => true,
+						'dragdrop' => true,
+						'delete' => true,
+						'localize' => true,
+					],
+					'levelLinksPosition' => 'bottom',
 					'useSortable' => 1,
 				),
 	            'foreign_field' => 'foreign_uid',
@@ -412,6 +442,16 @@ return array(
             'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.urls',
             'config' => array(
 	            'appearance' => array(
+		            'enabledControls' => [
+			            'info' => false,
+			            'new' => true,
+			            'sort' => false,
+			            'hide' => true,
+			            'dragdrop' => true,
+			            'delete' => true,
+			            'localize' => true,
+		            ],
+		            'levelLinksPosition' => 'bottom',
 		            'useSortable' => 1,
 	            ),
 	            'foreign_field' => 'foreign_uid',
