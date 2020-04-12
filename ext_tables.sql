@@ -9,6 +9,8 @@ CREATE TABLE tx_sportms_domain_model_address (
 	country int(11) DEFAULT '0' NOT NULL,
 	region varchar(255) DEFAULT NULL,
 	public tinyint(4) unsigned DEFAULT '0' NOT NULL,
+	foreign_uid int(11) DEFAULT 0 NOT NULL,
+	foreign_table varchar(255) DEFAULT '' NOT NULL,
 	club int(11) DEFAULT NULL,
 	club_section int(11) DEFAULT NULL,
 	club_ground int(11) DEFAULT NULL,
