@@ -20,7 +20,6 @@ return array(
 		'label_userFunc' => \Balumedien\Sportms\Configuration\TCA\UserFunc\UserFunc::class . '->addressLabel',
 	    'languageField' => 'sys_language_uid',
         'searchFields' => '',
-		'sortby' => 'sorting',
         'title'	=> 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_address',
 	    'transOrigDiffSourceField' => 'l10n_diffsource',
 	    'transOrigPointerField' => 'l10n_parent',
