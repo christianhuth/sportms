@@ -339,9 +339,8 @@ CREATE TABLE tx_sportms_domain_model_gameresultset (
 # Table structure for table 'tx_sportms_domain_model_mail'
 #
 CREATE TABLE tx_sportms_domain_model_mail (
-    club int(11) DEFAULT NULL,
-    club_section int(11) DEFAULT NULL,
-    person int(11) DEFAULT NULL,
+    foreign_uid int(11) DEFAULT 0 NOT NULL,
+    foreign_table varchar(255) DEFAULT '' NOT NULL,
 	mail varchar(255) DEFAULT '' NOT NULL,
 	mail_type int(11) unsigned DEFAULT NULL,
 	public tinyint(4) unsigned DEFAULT '0' NULL,
@@ -413,9 +412,8 @@ CREATE TABLE tx_sportms_domain_model_personprofile (
 # Table structure for table 'tx_sportms_domain_model_phone'
 #
 CREATE TABLE tx_sportms_domain_model_phone (
-    club int(11) DEFAULT NULL,
-    club_section int(11) DEFAULT NULL,
-    person int(11) DEFAULT NULL,
+    foreign_uid int(11) DEFAULT 0 NOT NULL,
+    foreign_table varchar(255) DEFAULT '' NOT NULL,
 	area_code varchar(255) DEFAULT NULL,
 	calling_number varchar(255) DEFAULT '' NOT NULL,
 	international_area_code varchar(255) DEFAULT '' NOT NULL,
@@ -600,9 +598,8 @@ CREATE TABLE tx_sportms_domain_model_teamseasonsquadmember (
 # Table structure for table 'tx_sportms_domain_model_url'
 #
 CREATE TABLE tx_sportms_domain_model_url (
-    club int(11) DEFAULT NULL,
-    club_section int(11) DEFAULT NULL,
-    person int(11) DEFAULT NULL,
+    foreign_uid int(11) DEFAULT 0 NOT NULL,
+    foreign_table varchar(255) DEFAULT '' NOT NULL,
 	url varchar(255) DEFAULT '0' NOT NULL,
 	public tinyint(4) unsigned DEFAULT '0' NOT NULL,
 	sorting int(11) DEFAULT '0' NOT NULL
