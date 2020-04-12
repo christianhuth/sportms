@@ -157,9 +157,12 @@ return array(
             'exclude' => 1,
             'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_clubmembers.members',
             'config' => array(
-                'type' => 'input',
-                'size' => 30,
-                'eval' => 'int, required, trim'
+	            'eval' => 'int, required, trim',
+	            'range' => [
+		            'lower' => 0,
+	            ],
+	            'size' => 30,
+	            'type' => 'input',
             ),
         ),
 		'date' => array(
