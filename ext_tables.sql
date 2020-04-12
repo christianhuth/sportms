@@ -60,8 +60,8 @@ CREATE TABLE tx_sportms_domain_model_clubground (
 #
 CREATE TABLE tx_sportms_domain_model_clubmembers (
 	club int(11) DEFAULT '0' NOT NULL,
-	members varchar(255) DEFAULT '' NOT NULL,
-	date int(11) DEFAULT '0' NOT NULL,
+	members int(11) DEFAULT '' NOT NULL,
+	date int(11) DEFAULT '0' NOT NULL
 );
 
 #
