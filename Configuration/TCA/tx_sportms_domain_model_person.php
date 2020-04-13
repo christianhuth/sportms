@@ -184,9 +184,7 @@ return array(
 				'items' => Array (
                     array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ''),
 				),
-				'maxItems' => 1,
 	            'renderType' => 'selectMultipleSideBySide',
-                'size' => 1,
                 'type' => 'select',
             ),
         ),
