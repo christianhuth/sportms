@@ -649,6 +649,19 @@ CREATE TABLE tx_sportms_competitionseason_teamseason_mm (
 );
 
 #
+# Table structure for table 'tx_sportms_person_nationality_mm'
+#
+CREATE TABLE tx_sportms_person_nationality_mm (
+    uid_local int(11) unsigned DEFAULT '0' NOT NULL,
+    uid_foreign int(11) unsigned DEFAULT '0' NOT NULL,
+    sorting int(11) unsigned DEFAULT '0' NOT NULL,
+    sorting_foreign int(11) unsigned DEFAULT '0' NOT NULL,
+    PRIMARY KEY (uid_local,uid_foreign),
+    KEY uid_local (uid_local),
+    KEY uid_foreign (uid_foreign)
+);
+
+#
 # Table structure for table 'tx_sportms_sport_sporttype_mm'
 #
 CREATE TABLE tx_sportms_sport_sporttype_mm (

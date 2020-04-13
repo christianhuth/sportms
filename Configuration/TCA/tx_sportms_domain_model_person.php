@@ -182,10 +182,10 @@ return array(
             'config' => array(
 				'foreign_table' => 'static_countries',
 				'items' => Array (
-                    array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", ""),
+                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ''),
 				),
 				'maxItems' => 1,
-				'renderType' => 'selectSingle',
+	            'renderType' => 'selectMultipleSideBySide',
                 'size' => 1,
                 'type' => 'select',
             ),
@@ -195,7 +195,7 @@ return array(
             'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.gender',
             'config' => array(
 				'items' => array(
-                    array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", ""),
+                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ''),
 					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.gender_male', 'm'),
 					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.gender_female', 'f'),
 				),
