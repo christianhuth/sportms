@@ -154,7 +154,8 @@ return array(
             'exclude' => 1,
             'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_address.public',
             'config' => array(
-                'type' => 'check',
+	            'renderType' => 'checkboxToggle',
+	            'type' => 'check',
             ),
         ),
 		
