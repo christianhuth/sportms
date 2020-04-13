@@ -129,6 +129,9 @@ return array(
 				'eval' => 'int, trim',
 				'max' => 4,
 				'min' => 4,
+				'range' => [
+					'min' => 0,
+				],
 				'size' => 30,
 				'type' => 'input',
 			),
