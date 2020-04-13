@@ -28,7 +28,6 @@ return array(
 	'types' => array(
 		'1' => array('showitem' => 'sport, label, short, slug,
 		                            --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sportagegroup.tab_sport_age_levels, sport_age_levels,
-		                            --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab_language, sys_language_uid, l10n_parent, l10n_diffsource,
 		                            '),
 	),
 	'palettes' => array(

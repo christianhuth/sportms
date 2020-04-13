@@ -30,7 +30,6 @@ return array(
 	'types' => array(
 		'1' => array('showitem' => 'profile_type, sport, sport_position_group, sport_position,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_personprofile.tab_images, profile_images,
-		                            --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab_language, sys_language_uid, l10n_parent, l10n_diffsource,
 		                            '),
 	),
 	'palettes' => array(

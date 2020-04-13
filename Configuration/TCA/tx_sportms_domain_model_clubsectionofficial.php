@@ -29,7 +29,6 @@ return array(
 	'types' => array(
 		'1' => array('showitem' => 'club_section_official_job, person, 
 		                            --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_clubsectionofficial.tab_date, startdate, enddate,
-		                            --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab_language, sys_language_uid, l10n_parent, l10n_diffsource,
 		                            '),
 	),
 	'palettes' => array(
