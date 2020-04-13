@@ -7,7 +7,7 @@ return array(
 	'ctrl' => array(
 		'crdate' => 'crdate',
 		'cruser_id' => 'cruser_id',
-		'default_sortby' => 'ORDER BY section ASC, competition_season ASC, team_season_home ASC',
+		'default_sortby' => 'ORDER BY sport ASC, competition_season ASC, team_season_home ASC',
 		'delete' => 'deleted',
 		'enablecolumns' => array(
 			'disabled' => 'hidden',
@@ -166,7 +166,7 @@ return array(
                 'eval' => 'required',
                 'foreign_table' => 'tx_sportms_domain_model_competitionseason',
 	            'foreign_table_where' => '  AND tx_sportms_domain_model_competitionseason.season = ###REC_FIELD_season###
-	                                        AND tx_sportms_domain_model_competitionseason.competition IN (SELECT competition FROM tx_sportms_domain_model_competition WHERE section = ###REC_FIELD_section###)
+	                                        AND tx_sportms_domain_model_competitionseason.competition IN (SELECT competition FROM tx_sportms_domain_model_competition WHERE sport = ###REC_FIELD_sport###)
 	                                        ORDER BY tx_sportms_domain_model_competitionseason.competition ASC',
                 'items' => Array (
                     array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", ""),
