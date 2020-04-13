@@ -119,9 +119,9 @@
             if($record['jersey_number']) {
                 $newLabel .= " (" . $record['jersey_number'] . ")";
             }
-	        if($record['section_position']) {
-		        $sectionPosition = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_sportms_domain_model_sectionposition", $record['section_position']);
-		        $newLabel .= " (" . $sectionPosition['label_short'] . ")";
+	        if($record['sport_position']) {
+		        $sportPosition = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_sportms_domain_model_sportposition", $record['sport_position']);
+		        $newLabel .= " (" . $sportPosition['label_short'] . ")";
 	        }
             $parameters['title'] = $newLabel;
         }
@@ -178,14 +178,14 @@
 		
 		public function personProfileLabel(&$parameters, $parentObject) {
 			$record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
-			$section = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_sportms_domain_model_section", $record['section']);
+			$sport = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_sportms_domain_model_sport", $record['sport']);
 			$profile_type = $record['profile_type'];
 			switch($profile_type) {
 				case "official": $profile_type = "FunktionärIn"; break;
 				case "player": $profile_type = "SpielerIn"; break;
 				case "referee": $profile_type = "SchiedsrichterIn"; break;
 			}
-			$newLabel = $section['label'] . " (" . $profile_type . ")";
+			$newLabel = $sport['label'] . " (" . $profile_type . ")";
 			$parameters['title'] = $newLabel;
 		}
 		
