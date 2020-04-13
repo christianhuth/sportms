@@ -385,14 +385,17 @@
 			<trans-unit id="tx_sportms_domain_model_game.status_canceled">
 				<source>Abgesagt</source>
 			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_game.status_contemplated">
+				<source>Angedacht</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_game.status_dropped">
+				<source>Abgesetzt</source>
+			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_game.status_finished">
 				<source>Beendet</source>
 			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_game.status_invalid">
 				<source>Ungültig</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_game.status_planned">
-				<source>Geplant</source>
 			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_game.status_rescheduled">
 				<source>Verschoben</source>
