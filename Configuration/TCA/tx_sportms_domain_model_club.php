@@ -130,7 +130,7 @@ return array(
 				'max' => 4,
 				'min' => 4,
 				'range' => [
-					'min' => 0,
+					'lower' => 0,
 				],
 				'size' => 30,
 				'type' => 'input',
