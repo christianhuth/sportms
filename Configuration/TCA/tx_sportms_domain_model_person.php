@@ -184,6 +184,11 @@ return array(
 				'items' => Array (
                     array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ''),
 				),
+	            'multiSelectFilterItems' => [
+		            ['', ''],
+		            ['foo', 'foo'],
+		            ['bar', 'bar'],
+	            ],
 	            'renderType' => 'selectMultipleSideBySide',
                 'type' => 'select',
             ),
