@@ -185,6 +185,7 @@ return array(
                     'useSortable' => 1,
 				),
 				'foreign_field' => 'team_season',
+				'foreign_sortby' => 'sorting',
 				'foreign_table' => 'tx_sportms_domain_model_teamseasonpractice',
 				'type' => 'inline',
 			),
