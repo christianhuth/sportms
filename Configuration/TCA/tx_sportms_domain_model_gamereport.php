@@ -17,7 +17,6 @@ return array(
 		'iconfile' => 'EXT:sportms/Resources/Public/Icons/tx_sportms_domain_model_gamereport.svg',
         'label' => 'headline',
 		'searchFields' => '',
-		'sortby' => 'sorting',
 		'title'	=> 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_gamereport',
 		'tstamp' => 'tstamp',
 		'versioningWS' => TRUE,
