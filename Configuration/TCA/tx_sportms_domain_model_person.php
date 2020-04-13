@@ -9,9 +9,6 @@ return array(
         'cruser_id' => 'cruser_id',
 		'default_sortby' => 'ORDER BY lastname ASC, firstname ASC',
         'delete' => 'deleted',
-        'languageField' => 'sys_language_uid',
-        'transOrigDiffSourceField' => 'l10n_diffsource',
-        'transOrigPointerField' => 'l10n_parent',
         'dividers2tabs' => TRUE,
         'enablecolumns' => array(
             'disabled' => 'hidden',
@@ -43,44 +40,6 @@ return array(
 		'1' => array('showitem' => ''),
 	),
 	'columns' => array(
-		
-        'sys_language_uid' => [
-            'exclude' => true,
-            'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.language',
-            'config' => [
-                'type' => 'select',
-                'renderType' => 'selectSingle',
-                'special' => 'languages',
-                'items' => [
-                    [
-                        'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.allLanguages',
-                        -1,
-                        'flags-multiple'
-                    ]
-                ],
-                'default' => 0,
-            ],
-        ],
-        'l10n_parent' => [
-            'displayCond' => 'FIELD:sys_language_uid:>:0',
-            'exclude' => true,
-            'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.l18n_parent',
-            'config' => [
-                'type' => 'select',
-                'renderType' => 'selectSingle',
-                'default' => 0,
-                'items' => [
-                    ['', 0],
-                ],
-                'foreign_table' => 'tx_sportms_domain_model_person',
-                'foreign_table_where' => 'AND {#tx_sportms_domain_model_person}.{#pid}=###CURRENT_PID### AND {#tx_sportms_domain_model_person}.{#sys_language_uid} IN (-1,0)',
-            ],
-        ],
-        'l10n_diffsource' => [
-            'config' => [
-                'type' => 'passthrough',
-            ],
-        ],
         
         't3ver_label' => [
             'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.versionLabel',
