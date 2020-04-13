@@ -49,8 +49,6 @@ return array(
 			'exclude' => true,
 			'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.visible',
 			'config' => [
-				'type' => 'check',
-				'renderType' => 'checkboxToggle',
 				'items' => [
 					[
 						0 => '',
@@ -58,6 +56,8 @@ return array(
 						'invertStateDisplay' => true
 					]
 				],
+				'renderType' => 'checkboxToggle',
+				'type' => 'check',
 			],
 		],
 		
@@ -160,6 +160,8 @@ return array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_teamseasonsquadmember.new_signing',
 			'config' => array(
+				'default' => FALSE,
+				'renderType' => 'checkboxToggle',
 				'type' => 'check',
 			),
 		),
@@ -167,6 +169,8 @@ return array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_teamseasonsquadmember.leaving',
 			'config' => array(
+				'default' => FALSE,
+				'renderType' => 'checkboxToggle',
 				'type' => 'check',
 			),
 		),

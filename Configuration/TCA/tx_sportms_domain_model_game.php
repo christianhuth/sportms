@@ -72,8 +72,6 @@ return array(
 			'exclude' => true,
 			'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.visible',
 			'config' => [
-				'type' => 'check',
-				'renderType' => 'checkboxToggle',
 				'items' => [
 					[
 						0 => '',
@@ -81,6 +79,8 @@ return array(
 						'invertStateDisplay' => true
 					]
 				],
+				'renderType' => 'checkboxToggle',
+				'type' => 'check',
 			],
 		],
 		
@@ -245,7 +245,7 @@ return array(
                 'foreign_table' => 'tx_sportms_domain_model_venue',
                 'foreign_table_where' => 'ORDER BY name ASC',
                 'items' => Array (
-                    array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", ""),
+                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ''),
                 ),
                 'renderType' => 'selectSingle',
                 'size' => 1,
@@ -347,7 +347,8 @@ return array(
 		),
 		'result_end_additional' => array(
 			'config' => array(
-				'default' => '0',
+				'default' => FALSE,
+				'renderType' => 'checkboxToggle',
 				'type' => 'check',
 			),
 			'exclude' => 1,
@@ -735,7 +736,7 @@ return array(
                 'foreign_table_where' => '  AND tx_sportms_domain_model_teamseason.uid IN (SELECT uid_foreign FROM tx_sportms_competitionseason_teamseason_mm WHERE uid_local = ###REC_FIELD_competition_season###)
 	                                        ORDER BY tx_sportms_domain_model_teamseason.team ASC',
                 'items' => Array (
-                    array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", ""),
+                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ''),
                 ),
                 'maxItems' => 1,
                 'minItems' => 1,
@@ -806,7 +807,7 @@ return array(
                 'foreign_table' => 'tx_sportms_domain_model_teamseasonofficial',
                 'foreign_table_where' => ' AND team_season = ###REC_FIELD_team_season_home###',
                 'items' => Array (
-                    array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", ""),
+                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ''),
                 ),
                 'maxItems' => 1,
                 'minItems' => 1,
@@ -832,7 +833,7 @@ return array(
                                             AND tx_sportms_domain_model_teamseason.uid != ###REC_FIELD_team_season_home###
 											ORDER BY tx_sportms_domain_model_teamseason.team ASC',
                 'items' => Array (
-                    array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", ""),
+                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ''),
                 ),
                 'maxItems' => 1,
                 'minItems' => 1,
@@ -904,7 +905,7 @@ return array(
 				'foreign_table' => 'tx_sportms_domain_model_teamseasonofficial',
 				'foreign_table_where' => ' AND team_season = ###REC_FIELD_team_season_guest###',
 				'items' => Array (
-					array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", ""),
+					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ''),
 				),
 				'maxItems' => 1,
 				'minItems' => 1,
@@ -1023,15 +1024,15 @@ return array(
             ),
         ),
 
-        'detail_link' => array(
-            'exclude' => 1,
+        'detail_link' => [
+            'exclude' => true,
             'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.detail_link',
-            'config' => array(
-                'default' => '1',
+            'config' => [
+                'default' => FALSE,
                 'renderType' => 'checkboxToggle',
                 'type' => 'check',
-            ),
-        ),
+            ],
+        ],
 		
 		'slug' => [
 			'exclude' => true,

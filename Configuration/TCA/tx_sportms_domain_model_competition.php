@@ -51,8 +51,6 @@
 				'exclude' => true,
 				'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.visible',
 				'config' => [
-					'type' => 'check',
-					'renderType' => 'checkboxToggle',
 					'items' => [
 						[
 							0 => '',
@@ -60,6 +58,8 @@
 							'invertStateDisplay' => true
 						]
 					],
+					'renderType' => 'checkboxToggle',
+					'type' => 'check',
 				],
 			],
 			'starttime' => [
@@ -211,7 +211,7 @@
 				'exclude' => true,
 				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.detail_link',
 				'config' => [
-					'default' => '1',
+					'default' => FALSE,
 					'renderType' => 'checkboxToggle',
 					'type' => 'check',
 				],

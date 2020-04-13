@@ -50,8 +50,6 @@ return array(
 			'exclude' => true,
 			'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.visible',
 			'config' => [
-				'type' => 'check',
-				'renderType' => 'checkboxToggle',
 				'items' => [
 					[
 						0 => '',
@@ -59,6 +57,8 @@ return array(
 						'invertStateDisplay' => true
 					]
 				],
+				'renderType' => 'checkboxToggle',
+				'type' => 'check',
 			],
 		],
 		
@@ -169,6 +169,8 @@ return array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_team.dummy',
 			'config' => array(
+				'default' => FALSE,
+				'renderType' => 'checkboxToggle',
 				'type' => 'check',
 			),
 		),
@@ -220,7 +222,7 @@ return array(
 			'exclude' => true,
 			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.detail_link',
 			'config' => [
-				'default' => '1',
+				'default' => FALSE,
 				'renderType' => 'checkboxToggle',
 				'type' => 'check',
 			],

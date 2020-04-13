@@ -53,8 +53,6 @@ return array(
 			'exclude' => true,
 			'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.visible',
 			'config' => [
-				'type' => 'check',
-				'renderType' => 'checkboxToggle',
 				'items' => [
 					[
 						0 => '',
@@ -62,6 +60,8 @@ return array(
 						'invertStateDisplay' => true
 					]
 				],
+				'renderType' => 'checkboxToggle',
+				'type' => 'check',
 			],
 		],
 		'slug' => [
@@ -127,8 +127,8 @@ return array(
 			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sport.is_team_sport',
 			'config' => [
 				'default' => FALSE,
-				'type' => 'check',
 				'renderType' => 'checkboxToggle',
+				'type' => 'check',
 			],
 		],
 		'is_individual_sport' => [
@@ -136,8 +136,8 @@ return array(
 			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sport.is_individual_sport',
 			'config' => [
 				'default' => FALSE,
-				'type' => 'check',
 				'renderType' => 'checkboxToggle',
+				'type' => 'check',
 			],
 		],
 		'sport_types' => array(
