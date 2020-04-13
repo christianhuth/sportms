@@ -18,7 +18,7 @@
 			'iconfile' => 'EXT:sportms/Resources/Public/Icons/tx_sportms_domain_model_teamseason.svg',
             'label' => '',
 			'label_userFunc' => \Balumedien\Sportms\Configuration\TCA\UserFunc\UserFunc::class . '->CompetitionSeasonLabel',
-			'searchFields' => '',
+			'searchFields' => 'competition',
 			'title' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_competitionseason',
 			'tstamp' => 'tstamp',
 			'versioningWS' => TRUE,
