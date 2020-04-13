@@ -16,7 +16,7 @@ return array(
         'hideTable' => TRUE,
 		'iconfile' => 'EXT:sportms/Resources/Public/Icons/tx_sportms_domain_model_gamereport.svg',
         'label' => 'headline',
-		'searchFields' => '',
+		'searchFields' => 'headline, text, author',
 		'title'	=> 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_gamereport',
 		'tstamp' => 'tstamp',
 		'versioningWS' => TRUE,
@@ -25,8 +25,7 @@ return array(
 		'showRecordFieldList' => '',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'game, headline, text, author,
-		                            '),
+		'1' => array('showitem' => 'game, headline, text, author, date'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -95,7 +94,7 @@ return array(
                 'eval' => 'required',
                 'foreign_table' => 'tx_sportms_domain_model_game',
                 'items' => Array (
-                    array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", ""),
+                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ""),
                 ),
                 'maxItems' => 1,
                 'minItems' => 1,
