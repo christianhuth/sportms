@@ -316,7 +316,7 @@ CREATE TABLE tx_sportms_domain_model_gamereferee (
 CREATE TABLE tx_sportms_domain_model_gamereport (
     game int(11) DEFAULT '0' NOT NULL,
     headline varchar(255) DEFAULT '' NOT NULL,
-    text varchar(255) DEFAULT '' NOT NULL,
+    text text DEFAULT '' NOT NULL,
     author varchar(255) DEFAULT NULL,
     date int(11) DEFAULT NULL,
 	sorting int(11) DEFAULT '0' NOT NULL
