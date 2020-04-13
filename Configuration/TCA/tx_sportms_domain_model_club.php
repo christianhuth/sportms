@@ -320,6 +320,7 @@ return array(
                     'useSortable' => 1,
                 ),
                 'foreign_field' => 'club',
+	            'foreign_sortby' => 'sorting',
                 'foreign_table' => 'tx_sportms_domain_model_clubground',
                 'type' => 'inline',
             ),
