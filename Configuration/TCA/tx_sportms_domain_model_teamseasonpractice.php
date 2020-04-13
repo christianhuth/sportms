@@ -142,6 +142,7 @@ return array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_teamseasonpractice.day',
 			'config' => array(
+				'eval' => 'required',
 				'items' => array(
 					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ''),
 					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_teamseasonpractice.day.1', '1'),
@@ -185,7 +186,7 @@ return array(
 				'foreign_table' => 'tx_sportms_domain_model_venue',
 				'foreign_table_where' => 'ORDER BY name ASC',
 				'items' => Array (
-                    array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", ""),
+                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ''),
 				),
 				'maxItems' => 1,
 				'minItems' => 1,

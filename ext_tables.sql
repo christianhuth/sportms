@@ -568,7 +568,7 @@ CREATE TABLE tx_sportms_domain_model_teamseasonofficialjob (
 #
 CREATE TABLE tx_sportms_domain_model_teamseasonpractice (
     team_season int(11) DEFAULT '0' NOT NULL,
-	day varchar(255) DEFAULT '' NOT NULL,
+	day int(1) DEFAULT 0 NOT NULL,
 	time_start varchar(255) DEFAULT '' NOT NULL,
 	time_end varchar(255) DEFAULT '' NOT NULL,
 	venue int(11) DEFAULT '0' NOT NULL,
