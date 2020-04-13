@@ -1,4 +1,5 @@
 <?php
+	
 	if (!defined ('TYPO3_MODE')) {
 		die ('Access denied.');
 	}
@@ -14,6 +15,7 @@
 				'starttime' => 'starttime',
 				'endtime' => 'endtime',
 			),
+			'hideTable' => FALSE,
 			'iconfile' => 'EXT:sportms/Resources/Public/Icons/tx_sportms_domain_model_competition.svg',
 	        'label' => '',
 	        'label_userFunc' => \Balumedien\Sportms\Configuration\TCA\UserFunc\UserFunc::class . '->CompetitionLabel',
