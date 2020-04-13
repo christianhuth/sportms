@@ -838,6 +838,9 @@
 			<trans-unit id="tx_sportms_domain_model_gamereport.author">
 				<source>Autor</source>
 			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_gamereport.date">
+				<source>Datum</source>
+			</trans-unit>
 
 
 			<!-- Domain Model GameResultSet -->

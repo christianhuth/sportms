@@ -132,6 +132,17 @@ return array(
                 'type' => 'input',
             ),
         ),
+		'date' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_gamereport.date',
+			'config' => array(
+				'type' => 'input',
+				'size' => 8,
+				'eval' => 'date',
+				'placeholder' => 'dd-mm-yyyy',
+				'renderType' => 'inputDateTime',
+			),
+		),
 		
 	),
 );
