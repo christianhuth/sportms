@@ -382,7 +382,7 @@ CREATE TABLE tx_sportms_domain_model_person (
 	mails int(11) DEFAULT NULL,
 	urls int(11) DEFAULT NULL,
     person_profiles int(11) DEFAULT NULL,
-	hidden_birthday tinyint(4) unsigned DEFAULT '0' NOT NULL,
+	show_birthday tinyint(4) unsigned DEFAULT '0' NOT NULL,
 	detail_link tinyint(4) unsigned DEFAULT '1' NOT NULL,
 	profile_player tinyint(4) unsigned DEFAULT '0' NOT NULL,
 	profile_official tinyint(4) unsigned DEFAULT '0' NOT NULL,
