@@ -14,7 +14,7 @@ mod.wizards.newContentElement.wizardItems.plugins {
 
 mod.wizards.newContentElement.wizardItems.plugins {
 	elements {
-		sportms_club {
+		club {
 			iconIdentifier = ext-sportms-wizard-plugin-club-icon
 			title = LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:CE_title
 			description = LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:CE_description
@@ -28,7 +28,7 @@ mod.wizards.newContentElement.wizardItems.plugins {
 
 mod.wizards.newContentElement.wizardItems.plugins {
 	elements {
-		sportms_competition {
+		competition {
 			iconIdentifier = ext-sportms-wizard-plugin-competition-icon
 			title = LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:CE_title
 			description = LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:CE_description
@@ -41,7 +41,7 @@ mod.wizards.newContentElement.wizardItems.plugins {
 }
 mod.wizards.newContentElement.wizardItems.plugins {
 	elements {
-		sportms_game {
+		game {
 			iconIdentifier = ext-sportms-wizard-plugin-game-icon
 			title = LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:CE_title
 			description = LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:CE_description
@@ -54,7 +54,7 @@ mod.wizards.newContentElement.wizardItems.plugins {
 }
 mod.wizards.newContentElement.wizardItems.plugins {
 	elements {
-		sportms_person {
+		person {
 			iconIdentifier = ext-sportms-wizard-plugin-person-icon
 			title = LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:CE_title
 			description = LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:CE_description
@@ -67,7 +67,7 @@ mod.wizards.newContentElement.wizardItems.plugins {
 }
 mod.wizards.newContentElement.wizardItems.plugins {
 	elements {
-		sportms_team {
+		team {
 			iconIdentifier = ext-sportms-wizard-plugin-team-icon
 			title = LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:CE_title
 			description = LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:CE_description
