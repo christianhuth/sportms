@@ -726,8 +726,6 @@ return array(
 			),
 		),
 		'game_rating' => array(
-			'exclude' => 1,
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.game_rating',
 			'config' => array(
 				'items' => array(
 					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.game_rating.normal', 1),
@@ -737,6 +735,9 @@ return array(
 				'renderType' => 'selectSingle',
 				'type' => 'select',
 			),
+			'exclude' => TRUE,
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.game_rating',
+			'onChange' => 'reload',
 		),
 		'result_special_home' => array(
 			'config' => array(
