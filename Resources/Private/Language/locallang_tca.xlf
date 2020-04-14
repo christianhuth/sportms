@@ -1465,14 +1465,14 @@
 			<trans-unit id="tx_sportms_domain_model_venue">
 				<source>Sportstätte</source>
 			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_venue.club">
-				<source>Verein</source>
+			<trans-unit id="tx_sportms_domain_model_venue.address">
+				<source>Adresse</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_venue.home_venue_for_clubs">
+				<source>Heimspielstätte für folgende Vereine</source>
 			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_venue.name">
 				<source>Bezeichnung</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_venue.address">
-				<source>Adresse</source>
 			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_venue.images">
 				<source>Bilder</source>

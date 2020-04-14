@@ -28,7 +28,7 @@ return array(
 		'1' => array('showitem' => 'name, favorite, colours, date_of_founding, year_of_founding, club_members,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_club.tab_images, images,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_club.tab_contact, addresses, phones, mails, urls,
-									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_club.tab_grounds, club_grounds,
+									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_club.tab_grounds, club_grounds, home_venues,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_club.tab_sections, club_sections,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_club.tab_officials, club_officials,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab_visibility, hidden, detail_link, slug,
@@ -286,6 +286,31 @@ return array(
                 'type' => 'inline',
             ),
         ),
+		'home_venues' => array(
+			'exclude' => true,
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_club.home_venues',
+			'config' => array(
+				'autoSizeMax' => 30,
+				'fieldControl' => [
+					'editPopup' => [
+						'disabled' => true,
+					],
+					'addRecord' => [
+						'disabled' => true,
+					],
+					'listModule' => [
+						'disabled' => true,
+					],
+				],
+				'foreign_table' => 'tx_sportms_domain_model_venue',
+				'MM' => 'tx_sportms_venue_club_mm',
+				'MM_opposite_field' => 'home_venues',
+				'multiple' => 0,
+				'renderType' => 'selectMultipleSideBySide',
+				'size' => 10,
+				'type' => 'select',
+			),
+		),
 		
 		'club_sections' => array(
 			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_club.club_sections',

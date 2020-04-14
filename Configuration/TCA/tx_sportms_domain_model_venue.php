@@ -26,7 +26,7 @@ return array(
 		'showRecordFieldList' => 'hidden, section',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'club, name, address, images, description, --palette--;;building, --palette--;;size,
+		'1' => array('showitem' => 'name, address, home_venue_for_clubs, images, description, --palette--;;building, --palette--;;size,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab_visibility, hidden, detail_link, slug,
 									'),
 	),
@@ -90,22 +90,7 @@ return array(
                 ]
             ],
         ],
-
-        'club' => array(
-            'exclude' => 1,
-            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_venue.club',
-            'config' => array(
-                'foreign_table' => 'tx_sportms_domain_model_club',
-                'foreign_table_where' => 'ORDER BY name ASC',
-                'items' => Array (
-                    array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", ""),
-                ),
-                'maxItems' => 1,
-                'renderType' => 'selectSingle',
-                'size' => 1,
-                'type' => 'select',
-            ),
-        ),
+		
 		'name' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_venue.name',
@@ -115,15 +100,6 @@ return array(
 				'type' => 'input',
 			),
 		),
-        'description' => array(
-            'exclude' => 1,
-            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_venue.description',
-            'config' => array(
-                'cols' => '40',
-                'rows' => '15',
-                'type' => 'text',
-            ),
-        ),
 		'address' => array(
 			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_venue.address',
 			'config' => array(
@@ -148,6 +124,30 @@ return array(
 				'type' => 'inline',
 			),
 		),
+		'home_venue_for_clubs' => array(
+			'exclude' => true,
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_venue.home_venue_for_clubs',
+			'config' => array(
+				'autoSizeMax' => 30,
+				'fieldControl' => [
+					'editPopup' => [
+						'disabled' => true,
+					],
+					'addRecord' => [
+						'disabled' => true,
+					],
+					'listModule' => [
+						'disabled' => true,
+					],
+				],
+				'foreign_table' => 'tx_sportms_domain_model_club',
+				'MM' => 'tx_sportms_venue_club_mm',
+				'multiple' => 0,
+				'renderType' => 'selectMultipleSideBySide',
+				'size' => 10,
+				'type' => 'select',
+			),
+		),
 		
 		'images' => array(
 				'exclude' => 1,
@@ -161,6 +161,16 @@ return array(
 					),
 					$GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']
 				),
+		),
+		
+		'description' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_venue.description',
+			'config' => array(
+				'cols' => '40',
+				'rows' => '15',
+				'type' => 'text',
+			),
 		),
 
 		'date_of_building' => array(

@@ -611,10 +611,10 @@ CREATE TABLE tx_sportms_domain_model_url (
 # Table structure for table 'tx_sportms_domain_model_venue'
 #
 CREATE TABLE tx_sportms_domain_model_venue (
-    club int(11) DEFAULT NULL,
     name varchar(255) DEFAULT '' NOT NULL,
-    description varchar(255) DEFAULT '' NOT NULL,
     address int(11) DEFAULT NULL,
+    home_venue_for_clubs int(11) DEFAULT NULL,
+    description varchar(255) DEFAULT '' NOT NULL,
     images varchar(255) DEFAULT NULL,
     date_of_building int(11) DEFAULT NULL,
     year_of_building varchar(255) DEFAULT NULL,
@@ -688,4 +688,17 @@ CREATE TABLE tx_sportms_teamseason_teamseasonsquadmember_mm (
 	PRIMARY KEY (uid_local,uid_foreign),
 	KEY uid_local (uid_local),
 	KEY uid_foreign (uid_foreign)
+);
+
+#
+# Table structure for table 'tx_sportms_venue_club_mm'
+#
+CREATE TABLE tx_sportms_venue_club_mm (
+    uid_local int(11) unsigned DEFAULT '0' NOT NULL,
+    uid_foreign int(11) unsigned DEFAULT '0' NOT NULL,
+    sorting int(11) unsigned DEFAULT '0' NOT NULL,
+    sorting_foreign int(11) unsigned DEFAULT '0' NOT NULL,
+    PRIMARY KEY (uid_local,uid_foreign),
+    KEY uid_local (uid_local),
+    KEY uid_foreign (uid_foreign)
 );

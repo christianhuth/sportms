@@ -8,11 +8,6 @@
 	class Venue extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 		
 		/**
-		 * @var \Balumedien\Sportms\Domain\Model\Club
-		 */
-		protected $club;
-		
-		/**
 		 * @var string
 		 */
 		protected $name;
@@ -26,6 +21,11 @@
 		 * @var \Balumedien\Sportms\Domain\Model\Address
 		 */
 		protected $address;
+		
+		/**
+		 * @var int
+		 */
+		protected $homeVenueForClubs;
 		
 		/**
 		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference>
@@ -81,20 +81,6 @@
 		}
 		
 		/**
-		 * @return \Balumedien\Sportms\Domain\Model\Club
-		 */
-		public function getClub(): \Balumedien\Sportms\Domain\Model\Club {
-			return $this->club;
-		}
-		
-		/**
-		 * @param \Balumedien\Sportms\Domain\Model\Club $club
-		 */
-		public function setClub(\Balumedien\Sportms\Domain\Model\Club $club): void {
-			$this->club = $club;
-		}
-		
-		/**
 		 * @return string
 		 */
 		public function getName(): string {
@@ -134,6 +120,20 @@
 		 */
 		public function setAddress(\Balumedien\Sportms\Domain\Model\Address $address): void {
 			$this->address = $address;
+		}
+		
+		/**
+		 * @return int
+		 */
+		public function getHomeVenueForClubs(): int {
+			return $this->homeVenueForClubs;
+		}
+		
+		/**
+		 * @param int $homeVenueForClubs
+		 */
+		public function setHomeVenueForClubs(int $homeVenueForClubs): void {
+			$this->homeVenueForClubs = $homeVenueForClubs;
 		}
 		
 		/**
