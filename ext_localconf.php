@@ -3,7 +3,7 @@
 	\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
 		'Balumedien.' . $_EXTKEY,
 		'sportms',
-		array(
+		[
 			'SportMS' => 'dbStats',
 			'Club' => 'list',
 			'Competition' => 'list, showIndex',
@@ -11,9 +11,7 @@
 			'Person' => 'list, showIndex',
 			'Sport' => 'list, showIndex',
 			'Team' => 'list, showIndex',
-		),
-		array(
-		)
+		]
 	);
 	
 	\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
