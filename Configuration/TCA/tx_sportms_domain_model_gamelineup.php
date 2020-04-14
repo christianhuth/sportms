@@ -14,7 +14,7 @@ return array(
 			'endtime' => 'endtime',
 		),
 		'hideTable' => TRUE,
-		'iconfile' => 'EXT:sportms/Resources/Public/Icons/tx_sportms_domain_model_game.svg',
+		'iconfile' => 'EXT:sportms/Resources/Public/Icons/tx_sportms_domain_model_gamelineup.svg',
         'label' => '',
         'label_userFunc' => \Balumedien\Sportms\Configuration\TCA\UserFunc\UserFunc::class . '->GameLineupLabel',
 		'searchFields' => '',
