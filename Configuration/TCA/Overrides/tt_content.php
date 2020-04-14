@@ -9,8 +9,14 @@
 	\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
 		$_EXTKEY,					                                    // Extension-Key
 		'sportms',					                        // Plugin-Name
-		'Sport Management System',	                        // Plugin-Label
-		'EXT:sportms/Resources/Public/Icons/Extension.svg'   // Extension Icon in Plugin Selection
+		'Sport Management System',	                            // Plugin-Label
+		'EXT:sportms/Resources/Public/Icons/Extension.svg'     // Extension Icon in Plugin Selection
+	);
+	\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
+		$_EXTKEY,					                                     // Extension-Key
+		'club',					                             // Plugin-Name
+		'Sport Management System (Club)',                       // Plugin-Label
+		'EXT:sportms/Resources/Public/Icons/tx_sportms_domain_model_club.svg'      // Extension Icon in Plugin Selection
 	);
 	
 	// Add Static Template File
