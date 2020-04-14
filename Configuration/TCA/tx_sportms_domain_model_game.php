@@ -27,7 +27,7 @@ return array(
 	),
 	'types' => array(
 		'1' => array('showitem' => 'sport, season, competition_season,
-		                            --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.tab_details, game_appointment, --palette--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.palette_gameday_date_time;gameday_date_time, --palette--;;venue_spectators, --palette--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.palette_periods;periods, game_periods,
+		                            --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.tab_details, game_appointment, game_rating, --palette--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.palette_gameday_date_time;gameday_date_time, --palette--;;venue_spectators, --palette--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.palette_periods;periods, game_periods,
 		                            --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.tab_result,
 		                                --palette--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.palette_result_end_regular;result_end_regular,
 		                                --palette--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.palette_result_end_additional;result_end_additional,
@@ -178,23 +178,36 @@ return array(
             ),
             'onChange' => 'reload',
         ),
-
-        'game_appointment' => array(
-            'exclude' => 1,
-            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.game_appointment',
-            'config' => array(
-                'items' => array(
-                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.game_appointment.planned', 1),
-                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.game_appointment.canceled', 2),
-                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.game_appointment.dropped', 3),
-                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.game_appointment.running', 4),
-                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.game_appointment.uncompleted', 5),
-                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.game_appointment.finished', 6),
-                ),
-                'renderType' => 'selectSingle',
-                'type' => 'select',
-            ),
-        ),
+		
+		'game_appointment' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.game_appointment',
+			'config' => array(
+				'items' => array(
+					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.game_appointment.planned', 1),
+					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.game_appointment.canceled', 2),
+					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.game_appointment.dropped', 3),
+					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.game_appointment.running', 4),
+					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.game_appointment.uncompleted', 5),
+					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.game_appointment.finished', 6),
+				),
+				'renderType' => 'selectSingle',
+				'type' => 'select',
+			),
+		),
+		'game_rating' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.game_rating',
+			'config' => array(
+				'items' => array(
+					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.game_rating.normal', 1),
+					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.game_rating.special', 2),
+					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.game_rating.invalid', 3),
+				),
+				'renderType' => 'selectSingle',
+				'type' => 'select',
+			),
+		),
 		'gameday' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.gameday',

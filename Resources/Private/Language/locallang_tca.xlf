@@ -400,6 +400,18 @@
 			<trans-unit id="tx_sportms_domain_model_game.game_appointment.uncompleted">
 				<source>Abgebrochen</source>
 			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_game.game_rating">
+				<source>Spielwertung</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_game.game_rating.normal">
+				<source>Normale Wertung</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_game.game_rating.special">
+				<source>Spezialwertung</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_game.game_rating.invalid">
+				<source>Keine Wertung</source>
+			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_game.gameday">
 				<source>Spieltag</source>
 			</trans-unit>

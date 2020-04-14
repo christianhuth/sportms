@@ -40,6 +40,11 @@
 		protected $gameAppointment;
 		
 		/**
+		 * @var int
+		 */
+		protected $gameRating;
+		
+		/**
 		 * @var \Balumedien\Sportms\Domain\Model\CompetitionSeasonGameday
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
@@ -406,6 +411,20 @@
 		 */
 		public function setGameAppointment(int $gameAppointment): void {
 			$this->gameAppointment = $gameAppointment;
+		}
+		
+		/**
+		 * @return int
+		 */
+		public function getGameRating(): int {
+			return $this->gameRating;
+		}
+		
+		/**
+		 * @param int $gameRating
+		 */
+		public function setGameRating(int $gameRating): void {
+			$this->gameRating = $gameRating;
 		}
 		
 		/**
