@@ -529,6 +529,12 @@
 			<trans-unit id="tx_sportms_domain_model_game.result_sets">
 				<source>Spielsätze</source>
 			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_game.result_special_home">
+				<source>Sonderwertung (Heim)</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_game.result_special_guest">
+				<source>Sonderwertung (Gast)</source>
+			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_game.team_season_home">
 				<source>Heimmannschaft</source>
 			</trans-unit>
@@ -591,6 +597,9 @@
 			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_game.palette_result_sets">
 				<source>Ergebnis nach Sätzen</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_game.palette_result_special">
+				<source>Spezialwertung</source>
 			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_game.tab_details">
 				<source>Details</source>

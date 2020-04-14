@@ -220,6 +220,8 @@ CREATE TABLE tx_sportms_domain_model_game (
     result_fourths_fourth_home int(11) DEFAULT NULL,
     result_fourths_fourth_guest int(11) DEFAULT NULL,
     result_sets int(11) DEFAULT NULL,
+    result_special_home int(11) DEFAULT NULL,
+    result_special_guest int(11) DEFAULT NULL,
     game_lineup_home_starts int(11) DEFAULT NULL,
     game_lineup_home_substitutes int(11) DEFAULT NULL,
     trainer_home int(11) DEFAULT NULL,
