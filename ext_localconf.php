@@ -59,11 +59,11 @@
 	if (TYPO3_MODE === 'BE') {
 		$icons = [
 			'ext-sportms-wizard-icon' => 'Extension.svg',
-			'ext-sportms-wizard-plugin-club-icon' => 'tx_clubms_domain_model_club.svg',
-			'ext-sportms-wizard-plugin-competition-icon' => 'tx_clubms_domain_model_game.svg',
-			'ext-sportms-wizard-plugin-game-icon' => 'tx_clubms_domain_model_game.svg',
-			'ext-sportms-wizard-plugin-person-icon' => 'tx_clubms_domain_model_person.svg',
-			'ext-sportms-wizard-plugin-team-icon' => 'tx_clubms_domain_model_team.svg',
+			'ext-sportms-wizard-plugin-club-icon' => 'tx_sportms_domain_model_club.svg',
+			'ext-sportms-wizard-plugin-competition-icon' => 'tx_sportms_domain_model_game.svg',
+			'ext-sportms-wizard-plugin-game-icon' => 'tx_sportms_domain_model_game.svg',
+			'ext-sportms-wizard-plugin-person-icon' => 'tx_sportms_domain_model_person.svg',
+			'ext-sportms-wizard-plugin-team-icon' => 'tx_sportms_domain_model_team.svg',
 		];
 		$iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
 		foreach ($icons as $identifier => $filename) {
