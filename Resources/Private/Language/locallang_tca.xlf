@@ -87,6 +87,9 @@
 			<trans-unit id="tx_sportms_domain_model_club.club_grounds">
 				<source>Vereinsgelände</source>
 			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_club.home_venues">
+				<source>Heimspielstätten</source>
+			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_club.club_sections">
 				<source>Abteilungen</source>
 			</trans-unit>

@@ -29,6 +29,7 @@ CREATE TABLE tx_sportms_domain_model_club (
 	mails int(11) DEFAULT NULL,
 	urls int(11) DEFAULT NULL,
     club_grounds int(11) DEFAULT NULL,
+    home_venues int(11) DEFAULT NULL,
     club_sections int(11) DEFAULT NULL,
     club_officials int(11) DEFAULT NULL,
 	detail_link tinyint(4) unsigned DEFAULT '1' NOT NULL,
