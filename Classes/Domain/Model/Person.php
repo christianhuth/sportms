@@ -50,7 +50,7 @@
 		/**
 		 * @var string
 		 */
-		protected $gender = '';
+		protected $sex = '';
 		
 		/**
 		 * @var string
@@ -311,15 +311,15 @@
 		/**
 		 * @return string
 		 */
-		public function getGender() {
-			return $this->gender;
+		public function getSex(): string {
+			return $this->sex;
 		}
 		
 		/**
-		 * @param string $gender
+		 * @param string $sex
 		 */
-		public function setGender($gender) {
-			$this->gender = $gender;
+		public function setSex(string $sex): void {
+			$this->sex = $sex;
 		}
 		
 		/**

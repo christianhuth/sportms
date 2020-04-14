@@ -364,7 +364,7 @@ CREATE TABLE tx_sportms_domain_model_person (
 	zodiac_sign int(11) DEFAULT NULL,
 	place_of_birth varchar(255) DEFAULT NULL,
 	nationality int(11) DEFAULT NULL,
-	gender varchar(1) DEFAULT NULL,
+	sex varchar(1) DEFAULT NULL,
 	weight double(11,4) DEFAULT NULL,
 	height double(11,4) DEFAULT NULL,
 	size_of_shoe varchar(255) DEFAULT NULL,

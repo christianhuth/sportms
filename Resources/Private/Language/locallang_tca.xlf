@@ -949,13 +949,16 @@
 			<trans-unit id="tx_sportms_domain_model_person.nationality">
 				<source>Nationalität</source>
 			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_person.gender">
+			<trans-unit id="tx_sportms_domain_model_person.sex">
 				<source>Geschlecht</source>
 			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_person.gender_male">
+			<trans-unit id="tx_sportms_domain_model_person.sex_diverse">
+				<source>Divers</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_person.sex_male">
 				<source>Männlich</source>
 			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_person.gender_female">
+			<trans-unit id="tx_sportms_domain_model_person.sex_female">
 				<source>Weiblich</source>
 			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_person.weight">

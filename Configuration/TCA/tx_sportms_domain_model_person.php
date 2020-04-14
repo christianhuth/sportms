@@ -25,10 +25,10 @@ return array(
 		'versioningWS' => TRUE,
     ),
 	'interface' => array(
-		'showRecordFieldList' => 'firstname, lastname, nickname, date_of_birth, zodiac_sign, place_of_birth, nationality, gender, height, weight, hander, footer, address, phone, url',
+		'showRecordFieldList' => 'firstname, lastname, nickname, date_of_birth, zodiac_sign, place_of_birth, nationality, sex, height, weight, hander, footer, address, phone, url',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'firstname, lastname, birthname, nickname, date_of_birth, zodiac_sign, place_of_birth, nationality, gender,
+		'1' => array('showitem' => 'firstname, lastname, birthname, nickname, date_of_birth, zodiac_sign, place_of_birth, nationality, sex,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.tab_personal, weight, height, size_of_shoe, hander, footer, family_status, graduation, job, characteristics, hobbies, favorite_dish, favorite_drink,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.tab_contact, addresses, phones, mails, urls,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.tab_profiles, person_profiles,
@@ -189,14 +189,15 @@ return array(
 				'multiple' => 0,
 			),
 		),
-        'gender' => array(
+        'sex' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.gender',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.sex',
             'config' => array(
 				'items' => array(
                     array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ''),
-					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.gender_male', 'm'),
-					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.gender_female', 'f'),
+					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.sex_diverse', 'd'),
+					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.sex_male', 'm'),
+					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.sex_female', 'f'),
 				),
                 'renderType' => 'selectSingle',
 				'type' => 'select',
