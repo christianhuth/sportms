@@ -17,7 +17,7 @@ return array(
 		'iconfile' => 'EXT:sportms/Resources/Public/Icons/tx_sportms_domain_model_venue.svg',
 		'label' => '',
         'label_userFunc' => \Balumedien\Sportms\Configuration\TCA\UserFunc\UserFunc::class . '->VenueLabel',
-		'searchFields' => '',
+		'searchFields' => 'name',
 		'title'	=> 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_venue',
 		'tstamp' => 'tstamp',
 		'versioningWS' => TRUE,
