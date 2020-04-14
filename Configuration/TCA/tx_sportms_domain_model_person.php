@@ -176,23 +176,19 @@ return array(
                 'eval' => 'trim',
             ),
         ),
-        'nationality' => array(
-            'exclude' => 1,
-            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.nationality',
-            'config' => array(
+		'nationality' => array(
+			'exclude' => true,
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.nationality',
+			'config' => array(
+				'type' => 'select',
+				'renderType' => 'selectMultipleSideBySide',
 				'foreign_table' => 'static_countries',
-				'items' => Array (
-                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ''),
-				),
-	            'multiSelectFilterItems' => [
-		            ['', ''],
-		            ['foo', 'foo'],
-		            ['bar', 'bar'],
-	            ],
-	            'renderType' => 'selectMultipleSideBySide',
-                'type' => 'select',
-            ),
-        ),
+				'MM' => 'tx_sportms_person_nationality_mm',
+				'size' => 10,
+				'autoSizeMax' => 30,
+				'multiple' => 0,
+			),
+		),
         'gender' => array(
             'exclude' => 1,
             'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.gender',
