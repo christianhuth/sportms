@@ -592,6 +592,7 @@ CREATE TABLE tx_sportms_domain_model_teamseasonsquadmember (
     squad_number varchar(255) DEFAULT NULL,
 	new_signing tinyint(4) unsigned DEFAULT '0' NOT NULL,
 	leaving tinyint(4) unsigned DEFAULT '0' NOT NULL,
+    hidden_in_squad_list smallint(5) unsigned NOT NULL DEFAULT '0',
 	sorting int(11) DEFAULT NULL
 );
 

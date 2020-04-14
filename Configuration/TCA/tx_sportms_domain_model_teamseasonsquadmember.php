@@ -28,7 +28,7 @@ return array(
 	'types' => array(
 		'1' => array('showitem' => 'person, sport_position_group, sport_position, squad_number,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_teamseasonsquadmember.tab_transfer, new_signing, leaving,
-									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab_visibility, hidden,
+									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab_visibility, hidden, hidden_in_squad_list,
 		                            '),
 	),
 	'palettes' => array(
@@ -174,6 +174,23 @@ return array(
 				'type' => 'check',
 			),
 		),
+		
+		'hidden_in_squad_list' => [
+			'exclude' => true,
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_teamseasonsquadmember.hidden_in_squad_list',
+			'config' => [
+				'default' => FALSE,
+				'items' => [
+					[
+						0 => '',
+						1 => '',
+						'invertStateDisplay' => true
+					]
+				],
+				'renderType' => 'checkboxToggle',
+				'type' => 'check',
+			],
+		],
 		
 	),
 );

@@ -34,14 +34,19 @@
 		protected $squadNumber;
 		
 		/**
-		 * @var boolean
+		 * @var bool
 		 */
 		protected $newSigning;
 		
 		/**
-		 * @var boolean
+		 * @var bool
 		 */
 		protected $leaving;
+		
+		/**
+		 * @var bool
+		 */
+		protected $hiddenInSquadList;
 		
 		/**
 		 * @return TeamSeason
@@ -139,6 +144,20 @@
 		 */
 		public function setLeaving($leaving) {
 			$this->leaving = $leaving;
+		}
+		
+		/**
+		 * @return bool
+		 */
+		public function isHiddenInSquadList(): bool {
+			return $this->hiddenInSquadList;
+		}
+		
+		/**
+		 * @param bool $hiddenInSquadList
+		 */
+		public function setHiddenInSquadList(bool $hiddenInSquadList): void {
+			$this->hiddenInSquadList = $hiddenInSquadList;
 		}
 		
 	}
