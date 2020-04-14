@@ -1,4 +1,4 @@
-w<?php
+<?php
 	
 	$EM_CONF[$_EXTKEY] = array(
 		'title' => 'Sport Management System',
@@ -23,5 +23,3 @@ w<?php
 			),
 		),
 	);
-	
-?>
