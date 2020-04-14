@@ -6,30 +6,6 @@
 		['Club' => 'list']
 	);
 	
-	\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-		'Balumedien.' . $_EXTKEY,
-		'competition',
-		['Competition' => 'list']
-	);
-	
-	\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-		'Balumedien.' . $_EXTKEY,
-		'game',
-		['Game' => 'list, showIndex']
-	);
-	
-	\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-		'Balumedien.' . $_EXTKEY,
-		'person',
-		['Person' => 'list, showIndex']
-	);
-	
-	\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-		'Balumedien.' . $_EXTKEY,
-		'team',
-		['Team' => 'list, showGames, showGoals, showHistoryRecordGames, showIndex, showSquad']
-	);
-	
 	/* ===========================================================================
 		Add Plugin to PluginList
 	=========================================================================== */
