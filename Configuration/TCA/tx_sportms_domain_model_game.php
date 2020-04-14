@@ -27,7 +27,7 @@ return array(
 	),
 	'types' => array(
 		'1' => array('showitem' => 'sport, season, competition_season,
-		                            --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.tab_details, status, --palette--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.palette_gameday_date_time;gameday_date_time, --palette--;;venue_spectators, --palette--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.palette_periods;periods, game_periods,
+		                            --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.tab_details, game_status, --palette--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.palette_gameday_date_time;gameday_date_time, --palette--;;venue_spectators, --palette--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.palette_periods;periods, game_periods,
 		                            --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.tab_result,
 		                                --palette--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.palette_result_end_regular;result_end_regular,
 		                                --palette--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.palette_result_end_additional;result_end_additional,
@@ -178,26 +178,24 @@ return array(
             ),
             'onChange' => 'reload',
         ),
-
-        'status' => array(
-            'exclude' => 1,
-            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.status',
-            'config' => array(
-                'items' => array(
-                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.status_contemplated', 0),
-                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.status_scheduled', 1),
-                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.status_running', 2),
-                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.status_finished', 3),
-	                array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.status_rescheduled', -10),
-                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.status_uncompleted', -20),
-                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.status_invalid', -30),
-	                array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.status_canceled', -40),
-	                array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.status_dropped', -50),
-                ),
-                'renderType' => 'selectSingle',
-                'type' => 'select',
-            ),
-        ),
+		
+		'game_status' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.game_status',
+			'config' => array(
+				'eval' => 'required',
+				'foreign_table' => 'tx_sportms_domain_model_gamestatus',
+				'items' => Array (
+					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ''),
+				),
+				'maxItems' => 1,
+				'minItems' => 1,
+				'renderType' => 'selectSingle',
+				'size' => 1,
+				'type' => 'select',
+			),
+			'onChange' => 'reload',
+		),
 		'gameday' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.gameday',

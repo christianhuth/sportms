@@ -35,9 +35,9 @@
 		protected $teamSeasonGuest;
 		
 		/**
-		 * @var int
+		 * @var \Balumedien\Sportms\Domain\Model\GameStatus
 		 */
-		protected $status;
+		protected $gameStatus;
 		
 		/**
 		 * @var \Balumedien\Sportms\Domain\Model\CompetitionSeasonGameday
@@ -395,17 +395,17 @@
 		}
 		
 		/**
-		 * @return int
+		 * @return GameStatus
 		 */
-		public function getStatus(): int {
-			return $this->status;
+		public function getGameStatus(): GameStatus {
+			return $this->gameStatus;
 		}
 		
 		/**
-		 * @param int $status
+		 * @param GameStatus $gameStatus
 		 */
-		public function setStatus(int $status): void {
-			$this->status = $status;
+		public function setGameStatus(GameStatus $gameStatus): void {
+			$this->gameStatus = $gameStatus;
 		}
 		
 		/**
