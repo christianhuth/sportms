@@ -16,6 +16,36 @@
 		)
 	);
 	
+	\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+		'Balumedien.' . $_EXTKEY,
+		'competition',
+		['Competition' => 'list']
+	);
+	
+	\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+		'Balumedien.' . $_EXTKEY,
+		'club',
+		['Club' => 'list']
+	);
+	
+	\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+		'Balumedien.' . $_EXTKEY,
+		'game',
+		['Game' => 'list, showIndex']
+	);
+	
+	\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+		'Balumedien.' . $_EXTKEY,
+		'person',
+		['Person' => 'list, showIndex']
+	);
+	
+	\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+		'Balumedien.' . $_EXTKEY,
+		'team',
+		['Team' => 'list, showGames, showGoals, showHistoryRecordGames, showIndex, showSquad']
+	);
+	
 	/* ===========================================================================
 		Add Plugin to PluginList
 	=========================================================================== */
@@ -29,6 +59,11 @@
 	if (TYPO3_MODE === 'BE') {
 		$icons = [
 			'ext-sportms-wizard-icon' => 'Extension.svg',
+			'ext-sportms-wizard-plugin-club-icon' => 'tx_clubms_domain_model_club.svg',
+			'ext-sportms-wizard-plugin-competition-icon' => 'tx_clubms_domain_model_game.svg',
+			'ext-sportms-wizard-plugin-game-icon' => 'tx_clubms_domain_model_game.svg',
+			'ext-sportms-wizard-plugin-person-icon' => 'tx_clubms_domain_model_person.svg',
+			'ext-sportms-wizard-plugin-team-icon' => 'tx_clubms_domain_model_team.svg',
 		];
 		$iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
 		foreach ($icons as $identifier => $filename) {
