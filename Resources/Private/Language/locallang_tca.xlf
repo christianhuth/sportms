@@ -1027,8 +1027,8 @@
 			<trans-unit id="tx_sportms_domain_model_person.person_profile">
 				<source>Profil</source>
 			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_person.hidden_birthday">
-				<source>Geburtsdatum verbergen</source>
+			<trans-unit id="tx_sportms_domain_model_person.show_birthday">
+				<source>Geburtsdatum zeigen</source>
 			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_person.profile_player">
 				<source>Spieler-Profil?</source>

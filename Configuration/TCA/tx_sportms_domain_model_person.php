@@ -455,7 +455,7 @@ return array(
 		
 		'show_birthday' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.hidden_birthday',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.show_birthday',
 			'config' => array(
 				'default' => FALSE,
 				'renderType' => 'checkboxToggle',
