@@ -843,6 +843,15 @@
 			</trans-unit>
 
 
+			<!-- Domain Model GameStatus -->
+			<trans-unit id="tx_sportms_domain_model_gamestatus">
+				<source>Spielzustand</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_gamestatus.label">
+				<source>Bezeichnung</source>
+			</trans-unit>
+
+
 			<!-- Domain Model GameResultSet -->
             <trans-unit id="tx_sportms_domain_model_gameresultset">
                 <source>Spielsatz</source>
