@@ -1,12 +1,48 @@
 mod.wizards.newContentElement.wizardItems.plugins {
 	elements {
-		sportms {
-			iconIdentifier = ext-sportms-wizard-icon
+		sportms_club {
+			iconIdentifier = ext-sportms-plugin-club-icon
 			title = LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:CE_title
 			description = LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:CE_description
 			tt_content_defValues {
 				CType = list
-				list_type = sportms_sportms
+				list_type = sportms_club
+			}
+		}
+		sportms_competition {
+			iconIdentifier = ext-sportms-plugin-competition-icon
+			title = LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:CE_title
+			description = LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:CE_description
+			tt_content_defValues {
+				CType = list
+				list_type = sportms_competition
+			}
+		}
+		sportms_game {
+			iconIdentifier = ext-sportms-plugin-game-icon
+			title = LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:CE_title
+			description = LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:CE_description
+			tt_content_defValues {
+				CType = list
+				list_type = sportms_game
+			}
+		}
+		sportms_person {
+			iconIdentifier = ext-sportms-plugin-person-icon
+			title = LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:CE_title
+			description = LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:CE_description
+			tt_content_defValues {
+				CType = list
+				list_type = sportms_person
+			}
+		}
+		sportms_team {
+			iconIdentifier = ext-sportms-plugin-team-icon
+			title = LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:CE_title
+			description = LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:CE_description
+			tt_content_defValues {
+				CType = list
+				list_type = sportms_team
 			}
 		}
 	}
