@@ -303,6 +303,7 @@ return array(
 					],
 				],
 				'foreign_table' => 'tx_sportms_domain_model_venue',
+				'foreign_table_where' => 'ORDER BY tx_sportms_domain_model_venue.name ASC',
 				'MM' => 'tx_sportms_venue_club_mm',
 				'MM_opposite_field' => 'home_venues',
 				'multiple' => 0,
