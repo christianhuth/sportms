@@ -379,35 +379,8 @@
 			<trans-unit id="tx_sportms_domain_model_game.competition_season">
 				<source>Wettbewerb</source>
 			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_game.status">
-				<source>Status</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_game.status_canceled">
-				<source>Abgesagt</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_game.status_contemplated">
-				<source>Angedacht</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_game.status_dropped">
-				<source>Abgesetzt</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_game.status_finished">
-				<source>Beendet</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_game.status_invalid">
-				<source>Ungültig</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_game.status_rescheduled">
-				<source>Verschoben</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_game.status_running">
-				<source>Läuft</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_game.status_scheduled">
-				<source>Angesetzt</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_game.status_uncompleted">
-				<source>Abgebrochen</source>
+			<trans-unit id="tx_sportms_domain_model_game.game_status">
+				<source>Ansetzungsstatus</source>
 			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_game.gameday">
 				<source>Spieltag</source>
