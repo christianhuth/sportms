@@ -141,7 +141,7 @@ return array(
 					],
 				],
 				'foreign_table' => 'tx_sportms_domain_model_club',
-				'foreign_default_sortby' => 'ORDER BY tx_sportms_domain_model_club.name ASC',
+				'foreign_table_where' => 'ORDER BY tx_sportms_domain_model_club.name ASC',
 				'MM' => 'tx_sportms_venue_club_mm',
 				'multiple' => 0,
 				'renderType' => 'selectMultipleSideBySide',
