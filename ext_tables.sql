@@ -334,13 +334,6 @@ CREATE TABLE tx_sportms_domain_model_gameresultset (
 );
 
 #
-# Table structure for table 'tx_sportms_domain_model_gamestatus'
-#
-CREATE TABLE tx_sportms_domain_model_gamestatus (
-    label varchar(255) DEFAULT NULL
-);
-
-#
 # Table structure for table 'tx_sportms_domain_model_mail'
 #
 CREATE TABLE tx_sportms_domain_model_mail (
