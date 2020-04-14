@@ -1,7 +1,7 @@
 mod.wizards.newContentElement.wizardItems.plugins {
 	elements {
 		sportms {
-			iconIdentifier = ext-sportms-plugin-club-icon
+			iconIdentifier = ext-sportms-wizard-icon
 			title = LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:CE_title
 			description = LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:CE_description
 			tt_content_defValues {
