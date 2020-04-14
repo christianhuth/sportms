@@ -178,24 +178,23 @@ return array(
             ),
             'onChange' => 'reload',
         ),
-		
-		'game_status' => array(
-			'exclude' => 1,
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.game_status',
-			'config' => array(
-				'eval' => 'required',
-				'foreign_table' => 'tx_sportms_domain_model_gamestatus',
-				'items' => Array (
-					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ''),
-				),
-				'maxItems' => 1,
-				'minItems' => 1,
-				'renderType' => 'selectSingle',
-				'size' => 1,
-				'type' => 'select',
-			),
-			'onChange' => 'reload',
-		),
+
+        'game_appointment' => array(
+            'exclude' => 1,
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.game_appointment',
+            'config' => array(
+                'items' => array(
+                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.game_appointment.planned', 1),
+                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.game_appointment.canceled', 2),
+                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.game_appointment.dropped', 3),
+                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.game_appointment.running', 4),
+                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.game_appointment.uncompleted', 5),
+                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.game_appointment.finished', 6),
+                ),
+                'renderType' => 'selectSingle',
+                'type' => 'select',
+            ),
+        ),
 		'gameday' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.gameday',

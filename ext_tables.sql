@@ -183,7 +183,7 @@ CREATE TABLE tx_sportms_domain_model_game (
     competition_season int(11) DEFAULT '0' NOT NULL,
     team_season_home int(11) DEFAULT '0' NOT NULL,
     team_season_guest int(11) DEFAULT '0' NOT NULL,
-    game_status int(11) DEFAULT 1 NOT NULL,
+    game_appointment int(11) DEFAULT 1 NOT NULL,
     gameday int(11) unsigned DEFAULT NULL,
     date int(11) unsigned DEFAULT NULL,
     time int(11) unsigned DEFAULT NULL,
