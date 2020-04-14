@@ -6,7 +6,7 @@ mod.wizards.newContentElement.wizardItems.plugins {
 			description = LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:CE_description
 			tt_content_defValues {
 				CType = list
-				list_type = sportms_club
+				list_type = sportms_sportms
 			}
 		}
 	}

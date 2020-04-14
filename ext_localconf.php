@@ -2,7 +2,7 @@
 	
 	\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
 		'Balumedien.' . $_EXTKEY,
-		'club',
+		'sportms',
 		['Club' => 'list']
 	);
 	
