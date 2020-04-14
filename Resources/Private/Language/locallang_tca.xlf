@@ -1448,7 +1448,7 @@
 				<source>Abgang</source>
 			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_teamseasonsquadmember.hidden_in_squad_list">
-				<source>In Kaderliste sichtbar?</source>
+				<source>In Kaderliste sichtbar</source>
 			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_teamseasonsquadmember.tab_transfer">
 				<source>Transfer</source>
