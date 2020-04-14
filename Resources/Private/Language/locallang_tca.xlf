@@ -970,8 +970,8 @@
 			<trans-unit id="tx_sportms_domain_model_person.place_of_birth">
 				<source>Geburtsort</source>
 			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_person.nationality">
-				<source>Nationalität</source>
+			<trans-unit id="tx_sportms_domain_model_person.nationalities">
+				<source>Nationalität(en)</source>
 			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_person.sex">
 				<source>Geschlecht</source>

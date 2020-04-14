@@ -45,7 +45,7 @@
 		/**
 		 * @var int
 		 */
-		protected $nationality = '';
+		protected $nationalities = '';
 		
 		/**
 		 * @var string
@@ -297,15 +297,15 @@
 		/**
 		 * @return int
 		 */
-		public function getNationality() {
-			return $this->nationality;
+		public function getNationalities(): int {
+			return $this->nationalities;
 		}
 		
 		/**
-		 * @param int $nationality
+		 * @param int $nationalities
 		 */
-		public function setNationality($nationality) {
-			$this->nationality = $nationality;
+		public function setNationalities(int $nationalities): void {
+			$this->nationalities = $nationalities;
 		}
 		
 		/**
