@@ -744,6 +744,7 @@ return array(
                 'eval' => 'required',
                 'foreign_table' => 'tx_sportms_domain_model_teamseason',
                 'foreign_table_where' => '  AND tx_sportms_domain_model_teamseason.uid IN (SELECT uid_foreign FROM tx_sportms_competitionseason_teamseason_mm WHERE uid_local = ###REC_FIELD_competition_season###)
+	                                        AND tx_sportms_domain_model_teamseason.season = ###REC_FIELD_season###
 	                                        ORDER BY tx_sportms_domain_model_teamseason.team ASC',
                 'items' => Array (
                     array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ''),
@@ -841,6 +842,7 @@ return array(
                 'foreign_table' => 'tx_sportms_domain_model_teamseason',
                 'foreign_table_where' => '  AND tx_sportms_domain_model_teamseason.uid IN (SELECT uid_foreign FROM tx_sportms_competitionseason_teamseason_mm WHERE uid_local = ###REC_FIELD_competition_season###)
                                             AND tx_sportms_domain_model_teamseason.uid != ###REC_FIELD_team_season_home###
+	                                        AND tx_sportms_domain_model_teamseason.season = ###REC_FIELD_season###
 											ORDER BY tx_sportms_domain_model_teamseason.team ASC',
                 'items' => Array (
                     array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ''),
