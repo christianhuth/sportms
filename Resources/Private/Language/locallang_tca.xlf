@@ -1099,17 +1099,14 @@
 			<trans-unit id="tx_sportms_domain_model_personprofile.sport">
 				<source>Sportart</source>
 			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_personprofile.main_sport_position_group">
-				<source>Hauptpositionsgruppe</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_personprofile.main_sport_position">
-				<source>Hauptposition</source>
-			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_personprofile.profile_images">
 				<source>Profilbild(er)</source>
 			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_personprofile.palette_main_position">
 				<source>Hauptposition</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_personprofile.side_positions">
+				<source>Nebenpositionen</source>
 			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_personprofile.tab_images">
 				<source>Profilbilder</source>

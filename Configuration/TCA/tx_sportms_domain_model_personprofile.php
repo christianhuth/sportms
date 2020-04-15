@@ -157,7 +157,7 @@ return array(
 				),
 			),
 			'exclude' => 1,
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_personprofile.main_sport_position_group',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sportpositiongroup',
 			'config' => array(
 				'foreign_table' => 'tx_sportms_domain_model_sportpositiongroup',
 				'foreign_sortby' => 'sorting',
@@ -175,7 +175,7 @@ return array(
 		'main_sport_position' => array(
 			'displayCond' => 'FIELD:main_sport_position_group:>:0',
 			'exclude' => 1,
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_personprofile.main_sport_position',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sportposition',
 			'config' => array(
 				'foreign_table' => 'tx_sportms_domain_model_sportposition',
 				'foreign_table_where' => '  AND tx_sportms_domain_model_sportposition.sport_position_group = ###REC_FIELD_main_sport_position_group###
