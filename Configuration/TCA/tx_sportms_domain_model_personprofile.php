@@ -27,12 +27,14 @@ return array(
 		'showRecordFieldList' => '',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'profile_type, sport, main_sport_position_group, main_sport_position, side_sport_position_groups, side_sport_positions,
+		'1' => array('showitem' => 'profile_type, sport,
+									--palette--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_personprofile.palette_main_position;main_position,
+									side_sport_position_groups, side_sport_positions,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_personprofile.tab_images, profile_images,
 		                            '),
 	),
 	'palettes' => array(
-		'1' => array('showitem' => ''),
+		'main_position' => array('showitem' => 'main_sport_position_group, main_sport_position'),
 	),
 	'columns' => array(
         
@@ -138,7 +140,7 @@ return array(
 				'foreign_table' => 'tx_sportms_domain_model_sport',
 				'foreign_table_where' => 'ORDER BY tx_sportms_domain_model_sport.label ASC',
 				'items' => array(
-					array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", ""),
+					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ''),
 				),
 				'maxItems' => 1,
 				'renderType' => 'selectSingle',

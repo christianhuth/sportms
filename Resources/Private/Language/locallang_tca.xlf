@@ -1108,6 +1108,9 @@
 			<trans-unit id="tx_sportms_domain_model_personprofile.profile_images">
 				<source>Profilbild(er)</source>
 			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_personprofile.palette_main_position">
+				<source>Hauptposition</source>
+			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_personprofile.tab_images">
 				<source>Profilbilder</source>
 			</trans-unit>
