@@ -109,11 +109,10 @@
 			$this->initListOfSportMsDomainModels();
 			foreach($this->getListOfSportMsDomainModels() as $sportMsDomainModel) {
 				$name = $sportMsDomainModel;
-				$type = "string";
+				$type = 'string';
 				$description = lcfirst($sportMsDomainModel) . ' to show';
 				$this->registerArgument($name, $type, $description, FALSE);
 			}
-			$this->registerArgument("Show", "string", "Show View to show", FALSE);
 		}
 		
 		# Needed so we can fill $this->getSettings()
@@ -123,8 +122,8 @@
 		}
 		
 		public function initListOfSportMsDomainModels() {
-			$ListOfSportMsDomainModels = "Club, ClubSection, Competition, CompetitionSeason, Game, Person, Season, Sport, Team, TeamSeason, Venue";
-			$this->setListOfSportMsDomainModels(explode(",", str_replace(" ", "", trim($ListOfSportMsDomainModels))));
+			$ListOfSportMsDomainModels = 'Club, ClubSection, Competition, Game, Person, Team, Venue';
+			$this->setListOfSportMsDomainModels(explode(',', str_replace(' ', '', trim($ListOfSportMsDomainModels))));
 		}
 		
 		/**
@@ -139,10 +138,9 @@
 					break;
 				}
 			}
+			
 			$extensionName = 'sportms';
 			$pluginName = 'sportms';
-			$action = $this->arguments['action'] ? $this->arguments['action'] : 'show';
-			$showView = ($action === 'show') ? ($this->arguments['Show'] ? $this->arguments['Show'] : 'showIndex') : NULL;
 			
 			var_dump($showView);
 			if(strpos('show', (string) $showView) !== FALSE) {

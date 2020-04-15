@@ -3,14 +3,27 @@
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <tr>
-    <td class="tx-sportms-section-label">
-        <sportms:link.action Sport="{clubSection.sport}">{clubSection.sport.label}</sportms:link.action>
-    </td>
     <td class="tx-sportms-club-name">
         <sportms:link.action Club="{clubSection.club}">{clubSection.club.name}</sportms:link.action>
     </td>
-    <td class="tx-sportms-section-label">
+    <td class="tx-sportms-clubsection-label">
         <sportms:link.action ClubSection="{clubSection}">{clubSection.section.label}</sportms:link.action>
+    </td>
+    <td class="tx-sportms-sport-label">
+        <f:if condition="{clubSection.sports}">
+            <f:then>
+                <ul>
+                    <f:for each="{clubSection.sports}" as="sport">
+                        <li>{sport.label}</li>
+                    </f:for>
+                </ul>
+            </f:then>
+            <f:else>
+                <ul>
+                    <li>Keine angebotene Sportart bekannt.</li>
+                </ul>
+            </f:else>
+        </f:if>
     </td>
     <td class="tx-sportms-clubsection-teams">
         <sportms:link.action action="list" arguments="{club: clubSection.club, section: clubSection.section}" controller="Team">

@@ -18,57 +18,37 @@ plugin.tx_sportms {
 
         club {
             listPid = {$plugin.tx_sportms.settings.club.listPid}
-            showPid = {$plugin.tx_sportms.settings.club.showPid}
         }
 
         clubSection {
             listPid = {$plugin.tx_sportms.settings.clubSection.listPid}
-            showPid = {$plugin.tx_sportms.settings.clubSection.showPid}
         }
 
         competition {
             listPid = {$plugin.tx_sportms.settings.competition.listPid}
-            showPid = {$plugin.tx_sportms.settings.competition.showPid}
-        }
-
-        competitionSeason {
-            listPid = {$plugin.tx_sportms.settings.competitionSeason.listPid}
-            showPid = {$plugin.tx_sportms.settings.competitionSeason.showPid}
         }
 
         game {
             listPid = {$plugin.tx_sportms.settings.game.listPid}
-            showPid = {$plugin.tx_sportms.settings.game.showPid}
+            showIndexPid = {$plugin.tx_sportms.settings.game.showIndexPid}
         }
 
         person {
             listPid = {$plugin.tx_sportms.settings.person.listPid}
-            showPid = {$plugin.tx_sportms.settings.person.showPid}
+            showOfficialIndexPid = {$plugin.tx_sportms.settings.person.showOfficialIndexPid}
+            showPlayerIndexPid = {$plugin.tx_sportms.settings.person.showPlayerIndexPid}
+            showRefereeIndexPid = {$plugin.tx_sportms.settings.person.showRefereeIndexPid}
             dummyImageMale = {$plugin.tx_sportms.settings.person.dummyImageMale}
             dummyImageFemale = {$plugin.tx_sportms.settings.person.dummyImageFemale}
         }
 
-        season {
-            listPid = {$plugin.tx_sportms.settings.season.listPid}
-        }
-
-        sport {
-            listPid = {$plugin.tx_sportms.settings.sport.listPid}
-        }
-
         team {
             listPid = {$plugin.tx_sportms.settings.team.listPid}
-            showPid = {$plugin.tx_sportms.settings.team.showPid}
-        }
-
-        teamSeason {
-            listPid = {$plugin.tx_sportms.settings.teamSeason.listPid}
-            showPid = {$plugin.tx_sportms.settings.teamSeason.showPid}
-        }
-
-        venue {
-            listPid = {$plugin.tx_sportms.settings.venue.listPid}
-            showPid = {$plugin.tx_sportms.settings.venue.showPid}
+            showHistoryRecordGamesPid = {$plugin.tx_sportms.settings.team.showHistoryRecordGamesPid}
+            showSeasonGamesPid = {$plugin.tx_sportms.settings.team.showSeasonGamesPid}
+            showSeasonGoalsPid = {$plugin.tx_sportms.settings.team.showSeasonGoalsPid}
+            showSeasonIndexPid = {$plugin.tx_sportms.settings.team.showSeasonIndexPid}
+            showSeasonSquadPid = {$plugin.tx_sportms.settings.team.showSeasonSquadPid}
         }
 
     }
