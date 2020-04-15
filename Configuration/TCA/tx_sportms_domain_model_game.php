@@ -846,8 +846,10 @@ return array(
 					'columns' => [
 						'sport_position' => [
 							'config' => [
-								'type' => 'passthrough',
+								'type' => 'passthrough'
 							],
+							'exclude' => FALSE,
+							'label' => '',
 						],
 					],
 				],
@@ -953,8 +955,9 @@ return array(
 					'columns' => [
 						'sport_position' => [
 							'config' => [
-								'type' => 'passthrough',
+								'type' => 'passthrough'
 							],
+							'exclude' => FALSE,
 							'label' => '',
 						],
 					],
