@@ -29,97 +29,97 @@
 		protected $jerseyNumber;
 		
 		/**
-		 * @var \Balumedien\Sportms\Domain\Model\TeamSeasonSquadMember
+		 * @var \Balumedien\Sportms\Domain\Model\Person
 		 */
-		protected $teamSeasonSquadMember;
+		protected $person;
 		
 		/**
 		 * @var \Balumedien\Sportms\Domain\Model\SportPosition
 		 */
-		protected $sectionPosition;
+		protected $sportPosition;
 		
 		/**
-		 * @return \Balumedien\Sportms\Domain\Model\Game
+		 * @return Game
 		 */
-		public function getGame() {
+		public function getGame(): Game {
 			return $this->game;
 		}
 		
 		/**
-		 * @param \Balumedien\Sportms\Domain\Model\Game $game
+		 * @param Game $game
 		 */
-		public function setGame(\Balumedien\Sportms\Domain\Model\Game $game) {
+		public function setGame(Game $game): void {
 			$this->game = $game;
 		}
 		
 		/**
 		 * @return string
 		 */
-		public function getTeam() {
+		public function getTeam(): string {
 			return $this->team;
 		}
 		
 		/**
 		 * @param string $team
 		 */
-		public function setTeam($team) {
+		public function setTeam(string $team): void {
 			$this->team = $team;
 		}
 		
 		/**
 		 * @return string
 		 */
-		public function getType() {
+		public function getType(): string {
 			return $this->type;
 		}
 		
 		/**
 		 * @param string $type
 		 */
-		public function setType($type) {
+		public function setType(string $type): void {
 			$this->type = $type;
 		}
 		
 		/**
 		 * @return string
 		 */
-		public function getJerseyNumber() {
+		public function getJerseyNumber(): string {
 			return $this->jerseyNumber;
 		}
 		
 		/**
 		 * @param string $jerseyNumber
 		 */
-		public function setJerseyNumber($jerseyNumber) {
+		public function setJerseyNumber(string $jerseyNumber): void {
 			$this->jerseyNumber = $jerseyNumber;
 		}
 		
 		/**
-		 * @return TeamSeasonSquadMember
+		 * @return Person
 		 */
-		public function getTeamSeasonSquadMember() {
-			return $this->teamSeasonSquadMember;
+		public function getPerson(): Person {
+			return $this->person;
 		}
 		
 		/**
-		 * @param TeamSeasonSquadMember $teamSeasonSquadMember
+		 * @param Person $person
 		 */
-		public function setTeamSeasonSquadMember($teamSeasonSquadMember) {
-			$this->teamSeasonSquadMember = $teamSeasonSquadMember;
+		public function setPerson(Person $person): void {
+			$this->person = $person;
 		}
 		
 		/**
 		 * @return SportPosition
 		 */
-		public function getSectionPosition() {
-			return $this->sectionPosition;
+		public function getSportPosition(): SportPosition {
+			return $this->sportPosition;
 		}
 		
 		/**
-		 * @param SportPosition $sectionPosition
+		 * @param SportPosition $sportPosition
 		 */
-		public function setSectionPosition($sectionPosition) {
-			$this->sectionPosition = $sectionPosition;
+		public function setSportPosition(SportPosition $sportPosition): void {
+			$this->sportPosition = $sportPosition;
 		}
 		
 	}
