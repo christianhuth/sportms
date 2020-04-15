@@ -328,7 +328,7 @@ return array(
         ),
 		
         'addresses' => array(
-            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.addresses',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_addresses',
             'config' => array(
 				'appearance' => array(
 					'enabledControls' => [
@@ -351,7 +351,7 @@ return array(
             ),
         ),
         'phones' => array(
-            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.phones',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_phones',
             'config' => array(
 				'appearance' => array(
 					'enabledControls' => [
@@ -374,7 +374,7 @@ return array(
             ),
         ),
         'mails' => array(
-            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.mails',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_mails',
             'config' => array(
 				'appearance' => array(
 					'enabledControls' => [
@@ -397,7 +397,7 @@ return array(
             ),
         ),
         'urls' => array(
-            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.urls',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_urls',
             'config' => array(
 	            'appearance' => array(
 		            'enabledControls' => [
@@ -421,7 +421,7 @@ return array(
         ),
 		
 		'person_profiles' => array(
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.person_profile',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_personprofiles',
 			'config' => array(
 				'appearance' => array(
 					'useSortable' => 1,
