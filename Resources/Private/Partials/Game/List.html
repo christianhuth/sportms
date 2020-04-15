@@ -2,6 +2,7 @@
       xmlns:sportms="Balumedien\Sportms\ViewHelpers"
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
+
 <div class="table-responsive">
     <table class="table table-bordered table-hover table-striped">
         <thead>
@@ -17,6 +18,7 @@
         <f:if condition="{games}">
             <f:then>
                 <f:for as="game" each="{games}">
+                    <f:debug>{game.uid}</f:debug>
                     <tr>
                         <td>
                             {game.sport.label}
