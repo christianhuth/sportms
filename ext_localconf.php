@@ -4,26 +4,31 @@
 		'Balumedien.' . $_EXTKEY,
 		'sportms',
 		[
-			'SportMS' => 'dbStats',
 			'Club' => 'list',
-			'Competition' => 'list, showIndex',
+			'ClubSection' => 'list',
+			'Competition' => 'list',
 			'Game' => 'list, showIndex',
-			'Person' => 'list, showIndex',
-			'Sport' => 'list, showIndex',
-			'Team' => 'list, showIndex',
+			'Person' => 'officialIndex, playerIndex, refereeIndex',
+			'Team' => 'list, historyRecordGames, seasonGames, seasonGoals, seasonIndex, seasonSquad',
 		]
-	);
-	
-	\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-		'Balumedien.' . $_EXTKEY,
-		'competition',
-		['Competition' => 'list']
 	);
 	
 	\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
 		'Balumedien.' . $_EXTKEY,
 		'club',
 		['Club' => 'list']
+	);
+	
+	\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+		'Balumedien.' . $_EXTKEY,
+		'clubsection',
+		['ClubSection' => 'list']
+	);
+	
+	\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+		'Balumedien.' . $_EXTKEY,
+		'competition',
+		['Competition' => 'list']
 	);
 	
 	\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
@@ -35,13 +40,13 @@
 	\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
 		'Balumedien.' . $_EXTKEY,
 		'person',
-		['Person' => 'list, showIndex']
+		['Person' => 'list, officialIndex, playerIndex, refereeIndex']
 	);
 	
 	\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
 		'Balumedien.' . $_EXTKEY,
 		'team',
-		['Team' => 'list, showGames, showGoals, showHistoryRecordGames, showIndex, showSquad']
+		['Team' => 'list, historyRecordGames, seasonGames, seasonGoals, seasonIndex, seasonSquad']
 	);
 	
 	/* ===========================================================================
@@ -58,6 +63,7 @@
 		$icons = [
 			'ext-sportms-wizard-icon' => 'Extension.svg',
 			'ext-sportms-wizard-plugin-club-icon' => 'tx_sportms_domain_model_club.svg',
+			'ext-sportms-wizard-plugin-clubsection-icon' => 'tx_sportms_domain_model_clubsection.svg',
 			'ext-sportms-wizard-plugin-competition-icon' => 'tx_sportms_domain_model_game.svg',
 			'ext-sportms-wizard-plugin-game-icon' => 'tx_sportms_domain_model_game.svg',
 			'ext-sportms-wizard-plugin-person-icon' => 'tx_sportms_domain_model_person.svg',
