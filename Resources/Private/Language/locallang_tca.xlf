@@ -730,8 +730,8 @@
 			<trans-unit id="tx_sportms_domain_model_gamelineup.jersey_number">
 				<source>Rückennummer</source>
 			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_gamelineup.sport_position">
-				<source>Position</source>
+			<trans-unit id="tx_sportms_domain_model_gamelineup.is_team_captain">
+				<source>Mannschaftskapitän?</source>
 			</trans-unit>
 
 

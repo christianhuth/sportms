@@ -26,7 +26,7 @@ return array(
 		'showRecordFieldList' => '',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'game, jersey_number, person, sport_position,'),
+		'1' => array('showitem' => 'game, jersey_number, person, sport_position, is_team_captain'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -139,7 +139,7 @@ return array(
 		),
 		'sport_position' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_gamelineup.sport_position',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sportposition',
 			'config' => array(
 				'foreign_table' => 'tx_sportms_domain_model_sportposition',
 				'foreign_table_where' => '  ORDER BY tx_sportms_domain_model_sportposition.label ASC',
@@ -152,6 +152,15 @@ return array(
 				'type' => 'select',
 			),
 		),
+		'is_team_captain' => [
+			'exclude' => true,
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_gamelineup.is_team_captain',
+			'config' => [
+				'default' => FALSE,
+				'renderType' => 'checkboxToggle',
+				'type' => 'check',
+			],
+		],
 		
 	),
 );
