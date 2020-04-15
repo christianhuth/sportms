@@ -216,7 +216,7 @@ return array(
 				'type' => 'select',
 			),
 		),
-		'side_sport_position' => array(
+		'side_sport_positions' => array(
 			'exclude' => true,
 			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sportpositions',
 			'config' => array(
