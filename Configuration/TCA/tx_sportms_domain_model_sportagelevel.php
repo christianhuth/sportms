@@ -25,7 +25,7 @@ return array(
 		'showRecordFieldList' => 'sport_age_group, label, abbreviation, slug',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'label, short, slug,
+		'1' => array('showitem' => 'label, abbreviation, slug,
 		                            '),
 	),
 	'palettes' => array(
