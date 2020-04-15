@@ -409,7 +409,7 @@ CREATE TABLE tx_sportms_domain_model_personprofile (
     side_sport_positions int(11) DEFAULT NULL,
     profile_images varchar(255) DEFAULT NULL,
     sorting int(11) DEFAULT '0' NOT NULL,
-    UNIQUE(person, profile_type, sport)
+    UNIQUE KEY person_profile_sport(person, profile_type, sport)
 );
 
 #
