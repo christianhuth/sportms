@@ -40,7 +40,7 @@
                     </displayCond>
                     <config>
                         <foreign_table>tx_sportms_domain_model_season</foreign_table>
-                        <foreign_table_where>ORDER BY season_name DESC</foreign_table_where>
+                        <foreign_table_where>ORDER BY tx_sportms_domain_model_season.label DESC</foreign_table_where>
                         <renderType>selectMultipleSideBySide</renderType>
                         <type>select</type>
                     </config>
