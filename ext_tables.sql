@@ -394,8 +394,6 @@ CREATE TABLE tx_sportms_domain_model_person (
     slug varchar(2048) DEFAULT ''
 );
 
-
-
 #
 # Table structure for table 'tx_sportms_domain_model_personprofile'
 #
