@@ -58,4 +58,54 @@
 			return $query->execute();
 		}
 		
+		public function findHighestWins(string $sportUids = NULL, string $sportAgeGroupUids = NULL, string $sportAgeLevelUids = NULL, string $competitionTypeUids = NULL, string $competitionUids = NULL, string $clubUids = NULL, string $teamUids = NULL, string $seasonUids = NULL, string $competitionSeasonGamedayUids = NULL, $limit = NULL) {
+			$query = $this->createQuery();
+			$constraints = [];
+			if($sportUids) {
+				$constraints[] = $query->in('competitionSeason.competition.sport', explode(',', $sportUids));
+			}
+			if($sportAgeGroupUids) {
+				$constraints[] = $query->in('competitionSeason.competition.sportAgeGroup', explode(',', $sportAgeGroupUids));
+			}
+			if($sportAgeLevelUids) {
+				$constraints[] = $query->in('competitionSeason.competition.sportAgeLevel', explode(',', $sportAgeLevelUids));
+			}
+			if($competitionTypeUids) {
+				$constraints[] = $query->in('competitionSeason.competition.competitionType', explode(',', $competitionTypeUids));
+			}
+			if($competitionUids) {
+				$constraints[] = $query->in('competitionSeason.competition', explode(',', $competitionUids));
+			}
+			if($clubUids) {
+				$constraints[] = $query->logicalOr(
+					$query->in('teamSeasonHome.team.club', explode(',', $clubUids)),
+					$query->in('teamSeasonGuest.team.club', explode(',', $clubUids))
+				);
+			}
+			if($teamUids) {
+				$constraints[] = $query->logicalOr(
+					$query->in('teamSeasonHome.team', explode(',', $teamUids)),
+					$query->in('teamSeasonGuest.team', explode(',', $teamUids))
+				);
+			}
+			if($seasonUids) {
+				$constraints[] = $query->in('season', explode(',', $seasonUids));
+			}
+			if($competitionSeasonGamedayUids) {
+				$constraints[] = $query->in('gameday', explode(',', $competitionSeasonGamedayUids));
+			}
+			if($constraints) {
+				$query->matching($query->logicalAnd($constraints));
+			}
+			$query->setLimit($limit);
+			return $query->execute();
+		}
+		
+		private function constraintForClubUids($query, string $clubUids = NULL) {
+			return $query->logicalOr(
+				$query->in('teamSeasonHome.team.club', explode(',', $clubUids)),
+				$query->in('teamSeasonGuest.team.club', explode(',', $clubUids))
+			);
+		}
+		
 	}

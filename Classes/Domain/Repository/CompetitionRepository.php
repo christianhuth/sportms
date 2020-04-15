@@ -16,7 +16,7 @@
 			$query = $this->createQuery();
 			$constraints = [];
 			if($sportUids) {
-				$constraints[] = $query->in('sport', explode(',', $sportUids));
+				$constraints[] = $this->constraintForSportUids($query, $sportUids);
 			}
 			if($sportAgeGroupUids) {
 				$constraints[] = $query->in('sport_age_group', explode(',', $sportAgeGroupUids));
@@ -34,6 +34,10 @@
 				$query->matching($query->logicalAnd($constraints));
 			}
 			return $query->execute();
+		}
+		
+		private function constraintForSportUids($query, string $sportUids = null) {
+			return $query->in('sport', explode(',', $sportUids));
 		}
 		
 	}
