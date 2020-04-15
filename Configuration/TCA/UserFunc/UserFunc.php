@@ -96,13 +96,13 @@
 			$personOut = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_sportms_domain_model_person", $record['person_out']);
 			$newLabel = '';
 			if($personIn) {
-				$newLabel .= $personIn['lastname'] . ', ' . $personIn['firstname'];
+				$newLabel .= $personIn['lastname'];
 			}
 			if($personIn && $personOut) {
 				$newLabel .= ' <-> ';
 			}
 			if($personOut) {
-				$newLabel .= $personOut;
+				$newLabel .= $personOut['lastname'];
 			}
 			$newLabel .= ' (' . $record['minute'] . '.)';
 			$parameters['title'] = $newLabel;
