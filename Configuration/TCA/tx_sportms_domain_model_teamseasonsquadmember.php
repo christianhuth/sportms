@@ -106,7 +106,7 @@ return array(
                 'foreign_table_where' => '  AND show_as_player = 1
                                             ORDER BY lastname ASC, firstname ASC',
 				'items' => Array (
-                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ""),
+                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', 0),
 				),
 				'maxItems' => 1,
 				'renderType' => 'selectSingle',
@@ -121,7 +121,7 @@ return array(
                 'foreign_table' => 'tx_sportms_domain_model_sportpositiongroup',
                 'foreign_table_where' => ' ORDER BY tx_sportms_domain_model_sportpositiongroup.sorting ASC',
                 'items' => Array (
-                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ""),
+                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', 0),
                 ),
                 'maxItems' => 1,
                 'renderType' => 'selectSingle',
@@ -139,7 +139,7 @@ return array(
                 'foreign_table_where' => '  AND tx_sportms_domain_model_sportposition.sport_position_group = ###REC_FIELD_sport_position_group###
                                             ORDER BY tx_sportms_domain_model_sportposition.sorting ASC',
                 'items' => Array (
-                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ""),
+                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', 0),
                 ),
                 'maxItems' => 1,
                 'renderType' => 'selectSingle',
