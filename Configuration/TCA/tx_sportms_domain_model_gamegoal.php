@@ -172,8 +172,8 @@ return array(
             'exclude' => 1,
             'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_gamegoal.scorer',
             'config' => array(
-                'foreign_table' => 'tx_sportms_domain_model_gamelineup',
-                'foreign_table_where' => '  AND tx_sportms_domain_model_gamelineup.game = ###REC_FIELD_game###
+                'foreign_table' => 'tx_sportms_domain_model_person',
+                'foreign_table_where' => '  AND tx_sportms_domain_model_person.uid IN (SELECT uid FROM tx_sportms_domain_model_gamelineup WHERE tx_sportms_domain_model_gamelineup.game = ###REC_FIELD_game###)
                                             ORDER BY tx_sportms_domain_model_gamelineup.jersey_number ASC',
                 'items' => array(
                     array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", 0),
