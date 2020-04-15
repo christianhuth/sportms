@@ -12,7 +12,7 @@
 			$query = $this->createQuery();
 			$constraints = [];
 			if($sportUids) {
-				$constraints[] = $query->in('sport', explode(",", $sportUids));
+				$constraints[] = $query->in('sports', explode(",", $sportUids));
 			}
 			if($clubUids) {
 				$constraints[] = $query->in('club', explode(",", $clubUids));
