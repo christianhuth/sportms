@@ -142,14 +142,11 @@
 			$extensionName = 'sportms';
 			$pluginName = 'sportms';
 			
-			var_dump($showView);
-			if(strpos('show', (string) $showView) !== FALSE) {
-				if(is_null($this->arguments[$this->sportMsDomainModel]) || !$this->arguments[$this->sportMsDomainModel]->isDetailLink()) {
-					$this->tagName = 'span';
-					$this->setTagBuilder(new \TYPO3Fluid\Fluid\Core\ViewHelper\TagBuilder($this->tagName));
-					$this->tag->setContent($this->renderChildren());
-					return $this->tag->render();
-				}
+			if(is_null($this->arguments[$this->sportMsDomainModel]) || !$this->arguments[$this->sportMsDomainModel]->isDetailLink()) {
+				$this->tagName = 'span';
+				$this->setTagBuilder(new \TYPO3Fluid\Fluid\Core\ViewHelper\TagBuilder($this->tagName));
+				$this->tag->setContent($this->renderChildren());
+				return $this->tag->render();
 			}
 			
 			$controller = $this->arguments['controller'] ? $this->arguments['controller'] : $this->getSportMsDomainModel();
