@@ -1,7 +1,7 @@
 <html data-namespace-typo3-fluid="true"
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
-<f:if condition="{  settings.section.sectionsSelectbox ||
+<f:if condition="{  settings.sport.sportsSelectbox ||
                     settings.competitionType.competitionTypesSelectbox ||
                     settings.competition.competitionsSelectbox ||
                     settings.club.clubsSelectbox ||
@@ -10,9 +10,9 @@
                     settings.competitionSeasonGameday.competitionSeasonGamedaysSelectbox}">
     <div class="tx-sportms-list-filter well">
         <f:form action="list" class="form-horizontal" controller="Game" extensionName="sportms" method="POST" noCache="TRUE" noCacheHash="TRUE" pageUid="{settings.game.listPid}" pluginName="sportms">
-            <f:render arguments="{options: sectionsSelectbox,                   settings: settings,     value: settings.section.selected}" partial="Form/Select/Sport"/>
-            <f:render arguments="{options: sectionAgeGroupsSelectbox,           settings: settings,     value: settings.sectionAgeGroup.selected}" partial="Form/Select/SportAgeGroup"/>
-            <f:render arguments="{options: sectionAgeLevelsSelectbox,           settings: settings,     value: settings.sectionAgeLevel.selected}" partial="Form/Select/SportAgeLevel"/>
+            <f:render arguments="{options: sportsSelectbox,                     settings: settings,     value: settings.sport.selected}" partial="Form/Select/Sport"/>
+            <f:render arguments="{options: sportAgeGroupsSelectbox,             settings: settings,     value: settings.sportAgeGroup.selected}" partial="Form/Select/SportAgeGroup"/>
+            <f:render arguments="{options: sportAgeLevelsSelectbox,             settings: settings,     value: settings.sportAgeLevel.selected}" partial="Form/Select/SportAgeLevel"/>
             <f:render arguments="{options: competitionTypesSelectbox,           settings: settings,     value: settings.competitionType.selected}" partial="Form/Select/CompetitionType"/>
             <f:render arguments="{options: competitionsSelectbox,               settings: settings,     value: settings.competition.selected}" partial="Form/Select/Competition"/>
             <f:render arguments="{options: clubsSelectbox,                      settings: settings,     value: settings.club.selected}" partial="Form/Select/Club"/>
