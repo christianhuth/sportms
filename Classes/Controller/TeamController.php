@@ -16,6 +16,12 @@
 		protected $teamRepository;
 		
 		/**
+		 * @var \Balumedien\Sportms\Domain\Repository\TeamSeasonRepository
+		 * @TYPO3\CMS\Extbase\Annotation\Inject
+		 */
+		protected $teamSeasonRepository;
+		
+		/**
 		 * @var \Balumedien\Sportms\Domain\Repository\SportRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
