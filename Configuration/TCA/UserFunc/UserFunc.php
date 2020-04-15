@@ -222,33 +222,6 @@
 			$parameters['title'] = $newLabel;
 		}
 		
-		public function sportAgeGroupLabel(&$parameters, $parentObject): void {
-			$record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
-			$newLabel = $record['label'];
-			if($record['short']) {
-				$newLabel .= ' (' . $record['short'] . ')';
-			}
-			$parameters['title'] = $newLabel;
-		}
-		
-		public function sportAgeLevelLabel(&$parameters, $parentObject): void {
-			$record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
-			$newLabel = $record['label'];
-			if($record['short']) {
-				$newLabel .= ' (' . $record['short'] . ')';
-			}
-			$parameters['title'] = $newLabel;
-		}
-		
-		public function sportPositionLabel(&$parameters, $parentObject): void {
-			$record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
-			$newLabel = $record['label'];
-			if($record['label_short']) {
-				$newLabel .= ' (' . $record['label_short'] . ')';
-			}
-			$parameters['title'] = $newLabel;
-		}
-		
 		public function teamSeasonLabel(&$parameters, $parentObject): void {
 			$record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
 			$team = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord('tx_sportms_domain_model_team', $record['team']);
