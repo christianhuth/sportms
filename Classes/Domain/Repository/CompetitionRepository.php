@@ -22,13 +22,13 @@
 				$constraints[] = $this->constraintForSportAgeGroupUids($query, $sportAgeGroupUids);
 			}
 			if($sportAgeLevelUids) {
-				$constraints[] = $query->in('sport_age_level', explode(',', $sportAgeLevelUids));
+				$constraints[] = $this->constraintForSportAgeLevelUids($query, $sportAgeLevelUids);
 			}
 			if($competitionTypeUids) {
-				$constraints[] = $query->in('competition_type', explode(',', $competitionTypeUids));
+				$constraints[] = $this->constraintForCompetitionTypeUids($query, $competitionTypeUids);
 			}
 			if($competitionUids) {
-				$constraints[] = $query->in('uid', explode(',', $competitionUids));
+				$constraints[] = $this->constraintForCompetitionUids($query, $competitionUids);
 			}
 			if($constraints) {
 				$query->matching($query->logicalAnd($constraints));
@@ -42,6 +42,18 @@
 		
 		private function constraintForSportAgeGroupUids($query, string $sportAgeGroupUids = null) {
 			return $query->in('sport_age_group', explode(',', $sportAgeGroupUids));
+		}
+		
+		private function constraintForSportAgeLevelUids($query, string $sportAgeLevelUids = null) {
+			return $query->in('sport_age_level', explode(',', $sportAgeLevelUids));
+		}
+		
+		private function constraintForCompetitionTypeUids($query, string $competitionTypeUids = null) {
+			return $query->in('competition_type', explode(',', $competitionTypeUids));
+		}
+		
+		private function constraintForCompetitionUids($query, string $competitionUids = null) {
+			return $query->in('uid', explode(',', $competitionUids));
 		}
 		
 	}
