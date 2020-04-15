@@ -343,6 +343,9 @@
 		 * @return Sport
 		 */
 		public function getSport(): Sport {
+			if($this->sport instanceof \TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy) {
+				$this->sport->_loadRealInstance();
+			}
 			return $this->sport;
 		}
 		
