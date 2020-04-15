@@ -402,11 +402,12 @@ CREATE TABLE tx_sportms_domain_model_person (
 CREATE TABLE tx_sportms_domain_model_personprofile (
     person int(11) DEFAULT '0' NOT NULL,
     profile_type varchar(255) DEFAULT '' NOT NULL,
-    section int(11) DEFAULT '0' NOT NULL,
-    sport_position_group int(11) DEFAULT NULL,
-    sport_position int(11) DEFAULT NULL,
-    profile_images varchar(255) DEFAULT NULL,
-    slug varchar(2048) DEFAULT ''
+    sport int(11) DEFAULT 0 NOT NULL,
+    main_sport_position_group int(11) DEFAULT NULL,
+    main_sport_position int(11) DEFAULT NULL,
+    side_sport_position_groups int(11) DEFAULT NULL,
+    side_sport_positions int(11) DEFAULT NULL,
+    profile_images varchar(255) DEFAULT NULL
 );
 
 #

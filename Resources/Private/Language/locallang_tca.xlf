@@ -1081,26 +1081,29 @@
 			<trans-unit id="tx_sportms_domain_model_personprofile">
 				<source>Profil</source>
 			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_personprofile.sport">
-				<source>Sportart</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_personprofile.sport_position_group">
-				<source>Positionsgruppe</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_personprofile.sport_position">
-				<source>Position</source>
+			<trans-unit id="tx_sportms_domain_model_personprofile.person">
+				<source>Person</source>
 			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_personprofile.profiletype">
 				<source>Profilart</source>
 			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_personprofile.profiletype_official">
+			<trans-unit id="tx_sportms_domain_model_personprofile.profiletype.official">
 				<source>FunktionärIn</source>
 			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_personprofile.profiletype_player">
+			<trans-unit id="tx_sportms_domain_model_personprofile.profiletype.player">
 				<source>SpielerIn</source>
 			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_personprofile.profiletype_referee">
+			<trans-unit id="tx_sportms_domain_model_personprofile.profiletype.referee">
 				<source>Schiedsrichterin</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_personprofile.sport">
+				<source>Sportart</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_personprofile.main_sport_position_group">
+				<source>Hauptpositionsgruppe</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_personprofile.main_sport_position">
+				<source>Hauptposition</source>
 			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_personprofile.profile_images">
 				<source>Profilbild(er)</source>

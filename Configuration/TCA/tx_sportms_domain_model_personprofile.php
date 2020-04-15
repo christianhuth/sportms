@@ -28,7 +28,7 @@ return array(
 		'showRecordFieldList' => '',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'profile_type, sport, sport_position_group, sport_position,
+		'1' => array('showitem' => 'profile_type, sport, main_sport_position_group, main_sport_position, side_sport_position_groups, side_sport_positions,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_personprofile.tab_images, profile_images,
 		                            '),
 	),
@@ -93,9 +93,26 @@ return array(
         ],
 		
 		'person' => array(
-			'config' => array(
-				'type' => 'passthrough',
+			'displayCond' => array(
+				'AND' => array(
+					'FIELD:profile_type:=:player',
+					'FIELD:sport:>:0',
+				),
 			),
+			'exclude' => 1,
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_personprofile.person',
+			'config' => array(
+				'foreign_table' => 'tx_sportms_domain_model_person',
+				'foreign_table_where' => 'ORDER BY lastname ASC, firstname ASC',
+				'items' => Array (
+					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ''),
+				),
+				'maxItems' => 1,
+				'renderType' => 'selectSingle',
+				'size' => 1,
+				'type' => 'select',
+			),
+			'onChange' => 'reload',
 		),
 		
 		'profile_type' => array(
@@ -104,10 +121,10 @@ return array(
 			'config' => array(
 				'eval' => 'required',
 				'items' => array(
-					array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", ""),
-					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_personprofile.profiletype_official', 'official'),
-					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_personprofile.profiletype_player', 'player'),
-					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_personprofile.profiletype_referee', 'referee'),
+					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ''),
+					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_personprofile.profiletype.official', 'official'),
+					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_personprofile.profiletype.player', 'player'),
+					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_personprofile.profiletype.referee', 'referee'),
 				),
 				'renderType' => 'selectSingle',
 				'type' => 'select',
@@ -131,7 +148,7 @@ return array(
 			),
 			'onChange' => 'reload',
 		),
-		'sport_position_group' => array(
+		'main_sport_position_group' => array(
 			'displayCond' => array(
 				'AND' => array(
 					'FIELD:profile_type:=:player',
@@ -139,7 +156,7 @@ return array(
 				),
 			),
 			'exclude' => 1,
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_personprofile.sport_position_group',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_personprofile.main_sport_position_group',
 			'config' => array(
 				'foreign_table' => 'tx_sportms_domain_model_sportpositiongroup',
 				'foreign_sortby' => 'sorting',
@@ -154,10 +171,10 @@ return array(
 			),
 			'onChange' => 'reload',
 		),
-		'sport_position' => array(
+		'main_sport_position' => array(
 			'displayCond' => 'FIELD:sport_position_group:>:0',
 			'exclude' => 1,
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_personprofile.section_position',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_personprofile.main_sport_position',
 			'config' => array(
 				'foreign_table' => 'tx_sportms_domain_model_sportposition',
 				'foreign_table_where' => '  AND tx_sportms_domain_model_sportposition.sport_position_group = ###REC_FIELD_sport_position_group###
