@@ -7,7 +7,7 @@
 
             <!-- General -->
 			<trans-unit id="tx_sportms_general.abbreviation">
-				<source>Tag</source>
+				<source>Abkürzung</source>
 			</trans-unit>
 			<trans-unit id="tx_sportms_general.date">
 				<source>Tag</source>
