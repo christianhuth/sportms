@@ -11,8 +11,11 @@
 					<label>Zeige folgendes Team</label>
 					<displayCond>
 						<OR>
-							<numIndex index="1">FIELD:base.switchableControllerActions:=:Team->show</numIndex>
-							<numIndex index="2">FIELD:base.switchableControllerActions:=:TeamSeason->show</numIndex>
+							<numIndex index="1">FIELD:base.switchableControllerActions:=:Team->historyRecordGames</numIndex>
+							<numIndex index="2">FIELD:base.switchableControllerActions:=:Team->seasonGames</numIndex>
+							<numIndex index="3">FIELD:base.switchableControllerActions:=:Team->seasonGoals</numIndex>
+							<numIndex index="4">FIELD:base.switchableControllerActions:=:Team->seasonIndex</numIndex>
+							<numIndex index="5">FIELD:base.switchableControllerActions:=:Team->seasonSquad</numIndex>
 						</OR>
 					</displayCond>
 					<config>
@@ -106,7 +109,6 @@
 						<OR>
 							<numIndex index="1">FIELD:base.switchableControllerActions:=:Game->list</numIndex>
 							<numIndex index="2">FIELD:base.switchableControllerActions:=:Team->list</numIndex>
-							<numIndex index="3">FIELD:base.switchableControllerActions:=:TeamSeason->list</numIndex>
 						</OR>
 					</displayCond>
 					<config>
@@ -124,7 +126,6 @@
 						<OR>
 							<numIndex index="1">FIELD:base.switchableControllerActions:=:Game->list</numIndex>
 							<numIndex index="2">FIELD:base.switchableControllerActions:=:Team->list</numIndex>
-							<numIndex index="3">FIELD:base.switchableControllerActions:=:TeamSeason->list</numIndex>
 						</OR>
 					</displayCond>
 					<config>
