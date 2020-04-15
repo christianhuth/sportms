@@ -220,7 +220,6 @@ return array(
 				'size' => 10,
 				'type' => 'select',
 			),
-			'onChange' => 'reload',
 		),
 		'side_sport_positions' => array(
 			'displayCond' => array(
