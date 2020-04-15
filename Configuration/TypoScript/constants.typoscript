@@ -51,12 +51,12 @@ plugin.tx_sportms {
         person {
             # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Person->list
             listPid =
-            # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Person->showOfficialIndex
-            showOfficialIndexPid =
-            # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Person->showPlayerIndex
-            showPlayerIndexPid =
-            # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Person->showRefereeIndex
-            showRefereeIndexPid =
+            # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Person->officialIndex
+            officialIndexPid =
+            # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Person->playerIndex
+            playerIndexPid =
+            # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Person->refereeIndex
+            refereeIndexPid =
             # cat=plugin.tx_sportms/sportms; type=string; label=Path to default dummy image for a male person
             dummyImageMale = EXT:sportms/Resources/Public/Images/person-male.jpg
             # cat=plugin.tx_sportms/sportms; type=string; label=Path to default dummy image for a female person
@@ -68,14 +68,14 @@ plugin.tx_sportms {
             listPid =
             # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Team->showHistoryRecordGames
             showHistoryRecordGamesPid =
-            # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Team->showSeasonGamesPid
-            showSeasonGamesPid =
-            # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Team->showSeasonGoalsPid
-            showSeasonGoalsPid =
-            # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Team->showSeasonIndexPid
-            showSeasonIndexPid =
-            # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Team->showSeasonSquadPid
-            showSeasonSquadPid =
+            # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Team->seasonGamesPid
+            seasonGamesPid =
+            # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Team->seasonGoalsPid
+            seasonGoalsPid =
+            # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Team->seasonIndexPid
+            seasonIndexPid =
+            # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Team->seasonSquadPid
+            seasonSquadPid =
         }
 
     }

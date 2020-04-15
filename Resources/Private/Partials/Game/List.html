@@ -1,6 +1,6 @@
 <html data-namespace-typo3-fluid="true"
-      xmlns:sportms="Balumedien\Sportms\ViewHelpers"
-      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:sportms="Balumedien\Sportms\ViewHelpers">
 
 
 <div class="table-responsive">
@@ -29,14 +29,14 @@
                             {game.competitionSeason.season.label}
                         </td>
                         <td>
-                            <sportms:link.action Team="{game.teamSeasonHome.team}" Season="{game.teamSeasonHome.season}">{game.teamSeasonHome.team.name}</sportms:link.action>
+                            <sportms:link.action Season="{game.teamSeasonHome.season}" Team="{game.teamSeasonHome.team}">{game.teamSeasonHome.team.name}</sportms:link.action>
                         </td>
                         <td>-</td>
                         <td>
-                            <sportms:link.action Team="{game.teamSeasonHome.team}" Season="{game.teamSeasonHome.season}">{game.teamSeasonGuest.team.name}</sportms:link.action>
+                            <sportms:link.action Season="{game.teamSeasonHome.season}" Team="{game.teamSeasonHome.team}">{game.teamSeasonGuest.team.name}</sportms:link.action>
                         </td>
                         <td>
-                            <sportms:link.action Game="{game}" action="showIndex">{game.resultEndRegularHome} : {game.resultEndRegularGuest}</sportms:link.action>
+                            <f:link.action action="showIndex" arguments="{game: game, settings:settings}" pageUid="{settings.game.showIndexPid}}">{game.resultEndRegularHome} : {game.resultEndRegularGuest}</f:link.action>
                         </td>
                     </tr>
                 </f:for>

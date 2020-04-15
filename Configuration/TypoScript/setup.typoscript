@@ -35,20 +35,20 @@ plugin.tx_sportms {
 
         person {
             listPid = {$plugin.tx_sportms.settings.person.listPid}
-            showOfficialIndexPid = {$plugin.tx_sportms.settings.person.showOfficialIndexPid}
-            showPlayerIndexPid = {$plugin.tx_sportms.settings.person.showPlayerIndexPid}
-            showRefereeIndexPid = {$plugin.tx_sportms.settings.person.showRefereeIndexPid}
+            officialIndexPid = {$plugin.tx_sportms.settings.person.officialIndexPid}
+            playerIndexPid = {$plugin.tx_sportms.settings.person.playerIndexPid}
+            refereeIndexPid = {$plugin.tx_sportms.settings.person.refereeIndexPid}
             dummyImageMale = {$plugin.tx_sportms.settings.person.dummyImageMale}
             dummyImageFemale = {$plugin.tx_sportms.settings.person.dummyImageFemale}
         }
 
         team {
             listPid = {$plugin.tx_sportms.settings.team.listPid}
-            showHistoryRecordGamesPid = {$plugin.tx_sportms.settings.team.showHistoryRecordGamesPid}
-            showSeasonGamesPid = {$plugin.tx_sportms.settings.team.showSeasonGamesPid}
-            showSeasonGoalsPid = {$plugin.tx_sportms.settings.team.showSeasonGoalsPid}
-            showSeasonIndexPid = {$plugin.tx_sportms.settings.team.showSeasonIndexPid}
-            showSeasonSquadPid = {$plugin.tx_sportms.settings.team.showSeasonSquadPid}
+            historyRecordGamesPid = {$plugin.tx_sportms.settings.team.historyRecordGamesPid}
+            seasonGamesPid = {$plugin.tx_sportms.settings.team.seasonGamesPid}
+            seasonGoalsPid = {$plugin.tx_sportms.settings.team.seasonGoalsPid}
+            seasonIndexPid = {$plugin.tx_sportms.settings.team.seasonIndexPid}
+            seasonSquadPid = {$plugin.tx_sportms.settings.team.seasonSquadPid}
         }
 
     }
