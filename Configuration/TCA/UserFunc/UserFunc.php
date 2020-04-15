@@ -104,10 +104,12 @@
 
 		public function gameGoalLabel(&$parameters, $parentObject) {
 			$record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
-			$gameLineup = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_sportms_domain_model_gamelineup", $record['scorer']);
-			$teamSeasonSquadMemberScorer = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_sportms_domain_model_teamseasonsquadmember", $gameLineup['team_season_squad_member']);
-			$scorer = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_sportms_domain_model_person", $teamSeasonSquadMemberScorer['person']);
-			$newLabel = $record['goal_home'] . ":" . $record['goal_guest'] . " - " . $scorer['lastname'] . ", " . $scorer['firstname'] . " (" . $record['minute'] . ".)";
+			if($record['scorer']) {
+				$person = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_sportms_domain_model_person", $record['scorer']);
+				$newLabel = $record['goal_home'] . ":" . $record['goal_guest'] . " - " . $person['lastname'] . ", " . $person['firstname'] . " (" . $record['minute'] . ".)";
+			} else {
+				$newLabel = $record['goal_home'] . ":" . $record['goal_guest'] .  " (" . $record['minute'] . ".)";
+			}
 			$parameters['title'] = $newLabel;
 		}
 
