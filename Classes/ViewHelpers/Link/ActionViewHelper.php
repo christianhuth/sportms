@@ -144,6 +144,7 @@
 			$action = $this->arguments['action'] ? $this->arguments['action'] : 'show';
 			$showView = ($action === 'show') ? ($this->arguments['Show'] ? $this->arguments['Show'] : 'showIndex') : NULL;
 			
+			var_dump($showView);
 			if(strpos('show', $showView) !== FALSE) {
 				if(is_null($this->arguments[$this->sportMsDomainModel]) || !$this->arguments[$this->sportMsDomainModel]->isDetailLink()) {
 					$this->tagName = 'span';
