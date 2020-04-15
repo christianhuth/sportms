@@ -103,7 +103,8 @@ return array(
 			'config' => array(
 				'eval' => 'required',
 				'foreign_table' => 'tx_sportms_domain_model_person',
-                'foreign_table_where' => 'AND profile_player = 1 ORDER BY lastname ASC, firstname ASC',
+                'foreign_table_where' => '  AND show_as_player = 1
+                                            ORDER BY lastname ASC, firstname ASC',
 				'items' => Array (
                     array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", ""),
 				),

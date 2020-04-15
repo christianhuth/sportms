@@ -118,7 +118,8 @@ return array(
             'config' => array(
                 'eval' => 'required',
                 'foreign_table' => 'tx_sportms_domain_model_person',
-                'foreign_table_where' => 'AND profile_official = 1 ORDER BY tx_sportms_domain_model_person.lastname ASC, tx_sportms_domain_model_person.firstname ASC',
+                'foreign_table_where' => '  AND show_as_official = 1
+                                            ORDER BY tx_sportms_domain_model_person.lastname ASC, tx_sportms_domain_model_person.firstname ASC',
                 'items' => array(
                     array('', ''),
                 ),
