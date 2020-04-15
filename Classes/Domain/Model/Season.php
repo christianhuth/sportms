@@ -70,7 +70,7 @@
 		/**
 		 * @param int $startdate
 		 */
-		public function setStartdate($startdate): void {
+		public function setStartdate(int $startdate): void {
 			$this->startdate = $startdate;
 		}
 		
@@ -84,7 +84,7 @@
 		/**
 		 * @param int $enddate
 		 */
-		public function setEnddate($enddate): void {
+		public function setEnddate(int $enddate): void {
 			$this->enddate = $enddate;
 		}
 		
