@@ -142,7 +142,7 @@ return array(
 			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_gamelineup.sport_position',
 			'config' => array(
 				'foreign_table' => 'tx_sportms_domain_model_sportposition',
-				'foreign_table_where' => '  ORDER BY tx_sportms_domain_model_sportposition.sorting ASC',
+				'foreign_table_where' => '  ORDER BY tx_sportms_domain_model_sportposition.label ASC',
 				'items' => Array (
 					array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", ""),
 				),
