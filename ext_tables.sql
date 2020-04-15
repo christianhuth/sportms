@@ -388,9 +388,9 @@ CREATE TABLE tx_sportms_domain_model_person (
     person_profiles int(11) DEFAULT NULL,
 	show_birthday tinyint(4) unsigned DEFAULT '0' NOT NULL,
 	detail_link tinyint(4) unsigned DEFAULT '1' NOT NULL,
-	show_as_player tinyint(4) unsigned DEFAULT '0' NOT NULL,
-	show_as_official tinyint(4) unsigned DEFAULT '0' NOT NULL,
-	show_as_referee tinyint(4) unsigned DEFAULT '0' NOT NULL,
+	show_as_player tinyint(4) unsigned DEFAULT 1 NOT NULL,
+	show_as_official tinyint(4) unsigned DEFAULT 0 NOT NULL,
+	show_as_referee tinyint(4) unsigned DEFAULT 0 NOT NULL,
     slug varchar(2048) DEFAULT ''
 );
 
