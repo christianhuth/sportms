@@ -4,7 +4,6 @@
 		<header/>
 		<body>
 			
-			
 			<trans-unit id="tx_sportms_domain_model_club">
 				<source>Verein</source>
 			</trans-unit>

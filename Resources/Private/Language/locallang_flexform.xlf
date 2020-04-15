@@ -10,7 +10,6 @@
 			<trans-unit id="tx_sportms_flexform.sheet.general.recursive.I.inherit">
                 <source>Wie in TypoScript definiert</source>
             </trans-unit>
-			
 			<trans-unit id="tx_sportms_flexform.sheet.scope">
 				<source>Scope</source>
 			</trans-unit>
