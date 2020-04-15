@@ -62,7 +62,7 @@
 		 * @return void
 		 */
 		protected function initStorageObjects(): void {
-			$this->teamSeasons = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+			$this->setTeamSeasons(new \TYPO3\CMS\Extbase\Persistence\ObjectStorage());
 		}
 		
 		/**

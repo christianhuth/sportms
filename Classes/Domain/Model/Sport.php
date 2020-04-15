@@ -57,9 +57,9 @@
 		 * @return void
 		 */
 		protected function initStorageObjects(): void {
-			$this->sportTypes = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-			$this->sportAgeGroups = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-			$this->sportPositionGroups = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+			$this->setSportTypes(new \TYPO3\CMS\Extbase\Persistence\ObjectStorage());
+			$this->setSportAgeGroups(new \TYPO3\CMS\Extbase\Persistence\ObjectStorage());
+			$this->setSportPositionGroups(new \TYPO3\CMS\Extbase\Persistence\ObjectStorage());
 		}
 		
 		/**

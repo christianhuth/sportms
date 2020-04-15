@@ -188,7 +188,7 @@
 		 *
 		 * @return void
 		 */
-		protected function initStorageObjects() {
+		protected function initStorageObjects(): void {
 			$this->setAddresses(new \TYPO3\CMS\Extbase\Persistence\ObjectStorage());
 			$this->setPhones(new \TYPO3\CMS\Extbase\Persistence\ObjectStorage());
 			$this->setMails(new \TYPO3\CMS\Extbase\Persistence\ObjectStorage());

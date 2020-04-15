@@ -33,7 +33,7 @@
 		 * @return void
 		 */
 		protected function initStorageObjects(): void {
-			$this->sports = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+			$this->setSports(new \TYPO3\CMS\Extbase\Persistence\ObjectStorage());
 		}
 		
 		/**

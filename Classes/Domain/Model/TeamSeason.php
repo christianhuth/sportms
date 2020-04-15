@@ -63,12 +63,12 @@
 		 *
 		 * @return void
 		 */
-		protected function initStorageObjects() {
-			$this->teamSeasonPractices = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-			$this->teamSeasonImages = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-			$this->teamSeasonOfficials = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-			$this->teamSeasonSquadMembers = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-			$this->teamSeasonSquadCaptains = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+		protected function initStorageObjects(): void {
+			$this->setTeamSeasonPractices(\TYPO3\CMS\Extbase\Persistence\ObjectStorage());
+			$this->setTeamSeasonImages(\TYPO3\CMS\Extbase\Persistence\ObjectStorage());
+			$this->setTeamSeasonOfficials(\TYPO3\CMS\Extbase\Persistence\ObjectStorage());
+			$this->setTeamSeasonSquadMembers(\TYPO3\CMS\Extbase\Persistence\ObjectStorage());
+			$this->setTeamSeasonSquadCaptains(\TYPO3\CMS\Extbase\Persistence\ObjectStorage());
 		}
 		
 		/**

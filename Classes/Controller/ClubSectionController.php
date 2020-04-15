@@ -39,10 +39,7 @@
 		 * Use this method to solve tasks which all actions have in common, when VIEW-Context is needed
 		 */
 		public function initializeActions() {
-			$listOfPossibleShowViews = 'index,officials,teams';
-			$this->determineShowView($this->model);
-			$this->determineShowViews($this->model, $listOfPossibleShowViews);
-			$this->determineShowNavigationViews($this->model, $listOfPossibleShowViews);
+			$listOfPossibleViews = 'list';
 			$this->view->assign('settings', $this->settings);
 		}
 		

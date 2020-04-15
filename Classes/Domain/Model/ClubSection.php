@@ -100,16 +100,16 @@
 		 *
 		 * @return void
 		 */
-		protected function initStorageObjects() {
-			$this->sports = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-			$this->images = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-			$this->clubSectionMembers = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-			$this->addresses = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-			$this->phones = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-			$this->mails = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-			$this->urls = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-			$this->clubSectionOfficials = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-			$this->teams = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+		protected function initStorageObjects(): void {
+			$this->setSports(new \TYPO3\CMS\Extbase\Persistence\ObjectStorage());
+			$this->setImages(new \TYPO3\CMS\Extbase\Persistence\ObjectStorage());
+			$this->setClubSectionMembers(new \TYPO3\CMS\Extbase\Persistence\ObjectStorage());
+			$this->setAddresses( new \TYPO3\CMS\Extbase\Persistence\ObjectStorage());
+			$this->setPhones(new \TYPO3\CMS\Extbase\Persistence\ObjectStorage());
+			$this->setMails(new \TYPO3\CMS\Extbase\Persistence\ObjectStorage());
+			$this->setUrls(new \TYPO3\CMS\Extbase\Persistence\ObjectStorage());
+			$this->setClubSectionOfficials(new \TYPO3\CMS\Extbase\Persistence\ObjectStorage());
+			$this->setTeams(new \TYPO3\CMS\Extbase\Persistence\ObjectStorage());
 		}
 		
 		/**

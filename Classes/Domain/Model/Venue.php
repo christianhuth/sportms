@@ -77,7 +77,7 @@
 		 * @return void
 		 */
 		protected function initStorageObjects(): void {
-			$this->images = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+			$this->setImages(new \TYPO3\CMS\Extbase\Persistence\ObjectStorage());
 		}
 		
 		/**

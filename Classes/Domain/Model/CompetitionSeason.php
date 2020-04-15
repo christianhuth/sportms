@@ -45,9 +45,9 @@
 		 *
 		 * @return void
 		 */
-		protected function initStorageObjects() {
-			$this->competitionSeasonGamedays = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-			$this->competitionSeasonTeams = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+		protected function initStorageObjects(): void {
+			$this->setCompetitionSeasonGamedays(new \TYPO3\CMS\Extbase\Persistence\ObjectStorage());
+			$this->setCompetitionSeasonTeams(new \TYPO3\CMS\Extbase\Persistence\ObjectStorage());
 		}
 
 		/**

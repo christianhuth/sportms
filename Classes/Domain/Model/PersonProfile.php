@@ -66,7 +66,7 @@
 		 *
 		 * @return void
 		 */
-		protected function initStorageObjects() {
+		protected function initStorageObjects(): void {
 			$this->setProfileImages(new \TYPO3\CMS\Extbase\Persistence\ObjectStorage());
 			$this->setSideSportPositionGroups(new \TYPO3\CMS\Extbase\Persistence\ObjectStorage());
 			$this->setSideSportPositions(new \TYPO3\CMS\Extbase\Persistence\ObjectStorage());
