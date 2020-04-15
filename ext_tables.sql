@@ -388,9 +388,9 @@ CREATE TABLE tx_sportms_domain_model_person (
     person_profiles int(11) DEFAULT NULL,
 	show_birthday tinyint(4) unsigned DEFAULT '0' NOT NULL,
 	detail_link tinyint(4) unsigned DEFAULT '1' NOT NULL,
-	profile_player tinyint(4) unsigned DEFAULT '0' NOT NULL,
-	profile_official tinyint(4) unsigned DEFAULT '0' NOT NULL,
-	profile_referee tinyint(4) unsigned DEFAULT '0' NOT NULL,
+	show_as_player tinyint(4) unsigned DEFAULT '0' NOT NULL,
+	show_as_official tinyint(4) unsigned DEFAULT '0' NOT NULL,
+	show_as_referee tinyint(4) unsigned DEFAULT '0' NOT NULL,
     slug varchar(2048) DEFAULT ''
 );
 
@@ -696,6 +696,32 @@ CREATE TABLE tx_sportms_teamseason_teamseasonsquadmember_mm (
 # Table structure for table 'tx_sportms_venue_club_mm'
 #
 CREATE TABLE tx_sportms_venue_club_mm (
+    uid_local int(11) unsigned DEFAULT '0' NOT NULL,
+    uid_foreign int(11) unsigned DEFAULT '0' NOT NULL,
+    sorting int(11) unsigned DEFAULT '0' NOT NULL,
+    sorting_foreign int(11) unsigned DEFAULT '0' NOT NULL,
+    PRIMARY KEY (uid_local,uid_foreign),
+    KEY uid_local (uid_local),
+    KEY uid_foreign (uid_foreign)
+);
+
+#
+# Table structure for table 'tx_sportms_venue_club_mm'
+#
+CREATE TABLE tx_sportms_person_sportpositiongroup_mm (
+    uid_local int(11) unsigned DEFAULT '0' NOT NULL,
+    uid_foreign int(11) unsigned DEFAULT '0' NOT NULL,
+    sorting int(11) unsigned DEFAULT '0' NOT NULL,
+    sorting_foreign int(11) unsigned DEFAULT '0' NOT NULL,
+    PRIMARY KEY (uid_local,uid_foreign),
+    KEY uid_local (uid_local),
+    KEY uid_foreign (uid_foreign)
+);
+
+#
+# Table structure for table 'tx_sportms_venue_club_mm'
+#
+CREATE TABLE tx_sportms_person_sportposition_mm (
     uid_local int(11) unsigned DEFAULT '0' NOT NULL,
     uid_foreign int(11) unsigned DEFAULT '0' NOT NULL,
     sorting int(11) unsigned DEFAULT '0' NOT NULL,

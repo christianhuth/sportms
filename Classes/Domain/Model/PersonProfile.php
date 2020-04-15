@@ -25,12 +25,24 @@
 		/**
 		 * @var \Balumedien\Sportms\Domain\Model\SportPositionGroup
 		 */
-		protected $sportPositionGroup;
+		protected $mainSportPositionGroup;
 		
 		/**
 		 * @var \Balumedien\Sportms\Domain\Model\SportPosition
 		 */
-		protected $sportPosition;
+		protected $mainSportPosition;
+		
+		/**
+		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\SportPositionGroup>
+		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
+		 */
+		protected $sideSportPositionGroups;
+		
+		/**
+		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\SportPosition>
+		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
+		 */
+		protected $sideSportPositions;
 		
 		/**
 		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference>
@@ -55,7 +67,9 @@
 		 * @return void
 		 */
 		protected function initStorageObjects() {
-			$this->profileImages = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+			$this->setProfileImages(new \TYPO3\CMS\Extbase\Persistence\ObjectStorage());
+			$this->setSideSportPositionGroups(new \TYPO3\CMS\Extbase\Persistence\ObjectStorage());
+			$this->setSideSportPositions(new \TYPO3\CMS\Extbase\Persistence\ObjectStorage());
 		}
 		
 		/**
@@ -103,29 +117,57 @@
 		/**
 		 * @return SportPositionGroup
 		 */
-		public function getSportPositionGroup(): SportPositionGroup {
-			return $this->sportPositionGroup;
+		public function getMainSportPositionGroup(): SportPositionGroup {
+			return $this->mainSportPositionGroup;
 		}
 		
 		/**
-		 * @param SportPositionGroup $sportPositionGroup
+		 * @param SportPositionGroup $mainSportPositionGroup
 		 */
-		public function setSportPositionGroup(SportPositionGroup $sportPositionGroup): void {
-			$this->sportPositionGroup = $sportPositionGroup;
+		public function setMainSportPositionGroup(SportPositionGroup $mainSportPositionGroup): void {
+			$this->mainSportPositionGroup = $mainSportPositionGroup;
 		}
 		
 		/**
 		 * @return SportPosition
 		 */
-		public function getSportPosition(): SportPosition {
-			return $this->sportPosition;
+		public function getMainSportPosition(): SportPosition {
+			return $this->mainSportPosition;
 		}
 		
 		/**
-		 * @param SportPosition $sportPosition
+		 * @param SportPosition $mainSportPosition
 		 */
-		public function setSportPosition(SportPosition $sportPosition): void {
-			$this->sportPosition = $sportPosition;
+		public function setMainSportPosition(SportPosition $mainSportPosition): void {
+			$this->mainSportPosition = $mainSportPosition;
+		}
+		
+		/**
+		 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+		 */
+		public function getSideSportPositionGroups(): \TYPO3\CMS\Extbase\Persistence\ObjectStorage {
+			return $this->sideSportPositionGroups;
+		}
+		
+		/**
+		 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $sideSportPositionGroups
+		 */
+		public function setSideSportPositionGroups(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $sideSportPositionGroups): void {
+			$this->sideSportPositionGroups = $sideSportPositionGroups;
+		}
+		
+		/**
+		 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+		 */
+		public function getSideSportPositions(): \TYPO3\CMS\Extbase\Persistence\ObjectStorage {
+			return $this->sideSportPositions;
+		}
+		
+		/**
+		 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $sideSportPositions
+		 */
+		public function setSideSportPositions(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $sideSportPositions): void {
+			$this->sideSportPositions = $sideSportPositions;
 		}
 		
 		/**

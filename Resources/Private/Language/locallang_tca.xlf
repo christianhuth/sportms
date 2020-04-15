@@ -1057,14 +1057,14 @@
 			<trans-unit id="tx_sportms_domain_model_person.show_birthday">
 				<source>Geburtsdatum zeigen</source>
 			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_person.profile_player">
-				<source>Spieler-Profil?</source>
+			<trans-unit id="tx_sportms_domain_model_person.show_as_player">
+				<source>In Spieler-Auswahl sichtbar</source>
 			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_person.profile_official">
-				<source>Funktionärs-Profil?</source>
+			<trans-unit id="tx_sportms_domain_model_person.show_as_official">
+				<source>In Funktionärs-Auswahl sichtbar</source>
 			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_person.profile_referee">
-				<source>Schiedsrichter-Profil?</source>
+			<trans-unit id="tx_sportms_domain_model_person.show_as_referee">
+				<source>In Schiedsrichter-Auswahl sichtbar</source>
 			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_person.tab_personal">
 				<source>Persönliche Daten</source>

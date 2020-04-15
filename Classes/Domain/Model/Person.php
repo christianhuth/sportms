@@ -160,17 +160,17 @@
 		/**
 		 * @var bool
 		 */
-		protected $profilePlayer = '';
+		protected $showAsPlayer;
 		
 		/**
 		 * @var bool
 		 */
-		protected $profileOfficial = '';
+		protected $showAsOfficial;
 		
 		/**
 		 * @var bool
 		 */
-		protected $profileReferee = '';
+		protected $showAsReferee;
 		
 		/**
 		 * TeamSeason constructor.
@@ -591,43 +591,43 @@
 		/**
 		 * @return bool
 		 */
-		public function isProfilePlayer() {
-			return $this->profilePlayer;
+		public function isShowAsPlayer(): bool {
+			return $this->showAsPlayer;
 		}
 		
 		/**
-		 * @param bool $profilePlayer
+		 * @param bool $showAsPlayer
 		 */
-		public function setProfilePlayer($profilePlayer) {
-			$this->profilePlayer = $profilePlayer;
-		}
-		
-		/**
-		 * @return bool
-		 */
-		public function isProfileOfficial() {
-			return $this->profileOfficial;
-		}
-		
-		/**
-		 * @param bool $profileOfficial
-		 */
-		public function setProfileOfficial($profileOfficial) {
-			$this->profileOfficial = $profileOfficial;
+		public function setShowAsPlayer(bool $showAsPlayer): void {
+			$this->showAsPlayer = $showAsPlayer;
 		}
 		
 		/**
 		 * @return bool
 		 */
-		public function isProfileReferee() {
-			return $this->profileReferee;
+		public function isShowAsOfficial(): bool {
+			return $this->showAsOfficial;
 		}
 		
 		/**
-		 * @param bool $profileReferee
+		 * @param bool $showAsOfficial
 		 */
-		public function setProfileReferee($profileReferee) {
-			$this->profileReferee = $profileReferee;
+		public function setShowAsOfficial(bool $showAsOfficial): void {
+			$this->showAsOfficial = $showAsOfficial;
+		}
+		
+		/**
+		 * @return bool
+		 */
+		public function isShowAsReferee(): bool {
+			return $this->showAsReferee;
+		}
+		
+		/**
+		 * @param bool $showAsReferee
+		 */
+		public function setShowAsReferee(bool $showAsReferee): void {
+			$this->showAsReferee = $showAsReferee;
 		}
 		
 	}

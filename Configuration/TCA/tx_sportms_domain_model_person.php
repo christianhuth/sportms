@@ -32,7 +32,7 @@ return array(
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.tab_personal, weight, height, size_of_shoe, hander, footer, family_status, graduation, job, characteristics, hobbies, favorite_dish, favorite_drink,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.tab_contact, addresses, phones, mails, urls,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.tab_profiles, person_profiles,
-									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab_visibility, hidden, show_birthday, detail_link, profile_player, profile_official, profile_referee, slug,
+									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab_visibility, hidden, show_birthday, detail_link, show_as_player, show_as_official, show_as_referee, slug,
 		                            '),
 	),
 	'palettes' => array(
@@ -472,27 +472,27 @@ return array(
 				'type' => 'check',
 			],
 		],
-		'profile_player' => array(
+		'show_as_player' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.profile_player',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.show_as_player',
+			'config' => array(
+				'default' => TRUE,
+				'renderType' => 'checkboxToggle',
+				'type' => 'check',
+			),
+		),
+		'show_as_official' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.show_as_official',
 			'config' => array(
 				'default' => FALSE,
 				'renderType' => 'checkboxToggle',
 				'type' => 'check',
 			),
 		),
-		'profile_official' => array(
+		'show_as_referee' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.profile_official',
-			'config' => array(
-				'default' => FALSE,
-				'renderType' => 'checkboxToggle',
-				'type' => 'check',
-			),
-		),
-		'profile_referee' => array(
-			'exclude' => 1,
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.profile_referee',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.show_as_referee',
 			'config' => array(
 				'default' => FALSE,
 				'renderType' => 'checkboxToggle',
