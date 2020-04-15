@@ -22,11 +22,11 @@ return array(
 		'versioningWS' => TRUE,
 	),
 	'interface' => array(
-		'showRecordFieldList' => 'hidden, label, abbreviation', 'startdate', 'enddate',
+		'showRecordFieldList' => 'hidden, label, abbreviation, startdate, enddate',
 	),
 	'types' => array(
 		'1' => array('showitem' => 'label, abbreviation,
-									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_season.tab_dates, startdate, enddate,
+									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_season.tab_dates, startdate, enddate, winter_break,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab_visibility, hidden, detail_link, slug,
 		                            '),
 	),
@@ -123,6 +123,17 @@ return array(
 		'enddate' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.enddate',
+			'config' => array(
+				'type' => 'input',
+				'size' => 8,
+				'eval' => 'date',
+				'placeholder' => 'dd-mm-yyyy',
+				'renderType' => 'inputDateTime',
+			),
+		),
+		'winter_break' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_season.winter_break',
 			'config' => array(
 				'type' => 'input',
 				'size' => 8,

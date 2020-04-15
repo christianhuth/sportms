@@ -447,8 +447,9 @@ CREATE TABLE tx_sportms_domain_model_season (
 	label varchar(255) DEFAULT '' NOT NULL,
 	abbreviation varchar(255) DEFAULT NULL,
 	startdate int(11) unsigned DEFAULT NULL,
-	enddate int(11) unsigned DEFAULT NULL,
-    detail_link tinyint(4) unsigned DEFAULT '1' NOT NULL,
+    enddate int(11) unsigned DEFAULT NULL,
+    winter_break int(11) unsigned DEFAULT NULL,
+    detail_link tinyint(4) unsigned DEFAULT 1 NOT NULL,
     slug varchar(2048) DEFAULT ''
 );
 

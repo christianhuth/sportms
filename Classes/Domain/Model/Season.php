@@ -28,6 +28,11 @@
 		protected $enddate;
 		
 		/**
+		 * @var int
+		 */
+		protected $winterBreak;
+		
+		/**
 		 * @var bool
 		 */
 		protected $detailLink;
@@ -86,6 +91,20 @@
 		 */
 		public function setEnddate(int $enddate): void {
 			$this->enddate = $enddate;
+		}
+		
+		/**
+		 * @return int
+		 */
+		public function getWinterBreak(): int {
+			return $this->winterBreak;
+		}
+		
+		/**
+		 * @param int $winterBreak
+		 */
+		public function setWinterBreak(int $winterBreak): void {
+			$this->winterBreak = $winterBreak;
 		}
 		
 		/**

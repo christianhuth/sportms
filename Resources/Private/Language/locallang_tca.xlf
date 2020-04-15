@@ -1052,6 +1052,9 @@
 			<trans-unit id="tx_sportms_domain_model_seasons">
 				<source>Saisons</source>
 			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_season.winter_break">
+				<source>Winterpause</source>
+			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_season.tab_dates">
 				<source>Daten</source>
 			</trans-unit>
