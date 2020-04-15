@@ -18,7 +18,6 @@
             <th>
                 <f:translate key="tx_sportms_domain_model_competition.competitionType"/>
             </th>
-            <th>Wettbewerbsinstanzen</th>
         </tr>
         </thead>
         <tbody>
@@ -34,9 +33,6 @@
                         </td>
                         <td>{competition.sportAgeLevel.label}</td>
                         <td>{competition.competitionType.label}</td>
-                        <td>
-                            <f:count>{competition.competitionSeasons}</f:count>
-                        </td>
                     </tr>
                 </f:for>
             </f:then>
