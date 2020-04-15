@@ -20,7 +20,7 @@
 		/**
 		 * @var string
 		 */
-		protected $short;
+		protected $abbreviation;
 		
 		/**
 		 * @return \Balumedien\Sportms\Domain\Model\SportAgeGroup
@@ -55,15 +55,15 @@
 		/**
 		 * @return string
 		 */
-		public function getShort(): string {
-			return $this->short;
+		public function getAbbreviation(): string {
+			return $this->abbreviation;
 		}
 		
 		/**
-		 * @param string $short
+		 * @param string $abbreviation
 		 */
-		public function setShort($short): void {
-			$this->short = $short;
+		public function setAbbreviation($abbreviation): void {
+			$this->abbreviation = $abbreviation;
 		}
 		
 	}

@@ -18,6 +18,11 @@
 		protected $label;
 		
 		/**
+		 * @var string
+		 */
+		protected $abbreviation;
+		
+		/**
 		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\SportPosition>
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
@@ -67,6 +72,20 @@
 		 */
 		public function setLabel(string $label): void {
 			$this->label = $label;
+		}
+		
+		/**
+		 * @return string
+		 */
+		public function getAbbreviation(): string {
+			return $this->abbreviation;
+		}
+		
+		/**
+		 * @param string $abbreviation
+		 */
+		public function setAbbreviation(string $abbreviation): void {
+			$this->abbreviation = $abbreviation;
 		}
 		
 		/**

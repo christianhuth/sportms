@@ -20,7 +20,7 @@
 		/**
 		 * @var string
 		 */
-		protected $labelShort;
+		protected $abbreviation;
 		
 		/**
 		 * @var int
@@ -63,15 +63,15 @@
 		/**
 		 * @return string
 		 */
-		public function getLabelShort(): string {
-			return $this->labelShort;
+		public function getAbbreviation(): string {
+			return $this->abbreviation;
 		}
 		
 		/**
-		 * @param string $labelShort
+		 * @param string $abbreviation
 		 */
-		public function setLabelShort(string $labelShort): void {
-			$this->labelShort = $labelShort;
+		public function setAbbreviation(string $abbreviation): void {
+			$this->abbreviation = $abbreviation;
 		}
 		
 		/**

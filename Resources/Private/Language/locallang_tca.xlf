@@ -1088,9 +1088,6 @@
 			<trans-unit id="tx_sportms_domain_model_sportagegroups">
 				<source>Altersgruppe</source>
 			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_sportagegroup.short">
-				<source>Kurzform</source>
-			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_sportagegroup.tab_sport_age_levels">
 				<source>Altersstufen</source>
 			</trans-unit>
@@ -1103,9 +1100,6 @@
 			<trans-unit id="tx_sportms_domain_model_sportagelevels">
 				<source>Altersstufen</source>
 			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_sportagelevel.short">
-				<source>Kurzform</source>
-			</trans-unit>
 
 
 			<!-- Domain Model SportPosition -->
@@ -1114,9 +1108,6 @@
 			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_sportpositions">
 				<source>Positionen</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_sportposition.label_short">
-				<source>Abkürzung</source>
 			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_sportposition.x_position">
 				<source>Position X-Achse</source>

@@ -10,24 +10,24 @@
 		/**
 		 * @var \Balumedien\Sportms\Domain\Model\Sport
 		 */
-		protected $sport = '';
+		protected $sport;
 		
 		/**
 		 * @var string
 		 */
-		protected $label = '';
+		protected $label;
 		
 		/**
 		 * @var string
 		 */
-		protected $short = '';
+		protected $abbreviation;
 		
 		/**
 		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\SportAgeLevel>
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
 		 */
-		protected $sportAgeLevels = '';
+		protected $sportAgeLevels;
 		
 		/**
 		 * __construct
@@ -80,15 +80,15 @@
 		/**
 		 * @return string
 		 */
-		public function getShort(): string {
-			return $this->short;
+		public function getAbbreviation(): string {
+			return $this->abbreviation;
 		}
 		
 		/**
-		 * @param string $short
+		 * @param string $abbreviation
 		 */
-		public function setShort(string $short): void {
-			$this->short = $short;
+		public function setAbbreviation(string $abbreviation): void {
+			$this->abbreviation = $abbreviation;
 		}
 		
 		/**

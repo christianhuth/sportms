@@ -24,7 +24,7 @@ return array(
 		'versioningWS' => TRUE,
 	),
 	'interface' => array(
-		'showRecordFieldList' => 'label, label_short, x_position, y_position',
+		'showRecordFieldList' => 'label, abbreviation, x_position, y_position',
 	),
 	'types' => array(
 		'1' => array('showitem' => 'sport_position_group, label, label_short,
@@ -111,18 +111,18 @@ return array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.label',
 			'config' => array(
+				'eval' => 'required, trim',
+				'size' => 255,
 				'type' => 'input',
-				'size' => 30,
-				'eval' => 'trim, required'
 			),
 		),
-		'label_short' => array(
+		'abbreviation' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sportposition.label_short',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.abbreviation',
 			'config' => array(
+				'eval' => 'trim',
+				'size' => 255,
 				'type' => 'input',
-				'size' => 30,
-				'eval' => 'trim, required'
 			),
 		),
 		

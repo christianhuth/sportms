@@ -23,7 +23,7 @@ return array(
 		'versioningWS' => TRUE,
     ),
 	'interface' => array(
-		'showRecordFieldList' => 'sport_age_group, label, short, slug',
+		'showRecordFieldList' => 'sport_age_group, label, abbreviation, slug',
 	),
 	'types' => array(
 		'1' => array('showitem' => 'label, short, slug,
@@ -114,9 +114,9 @@ return array(
 				'type' => 'input',
 			),
 		),
-		'short' => array(
+		'abbreviation' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sportagelevel.short',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.abbreviation',
 			'config' => array(
 				'eval' => 'trim',
 				'size' => 255,

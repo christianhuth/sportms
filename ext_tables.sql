@@ -471,8 +471,8 @@ CREATE TABLE tx_sportms_domain_model_sport (
 #
 CREATE TABLE tx_sportms_domain_model_sportagegroup (
     sport int(11) DEFAULT NULL,
-    label varchar(255) DEFAULT NULL,
-    short varchar(255) DEFAULT NULL,
+    label varchar(255) DEFAULT '' NOT NULL,
+    abbreviation varchar(255) DEFAULT NULL,
     sport_age_levels int(11) DEFAULT NULL,
     slug varchar(2048) DEFAULT '',
     sorting int(11) DEFAULT '0' NOT NULL
@@ -483,8 +483,8 @@ CREATE TABLE tx_sportms_domain_model_sportagegroup (
 #
 CREATE TABLE tx_sportms_domain_model_sportagelevel (
     sport_age_group int(11) DEFAULT NULL,
-    label varchar(255) DEFAULT NULL,
-    short varchar(255) DEFAULT NULL,
+    label varchar(255) DEFAULT '' NOT NULL,
+    abbreviation varchar(255) DEFAULT NULL,
     slug varchar(2048) DEFAULT '',
     sorting int(11) DEFAULT '0' NOT NULL
 );
@@ -494,8 +494,8 @@ CREATE TABLE tx_sportms_domain_model_sportagelevel (
 #
 CREATE TABLE tx_sportms_domain_model_sportposition (
     sport_position_group int(11) DEFAULT '0' NOT NULL,
-    label varchar(255) DEFAULT NULL,
-    label_short varchar(255) DEFAULT NULL,
+    label varchar(255) DEFAULT '' NOT NULL,
+    abbreviation varchar(255) DEFAULT NULL,
     x_position int(11) DEFAULT NULL,
     y_position int(11) DEFAULT NULL,
     sorting int(11) DEFAULT '0' NOT NULL
@@ -506,7 +506,8 @@ CREATE TABLE tx_sportms_domain_model_sportposition (
 #
 CREATE TABLE tx_sportms_domain_model_sportpositiongroup (
     sport int(11) DEFAULT '0' NOT NULL,
-    label varchar(255) DEFAULT NULL,
+    label varchar(255) DEFAULT '' NOT NULL,
+    abbreviation varchar(255) DEFAULT NULL,
     sport_positions int(11) DEFAULT NULL,
     sorting int(11) DEFAULT '0' NOT NULL
 );
