@@ -7,8 +7,7 @@
         <thead>
         <tr>
             <th>Bezeichnung</th>
-            <th>Kurze Bezeichnung</th>
-            <th>Sehr kurze Bezeichnung</th>
+            <th>Abkürzung</th>
         </tr>
         </thead>
         <tbody>
@@ -17,13 +16,10 @@
                 <f:for as="season" each="{seasons}">
                     <tr>
                         <td>
-                            <sportms:link.action Season="{season}">{season.seasonName}</sportms:link.action>
+                            <sportms:link.action Season="{season}">{season.label}</sportms:link.action>
                         </td>
                         <td>
-                            <sportms:link.action Season="{season}">{season.seasonNameShort}</sportms:link.action>
-                        </td>
-                        <td>
-                            <sportms:link.action Season="{season}">{season.seasonNameShort}</sportms:link.action>
+                            <sportms:link.action Season="{season}">{season.abbreviation}</sportms:link.action>
                         </td>
                     </tr>
                 </f:for>
