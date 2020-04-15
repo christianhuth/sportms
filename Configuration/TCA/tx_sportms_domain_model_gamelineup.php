@@ -131,7 +131,7 @@ return array(
 				'items' => array(
 					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ''),
 				),
-				#'itemsProcFunc' => 'Balumedien\\Sportms\\Configuration\\TCA\\UserFunc\\ItemsProcFunc->team_season_squad_member_GameLineup',
+				'itemsProcFunc' => 'Balumedien\\Sportms\\Configuration\\TCA\\UserFunc\\ItemsProcFunc->team_season_squad_member_GameLineup',
 				'renderType' => 'selectSingle',
 				'size' => 1,
 				'type' => 'select',
