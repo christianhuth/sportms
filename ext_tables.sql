@@ -407,7 +407,8 @@ CREATE TABLE tx_sportms_domain_model_personprofile (
     main_sport_position int(11) DEFAULT NULL,
     side_sport_position_groups int(11) DEFAULT NULL,
     side_sport_positions int(11) DEFAULT NULL,
-    profile_images varchar(255) DEFAULT NULL
+    profile_images varchar(255) DEFAULT NULL,
+    sorting int(11) DEFAULT '0' NOT NULL
 );
 
 #
