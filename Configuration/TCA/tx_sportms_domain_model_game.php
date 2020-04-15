@@ -955,6 +955,7 @@ return array(
 							'config' => [
 								'type' => 'passthrough',
 							],
+							'label' => '',
 						],
 					],
 				],

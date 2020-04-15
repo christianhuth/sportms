@@ -144,7 +144,7 @@ return array(
 				'foreign_table' => 'tx_sportms_domain_model_sportposition',
 				'foreign_table_where' => '  ORDER BY tx_sportms_domain_model_sportposition.label ASC',
 				'items' => Array (
-					array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", ""),
+					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ''),
 				),
 				'maxItems' => 1,
 				'renderType' => 'selectSingle',
