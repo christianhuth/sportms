@@ -172,7 +172,7 @@ return array(
 			'onChange' => 'reload',
 		),
 		'main_sport_position' => array(
-			'displayCond' => 'FIELD:sport_position_group:>:0',
+			'displayCond' => 'FIELD:main_sport_position_group:>:0',
 			'exclude' => 1,
 			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_personprofile.main_sport_position',
 			'config' => array(
