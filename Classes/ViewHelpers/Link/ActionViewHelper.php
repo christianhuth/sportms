@@ -144,7 +144,7 @@
 			$action = $this->arguments['action'] ? $this->arguments['action'] : 'show';
 			$showView = ($action === 'show') ? ($this->arguments['Show'] ? $this->arguments['Show'] : 'index') : NULL;
 			
-			if($showView === 'show') {
+			if(strpos('show', $showView) !== FALSE) {
 				if(is_null($this->arguments[$this->sportMsDomainModel]) || !$this->arguments[$this->sportMsDomainModel]->isDetailLink()) {
 					$this->tagName = 'span';
 					$this->setTagBuilder(new \TYPO3Fluid\Fluid\Core\ViewHelper\TagBuilder($this->tagName));
