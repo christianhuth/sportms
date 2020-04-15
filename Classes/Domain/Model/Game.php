@@ -9,13 +9,11 @@
 		
 		/**
 		 * @var \Balumedien\Sportms\Domain\Model\Sport
-		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
 		 */
 		protected $sport;
 		
 		/**
 		 * @var \Balumedien\Sportms\Domain\Model\Season
-		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
 		 */
 		protected $season;
 		
@@ -46,7 +44,6 @@
 		
 		/**
 		 * @var \Balumedien\Sportms\Domain\Model\CompetitionSeasonGameday
-		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
 		 */
 		protected $gameday;
@@ -63,7 +60,6 @@
 		
 		/**
 		 * @var \Balumedien\Sportms\Domain\Model\Venue
-		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
 		 */
 		protected $venue;
 		
@@ -343,9 +339,6 @@
 		 * @return Sport
 		 */
 		public function getSport(): Sport {
-			if($this->sport instanceof \TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy) {
-				$this->sport->_loadRealInstance();
-			}
 			return $this->sport;
 		}
 		
