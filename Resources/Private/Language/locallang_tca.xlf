@@ -1246,6 +1246,9 @@
 			<trans-unit id="tx_sportms_domain_model_sportposition">
 				<source>Position</source>
 			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_sportpositions">
+				<source>Positionen</source>
+			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_sportposition.label">
 				<source>Bezeichnung</source>
 			</trans-unit>
@@ -1266,6 +1269,9 @@
 			<!-- Domain Model SportPositionGroup -->
 			<trans-unit id="tx_sportms_domain_model_sportpositiongroup">
 				<source>Positionsgruppe</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_sportpositiongroups">
+				<source>Positionsgruppen</source>
 			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_sportpositiongroup.sport">
 				<source>Sportart</source>

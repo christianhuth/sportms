@@ -408,7 +408,8 @@ CREATE TABLE tx_sportms_domain_model_personprofile (
     side_sport_position_groups int(11) DEFAULT NULL,
     side_sport_positions int(11) DEFAULT NULL,
     profile_images varchar(255) DEFAULT NULL,
-    sorting int(11) DEFAULT '0' NOT NULL
+    sorting int(11) DEFAULT '0' NOT NULL,
+    UNIQUE(person, profile_type, sport)
 );
 
 #
@@ -710,7 +711,7 @@ CREATE TABLE tx_sportms_venue_club_mm (
 #
 # Table structure for table 'tx_sportms_venue_club_mm'
 #
-CREATE TABLE tx_sportms_person_sportpositiongroup_mm (
+CREATE TABLE tx_sportms_personprofile_sportpositiongroup_mm (
     uid_local int(11) unsigned DEFAULT '0' NOT NULL,
     uid_foreign int(11) unsigned DEFAULT '0' NOT NULL,
     sorting int(11) unsigned DEFAULT '0' NOT NULL,
@@ -723,7 +724,7 @@ CREATE TABLE tx_sportms_person_sportpositiongroup_mm (
 #
 # Table structure for table 'tx_sportms_venue_club_mm'
 #
-CREATE TABLE tx_sportms_person_sportposition_mm (
+CREATE TABLE tx_sportms_personprofile_sportposition_mm (
     uid_local int(11) unsigned DEFAULT '0' NOT NULL,
     uid_foreign int(11) unsigned DEFAULT '0' NOT NULL,
     sorting int(11) unsigned DEFAULT '0' NOT NULL,
