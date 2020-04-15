@@ -25,7 +25,7 @@ return array(
 		'showRecordFieldList' => 'label, abbreviation, x_position, y_position',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'sport_position_group, label, label_short,
+		'1' => array('showitem' => 'sport_position_group, label, abbreviation,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sportposition.tab_representation, x_position, y_position,
 		                            '),
 	),
