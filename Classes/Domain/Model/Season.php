@@ -10,17 +10,12 @@
 		/**
 		 * @var string
 		 */
-		protected $seasonName = '';
+		protected $label;
 		
 		/**
 		 * @var string
 		 */
-		protected $seasonNameShort = '';
-		
-		/**
-		 * @var string
-		 */
-		protected $seasonNameVeryShort = '';
+		protected $abbreviation;
 		
 		/**
 		 * @var int
@@ -40,43 +35,29 @@
 		/**
 		 * @return string
 		 */
-		public function getSeasonName(): string {
-			return $this->seasonName;
+		public function getLabel(): string {
+			return $this->label;
 		}
 		
 		/**
-		 * @param string $seasonName
+		 * @param string $label
 		 */
-		public function setSeasonName(string $seasonName): void {
-			$this->seasonName = $seasonName;
-		}
-		
-		/**
-		 * @return string
-		 */
-		public function getSeasonNameShort(): string {
-			return $this->seasonNameShort;
-		}
-		
-		/**
-		 * @param string $seasonNameShort
-		 */
-		public function setSeasonNameShort($seasonNameShort): void {
-			$this->seasonNameShort = $seasonNameShort;
+		public function setLabel(string $label): void {
+			$this->label = $label;
 		}
 		
 		/**
 		 * @return string
 		 */
-		public function getSeasonNameVeryShort(): string {
-			return $this->seasonNameVeryShort;
+		public function getAbbreviation(): string {
+			return $this->abbreviation;
 		}
 		
 		/**
-		 * @param string $seasonNameVeryShort
+		 * @param string $abbreviation
 		 */
-		public function setSeasonNameVeryShort($seasonNameVeryShort): void {
-			$this->seasonNameVeryShort = $seasonNameVeryShort;
+		public function setAbbreviation(string $abbreviation): void {
+			$this->abbreviation = $abbreviation;
 		}
 		
 		/**

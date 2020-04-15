@@ -116,7 +116,7 @@ return array(
 			'config' => array(
 				'eval' => 'required',
 				'foreign_table' => 'tx_sportms_domain_model_season',
-				'foreign_table_where' => 'ORDER BY season_name DESC',
+				'foreign_table_where' => 'ORDER BY label DESC',
 				'items' => Array (
                     array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ""),
 				),

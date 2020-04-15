@@ -444,9 +444,8 @@ CREATE TABLE tx_sportms_domain_model_refereejob (
 # Table structure for table 'tx_sportms_domain_model_season'
 #
 CREATE TABLE tx_sportms_domain_model_season (
-	season_name varchar(255) DEFAULT '' NOT NULL,
-	season_name_short varchar(255) DEFAULT NULL,
-	season_name_very_short varchar(255) DEFAULT NULL,
+	label varchar(255) DEFAULT '' NOT NULL,
+	abbreviation varchar(255) DEFAULT NULL,
 	startdate int(11) unsigned DEFAULT NULL,
 	enddate int(11) unsigned DEFAULT NULL,
     detail_link tinyint(4) unsigned DEFAULT '1' NOT NULL,

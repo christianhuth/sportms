@@ -56,7 +56,7 @@
             $record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
             $competition = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_sportms_domain_model_competition", $record['competition']);
             $season = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_sportms_domain_model_season", $record['season']);
-            $newLabel = $competition['name'] . " (" . $season['season_name'] . ")";
+            $newLabel = $competition['name'] . " (" . $season['label'] . ")";
             $parameters['title'] = $newLabel;
         }
 
@@ -86,7 +86,7 @@
             $teamHome = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_sportms_domain_model_team", $teamSeasonHome['team']);
             $teamSeasonGuest = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_sportms_domain_model_teamseason", $record['team_season_guest']);
             $teamGuest = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_sportms_domain_model_team", $teamSeasonGuest['team']);
-            $newLabel = $competition['name'] . " (" . $season['season_name_very_short']. "): " . $teamHome['name'] . " - " . $teamGuest['name'];
+            $newLabel = $competition['name'] . " (" . $season['abbreeeeeviation']. "): " . $teamHome['name'] . " - " . $teamGuest['name'];
             $parameters['title'] = $newLabel;
         }
 
@@ -237,7 +237,7 @@
 			$record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
 			$team = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_sportms_domain_model_team", $record['team']);
 			$season = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_sportms_domain_model_season", $record['season']);
-			$newLabel = $team['name'] . " (" . $season['season_name_short'] . ")";
+			$newLabel = $team['name'] . ' (' . $season['abbreviation'] . ')';
 			$parameters['title'] = $newLabel;
 		}
 
@@ -245,7 +245,7 @@
 			$record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
 			$person = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_sportms_domain_model_person", $record['person']);
 			$officialJob = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_sportms_domain_model_teamseasonofficialjob", $record['team_season_official_job']);
-			$newLabel = $officialJob['label'] . ": " . $person['firstname'] . " " . $person['lastname'];
+			$newLabel = $officialJob['label'] . ': ' . $person['firstname'] . " " . $person['lastname'];
 			$parameters['title'] = $newLabel;
 		}
 		

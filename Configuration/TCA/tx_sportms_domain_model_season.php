@@ -7,7 +7,7 @@ return array(
 	'ctrl' => array(
 		'crdate' => 'crdate',
 		'cruser_id' => 'cruser_id',
-		'default_sortby' => 'ORDER BY season_name DESC',
+		'default_sortby' => 'ORDER BY label DESC',
 		'delete' => 'deleted',
 		'enablecolumns' => array(
 			'disabled' => 'hidden',
@@ -15,17 +15,17 @@ return array(
 			'endtime' => 'endtime',
 		),
 		'iconfile' => 'EXT:sportms/Resources/Public/Icons/tx_sportms_domain_model_season.svg',
-		'label' => 'season_name',
+		'label' => 'label',
 		'searchFields' => '',
 		'title'	=> 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_season',
 		'tstamp' => 'tstamp',
 		'versioningWS' => TRUE,
 	),
 	'interface' => array(
-		'showRecordFieldList' => 'hidden, season_name, season_name_short, season_name_very_short', 'startdate', 'enddate',
+		'showRecordFieldList' => 'hidden, label, abbreviation', 'startdate', 'enddate',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'season_name, season_name_short, season_name_very_short,
+		'1' => array('showitem' => 'label, abbreviation,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_season.tab_dates, startdate, enddate,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab_visibility, hidden, detail_link, slug,
 		                            '),
@@ -90,27 +90,18 @@ return array(
             ],
         ],
 		
-		'season_name' => array(
+		'label' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_season.season_name',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.label',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
 				'eval' => 'trim, required'
 			),
 		),
-		'season_name_short' => array(
+		'abbreviation' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_season.season_name_short',
-			'config' => array(
-				'type' => 'input',
-				'size' => 30,
-				'eval' => 'trim'
-			),
-		),
-		'season_name_very_short' => array(
-			'exclude' => 1,
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_season.season_name_very_short',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.abbreviation',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -158,7 +149,7 @@ return array(
 				'eval' => 'uniqueInSite',
 				'fallbackCharacter' => '-',
 				'generatorOptions' => [
-					'fields' => ['season_name'],
+					'fields' => ['label'],
 					'fieldSeparator' => '-',
 					'prefixParentPageSlug' => false,
 					'replacements' => [

@@ -1052,15 +1052,6 @@
 			<trans-unit id="tx_sportms_domain_model_seasons">
 				<source>Saisons</source>
 			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_season.season_name">
-				<source>Bezeichnung</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_season.season_name_short">
-				<source>Alternative Bezeichnung</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_season.season_name_very_short">
-				<source>Kurzform</source>
-			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_season.tab_dates">
 				<source>Daten</source>
 			</trans-unit>
