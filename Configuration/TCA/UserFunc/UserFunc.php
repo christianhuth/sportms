@@ -245,7 +245,7 @@
 			$record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
 			$person = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_sportms_domain_model_person", $record['person']);
 			$officialJob = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord("tx_sportms_domain_model_teamseasonofficialjob", $record['team_season_official_job']);
-			$newLabel = $officialJob['label'] . ': ' . $person['firstname'] . " " . $person['lastname'];
+			$newLabel = $officialJob['label'] . ': ' . $person['lastname'] . ", " . $person['firstname'];
 			$parameters['title'] = $newLabel;
 		}
 		
