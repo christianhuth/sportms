@@ -842,6 +842,15 @@ return array(
 				),
 				'foreign_sortby' => 'sorting',
 				'foreign_table' => 'tx_sportms_domain_model_gamelineup',
+				'overrideChildTca' => [
+					'columns' => [
+						'sport_position' => [
+							'config' => [
+								'type' => 'passthrough',
+							],
+						],
+					],
+				],
 				'type' => 'inline',
 			),
 		),
@@ -940,6 +949,15 @@ return array(
 				),
 				'foreign_sortby' => 'sorting',
 				'foreign_table' => 'tx_sportms_domain_model_gamelineup',
+				'overrideChildTca' => [
+					'columns' => [
+						'sport_position' => [
+							'config' => [
+								'type' => 'passthrough',
+							],
+						],
+					],
+				],
 				'type' => 'inline',
 			),
 		),
