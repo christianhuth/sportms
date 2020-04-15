@@ -126,13 +126,13 @@ return array(
 
 		'sport' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.sport',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sport',
 			'config' => array(
 				'eval' => 'required',
 				'foreign_table' => 'tx_sportms_domain_model_sport',
 				'foreign_table_where' => 'ORDER BY label ASC',
 				'items' => Array (
-					array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", ""),
+					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ""),
 				),
 				'maxItems' => 1,
 				'minItems' => 1,
@@ -144,13 +144,13 @@ return array(
 		),
 		'season' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.season',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_season',
             'config' => array(
                 'eval' => 'required',
                 'foreign_table' => 'tx_sportms_domain_model_season',
                 'foreign_table_where' => 'ORDER BY season_name DESC',
                 'items' => Array (
-                    array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", ""),
+                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ""),
                 ),
                 'maxItems' => 1,
                 'minItems' => 1,
@@ -163,7 +163,7 @@ return array(
         'competition_season' => array(
             'displayCond' => 'FIELD:season:>:0',
             'exclude' => 1,
-            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.competition_season',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_competitionseason',
             'config' => array(
                 'eval' => 'required',
                 'foreign_table' => 'tx_sportms_domain_model_competitionseason',
@@ -171,7 +171,7 @@ return array(
 	                                        AND tx_sportms_domain_model_competitionseason.competition IN (SELECT competition FROM tx_sportms_domain_model_competition WHERE sport = ###REC_FIELD_sport###)
 	                                        ORDER BY tx_sportms_domain_model_competitionseason.competition ASC',
                 'items' => Array (
-                    array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", ""),
+                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ""),
                 ),
                 'maxItems' => 1,
                 'minItems' => 1,
@@ -200,13 +200,13 @@ return array(
 		),
 		'gameday' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.gameday',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_competitionseasongameday',
 			'config' => array(
 				'foreign_table' => 'tx_sportms_domain_model_competitionseasongameday',
 				'foreign_table_where' => ' AND tx_sportms_domain_model_competitionseasongameday.competition_season = ###REC_FIELD_competition_season###
 											ORDER BY tx_sportms_domain_model_competitionseasongameday.sorting ASC',
 				'items' => Array (
-					array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", ""),
+					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ""),
 				),
 				'maxItems' => 1,
 				'minItems' => 1,
@@ -218,7 +218,7 @@ return array(
 		),
         'date' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.date',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.date',
             'config' => array(
                 'eval' => 'date',
                 'placeholder' => 'dd-mm-yyyy',
@@ -229,7 +229,7 @@ return array(
         ),
         'time' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.time',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.time',
             'config' => array(
                 'eval' => 'time',
                 'placeholder' => 'hh:mm',
@@ -240,7 +240,7 @@ return array(
         ),
         'venue' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.venue',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_venue',
             'config' => array(
                 'foreign_table' => 'tx_sportms_domain_model_venue',
                 'foreign_table_where' => 'ORDER BY name ASC',
@@ -295,7 +295,7 @@ return array(
 			),
 		),
 		'game_periods' => array(
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.game_periods',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_gameperiods',
 			'config' => array(
 				'appearance' => array(
 					'enabledControls' => [

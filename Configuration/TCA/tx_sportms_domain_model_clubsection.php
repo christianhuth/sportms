@@ -95,7 +95,7 @@ return array(
 
         'club' => array(
 	        'exclude' => 1,
-	        'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_clubsection.club',
+	        'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_club',
 	        'config' => array(
 	        	'eval' => 'required',
 		        'foreign_table' => 'tx_sportms_domain_model_club',
@@ -111,7 +111,7 @@ return array(
         ),
 		'label' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sport.label',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.label',
 			'config' => array(
 				'eval' => 'trim, required',
 				'size' => 30,
@@ -120,7 +120,7 @@ return array(
 		),
 		'sports' => array(
 			'exclude' => true,
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_clubsection.sports',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sports',
 			'config' => array(
 				'type' => 'select',
 				'renderType' => 'selectMultipleSideBySide',
@@ -148,7 +148,7 @@ return array(
 			),
 		),
 		'club_section_members' => array(
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_clubsection.club_section_members',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_clubsectionmembers',
 			'config' => array(
 				'appearance' => array(
                     'enabledControls' => [
@@ -170,7 +170,7 @@ return array(
 		),
 		
 		'addresses' => array(
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_clubsection.addresses',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_addresses',
 			'config' => array(
 				'appearance' => array(
                     'enabledControls' => [
@@ -193,7 +193,7 @@ return array(
             ),
         ),
         'phones' => array(
-            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_clubsection.phones',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_phones',
             'config' => array(
 				'appearance' => array(
                     'enabledControls' => [
@@ -216,7 +216,7 @@ return array(
             ),
         ),
         'mails' => array(
-            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_clubsection.mails',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_mails',
             'config' => array(
 				'appearance' => array(
                     'enabledControls' => [
@@ -239,7 +239,7 @@ return array(
 			),
 		),
 		'urls' => array(
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_clubsection.urls',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_urls',
 			'config' => array(
 				'appearance' => array(
                     'enabledControls' => [
@@ -263,7 +263,7 @@ return array(
 		),
 		
 		'club_section_officials' => array(
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_clubsection.club_section_officials',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_clubsectionofficials',
 			'config' => array(
 				'appearance' => array(
                     'enabledControls' => [

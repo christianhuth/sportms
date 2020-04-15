@@ -133,7 +133,7 @@ return array(
                 'eval' => 'required',
 				'foreign_table' => 'static_countries',
 				'items' => Array (
-                    array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", ""),
+                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ''),
 				),
 				'maxItems' => 1,
 				'renderType' => 'selectSingle',
@@ -152,7 +152,7 @@ return array(
         ),
         'public' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_address.public',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.public',
             'config' => array(
             	'default' => FALSE,
 	            'renderType' => 'checkboxToggle',

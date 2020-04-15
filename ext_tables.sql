@@ -623,9 +623,9 @@ CREATE TABLE tx_sportms_domain_model_venue (
     date_of_building int(11) DEFAULT NULL,
     year_of_building varchar(255) DEFAULT NULL,
     dimensions varchar(255) DEFAULT '' NOT NULL,
-    surface int(11) DEFAULT '0' NOT NULL,
+    surface int(11) DEFAULT 0 NOT NULL,
     spectator_capacity varchar(255) DEFAULT '' NOT NULL,
-    detail_link tinyint(4) unsigned DEFAULT '1' NOT NULL,
+    detail_link tinyint(4) unsigned DEFAULT 1 NOT NULL,
     slug varchar(2048) DEFAULT ''
 );
 

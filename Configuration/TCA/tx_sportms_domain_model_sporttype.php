@@ -112,7 +112,7 @@ return array(
 		
 		'label' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sporttype.label',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.label',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -121,7 +121,7 @@ return array(
 		),
 		'sports' => array(
 			'exclude' => true,
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sporttype.sports',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sports',
 			'config' => array(
 				'type' => 'select',
 				'renderType' => 'selectMultipleSideBySide',

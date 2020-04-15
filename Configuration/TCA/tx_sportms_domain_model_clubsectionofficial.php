@@ -97,13 +97,13 @@ return array(
 
         'club_section_official_job' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_clubsectionofficial.club_section_official_job',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_clubsectionofficialjob',
             'config' => array(
                 'eval' => 'required',
                 'foreign_table' => 'tx_sportms_domain_model_clubsectionofficialjob',
                 'foreign_table_where' => 'ORDER BY tx_sportms_domain_model_clubsectionofficialjob.label ASC',
                 'items' => array(
-                    array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", ""),
+                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', 0),
                 ),
                 'maxItems' => 1,
                 'renderType' => 'selectSingle',
@@ -113,14 +113,14 @@ return array(
         ),
 		'person' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_clubsectionofficial',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person',
 			'config' => array(
 				'eval' => 'required',
 				'foreign_table' => 'tx_sportms_domain_model_person',
                 'foreign_table_where' => '  AND show_as_official = 1
                                             ORDER BY tx_sportms_domain_model_person.lastname ASC, tx_sportms_domain_model_person.firstname ASC',
 				'items' => array(
-                    array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", ""),
+                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', 0),
 				),
 				'maxItems' => 1,
 				'minItems' => 1,
@@ -132,7 +132,7 @@ return array(
 
 		'startdate' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_clubsectionofficial.startdate',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.startdate',
 			'config' => array(
 				'type' => 'input',
 				'size' => 8,
@@ -143,7 +143,7 @@ return array(
 		),
 		'enddate' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_clubsectionofficial.enddate',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.enddate',
 			'config' => array(
 				'type' => 'input',
 				'size' => 8,

@@ -95,13 +95,13 @@ return array(
 
         'team' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_teamseason.team',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_team',
             'config' => array(
                 'eval' => 'required',
                 'foreign_table' => 'tx_sportms_domain_model_team',
                 'foreign_table_where' => 'ORDER BY name ASC',
                 'items' => Array (
-                    array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", ""),
+                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ""),
                 ),
                 'maxItems' => 1,
                 'renderType' => 'selectSingle',
@@ -112,13 +112,13 @@ return array(
 
 		'season' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_teamseason.season',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_season',
 			'config' => array(
 				'eval' => 'required',
 				'foreign_table' => 'tx_sportms_domain_model_season',
 				'foreign_table_where' => 'ORDER BY season_name DESC',
 				'items' => Array (
-                    array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", ""),
+                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ""),
 				),
 				'maxItems' => 1,
 				'renderType' => 'selectSingle',
@@ -127,7 +127,7 @@ return array(
 			),
 		),
 		'team_season_practices' => array(
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_teamseason.team_season_practices',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_teamseasonpractices',
 			'config' => array(
 				'appearance' => array(
                     'enabledControls' => [
@@ -163,7 +163,7 @@ return array(
         ),
 		
 		'team_season_officials' => array(
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_teamseason.team_season_officials',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_teamseasonofficials',
 			'config' => array(
 				'appearance' => array(
                     'enabledControls' => [
@@ -186,7 +186,7 @@ return array(
 		),
 		
 		'team_season_squad_members' => array(
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_teamseason.team_season_squad_members',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_teamseasonsquadmembers',
 			'config' => array(
 				'appearance' => array(
                     'enabledControls' => [

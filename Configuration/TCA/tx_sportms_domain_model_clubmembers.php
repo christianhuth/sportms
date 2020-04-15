@@ -99,7 +99,7 @@ return array(
 		
 		'club' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_clubmembers.club',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_club',
 			'config' => array(
 				'eval' => 'required',
 				'foreign_table' => 'tx_sportms_domain_model_club',

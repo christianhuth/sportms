@@ -91,12 +91,12 @@ return array(
 
         'game' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_gameperiod.game',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game',
             'config' => array(
                 'eval' => 'required',
                 'foreign_table' => 'tx_sportms_domain_model_game',
                 'items' => array(
-                    array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", ""),
+                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', 0),
                 ),
                 'maxItems' => 1,
                 'renderType' => 'selectSingle',
@@ -107,7 +107,7 @@ return array(
 
 		'label' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_gameperiod.label',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.label',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,

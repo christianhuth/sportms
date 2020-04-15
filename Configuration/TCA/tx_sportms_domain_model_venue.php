@@ -101,7 +101,7 @@ return array(
 			),
 		),
 		'address' => array(
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_venue.address',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_address',
 			'config' => array(
 				'appearance' => array(
 					'enabledControls' => [
@@ -209,10 +209,10 @@ return array(
 			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_venue.surface',
 			'config' => array(
 				'items' => array(
-                    array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", ""),
-					array('Halle', '1'),
-					array('Kunstrasen', '2'),
-					array('Rasen', '3'),
+                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', 0),
+					array('Halle', 1),
+					array('Kunstrasen', 2),
+					array('Rasen', 3),
 				),
 				'renderType' => 'selectSingle',
 				'type' => 'select',

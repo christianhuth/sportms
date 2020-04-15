@@ -94,13 +94,13 @@ return array(
 
         'club' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_team.club',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_club',
             'config' => array(
                 'eval' => 'required',
                 'foreign_table' => 'tx_sportms_domain_model_club',
                 'foreign_table_where' => 'ORDER BY name ASC',
                 'items' => Array (
-                    array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", ""),
+                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ""),
                 ),
                 'renderType' => 'selectSingle',
                 'size' => 1,
@@ -109,7 +109,7 @@ return array(
         ),
         'sport' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_team.sport',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sport',
             'config' => array(
                 'eval' => 'required',
                 'foreign_table' => 'tx_sportms_domain_model_sport',
@@ -126,7 +126,7 @@ return array(
 		'sport_age_group' => array(
 			'displayCond' => 'FIELD:sport:>:0',
 			'exclude' => 1,
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_team.sport_age_group',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sportagegroup',
 			'config' => array(
 				'eval' => 'required',
 				'foreign_table' => 'tx_sportms_domain_model_sportagegroup',
@@ -143,7 +143,7 @@ return array(
         'sport_age_level' => array(
 	        'displayCond' => 'FIELD:sport_age_group:>:0',
             'exclude' => 1,
-            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_team.sport_age_level',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sportagelevel',
             'config' => array(
                 'eval' => 'required',
                 'foreign_table' => 'tx_sportms_domain_model_sportagelevel',
@@ -176,7 +176,7 @@ return array(
 		),
 		
 		'team_seasons' => array(
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_team.team_seasons',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_teamseasons',
 			'config' => array(
 				'appearance' => array(
                     'enabledControls' => [

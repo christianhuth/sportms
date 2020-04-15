@@ -98,13 +98,13 @@ return array(
 
 		'club_official_job' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_clubofficial.club_official_job',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_clubofficialjob',
 			'config' => array(
 				'eval' => 'required',
 				'foreign_table' => 'tx_sportms_domain_model_clubofficialjob',
 				'foreign_table_where' => 'ORDER BY tx_sportms_domain_model_clubofficialjob.label ASC',
 				'items' => array(
-					array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", ""),
+					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ""),
 				),
 				'maxItems' => 1,
 				'renderType' => 'selectSingle',
@@ -114,7 +114,7 @@ return array(
 		),
         'person' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_clubofficial.person',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person',
             'config' => array(
                 'eval' => 'required',
                 'foreign_table' => 'tx_sportms_domain_model_person',
@@ -140,7 +140,7 @@ return array(
 		        'renderType' => 'inputDateTime',
 	        ),
             'exclude' => 1,
-            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_clubofficial.startdate',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.startdate',
         ),
 		'until_today' => array(
 			'config' => array(
@@ -162,7 +162,7 @@ return array(
 	        ),
 	        'displayCond' => 'FIELD:until_today:=:0',
             'exclude' => 1,
-            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_clubofficial.enddate',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.enddate',
         ),
 		
 	),

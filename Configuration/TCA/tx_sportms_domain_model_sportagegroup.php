@@ -92,13 +92,13 @@ return array(
 
         'sport' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sportagegroup.sport',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sport',
             'config' => array(
                 'eval' => 'required',
                 'foreign_table' => 'tx_sportms_domain_model_sport',
                 'foreign_table_where' => 'ORDER BY label ASC',
                 'items' => Array (
-                    array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", ""),
+                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ""),
                 ),
                 'maxItems' => 1,
                 'renderType' => 'selectSingle',
@@ -108,7 +108,7 @@ return array(
         ),
 		'label' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sportagegroup.label',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.label',
 			'config' => array(
 				'eval' => 'required, trim',
 				'size' => 255,
@@ -126,7 +126,7 @@ return array(
 		),
 		
 		'sport_age_levels' => array(
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sportagegroup.sport_age_levels',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sportagelevels',
 			'config' => array(
 				'appearance' => array(
                     'enabledControls' => [

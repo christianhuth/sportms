@@ -106,7 +106,7 @@ return array(
 			),
 		),
 		'address' => array(
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_clubground.address',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_waddress',
 			'config' => array(
 				'appearance' => array(
 					'enabledControls' => [

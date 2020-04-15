@@ -99,14 +99,14 @@ return array(
 
 		'person' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_teamseasonsquadmember.person',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person',
 			'config' => array(
 				'eval' => 'required',
 				'foreign_table' => 'tx_sportms_domain_model_person',
                 'foreign_table_where' => '  AND show_as_player = 1
                                             ORDER BY lastname ASC, firstname ASC',
 				'items' => Array (
-                    array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", ""),
+                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ""),
 				),
 				'maxItems' => 1,
 				'renderType' => 'selectSingle',
@@ -116,12 +116,12 @@ return array(
 		),
         'sport_position_group' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_teamseasonsquadmember.sport_position_group',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sportpositiongroup',
             'config' => array(
                 'foreign_table' => 'tx_sportms_domain_model_sportpositiongroup',
                 'foreign_table_where' => ' ORDER BY tx_sportms_domain_model_sportpositiongroup.sorting ASC',
                 'items' => Array (
-                    array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", ""),
+                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ""),
                 ),
                 'maxItems' => 1,
                 'renderType' => 'selectSingle',
@@ -133,13 +133,13 @@ return array(
         'sport_position' => array(
 	        'displayCond' => 'FIELD:sport_position_group:>:0',
             'exclude' => 1,
-            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_teamseasonsquadmember.sport_position',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sportposition',
             'config' => array(
                 'foreign_table' => 'tx_sportms_domain_model_sportposition',
                 'foreign_table_where' => '  AND tx_sportms_domain_model_sportposition.sport_position_group = ###REC_FIELD_sport_position_group###
                                             ORDER BY tx_sportms_domain_model_sportposition.sorting ASC',
                 'items' => Array (
-                    array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", ""),
+                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ""),
                 ),
                 'maxItems' => 1,
                 'renderType' => 'selectSingle',

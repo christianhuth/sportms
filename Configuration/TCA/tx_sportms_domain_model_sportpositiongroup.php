@@ -98,7 +98,7 @@ return array(
 				'foreign_table' => 'tx_sportms_domain_model_sport',
 				'foreign_table_where' => 'ORDER BY label ASC',
 				'items' => Array (
-					array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", ""),
+					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ""),
 				),
 				'maxItems' => 1,
 				'renderType' => 'selectSingle',
@@ -108,7 +108,7 @@ return array(
 		),
 		'label' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sportpositiongroup.label',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.label',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -116,7 +116,7 @@ return array(
 			),
 		),
 		'sport_positions' => array(
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sportpositiongroup.sport_positions',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sportpositions',
 			'config' => array(
 				'appearance' => array(
                     'enabledControls' => [

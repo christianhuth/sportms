@@ -96,7 +96,7 @@ return array(
                 'eval' => 'required',
                 'foreign_table' => 'tx_sportms_domain_model_game',
                 'items' => array(
-                    array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", ""),
+                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ""),
                 ),
                 'maxItems' => 1,
                 'renderType' => 'selectSingle',

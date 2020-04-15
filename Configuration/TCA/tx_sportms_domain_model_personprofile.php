@@ -96,7 +96,7 @@ return array(
 		
 		'person' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_personprofile.person',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person',
 			'config' => array(
 				'foreign_table' => 'tx_sportms_domain_model_person',
 				'foreign_table_where' => 'ORDER BY lastname ASC, firstname ASC',
@@ -129,7 +129,7 @@ return array(
 		),
 		'sport' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_personprofile.sport',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sport',
 			'config' => array(
 				'eval' => 'required',
 				'foreign_table' => 'tx_sportms_domain_model_sport',

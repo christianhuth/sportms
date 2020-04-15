@@ -120,7 +120,7 @@ return array(
 
 		'startdate' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_season.startdate',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.startdate',
 			'config' => array(
 				'type' => 'input',
 				'size' => 8,
@@ -131,7 +131,7 @@ return array(
 		),
 		'enddate' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_season.enddate',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.enddate',
 			'config' => array(
 				'type' => 'input',
 				'size' => 8,

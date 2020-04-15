@@ -107,7 +107,7 @@ return array(
 				'foreign_table' => 'tx_sportms_domain_model_mailtype',
 				'foreign_table_where' => 'ORDER BY label ASC',
 				'items' => array(
-                    array("LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select", 0),
+                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', 0),
                 ),
 				'maxItems' => 1,
 				'minItems' => 1,
@@ -118,7 +118,7 @@ return array(
 		),
 		'public' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_mail.public',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.public',
 			'config' => array(
 				'default' => FALSE,
 				'renderType' => 'checkboxToggle',
