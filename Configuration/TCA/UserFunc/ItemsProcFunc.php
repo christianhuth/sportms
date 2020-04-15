@@ -17,8 +17,6 @@
 				if($whichTeam == "guest") {
 					$teamSeasonColumn = "team_season_guest";
 				}
-				
-				
 				#$json_encoded_config = json_encode($config);
 				#file_put_contents("/homepages/17/d76951472/htdocs/www/team_season_squad_member_GameLineup.log", $json_encoded_config);
 				
@@ -37,7 +35,7 @@
 				$personTable = "tx_sportms_domain_model_person";
 				
 				$queryBuilder = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Database\ConnectionPool::class)->getQueryBuilderForTable($teamseasonsquadmemberTable);
-				$queryBuilder	->select($teamseasonsquadmemberTable . '.uid', $personTable . '.firstname', $personTable . '.lastname')
+				$queryBuilder	->select($personTable . '.uid', $personTable . '.firstname', $personTable . '.lastname')
 								->from($teamseasonsquadmemberTable)
 								->innerJoin(
 									$teamseasonsquadmemberTable,
