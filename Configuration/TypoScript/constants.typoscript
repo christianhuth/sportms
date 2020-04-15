@@ -66,8 +66,8 @@ plugin.tx_sportms {
         team {
             # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Team->list
             listPid =
-            # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Team->showHistoryRecordGames
-            showHistoryRecordGamesPid =
+            # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Team->historyRecordGames
+            historyRecordGamesPid =
             # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Team->seasonGamesPid
             seasonGamesPid =
             # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Team->seasonGoalsPid
