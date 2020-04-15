@@ -148,14 +148,14 @@
 		protected $personProfiles = '';
 		
 		/**
-		 * @var boolean
+		 * @var bool
 		 */
-		protected $hiddenBirthday = '';
+		protected $showBirthday;
 		
 		/**
 		 * @var bool
 		 */
-		protected $detailLink = '';
+		protected $detailLink;
 		
 		/**
 		 * @var bool
@@ -189,11 +189,11 @@
 		 * @return void
 		 */
 		protected function initStorageObjects() {
-			$this->addresses = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-			$this->phones = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-			$this->mails = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-			$this->urls = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-			$this->personProfiles = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+			$this->setAddresses(new \TYPO3\CMS\Extbase\Persistence\ObjectStorage());
+			$this->setPhones(new \TYPO3\CMS\Extbase\Persistence\ObjectStorage());
+			$this->setMails(new \TYPO3\CMS\Extbase\Persistence\ObjectStorage());
+			$this->setUrls(new \TYPO3\CMS\Extbase\Persistence\ObjectStorage());
+			$this->setPersonProfiles(new \TYPO3\CMS\Extbase\Persistence\ObjectStorage());
 		}
 		
 		/**
@@ -563,15 +563,15 @@
 		/**
 		 * @return bool
 		 */
-		public function isHiddenBirthday() {
-			return $this->hiddenBirthday;
+		public function isShowBirthday(): bool {
+			return $this->showBirthday;
 		}
 		
 		/**
-		 * @param bool $hiddenBirthday
+		 * @param bool $showBirthday
 		 */
-		public function setHiddenBirthday($hiddenBirthday) {
-			$this->hiddenBirthday = $hiddenBirthday;
+		public function setShowBirthday(bool $showBirthday): void {
+			$this->showBirthday = $showBirthday;
 		}
 		
 		/**
