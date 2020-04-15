@@ -67,7 +67,7 @@
 		/**
 		 * @param \Balumedien\Sportms\Domain\Model\ClubSection $clubSection
 		 */
-		public function showAction(\Balumedien\Sportms\Domain\Model\ClubSection $clubSection = NULL) {
+		public function showIndexAction(\Balumedien\Sportms\Domain\Model\ClubSection $clubSection = NULL) {
 			$this->initializeActions();
 			if($clubSection === NULL) {
 				// TODO: CHECK IF SETTINGS IS SET ELSE DIE

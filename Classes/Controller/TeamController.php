@@ -90,7 +90,24 @@
 		/**
 		 * @param \Balumedien\Sportms\Domain\Model\Team $team
 		 */
-		public function showAction(\Balumedien\Sportms\Domain\Model\Team $team = NULL) {
+		public function historyRecordGamesAction(\Balumedien\Sportms\Domain\Model\Team $team = NULL) {
+			$this->initializeActions();
+			if($team === NULL) {
+				if($this->settings['team']['uid']) {
+					$teamUid = $this->settings['team']['uid'];
+					$team = $this->teamRepository->findByUid($teamUid);
+				} else {
+					// TODO: DIE IF NO TEAM IS SELECTED VIA FLEXFORM
+				}
+			}
+			$this->view->assign('team', $team);
+		}
+		
+		/**
+		 * @param \Balumedien\Sportms\Domain\Model\Team $team
+		 * @param \Balumedien\Sportms\Domain\Model\Season $season
+		 */
+		public function seasonIndexAction(\Balumedien\Sportms\Domain\Model\Team $team = NULL, \Balumedien\Sportms\Domain\Model\Season $season = NULL) {
 			$this->initializeActions();
 			if($team === NULL) {
 				if($this->settings['team']['uid']) {

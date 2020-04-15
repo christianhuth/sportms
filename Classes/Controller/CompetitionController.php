@@ -90,7 +90,7 @@
 		/**
 		 * @param \Balumedien\Sportms\Domain\Model\Competition $competition
 		 */
-		public function showAction(\Balumedien\Sportms\Domain\Model\Competition $competition = NULL): void {
+		public function showIndexAction(\Balumedien\Sportms\Domain\Model\Competition $competition = NULL): void {
 			$this->initializeActions();
 			if($competition === NULL) {
 				$competitionUid = $this->settings['competition']['uid'];

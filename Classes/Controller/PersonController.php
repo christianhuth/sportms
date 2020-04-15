@@ -47,7 +47,31 @@
 		/**
 		 * @param \Balumedien\Sportms\Domain\Model\Person $person
 		 */
-		public function showAction(\Balumedien\Sportms\Domain\Model\Person $person = NULL): void {
+		public function officialIndexAction(\Balumedien\Sportms\Domain\Model\Person $person = NULL): void {
+			$this->initializeActions();
+			if($person === NULL) {
+				$personUid = $this->settings['single']['person'];
+				$person = $this->personRepository->findByUid($personUid);
+			}
+			$this->view->assign('person', $person);
+		}
+		
+		/**
+		 * @param \Balumedien\Sportms\Domain\Model\Person $person
+		 */
+		public function playerIndexAction(\Balumedien\Sportms\Domain\Model\Person $person = NULL): void {
+			$this->initializeActions();
+			if($person === NULL) {
+				$personUid = $this->settings['single']['person'];
+				$person = $this->personRepository->findByUid($personUid);
+			}
+			$this->view->assign('person', $person);
+		}
+		
+		/**
+		 * @param \Balumedien\Sportms\Domain\Model\Person $person
+		 */
+		public function refereeIndexAction(\Balumedien\Sportms\Domain\Model\Person $person = NULL): void {
 			$this->initializeActions();
 			if($person === NULL) {
 				$personUid = $this->settings['single']['person'];

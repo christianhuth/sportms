@@ -141,7 +141,7 @@
 		/**
 		 * @param \Balumedien\Sportms\Domain\Model\Game $game
 		 */
-		public function showAction(\Balumedien\Sportms\Domain\Model\Game $game = NULL) {
+		public function showIndexAction(\Balumedien\Sportms\Domain\Model\Game $game = NULL) {
 			$this->initializeActions();
 			$this->view->assign('game', $game);
 		}
