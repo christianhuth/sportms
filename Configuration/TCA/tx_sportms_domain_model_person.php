@@ -427,6 +427,7 @@ return array(
 					'useSortable' => 1,
 				),
 				'foreign_field' => 'person',
+				'foreign_sortby' => 'sorting',
 				'foreign_table' => 'tx_sportms_domain_model_personprofile',
 				'type' => 'inline',
 			),

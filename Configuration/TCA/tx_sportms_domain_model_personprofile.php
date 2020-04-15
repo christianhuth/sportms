@@ -19,7 +19,6 @@ return array(
         'label' => '',
         'label_userFunc' => \Balumedien\Sportms\Configuration\TCA\UserFunc\UserFunc::class . '->personProfileLabel',
         'searchFields' => '',
-        'sortBy' => 'sorting',
         'title'	=> 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_personprofile',
         'tstamp' => 'tstamp',
 		'versioningWS' => TRUE,
@@ -177,7 +176,7 @@ return array(
 			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_personprofile.main_sport_position',
 			'config' => array(
 				'foreign_table' => 'tx_sportms_domain_model_sportposition',
-				'foreign_table_where' => '  AND tx_sportms_domain_model_sportposition.sport_position_group = ###REC_FIELD_sport_position_group###
+				'foreign_table_where' => '  AND tx_sportms_domain_model_sportposition.sport_position_group = ###REC_FIELD_main_sport_position_group###
                                             ORDER BY tx_sportms_domain_model_sportposition.sorting ASC',
 				'items' => Array (
 					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ''),
