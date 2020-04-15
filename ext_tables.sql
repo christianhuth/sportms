@@ -275,7 +275,7 @@ CREATE TABLE tx_sportms_domain_model_gamelineup (
     team varchar(255) DEFAULT '' NOT NULL,
     type varchar(255) DEFAULT '' NOT NULL,
     jersey_number varchar(255) DEFAULT NULL,
-    team_season_squad_member int(11) DEFAULT '0' NOT NULL,
+    person int(11) DEFAULT 0 NOT NULL,
     sport_position int(11) DEFAULT NULL,
 	sorting int(11) DEFAULT 0 NOT NULL
 );

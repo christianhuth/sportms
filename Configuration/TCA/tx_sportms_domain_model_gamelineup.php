@@ -26,8 +26,7 @@ return array(
 		'showRecordFieldList' => '',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'game, jersey_number, team_season_squad_member, sport_position,
-		                            '),
+		'1' => array('showitem' => 'game, jersey_number, person, sport_position,'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -124,9 +123,9 @@ return array(
 				'eval' => 'trim'
 			),
 		),
-		'team_season_squad_member' => array(
+		'person' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_gamelineup.team_season_squad_member',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person',
 			'config' => array(
 				'eval' => '',
 				'items' => array(
