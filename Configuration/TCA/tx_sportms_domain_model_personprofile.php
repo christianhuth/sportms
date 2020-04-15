@@ -245,7 +245,8 @@ return array(
 					],
 				],
 				'foreign_table' => 'tx_sportms_domain_model_sportposition',
-				'foreign_table_where' => 'ORDER BY tx_sportms_domain_model_sportposition.label ASC',
+				'foreign_table_where' => '  AND tx_sportms_domain_model_sportposition.uid != ###REC_FIELD_main_sport_position###
+											ORDER BY tx_sportms_domain_model_sportposition.label ASC',
 				'MM' => 'tx_sportms_personprofile_sportposition_mm',
 				'multiple' => 0,
 				'renderType' => 'selectMultipleSideBySide',
