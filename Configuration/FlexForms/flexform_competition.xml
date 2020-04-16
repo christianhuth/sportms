@@ -103,7 +103,7 @@
 					</displayCond>
 					<config>
 						<foreign_table>tx_sportms_domain_model_competition</foreign_table>
-						<foreign_table_where>ORDER BY name ASC</foreign_table_where>
+						<foreign_table_where>ORDER BY label ASC</foreign_table_where>
 						<renderType>selectMultipleSideBySide</renderType>
 						<type>select</type>
 					</config>
