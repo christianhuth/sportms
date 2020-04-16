@@ -13,42 +13,6 @@
 		]
 	);
 	
-	\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-		'Balumedien.' . $_EXTKEY,
-		'club',
-		['Club' => 'list']
-	);
-	
-	\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-		'Balumedien.' . $_EXTKEY,
-		'clubsection',
-		['ClubSection' => 'list']
-	);
-	
-	\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-		'Balumedien.' . $_EXTKEY,
-		'competition',
-		['Competition' => 'list']
-	);
-	
-	\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-		'Balumedien.' . $_EXTKEY,
-		'game',
-		['Game' => 'list, showIndex']
-	);
-	
-	\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-		'Balumedien.' . $_EXTKEY,
-		'person',
-		['Person' => 'list, officialIndex, playerIndex, refereeIndex']
-	);
-	
-	\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-		'Balumedien.' . $_EXTKEY,
-		'team',
-		['Team' => 'list, historyRecordGames, seasonGames, seasonGoals, seasonIndex, seasonSquad']
-	);
-	
 	/* ===========================================================================
 		Add Plugin to PluginList
 	=========================================================================== */

@@ -3,7 +3,7 @@
 	
 	$_EXTKEY = 'sportms';
 	$extensionName = strtolower(\TYPO3\CMS\Core\Utility\GeneralUtility::underscoredToUpperCamelCase($_EXTKEY));
-	$pluginNames = ['sportms', 'club', 'competition', 'game', 'person', 'team'];
+	$pluginNames = ['sportms'];
 	
 	foreach($pluginNames AS $pluginName) {
 		/***************
