@@ -52,7 +52,7 @@
 			return $query->execute();
 		}
 		
-		public function findGamesWithHighestWinsForTeam(int $teamUid, int $limit = 5) {
+		public function findGamesWithHighestWinsForTeam(int $teamUid, int $limit = 5, int $seasonUid = NULL) {
 			$tableGame = 'tx_sportms_domain_model_game';
 			$tableGameAlias = 'game';
 			$tableTeamSeason = 'tx_sportms_domain_model_teamseason';
@@ -80,7 +80,8 @@
 							$queryBuilder->expr()->eq($tableTeamSeasonAliasGuest . '.team', $teamUid),
 							$queryBuilder->expr()->gt('result_end_regular_guest', 'result_end_regular_home')
 						)
-					)
+					),
+					$queryBuilder->expr()->eq($tableGameAlias . '.season', $seasonUid)
 				)
 				->GROUPBY($tableGameAlias . '.uid')
 				->ORDERBY('difference', \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING)
