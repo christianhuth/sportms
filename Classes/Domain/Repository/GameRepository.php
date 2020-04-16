@@ -94,7 +94,7 @@
 				)
 				->GROUPBY($tableGameAlias . '.uid')
 				->ORDERBY('difference', \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING)
-				->ADDORDERBY($tableGameAlias . 'result_end_regular_home', \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING)    # doesn't matter if we use result_end_regular_home or result_end_regular_guest, because both values will be greater for the same difference between different games
+				->ADDORDERBY($tableGameAlias . '.result_end_regular_home', \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING)    # doesn't matter if we use result_end_regular_home or result_end_regular_guest, because both values will be greater for the same difference between different games
 				->setMaxResults(10);
 			debug($queryBuilder->getSQL());
 			$dataMapper = $this->objectManager->get(\TYPO3\CMS\Extbase\Persistence\Generic\Mapper\DataMapper::class);
