@@ -72,6 +72,11 @@
 		}
 		
 		public function findGamesWithMostGoalsForTeam(int $teamUid) {
+			$statement = '	SELECT *, result_end_regular_home+result_end_regular_guest AS goals
+							FROM tx_sportms_domain_model_game
+							ORDER BY goals DESC';
+			
+			
 			$tableGame = 'tx_sportms_domain_model_game';
 			$tableGameAlias = 'game';
 			$tableSeason = 'tx_sportms_domain_model_season';
@@ -80,10 +85,11 @@
 			$tableCompetitionSeasonAlias = 'competitionseason';
 			$queryBuilder = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Database\ConnectionPool::class)->getQueryBuilderForTable($tableGame);
 			$queryBuilder->SELECT('*')
-							->addSelect('(coalesce(' . $tableGameAlias . '.result_end_regular_home, 0) + coalesce(' . $tableGameAlias . '.result_end_regular_guest, 0)) AS goals')
+							->addSelectLiteral('SUM(' . $queryBuilder->quoteIdentifier(result_end_regular_home) . ') AS ' . $queryBuilder->quoteIdentifier('items'))
+							#->addSelect('(coalesce(' . $tableGameAlias . '.result_end_regular_home, 0) + coalesce(' . $tableGameAlias . '.result_end_regular_guest, 0)) AS goals')
 							->FROM($tableGame, $tableGameAlias)
 							->INNERJOIN($tableGameAlias, $tableSeason, $tableSeasonAlias, $queryBuilder->expr()->eq($tableGameAlias . '.season', $queryBuilder->quoteIdentifier($tableSeasonAlias . '.uid')))
-							->ORDERBY('goals')
+							->ORDERBY('items')
 							->setMaxResults(10);
 			debug($queryBuilder->getSQL());
 			return $queryBuilder->execute();
