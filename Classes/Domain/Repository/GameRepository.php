@@ -1,7 +1,6 @@
 <?php
 	
 	namespace Balumedien\Sportms\Domain\Repository;
-	
 	// The use statements for the fileheader
 	use Balumedien\Sportms\Domain\Model\Game;
 	use TYPO3\CMS\Core\Database\ConnectionPool;
@@ -99,7 +98,8 @@
 		 * @param string $uidList
 		 * @return array|\TYPO3\CMS\Extbase\Persistence\QueryResultInterface
 		 */
-		public function findByUidList($uidList) {
+		public function findByUidList($uidList)
+		{
 			$uids = GeneralUtility::intExplode(',', $uidList, true);
 			if ($uidList === '' || count($uids) === 0) {
 				return [];
@@ -108,7 +108,8 @@
 			$dataMapper = GeneralUtility::makeInstance(DataMapper::class);
 			
 			/** @var QueryBuilder $queryBuilder */
-			$queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getQueryBuilderForTable('tx_sportms_domain_model_game');
+			$queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)
+				->getQueryBuilderForTable('tx_sportms_domain_model_game');
 			
 			$rows = $queryBuilder
 				->select('*')
@@ -118,7 +119,7 @@
 				->execute()
 				->fetchAll();
 			
-			return $dataMapper->map(\Balumedien\Sportms\Doamin\Model\Game::class, $rows);
+			return $dataMapper->map(Game::class, $rows);
 		}
 		
 		public function findGamesWithMostSpectatorsForTeam(int $teamUid) {
