@@ -2,6 +2,12 @@
 	
 	namespace Balumedien\Sportms\Domain\Repository;
 	
+	// The use statements for the fileheader
+	use TYPO3\CMS\Core\Database\ConnectionPool;
+	use TYPO3\CMS\Core\Database\Query\QueryBuilder;
+	use TYPO3\CMS\Core\Utility\GeneralUtility;
+	use TYPO3\CMS\Extbase\Persistence\Generic\Mapper\DataMapper;
+	
 	class GameRepository extends SportMSBaseRepository {
 		
 		protected $defaultOrderings = array(
@@ -85,11 +91,6 @@
 			return $this->findByUidList($gameUids);
 		}
 		
-		// The use statements for the fileheader
-		use TYPO3\CMS\Core\Database\ConnectionPool;
-		use TYPO3\CMS\Core\Database\Query\QueryBuilder;
-		use TYPO3\CMS\Core\Utility\GeneralUtility;
-		use TYPO3\CMS\Extbase\Persistence\Generic\Mapper\DataMapper;
 		
 		/**
 		 * Returns all matching records for the given list of uids and applies the uidList sorting for the result
