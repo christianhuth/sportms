@@ -114,11 +114,11 @@
 					$queryBuilder->expr()->orX(
 						$queryBuilder->expr()->andX(
 							$queryBuilder->expr()->eq($tableTeamSeasonAliasHome . '.team', $teamUid),
-							$queryBuilder->expr()->gt('result_end_regular_guest', 'result_end_regular_home')
+							$queryBuilder->expr()->gt($tableGameAlias . '.result_end_regular_guest', $tableGameAlias . '.result_end_regular_home')
 						),
 						$queryBuilder->expr()->andX(
 							$queryBuilder->expr()->eq($tableTeamSeasonAliasGuest . '.team', $teamUid),
-							$queryBuilder->expr()->gt('result_end_regular_home', 'result_end_regular_guest')
+							$queryBuilder->expr()->gt($tableGameAlias . '.result_end_regular_home', $tableGameAlias . '.result_end_regular_guest')
 						)
 					)
 				)
@@ -148,8 +148,8 @@
 								$queryBuilder->expr()->eq('game_appointment', 6),               # Spiel ist beendet
 								$queryBuilder->expr()->eq('game_rating', 1),                    # Normale Wertung
 								$queryBuilder->expr()->andX(
-									$queryBuilder->expr()->isNotNull('result_end_regular_home'),
-									$queryBuilder->expr()->isNotNull('result_end_regular_guest')
+									$queryBuilder->expr()->isNotNull($tableGameAlias . '.result_end_regular_home'),
+									$queryBuilder->expr()->isNotNull($tableGameAlias . '.result_end_regular_guest')
 								),
 								$queryBuilder->expr()->orX(
 									$queryBuilder->expr()->eq($tableTeamSeasonAliasHome . '.team', $teamUid),
