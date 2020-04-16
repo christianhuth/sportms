@@ -71,6 +71,9 @@
 			return $query->execute();
 		}
 		
+		/**
+		 * @return \Balumedien\Sportms\Domain\Model\Game
+		 * */
 		public function findGamesWithMostGoalsForTeam(int $teamUid) {
 			$tableGame = 'tx_sportms_domain_model_game';
 			$queryBuilder = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Database\ConnectionPool::class)->getQueryBuilderForTable($tableGame);
@@ -82,7 +85,7 @@
 			debug($queryBuilder->getSQL());
 			$gameUids = implode(',', array_column($queryBuilder->execute()->fetchAll(), 'uid'));
 			debug($gameUids);
-			return null;
+			return $queryBuilder->execute()->fetchAll();
 		}
 		
 		public function findGamesWithMostSpectatorsForTeam(int $teamUid) {
