@@ -21,14 +21,28 @@
     <td class="tx-sportms-table-team">
         <f:if condition="{team} == {recordGame.teamSeasonHome.team}">
             <f:then>
-                <f:link.action action="seasonIndex" arguments="{teamSeason: recordGame.teamSeasonGuest}" controller="TeamSeason" pluginName="sportms" pageUid="2244">
-                    {recordGame.teamSeasonGuest.team.name}
-                </f:link.action>
+                <f:if condition="{recordGame.teamSeasonGuest.team.detailLink}">
+                    <f:then>
+                        <f:link.action action="seasonIndex" arguments="{teamSeason: recordGame.teamSeasonGuest}" controller="TeamSeason" pluginName="sportms" pageUid="2244">
+                            {recordGame.teamSeasonGuest.team.name}
+                        </f:link.action>
+                    </f:then>
+                    <f:else>
+                        {recordGame.teamSeasonGuest.team.name}
+                    </f:else>
+                </f:if>
             </f:then>
             <f:else>
-                <f:link.action action="seasonIndex" arguments="{teamSeason: recordGame.teamSeasonHome}" controller="TeamSeason" pluginName="sportms" pageUid="2244">
-                    {recordGame.teamSeasonHome.team.name}
-                </f:link.action>
+                <f:if condition="{recordGame.teamSeasonHome.team.detailLink}">
+                    <f:then>
+                        <f:link.action action="seasonIndex" arguments="{teamSeason: recordGame.teamSeasonHome}" controller="TeamSeason" pluginName="sportms" pageUid="2244">
+                            {recordGame.teamSeasonHome.team.name}
+                        </f:link.action>
+                    </f:then>
+                    <f:else>
+                        {recordGame.teamSeasonHome.team.name}
+                    </f:else>
+                </f:if>
             </f:else>
         </f:if>
     </td>
