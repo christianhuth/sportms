@@ -37,7 +37,7 @@
 							->setMaxResults($limit);
 			debug($queryBuilder->getSQL());
 			$dataMapper = $this->objectManager->get(\TYPO3\CMS\Extbase\Persistence\Generic\Mapper\DataMapper::class);
-			return $dataMapper->map(\Balumedien\Sportms\Domain\Model\PlayerStat::class, $queryBuilder->execute()->fetchAll());
+			return $dataMapper->map($this->objectType, $queryBuilder->execute()->fetchAll());
 		}
 	
 	}
