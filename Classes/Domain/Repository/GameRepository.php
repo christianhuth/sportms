@@ -63,6 +63,38 @@
 		}
 		
 		public function findGamesWithHighestLostsForTeam(int $teamUid) {
+			$tableGame = 'tx_sportms_domain_model_game';
+			$tableGameAlias = 'game';
+			$tableTeamSeason = 'tx_sportms_domain_model_teamseason';
+			$tableTeamSeasonAliasHome = 'teamseasonhome';
+			$tableTeamSeasonAliasGuest = 'teamseasonguest';
+			$queryBuilder = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Database\ConnectionPool::class)->getQueryBuilderForTable($tableGame);
+			$queryBuilder->SELECT('*')
+				->addSelectLiteral($queryBuilder->quoteIdentifier('result_end_regular_home') . '+' . $queryBuilder->quoteIdentifier('result_end_regular_guest') .' AS ' . $queryBuilder->quoteIdentifier('goals'))
+				->FROM($tableGame, $tableGameAlias)
+				->INNERJOIN($tableGameAlias, $tableTeamSeason, $tableTeamSeasonAliasHome, $queryBuilder->expr()->eq($tableGameAlias . '.team_season_home', $queryBuilder->quoteIdentifier($tableTeamSeasonAliasHome . '.uid')))
+				->INNERJOIN($tableGameAlias, $tableTeamSeason, $tableTeamSeasonAliasGuest, $queryBuilder->expr()->eq($tableGameAlias . '.team_season_guest', $queryBuilder->quoteIdentifier($tableTeamSeasonAliasGuest . '.uid')))
+				->WHERE(
+					$queryBuilder->expr()->eq('game_appointment', 6),               # Spiel ist beendet
+					$queryBuilder->expr()->eq('game_rating', 1),                    # Normale Wertung
+					$queryBuilder->expr()->andX(
+						$queryBuilder->expr()->isNotNull('result_end_regular_home'),
+						$queryBuilder->expr()->isNotNull('result_end_regular_guest')
+					),
+					$queryBuilder->expr()->orX(
+						$queryBuilder->expr()->andX(
+							$queryBuilder->expr()->eq($tableTeamSeasonAliasHome . '.team', $teamUid),
+							$queryBuilder->expr()->gt('result_end_regular_guest', 'result_end_regular_home')
+						)
+					)
+				)
+				->ORDERBY('goals', \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING)
+				->setMaxResults(10);
+			debug($queryBuilder->getSQL());
+			$dataMapper = $this->objectManager->get(\TYPO3\CMS\Extbase\Persistence\Generic\Mapper\DataMapper::class);
+			return $dataMapper->map($this->objectType, $queryBuilder->execute()->fetchAll());
+			
+			
 			$query = $this->createQuery();
 			$constraints = [];
 			$constraints[] = $this->constraintForTeamUids($query, (string) $teamUid);
