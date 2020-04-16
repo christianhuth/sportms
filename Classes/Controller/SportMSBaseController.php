@@ -137,6 +137,7 @@
 				return $this->teamSeasonRepository->findByUid($teamSeasonUid);
 			} else {
 				// TODO: DIE IF NO TEAM IS SELECTED VIA FLEXFORM
+				return null;
 			}
 		}
 		
