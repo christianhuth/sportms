@@ -8,10 +8,10 @@
             <div class="input-group">
                 <span class="input-group-addon"><i class="sportmsicon sportmsicon-competition"></i></span>
                 <f:form.select class="form-control" name="selectCompetition" optionLabelField="label" optionValueField="uid" prependOptionLabel="Alle Wettbewerbe" prependOptionValue="" value="{value}">
-                    <f:groupedFor as="competitionsBySection" each="{options}" groupBy="section" groupKey="section">
-                        <f:form.select.optgroup class="form-control" label="{section.label}" title="{section.label}"/>
-                        <f:for as="competitionBySection" each="{competitionsBySection}">
-                            <f:form.select.option value="{competitionBySection.uid}">{competitionBySection.label}</f:form.select.option>
+                    <f:groupedFor as="competitionsBySport" each="{options}" groupBy="sport" groupKey="sport">
+                        <f:form.select.optgroup class="form-control" label="{sport.label}" title="{sport.label}"/>
+                        <f:for as="competitionBySport" each="{competitionsBySport}">
+                            <f:form.select.option value="{competitionBySport.uid}">{competitionBySport.label}</f:form.select.option>
                         </f:for>
                     </f:groupedFor>
                 </f:form.select>
