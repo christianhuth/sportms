@@ -11,11 +11,12 @@
 					<label>Zeige folgendes Team</label>
 					<displayCond>
 						<OR>
-							<numIndex index="1">FIELD:base.switchableControllerActions:=:Team->historyRecordGames</numIndex>
-							<numIndex index="2">FIELD:base.switchableControllerActions:=:Team->seasonGames</numIndex>
-							<numIndex index="3">FIELD:base.switchableControllerActions:=:Team->seasonGoals</numIndex>
-							<numIndex index="4">FIELD:base.switchableControllerActions:=:Team->seasonIndex</numIndex>
-							<numIndex index="5">FIELD:base.switchableControllerActions:=:Team->seasonSquad</numIndex>
+							<numIndex index="01">FIELD:base.switchableControllerActions:=:Team->historyRecordGames</numIndex>
+							<numIndex index="02">FIELD:base.switchableControllerActions:=:Team->historyRecordPlayers</numIndex>
+							<numIndex index="10">FIELD:base.switchableControllerActions:=:Team->seasonGames</numIndex>
+							<numIndex index="11">FIELD:base.switchableControllerActions:=:Team->seasonGoals</numIndex>
+							<numIndex index="12">FIELD:base.switchableControllerActions:=:Team->seasonIndex</numIndex>
+							<numIndex index="13">FIELD:base.switchableControllerActions:=:Team->seasonSquad</numIndex>
 						</OR>
 					</displayCond>
 					<config>
