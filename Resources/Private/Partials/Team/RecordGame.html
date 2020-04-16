@@ -36,7 +36,7 @@
         <f:render arguments="{spectators: recordGame.spectators}" partial="ViewHelper/Spectators"/>
     </td>
     <td class="tx-sportms-table-result">
-        <f:link.action action="showIndex" arguments="{game: recordGame}" controller="Game" pluginName="sportms" pageUid="2246">
+        <f:link.action action="showIndex" arguments="{game: recordGame.uid}" controller="Game" pluginName="sportms" pageUid="2246">
             {recordGame.resultEndRegularHome} : {recordGame.resultEndRegularGuest}
         </f:link.action>
     </td>
