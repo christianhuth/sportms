@@ -422,6 +422,7 @@
 
 
 
+.tx-sportms-table-competition,
 .tx-sportms-table-date,
 .tx-sportms-table-gameday,
 .tx-sportms-table-homeaway,
@@ -433,7 +434,6 @@
     text-align: center;
 }
 
-.tx-sportms-table-competition,
 .tx-sportms-table-team {
     text-align: left;
 }
