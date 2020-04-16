@@ -53,13 +53,43 @@
 		}
 		
 		public function findGamesWithHighestWinsForTeam(int $teamUid) {
-			$query = $this->createQuery();
-			$constraints = [];
-			$constraints[] = $this->constraintForTeamUids($query, (string) $teamUid);
-			$query->matching($query->logicalAnd($constraints));
-			$query->setLimit(10);
-			$query->setOrderings(['spectators' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING]);
-			return $query->execute();
+			$tableGame = 'tx_sportms_domain_model_game';
+			$tableGameAlias = 'game';
+			$tableTeamSeason = 'tx_sportms_domain_model_teamseason';
+			$tableTeamSeasonAliasHome = 'teamseasonhome';
+			$tableTeamSeasonAliasGuest = 'teamseasonguest';
+			$queryBuilder = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Database\ConnectionPool::class)->getQueryBuilderForTable($tableGame);
+			$queryBuilder->SELECT('*')
+				->addSelectLiteral('ABS(' . $queryBuilder->quoteIdentifier('result_end_regular_home') . '-' . $queryBuilder->quoteIdentifier('result_end_regular_guest') .') AS ' . $queryBuilder->quoteIdentifier('difference'))
+				->FROM($tableGame, $tableGameAlias)
+				->INNERJOIN($tableGameAlias, $tableTeamSeason, $tableTeamSeasonAliasHome, $queryBuilder->expr()->eq($tableGameAlias . '.team_season_home', $queryBuilder->quoteIdentifier($tableTeamSeasonAliasHome . '.uid')))
+				->INNERJOIN($tableGameAlias, $tableTeamSeason, $tableTeamSeasonAliasGuest, $queryBuilder->expr()->eq($tableGameAlias . '.team_season_guest', $queryBuilder->quoteIdentifier($tableTeamSeasonAliasGuest . '.uid')))
+				->WHERE(
+					$queryBuilder->expr()->eq('game_appointment', 6),               # Spiel ist beendet
+					$queryBuilder->expr()->eq('game_rating', 1),                    # Normale Wertung
+					$queryBuilder->expr()->andX(
+						$queryBuilder->expr()->isNotNull('result_end_regular_home'),
+						$queryBuilder->expr()->isNotNull('result_end_regular_guest')
+					),
+					$queryBuilder->expr()->orX(
+						$queryBuilder->expr()->andX(
+							$queryBuilder->expr()->eq($tableTeamSeasonAliasHome . '.team', $teamUid),
+							$queryBuilder->expr()->gt('result_end_regular_home', 'result_end_regular_guest')
+						),
+						$queryBuilder->expr()->andX(
+							$queryBuilder->expr()->eq($tableTeamSeasonAliasGuest . '.team', $teamUid),
+							$queryBuilder->expr()->gt('result_end_regular_guest', 'result_end_regular_home')
+						)
+					)
+				)
+				->GROUPBY($tableGameAlias . '.uid')
+				->ORDERBY('difference', \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING)
+				->add('orderBy', 'GREATEST(result_end_regular_home, result_end_regular_guest) DESC', true)
+				->ADDORDERBY('result_end_regular_home', \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING)    # a high win away is more powerful than at home
+				->setMaxResults(10);
+			debug($queryBuilder->getSQL());
+			$dataMapper = $this->objectManager->get(\TYPO3\CMS\Extbase\Persistence\Generic\Mapper\DataMapper::class);
+			return $dataMapper->map($this->objectType, $queryBuilder->execute()->fetchAll());
 		}
 		
 		public function findGamesWithHighestLostsForTeam(int $teamUid) {
