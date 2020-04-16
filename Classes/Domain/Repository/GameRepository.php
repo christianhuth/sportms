@@ -80,10 +80,12 @@
 							$queryBuilder->expr()->eq($tableTeamSeasonAliasGuest . '.team', $teamUid),
 							$queryBuilder->expr()->gt('result_end_regular_guest', 'result_end_regular_home')
 						)
-					),
-					$queryBuilder->expr()->eq($tableGameAlias . '.season', $seasonUid)
-				)
-				->GROUPBY($tableGameAlias . '.uid')
+					)
+				);
+				if($seasonUid) {
+					$queryBuilder->andWhere($queryBuilder->expr()->eq($tableGameAlias . '.season', $seasonUid));
+				}
+				$queryBuilder->GROUPBY($tableGameAlias . '.uid')
 				->ORDERBY('difference', \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING)
 				->add('orderBy', 'GREATEST(result_end_regular_home, result_end_regular_guest) DESC', true)
 				->ADDORDERBY('result_end_regular_home', \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING)    # a high win away is more powerful than at home
