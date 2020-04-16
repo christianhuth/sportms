@@ -94,7 +94,8 @@
 				)
 				->GROUPBY($tableGameAlias . '.uid')
 				->ORDERBY('difference', \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING)
-				->ADDORDERBY('GREATEST(' . $queryBuilder->quoteIdentifier($tableGameAlias . '.result_end_regular_home') . ', ' . $queryBuilder->quoteIdentifier($tableGameAlias . '.result_end_regular_guest') . ')', \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING)
+				#->ADDORDERBY('GREATEST(' . $queryBuilder->quoteIdentifier($tableGameAlias . '.result_end_regular_home') . ', ' . $queryBuilder->quoteIdentifier($tableGameAlias . '.result_end_regular_guest') . ')', \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING)
+				->add('orderBy', 'GREATEST(result_end_regular_home, result_end_regular_guest)', true)
 				->setMaxResults(10);
 			debug($queryBuilder->getSQL());
 			$dataMapper = $this->objectManager->get(\TYPO3\CMS\Extbase\Persistence\Generic\Mapper\DataMapper::class);
