@@ -1,0 +1,15 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<f:if condition="{team.detailLink}">
+    <f:then>
+        <f:link.action action="historyRecordGames" arguments="{team: team}" controller="Team" pageUid="{settings.team.historyRecordGames.pid}" pluginName="sportms">
+            Rekordspiele
+        </f:link.action>
+    </f:then>
+    <f:else>
+        Rekordspiele
+    </f:else>
+</f:if>
+
+</html>

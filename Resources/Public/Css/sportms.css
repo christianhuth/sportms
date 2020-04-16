@@ -422,22 +422,13 @@
 
 
 
-.tx-sportms-table-competition,
-.tx-sportms-table-date,
-.tx-sportms-table-gameday,
-.tx-sportms-table-homeaway,
-.tx-sportms-table-nodata,
-.tx-sportms-table-position,
-.tx-sportms-table-result,
-.tx-sportms-table-season,
-.tx-sportms-table-spectators,
-.tx-sportms-table-sport,
-.tx-sportms-table-sportagegroup,
-.tx-sportms-table-sportagelevel {
+
+.tx-sportms-table-center {
     text-align: center;
 }
-
-.tx-sportms-table-club,
-.tx-sportms-table-team {
+.tx-sportms-table-left {
+    text-align: left;
+}
+.tx-sportms-table-right {
     text-align: left;
 }

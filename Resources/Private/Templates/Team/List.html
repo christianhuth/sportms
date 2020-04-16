@@ -10,11 +10,9 @@
             <table class="table table-bordered table-condensed table-hover table-striped">
                 <thead>
                 <tr>
-                    <th class="tx-sportms-table-club">Verein</th>
-                    <th class="tx-sportms-table-sport">Sportart</th>
-                    <th class="tx-sportms-table-sportagegroup">Altersgruppe</th>
-                    <th class="tx-sportms-table-sportagelevel">Altersstufe</th>
-                    <th class="tx-sportms-table-team">Mannschaft</th>
+                    <th class="tx-sportms-table-left">Mannschaft</th>
+                    <th class="tx-sportms-table-center">Rekordspiele</th>
+                    <th class="tx-sportms-table-center">Rekordspieler</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -25,7 +23,7 @@
                         </f:for>
                     </f:then>
                     <f:else>
-                        <td colspan="5">Keine Mannschaften gefunden</td>
+                        <td colspan="3">Keine Mannschaften gefunden</td>
                     </f:else>
                 </f:if>
                 </tbody>
