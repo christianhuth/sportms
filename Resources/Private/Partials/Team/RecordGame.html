@@ -21,16 +21,7 @@
     <td class="tx-sportms-table-team">
         <f:if condition="{team} == {recordGame.teamSeasonHome.team}">
             <f:then>
-                <f:if condition="{recordGame.teamSeasonGuest.team.detailLink}">
-                    <f:then>
-                        <f:link.action action="seasonIndex" arguments="{teamSeason: recordGame.teamSeasonGuest}" controller="TeamSeason" pluginName="sportms" pageUid="2244">
-                            {recordGame.teamSeasonGuest.team.name}
-                        </f:link.action>
-                    </f:then>
-                    <f:else>
-                        {recordGame.teamSeasonGuest.team.name}
-                    </f:else>
-                </f:if>
+                <f:render arguments="{settings: settings, teamSeason: recordGame.teamSeasonGuest}" partial="ViewHelper/Link/TeamSeason/SeasonIndex" />
             </f:then>
             <f:else>
                 <f:if condition="{recordGame.teamSeasonHome.team.detailLink}">
