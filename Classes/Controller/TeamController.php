@@ -115,7 +115,7 @@
 				$teamUid = $team->getUid();
 			}
 			$this->view->assign('team', $team);
-			$gamesWithHighestWins = $this->gameRepository->findGamesWithHighestWinsForTeam($teamUid);
+			$gamesWithHighestWins = $this->gameRepository->findGamesWithHighestWinsForTeam($teamUid, $this->settings['team']['historyRecordGames']['limit']);
 			$this->view->assign('gamesWithHighestWins', $gamesWithHighestWins);
 			$gamesWithHighestLosts = $this->gameRepository->findGamesWithHighestLostsForTeam($teamUid);
 			$this->view->assign('gamesWithHighestLosts', $gamesWithHighestLosts);

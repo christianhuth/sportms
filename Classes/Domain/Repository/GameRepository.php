@@ -52,7 +52,7 @@
 			return $query->execute();
 		}
 		
-		public function findGamesWithHighestWinsForTeam(int $teamUid) {
+		public function findGamesWithHighestWinsForTeam(int $teamUid, int $limit = 5) {
 			$tableGame = 'tx_sportms_domain_model_game';
 			$tableGameAlias = 'game';
 			$tableTeamSeason = 'tx_sportms_domain_model_teamseason';
@@ -86,12 +86,12 @@
 				->ORDERBY('difference', \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING)
 				->add('orderBy', 'GREATEST(result_end_regular_home, result_end_regular_guest) DESC', true)
 				->ADDORDERBY('result_end_regular_home', \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING)    # a high win away is more powerful than at home
-				->setMaxResults(10);
+				->setMaxResults($limit);
 			$dataMapper = $this->objectManager->get(\TYPO3\CMS\Extbase\Persistence\Generic\Mapper\DataMapper::class);
 			return $dataMapper->map($this->objectType, $queryBuilder->execute()->fetchAll());
 		}
 		
-		public function findGamesWithHighestLostsForTeam(int $teamUid) {
+		public function findGamesWithHighestLostsForTeam(int $teamUid, int $limit = 5) {
 			$tableGame = 'tx_sportms_domain_model_game';
 			$tableGameAlias = 'game';
 			$tableTeamSeason = 'tx_sportms_domain_model_teamseason';
@@ -125,12 +125,12 @@
 				->ORDERBY('difference', \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING)
 				->add('orderBy', 'GREATEST(result_end_regular_home, result_end_regular_guest) DESC', true)
 				->ADDORDERBY('result_end_regular_home', \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING)    # a high lost at home is more crucial than away
-				->setMaxResults(10);
+				->setMaxResults($limit);
 			$dataMapper = $this->objectManager->get(\TYPO3\CMS\Extbase\Persistence\Generic\Mapper\DataMapper::class);
 			return $dataMapper->map($this->objectType, $queryBuilder->execute()->fetchAll());
 		}
 		
-		public function findGamesWithMostGoalsForTeam(int $teamUid) {
+		public function findGamesWithMostGoalsForTeam(int $teamUid, int $limit = 5) {
 			$tableGame = 'tx_sportms_domain_model_game';
 			$tableGameAlias = 'game';
 			$tableTeamSeason = 'tx_sportms_domain_model_teamseason';
@@ -155,26 +155,26 @@
 								)
 							)
 							->ORDERBY('goals', \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING)
-							->setMaxResults(10);
+							->setMaxResults($limit);
 			$dataMapper = $this->objectManager->get(\TYPO3\CMS\Extbase\Persistence\Generic\Mapper\DataMapper::class);
 			return $dataMapper->map($this->objectType, $queryBuilder->execute()->fetchAll());
 		}
 		
-		public function findGamesWithMostSpectatorsForTeam(int $teamUid) {
-			return $this->findRecordGamesBySpectatorsForTeam($teamUid, \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING);
+		public function findGamesWithMostSpectatorsForTeam(int $teamUid, int $limit = 5) {
+			return $this->findRecordGamesBySpectatorsForTeam($teamUid, \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING, $limit);
 		}
 		
-		public function findGamesWithFewestSpectatorsForTeam(int $teamUid) {
-			return $this->findRecordGamesBySpectatorsForTeam($teamUid, \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING);
+		public function findGamesWithFewestSpectatorsForTeam(int $teamUid, int $limit = 5) {
+			return $this->findRecordGamesBySpectatorsForTeam($teamUid, \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING, $limit);
 		}
 		
-		public function findRecordGamesBySpectatorsForTeam(int $teamUid, string $ordering) {
+		public function findRecordGamesBySpectatorsForTeam(int $teamUid, string $ordering, int $limit = 5) {
 			$query = $this->createQuery();
 			$constraints = [];
 			$constraints[] = $this->constraintForTeamUids($query, (string) $teamUid);
 			$constraints[] = $query->greaterThanOrEqual('spectators', 0);
 			$query->matching($query->logicalAnd($constraints));
-			$query->setLimit(10);
+			$query->setLimit($limit);
 			$query->setOrderings(['spectators' => $ordering]);
 			return $query->execute();
 		}
