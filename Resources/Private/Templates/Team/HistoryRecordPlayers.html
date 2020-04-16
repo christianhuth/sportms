@@ -7,6 +7,7 @@
     <f:render arguments="{_all}" partial="Team/History/RecordPlayersFilter"/>
     <div class="tx-sportms-team-history-recordplayer">
         <h3>Die meisten Spiele</h3>
+        <f:debug>{playersWithMostGames}</f:debug>
         <f:render arguments="{recordPlayers: playersWithMostGames, settings: settings}" partial="Team/History/PlayersWithMostGames" />
     </div>
     <div class="tx-sportms-team-history-recordplayer">

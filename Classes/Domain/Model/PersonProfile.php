@@ -2,9 +2,6 @@
 	
 	namespace Balumedien\Sportms\Domain\Model;
 	
-	/**
-	 * PersonProfile
-	 */
 	class PersonProfile extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 		
 		/**

@@ -2,9 +2,6 @@
 	
 	namespace Balumedien\Sportms\Domain\Model;
 	
-	/**
-	 * Phone
-	 */
 	class Phone extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 		
 		/**
