@@ -70,7 +70,7 @@
 			$tableTeamSeasonAliasGuest = 'teamseasonguest';
 			$queryBuilder = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Database\ConnectionPool::class)->getQueryBuilderForTable($tableGame);
 			$queryBuilder->SELECT('*')
-				->addSelectLiteral($queryBuilder->quoteIdentifier('result_end_regular_home') . '+' . $queryBuilder->quoteIdentifier('result_end_regular_guest') .' AS ' . $queryBuilder->quoteIdentifier('goals'))
+				->addSelectLiteral('ABS(' . $queryBuilder->quoteIdentifier('result_end_regular_home') . '-' . $queryBuilder->quoteIdentifier('result_end_regular_guest') .') AS ' . $queryBuilder->quoteIdentifier('difference'))
 				->FROM($tableGame, $tableGameAlias)
 				->INNERJOIN($tableGameAlias, $tableTeamSeason, $tableTeamSeasonAliasHome, $queryBuilder->expr()->eq($tableGameAlias . '.team_season_home', $queryBuilder->quoteIdentifier($tableTeamSeasonAliasHome . '.uid')))
 				->INNERJOIN($tableGameAlias, $tableTeamSeason, $tableTeamSeasonAliasGuest, $queryBuilder->expr()->eq($tableGameAlias . '.team_season_guest', $queryBuilder->quoteIdentifier($tableTeamSeasonAliasGuest . '.uid')))
@@ -88,7 +88,7 @@
 						)
 					)
 				)
-				->ORDERBY('goals', \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING)
+				->ORDERBY('difference', \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING)
 				->setMaxResults(10);
 			debug($queryBuilder->getSQL());
 			$dataMapper = $this->objectManager->get(\TYPO3\CMS\Extbase\Persistence\Generic\Mapper\DataMapper::class);
