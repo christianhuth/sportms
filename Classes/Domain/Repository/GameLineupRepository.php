@@ -29,7 +29,7 @@
 			$tableGameLineup = 'tx_sportms_domain_model_gamelineup';
 			$tableGameLineupAlias = 'gamelineup';
 			$queryBuilder = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Database\ConnectionPool::class)->getQueryBuilderForTable($tableGameLineup);
-			$queryBuilder->SELECT($tableGameLineupAlias . '.person')
+			$queryBuilder->SELECT($tableGameLineupAlias . '.*')
 							->addSelectLiteral('COUNT(' . $tableGameLineupAlias . '.' . $queryBuilder->quoteIdentifier('game') . ') AS ' . $queryBuilder->quoteIdentifier('numberOfGames'))
 							->FROM($tableGameLineup, $tableGameLineupAlias)
 							->GROUPBY($tableGameLineupAlias . '.person')
