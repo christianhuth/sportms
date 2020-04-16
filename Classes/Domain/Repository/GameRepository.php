@@ -1,12 +1,6 @@
 <?php
 	
 	namespace Balumedien\Sportms\Domain\Repository;
-	// The use statements for the fileheader
-	use Balumedien\Sportms\Domain\Model\Game;
-	use TYPO3\CMS\Core\Database\ConnectionPool;
-	use TYPO3\CMS\Core\Database\Query\QueryBuilder;
-	use TYPO3\CMS\Core\Utility\GeneralUtility;
-	use TYPO3\CMS\Extbase\Persistence\Generic\Mapper\DataMapper;
 	
 	class GameRepository extends SportMSBaseRepository {
 		
@@ -83,50 +77,15 @@
 			$queryBuilder->SELECT('*')
 							->addSelectLiteral($queryBuilder->quoteIdentifier('result_end_regular_home') . '+' . $queryBuilder->quoteIdentifier('result_end_regular_guest') .' AS ' . $queryBuilder->quoteIdentifier('goals'))
 							->FROM($tableGame)
-							->ORDERBY('goals')
+							->WHERE(
+								$queryBuilder->expr()->gte('result_end_regular_home', 0),
+								$queryBuilder->expr()->gte('result_end_regular_guest', 0)
+							)
+							->ORDERBY('goals DESC')
 							->setMaxResults(10);
 			debug($queryBuilder->getSQL());
-			
-			
 			$dataMapper = $this->objectManager->get(\TYPO3\CMS\Extbase\Persistence\Generic\Mapper\DataMapper::class);
 			return $dataMapper->map($this->objectType, $queryBuilder->execute()->fetchAll());
-			
-			
-			
-			$gameUids = implode(',', array_column($queryBuilder->execute()->fetchAll(), 'uid'));
-			debug($gameUids);
-			return $queryBuilder->execute()->fetchAll();
-		}
-		
-		
-		/**
-		 * Returns all matching records for the given list of uids and applies the uidList sorting for the result
-		 *
-		 * @param string $uidList
-		 * @return array|\TYPO3\CMS\Extbase\Persistence\QueryResultInterface
-		 */
-		public function findByUidList($uidList)
-		{
-			$uids = GeneralUtility::intExplode(',', $uidList, true);
-			if ($uidList === '' || count($uids) === 0) {
-				return [];
-			}
-			
-			$dataMapper = GeneralUtility::makeInstance(DataMapper::class);
-			
-			/** @var QueryBuilder $queryBuilder */
-			$queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)
-				->getQueryBuilderForTable('tx_sportms_domain_model_game');
-			
-			$rows = $queryBuilder
-				->select('*')
-				->from('tx_sportms_domain_model_game')
-				->where($queryBuilder->expr()->in('uid', $uids))
-				->add('orderBy', 'FIELD(tx_sportms_domain_model_game.uid,' . implode(',', $uids) . ')')
-				->execute()
-				->fetchAll();
-			
-			return $dataMapper->map(Game::class, $rows);
 		}
 		
 		public function findGamesWithMostSpectatorsForTeam(int $teamUid) {
