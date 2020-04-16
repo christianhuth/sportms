@@ -52,9 +52,11 @@
 			return $query->execute();
 		}
 		
-		public function findGamesWithHighestWinsForTeam(int $teamUid, int $limit = 5, int $seasonUid = NULL) {
+		public function findGamesWithHighestWinsForTeam(int $teamUid, int $limit = 5, string $competitionUids = NULL, string $seasonUids = NULL) {
 			$tableGame = 'tx_sportms_domain_model_game';
 			$tableGameAlias = 'game';
+			$tableCompetitionSeason = 'tx_sportms_domain_model_competitionseason';
+			$tableCompetitionSeasonAlias = 'competitionseason';
 			$tableTeamSeason = 'tx_sportms_domain_model_teamseason';
 			$tableTeamSeasonAliasHome = 'teamseasonhome';
 			$tableTeamSeasonAliasGuest = 'teamseasonguest';
@@ -63,29 +65,35 @@
 				->addSelectLiteral('ABS(' . $queryBuilder->quoteIdentifier('result_end_regular_home') . '-' . $queryBuilder->quoteIdentifier('result_end_regular_guest') .') AS ' . $queryBuilder->quoteIdentifier('difference'))
 				->FROM($tableGame, $tableGameAlias)
 				->INNERJOIN($tableGameAlias, $tableTeamSeason, $tableTeamSeasonAliasHome, $queryBuilder->expr()->eq($tableGameAlias . '.team_season_home', $queryBuilder->quoteIdentifier($tableTeamSeasonAliasHome . '.uid')))
-				->INNERJOIN($tableGameAlias, $tableTeamSeason, $tableTeamSeasonAliasGuest, $queryBuilder->expr()->eq($tableGameAlias . '.team_season_guest', $queryBuilder->quoteIdentifier($tableTeamSeasonAliasGuest . '.uid')))
-				->WHERE(
-					$queryBuilder->expr()->eq('game_appointment', 6),               # Spiel ist beendet
-					$queryBuilder->expr()->eq('game_rating', 1),                    # Normale Wertung
+				->INNERJOIN($tableGameAlias, $tableTeamSeason, $tableTeamSeasonAliasGuest, $queryBuilder->expr()->eq($tableGameAlias . '.team_season_guest', $queryBuilder->quoteIdentifier($tableTeamSeasonAliasGuest . '.uid')));
+			if($competitionUids) {
+				$queryBuilder->INNERJOIN($tableGameAlias, $tableCompetitionSeason, $tableCompetitionSeasonAlias, $queryBuilder->expr()->eq($tableGameAlias . '.competition_season', $queryBuilder->quoteIdentifier($tableCompetitionSeasonAlias . '.uid')));
+			}
+			$queryBuilder->WHERE(
+				$queryBuilder->expr()->eq('game_appointment', 6),               # Spiel ist beendet
+				$queryBuilder->expr()->eq('game_rating', 1),                    # Normale Wertung
+				$queryBuilder->expr()->andX(
+					$queryBuilder->expr()->isNotNull('result_end_regular_home'),
+					$queryBuilder->expr()->isNotNull('result_end_regular_guest')
+				),
+				$queryBuilder->expr()->orX(
 					$queryBuilder->expr()->andX(
-						$queryBuilder->expr()->isNotNull('result_end_regular_home'),
-						$queryBuilder->expr()->isNotNull('result_end_regular_guest')
+						$queryBuilder->expr()->eq($tableTeamSeasonAliasHome . '.team', $teamUid),
+						$queryBuilder->expr()->gt('result_end_regular_home', 'result_end_regular_guest')
 					),
-					$queryBuilder->expr()->orX(
-						$queryBuilder->expr()->andX(
-							$queryBuilder->expr()->eq($tableTeamSeasonAliasHome . '.team', $teamUid),
-							$queryBuilder->expr()->gt('result_end_regular_home', 'result_end_regular_guest')
-						),
-						$queryBuilder->expr()->andX(
-							$queryBuilder->expr()->eq($tableTeamSeasonAliasGuest . '.team', $teamUid),
-							$queryBuilder->expr()->gt('result_end_regular_guest', 'result_end_regular_home')
-						)
+					$queryBuilder->expr()->andX(
+						$queryBuilder->expr()->eq($tableTeamSeasonAliasGuest . '.team', $teamUid),
+						$queryBuilder->expr()->gt('result_end_regular_guest', 'result_end_regular_home')
 					)
-				);
-				if($seasonUid) {
-					$queryBuilder->andWhere($queryBuilder->expr()->eq($tableGameAlias . '.season', $seasonUid));
-				}
-				$queryBuilder->GROUPBY($tableGameAlias . '.uid')
+				)
+			);
+			if($competitionUids) {
+				$queryBuilder->andWhere($queryBuilder->expr()->in($tableCompetitionSeasonAlias . '.competition', explode(',', $competitionUids)));
+			}
+			if($seasonUids) {
+				$queryBuilder->andWhere($queryBuilder->expr()->in($tableGameAlias . '.season', explode(',', $seasonUids)));
+			}
+			$queryBuilder->GROUPBY($tableGameAlias . '.uid')
 				->ORDERBY('difference', \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING)
 				->add('orderBy', 'GREATEST(result_end_regular_home, result_end_regular_guest) DESC', true)
 				->ADDORDERBY('result_end_regular_home', \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING)    # a high win away is more powerful than at home
