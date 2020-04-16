@@ -86,9 +86,16 @@
 							->ORDERBY('goals')
 							->setMaxResults(10);
 			debug($queryBuilder->getSQL());
+			
+			
+			$dataMapper = $this->objectManager()->get(\TYPO3\CMS\Extbase\Persistence\Generic\Mapper\DataMapper::class);
+			return $dataMapper->map($this->objectType, $queryBuilder->execute()->fetchAll());
+			
+			
+			
 			$gameUids = implode(',', array_column($queryBuilder->execute()->fetchAll(), 'uid'));
 			debug($gameUids);
-			return $this->findByUidList($gameUids);
+			return $queryBuilder->execute()->fetchAll();
 		}
 		
 		
