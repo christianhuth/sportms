@@ -14,6 +14,10 @@
 		 */
 		protected $numberOfGames;
 		
+		/**
+		 * @var int
+		 */
+		protected $numberOfGames;
 		
 		/**
 		 * @return Person
