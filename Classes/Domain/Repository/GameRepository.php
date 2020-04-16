@@ -78,7 +78,7 @@
 			$queryBuilder = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Database\ConnectionPool::class)->getQueryBuilderForTable($tableGame);
 			$queryBuilder->SELECT('*')
 							->FROM($tableGame)
-							->JOIN($tableSeason, $queryBuilder->expr()->eq($tableGame . '.season', $queryBuilder->quoteIdentifier($tableSeason . '.uid')))
+							->INNERJOIN($tableGame, $tableSeason, $tableSeason, $queryBuilder->expr()->eq($tableGame . '.season', $queryBuilder->quoteIdentifier($tableSeason . '.uid')))
 							->setMaxResults(10);
 			debug($queryBuilder->getSQL());
 			return $queryBuilder->execute()->fetchAll();
