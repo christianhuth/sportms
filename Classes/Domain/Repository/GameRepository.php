@@ -59,7 +59,7 @@
 			$tableTeamSeasonAliasHome = 'teamseasonhome';
 			$tableTeamSeasonAliasGuest = 'teamseasonguest';
 			$queryBuilder = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Database\ConnectionPool::class)->getQueryBuilderForTable($tableGame);
-			$queryBuilder->SELECT('*')
+			$queryBuilder->SELECT($tableGameAlias . '.*')
 				->addSelectLiteral('ABS(' . $queryBuilder->quoteIdentifier('result_end_regular_home') . '-' . $queryBuilder->quoteIdentifier('result_end_regular_guest') .') AS ' . $queryBuilder->quoteIdentifier('difference'))
 				->FROM($tableGame, $tableGameAlias)
 				->INNERJOIN($tableGameAlias, $tableTeamSeason, $tableTeamSeasonAliasHome, $queryBuilder->expr()->eq($tableGameAlias . '.team_season_home', $queryBuilder->quoteIdentifier($tableTeamSeasonAliasHome . '.uid')))
@@ -139,7 +139,7 @@
 			$tableTeamSeasonAliasHome = 'teamseasonhome';
 			$tableTeamSeasonAliasGuest = 'teamseasonguest';
 			$queryBuilder = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Database\ConnectionPool::class)->getQueryBuilderForTable($tableGame);
-			$queryBuilder->SELECT('*')
+			$queryBuilder->SELECT($tableGameAlias . '.*')
 							->addSelectLiteral($queryBuilder->quoteIdentifier('result_end_regular_home') . '+' . $queryBuilder->quoteIdentifier('result_end_regular_guest') .' AS ' . $queryBuilder->quoteIdentifier('goals'))
 							->FROM($tableGame, $tableGameAlias)
 							->INNERJOIN($tableGameAlias, $tableTeamSeason, $tableTeamSeasonAliasHome, $queryBuilder->expr()->eq($tableGameAlias . '.team_season_home', $queryBuilder->quoteIdentifier($tableTeamSeasonAliasHome . '.uid')))
