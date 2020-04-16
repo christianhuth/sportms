@@ -76,7 +76,7 @@
 			$queryBuilder = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Database\ConnectionPool::class)->getQueryBuilderForTable($tableTeamSeason);
 			$teamSeasonUids = $queryBuilder->SELECT('uid')
 											->FROM($tableTeamSeason)
-											->WHERE($queryBuilder->expr()->qa('team', $teamUid))
+											->WHERE($queryBuilder->expr()->eq('team', $teamUid))
 											->EXECUTE()
 											->FETCHALL();
 			debug(implode(',', array_column($teamSeasonUids, 'uid')));
