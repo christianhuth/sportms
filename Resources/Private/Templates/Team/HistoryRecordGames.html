@@ -4,16 +4,22 @@
 <f:layout name="default"/>
 
 <f:section name="default">
+    <f:debug>{gamesWithHighestWins}</f:debug>
     <div class="tx-sportms-team-history-recordgames">
+        <h3>Die höchsten Siege</h3>
         <f:render arguments="{recordGames: gamesWithHighestWins, settings: settings}" partial="Team/RecordGames" />
+    </div>
+    <div class="tx-sportms-team-history-recordgames">
+        <h3>Die höchsten Niederlagen</h3>
         <f:render arguments="{recordGames: gamesWithHighestLosts, settings: settings}" partial="Team/RecordGames" />
+    </div>
+    <div class="tx-sportms-team-history-recordgames">
+        <h3>Die meisten Zuschauer</h3>
         <f:render arguments="{recordGames: gamesWithMostSpectators, settings: settings}" partial="Team/RecordGames" />
+    </div>
+    <div class="tx-sportms-team-history-recordgames">
+        <h3>Die wenigsten Zuschauer</h3>
         <f:render arguments="{recordGames: gamesWithFewestSpectators, settings: settings}" partial="Team/RecordGames" />
-
-        <f:debug>{gamesWithHighestWins}</f:debug>
-        <f:debug>{gamesWithHighestLosts}</f:debug>
-        <f:debug>{gamesWithMostSpectators}</f:debug>
-        <f:debug>{gamesWithFewestSpectators}</f:debug>
     </div>
 </f:section>
 
