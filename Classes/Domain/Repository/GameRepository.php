@@ -79,8 +79,6 @@
 											->WHERE($queryBuilder->expr()->eq('team', $teamUid))
 											->EXECUTE()
 											->FETCHALL(), 'uid'));
-			debug($teamSeasonUids);
-			
 			$tableGame = 'tx_sportms_domain_model_game';
 			$queryBuilder = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Database\ConnectionPool::class)->getQueryBuilderForTable($tableGame);
 			$queryBuilder->SELECT('*')
@@ -100,7 +98,6 @@
 							)
 							->ORDERBY('goals', \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING)
 							->setMaxResults(10);
-			debug($queryBuilder->getSQL());
 			$dataMapper = $this->objectManager->get(\TYPO3\CMS\Extbase\Persistence\Generic\Mapper\DataMapper::class);
 			return $dataMapper->map($this->objectType, $queryBuilder->execute()->fetchAll());
 		}
