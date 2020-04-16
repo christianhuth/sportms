@@ -2,13 +2,13 @@
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <tr>
-    <td class="tx-sportms-table-position">{position + 1}</td>
-    <td class="tx-sportms-table-date">
+    <td class="tx-sportms-table-center">{position + 1}</td>
+    <td class="tx-sportms-table-center">
         <f:format.date format="d.m.Y">{recordGame.date}</f:format.date>
     </td>
-    <td class="tx-sportms-table-season">{recordGame.season.abbreviation}</td>
-    <td class="tx-sportms-table-competition">{recordGame.competitionSeason.competition.label}</td>
-    <td class="tx-sportms-table-homeaway">
+    <td class="tx-sportms-table-center">{recordGame.season.abbreviation}</td>
+    <td class="tx-sportms-table-center">{recordGame.competitionSeason.competition.label}</td>
+    <td class="tx-sportms-table-center">
         <f:if condition="{team} == {recordGame.teamSeasonHome.team}">
             <f:then>
                 H
@@ -18,7 +18,7 @@
             </f:else>
         </f:if>
     </td>
-    <td class="tx-sportms-table-team">
+    <td class="tx-sportms-table-left">
         <f:if condition="{team} == {recordGame.teamSeasonHome.team}">
             <f:then>
                 <f:render arguments="{settings: settings, teamSeason: recordGame.teamSeasonGuest}" partial="ViewHelper/Link/TeamSeason/SeasonIndex" />
@@ -28,10 +28,10 @@
             </f:else>
         </f:if>
     </td>
-    <td class="tx-sportms-table-spectators">
+    <td class="tx-sportms-table-center">
         <f:render arguments="{spectators: recordGame.spectators}" partial="ViewHelper/GameSpectators"/>
     </td>
-    <td class="tx-sportms-table-result">
+    <td class="tx-sportms-table-center">
         <f:render arguments="{settings: settings, game: recordGame}" partial="ViewHelper/Link/Game/ShowIndex" />
     </td>
 </tr>
