@@ -80,7 +80,7 @@
 			$tableCompetitionSeasonAlias = 'competitionseason';
 			$queryBuilder = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Database\ConnectionPool::class)->getQueryBuilderForTable($tableGame);
 			$queryBuilder->SELECT('*')
-							->addSelectLiteral($queryBuilder->expr()->sum('result_end_regular_home + result_end_regular_guest', 'goals'))
+							->addSelect('result_end_regular_home + result_end_regular_guest', 'goals')
 							->FROM($tableGame, $tableGameAlias)
 							->INNERJOIN($tableGameAlias, $tableSeason, $tableSeasonAlias, $queryBuilder->expr()->eq($tableGameAlias . '.season', $queryBuilder->quoteIdentifier($tableSeasonAlias . '.uid')))
 							->ORDERBY('goals')
