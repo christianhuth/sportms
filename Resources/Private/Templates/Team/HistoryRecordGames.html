@@ -4,7 +4,6 @@
 <f:layout name="default"/>
 
 <f:section name="default">
-    <f:debug>{gamesWithHighestWins}</f:debug>
     <div class="tx-sportms-team-history-recordgames">
         <h3>Die höchsten Siege</h3>
         <f:render arguments="{recordGames: gamesWithHighestWins, settings: settings, team: team}" partial="Team/RecordGames" />
@@ -15,6 +14,7 @@
     </div>
     <div class="tx-sportms-team-history-recordgames">
         <h3>Die meisten Tore</h3>
+        <f:debug>{gamesWithMostGoals}</f:debug>
         <f:render arguments="{recordGames: gamesWithMostGoals, settings: settings, team: team}" partial="Team/RecordGames" />
     </div>
     <div class="tx-sportms-team-history-recordgames">
