@@ -1,6 +1,6 @@
 <html data-namespace-typo3-fluid="true"
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
-
+<f:debug>{game}</f:debug>
 <f:if condition="{game.detailLink}">
     <f:then>
         <f:link.action action="showIndex" arguments="{game: game}" controller="Game" pageUid="{settings.game.showIndex.pid}" pluginName="sportms">
