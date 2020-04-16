@@ -86,7 +86,7 @@
 			$queryBuilder->SELECT('*')
 							->addSelectLiteral($queryBuilder->quoteIdentifier('result_end_regular_home') . '+' . $queryBuilder->quoteIdentifier('result_end_regular_guest') .' AS ' . $queryBuilder->quoteIdentifier('goals'))
 							->FROM($tableGame, $tableGameAlias)
-							->INNERJOIN($tableGameAlias, $tableTeamSeason, $tableTeamSeasonAlias, $queryBuilder->expr()->eq($tableGameAlias . '.team_season_home', $queryBuilder->quoteIdentifier($tableTeamSeasonAlias . '.uid')))
+							->INNERJOIN($tableGameAlias, $tableTeamSeason, $tableTeamSeasonAlias, $queryBuilder->expr()->eq($tableGameAlias . '.team_season_home', $tableTeamSeasonAlias . '.uid'))
 							->WHERE(
 								$queryBuilder->expr()->eq('game_appointment', 6),               # Spiel ist beendet
 								$queryBuilder->expr()->eq('game_rating', 1),                    # Normale Wertung
