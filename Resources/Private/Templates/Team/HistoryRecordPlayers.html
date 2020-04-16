@@ -1,0 +1,21 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<f:layout name="default"/>
+
+<f:section name="default">
+    <div class="tx-sportms-team-history-recordplayer">
+        <h3>Die meisten Spiele</h3>
+        <f:render arguments="{recordPlayers: playersWithMostGames, settings: settings}" partial="Team/RecordPlayer" />
+    </div>
+    <div class="tx-sportms-team-history-recordplayer">
+        <h3>Die meisten Tore</h3>
+        <f:render arguments="{recordPlayers: playersWithMostGoals, settings: settings}" partial="Team/RecordPlayer" />
+    </div>
+    <div class="tx-sportms-team-history-recordplayer">
+        <h3>Die meisten Vorlagen</h3>
+        <f:render arguments="{recordPlayers: playersWithMostAssists, settings: settings}" partial="Team/RecordPlayer" />
+    </div>
+</f:section>
+
+</html>
