@@ -114,6 +114,8 @@
 				}
 				$team = $this->teamRepository->findByUid($teamUid);
 			}
+			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->request, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
+			\TYPO3\CMS\Core\Utility\DebugUtility::debug($teamUid, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			$this->view->assign('team', $team);
 			$gamesWithHighestWins = $this->gameRepository->findGamesWithHighestWinsForTeam($teamUid);
 			$this->view->assign('gamesWithHighestWins', $gamesWithHighestWins);
