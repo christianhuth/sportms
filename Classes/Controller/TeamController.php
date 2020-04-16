@@ -117,13 +117,13 @@
 			$this->view->assign('team', $team);
 			$gamesWithHighestWins = $this->gameRepository->findGamesWithHighestWinsForTeam($teamUid, $this->settings['team']['historyRecordGames']['limit']);
 			$this->view->assign('gamesWithHighestWins', $gamesWithHighestWins);
-			$gamesWithHighestLosts = $this->gameRepository->findGamesWithHighestLostsForTeam($teamUid);
+			$gamesWithHighestLosts = $this->gameRepository->findGamesWithHighestLostsForTeam($teamUid, $this->settings['team']['historyRecordGames']['limit']);
 			$this->view->assign('gamesWithHighestLosts', $gamesWithHighestLosts);
-			$gamesWithMostGoals = $this->gameRepository->findGamesWithMostGoalsForTeam($teamUid);
+			$gamesWithMostGoals = $this->gameRepository->findGamesWithMostGoalsForTeam($teamUid, $this->settings['team']['historyRecordGames']['limit']);
 			$this->view->assign('gamesWithMostGoals', $gamesWithMostGoals);
-			$gamesWithMostSpectators = $this->gameRepository->findGamesWithMostSpectatorsForTeam($teamUid);
+			$gamesWithMostSpectators = $this->gameRepository->findGamesWithMostSpectatorsForTeam($teamUid, $this->settings['team']['historyRecordGames']['limit']);
 			$this->view->assign('gamesWithMostSpectators', $gamesWithMostSpectators);
-			$gamesWithFewestSpectators = $this->gameRepository->findGamesWithFewestSpectatorsForTeam($teamUid);
+			$gamesWithFewestSpectators = $this->gameRepository->findGamesWithFewestSpectatorsForTeam($teamUid, $this->settings['team']['historyRecordGames']['limit']);
 			$this->view->assign('gamesWithFewestSpectators', $gamesWithFewestSpectators);
 		}
 		
