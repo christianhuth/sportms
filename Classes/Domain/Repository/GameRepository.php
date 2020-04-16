@@ -73,15 +73,20 @@
 		
 		public function findGamesWithMostGoalsForTeam(int $teamUid) {
 			$tableGame = 'tx_sportms_domain_model_game';
+			$tableGameAlias = 'game';
 			$tableSeason = 'tx_sportms_domain_model_season';
-			$tableCompetitionSeason = 'tx_sportms_domain_model_competition';
+			$tableSeasonAlias = 'season';
+			$tableCompetitionSeason = 'tx_sportms_domain_model_competitionseason';
+			$tableCompetitionSeasonAlias = 'competitionseason';
 			$queryBuilder = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Database\ConnectionPool::class)->getQueryBuilderForTable($tableGame);
 			$queryBuilder->SELECT('*')
+							->addSelectLiteral($queryBuilder->expr()->sum('result_end__regular_home', 'goals'))
 							->FROM($tableGame)
-							->INNERJOIN($tableGame, $tableSeason, $tableSeason, $queryBuilder->expr()->eq($tableGame . '.season', $queryBuilder->quoteIdentifier($tableSeason . '.uid')))
+							->INNERJOIN($tableGameAlias, $tableSeason, $tableSeasonAlias, $queryBuilder->expr()->eq($tableGameAlias . '.season', $queryBuilder->quoteIdentifier($tableSeasonAlias . '.uid')))
+							->ORDERBY('goals')
 							->setMaxResults(10);
 			debug($queryBuilder->getSQL());
-			return $queryBuilder->execute()->fetchAll();
+			return $queryBuilder->execute();
 		}
 		
 		public function findGamesWithMostSpectatorsForTeam(int $teamUid) {
