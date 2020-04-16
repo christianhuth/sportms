@@ -76,7 +76,7 @@
 			$queryBuilder = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Database\ConnectionPool::class)->getQueryBuilderForTable($table);
 			$queryBuilder->SELECT('*')->FROM($table)->setMaxResults(10);
 			debug($queryBuilder->getSQL());
-			return $queryBuilder->execute();
+			return $queryBuilder->execute()->fetchAll();
 		}
 		
 		public function findGamesWithMostSpectatorsForTeam(int $teamUid) {
