@@ -111,8 +111,14 @@
 					// TODO: DIE IF NO TEAM IS SELECTED VIA FLEXFORM
 				}
 			}
-			$highestWins = $this->gameRepository->findHighestWinsForTeam($teamUid);
-			$this->view->assign('highestWins', $highestWins);
+			$gamesWithHighestWins = $this->gameRepository->findGamesWithHighestWinsForTeam($teamUid);
+			$this->view->assign('gamesWithHighestWins', $gamesWithHighestWins);
+			$gamesWithHighestLosts = $this->gameRepository->findGamesWithHighestLostsForTeam($teamUid);
+			$this->view->assign('gamesWithHighestLosts', $gamesWithHighestLosts);
+			$gamesWithMostSpectators = $this->gameRepository->findGamesWithMostSpectatorsForTeam($teamUid);
+			$this->view->assign('gamesWithMostSpectators', $gamesWithMostSpectators);
+			$gamesWithFewestSpectators = $this->gameRepository->findGamesWithFewestSpectatorsForTeam($teamUid);
+			$this->view->assign('gamesWithFewestSpectators', $gamesWithFewestSpectators);
 		}
 		
 		/**
