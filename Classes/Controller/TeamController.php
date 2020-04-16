@@ -107,10 +107,12 @@
 			if($team === NULL) {
 				if($this->settings['team']['uid']) {
 					$teamUid = (int) $this->settings['team']['uid'];
+					$team = $this->teamRepository->findByUid($teamUid);
 				} else {
 					// TODO: DIE IF NO TEAM IS SELECTED VIA FLEXFORM
 				}
 			}
+			$this->view->assign('team', $team);
 			$gamesWithHighestWins = $this->gameRepository->findGamesWithHighestWinsForTeam($teamUid);
 			$this->view->assign('gamesWithHighestWins', $gamesWithHighestWins);
 			$gamesWithHighestLosts = $this->gameRepository->findGamesWithHighestLostsForTeam($teamUid);

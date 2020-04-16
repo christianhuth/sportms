@@ -7,19 +7,19 @@
     <f:debug>{gamesWithHighestWins}</f:debug>
     <div class="tx-sportms-team-history-recordgames">
         <h3>Die höchsten Siege</h3>
-        <f:render arguments="{recordGames: gamesWithHighestWins, settings: settings}" partial="Team/RecordGames" />
+        <f:render arguments="{recordGames: gamesWithHighestWins, settings: settings, team: team}" partial="Team/RecordGames" />
     </div>
     <div class="tx-sportms-team-history-recordgames">
         <h3>Die höchsten Niederlagen</h3>
-        <f:render arguments="{recordGames: gamesWithHighestLosts, settings: settings}" partial="Team/RecordGames" />
+        <f:render arguments="{recordGames: gamesWithHighestLosts, settings: settings, team: team}" partial="Team/RecordGames" />
     </div>
     <div class="tx-sportms-team-history-recordgames">
         <h3>Die meisten Zuschauer</h3>
-        <f:render arguments="{recordGames: gamesWithMostSpectators, settings: settings}" partial="Team/RecordGames" />
+        <f:render arguments="{recordGames: gamesWithMostSpectators, settings: settings, team: team}" partial="Team/RecordGames" />
     </div>
     <div class="tx-sportms-team-history-recordgames">
         <h3>Die wenigsten Zuschauer</h3>
-        <f:render arguments="{recordGames: gamesWithFewestSpectators, settings: settings}" partial="Team/RecordGames" />
+        <f:render arguments="{recordGames: gamesWithFewestSpectators, settings: settings, team: team}" partial="Team/RecordGames" />
     </div>
 </f:section>
 
