@@ -72,14 +72,7 @@
 		}
 		
 		public function findGamesWithMostSpectatorsForTeam(int $teamUid) {
-			$query = $this->createQuery();
-			$constraints = [];
-			$constraints[] = $this->constraintForTeamUids($query, (string) $teamUid);
-			$constraints[] = $query->greaterThanOrEqual('spectators', 0);
-			$query->matching($query->logicalAnd($constraints));
-			$query->setLimit(10);
-			$query->setOrderings(['spectators' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING]);
-			return $query->execute();
+			return $this->findRecordGamesBySpectatorsForTeam($teamUid, \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING);
 		}
 		
 		public function findGamesWithFewestSpectatorsForTeam(int $teamUid) {
