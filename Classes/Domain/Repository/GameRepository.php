@@ -74,12 +74,12 @@
 		public function findGamesWithMostGoalsForTeam(int $teamUid) {
 			$tableTeamSeason = 'tx_sportms_domain_model_teamseason';
 			$queryBuilder = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Database\ConnectionPool::class)->getQueryBuilderForTable($tableTeamSeason);
-			$teamSeasonUids = $queryBuilder->SELECT('uid')
+			$teamSeasonUids = implode(',', array_column($queryBuilder->SELECT('uid')
 											->FROM($tableTeamSeason)
 											->WHERE($queryBuilder->expr()->eq('team', $teamUid))
 											->EXECUTE()
-											->FETCHALL();
-			debug(implode(',', array_column($teamSeasonUids, 'uid')));
+											->FETCHALL(), 'uid'));
+			debug($teamSeasonUids);
 			
 			$tableGame = 'tx_sportms_domain_model_game';
 			$queryBuilder = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Database\ConnectionPool::class)->getQueryBuilderForTable($tableGame);
