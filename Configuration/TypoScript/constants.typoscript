@@ -34,18 +34,24 @@ plugin.tx_sportms {
     settings {
 
         club {
-            # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Club->list
-            listPid =
+            list {
+                # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Club->list
+                pid =
+            }
         }
 
         clubSection {
-            # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of ClubSection->list
-            listPid =
+            list {
+                # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of ClubSection->list
+                pid =
+            }
         }
 
         competition {
-            # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Competition->list
-            listPid =
+            list {
+                # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Competition->list
+                pid =
+            }
         }
 
         game {
@@ -53,6 +59,7 @@ plugin.tx_sportms {
                 # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Game->list
                 pid =
             }
+
             showIndex {
                 # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Game->showIndex
                 pid =
@@ -60,14 +67,22 @@ plugin.tx_sportms {
         }
 
         person {
-            # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Person->list
-            listPid =
-            # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Person->officialIndex
-            officialIndexPid =
-            # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Person->playerIndex
-            playerIndexPid =
+            list {
+                # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Person->list
+                pid =
+            }
+            officialIndex {
+                # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Person->officialIndex
+                pid =
+            }
+            playerIndex {
+                # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Person->playerIndex
+                pid =
+            }
             # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Person->refereeIndex
-            refereeIndexPid =
+            refereeIndex {
+                pid =
+            }
             # cat=plugin.tx_sportms/sportms; type=string; label=Path to default dummy image for a male person
             dummyImageMale = EXT:sportms/Resources/Public/Images/person-male.jpg
             # cat=plugin.tx_sportms/sportms; type=string; label=Path to default dummy image for a female person
@@ -81,12 +96,21 @@ plugin.tx_sportms {
                 # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Team->list
                 pid =
             }
+
+            historyRecordPlayers {
+                # cat=plugin.tx_sportms/sportms; type=int+; label=Default Limit for Team->historyRecordPlayers
+                limit = 10
+                # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Team->historyRecordPlayers
+                pid =
+            }
+
             historyRecordGames {
                 # cat=plugin.tx_sportms/sportms; type=int+; label=Default Limit for Team->historyRecordGames
                 limit = 10
                 # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Team->historyRecordGames
                 pid =
             }
+
             # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Team->seasonGamesPid
             seasonGamesPid =
             # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Team->seasonGoalsPid

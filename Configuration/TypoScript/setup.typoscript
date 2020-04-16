@@ -21,15 +21,21 @@ plugin.tx_sportms {
     settings {
 
         club {
-            listPid = {$plugin.tx_sportms.settings.club.listPid}
+            list {
+                pid = {$plugin.tx_sportms.settings.club.list.pid}
+            }
         }
 
         clubSection {
-            listPid = {$plugin.tx_sportms.settings.clubSection.listPid}
+            list {
+                pid = {$plugin.tx_sportms.settings.clubSection.list.pid}
+            }
         }
 
         competition {
-            listPid = {$plugin.tx_sportms.settings.competition.listPid}
+            list {
+                pid = {$plugin.tx_sportms.settings.competition.list.pid}
+            }
         }
 
         game {
@@ -42,10 +48,18 @@ plugin.tx_sportms {
         }
 
         person {
-            listPid = {$plugin.tx_sportms.settings.person.listPid}
-            officialIndexPid = {$plugin.tx_sportms.settings.person.officialIndexPid}
-            playerIndexPid = {$plugin.tx_sportms.settings.person.playerIndexPid}
-            refereeIndexPid = {$plugin.tx_sportms.settings.person.refereeIndexPid}
+            list {
+                pid = {$plugin.tx_sportms.settings.person.list.pid}
+            }
+            officialIndex {
+                pid = {$plugin.tx_sportms.settings.person.officialIndex.pid}
+            }
+            playerIndex {
+                pid = {$plugin.tx_sportms.settings.person.playerIndex.pid}
+            }
+            refereeIndex {
+                pid = {$plugin.tx_sportms.settings.person.refereeIndex.pid}
+            }
             dummyImageMale = {$plugin.tx_sportms.settings.person.dummyImageMale}
             dummyImageFemale = {$plugin.tx_sportms.settings.person.dummyImageFemale}
         }
@@ -58,10 +72,22 @@ plugin.tx_sportms {
                 limit = {$plugin.tx_sportms.settings.team.historyRecordGames.limit}
                 pid = {$plugin.tx_sportms.settings.team.historyRecordGames.pid}
             }
-            seasonGamesPid = {$plugin.tx_sportms.settings.team.seasonGamesPid}
-            seasonGoalsPid = {$plugin.tx_sportms.settings.team.seasonGoalsPid}
-            seasonIndexPid = {$plugin.tx_sportms.settings.team.seasonIndexPid}
-            seasonSquadPid = {$plugin.tx_sportms.settings.team.seasonSquadPid}
+            historyRecordPlayers {
+                limit = {$plugin.tx_sportms.settings.team.historyRecordPlayers.limit}
+                pid = {$plugin.tx_sportms.settings.team.historyRecordPlayers.pid}
+            }
+            seasonGames {
+                pid = {$plugin.tx_sportms.settings.team.seasonGames.pid}
+            }
+            seasonGoals {
+                pid = {$plugin.tx_sportms.settings.team.seasonGoals.pid}
+            }
+            seasonIndex {
+                pid = {$plugin.tx_sportms.settings.team.seasonIndex.pid}
+            }
+            seasonSquad {
+                pid = {$plugin.tx_sportms.settings.team.seasonSquad.pid}
+            }
         }
 
     }
