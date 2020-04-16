@@ -87,7 +87,6 @@
 				->add('orderBy', 'GREATEST(result_end_regular_home, result_end_regular_guest) DESC', true)
 				->ADDORDERBY('result_end_regular_home', \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING)    # a high win away is more powerful than at home
 				->setMaxResults(10);
-			debug($queryBuilder->getSQL());
 			$dataMapper = $this->objectManager->get(\TYPO3\CMS\Extbase\Persistence\Generic\Mapper\DataMapper::class);
 			return $dataMapper->map($this->objectType, $queryBuilder->execute()->fetchAll());
 		}
@@ -127,7 +126,6 @@
 				->add('orderBy', 'GREATEST(result_end_regular_home, result_end_regular_guest) DESC', true)
 				->ADDORDERBY('result_end_regular_home', \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING)    # a high lost at home is more crucial than away
 				->setMaxResults(10);
-			debug($queryBuilder->getSQL());
 			$dataMapper = $this->objectManager->get(\TYPO3\CMS\Extbase\Persistence\Generic\Mapper\DataMapper::class);
 			return $dataMapper->map($this->objectType, $queryBuilder->execute()->fetchAll());
 		}
