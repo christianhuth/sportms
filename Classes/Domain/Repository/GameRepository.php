@@ -89,7 +89,7 @@
 							#->addSelect('(coalesce(' . $tableGameAlias . '.result_end_regular_home, 0) + coalesce(' . $tableGameAlias . '.result_end_regular_guest, 0)) AS goals')
 							->FROM($tableGame, $tableGameAlias)
 							->INNERJOIN($tableGameAlias, $tableSeason, $tableSeasonAlias, $queryBuilder->expr()->eq($tableGameAlias . '.season', $queryBuilder->quoteIdentifier($tableSeasonAlias . '.uid')))
-							->ORDERBY('items')
+							->ORDERBY('goals')
 							->setMaxResults(10);
 			debug($queryBuilder->getSQL());
 			return $queryBuilder->execute();
