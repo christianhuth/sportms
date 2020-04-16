@@ -47,7 +47,7 @@
 			$record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
 			$sport = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord('tx_sportms_domain_model_sport', $record['sport']);
 			$sportAgeLevel = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord('tx_sportms_domain_model_sportagelevel', $record['sport_age_level']);
-			$newLabel = $record['name'] . ' (' . $sport['label'] . ' - ' . $sportAgeLevel['label'] . ')';
+			$newLabel = $record['label'] . ' (' . $sport['label'] . ' - ' . $sportAgeLevel['label'] . ')';
 			$parameters['title'] = $newLabel;
 		}
 		
@@ -55,7 +55,7 @@
 			$record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
 			$competition = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord('tx_sportms_domain_model_competition', $record['competition']);
 			$season = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord('tx_sportms_domain_model_season', $record['season']);
-			$newLabel = $competition['name'] . ' (' . $season['label'] . ')';
+			$newLabel = $competition['label'] . ' (' . $season['label'] . ')';
 			$parameters['title'] = $newLabel;
 		}
 		
@@ -85,7 +85,7 @@
 			$teamHome = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord('tx_sportms_domain_model_team', $teamSeasonHome['team']);
 			$teamSeasonGuest = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord('tx_sportms_domain_model_teamseason', $record['team_season_guest']);
 			$teamGuest = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord('tx_sportms_domain_model_team', $teamSeasonGuest['team']);
-			$newLabel = $competition['name'] . ' (' . $season['abbreviation'] . '): ' . $teamHome['name'] . ' - ' . $teamGuest['name'];
+			$newLabel = $competition['label'] . ' (' . $season['abbreviation'] . '): ' . $teamHome['name'] . ' - ' . $teamGuest['name'];
 			$parameters['title'] = $newLabel;
 		}
 		
