@@ -21,12 +21,12 @@
     <td class="tx-sportms-table-team">
         <f:if condition="{team} == {recordGame.teamSeasonHome.team}">
             <f:then>
-                <f:link.action action="seasonIndex" arguments="{season: recordGame.season, team: recordGame.teamSeasonGuest.team}" controller="Team" pluginName="sportms" pageUid="2244">
+                <f:link.action action="seasonIndex" arguments="{teamSeason: recordGame.teamSeasonGuest}" controller="TeamSeason" pluginName="sportms" pageUid="2244">
                     {recordGame.teamSeasonGuest.team.name}
                 </f:link.action>
             </f:then>
             <f:else>
-                <f:link.action action="seasonIndex" arguments="{season: recordGame.season, team: recordGame.teamSeasonHome.team}" controller="Team" pluginName="sportms" pageUid="2244">
+                <f:link.action action="seasonIndex" arguments="{teamSeason: recordGame.teamSeasonHome}" controller="TeamSeason" pluginName="sportms" pageUid="2244">
                     {recordGame.teamSeasonHome.team.name}
                 </f:link.action>
             </f:else>
