@@ -6,6 +6,10 @@ plugin.tx_sportms {
         skipDefaultArguments = {$plugin.tx_sportms.features.skipDefaultArguments}
     }
 
+    mvc {
+        callDefaultActionIfActionCantBeResolved = {$plugin.tx_sportms.mvc.callDefaultActionIfActionCantBeResolved}
+    }
+
     persistence {
         storagePid = {$plugin.tx_sportms.persistence.storagePid}
         recursive = {$plugin.tx_sportms.persistence.recursive}

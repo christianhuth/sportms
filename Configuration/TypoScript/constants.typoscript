@@ -1,5 +1,7 @@
 # customsubcategory=features=Features
 
+# customsubcategory=mvc=MVC
+
 # customsubcategory=persistence=Persistence
 
 # customsubcategory=sportms=SportMS
@@ -15,6 +17,11 @@ plugin.tx_sportms {
         requireCHashArgumentForActionArguments = 1
         # cat=plugin.tx_sportms/features; type=boolean; label=Skip default arguments in URLs. If a link to the default controller or action is created, the parameters are omitted. Default is false.
         skipDefaultArguments = 0
+    }
+
+    mvc {
+        # cat=plugin.tx_sportms/mvc; type=boolean; label=Will cause the controller to show its default action e.g. if the called action is not allowed by the controller.
+        callDefaultActionIfActionCantBeResolved = 1
     }
 
     persistence {
