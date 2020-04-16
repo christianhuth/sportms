@@ -4,26 +4,26 @@
 <f:layout name="default"/>
 
 <f:section name="default">
-    <f:render arguments="{_all}" partial="Team/HistoryRecordGamesFilter"/>
+    <f:render arguments="{_all}" partial="Team/History/RecordGamesFilter"/>
     <div class="tx-sportms-team-history-recordgames">
         <h3>Die höchsten Siege</h3>
-        <f:render arguments="{recordGames: gamesWithHighestWins, settings: settings, team: team}" partial="Team/RecordGames" />
+        <f:render arguments="{games: gamesWithHighestWins, settings: settings, team: team}" partial="Team/History/RecordGames" />
     </div>
     <div class="tx-sportms-team-history-recordgames">
         <h3>Die höchsten Niederlagen</h3>
-        <f:render arguments="{recordGames: gamesWithHighestLosts, settings: settings, team: team}" partial="Team/RecordGames" />
+        <f:render arguments="{games: gamesWithHighestLosts, settings: settings, team: team}" partial="Team/History/RecordGames" />
     </div>
     <div class="tx-sportms-team-history-recordgames">
         <h3>Die meisten Tore</h3>
-        <f:render arguments="{recordGames: gamesWithMostGoals, settings: settings, team: team}" partial="Team/RecordGames" />
+        <f:render arguments="{games: gamesWithMostGoals, settings: settings, team: team}" partial="Team/History/RecordGames" />
     </div>
     <div class="tx-sportms-team-history-recordgames">
         <h3>Die meisten Zuschauer</h3>
-        <f:render arguments="{recordGames: gamesWithMostSpectators, settings: settings, team: team}" partial="Team/RecordGames" />
+        <f:render arguments="{games: gamesWithMostSpectators, settings: settings, team: team}" partial="Team/History/RecordGames" />
     </div>
     <div class="tx-sportms-team-history-recordgames">
         <h3>Die wenigsten Zuschauer</h3>
-        <f:render arguments="{recordGames: gamesWithFewestSpectators, settings: settings, team: team}" partial="Team/RecordGames" />
+        <f:render arguments="{games: gamesWithFewestSpectators, settings: settings, team: team}" partial="Team/History/RecordGames" />
     </div>
 </f:section>
 
