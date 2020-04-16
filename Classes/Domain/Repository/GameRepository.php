@@ -92,7 +92,7 @@
 							->ORDERBY('goals')
 							->setMaxResults(10);
 			debug($queryBuilder->getSQL());
-			return $queryBuilder->execute();
+			return $queryBuilder->execute()->fetchAll();
 		}
 		
 		public function findGamesWithMostSpectatorsForTeam(int $teamUid) {
