@@ -52,7 +52,34 @@
 			return $query->execute();
 		}
 		
-		public function findHighestWinsForTeam(int $teamUid) {
+		public function findGamesWithHighestWinsForTeam(int $teamUid) {
+			$query = $this->createQuery();
+			$constraints = [];
+			$constraints[] = $this->constraintForTeamUids($query, (string) $teamUid);
+			$query->matching($query->logicalAnd($constraints));
+			$query->setLimit(10);
+			return $query->execute();
+		}
+		
+		public function findGamesWithHighestLostsForTeam(int $teamUid) {
+			$query = $this->createQuery();
+			$constraints = [];
+			$constraints[] = $this->constraintForTeamUids($query, (string) $teamUid);
+			$query->matching($query->logicalAnd($constraints));
+			$query->setLimit(10);
+			return $query->execute();
+		}
+		
+		public function findGamesWithMostSpectatorsForTeam(int $teamUid) {
+			$query = $this->createQuery();
+			$constraints = [];
+			$constraints[] = $this->constraintForTeamUids($query, (string) $teamUid);
+			$query->matching($query->logicalAnd($constraints));
+			$query->setLimit(10);
+			return $query->execute();
+		}
+		
+		public function findGamesWithFewestSpectatorsForTeam(int $teamUid) {
 			$query = $this->createQuery();
 			$constraints = [];
 			$constraints[] = $this->constraintForTeamUids($query, (string) $teamUid);

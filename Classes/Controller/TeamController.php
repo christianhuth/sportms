@@ -102,7 +102,7 @@
 		/**
 		 * @param \Balumedien\Sportms\Domain\Model\Team $team
 		 */
-		public function historyRecordGamesAction(\Balumedien\Sportms\Domain\Model\Team $team) {
+		public function historyRecordGamesAction(\Balumedien\Sportms\Domain\Model\Team $team = NULL) {
 			$this->initializeActions();
 			if($team === NULL) {
 				if($this->settings['team']['uid']) {
