@@ -105,14 +105,12 @@
 		public function historyRecordGamesAction(\Balumedien\Sportms\Domain\Model\Team $team = NULL) {
 			$this->initializeActions();
 			if($team === NULL) {
-				if($this->request->hasArgument('team')) {
-					$teamUid = (int) $this->request->getArgument('team');
-				} else if($this->settings['team']['uid']) {
+				if($this->settings['team']['uid']) {
 					$teamUid = (int) $this->settings['team']['uid'];
+					$team = $this->teamRepository->findByUid($teamUid);
 				} else {
-					// TODO: DIE IF NO TEAM IS SELECTED VIA FLEXFORM OR REQUEST
+					// TODO: DIE IF NO TEAM IS SELECTED VIA FLEXFORM AND NO REQUEST
 				}
-				$team = $this->teamRepository->findByUid($teamUid);
 			} else {
 				$teamUid = $team->getUid();
 			}
