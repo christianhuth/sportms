@@ -97,8 +97,8 @@
 									$queryBuilder->expr()->isNotNull('result_end_regular_guest')
 								),
 								$queryBuilder->expr()->orX(
-									$queryBuilder->expr()->eq($tableTeamSeasonAliasHome . 'team', $teamUid),
-									$queryBuilder->expr()->eq($tableTeamSeasonAliasGuest . 'team', $teamUid)
+									$queryBuilder->expr()->eq($tableTeamSeasonAliasHome . '.team', $teamUid),
+									$queryBuilder->expr()->eq($tableTeamSeasonAliasGuest . '.team', $teamUid)
 								)
 							)
 							->ORDERBY('goals', \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING)
