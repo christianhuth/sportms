@@ -7,7 +7,7 @@
         <f:format.date format="d.m.Y">{recordGame.date}</f:format.date>
     </td>
     <td class="tx-sportms-table-center">{recordGame.season.abbreviation}</td>
-    <td class="tx-sportms-table-center">{recordGame.competitionSeason.competition.label}</td>
+    <td class="tx-sportms-table-left">{recordGame.competitionSeason.competition.label}</td>
     <td class="tx-sportms-table-center">
         <f:if condition="{team} == {recordGame.teamSeasonHome.team}">
             <f:then>
