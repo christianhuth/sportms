@@ -125,4 +125,34 @@
 			}
 		}
 		
+		/**
+		 * @param \Balumedien\Sportms\Domain\Model\Team $team
+		 */
+		public function historyRecordPlayersAction(\Balumedien\Sportms\Domain\Model\Team $team = NULL) {
+			if($team === NULL) {
+				$team = $this->determineTeamFromFlexform();
+			}
+			$this->view->assign('team', $team);
+			$teamUid = $team->getUid();
+			$gamesWithHighestWins = $this->gameRepository->findGamesWithHighestWinsForTeam($teamUid, $this->settings['team']['historyRecordGames']['limit'], $this->getCompetitionsFilter(), $this->getSeasonsFilter());
+			$this->view->assign('gamesWithHighestWins', $gamesWithHighestWins);
+			$gamesWithHighestLosts = $this->gameRepository->findGamesWithHighestLostsForTeam($teamUid, $this->settings['team']['historyRecordGames']['limit'], $this->getCompetitionsFilter(), $this->getSeasonsFilter());
+			$this->view->assign('gamesWithHighestLosts', $gamesWithHighestLosts);
+			$gamesWithMostGoals = $this->gameRepository->findGamesWithMostGoalsForTeam($teamUid, $this->settings['team']['historyRecordGames']['limit'], $this->getCompetitionsFilter(), $this->getSeasonsFilter());
+			$this->view->assign('gamesWithMostGoals', $gamesWithMostGoals);
+			$gamesWithMostSpectators = $this->gameRepository->findGamesWithMostSpectatorsForTeam($teamUid, $this->settings['team']['historyRecordGames']['limit'], $this->getCompetitionsFilter(), $this->getSeasonsFilter());
+			$this->view->assign('gamesWithMostSpectators', $gamesWithMostSpectators);
+			$gamesWithFewestSpectators = $this->gameRepository->findGamesWithFewestSpectatorsForTeam($teamUid, $this->settings['team']['historyRecordGames']['limit'], $this->getCompetitionsFilter(), $this->getSeasonsFilter());
+			$this->view->assign('gamesWithFewestSpectators', $gamesWithFewestSpectators);
+			/* FRONTEND FILTERS */
+			if($this->settings['competition']['competitionsSelectbox']) {
+				$competitionsSelectbox = $this->competitionRepository->findAll($this->getSportsFilter(), $this->getSportAgeGroupsFilter(), $this->getSportAgeLevelsFilter(), $this->getCompetitionTypesFilter(), $this->getCompetitionsFilter(FALSE));
+				$this->view->assign('competitionsSelectbox', $competitionsSelectbox);
+			}
+			if($this->settings['season']['seasonsSelectbox']) {
+				$seasonsSelectbox = $this->seasonRepository->findAll($this->getSeasonsFilter(FALSE));
+				$this->view->assign('seasonsSelectbox', $seasonsSelectbox);
+			}
+		}
+		
 	}
