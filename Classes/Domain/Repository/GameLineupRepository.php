@@ -30,10 +30,10 @@
 			$tableGameLineupAlias = 'gamelineup';
 			$queryBuilder = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Database\ConnectionPool::class)->getQueryBuilderForTable($tableGameLineup);
 			$queryBuilder->SELECT($tableGameLineupAlias . '.*')
-							#->addSelectLiteral($queryBuilder->quoteIdentifier('result_end_regular_home') . '+' . $queryBuilder->quoteIdentifier('result_end_regular_guest') .' AS ' . $queryBuilder->quoteIdentifier('goals'))
+							->addSelectLiteral('COUNT(' . $queryBuilder->quoteIdentifier('game') . ') AS ' . $queryBuilder->quoteIdentifier('games'))
 							->FROM($tableGameLineup, $tableGameLineupAlias)
 							->GROUPBY($tableGameLineupAlias . '.person')
-							#->ORDERBY('goals', \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING)
+							->ORDERBY('games', \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING)
 							->setMaxResults($limit);
 			debug($queryBuilder->getSQL());
 			return $queryBuilder->execute()->fetchAll();
