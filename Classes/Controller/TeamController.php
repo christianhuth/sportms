@@ -105,6 +105,7 @@
 		public function historyRecordGamesAction(\Balumedien\Sportms\Domain\Model\Team $team = NULL) {
 			$this->initializeActions();
 			if($team === NULL) {
+				\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->request->hasArgument('team'), 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 				if($this->request->hasArgument('team')) {
 					$teamUid = (int) $this->request->getArgument('team');
 					\TYPO3\CMS\Core\Utility\DebugUtility::debug($teamUid, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
