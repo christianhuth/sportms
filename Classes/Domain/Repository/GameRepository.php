@@ -86,7 +86,7 @@
 		}
 		
 		// The use statements for the fileheader
-		use MyVendor\MyExtension\Domain\Model\Mymodel;
+		use Balumedien\Sportms\Domain\Model\Game;
 		use TYPO3\CMS\Core\Database\ConnectionPool;
 		use TYPO3\CMS\Core\Database\Query\QueryBuilder;
 		use TYPO3\CMS\Core\Utility\GeneralUtility;
@@ -98,8 +98,7 @@
 		 * @param string $uidList
 		 * @return array|\TYPO3\CMS\Extbase\Persistence\QueryResultInterface
 		 */
-		public function findByUidList($uidList)
-		{
+		public function findByUidList($uidList) {
 			$uids = GeneralUtility::intExplode(',', $uidList, true);
 			if ($uidList === '' || count($uids) === 0) {
 				return [];
@@ -108,14 +107,13 @@
 			$dataMapper = GeneralUtility::makeInstance(DataMapper::class);
 			
 			/** @var QueryBuilder $queryBuilder */
-			$queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)
-				->getQueryBuilderForTable('tx_myext_domain_model_mymodel');
+			$queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getQueryBuilderForTable('tx_sportms_domain_model_game');
 			
 			$rows = $queryBuilder
 				->select('*')
-				->from('tx_myext_domain_model_mymodel')
+				->from('tx_sportms_domain_model_game')
 				->where($queryBuilder->expr()->in('uid', $uids))
-				->add('orderBy', 'FIELD(tx_myext_domain_model_mymodel.uid,' . implode(',', $uids) . ')')
+				->add('orderBy', 'FIELD(tx_sportms_domain_model_game.uid,' . implode(',', $uids) . ')')
 				->execute()
 				->fetchAll();
 			
