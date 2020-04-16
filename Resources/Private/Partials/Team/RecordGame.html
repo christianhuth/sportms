@@ -10,7 +10,7 @@
         <td class="tx-sportms-table-competition">{recordGame.competitionSeason.competition.label}</td>
         <td class="tx-sportms-table-homeaway">H</td>
         <td class="tx-sportms-table-team">
-            <f:if condition="{team == recordGame.teamSeasonHome}">
+            <f:if condition="{team} == {recordGame.teamSeasonHome.team}">
                 <f:then>
                     {recordGame.teamSeasonGuest.team.name}
                 </f:then>
