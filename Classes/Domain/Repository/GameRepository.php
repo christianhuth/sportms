@@ -58,6 +58,7 @@
 			$constraints[] = $this->constraintForTeamUids($query, (string) $teamUid);
 			$query->matching($query->logicalAnd($constraints));
 			$query->setLimit(10);
+			$query->setOrderings(['spectators' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING]);
 			return $query->execute();
 		}
 		

@@ -45,6 +45,10 @@ plugin.tx_sportms {
         team {
             listPid = {$plugin.tx_sportms.settings.team.listPid}
             historyRecordGamesPid = {$plugin.tx_sportms.settings.team.historyRecordGamesPid}
+            historyRecordGames {
+                limit = 10
+                pid = {$plugin.tx_sportms.settings.team.historyRecordGamesPid}
+            }
             seasonGamesPid = {$plugin.tx_sportms.settings.team.seasonGamesPid}
             seasonGoalsPid = {$plugin.tx_sportms.settings.team.seasonGoalsPid}
             seasonIndexPid = {$plugin.tx_sportms.settings.team.seasonIndexPid}

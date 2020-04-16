@@ -21,7 +21,7 @@ plugin.tx_sportms {
         # cat=plugin.tx_sportms/persistence; type=int+; label=Default storage PID
         storagePid =
         # cat=plugin.tx_sportms/persistence; type=int+; label=Recursion level of storage PID
-        recursive = 1
+        recursive = 0
     }
 
     settings {
