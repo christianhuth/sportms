@@ -106,13 +106,13 @@
 			$teamUid = $team->getUid();
 			$gamesWithHighestWins = $this->gameRepository->findGamesWithHighestWinsForTeam($teamUid, $this->settings['team']['historyRecordGames']['limit'], $this->getCompetitionsFilter(), $this->getSeasonsFilter());
 			$this->view->assign('gamesWithHighestWins', $gamesWithHighestWins);
-			$gamesWithHighestLosts = $this->gameRepository->findGamesWithHighestLostsForTeam($teamUid, $this->settings['team']['historyRecordGames']['limit']);
+			$gamesWithHighestLosts = $this->gameRepository->findGamesWithHighestLostsForTeam($teamUid, $this->settings['team']['historyRecordGames']['limit'], $this->getCompetitionsFilter(), $this->getSeasonsFilter());
 			$this->view->assign('gamesWithHighestLosts', $gamesWithHighestLosts);
-			$gamesWithMostGoals = $this->gameRepository->findGamesWithMostGoalsForTeam($teamUid, $this->settings['team']['historyRecordGames']['limit']);
+			$gamesWithMostGoals = $this->gameRepository->findGamesWithMostGoalsForTeam($teamUid, $this->settings['team']['historyRecordGames']['limit'], $this->getCompetitionsFilter(), $this->getSeasonsFilter());
 			$this->view->assign('gamesWithMostGoals', $gamesWithMostGoals);
-			$gamesWithMostSpectators = $this->gameRepository->findGamesWithMostSpectatorsForTeam($teamUid, $this->settings['team']['historyRecordGames']['limit']);
+			$gamesWithMostSpectators = $this->gameRepository->findGamesWithMostSpectatorsForTeam($teamUid, $this->settings['team']['historyRecordGames']['limit'], $this->getCompetitionsFilter(), $this->getSeasonsFilter());
 			$this->view->assign('gamesWithMostSpectators', $gamesWithMostSpectators);
-			$gamesWithFewestSpectators = $this->gameRepository->findGamesWithFewestSpectatorsForTeam($teamUid, $this->settings['team']['historyRecordGames']['limit']);
+			$gamesWithFewestSpectators = $this->gameRepository->findGamesWithFewestSpectatorsForTeam($teamUid, $this->settings['team']['historyRecordGames']['limit'], $this->getCompetitionsFilter(), $this->getSeasonsFilter());
 			$this->view->assign('gamesWithFewestSpectators', $gamesWithFewestSpectators);
 			/* FRONTEND FILTERS */
 			if($this->settings['competition']['competitionsSelectbox']) {
