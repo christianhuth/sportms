@@ -7,7 +7,7 @@ return array(
     'ctrl' => array(
         'crdate' => 'crdate',
         'cruser_id' => 'cruser_id',
-        'default_sortby' => 'ORDER BY name ASC',
+        'default_sortby' => 'ORDER BY label ASC',
         'delete' => 'deleted',
         'dividers2tabs' => TRUE,
         'enablecolumns' => array(
@@ -17,17 +17,17 @@ return array(
         ),
 	    'hideTable' => FALSE,
 		'iconfile' => 'EXT:sportms/Resources/Public/Icons/tx_sportms_domain_model_team.svg',
-        'label' => 'name',
-        'searchFields' => 'name',
+        'label' => 'label',
+        'searchFields' => 'label',
         'title'	=> 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_team',
         'tstamp' => 'tstamp',
 		'versioningWS' => TRUE,
     ),
 	'interface' => array(
-		'showRecordFieldList' => 'name, club, sport, team_seasons',
+		'showRecordFieldList' => 'label, club, sport, team_seasons',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'club, sport, sport_age_group, sport_age_level, name, dummy,
+		'1' => array('showitem' => 'club, sport, sport_age_group, sport_age_level, label, dummy,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_team.tab_seasons, team_seasons,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab_visibility, hidden, detail_link, slug,
 		                            '),
@@ -156,9 +156,9 @@ return array(
                 'type' => 'select',
             ),
         ),
-		'name' => array(
+		'label' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_team.name',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.label',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -206,7 +206,7 @@ return array(
 				'eval' => 'uniqueInSite',
 				'fallbackCharacter' => '-',
 				'generatorOptions' => [
-					'fields' => ['name', 'section_age_level'],
+					'fields' => ['label', 'section_age_level'],
 					'fieldSeparator' => '-',
 					'prefixParentPageSlug' => false,
 					'replacements' => [

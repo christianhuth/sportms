@@ -529,7 +529,7 @@ CREATE TABLE tx_sportms_domain_model_team (
     sport int(11) DEFAULT '0' NOT NULL,
     sport_age_group int(11) DEFAULT '0' NOT NULL,
     sport_age_level int(11) DEFAULT '0' NOT NULL,
-	name varchar(255) DEFAULT '' NOT NULL,
+    label varchar(255) DEFAULT '' NOT NULL,
 	dummy tinyint(4) unsigned DEFAULT '0' NOT NULL,
     detail_link tinyint(4) unsigned DEFAULT '1' NOT NULL,
 	team_seasons int(11) DEFAULT NULL,

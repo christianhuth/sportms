@@ -30,7 +30,7 @@
 		/**
 		 * @var string
 		 */
-		protected $name;
+		protected $label;
 		
 		/**
 		 * @var boolean
@@ -124,15 +124,15 @@
 		/**
 		 * @return string
 		 */
-		public function getName(): string {
-			return $this->name;
+		public function getLabel(): string {
+			return $this->label;
 		}
 		
 		/**
-		 * @param string $name
+		 * @param string $label
 		 */
-		public function setName(string $name): void {
-			$this->name = $name;
+		public function setLabel(string $label): void {
+			$this->label = $label;
 		}
 		
 		/**
