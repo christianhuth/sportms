@@ -1142,9 +1142,6 @@
 			<trans-unit id="tx_sportms_domain_model_teams">
 				<source>Mannschaften</source>
 			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_team.name">
-				<source>Mannschaftsname</source>
-			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_team.dummy">
 				<source>Spielfrei</source>
 			</trans-unit>
