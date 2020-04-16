@@ -7,7 +7,16 @@
         <td class="tx-sportms-table-date"><f:format.date format="d.m.Y">{recordGame.date}</f:format.date></td>
         <td class="tx-sportms-table-season">{recordGame.season.abbreviation}</td>
         <td class="tx-sportms-table-competition">{recordGame.competitionSeason.competition.label}</td>
-        <td class="tx-sportms-table-homeaway">H</td>
+        <td class="tx-sportms-table-homeaway">
+            <f:if condition="{team} == {recordGame.teamSeasonHome.team}">
+                <f:then>
+                    H
+                </f:then>
+                <f:else>
+                    G
+                </f:else>
+            </f:if>
+        </td>
         <td class="tx-sportms-table-team">
             <f:if condition="{team} == {recordGame.teamSeasonHome.team}">
                 <f:then>
