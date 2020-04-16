@@ -427,15 +427,12 @@
 .tx-sportms-table-season,
 .tx-sportms-table-gameday,
 .tx-sportms-table-homeaway,
-.tx-sportms-table-result {
+.tx-sportms-table-result,
+.tx-sportms-table-spectators {
     text-align: center;
 }
 
 .tx-sportms-table-competition,
 .tx-sportms-table-team {
     text-align: left;
-}
-
-.tx-sportms-table-spectators {
-    text-align: right;
 }

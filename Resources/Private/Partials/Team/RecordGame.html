@@ -10,7 +10,7 @@
         <td class="tx-sportms-table-competition">{recordGame.competitionSeason.competition.label}</td>
         <td class="tx-sportms-table-homeaway">H</td>
         <td class="tx-sportms-table-team">{recordGame.teamSeasonHome.team.label}</td>
-        <td class="tx-sportms-table-spectators">{recordGame.spectators}</td>
+        <td class="tx-sportms-table-spectators"><f:render arguments="{spectators: recordGame.spectators}" partial="ViewHelper/Spectators" /></td>
         <td class="tx-sportms-table-result">{recordGame.resultEndRegularHome} : {recordGame.resultEndRegularGuest}</td>
     </tr>
 
