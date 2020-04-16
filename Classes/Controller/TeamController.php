@@ -126,4 +126,55 @@
 			$this->view->assign('team', $team);
 		}
 		
+		/**
+		 * @param \Balumedien\Sportms\Domain\Model\Team $team
+		 * @param \Balumedien\Sportms\Domain\Model\Season $season
+		 */
+		public function seasonGamesAction(\Balumedien\Sportms\Domain\Model\Team $team = NULL, \Balumedien\Sportms\Domain\Model\Season $season = NULL) {
+			$this->initializeActions();
+			if($team === NULL) {
+				if($this->settings['team']['uid']) {
+					$teamUid = $this->settings['team']['uid'];
+					$team = $this->teamRepository->findByUid($teamUid);
+				} else {
+					// TODO: DIE IF NO TEAM IS SELECTED VIA FLEXFORM
+				}
+			}
+			$this->view->assign('team', $team);
+		}
+		
+		/**
+		 * @param \Balumedien\Sportms\Domain\Model\Team $team
+		 * @param \Balumedien\Sportms\Domain\Model\Season $season
+		 */
+		public function seasonGoalsAction(\Balumedien\Sportms\Domain\Model\Team $team = NULL, \Balumedien\Sportms\Domain\Model\Season $season = NULL) {
+			$this->initializeActions();
+			if($team === NULL) {
+				if($this->settings['team']['uid']) {
+					$teamUid = $this->settings['team']['uid'];
+					$team = $this->teamRepository->findByUid($teamUid);
+				} else {
+					// TODO: DIE IF NO TEAM IS SELECTED VIA FLEXFORM
+				}
+			}
+			$this->view->assign('team', $team);
+		}
+		
+		/**
+		 * @param \Balumedien\Sportms\Domain\Model\Team $team
+		 * @param \Balumedien\Sportms\Domain\Model\Season $season
+		 */
+		public function seasonSquadAction(\Balumedien\Sportms\Domain\Model\Team $team = NULL, \Balumedien\Sportms\Domain\Model\Season $season = NULL) {
+			$this->initializeActions();
+			if($team === NULL) {
+				if($this->settings['team']['uid']) {
+					$teamUid = $this->settings['team']['uid'];
+					$team = $this->teamRepository->findByUid($teamUid);
+				} else {
+					// TODO: DIE IF NO TEAM IS SELECTED VIA FLEXFORM
+				}
+			}
+			$this->view->assign('team', $team);
+		}
+		
 	}
