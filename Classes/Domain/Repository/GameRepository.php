@@ -105,11 +105,11 @@
 				->INNERJOIN($tableGameAlias, $tableTeamSeason, $tableTeamSeasonAliasHome, $queryBuilder->expr()->eq($tableGameAlias . '.team_season_home', $queryBuilder->quoteIdentifier($tableTeamSeasonAliasHome . '.uid')))
 				->INNERJOIN($tableGameAlias, $tableTeamSeason, $tableTeamSeasonAliasGuest, $queryBuilder->expr()->eq($tableGameAlias . '.team_season_guest', $queryBuilder->quoteIdentifier($tableTeamSeasonAliasGuest . '.uid')))
 				->WHERE(
-					$queryBuilder->expr()->eq('game_appointment', 6),               # Spiel ist beendet
-					$queryBuilder->expr()->eq('game_rating', 1),                    # Normale Wertung
+					$queryBuilder->expr()->eq($tableGameAlias . '.game_appointment', 6),               # Spiel ist beendet
+					$queryBuilder->expr()->eq($tableGameAlias . '.game_rating', 1),                    # Normale Wertung
 					$queryBuilder->expr()->andX(
-						$queryBuilder->expr()->isNotNull('result_end_regular_home'),
-						$queryBuilder->expr()->isNotNull('result_end_regular_guest')
+						$queryBuilder->expr()->isNotNull($tableGameAlias . '.result_end_regular_home'),
+						$queryBuilder->expr()->isNotNull($tableGameAlias . '.result_end_regular_guest')
 					),
 					$queryBuilder->expr()->orX(
 						$queryBuilder->expr()->andX(
