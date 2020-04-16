@@ -8,15 +8,15 @@
     <div class="tx-sportms-team-history-recordplayer">
         <h3>Die meisten Spiele</h3>
         <f:debug>{playersWithMostGames}</f:debug>
-        <f:render arguments="{recordPlayers: playersWithMostGames, settings: settings}" partial="Team/History/PlayersWithMostGames" />
+        <f:render arguments="{playersWithMostGames: playersWithMostGames, settings: settings}" partial="Team/History/PlayersWithMostGames" />
     </div>
     <div class="tx-sportms-team-history-recordplayer">
         <h3>Die meisten Tore</h3>
-        <f:render arguments="{recordPlayers: playersWithMostGoals, settings: settings}" partial="Team/History/PlayersWithMostGoals" />
+        <f:render arguments="{playersWithMostGoals: playersWithMostGoals, settings: settings}" partial="Team/History/PlayersWithMostGoals" />
     </div>
     <div class="tx-sportms-team-history-recordplayer">
         <h3>Die meisten Vorlagen</h3>
-        <f:render arguments="{recordPlayers: playersWithMostAssists, settings: settings}" partial="Team/History/PlayersWithMostAssists" />
+        <f:render arguments="{playersWithMostAssists: playersWithMostAssists, settings: settings}" partial="Team/History/PlayersWithMostAssists" />
     </div>
 </f:section>
 
