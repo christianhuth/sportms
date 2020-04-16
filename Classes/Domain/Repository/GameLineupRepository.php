@@ -24,5 +24,18 @@
 			}
 			return $query->execute();
 		}
+		
+		public function findPlayersWithMostGames(string $sportUids = NULL, string $sportAgeGroupUids = NULL, string $sportAgeLevelUids = NULL, string $sportPositionGroupUids = NULL, string $sportPositionUids = NULL, string $competitionTypeUids = NULL, string $competitionUids = NULL, string $clubUids = NULL, string $teamUids = NULL, string $seasonUids = NULL, int $limit = 10) {
+			$tableGameLineup = 'tx_sportms_domain_model_gamelineup';
+			$tableGameLineupAlias = 'gamelineup';
+			$queryBuilder = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Database\ConnectionPool::class)->getQueryBuilderForTable($tableGameLineup);
+			$queryBuilder->SELECT($tableGameLineupAlias . '.*')
+							->addSelectLiteral($queryBuilder->quoteIdentifier('result_end_regular_home') . '+' . $queryBuilder->quoteIdentifier('result_end_regular_guest') .' AS ' . $queryBuilder->quoteIdentifier('goals'))
+							->FROM($tableGameLineup, $tableGameLineupAlias)
+							->GROUPBY($tableGameLineupAlias . '.person')
+							->ORDERBY('goals', \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING)
+							->setMaxResults($limit);
+			return $queryBuilder->execute()->fetchAll();
+		}
 	
 	}

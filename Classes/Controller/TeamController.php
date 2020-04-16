@@ -157,16 +157,8 @@
 				$team = $this->determineTeamFromFlexform();
 			}
 			$teamUid = $team->getUid();
-			$playersWithMostGames = $this->gameLineupRepository->findGamesWithHighestWinsForTeam($teamUid, $this->settings['team']['historyRecordGames']['limit'], $this->getCompetitionsFilter(), $this->getSeasonsFilter());
+			$playersWithMostGames = $this->gameLineupRepository->findPlayersWithMostGames($this->getSportsFilter(), $this->getSportAgeGroupsFilter(), $this->getSportAgeLevelsFilter(), $this->getSportPositionGroupsFilter(), $this->getSportPositionsFilter(), $this->getCompetitionTypesFilter(), $this->getCompetitionsFilter(), $this->getClubsFilter(), $teamUid, $this->getSeasonsFilter(), $this->settings['team']['historyRecordPlayers']['limit']);
 			$this->view->assign('playersWithMostGames', $playersWithMostGames);
-			$gamesWithHighestLosts = $this->gameRepository->findGamesWithHighestLostsForTeam($teamUid, $this->settings['team']['historyRecordGames']['limit'], $this->getCompetitionsFilter(), $this->getSeasonsFilter());
-			$this->view->assign('gamesWithHighestLosts', $gamesWithHighestLosts);
-			$gamesWithMostGoals = $this->gameRepository->findGamesWithMostGoalsForTeam($teamUid, $this->settings['team']['historyRecordGames']['limit'], $this->getCompetitionsFilter(), $this->getSeasonsFilter());
-			$this->view->assign('gamesWithMostGoals', $gamesWithMostGoals);
-			$gamesWithMostSpectators = $this->gameRepository->findGamesWithMostSpectatorsForTeam($teamUid, $this->settings['team']['historyRecordGames']['limit'], $this->getCompetitionsFilter(), $this->getSeasonsFilter());
-			$this->view->assign('gamesWithMostSpectators', $gamesWithMostSpectators);
-			$gamesWithFewestSpectators = $this->gameRepository->findGamesWithFewestSpectatorsForTeam($teamUid, $this->settings['team']['historyRecordGames']['limit'], $this->getCompetitionsFilter(), $this->getSeasonsFilter());
-			$this->view->assign('gamesWithFewestSpectators', $gamesWithFewestSpectators);
 			/* FRONTEND FILTERS */
 			if($this->settings['competitionType']['competitionTypesSelectbox']) {
 				$competitionTypesSelectbox = $this->competitionTypeRepository->findAll($this->getCompetitionTypesFilter(FALSE));
@@ -176,13 +168,13 @@
 				$competitionsSelectbox = $this->competitionRepository->findAll($this->getSportsFilter(), $this->getSportAgeGroupsFilter(), $this->getSportAgeLevelsFilter(), $this->getCompetitionTypesFilter(), $this->getCompetitionsFilter(FALSE));
 				$this->view->assign('competitionsSelectbox', $competitionsSelectbox);
 			}
-			if($this->settings['sportAgeGroup']['sportAgeGroupsSelectbox']) {
-				$sportAgeGroupsSelectbox = $this->sportAgeGroupRepository->findAll($this->getSportsFilter(), $this->getSportAgeGroupsFilter(FALSE));
-				$this->view->assign('sportAgeGroupsSelectbox', $sportAgeGroupsSelectbox);
+			if($this->settings['sportPositionGroup']['sportPositionGroupsSelectbox']) {
+				$sportPositionGroupsSelectbox = $this->sportPositionGroupRepository->findAll($this->getSportsFilter(), $this->getSportPositionGroupsFilter(FALSE));
+				$this->view->assign('sportPositionGroupsSelectbox', $sportPositionGroupsSelectbox);
 			}
-			if($this->settings['sportAgeLevel']['sportAgeLevelsSelectbox']) {
-				$sportAgeLevelsSelectbox = $this->sportAgeLevelRepository->findAll($this->getSportsFilter(), $this->getSportAgeGroupsFilter(), $this->getSportAgeLevelsFilter(FALSE));
-				$this->view->assign('sportAgeLevelsSelectbox', $sportAgeLevelsSelectbox);
+			if($this->settings['sportPosition']['sportPositionsSelectbox']) {
+				$sportPositionsSelectbox = $this->sportPositionRepository->findAll($this->getSportsFilter(), $this->getSportPositionGroupsFilter(), $this->getSportPositionsFilter(FALSE));
+				$this->view->assign('sportPositionsSelectbox', $sportPositionsSelectbox);
 			}
 		}
 		

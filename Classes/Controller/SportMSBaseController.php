@@ -36,6 +36,14 @@
 			return $this->getFilter('sportAgeGroup', 'sportAgeGroups', $useSelected);
 		}
 		
+		protected function getSportPositionGroupsFilter($useSelected = TRUE) {
+			return $this->getFilter('sportPositionGroup', 'sportPositionGroups', $useSelected);
+		}
+		
+		protected function getSportPositionsFilter($useSelected = TRUE) {
+			return $this->getFilter('sportPosition', 'sportPositions', $useSelected);
+		}
+		
 		protected function getSportAgeLevelsFilter($useSelected = TRUE) {
 			return $this->getFilter('sportAgeLevel', 'sportAgeLevels', $useSelected);
 		}
