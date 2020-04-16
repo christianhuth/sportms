@@ -72,19 +72,31 @@
 		}
 		
 		public function findGamesWithMostGoalsForTeam(int $teamUid) {
-			$tableGame = 'tx_sportms_domain_model_game';
 			$tableTeamSeason = 'tx_sportms_domain_model_teamseason';
+			$queryBuilder = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Database\ConnectionPool::class)->getQueryBuilderForTable($tableTeamSeason);
+			$teamSeasonUids = $queryBuilder->SELECT('uid')
+											->FROM($tableTeamSeason)
+											->WHERE($queryBuilder->expr()->qa('team', $teamUid))
+											->EXECUTE()
+											->FETCHALL();
+			debug(implode(',', array_column($teamSeasonUids, 'uid')));
+			
+			$tableGame = 'tx_sportms_domain_model_game';
 			$queryBuilder = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Database\ConnectionPool::class)->getQueryBuilderForTable($tableGame);
 			$queryBuilder->SELECT('*')
 							->addSelectLiteral($queryBuilder->quoteIdentifier('result_end_regular_home') . '+' . $queryBuilder->quoteIdentifier('result_end_regular_guest') .' AS ' . $queryBuilder->quoteIdentifier('goals'))
 							->FROM($tableGame)
 							->WHERE(
-								$queryBuilder->expr()->gte('result_end_regular_home', 0),
-								$queryBuilder->expr()->gte('result_end_regular_guest', 0)
-							)
-							->ORWHERE(
-								$queryBuilder->expr()->eq('team_season_home', $teamUid),
-								$queryBuilder->expr()->eq('team_season_guest', $teamUid)
+								$queryBuilder->expr()->eq('game_appointment', 6),               # Spiel ist beendet
+								$queryBuilder->expr()->eq('game_rating', 1),                    # Normale Wertung
+								$queryBuilder->expr()->andX(
+									$queryBuilder->expr()->neq('result_end_regular_home', NULL),
+									$queryBuilder->expr()->neq('result_end_regular_guest', NULL)
+								),
+								$queryBuilder->expr()->orX(
+									$queryBuilder->expr()->in('team_season_home', $teamSeasonUids),
+									$queryBuilder->expr()->in('team_season_guest', $teamSeasonUids)
+								)
 							)
 							->ORDERBY('goals', \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING)
 							->setMaxResults(10);
