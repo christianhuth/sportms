@@ -75,12 +75,13 @@
 			$tableGame = 'tx_sportms_domain_model_game';
 			$queryBuilder = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Database\ConnectionPool::class)->getQueryBuilderForTable($tableGame);
 			$queryBuilder->SELECT('uid')
-							#->addSelectLiteral($queryBuilder->quoteIdentifier('result_end_regular_home') . '+' . $queryBuilder->quoteIdentifier('result_end_regular_guest') .' AS ' . $queryBuilder->quoteIdentifier('goals'))
+							->addSelectLiteral($queryBuilder->quoteIdentifier('result_end_regular_home') . '+' . $queryBuilder->quoteIdentifier('result_end_regular_guest') .' AS ' . $queryBuilder->quoteIdentifier('goals'))
 							->FROM($tableGame)
-							->ORDERBY($queryBuilder->quoteIdentifier('result_end_regular_home') . '+' . $queryBuilder->quoteIdentifier('result_end_regular_guest'))
+							->ORDERBY('goals')
 							->setMaxResults(10);
 			debug($queryBuilder->getSQL());
-			return $queryBuilder->execute();
+			debug($queryBuilder->execute());
+			return null;
 		}
 		
 		public function findGamesWithMostSpectatorsForTeam(int $teamUid) {
