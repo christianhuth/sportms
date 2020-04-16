@@ -1,0 +1,15 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<f:if condition="{settings.season.seasonsSelectbox} ||
+                 {settings.competition.competitionsSelectbox}">
+    <div class="tx-sportms-list-filter well">
+        <f:form action="list" class="form-horizontal" controller="Team" extensionName="sportms" method="POST" noCache="TRUE" noCacheHash="TRUE" pageUid="{settings.team.listPid}" pluginName="sportms">
+            <f:render arguments="{options: seasonsSelectbox,             settings: settings,     value: settings.season.selected}" partial="Form/Select/Season"/>
+            <f:render arguments="{options: competitionsSelectbox,        settings: settings,     value: settings.competition.selected}" partial="Form/Select/Competition"/>
+            <f:render partial="Form/Submit"/>
+        </f:form>
+    </div>
+</f:if>
+
+</html>
