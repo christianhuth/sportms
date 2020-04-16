@@ -80,7 +80,7 @@
 							->ORDERBY('goals')
 							->setMaxResults(10);
 			debug($queryBuilder->getSQL());
-			debug($queryBuilder->execute());
+			debug($queryBuilder->execute()->fetchAll());
 			return null;
 		}
 		
