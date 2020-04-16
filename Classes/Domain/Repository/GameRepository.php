@@ -207,7 +207,7 @@
 			$constraints[] = $this->constraintForTeamUids($query, (string) $teamUid);
 			$constraints[] = $query->greaterThanOrEqual('spectators', 0);
 			if($competitionUids) {
-				$this->constraintForCompetitionUids($query, $competitionUids);
+				$constraints[] = $this->constraintForCompetitionUids($query, $competitionUids);
 			}
 			$query->matching($query->logicalAnd($constraints));
 			$query->setLimit($limit);
