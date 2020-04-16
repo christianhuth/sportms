@@ -31,7 +31,7 @@
 			$tablePerson = 'tx_sportms_domain_model_person';
 			$tablePersonAlias = 'person';
 			$queryBuilder = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Database\ConnectionPool::class)->getQueryBuilderForTable($tableGameLineup);
-			$queryBuilder->SELECT($tablePersonAlias . '.uid', $tablePersonAlias . '.firstname', $tablePersonAlias . '.lastname', $tablePersonAlias . '.detail_link')
+			$queryBuilder->SELECT($tableGameLineupAlias . '.*', $tablePersonAlias . '.*')
 							->addSelectLiteral('COUNT(' . $tableGameLineupAlias . '.' . $queryBuilder->quoteIdentifier('game') . ') AS ' . $queryBuilder->quoteIdentifier('numberOfGames'))
 							->FROM($tableGameLineup, $tableGameLineupAlias)
 							->INNERJOIN($tableGameLineupAlias, $tablePerson, $tablePersonAlias, $queryBuilder->expr()->eq($tableGameLineupAlias . '.person', $queryBuilder->quoteIdentifier($tablePersonAlias . '.uid')))
