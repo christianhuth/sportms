@@ -15,11 +15,6 @@
 		protected $numberOfGames;
 		
 		/**
-		 * @var int
-		 */
-		protected $numberOfGames;
-		
-		/**
 		 * @return Person
 		 */
 		public function getPerson(): Person {
