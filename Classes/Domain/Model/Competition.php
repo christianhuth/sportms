@@ -8,16 +8,6 @@
 	class Competition extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 		
 		/**
-		 * @var string
-		 */
-		protected $name;
-		
-		/**
-		 * @var string
-		 */
-		protected $nameShort;
-		
-		/**
 		 * @var \Balumedien\Sportms\Domain\Model\Sport
 		 */
 		protected $sport;
@@ -38,6 +28,16 @@
 		protected $competitionType;
 		
 		/**
+		 * @var string
+		 */
+		protected $label;
+		
+		/**
+		 * @var string
+		 */
+		protected $abbreviation;
+		
+		/**
 		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\CompetitionSeason>
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
@@ -45,7 +45,7 @@
 		protected $competitionSeasons;
 		
 		/**
-		 * @var boolean
+		 * @var bool
 		 */
 		protected $detailLink;
 		
@@ -67,93 +67,93 @@
 		}
 		
 		/**
-		 * @return string
+		 * @return Sport
 		 */
-		public function getName(): string {
-			return $this->name;
-		}
-		
-		/**
-		 * @param string $name
-		 */
-		public function setName(string $name): void {
-			$this->name = $name;
-		}
-		
-		/**
-		 * @return string
-		 */
-		public function getNameShort(): string {
-			return $this->nameShort;
-		}
-		
-		/**
-		 * @param string $nameShort
-		 */
-		public function setNameShort(string $nameShort): void {
-			$this->nameShort = $nameShort;
-		}
-		
-		/**
-		 * @return \Balumedien\Sportms\Domain\Model\Sport
-		 */
-		public function getSport(): \Balumedien\Sportms\Domain\Model\Sport {
+		public function getSport(): Sport {
 			return $this->sport;
 		}
 		
 		/**
-		 * @param \Balumedien\Sportms\Domain\Model\Sport $sport
+		 * @param Sport $sport
 		 */
-		public function setSport(\Balumedien\Sportms\Domain\Model\Sport $sport): void {
+		public function setSport(Sport $sport): void {
 			$this->sport = $sport;
 		}
 		
 		/**
-		 * @return \Balumedien\Sportms\Domain\Model\SportAgeGroup
+		 * @return SportAgeGroup
 		 */
-		public function getSportAgeGroup(): \Balumedien\Sportms\Domain\Model\SportAgeGroup {
+		public function getSportAgeGroup(): SportAgeGroup {
 			return $this->sportAgeGroup;
 		}
 		
 		/**
-		 * @param \Balumedien\Sportms\Domain\Model\SportAgeGroup $sportAgeGroup
+		 * @param SportAgeGroup $sportAgeGroup
 		 */
-		public function setSportAgeGroup(\Balumedien\Sportms\Domain\Model\SportAgeGroup $sportAgeGroup): void {
+		public function setSportAgeGroup(SportAgeGroup $sportAgeGroup): void {
 			$this->sportAgeGroup = $sportAgeGroup;
 		}
 		
 		/**
-		 * @return \Balumedien\Sportms\Domain\Model\SportAgeLevel
+		 * @return SportAgeLevel
 		 */
-		public function getSportAgeLevel(): \Balumedien\Sportms\Domain\Model\SportAgeLevel {
+		public function getSportAgeLevel(): SportAgeLevel {
 			return $this->sportAgeLevel;
 		}
 		
 		/**
-		 * @param \Balumedien\Sportms\Domain\Model\SportAgeLevel $sportAgeLevel
+		 * @param SportAgeLevel $sportAgeLevel
 		 */
-		public function setSportAgeLevel(\Balumedien\Sportms\Domain\Model\SportAgeLevel $sportAgeLevel): void {
+		public function setSportAgeLevel(SportAgeLevel $sportAgeLevel): void {
 			$this->sportAgeLevel = $sportAgeLevel;
 		}
 		
 		/**
-		 * @return \Balumedien\Sportms\Domain\Model\CompetitionType
+		 * @return CompetitionType
 		 */
-		public function getCompetitionType(): \Balumedien\Sportms\Domain\Model\CompetitionType {
+		public function getCompetitionType(): CompetitionType {
 			return $this->competitionType;
 		}
 		
 		/**
-		 * @param \Balumedien\Sportms\Domain\Model\CompetitionType $competitionType
+		 * @param CompetitionType $competitionType
 		 */
-		public function setCompetitionType(\Balumedien\Sportms\Domain\Model\CompetitionType $competitionType): void {
+		public function setCompetitionType(CompetitionType $competitionType): void {
 			$this->competitionType = $competitionType;
 		}
 		
 		/**
-		 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage|null
+		 * @return string
 		 */
-		public function getCompetitionSeasons(): ?\TYPO3\CMS\Extbase\Persistence\ObjectStorage {
+		public function getLabel(): string {
+			return $this->label;
+		}
+		
+		/**
+		 * @param string $label
+		 */
+		public function setLabel(string $label): void {
+			$this->label = $label;
+		}
+		
+		/**
+		 * @return string
+		 */
+		public function getAbbreviation(): string {
+			return $this->abbreviation;
+		}
+		
+		/**
+		 * @param string $abbreviation
+		 */
+		public function setAbbreviation(string $abbreviation): void {
+			$this->abbreviation = $abbreviation;
+		}
+		
+		/**
+		 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+		 */
+		public function getCompetitionSeasons(): \TYPO3\CMS\Extbase\Persistence\ObjectStorage {
 			return $this->competitionSeasons;
 		}
 		

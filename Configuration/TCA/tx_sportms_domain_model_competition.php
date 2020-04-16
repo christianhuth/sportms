@@ -25,10 +25,10 @@
 			'versioningWS' => TRUE,
 		),
 		'interface' => array(
-			'showRecordFieldList' => 'sport, sport_age_group, sport_age_level, competition_type, name, slug',
+			'showRecordFieldList' => 'sport, sport_age_group, sport_age_level, competition_type, label, abbreviation, slug',
 		),
 		'types' => array(
-			'1' => array('showitem' => 'sport, sport_age_group, sport_age_level, competition_type, name, name_short,
+			'1' => array('showitem' => 'sport, sport_age_group, sport_age_level, competition_type, label, abbreviation,
 										--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_competition.tab_seasons, competition_seasons,
 										--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab_visibility, hidden, detail_link, slug,
 			                            '),
@@ -165,18 +165,18 @@
 					'type' => 'select',
 				),
 			),
-			'name' => array(
+			'label' => array(
 				'exclude' => 1,
-				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_competition.name',
+				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.label',
 				'config' => array(
 					'type' => 'input',
 					'size' => 30,
 					'eval' => 'trim, required'
 				),
 			),
-			'name_short' => array(
+			'abbreviation' => array(
 				'exclude' => 1,
-				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_competition.name_short',
+				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.abbreviation',
 				'config' => array(
 					'eval' => 'trim',
 					'size' => 15,

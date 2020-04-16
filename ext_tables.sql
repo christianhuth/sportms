@@ -137,10 +137,10 @@ CREATE TABLE tx_sportms_domain_model_competition (
     sport_age_group int(11) DEFAULT '0' NOT NULL,
     sport_age_level int(11) DEFAULT '0' NOT NULL,
     competition_type int(11) DEFAULT '0' NOT NULL,
-	name varchar(255) DEFAULT '0' NOT NULL,
-	name_short varchar(255) DEFAULT NULL,
+	label varchar(255) DEFAULT '0' NOT NULL,
+	abbreviation varchar(255) DEFAULT NULL,
 	competition_seasons int(11) DEFAULT NULL,
-	detail_link tinyint(4) unsigned DEFAULT '1' NOT NULL,
+	detail_link tinyint(4) unsigned DEFAULT 0 NOT NULL,
     slug varchar(2048) DEFAULT ''
 );
 

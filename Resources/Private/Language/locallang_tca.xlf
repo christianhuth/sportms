@@ -280,12 +280,6 @@
 			<trans-unit id="tx_sportms_domain_model_competitions">
 				<source>Wettbewerbe</source>
 			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_competition.name">
-				<source>Wettbewerbsname</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_competition.name_short">
-				<source>Kurzform</source>
-			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_competition.tab_seasons">
 				<source>Saison-Instanzen</source>
 			</trans-unit>
