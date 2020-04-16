@@ -80,7 +80,8 @@
 							->ORDERBY('goals')
 							->setMaxResults(10);
 			debug($queryBuilder->getSQL());
-			debug($queryBuilder->execute()->fetchAll());
+			$gameUids = array_column($queryBuilder->execute()->fetchAll(), 'uid');
+			debug($gameUids);
 			return null;
 		}
 		
