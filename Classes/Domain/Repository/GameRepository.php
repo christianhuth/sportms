@@ -101,6 +101,7 @@
 							)
 							->ORDERBY('goals', \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING)
 							->setMaxResults(10);
+			debug($queryBuilder->getSQL());
 			$dataMapper = $this->objectManager->get(\TYPO3\CMS\Extbase\Persistence\Generic\Mapper\DataMapper::class);
 			return $dataMapper->map($this->objectType, $queryBuilder->execute()->fetchAll());
 		}
