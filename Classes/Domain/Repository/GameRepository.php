@@ -90,8 +90,8 @@
 								$queryBuilder->expr()->eq('game_appointment', 6),               # Spiel ist beendet
 								$queryBuilder->expr()->eq('game_rating', 1),                    # Normale Wertung
 								$queryBuilder->expr()->andX(
-									$queryBuilder->expr()->neq('result_end_regular_home', NULL),
-									$queryBuilder->expr()->neq('result_end_regular_guest', NULL)
+									$queryBuilder->expr()->isNotNull('result_end_regular_home'),
+									$queryBuilder->expr()->isNotNull('result_end_regular_guest')
 								),
 								$queryBuilder->expr()->orX(
 									$queryBuilder->expr()->in('team_season_home', $teamSeasonUids),
