@@ -92,19 +92,13 @@
 						)
 					)
 				)
+				->GROUPBY($tableGameAlias . '.uid')
 				->ORDERBY('difference', \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING)
+				->ADDORDERBY()
 				->setMaxResults(10);
 			debug($queryBuilder->getSQL());
 			$dataMapper = $this->objectManager->get(\TYPO3\CMS\Extbase\Persistence\Generic\Mapper\DataMapper::class);
 			return $dataMapper->map($this->objectType, $queryBuilder->execute()->fetchAll());
-			
-			
-			$query = $this->createQuery();
-			$constraints = [];
-			$constraints[] = $this->constraintForTeamUids($query, (string) $teamUid);
-			$query->matching($query->logicalAnd($constraints));
-			$query->setLimit(10);
-			return $query->execute();
 		}
 		
 		public function findGamesWithMostGoalsForTeam(int $teamUid) {
