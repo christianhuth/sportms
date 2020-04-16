@@ -117,6 +117,8 @@
 			$this->view->assign('gamesWithHighestWins', $gamesWithHighestWins);
 			$gamesWithHighestLosts = $this->gameRepository->findGamesWithHighestLostsForTeam($teamUid);
 			$this->view->assign('gamesWithHighestLosts', $gamesWithHighestLosts);
+			$gamesWithMostGoals = $this->gameRepository->findGamesWithMostGoalsForTeam($teamUid);
+			$this->view->assign('gamesWithMostGoals', $gamesWithMostGoals);
 			$gamesWithMostSpectators = $this->gameRepository->findGamesWithMostSpectatorsForTeam($teamUid);
 			$this->view->assign('gamesWithMostSpectators', $gamesWithMostSpectators);
 			$gamesWithFewestSpectators = $this->gameRepository->findGamesWithFewestSpectatorsForTeam($teamUid);

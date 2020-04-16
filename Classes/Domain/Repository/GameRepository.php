@@ -71,6 +71,15 @@
 			return $query->execute();
 		}
 		
+		public function findGamesWithMostGoalsForTeam(int $teamUid) {
+			$query = $this->createQuery();
+			$constraints = [];
+			$constraints[] = $this->constraintForTeamUids($query, (string) $teamUid);
+			$query->matching($query->logicalAnd($constraints));
+			$query->setLimit(10);
+			return $query->execute();
+		}
+		
 		public function findGamesWithMostSpectatorsForTeam(int $teamUid) {
 			return $this->findRecordGamesBySpectatorsForTeam($teamUid, \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING);
 		}

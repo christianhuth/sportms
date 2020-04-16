@@ -14,6 +14,10 @@
         <f:render arguments="{recordGames: gamesWithHighestLosts, settings: settings, team: team}" partial="Team/RecordGames" />
     </div>
     <div class="tx-sportms-team-history-recordgames">
+        <h3>Die meisten Tore</h3>
+        <f:render arguments="{recordGames: gamesWithMostGoals, settings: settings, team: team}" partial="Team/RecordGames" />
+    </div>
+    <div class="tx-sportms-team-history-recordgames">
         <h3>Die meisten Zuschauer</h3>
         <f:render arguments="{recordGames: gamesWithMostSpectators, settings: settings, team: team}" partial="Team/RecordGames" />
     </div>
