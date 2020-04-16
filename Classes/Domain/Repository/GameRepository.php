@@ -81,7 +81,7 @@
 								$queryBuilder->expr()->gte('result_end_regular_home', 0),
 								$queryBuilder->expr()->gte('result_end_regular_guest', 0)
 							)
-							->ORDERBY('goals DESC')
+							->ORDERBY('goals', \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING)
 							->setMaxResults(10);
 			debug($queryBuilder->getSQL());
 			$dataMapper = $this->objectManager->get(\TYPO3\CMS\Extbase\Persistence\Generic\Mapper\DataMapper::class);
