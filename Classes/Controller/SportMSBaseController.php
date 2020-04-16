@@ -125,6 +125,7 @@
 				return $this->teamRepository->findByUid($teamUid);
 			} else {
 				// TODO: DIE IF NO TEAM IS SELECTED VIA FLEXFORM
+				return null;
 			}
 		}
 		
