@@ -7,12 +7,12 @@
 		/**
 		 * @var \Balumedien\Sportms\Domain\Model\Person
 		 */
-		private $person;
+		protected $person;
 		
 		/**
 		 * @var int
 		 */
-		private $numberOfGames;
+		protected $numberOfGames;
 		
 		
 		/**
