@@ -105,18 +105,17 @@
 		public function historyRecordGamesAction(\Balumedien\Sportms\Domain\Model\Team $team = NULL) {
 			$this->initializeActions();
 			if($team === NULL) {
-				\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->request->hasArgument('team'), 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 				if($this->request->hasArgument('team')) {
 					$teamUid = (int) $this->request->getArgument('team');
-					\TYPO3\CMS\Core\Utility\DebugUtility::debug($teamUid, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 				} else if($this->settings['team']['uid']) {
 					$teamUid = (int) $this->settings['team']['uid'];
 				} else {
 					// TODO: DIE IF NO TEAM IS SELECTED VIA FLEXFORM OR REQUEST
 				}
 				$team = $this->teamRepository->findByUid($teamUid);
+			} else {
+				$teamUid = $team->getUid();
 			}
-			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->request, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			$this->view->assign('team', $team);
 			$gamesWithHighestWins = $this->gameRepository->findGamesWithHighestWinsForTeam($teamUid);
 			$this->view->assign('gamesWithHighestWins', $gamesWithHighestWins);
