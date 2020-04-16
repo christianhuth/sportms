@@ -4,7 +4,7 @@
 
     <tr>
         <td>{position + 1}</td>
-        <td>{recordGame.date}</td>
+        <td><f:format.date format="d.m.Y">{recordGame.date}</f:format.date></td>
         <td>{recordGame.season.abbreviation}</td>
         <td>{recordGame.gameday}</td>
         <td>{recordGame.competitionSeason.competition.label}</td>
