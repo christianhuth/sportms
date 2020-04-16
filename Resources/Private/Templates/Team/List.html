@@ -6,6 +6,31 @@
 <f:section name="default">
     <div class="tx-sportms-team-list">
         <f:render arguments="{_all}" partial="Team/ListFilter"/>
+        <div class="table-responsive">
+            <table class="table table-bordered table-condensed table-hover table-striped">
+                <thead>
+                <tr>
+                    <th class="tx-sportms-table-club">Verein</th>
+                    <th class="tx-sportms-table-sport">Sportart</th>
+                    <th class="tx-sportms-table-sportagegroup">Altersgruppe</th>
+                    <th class="tx-sportms-table-sportagelevel">Altersstufe</th>
+                    <th class="tx-sportms-table-team">Mannschaft</th>
+                </tr>
+                </thead>
+                <tbody>
+                <f:if condition="{teams}">
+                    <f:then>
+                        <f:for as="team" each="{teams}">
+                            <f:render arguments="{team: team}" partial="Team/ListItem"/>
+                        </f:for>
+                    </f:then>
+                    <f:else>
+                        <td colspan="5">Keine Mannschaften gefunden</td>
+                    </f:else>
+                </f:if>
+                </tbody>
+            </table>
+        </div>
     </div>
 </f:section>
 

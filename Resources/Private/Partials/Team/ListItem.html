@@ -2,18 +2,6 @@
       xmlns:sportms="Balumedien\Sportms\ViewHelpers"
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
-<tr>
-    <td class="tx-sportms-table-club">
-        <sportms:link.action Club="{team.club}">{team.club.name}</sportms:link.action>
-    </td>
-    <td class="tx-sportms-table-clubsection">
-        <sportms:link.action ClubSection="{team.clubSection}" arguments="{club: team.clubSection.club, section: team.clubSection.section}">{team.clubSection.section.label}</sportms:link.action>
-    </td>
-    <td class="tx-sportms-table-team">
-        <sportms:link.action Team="{team}">{team.label}</sportms:link.action>
-    </td>
-    <td class="tx-sportms-table-sportagegroup">{team.sportAgeGroup.label}</td>
-    <td class="tx-sportms-table-sportagelevel">{team.sportAgeLevel.label}</td>
-</tr>
+
 
 </html>
