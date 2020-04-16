@@ -430,10 +430,14 @@
 .tx-sportms-table-position,
 .tx-sportms-table-result,
 .tx-sportms-table-season,
-.tx-sportms-table-spectators {
+.tx-sportms-table-spectators,
+.tx-sportms-table-sport,
+.tx-sportms-table-sportagegroup,
+.tx-sportms-table-sportagelevel {
     text-align: center;
 }
 
+.tx-sportms-table-club,
 .tx-sportms-table-team {
     text-align: left;
 }
