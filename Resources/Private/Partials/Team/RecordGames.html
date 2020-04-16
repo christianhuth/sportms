@@ -4,15 +4,15 @@
 <table class="table table-bordered table-hover table-striped">
     <thead>
     <tr>
-        <th>#</th>
-        <th>Datum</th>
-        <th>Saison</th>
-        <th>Sptg.</th>
-        <th>Wettbewerb</th>
-        <th>Ort</th>
-        <th>Gegner</th>
-        <th>Zuschauer</th>
-        <th>Ergebnis</th>
+        <th class="tx-sportms-table-position">#</th>
+        <th class="tx-sportms-table-date">Datum</th>
+        <th class="tx-sportms-table-season">Saison</th>
+        <th class="tx-sportms-table-gameday">Sptg.</th>
+        <th class="tx-sportms-table-competition">Wettbewerb</th>
+        <th class="tx-sportms-table-homeaway">Ort</th>
+        <th class="tx-sportms-table-team">Gegner</th>
+        <th class="tx-sportms-table-spectators">Zuschauer</th>
+        <th class="tx-sportms-table-result">Ergebnis</th>
     </tr>
     </thead>
     <tbody>
@@ -24,7 +24,7 @@
         </f:then>
         <f:else>
             <tr>
-                <td colspan="8">Keine Rekordspiele gefunden.</td>
+                <td class="tx-sportms-table-nodata" colspan="8">Keine Rekordspiele gefunden.</td>
             </tr>
         </f:else>
     </f:if>

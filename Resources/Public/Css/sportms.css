@@ -422,12 +422,13 @@
 
 
 
-.tx-sportms-table-position,
 .tx-sportms-table-date,
-.tx-sportms-table-season,
 .tx-sportms-table-gameday,
 .tx-sportms-table-homeaway,
+.tx-sportms-table-nodata,
+.tx-sportms-table-position,
 .tx-sportms-table-result,
+.tx-sportms-table-season,
 .tx-sportms-table-spectators {
     text-align: center;
 }
