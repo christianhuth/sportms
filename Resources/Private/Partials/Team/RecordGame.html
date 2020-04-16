@@ -32,9 +32,7 @@
         <f:render arguments="{spectators: recordGame.spectators}" partial="ViewHelper/GameSpectators"/>
     </td>
     <td class="tx-sportms-table-result">
-        <f:link.action action="showIndex" arguments="{game: recordGame.uid}" controller="Game" pluginName="sportms" pageUid="2246">
-            {recordGame.resultEndRegularHome} : {recordGame.resultEndRegularGuest}
-        </f:link.action>
+        <f:render arguments="{settings: settings, game: recordGame}" partial="ViewHelper/Link/Game/ShowIndex" />
     </td>
 </tr>
 
