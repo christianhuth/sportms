@@ -1,34 +1,41 @@
 <html data-namespace-typo3-fluid="true"
-      xmlns:clubms="Balumedien\Clubms\ViewHelpers"
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
-    <tr>
-        <td class="tx-sportms-table-position">{position + 1}</td>
-        <td class="tx-sportms-table-date"><f:format.date format="d.m.Y">{recordGame.date}</f:format.date></td>
-        <td class="tx-sportms-table-season">{recordGame.season.abbreviation}</td>
-        <td class="tx-sportms-table-competition">{recordGame.competitionSeason.competition.label}</td>
-        <td class="tx-sportms-table-homeaway">
-            <f:if condition="{team} == {recordGame.teamSeasonHome.team}">
-                <f:then>
-                    H
-                </f:then>
-                <f:else>
-                    G
-                </f:else>
-            </f:if>
-        </td>
-        <td class="tx-sportms-table-team">
-            <f:if condition="{team} == {recordGame.teamSeasonHome.team}">
-                <f:then>
-                    {recordGame.teamSeasonGuest.team.name}
-                </f:then>
-                <f:else>
-                    {recordGame.teamSeasonHome.team.name}
-                </f:else>
-            </f:if>
-        </td>
-        <td class="tx-sportms-table-spectators"><f:render arguments="{spectators: recordGame.spectators}" partial="ViewHelper/Spectators" /></td>
-        <td class="tx-sportms-table-result">{recordGame.resultEndRegularHome} : {recordGame.resultEndRegularGuest}</td>
-    </tr>
+<tr>
+    <td class="tx-sportms-table-position">{position + 1}</td>
+    <td class="tx-sportms-table-date">
+        <f:format.date format="d.m.Y">{recordGame.date}</f:format.date>
+    </td>
+    <td class="tx-sportms-table-season">{recordGame.season.abbreviation}</td>
+    <td class="tx-sportms-table-competition">{recordGame.competitionSeason.competition.label}</td>
+    <td class="tx-sportms-table-homeaway">
+        <f:if condition="{team} == {recordGame.teamSeasonHome.team}">
+            <f:then>
+                H
+            </f:then>
+            <f:else>
+                G
+            </f:else>
+        </f:if>
+    </td>
+    <td class="tx-sportms-table-team">
+        <f:if condition="{team} == {recordGame.teamSeasonHome.team}">
+            <f:then>
+                {recordGame.teamSeasonGuest.team.name}
+            </f:then>
+            <f:else>
+                {recordGame.teamSeasonHome.team.name}
+            </f:else>
+        </f:if>
+    </td>
+    <td class="tx-sportms-table-spectators">
+        <f:render arguments="{spectators: recordGame.spectators}" partial="ViewHelper/Spectators"/>
+    </td>
+    <td class="tx-sportms-table-result">
+        <f:link.action action="showIndex" arguments="{_all}" controller="Game" pageUid="2246">
+            {recordGame.resultEndRegularHome} : {recordGame.resultEndRegularGuest}
+        </f:link.action>
+    </td>
+</tr>
 
 </html>
