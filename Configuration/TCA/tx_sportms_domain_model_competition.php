@@ -8,7 +8,7 @@
 		'ctrl' => array(
 			'crdate' => 'crdate',
 			'cruser_id' => 'cruser_id',
-			'default_sortby' => 'name',
+			'default_sortby' => 'ORDER BY label ASC',
 			'delete' => 'deleted',
 			'enablecolumns' => array(
 				'disabled' => 'hidden',
@@ -19,7 +19,7 @@
 			'iconfile' => 'EXT:sportms/Resources/Public/Icons/tx_sportms_domain_model_competition.svg',
 	        'label' => '',
 	        'label_userFunc' => \Balumedien\Sportms\Configuration\TCA\UserFunc\UserFunc::class . '->CompetitionLabel',
-			'searchFields' => 'name, name_short',
+			'searchFields' => 'label, abbreviation',
 			'title'	=> 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_competition',
 			'tstamp' => 'tstamp',
 			'versioningWS' => TRUE,
@@ -225,7 +225,7 @@
 					'eval' => 'uniqueInSite',
 					'fallbackCharacter' => '-',
 					'generatorOptions' => [
-						'fields' => ['name'],
+						'fields' => ['label'],
 						'fieldSeparator' => '-',
 						'prefixParentPageSlug' => FALSE,
 						'replacements' => [
