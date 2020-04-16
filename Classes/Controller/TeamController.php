@@ -107,6 +107,7 @@
 			if($team === NULL) {
 				if($this->request->hasArgument('team')) {
 					$teamUid = (int) $this->request->getArgument('team');
+					\TYPO3\CMS\Core\Utility\DebugUtility::debug($teamUid, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 				} else if($this->settings['team']['uid']) {
 					$teamUid = (int) $this->settings['team']['uid'];
 				} else {
@@ -115,7 +116,6 @@
 				$team = $this->teamRepository->findByUid($teamUid);
 			}
 			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->request, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
-			\TYPO3\CMS\Core\Utility\DebugUtility::debug($teamUid, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			$this->view->assign('team', $team);
 			$gamesWithHighestWins = $this->gameRepository->findGamesWithHighestWinsForTeam($teamUid);
 			$this->view->assign('gamesWithHighestWins', $gamesWithHighestWins);
