@@ -10,16 +10,16 @@
 		protected $model = 'team';
 		
 		/**
-		 * @var \Balumedien\Sportms\Domain\Repository\TeamRepository
+		 * @var \Balumedien\Sportms\Domain\Repository\ClubRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
-		protected $teamRepository;
+		protected $clubRepository;
 		
 		/**
-		 * @var \Balumedien\Sportms\Domain\Repository\TeamSeasonRepository
+		 * @var \Balumedien\Sportms\Domain\Repository\GameRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
-		protected $teamSeasonRepository;
+		protected $gameRepository;
 		
 		/**
 		 * @var \Balumedien\Sportms\Domain\Repository\SportRepository
@@ -40,10 +40,16 @@
 		protected $sportAgeLevelRepository;
 		
 		/**
-		 * @var \Balumedien\Sportms\Domain\Repository\ClubRepository
+		 * @var \Balumedien\Sportms\Domain\Repository\TeamRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
-		protected $clubRepository;
+		protected $teamRepository;
+		
+		/**
+		 * @var \Balumedien\Sportms\Domain\Repository\TeamSeasonRepository
+		 * @TYPO3\CMS\Extbase\Annotation\Inject
+		 */
+		protected $teamSeasonRepository;
 		
 		/**
 		 * Initializes the controller before invoking an action method.
@@ -100,13 +106,13 @@
 			$this->initializeActions();
 			if($team === NULL) {
 				if($this->settings['team']['uid']) {
-					$teamUid = $this->settings['team']['uid'];
-					$team = $this->teamRepository->findByUid($teamUid);
+					$teamUid = (int) $this->settings['team']['uid'];
 				} else {
 					// TODO: DIE IF NO TEAM IS SELECTED VIA FLEXFORM
 				}
 			}
-			$this->view->assign('team', $team);
+			$highestWins = $this->gameRepository->findHighestWinsForTeam($teamUid);
+			$this->view->assign('highestWins', $highestWins);
 		}
 		
 		/**

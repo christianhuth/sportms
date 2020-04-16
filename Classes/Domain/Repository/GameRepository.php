@@ -20,37 +20,31 @@
 			$query = $this->createQuery();
 			$constraints = [];
 			if($sportUids) {
-				$constraints[] = $query->in('competitionSeason.competition.sport', explode(',', $sportUids));
+				$constraints[] = $this->constraintForSportUids($query, $sportUids);
 			}
 			if($sportAgeGroupUids) {
-				$constraints[] = $query->in('competitionSeason.competition.sportAgeGroup', explode(',', $sportAgeGroupUids));
+				$constraints[] = $this->constraintForSportAgeGroupUids($query, $sportAgeGroupUids);
 			}
 			if($sportAgeLevelUids) {
-				$constraints[] = $query->in('competitionSeason.competition.sportAgeLevel', explode(',', $sportAgeLevelUids));
+				$constraints[] = $this->constraintForSportAgeLevelUids($query, $sportAgeLevelUids);
 			}
 			if($competitionTypeUids) {
-				$constraints[] = $query->in('competitionSeason.competition.competitionType', explode(',', $competitionTypeUids));
+				$constraints[] = $this->constraintForCompetitionTypeUids($query, $competitionTypeUids);
 			}
 			if($competitionUids) {
-				$constraints[] = $query->in('competitionSeason.competition', explode(',', $competitionUids));
+				$constraints[] = $this->constraintForCompetitionUids($query, $competitionUids);
 			}
 			if($clubUids) {
-				$constraints[] = $query->logicalOr(
-					$query->in('teamSeasonHome.team.club', explode(',', $clubUids)),
-					$query->in('teamSeasonGuest.team.club', explode(',', $clubUids))
-				);
+				$constraints[] = $this->constraintForClubUids($query, $clubUids);
 			}
 			if($teamUids) {
-				$constraints[] = $query->logicalOr(
-					$query->in('teamSeasonHome.team', explode(',', $teamUids)),
-					$query->in('teamSeasonGuest.team', explode(',', $teamUids))
-				);
+				$constraints[] = $this->constraintForTeamUids($query, $teamUids);
 			}
 			if($seasonUids) {
-				$constraints[] = $query->in('season', explode(',', $seasonUids));
+				$constraints[] = $this->constraintForSeasonUids($query, $seasonUids);
 			}
 			if($competitionSeasonGamedayUids) {
-				$constraints[] = $query->in('gameday', explode(',', $competitionSeasonGamedayUids));
+				$constraints[] = $this->constraintForCompetitionSeasonGamedayUids($query, $competitionSeasonGamedayUids);
 			}
 			if($constraints) {
 				$query->matching($query->logicalAnd($constraints));
@@ -58,54 +52,49 @@
 			return $query->execute();
 		}
 		
-		public function findHighestWins(string $sportUids = NULL, string $sportAgeGroupUids = NULL, string $sportAgeLevelUids = NULL, string $competitionTypeUids = NULL, string $competitionUids = NULL, string $clubUids = NULL, string $teamUids = NULL, string $seasonUids = NULL, string $competitionSeasonGamedayUids = NULL, $limit = NULL) {
+		public function findHighestWinsForTeam(int $teamUid) {
 			$query = $this->createQuery();
 			$constraints = [];
-			if($sportUids) {
-				$constraints[] = $query->in('competitionSeason.competition.sport', explode(',', $sportUids));
-			}
-			if($sportAgeGroupUids) {
-				$constraints[] = $query->in('competitionSeason.competition.sportAgeGroup', explode(',', $sportAgeGroupUids));
-			}
-			if($sportAgeLevelUids) {
-				$constraints[] = $query->in('competitionSeason.competition.sportAgeLevel', explode(',', $sportAgeLevelUids));
-			}
-			if($competitionTypeUids) {
-				$constraints[] = $query->in('competitionSeason.competition.competitionType', explode(',', $competitionTypeUids));
-			}
-			if($competitionUids) {
-				$constraints[] = $query->in('competitionSeason.competition', explode(',', $competitionUids));
-			}
-			if($clubUids) {
-				$constraints[] = $query->logicalOr(
-					$query->in('teamSeasonHome.team.club', explode(',', $clubUids)),
-					$query->in('teamSeasonGuest.team.club', explode(',', $clubUids))
-				);
-			}
-			if($teamUids) {
-				$constraints[] = $query->logicalOr(
-					$query->in('teamSeasonHome.team', explode(',', $teamUids)),
-					$query->in('teamSeasonGuest.team', explode(',', $teamUids))
-				);
-			}
-			if($seasonUids) {
-				$constraints[] = $query->in('season', explode(',', $seasonUids));
-			}
-			if($competitionSeasonGamedayUids) {
-				$constraints[] = $query->in('gameday', explode(',', $competitionSeasonGamedayUids));
-			}
-			if($constraints) {
-				$query->matching($query->logicalAnd($constraints));
-			}
-			$query->setLimit($limit);
+			$constraints[] = $this->constraintForTeamUids($query, (string) $teamUid);
+			$query->matching($query->logicalAnd($constraints));
+			$query->setLimit(10);
 			return $query->execute();
 		}
 		
-		private function constraintForClubUids($query, string $clubUids = NULL) {
-			return $query->logicalOr(
-				$query->in('teamSeasonHome.team.club', explode(',', $clubUids)),
-				$query->in('teamSeasonGuest.team.club', explode(',', $clubUids))
-			);
+		private function constraintForClubUids($query, string $clubUids) {
+			return $query->logicalOr($query->in('teamSeasonHome.team.club', explode(',', $clubUids)), $query->in('teamSeasonGuest.team.club', explode(',', $clubUids)));
+		}
+		
+		private function constraintForCompetitionUids($query, string $competitionUids) {
+			return $query->in('competitionSeason.competition', explode(',', $competitionUids));
+		}
+		
+		private function constraintForCompetitionSeasonGamedayUids($query, string $competitionSeasonGamedayUids) {
+			return $query->in('gameday', explode(',', $competitionSeasonGamedayUids));
+		}
+		
+		private function constraintForCompetitionTypeUids($query, string $competitionTypeUids) {
+			return $query->in('competitionSeason.competition.competitionType', explode(',', $competitionTypeUids));
+		}
+		
+		private function constraintForSeasonUids($query, string $seasonUids) {
+			return $query->in('season', explode(',', $seasonUids));
+		}
+		
+		private function constraintForSportUids($query, string $sportUids) {
+			return $query->in('competitionSeason.competition.sport', explode(',', $sportUids));
+		}
+		
+		private function constraintForSportAgeGroupUids($query, string $sportAgeGroupUids) {
+			return $query->in('competitionSeason.competition.sportAgeGroup', explode(',', $sportAgeGroupUids));
+		}
+		
+		private function constraintForSportAgeLevelUids($query, string $sportAgeLevelUids) {
+			return $query->in('competitionSeason.competition.sportAgeLevel', explode(',', $sportAgeLevelUids));
+		}
+		
+		private function constraintForTeamUids($query, string $teamUids) {
+			return $query->logicalOr($query->in('teamSeasonHome.team', explode(',', $teamUids)), $query->in('teamSeasonGuest.team', explode(',', $teamUids)));
 		}
 		
 	}
