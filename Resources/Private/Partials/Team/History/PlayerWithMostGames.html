@@ -16,22 +16,6 @@
             </f:else>
         </f:if>
     </td>
-    <td class="tx-sportms-table-left">
-        <f:if condition="{team} == {recordGame.teamSeasonHome.team}">
-            <f:then>
-                <f:render arguments="{settings: settings, teamSeason: recordGame.teamSeasonGuest}" partial="ViewHelper/Link/TeamSeason/SeasonIndex" />
-            </f:then>
-            <f:else>
-                <f:render arguments="{settings: settings, teamSeason: recordGame.teamSeasonHome}" partial="ViewHelper/Link/TeamSeason/SeasonIndex" />
-            </f:else>
-        </f:if>
-    </td>
-    <td class="tx-sportms-table-center">
-        <f:render arguments="{spectators: recordGame.spectators}" partial="ViewHelper/GameSpectators"/>
-    </td>
-    <td class="tx-sportms-table-center">
-        <f:render arguments="{settings: settings, game: recordGame}" partial="ViewHelper/Link/Game/ShowIndex" />
-    </td>
 </tr>
 
 </html>
