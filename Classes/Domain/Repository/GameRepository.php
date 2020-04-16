@@ -81,7 +81,7 @@
 			$queryBuilder = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Database\ConnectionPool::class)->getQueryBuilderForTable($tableGame);
 			$queryBuilder->SELECT('*')
 							->addSelectLiteral($queryBuilder->expr()->sum('result_end__regular_home', 'goals'))
-							->FROM($tableGame)
+							->FROM($tableGame, $tableGameAlias)
 							->INNERJOIN($tableGameAlias, $tableSeason, $tableSeasonAlias, $queryBuilder->expr()->eq($tableGameAlias . '.season', $queryBuilder->quoteIdentifier($tableSeasonAlias . '.uid')))
 							->ORDERBY('goals')
 							->setMaxResults(10);
