@@ -19,7 +19,7 @@
 				$constraints[] = $query->in('uid', explode(',', $teamUids));
 			}
 			if($sportUids) {
-				$constraints[] = $query->in('clubSection.sport', explode(',', $sportUids));
+				$constraints[] = $query->in('sport', explode(',', $sportUids));
 			}
 			if($sportAgeGroupUids) {
 				$constraints[] = $query->in('sport_age_group', explode(',', $sportAgeGroupUids));
