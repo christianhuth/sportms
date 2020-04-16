@@ -29,8 +29,12 @@ plugin.tx_sportms {
         }
 
         game {
-            listPid = {$plugin.tx_sportms.settings.game.listPid}
-            showIndexPid = {$plugin.tx_sportms.settings.game.showIndexPid}
+            list {
+                pid = {$plugin.tx_sportms.settings.game.list.pid}
+            }
+            showIndex {
+                pid = {$plugin.tx_sportms.settings.game.showIndex.pid}
+            }
         }
 
         person {
@@ -43,11 +47,12 @@ plugin.tx_sportms {
         }
 
         team {
-            listPid = {$plugin.tx_sportms.settings.team.listPid}
-            historyRecordGamesPid = {$plugin.tx_sportms.settings.team.historyRecordGamesPid}
+            list {
+                pid = {$plugin.tx_sportms.settings.team.list.pid}
+            }
             historyRecordGames {
-                limit = 10
-                pid = {$plugin.tx_sportms.settings.team.historyRecordGamesPid}
+                limit = {$plugin.tx_sportms.settings.team.historyRecordGames.limit}
+                pid = {$plugin.tx_sportms.settings.team.historyRecordGames.pid}
             }
             seasonGamesPid = {$plugin.tx_sportms.settings.team.seasonGamesPid}
             seasonGoalsPid = {$plugin.tx_sportms.settings.team.seasonGoalsPid}

@@ -42,10 +42,14 @@ plugin.tx_sportms {
         }
 
         game {
-            # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Game->list
-            listPid =
-            # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Game->showIndex
-            showIndexPid =
+            list {
+                # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Game->list
+                pid =
+            }
+            showIndex {
+                # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Game->showIndex
+                pid =
+            }
         }
 
         person {
@@ -64,10 +68,18 @@ plugin.tx_sportms {
         }
 
         team {
-            # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Team->list
-            listPid =
-            # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Team->historyRecordGames
-            historyRecordGamesPid =
+            list {
+                # cat=plugin.tx_sportms/sportms; type=int+; label=Default Limit for Team->list
+                limit =
+                # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Team->list
+                pid =
+            }
+            historyRecordGames {
+                # cat=plugin.tx_sportms/sportms; type=int+; label=Default Limit for Team->historyRecordGames
+                limit = 10
+                # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Team->historyRecordGames
+                pid =
+            }
             # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Team->seasonGamesPid
             seasonGamesPid =
             # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Team->seasonGoalsPid
