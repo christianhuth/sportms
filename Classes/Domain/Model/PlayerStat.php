@@ -2,7 +2,7 @@
 	
 	namespace Balumedien\Sportms\Domain\Model;
 	
-	class PlayerStat {
+	class PlayerStat extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 		
 		/**
 		 * @var \Balumedien\Sportms\Domain\Model\Person
