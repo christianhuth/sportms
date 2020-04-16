@@ -15,12 +15,12 @@
     <f:if condition="{playersWithMostGoals}">
         <f:then>
             <f:for as="playerWithMostGoal" each="{playersWithMostGoals}" iteration="iterator">
-                <f:render arguments="{position: iterator.index, person: playerWithMostGoal, settings: settings}" partial="Team/History/PlayerWithMostGoal"/>
+                <f:render arguments="{position: iterator.index, person: playerWithMostGoal, settings: settings}" partial="Team/History/PlayerWithMostGames"/>
             </f:for>
         </f:then>
         <f:else>
             <tr>
-                <td class="tx-sportms-table-center" colspan="4">Keine Rekordspieler gefunden.</td>
+                <td class="tx-sportms-table-center" colspan="5">Keine Rekordspieler gefunden.</td>
             </tr>
         </f:else>
     </f:if>
