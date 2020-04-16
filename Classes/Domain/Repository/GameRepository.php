@@ -80,7 +80,7 @@
 		public function findGamesWithMostGoalsForTeam(int $teamUid) {
 			$tableGame = 'tx_sportms_domain_model_game';
 			$queryBuilder = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Database\ConnectionPool::class)->getQueryBuilderForTable($tableGame);
-			$queryBuilder->SELECT('uid')
+			$queryBuilder->SELECT('*')
 							->addSelectLiteral($queryBuilder->quoteIdentifier('result_end_regular_home') . '+' . $queryBuilder->quoteIdentifier('result_end_regular_guest') .' AS ' . $queryBuilder->quoteIdentifier('goals'))
 							->FROM($tableGame)
 							->ORDERBY('goals')
