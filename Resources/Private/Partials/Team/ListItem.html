@@ -2,6 +2,16 @@
       xmlns:sportms="Balumedien\Sportms\ViewHelpers"
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
-
+<tr>
+    <td class="tx-sportms-table-club">
+        <f:render arguments="{club: team.club, settings: settings}" partial="ViewHelper/Link/Club/ShowIndex" />
+    </td>
+    <td class="tx-sportms-table-sport">{team.sport.label}</td>
+    <td class="tx-sportms-table-sportagegroup">{team.sportAgeGroup.label}</td>
+    <td class="tx-sportms-table-sportagelevel">{team.sportAgeLevel.label}</td>
+    <td class="tx-sportms-table-team">
+        <f:render arguments="{team: team, settings: settings}" partial="ViewHelper/Link/Team/ShowIndex" />
+    </td>
+</tr>
 
 </html>
