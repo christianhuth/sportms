@@ -85,6 +85,10 @@
 						$queryBuilder->expr()->andX(
 							$queryBuilder->expr()->eq($tableTeamSeasonAliasHome . '.team', $teamUid),
 							$queryBuilder->expr()->gt('result_end_regular_guest', 'result_end_regular_home')
+						),
+						$queryBuilder->expr()->andX(
+							$queryBuilder->expr()->eq($tableTeamSeasonAliasGuest . '.team', $teamUid),
+							$queryBuilder->expr()->gt('result_end_regular_home', 'result_end_regular_guest')
 						)
 					)
 				)
