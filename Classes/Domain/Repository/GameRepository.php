@@ -72,12 +72,11 @@
 		}
 		
 		public function findGamesWithMostGoalsForTeam(int $teamUid) {
-			$query = $this->createQuery();
-			$constraints = [];
-			$constraints[] = $this->constraintForTeamUids($query, (string) $teamUid);
-			$query->matching($query->logicalAnd($constraints));
-			$query->setLimit(10);
-			return $query->execute();
+			$table = 'tx_sportms_domain_model_game';
+			$queryBuilder = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Database\ConnectionPool::class)->getQueryBuilderForTable($table);
+			$queryBuilder->SELECT('*')->FROM($table)->setMaxResults(10);
+			debug($queryBuilder->getSQL());
+			return $queryBuilder->execute();
 		}
 		
 		public function findGamesWithMostSpectatorsForTeam(int $teamUid) {
