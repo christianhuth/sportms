@@ -36,7 +36,9 @@
 							->ORDERBY('numberOfGames', \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING)
 							->setMaxResults($limit);
 			debug($queryBuilder->getSQL());
-			return $queryBuilder->execute()->fetchAll();
+			debug($this->objectType);
+			$dataMapper = $this->objectManager->get(\TYPO3\CMS\Extbase\Persistence\Generic\Mapper\DataMapper::class);
+			return $dataMapper->map(\Balumedien\Sportms\Domain\Model\PlayerStat::class, $queryBuilder->execute()->fetchAll());
 		}
 	
 	}
