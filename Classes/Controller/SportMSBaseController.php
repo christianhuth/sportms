@@ -49,13 +49,13 @@
 		}
 		
 		protected function getFilter($key1, $key2, $useSelected) {
-			return ($useSelected && ($this->settings[$key1]['selected'])) ? $this->settings[$key1]['selected']: $this->settings[$key1][$key2];
+			return ($useSelected && ($this->settings[$key1]['selected'])) ? $this->settings[$key1]['selected'] : $this->settings[$key1][$key2];
 		}
 		
 		protected function mapRequestsToSettings(): void {
 			/* SelectModel */
 			$listOfSelectModels = 'sport,sportAgeGroup,sportAgeLevel,competitionType,competition,club,team,season,competitionSeasonGameday';
-			foreach(explode(',', $listOfSelectModels) AS $selectModel) {
+			foreach(explode(',', $listOfSelectModels) as $selectModel) {
 				if($this->request->hasArgument('select' . ucfirst($selectModel))) {
 					$this->settings[$selectModel]['selected'] = $this->request->getArgument('select' . ucfirst($selectModel));
 				}
@@ -76,7 +76,7 @@
 		}
 		
 		protected function determineShowViews($model, $listOfPossibleShowViews): void {
-			foreach(explode(',', $listOfPossibleShowViews) AS $showView) {
+			foreach(explode(',', $listOfPossibleShowViews) as $showView) {
 				$this->settings[$model]['showView'][$showView] = ($this->settings[$model]['showViews']) ? strpos($this->settings[$model]['showViews'], $showView) !== FALSE : TRUE;
 			}
 		}
@@ -90,7 +90,7 @@
 		protected function determineShowNavigationViews($model, $listOfPossibleShowViews): void {
 			if($this->settings[$model]['showNavigation']['enabled']) {
 				$showNavigationEnabled = FALSE;
-				foreach(explode(',', $listOfPossibleShowViews) AS $showView) {
+				foreach(explode(',', $listOfPossibleShowViews) as $showView) {
 					if($this->settings[$model]['showViews']) {
 						if(strpos($this->settings[$model]['showViews'], $showView) !== FALSE) {
 							if($this->settings[$model]['showNavigation']['views']) {
@@ -113,6 +113,30 @@
 					}
 				}
 				$this->settings[$model]['showNavigation']['enabled'] = $showNavigationEnabled;
+			}
+		}
+		
+		/**
+		 * @return \Balumedien\Sportms\Domain\Model\Team
+		 */
+		protected function determineTeamFromFlexform(): ?\Balumedien\Sportms\Domain\Model\Team {
+			if($this->settings['team']['uid']) {
+				$teamUid = $this->settings['team']['uid'];
+				return $this->teamRepository->findByUid($teamUid);
+			} else {
+				// TODO: DIE IF NO TEAM IS SELECTED VIA FLEXFORM
+			}
+		}
+		
+		/**
+		 * @return \Balumedien\Sportms\Domain\Model\TeamSeason
+		 */
+		protected function determineTeamSeasonFromFlexform(): ?\Balumedien\Sportms\Domain\Model\TeamSeason {
+			if($this->settings['teamseason']['uid']) {
+				$teamSeasonUid = $this->settings['teamseason']['uid'];
+				return $this->teamSeasonRepository->findByUid($teamSeasonUid);
+			} else {
+				// TODO: DIE IF NO TEAM IS SELECTED VIA FLEXFORM
 			}
 		}
 		

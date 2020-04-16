@@ -7,8 +7,6 @@
 	 */
 	class TeamController extends SportMSBaseController {
 		
-		protected $model = 'team';
-		
 		/**
 		 * @var \Balumedien\Sportms\Domain\Repository\ClubRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
@@ -60,22 +58,10 @@
 		}
 		
 		/**
-		 * Use this method to solve tasks which all actions have in common, when VIEW-Context is needed
-		 */
-		public function initializeActions(): void {
-			$listOfPossibleShowViews = 'index,competitions,games,stats';
-			$this->determineShowView($this->model);
-			$this->determineShowViews($this->model, $listOfPossibleShowViews);
-			$this->determineShowNavigationViews($this->model, $listOfPossibleShowViews);
-			$this->view->assign('settings', $this->settings);
-		}
-		
-		/**
 		 * @return void
 		 * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
 		 */
 		public function listAction(): void {
-			$this->initializeActions();
 			$teams = $this->teamRepository->findAll($this->getSportsFilter(), $this->getSportAgeGroupsFilter(), $this->getSportAgeLevelsFilter(), $this->getClubsFilter(), $this->getTeamsFilter());
 			$this->view->assign('teams', $teams);
 			/* FRONTEND FILTERS */
@@ -103,18 +89,11 @@
 		 * @param \Balumedien\Sportms\Domain\Model\Team $team
 		 */
 		public function historyRecordGamesAction(\Balumedien\Sportms\Domain\Model\Team $team = NULL) {
-			$this->initializeActions();
 			if($team === NULL) {
-				if($this->settings['team']['uid']) {
-					$teamUid = (int) $this->settings['team']['uid'];
-					$team = $this->teamRepository->findByUid($teamUid);
-				} else {
-					// TODO: DIE IF NO TEAM IS SELECTED VIA FLEXFORM AND NO REQUEST
-				}
-			} else {
-				$teamUid = $team->getUid();
+				$team = $this->determineTeamFromFlexform();
 			}
 			$this->view->assign('team', $team);
+			$teamUid = $team->getUid();
 			$gamesWithHighestWins = $this->gameRepository->findGamesWithHighestWinsForTeam($teamUid, $this->settings['team']['historyRecordGames']['limit']);
 			$this->view->assign('gamesWithHighestWins', $gamesWithHighestWins);
 			$gamesWithHighestLosts = $this->gameRepository->findGamesWithHighestLostsForTeam($teamUid, $this->settings['team']['historyRecordGames']['limit']);
@@ -125,74 +104,6 @@
 			$this->view->assign('gamesWithMostSpectators', $gamesWithMostSpectators);
 			$gamesWithFewestSpectators = $this->gameRepository->findGamesWithFewestSpectatorsForTeam($teamUid, $this->settings['team']['historyRecordGames']['limit']);
 			$this->view->assign('gamesWithFewestSpectators', $gamesWithFewestSpectators);
-		}
-		
-		/**
-		 * @param \Balumedien\Sportms\Domain\Model\Team $team
-		 * @param \Balumedien\Sportms\Domain\Model\Season $season
-		 */
-		public function seasonIndexAction(\Balumedien\Sportms\Domain\Model\Team $team = NULL, \Balumedien\Sportms\Domain\Model\Season $season = NULL) {
-			$this->initializeActions();
-			if($team === NULL) {
-				if($this->settings['team']['uid']) {
-					$teamUid = $this->settings['team']['uid'];
-					$team = $this->teamRepository->findByUid($teamUid);
-				} else {
-					// TODO: DIE IF NO TEAM IS SELECTED VIA FLEXFORM
-				}
-			}
-			$this->view->assign('team', $team);
-		}
-		
-		/**
-		 * @param \Balumedien\Sportms\Domain\Model\Team $team
-		 * @param \Balumedien\Sportms\Domain\Model\Season $season
-		 */
-		public function seasonGamesAction(\Balumedien\Sportms\Domain\Model\Team $team = NULL, \Balumedien\Sportms\Domain\Model\Season $season = NULL) {
-			$this->initializeActions();
-			if($team === NULL) {
-				if($this->settings['team']['uid']) {
-					$teamUid = $this->settings['team']['uid'];
-					$team = $this->teamRepository->findByUid($teamUid);
-				} else {
-					// TODO: DIE IF NO TEAM IS SELECTED VIA FLEXFORM
-				}
-			}
-			$this->view->assign('team', $team);
-		}
-		
-		/**
-		 * @param \Balumedien\Sportms\Domain\Model\Team $team
-		 * @param \Balumedien\Sportms\Domain\Model\Season $season
-		 */
-		public function seasonGoalsAction(\Balumedien\Sportms\Domain\Model\Team $team = NULL, \Balumedien\Sportms\Domain\Model\Season $season = NULL) {
-			$this->initializeActions();
-			if($team === NULL) {
-				if($this->settings['team']['uid']) {
-					$teamUid = $this->settings['team']['uid'];
-					$team = $this->teamRepository->findByUid($teamUid);
-				} else {
-					// TODO: DIE IF NO TEAM IS SELECTED VIA FLEXFORM
-				}
-			}
-			$this->view->assign('team', $team);
-		}
-		
-		/**
-		 * @param \Balumedien\Sportms\Domain\Model\Team $team
-		 * @param \Balumedien\Sportms\Domain\Model\Season $season
-		 */
-		public function seasonSquadAction(\Balumedien\Sportms\Domain\Model\Team $team = NULL, \Balumedien\Sportms\Domain\Model\Season $season = NULL) {
-			$this->initializeActions();
-			if($team === NULL) {
-				if($this->settings['team']['uid']) {
-					$teamUid = $this->settings['team']['uid'];
-					$team = $this->teamRepository->findByUid($teamUid);
-				} else {
-					// TODO: DIE IF NO TEAM IS SELECTED VIA FLEXFORM
-				}
-			}
-			$this->view->assign('team', $team);
 		}
 		
 	}
