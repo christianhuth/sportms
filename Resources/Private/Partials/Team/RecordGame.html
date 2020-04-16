@@ -3,15 +3,15 @@
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
     <tr>
-        <td>{position + 1}</td>
-        <td><f:format.date format="d.m.Y">{recordGame.date}</f:format.date></td>
-        <td>{recordGame.season.abbreviation}</td>
-        <td>{recordGame.gameday}</td>
-        <td>{recordGame.competitionSeason.competition.label}</td>
-        <td>H</td>
-        <td>{recordGame.teamSeasonHome.team.label}</td>
-        <td>{recordGame.spectators}</td>
-        <td>{recordGame.resultEndHome} : {recordGame.resultEndGuest}</td>
+        <td class="tx-sportms-table-position">{position + 1}</td>
+        <td class="tx-sportms-table-date"><f:format.date format="d.m.Y">{recordGame.date}</f:format.date></td>
+        <td class="tx-sportms-table-season">{recordGame.season.abbreviation}</td>
+        <td class="tx-sportms-table-gameday">{recordGame.gameday}</td>
+        <td class="tx-sportms-table-competition">{recordGame.competitionSeason.competition.label}</td>
+        <td class="tx-sportms-table-homeaway">H</td>
+        <td class="tx-sportms-table-team">{recordGame.teamSeasonHome.team.label}</td>
+        <td class="tx-sportms-table-spectators">{recordGame.spectators}</td>
+        <td class="tx-sportms-table-result">{recordGame.resultEndRegularHome} : {recordGame.resultEndRegularGuest}</td>
     </tr>
 
 </html>
