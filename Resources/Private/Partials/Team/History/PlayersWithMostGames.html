@@ -1,0 +1,29 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<table class="table table-bordered table-condensed table-hover table-striped">
+    <thead>
+    <tr>
+        <th class="tx-sportms-table-center">#</th>
+        <th class="tx-sportms-table-left">Person</th>
+        <th class="tx-sportms-table-center">Spiele</th>
+        <th class="tx-sportms-table-center">Startformation</th>
+    </tr>
+    </thead>
+    <tbody>
+    <f:if condition="{playersWithMostGoals}">
+        <f:then>
+            <f:for as="playerWithMostGoal" each="{playersWithMostGoals}" iteration="iterator">
+                <f:render arguments="{position: iterator.index, person: playerWithMostGoal, settings: settings}" partial="Team/History/PlayerWithMostGoal"/>
+            </f:for>
+        </f:then>
+        <f:else>
+            <tr>
+                <td class="tx-sportms-table-center" colspan="4">Keine Rekordspieler gefunden.</td>
+            </tr>
+        </f:else>
+    </f:if>
+    </tbody>
+</table>
+
+</html>
