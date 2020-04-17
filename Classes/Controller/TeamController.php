@@ -176,6 +176,7 @@
 				$playerWithMostGames->setPerson($this->personRepository->findByUid($playerWithMostGamesAsArray['person']));
 				$playerWithMostGames->setNumberOfGames($playerWithMostGamesAsArray['numberOfGames']);
 				$playerWithMostGames->setNumberOfStartingFormation($playerWithMostGamesAsArray['numberOfStartingFormation']);
+				$playerWithMostGames->setPercentageOfStartingFormation($playerWithMostGamesAsArray['numberOfStartingFormation'] / $playerWithMostGamesAsArray['numberOfGames']);
 				$playersWithMostGames[] = $playerWithMostGames;
 			}
 			$this->view->assign('playersWithMostGames', $playersWithMostGames);

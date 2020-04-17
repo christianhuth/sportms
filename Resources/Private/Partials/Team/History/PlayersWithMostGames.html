@@ -9,6 +9,7 @@
         <th class="tx-sportms-table-center">Nationalität</th>
         <th class="tx-sportms-table-center">Spiele</th>
         <th class="tx-sportms-table-center">Startformation</th>
+        <th class="tx-sportms-table-center">Quote</th>
     </tr>
     </thead>
     <tbody>
@@ -17,10 +18,23 @@
             <f:for as="playerWithMostGames" each="{playersWithMostGames}" iteration="iterator">
                 <tr>
                     <td class="tx-sportms-table-center">{iterator.index + 1}</td>
-                    <td class="tx-sportms-table-left"><f:render arguments="{person: playerWithMostGames.person, settings: settings}" partial="ViewHelper/Link/Person/PlayerIndex"/></td>
-                    <td class="tx-sportms-table-center"><f:render arguments="{nationalities: playerWithMostGames.person.nationalities}" partial="ViewHelper/Link/Person/Nationalities"/></td>
+                    <td class="tx-sportms-table-left">
+                        <f:render arguments="{person: playerWithMostGames.person, settings: settings}" partial="ViewHelper/Link/Person/PlayerIndex"/>
+                    </td>
+                    <td class="tx-sportms-table-center">
+                        <f:render arguments="{nationalities: playerWithMostGames.person.nationalities}" partial="ViewHelper/Link/Person/Nationalities"/>
+                    </td>
                     <td class="tx-sportms-table-center">{playerWithMostGames.numberOfGames}</td>
                     <td class="tx-sportms-table-center">{playerWithMostGames.numberOfStartingFormation}</td>
+                    <td class="tx-sportms-table-center">
+                        <f:variable name="numberOfGames" value="{playerWithMostGames.numberOfGames}" />
+                        <f:variable name="numberOfStartingFormation" value="{playerWithMostGames.numberOfStartingFormation}" />
+                        {playerWithMostGames.numberOfGames} / {playerWithMostGames.numberOfStartingFormation} * 100 %
+                        {playerWithMostGames.numberOfGames} / {numberOfStartingFormation} * 100 %
+                        <f:format.number decimalSeparator="," decimals="2" thousandsSeparator=".">
+                            {playerWithMostGames.percentageOfStartingFormation} * 100
+                        </f:format.number> %
+                    </td>
                 </tr>
             </f:for>
         </f:then>

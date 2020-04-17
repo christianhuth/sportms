@@ -20,6 +20,11 @@
 		protected $numberOfStartingFormation;
 		
 		/**
+		 * @var float|null
+		 */
+		protected $percentageOfStartingFormation;
+		
+		/**
 		 * @var int|null
 		 */
 		protected $numberOfGoals;
@@ -69,6 +74,20 @@
 		 */
 		public function setNumberOfStartingFormation(?int $numberOfStartingFormation): void {
 			$this->numberOfStartingFormation = $numberOfStartingFormation;
+		}
+		
+		/**
+		 * @return float|null
+		 */
+		public function getPercentageOfStartingFormation(): ?float {
+			return $this->percentageOfStartingFormation;
+		}
+		
+		/**
+		 * @param float|null $percentageOfStartingFormation
+		 */
+		public function setPercentageOfStartingFormation(?float $percentageOfStartingFormation): void {
+			$this->percentageOfStartingFormation = $percentageOfStartingFormation;
 		}
 		
 		/**
