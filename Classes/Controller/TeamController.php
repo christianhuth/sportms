@@ -32,6 +32,12 @@
 		protected $gameRepository;
 		
 		/**
+		 * @var \Balumedien\Sportms\Domain\Repository\GameGoalRepository
+		 * @TYPO3\CMS\Extbase\Annotation\Inject
+		 */
+		protected $gameGoalRepository;
+		
+		/**
 		 * @var \Balumedien\Sportms\Domain\Repository\GameLineupRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
@@ -172,6 +178,15 @@
 				$playersWithMostGames[] = $playerWithMostGames;
 			}
 			$this->view->assign('playersWithMostGames', $playersWithMostGames);
+			$playersWithMostGoalsAsArray = $this->gameGoalRepository->findPlayersWithMostGames($this->getSportsFilter(), $this->getSportAgeGroupsFilter(), $this->getSportAgeLevelsFilter(), $this->getSportPositionGroupsFilter(), $this->getSportPositionsFilter(), $this->getCompetitionTypesFilter(), $this->getCompetitionsFilter(), $this->getClubsFilter(), $teamUid, $this->getSeasonsFilter(), $this->settings['team']['historyRecordPlayers']['limit']);
+			$playersWithMostGoals = [];
+			foreach($playersWithMostGoalsAsArray AS $playerWithMostGoalsAsArray) {
+				$playerWithMostGoal = new \Balumedien\Sportms\Domain\Model\PlayerStat();
+				$playerWithMostGoal->setPerson($this->personRepository->findByUid($playerWithMostGoalsAsArray['scorer']));
+				$playerWithMostGoal->setNumberOfGoals($playerWithMostGoalsAsArray['numberOfGoals']);
+				$playersWithMostGoals[] = $playerWithMostGoal;
+			}
+			$this->view->assign('playersWithMostGoals', $playersWithMostGoals);
 			/* FRONTEND FILTERS */
 			if($this->settings['competitionType']['competitionTypesSelectbox']) {
 				$competitionTypesSelectbox = $this->competitionTypeRepository->findAll($this->getCompetitionTypesFilter(FALSE));

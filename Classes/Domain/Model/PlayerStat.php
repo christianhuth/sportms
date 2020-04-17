@@ -15,6 +15,16 @@
 		protected $numberOfGames;
 		
 		/**
+		 * @var int
+		 */
+		protected $numberOfGoals;
+		
+		/**
+		 * @var int
+		 */
+		protected $numberOfAssists;
+		
+		/**
 		 * @return Person
 		 */
 		public function getPerson(): Person {
@@ -40,6 +50,34 @@
 		 */
 		public function setNumberOfGames(int $numberOfGames): void {
 			$this->numberOfGames = $numberOfGames;
+		}
+		
+		/**
+		 * @return int
+		 */
+		public function getNumberOfGoals(): int {
+			return $this->numberOfGoals;
+		}
+		
+		/**
+		 * @param int $numberOfGoals
+		 */
+		public function setNumberOfGoals(int $numberOfGoals): void {
+			$this->numberOfGoals = $numberOfGoals;
+		}
+		
+		/**
+		 * @return int
+		 */
+		public function getNumberOfAssists(): int {
+			return $this->numberOfAssists;
+		}
+		
+		/**
+		 * @param int $numberOfAssists
+		 */
+		public function setNumberOfAssists(int $numberOfAssists): void {
+			$this->numberOfAssists = $numberOfAssists;
 		}
 		
 	}

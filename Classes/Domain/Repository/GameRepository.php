@@ -218,39 +218,39 @@
 			return $query->execute();
 		}
 		
-		private function constraintForClubUids($query, string $clubUids) {
+		private function constraintForClubUids(\TYPO3\CMS\Extbase\Persistence\QueryInterface $query, string $clubUids) {
 			return $query->logicalOr($query->in('teamSeasonHome.team.club', explode(',', $clubUids)), $query->in('teamSeasonGuest.team.club', explode(',', $clubUids)));
 		}
 		
-		private function constraintForCompetitionUids($query, string $competitionUids) {
+		private function constraintForCompetitionUids(\TYPO3\CMS\Extbase\Persistence\QueryInterface $query, string $competitionUids) {
 			return $query->in('competitionSeason.competition', explode(',', $competitionUids));
 		}
 		
-		private function constraintForCompetitionSeasonGamedayUids($query, string $competitionSeasonGamedayUids) {
+		private function constraintForCompetitionSeasonGamedayUids(\TYPO3\CMS\Extbase\Persistence\QueryInterface $query, string $competitionSeasonGamedayUids) {
 			return $query->in('gameday', explode(',', $competitionSeasonGamedayUids));
 		}
 		
-		private function constraintForCompetitionTypeUids($query, string $competitionTypeUids) {
+		private function constraintForCompetitionTypeUids(\TYPO3\CMS\Extbase\Persistence\QueryInterface $query, string $competitionTypeUids) {
 			return $query->in('competitionSeason.competition.competitionType', explode(',', $competitionTypeUids));
 		}
 		
-		private function constraintForSeasonUids($query, string $seasonUids) {
+		private function constraintForSeasonUids(\TYPO3\CMS\Extbase\Persistence\QueryInterface $query, string $seasonUids) {
 			return $query->in('season', explode(',', $seasonUids));
 		}
 		
-		private function constraintForSportUids($query, string $sportUids) {
+		private function constraintForSportUids(\TYPO3\CMS\Extbase\Persistence\QueryInterface $query, string $sportUids) {
 			return $query->in('competitionSeason.competition.sport', explode(',', $sportUids));
 		}
 		
-		private function constraintForSportAgeGroupUids($query, string $sportAgeGroupUids) {
+		private function constraintForSportAgeGroupUids(\TYPO3\CMS\Extbase\Persistence\QueryInterface $query, string $sportAgeGroupUids) {
 			return $query->in('competitionSeason.competition.sportAgeGroup', explode(',', $sportAgeGroupUids));
 		}
 		
-		private function constraintForSportAgeLevelUids($query, string $sportAgeLevelUids) {
+		private function constraintForSportAgeLevelUids(\TYPO3\CMS\Extbase\Persistence\QueryInterface $query, string $sportAgeLevelUids) {
 			return $query->in('competitionSeason.competition.sportAgeLevel', explode(',', $sportAgeLevelUids));
 		}
 		
-		private function constraintForTeamUids($query, string $teamUids) {
+		private function constraintForTeamUids(\TYPO3\CMS\Extbase\Persistence\QueryInterface $query, string $teamUids) {
 			return $query->logicalOr($query->in('teamSeasonHome.team', explode(',', $teamUids)), $query->in('teamSeasonGuest.team', explode(',', $teamUids)));
 		}
 		
