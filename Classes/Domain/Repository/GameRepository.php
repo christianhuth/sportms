@@ -209,6 +209,9 @@
 			if($competitionUids) {
 				$constraints[] = $this->constraintForCompetitionUids($query, $competitionUids);
 			}
+			if($seasonUids) {
+				$constraints[] = $this->constraintForSeasonUids($query, $seasonUids);
+			}
 			$query->matching($query->logicalAnd($constraints));
 			$query->setLimit($limit);
 			$query->setOrderings(['spectators' => $ordering]);
