@@ -3,7 +3,7 @@
 
 <tr>
     <td class="tx-sportms-table-center">{position + 1}</td>
-    <td class="tx-sportms-table-left"><f:render arguments="{person: person, settings: settings}" partial="ViewHelper/Link/Person/PlayerIndex"/></td>
+    <td class="tx-sportms-table-left"><f:render arguments="{person: playerStat.person, settings: settings}" partial="ViewHelper/Link/Person/PlayerIndex"/></td>
     <td class="tx-sportms-table-center">{playerStat.person.nationalities}</td>
     <td class="tx-sportms-table-center">{playerStat.numberOfGames}</td>
     <td class="tx-sportms-table-center">0</td>
