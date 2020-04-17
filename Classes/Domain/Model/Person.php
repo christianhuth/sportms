@@ -43,9 +43,11 @@
 		protected $placeOfBirth = '';
 		
 		/**
-		 * @var int
+		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\SJBR\StaticInfoTables\Domain\Model\Country>
+		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
+		 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
 		 */
-		protected $nationalities = '';
+		protected $nationalities;
 		
 		/**
 		 * @var string
@@ -189,6 +191,7 @@
 		 * @return void
 		 */
 		protected function initStorageObjects(): void {
+			$this->setNationalities(new \TYPO3\CMS\Extbase\Persistence\ObjectStorage());
 			$this->setAddresses(new \TYPO3\CMS\Extbase\Persistence\ObjectStorage());
 			$this->setPhones(new \TYPO3\CMS\Extbase\Persistence\ObjectStorage());
 			$this->setMails(new \TYPO3\CMS\Extbase\Persistence\ObjectStorage());
@@ -295,16 +298,16 @@
 		}
 		
 		/**
-		 * @return int
+		 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
 		 */
-		public function getNationalities(): int {
+		public function getNationalities(): \TYPO3\CMS\Extbase\Persistence\ObjectStorage {
 			return $this->nationalities;
 		}
 		
 		/**
-		 * @param int $nationalities
+		 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $nationalities
 		 */
-		public function setNationalities(int $nationalities): void {
+		public function setNationalities(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $nationalities): void {
 			$this->nationalities = $nationalities;
 		}
 		
