@@ -10,22 +10,22 @@
 		protected $person;
 		
 		/**
-		 * @var int
+		 * @var int|null
 		 */
 		protected $numberOfGames;
 		
 		/**
-		 * @var int
+		 * @var int|null
 		 */
 		protected $numberOfStartingFormation;
 		
 		/**
-		 * @var int
+		 * @var int|null
 		 */
 		protected $numberOfGoals;
 		
 		/**
-		 * @var int
+		 * @var int|null
 		 */
 		protected $numberOfAssists;
 		
@@ -44,58 +44,58 @@
 		}
 		
 		/**
-		 * @return int
+		 * @return int|null
 		 */
-		public function getNumberOfGames(): int {
+		public function getNumberOfGames(): ?int {
 			return $this->numberOfGames;
 		}
 		
 		/**
-		 * @param int $numberOfGames
+		 * @param int|null $numberOfGames
 		 */
-		public function setNumberOfGames(int $numberOfGames): void {
+		public function setNumberOfGames(?int $numberOfGames): void {
 			$this->numberOfGames = $numberOfGames;
 		}
 		
 		/**
-		 * @return int
+		 * @return int|null
 		 */
-		public function getNumberOfStartingFormation(): int {
+		public function getNumberOfStartingFormation(): ?int {
 			return $this->numberOfStartingFormation;
 		}
 		
 		/**
-		 * @param int $numberOfStartingFormation
+		 * @param int|null $numberOfStartingFormation
 		 */
-		public function setNumberOfStartingFormation(int $numberOfStartingFormation): void {
+		public function setNumberOfStartingFormation(?int $numberOfStartingFormation): void {
 			$this->numberOfStartingFormation = $numberOfStartingFormation;
 		}
 		
 		/**
-		 * @return int
+		 * @return int|null
 		 */
-		public function getNumberOfGoals(): int {
+		public function getNumberOfGoals(): ?int {
 			return $this->numberOfGoals;
 		}
 		
 		/**
-		 * @param int $numberOfGoals
+		 * @param int|null $numberOfGoals
 		 */
-		public function setNumberOfGoals(int $numberOfGoals): void {
+		public function setNumberOfGoals(?int $numberOfGoals): void {
 			$this->numberOfGoals = $numberOfGoals;
 		}
 		
 		/**
-		 * @return int
+		 * @return int|null
 		 */
-		public function getNumberOfAssists(): int {
+		public function getNumberOfAssists(): ?int {
 			return $this->numberOfAssists;
 		}
 		
 		/**
-		 * @param int $numberOfAssists
+		 * @param int|null $numberOfAssists
 		 */
-		public function setNumberOfAssists(int $numberOfAssists): void {
+		public function setNumberOfAssists(?int $numberOfAssists): void {
 			$this->numberOfAssists = $numberOfAssists;
 		}
 		
