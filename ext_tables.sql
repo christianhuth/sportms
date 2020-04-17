@@ -273,7 +273,7 @@ CREATE TABLE tx_sportms_domain_model_gamegoal (
 CREATE TABLE tx_sportms_domain_model_gamelineup (
     game int(11) DEFAULT '0' NOT NULL,
     team varchar(255) DEFAULT '' NOT NULL,
-    type varchar(255) DEFAULT '' NOT NULL,
+    start tinyint(4) DEFAULT 0 NOT NULL,
     jersey_number varchar(255) DEFAULT NULL,
     person int(11) DEFAULT 0 NOT NULL,
     sport_position int(11) DEFAULT NULL,

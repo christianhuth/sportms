@@ -19,9 +19,9 @@
 		protected $team;
 		
 		/**
-		 * @var string
+		 * @var bool
 		 */
-		protected $type;
+		protected $start;
 		
 		/**
 		 * @var string
@@ -72,17 +72,17 @@
 		}
 		
 		/**
-		 * @return string
+		 * @return bool
 		 */
-		public function getType(): string {
-			return $this->type;
+		public function isStart(): bool {
+			return $this->start;
 		}
 		
 		/**
-		 * @param string $type
+		 * @param bool $start
 		 */
-		public function setType(string $type): void {
-			$this->type = $type;
+		public function setStart(bool $start): void {
+			$this->start = $start;
 		}
 		
 		/**
