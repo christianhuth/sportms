@@ -21,18 +21,18 @@
     <td class="tx-sportms-table-left">
         <f:if condition="{team} == {game.teamSeasonHome.team}">
             <f:then>
-                <f:render arguments="{settings: settings, teamSeason: game.teamSeasonGuest}" partial="ViewHelper/Link/TeamSeason/SeasonIndex" />
+                <f:render arguments="{settings: settings, teamSeason: game.teamSeasonGuest}" partial="ViewHelper/TeamSeason/SeasonIndex" />
             </f:then>
             <f:else>
-                <f:render arguments="{settings: settings, teamSeason: game.teamSeasonHome}" partial="ViewHelper/Link/TeamSeason/SeasonIndex" />
+                <f:render arguments="{settings: settings, teamSeason: game.teamSeasonHome}" partial="ViewHelper/TeamSeason/SeasonIndex" />
             </f:else>
         </f:if>
     </td>
     <td class="tx-sportms-table-center">
-        <f:render arguments="{spectators: game.spectators}" partial="ViewHelper/GameSpectators"/>
+        <f:render arguments="{spectators: game.spectators}" partial="ViewHelper/Game/GameSpectators"/>
     </td>
     <td class="tx-sportms-table-center">
-        <f:render arguments="{settings: settings, game: game}" partial="ViewHelper/Link/Game/ShowIndex" />
+        <f:render arguments="{settings: settings, game: game}" partial="ViewHelper/Game/ShowIndex" />
     </td>
 </tr>
 

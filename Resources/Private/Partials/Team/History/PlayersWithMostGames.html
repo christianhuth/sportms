@@ -19,10 +19,10 @@
                 <tr>
                     <td class="tx-sportms-table-center">{iterator.index + 1}</td>
                     <td class="tx-sportms-table-left">
-                        <f:render arguments="{person: playerWithMostGames.person, settings: settings}" partial="ViewHelper/Link/Person/PlayerIndex"/>
+                        <f:render arguments="{person: playerWithMostGames.person, settings: settings}" partial="ViewHelper/Person/PlayerIndex"/>
                     </td>
                     <td class="tx-sportms-table-center">
-                        <f:render arguments="{nationalities: playerWithMostGames.person.nationalities}" partial="ViewHelper/Link/Person/Nationalities"/>
+                        <f:render arguments="{nationalities: playerWithMostGames.person.nationalities}" partial="ViewHelper/Person/Nationalities"/>
                     </td>
                     <td class="tx-sportms-table-center">{playerWithMostGames.numberOfGames}</td>
                     <td class="tx-sportms-table-center">{playerWithMostGames.numberOfStartingFormation}</td>
