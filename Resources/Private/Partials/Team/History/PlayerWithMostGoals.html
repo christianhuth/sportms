@@ -3,35 +3,10 @@
 
 <tr>
     <td class="tx-sportms-table-center">{position + 1}</td>
-    <td class="tx-sportms-table-left">{person.firstname} {person.lastname}</td>
-    <td class="tx-sportms-table-center">{recordGame.season.abbreviation}</td>
-    <td class="tx-sportms-table-left">{recordGame.competitionSeason.competition.label}</td>
-    <td class="tx-sportms-table-center">
-        <f:if condition="{team} == {recordGame.teamSeasonHome.team}">
-            <f:then>
-                H
-            </f:then>
-            <f:else>
-                A
-            </f:else>
-        </f:if>
-    </td>
-    <td class="tx-sportms-table-left">
-        <f:if condition="{team} == {recordGame.teamSeasonHome.team}">
-            <f:then>
-                <f:render arguments="{settings: settings, teamSeason: recordGame.teamSeasonGuest}" partial="ViewHelper/Link/TeamSeason/SeasonIndex" />
-            </f:then>
-            <f:else>
-                <f:render arguments="{settings: settings, teamSeason: recordGame.teamSeasonHome}" partial="ViewHelper/Link/TeamSeason/SeasonIndex" />
-            </f:else>
-        </f:if>
-    </td>
-    <td class="tx-sportms-table-center">
-        <f:render arguments="{spectators: recordGame.spectators}" partial="ViewHelper/GameSpectators"/>
-    </td>
-    <td class="tx-sportms-table-center">
-        <f:render arguments="{settings: settings, game: recordGame}" partial="ViewHelper/Link/Game/ShowIndex" />
-    </td>
+    <td class="tx-sportms-table-left"><f:render arguments="{person: playerStat.person, settings: settings}" partial="ViewHelper/Link/Person/PlayerIndex"/></td>
+    <td class="tx-sportms-table-center"><f:render arguments="{nationalities: playerStat.person.nationalities}" partial="ViewHelper/Link/Person/Nationalities"/></td>
+    <td class="tx-sportms-table-center">{playerStat.numberOfGoals}</td>
+    <td class="tx-sportms-table-center">?</td>
 </tr>
 
 </html>

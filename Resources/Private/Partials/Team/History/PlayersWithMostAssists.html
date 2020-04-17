@@ -13,10 +13,10 @@
     </tr>
     </thead>
     <tbody>
-    <f:if condition="{playersWithMostGoals}">
+    <f:if condition="{playersWithMostAssists}">
         <f:then>
-            <f:for as="playerWithMostGoal" each="{playersWithMostGoals}" iteration="iterator">
-                <f:render arguments="{position: iterator.index, person: playerWithMostGoal, settings: settings}" partial="Team/History/PlayerWithMostAssists"/>
+            <f:for as="playerWithMostAssists" each="{playersWithMostAssists}" iteration="iterator">
+                <f:render arguments="{position: iterator.index, person: playerWithMostAssists, settings: settings}" partial="Team/History/PlayerWithMostAssists"/>
             </f:for>
         </f:then>
         <f:else>
