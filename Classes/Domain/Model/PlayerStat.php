@@ -17,6 +17,11 @@
 		/**
 		 * @var int
 		 */
+		protected $numberOfStartingFormation;
+		
+		/**
+		 * @var int
+		 */
 		protected $numberOfGoals;
 		
 		/**
@@ -50,6 +55,20 @@
 		 */
 		public function setNumberOfGames(int $numberOfGames): void {
 			$this->numberOfGames = $numberOfGames;
+		}
+		
+		/**
+		 * @return int
+		 */
+		public function getNumberOfStartingFormation(): int {
+			return $this->numberOfStartingFormation;
+		}
+		
+		/**
+		 * @param int $numberOfStartingFormation
+		 */
+		public function setNumberOfStartingFormation(int $numberOfStartingFormation): void {
+			$this->numberOfStartingFormation = $numberOfStartingFormation;
 		}
 		
 		/**
