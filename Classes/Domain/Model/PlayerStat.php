@@ -65,10 +65,10 @@
 		}
 		
 		/**
-		 * @param float|null $percentageOfStartingFormation
+		 * @param int|null $numberOfStartingFormation
 		 */
-		public function setPercentageOfStartingFormation(?float $percentageOfStartingFormation): void {
-			$this->percentageOfStartingFormation = $percentageOfStartingFormation;
+		public function setNumberOfStartingFormation(?int $numberOfStartingFormation): void {
+			$this->numberOfStartingFormation = $numberOfStartingFormation;
 		}
 		
 		/**
