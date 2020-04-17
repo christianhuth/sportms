@@ -3,12 +3,8 @@
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <f:image src="EXT:core/Resources/Public/Icons/Flags/DE.png" />
-<f:if condition="{nationalities}">
+<f:for each="{nationalities}" as="nationality">
     <f:image src="EXT:core/Resources/Public/Icons/Flags/DE.png" />
-    <f:for each="{nationalities}" as="nationality">
-        test
-        <f:image src="/typo3/sysext/core/Resources/Public/Icons/Flags/DE.png" />
-    </f:for>
-</f:if>
+</f:for>
 
 </html>
