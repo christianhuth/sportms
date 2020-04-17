@@ -27,7 +27,9 @@
                     <td class="tx-sportms-table-center">{playerWithMostGames.numberOfGames}</td>
                     <td class="tx-sportms-table-center">{playerWithMostGames.numberOfStartingFormation}</td>
                     <td class="tx-sportms-table-center">
-                        {playerWithMostGames.numberOfStartingFormation / playerWithMostGames.numberOfGames * 100} %
+                        <f:format.number decimals="2" decimalSeparator=",">
+                            {playerWithMostGames.numberOfStartingFormation / playerWithMostGames.numberOfGames * 100}
+                        </f:format.number>%
                     </td>
                 </tr>
             </f:for>
