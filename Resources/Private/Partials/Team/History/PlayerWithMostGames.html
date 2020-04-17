@@ -3,19 +3,10 @@
 
 <tr>
     <td class="tx-sportms-table-center">{position + 1}</td>
-    <td class="tx-sportms-table-left">{person.firstname} {person.lastname}</td>
-    <td class="tx-sportms-table-center">{recordGame.season.abbreviation}</td>
-    <td class="tx-sportms-table-left">{recordGame.competitionSeason.competition.label}</td>
-    <td class="tx-sportms-table-center">
-        <f:if condition="{team} == {recordGame.teamSeasonHome.team}">
-            <f:then>
-                H
-            </f:then>
-            <f:else>
-                A
-            </f:else>
-        </f:if>
-    </td>
+    <td class="tx-sportms-table-left">{playerStat.person.firstname} {playerStat.person.lastname}</td>
+    <td class="tx-sportms-table-center">{playerStat.person.nationalities}</td>
+    <td class="tx-sportms-table-left">{playerStat.numberOfGames}</td>
+    <td class="tx-sportms-table-center">0</td>
 </tr>
 
 </html>
