@@ -16,7 +16,7 @@
     <f:if condition="{playersWithMostGoals}">
         <f:then>
             <f:for as="playerWithMostGoal" each="{playersWithMostGoals}" iteration="iterator">
-                <f:render arguments="{position: iterator.index, person: playerWithMostGoal, settings: settings}" partial="Team/History/PlayerWithMostGoals"/>
+                <f:render arguments="{position: iterator.index, playerStat: playerWithMostGoal, settings: settings}" partial="Team/History/PlayerWithMostGoals"/>
             </f:for>
         </f:then>
         <f:else>
