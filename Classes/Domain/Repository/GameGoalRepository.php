@@ -41,6 +41,7 @@
 							->addSelectLiteral('COUNT(' . $tableGameGoalAlias . '.' . $queryBuilder->quoteIdentifier('game') . ') AS ' . $queryBuilder->quoteIdentifier('numberOfGoals'))
 							->FROM($tableGameGoal, $tableGameGoalAlias)
 							->GROUPBY($tableGameGoalAlias . '.scorer')
+							->WHERE($queryBuilder->expr()->isNotNull($tableGameGoalAlias . '.scorer'))
 							->ORDERBY('numberOfGoals', \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING)
 							->setMaxResults($limit);
 			debug($queryBuilder->getSQL());
