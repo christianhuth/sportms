@@ -181,14 +181,21 @@
 			$playersWithMostGoalsAsArray = $this->gameGoalRepository->findPlayersWithMostGoals($this->getSportsFilter(), $this->getSportAgeGroupsFilter(), $this->getSportAgeLevelsFilter(), $this->getSportPositionGroupsFilter(), $this->getSportPositionsFilter(), $this->getCompetitionTypesFilter(), $this->getCompetitionsFilter(), $this->getClubsFilter(), $teamUid, $this->getSeasonsFilter(), $this->settings['team']['historyRecordPlayers']['limit']);
 			$playersWithMostGoals = [];
 			foreach($playersWithMostGoalsAsArray AS $playerWithMostGoalsAsArray) {
-				
-					\TYPO3\CMS\Core\Utility\DebugUtility::debug($playerWithMostGoalsAsArray, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
-				$playerWithMostGoal = new \Balumedien\Sportms\Domain\Model\PlayerStat();
-				$playerWithMostGoal->setPerson($this->personRepository->findByUid($playerWithMostGoalsAsArray['scorer']));
-				$playerWithMostGoal->setNumberOfGoals($playerWithMostGoalsAsArray['numberOfGoals']);
-				$playersWithMostGoals[] = $playerWithMostGoal;
+				$playerWithMostGoals = new \Balumedien\Sportms\Domain\Model\PlayerStat();
+				$playerWithMostGoals->setPerson($this->personRepository->findByUid($playerWithMostGoalsAsArray['scorer']));
+				$playerWithMostGoals->setNumberOfGoals($playerWithMostGoalsAsArray['numberOfGoals']);
+				$playersWithMostGoals[] = $playerWithMostGoals;
 			}
 			$this->view->assign('playersWithMostGoals', $playersWithMostGoals);
+			$playersWithMostAssistsAsArray = $this->gameGoalRepository->findPlayersWithMostAssists($this->getSportsFilter(), $this->getSportAgeGroupsFilter(), $this->getSportAgeLevelsFilter(), $this->getSportPositionGroupsFilter(), $this->getSportPositionsFilter(), $this->getCompetitionTypesFilter(), $this->getCompetitionsFilter(), $this->getClubsFilter(), $teamUid, $this->getSeasonsFilter(), $this->settings['team']['historyRecordPlayers']['limit']);
+			$playersWithMostAssists = [];
+			foreach($playersWithMostAssistsAsArray AS $playerWithMostAssistsAsArray) {
+				$playerWithMostAssists = new \Balumedien\Sportms\Domain\Model\PlayerStat();
+				$playerWithMostAssists->setPerson($this->personRepository->findByUid($playerWithMostAssistsAsArray['assist']));
+				$playerWithMostAssists->setNumberOfAssists($playerWithMostAssistsAsArray['numberOfAssists']);
+				$playersWithMostAssists[] = $playerWithMostAssists;
+			}
+			$this->view->assign('playersWithMostAssists', $playersWithMostAssists);
 			/* FRONTEND FILTERS */
 			if($this->settings['competitionType']['competitionTypesSelectbox']) {
 				$competitionTypesSelectbox = $this->competitionTypeRepository->findAll($this->getCompetitionTypesFilter(FALSE));

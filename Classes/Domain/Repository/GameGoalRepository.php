@@ -38,12 +38,27 @@
 			$tableGameGoalAlias = 'gamegoal';
 			$queryBuilder = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Database\ConnectionPool::class)->getQueryBuilderForTable($tableGameGoal);
 			$queryBuilder->SELECT($tableGameGoalAlias . '.*')
-							->addSelectLiteral('COUNT(' . $tableGameGoalAlias . '.' . $queryBuilder->quoteIdentifier('game') . ') AS ' . $queryBuilder->quoteIdentifier('numberOfGoals'))
-							->FROM($tableGameGoal, $tableGameGoalAlias)
-							->GROUPBY($tableGameGoalAlias . '.scorer')
-							->WHERE($queryBuilder->expr()->isNotNull($tableGameGoalAlias . '.scorer'))
-							->ORDERBY('numberOfGoals', \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING)
-							->setMaxResults($limit);
+				->addSelectLiteral('COUNT(' . $tableGameGoalAlias . '.' . $queryBuilder->quoteIdentifier('game') . ') AS ' . $queryBuilder->quoteIdentifier('numberOfGoals'))
+				->FROM($tableGameGoal, $tableGameGoalAlias)
+				->GROUPBY($tableGameGoalAlias . '.scorer')
+				->WHERE($queryBuilder->expr()->isNotNull($tableGameGoalAlias . '.scorer'))
+				->ORDERBY('numberOfGoals', \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING)
+				->setMaxResults($limit);
+			debug($queryBuilder->getSQL());
+			return $queryBuilder->execute()->fetchAll();
+		}
+		
+		public function findPlayersWithMostAssists(string $sportUids = NULL, string $sportAgeGroupUids = NULL, string $sportAgeLevelUids = NULL, string $sportPositionGroupUids = NULL, string $sportPositionUids = NULL, string $competitionTypeUids = NULL, string $competitionUids = NULL, string $clubUids = NULL, string $teamUids = NULL, string $seasonUids = NULL, int $limit = 10) {
+			$tableGameGoal = 'tx_sportms_domain_model_gamegoal';
+			$tableGameGoalAlias = 'gamegoal';
+			$queryBuilder = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Database\ConnectionPool::class)->getQueryBuilderForTable($tableGameGoal);
+			$queryBuilder->SELECT($tableGameGoalAlias . '.*')
+				->addSelectLiteral('COUNT(' . $tableGameGoalAlias . '.' . $queryBuilder->quoteIdentifier('game') . ') AS ' . $queryBuilder->quoteIdentifier('numberOfAssists'))
+				->FROM($tableGameGoal, $tableGameGoalAlias)
+				->GROUPBY($tableGameGoalAlias . '.assist')
+				->WHERE($queryBuilder->expr()->isNotNull($tableGameGoalAlias . '.assist'))
+				->ORDERBY('numberOfAssists', \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING)
+				->setMaxResults($limit);
 			debug($queryBuilder->getSQL());
 			return $queryBuilder->execute()->fetchAll();
 		}
