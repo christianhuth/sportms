@@ -181,6 +181,8 @@
 			$playersWithMostGoalsAsArray = $this->gameGoalRepository->findPlayersWithMostGoals($this->getSportsFilter(), $this->getSportAgeGroupsFilter(), $this->getSportAgeLevelsFilter(), $this->getSportPositionGroupsFilter(), $this->getSportPositionsFilter(), $this->getCompetitionTypesFilter(), $this->getCompetitionsFilter(), $this->getClubsFilter(), $teamUid, $this->getSeasonsFilter(), $this->settings['team']['historyRecordPlayers']['limit']);
 			$playersWithMostGoals = [];
 			foreach($playersWithMostGoalsAsArray AS $playerWithMostGoalsAsArray) {
+				
+					\TYPO3\CMS\Core\Utility\DebugUtility::debug($playerWithMostGoalsAsArray, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 				$playerWithMostGoal = new \Balumedien\Sportms\Domain\Model\PlayerStat();
 				$playerWithMostGoal->setPerson($this->personRepository->findByUid($playerWithMostGoalsAsArray['scorer']));
 				$playerWithMostGoal->setNumberOfGoals($playerWithMostGoalsAsArray['numberOfGoals']);
