@@ -2,8 +2,9 @@
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <f:if condition="{nationalities}">
-    <f:for as="nationality" each="{nationalities}">
+    <f:for as="nationality" each="{nationalities}" iteration="iterator">
         <f:image class="tx-sportms-person-nationality" height="20" src="EXT:core/Resources/Public/Icons/Flags/{nationality.isoCodeA2}.png" width="26"/>
+        <f:if condition="!{iterator.istLast}"> </f:if>
     </f:for>
 </f:if>
 
