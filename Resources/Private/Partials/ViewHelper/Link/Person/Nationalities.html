@@ -2,8 +2,9 @@
       xmlns:clubms="Balumedien\Clubms\ViewHelpers"
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
-<f:if condition="{person.nationalities}">
-    <f:for each="{person.nationalities}" as="nationality">
+<f:if condition="{nationalities}">
+    <f:for each="{nationalities}" as="nationality">
+        test
         <f:image src="EXT:core/Resources/Public/Icons/Flags/DE.png" />
     </f:for>
 </f:if>
