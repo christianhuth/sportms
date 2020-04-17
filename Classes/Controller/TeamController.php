@@ -38,6 +38,12 @@
 		protected $gameLineupRepository;
 		
 		/**
+		 * @var \Balumedien\Sportms\Domain\Repository\PersonRepository
+		 * @TYPO3\CMS\Extbase\Annotation\Inject
+		 */
+		protected $personRepository;
+		
+		/**
 		 * @var \Balumedien\Sportms\Domain\Repository\SeasonRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
@@ -157,7 +163,14 @@
 				$team = $this->determineTeamFromFlexform();
 			}
 			$teamUid = $team->getUid();
-			$playersWithMostGames = $this->gameLineupRepository->findPlayersWithMostGames($this->getSportsFilter(), $this->getSportAgeGroupsFilter(), $this->getSportAgeLevelsFilter(), $this->getSportPositionGroupsFilter(), $this->getSportPositionsFilter(), $this->getCompetitionTypesFilter(), $this->getCompetitionsFilter(), $this->getClubsFilter(), $teamUid, $this->getSeasonsFilter(), $this->settings['team']['historyRecordPlayers']['limit']);
+			$playersWithMostGamesAsArray = $this->gameLineupRepository->findPlayersWithMostGames($this->getSportsFilter(), $this->getSportAgeGroupsFilter(), $this->getSportAgeLevelsFilter(), $this->getSportPositionGroupsFilter(), $this->getSportPositionsFilter(), $this->getCompetitionTypesFilter(), $this->getCompetitionsFilter(), $this->getClubsFilter(), $teamUid, $this->getSeasonsFilter(), $this->settings['team']['historyRecordPlayers']['limit']);
+			$playersWithMostGames = [];
+			foreach($playersWithMostGamesAsArray AS $playerWithMostGamesAsArray) {
+				$playerWithMostGames = new \Balumedien\Sportms\Domain\Model\PlayerStat();
+				$playerWithMostGames->setPerson($this->personRepository->findByUid($playerWithMostGamesAsArray['person']));
+				$playerWithMostGames->setNumberOfGames($playerWithMostGamesAsArray['numberOfGames']);
+				$playersWithMostGames[] = $playerWithMostGames;
+			}
 			$this->view->assign('playersWithMostGames', $playersWithMostGames);
 			/* FRONTEND FILTERS */
 			if($this->settings['competitionType']['competitionTypesSelectbox']) {
