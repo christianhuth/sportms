@@ -178,7 +178,7 @@
 				$playersWithMostGames[] = $playerWithMostGames;
 			}
 			$this->view->assign('playersWithMostGames', $playersWithMostGames);
-			$playersWithMostGoalsAsArray = $this->gameGoalRepository->findPlayersWithMostGames($this->getSportsFilter(), $this->getSportAgeGroupsFilter(), $this->getSportAgeLevelsFilter(), $this->getSportPositionGroupsFilter(), $this->getSportPositionsFilter(), $this->getCompetitionTypesFilter(), $this->getCompetitionsFilter(), $this->getClubsFilter(), $teamUid, $this->getSeasonsFilter(), $this->settings['team']['historyRecordPlayers']['limit']);
+			$playersWithMostGoalsAsArray = $this->gameGoalRepository->findPlayersWithMostGoals($this->getSportsFilter(), $this->getSportAgeGroupsFilter(), $this->getSportAgeLevelsFilter(), $this->getSportPositionGroupsFilter(), $this->getSportPositionsFilter(), $this->getCompetitionTypesFilter(), $this->getCompetitionsFilter(), $this->getClubsFilter(), $teamUid, $this->getSeasonsFilter(), $this->settings['team']['historyRecordPlayers']['limit']);
 			$playersWithMostGoals = [];
 			foreach($playersWithMostGoalsAsArray AS $playerWithMostGoalsAsArray) {
 				$playerWithMostGoal = new \Balumedien\Sportms\Domain\Model\PlayerStat();
