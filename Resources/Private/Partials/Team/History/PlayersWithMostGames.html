@@ -29,10 +29,10 @@
                     <td class="tx-sportms-table-center">
                         <f:variable name="numberOfGames" value="{playerWithMostGames.numberOfGames}" />
                         <f:variable name="numberOfStartingFormation" value="{playerWithMostGames.numberOfStartingFormation}" />
-                        {playerWithMostGames.numberOfGames} / {playerWithMostGames.numberOfStartingFormation} * 100 %
-                        {playerWithMostGames.numberOfGames} / {numberOfStartingFormation} * 100 %
+                        {playerWithMostGames.numberOfGames / playerWithMostGames.numberOfStartingFormation * 100} %
+                        {playerWithMostGames.numberOfGames / numberOfStartingFormation * 100} %
                         <f:format.number decimalSeparator="," decimals="2" thousandsSeparator=".">
-                            {playerWithMostGames.percentageOfStartingFormation} * 100
+                            {playerWithMostGames.percentageOfStartingFormation}
                         </f:format.number> %
                     </td>
                 </tr>
