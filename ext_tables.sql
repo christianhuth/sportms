@@ -261,7 +261,7 @@ CREATE TABLE tx_sportms_domain_model_gamegoal (
     period int(11) DEFAULT NULL,
     minute int(11) DEFAULT '0' NOT NULL,
     minute_additional int(11) DEFAULT NULL,
-    scorer int(11) DEFAULT '0' NOT NULL,
+    scorer int(11) DEFAULT NULL,
     assist int(11) DEFAULT NULL,
     own_goal tinyint(4) DEFAULT '0' NOT NULL,
     goal_type int(11) DEFAULT NULL
