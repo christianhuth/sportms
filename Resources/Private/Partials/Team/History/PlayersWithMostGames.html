@@ -15,7 +15,13 @@
     <f:if condition="{playersWithMostGames}">
         <f:then>
             <f:for as="playerWithMostGames" each="{playersWithMostGames}" iteration="iterator">
-                <f:render arguments="{position: iterator.index, playerStat: playerWithMostGames, settings: settings}" partial="Team/History/PlayerWithMostGames"/>
+                <tr>
+                    <td class="tx-sportms-table-center">{iterator.index + 1}</td>
+                    <td class="tx-sportms-table-left"><f:render arguments="{person: playerWithMostGames.person, settings: settings}" partial="ViewHelper/Link/Person/PlayerIndex"/></td>
+                    <td class="tx-sportms-table-center"><f:render arguments="{nationalities: playerWithMostGames.person.nationalities}" partial="ViewHelper/Link/Person/Nationalities"/></td>
+                    <td class="tx-sportms-table-center">{playerWithMostGames.numberOfGames}</td>
+                    <td class="tx-sportms-table-center">{playerWithMostGames.numberOfStartingFormation}</td>
+                </tr>
             </f:for>
         </f:then>
         <f:else>
