@@ -7,16 +7,19 @@
         <th class="tx-sportms-table-center">#</th>
         <th class="tx-sportms-table-left">Person</th>
         <th class="tx-sportms-table-center">Nationalität</th>
-        <th class="tx-sportms-table-center">Spiele</th>
         <th class="tx-sportms-table-center">Tore</th>
-        <th class="tx-sportms-table-center">Tore pro Spiel</th>
     </tr>
     </thead>
     <tbody>
     <f:if condition="{playersWithMostGoals}">
         <f:then>
             <f:for as="playerWithMostGoal" each="{playersWithMostGoals}" iteration="iterator">
-                <f:render arguments="{position: iterator.index, playerStat: playerWithMostGoal, settings: settings}" partial="Team/History/PlayerWithMostGoals"/>
+                <tr>
+                    <td class="tx-sportms-table-center">{iterator.index + 1}</td>
+                    <td class="tx-sportms-table-left"><f:render arguments="{person: playerWithMostGoal.person, settings: settings}" partial="ViewHelper/Person/PlayerIndex"/></td>
+                    <td class="tx-sportms-table-center"><f:render arguments="{nationalities: playerWithMostGoal.person.nationalities}" partial="ViewHelper/Person/Nationalities"/></td>
+                    <td class="tx-sportms-table-center">{playerWithMostGoal.numberOfGoals}</td>
+                </tr>
             </f:for>
         </f:then>
         <f:else>
