@@ -248,8 +248,11 @@
 		public function teamSeasonSquadMemberLabel(&$parameters, $parentObject): void {
 			$record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
 			$person = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord('tx_sportms_domain_model_person', $record['person']);
-			$sportPositionGroup = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord('tx_sportms_domain_model_sportpositiongroup', $record['sport_position_group']);
-			$newLabel = $sportPositionGroup['label'] . ': ' . $person['lastname'] . ', ' . $person['firstname'];
+			$newLabel = $person['lastname'] . ', ' . $person['firstname'];
+			if($record['sport_position_group']) {
+				$sportPositionGroup = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord('tx_sportms_domain_model_sportpositiongroup', $record['sport_position_group']);
+				$newLabel .= ' (' . $sportPositionGroup['label'] . ')';
+			}
 			if($record['squad_number'] != NULL) {
 				$newLabel .= ' (' . $record['squad_number'] . ')';
 			}

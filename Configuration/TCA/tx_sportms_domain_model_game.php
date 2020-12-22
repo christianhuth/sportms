@@ -815,6 +815,15 @@ return array(
 	            ),
                 'foreign_sortby' => 'sorting',
                 'foreign_table' => 'tx_sportms_domain_model_gamelineup',
+				'overrideChildTca' => [
+					'columns' => [
+						'person' => array(
+							'config' => array(
+								'foreign_table_where' => 'AND team_season = (SELECT team_season_home FROM tx_sportms_domain_model_game WHERE uid = ###REC_FIELD_game###)',
+							),
+						),
+					],
+				],
                 'type' => 'inline',
             ),
         ),
@@ -842,6 +851,15 @@ return array(
 				),
 				'foreign_sortby' => 'sorting',
 				'foreign_table' => 'tx_sportms_domain_model_gamelineup',
+				'overrideChildTca' => [
+					'columns' => [
+						'person' => array(
+							'config' => array(
+								'foreign_table_where' => 'AND team_season = (SELECT team_season_home FROM tx_sportms_domain_model_game WHERE uid = ###REC_FIELD_game###)',
+							),
+						),
+					],
+				],
 				'type' => 'inline',
 			),
 		),
@@ -913,6 +931,16 @@ return array(
 				),
 				'foreign_sortby' => 'sorting',
 				'foreign_table' => 'tx_sportms_domain_model_gamelineup',
+				'overrideChildTca' => [
+					'columns' => [
+						'person' => array(
+							'config' => array(
+								'eval' => '',
+								'foreign_table_where' => 'AND team_season = (SELECT team_season_guest FROM tx_sportms_domain_model_game WHERE uid = ###REC_FIELD_game###)',
+							),
+						),
+					],
+				],
 				'type' => 'inline',
 			),
 		),
@@ -940,6 +968,16 @@ return array(
 				),
 				'foreign_sortby' => 'sorting',
 				'foreign_table' => 'tx_sportms_domain_model_gamelineup',
+				'overrideChildTca' => [
+					'columns' => [
+						'person' => array(
+							'config' => array(
+								'eval' => '',
+								'foreign_table_where' => 'AND team_season = (SELECT team_season_guest FROM tx_sportms_domain_model_game WHERE uid = ###REC_FIELD_game###)',
+							),
+						),
+					],
+				],
 				'type' => 'inline',
 			),
 		),
