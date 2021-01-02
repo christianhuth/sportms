@@ -819,7 +819,7 @@ return array(
 					'columns' => [
 						'person' => array(
 							'config' => array(
-								'foreign_table_where' => 'AND team_season = (SELECT team_season_home FROM tx_sportms_domain_model_game WHERE uid = ###REC_FIELD_game###)',
+								'foreign_table_where' => 'AND tx_sportms_domain_model_person.uid IN (SELECT tx_sportms_domain_model_teamseasonsquadmember.person FROM tx_sportms_domain_model_teamseasonsquadmember WHERE tx_sportms_domain_model_teamseasonsquadmember.team_season = (SELECT tx_sportms_domain_model_game.team_season_home FROM tx_sportms_domain_model_game WHERE tx_sportms_domain_model_game.uid = ###REC_FIELD_game###))',
 							),
 						),
 					],
@@ -855,7 +855,7 @@ return array(
 					'columns' => [
 						'person' => array(
 							'config' => array(
-								'foreign_table_where' => 'AND team_season = (SELECT team_season_home FROM tx_sportms_domain_model_game WHERE uid = ###REC_FIELD_game###)',
+								'foreign_table_where' => 'AND tx_sportms_domain_model_person.uid IN (SELECT tx_sportms_domain_model_teamseasonsquadmember.person FROM tx_sportms_domain_model_teamseasonsquadmember WHERE tx_sportms_domain_model_teamseasonsquadmember.team_season = (SELECT tx_sportms_domain_model_game.team_season_home FROM tx_sportms_domain_model_game WHERE tx_sportms_domain_model_game.uid = ###REC_FIELD_game###))',
 							),
 						),
 					],
@@ -935,8 +935,7 @@ return array(
 					'columns' => [
 						'person' => array(
 							'config' => array(
-								'eval' => '',
-								'foreign_table_where' => 'AND team_season = (SELECT team_season_guest FROM tx_sportms_domain_model_game WHERE uid = ###REC_FIELD_game###)',
+								'foreign_table_where' => 'AND tx_sportms_domain_model_person.uid IN (SELECT tx_sportms_domain_model_teamseasonsquadmember.person FROM tx_sportms_domain_model_teamseasonsquadmember WHERE tx_sportms_domain_model_teamseasonsquadmember.team_season = (SELECT tx_sportms_domain_model_game.team_season_guest FROM tx_sportms_domain_model_game WHERE tx_sportms_domain_model_game.uid = ###REC_FIELD_game###))',
 							),
 						),
 					],
@@ -972,8 +971,7 @@ return array(
 					'columns' => [
 						'person' => array(
 							'config' => array(
-								'eval' => '',
-								'foreign_table_where' => 'AND team_season = (SELECT team_season_guest FROM tx_sportms_domain_model_game WHERE uid = ###REC_FIELD_game###)',
+								'foreign_table_where' => 'AND tx_sportms_domain_model_person.uid IN (SELECT tx_sportms_domain_model_teamseasonsquadmember.person FROM tx_sportms_domain_model_teamseasonsquadmember WHERE tx_sportms_domain_model_teamseasonsquadmember.team_season = (SELECT tx_sportms_domain_model_game.team_season_guest FROM tx_sportms_domain_model_game WHERE tx_sportms_domain_model_game.uid = ###REC_FIELD_game###))',
 							),
 						),
 					],

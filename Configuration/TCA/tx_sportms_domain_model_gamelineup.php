@@ -128,11 +128,10 @@ return array(
 			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person',
 			'config' => array(
 				'eval' => '',
-				'foreign_table' => 'tx_sportms_domain_model_teamseasonsquadmember',
+				'foreign_table' => 'tx_sportms_domain_model_person',
 				'items' => array(
 					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ''),
 				),
-				#'itemsProcFunc' => 'Balumedien\\Sportms\\Configuration\\TCA\\UserFunc\\ItemsProcFunc->team_season_squad_member_GameLineup',
 				'renderType' => 'selectSingle',
 				'size' => 1,
 				'type' => 'select',
