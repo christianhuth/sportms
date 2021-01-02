@@ -811,7 +811,7 @@ return array(
                 'foreign_field' => 'game',
 	            'foreign_match_fields' => array(
 		            'team' => 'home',
-		            'start' => '1',
+		            'type' => 'start',
 	            ),
                 'foreign_sortby' => 'sorting',
                 'foreign_table' => 'tx_sportms_domain_model_gamelineup',
@@ -847,7 +847,7 @@ return array(
 				'foreign_field' => 'game',
 				'foreign_match_fields' => array(
 					'team' => 'home',
-					'start' => '0',
+					'type' => 'substitute',
 				),
 				'foreign_sortby' => 'sorting',
 				'foreign_table' => 'tx_sportms_domain_model_gamelineup',
@@ -927,7 +927,7 @@ return array(
 				'foreign_field' => 'game',
 				'foreign_match_fields' => array(
 					'team' => 'guest',
-					'start' => '1',
+		            'type' => 'start',
 				),
 				'foreign_sortby' => 'sorting',
 				'foreign_table' => 'tx_sportms_domain_model_gamelineup',
@@ -963,7 +963,7 @@ return array(
 				'foreign_field' => 'game',
 				'foreign_match_fields' => array(
 					'team' => 'guest',
-					'start' => '0',
+		            'type' => 'substitute',
 				),
 				'foreign_sortby' => 'sorting',
 				'foreign_table' => 'tx_sportms_domain_model_gamelineup',
