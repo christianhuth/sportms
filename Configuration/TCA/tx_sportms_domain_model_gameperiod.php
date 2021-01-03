@@ -18,6 +18,7 @@ return array(
         'label' => '',
         'label_userFunc' => \Balumedien\Sportms\Configuration\TCA\UserFunc\UserFunc::class . '->GamePeriodLabel',
 		'searchFields' => '',
+		'sortby' => 'sorting',
 		'title'	=> 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_gameperiod',
 		'tstamp' => 'tstamp',
 		'versioningWS' => TRUE,
