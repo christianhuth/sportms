@@ -20,7 +20,7 @@
 		/**
 		 * @var string
 		 */
-		protected $zipcode = '';
+		protected $zipcode;
 		
 		/**
 		 * @var string
