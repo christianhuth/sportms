@@ -141,7 +141,6 @@ return array(
 			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_venue',
 			'config' => array(
 				'foreign_table' => 'tx_sportms_domain_model_venue',
-				'foreign_table_where' => 'ORDER BY name ASC',
 				'items' => Array (
                     array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ''),
 				),
