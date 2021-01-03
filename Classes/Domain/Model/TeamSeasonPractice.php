@@ -14,7 +14,7 @@
 		protected $teamSeason;
 		
 		/**
-		 * @var string
+		 * @var integer
 		 */
 		protected $day;
 		
@@ -53,14 +53,14 @@
 		}
 		
 		/**
-		 * @return string
+		 * @return integer
 		 */
 		public function getDay() {
 			return $this->day;
 		}
 		
 		/**
-		 * @param string $day
+		 * @param integer $day
 		 */
 		public function setDay($day) {
 			$this->day = $day;
