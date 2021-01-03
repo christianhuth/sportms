@@ -18,7 +18,7 @@ return array(
         'label' => '',
         'label_userFunc' => \Balumedien\Sportms\Configuration\TCA\UserFunc\UserFunc::class . '->GameResultSetLabel',
 		'searchFields' => '',
-		'sortby' => 'sorting'
+		'sortby' => 'sorting',
 		'title'	=> 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_gameresultset',
 		'tstamp' => 'tstamp',
 		'versioningWS' => TRUE,
