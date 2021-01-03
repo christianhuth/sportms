@@ -31,14 +31,14 @@
 		protected $enddate;
 		
 		/**
-		 * @return CompetitionSeason
+		 * @return \Balumedien\Sportms\Domain\Model\CompetitionSeason
 		 */
 		public function getCompetitionSeason() {
 			return $this->competitionSeason;
 		}
 		
 		/**
-		 * @param CompetitionSeason $competitionSeason
+		 * @param \Balumedien\Sportms\Domain\Model\CompetitionSeason $competitionSeason
 		 */
 		public function setCompetitionSeason($competitionSeason) {
 			$this->competitionSeason = $competitionSeason;
