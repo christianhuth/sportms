@@ -18,6 +18,7 @@ return array(
 		'label' => '',
 		'label_userFunc' => \Balumedien\Sportms\Configuration\TCA\UserFunc\UserFunc::class . '->TeamSeasonSquadMemberLabel',
 		'searchFields' => '',
+		'sortby' => 'sorting',
 		'title'	=> 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_teamseasonsquadmember',
 		'tstamp' => 'tstamp',
         'versioningWS' => TRUE,
