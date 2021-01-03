@@ -6,16 +6,35 @@
 	 * ClubMembers
 	 */
 	class ClubMembers extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
+
+		/**
+		 * @var \Balumedien\Sportms\Domain\Model\Club
+		 */
+		protected $club;
 		
 		/**
 		 * @var int
 		 */
-		protected $date = '';
+		protected $date;
 		
 		/**
 		 * @var int
 		 */
-		protected $members = '';
+		protected $members;
+		
+		/**
+		 * @return \Balumedien\Sportms\Domain\Model\Club
+		 */
+		public function getClub() {
+			return $this->club;
+		}
+		
+		/**
+		 * @param \Balumedien\Sportms\Domain\Model\Club $club
+		 */
+		public function setClub($club) {
+			$this->club = $club;
+		}
 		
 		/**
 		 * Returns the date
