@@ -436,8 +436,7 @@ CREATE TABLE tx_sportms_domain_model_phonetype (
 # Table structure for table 'tx_sportms_domain_model_refereejob'
 #
 CREATE TABLE tx_sportms_domain_model_refereejob (
-	label varchar(255) DEFAULT '0' NOT NULL,
-    slug varchar(2048) DEFAULT ''
+	label varchar(255) DEFAULT '0' NOT NULL
 );
 
 #
