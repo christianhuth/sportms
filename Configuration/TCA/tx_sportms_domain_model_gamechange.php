@@ -27,8 +27,7 @@ return array(
 		'showRecordFieldList' => '',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'game, ---palette---;;time, ---palette---;;person_in_person_out, reason,
-		                            '),
+		'1' => array('showitem' => 'game, ---palette---;;time, ---palette---;;person_in_person_out, reason'),
 	),
 	'palettes' => array(
 		'time' => array('showitem' => 'period, minute, minute_additional'),
