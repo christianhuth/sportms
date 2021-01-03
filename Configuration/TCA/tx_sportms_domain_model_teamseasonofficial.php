@@ -18,6 +18,7 @@ return array(
 		'label' => '',
 		'label_userFunc' => \Balumedien\Sportms\Configuration\TCA\UserFunc\UserFunc::class . '->teamSeasonOfficialLabel',
 		'searchFields' => '',
+		'sortby' => 'sorting',
 		'title'	=> 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_teamseasonofficial',
 		'tstamp' => 'tstamp',
 		'versioningWS' => TRUE,
@@ -106,22 +107,6 @@ return array(
             ),
         ),
 
-        'team_season_official_job' => array(
-            'exclude' => 1,
-            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_teamseasonofficialjob',
-            'config' => array(
-                'eval' => 'required',
-                'foreign_table' => 'tx_sportms_domain_model_teamseasonofficialjob',
-                'foreign_table_where' => 'ORDER BY tx_sportms_domain_model_teamseasonofficialjob.label ASC',
-                'items' => array(
-                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', 0),
-                ),
-                'maxItems' => 1,
-                'renderType' => 'selectSingle',
-                'size' => 1,
-                'type' => 'select',
-            ),
-        ),
 		'person' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person',
@@ -140,6 +125,22 @@ return array(
 				'type' => 'select',
 			),
 		),
+        'team_season_official_job' => array(
+            'exclude' => 1,
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_teamseasonofficialjob',
+            'config' => array(
+                'eval' => 'required',
+                'foreign_table' => 'tx_sportms_domain_model_teamseasonofficialjob',
+                'foreign_table_where' => 'ORDER BY tx_sportms_domain_model_teamseasonofficialjob.label ASC',
+                'items' => array(
+                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', 0),
+                ),
+                'maxItems' => 1,
+                'renderType' => 'selectSingle',
+                'size' => 1,
+                'type' => 'select',
+            ),
+        ),
 
 		'startdate' => array(
 			'exclude' => 1,
