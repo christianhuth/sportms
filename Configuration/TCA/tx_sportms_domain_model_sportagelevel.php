@@ -17,6 +17,7 @@ return array(
 		'iconfile' => 'EXT:sportms/Resources/Public/Icons/tx_sportms_domain_model_sportagelevel.svg',
 		'label' => 'label',
 		'searchFields' => 'label',
+		'sortby' => 'sorting',
 		'title'	=> 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sportagelevel',
 		'tstamp' => 'tstamp',
 		'versioningWS' => TRUE,
