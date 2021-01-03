@@ -76,6 +76,13 @@
 		protected $clubGrounds;
 		
 		/**
+		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\Venue>
+		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
+		 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
+		 */
+		protected $homeVenues;
+		
+		/**
 		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\ClubSection>
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
@@ -118,6 +125,7 @@
 			$this->setMails(new \TYPO3\CMS\Extbase\Persistence\ObjectStorage());
 			$this->setUrls(new \TYPO3\CMS\Extbase\Persistence\ObjectStorage());
 			$this->setClubGrounds(new \TYPO3\CMS\Extbase\Persistence\ObjectStorage());
+			$this->setHomeVenues(new \TYPO3\CMS\Extbase\Persistence\ObjectStorage());
 			$this->setClubSections(new \TYPO3\CMS\Extbase\Persistence\ObjectStorage());
 			$this->setClubOfficials(new \TYPO3\CMS\Extbase\Persistence\ObjectStorage());
 		}
@@ -274,6 +282,20 @@
 		 */
 		public function setClubGrounds($clubGrounds) {
 			$this->clubGrounds = $clubGrounds;
+		}
+		
+		/**
+		 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+		 */
+		public function getHomeVenue() {
+			return $this->homeVenues;
+		}
+		
+		/**
+		 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $clubGrounds
+		 */
+		public function setHomeVenues($homeVenues) {
+			$this->homeVenues = $homeVenues;
 		}
 		
 		/**
