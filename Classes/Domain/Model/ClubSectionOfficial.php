@@ -34,11 +34,6 @@
 		protected $enddate;
 		
 		/**
-		 * @var int
-		 */
-		protected $sorting;
-		
-		/**
 		 * @return ClubSection
 		 */
 		public function getClubSection() {
@@ -106,20 +101,6 @@
 		 */
 		public function setEnddate($enddate) {
 			$this->enddate = $enddate;
-		}
-		
-		/**
-		 * @return int
-		 */
-		public function getSorting() {
-			return $this->sorting;
-		}
-		
-		/**
-		 * @param int $sorting
-		 */
-		public function setSorting($sorting) {
-			$this->sorting = $sorting;
 		}
 		
 	}
