@@ -19,6 +19,7 @@
             'label' => '',
 			'label_userFunc' => \Balumedien\Sportms\Configuration\TCA\UserFunc\UserFunc::class . '->CompetitionSeasonLabel',
 			'searchFields' => 'competition',
+			'sortby' => 'sorting',
 			'title' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_competitionseason',
 			'tstamp' => 'tstamp',
 			'versioningWS' => TRUE,
