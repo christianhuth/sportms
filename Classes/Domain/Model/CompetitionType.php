@@ -13,7 +13,6 @@
 		protected $label;
 		
 		/**
-		 * Returns the label of the competition
 		 * @return string $label
 		 */
 		public function getLabel() {
@@ -21,7 +20,6 @@
 		}
 		
 		/**
-		 * Sets the label of the competition
 		 * @param string $label
 		 * @return void
 		 */
