@@ -27,7 +27,7 @@ return array(
 		'showRecordFieldList' => '',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'team_season_official_job, person, 
+		'1' => array('showitem' => 'person, team_season_official_job,
 		                            --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_teamseasonofficial.tab_date, startdate, enddate,
 		                            '),
 	),
