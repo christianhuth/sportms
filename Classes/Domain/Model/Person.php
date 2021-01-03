@@ -10,37 +10,37 @@
 		/**
 		 * @var string
 		 */
-		protected $firstname = '';
+		protected $firstname;
 		
 		/**
 		 * @var string
 		 */
-		protected $lastname = '';
+		protected $lastname;
 		
 		/**
 		 * @var string
 		 */
-		protected $birthname = '';
+		protected $birthname;
 		
 		/**
 		 * @var string
 		 */
-		protected $nickname = '';
+		protected $nickname;
 		
 		/**
 		 * @var int
 		 */
-		protected $dateOfBirth = '';
+		protected $dateOfBirth;
 		
 		/**
 		 * @var int
 		 */
-		protected $zodiacSign = '';
+		protected $zodiacSign;
 		
 		/**
 		 * @var string
 		 */
-		protected $placeOfBirth = '';
+		protected $placeOfBirth;
 		
 		/**
 		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\SJBR\StaticInfoTables\Domain\Model\Country>
@@ -51,102 +51,102 @@
 		/**
 		 * @var string
 		 */
-		protected $sex = '';
+		protected $sex;
 		
 		/**
 		 * @var string
 		 */
-		protected $weight = '';
+		protected $weight;
 		
 		/**
 		 * @var string
 		 */
-		protected $height = '';
+		protected $height;
 		
 		/**
 		 * @var string
 		 */
-		protected $sizeOfShoe = '';
+		protected $sizeOfShoe;
 		
 		/**
 		 * @var int
 		 */
-		protected $footer = '';
+		protected $footer;
 		
 		/**
 		 * @var int
 		 */
-		protected $hander = '';
+		protected $hander;
 		
 		/**
 		 * @var string
 		 */
-		protected $familyStatus = '';
+		protected $familyStatus;
 		
 		/**
 		 * @var string
 		 */
-		protected $graduation = '';
+		protected $graduation;
 		
 		/**
 		 * @var string
 		 */
-		protected $job = '';
+		protected $job;
 		
 		/**
 		 * @var string
 		 */
-		protected $characteristics = '';
+		protected $characteristics;
 		
 		/**
 		 * @var string
 		 */
-		protected $hobbies = '';
+		protected $hobbies;
 		
 		/**
 		 * @var string
 		 */
-		protected $favoriteDish = '';
+		protected $favoriteDish;
 		
 		/**
 		 * @var string
 		 */
-		protected $favoriteDrink = '';
+		protected $favoriteDrink;
 		
 		/**
 		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\Address>
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
 		 */
-		protected $addresses = '';
+		protected $addresses;
 		
 		/**
 		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\Phone>
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
 		 */
-		protected $phones = '';
+		protected $phones;
 		
 		/**
 		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\Mail>
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
 		 */
-		protected $mails = '';
+		protected $mails;
 		
 		/**
 		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\Url>
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
 		 */
-		protected $urls = '';
+		protected $urls;
 		
 		/**
 		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\PersonProfile>
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
 		 */
-		protected $personProfiles = '';
+		protected $personProfiles;
 		
 		/**
 		 * @var bool
