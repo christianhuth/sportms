@@ -10,7 +10,7 @@
 		/**
 		 * @var string
 		 */
-		protected $label = '';
+		protected $label;
 		
 		/**
 		 * Returns the label of the competition
