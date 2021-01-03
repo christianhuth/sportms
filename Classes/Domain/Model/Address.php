@@ -43,26 +43,6 @@
 		protected $public;
 		
 		/**
-		 * @var int
-		 */
-		protected $club;
-		
-		/**
-		 * @var int
-		 */
-		protected $club_section;
-		
-		/**
-		 * @var int
-		 */
-		protected $person;
-		
-		/**
-		 * @var int
-		 */
-		protected $sorting;
-		
-		/**
 		 * @return string
 		 */
 		public function getStreet() {
@@ -158,20 +138,6 @@
 		 */
 		public function setPublic($public) {
 			$this->public = $public;
-		}
-		
-		/**
-		 * @return int
-		 */
-		public function getSorting() {
-			return $this->sorting;
-		}
-		
-		/**
-		 * @param int $sorting
-		 */
-		public function setSorting($sorting) {
-			$this->sorting = $sorting;
 		}
 		
 	}
