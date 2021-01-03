@@ -78,7 +78,6 @@
 		/**
 		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\Venue>
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
-		 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
 		 */
 		protected $homeVenues;
 		
@@ -292,7 +291,7 @@
 		}
 		
 		/**
-		 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $clubGrounds
+		 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $homeVenues
 		 */
 		public function setHomeVenues($homeVenues) {
 			$this->homeVenues = $homeVenues;
