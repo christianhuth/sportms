@@ -10,12 +10,12 @@
 		/**
 		 * @var string
 		 */
-		protected $street = '';
+		protected $street;
 		
 		/**
 		 * @var string
 		 */
-		protected $housenumber = '';
+		protected $housenumber;
 		
 		/**
 		 * @var string
@@ -25,42 +25,42 @@
 		/**
 		 * @var string
 		 */
-		protected $location = '';
+		protected $location;
 		
 		/**
 		 * @var int
 		 */
-		protected $country = '';
+		protected $country;
 		
 		/**
 		 * @var string
 		 */
-		protected $region = '';
+		protected $region;
 		
 		/**
 		 * @var boolean
 		 */
-		protected $public = '';
+		protected $public;
 		
 		/**
 		 * @var int
 		 */
-		protected $club = '';
+		protected $club;
 		
 		/**
 		 * @var int
 		 */
-		protected $club_section = '';
+		protected $club_section;
 		
 		/**
 		 * @var int
 		 */
-		protected $person = '';
+		protected $person;
 		
 		/**
 		 * @var int
 		 */
-		protected $ordering = '';
+		protected $sorting;
 		
 		/**
 		 * @return string
@@ -158,6 +158,20 @@
 		 */
 		public function setPublic($public) {
 			$this->public = $public;
+		}
+		
+		/**
+		 * @return int
+		 */
+		public function getSorting() {
+			return $this->sorting;
+		}
+		
+		/**
+		 * @param int $sorting
+		 */
+		public function setSorting($sorting) {
+			$this->sorting = $sorting;
 		}
 		
 	}
