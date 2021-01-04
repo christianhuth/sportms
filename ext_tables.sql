@@ -246,7 +246,7 @@ CREATE TABLE tx_sportms_domain_model_game (
 CREATE TABLE tx_sportms_domain_model_gamecaptain (
     game int(11) DEFAULT '0' NOT NULL,
     team varchar(255) DEFAULT '' NOT NULL,
-    person_in int(11) DEFAULT '0' NOT NULL
+    person int(11) DEFAULT '0' NOT NULL
 );
 
 #
