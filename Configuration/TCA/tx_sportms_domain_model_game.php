@@ -980,36 +980,17 @@ return array(
 		),
 		'captain_guest' => array(
 			'displayCond' => 'FIELD:team_season_guest:>:0',
+			'exclude' => 1,
 			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_gamecaptain',
 			'config' => array(
-				'appearance' => array(
-					'enabledControls' => [
-						'info' => false,
-						'new' => true,
-						'sort' => false,
-						'hide' => true,
-						'dragdrop' => true,
-						'delete' => true,
-						'localize' => true,
-					],
-					'levelLinksPosition' => 'bottom',
-					'useSortable' => 1,
+				'foreign_table' => 'tx_sportms_domain_model_person',
+				'items' => Array (
+					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ''),
 				),
-				'foreign_field' => 'game',
-				'foreign_match_fields' => array(
-					'team' => 'guest'
-				),
-				'foreign_table' => 'tx_sportms_domain_model_gamecaptain',
-				'maxitems' => 1,
-				'overrideChildTca' => [
-					'columns' => [
-						'person' => array(
-							'config' => array(
-								'foreign_table_where' => 'AND tx_sportms_domain_model_person.uid IN (SELECT tx_sportms_domain_model_gamelineup.person FROM tx_sportms_domain_model_gamelineup WHERE tx_sportms_domain_model_gamelineup.game = ###REC_FIELD_game### AND tx_sportms_domain_model_gamelineup.team = guest)',
-							),
-						),
-					],
-				],
+				'maxItems' => 1,
+				'minItems' => 0,
+				'renderType' => 'selectSingle',
+				'size' => 1,
 				'type' => 'select',
 			),
 		),
@@ -1060,7 +1041,7 @@ return array(
 					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ''),
 				),
 				'maxItems' => 1,
-				'minItems' => 1,
+				'minItems' => 0,
 				'renderType' => 'selectSingle',
 				'size' => 1,
 				'type' => 'select',

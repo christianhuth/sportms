@@ -85,42 +85,32 @@ return array(
             ],
         ],
 
-        'game' => array(
-            'exclude' => 1,
-            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game',
-            'config' => array(
-                'eval' => 'required',
-                'foreign_table' => 'tx_sportms_domain_model_game',
-                'items' => array(
-                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', 0),
-                ),
-                'maxItems' => 1,
-                'renderType' => 'selectSingle',
-                'size' => 1,
-                'type' => 'select',
-            ),
-        ),
-		
+		'game' => array(
+			'config' => array(
+				'type' => 'passthrough',
+			),
+		),
 		'team' => array(
 			'config' => array(
 				'type' => 'passthrough',
 			),
 		),
 
-        'person' => array(
-            'exclude' => 1,
-            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_gamecaptain.person',
-            'config' => array(
-                'foreign_table' => 'tx_sportms_domain_model_person',
-	            'items' => array(
-		            array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ''),
-	            ),
-                'maxItems' => 1,
-                'renderType' => 'selectSingle',
-                'size' => 1,
-                'type' => 'select',
-            ),
-        ),
+		'person' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.trainer_guest',
+			'config' => array(
+				'foreign_table' => 'tx_sportms_domain_model_teamseasonofficial',
+				'items' => Array (
+					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ''),
+				),
+				'maxItems' => 1,
+				'minItems' => 1,
+				'renderType' => 'selectSingle',
+				'size' => 1,
+				'type' => 'select',
+			),
+		),
 		
 	),
 );
