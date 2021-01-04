@@ -140,9 +140,7 @@
 		
 		public function gamePunishmentLabel(&$parameters, $parentObject): void {
 			$record = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
-			$gameLineup = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord('tx_sportms_domain_model_gamelineup', $record['punished_person']);
-			$teamSeasonSquadMemberPunished = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord('tx_sportms_domain_model_teamseasonsquadmember', $gameLineup['team_season_squad_member']);
-			$person = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord('tx_sportms_domain_model_person', $teamSeasonSquadMemberPunished['person']);
+			$person = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord('tx_sportms_domain_model_person', $record['punished_person']);
 			$newLabel = $person['lastname'] . ', ' . $person['firstname'];
 			if($record['minute']) {
 				$newLabel .= ' (' . $record['minute'] . '.)';
