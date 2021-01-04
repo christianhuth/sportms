@@ -494,6 +494,9 @@
 			<trans-unit id="tx_sportms_domain_model_game.trainer_guest">
 				<source>Gasttrainer</source>
 			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_game.captain">
+				<source>Mannschaftskapitän</source>
+			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_game.game_changes">
 				<source>Spielerwechsel</source>
 			</trans-unit>
@@ -562,18 +565,6 @@
 			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_game.tab_reports">
 				<source>Spielberichte</source>
-			</trans-unit>
-
-
-			<!-- Domain Model GameCaptain -->
-			<trans-unit id="tx_sportms_domain_model_gamecaptain">
-				<source>Mannschaftskapitän</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_gamecaptains">
-				<source>Mannschaftskapitäne</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_gamecaptain.person">
-				<source>Mannschaftskapitän</source>
 			</trans-unit>
 
 
