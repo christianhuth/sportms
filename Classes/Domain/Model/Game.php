@@ -244,6 +244,11 @@
 		protected $gameLineupHomeStarts;
 		
 		/**
+		 * @var \Balumedien\Sportms\Domain\Model\GameCaptain|null
+		 */
+		protected $captainHome;
+		
+		/**
 		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\GameLineup>|\TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy|null
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
@@ -261,6 +266,11 @@
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
 		 */
 		protected $gameLineupGuestStarts;
+		
+		/**
+		 * @var \Balumedien\Sportms\Domain\Model\GameCaptain|null
+		 */
+		protected $captainGuest;
 		
 		/**
 		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\GameLineup>|\TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy|null
@@ -967,6 +977,20 @@
 		 */
 		public function setGameLineupHomeStarts($gameLineupHomeStarts): void {
 			$this->gameLineupHomeStarts = $gameLineupHomeStarts;
+		}
+		
+		/**
+		 * @return \Balumedien\Sportms\Domain\Model\GameCaptain|null
+		 */
+		public function getCaptainHome(): ?GameCaptain {
+			return $this->captainHome;
+		}
+		
+		/**
+		 * @param \Balumedien\Sportms\Domain\Model\GameCaptain|null $captainHome
+		 */
+		public function setCaptainHome(?GameCaptain $captainHome): void {
+			$this->captainHome = $captainHome;
 		}
 		
 		/**

@@ -38,8 +38,8 @@ return array(
 		                                --palette--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.palette_result_sets;result_sets,
 		                                game_rating,
 		                                --palette--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.palette_result_special;result_special,
-		                            --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.tab_home, team_season_home, game_lineup_home_starts, game_lineup_home_substitutes, trainer_home,
-		                            --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.tab_guest, team_season_guest, game_lineup_guest_starts, game_lineup_guest_substitutes, trainer_guest,
+		                            --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.tab_home, team_season_home, game_lineup_home_starts, captain_home, game_lineup_home_substitutes, trainer_home,
+		                            --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.tab_guest, team_season_guest, game_lineup_guest_starts, captain_guest, game_lineup_guest_substitutes, trainer_guest,
 		                            --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.tab_changes, game_changes,
 		                            --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.tab_goals, game_goals,
 		                            --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.tab_punishments, game_punishments,
@@ -223,7 +223,7 @@ return array(
                 'eval' => 'date',
                 'placeholder' => 'dd-mm-yyyy',
                 'renderType' => 'inputDateTime',
-                'size' => '10',
+                'size' => 10,
                 'type' => 'input',
             ),
         ),
@@ -234,7 +234,7 @@ return array(
                 'eval' => 'time',
                 'placeholder' => 'hh:mm',
                 'renderType' => 'inputDateTime',
-                'size' => '10',
+                'size' => 10,
                 'type' => 'input',
             ),
         ),
@@ -791,30 +791,30 @@ return array(
             ),
             'onChange' => 'reload',
         ),
-        'game_lineup_home_starts' => array(
-            'displayCond' => 'FIELD:team_season_home:>:0',
-            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.game_lineup_home_starts',
-            'config' => array(
-                'appearance' => array(
-                    'enabledControls' => [
-                        'info' => false,
-                        'new' => true,
-                        'sort' => false,
-                        'hide' => true,
-                        'dragdrop' => true,
-                        'delete' => true,
-                        'localize' => true,
-                    ],
-                    'levelLinksPosition' => 'bottom',
-                    'useSortable' => 1,
-                ),
-                'foreign_field' => 'game',
-	            'foreign_match_fields' => array(
-		            'team' => 'home',
-		            'type' => 'start',
-	            ),
-                'foreign_sortby' => 'sorting',
-                'foreign_table' => 'tx_sportms_domain_model_gamelineup',
+		'game_lineup_home_starts' => array(
+			'displayCond' => 'FIELD:team_season_home:>:0',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.game_lineup_home_starts',
+			'config' => array(
+				'appearance' => array(
+					'enabledControls' => [
+						'info' => false,
+						'new' => true,
+						'sort' => false,
+						'hide' => true,
+						'dragdrop' => true,
+						'delete' => true,
+						'localize' => true,
+					],
+					'levelLinksPosition' => 'bottom',
+					'useSortable' => 1,
+				),
+				'foreign_field' => 'game',
+				'foreign_match_fields' => array(
+					'team' => 'home',
+					'type' => 'start',
+				),
+				'foreign_sortby' => 'sorting',
+				'foreign_table' => 'tx_sportms_domain_model_gamelineup',
 				'overrideChildTca' => [
 					'columns' => [
 						'person' => array(
@@ -824,9 +824,44 @@ return array(
 						),
 					],
 				],
-                'type' => 'inline',
-            ),
-        ),
+				'type' => 'inline',
+			),
+		),
+		'captain_home' => array(
+			'displayCond' => 'FIELD:team_season_home:>:0',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.game_lineup_home_starts',
+			'config' => array(
+				'appearance' => array(
+					'enabledControls' => [
+						'info' => false,
+						'new' => true,
+						'sort' => false,
+						'hide' => true,
+						'dragdrop' => true,
+						'delete' => true,
+						'localize' => true,
+					],
+					'levelLinksPosition' => 'bottom',
+					'useSortable' => 1,
+				),
+				'foreign_field' => 'game',
+				'foreign_match_fields' => array(
+					'team' => 'home'
+				),
+				'foreign_table' => 'tx_sportms_domain_model_gamecaptain',
+				'maxitems' => 1,
+				'overrideChildTca' => [
+					'columns' => [
+						'person' => array(
+							'config' => array(
+								'foreign_table_where' => 'AND tx_sportms_domain_model_person.uid IN (SELECT tx_sportms_domain_model_gamelineup.person FROM tx_sportms_domain_model_gamelineup WHERE tx_sportms_domain_model_gamelineup.game = ###REC_FIELD_game### AND tx_sportms_domain_model_gamelineup.team = home)',
+							),
+						),
+					],
+				],
+				'type' => 'select',
+			),
+		),
 		'game_lineup_home_substitutes' => array(
 			'displayCond' => 'FIELD:team_season_home:>:0',
 			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.game_lineup_home_substitutes',
@@ -941,6 +976,41 @@ return array(
 					],
 				],
 				'type' => 'inline',
+			),
+		),
+		'captain_guest' => array(
+			'displayCond' => 'FIELD:team_season_guest:>:0',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.game_lineup_home_starts',
+			'config' => array(
+				'appearance' => array(
+					'enabledControls' => [
+						'info' => false,
+						'new' => true,
+						'sort' => false,
+						'hide' => true,
+						'dragdrop' => true,
+						'delete' => true,
+						'localize' => true,
+					],
+					'levelLinksPosition' => 'bottom',
+					'useSortable' => 1,
+				),
+				'foreign_field' => 'game',
+				'foreign_match_fields' => array(
+					'team' => 'guest'
+				),
+				'foreign_table' => 'tx_sportms_domain_model_gamecaptain',
+				'maxitems' => 1,
+				'overrideChildTca' => [
+					'columns' => [
+						'person' => array(
+							'config' => array(
+								'foreign_table_where' => 'AND tx_sportms_domain_model_person.uid IN (SELECT tx_sportms_domain_model_gamelineup.person FROM tx_sportms_domain_model_gamelineup WHERE tx_sportms_domain_model_gamelineup.game = ###REC_FIELD_game### AND tx_sportms_domain_model_gamelineup.team = guest)',
+							),
+						),
+					],
+				],
+				'type' => 'select',
 			),
 		),
 		'game_lineup_guest_substitutes' => array(

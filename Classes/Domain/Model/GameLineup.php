@@ -39,11 +39,6 @@
 		protected $sportPosition;
 		
 		/**
-		 * @var bool
-		 */
-		protected $isTeamCaptain;
-		
-		/**
 		 * @return Game
 		 */
 		public function getGame(): Game {
@@ -125,20 +120,6 @@
 		 */
 		public function setSportPosition(SportPosition $sportPosition): void {
 			$this->sportPosition = $sportPosition;
-		}
-		
-		/**
-		 * @return bool
-		 */
-		public function isTeamCaptain(): bool {
-			return $this->isTeamCaptain;
-		}
-		
-		/**
-		 * @param bool $isTeamCaptain
-		 */
-		public function setIsTeamCaptain(bool $isTeamCaptain): void {
-			$this->isTeamCaptain = $isTeamCaptain;
 		}
 		
 	}

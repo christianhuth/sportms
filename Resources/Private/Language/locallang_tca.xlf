@@ -565,6 +565,18 @@
 			</trans-unit>
 
 
+			<!-- Domain Model GameCaptain -->
+			<trans-unit id="tx_sportms_domain_model_gamecaptain">
+				<source>Mannschaftskapitän</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_gamecaptains">
+				<source>Mannschaftskapitäne</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_gamecaptain.person">
+				<source>Mannschaftskapitän</source>
+			</trans-unit>
+
+
 			<!-- Domain Model GameChange -->
 			<trans-unit id="tx_sportms_domain_model_gamechange">
 				<source>Wechsel</source>
@@ -658,9 +670,6 @@
 			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_gamelineup.jersey_number">
 				<source>Rückennummer</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_gamelineup.is_team_captain">
-				<source>Mannschaftskapitän?</source>
 			</trans-unit>
 
 

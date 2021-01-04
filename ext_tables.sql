@@ -224,9 +224,11 @@ CREATE TABLE tx_sportms_domain_model_game (
     result_special_home int(11) DEFAULT NULL,
     result_special_guest int(11) DEFAULT NULL,
     game_lineup_home_starts int(11) DEFAULT NULL,
+    captain_home int(11) DEFAULT NULL,
     game_lineup_home_substitutes int(11) DEFAULT NULL,
     trainer_home int(11) DEFAULT NULL,
     game_lineup_guest_starts int(11) DEFAULT NULL,
+    captain_guest int(11) DEFAULT NULL,
     game_lineup_guest_substitutes int(11) DEFAULT NULL,
     trainer_guest int(11) DEFAULT NULL,
     game_changes int(11) DEFAULT NULL,
@@ -236,6 +238,15 @@ CREATE TABLE tx_sportms_domain_model_game (
     game_reports int(11) DEFAULT NULL,
     detail_link tinyint(4) unsigned DEFAULT '1' NOT NULL,
     slug varchar(2048) DEFAULT ''
+);
+
+#
+# Table structure for table 'tx_sportms_domain_model_gamecaptain'
+#
+CREATE TABLE tx_sportms_domain_model_gamecaptain (
+    game int(11) DEFAULT '0' NOT NULL,
+    team varchar(255) DEFAULT '' NOT NULL,
+    person_in int(11) DEFAULT '0' NOT NULL
 );
 
 #
@@ -252,7 +263,7 @@ CREATE TABLE tx_sportms_domain_model_gamechange (
 );
 
 #
-# Table structure for table 'tx_sportms_domain_model_gamechange'
+# Table structure for table 'tx_sportms_domain_model_gamegoal'
 #
 CREATE TABLE tx_sportms_domain_model_gamegoal (
     game int(11) DEFAULT '0' NOT NULL,

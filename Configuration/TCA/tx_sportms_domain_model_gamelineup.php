@@ -27,7 +27,7 @@ return array(
 		'showRecordFieldList' => '',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'game, jersey_number, person, sport_position, is_team_captain'),
+		'1' => array('showitem' => 'game, jersey_number, person, sport_position'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -153,15 +153,6 @@ return array(
 				'type' => 'select',
 			),
 		),
-		'is_team_captain' => [
-			'exclude' => true,
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_gamelineup.is_team_captain',
-			'config' => [
-				'default' => FALSE,
-				'renderType' => 'checkboxToggle',
-				'type' => 'check',
-			],
-		],
 		
 	),
 );
