@@ -829,7 +829,7 @@ return array(
 		),
 		'captain_home' => array(
 			'displayCond' => 'FIELD:team_season_home:>:0',
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.game_lineup_home_starts',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_gamecaptain',
 			'config' => array(
 				'appearance' => array(
 					'enabledControls' => [
@@ -980,7 +980,7 @@ return array(
 		),
 		'captain_guest' => array(
 			'displayCond' => 'FIELD:team_season_guest:>:0',
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.game_lineup_home_starts',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_gamecaptain',
 			'config' => array(
 				'appearance' => array(
 					'enabledControls' => [
