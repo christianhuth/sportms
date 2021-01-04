@@ -244,16 +244,16 @@
 		protected $gameLineupHomeStarts;
 		
 		/**
-		 * @var \Balumedien\Sportms\Domain\Model\GameCaptain|null
-		 */
-		protected $captainHome;
-		
-		/**
 		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\GameLineup>|\TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy|null
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
 		 */
 		protected $gameLineupHomeSubstitutes;
+		
+		/**
+		 * @var \Balumedien\Sportms\Domain\Model\Person|null
+		 */
+		protected $captainHome;
 		
 		/**
 		 * @var \Balumedien\Sportms\Domain\Model\TeamSeasonOfficial|null
@@ -268,16 +268,16 @@
 		protected $gameLineupGuestStarts;
 		
 		/**
-		 * @var \Balumedien\Sportms\Domain\Model\GameCaptain|null
-		 */
-		protected $captainGuest;
-		
-		/**
 		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\GameLineup>|\TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy|null
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
 		 */
 		protected $gameLineupGuestSubstitutes;
+		
+		/**
+		 * @var \Balumedien\Sportms\Domain\Model\Person|null
+		 */
+		protected $captainGuest;
 		
 		/**
 		 * @var \Balumedien\Sportms\Domain\Model\TeamSeasonOfficial|null
@@ -980,20 +980,6 @@
 		}
 		
 		/**
-		 * @return \Balumedien\Sportms\Domain\Model\GameCaptain|null
-		 */
-		public function getCaptainHome(): ?GameCaptain {
-			return $this->captainHome;
-		}
-		
-		/**
-		 * @param \Balumedien\Sportms\Domain\Model\GameCaptain|null $captainHome
-		 */
-		public function setCaptainHome(?GameCaptain $captainHome): void {
-			$this->captainHome = $captainHome;
-		}
-		
-		/**
 		 * @return \TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy|\TYPO3\CMS\Extbase\Persistence\ObjectStorage|null
 		 */
 		public function getGameLineupHomeSubstitutes() {
@@ -1005,6 +991,20 @@
 		 */
 		public function setGameLineupHomeSubstitutes($gameLineupHomeSubstitutes): void {
 			$this->gameLineupHomeSubstitutes = $gameLineupHomeSubstitutes;
+		}
+		
+		/**
+		 * @return Person|null
+		 */
+		public function getCaptainHome(): ?Person {
+			return $this->captainHome;
+		}
+		
+		/**
+		 * @param Person|null $captainHome
+		 */
+		public function setCaptainHome(?Person $captainHome): void {
+			$this->captainHome = $captainHome;
 		}
 		
 		/**
@@ -1047,6 +1047,20 @@
 		 */
 		public function setGameLineupGuestSubstitutes($gameLineupGuestSubstitutes): void {
 			$this->gameLineupGuestSubstitutes = $gameLineupGuestSubstitutes;
+		}
+		
+		/**
+		 * @return Person|null
+		 */
+		public function getCaptainGuest(): ?Person {
+			return $this->captainGuest;
+		}
+		
+		/**
+		 * @param Person|null $captainGuest
+		 */
+		public function setCaptainGuest(?Person $captainGuest): void {
+			$this->captainGuest = $captainGuest;
 		}
 		
 		/**

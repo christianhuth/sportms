@@ -241,15 +241,6 @@ CREATE TABLE tx_sportms_domain_model_game (
 );
 
 #
-# Table structure for table 'tx_sportms_domain_model_gamecaptain'
-#
-CREATE TABLE tx_sportms_domain_model_gamecaptain (
-    game int(11) DEFAULT '0' NOT NULL,
-    team varchar(255) DEFAULT '' NOT NULL,
-    person int(11) DEFAULT '0' NOT NULL
-);
-
-#
 # Table structure for table 'tx_sportms_domain_model_gamechange'
 #
 CREATE TABLE tx_sportms_domain_model_gamechange (
