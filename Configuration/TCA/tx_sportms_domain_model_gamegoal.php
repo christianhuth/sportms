@@ -27,8 +27,7 @@ return array(
 		'showRecordFieldList' => '',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'game, ---palette---;;goal, ---palette---;;time, ---palette---;;scorer_assist, ---palette---;;goal_details,
-		                            '),
+		'1' => array('showitem' => 'game, ---palette---;;goal, ---palette---;;time, ---palette---;;scorer_assist, ---palette---;;goal_details'),
 	),
 	'palettes' => array(
 		'goal' => array('showitem' => 'goal_home, goal_guest'),
@@ -176,9 +175,10 @@ return array(
                 'foreign_table_where' => '  AND tx_sportms_domain_model_person.uid IN (SELECT person FROM tx_sportms_domain_model_gamelineup WHERE tx_sportms_domain_model_gamelineup.game = ###REC_FIELD_game###)
                                             ORDER BY tx_sportms_domain_model_person.lastname ASC, tx_sportms_domain_model_person.firstname ASC',
                 'items' => array(
-                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', NULL),
+                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', 0),
                 ),
                 'maxItems' => 1,
+                'minitems' => 0,
                 'renderType' => 'selectSingle',
                 'size' => 1,
                 'type' => 'select',
@@ -192,9 +192,10 @@ return array(
 				'foreign_table_where' => '  AND tx_sportms_domain_model_person.uid IN (SELECT person FROM tx_sportms_domain_model_gamelineup WHERE tx_sportms_domain_model_gamelineup.game = ###REC_FIELD_game###)
 											ORDER BY tx_sportms_domain_model_person.lastname ASC, tx_sportms_domain_model_person.firstname ASC',
 				'items' => array(
-					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', NULL),
+					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', 0),
 				),
 				'maxItems' => 1,
+				'minitems' => 0,
 				'renderType' => 'selectSingle',
 				'size' => 1,
 				'type' => 'select',
