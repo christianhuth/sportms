@@ -781,7 +781,7 @@ return array(
 	                                        AND tx_sportms_domain_model_teamseason.season = ###REC_FIELD_season###
 	                                        ORDER BY tx_sportms_domain_model_teamseason.team ASC',
                 'items' => Array (
-                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ''),
+                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', 0),
                 ),
                 'maxItems' => 1,
                 'minItems' => 1,
@@ -871,7 +871,7 @@ return array(
 				'foreign_table' => 'tx_sportms_domain_model_person',
 				'foreign_table_where' => 'AND tx_sportms_domain_model_person.uid IN (SELECT tx_sportms_domain_model_gamelineup.person FROM tx_sportms_domain_model_gamelineup WHERE tx_sportms_domain_model_gamelineup.team = "home" AND tx_sportms_domain_model_gamelineup.game = ###THIS_UID###)',
 				'items' => Array (
-					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ''),
+					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', 0),
 				),
 				'maxItems' => 1,
 				'minItems' => 0,
@@ -887,10 +887,10 @@ return array(
                 'foreign_table' => 'tx_sportms_domain_model_teamseasonofficial',
                 'foreign_table_where' => ' AND team_season = ###REC_FIELD_team_season_home###',
                 'items' => Array (
-                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ''),
+                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', 0),
                 ),
                 'maxItems' => 1,
-                'minItems' => 1,
+                'minItems' => 0,
                 'renderType' => 'selectSingle',
                 'size' => 1,
                 'type' => 'select',
@@ -914,7 +914,7 @@ return array(
 	                                        AND tx_sportms_domain_model_teamseason.season = ###REC_FIELD_season###
 											ORDER BY tx_sportms_domain_model_teamseason.team ASC',
                 'items' => Array (
-                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ''),
+                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', 0),
                 ),
                 'maxItems' => 1,
                 'minItems' => 1,
@@ -1004,7 +1004,7 @@ return array(
 				'foreign_table' => 'tx_sportms_domain_model_person',
 				'foreign_table_where' => 'AND tx_sportms_domain_model_person.uid IN (SELECT tx_sportms_domain_model_gamelineup.person FROM tx_sportms_domain_model_gamelineup WHERE tx_sportms_domain_model_gamelineup.team = "guest" AND tx_sportms_domain_model_gamelineup.game = ###THIS_UID###)',
 				'items' => Array (
-					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ''),
+					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', 0),
 				),
 				'maxItems' => 1,
 				'minItems' => 0,
@@ -1021,7 +1021,7 @@ return array(
 				'foreign_table' => 'tx_sportms_domain_model_teamseasonofficial',
 				'foreign_table_where' => ' AND team_season = ###REC_FIELD_team_season_guest###',
 				'items' => Array (
-					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ''),
+					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', 0),
 				),
 				'maxItems' => 1,
 				'minItems' => 0,
