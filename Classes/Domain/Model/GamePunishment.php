@@ -29,7 +29,7 @@
 		protected $minuteAdditional;
 
 		/**
-		 * @var \Balumedien\Sportms\Domain\Model\TeamSeasonSquadMember
+		 * @var \Balumedien\Sportms\Domain\Model\Person
 		 */
 		protected $punishedPerson;
 
@@ -105,16 +105,16 @@
 		}
 
 		/**
-		 * @return TeamSeasonSquadMember
+		 * @return Person
 		 */
-		public function getPunishedPerson() {
+		public function getPunishedPerson(): Person {
 			return $this->punishedPerson;
 		}
 
 		/**
-		 * @param TeamSeasonSquadMember $punishedPerson
+		 * @param Person $punishedPerson
 		 */
-		public function setPunishedPerson($punishedPerson) {
+		public function setPunishedPerson(Person $punishedPerson) {
 			$this->punishedPerson = $punishedPerson;
 		}
 

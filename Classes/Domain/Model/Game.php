@@ -256,7 +256,7 @@
 		protected $captainHome;
 		
 		/**
-		 * @var \Balumedien\Sportms\Domain\Model\TeamSeasonOfficial|null
+		 * @var \Balumedien\Sportms\Domain\Model\Person|null
 		 */
 		protected $trainerHome;
 		
@@ -280,7 +280,7 @@
 		protected $captainGuest;
 		
 		/**
-		 * @var \Balumedien\Sportms\Domain\Model\TeamSeasonOfficial|null
+		 * @var \Balumedien\Sportms\Domain\Model\Person|null
 		 */
 		protected $trainerGuest;
 		
@@ -1008,16 +1008,16 @@
 		}
 		
 		/**
-		 * @return TeamSeasonOfficial|null
+		 * @return Person|null
 		 */
-		public function getTrainerHome(): ?TeamSeasonOfficial {
+		public function getTrainerHome(): ?Person {
 			return $this->trainerHome;
 		}
 		
 		/**
-		 * @param TeamSeasonOfficial|null $trainerHome
+		 * @param Person|null $trainerHome
 		 */
-		public function setTrainerHome(?TeamSeasonOfficial $trainerHome): void {
+		public function setTrainerHome(?Person $trainerHome): void {
 			$this->trainerHome = $trainerHome;
 		}
 		
@@ -1064,16 +1064,16 @@
 		}
 		
 		/**
-		 * @return TeamSeasonOfficial|null
+		 * @return Person|null
 		 */
-		public function getTrainerGuest(): ?TeamSeasonOfficial {
+		public function getTrainerGuest(): ?Person {
 			return $this->trainerGuest;
 		}
 		
 		/**
-		 * @param TeamSeasonOfficial|null $trainerGuest
+		 * @param Person|null $trainerGuest
 		 */
-		public function setTrainerGuest(?TeamSeasonOfficial $trainerGuest): void {
+		public function setTrainerGuest(?Person $trainerGuest): void {
 			$this->trainerGuest = $trainerGuest;
 		}
 		

@@ -152,13 +152,14 @@ return array(
             'exclude' => 1,
             'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_gamepunishment.punished_person',
             'config' => array(
-                'foreign_table' => 'tx_sportms_domain_model_gamelineup',
-                'foreign_table_where' => '  AND tx_sportms_domain_model_gamelineup.game = ###REC_FIELD_game###
-                                            ORDER BY tx_sportms_domain_model_gamelineup.jersey_number ASC',
+            	'eval' => 'required',
+                'foreign_table' => 'tx_sportms_domain_model_person',
+                'foreign_table_where' => '  AND tx_sportms_domain_model_person.uid IN (SELECT tx_sportms_domain_model_gamelineup.person FROM tx_sportms_domain_model_gamelineup WHERE tx_sportms_domain_model_gamelineup.game = ###REC_FIELD_game###)',
                 'items' => array(
                     array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ""),
                 ),
                 'maxItems' => 1,
+                'minIteams' => 1,
                 'renderType' => 'selectSingle',
                 'size' => 1,
                 'type' => 'select',
