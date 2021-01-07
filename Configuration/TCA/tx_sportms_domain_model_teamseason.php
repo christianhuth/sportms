@@ -215,9 +215,9 @@ return array(
             'config' => array(
                 'type' => 'select',
                 'renderType' => 'selectMultipleSideBySide',
-                'foreign_table' => 'tx_sportms_domain_model_teamseasonsquadmember',
-                'foreign_table_where' => ' AND tx_sportms_domain_model_teamseasonsquadmember.team_season = ###THIS_UID### ',
-                'MM' => 'tx_sportms_teamseason_teamseasonsquadmember_mm',
+                'foreign_table' => 'tx_sportms_domain_model_person',
+                'foreign_table_where' => ' AND tx_sportms_domain_model_person.uid IN (SELECT tx_sportms_domain_model_teamseasonsquadmember.person FROM tx_sportms_domain_model_teamseasonsquadmember WHERE tx_sportms_domain_model_teamseasonsquadmember.team_season = ###THIS_UID###)',
+                'MM' => 'tx_sportms_teamseason_person_mm',
                 'size' => 10,
                 'autoSizeMax' => 30,
                 'maxitems' => 9999,

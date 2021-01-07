@@ -682,9 +682,9 @@ CREATE TABLE tx_sportms_sport_sporttype_mm (
 );
 
 #
-# Table structure for table 'tx_sportms_teamseason_teamseasonsquadmember_mm'
+# Table structure for table 'tx_sportms_teamseason_person_mm'
 #
-CREATE TABLE tx_sportms_teamseason_teamseasonsquadmember_mm (
+CREATE TABLE tx_sportms_teamseason_person_mm (
 	uid_local int(11) unsigned DEFAULT '0' NOT NULL,
 	uid_foreign int(11) unsigned DEFAULT '0' NOT NULL,
 	sorting int(11) unsigned DEFAULT '0' NOT NULL,

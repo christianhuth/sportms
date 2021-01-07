@@ -38,7 +38,7 @@
 		protected $teamSeasonSquadMembers;
 		
 		/**
-		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\TeamSeasonSquadMember>
+		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\Person>
 		 */
 		protected $teamSeasonSquadCaptains;
 		
