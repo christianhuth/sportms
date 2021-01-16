@@ -47,46 +47,25 @@ plugin.tx_sportms {
         }
 
         person {
-            list {
-                pid = {$plugin.tx_sportms.settings.person.list.pid}
-            }
-            officialIndex {
-                pid = {$plugin.tx_sportms.settings.person.officialIndex.pid}
-            }
-            playerIndex {
-                pid = {$plugin.tx_sportms.settings.person.playerIndex.pid}
-            }
-            refereeIndex {
-                pid = {$plugin.tx_sportms.settings.person.refereeIndex.pid}
-            }
+            list.pid = {$plugin.tx_sportms.settings.person.list.pid}
+            officialIndex.pid = {$plugin.tx_sportms.settings.person.officialIndex.pid}
+            playerIndex.pid = {$plugin.tx_sportms.settings.person.playerIndex.pid}
+            refereeIndex.pid = {$plugin.tx_sportms.settings.person.refereeIndex.pid}
             dummyImageMale = {$plugin.tx_sportms.settings.person.dummyImageMale}
             dummyImageFemale = {$plugin.tx_sportms.settings.person.dummyImageFemale}
         }
 
         team {
-            list {
-                pid = {$plugin.tx_sportms.settings.team.list.pid}
-            }
-            historyRecordGames {
-                limit = {$plugin.tx_sportms.settings.team.historyRecordGames.limit}
-                pid = {$plugin.tx_sportms.settings.team.historyRecordGames.pid}
-            }
-            historyRecordPlayers {
-                limit = {$plugin.tx_sportms.settings.team.historyRecordPlayers.limit}
-                pid = {$plugin.tx_sportms.settings.team.historyRecordPlayers.pid}
-            }
-            seasonGames {
-                pid = {$plugin.tx_sportms.settings.team.seasonGames.pid}
-            }
-            seasonGoals {
-                pid = {$plugin.tx_sportms.settings.team.seasonGoals.pid}
-            }
-            seasonIndex {
-                pid = {$plugin.tx_sportms.settings.team.seasonIndex.pid}
-            }
-            seasonSquad {
-                pid = {$plugin.tx_sportms.settings.team.seasonSquad.pid}
-            }
+            historyRecordGames.limit = {$plugin.tx_sportms.settings.team.historyRecordGames.limit}
+            historyRecordGames.pid = {$plugin.tx_sportms.settings.team.historyRecordGames.pid}
+            historyRecordPlayers.limit = {$plugin.tx_sportms.settings.team.historyRecordPlayers.limit}
+            historyRecordPlayers.pid = {$plugin.tx_sportms.settings.team.historyRecordPlayers.pid}
+            list.limit = {$plugin.tx_sportms.settings.team.list.limit}
+            list.pid = {$plugin.tx_sportms.settings.team.list.pid}
+            seasonGames.pid = {$plugin.tx_sportms.settings.team.seasonGames.pid}
+            seasonGoals.pid = {$plugin.tx_sportms.settings.team.seasonGoals.pid}
+            seasonIndex.pid = {$plugin.tx_sportms.settings.team.seasonIndex.pid}
+            seasonSquad.pid = {$plugin.tx_sportms.settings.team.seasonSquad.pid}
         }
 
     }
