@@ -462,7 +462,8 @@ CREATE TABLE tx_sportms_domain_model_sport (
     is_individual_sport tinyint(4) unsigned DEFAULT '0' NOT NULL,
     sport_types int(11) DEFAULT NULL,
     sport_age_groups int(11) DEFAULT NULL,
-    sport_position_groups int(11) DEFAULT NULL
+    sport_position_groups int(11) DEFAULT NULL,
+    slug varchar(2048) DEFAULT ''
 );
 
 #
