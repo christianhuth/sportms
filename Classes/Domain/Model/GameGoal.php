@@ -39,12 +39,12 @@
 		protected $minuteAdditional;
 		
 		/**
-		 * @var \Balumedien\Sportms\Domain\Model\TeamSeasonSquadMember
+		 * @var \Balumedien\Sportms\Domain\Model\Person
 		 */
 		protected $scorer;
 		
 		/**
-		 * @var \Balumedien\Sportms\Domain\Model\TeamSeasonSquadMember
+		 * @var \Balumedien\Sportms\Domain\Model\Person
 		 */
 		protected $assist;
 		
@@ -143,28 +143,28 @@
 		}
 		
 		/**
-		 * @return TeamSeasonSquadMember
+		 * @return Person
 		 */
 		public function getScorer() {
 			return $this->scorer;
 		}
 		
 		/**
-		 * @param TeamSeasonSquadMember $scorer
+		 * @param Person $scorer
 		 */
 		public function setScorer($scorer) {
 			$this->scorer = $scorer;
 		}
 		
 		/**
-		 * @return TeamSeasonSquadMember
+		 * @return Person
 		 */
 		public function getAssist() {
 			return $this->assist;
 		}
 		
 		/**
-		 * @param TeamSeasonSquadMember $assist
+		 * @param Person $assist
 		 */
 		public function setAssist($assist) {
 			$this->assist = $assist;
