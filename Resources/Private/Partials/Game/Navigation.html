@@ -13,7 +13,7 @@
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li><f:link.page pageUid="{settings.game.showIndex.pid}">Schema</f:link.page></li>
+                    <li><f:link.action action="showIndex" controller="Game" pageUid="{settings.game.showIndex.pid}">Schema</f:link.action></li>
                     <li><f:link.page pageUid="{settings.game.showLineup.pid}">Aufstellung</f:link.page></li>
                     <f:if condition="{game.reports}">
                         <f:then>
