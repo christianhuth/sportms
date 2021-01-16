@@ -17,14 +17,12 @@
                     <li><f:link.page pageUid="{settings.game.showLineup.pid}">Aufstellung</f:link.page></li>
                     <f:if condition="{game.reports}">
                         <f:then>
-                            <li>
+                            <li><f:link.page pageUid="{settings.game.showReport.pid}">Spielbericht</f:link.page></li>
                         </f:then>
                         <f:else>
-                            <li class="disabled">
+                            <li class="disabled"><f:link.page pageUid="{settings.game.showReport.pid}">Spielbericht</f:link.page></li>
                         </f:else>
                     </f:if>
-                    <f:link.page pageUid="{settings.game.showReport.pid}">Spielbericht</f:link.page>
-                    </li>
                     <li><f:link.page pageUid="{settings.game.showHistory.pid}">Historie</f:link.page></li>
                     <li><f:link.page pageUid="{settings.competition.showGameday.pid}">Spieltagsübersicht</f:link.page></li>
                 </ul>
