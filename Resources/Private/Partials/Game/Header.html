@@ -13,23 +13,4 @@
         </div>
     </div>
 
-    <table>
-        <tr>
-            <td>
-                <f:for each="{game.teamSeasonHome.team.club.images}" as="logo">
-                    <f:debug>{logo}</f:debug>
-                </f:for>
-            </td>
-            <td>{game.resultEndRegularHome} : {game.resultEndRegularGuest}</td>
-            <td>
-                <f:debug>{game.teamSeasonGuest.team.club.images}</f:debug>
-                <f:for each="{game.teamSeasonGuest.team.club.images}" as="logo" iteration="iterator">
-                    <f:if condition="iterator.isFirst">
-                        <f:image image="{logo}"/>
-                    </f:if>
-                </f:for>
-            </td>
-        </tr>
-    </table>
-
 </html>
