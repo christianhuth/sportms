@@ -7,24 +7,46 @@
     <f:render arguments="{_all}" partial="Game/Navigation"/>
     <div class="tx-sportms-game-showindex">
 
-        <div class="tx-sportms-game-lineup">
-            <h4>Aufstellung</h4>
-            <f:for each="{game.gameLineups}" as="lineup">
-                <f:debug>{lineup}</f:debug>
-            </f:for>
-        </div>
-
         <div clas="tx-sportms-game-goals">
             <h4>Tore</h4>
-            <f:for each="{game.gameGoals}" as="goal">
-                <f:debug>{goal}</f:debug>
+            <table>
+                <f:for each="{game.gameGoals}" as="goal">
+                    <tr>
+                        <td>{goal.scorer.lastname}</td>
+                        <td>{goal.minute}'</td>
+                        <td>{goal.goal_home} : {goal.goal_guest}</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </f:for>
+            </table>
+        </div>
+
+        <div class="tx-sportms-game-lineup-start">
+            <h4>Aufstellung</h4>
+            <table>
+                <f:for each="{game.gameLineupHomeStarts}" as="lineup">
+                    <tr>
+                        <td>{lineup.person.lastname}</td>
+                        <td>{lineup.}</td>
+                    </tr>
+                </f:for>
+            </table>
+        </div>
+
+        <div class="tx-sportms-game-lineup-substitute">
+            <h4>Reservebank</h4>
+            <f:for each="{game.gameLineupHomeSubstitutes}" as="lineup">
+                <tr>
+                    <td>{lineup.person.lastname}</td>
+                    <td>{lineup.}</td>
+                </tr>
             </f:for>
         </div>
 
         <div clas="tx-sportms-game-changes">
             <h4>Wechsel</h4>
             <f:for each="{game.gameChanges}" as="change">
-                <f:debug>change</f:debug>
             </f:for>
         </div>
 
