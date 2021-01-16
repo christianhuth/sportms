@@ -12,7 +12,11 @@
         <tr>
             <td></td>
             <td>{game.resultEndRegularHome} : {game.resultEndRegularGuest}</td>
-            <td><f:debug>{game.teamSeasonGuest.team.club.images}</f:debug></td>
+            <td>
+                <f:for each="{game.teamSeasonGuest.team.club.images}" as="logo">
+                    <f:debug>{logo}</f:debug>
+                </f:for>
+            </td>
         </tr>
     </table>
 
