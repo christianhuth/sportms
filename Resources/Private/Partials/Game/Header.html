@@ -10,7 +10,11 @@
             <td>{game.teamSeasonGuest.team.label}</td>
         </tr>
         <tr>
-            <td></td>
+            <td>
+                <f:for each="{game.teamSeasonHome.team.club.images}" as="logo">
+                    <f:debug>{logo}</f:debug>
+                </f:for>
+            </td>
             <td>{game.resultEndRegularHome} : {game.resultEndRegularGuest}</td>
             <td>
                 <f:for each="{game.teamSeasonGuest.team.club.images}" as="logo">
