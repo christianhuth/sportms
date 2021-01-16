@@ -13,33 +13,22 @@
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#">Page 1</a></li>
-                    <li><a href="#">Page 2</a></li>
-                    <li><a href="#">Page 3</a></li>
+                    <li class="nav-item"><f:link.page pageUid="12" class="nav-link">Schema</f:link.page></li>
+                    <li class="nav-item"><f:link.page pageUid="12" class="nav-link">Aufstellung</f:link.page></li>
+                    <li class="nav-item">
+                        <f:if condition="{game.reports}">
+                            <f:then>
+                                <a class="nav-link" href="#">Spielbericht</a>
+                            </f:then>
+                            <f:else>
+                                <a class="nav-link disabled" href="#">Spielbericht</a>
+                            </f:else>
+                        </f:if>
+                    </li>
+                    <li class="nav-item"><f:link.page pageUid="12" class="nav-link">Historie</f:link.page></li>
+                    <li class="nav-item"><f:link.page pageUid="12" class="nav-link">Spieltagsübersicht</f:link.page></li>
                 </ul>
             </div>
-        </div>
-    </nav>
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item"><f:link.page pageUid="12" class="nav-link">Schema</f:link.page></li>
-                <li class="nav-item"><f:link.page pageUid="12" class="nav-link">Aufstellung</f:link.page></li>
-                <li class="nav-item">
-                    <f:if condition="{game.reports}">
-                        <f:then>
-                            <a class="nav-link" href="#">Spielbericht</a>
-                        </f:then>
-                        <f:else>
-                            <a class="nav-link disabled" href="#">Spielbericht</a>
-                        </f:else>
-                    </f:if>
-                </li>
-                <li class="nav-item"><f:link.page pageUid="12" class="nav-link">Historie</f:link.page></li>
-                <li class="nav-item"><f:link.page pageUid="12" class="nav-link">Spieltagsübersicht</f:link.page></li>
-            </ul>
         </div>
     </nav>
 
