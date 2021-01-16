@@ -42,8 +42,8 @@
 			<trans-unit id="tx_sportms_domain_model_competition">
 				<source>Wettbewerb</source>
 			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_competition.name">
-				<source>Wettbewerbsname</source>
+			<trans-unit id="tx_sportms_domain_model_competition.label">
+				<source>Wettbewerbsbezeichnung</source>
 			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_competition.short">
 				<source>Kurzform</source>
