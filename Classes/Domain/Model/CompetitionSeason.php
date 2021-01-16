@@ -29,6 +29,11 @@
 		 */
 		protected $competitionSeasonTeams;
 
+        /**
+         * @var bool
+         */
+        protected $detailLink;
+
 		/**
 		 * __construct
 		 */
@@ -105,5 +110,19 @@
 		public function setCompetitionSeasonTeams($competitionSeasonTeams) {
 			$this->competitionSeasonTeams = $competitionSeasonTeams;
 		}
+
+        /**
+         * @return bool
+         */
+        public function isDetailLink(): bool {
+            return $this->detailLink;
+        }
+
+        /**
+         * @param bool $detailLink
+         */
+        public function setDetailLink(bool $detailLink): void {
+            $this->detailLink = $detailLink;
+        }
 
 	}
