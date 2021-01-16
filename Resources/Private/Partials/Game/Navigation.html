@@ -2,33 +2,35 @@
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
       xmlns:sportms="Balumedien\Sportms\ViewHelpers">
 
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#gameNavbar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <span class="navbar-brand">Spiel-Navigation</span>
+    <div class="tx-sportms-game-navigation">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#gameNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <span class="navbar-brand">Spiel-Navigation</span>
+                </div>
+                <div class="collapse navbar-collapse" id="gameNavbar">
+                    <ul class="nav navbar-nav">
+                        <li><sportms:link.action action="showIndex" Game="{game}">Schema</sportms:link.action></li>
+                        <li><sportms:link.action action="showLineup" Game="{game}">Aufstellung</sportms:link.action></li>
+                        <f:if condition="{game.reports}">
+                            <f:then>
+                                <li><sportms:link.action action="showReport" Game="{game}">Spielbericht</sportms:link.action></li>
+                            </f:then>
+                            <f:else>
+                                <li class="disabled"><sportms:link.action action="showReport" Game="{game}">Spielbericht</sportms:link.action></li>
+                            </f:else>
+                        </f:if>
+                        <li><sportms:link.action action="showHistory" Game="{game}">Historie</sportms:link.action></li>
+                        <li><sportms:link.action action="showGameday" CompetitionSeason="{game.competitionSeason}">Spieltagsübersicht</sportms:link.action></li>
+                    </ul>
+                </div>
             </div>
-            <div class="collapse navbar-collapse" id="gameNavbar">
-                <ul class="nav navbar-nav">
-                    <li><sportms:link.action action="showIndex" Game="{game}">Schema</sportms:link.action></li>
-                    <li><sportms:link.action action="showLineup" Game="{game}">Aufstellung</sportms:link.action></li>
-                    <f:if condition="{game.reports}">
-                        <f:then>
-                            <li><sportms:link.action action="showReport" Game="{game}">Spielbericht</sportms:link.action></li>
-                        </f:then>
-                        <f:else>
-                            <li class="disabled"><sportms:link.action action="showReport" Game="{game}">Spielbericht</sportms:link.action></li>
-                        </f:else>
-                    </f:if>
-                    <li><sportms:link.action action="showHistory" Game="{game}">Historie</sportms:link.action></li>
-                    <li><sportms:link.action action="showGameday" CompetitionSeason="{game.competitionSeason}">Spieltagsübersicht</sportms:link.action></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+        </nav>
+    </div>
 
 </html>
