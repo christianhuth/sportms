@@ -2,13 +2,15 @@
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
       xmlns:sportms="Balumedien\Sportms\ViewHelpers">
 
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-4">{game.teamSeasonHome.team.label}</div>
+            <div class="col-4">{game.competitionSeason.competition.label} {game.season.abbreviation} {game.gameday.label}</div>
+            <div class="col-4">{game.teamSeasonGuest.team.label}</div>
+        </div>
+    </div>
+
     <table>
-        <tr><td colspan="3">Spielpaarung</td></tr>
-        <tr>
-            <td>{game.teamSeasonHome.team.label}</td>
-            <td></td>
-            <td>{game.teamSeasonGuest.team.label}</td>
-        </tr>
         <tr>
             <td>
                 <f:for each="{game.teamSeasonHome.team.club.images}" as="logo">
