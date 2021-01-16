@@ -1,0 +1,19 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:sportms="Balumedien\Sportms\ViewHelpers">
+
+    <table>
+        <tr><td colspan="3">Spielpaarung</td></tr>
+        <tr>
+            <td>{game.teamSeasonHome.team.label}</td>
+            <td></td>
+            <td>{game.teamSeasonGuest.team.label}</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>{game.resultEndRegularHome} : {game.resultEndRegularGuest}</td>
+            <td><f:debug>{game.teamSeasonGuest.team.club.logos}</f:debug></td>
+        </tr>
+    </table>
+
+</html>
