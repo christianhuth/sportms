@@ -13,20 +13,20 @@
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li class="nav-item"><f:link.page pageUid="12" class="nav-link">Schema</f:link.page></li>
-                    <li class="nav-item"><f:link.page pageUid="12" class="nav-link">Aufstellung</f:link.page></li>
-                    <li class="nav-item">
-                        <f:if condition="{game.reports}">
-                            <f:then>
-                                <a class="nav-link" href="#">Spielbericht</a>
-                            </f:then>
-                            <f:else>
-                                <a class="nav-link disabled" href="#">Spielbericht</a>
-                            </f:else>
-                        </f:if>
+                    <li><f:link.page pageUid="{settings.game.showIndex.pid}">Schema</f:link.page></li>
+                    <li><f:link.page pageUid="{settings.game.showLineup.pid}">Aufstellung</f:link.page></li>
+                    <f:if condition="{game.reports}">
+                        <f:then>
+                            <li>
+                        </f:then>
+                        <f:else>
+                            <li class="disabled">
+                        </f:else>
+                    </f:if>
+                    <f:link.page pageUid="{settings.game.showReport.pid}">Spielbericht</f:link.page>
                     </li>
-                    <li class="nav-item"><f:link.page pageUid="12" class="nav-link">Historie</f:link.page></li>
-                    <li class="nav-item"><f:link.page pageUid="12" class="nav-link">Spieltagsübersicht</f:link.page></li>
+                    <li><f:link.page pageUid="{settings.game.showHistory.pid}">Historie</f:link.page></li>
+                    <li><f:link.page pageUid="{settings.competition.showGameday.pid}">Spieltagsübersicht</f:link.page></li>
                 </ul>
             </div>
         </div>

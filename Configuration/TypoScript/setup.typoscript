@@ -39,12 +39,11 @@ plugin.tx_sportms {
         }
 
         game {
-            list {
-                pid = {$plugin.tx_sportms.settings.game.list.pid}
-            }
-            showIndex {
-                pid = {$plugin.tx_sportms.settings.game.showIndex.pid}
-            }
+            list.pid = {$plugin.tx_sportms.settings.game.list.pid}
+            showHistory.pid = {$plugin.tx_sportms.settings.game.showHistory.pid}
+            showIndex.pid = {$plugin.tx_sportms.settings.game.showIndex.pid}
+            showLineup.pid = {$plugin.tx_sportms.settings.game.showLineup.pid}
+            showReport.pid = {$plugin.tx_sportms.settings.game.showReport.pid}
         }
 
         person {

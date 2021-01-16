@@ -55,15 +55,16 @@ plugin.tx_sportms {
         }
 
         game {
-            list {
-                # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Game->list
-                pid =
-            }
-
-            showIndex {
-                # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Game->showIndex
-                pid =
-            }
+            # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Game->list
+            list.pid =
+            # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Game->showHistory
+            showHistory.pid =
+            # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Game->showIndex
+            showIndex.pid =
+            # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Game->showLineup
+            showLineup.pid =
+            # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Game->showReport
+            showReport.pid =
         }
 
         person {
