@@ -36,12 +36,20 @@
 
         <div class="tx-sportms-game-lineup-substitute">
             <h4>Reservebank</h4>
-            <f:for each="{game.gameLineupHomeSubstitutes}" as="lineup">
+            <table>
                 <tr>
-                    <td>{lineup.person.lastname}</td>
-                    <td>{lineup.}</td>
+                    <td>
+                        <f:for each="{game.gameLineupHomeSubstitutes}" as="lineup">
+                            {lineup.person.lastname}
+                        </f:for>
+                    </td>
+                    <td>
+                        <f:for each="{game.gameLineupGuestSubstitutes}" as="lineup">
+                            {lineup.person.lastname}
+                        </f:for>
+                    </td>
                 </tr>
-            </f:for>
+            </table>
         </div>
 
         <div clas="tx-sportms-game-changes">
