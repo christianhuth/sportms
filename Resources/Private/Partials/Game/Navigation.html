@@ -24,8 +24,8 @@
                             <li class="disabled"><f:link.page pageUid="{settings.game.showReport.pid}">Spielbericht</f:link.page></li>
                         </f:else>
                     </f:if>
-                    <li><f:link.page pageUid="{settings.game.showHistory.pid}">Historie</f:link.page></li>
-                    <li><f:link.page pageUid="{settings.competition.showGameday.pid}">Spieltagsübersicht</f:link.page></li>
+                    <li><sportms:link.action action="showHistory" Game="{game}">Historie</sportms:link.action></li>
+                    <li><sportms:link.action action="showGameday" Competition="{game.competitionSeason.competition}">Spieltagsübersicht</sportms:link.action></li>
                 </ul>
             </div>
         </div>
