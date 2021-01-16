@@ -15,7 +15,7 @@
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li><sportms:link.action action="showIndex" Game="{game}">Schema</sportms:link.action></li>
-                    <li><sportms:link.action action="showLineup" Game="{game}">Aufstellung</sportms:link.page></li>
+                    <li><sportms:link.action action="showLineup" Game="{game}">Aufstellung</sportms:link.action></li>
                     <f:if condition="{game.reports}">
                         <f:then>
                             <li><f:link.page pageUid="{settings.game.showReport.pid}">Spielbericht</f:link.page></li>
