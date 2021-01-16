@@ -148,13 +148,16 @@
 				$this->tag->setContent($this->renderChildren());
 				return $this->tag->render();
 			}
+
+			if(is_null($this->arguments['action'])) {
+			    $action = "list";
+            } else {
+			    $action = $this->arguments['action'];
+            }
 			
 			$controller = $this->arguments['controller'] ? $this->arguments['controller'] : $this->getSportMsDomainModel();
 			$pageUid = $this->arguments['pageUid'] ? (int) $this->arguments['pageUid'] : (int) $this->getSettings()[lcfirst($controller)][$action . '.pid'] ? : NULL;
 			$parameters = $this->arguments['arguments'] ? $this->arguments['arguments'] : array();
-			if(($action == "show") && ($showView)) {
-				$parameters['showView'] = $showView;
-			}
 			if($this->getSportMsDomainModel() != NULL) {
 				if($this->getSportMsDomainModel() != "CompetitionSeason" && $this->getSportMsDomainModel() != "TeamSeason") {
 					$parameters[lcfirst($this->getSportMsDomainModel())] = $this->arguments[$this->getSportMsDomainModel()];
