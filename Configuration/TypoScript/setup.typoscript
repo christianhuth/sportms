@@ -21,15 +21,11 @@ plugin.tx_sportms {
     settings {
 
         club {
-            list {
-                pid = {$plugin.tx_sportms.settings.club.list.pid}
-            }
+            list.pid = {$plugin.tx_sportms.settings.club.list.pid}
         }
 
         clubSection {
-            list {
-                pid = {$plugin.tx_sportms.settings.clubSection.list.pid}
-            }
+            list.pid = {$plugin.tx_sportms.settings.clubSection.list.pid}
         }
 
         competition {
