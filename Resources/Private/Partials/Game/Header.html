@@ -17,6 +17,7 @@
             </td>
             <td>{game.resultEndRegularHome} : {game.resultEndRegularGuest}</td>
             <td>
+                <f:debug>{game.teamSeasonGuest.team.club.images}</f:debug>
                 <f:for each="{game.teamSeasonGuest.team.club.images}" as="logo" iteration="iterator">
                     <f:if condition="iterator.isFirst">
                         <f:image image="{logo}"/>
