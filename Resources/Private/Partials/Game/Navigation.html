@@ -18,10 +18,10 @@
                     <li><sportms:link.action action="showLineup" Game="{game}">Aufstellung</sportms:link.action></li>
                     <f:if condition="{game.reports}">
                         <f:then>
-                            <li><f:link.page pageUid="{settings.game.showReport.pid}">Spielbericht</f:link.page></li>
+                            <li><sportms:link.action action="showReport" Game="{game}">Spielbericht</sportms:link.action></li>
                         </f:then>
                         <f:else>
-                            <li class="disabled"><f:link.page pageUid="{settings.game.showReport.pid}">Spielbericht</f:link.page></li>
+                            <li class="disabled"><sportms:link.action action="showReport" Game="{game}">Spielbericht</sportms:link.action></li>
                         </f:else>
                     </f:if>
                     <li><sportms:link.action action="showHistory" Game="{game}">Historie</sportms:link.action></li>
