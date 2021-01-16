@@ -10,7 +10,7 @@
                 <f:translate key="tx_sportms_domain_model_competition.sport"/>
             </th>
             <th>
-                <f:translate key="tx_sportms_domain_model_competition.name"/>
+                <f:translate key="tx_sportms_domain_model_competition.label"/>
             </th>
             <th>
                 <f:translate key="tx_sportms_domain_model_competition.ageLevel"/>
@@ -29,7 +29,7 @@
                             {competition.sport.label}
                         </td>
                         <td>
-                            <sportms:link.action Competition="{competition}" action="showSeasonIndex">{competition.name}</sportms:link.action>
+                            <sportms:link.action Competition="{competition}" action="showSeasonIndex">{competition.label}</sportms:link.action>
                         </td>
                         <td>{competition.sportAgeLevel.label}</td>
                         <td>{competition.competitionType.label}</td>
