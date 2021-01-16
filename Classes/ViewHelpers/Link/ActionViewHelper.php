@@ -150,7 +150,7 @@
 			}
 			
 			$controller = $this->arguments['controller'] ? $this->arguments['controller'] : $this->getSportMsDomainModel();
-			$pageUid = $this->arguments['pageUid'] ? (int) $this->arguments['pageUid'] : (int) $this->getSettings()[lcfirst($controller)][$action . 'Pid'] ? : NULL;
+			$pageUid = $this->arguments['pageUid'] ? (int) $this->arguments['pageUid'] : (int) $this->getSettings()[lcfirst($controller)][$action . '.pid'] ? : NULL;
 			$parameters = $this->arguments['arguments'] ? $this->arguments['arguments'] : array();
 			if(($action == "show") && ($showView)) {
 				$parameters['showView'] = $showView;

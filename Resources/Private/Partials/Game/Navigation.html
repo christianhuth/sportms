@@ -1,5 +1,6 @@
 <html data-namespace-typo3-fluid="true"
-      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:sportms="Balumedien\Sportms\ViewHelpers">
 
     <nav class="navbar navbar-default">
         <div class="container-fluid">
@@ -13,8 +14,8 @@
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li><f:link.action action="showIndex" controller="Game" pageUid="{settings.game.showIndex.pid}">Schema</f:link.action></li>
-                    <li><f:link.page pageUid="{settings.game.showLineup.pid}">Aufstellung</f:link.page></li>
+                    <li><sportms:link.action action="showIndex" Game="{game}">Schema</sportms:link.action></li>
+                    <li><sportms:link.action action="showLineup" Game="{game}">Aufstellung</sportms:link.page></li>
                     <f:if condition="{game.reports}">
                         <f:then>
                             <li><f:link.page pageUid="{settings.game.showReport.pid}">Spielbericht</f:link.page></li>
