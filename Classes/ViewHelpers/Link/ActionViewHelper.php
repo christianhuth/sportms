@@ -191,7 +191,7 @@
 				$controller = $this->arguments['controller'];
 			} else {
 				foreach($this->getListOfAllowedSportMsDomainModels() as $sportMsDomainModel) {
-					var_dump($this->arguments[$sportMsDomainModel]);
+					\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->arguments[$sportMsDomainModel], 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 					$actionsOfDomainModel = $this->getListOfDomainModelsAndTheirActions()[$this->arguments[$sportMsDomainModel]];
 					if($this->arguments[$sportMsDomainModel]) {
 						foreach($actionsOfDomainModel as $actionOfDomainModel) {
