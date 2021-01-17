@@ -31,8 +31,11 @@
 			$queryBuilder = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Database\ConnectionPool::class)->getQueryBuilderForTable($tableGameLineup);
 			$queryBuilder->SELECT($tableGameLineupAlias . '.*')
 							->addSelectLiteral('COUNT(' . $tableGameLineupAlias . '.' . $queryBuilder->quoteIdentifier('game') . ') AS ' . $queryBuilder->quoteIdentifier('numberOfGames'))
-							->addSelectLiteral('SUM(' . $tableGameLineupAlias . '.' . $queryBuilder->quoteIdentifier('start') . ') AS ' . $queryBuilder->quoteIdentifier('numberOfStartingFormation'))
+							->addSelectLiteral('SUM(' . $tableGameLineupAlias . '.' . $queryBuilder->quoteIdentifier('type') . ') AS ' . $queryBuilder->quoteIdentifier('numberOfStartingFormation'))
 							->FROM($tableGameLineup, $tableGameLineupAlias)
+                            ->WHERE(
+                                $queryBuilder->expr()->eq('type', $queryBuilder->createNamedParameter('start'))
+                            )
 							->GROUPBY($tableGameLineupAlias . '.person')
 							->ORDERBY('numberOfGames', \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING)
 							->setMaxResults($limit);
