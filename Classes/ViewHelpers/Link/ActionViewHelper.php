@@ -24,7 +24,12 @@
 		/**
 		 * @var array
 		 */
-		public $listOfSportMsDomainModels;
+		protected $listOfDomainModelsAndTheirActions;
+		
+		/**
+		 * @var array
+		 */
+		protected $listOfAllowedSportMsDomainModels;
 		
 		/**
 		 * @var string
@@ -76,22 +81,36 @@
 		/**
 		 * @return array
 		 */
-		public function getListOfSportMsDomainModels(): array {
-			return $this->listOfSportMsDomainModels;
+		public function getListOfDomainModelsAndTheirActions(): array {
+			return $this->listOfDomainModelsAndTheirActions;
 		}
 		
 		/**
-		 * @param array $listOfSportMSDomainModels
+		 * @param array $listOfDomainModelsAndTheirActions
 		 */
-		public function setListOfSportMsDomainModels(array $listOfSportMSDomainModels): void {
-			$this->listOfSportMsDomainModels = $listOfSportMSDomainModels;
+		public function setListOfDomainModelsAndTheirActions(array $listOfDomainModelsAndTheirActions): void {
+			$this->listOfDomainModelsAndTheirActions = $listOfDomainModelsAndTheirActions;
+		}
+		
+		/**
+		 * @return array
+		 */
+		public function getListOfAllowedSportMsDomainModels(): array {
+			return $this->listOfAllowedSportMsDomainModels;
+		}
+		
+		/**
+		 * @param array $listOfAllowedSportMsDomainModels
+		 */
+		public function setListOfAllowedSportMsDomainModels(array $listOfAllowedSportMsDomainModels): void {
+			$this->listOfAllowedSportMsDomainModels = $listOfAllowedSportMsDomainModels;
 		}
 		
 		/**
 		 * @return string
 		 */
 		public function getSportMsDomainModel(): string {
-			return $this->sportMsDomainModel ? $this->sportMsDomainModel : "";
+			return $this->sportMsDomainModel ? : "";
 		}
 		
 		/**
@@ -104,43 +123,86 @@
 		/**
 		 * Arguments initialization
 		 */
-		public function initializeArguments() {
+		public function initializeArguments(): void {
 			parent::initializeArguments();
-			$this->initListOfSportMsDomainModels();
-			foreach($this->getListOfSportMsDomainModels() as $sportMsDomainModel) {
+			$this->initListOfAllowedSportMsDomainModels();
+			foreach($this->getListOfAllowedSportMsDomainModels() as $sportMsDomainModel) {
 				$name = $sportMsDomainModel;
 				$type = 'string';
-				$description = lcfirst($sportMsDomainModel) . ' to show';
+				$description = lcfirst($sportMsDomainModel);
 				$this->registerArgument($name, $type, $description, FALSE);
 			}
 		}
 		
 		# Needed so we can fill $this->getSettings()
-		public function initSettings() {
-			$configurationManager = $this->objectManager->get('TYPO3\CMS\Extbase\Configuration\ConfigurationManager');
+		public function initSettings(): void {
+			$configurationManager = $this->objectManager->get(\TYPO3\CMS\Extbase\Configuration\ConfigurationManager::class);
 			$this->setSettings($configurationManager->getConfiguration(\TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface::CONFIGURATION_TYPE_SETTINGS, 'Sportms', 'sportms'));
 		}
 		
-		public function initListOfSportMsDomainModels() {
-			$ListOfSportMsDomainModels = 'Club, ClubSection, Competition, CompetitionSeason, CompetitionSeasonGameday, Game, Person, Season, Team, TeamSeason, Venue';
-			$this->setListOfSportMsDomainModels(explode(',', str_replace(' ', '', trim($ListOfSportMsDomainModels))));
+		public function initListOfAllowedSportMsDomainModels(): void {
+			$listOfAllowedSportMsDomainModels = array();
+			$listOfAllowedSportMsDomainModels[] = 'Club';
+			$listOfAllowedSportMsDomainModels[] = 'ClubSection';
+			$listOfAllowedSportMsDomainModels[] = 'Competition';
+			$listOfAllowedSportMsDomainModels[] = 'CompetitionSeason';
+			$listOfAllowedSportMsDomainModels[] = 'CompetitionSeasonGameday';
+			$listOfAllowedSportMsDomainModels[] = 'Game';
+			$listOfAllowedSportMsDomainModels[] = 'Person';
+			$listOfAllowedSportMsDomainModels[] = 'Season';
+			$listOfAllowedSportMsDomainModels[] = 'TeamSeason';
+			$listOfAllowedSportMsDomainModels[] = 'Venue';
+			$this->setListOfAllowedSportMsDomainModels($listOfAllowedSportMsDomainModels);
+		}
+		
+		protected function initListOfDomainModelsAndTheirActions(): void {
+			$listofDomainModelsAndTheirActions = array();
+			$listofDomainModelsAndTheirActions[] = ['Club', ['list']];
+			$listofDomainModelsAndTheirActions[] = ['ClubSection', ['list']];
+			$listofDomainModelsAndTheirActions[] = ['Competition', ['list', 'seasonGames', 'seasonStandings']];
+			$listofDomainModelsAndTheirActions[] = ['CompetitionSeason', ['games', 'standings']];
+			$listofDomainModelsAndTheirActions[] = ['Game', ['list', 'showHistory', 'showIndex', 'showInfo', 'showLineup', 'showReport']];
+			$listofDomainModelsAndTheirActions[] = ['Person', ['list', 'officialIndex', 'playerIndex', 'refereeIndex']];
+			$listofDomainModelsAndTheirActions[] = ['Team', ['historyRecordGames', 'historyRecordPlayers', 'list', 'seasonIndex', 'seasonGames', 'seasonGoals', 'seasonSquad']];
+			$this->setListOfDomainModelsAndTheirActions($listofDomainModelsAndTheirActions);
 		}
 		
 		/**
 		 * @return string Rendered link
 		 */
-		public function render() {
+		public function render(): string {
+			
 			$this->initSettings();
-			$this->initListOfSportMsDomainModels();
-			foreach($this->getListOfSportMsDomainModels() as $sportMsDomainModel) {
-				if($this->arguments[$sportMsDomainModel]) {
-					$this->setSportMsDomainModel($sportMsDomainModel);
-					break;
-				}
-			}
+			$this->initListOfAllowedSportMsDomainModels();
+			$this->initListOfDomainModelsAndTheirActions();
 			
 			$extensionName = 'sportms';
 			$pluginName = 'sportms';
+			
+			# find out which action to use
+			if(is_null($this->arguments['action'])) {
+				$action = "list";
+			} else {
+				$action = $this->arguments['action'];
+			}
+			
+			# find out which Controller to use
+			if($this->arguments['controller']) {
+				$controller = $this->arguments['controller'];
+			} else {
+				foreach($this->getListOfAllowedSportMsDomainModels() as $sportMsDomainModel) {
+					if($this->arguments[$sportMsDomainModel]) {
+						$actionsOfDomainModel = $this->getListOfDomainModelsAndTheirActions()[$this->arguments[$sportMsDomainModel]];
+						foreach($actionsOfDomainModel as $actionOfDomainModel) {
+							if($action === $actionOfDomainModel) {
+								$this->setSportMsDomainModel($sportMsDomainModel);
+								break;
+							}
+						}
+					}
+				}
+				$controller = $this->getSportMsDomainModel();
+			}
 			
 			if(is_null($this->arguments[$this->sportMsDomainModel]) || !$this->arguments[$this->sportMsDomainModel]->isDetailLink()) {
 				$this->tagName = 'span';
@@ -148,20 +210,14 @@
 				$this->tag->setContent($this->renderChildren());
 				return $this->tag->render();
 			}
-
-			if(is_null($this->arguments['action'])) {
-			    $action = "list";
-            } else {
-			    $action = $this->arguments['action'];
-            }
 			
-			$controller = $this->arguments['controller'] ? $this->arguments['controller'] : $this->getSportMsDomainModel();
 			# pageUid can only be set via Settings (TypoScript or Flexform)
 			$pageUid = (int) $this->getSettings()[lcfirst($controller)][$action]['pid'];
-			$parameters = $this->arguments['arguments'] ? $this->arguments['arguments'] : array();
-			if($this->getSportMsDomainModel() != NULL) {
+			
+			$parameters = $this->arguments['arguments'] ? : array();
+			if($this->getSportMsDomainModel() !== NULL) {
 				$parameters[lcfirst($this->getSportMsDomainModel())] = $this->arguments[$this->getSportMsDomainModel()];
-				if($this->getSportMsDomainModel() == "CompetitionSeason" | $this->getSportMsDomainModel() == "TeamSeason") {
+				if($this->getSportMsDomainModel() === "CompetitionSeason" | $this->getSportMsDomainModel() === "TeamSeason") {
 					$parameters['season'] = $this->arguments[$sportMsDomainModel]->getSeason();
 					switch($this->getSportMsDomainModel()) {
 						case "CompetitionSeason":
