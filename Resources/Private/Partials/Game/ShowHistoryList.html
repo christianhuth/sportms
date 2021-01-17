@@ -7,22 +7,16 @@
     <table class="table table-bordered table-hover table-striped">
         <thead>
         <tr>
-            <th>Sportart</th>
-            <th>Wettbewerb</th>
-            <th>Saison</th>
-            <th colspan="3">Begegnung</th>
-            <th>Ergebnis</th>
+            <th>Datum</th>
+            <th colspan="3">Begegnungen</th>
+            <th>Bericht</th>
         </tr>
         </thead>
         <tbody>
         <f:if condition="{games}">
             <f:then>
                 <f:for as="game" each="{games}">
-                    <f:debug>{game}</f:debug>
                     <tr>
-                        <td>
-                            {game.sport.label}
-                        </td>
                         <td>
                             <sportms:link.action Competition="{game.competitionSeason.competition}">{game.competitionSeason.competition.name}</sportms:link.action>
                         </td>

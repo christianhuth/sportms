@@ -62,6 +62,10 @@
 								<numIndex index="0">Spiel (Einzelansicht - Historie)</numIndex>
 								<numIndex index="1">Game->showHistory</numIndex>
 							</numIndex>
+							<numIndex index="146">
+								<numIndex index="0">Spiel (Einzelansicht - Info)</numIndex>
+								<numIndex index="1">Game->showInfo</numIndex>
+							</numIndex>
 							<numIndex index="150">
 								<numIndex index="0">Person</numIndex>
 								<numIndex index="1">--div--</numIndex>
