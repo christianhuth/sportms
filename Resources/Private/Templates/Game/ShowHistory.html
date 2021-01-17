@@ -14,7 +14,9 @@
         <div class="tx-sportms-game-showhistory">
             <div clas="tx-sportms-game-list">
                 <h4>Bisherige Begegnungen</h4>
-                <f:debug>{gamesInCompetition}</f:debug>
+                <f:for each="{gamesInCompetition}" as="game">
+                    <f:debug>{game}</f:debug>
+                </f:for>
             </div>
         </div>
 
