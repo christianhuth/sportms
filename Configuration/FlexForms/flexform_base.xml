@@ -107,12 +107,12 @@
 								<numIndex index="1">Team->seasonIndex</numIndex>
 							</numIndex>
 							<numIndex index="191">
-								<numIndex index="0">Mannschaft (Saisonansicht - Tore)</numIndex>
-								<numIndex index="1">Team->seasonGoals</numIndex>
-							</numIndex>
-							<numIndex index="192">
 								<numIndex index="0">Mannschaft (Saisonansicht - Spiele)</numIndex>
 								<numIndex index="1">Team->seasonGames</numIndex>
+							</numIndex>
+							<numIndex index="192">
+								<numIndex index="0">Mannschaft (Saisonansicht - Tore)</numIndex>
+								<numIndex index="1">Team->seasonGoals</numIndex>
 							</numIndex>
 							<numIndex index="193">
 								<numIndex index="0">Mannschaft (Saisonansicht - Kader)</numIndex>

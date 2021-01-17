@@ -156,7 +156,8 @@
             }
 			
 			$controller = $this->arguments['controller'] ? $this->arguments['controller'] : $this->getSportMsDomainModel();
-			$pageUid = $this->arguments['pageUid'] ? (int) $this->arguments['pageUid'] : (int) $this->getSettings()[lcfirst($controller)][$action]['pid'] ? : NULL;
+			# pageUid can only be set via Settings (TypoScript or Flexform)
+			$pageUid = (int) $this->getSettings()[lcfirst($controller)][$action]['pid'];
 			$parameters = $this->arguments['arguments'] ? $this->arguments['arguments'] : array();
 			if($this->getSportMsDomainModel() != NULL) {
 				if($this->getSportMsDomainModel() != "CompetitionSeason" && $this->getSportMsDomainModel() != "TeamSeason") {
