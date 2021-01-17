@@ -27,6 +27,11 @@
 		 * @var string
 		 */
 		protected $author;
+
+        /**
+         * @var int
+         */
+        protected $date;
 		
 		/**
 		 * @return \Balumedien\Sportms\Domain\Model\Game
@@ -83,5 +88,19 @@
 		public function setAuthor($author) {
 			$this->author = $author;
 		}
+
+        /**
+         * @return int
+         */
+        public function getDate(): int {
+            return $this->date;
+        }
+
+        /**
+         * @param int $date
+         */
+        public function setDate(int $date): void {
+            $this->date = $date;
+        }
 		
 	}
