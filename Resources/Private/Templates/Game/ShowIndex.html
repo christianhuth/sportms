@@ -19,7 +19,7 @@
                 <table>
                     <f:for each="{game.gameGoals}" as="goal">
                         <tr>
-                            <td><f:link.page pageUid="{settings.person.playerIndex.pid}" additionalParams="{sportms: {person: '{goal.scorer.uid}'}}">{goal.scorer.lastname}</f:link.page></td>
+                            <td><sportms:link.action action="playerIndex" Person="{goal.scorer}">{goal.scorer.lastname}</sportms:link.action></td>
                             <td>{goal.minute}'</td>
                             <td>{goal.goalHome} : {goal.goalGuest}</td>
                             <td></td>
