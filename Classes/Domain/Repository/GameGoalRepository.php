@@ -59,6 +59,7 @@
 				->FROM($tableGameGoal, $tableGameGoalAlias)
 				->GROUPBY($tableGameGoalAlias . '.assist')
 				->WHERE($queryBuilder->expr()->isNotNull($tableGameGoalAlias . '.assist'))
+                ->WHERE($queryBuilder->expr()->gt($tableGameGoalAlias . '.assist', 0))
 				->ORDERBY('numberOfAssists', \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING)
 				->setMaxResults($limit);
 			debug($queryBuilder->getSQL());
