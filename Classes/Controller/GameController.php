@@ -153,12 +153,12 @@
             $this->initializeActions();
             $gamesInCompetition = $this->gameRepository->findAll(
                 $game->getSport()->getUid(),
-                $game->getCompetitionSeason()->getCompetition()->getSportAgeGroup(),
-                $game->getCompetitionSeason()->getCompetition()->getSportAgeLevel(),
-                $game->getCompetitionSeason()->getCompetition()->getCompetitionType(),
-                $game->getCompetitionSeason()->getCompetition(),
+                $game->getCompetitionSeason()->getCompetition()->getSportAgeGroup()->getUid(),
+                $game->getCompetitionSeason()->getCompetition()->getSportAgeLevel()->getUid(),
+                $game->getCompetitionSeason()->getCompetition()->getCompetitionType()->getUid(),
+                $game->getCompetitionSeason()->getCompetition()->getUid(),
                 null, # Clubs
-                $game->getTeamSeasonHome()->getTeam() . "," . $game->getTeamSeasonGuest()->getTeam(),
+                $game->getTeamSeasonHome()->getTeam()->getUid() . "," . $game->getTeamSeasonGuest()->getTeam()->getUid(),
                 null,
                 null);
             $this->view->assign('gamesInCompetition', $gamesInCompetition);
