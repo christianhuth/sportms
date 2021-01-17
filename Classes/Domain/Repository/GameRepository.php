@@ -49,6 +49,7 @@
 			if($constraints) {
 				$query->matching($query->logicalAnd($constraints));
 			}
+            debug($query->getSQL());
 			return $query->execute();
 		}
 		
