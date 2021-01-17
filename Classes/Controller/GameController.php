@@ -137,13 +137,21 @@
 				}
 			}
 		}
-		
-		/**
-		 * @param \Balumedien\Sportms\Domain\Model\Game $game
-		 */
-		public function showIndexAction(\Balumedien\Sportms\Domain\Model\Game $game = NULL) {
-			$this->initializeActions();
-			$this->view->assign('game', $game);
-		}
+
+        /**
+         * @param \Balumedien\Sportms\Domain\Model\Game $game
+         */
+        public function showIndexAction(\Balumedien\Sportms\Domain\Model\Game $game = NULL) {
+            $this->initializeActions();
+            $this->view->assign('game', $game);
+        }
+
+        /**
+         * @param \Balumedien\Sportms\Domain\Model\Game $game
+         */
+        public function showHistoryAction(\Balumedien\Sportms\Domain\Model\Game $game = NULL) {
+            $this->initializeActions();
+            $this->view->assign('game', $game);
+        }
 		
 	}
