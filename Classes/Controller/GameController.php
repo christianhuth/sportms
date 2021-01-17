@@ -151,7 +151,16 @@
          */
         public function showHistoryAction(\Balumedien\Sportms\Domain\Model\Game $game = NULL) {
             $this->initializeActions();
-            $gamesInCompetition = $this->gameRepository->findAll($this->getSportsFilter(), $this->getSportAgeGroupsFilter(), $this->getSportAgeLevelsFilter(), $this->getCompetitionTypesFilter(), $game->getCompetitionSeason()->getCompetition(), $this->getClubsFilter(), $this->getTeamsFilter(), $this->getSeasonsFilter(), $this->getCompetitionSeasonGamedaysFilter());
+            $gamesInCompetition = $this->gameRepository->findAll(
+                $game->getSport(),
+                $game->getCompetitionSeason()->getCompetition()->getSportAgeGroup(),
+                $game->getCompetitionSeason()->getCompetition()->getSportAgeLevel(),
+                $game->getCompetitionSeason()->getCompetition()->getCompetitionType(),
+                $game->getCompetitionSeason()->getCompetition(),
+                null, # Clubs
+                $game->getTeamSeasonHome()->getTeam() . "," . $game->getTeamSeasonGuest()->getTeam(),
+                null,
+                null);
             $this->view->assign('gamesInCompetition', $gamesInCompetition);
         }
 		
