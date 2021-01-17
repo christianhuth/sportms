@@ -160,17 +160,15 @@
 			$pageUid = (int) $this->getSettings()[lcfirst($controller)][$action]['pid'];
 			$parameters = $this->arguments['arguments'] ? $this->arguments['arguments'] : array();
 			if($this->getSportMsDomainModel() != NULL) {
-				if($this->getSportMsDomainModel() != "CompetitionSeason" && $this->getSportMsDomainModel() != "TeamSeason") {
-					$parameters[lcfirst($this->getSportMsDomainModel())] = $this->arguments[$this->getSportMsDomainModel()];
-				} else {
+				$parameters[lcfirst($this->getSportMsDomainModel())] = $this->arguments[$this->getSportMsDomainModel()];
+				if($this->getSportMsDomainModel() == "CompetitionSeason" | $this->getSportMsDomainModel() == "TeamSeason") {
+					$parameters['season'] = $this->arguments[$sportMsDomainModel]->getSeason();
 					switch($this->getSportMsDomainModel()) {
 						case "CompetitionSeason":
 							$parameters['competition'] = $this->arguments[$sportMsDomainModel]->getCompetition();
-							$parameters['season'] = $this->arguments[$sportMsDomainModel]->getSeason();
 							break;
 						case "TeamSeason":
 							$parameters['team'] = $this->arguments[$sportMsDomainModel]->getTeam();
-							$parameters['season'] = $this->arguments[$sportMsDomainModel]->getSeason();
 							break;
 					}
 				}
