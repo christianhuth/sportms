@@ -50,15 +50,15 @@
 								<numIndex index="0">Spiel (Einzelansicht - Schema)</numIndex>
 								<numIndex index="1">Game->showIndex</numIndex>
 							</numIndex>
-							<numIndex index="142">
+							<numIndex index="143">
 								<numIndex index="0">Spiel (Einzelansicht - Aufstellung)</numIndex>
 								<numIndex index="1">Game->showLineup</numIndex>
 							</numIndex>
-							<numIndex index="142">
+							<numIndex index="144">
 								<numIndex index="0">Spiel (Einzelansicht - Spielbericht)</numIndex>
 								<numIndex index="1">Game->showReport</numIndex>
 							</numIndex>
-							<numIndex index="142">
+							<numIndex index="145">
 								<numIndex index="0">Spiel (Einzelansicht - Historie)</numIndex>
 								<numIndex index="1">Game->showHistory</numIndex>
 							</numIndex>
