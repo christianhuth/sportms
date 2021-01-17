@@ -53,7 +53,7 @@
             $queryParser = $this->objectManager->get(\TYPO3\CMS\Extbase\Persistence\Generic\Storage\Typo3DbQueryParser::class);
             \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($queryParser->convertQueryToDoctrineQueryBuilder($query)->getSQL());
             \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($queryParser->convertQueryToDoctrineQueryBuilder($query)->getParameters());
-			return $query->execute(true);
+			return $query->execute();
 		}
 		
 		public function findGamesWithHighestWinsForTeam(int $teamUid, int $limit = 5, string $competitionUids = NULL, string $seasonUids = NULL) {
