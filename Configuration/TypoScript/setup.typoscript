@@ -30,8 +30,8 @@ plugin.tx_sportms {
 
         competition {
             list.pid = {$plugin.tx_sportms.settings.competition.list.pid}
-            games.pid = {$plugin.tx_sportms.settings.competition.games.pid}
-            standings.pid = {$plugin.tx_sportms.settings.competition.standings.pid}
+            seasonGames.pid = {$plugin.tx_sportms.settings.competition.seasonGames.pid}
+            seasonStandings.pid = {$plugin.tx_sportms.settings.competition.seasonStandings.pid}
         }
 
         game {
