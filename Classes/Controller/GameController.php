@@ -152,7 +152,7 @@
         public function showHistoryAction(\Balumedien\Sportms\Domain\Model\Game $game = NULL) {
             $this->initializeActions();
             $gamesInCompetition = $this->gameRepository->findAll(
-                $game->getSport(),
+                $game->getSport()->getUid(),
                 $game->getCompetitionSeason()->getCompetition()->getSportAgeGroup(),
                 $game->getCompetitionSeason()->getCompetition()->getSportAgeLevel(),
                 $game->getCompetitionSeason()->getCompetition()->getCompetitionType(),
