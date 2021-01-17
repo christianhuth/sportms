@@ -7,9 +7,10 @@
     <table class="table table-bordered table-hover table-striped">
         <thead>
         <tr>
-            <th>Datum</th>
-            <th colspan="3">Begegnungen</th>
-            <th>Bericht</th>
+            <th>Wettbewerb</th>
+            <th>Saison</th>
+            <th colspan="3">Begegnung</th>
+            <th>Ergebnis</th>
         </tr>
         </thead>
         <tbody>
@@ -18,26 +19,26 @@
                 <f:for as="game" each="{games}">
                     <tr>
                         <td>
-                            <sportms:link.action Competition="{game.competitionSeason.competition}">{game.competitionSeason.competition.name}</sportms:link.action>
+                            <sportms:link.action Competition="{game.competitionSeason.competition}">{game.competitionSeason.competition.label}</sportms:link.action>
                         </td>
                         <td>
                             {game.competitionSeason.season.label}
                         </td>
                         <td>
-                            <sportms:link.action Season="{game.teamSeasonHome.season}" Team="{game.teamSeasonHome.team}">{game.teamSeasonHome.team.name}</sportms:link.action>
+                            <sportms:link.action Season="{game.teamSeasonHome.season}" Team="{game.teamSeasonHome.team}">{game.teamSeasonHome.team.label}</sportms:link.action>
                         </td>
                         <td>-</td>
                         <td>
-                            <sportms:link.action Season="{game.teamSeasonHome.season}" Team="{game.teamSeasonHome.team}">{game.teamSeasonGuest.team.name}</sportms:link.action>
+                            <sportms:link.action Season="{game.teamSeasonHome.season}" Team="{game.teamSeasonHome.team}">{game.teamSeasonGuest.team.label}</sportms:link.action>
                         </td>
                         <td>
-                            <f:link.action action="showIndex" arguments="{game: game, settings:settings}" pageUid="{settings.game.showIndexPid}}" pluginName="sportms">{game.resultEndRegularHome} : {game.resultEndRegularGuest}</f:link.action>
+                            <sportms:link.action action="showIndex" Game="{game}">{game.resultEndRegularHome} : {game.resultEndRegularGuest}</sportms:link.action>
                         </td>
                     </tr>
                 </f:for>
             </f:then>
             <f:else>
-                <td colspan="9">Keine Spiele gefunden.</td>
+                <td colspan="6">Keine Spiele gefunden.</td>
             </f:else>
         </f:if>
         </tbody>
