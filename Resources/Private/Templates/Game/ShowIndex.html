@@ -1,5 +1,6 @@
 <html data-namespace-typo3-fluid="true"
-      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:sportms="Balumedien\Sportms\ViewHelpers">
 
 <f:layout name="default"/>
 
@@ -33,7 +34,7 @@
                 <table>
                     <f:for each="{game.gameLineupHomeStarts}" as="lineup">
                         <tr>
-                            <td>{lineup.person.lastname}</td>
+                            <td><sportms:link.action action="playerIndex" Person="{lineup.person}">{lineup.person.lastname}</sportms:link.action></td>
                             <td>{lineup.}</td>
                         </tr>
                     </f:for>
