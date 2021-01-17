@@ -191,8 +191,9 @@
 				$controller = $this->arguments['controller'];
 			} else {
 				foreach($this->getListOfAllowedSportMsDomainModels() as $sportMsDomainModel) {
+					var_dump($this->arguments[$sportMsDomainModel]);
+					$actionsOfDomainModel = $this->getListOfDomainModelsAndTheirActions()[$this->arguments[$sportMsDomainModel]];
 					if($this->arguments[$sportMsDomainModel]) {
-						$actionsOfDomainModel = $this->getListOfDomainModelsAndTheirActions()[$this->arguments[$sportMsDomainModel]];
 						foreach($actionsOfDomainModel as $actionOfDomainModel) {
 							if($action === $actionOfDomainModel) {
 								$this->setSportMsDomainModel($sportMsDomainModel);
