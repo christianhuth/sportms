@@ -160,7 +160,8 @@
                 null,
                 $game->getTeamSeasonHome()->getTeam()->getUid() . "," . $game->getTeamSeasonGuest()->getTeam()->getUid(),
                 null,
-                null);
+                null,
+                TRUE);
             $this->view->assign('gamesInCompetition', $gamesInCompetition);
 	        $this->view->assign('game', $game);
         }

@@ -16,7 +16,7 @@
 			'teamSeasonGuest.team.label' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
 		);
 		
-		public function findAll(string $sportUids = NULL, string $sportAgeGroupUids = NULL, string $sportAgeLevelUids = NULL, string $competitionTypeUids = NULL, string $competitionUids = NULL, string $clubUids = NULL, string $teamUids = NULL, string $seasonUids = NULL, string $competitionSeasonGamedayUids = NULL) {
+		public function findAll(string $sportUids = NULL, string $sportAgeGroupUids = NULL, string $sportAgeLevelUids = NULL, string $competitionTypeUids = NULL, string $competitionUids = NULL, string $clubUids = NULL, string $teamUids = NULL, string $seasonUids = NULL, string $competitionSeasonGamedayUids = NULL, $onlyGamesBetweenTeams = FALSE) {
 			$query = $this->createQuery();
 			$constraints = [];
 			if($sportUids) {
@@ -38,7 +38,7 @@
 				$constraints[] = $this->constraintForClubUids($query, $clubUids);
 			}
 			if($teamUids) {
-				$constraints[] = $this->constraintForTeamUids($query, $teamUids);
+				$constraints[] = $this->constraintForTeamUids($query, $teamUids, $onlyGamesBetweenTeams);
 			}
 			if($seasonUids) {
 				$constraints[] = $this->constraintForSeasonUids($query, $seasonUids);
@@ -254,8 +254,12 @@
 			return $query->in('competitionSeason.competition.sportAgeLevel', explode(',', $sportAgeLevelUids));
 		}
 		
-		private function constraintForTeamUids(\TYPO3\CMS\Extbase\Persistence\QueryInterface $query, string $teamUids) {
-			return $query->logicalOr($query->in('teamSeasonHome.team', explode(',', $teamUids)), $query->in('teamSeasonGuest.team', explode(',', $teamUids)));
+		private function constraintForTeamUids(\TYPO3\CMS\Extbase\Persistence\QueryInterface $query, string $teamUids, bool $onlyGamesBetweenTeams = FALSE) {
+			if($onlyGamesBetweenTeams === TRUE) {
+				return $query->logicalAnd($query->in('teamSeasonHome.team', explode(',', $teamUids)), $query->in('teamSeasonGuest.team', explode(',', $teamUids)));
+			} else {
+				return $query->logicalOr($query->in('teamSeasonHome.team', explode(',', $teamUids)), $query->in('teamSeasonGuest.team', explode(',', $teamUids)));
+			}
 		}
 		
 	}
