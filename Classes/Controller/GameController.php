@@ -162,6 +162,7 @@
                 null,
                 null);
             $this->view->assign('gamesInCompetition', $gamesInCompetition);
+	        $this->view->assign('game', $game);
         }
 		
 	}
