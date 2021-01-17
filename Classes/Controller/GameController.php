@@ -153,7 +153,7 @@
             \TYPO3\CMS\Core\Utility\DebugUtility::debug($game, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
             $this->initializeActions();
             $gamesInCompetition = $this->gameRepository->findAll($this->getSportsFilter(), $this->getSportAgeGroupsFilter(), $this->getSportAgeLevelsFilter(), $this->getCompetitionTypesFilter(), $game->getCompetitionSeason()->getCompetition(), $this->getClubsFilter(), $this->getTeamsFilter(), $this->getSeasonsFilter(), $this->getCompetitionSeasonGamedaysFilter());
-            $this->view->assign('$gamesInCompetition', $gamesInCompetition);
+            $this->view->assign('gamesInCompetition', $gamesInCompetition);
         }
 		
 	}
