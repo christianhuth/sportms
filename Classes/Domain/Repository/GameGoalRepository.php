@@ -43,6 +43,7 @@
 				->GROUPBY($tableGameGoalAlias . '.scorer')
 				->WHERE($queryBuilder->expr()->neq($tableGameGoalAlias . '.own_goal', 1))
 				->WHERE($queryBuilder->expr()->isNotNull($tableGameGoalAlias . '.scorer'))
+                ->WHERE($queryBuilder->expr()->gt($tableGameGoalAlias . '.scorer', 0))
 				->ORDERBY('numberOfGoals', \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING)
 				->setMaxResults($limit);
 			debug($queryBuilder->getSQL());
