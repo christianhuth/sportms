@@ -150,7 +150,9 @@
          * @param \Balumedien\Sportms\Domain\Model\Game $game
          */
         public function showHistoryAction(\Balumedien\Sportms\Domain\Model\Game $game = NULL) {
+            \TYPO3\CMS\Core\Utility\DebugUtility::debug($game, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
             $game = $this->gameRepository->findByUid($game);
+            \TYPO3\CMS\Core\Utility\DebugUtility::debug($game, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
             $this->initializeActions();
             $gamesInCompetition = $this->gameRepository->findAll($this->getSportsFilter(), $this->getSportAgeGroupsFilter(), $this->getSportAgeLevelsFilter(), $this->getCompetitionTypesFilter(), $game->getCompetitionSeason()->getCompetition(), $this->getClubsFilter(), $this->getTeamsFilter(), $this->getSeasonsFilter(), $this->getCompetitionSeasonGamedaysFilter());
             $this->view->assign('$gamesInCompetition', $gamesInCompetition);
