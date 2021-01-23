@@ -164,9 +164,10 @@
 			$listofDomainModelsAndTheirActions[] = ['ClubSection', ['list']];
 			$listofDomainModelsAndTheirActions[] = ['Competition', ['list', 'seasonGames', 'seasonStandings']];
 			$listofDomainModelsAndTheirActions[] = ['CompetitionSeason', ['games', 'standings']];
-			$listofDomainModelsAndTheirActions[] = ['Game', ['list', 'showHistory', 'showIndex', 'showInfo', 'showLineup', 'showReport']];
+			$listofDomainModelsAndTheirActions[] = ['Game', ['list', 'history', 'index', 'info', 'lineup', 'report']];
 			$listofDomainModelsAndTheirActions[] = ['Person', ['list', 'officialIndex', 'playerIndex', 'refereeIndex']];
 			$listofDomainModelsAndTheirActions[] = ['Team', ['historyRecordGames', 'historyRecordPlayers', 'list', 'seasonIndex', 'seasonGames', 'seasonGoals', 'seasonSquad']];
+			$listofDomainModelsAndTheirActions[] = ['TeamSeason', ['games', 'goals', 'index', 'squad']];
 			$this->setListOfDomainModelsAndTheirActions($listofDomainModelsAndTheirActions);
 		}
 		
@@ -204,7 +205,7 @@
                 }
             }
 			
-			if(is_null($this->arguments[$this->sportMsDomainModel]) || !$this->arguments[$this->sportMsDomainModel]->isDetailLink()) {
+			if(is_null($this->arguments[$controller]) || !$this->arguments[$controller]->isDetailLink()) {
 				$this->tagName = 'span';
 				$this->setTagBuilder(new \TYPO3Fluid\Fluid\Core\ViewHelper\TagBuilder($this->tagName));
 				$this->tag->setContent($this->renderChildren());
