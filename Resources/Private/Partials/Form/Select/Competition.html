@@ -18,7 +18,9 @@
                             </f:groupedFor>
                         </f:then>
                         <f:else>
-
+                            <f:for as="competition" each="{options}">
+                                <f:form.select.option value="{competition.uid}">{v.label}</f:form.select.option>
+                            </f:for>
                         </f:else>
                     </f:if>
                 </f:form.select>
