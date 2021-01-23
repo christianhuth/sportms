@@ -202,7 +202,7 @@
 			    die("No Controller given to create Link in sportms Extension.");
 			}
 
-			die($controller);
+			#die($controller);
 
 			# we now know controller and action
             # let's check if all arguments are given to create the link for the specified combination of controller and action
@@ -223,7 +223,9 @@
 			
 			# pageUid can only be set via Settings (TypoScript or Flexform)
 			$pageUid = (int) $this->getSettings()[lcfirst($controller)][$action]['pid'];
-			
+
+            die(lcfirst($controller));
+
 			$parameters = $this->arguments['arguments'] ? : array();
 			if($this->getSportMsDomainModel() !== NULL) {
 				$parameters[lcfirst($this->getSportMsDomainModel())] = $this->arguments[$this->getSportMsDomainModel()];
