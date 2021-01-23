@@ -132,6 +132,7 @@
 				$description = lcfirst($sportMsDomainModel);
 				$this->registerArgument($name, $type, $description, FALSE);
 			}
+			$this->registerArgument("controller", "string", "Target controller. Needs to be defined", TRUE);
 		}
 		
 		# Needed so we can fill $this->getSettings()
@@ -191,7 +192,7 @@
 			if($this->arguments['controller']) {
 				$controller = $this->arguments['controller'];
 			} else {
-			    die("error");
+			    die("No Controller given to create Link in sportms Extension");
 			}
 
 			# we now know controller and action
