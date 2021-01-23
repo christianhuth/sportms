@@ -148,6 +148,7 @@
 			$listOfAllowedSportMsDomainModels[] = 'CompetitionSeason';
 			$listOfAllowedSportMsDomainModels[] = 'CompetitionSeasonGameday';
 			$listOfAllowedSportMsDomainModels[] = 'Game';
+			$listOfAllowedSportMsDomainModels[] = 'Gameday';
 			$listOfAllowedSportMsDomainModels[] = 'Person';
 			$listOfAllowedSportMsDomainModels[] = 'Season';
 			$listOfAllowedSportMsDomainModels[] = 'TeamSeason';
