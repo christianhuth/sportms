@@ -1,4 +1,5 @@
 <html data-namespace-typo3-fluid="true"
+      xmlns:sportms="Balumedien\Sportms\ViewHelpers"
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <tr>
@@ -7,7 +8,7 @@
         <f:format.date format="d.m.Y">{game.date}</f:format.date>
     </td>
     <td class="tx-sportms-table-center">{game.season.abbreviation}</td>
-    <td class="tx-sportms-table-left">{game.competitionSeason.competition.label}</td>
+    <td class="tx-sportms-table-left"><sportms:link.action action="seasonGames" CompetitionSeason="{game.competitionSeason}">{game.competitionSeason.competition.label}</sportms:link.action></td>
     <td class="tx-sportms-table-center">
         <f:if condition="{team} == {game.teamSeasonHome.team}">
             <f:then>
