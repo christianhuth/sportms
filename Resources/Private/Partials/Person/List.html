@@ -33,7 +33,7 @@
                             <sportms:nationality nationality="{person.nationality}"/>
                         </td>
                         <td>
-                            <sportms:link.action Person="{person}" arguments="{profile: person.personProfiles.0.profileType, section: person.personProfiles.0.section}">LINK</sportms:link.action>
+                            <sportms:link.action action="playerIndex" controller="Person" Person="{person}" arguments="{profile: person.personProfiles.0.profileType, section: person.personProfiles.0.section}">LINK</sportms:link.action>
                         </td>
                     </tr>
                 </f:for>

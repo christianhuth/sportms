@@ -6,16 +6,14 @@
     <td>
         <f:if condition="{venue.club}">
             <f:then>
-                <sportms:link.action Club="{venue.club}">{venue.club.name}</sportms:link.action>
+                <sportms:link.action action="index" controller="Club" Club="{venue.club}">{venue.club.name}</sportms:link.action>
             </f:then>
             <f:else>
                 -
             </f:else>
         </f:if>
     </td>
-    <td>
-        <sportms:link.action Venue="{venue}">{venue.name}</sportms:link.action>
-    </td>
+    <td>{venue.name}</td>
     <td>
         <f:render arguments="{address: venue.address}" partial="Address/Show"/>
     </td>

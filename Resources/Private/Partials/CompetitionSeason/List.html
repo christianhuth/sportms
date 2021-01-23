@@ -22,7 +22,7 @@
                             {competitionSeason.competition.sport.label}
                         </td>
                         <td>
-                            <sportms:link.action Competition="{competitionSeason.competition}">{competitionSeason.competition.name}</sportms:link.action>
+                            <sportms:link.action action="games" controller="CompetitionSeason" CompetitionSeason="{competitionSeason}">{competitionSeason.competition.name}</sportms:link.action>
                         </td>
                         <td>{competitionSeason.competition.sectionAgeLevel.label}</td>
                         <td>{competitionSeason.competition.competitionType.label}</td>
