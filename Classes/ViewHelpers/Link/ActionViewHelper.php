@@ -132,7 +132,7 @@
 				$description = lcfirst($sportMsDomainModel);
 				$this->registerArgument($name, $type, $description, FALSE);
 			}
-			$this->registerArgument("controller", "string", "Target controller. Needs to be defined", TRUE);
+			$this->overridesArgument("controller", "string", "Target controller. Needs to be defined.", TRUE);
 		}
 		
 		# Needed so we can fill $this->getSettings()
