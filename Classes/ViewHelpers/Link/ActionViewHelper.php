@@ -184,36 +184,31 @@
 			
 			$extensionName = 'sportms';
 			$pluginName = 'sportms';
+
+            # find out which Controller to use
+            if($this->arguments['controller']) {
+                $controller = $this->arguments['controller'];
+                if(!array_key_exists($controller, $this->getListOfControllersAndTheirActions())) {
+                    die("Wrong Controller $controller given to create Link in sportms Extension.");
+                }
+            } else {
+                die("No Controller given to create Link in sportms Extension.");
+            }
 			
 			# find out which action to use
 			if(is_null($this->arguments['action'])) {
 				$action = "list";
 			} else {
 				$action = $this->arguments['action'];
-			}
-			
-			# find out which Controller to use
-			if($this->arguments['controller']) {
-				$controller = $this->arguments['controller'];
-				if(!array_key_exists($controller, $this->getListOfControllersAndTheirActions())) {
-                    die("Wrong Controller $controller given to create Link in sportms Extension.");
+				# check if Object of Controller is given, else we can't execute the action
+                if(is_null($this->arguments[$controller])) {
+                    die("No Domain Object given to display.");
                 }
-			} else {
-			    die("No Controller given to create Link in sportms Extension.");
 			}
 
             # we now know controller and action
             # pageUid can only be set via Settings (only TypoScript at the moment)
             $pageUid = (int) $this->getSettings()[lcfirst($controller)][$action]['pid'];
-
-			die(print_r($this->getListOfControllersAndTheirActions()[$controller]));
-
-            # let's check if all arguments are given to create the link for the specified combination of controller and action
-            foreach($this->getListOfAllowedSportMsDomainModels() as $sportMsDomainModel) {
-                if($this->arguments[$sportMsDomainModel]) {
-                    $parameters[lcfirst($sportMsDomainModel)] = $this->arguments[$sportMsDomainModel];
-                }
-            }
 
             # TODO: add Possibility to add allowed actions to an instance of a DomainModel
             # TODO: check if desired action is in allowed actions
@@ -225,9 +220,13 @@
 			}
 
 			$parameters = $this->arguments['arguments'] ? : array();
-			if($this->getSportMsDomainModel() !== NULL) {
-				$parameters[lcfirst($this->getSportMsDomainModel())] = $this->arguments[$this->getSportMsDomainModel()];
-			}
+			# add every given Domain Object as parameter for the link
+            foreach($this->getListOfAllowedSportMsDomainModels() as $sportMsDomainModel) {
+                if($this->arguments[$sportMsDomainModel]) {
+                    $parameters[lcfirst($sportMsDomainModel)] = $this->arguments[$sportMsDomainModel];
+                }
+            }
+            die(print_r($parameters));
 			$pageType = (int) $this->arguments['pageType'];
 			$noCache = (bool) $this->arguments['noCache'];
 			$noCacheHash = (bool) $this->arguments['noCacheHash'];
