@@ -8,12 +8,19 @@
             <div class="input-group">
                 <span class="input-group-addon"><i class="sportmsicon sportmsicon-competition"></i></span>
                 <f:form.select class="form-control" name="selectCompetition" optionLabelField="label" optionValueField="uid" prependOptionLabel="Alle Wettbewerbe" prependOptionValue="" value="{value}">
-                    <f:groupedFor as="competitionsBySport" each="{options}" groupBy="sport" groupKey="sport">
-                        <f:form.select.optgroup class="form-control" label="{sport.label}" title="{sport.label}"/>
-                        <f:for as="competitionBySport" each="{competitionsBySport}">
-                            <f:form.select.option value="{competitionBySport.uid}">{competitionBySport.label}</f:form.select.option>
-                        </f:for>
-                    </f:groupedFor>
+                    <f:if condition="{settings.competition.groupedSelectbox}">
+                        <f:then>
+                            <f:groupedFor as="competitionsBySport" each="{options}" groupBy="sport" groupKey="sport">
+                                <f:form.select.optgroup class="form-control" label="{sport.label}" title="{sport.label}"/>
+                                <f:for as="competitionBySport" each="{competitionsBySport}">
+                                    <f:form.select.option value="{competitionBySport.uid}">{competitionBySport.label}</f:form.select.option>
+                                </f:for>
+                            </f:groupedFor>
+                        </f:then>
+                        <f:else>
+
+                        </f:else>
+                    </f:if>
                 </f:form.select>
             </div>
         </div>
