@@ -35,6 +35,7 @@ plugin.tx_sportms {
         competitionSeason {
             games.pid = {$plugin.tx_sportms.settings.competitionSeason.games.pid}
             standings.pid = {$plugin.tx_sportms.settings.competitionSeason.standings.pid}
+            teams.pid = {$plugin.tx_sportms.settings.competitionSeason.teams.pid}
         }
 
         game {
