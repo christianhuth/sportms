@@ -210,9 +210,7 @@
                 }
             }
 
-            die($this->arguments[$controller]->isDetailLink());
-
-			if(is_null($this->arguments[$controller]) || !$this->arguments[$controller]->isDetailLink()) {
+			if(is_null($this->arguments[$controller])) {
 				$this->tagName = 'span';
 				$this->setTagBuilder(new \TYPO3Fluid\Fluid\Core\ViewHelper\TagBuilder($this->tagName));
 				$this->tag->setContent($this->renderChildren());
