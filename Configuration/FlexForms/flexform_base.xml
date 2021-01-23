@@ -40,11 +40,11 @@
 							</numIndex>
 							<numIndex index="131">
 								<numIndex index="0">Wettbewerb (Saisonansicht - Spiele)</numIndex>
-								<numIndex index="1">Competition->seasonGames</numIndex>
+								<numIndex index="1">CompetitionSeason->games</numIndex>
 							</numIndex>
 							<numIndex index="132">
 								<numIndex index="0">Wettbewerb (Saisonansicht - Tabellen)</numIndex>
-								<numIndex index="1">Competition->seasonStandings</numIndex>
+								<numIndex index="1">CompetitionSeason->standings</numIndex>
 							</numIndex>
 							<numIndex index="140">
 								<numIndex index="0">Spiel</numIndex>

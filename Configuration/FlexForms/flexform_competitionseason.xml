@@ -9,18 +9,17 @@
 			<settings.competitionSeason.showViews>
 				<TCEforms>
 					<label>Erlaube folgende Einzelansichten</label>
-					<displayCond>FIELD:base.switchableControllerActions:=:CompetitionSeason->show</displayCond>
 					<config>
 						<type>select</type>
 						<renderType>selectMultipleSideBySide</renderType>
 						<items type="array">
 							<numIndex index="0">
-								<numIndex index="0">Index</numIndex>
-								<numIndex index="1">index</numIndex>
-							</numIndex>
-							<numIndex index="1">
 								<numIndex index="0">Games</numIndex>
 								<numIndex index="1">games</numIndex>
+							</numIndex>
+							<numIndex index="1">
+								<numIndex index="0">Standings</numIndex>
+								<numIndex index="1">standings</numIndex>
 							</numIndex>
 							<numIndex index="2">
 								<numIndex index="0">Teams</numIndex>
@@ -56,12 +55,12 @@
 						<renderType>selectMultipleSideBySide</renderType>
 						<items type="array">
 							<numIndex index="0">
-								<numIndex index="0">Index</numIndex>
-								<numIndex index="1">index</numIndex>
-							</numIndex>
-							<numIndex index="1">
 								<numIndex index="0">Games</numIndex>
 								<numIndex index="1">games</numIndex>
+							</numIndex>
+							<numIndex index="1">
+								<numIndex index="0">Standings</numIndex>
+								<numIndex index="1">standings</numIndex>
 							</numIndex>
 							<numIndex index="2">
 								<numIndex index="0">Teams</numIndex>
