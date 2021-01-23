@@ -224,7 +224,7 @@
 			# pageUid can only be set via Settings (TypoScript or Flexform)
 			$pageUid = (int) $this->getSettings()[lcfirst($controller)][$action]['pid'];
 
-            die(lcfirst($controller));
+            die($controller);
 
 			$parameters = $this->arguments['arguments'] ? : array();
 			if($this->getSportMsDomainModel() !== NULL) {
