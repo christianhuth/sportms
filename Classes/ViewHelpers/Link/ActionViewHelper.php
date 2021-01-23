@@ -168,7 +168,7 @@
 			#$listofControllersAndTheirActions[] = ['CompetitionSeason', ['games', 'standings']];
 			#$listofControllersAndTheirActions[] = ['Game', ['list', 'history', 'index', 'info', 'lineup', 'report']];
 			#$listofControllersAndTheirActions[] = ['Person', ['list', 'officialIndex', 'playerIndex', 'refereeIndex']];
-			#$listofControllersAndTheirActions[] = ['Team', ['historyRecordGames', 'historyRecordPlayers', 'list', 'seasonIndex', 'seasonGames', 'seasonGoals', 'seasonSquad']];
+			$listofControllersAndTheirActions['Team'] = ['historyRecordGames', 'historyRecordPlayers', 'list', 'seasonIndex', 'seasonGames', 'seasonGoals', 'seasonSquad'];
 			#$listofControllersAndTheirActions[] = ['TeamSeason', ['games', 'goals', 'index', 'squad']];
 			$this->setListOfControllersAndTheirActions($listofControllersAndTheirActions);
 		}
@@ -195,7 +195,7 @@
 			# find out which Controller to use
 			if($this->arguments['controller']) {
 				$controller = $this->arguments['controller'];
-				die(print_r($this->getListOfControllersAndTheirActions()));
+				#die(print_r($this->getListOfControllersAndTheirActions()));
 				(array_key_exists($controller, $this->getListOfControllersAndTheirActions())) ? die("correct Controller given") : die("Wrong Controller $controller given to create Link in sportms Extension.");
 			} else {
 			    die("No Controller given to create Link in sportms Extension.");
