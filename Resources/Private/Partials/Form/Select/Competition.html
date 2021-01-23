@@ -8,7 +8,7 @@
             <div class="input-group">
                 <span class="input-group-addon"><i class="sportmsicon sportmsicon-competition"></i></span>
                 <f:form.select class="form-control" name="selectCompetition" optionLabelField="label" optionValueField="uid" prependOptionLabel="Alle Wettbewerbe" prependOptionValue="" value="{value}">
-                    <f:if condition="{settings.competition.groupedSelectbox}">
+                    <f:if condition="{groupedSelectbox} == true">
                         <f:then>
                             <f:groupedFor as="competitionsBySport" each="{options}" groupBy="sport" groupKey="sport">
                                 <f:form.select.optgroup class="form-control" label="{sport.label}" title="{sport.label}"/>
