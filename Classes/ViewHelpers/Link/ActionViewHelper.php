@@ -24,7 +24,7 @@
 		/**
 		 * @var array
 		 */
-		protected $listOfDomainModelsAndTheirActions;
+		protected $listOfControllersAndTheirActions;
 		
 		/**
 		 * @var array
@@ -81,15 +81,15 @@
 		/**
 		 * @return array
 		 */
-		public function getListOfDomainModelsAndTheirActions(): array {
-			return $this->listOfDomainModelsAndTheirActions;
+		public function getListOfControllersAndTheirActions(): array {
+			return $this->listOfControllersAndTheirActions;
 		}
 		
 		/**
-		 * @param array $listOfDomainModelsAndTheirActions
+		 * @param array $listOfControllersAndTheirActions
 		 */
-		public function setListOfDomainModelsAndTheirActions(array $listOfDomainModelsAndTheirActions): void {
-			$this->listOfDomainModelsAndTheirActions = $listOfDomainModelsAndTheirActions;
+		public function setListOfControllersAndTheirActions(array $listOfControllersAndTheirActions): void {
+			$this->listOfControllersAndTheirActions = $listOfControllersAndTheirActions;
 		}
 		
 		/**
@@ -149,26 +149,28 @@
 			$listOfAllowedSportMsDomainModels[] = 'CompetitionSeason';
 			$listOfAllowedSportMsDomainModels[] = 'CompetitionSeasonGameday';
 			$listOfAllowedSportMsDomainModels[] = 'Game';
-			$listOfAllowedSportMsDomainModels[] = 'Gameday';
 			$listOfAllowedSportMsDomainModels[] = 'Person';
 			$listOfAllowedSportMsDomainModels[] = 'Season';
+			$listOfAllowedSportMsDomainModels[] = 'Sport';
+			$listOfAllowedSportMsDomainModels[] = 'SportAgeGroup';
+			$listOfAllowedSportMsDomainModels[] = 'SportAgeLevel';
 			$listOfAllowedSportMsDomainModels[] = 'Team';
 			$listOfAllowedSportMsDomainModels[] = 'TeamSeason';
 			$listOfAllowedSportMsDomainModels[] = 'Venue';
 			$this->setListOfAllowedSportMsDomainModels($listOfAllowedSportMsDomainModels);
 		}
 		
-		protected function initListOfDomainModelsAndTheirActions(): void {
-			$listofDomainModelsAndTheirActions = array();
-			$listofDomainModelsAndTheirActions[] = ['Club', ['list']];
-			$listofDomainModelsAndTheirActions[] = ['ClubSection', ['list']];
-			$listofDomainModelsAndTheirActions[] = ['Competition', ['list', 'seasonGames', 'seasonStandings']];
-			$listofDomainModelsAndTheirActions[] = ['CompetitionSeason', ['games', 'standings']];
-			$listofDomainModelsAndTheirActions[] = ['Game', ['list', 'history', 'index', 'info', 'lineup', 'report']];
-			$listofDomainModelsAndTheirActions[] = ['Person', ['list', 'officialIndex', 'playerIndex', 'refereeIndex']];
-			$listofDomainModelsAndTheirActions[] = ['Team', ['historyRecordGames', 'historyRecordPlayers', 'list', 'seasonIndex', 'seasonGames', 'seasonGoals', 'seasonSquad']];
-			$listofDomainModelsAndTheirActions[] = ['TeamSeason', ['games', 'goals', 'index', 'squad']];
-			$this->setListOfDomainModelsAndTheirActions($listofDomainModelsAndTheirActions);
+		protected function initListOfControllersAndTheirActions(): void {
+			$listofControllersAndTheirActions = array();
+			$listofControllersAndTheirActions[] = ['Club', ['list']];
+			$listofControllersAndTheirActions[] = ['ClubSection', ['list']];
+			$listofControllersAndTheirActions[] = ['Competition', ['list', 'seasonGames', 'seasonStandings']];
+			$listofControllersAndTheirActions[] = ['CompetitionSeason', ['games', 'standings']];
+			$listofControllersAndTheirActions[] = ['Game', ['list', 'history', 'index', 'info', 'lineup', 'report']];
+			$listofControllersAndTheirActions[] = ['Person', ['list', 'officialIndex', 'playerIndex', 'refereeIndex']];
+			$listofControllersAndTheirActions[] = ['Team', ['historyRecordGames', 'historyRecordPlayers', 'list', 'seasonIndex', 'seasonGames', 'seasonGoals', 'seasonSquad']];
+			$listofControllersAndTheirActions[] = ['TeamSeason', ['games', 'goals', 'index', 'squad']];
+			$this->setListOfControllersAndTheirActions($listofControllersAndTheirActions);
 		}
 		
 		/**
@@ -178,7 +180,7 @@
 			
 			$this->initSettings();
 			$this->initListOfAllowedSportMsDomainModels();
-			$this->initListOfDomainModelsAndTheirActions();
+			$this->initListOfControllersAndTheirActions();
 			
 			$extensionName = 'sportms';
 			$pluginName = 'sportms';
@@ -193,8 +195,9 @@
 			# find out which Controller to use
 			if($this->arguments['controller']) {
 				$controller = $this->arguments['controller'];
+                (in_array($controller, $this->getListOfControllersAndTheirActions(), false)) ? : die("Wrong Controller given to create Link in sportms Extension.");
 			} else {
-			    die("No Controller given to create Link in sportms Extension");
+			    die("No Controller given to create Link in sportms Extension.");
 			}
 
 			# we now know controller and action
