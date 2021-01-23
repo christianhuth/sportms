@@ -193,8 +193,10 @@
 			} else {
 				foreach($this->getListOfAllowedSportMsDomainModels() as $sportMsDomainModel) {
 					if($this->arguments[$sportMsDomainModel]) {
-						$this->setSportMsDomainModel($sportMsDomainModel);
-						break;
+                        $parameters[lcfirst($sportMsDomainModel)] = $this->arguments[$sportMsDomainModel];
+                        if(is_null($this->getSportMsDomainModel())) {
+                            $this->setSportMsDomainModel($sportMsDomainModel);
+                        }
 					}
 				}
 				$controller = $this->getSportMsDomainModel();
