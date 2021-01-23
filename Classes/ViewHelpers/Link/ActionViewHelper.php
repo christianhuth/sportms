@@ -206,13 +206,12 @@
             # let's check if all arguments are given to create the link for the specified combination of controller and action
             foreach($this->getListOfAllowedSportMsDomainModels() as $sportMsDomainModel) {
                 if($this->arguments[$sportMsDomainModel]) {
-                    die($sportMsDomainModel);
-                    die(lcfirst($sportMsDomainModel));
                     $parameters[lcfirst($sportMsDomainModel)] = $this->arguments[$sportMsDomainModel];
                 }
-                die($parameters['team']);
             }
-			
+
+            die($this->arguments[$controller]->isDetailLink());
+
 			if(is_null($this->arguments[$controller]) || !$this->arguments[$controller]->isDetailLink()) {
 				$this->tagName = 'span';
 				$this->setTagBuilder(new \TYPO3Fluid\Fluid\Core\ViewHelper\TagBuilder($this->tagName));
