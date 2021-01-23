@@ -191,16 +191,16 @@
 			if($this->arguments['controller']) {
 				$controller = $this->arguments['controller'];
 			} else {
-				foreach($this->getListOfAllowedSportMsDomainModels() as $sportMsDomainModel) {
-					if($this->arguments[$sportMsDomainModel]) {
-                        $parameters[lcfirst($sportMsDomainModel)] = $this->arguments[$sportMsDomainModel];
-                        if(is_null($this->getSportMsDomainModel())) {
-                            $this->setSportMsDomainModel($sportMsDomainModel);
-                        }
-					}
-				}
-				$controller = $this->getSportMsDomainModel();
+			    die("error");
 			}
+
+			# we now know controller and action
+            # let's check if all arguments are given to create the link for the specified combination of controller and action
+            foreach($this->getListOfAllowedSportMsDomainModels() as $sportMsDomainModel) {
+                if($this->arguments[$sportMsDomainModel]) {
+                    $parameters[lcfirst($sportMsDomainModel)] = $this->arguments[$sportMsDomainModel];
+                }
+            }
 			
 			if(is_null($this->arguments[$this->sportMsDomainModel]) || !$this->arguments[$this->sportMsDomainModel]->isDetailLink()) {
 				$this->tagName = 'span';
