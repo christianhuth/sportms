@@ -210,6 +210,8 @@
                 }
             }
 
+            # TODO: add Possibility to add allowed actions to an instance of a DomainModel
+            # TODO: check if desired action is in allowed actions
 			if(is_null($this->arguments[$controller])) {
 				$this->tagName = 'span';
 				$this->setTagBuilder(new \TYPO3Fluid\Fluid\Core\ViewHelper\TagBuilder($this->tagName));
@@ -219,6 +221,7 @@
 			
 			# pageUid can only be set via Settings (TypoScript or Flexform)
 			$pageUid = (int) $this->getSettings()[lcfirst($controller)][$action]['pid'];
+			die($pageUId);
 			
 			$parameters = $this->arguments['arguments'] ? : array();
 			if($this->getSportMsDomainModel() !== NULL) {
