@@ -200,9 +200,9 @@
 				$action = "list";
 			} else {
 				$action = $this->arguments['action'];
-				# check if Object of Controller is given, else we can't execute the action
-                if(!(!is_null($this->arguments[$controller])) || (($controller == "TeamSeason") && (is_null($this->arguments["Team"])))) {
-                    die("No Domain Object given to display.");
+				# TODO: check if Object of Controller is given, else we can't execute the action
+                if((is_null($this->arguments[$controller])) && (($controller == "TeamSeason") && (is_null($this->arguments["Team"])))) {
+                    #die("No Domain Object given to display.");
                 }
 			}
 
@@ -212,7 +212,8 @@
 
             # TODO: add Possibility to add allowed actions to an instance of a DomainModel
             # TODO: check if desired action is in allowed actions
-			if(is_null($this->arguments[$controller])) {
+            # if no pageUid is defined, or the desired action is not allowed, than just display a span instead of a link
+			if(is_null($pageUid) || is_null($this->arguments[$controller])) {
 				$this->tagName = 'span';
 				$this->setTagBuilder(new \TYPO3Fluid\Fluid\Core\ViewHelper\TagBuilder($this->tagName));
 				$this->tag->setContent($this->renderChildren());
