@@ -134,7 +134,7 @@
 			}
 			$this->overrideArgument("controller", "string", "Target controller. Needs to be defined.", TRUE);
 		}
-		
+
 		# Needed so we can fill $this->getSettings()
 		public function initSettings(): void {
 			$configurationManager = $this->objectManager->get(\TYPO3\CMS\Extbase\Configuration\ConfigurationManager::class);
@@ -152,6 +152,7 @@
 			$listOfAllowedSportMsDomainModels[] = 'Gameday';
 			$listOfAllowedSportMsDomainModels[] = 'Person';
 			$listOfAllowedSportMsDomainModels[] = 'Season';
+			$listOfAllowedSportMsDomainModels[] = 'Team';
 			$listOfAllowedSportMsDomainModels[] = 'TeamSeason';
 			$listOfAllowedSportMsDomainModels[] = 'Venue';
 			$this->setListOfAllowedSportMsDomainModels($listOfAllowedSportMsDomainModels);
