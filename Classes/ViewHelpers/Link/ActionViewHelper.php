@@ -206,6 +206,7 @@
             # let's check if all arguments are given to create the link for the specified combination of controller and action
             foreach($this->getListOfAllowedSportMsDomainModels() as $sportMsDomainModel) {
                 if($this->arguments[$sportMsDomainModel]) {
+                    die($sportMsDomainModel);
                     die(lcfirst($sportMsDomainModel));
                     $parameters[lcfirst($sportMsDomainModel)] = $this->arguments[$sportMsDomainModel];
                 }
