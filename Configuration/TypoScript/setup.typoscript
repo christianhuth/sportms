@@ -40,10 +40,10 @@ plugin.tx_sportms {
 
         game {
             list.pid = {$plugin.tx_sportms.settings.game.list.pid}
-            showHistory.pid = {$plugin.tx_sportms.settings.game.showHistory.pid}
-            showIndex.pid = {$plugin.tx_sportms.settings.game.showIndex.pid}
-            showLineup.pid = {$plugin.tx_sportms.settings.game.showLineup.pid}
-            showReport.pid = {$plugin.tx_sportms.settings.game.showReport.pid}
+            history.pid = {$plugin.tx_sportms.settings.game.history.pid}
+            index.pid = {$plugin.tx_sportms.settings.game.index.pid}
+            lineup.pid = {$plugin.tx_sportms.settings.game.lineup.pid}
+            report.pid = {$plugin.tx_sportms.settings.game.report.pid}
         }
 
         person {
@@ -62,10 +62,13 @@ plugin.tx_sportms {
             historyRecordPlayers.pid = {$plugin.tx_sportms.settings.team.historyRecordPlayers.pid}
             list.limit = {$plugin.tx_sportms.settings.team.list.limit}
             list.pid = {$plugin.tx_sportms.settings.team.list.pid}
-            seasonGames.pid = {$plugin.tx_sportms.settings.team.seasonGames.pid}
-            seasonGoals.pid = {$plugin.tx_sportms.settings.team.seasonGoals.pid}
-            seasonIndex.pid = {$plugin.tx_sportms.settings.team.seasonIndex.pid}
-            seasonSquad.pid = {$plugin.tx_sportms.settings.team.seasonSquad.pid}
+        }
+
+        teamSeason {
+            games.pid = {$plugin.tx_sportms.settings.teamSeason.games.pid}
+            goals.pid = {$plugin.tx_sportms.settings.teamSeason.goals.pid}
+            index.pid = {$plugin.tx_sportms.settings.teamSeason.index.pid}
+            squad.pid = {$plugin.tx_sportms.settings.teamSeason.squad.pid}
         }
 
     }
