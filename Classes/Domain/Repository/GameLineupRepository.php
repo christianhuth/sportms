@@ -39,7 +39,7 @@
 							->GROUPBY($tableGameLineupAlias . '.person')
 							->ORDERBY('numberOfGames', \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING)
 							->setMaxResults($limit);
-			debug($queryBuilder->getSQL());
+			#debug($queryBuilder->getSQL());
 			return $queryBuilder->execute()->fetchAll();
 		}
 	

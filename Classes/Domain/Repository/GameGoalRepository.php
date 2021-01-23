@@ -46,7 +46,7 @@
                 ->WHERE($queryBuilder->expr()->gt($tableGameGoalAlias . '.scorer', 0))
 				->ORDERBY('numberOfGoals', \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING)
 				->setMaxResults($limit);
-			debug($queryBuilder->getSQL());
+			#debug($queryBuilder->getSQL());
 			return $queryBuilder->execute()->fetchAll();
 		}
 		
@@ -62,7 +62,7 @@
                 ->WHERE($queryBuilder->expr()->gt($tableGameGoalAlias . '.assist', 0))
 				->ORDERBY('numberOfAssists', \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING)
 				->setMaxResults($limit);
-			debug($queryBuilder->getSQL());
+			#debug($queryBuilder->getSQL());
 			return $queryBuilder->execute()->fetchAll();
 		}
 		
