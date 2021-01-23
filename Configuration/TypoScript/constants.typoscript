@@ -4,8 +4,6 @@
 
 # customsubcategory=persistence=Persistence
 
-# customsubcategory=sportms=SportMS
-
 # customsubcategory=sportmsClub=SportMS - Club
 
 # customsubcategory=sportmsCompetition=SportMS - Competition
@@ -111,13 +109,13 @@ plugin.tx_sportms {
         }
 
         teamSeason {
-            # cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of TeamSeason->games.pid
+            # cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of TeamSeason->games
             games.pid =
-            # cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of TeamSeason->goals.pid
+            # cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of TeamSeason->goals
             goals.pid =
-            # cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of TeamSeason->index.pid
+            # cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of TeamSeason->index
             index.pid =
-            # cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of TeamSeason->squad.pid
+            # cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of TeamSeason->squad
             squad.pid =
         }
 
