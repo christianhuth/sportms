@@ -201,7 +201,7 @@
 			} else {
 				$action = $this->arguments['action'];
 				# check if Object of Controller is given, else we can't execute the action
-                if(is_null($this->arguments[$controller])) {
+                if(!(!is_null($this->arguments[$controller])) || (($controller === "TeamSeason") && (is_null($this->arguments["Team"])))) {
                     die("No Domain Object given to display.");
                 }
 			}
