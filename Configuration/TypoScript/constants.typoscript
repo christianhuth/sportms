@@ -6,6 +6,8 @@
 
 # customsubcategory=sportms=SportMS
 
+# customsubcategory=sportmsCompetition=SportMS - Competition
+
 # customsubcategory=view=View
 
 plugin.tx_sportms {
@@ -44,16 +46,16 @@ plugin.tx_sportms {
         }
 
         competition {
-            # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of Competition->list
+            # cat=plugin.tx_sportms/sportmsCompetition; type=int+; label=Default PID of Competition->list
             list.pid =
         }
 
         competitionSeason {
-            # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of CompetitionSeason->games
+            # cat=plugin.tx_sportms/sportmsCompetition; type=int+; label=Default PID of CompetitionSeason->games
             games.pid =v
-            # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of CompetitionSeason->standings
+            # cat=plugin.tx_sportms/sportmsCompetition; type=int+; label=Default PID of CompetitionSeason->standings
             standings.pid =
-            # cat=plugin.tx_sportms/sportms; type=int+; label=Default PID of CompetitionSeason->teams
+            # cat=plugin.tx_sportms/sportmsCompetition; type=int+; label=Default PID of CompetitionSeason->teams
             teams.pid =
         }
 
