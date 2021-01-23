@@ -213,17 +213,6 @@
 			$parameters = $this->arguments['arguments'] ? : array();
 			if($this->getSportMsDomainModel() !== NULL) {
 				$parameters[lcfirst($this->getSportMsDomainModel())] = $this->arguments[$this->getSportMsDomainModel()];
-				if($this->getSportMsDomainModel() === "CompetitionSeason" | $this->getSportMsDomainModel() === "TeamSeason") {
-					$parameters['season'] = $this->arguments[$sportMsDomainModel]->getSeason();
-					switch($this->getSportMsDomainModel()) {
-						case "CompetitionSeason":
-							$parameters['competition'] = $this->arguments[$sportMsDomainModel]->getCompetition();
-							break;
-						case "TeamSeason":
-							$parameters['team'] = $this->arguments[$sportMsDomainModel]->getTeam();
-							break;
-					}
-				}
 			}
 			$pageType = (int) $this->arguments['pageType'];
 			$noCache = (bool) $this->arguments['noCache'];
