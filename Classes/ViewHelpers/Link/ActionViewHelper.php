@@ -228,8 +228,7 @@
                     $parameters[lcfirst($sportMsDomainModel)] = $this->arguments[$sportMsDomainModel]->getUid();
                 }
             }
-            die(print_r($parameters));
-			$pageType = (int) $this->arguments['pageType'];
+            $pageType = (int) $this->arguments['pageType'];
 			$noCache = (bool) $this->arguments['noCache'];
 			$noCacheHash = (bool) $this->arguments['noCacheHash'];
 			$section = (string) $this->arguments['section'];
