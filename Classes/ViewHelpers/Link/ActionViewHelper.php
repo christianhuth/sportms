@@ -206,7 +206,7 @@
             # pageUid can only be set via Settings (TypoScript or Flexform)
             $pageUid = (int) $this->getSettings()[lcfirst($controller)][$action]['pid'];
 
-            die(lcfirst($controller));
+            die(lcfirst($pageUid));
 
             # let's check if all arguments are given to create the link for the specified combination of controller and action
             foreach($this->getListOfAllowedSportMsDomainModels() as $sportMsDomainModel) {
