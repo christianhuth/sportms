@@ -4,18 +4,18 @@
 <f:layout name="default"/>
 
 <f:section name="default">
-    <f:render arguments="{_all}" partial="Team/History/RecordPlayersFilter"/>
+    <f:render arguments="{_all}" partial="Team/HistoryRecordPlayers/Filter"/>
     <div class="tx-sportms-team-history-recordplayer">
         <h3>Die meisten Spiele</h3>
-        <f:render arguments="{playersWithMostGames: playersWithMostGames, settings: settings}" partial="Team/History/PlayersWithMostGames" />
+        <f:render arguments="{playersWithMostGames: playersWithMostGames, settings: settings}" partial="Team/HistoryRecordPlayers/MostGames" />
     </div>
     <div class="tx-sportms-team-history-recordplayer">
         <h3>Die meisten Tore</h3>
-        <f:render arguments="{playersWithMostGoals: playersWithMostGoals, settings: settings}" partial="Team/History/PlayersWithMostGoals" />
+        <f:render arguments="{playersWithMostGoals: playersWithMostGoals, settings: settings}" partial="Team/HistoryRecordPlayers/MostGoals" />
     </div>
     <div class="tx-sportms-team-history-recordplayer">
         <h3>Die meisten Vorlagen</h3>
-        <f:render arguments="{playersWithMostAssists: playersWithMostAssists, settings: settings}" partial="Team/History/PlayersWithMostAssists" />
+        <f:render arguments="{playersWithMostAssists: playersWithMostAssists, settings: settings}" partial="Team/HistoryRecordPlayers/MostAssists" />
     </div>
 </f:section>
 
