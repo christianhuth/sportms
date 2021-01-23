@@ -208,7 +208,7 @@
                 if($this->arguments[$sportMsDomainModel]) {
                     $parameters[lcfirst($sportMsDomainModel)] = $this->arguments[$sportMsDomainModel];
                 }
-                die($this->arguments['Team']);
+                die($parameters['team']);
             }
 			
 			if(is_null($this->arguments[$controller]) || !$this->arguments[$controller]->isDetailLink()) {
