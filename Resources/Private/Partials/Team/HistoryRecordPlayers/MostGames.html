@@ -1,4 +1,5 @@
 <html data-namespace-typo3-fluid="true"
+      xmlns:sportms="Balumedien\Sportms\ViewHelpers"
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <table class="table table-bordered table-condensed table-hover table-striped">
@@ -19,7 +20,7 @@
                 <tr>
                     <td class="tx-sportms-table-center">{iterator.index + 1}</td>
                     <td class="tx-sportms-table-left">
-                        <f:render arguments="{person: playerWithMostGames.person, settings: settings}" partial="ViewHelper/Person/PlayerIndex"/>
+                        <sportms:link.action action="playerIndex" controller="Person" Person="{playerWithMostGames.person}">{playerWithMostGames.person.firstname} {playerWithMostGames.person.lastname}</sportms:link.action>
                     </td>
                     <td class="tx-sportms-table-center">
                         <f:render arguments="{nationalities: playerWithMostGames.person.nationalities}" partial="ViewHelper/Person/Nationalities"/>
