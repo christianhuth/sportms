@@ -195,7 +195,7 @@
 			# find out which Controller to use
 			if($this->arguments['controller']) {
 				$controller = $this->arguments['controller'];
-                (in_array($controller, $this->getListOfControllersAndTheirActions(), false)) ? : die("Wrong Controller given to create Link in sportms Extension.");
+                (in_array($controller, $this->getListOfControllersAndTheirActions(), false)) ? die("correct Controller given") : die("Wrong Controller $controller given to create Link in sportms Extension.");
 			} else {
 			    die("No Controller given to create Link in sportms Extension.");
 			}
