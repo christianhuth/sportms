@@ -14,8 +14,8 @@
                 </div>
                 <div class="collapse navbar-collapse" id="gameNavbar">
                     <ul class="nav navbar-nav">
-                        <li><sportms:link.action action="showIndex" Game="{game}">Schema</sportms:link.action></li>
-                        <li><sportms:link.action action="showLineup" Game="{game}">Aufstellung</sportms:link.action></li>
+                        <li><sportms:link.action action="showIndex" controller="Game" Game="{game}">Schema</sportms:link.action></li>
+                        <li><sportms:link.action action="showLineup" controller="Game" Game="{game}">Aufstellung</sportms:link.action></li>
                         <f:if condition="{game.reports}">
                             <f:then>
                                 <li><sportms:link.action action="showReport" Game="{game}">Spielbericht</sportms:link.action></li>
