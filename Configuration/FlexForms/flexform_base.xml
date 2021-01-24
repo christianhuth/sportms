@@ -87,16 +87,16 @@
 								<numIndex index="1">Person->list</numIndex>
 							</numIndex>
 							<numIndex index="152">
-								<numIndex index="0">FunktionärIn (Einzelansicht - Start)</numIndex>
-								<numIndex index="1">Person->officialIndex</numIndex>
+								<numIndex index="0">FunktionärIn (Einzelansicht - Profil)</numIndex>
+								<numIndex index="1">Person->officialProfile</numIndex>
 							</numIndex>
 							<numIndex index="153">
-								<numIndex index="0">SpielerIn (Einzelansicht - Start)</numIndex>
-								<numIndex index="1">Person->playerIndex</numIndex>
+								<numIndex index="0">SpielerIn (Einzelansicht - Profil)</numIndex>
+								<numIndex index="1">Person->playerProfile</numIndex>
 							</numIndex>
 							<numIndex index="154">
-								<numIndex index="0">SchiedsrichterIn (Einzelansicht - Start)</numIndex>
-								<numIndex index="1">Person->refereeIndex</numIndex>
+								<numIndex index="0">SchiedsrichterIn (Einzelansicht - Profil)</numIndex>
+								<numIndex index="1">Person->refereeProfile</numIndex>
 							</numIndex>
 							<numIndex index="180">
 								<numIndex index="0">Mannschaft</numIndex>

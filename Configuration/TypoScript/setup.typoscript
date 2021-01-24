@@ -48,9 +48,9 @@ plugin.tx_sportms {
 
         person {
             list.pid = {$plugin.tx_sportms.settings.person.list.pid}
-            officialIndex.pid = {$plugin.tx_sportms.settings.person.officialIndex.pid}
-            playerIndex.pid = {$plugin.tx_sportms.settings.person.playerIndex.pid}
-            refereeIndex.pid = {$plugin.tx_sportms.settings.person.refereeIndex.pid}
+            officialProfile.pid = {$plugin.tx_sportms.settings.person.officialProfile.pid}
+            playerProfile.pid = {$plugin.tx_sportms.settings.person.playerProfile.pid}
+            refereeProfile.pid = {$plugin.tx_sportms.settings.person.refereeProfile.pid}
             dummyImageMale = {$plugin.tx_sportms.settings.person.dummyImageMale}
             dummyImageFemale = {$plugin.tx_sportms.settings.person.dummyImageFemale}
         }
