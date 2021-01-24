@@ -3,16 +3,15 @@
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <f:section name="default">
-    <sportms:link.action action="index" controller="Game" Game="{game}">
-        {game.resultEndRegularHome} : {game.resultEndRegularGuest}
-        <f:if condition="{game.resultType} == 2">
-            {game.resultEndRegularHome} : {game.resultEndRegularGuest}
-        </f:if>
-    </sportms:link.action>
+    <f:if condition="{game.resultType} == 2">
+        <f:render section="halftime"></f:render>
+    </f:if>
 </f:section>
 
 <f:section name="halftime">
-
+    <sportms:link.action action="index" controller="Game" Game="{game}">
+        {game.resultEndRegularHome} : {game.resultEndRegularGuest}
+    </sportms:link.action>
 </f:section>
 
 
