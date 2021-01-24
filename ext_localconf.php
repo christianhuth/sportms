@@ -6,10 +6,12 @@
 		[
 			'Club' => 'list',
 			'ClubSection' => 'list',
-			'Competition' => 'list',
-			'Game' => 'list, showIndex',
-			'Person' => 'officialIndex, playerIndex, refereeIndex',
-			'Team' => 'list, historyRecordGames, seasonGames, seasonGoals, seasonIndex, seasonSquad',
+			'Competition' => 'list, historyTeams',
+			'CompetitionSeason' => 'games, goals, list, teams',
+			'Game' => 'history, index, last',
+			'Person' => 'officialProfile, playerProfile, refereeProfile',
+			'Team' => 'list, historyRecordGames, historyRecordPlayers, seasonGames, seasonGoals, seasonIndex, seasonSquad',
+            'TeamSeason' => 'games, goals, index, list, squad'
 		]
 	);
 	
