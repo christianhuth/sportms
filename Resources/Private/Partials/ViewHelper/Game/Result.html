@@ -1,0 +1,18 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:sportms="Balumedien\Sportms\ViewHelpers"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<f:section name="default">
+    <sportms:link.action action="index" controller="Game" Game="{game}">
+        <f:if condition="{game.resultType} == 2">
+            {game.resultEndRegularHome} : {game.resultEndRegularGuest}
+        </f:if>
+    </sportms:link.action>
+</f:section>
+
+<f:section name="halftime">
+
+</f:section>
+
+
+</html>

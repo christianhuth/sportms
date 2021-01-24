@@ -30,10 +30,10 @@
         </f:if>
     </td>
     <td class="tx-sportms-table-center">
-        <f:render arguments="{spectators: game.spectators}" partial="ViewHelper/Game/GameSpectators"/>
+        <f:render arguments="{spectators: game.spectators}" partial="ViewHelper/Game/Spectators"/>
     </td>
     <td class="tx-sportms-table-center">
-        <sportms:link.action action="index" controller="Game" Game="{game}"></sportms:link.action>
+        <f:render arguments="{game: game}" partial="ViewHelper/Game/Result"/>
     </td>
 </tr>
 
