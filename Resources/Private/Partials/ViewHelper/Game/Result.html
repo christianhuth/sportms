@@ -4,6 +4,7 @@
 
 <f:section name="default">
     <sportms:link.action action="index" controller="Game" Game="{game}">
+        {game.resultEndRegularHome} : {game.resultEndRegularGuest}
         <f:if condition="{game.resultType} == 2">
             {game.resultEndRegularHome} : {game.resultEndRegularGuest}
         </f:if>
