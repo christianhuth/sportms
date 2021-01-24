@@ -3,6 +3,7 @@
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <f:section name="default">
+    <f:debug>{game}</f:debug>
     <sportms:link.action action="index" controller="Game" Game="{game}">
         {game.resultEndRegularHome} : {game.resultEndRegularGuest}
         <f:if condition="{game.resultType} == 2">
