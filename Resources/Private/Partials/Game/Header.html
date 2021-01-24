@@ -5,9 +5,9 @@
     <div class="container-fluid tx-sportms-game-show-header">
         <div class="row">
             <div class="col-xs-12"><sportms:link.action action="seasonGames" controller="Competition" CompetitionSeason="{game.competitionSeason}" CompetitionSeasonGameday="{game.gameday}">{game.competitionSeason.competition.label} {game.season.label} {game.gameday.label}</sportms:link.action></div>
-            <div class="col-xs-4"><sportms:link.action action="seasonIndex" TeamSeason="{game.teamSeasonHome}">{game.teamSeasonHome.team.label}</sportms:link.action></div>
+            <div class="col-xs-4"><sportms:link.action action="seasonIndex" controller="TeamSeason" TeamSeason="{game.teamSeasonHome}">{game.teamSeasonHome.team.label}</sportms:link.action></div>
             <div class="col-xs-4">{game.resultEndRegularHome} : {game.resultEndRegularGuest}</div>
-            <div class="col-xs-4"><sportms:link.action action="seasonIndex" TeamSeason="{game.teamSeasonGuest}">{game.teamSeasonGuest.team.label}</sportms:link.action></div>
+            <div class="col-xs-4"><sportms:link.action action="seasonIndex" controller="TeamSeason" TeamSeason="{game.teamSeasonGuest}">{game.teamSeasonGuest.team.label}</sportms:link.action></div>
         </div>
     </div>
 
