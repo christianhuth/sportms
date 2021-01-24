@@ -60,23 +60,23 @@
 							</numIndex>
 							<numIndex index="142">
 								<numIndex index="0">Spiel (Einzelansicht - Schema)</numIndex>
-								<numIndex index="1">Game->showIndex</numIndex>
+								<numIndex index="1">Game->index</numIndex>
 							</numIndex>
 							<numIndex index="143">
 								<numIndex index="0">Spiel (Einzelansicht - Aufstellung)</numIndex>
-								<numIndex index="1">Game->showLineup</numIndex>
+								<numIndex index="1">Game->lineup</numIndex>
 							</numIndex>
 							<numIndex index="144">
 								<numIndex index="0">Spiel (Einzelansicht - Spielbericht)</numIndex>
-								<numIndex index="1">Game->showReport</numIndex>
+								<numIndex index="1">Game->report</numIndex>
 							</numIndex>
 							<numIndex index="145">
 								<numIndex index="0">Spiel (Einzelansicht - Historie)</numIndex>
-								<numIndex index="1">Game->showHistory</numIndex>
+								<numIndex index="1">Game->history</numIndex>
 							</numIndex>
 							<numIndex index="146">
 								<numIndex index="0">Spiel (Einzelansicht - Info)</numIndex>
-								<numIndex index="1">Game->showInfo</numIndex>
+								<numIndex index="1">Game->info</numIndex>
 							</numIndex>
 							<numIndex index="150">
 								<numIndex index="0">Person</numIndex>
@@ -116,19 +116,19 @@
 							</numIndex>
 							<numIndex index="190">
 								<numIndex index="0">Mannschaft (Saisonansicht - Start)</numIndex>
-								<numIndex index="1">Team->seasonIndex</numIndex>
+								<numIndex index="1">TeamSeason->index</numIndex>
 							</numIndex>
 							<numIndex index="191">
 								<numIndex index="0">Mannschaft (Saisonansicht - Spiele)</numIndex>
-								<numIndex index="1">Team->seasonGames</numIndex>
+								<numIndex index="1">TeamSeason->games</numIndex>
 							</numIndex>
 							<numIndex index="192">
 								<numIndex index="0">Mannschaft (Saisonansicht - Tore)</numIndex>
-								<numIndex index="1">Team->seasonGoals</numIndex>
+								<numIndex index="1">TeamSeason->goals</numIndex>
 							</numIndex>
 							<numIndex index="193">
 								<numIndex index="0">Mannschaft (Saisonansicht - Kader)</numIndex>
-								<numIndex index="1">Team->seasonSquad</numIndex>
+								<numIndex index="1">TeamSeason->squad</numIndex>
 							</numIndex>
 						</items>
 					</config>
