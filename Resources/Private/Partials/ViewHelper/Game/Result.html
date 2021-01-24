@@ -4,7 +4,7 @@
 
 <f:section name="default">
     <f:if condition="{game.resultType} == 2">
-        <f:render section="halftime"></f:render>
+        <f:render section="halftime" arguments="{game: game}"></f:render>
     </f:if>
 </f:section>
 
