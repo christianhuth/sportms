@@ -21,7 +21,7 @@
                                 <li><sportms:link.action action="report" controller="Game" Game="{game}">Spielbericht</sportms:link.action></li>
                             </f:then>
                             <f:else>
-                                <li class="disabled"><sportms:link.action action="report" Game="{game}">Spielbericht</sportms:link.action></li>
+                                <li class="disabled"><sportms:link.action action="report" controller="Game" Game="{game}">Spielbericht</sportms:link.action></li>
                             </f:else>
                         </f:if>
                         <li><sportms:link.action action="history" controller="Game" Game="{game}">Historie</sportms:link.action></li>
