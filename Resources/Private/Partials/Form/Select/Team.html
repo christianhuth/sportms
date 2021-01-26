@@ -13,7 +13,7 @@
                 <f:form.select class="form-control" name="selectTeam" optionLabelField="name" optionValueField="uid" prependOptionLabel="Alle Teams" prependOptionValue="" value="{value}">
                     <f:groupedFor as="teamsByClubSection" each="{options}" groupBy="clubSection" groupKey="clubSection">
                         <f:if condition='({settings.club.selected}) && (!{settings.section.selected})'>
-                            <f:form.select.optgroup class="form-control" label="{clubSection.section.label}" title="{clubSection.section.label}"/>
+                            <f:form.select.optgroup class="form-control" label="{clubSection.sport.label}" title="{clubSection.sport.label}"/>
                         </f:if>
                         <f:if condition='(!{settings.club.selected}) && ({settings.section.selected})'>
                             <f:form.select.optgroup class="form-control" label="{clubSection.club.name}" title="{clubSection.club.name}"/>
