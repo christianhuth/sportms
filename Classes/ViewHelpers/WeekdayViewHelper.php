@@ -9,7 +9,7 @@
 		 */
 		public function initializeArguments() {
 			parent::initializeArguments();
-			$this->registerArgument('weekyday', 'int', 'the day of the week', TRUE);
+			$this->registerArgument('weekday', 'int', 'the day of the week', TRUE);
 		}
 		
 		/**
