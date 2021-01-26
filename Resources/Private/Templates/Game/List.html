@@ -6,7 +6,31 @@
 <f:section name="default">
     <div class="tx-sportms-game-list">
         <f:render arguments="{_all}" partial="Game/List/Filter"/>
-        <f:render arguments="{_all}" partial="Game/List"/>
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover table-striped">
+                <thead>
+                <tr>
+                    <th>Sportart</th>
+                    <th>Wettbewerb</th>
+                    <th>Saison</th>
+                    <th colspan="3">Begegnung</th>
+                    <th>Ergebnis</th>
+                </tr>
+                </thead>
+                <tbody>
+                <f:if condition="{games}">
+                    <f:then>
+                        <f:for as="game" each="{games}">
+                            <f:render partial="Game/List/Item" arguments="{game: game}"/>
+                        </f:for>
+                    </f:then>
+                    <f:else>
+                        <td colspan="9">Keine Spiele gefunden.</td>
+                    </f:else>
+                </f:if>
+                </tbody>
+            </table>
+        </div>
     </div>
 </f:section>
 

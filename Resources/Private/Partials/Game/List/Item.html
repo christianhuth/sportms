@@ -1,0 +1,27 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:sportms="Balumedien\Sportms\ViewHelpers">
+
+<tr>
+    <td>
+        {game.sport.label}
+    </td>
+    <td>
+        <sportms:link.action Competition="{game.competitionSeason.competition}">{game.competitionSeason.competition.label}</sportms:link.action>
+    </td>
+    <td>
+        {game.competitionSeason.season.label}
+    </td>
+    <td>
+        <sportms:link.action Season="{game.teamSeasonHome.season}" Team="{game.teamSeasonHome.team}">{game.teamSeasonHome.team.label}</sportms:link.action>
+    </td>
+    <td>-</td>
+    <td>
+        <sportms:link.action Season="{game.teamSeasonHome.season}" Team="{game.teamSeasonHome.team}">{game.teamSeasonGuest.team.label}</sportms:link.action>
+    </td>
+    <td>
+        <sportms:link.action action="showIndex" Game="{game}">{game.resultEndRegularHome} : {game.resultEndRegularGuest}</sportms:link.action>
+    </td>
+</tr>
+
+</html>
