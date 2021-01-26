@@ -2,7 +2,7 @@
 	
 	namespace Balumedien\Sportms\ViewHelpers;
 	
-	class ZodiacSignViewHelper extends \TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper {
+	class WeekdayViewHelper extends \TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper {
 		
 		/**
 		 * @return void
