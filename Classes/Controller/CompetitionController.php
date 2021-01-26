@@ -8,12 +8,18 @@
 	class CompetitionController extends SportMSBaseController {
 		
 		protected $model = 'competition';
-		
-		/**
-		 * @var \Balumedien\Sportms\Domain\Repository\CompetitionRepository
-		 * @TYPO3\CMS\Extbase\Annotation\Inject
-		 */
-		protected $competitionRepository;
+
+        /**
+         * @var \Balumedien\Sportms\Domain\Repository\CompetitionRepository
+         * @TYPO3\CMS\Extbase\Annotation\Inject
+         */
+        protected $competitionRepository;
+
+        /**
+         * @var \Balumedien\Sportms\Domain\Repository\GameRepository
+         * @TYPO3\CMS\Extbase\Annotation\Inject
+         */
+        protected $gameRepository;
 		
 		/**
 		 * @var \Balumedien\Sportms\Domain\Repository\SportRepository
@@ -90,8 +96,7 @@
 		/**
 		 * @param \Balumedien\Sportms\Domain\Model\Competition $competition
 		 */
-		public function showIndexAction(\Balumedien\Sportms\Domain\Model\Competition $competition = NULL): void {
-			$this->initializeActions();
+		public function gamesAction(\Balumedien\Sportms\Domain\Model\Competition $competition = NULL): void {
 			if($competition === NULL) {
 				$competitionUid = $this->settings['competition']['uid'];
 				$competition = $this->competitionRepository->findByUid($competitionUid);
