@@ -12,9 +12,7 @@
                 <span class="input-group-addon"><i class="sportmsicon sportmsicon-team"></i></span>
                 <f:form.select class="form-control" name="selectTeam" optionLabelField="name" optionValueField="uid" prependOptionLabel="Alle Teams" prependOptionValue="" value="{value}">
                     <f:groupedFor as="teamsBySport" each="{options}" groupBy="sport" groupKey="sport">
-                        <f:if condition='(!{settings.sport.selected})'>
-                            <f:form.select.optgroup class="form-control" label="{sport.label}" title="{sport.label}"/>
-                        </f:if>
+                        <f:form.select.optgroup class="form-control" label="{sport.label}" title="{sport.label}"/>
                         <f:for as="teamBySport" each="{teamsBySport}">
                             <f:form.select.option value="{teamBySport.uid}">{teamBySport.label}</f:form.select.option>
                         </f:for>
