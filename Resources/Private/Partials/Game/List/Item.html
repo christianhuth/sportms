@@ -20,7 +20,7 @@
         <sportms:link.action action="index" controller="TeamSeason" TeamSeason="{game.teamSeasonHome}">{game.teamSeasonGuest.team.label}</sportms:link.action>
     </td>
     <td>
-        <f:render partial="ViewHelper/Game/Result" arguments="{game: game}"/>
+        <f:render partial="ViewHelper/Game/Result" arguments="{game: game}" section="default"/>
     </td>
 </tr>
 
