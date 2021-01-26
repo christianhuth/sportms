@@ -1,0 +1,16 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:sportms="Balumedien\Sportms\ViewHelpers">
+
+<tr>
+    <td class="tx-sportms-sport">
+        {competition.sport.label}
+    </td>
+    <td class="tx-sportms-competition">
+        <sportms:link.action action="games" controller="CompetitionSeason" Competition="{competition}">{competition.label}</sportms:link.action>
+    </td>
+    <td class="tx-sportms-sportagelevel">{competition.sportAgeLevel.label}</td>
+    <td class="tx-sportms-competitiontype">{competition.competitionType.label}</td>
+</tr>
+
+</html>

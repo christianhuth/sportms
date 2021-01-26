@@ -5,8 +5,39 @@
 
 <f:section name="default">
     <div class="tx-sportms-competition-list">
-        <f:render arguments="{_all}" partial="Competition/ListFilter"/>
-        <f:render arguments="{_all}" partial="Competition/List"/>
+        <f:render arguments="{_all}" partial="Competition/List/Filter"/>
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover table-striped">
+                <thead>
+                    <tr>
+                        <th>
+                            <f:translate key="tx_sportms_domain_model_competition.sport"/>
+                        </th>
+                        <th>
+                            <f:translate key="tx_sportms_domain_model_competition.label"/>
+                        </th>
+                        <th>
+                            <f:translate key="tx_sportms_domain_model_competition.ageLevel"/>
+                        </th>
+                        <th>
+                            <f:translate key="tx_sportms_domain_model_competition.competitionType"/>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                <f:if condition="{competitions}">
+                    <f:then>
+                        <f:for as="competition" each="{competitions}">
+                            <f:render partial="Competition/List/Item" arguments="{competition: competition}"/>
+                        </f:for>
+                    </f:then>
+                    <f:else>
+                        <td colspan="4">Keine Wettbewerbe gefunden.</td>
+                    </f:else>
+                </f:if>
+                </tbody>
+            </table>
+        </div>
     </div>
 </f:section>
 
