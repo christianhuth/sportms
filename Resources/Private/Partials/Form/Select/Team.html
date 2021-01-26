@@ -11,18 +11,10 @@
             <div class="input-group">
                 <span class="input-group-addon"><i class="sportmsicon sportmsicon-team"></i></span>
                 <f:form.select class="form-control" name="selectTeam" optionLabelField="name" optionValueField="uid" prependOptionLabel="Alle Teams" prependOptionValue="" value="{value}">
-                    <f:groupedFor as="teamsByClubSection" each="{options}" groupBy="clubSection" groupKey="clubSection">
-                        <f:if condition='({settings.club.selected}) && (!{settings.section.selected})'>
-                            <f:form.select.optgroup class="form-control" label="{clubSection.sport.label}" title="{clubSection.sport.label}"/>
-                        </f:if>
-                        <f:if condition='(!{settings.club.selected}) && ({settings.section.selected})'>
-                            <f:form.select.optgroup class="form-control" label="{clubSection.club.name}" title="{clubSection.club.name}"/>
-                        </f:if>
-                        <f:if condition="(!{settings.club.selected}) && (!{settings.section.selected})">
-                            <f:form.select.optgroup class="form-control" label="{clubSection.club.name}: {clubSection.section.label}" title="{clubSection.club.name}: {clubSection.section.label}"/>
-                        </f:if>
-                        <f:for as="teamByClubSection" each="{teamsByClubSection}">
-                            <f:form.select.option value="{teamByClubSection.uid}">{teamByClubSection.label}</f:form.select.option>
+                    <f:groupedFor as="teamsBySport" each="{options}" groupBy="sport" groupKey="sport">
+                        <f:form.select.optgroup class="form-control" label="{sport.label}" title="{sport.label}"/>
+                        <f:for as="teamBySport" each="{teamsBySport}">
+                            <f:form.select.option value="{teamBySport.uid}">{teamBySport.label}</f:form.select.option>
                         </f:for>
                     </f:groupedFor>
                 </f:form.select>
