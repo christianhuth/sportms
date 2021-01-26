@@ -224,7 +224,7 @@
 			# add every given Domain Object as parameter for the link
             foreach($this->getListOfAllowedSportMsDomainModels() as $sportMsDomainModel) {
                 if($this->arguments[$sportMsDomainModel]) {
-                    $parameters[lcfirst($sportMsDomainModel)] = $this->arguments[$sportMsDomainModel]->getUid();
+                    $parameters[lcfirst($sportMsDomainModel)] = $this->arguments[$sportMsDomainModel];
                 }
             }
             $pageType = (int) $this->arguments['pageType'];
