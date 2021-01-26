@@ -19,7 +19,7 @@
     <td>
         <sportms:link.action action="index" controller="TeamSeason" TeamSeason="{game.teamSeasonHome}">{game.teamSeasonGuest.team.label}</sportms:link.action>
     </td>
-    <td>
+    <td class="tx-sportms-game-result">
         <f:render partial="ViewHelper/Game/Result" arguments="{game: game}" section="default"/>
     </td>
 </tr>

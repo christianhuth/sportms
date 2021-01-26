@@ -89,7 +89,8 @@
 	width: 20px;
 }
 
-.tx-sportms .tx-sportms-game-show .tx-sportms-game-show-header {
+.tx-sportms .tx-sportms-game-show .tx-sportms-game-show-header,
+.tx-sportms .tx-sportms-game-list .tx-sportms-game-result {
     text-align: center;
 }
 
