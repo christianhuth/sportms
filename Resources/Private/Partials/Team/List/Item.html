@@ -10,7 +10,22 @@
         <sportms:link.action action="historyRecordGames" controller="Team" Team="{team}">Rekordspiele</sportms:link.action>
     </td>
     <td class="tx-sportms-table-center">
-        <sportms:link.action action="historyRecordPlayers" controller="Team" Team="{team}">RekordspielerInnen</sportms:link.action>    </td>
+        <sportms:link.action action="historyRecordPlayers" controller="Team" Team="{team}">RekordspielerInnen</sportms:link.action>
+    </td>
+    <td>
+        <f:if condition="{team.teamSeasons}">
+            <f:then>
+                <ul>
+                    <f:for each="{team.teamSeasons}" as="teamSeason">
+                        <li><sportms:link.action action="profile" controller="TeamSeason" TeamSeason="{teamSeason}">{teamSeason.season.label}</sportms:link.action></li>
+                    </f:for>
+                </ul>
+            </f:then>
+            <f:else>
+                - - -
+            </f:else>
+        </f:if>
+    </td>
 </tr>
 
 </html>
