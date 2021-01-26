@@ -203,7 +203,7 @@
 				$this->view->assign('competitionTypesSelectbox', $competitionTypesSelectbox);
 			}
 			if($this->settings['competition']['competitionsSelectbox']) {
-				$competitionsSelectbox = $this->competitionRepository->findAll($this->getSportsFilter(), $this->getSportAgeGroupsFilter(), $this->getSportAgeLevelsFilter(), $this->getCompetitionTypesFilter(), $this->getCompetitionsFilter(FALSE));
+				$competitionsSelectbox = $this->competitionRepository->findAll($this->getSportsFilter(), $this->getSportAgeGroupsFilter(), $this->getSportAgeLevelsFilter(), $this->getCompetitionTypesFilter(), $this->getCompetitionsFilter(FALSE), $teamUid);
 				$this->view->assign('competitionsSelectbox', $competitionsSelectbox);
 			}
 			if($this->settings['sportPositionGroup']['sportPositionGroupsSelectbox']) {
