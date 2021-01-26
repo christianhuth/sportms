@@ -3,7 +3,7 @@
 
     <div class="tx-sportms-teamseason-squadmember col-xs-4 col-sm-3 col-md-3">
         <div class="tx-sportms-teamseason-squadmember-wrapper">
-            <f:link.action controller="Person" action="show" additionalParams="{tx_sportms_sportms: '{person: squadMember.person, section: squadMember.teamSeason.team.clubSection.section, profile: \"player\"}'}" pageUid="{settings.person.showPid}">
+            <sportms:link.action action="playerProfile" controller="Person" Person="{squadMember.person}">
                 <div class="squadmember-image">
                     <f:if condition="{squadMember.person.personProfiles}">
                         <f:then>
@@ -48,7 +48,7 @@
                         <span class="squadmember-lastname">{squadMember.person.lastname}</span>
                     </div>
                 </div>
-            </f:link.action>
+            </sportms:link.action>
         </div>
     </div>
 
