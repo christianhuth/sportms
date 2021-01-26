@@ -17,7 +17,7 @@
             <f:then>
                 <ul>
                     <f:for each="{team.teamSeasons}" as="teamSeason">
-                        <li><sportms:link.action action="profile" controller="TeamSeason" TeamSeason="{teamSeason}">{teamSeason.season.label}</sportms:link.action></li>
+                        <li><sportms:link.action action="index" controller="TeamSeason" TeamSeason="{teamSeason}">{teamSeason.season.label}</sportms:link.action></li>
                     </f:for>
                 </ul>
             </f:then>
