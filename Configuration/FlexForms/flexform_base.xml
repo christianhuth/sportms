@@ -38,6 +38,10 @@
 								<numIndex index="0">Wettbewerb (Listenansicht)</numIndex>
 								<numIndex index="1">Competition->list</numIndex>
 							</numIndex>
+							<numIndex index="122">
+								<numIndex index="0">Wettbewerb (Einzelansicht - Spiele)</numIndex>
+								<numIndex index="1">Competition->games</numIndex>
+							</numIndex>
 							<numIndex index="131">
 								<numIndex index="0">Wettbewerb (Saisonansicht - Spiele)</numIndex>
 								<numIndex index="1">CompetitionSeason->games</numIndex>

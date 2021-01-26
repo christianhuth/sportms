@@ -29,6 +29,7 @@ plugin.tx_sportms {
         }
 
         competition {
+            games.pid = {$plugin.tx_sportms.settings.competition.games.pid}
             list.pid = {$plugin.tx_sportms.settings.competition.list.pid}
         }
 
