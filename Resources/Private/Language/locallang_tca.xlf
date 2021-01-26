@@ -4,7 +4,6 @@
 		<header/>
 		<body>
 
-
             <!-- General -->
 			<trans-unit id="tx_sportms_general.abbreviation">
 				<source>Abkürzung</source>
