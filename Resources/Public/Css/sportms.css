@@ -1,3 +1,8 @@
+/*
+ *
+ * SPORTMS Icons
+ +
+ */
 .sportmsicon {
     background: var(--regular-red);
     display: block;
@@ -88,12 +93,6 @@
 	mask-size: contain;
 	width: 20px;
 }
-
-.tx-sportms .tx-sportms-game-show .tx-sportms-game-show-header,
-.tx-sportms .tx-sportms-game-list .tx-sportms-game-result {
-    text-align: center;
-}
-
 
 .tx_sportms_club_sections {
     margin-bottom: 75px;
@@ -203,6 +202,26 @@
     text-align: center;
 }
 
+/*
+ *
+ * COMPETITION
+ *
+ */
+.tx-sportms .tx-sportms-competition-list .tx-sportms-competitiontype
+.tx-sportms .tx-sportms-competition-list .tx-sportms-sport,
+.tx-sportms .tx-sportms-competition-list .tx-sportms-sportagelevel {
+    text-align: center;
+}
+
+/*
+ *
+ * GAME
+ *
+ */
+.tx-sportms .tx-sportms-game-show .tx-sportms-game-show-header,
+.tx-sportms .tx-sportms-game-list .tx-sportms-game-result {
+    text-align: center;
+}
 
 /*
  *
@@ -390,50 +409,4 @@
     font-size: 1.125rem;
     font-weight: bold;
     line-height: 1em;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.tx-sportms-table-center {
-    text-align: center;
-}
-.tx-sportms-table-left {
-    text-align: left;
-}
-.tx-sportms-table-right {
-    text-align: left;
 }
