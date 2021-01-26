@@ -49,8 +49,8 @@
         <f:if condition="{teamSeason.teamSeasonSquadMembers}">
             <div class="tx-sportms-teamseason-squad">
                 <f:groupedFor as="squadMembersByPosition" each="{teamSeason.teamSeasonSquadMembers}"
-                              groupBy="sectionPositionGroup" groupKey="sectionPositionGroup">
-                    <div class="tx-sportms-teamseason-squad-position col-xs-12"><h3>{sectionPositionGroup.label}</h3>
+                              groupBy="sportPositionGroup" groupKey="sportPositionGroup">
+                    <div class="tx-sportms-teamseason-squad-position col-xs-12"><h3>{sportPositionGroup.label}</h3>
                     </div>
                     <div class="tx-sportms-teamseason-squad-position-members">
                         <f:for as="squadMember" each="{squadMembersByPosition}">
