@@ -54,8 +54,7 @@
                     </div>
                     <div class="tx-sportms-teamseason-squad-position-members">
                         <f:for as="squadMember" each="{squadMembersByPosition}">
-                            <f:render arguments="{squadMember: squadMember, settings: settings}"
-                                      partial="TeamSeason/SquadMember"/>
+                            <f:render arguments="{_all}" partial="TeamSeason/SquadMember"/>
                         </f:for>
                     </div>
                     <div class="tx-sportms-teamseason-squad-position-seperator col-xs-12"></div>

@@ -4,7 +4,7 @@
 
     <div class="tx-sportms-teamseason-squadmember col-xs-4 col-sm-3 col-md-3">
         <div class="tx-sportms-teamseason-squadmember-wrapper">
-            <sportms:link.action action="playerProfile" controller="Person" Person="{squadMember.person}">
+            <sportms:link.action action="playerProfile" controller="Person" Person="{squadMember.person}" Sport="{teamSeason.team.sport}">
                 <div class="squadmember-image">
                     <f:if condition="{squadMember.person.personProfiles}">
                         <f:then>
