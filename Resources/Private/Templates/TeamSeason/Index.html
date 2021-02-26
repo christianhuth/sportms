@@ -6,7 +6,7 @@
 <f:section name="default">
     <div class="tx-sportms-teamseason-index">
 
-        <f:render partial="Team/Navigation" arguments="{team: teamSeason.team}"/>
+        <f:render partial="Team/Navigation" arguments="{team: teamSeason.team, teamSeason: teamSeason}"/>
 
         <f:if condition="{teamSeason.teamSeasonImages}">
             <div class="tx-sportms-teamseason-image">

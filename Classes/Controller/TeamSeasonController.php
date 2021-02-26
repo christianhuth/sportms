@@ -2,7 +2,9 @@
 	
 	namespace Balumedien\Sportms\Controller;
 	
-	/**
+	use Balumedien\Sportms\Domain\Model\TeamSeason;
+
+    /**
 	 * TeamSeasonController
 	 */
 	class TeamSeasonController extends SportMSBaseController {
@@ -26,21 +28,33 @@
 		public function initializeAction(): void {
 			$this->mapRequestsToSettings();
 		}
-		
-		/**
-		 * @param \Balumedien\Sportms\Domain\Model\TeamSeason $teamSeason
-		 */
-		public function indexAction(\Balumedien\Sportms\Domain\Model\TeamSeason $teamSeason = NULL) {
-			if($teamSeason === NULL) {
-				$teamSeason = $this->determineTeamSeason();
-			}
-			$this->view->assign('teamSeason', $teamSeason);
-		}
 
         /**
-         * @param \Balumedien\Sportms\Domain\Model\TeamSeason $teamSeason
+         * @param TeamSeason|null $teamSeason
          */
-		public function goalsAction(\Balumedien\Sportms\Domain\Model\TeamSeason $teamSeason = NULL) {
+        public function gamesByCompetitionAction(TeamSeason $teamSeason = NULL) {
+            if($teamSeason === NULL) {
+                $teamSeason = $this->determineTeamSeason();
+            }
+            $this->view->assign('teamSeason', $teamSeason);
+            $games = $this->gameRepository->findGamesByTeamSeason($teamSeason);
+            $this->view->assign('games', $games);
+        }
+
+        /**
+         * @param TeamSeason|null $teamSeason
+         */
+		public function goalsAction(TeamSeason $teamSeason = NULL) {
+            if($teamSeason === NULL) {
+                $teamSeason = $this->determineTeamSeason();
+            }
+            $this->view->assign('teamSeason', $teamSeason);
+        }
+
+        /**
+         * @param TeamSeason $teamSeason
+         */
+        public function indexAction(TeamSeason $teamSeason = NULL) {
             if($teamSeason === NULL) {
                 $teamSeason = $this->determineTeamSeason();
             }

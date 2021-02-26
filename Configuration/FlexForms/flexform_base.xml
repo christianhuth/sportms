@@ -131,8 +131,8 @@
 								<numIndex index="1">TeamSeason->index</numIndex>
 							</numIndex>
 							<numIndex index="191">
-								<numIndex index="0">Mannschaft (Saisonansicht - Spiele)</numIndex>
-								<numIndex index="1">TeamSeason->games</numIndex>
+								<numIndex index="0">Mannschaft (Saisonansicht - Spiele nach Wettbewerb)</numIndex>
+								<numIndex index="1">TeamSeason->gamesByCompetition</numIndex>
 							</numIndex>
 							<numIndex index="192">
 								<numIndex index="0">Mannschaft (Saisonansicht - Tore)</numIndex>

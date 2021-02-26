@@ -4,8 +4,9 @@
 <f:layout name="default"/>
 
 <f:section name="default">
-    <div class="tx-sportms-teamseason-goals">
+    <div class="tx-sportms-teamseason-games">
         <f:render partial="Team/Navigation" arguments="{team: teamSeason.team, teamSeason: teamSeason}"/>
+        <f:render partial="TeamSeason/GamesByCompetition" arguments="{games: games, settings: settings, teamSeason: teamSeason}"/>
     </div>
 </f:section>
 

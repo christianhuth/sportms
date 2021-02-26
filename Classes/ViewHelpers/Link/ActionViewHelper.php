@@ -169,7 +169,7 @@
 			$listofControllersAndTheirActions['Game'] = ['list', 'history', 'index', 'info', 'lineup', 'report'];
 			$listofControllersAndTheirActions['Person'] = ['list', 'officialIndex', 'playerProfile', 'playerPerformance', 'playerPerformanceByClub', 'playerPerformanceByCompetition', 'playerPerformanceByTrainer', 'refereeIndex'];
 			$listofControllersAndTheirActions['Team'] = ['historyRecordGames', 'historyRecordPlayers', 'list', 'seasonIndex', 'seasonGames', 'seasonGoals', 'seasonSquad'];
-			$listofControllersAndTheirActions['TeamSeason'] = ['games', 'goals', 'index', 'squad'];
+			$listofControllersAndTheirActions['TeamSeason'] = ['gamesByCompetition', 'goals', 'index', 'squad'];
 			$this->setListOfControllersAndTheirActions($listofControllersAndTheirActions);
 		}
 		

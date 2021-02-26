@@ -14,9 +14,52 @@
                 </div>
                 <div class="collapse navbar-collapse" id="teamNavbar">
                     <ul class="nav navbar-nav">
-                        <li><sportms:link.action action="index" controller="TeamSeason" TeamSeason="{team.teamSeasons.0}">Übersicht</sportms:link.action></li>
-                        <li><sportms:link.action action="games" controller="TeamSeason" TeamSeason="{team.teamSeasons.0}">Spielplan</sportms:link.action></li>
-                        <li><sportms:link.action action="goals" controller="TeamSeason" TeamSeason="{team.teamSeasons.0}">Torschützen</sportms:link.action></li>
+                        <li>
+                            <f:if condition="{teamSeason}">
+                                <f:then>
+                                    <sportms:link.action action="index" controller="TeamSeason" TeamSeason="{teamSeason}">Übersicht</sportms:link.action>
+                                </f:then>
+                                <f:else>
+                                    <sportms:link.action action="index" controller="TeamSeason" TeamSeason="{team.teamSeasons.0}">Übersicht</sportms:link.action>
+                                </f:else>
+                            </f:if>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Spielplan<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <f:if condition="{teamSeason}">
+                                        <f:then>
+                                            <sportms:link.action action="gamesByCompetition" controller="TeamSeason" TeamSeason="{teamSeason}">Spiele nach Wettbewerb</sportms:link.action>
+                                        </f:then>
+                                        <f:else>
+                                            <sportms:link.action action="gamesByCompetition" controller="TeamSeason" TeamSeason="{team.teamSeasons.0}">Spiele nach Wettbewerb</sportms:link.action>
+                                        </f:else>
+                                    </f:if>
+                                </li>
+                                <li>
+                                    <f:if condition="{teamSeason}">
+                                        <f:then>
+                                            <sportms:link.action action="gamesByDate" controller="TeamSeason" TeamSeason="{teamSeason}">Spiele nach Datum</sportms:link.action>
+                                        </f:then>
+                                        <f:else>
+                                            <sportms:link.action action="gamesByDate" controller="TeamSeason" TeamSeason="{team.teamSeasons.0}">Spiele nach Datum</sportms:link.action>
+                                        </f:else>
+                                    </f:if>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <f:if condition="{teamSeason}">
+                                <f:then>
+                                    <sportms:link.action action="goals" controller="TeamSeason" TeamSeason="{teamSeason}">Tore</sportms:link.action>
+                                </f:then>
+                                <f:else>
+                                    <sportms:link.action action="goals" controller="TeamSeason" TeamSeason="{team.teamSeasons.0}">Tore</sportms:link.action>
+                                </f:else>
+                            </f:if>
+                        </li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Historie<span class="caret"></span></a>
                             <ul class="dropdown-menu">

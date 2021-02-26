@@ -2,7 +2,8 @@
 	
 	namespace Balumedien\Sportms\Controller;
 
-	use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
+	use Balumedien\Sportms\Domain\Model\TeamSeason;
+    use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 
     class SportMSBaseController extends ActionController {
 		
@@ -167,8 +168,13 @@
 				$teamSeasonUid = $this->settings['teamseason']['uid'];
 				return $this->teamSeasonRepository->findByUid($teamSeasonUid);
 			} else {
-                if($this->request->hasArgument('teamseason')) {
-                    return $this->request->getArgument('teamseason');
+                if($this->request->hasArgument('teamSeason')) {
+                    $teamSeason = $this->request->getArgument('teamSeason');
+                    if($teamSeason instanceof TeamSeason) {
+                        return $teamSeason;
+                    } else {
+                        return $this->teamSeasonRepository->findByUid($teamSeason);
+                    }
                 } else {
                     // TODO: DIE IF NO TEAMSEASON IS SELECTED VIA FLEXFORM AND GIVEN VIA REQUEST
                 }

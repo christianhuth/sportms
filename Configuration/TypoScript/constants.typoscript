@@ -14,6 +14,8 @@
 
 # customsubcategory=sportmsTeam=SportMS - Team
 
+# customsubcategory=format=Formatierungen
+
 # customsubcategory=view=View
 
 plugin.tx_sportms {
@@ -67,6 +69,21 @@ plugin.tx_sportms {
             teams.pid =
         }
 
+        format {
+            # cat=plugin.tx_sportms/format; type=string; label=Long format for dates
+            dateLong = %d.%m.%Y
+            # cat=plugin.tx_sportms/format; type=string; label=Short format for dates
+            dateShort = %d.%m.%y
+            # cat=plugin.tx_sportms/format; type=string; label=Long format for datetimes
+            dateTimeLong = %d.%m.%Y - %H:%M
+            # cat=plugin.tx_sportms/format; type=string; label=Short format for datetimes
+            dateTimeShort = %d.%m. - %H:%M
+            # cat=plugin.tx_sportms/format; type=string; label=Long format for times
+            timeLong = %H:%M
+            # cat=plugin.tx_sportms/format; type=string; label=Short format for times
+            timeShort = %H:%M
+        }
+
         game {
             # cat=plugin.tx_sportms/sportmsGame; type=int+; label=Default PID of Game->list
             list.pid =
@@ -115,8 +132,8 @@ plugin.tx_sportms {
         }
 
         teamSeason {
-            # cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of TeamSeason->games
-            games.pid =
+            # cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of TeamSeason->gamesByCompetition
+            gamesByCompetition.pid =
             # cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of TeamSeason->goals
             goals.pid =
             # cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of TeamSeason->index

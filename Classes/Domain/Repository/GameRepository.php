@@ -2,7 +2,9 @@
 	
 	namespace Balumedien\Sportms\Domain\Repository;
 	
-	class GameRepository extends SportMSBaseRepository {
+	use Balumedien\Sportms\Domain\Model\TeamSeason;
+
+    class GameRepository extends SportMSBaseRepository {
 		
 		protected $defaultOrderings = array(
 			'sport.label' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
@@ -50,6 +52,25 @@
 				$query->matching($query->logicalAnd($constraints));
 			}
 			return $query->execute();
+		}
+
+        /**
+         * @param TeamSeason $teamSeason
+         */
+		public function findGamesByTeamSeason(TeamSeason $teamSeason) {
+            $query = $this->createQuery();
+            $query->setOrderings([
+                'competitionSeason.competition.competitionType.sorting' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
+                'competitionSeason.competition.label' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
+                'date' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
+                'time' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
+            ]);
+            $constraints = [];
+            $constraints[] = $this->constraintForTeamSeasonUids($query, $teamSeason->getUid());
+            if($constraints) {
+                $query->matching($query->logicalAnd($constraints));
+            }
+            return $query->execute();
 		}
 		
 		public function findGamesWithHighestWinsForTeam(int $teamUid, int $limit = 5, string $competitionUids = NULL, string $seasonUids = NULL) {
@@ -257,5 +278,13 @@
 				return $query->logicalOr($query->in('teamSeasonHome.team', explode(',', $teamUids)), $query->in('teamSeasonGuest.team', explode(',', $teamUids)));
 			}
 		}
+
+		private function constraintForTeamSeasonUids(\TYPO3\CMS\Extbase\Persistence\QueryInterface $query, string $teamSeasonUids, bool $onlyGamesBetweenTeams = FALSE) {
+            if($onlyGamesBetweenTeams === TRUE) {
+                return $query->logicalAnd($query->in('teamSeasonHome', explode(',', $teamSeasonUids)), $query->in('teamSeasonGuest', explode(',', $teamSeasonUids)));
+            } else {
+                return $query->logicalOr($query->in('teamSeasonHome', explode(',', $teamSeasonUids)), $query->in('teamSeasonGuest', explode(',', $teamSeasonUids)));
+            }
+        }
 		
 	}
