@@ -10,7 +10,7 @@
             <f:render arguments="{nationalities: person.nationalities}" partial="ViewHelper/Person/Nationalities"/>
         </td>
         <td>
-            <sportms:link.action action="playerIndex" controller="Person" Person="{person}" arguments="{profile: person.personProfiles.0.profileType, section: person.personProfiles.0.section}">LINK</sportms:link.action>
+            <sportms:link.action action="playerProfile" controller="Person" Person="{person}" arguments="{profile: person.personProfiles.0.profileType, section: person.personProfiles.0.section}">LINK</sportms:link.action>
         </td>
     </tr>
 

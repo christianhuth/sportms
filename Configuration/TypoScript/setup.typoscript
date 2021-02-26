@@ -50,10 +50,16 @@ plugin.tx_sportms {
         person {
             list.pid = {$plugin.tx_sportms.settings.person.list.pid}
             officialProfile.pid = {$plugin.tx_sportms.settings.person.officialProfile.pid}
+            playerJerseys.pid = {$plugin.tx_sportms.settings.person.playerJerseys.pid}
+            playerPerformance.pid = {$plugin.tx_sportms.settings.person.playerPerformance.pid}
             playerProfile.pid = {$plugin.tx_sportms.settings.person.playerProfile.pid}
             refereeProfile.pid = {$plugin.tx_sportms.settings.person.refereeProfile.pid}
             dummyImageMale = {$plugin.tx_sportms.settings.person.dummyImageMale}
             dummyImageFemale = {$plugin.tx_sportms.settings.person.dummyImageFemale}
+        }
+
+        player {
+
         }
 
         team {

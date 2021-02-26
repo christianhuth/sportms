@@ -6,6 +6,12 @@
 	 * TeamSeasonController
 	 */
 	class TeamSeasonController extends SportMSBaseController {
+
+        /**
+         * @var \Balumedien\Sportms\Domain\Repository\GameRepository
+         * @TYPO3\CMS\Extbase\Annotation\Inject
+         */
+        protected $gameRepository;
 		
 		/**
 		 * @var \Balumedien\Sportms\Domain\Repository\TeamSeasonRepository
@@ -26,9 +32,19 @@
 		 */
 		public function indexAction(\Balumedien\Sportms\Domain\Model\TeamSeason $teamSeason = NULL) {
 			if($teamSeason === NULL) {
-				$teamSeason = $this->determineTeamSeasonFromFlexform();
+				$teamSeason = $this->determineTeamSeason();
 			}
 			$this->view->assign('teamSeason', $teamSeason);
 		}
+
+        /**
+         * @param \Balumedien\Sportms\Domain\Model\TeamSeason $teamSeason
+         */
+		public function goalsAction(\Balumedien\Sportms\Domain\Model\TeamSeason $teamSeason = NULL) {
+            if($teamSeason === NULL) {
+                $teamSeason = $this->determineTeamSeason();
+            }
+            $this->view->assign('teamSeason', $teamSeason);
+        }
 		
 	}

@@ -9,7 +9,13 @@
             <settings.person.uid>
                 <TCEforms>
                     <label>Zeige folgende Person</label>
-                    <displayCond>FIELD:base.switchableControllerActions:=:Person->show</displayCond>
+                    <displayCond>
+                        <OR>
+                            <numIndex index="1">FIELD:base.switchableControllerActions:=:Person->playerJerseys</numIndex>
+                            <numIndex index="2">FIELD:base.switchableControllerActions:=:Person->playerPerformance</numIndex>
+                            <numIndex index="3">FIELD:base.switchableControllerActions:=:Person->playerProfile</numIndex>
+                        </OR>
+                    </displayCond>
                     <config>
                         <type>group</type>
                         <internal_type>db</internal_type>
@@ -21,30 +27,16 @@
                     </config>
                 </TCEforms>
             </settings.person.uid>
-            <settings.person.showViews>
-                <TCEforms>
-                    <label>Erlaube folgende Einzelansichten</label>
-                    <displayCond>FIELD:base.switchableControllerActions:=:Person->show</displayCond>
-                    <config>
-                        <type>select</type>
-                        <renderType>selectMultipleSideBySide</renderType>
-                        <items type="array">
-                            <numIndex index="0">
-                                <numIndex index="0">Index</numIndex>
-                                <numIndex index="1">index</numIndex>
-                            </numIndex>
-                            <numIndex index="2">
-                                <numIndex index="0">Officials</numIndex>
-                                <numIndex index="1">officials</numIndex>
-                            </numIndex>
-                        </items>
-                    </config>
-                </TCEforms>
-            </settings.person.showViews>
-            <settings.person.showNavigation.enabled>
+            <settings.person.playerNavigation.enabled>
                 <TCEforms>
                     <label>Navigation für Einzelansichten?</label>
-                    <displayCond>FIELD:base.switchableControllerActions:=:Person->show</displayCond>
+                    <displayCond>
+                        <OR>
+                            <numIndex index="1">FIELD:base.switchableControllerActions:=:Person->playerJerseys</numIndex>
+                            <numIndex index="2">FIELD:base.switchableControllerActions:=:Person->playerPerformance</numIndex>
+                            <numIndex index="3">FIELD:base.switchableControllerActions:=:Person->playerProfile</numIndex>
+                        </OR>
+                    </displayCond>
                     <config>
                         <default>1</default>
                         <renderType>checkboxToggle</renderType>
@@ -52,32 +44,40 @@
                     </config>
                     <onChange>reload</onChange>
                 </TCEforms>
-            </settings.person.showNavigation.enabled>
-            <settings.person.showNavigation.views>
+            </settings.person.playerNavigation.enabled>
+            <settings.person.playerNavigation.views>
                 <TCEforms>
                     <label>Zeige folgende Navigationselemente</label>
                     <displayCond>
                         <AND>
-                            <numIndex index="0">FIELD:base.switchableControllerActions:=:Person->show</numIndex>
-                            <numIndex index="1">FIELD:person.settings.person.showNavigation.enabled:REQ:TRUE</numIndex>
+                            <numIndex index="1">FIELD:person.settings.person.playerNavigation.enabled:REQ:TRUE</numIndex>
+                            <OR>
+                                <numIndex index="1">FIELD:base.switchableControllerActions:=:Person->playerJerseys</numIndex>
+                                <numIndex index="2">FIELD:base.switchableControllerActions:=:Person->playerPerformance</numIndex>
+                                <numIndex index="3">FIELD:base.switchableControllerActions:=:Person->playerProfile</numIndex>
+                            </OR>
                         </AND>
                     </displayCond>
                     <config>
                         <type>select</type>
                         <renderType>selectMultipleSideBySide</renderType>
                         <items type="array">
-                            <numIndex index="0">
-                                <numIndex index="0">Index</numIndex>
-                                <numIndex index="1">index</numIndex>
+                            <numIndex index="1">
+                                <numIndex index="0">Jerseys</numIndex>
+                                <numIndex index="1">jerseys</numIndex>
                             </numIndex>
                             <numIndex index="2">
-                                <numIndex index="0">Officials</numIndex>
-                                <numIndex index="1">officials</numIndex>
+                                <numIndex index="0">Performance</numIndex>
+                                <numIndex index="1">performance</numIndex>
+                            </numIndex>
+                            <numIndex index="3">
+                                <numIndex index="0">Profile</numIndex>
+                                <numIndex index="1">profile</numIndex>
                             </numIndex>
                         </items>
                     </config>
                 </TCEforms>
-            </settings.person.showNavigation.views>
+            </settings.person.playerNavigation.views>
             <settings.person.persons>
                 <TCEforms>
                     <label>Welche Personen sollen angezeigt werden?</label>

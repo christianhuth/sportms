@@ -14,8 +14,16 @@
                 </div>
                 <div class="collapse navbar-collapse" id="teamNavbar">
                     <ul class="nav navbar-nav">
-                        <li><sportms:link.action action="historyRecordGames" controller="Team" Team="{team}">Rekordspiele</sportms:link.action></li>
-                        <li><sportms:link.action action="historyRecordPlayers" controller="Team" Team="{team}">Rekordspieler</sportms:link.action></li>
+                        <li><sportms:link.action action="index" controller="TeamSeason" TeamSeason="{team.teamSeasons.0}">Übersicht</sportms:link.action></li>
+                        <li><sportms:link.action action="games" controller="TeamSeason" TeamSeason="{team.teamSeasons.0}">Spielplan</sportms:link.action></li>
+                        <li><sportms:link.action action="goals" controller="TeamSeason" TeamSeason="{team.teamSeasons.0}">Torschützen</sportms:link.action></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Historie<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><sportms:link.action action="historyRecordGames" controller="Team" Team="{team}">Rekordspiele</sportms:link.action></li>
+                                <li><sportms:link.action action="historyRecordPlayers" controller="Team" Team="{team}">Rekordspieler</sportms:link.action></li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>

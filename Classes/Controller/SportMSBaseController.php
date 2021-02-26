@@ -1,8 +1,10 @@
 <?php
 	
 	namespace Balumedien\Sportms\Controller;
-	
-	class SportMSBaseController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
+
+	use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
+
+    class SportMSBaseController extends ActionController {
 		
 		protected function getClubsFilter($useSelected = TRUE) {
 			return $this->getFilter('club', 'clubs', $useSelected);
@@ -91,7 +93,7 @@
 		
 		protected function determineShowView($model): void {
 			if(!$this->settings[$model]['showView']['current']) {
-				$this->settings[$model]['showView']['current'] = ($this->settings[$model]['showViews']) ? explode(',', $this->settings[$model]['showViews'])[0] : 'index';
+				$this->settings[$model]['showView']['current'] = ($this->settings[$model]['showViews']) ? explode(',', $this->settings[$model]['showViews'])[0] : 'profile';
 			}
 		}
 		
@@ -123,30 +125,53 @@
 				$this->settings[$model]['showNavigation']['enabled'] = $showNavigationEnabled;
 			}
 		}
+
+        /**
+         * @return \Balumedien\Sportms\Domain\Model\Person
+         */
+        protected function determinePerson(): \Balumedien\Sportms\Domain\Model\Person {
+            # check if a person is defined via flexform
+            if($this->settings['person']['uid']) {
+                $personUid = $this->settings['person']['uid'];
+                return $this->personRepository->findByUid($personUid);
+            } else {
+                if($this->request->hasArgument('person')) {
+                    return $this->request->getArgument('person');
+                } else {
+                    // TODO: DIE IF NO PERSON IS SELECTED VIA FLEXFORM AND GIVEN VIA REQUEST
+                }
+            }
+        }
 		
 		/**
 		 * @return \Balumedien\Sportms\Domain\Model\Team
 		 */
-		protected function determineTeamFromFlexform(): ?\Balumedien\Sportms\Domain\Model\Team {
+		protected function determineTeam(): \Balumedien\Sportms\Domain\Model\Team {
 			if($this->settings['team']['uid']) {
 				$teamUid = $this->settings['team']['uid'];
 				return $this->teamRepository->findByUid($teamUid);
 			} else {
-				// TODO: DIE IF NO TEAM IS SELECTED VIA FLEXFORM
-				return null;
+                if($this->request->hasArgument('team')) {
+                    return $this->request->getArgument('team');
+                } else {
+                    // TODO: DIE IF NO TEAM IS SELECTED VIA FLEXFORM AND GIVEN VIA REQUEST
+                }
 			}
 		}
 		
 		/**
 		 * @return \Balumedien\Sportms\Domain\Model\TeamSeason
 		 */
-		protected function determineTeamSeasonFromFlexform(): ?\Balumedien\Sportms\Domain\Model\TeamSeason {
+		protected function determineTeamSeason(): \Balumedien\Sportms\Domain\Model\TeamSeason {
 			if($this->settings['teamseason']['uid']) {
 				$teamSeasonUid = $this->settings['teamseason']['uid'];
 				return $this->teamSeasonRepository->findByUid($teamSeasonUid);
 			} else {
-				// TODO: DIE IF NO TEAM IS SELECTED VIA FLEXFORM
-				return null;
+                if($this->request->hasArgument('teamseason')) {
+                    return $this->request->getArgument('teamseason');
+                } else {
+                    // TODO: DIE IF NO TEAMSEASON IS SELECTED VIA FLEXFORM AND GIVEN VIA REQUEST
+                }
 			}
 		}
 		

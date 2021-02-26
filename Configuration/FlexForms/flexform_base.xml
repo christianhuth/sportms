@@ -95,12 +95,20 @@
 								<numIndex index="1">Person->officialProfile</numIndex>
 							</numIndex>
 							<numIndex index="153">
-								<numIndex index="0">SpielerIn (Einzelansicht - Profil)</numIndex>
-								<numIndex index="1">Person->playerProfile</numIndex>
-							</numIndex>
-							<numIndex index="154">
 								<numIndex index="0">SchiedsrichterIn (Einzelansicht - Profil)</numIndex>
 								<numIndex index="1">Person->refereeProfile</numIndex>
+							</numIndex>
+							<numIndex index="171">
+								<numIndex index="0">SpielerIn (Einzelansicht - Rückennummern)</numIndex>
+								<numIndex index="1">Person->playerJerseys</numIndex>
+							</numIndex>
+							<numIndex index="172">
+								<numIndex index="0">SpielerIn (Einzelansicht - Leistungsdaten)</numIndex>
+								<numIndex index="1">Person->playerPerformance</numIndex>
+							</numIndex>
+							<numIndex index="173">
+								<numIndex index="0">SpielerIn (Einzelansicht - Profil)</numIndex>
+								<numIndex index="1">Person->playerProfile</numIndex>
 							</numIndex>
 							<numIndex index="180">
 								<numIndex index="0">Mannschaft</numIndex>

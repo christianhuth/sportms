@@ -410,3 +410,13 @@
     font-weight: bold;
     line-height: 1em;
 }
+
+/*
+ *
+ */
+@media screen and (max-width: 768px) {
+    .tx-sportms-teamseason-official .official-jerseynumber,
+    .tx-sportms-teamseason-squadmember .squadmember-jerseynumber {
+        display: none;
+    }
+}

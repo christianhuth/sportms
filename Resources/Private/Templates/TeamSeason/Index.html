@@ -4,7 +4,10 @@
 <f:layout name="default"/>
 
 <f:section name="default">
-    <div class="tx-sportms-team-seasonindex">
+    <div class="tx-sportms-teamseason-index">
+
+        <f:render partial="Team/Navigation" arguments="{team: teamSeason.team}"/>
+
         <f:if condition="{teamSeason.teamSeasonImages}">
             <div class="tx-sportms-teamseason-image">
                 <a class="t3colorbox" href="{f:uri.image(image: teamSeason.teamSeasonImages.0)}" rel="lightbox[sportms]">
@@ -37,8 +40,12 @@
                 <div class="tx-sportms-teamseason-officials col-xs-12"><h3>Trainerstab</h3></div>
                 <div class="tx-sportms-teamseason-officials-members">
                     <f:for as="teamSeasonOfficial" each="{teamSeason.teamSeasonOfficials}">
-                        <f:render arguments="{teamSeasonOfficial: teamSeasonOfficial, settings: settings}"
-                                  partial="TeamSeason/TeamSeasonOfficial"/>
+                        <f:if condition="{teamSeasonOfficial.enddate} == ''">
+                            <f:then>
+                                <f:render arguments="{teamSeasonOfficial: teamSeasonOfficial, settings: settings}"
+                                          partial="TeamSeason/TeamSeasonOfficial"/>
+                            </f:then>
+                        </f:if>
                     </f:for>
                 </div>
                 <div class="tx-sportms-teamseason-officials-seperator col-xs-12"></div>
@@ -65,7 +72,7 @@
             <div class="tx-sportms-teamseason-squad-captains">
                 <div class="tx-sportms-teamseason-squad-captains col-xs-12"><h3>Mannschaftskapitäne</h3></div>
                 <f:for as="squadCaptain" each="{teamSeason.teamSeasonSquadCaptains}" iteration="iterator">
-                    <f:render arguments="{squadCaptain: squadCaptain, settings: settings, position: iterator.index}"
+                    <f:render arguments="{squadCaptain: squadCaptain, settings: settings, position: iterator.index, teamSeason: teamSeason}"
                               partial="TeamSeason/SquadCaptain"/>
                 </f:for>
             </div>

@@ -85,6 +85,10 @@ plugin.tx_sportms {
             list.pid =
             # cat=plugin.tx_sportms/sportmsPerson; type=int+; label=Default PID of Person->officialProfile
             officialProfile.pid =
+            # cat=plugin.tx_sportms/sportmsPerson; type=int+; label=Default PID of Person->playerJerseys
+            playerJerseys.pid =
+            # cat=plugin.tx_sportms/sportmsPerson; type=int+; label=Default PID of Person->playerPerformance
+            playerPerformance.pid =
             # cat=plugin.tx_sportms/sportmsPerson; type=int+; label=Default PID of Person->playerProfile
             playerProfile.pid =
             # cat=plugin.tx_sportms/sportmsPerson; type=int+; label=Default PID of Person->refereeProfile

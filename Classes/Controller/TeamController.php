@@ -136,7 +136,7 @@
 		 */
 		public function historyRecordGamesAction(\Balumedien\Sportms\Domain\Model\Team $team = NULL) {
 			if($team === NULL) {
-				$team = $this->determineTeamFromFlexform();
+				$team = $this->determineTeam();
 			}
 			$this->view->assign('team', $team);
 			$teamUid = $team->getUid();
@@ -166,9 +166,10 @@
 		 */
 		public function historyRecordPlayersAction(\Balumedien\Sportms\Domain\Model\Team $team = NULL) {
 			if($team === NULL) {
-				$team = $this->determineTeamFromFlexform();
+				$team = $this->determineTeam();
 			}
-			$teamUid = $team->getUid();
+            $this->view->assign('team', $team);
+            $teamUid = $team->getUid();
 			$playersWithMostGamesAsArray = $this->gameLineupRepository->findPlayersWithMostGames($this->getSportsFilter(), $this->getSportAgeGroupsFilter(), $this->getSportAgeLevelsFilter(), $this->getSportPositionGroupsFilter(), $this->getSportPositionsFilter(), $this->getCompetitionTypesFilter(), $this->getCompetitionsFilter(), $this->getClubsFilter(), $teamUid, $this->getSeasonsFilter(), $this->settings['team']['historyRecordPlayers']['limit']);
 			$playersWithMostGames = [];
 			foreach($playersWithMostGamesAsArray AS $playerWithMostGamesAsArray) {

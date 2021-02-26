@@ -17,7 +17,7 @@
             <f:for as="playerWithMostAssists" each="{playersWithMostAssists}" iteration="iterator">
                 <tr>
                     <td class="tx-sportms-table-center">{iterator.index + 1}</td>
-                    <td class="tx-sportms-table-left"><sportms:link.action action="playerIndex" controller="Person" Person="{playerWithMostAssists.person}">{playerWithMostAssists.person.firstname} {playerWithMostAssists.person.lastname}</sportms:link.action></td>
+                    <td class="tx-sportms-table-left"><sportms:link.action action="playerProfile" controller="Person" Person="{playerWithMostAssists.person}">{playerWithMostAssists.person.firstname} {playerWithMostAssists.person.lastname}</sportms:link.action></td>
                     <td class="tx-sportms-table-center"><f:render arguments="{nationalities: playerWithMostAssists.person.nationalities}" partial="ViewHelper/Person/Nationalities"/></td>
                     <td class="tx-sportms-table-center">{playerWithMostAssists.numberOfAssists}</td>
                 </tr>

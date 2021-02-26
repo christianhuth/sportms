@@ -9,7 +9,6 @@
 		
 		/**
 		 * @var \Balumedien\Sportms\Domain\Model\TeamSeason
-		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
 		 */
 		protected $teamSeason;
 		
@@ -49,16 +48,16 @@
 		protected $hiddenInSquadList;
 		
 		/**
-		 * @return TeamSeason
+		 * @return \Balumedien\Sportms\Domain\Model\TeamSeason
 		 */
 		public function getTeamSeason() {
 			return $this->teamSeason;
 		}
 		
 		/**
-		 * @param TeamSeason $teamSeason
+		 * @param \Balumedien\Sportms\Domain\Model\TeamSeason $teamSeason
 		 */
-		public function setTeamSeason($teamSeason) {
+		public function setTeamSeason(\Balumedien\Sportms\Domain\Model\TeamSeason $teamSeason) {
 			$this->teamSeason = $teamSeason;
 		}
 		

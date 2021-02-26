@@ -93,8 +93,18 @@ return array(
         ],
 
         'team_season' => array(
+            'exclude' => 1,
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_teamseason',
             'config' => array(
-                'type' => 'passthrough',
+                'eval' => 'required',
+                'foreign_table' => 'tx_sportms_domain_model_teamseason',
+                'items' => array(
+                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', 0),
+                ),
+                'maxItems' => 1,
+                'renderType' => 'selectSingle',
+                'size' => 1,
+                'type' => 'select',
             ),
         ),
 
