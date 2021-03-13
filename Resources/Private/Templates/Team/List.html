@@ -4,13 +4,14 @@
 <f:layout name="default"/>
 
 <f:section name="default">
-    <div class="tx-sportms-team-list">
+    <div id="tx-sportms-team-list">
         <f:render arguments="{_all}" partial="Team/List/Filter"/>
         <div class="table-responsive">
-            <table class="table table-bordered table-condensed table-hover table-striped">
+            <table class="table table-bordered table-condensed table-hover table-striped tx-sportms-table">
                 <thead>
                 <tr>
-                    <th class="tx-sportms-table-left">Mannschaft</th>
+                    <th class="tx-sportms-table-center">Mannschaft</th>
+                    <th class="tx-sportms-table-center">Spielplan</th>
                     <th class="tx-sportms-table-center">Rekordspiele</th>
                     <th class="tx-sportms-table-center">Rekordspieler</th>
                     <th class="tx-sportms-table-center">Instanzen</th>

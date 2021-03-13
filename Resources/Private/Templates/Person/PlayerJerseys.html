@@ -4,10 +4,11 @@
 <f:layout name="default"/>
 
 <f:section name="default">
-    <div class="tx-sportms-person-show">
+    <div id="tx-sportms-person-playerjerseys">
+        <f:render arguments="{person: person}" partial="Person/Player/Header"/>
         <f:render arguments="{person: person}" partial="Person/Player/Navigation"/>
-        <f:render arguments="{jerseysByTeamSeason: jerseysByTeamSeason}" partial="Person/Player/JerseysByTeamSeason"/>
-        <f:render arguments="{jerseysByGames: jerseysByGames}" partial="Person/Player/JerseysByGames"/>
+        <f:render arguments="{jerseysByTeamSeason: jerseysByTeamSeason}" partial="Person/PlayerJerseys/JerseysByTeamSeason"/>
+        <f:render arguments="{jerseysByGames: jerseysByGames}" partial="Person/PlayerJerseys/JerseysByGames"/>
     </div>
 </f:section>
 

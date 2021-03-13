@@ -4,13 +4,13 @@
 		'Balumedien.' . $_EXTKEY,
 		'sportms',
 		[
-			'Club' => 'list',
+			'Club' => 'list, sections',
 			'ClubSection' => 'list',
-			'Competition' => 'list, historyTeams',
+			'Competition' => 'list',
 			'CompetitionSeason' => 'games, goals, list, teams',
 			'Game' => 'history, index, last',
 			'Person' => 'officialProfile, playerProfile, refereeProfile',
-			'Team' => 'list, historyRecordGames, historyRecordPlayers, seasonGames, seasonGoals, seasonIndex, seasonSquad',
+			'Team' => 'list, historyRecordGames, historyRecordPlayers',
             'TeamSeason' => 'games, goals, index, list, squad'
 		]
 	);

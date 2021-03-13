@@ -1,0 +1,35 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:sportms="Balumedien\Sportms\ViewHelpers"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<tr>
+    <td class="tx-sportms-club-name">
+        <sportms:link.action action="index" controller="Club" Club="{clubSection.club}">{clubSection.club.name}</sportms:link.action>
+    </td>
+    <td class="tx-sportms-clubsection-label">
+        <sportms:link.action action="index" controller="ClubSection" ClubSection="{clubSection}">{clubSection.section.label}</sportms:link.action>
+    </td>
+    <td class="tx-sportms-sport-label">
+        <f:if condition="{clubSection.sports}">
+            <f:then>
+                <ul>
+                    <f:for each="{clubSection.sports}" as="sport">
+                        <li>{sport.label}</li>
+                    </f:for>
+                </ul>
+            </f:then>
+            <f:else>
+                <ul>
+                    <li>Keine angebotene Sportart bekannt.</li>
+                </ul>
+            </f:else>
+        </f:if>
+    </td>
+    <td class="tx-sportms-clubsection-teams">
+        <sportms:link.action action="list" controller="Team" Club="{clubSection.club}" Section="{clubSection.section}">
+            <f:count>{clubSection.teams}</f:count>
+        </sportms:link.action>
+    </td>
+</tr>
+
+</html>

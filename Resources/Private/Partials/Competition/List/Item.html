@@ -3,14 +3,14 @@
       xmlns:sportms="Balumedien\Sportms\ViewHelpers">
 
 <tr>
-    <td class="tx-sportms-sport">
+    <td class="tx-sportms-table-center">
         {competition.sport.label}
     </td>
-    <td class="tx-sportms-competition">
+    <td>
         <sportms:link.action action="games" controller="Competition" Competition="{competition}">{competition.label}</sportms:link.action>
     </td>
-    <td class="tx-sportms-sportagelevel">{competition.sportAgeLevel.label}</td>
-    <td class="tx-sportms-competitiontype">{competition.competitionType.label}</td>
+    <td class="tx-sportms-table-center">{competition.sportAgeLevel.label}</td>
+    <td class="tx-sportms-table-center">{competition.competitionType.label}</td>
 </tr>
 
 </html>

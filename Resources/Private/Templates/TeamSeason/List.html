@@ -4,9 +4,33 @@
 <f:layout name="default"/>
 
 <f:section name="default">
-    <div class="tx-sportms-teamseason-list">
-        <f:render arguments="{_all}" partial="TeamSeason/ListFilter"/>
-        <f:render arguments="{_all}" partial="TeamSeason/List"/>
+    <div id="tx-sportms-teamseason-list">
+        <f:render arguments="{_all}" partial="TeamSeason/List/Filter"/>
+        <div class="table-responsive">
+            <table class="table table-bordered table-condensed table-hover table-striped tx-sportms-table">
+                <thead>
+                <tr>
+                    <th>Verein</th>
+                    <th>Vereinsabteilung</th>
+                    <th>Mannschaftsname</th>
+                    <th>Altersstufe</th>
+                    <th>Saison</th>
+                </tr>
+                </thead>
+                <tbody>
+                <f:if condition="{teamSeasons}">
+                    <f:then>
+                        <f:for as="teamSeason" each="{teamSeasons}">
+                            <f:render partial="TeamSeason/List/Item" arguments="{teamSeason: teamSeason}"/>
+                        </f:for>
+                    </f:then>
+                    <f:else>
+                        <td colspan="5">Keine Mannschaftsinstanzen gefunden.</td>
+                    </f:else>
+                </f:if>
+                </tbody>
+            </table>
+        </div>
     </div>
 </f:section>
 

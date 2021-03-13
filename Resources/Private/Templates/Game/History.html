@@ -5,7 +5,7 @@
 
 <f:section name="default">
 
-    <div class="tx-sportms-game-show">
+    <div id="tx-sportms-game-show">
 
         <f:render arguments="{game: game}" partial="Game/Header"/>
 
@@ -14,7 +14,7 @@
         <div class="tx-sportms-game-showhistory">
             <div clas="tx-sportms-game-list">
                 <h4>Bisherige Begegnungen</h4>
-                <f:render partial="Game/ShowHistoryList" arguments="{games: gamesInCompetition}"/>
+                <f:render partial="Game/History/List" arguments="{games: gamesInCompetition}"/>
             </div>
         </div>
 

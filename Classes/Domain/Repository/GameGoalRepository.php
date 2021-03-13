@@ -2,7 +2,9 @@
 	
 	namespace Balumedien\Sportms\Domain\Repository;
 	
-	class GameGoalRepository extends SportMSBaseRepository {
+	use Balumedien\Sportms\Domain\Model\TeamSeason;
+
+    class GameGoalRepository extends SportMSBaseRepository {
 		
 		protected $defaultOrderings = [
 			'period' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
@@ -11,6 +13,8 @@
 			'goal_home' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
 			'goal_guest' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
 		];
+
+		private $tableGameGoal = 'tx_sportms_domain_model_gamegoal';
 		
 		public function findAll(string $gameUids = null, string $gameGoalUids = null, string $scorerUids = null, string $assistUids = null) {
 			$query = $this->createQuery();
@@ -32,6 +36,23 @@
 			}
 			return $query->execute();
 		}
+
+        /**
+         * @param TeamSeason $teamSeasons
+         */
+        public function findGoalsByTeamSeason(TeamSeason $teamSeason) {
+            $tableGameGoal = 'tx_sportms_domain_model_gamegoal';
+            $tableGameGoalAlias = 'gamegoal';
+            $queryBuilder = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Database\ConnectionPool::class)->getQueryBuilderForTable($tableGameGoal);
+            $queryBuilder->SELECT($tableGameGoalAlias . '.*')
+                ->addSelectLiteral('COUNT(' . $tableGameGoalAlias . '.' . $queryBuilder->quoteIdentifier('game') . ') AS ' . $queryBuilder->quoteIdentifier('numberOfAssists'))
+                ->FROM($tableGameGoal, $tableGameGoalAlias)
+                ->GROUPBY($tableGameGoalAlias . '.scorer')
+                ->WHERE($queryBuilder->expr()->gt($tableGameGoalAlias . '.assist', 0))
+                ->ORDERBY('numberOfAssists', \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING);
+            #debug($queryBuilder->getSQL());
+            return $queryBuilder->execute()->fetchAll();
+        }
 		
 		public function findPlayersWithMostGoals(string $sportUids = NULL, string $sportAgeGroupUids = NULL, string $sportAgeLevelUids = NULL, string $sportPositionGroupUids = NULL, string $sportPositionUids = NULL, string $competitionTypeUids = NULL, string $competitionUids = NULL, string $clubUids = NULL, string $teamUids = NULL, string $seasonUids = NULL, int $limit = 10) {
 			$tableGameGoal = 'tx_sportms_domain_model_gamegoal';
@@ -51,7 +72,7 @@
 		}
 		
 		public function findPlayersWithMostAssists(string $sportUids = NULL, string $sportAgeGroupUids = NULL, string $sportAgeLevelUids = NULL, string $sportPositionGroupUids = NULL, string $sportPositionUids = NULL, string $competitionTypeUids = NULL, string $competitionUids = NULL, string $clubUids = NULL, string $teamUids = NULL, string $seasonUids = NULL, int $limit = 10) {
-			$tableGameGoal = 'tx_sportms_domain_model_gamegoal';
+			$tableGameGoal = $this->tableGameGoal;
 			$tableGameGoalAlias = 'gamegoal';
 			$queryBuilder = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Database\ConnectionPool::class)->getQueryBuilderForTable($tableGameGoal);
 			$queryBuilder->SELECT($tableGameGoalAlias . '.*')

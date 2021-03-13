@@ -3,6 +3,7 @@
 	namespace Balumedien\Sportms\Controller;
 	
 	use Balumedien\Sportms\Domain\Model\TeamSeason;
+    use TYPO3\CMS\Extbase\Persistence\QueryInterface;
 
     /**
 	 * TeamSeasonController
@@ -37,7 +38,29 @@
                 $teamSeason = $this->determineTeamSeason();
             }
             $this->view->assign('teamSeason', $teamSeason);
-            $games = $this->gameRepository->findGamesByTeamSeason($teamSeason);
+            $orderings = [
+                'competitionSeason.competition.competitionType.sorting' => QueryInterface::ORDER_ASCENDING,
+                'competitionSeason.competition.label' => QueryInterface::ORDER_ASCENDING,
+                'date' => QueryInterface::ORDER_ASCENDING,
+                'time' => QueryInterface::ORDER_ASCENDING,
+            ];
+            $games = $this->gameRepository->findGamesByTeamSeason($teamSeason, $orderings);
+            $this->view->assign('games', $games);
+        }
+
+        /**
+         * @param TeamSeason|null $teamSeason
+         */
+        public function gamesByDateAction(TeamSeason $teamSeason = NULL): void {
+            if($teamSeason === NULL) {
+                $teamSeason = $this->determineTeamSeason();
+            }
+            $this->view->assign('teamSeason', $teamSeason);
+            $orderings = [
+                'date' => QueryInterface::ORDER_ASCENDING,
+                'time' => QueryInterface::ORDER_ASCENDING,
+            ];
+            $games = $this->gameRepository->findGamesByTeamSeason($teamSeason, $orderings);
             $this->view->assign('games', $games);
         }
 

@@ -118,6 +118,10 @@
 								<numIndex index="0">Mannschaft (Listenansicht)</numIndex>
 								<numIndex index="1">Team->list</numIndex>
 							</numIndex>
+							<numIndex index="184">
+								<numIndex index="0">Mannschaft (Historie - Funktionäre)</numIndex>
+								<numIndex index="1">Team->historyOfficials</numIndex>
+							</numIndex>
 							<numIndex index="182">
 								<numIndex index="0">Mannschaft (Historie - Rekordspiele)</numIndex>
 								<numIndex index="1">Team->historyRecordGames</numIndex>
@@ -129,6 +133,10 @@
 							<numIndex index="190">
 								<numIndex index="0">Mannschaft (Saisonansicht - Start)</numIndex>
 								<numIndex index="1">TeamSeason->index</numIndex>
+							</numIndex>
+							<numIndex index="194">
+								<numIndex index="0">Mannschaft (Saisonansicht - Spiele nach Datum)</numIndex>
+								<numIndex index="1">TeamSeason->gamesByDate</numIndex>
 							</numIndex>
 							<numIndex index="191">
 								<numIndex index="0">Mannschaft (Saisonansicht - Spiele nach Wettbewerb)</numIndex>

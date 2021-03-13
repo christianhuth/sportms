@@ -3,7 +3,7 @@
 
 <f:if condition="{settings.season.seasonsSelectbox} ||
                  {settings.competition.competitionsSelectbox}">
-    <div class="tx-sportms-list-filter well">
+    <div class="tx-sportms-filter">
         <f:form action="historyRecordGames" arguments="{team: team}" class="form-horizontal" controller="Team" extensionName="sportms" method="POST" noCache="TRUE" noCacheHash="TRUE" pageUid="{settings.team.historyRecordGames.pid}" pluginName="sportms">
             <f:render arguments="{options: seasonsSelectbox,             settings: settings,     value: settings.season.selected}" partial="Form/Select/Season"/>
             <f:render arguments="{options: competitionsSelectbox,        settings: settings,     value: settings.competition.selected}" partial="Form/Select/Competition"/>

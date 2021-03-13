@@ -13,20 +13,32 @@
         </f:if>
     </f:then>
     <f:else>
-        <div style="text-align: center;">-</div>
+        <div class="tx-sportms-table-center">-</div>
     </f:else>
 </f:if>
 
 <f:section name="normal">
-    {address.street} {address.housenumber}<br/>
-    {address.zipcode} {address.location}
+    <f:if condition="{address.street} || {address.housenumber}">
+        {address.street} {address.housenumber}<br/>
+    </f:if>
+    <f:if condition="{address.zipcode} || {address.location}">
+        {address.zipcode} {address.location}
+    </f:if>
 </f:section>
 
 <f:section name="full">
-    {address.street} {address.housenumber}<br/>
-    {address.zipcode} {address.location}<br/>
-    {address.region}<br/>
-    {address.country}
+    <f:if condition="{address.street} || {address.housenumber}">
+        {address.street} {address.housenumber}<br/>
+    </f:if>
+    <f:if condition="{address.zipcode} || {address.location}">
+        {address.zipcode} {address.location}<br/>
+    </f:if>
+    <f:if condition="{address.region}">
+        {address.region}<br/>
+    </f:if>
+    <f:if condition="{address.country}">
+        {address.country}
+    </f:if>
 </f:section>
 
 </html>

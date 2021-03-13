@@ -5,7 +5,7 @@
                  {settings.club.clubsSelectbox} ||
                  {settings.team.teamsSelectbox} ||
                  {settings.season.seasonsSelextbox}">
-    <div class="tx-sportms-list-filter well">
+    <div class="tx-sportms-filter">
         <f:form action="list" class="form-horizontal" controller="TeamSeason" extensionName="sportms" method="POST" noCache="TRUE" noCacheHash="TRUE" pageUid="{settings.teamSeason.listPid}" pluginName="sportms">
             <f:render arguments="{options: sectionsSelectbox,           settings: settings,     value: settings.section.selected}" partial="Form/Select/Sport"/>
             <f:render arguments="{options: sectionAgeGroupsSelectbox,   settings: settings,     value: settings.sectionAgeGroup.selected}" partial="Form/Select/SportAgeGroup"/>

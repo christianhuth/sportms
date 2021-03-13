@@ -117,6 +117,8 @@ plugin.tx_sportms {
         }
 
         team {
+            # cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of Team->historyOfficials
+            historyOfficials.pid = 10
             # cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default Limit for Team->historyRecordGames
             historyRecordGames.limit = 10
             # cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of Team->historyRecordGames
@@ -134,6 +136,8 @@ plugin.tx_sportms {
         teamSeason {
             # cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of TeamSeason->gamesByCompetition
             gamesByCompetition.pid =
+            # cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of TeamSeason->gamesByDate
+            gamesByDate.pid =
             # cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of TeamSeason->goals
             goals.pid =
             # cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of TeamSeason->index

@@ -5,7 +5,7 @@
                  {settings.competition.competitionsSelectbox} ||
                  {settings.sportPositionGroup.sportPositionGroupsSelectbox} ||
                  {settings.sportPosition.sportPositionsSelectbox}">
-    <div class="tx-sportms-list-filter well">
+    <div class="tx-sportms-filter">
         <f:form action="historyRecordPlayers" arguments="{team: team}" class="form-horizontal" controller="Team" extensionName="sportms" method="POST" noCache="TRUE" noCacheHash="TRUE" pageUid="{settings.team.historyRecordPlayers.pid}" pluginName="sportms">
             <f:render arguments="{options: competitionTypesSelectbox,    settings: settings,     value: settings.competitionType.selected}" partial="Form/Select/CompetitionType"/>
             <f:render arguments="{options: competitionsSelectbox,        settings: settings,     value: settings.competition.selected}" partial="Form/Select/Competition"/>

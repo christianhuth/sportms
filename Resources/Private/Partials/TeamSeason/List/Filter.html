@@ -2,16 +2,16 @@
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <f:if condition="{settings.section.sectionsSelectbox} ||
-                 {settings.competition.competitionsSelectbox} ||
-                 {settings.competitionTyp3.competitionTypesSelectbox} ||
-                 {settings.season.seasonsSelectbox}">
-    <div class="tx-sportms-list-filter well">
-        <f:form action="list" class="form-horizontal" controller="CompetitionSeason" extensionName="sportms" method="POST" noCache="TRUE" noCacheHash="TRUE" pageUid="{settings.competitionSeason.listPid}" pluginName="sportms">
+                 {settings.club.clubsSelectbox} ||
+                 {settings.team.teamsSelectbox} ||
+                 {settings.season.seasonsSelextbox}">
+    <div class="tx-sportms-filter">
+        <f:form action="list" class="form-horizontal" controller="TeamSeason" extensionName="sportms" method="POST" noCache="TRUE" noCacheHash="TRUE" pageUid="{settings.teamSeason.listPid}" pluginName="sportms">
             <f:render arguments="{options: sectionsSelectbox,           settings: settings,     value: settings.section.selected}" partial="Form/Select/Sport"/>
             <f:render arguments="{options: sectionAgeGroupsSelectbox,   settings: settings,     value: settings.sectionAgeGroup.selected}" partial="Form/Select/SportAgeGroup"/>
             <f:render arguments="{options: sectionAgeLevelsSelectbox,   settings: settings,     value: settings.sectionAgeLevel.selected}" partial="Form/Select/SportAgeLevel"/>
-            <f:render arguments="{options: competitionTypesSelectbox,   settings: settings,     value: settings.competitionType.selected}" partial="Form/Select/CompetitionType"/>
-            <f:render arguments="{options: competitionsSelectbox,       settings: settings,     value: settings.competition.selected}" partial="Form/Select/Competition"/>
+            <f:render arguments="{options: clubsSelectbox,              settings: settings,     value: settings.club.selected}" partial="Form/Select/Club"/>
+            <f:render arguments="{options: teamsSelectbox,              settings: settings,     value: settings.team.selected}" partial="Form/Select/Team"/>
             <f:render arguments="{options: seasonsSelectbox,            settings: settings,     value: settings.season.selected}" partial="Form/Select/Season"/>
             <f:render partial="Form/Submit"/>
         </f:form>

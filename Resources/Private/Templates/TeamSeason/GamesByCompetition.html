@@ -4,10 +4,56 @@
 <f:layout name="default"/>
 
 <f:section name="default">
-    <div class="tx-sportms-teamseason-games">
+    <div id="tx-sportms-teamseason-games">
         <f:render partial="Team/Navigation" arguments="{team: teamSeason.team, teamSeason: teamSeason}"/>
-        <f:render partial="TeamSeason/GamesByCompetition" arguments="{games: games, settings: settings, teamSeason: teamSeason}"/>
+        <f:render partial="TeamSeason/GamesByCompetition/Filter" arguments="{settings: settings, teamSeason: teamSeason}"/>
+        <div class="tx-sportms-teamseason-gamesbycompetition">
+            <f:if condition="{games}">
+                <f:then>
+                    <f:groupedFor as="gamesByCompetition" each="{games}" groupBy="competitionSeason" groupKey="competitionSeason">
+                        <div class="table-responsive">
+                            <h3>{competitionSeason.competition.label}</h3>
+                            <f:render section="tablestart"/>
+                            <f:for as="game" each="{gamesByCompetition}">
+                                <f:render partial="TeamSeason/GamesByCompetition/Item" arguments="{game: game, settings: settings}"/>
+                            </f:for>
+                            <f:render section="tableend"/>
+                        </div>
+                    </f:groupedFor>
+                </f:then>
+                <f:else>
+                    <div class="table-responsive">
+                        <f:render section="tablestart"/>
+                        <tr>
+                            <td colspan="7">Keine Spiele gefunden.</td>
+                        </tr>
+                        <f:render section="tableend"/>
+                    </div>
+                </f:else>
+            </f:if>
+        </div>
     </div>
+</f:section>
+
+<f:section name="tablestart">
+    <table class="table table-bordered table-condensed table-hover table-striped tx-sportms-table">
+        <thead>
+        <tr>
+            <th>Spieltag</th>
+            <th>Datum</th>
+            <th>Uhrzeit</th>
+            <th>Ort</th>
+            <th>Gegner</th>
+            <th>Zuschauer</th>
+            <th>Ergebnis</th>
+        </tr>
+        </thead>
+        <tbody>
+</f:section>
+
+<f:section name="tableend">
+        </tbody>
+    </table>
 </f:section>
 
 </html>

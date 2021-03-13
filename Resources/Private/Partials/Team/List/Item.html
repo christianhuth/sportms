@@ -4,7 +4,10 @@
 
 <tr>
     <td class="tx-sportms-table-left">
-        <sportms:link.action action="index" controller="TeamSeason" Team="{team}">{team.label}</sportms:link.action>
+        <sportms:link.action action="index" controller="TeamSeason" TeamSeason="{team.teamSeasons.0}">{team.label}</sportms:link.action>
+    </td>
+    <td class="tx-sportms-table-center">
+        <sportms:link.action action="gamesByCompetition" controller="TeamSeason" TeamSeason="{team.teamSeasons.0}">Spielplan</sportms:link.action>
     </td>
     <td class="tx-sportms-table-center">
         <sportms:link.action action="historyRecordGames" controller="Team" Team="{team}">Rekordspiele</sportms:link.action>

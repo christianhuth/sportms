@@ -4,7 +4,7 @@
 <f:layout name="default"/>
 
 <f:section name="default">
-    <div class="tx-sportms-teamseason-index">
+    <div id="tx-sportms-teamseason-index">
 
         <f:render partial="Team/Navigation" arguments="{team: teamSeason.team, teamSeason: teamSeason}"/>
 
@@ -25,10 +25,10 @@
         <f:if condition="{teamSeason.teamSeasonPractices}">
             <div class="tx-sportms-teamseason-practices">
                 <div class="tx-sportms-teamseason-practices col-xs-12"><h3>Trainingszeiten</h3></div>
-                <table class="table table-bordered table-hover table-striped">
+                <table class="table table-bordered table-condensed table-hover table-striped tx-sportms-table">
                     <f:for as="teamSeasonPractice" each="{teamSeason.teamSeasonPractices}">
                         <f:render arguments="{teamSeasonPractice: teamSeasonPractice}"
-                                  partial="TeamSeason/TeamSeasonPractice"/>
+                                  partial="TeamSeason/Index/TeamSeasonPractice"/>
                     </f:for>
                 </table>
                 <div class="tx-sportms-teamseason-practices-seperator col-xs-12"></div>
@@ -43,7 +43,7 @@
                         <f:if condition="{teamSeasonOfficial.enddate} == ''">
                             <f:then>
                                 <f:render arguments="{teamSeasonOfficial: teamSeasonOfficial, settings: settings}"
-                                          partial="TeamSeason/TeamSeasonOfficial"/>
+                                          partial="TeamSeason/Index/TeamSeasonOfficial"/>
                             </f:then>
                         </f:if>
                     </f:for>
@@ -60,7 +60,7 @@
                     </div>
                     <div class="tx-sportms-teamseason-squad-position-members">
                         <f:for as="squadMember" each="{squadMembersByPosition}">
-                            <f:render arguments="{_all}" partial="TeamSeason/SquadMember"/>
+                            <f:render arguments="{_all}" partial="TeamSeason/Index/SquadMember"/>
                         </f:for>
                     </div>
                     <div class="tx-sportms-teamseason-squad-position-seperator col-xs-12"></div>
@@ -73,7 +73,7 @@
                 <div class="tx-sportms-teamseason-squad-captains col-xs-12"><h3>Mannschaftskapitäne</h3></div>
                 <f:for as="squadCaptain" each="{teamSeason.teamSeasonSquadCaptains}" iteration="iterator">
                     <f:render arguments="{squadCaptain: squadCaptain, settings: settings, position: iterator.index, teamSeason: teamSeason}"
-                              partial="TeamSeason/SquadCaptain"/>
+                              partial="TeamSeason/Index/SquadCaptain"/>
                 </f:for>
             </div>
         </f:if>

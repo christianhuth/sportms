@@ -32,6 +32,11 @@
 		 * @var int
 		 */
 		protected $enddate;
+
+        /**
+         * @var int
+         */
+		protected $dateDifference = 0;
 		
 		/**
 		 * @return TeamSeason
@@ -87,20 +92,63 @@
 		 */
 		public function setStartdate($startdate) {
 			$this->startdate = $startdate;
+			$this->updateDateDifference();
 		}
 		
 		/**
 		 * @return int
 		 */
-		public function getEnddate() {
+		public function getEnddate(): int {
 			return $this->enddate;
 		}
 		
 		/**
 		 * @param int $enddate
 		 */
-		public function setEnddate($enddate) {
+		public function setEnddate($enddate): void {
 			$this->enddate = $enddate;
+			$this->updateDateDifference();
 		}
+
+        /**
+         * @return int
+         */
+        public function getDateDifference(): int {
+            return $this->dateDifference;
+        }
+
+        /**
+         * @param int $dateDifference
+         */
+        public function setDateDifference(int $dateDifference): void {
+            $this->dateDifference = $dateDifference;
+        }
+
+        /**
+         *
+         */
+        private function updateDateDifference(): void {
+            if(!empty($this->getStartdate()) && !empty($this->getEnddate())) {
+                $this->setDateDifference(($this->calculateDateDifference($this->getStartdate(), $this->getEnddate())));
+            } else {
+                if(empty($this->getStartdate())) {
+                    $this->setDateDifference(0);
+                } else {
+                    if(empty($this->getEnddate())) {
+                        $this->setDateDifference(0);
+                    } else {
+                        $this->setDateDifference($this->calculateDateDifference($this->getStartdate(), (int) new \DateTime(now)));
+                    }
+                }
+            }
+        }
+
+        /**
+         * @param int $startdate
+         * @param int $enddate
+         */
+        private function calculateDateDifference(int $startdate, int $enddate): int {
+            return ($enddate - $startdate) / 60 / 60 / 24;
+        }
 		
 	}

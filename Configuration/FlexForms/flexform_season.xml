@@ -57,6 +57,8 @@
                             <numIndex index="3">FIELD:base.switchableControllerActions:=:Season->list</numIndex>
                             <numIndex index="4">FIELD:base.switchableControllerActions:=:Team->historyRecordGames</numIndex>
                             <numIndex index="5">FIELD:base.switchableControllerActions:=:Team->historyRecordPlayers</numIndex>
+                            <numIndex index="6">FIELD:base.switchableControllerActions:=:TeamSeason->gamesByCompetition</numIndex>
+                            <numIndex index="7">FIELD:base.switchableControllerActions:=:TeamSeason->gamesByDate</numIndex>
                         </OR>
                     </displayCond>
                     <config>

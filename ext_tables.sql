@@ -366,7 +366,7 @@ CREATE TABLE tx_sportms_domain_model_person (
 	lastname varchar(255) DEFAULT '' NOT NULL,
 	birthname varchar(255) DEFAULT NULL,
 	nickname varchar(255) DEFAULT NULL,
-	date_of_birth int(11) unsigned DEFAULT NULL,
+	date_of_birth bigint(20) DEFAULT NULL,
 	zodiac_sign int(11) DEFAULT NULL,
 	place_of_birth varchar(255) DEFAULT NULL,
 	nationalities int(11) DEFAULT NULL,

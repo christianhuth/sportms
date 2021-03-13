@@ -1,0 +1,44 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<f:layout name="default"/>
+
+<f:section name="default">
+    <div id="tx-sportms-teamseason-games">
+        <f:render partial="Team/Navigation" arguments="{team: teamSeason.team, teamSeason: teamSeason}"/>
+        <div class="tx-sportms-teamseason-gamesbydate">
+            <div class="table-responsive">
+                <table class="table table-bordered table-condensed table-hover table-striped tx-sportms-table">
+                    <thead>
+                    <tr>
+                        <th>Wettbewerb</th>
+                        <th>Spieltag</th>
+                        <th>Datum</th>
+                        <th>Uhrzeit</th>
+                        <th>Ort</th>
+                        <th>Gegner</th>
+                        <th>Zuschauer</th>
+                        <th>Ergebnis</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <f:if condition="{games}">
+                        <f:then>
+                            <f:for as="game" each="{games}">
+                                <f:render partial="TeamSeason/GamesByDate/Item" arguments="{game: game}"/>
+                            </f:for>
+                        </f:then>
+                        <f:else>
+                            <tr>
+                                <td colspan="8">Keine Spiele gefunden.</td>
+                            </tr>
+                        </f:else>
+                    </f:if>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</f:section>
+
+</html>

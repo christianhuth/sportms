@@ -3,8 +3,6 @@
 	namespace Balumedien\Sportms\Controller;
 
     use Balumedien\Sportms\Domain\Model\Person;
-    use Balumedien\Sportms\Domain\Repository\PersonRepository;
-    use Balumedien\Sportms\Domain\Repository\TeamSeasonSquadMemberRepository;
 
     /**
 	 * PersonController
@@ -14,13 +12,13 @@
 		protected $model = 'person';
 		
 		/**
-		 * @var PersonRepository
+		 * @var \Balumedien\Sportms\Domain\Repository\PersonRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
 		 */
 		protected $personRepository;
 
         /**
-         * @var TeamSeasonSquadMemberRepository
+         * @var \Balumedien\Sportms\Domain\Repository\TeamSeasonSquadMemberRepository
          * @TYPO3\CMS\Extbase\Annotation\Inject
          */
         protected $teamSeasonSquadMemberRepository;

@@ -68,24 +68,28 @@
     font-family: sans-serif;
 }
 
-.tx-sportms .tx-sportms-container .tx-sportms-list-filter {
+.tx-sportms .tx-sportms-container .tx-sportms-filter {
     background-color: var(--light-gray);
+    border: 1px solid var(--regular-gray);
+    border-radius: 5px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+    padding: 15px;
 }
 
-.tx-sportms .tx-sportms-container .tx-sportms-list-filter .form-group:last-of-type {
+.tx-sportms .tx-sportms-container .tx-sportms-filter .form-group:last-of-type {
     margin-bottom: 0;
 }
 
-.tx-sportms .tx-sportms-container .tx-sportms-list-filter .form-group .col-xs-0 {
+.tx-sportms .tx-sportms-container .tx-sportms-filter .form-group .col-xs-0 {
     margin: 0;
     padding: 0;
 }
 
-.tx-sportms .tx-sportms-container .tx-sportms-list-filter .input-group-addon {
+.tx-sportms .tx-sportms-container .tx-sportms-filter .input-group-addon {
 	padding: 4px;
 }
 
-.tx-sportms .tx-sportms-container .tx-sportms-list-filter .input-group-addon .sportmsicon {
+.tx-sportms .tx-sportms-container .tx-sportms-filter .input-group-addon .sportmsicon {
 	background: var(--regular-red);
 	display: block;
 	height: 20px;
@@ -150,18 +154,6 @@
 
 /*
  *
- * CLUB
- *
- */
-.tx-sportms .tx-sportms-container .club-official-startdate,
-.tx-sportms .tx-sportms-container .club-official-enddate,
-.tx-sportms .tx-sportms-container .club-official-duration {
-    text-align: center;
-}
-
-
-/*
- *
  * SPORTMS
  *
  */
@@ -192,34 +184,38 @@
     text-align: center;
 }
 
-.tx-sportms .tx-sportms-table-center {
+
+
+
+/*
+ *
+ * SPORTMS - TABLES
+ *
+ */
+.tx-sportms .tx-sportms-table th {
     text-align: center;
 }
-.tx-sportms .tx-sportms-table-left {
+.tx-sportms .tx-sportms-table td {
+    vertical-align: middle;
+}
+.tx-sportms .tx-sportms-table .tx-sportms-table-center {
+    text-align: center;
+}
+.tx-sportms .tx-sportms-table .tx-sportms-table-left {
     text-align: left;
 }
-.tx-sportms .tx-sportms-table-right {
+.tx-sportms .tx-sportms-table .tx-sportms-table-right {
     text-align: right;
 }
 
-
 /*
  *
- * CLUBSECTION
+ * CLUB
  *
  */
-.tx-sportms .tx-sportms-container .tx-sportms-club-list td.tx-sportms-club-image {
-    text-align: center;
-}
-
-/*
- *
- * COMPETITION
- *
- */
-.tx-sportms .tx-sportms-competition-list .tx-sportms-competitiontype,
-.tx-sportms .tx-sportms-competition-list .tx-sportms-sport,
-.tx-sportms .tx-sportms-competition-list .tx-sportms-sportagelevel {
+.tx-sportms .tx-sportms-container .club-official-startdate,
+.tx-sportms .tx-sportms-container .club-official-enddate,
+.tx-sportms .tx-sportms-container .club-official-duration {
     text-align: center;
 }
 
@@ -228,8 +224,8 @@
  * GAME
  *
  */
-.tx-sportms .tx-sportms-game-show .tx-sportms-game-show-header,
-.tx-sportms .tx-sportms-game-list .tx-sportms-game-result {
+.tx-sportms #tx-sportms-game-show .tx-sportms-game-show-header,
+.tx-sportms #tx-sportms-game-list .tx-sportms-game-result {
     text-align: center;
 }
 
@@ -238,7 +234,7 @@
  * PERSON
  *
  */
-.tx-sportms-container .tx-sportms-person-show .label {
+.tx-sportms-container #tx-sportms-person-show .label {
     background-color: #d5d5d5;
     border-bottom: 1px solid #ffffff;
     border-radius: 0;
@@ -421,12 +417,31 @@
     line-height: 1em;
 }
 
-/*
- *
+/**
+ * BOOTSTRAP - BREAKPOINTS
+ * v3.4: https://getbootstrap.com/docs/3.4/css/#grid-media-queries
+ * v4.1: https://getbootstrap.com/docs/4.1/layout/overview/
+ * v5.0: https://getbootstrap.com/docs/5.0/layout/breakpoints/
  */
-@media screen and (max-width: 768px) {
+
+/*
+ * MEDIAQUERIES - Phones
+ */
+@media screen and (max-width: 576px) {
     .tx-sportms-teamseason-official .official-jerseynumber,
     .tx-sportms-teamseason-squadmember .squadmember-jerseynumber {
         display: none;
     }
+}
+
+/*
+ * MEDIAQUERIES - Tablets
+ */
+@media screen and (max-width: 768px) {
+}
+
+/*
+ * MEDIAQUERIES - Desktop
+ */
+@media screen and (max-width: 992px) {
 }
