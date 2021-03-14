@@ -7,7 +7,6 @@
 		<clubofficial>EXT:sportms/Configuration/FlexForms/flexform_clubofficial.xml</clubofficial>
 		<clubSection>EXT:sportms/Configuration/FlexForms/flexform_clubsection.xml</clubSection>
 		<competition>EXT:sportms/Configuration/FlexForms/flexform_competition.xml</competition>
-		<competitionSeason>EXT:sportms/Configuration/FlexForms/flexform_competitionseason.xml</competitionSeason>
 		<game>EXT:sportms/Configuration/FlexForms/flexform_game.xml</game>
 		<person>EXT:sportms/Configuration/FlexForms/flexform_person.xml</person>
 		<sport>EXT:sportms/Configuration/FlexForms/flexform_sport.xml</sport>

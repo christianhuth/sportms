@@ -7,7 +7,7 @@
         {competition.sport.label}
     </td>
     <td>
-        <sportms:link.action action="games" controller="Competition" Competition="{competition}">{competition.label}</sportms:link.action>
+        <sportms:link.action action="gameday" controller="CompetitionSeason" CompetitionSeason="{competition.competitionSeasons.0}">{competition.label}</sportms:link.action>
     </td>
     <td class="tx-sportms-table-center">{competition.sportAgeLevel.label}</td>
     <td class="tx-sportms-table-center">{competition.competitionType.label}</td>

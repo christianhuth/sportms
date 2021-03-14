@@ -26,7 +26,7 @@ return array(
 	),
 	'types' => array(
 		'1' => array('showitem' => 'name, favorite, colours, date_of_founding, year_of_founding, club_members,
-									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_club.tab_images, images,
+									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_club.tab_logos, logos,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_club.tab_contact, addresses, phones, mails, urls,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_club.tab_grounds, club_grounds, home_venues,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_club.tab_sections, club_sections,
@@ -157,9 +157,9 @@ return array(
 			),
 		),
 		
-		'images' => array(
+		'logos' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_club.images',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_club.logos',
 			'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
 				'image',
 				array(

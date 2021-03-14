@@ -38,19 +38,11 @@
 								<numIndex index="0">Wettbewerb (Listenansicht)</numIndex>
 								<numIndex index="1">Competition->list</numIndex>
 							</numIndex>
-							<numIndex index="122">
-								<numIndex index="0">Wettbewerb (Einzelansicht - Spiele)</numIndex>
-								<numIndex index="1">Competition->games</numIndex>
-							</numIndex>
 							<numIndex index="131">
-								<numIndex index="0">Wettbewerb (Saisonansicht - Spiele)</numIndex>
-								<numIndex index="1">CompetitionSeason->games</numIndex>
+								<numIndex index="0">Wettbewerb (Saisonansicht - Spieltag)</numIndex>
+								<numIndex index="1">CompetitionSeason->gameday</numIndex>
 							</numIndex>
-							<numIndex index="132">
-								<numIndex index="0">Wettbewerb (Saisonansicht - Tabellen)</numIndex>
-								<numIndex index="1">CompetitionSeason->standings</numIndex>
-							</numIndex>
-							<numIndex index="133">
+							<numIndex index="134">
 								<numIndex index="0">Wettbewerb (Saisonansicht - Teams)</numIndex>
 								<numIndex index="1">CompetitionSeason->teams</numIndex>
 							</numIndex>

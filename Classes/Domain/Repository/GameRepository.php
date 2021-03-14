@@ -2,7 +2,9 @@
 	
 	namespace Balumedien\Sportms\Domain\Repository;
 	
-	use Balumedien\Sportms\Domain\Model\TeamSeason;
+	use Balumedien\Sportms\Domain\Model\CompetitionSeason;
+    use Balumedien\Sportms\Domain\Model\CompetitionSeasonGameday;
+    use Balumedien\Sportms\Domain\Model\TeamSeason;
     use TYPO3\CMS\Extbase\Persistence\QueryInterface;
 
     class GameRepository extends SportMSBaseRepository {
@@ -15,6 +17,7 @@
 			'competitionSeason.competition.sportAgeLevel.label' => QueryInterface::ORDER_ASCENDING,
 			'season.label' => QueryInterface::ORDER_ASCENDING,
 			'gameday' => QueryInterface::ORDER_ASCENDING,
+			'date' => QueryInterface::ORDER_ASCENDING,
 			'teamSeasonHome.team.label' => QueryInterface::ORDER_ASCENDING,
 			'teamSeasonGuest.team.label' => QueryInterface::ORDER_ASCENDING,
 		);
@@ -54,6 +57,21 @@
 			}
 			return $query->execute();
 		}
+
+        /**
+         * @param CompetitionSeason $competitionSeason
+         * @param CompetitionSeasonGameday|null $competitionSeasonGameday
+         */
+		public function findGamesbyCompetitionSeason(CompetitionSeason $competitionSeason, CompetitionSeasonGameday $competitionSeasonGameday = null) {
+            $query = $this->createQuery();
+            $constraints = [];
+            $constraints[] = $this->constraintForCompetitionSeasonUids($query, $competitionSeason->getUid());
+            if($competitionSeasonGameday) {
+                $constraints[] = $this->constraintForCompetitionSeasonGamedayUids($query, $competitionSeasonGameday->getUid());
+            }
+            $query->matching($query->logicalAnd($constraints));
+            return $query->execute();
+        }
 
         /**
          * @param TeamSeason $teamSeason
@@ -240,6 +258,10 @@
 		private function constraintForCompetitionUids(QueryInterface $query, string $competitionUids) {
 			return $query->in('competitionSeason.competition', explode(',', $competitionUids));
 		}
+
+        private function constraintForCompetitionSeasonUids(QueryInterface $query, string $competitionSeasonUids) {
+            return $query->in('competitionSeason', explode(',', $competitionSeasonUids));
+        }
 		
 		private function constraintForCompetitionSeasonGamedayUids(QueryInterface $query, string $competitionSeasonGamedayUids) {
 			return $query->in('gameday', explode(',', $competitionSeasonGamedayUids));

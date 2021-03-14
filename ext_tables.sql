@@ -23,7 +23,7 @@ CREATE TABLE tx_sportms_domain_model_club (
 	date_of_founding int(11) DEFAULT NULL,
 	year_of_founding int(11) DEFAULT NULL,
 	club_members int(11) DEFAULT NULL,
-	images varchar(255) DEFAULT NULL,
+    logos varchar(255) DEFAULT NULL,
 	addresses int(11) DEFAULT NULL,
 	phones int(11) DEFAULT NULL,
 	mails int(11) DEFAULT NULL,

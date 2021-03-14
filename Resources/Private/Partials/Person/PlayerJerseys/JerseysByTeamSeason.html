@@ -1,0 +1,36 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:sportms="Balumedien\Sportms\ViewHelpers"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<h4>Rückennummern nach Mannschaften</h4>
+<div>Diese Statistik zeigt, welche Rückennummer der Person in  verschiedenen Mannschaften zugeordnet war.</div>
+
+<table class="table table-bordered table-condensed table-hover table-striped tx-sportms-table">
+    <thead>
+        <tr>
+            <th>Saison</th>
+            <th>Mannschaft</th>
+            <th>Rückennummer</th>
+        </tr>
+    </thead>
+    <tbody>
+    <f:if condition="{jerseysByTeamSeason}">
+        <f:then>
+            <f:for each="{jerseysByTeamSeason}" as="jerseyByTeamSeason">
+                    <tr>
+                        <td>{jerseyByTeamSeason.teamSeason.season.label}</td>
+                        <td><sportms:link.action action="index" controller="TeamSeason" TeamSeason="{jerseyByTeamSeason.teamSeason}">{jerseyByTeamSeason.teamSeason.team.label}</sportms:link.action></td>
+                        <td>{jerseyByTeamSeason.squadNumber}</td>
+                    </tr>
+                </f:for>
+            </f:then>
+            <f:else>
+                <tr>
+                    <td colspan="3">Keine Zuordnungen gefunden.</td>
+                </tr>
+            </f:else>
+        </f:if>
+    </tbody>
+</table>
+
+</html>

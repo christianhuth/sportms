@@ -60,8 +60,8 @@
 			<trans-unit id="tx_sportms_domain_model_club.clubMembers">
 				<source>Mitglieder</source>
 			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_club.images">
-				<source>Bilder</source>
+			<trans-unit id="tx_sportms_domain_model_club.logos">
+				<source>Logos</source>
 			</trans-unit>
 			
 			

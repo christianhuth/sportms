@@ -18,7 +18,7 @@
             <f:render arguments="{options: clubsSelectbox,                      settings: settings,     value: settings.club.selected}" partial="Form/Select/Club"/>
             <f:render arguments="{options: teamsSelectbox,                      settings: settings,     value: settings.team.selected}" partial="Form/Select/Team"/>
             <f:render arguments="{options: seasonsSelectbox,                    settings: settings,     value: settings.season.selected}" partial="Form/Select/Season"/>
-            <f:render arguments="{options: competitionSeasonGamedaysSelectbox,  settings: settings,     value: settings.competitionSeasonGameday.selected}" partial="Form/Select/CompetitionSeasonGameday"/>
+            <f:render arguments="{options: competitionSeasonGamedaysSelectbox,  settings: settings,     value: settings.competitionSeasonGameday.selected,      prependAll: true}" partial="Form/Select/CompetitionSeasonGameday"/>
             <f:render partial="Form/Submit"/>
         </f:form>
     </div>

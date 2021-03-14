@@ -62,40 +62,7 @@
 
 .tx-sportms {
     display: block;
-}
-
-.tx-sportms .tx-sportms-container {
     font-family: sans-serif;
-}
-
-.tx-sportms .tx-sportms-container .tx-sportms-filter {
-    background-color: var(--light-gray);
-    border: 1px solid var(--regular-gray);
-    border-radius: 5px;
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
-    padding: 15px;
-}
-
-.tx-sportms .tx-sportms-container .tx-sportms-filter .form-group:last-of-type {
-    margin-bottom: 0;
-}
-
-.tx-sportms .tx-sportms-container .tx-sportms-filter .form-group .col-xs-0 {
-    margin: 0;
-    padding: 0;
-}
-
-.tx-sportms .tx-sportms-container .tx-sportms-filter .input-group-addon {
-	padding: 4px;
-}
-
-.tx-sportms .tx-sportms-container .tx-sportms-filter .input-group-addon .sportmsicon {
-	background: var(--regular-red);
-	display: block;
-	height: 20px;
-	mask-position: center center;
-	mask-size: contain;
-	width: 20px;
 }
 
 .tx_sportms_club_sections {
@@ -183,6 +150,40 @@
     padding-top: 0;
     text-align: center;
 }
+
+
+/*
+ *
+ * SPORTMS - FILTER
+ *
+ */
+.tx-sportms .tx-sportms-filter {
+    background-color: var(--light-gray);
+    border: 1px solid var(--regular-gray);
+    border-radius: 5px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+    margin-bottom: 25px;
+    padding: 15px;
+}
+.tx-sportms .tx-sportms-filter .form-group:last-of-type {
+    margin-bottom: 0;
+}
+.tx-sportms .tx-sportms-filter .form-group .col-xs-0 {
+    margin: 0;
+    padding: 0;
+}
+.tx-sportms .tx-sportms-filter .input-group-addon {
+    padding: 4px;
+}
+.tx-sportms .tx-sportms-filter .input-group-addon .sportmsicon {
+    background: var(--regular-red);
+    display: block;
+    height: 20px;
+    mask-position: center center;
+    mask-size: contain;
+    width: 20px;
+}
+
 
 
 

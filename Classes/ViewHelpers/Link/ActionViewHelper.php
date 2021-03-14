@@ -162,14 +162,14 @@
 		
 		protected function initListOfControllersAndTheirActions(): void {
 			$listofControllersAndTheirActions = array();
-			$listofControllersAndTheirActions['Club'] = ['list'];
+			$listofControllersAndTheirActions['Club'] = ['list', 'sections'];
 			$listofControllersAndTheirActions['ClubSection'] = ['list'];
-			$listofControllersAndTheirActions['Competition'] = ['list', 'seasonGames', 'seasonStandings'];
-			$listofControllersAndTheirActions['CompetitionSeason'] = ['games', 'standings'];
-			$listofControllersAndTheirActions['Game'] = ['list', 'history', 'index', 'info', 'lineup', 'report'];
-			$listofControllersAndTheirActions['Person'] = ['list', 'officialIndex', 'playerProfile', 'playerPerformance', 'playerPerformanceByClub', 'playerPerformanceByCompetition', 'playerPerformanceByTrainer', 'refereeIndex'];
-			$listofControllersAndTheirActions['Team'] = ['historyRecordGames', 'historyRecordPlayers', 'list', 'seasonIndex', 'seasonGames', 'seasonGoals', 'seasonSquad'];
-			$listofControllersAndTheirActions['TeamSeason'] = ['gamesByCompetition', 'goals', 'index', 'squad'];
+			$listofControllersAndTheirActions['Competition'] = ['list'];
+			$listofControllersAndTheirActions['CompetitionSeason'] = ['games', 'teams'];
+			$listofControllersAndTheirActions['Game'] = ['history', 'index', 'list', 'report'];
+			$listofControllersAndTheirActions['Person'] = ['list', 'officialProfile', 'playerJerseys', 'playerProfile', 'refereeProfile'];
+			$listofControllersAndTheirActions['Team'] = ['historyOfficials', 'historyRecordGames', 'historyRecordPlayers', 'list'];
+			$listofControllersAndTheirActions['TeamSeason'] = ['gamesByCompetition', 'gamesByDate', 'goals', 'index', 'squad'];
 			$this->setListOfControllersAndTheirActions($listofControllersAndTheirActions);
 		}
 		

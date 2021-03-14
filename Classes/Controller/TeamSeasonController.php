@@ -46,6 +46,8 @@
             ];
             $games = $this->gameRepository->findGamesByTeamSeason($teamSeason, $orderings);
             $this->view->assign('games', $games);
+            $teamSeasons = $this->teamSeasonRepository->findByTeam($teamSeason->getTeam());
+            $this->view->assign('teamSeasons', $teamSeasons);
         }
 
         /**
@@ -62,6 +64,8 @@
             ];
             $games = $this->gameRepository->findGamesByTeamSeason($teamSeason, $orderings);
             $this->view->assign('games', $games);
+            $teamSeasons = $this->teamSeasonRepository->findByTeam($teamSeason->getTeam());
+            $this->view->assign('teamSeasons', $teamSeasons);
         }
 
         /**

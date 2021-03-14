@@ -6,6 +6,7 @@
 <f:section name="default">
     <div id="tx-sportms-teamseason-games">
         <f:render partial="Team/Navigation" arguments="{team: teamSeason.team, teamSeason: teamSeason}"/>
+        <f:render partial="TeamSeason/GamesByDate/Filter" arguments="{settings: settings, teamSeason: teamSeason, teamSeasons: teamSeasons}"/>
         <div class="tx-sportms-teamseason-gamesbydate">
             <div class="table-responsive">
                 <table class="table table-bordered table-condensed table-hover table-striped tx-sportms-table">

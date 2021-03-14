@@ -2,7 +2,9 @@
 	
 	namespace Balumedien\Sportms\Controller;
 
-	use Balumedien\Sportms\Domain\Model\TeamSeason;
+	use Balumedien\Sportms\Domain\Model\CompetitionSeason;
+    use Balumedien\Sportms\Domain\Model\CompetitionSeasonGameday;
+    use Balumedien\Sportms\Domain\Model\TeamSeason;
     use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 
     class SportMSBaseController extends ActionController {
@@ -68,7 +70,12 @@
 			$listOfSelectModels = 'sport,sportAgeGroup,sportAgeLevel,competitionType,competition,club,team,season,competitionSeasonGameday';
 			foreach(explode(',', $listOfSelectModels) as $selectModel) {
 				if($this->request->hasArgument('select' . ucfirst($selectModel))) {
-					$this->settings[$selectModel]['selected'] = $this->request->getArgument('select' . ucfirst($selectModel));
+				    $selectedValue = $this->request->getArgument('select' . ucfirst($selectModel));
+				    if(is_array($selectedValue)) {
+                        $this->settings[$selectModel]['selected'] = $selectedValue['__identity'];
+                    } else {
+                        $this->settings[$selectModel]['selected'] = $selectedValue;
+                    }
 				}
 			}
 			/* BugFix, if the sportAgeGroup has been cleared but not the sportAgeLevel */
@@ -126,6 +133,48 @@
 				$this->settings[$model]['showNavigation']['enabled'] = $showNavigationEnabled;
 			}
 		}
+
+        /**
+         * @return CompetitionSeason
+         */
+        protected function determineCompetitionSeason(): CompetitionSeason {
+            if($this->settings['competitionseason']['uid']) {
+                $competitionSeasonUid = $this->settings['competitionseason']['uid'];
+                return $this->competitionSeasonRepository->findByUid($competitionSeasonUid);
+            } else {
+                if($this->request->hasArgument('competitionSeason')) {
+                    $competitionSeason = $this->request->getArgument('competitionSeason');
+                    if($competitionSeason instanceof CompetitionSeason) {
+                        return $competitionSeason;
+                    } else {
+                        return $this->competitionSeasonRepository->findByUid($competitionSeason);
+                    }
+                } else {
+                    // TODO: DIE IF NO COMPETITIONSEASON IS SELECTED VIA FLEXFORM AND GIVEN VIA REQUEST
+                }
+            }
+        }
+
+        /**
+         * @return CompetitionSeasonGameday
+         */
+        protected function determineCompetitionSeasonGameday(): CompetitionSeasonGameday {
+            if($this->settings['competitionseasongameday']['uid']) {
+                $competitionSeasonGamedayUid = $this->settings['competitionseasongameday']['uid'];
+                return $this->competitionSeasonGamedayRepository->findByUid($competitionSeasonGamedayUid);
+            } else {
+                if($this->request->hasArgument('competitionSeasonGameday')) {
+                    $competitionSeasonGameday = $this->request->getArgument('competitionSeasonGameday');
+                    if($competitionSeasonGameday instanceof CompetitionSeasonGameday) {
+                        return $competitionSeasonGameday;
+                    } else {
+                        return $this->competitionSeasonGamedayRepository->findByUid($competitionSeasonGameday);
+                    }
+                } else {
+                    // TODO: DIE IF NO COMPETITIONSEASONGAMEDAY IS SELECTED VIA FLEXFORM AND GIVEN VIA REQUEST
+                }
+            }
+        }
 
         /**
          * @return \Balumedien\Sportms\Domain\Model\Person

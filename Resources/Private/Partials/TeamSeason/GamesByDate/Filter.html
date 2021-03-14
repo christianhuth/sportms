@@ -3,8 +3,8 @@
 
 <f:if condition="{settings.season.seasonsSelectbox}">
     <div class="tx-sportms-filter">
-        <f:form action="gamesByDate" arguments="{teamSeason: teamSeason}" class="form-horizontal" controller="TeamSeason" extensionName="sportms" method="POST" noCache="TRUE" noCacheHash="TRUE" pageUid="{settings.teamSeason.gamesByCompetition.pid}" pluginName="sportms">
-            <f:render arguments="{options: seasonsSelectbox,             settings: settings,     value: settings.season.selected}" partial="Form/Select/Season"/>
+        <f:form action="gamesByDate" arguments="{teamSeason: teamSeason}" class="form-horizontal" controller="TeamSeason" extensionName="sportms" method="POST" noCache="TRUE" noCacheHash="TRUE" pageUid="{settings.teamSeason.gamesByDate.pid}" pluginName="sportms">
+            <f:render arguments="{options: teamSeasons,             settings: settings,     value: teamSeason}" partial="Form/Select/TeamSeason"/>
             <f:render partial="Form/Submit"/>
         </f:form>
     </div>

@@ -38,7 +38,7 @@
 		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference>
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
 		 */
-		protected $images;
+		protected $logos;
 		
 		/**
 		 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\Address>
@@ -118,7 +118,7 @@
 		 */
 		protected function initStorageObjects(): void {
 			$this->setClubMembers(new \TYPO3\CMS\Extbase\Persistence\ObjectStorage());
-			$this->setImages(new \TYPO3\CMS\Extbase\Persistence\ObjectStorage());
+			$this->setLogos(new \TYPO3\CMS\Extbase\Persistence\ObjectStorage());
 			$this->setAddresses(new \TYPO3\CMS\Extbase\Persistence\ObjectStorage());
 			$this->setPhones(new \TYPO3\CMS\Extbase\Persistence\ObjectStorage());
 			$this->setMails(new \TYPO3\CMS\Extbase\Persistence\ObjectStorage());
@@ -202,15 +202,15 @@
 		/**
 		 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
 		 */
-		public function getImages() {
-			return $this->images;
+		public function getLogos() {
+			return $this->logos;
 		}
 		
 		/**
-		 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $images
+		 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $logos
 		 */
-		public function setImages($images) {
-			$this->images = $images;
+		public function setLogos($logos) {
+			$this->logos = $logos;
 		}
 		
 		/**
