@@ -4,6 +4,7 @@
 
 	use Balumedien\Sportms\Domain\Model\CompetitionSeason;
     use Balumedien\Sportms\Domain\Model\CompetitionSeasonGameday;
+    use TYPO3\CMS\Core\Utility\GeneralUtility;
 
     /**
 	 * CompetitionSeasonController
@@ -60,6 +61,18 @@
             $this->view->assign('competitionSeasonGamedays', $competitionSeasonGamedays);
             $games = $this->gameRepository->findGamesbyCompetitionSeason($competitionSeason, $competitionSeasonGameday);
             $this->view->assign('games', $games);
+            $this->pagetitleForCompetitionSeason($competitionSeason, $competitionSeasonGameday->getLabel());
+        }
+
+        /**
+         * @param CompetitionSeason $competitionSeason
+         * @param string $actionLabel
+         */
+        private function pagetitleForCompetitionSeason(CompetitionSeason $competitionSeason, string $actionLabel) {
+            $competitionLabel = $competitionSeason->getCompetition()->getLabel();
+            $seasonLabel = $competitionSeason->getSeason()->getLabel();
+            $competitionSeasonLabel = $competitionLabel . " " . $seasonLabel;
+            $this->pagetitle($competitionSeasonLabel, $actionLabel);
         }
 		
 	}

@@ -46,3 +46,16 @@
 			}
 		}
 	}
+
+    /* ===========================================================================
+        Register PageTitleProvider
+    =========================================================================== */
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptSetup(trim('
+        config.pageTitleProviders {
+            sportms {
+                provider = Balumedien\Sportms\PageTitle\PageTitleProvider
+                before = record
+                after = altPageTitle
+            }
+        }
+    '));

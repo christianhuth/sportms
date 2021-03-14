@@ -7,7 +7,7 @@
         <div class="col-xs-12 col-sm-9">
             <div class="input-group">
                 <span class="input-group-addon"><i class="sportmsicon sportmsicon-season"></i></span>
-                <f:form.select class="form-control" name="competitionSeason" required="required" value="{value}">
+                <f:form.select additionalAttributes="{onChange : 'this.form.submit();'}" class="form-control" name="competitionSeason" required="required" value="{value}">
                     <f:for as="option" each="{options}">
                         <f:form.select.option value="{option.uid}">{option.season.label}</f:form.select.option>
                     </f:for>

@@ -2,14 +2,17 @@
 	
 	namespace Balumedien\Sportms\Controller;
 
+    use Balumedien\Sportms\Domain\Model\CompetitionSeason;
     use Balumedien\Sportms\Domain\Model\Person;
+    use TYPO3\CMS\Core\Utility\GeneralUtility;
+    use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
 
     /**
 	 * PersonController
 	 */
 	class PersonController extends SportMSBaseController {
-		
-		protected $model = 'person';
+
+	    protected $extensionsKey = 'sportms';
 		
 		/**
 		 * @var \Balumedien\Sportms\Domain\Repository\PersonRepository
@@ -50,17 +53,18 @@
 			$persons = $this->personRepository->findAll($this->getPersonsFilter());
 			$this->view->assign('persons', $persons);
 		}
-		
-		/**
-		 * @param Person $person
-		 */
-		public function officialIndexAction(Person $person = NULL): void {
+
+        /**
+         * @param Person|null $person
+         */
+		public function officialProfileAction(Person $person = NULL): void {
 			$this->initializeActions();
 			if($person === NULL) {
 				$personUid = $this->settings['single']['person'];
 				$person = $this->personRepository->findByUid($personUid);
 			}
 			$this->view->assign('person', $person);
+            $this->pagetitleForPerson($person, LocalizationUtility::translate('tx_sportms_pagetitle.person.officialProfile', $this->extensionsKey));
 		}
 
         /**
@@ -71,6 +75,7 @@
                 $person = $this->determinePerson();
             }
             $this->view->assign('person', $person);
+            $this->pagetitleForPerson($person, LocalizationUtility::translate('tx_sportms_pagetitle.person.playerProfile', $this->extensionsKey));
         }
 
         /**
@@ -83,18 +88,29 @@
             $this->view->assign('person', $person);
             $jerseysByTeamSeason = $this->teamSeasonSquadMemberRepository->findPlayerJerseys($person);
             $this->view->assign('jerseysByTeamSeason', $jerseysByTeamSeason);
+            $this->pagetitleForPerson($person, LocalizationUtility::translate('tx_sportms_pagetitle.person.playerJerseys', $this->extensionsKey));
         }
-		
-		/**
-		 * @param Person $person
-		 */
-		public function refereeIndexAction(Person $person = NULL): void {
+
+        /**
+         * @param Person|null $person
+         */
+		public function refereeProfileAction(Person $person = NULL): void {
 			$this->initializeActions();
 			if($person === NULL) {
 				$personUid = $this->settings['single']['person'];
 				$person = $this->personRepository->findByUid($personUid);
 			}
 			$this->view->assign('person', $person);
+            $this->pagetitleForPerson($person, LocalizationUtility::translate('tx_sportms_pagetitle.person.refereeProfile', $this->extensionsKey));
 		}
+
+        /**
+         * @param Person $person
+         * @param string $actionLabel
+         */
+        private function pagetitleForPerson(Person $person, string $actionLabel) {
+            $personLabel = $person->getFirstname() . " " . $person->getLastname();
+            $this->pagetitle($personLabel, $actionLabel);
+        }
 		
 	}

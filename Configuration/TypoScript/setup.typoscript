@@ -54,6 +54,12 @@ plugin.tx_sportms {
             report.pid = {$plugin.tx_sportms.settings.game.report.pid}
         }
 
+        pagetitle {
+            prefix = {$plugin.tx_sportms.settings.pagetitle.prefix}
+            seperator = {$plugin.tx_sportms.settings.pagetitle.seperator}
+            suffix = {$plugin.tx_sportms.settings.pagetitle.suffix}
+        }
+
         person {
             list.pid = {$plugin.tx_sportms.settings.person.list.pid}
             officialProfile.pid = {$plugin.tx_sportms.settings.person.officialProfile.pid}

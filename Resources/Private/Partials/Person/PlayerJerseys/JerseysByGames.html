@@ -1,0 +1,34 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:sportms="Balumedien\Sportms\ViewHelpers">
+
+<h4>Rückennummern in Spielen</h4>
+<div>Diese Statistik zeigt, welche Rückennummer die Person in Spielen getragen hat.</div>
+
+<table class="table table-bordered table-condensed table-hover table-striped tx-sportms-table">
+    <thead>
+        <tr>
+            <th>Rückennummer</th>
+            <th>Häufigkeit</th>
+        </tr>
+    </thead>
+    <tbody>
+        <f:if condition="{jerseysByGames}">
+            <f:then>
+                <f:for each="{jerseysByGames}" as="jerseyByGame">
+                    <tr>
+                        <td>{jerseyByGame.jerseyNumber}</td>
+                        <td>{jerseyByGame.count}</td>
+                    </tr>
+                </f:for>
+            </f:then>
+            <f:else>
+                <tr>
+                    <td colspan="2">Keine Zuordnungen gefunden.</td>
+                </tr>
+            </f:else>
+        </f:if>
+    </tbody>
+</table>
+
+</html>

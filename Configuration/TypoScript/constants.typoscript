@@ -2,6 +2,8 @@
 
 # customsubcategory=mvc=MVC
 
+# customsubcategory=page=Page Title Tag
+
 # customsubcategory=persistence=Persistence
 
 # customsubcategory=sportmsClub=SportMS - Club
@@ -91,6 +93,15 @@ plugin.tx_sportms {
             lineup.pid =
             # cat=plugin.tx_sportms/sportmsGame; type=int+; label=Default PID of Game->report
             report.pid =
+        }
+
+        pagetitle {
+            # cat=plugin.tx_sportms/page; type=string; label=Prefix for Creation of PageTitle Tag
+            prefix =
+            # cat=plugin.tx_sportms/page; type=string; label=Separator used for Creation of PageTitle Tag
+            seperator = -
+            # cat=plugin.tx_sportms/page; type=string; label=Suffix for Creation of PageTitle Tag
+            suffix =
         }
 
         person {

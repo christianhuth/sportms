@@ -5,7 +5,9 @@
 	use Balumedien\Sportms\Domain\Model\CompetitionSeason;
     use Balumedien\Sportms\Domain\Model\CompetitionSeasonGameday;
     use Balumedien\Sportms\Domain\Model\TeamSeason;
+    use Balumedien\Sportms\PageTitle\PageTitleProvider;
     use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
+    use TYPO3\CMS\Core\Utility\GeneralUtility;
 
     class SportMSBaseController extends ActionController {
 		
@@ -229,5 +231,20 @@
                 }
 			}
 		}
+
+		protected function pagetitle(string $part1, string $part2) {
+            $pagetitle = "";
+            if(!is_null($this->settings['pagetitle']['prefix'])) {
+                $pagetitle .= $this->settings['pagetitle']['prefix'] . " ";
+            }
+            $pagetitle .= $part1;
+            $pagetitle .= " " . $this->settings['pagetitle']['seperator'] . " ";
+            $pagetitle .= $part2;
+            if(!is_null($this->settings['pagetitle']['suffix'])) {
+                $pagetitle .= " " . $this->settings['pagetitle']['suffix'];
+            }
+            $pageTitle = GeneralUtility::makeInstance(PageTitleProvider::class);
+            $pageTitle->setTitle($pagetitle);
+        }
 		
 	}

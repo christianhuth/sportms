@@ -3,7 +3,9 @@
 	namespace Balumedien\Sportms\Controller;
 	
 	use Balumedien\Sportms\Domain\Model\TeamSeason;
+    use Balumedien\Sportms\PageTitle\PageTitleProvider;
     use TYPO3\CMS\Extbase\Persistence\QueryInterface;
+    use TYPO3\CMS\Core\Utility\GeneralUtility;
 
     /**
 	 * TeamSeasonController
@@ -48,6 +50,7 @@
             $this->view->assign('games', $games);
             $teamSeasons = $this->teamSeasonRepository->findByTeam($teamSeason->getTeam());
             $this->view->assign('teamSeasons', $teamSeasons);
+            $this->pageTitle($teamSeason, "Spielplan nach Wettbewerb");
         }
 
         /**
@@ -66,6 +69,7 @@
             $this->view->assign('games', $games);
             $teamSeasons = $this->teamSeasonRepository->findByTeam($teamSeason->getTeam());
             $this->view->assign('teamSeasons', $teamSeasons);
+            $this->pagetitleForTeamSeason($teamSeason, "Spielplan nach Datum");
         }
 
         /**
@@ -76,6 +80,7 @@
                 $teamSeason = $this->determineTeamSeason();
             }
             $this->view->assign('teamSeason', $teamSeason);
+            $this->pagetitleForTeamSeason($teamSeason, "Tore");
         }
 
         /**
@@ -86,6 +91,18 @@
                 $teamSeason = $this->determineTeamSeason();
             }
             $this->view->assign('teamSeason', $teamSeason);
+            $this->pagetitleForTeamSeason($teamSeason, "Mannschaftsprofil");
+        }
+
+        /**
+         * @param TeamSeason $teamSeason
+         * @param string $action
+         */
+        private function pagetitleForTeamSeason(TeamSeason $teamSeason, string $actionLabel) {
+            $teamLabel = $teamSeason->getTeam()->getLabel();
+            $seasonLabel = $teamSeason->getSeason()->getLabel();
+            $teamSeasonLabel = $teamLabel . " " . $seasonLabel;
+            $this->pagetitle($teamSeasonLabel, $actionLabel);
         }
 		
 	}
