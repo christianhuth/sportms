@@ -90,8 +90,19 @@ return array(
         ],
 
         'club_section' => array(
+            'exclude' => 1,
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_team',
             'config' => array(
-                'type' => 'passthrough',
+                'eval' => 'required',
+                'foreign_table' => 'tx_sportms_domain_model_clubsection',
+                'foreign_table_where' => 'ORDER BY label ASC',
+                'items' => Array (
+                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', "0"),
+                ),
+                'maxItems' => 1,
+                'renderType' => 'selectSingle',
+                'size' => 1,
+                'type' => 'select',
             ),
         ),
 
@@ -103,7 +114,7 @@ return array(
                 'foreign_table' => 'tx_sportms_domain_model_clubsectionofficialjob',
                 'foreign_table_where' => 'ORDER BY tx_sportms_domain_model_clubsectionofficialjob.label ASC',
                 'items' => array(
-                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', 0),
+                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ''),
                 ),
                 'maxItems' => 1,
                 'renderType' => 'selectSingle',
@@ -117,10 +128,13 @@ return array(
 			'config' => array(
 				'eval' => 'required',
 				'foreign_table' => 'tx_sportms_domain_model_person',
-                'foreign_table_where' => '  AND show_as_official = 1
+                'foreign_table_where' => '  tx_sportms_domain_model_person.uid IN (
+                                                SELECT person FROM tx_sportms_domain_model_personprofile WHERE profile_type = "official" AND sport IN 
+                                                (SELECT uid_foreign FROM tx_sportms_clubsection_sport_mm WHERE uid_local = ###REC_FIELD_club_section###)
+                                            )
                                             ORDER BY tx_sportms_domain_model_person.lastname ASC, tx_sportms_domain_model_person.firstname ASC',
 				'items' => array(
-                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', 0),
+                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ''),
 				),
 				'maxItems' => 1,
 				'minItems' => 1,

@@ -1,18 +1,32 @@
 <?php
 	
 	namespace Balumedien\Sportms\Domain\Repository;
-	
-	class CompetitionSeasonRepository extends SportMSBaseRepository {
+
+    use Balumedien\Sportms\Domain\Model\Competition;
+    use Balumedien\Sportms\Domain\Model\CompetitionSeason;
+    use Balumedien\Sportms\Domain\Model\Season;
+    use TYPO3\CMS\Extbase\Persistence\QueryInterface;
+
+    class CompetitionSeasonRepository extends SportMSBaseRepository {
 		
 		protected $defaultOrderings = array(
-			'competition.sport.label' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
-			'competition.label' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
-			'competition.competitionType.label' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
-			'competition.sportAgeGroup.label' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
-			'competition.sportAgeLevel.label' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
-			'season.label' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING,
+			'competition.sport.label' => QueryInterface::ORDER_ASCENDING,
+			'competition.label' => QueryInterface::ORDER_ASCENDING,
+			'competition.competitionType.label' => QueryInterface::ORDER_ASCENDING,
+			'competition.sportAgeGroup.label' => QueryInterface::ORDER_ASCENDING,
+			'competition.sportAgeLevel.label' => QueryInterface::ORDER_ASCENDING,
+			'season.label' => QueryInterface::ORDER_DESCENDING,
 		);
-		
+
+        /**
+         * @param string|null $sportUids
+         * @param string|null $sportAgeGroupUids
+         * @param string|null $sportAgeLevelUids
+         * @param string|null $competitionTypeUids
+         * @param string|null $competitionUids
+         * @param string|null $seasonUids
+         * @return mixed
+         */
 		public function findAll(string $sportUids = null, string $sportAgeGroupUids = null, string $sportAgeLevelUids = null, string $competitionTypeUids = null, string $competitionUids = null, string $seasonUids = null) {
 			$query = $this->createQuery();
 			$constraints = [];
@@ -39,5 +53,52 @@
 			}
 			return $query->execute();
 		}
+
+        /**
+         * @param int $competitionUid
+         * @return CompetitionSeason
+         */
+        public function findCurrentByCompetitionUid(int $competitionUid): CompetitionSeason {
+            $query = $this->createQuery();
+            $constraints = [];
+            $constraints[] = $query->equals('competition', $competitionUid);
+            $query->matching($query->logicalAnd($constraints));
+            $query->setOrderings([
+                'season.label' => QueryInterface::ORDER_DESCENDING
+            ]);
+            $query->setLimit(1);
+            return $query->execute()[0];
+        }
+
+        /**
+         * @param Competition $competition
+         * @return CompetitionSeason
+         */
+        public function findCurrentByCompetition(Competition $competition): CompetitionSeason {
+            return $this->findCurrentByCompetitionUid($competition->getUid());
+        }
+
+        /**
+         * @param int $competitionUid
+         * @param int $seasonUid
+         * @return CompetitionSeason
+         */
+        public function findByCompetitionUidAndSeasonUid(int $competitionUid, int $seasonUid): CompetitionSeason {
+            $query = $this->createQuery();
+            $constraints = [];
+            $constraints[] = $query->equals('competition', $competitionUid);
+            $constraints[] = $query->equals('season', $seasonUid);
+            $query->matching($query->logicalAnd($constraints));
+            return $query->execute()[0];
+        }
+
+        /**
+         * @param Competition $competition
+         * @param Season $season
+         * @return CompetitionSeason
+         */
+        public function findByCompetitionAndSeason(Competition $competition, Season $season): CompetitionSeason {
+            return $this->findByCompetitionUidAndSeasonUid($competition->getUid(), $season->getUid());
+        }
 		
 	}

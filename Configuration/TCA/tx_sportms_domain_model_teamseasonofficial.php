@@ -113,7 +113,12 @@ return array(
 			'config' => array(
 				'eval' => 'required',
 				'foreign_table' => 'tx_sportms_domain_model_person',
-                'foreign_table_where' => '  AND show_as_official = 1
+                'foreign_table_where' => '  tx_sportms_domain_model_person.uid IN (
+                                                SELECT person FROM tx_sportms_domain_model_personprofile WHERE profile_type = "official" AND sport = 
+                                                (SELECT sport FROM tx_sportms_domain_model_team WHERE tx_sportms_domain_model_team.uid = 
+                                                    (SELECT team FROM tx_sportms_domain_model_teamseason WHERE tx_sportms_domain_model_teamseason.uid = ###REC_FIELD_team_season###)
+                                                )
+                                            )
                                             ORDER BY tx_sportms_domain_model_person.lastname ASC, tx_sportms_domain_model_person.firstname ASC',
 				'items' => array(
                     array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ""),

@@ -115,7 +115,7 @@ return array(
 			'config' => array(
 				'type' => 'input',
 				'size' => 8,
-				'eval' => 'date',
+				'eval' => 'date, required',
 				'placeholder' => 'dd-mm-yyyy',
 				'renderType' => 'inputDateTime',
 			),
@@ -126,7 +126,7 @@ return array(
 			'config' => array(
 				'type' => 'input',
 				'size' => 8,
-				'eval' => 'date',
+				'eval' => 'date, required',
 				'placeholder' => 'dd-mm-yyyy',
 				'renderType' => 'inputDateTime',
 			),

@@ -227,7 +227,15 @@
                         return $this->teamSeasonRepository->findByUid($teamSeason);
                     }
                 } else {
-                    // TODO: DIE IF NO TEAMSEASON IS SELECTED VIA FLEXFORM AND GIVEN VIA REQUEST
+                    if($this->settings['team']['uid']) {
+                        if($this->settings['season']['uid']) {
+                            return $this->teamSeasonRepository->findByTeamUidAndSeasonUid($this->settings['team']['uid'], $this->settings['season']['uid']);
+                        } else {
+                            return $this->teamSeasonRepository->findCurrentByTeamUid($this->settings['team']['uid']);
+                        }
+                    } else {
+                        // TODO: DIE IF NO TEAMSEASON IS SELECTED VIA FLEXFORM NOR GIVEN VIA REQUEST NOR A TEAM IS SELECTED
+                    }
                 }
 			}
 		}

@@ -13,7 +13,7 @@
                         <OR>
                             <numIndex index="0">FIELD:base.switchableControllerActions:=:CompetitionSeason->show</numIndex>
                             <numIndex index="1">FIELD:base.switchableControllerActions:=:Season->show</numIndex>
-                            <numIndex index="2">FIELD:base.switchableControllerActions:=:TeamSeason->show</numIndex>
+                            <numIndex index="2">FIELD:base.switchableControllerActions:=:TeamSeason->index</numIndex>
                         </OR>
                     </displayCond>
                     <config>

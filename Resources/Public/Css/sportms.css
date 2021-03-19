@@ -146,11 +146,6 @@
     width: 100%;
 }
 
-.tx-sportms .tx-sportms-container .tx-sportms-sportms-dbstats .tx-sportms-dbstat .tx-sportms-dbstat-label {
-    padding-top: 0;
-    text-align: center;
-}
-
 
 /*
  *
@@ -211,27 +206,6 @@
 
 /*
  *
- * CLUB
- *
- */
-.tx-sportms .tx-sportms-container .club-official-startdate,
-.tx-sportms .tx-sportms-container .club-official-enddate,
-.tx-sportms .tx-sportms-container .club-official-duration {
-    text-align: center;
-}
-
-/*
- *
- * GAME
- *
- */
-.tx-sportms #tx-sportms-game-show .tx-sportms-game-show-header,
-.tx-sportms #tx-sportms-game-list .tx-sportms-game-result {
-    text-align: center;
-}
-
-/*
- *
  * PERSON
  *
  */
@@ -269,11 +243,6 @@
 
 .tx-sportms-teamseason-practices table {
     width: 100%;
-}
-
-.tx-sportms-teamseason-practices table tr td {
-    text-align: center;
-    width: 25%;
 }
 
 .tx-sportms-teamseason-practices table tr td:first-of-type {
@@ -329,6 +298,7 @@
     display: flex;
     flex-wrap: wrap;
     float: left;
+    width: 100%;
 }
 
 .tx-sportms-teamseason-official-wrapper a,

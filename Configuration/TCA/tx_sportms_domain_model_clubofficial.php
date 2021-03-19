@@ -104,7 +104,7 @@ return array(
 				'foreign_table' => 'tx_sportms_domain_model_clubofficialjob',
 				'foreign_table_where' => 'ORDER BY tx_sportms_domain_model_clubofficialjob.label ASC',
 				'items' => array(
-					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ""),
+					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', "0"),
 				),
 				'maxItems' => 1,
 				'renderType' => 'selectSingle',
@@ -118,10 +118,12 @@ return array(
             'config' => array(
                 'eval' => 'required',
                 'foreign_table' => 'tx_sportms_domain_model_person',
-                'foreign_table_where' => '  AND show_as_official = 1
+                'foreign_table_where' => '  tx_sportms_domain_model_person.uid IN (
+                                                SELECT person FROM tx_sportms_domain_model_personprofile WHERE profile_type = "official"
+                                            )
                                             ORDER BY tx_sportms_domain_model_person.lastname ASC, tx_sportms_domain_model_person.firstname ASC',
                 'items' => array(
-                    array('', ''),
+                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', "0"),
                 ),
                 'maxItems' => 1,
                 'minItems' => 1,

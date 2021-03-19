@@ -13,10 +13,10 @@
 						<OR>
 							<numIndex index="01">FIELD:base.switchableControllerActions:=:Team->historyRecordGames</numIndex>
 							<numIndex index="02">FIELD:base.switchableControllerActions:=:Team->historyRecordPlayers</numIndex>
-							<numIndex index="10">FIELD:base.switchableControllerActions:=:Team->seasonGames</numIndex>
-							<numIndex index="11">FIELD:base.switchableControllerActions:=:Team->seasonGoals</numIndex>
-							<numIndex index="12">FIELD:base.switchableControllerActions:=:Team->seasonIndex</numIndex>
-							<numIndex index="13">FIELD:base.switchableControllerActions:=:Team->seasonSquad</numIndex>
+							<numIndex index="10">FIELD:base.switchableControllerActions:=:TeamSeason->games</numIndex>
+							<numIndex index="11">FIELD:base.switchableControllerActions:=:TeamSeason->goals</numIndex>
+							<numIndex index="12">FIELD:base.switchableControllerActions:=:TeamSeason->index</numIndex>
+							<numIndex index="13">FIELD:base.switchableControllerActions:=:TeamSeason->squad</numIndex>
 						</OR>
 					</displayCond>
 					<config>
@@ -30,35 +30,7 @@
 					</config>
 				</TCEforms>
 			</settings.team.uid>
-			<settings.team.showViews>
-				<TCEforms>
-					<label>Erlaube folgende Einzelansichten</label>
-					<displayCond>FIELD:base.switchableControllerActions:=:Team->show</displayCond>
-					<config>
-						<type>select</type>
-						<renderType>selectMultipleSideBySide</renderType>
-						<items type="array">
-							<numIndex index="0">
-								<numIndex index="0">Index</numIndex>
-								<numIndex index="1">index</numIndex>
-							</numIndex>
-							<numIndex index="2">
-								<numIndex index="0">Competitions</numIndex>
-								<numIndex index="1">competitions</numIndex>
-							</numIndex>
-							<numIndex index="3">
-								<numIndex index="0">Games</numIndex>
-								<numIndex index="1">games</numIndex>
-							</numIndex>
-							<numIndex index="4">
-								<numIndex index="0">Stats</numIndex>
-								<numIndex index="1">stats</numIndex>
-							</numIndex>
-						</items>
-					</config>
-				</TCEforms>
-			</settings.team.showViews>
-			<settings.team.showNavigation.enabled>
+			<settings.team.navigation.enabled>
 				<TCEforms>
 					<label>Navigation für Einzelansichten?</label>
 					<displayCond>FIELD:base.switchableControllerActions:=:Team->show</displayCond>
@@ -69,40 +41,7 @@
 					</config>
 					<onChange>reload</onChange>
 				</TCEforms>
-			</settings.team.showNavigation.enabled>
-			<settings.team.showNavigation.views>
-				<TCEforms>
-					<label>Zeige folgende Navigationselemente</label>
-					<displayCond>
-						<AND>
-							<numIndex index="0">FIELD:base.switchableControllerActions:=:Team->show</numIndex>
-							<numIndex index="1">FIELD:team.settings.team.showNavigation.enabled:REQ:TRUE</numIndex>
-						</AND>
-					</displayCond>
-					<config>
-						<type>select</type>
-						<renderType>selectMultipleSideBySide</renderType>
-						<items type="array">
-							<numIndex index="0">
-								<numIndex index="0">Index</numIndex>
-								<numIndex index="1">index</numIndex>
-							</numIndex>
-							<numIndex index="2">
-								<numIndex index="0">Competitions</numIndex>
-								<numIndex index="1">competitions</numIndex>
-							</numIndex>
-							<numIndex index="3">
-								<numIndex index="0">Games</numIndex>
-								<numIndex index="1">games</numIndex>
-							</numIndex>
-							<numIndex index="4">
-								<numIndex index="0">Stats</numIndex>
-								<numIndex index="1">stats</numIndex>
-							</numIndex>
-						</items>
-					</config>
-				</TCEforms>
-			</settings.team.showNavigation.views>
+			</settings.team.navigation.enabled>
 			<settings.team.teams>
 				<TCEforms>
 					<label>Welche Teams sollen angezeigt werden?</label>

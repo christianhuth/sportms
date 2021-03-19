@@ -3,10 +3,12 @@
       data-namespace-typo3-fluid="true">
 
     <tr>
-        <td><sportms:weekday weekday="{teamSeasonPractice.day}"/></td>
-        <td>{teamSeasonPractice.timeStart} - {teamSeasonPractice.timeEnd} Uhr</td>
-        <td>{teamSeasonPractice.venue.name}</td>
-        <td>{teamSeasonPractice.annotation}</td>
+        <td class="tx-sportms-table-center"><sportms:weekday weekday="{teamSeasonPractice.day}"/></td>
+        <td class="tx-sportms-table-center">
+            <f:format.date format="{settings.format.timeShort}">{teamSeasonPractice.timeStart}</f:format.date> - <f:format.date format="{settings.format.timeShort}">{teamSeasonPractice.timeEnd}</f:format.date> Uhr
+        </td>
+        <td class="tx-sportms-table-center">{teamSeasonPractice.venue.name}</td>
+        <td class="tx-sportms-table-center">{teamSeasonPractice.annotation}</td>
     </tr>
 
 </html>

@@ -159,21 +159,6 @@
 		protected $detailLink;
 		
 		/**
-		 * @var bool
-		 */
-		protected $showAsPlayer;
-		
-		/**
-		 * @var bool
-		 */
-		protected $showAsOfficial;
-		
-		/**
-		 * @var bool
-		 */
-		protected $showAsReferee;
-		
-		/**
 		 * TeamSeason constructor.
 		 */
 		public function __construct() {
@@ -588,48 +573,6 @@
 		 */
 		public function setDetailLink($detailLink) {
 			$this->detailLink = $detailLink;
-		}
-		
-		/**
-		 * @return bool
-		 */
-		public function isShowAsPlayer(): bool {
-			return $this->showAsPlayer;
-		}
-		
-		/**
-		 * @param bool $showAsPlayer
-		 */
-		public function setShowAsPlayer(bool $showAsPlayer): void {
-			$this->showAsPlayer = $showAsPlayer;
-		}
-		
-		/**
-		 * @return bool
-		 */
-		public function isShowAsOfficial(): bool {
-			return $this->showAsOfficial;
-		}
-		
-		/**
-		 * @param bool $showAsOfficial
-		 */
-		public function setShowAsOfficial(bool $showAsOfficial): void {
-			$this->showAsOfficial = $showAsOfficial;
-		}
-		
-		/**
-		 * @return bool
-		 */
-		public function isShowAsReferee(): bool {
-			return $this->showAsReferee;
-		}
-		
-		/**
-		 * @param bool $showAsReferee
-		 */
-		public function setShowAsReferee(bool $showAsReferee): void {
-			$this->showAsReferee = $showAsReferee;
 		}
 		
 	}

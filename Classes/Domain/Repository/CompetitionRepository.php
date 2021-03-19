@@ -11,7 +11,16 @@
 			'sportAgeGroup.label' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
 			'sportAgeLevel.label' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
 		);
-		
+
+        /**
+         * @param string|null $sportUids
+         * @param string|null $sportAgeGroupUids
+         * @param string|null $sportAgeLevelUids
+         * @param string|null $competitionTypeUids
+         * @param string|null $competitionUids
+         * @param string|null $teamUids
+         * @return mixed
+         */
 		public function findAll(string $sportUids = null, string $sportAgeGroupUids = null, string $sportAgeLevelUids = null, string $competitionTypeUids = null, string $competitionUids = null, string $teamUids = null) {
 			$query = $this->createQuery();
 			$constraints = [];
@@ -38,7 +47,12 @@
 			}
 			return $query->execute();
 		}
-		
+
+        /**
+         * @param $query
+         * @param string|null $sportUids
+         * @return mixed
+         */
 		private function constraintForSportUids($query, string $sportUids = null) {
 			return $query->in('sport', explode(',', $sportUids));
 		}
