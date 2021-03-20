@@ -1,8 +1,11 @@
 <?php
 	
 	namespace Balumedien\Sportms\Domain\Model;
-	
-	/**
+
+	use Balumedien\Sportms\Domain\ModelPersonProfile;
+	use Balumedien\Sportms\Domain\Model\Sport;
+
+    /**
 	 * Person
 	 */
 	class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
@@ -167,7 +170,7 @@
 		}
 		
 		/**
-		 * Initializes all ObjectStorage properties
+		 * Initializes all \TYPO3\CMS\Extbase\Persistence\ObjectStorage properties
 		 * Do not modify this method!
 		 * It will be rewritten on each save in the extension builder
 		 * You may modify the constructor of this class instead

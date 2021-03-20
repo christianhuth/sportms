@@ -6,25 +6,7 @@
         <div class="tx-sportms-teamseason-squadmember-wrapper">
             <sportms:link.action action="playerProfile" controller="Person" Person="{squadMember.person}" Sport="{teamSeason.team.sport}">
                 <div class="squadmember-image">
-                    <f:if condition="{squadMember.person.personProfiles}">
-                        <f:then>
-                            <f:for each="{squadMember.person.personProfiles}" as="personProfile">
-                                <f:if condition="({personProfile.sport} == {teamSeason.team.sport}) && ({personProfile.profileType} == 'player') && {personProfile.profileImages.0}">
-                                    <f:image image="{personProfile.profileImages.0}"/>
-                                </f:if>
-                            </f:for>
-                        </f:then>
-                        <f:else>
-                            <f:if condition="{squadMember.person.sex} == 'm'">
-                                <f:then>
-                                    <f:image src="{settings.person.dummyImageMale}"/>
-                                </f:then>
-                                <f:else>
-                                    <f:image src="{settings.person.dummyImageFemale}"/>
-                                </f:else>
-                            </f:if>
-                        </f:else>
-                    </f:if>
+                    <f:render partial="ViewHelper/Person/ProfileImage" arguments="{person: squadMember.person, personProfile: '{sportms:person.profile(person: squadMember.person, profileType: \'player\', sport: teamSeason.team.sport)}'}"/>
                 </div>
                 <div class="squadmember-info">
                     <div class="squadmember-jerseynumber">
