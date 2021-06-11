@@ -50,7 +50,7 @@
             $this->view->assign('games', $games);
             $teamSeasons = $this->teamSeasonRepository->findByTeam($teamSeason->getTeam());
             $this->view->assign('teamSeasons', $teamSeasons);
-            $this->pageTitle($teamSeason, "Spielplan nach Wettbewerb");
+            $this->pageTitleForTeamSeason($teamSeason, "Spielplan nach Wettbewerb");
         }
 
         /**
