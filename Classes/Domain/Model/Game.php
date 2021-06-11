@@ -40,9 +40,7 @@
 		protected $gameAppointment;
 		
 		/**
-		 * @var \Balumedien\Sportms\Domain\Model\CompetitionSeasonGameday|\TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy|null
-		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
-		 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
+		 * @var \Balumedien\Sportms\Domain\Model\CompetitionSeasonGameday|null
 		 */
 		protected $gameday;
 		
@@ -434,16 +432,16 @@
 		}
 		
 		/**
-		 * @return CompetitionSeasonGameday|\TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy|null
+		 * @return CompetitionSeasonGameday|null
 		 */
 		public function getGameday() {
 			return $this->gameday;
 		}
 		
 		/**
-		 * @param CompetitionSeasonGameday|\TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy|null $gameday
+		 * @param CompetitionSeasonGameday|null $gameday
 		 */
-		public function setGameday($gameday): void {
+		public function setGameday(?CompetitionSeasonGameday $gameday): void {
 			$this->gameday = $gameday;
 		}
 		
