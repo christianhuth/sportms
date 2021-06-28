@@ -37,6 +37,15 @@
 			$this->mapRequestsToSettings();
 		}
 
+		protected function clubsAction(CompetitionSeason $competitionSeason = NULL) {
+            if($competitionSeason === NULL) {
+                $competitionSeason = $this->determineCompetitionSeason();
+            }
+            $this->view->assign('competitionSeason', $competitionSeason);
+            $competitionSeasons = $this->competitionSeasonRepository->findByCompetition($competitionSeason->getCompetition());
+            $this->view->assign('competitionSeasons', $competitionSeasons);
+        }
+
         /**
          * @param CompetitionSeason $competitionSeason
          * @param CompetitionSeasonGameday|null $competitionSeasonGameday

@@ -52,8 +52,9 @@
                     <label>Selectbox für Saisons?</label>
                     <displayCond>
                         <OR>
-                            <numIndex index="1">FIELD:base.switchableControllerActions:=:CompetitionSeason->gameday</numIndex>
-                            <numIndex index="teams">FIELD:base.switchableControllerActions:=:CompetitionSeason->teams</numIndex>
+                            <numIndex index="competitionseason_clubs">FIELD:base.switchableControllerActions:=:CompetitionSeason->clubs</numIndex>
+                            <numIndex index="competitionseason_gameday">FIELD:base.switchableControllerActions:=:CompetitionSeason->gameday</numIndex>
+                            <numIndex index="competitionseason_teams">FIELD:base.switchableControllerActions:=:CompetitionSeason->teams</numIndex>
                             <numIndex index="2">FIELD:base.switchableControllerActions:=:Game->list</numIndex>
                             <numIndex index="3">FIELD:base.switchableControllerActions:=:Season->list</numIndex>
                             <numIndex index="4">FIELD:base.switchableControllerActions:=:Team->historyRecordGames</numIndex>

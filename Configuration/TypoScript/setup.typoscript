@@ -33,6 +33,7 @@ plugin.tx_sportms {
         }
 
         competitionSeason {
+            clubs.pid = {$plugin.tx_sportms.settings.competitionSeason.clubs.pid}
             gameday.pid = {$plugin.tx_sportms.settings.competitionSeason.gameday.pid}
             teams.pid = {$plugin.tx_sportms.settings.competitionSeason.teams.pid}
         }

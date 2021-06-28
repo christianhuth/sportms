@@ -46,6 +46,10 @@
 								<numIndex index="0">Wettbewerb (Saisonansicht - Teams)</numIndex>
 								<numIndex index="1">CompetitionSeason->teams</numIndex>
 							</numIndex>
+							<numIndex index="135">
+								<numIndex index="0">Wettbewerb (Saisonansicht - Vereine)</numIndex>
+								<numIndex index="1">CompetitionSeason->clubs</numIndex>
+							</numIndex>
 							<numIndex index="140">
 								<numIndex index="0">Spiel</numIndex>
 								<numIndex index="1">--div--</numIndex>

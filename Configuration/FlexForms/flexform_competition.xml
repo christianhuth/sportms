@@ -54,9 +54,10 @@
 					<label>Navigation für Einzelansichten?</label>
 					<displayCond>
 						<OR>
-							<numIndex index="0">FIELD:base.switchableControllerActions:=:CompetitionSeason->gameday</numIndex>
-							<numIndex index="1">FIELD:base.switchableControllerActions:=:CompetitionSeason->goals</numIndex>
-							<numIndex index="2">FIELD:base.switchableControllerActions:=:CompetitionSeason->teams</numIndex>
+							<numIndex index="competitionseason_clubs">FIELD:base.switchableControllerActions:=:CompetitionSeason->clubs</numIndex>
+							<numIndex index="competitionseason_gameday">FIELD:base.switchableControllerActions:=:CompetitionSeason->gameday</numIndex>
+							<numIndex index="competitionseason_goals">FIELD:base.switchableControllerActions:=:CompetitionSeason->goals</numIndex>
+							<numIndex index="competitionseason_teams">FIELD:base.switchableControllerActions:=:CompetitionSeason->teams</numIndex>
 						</OR>
 					</displayCond>
 					<config>
