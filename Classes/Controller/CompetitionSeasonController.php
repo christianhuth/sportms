@@ -64,6 +64,13 @@
             $this->pagetitleForCompetitionSeason($competitionSeason, $competitionSeasonGameday->getLabel());
         }
 
+        protected function teamsAction(CompetitionSeason $competitionSeason = NULL): void {
+            if ($competitionSeason === NULL) {
+                $competitionSeason = $this->determineCompetitionSeason();
+            }
+            $this->view->assign('competitionSeason', $competitionSeason);
+        }
+
         /**
          * @param CompetitionSeason $competitionSeason
          * @param string $actionLabel

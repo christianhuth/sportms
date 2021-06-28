@@ -15,7 +15,7 @@
                             <h3>{competitionSeason.competition.label}</h3>
                             <f:render section="tablestart"/>
                             <f:for as="game" each="{gamesByCompetition}">
-                                <f:render partial="TeamSeason/GamesByCompetition/Item" arguments="{game: game, settings: settings}"/>
+                                <f:render partial="TeamSeason/GamesByCompetition/Item" arguments="{game: game, teamSeason: teamSeason}"/>
                             </f:for>
                             <f:render section="tableend"/>
                         </div>

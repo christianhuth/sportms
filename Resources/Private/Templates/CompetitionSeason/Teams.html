@@ -6,7 +6,47 @@
 <f:section name="default">
     <div id="tx-sportms-competitionseason-teams">
         <f:render arguments="{competition: competitionSeason.competition, competitionSeason: competitionSeason}" partial="Competition/Navigation"/>
+        <div class="tx-sportms-competitionseason-team">
+            <f:if condition="{competitionSeason.competitionSeasonTeams}">
+                <f:then>
+                    <div class="table-responsive">
+                        <f:render section="tablestart"/>
+                        <f:for as="teamSeason" each="{competitionSeason.competitionSeasonTeams}">
+                            <f:render partial="CompetitionSeason/Teams/Item" arguments="{teamSeason: teamSeason, settings: settings}"/>
+                        </f:for>
+                        <f:render section="tableend"/>
+                    </div>
+                </f:then>
+                <f:else>
+                    <div class="table-responsive">
+                        <f:render section="tablestart"/>
+                        <tr>
+                            <td colspan="4">Keine Teams gefunden.</td>
+                        </tr>
+                        <f:render section="tableend"/>
+                    </div>
+                </f:else>
+            </f:if>
+        </div>
     </div>
+</f:section>
+
+<f:section name="tablestart">
+    <table class="table table-bordered table-condensed table-hover table-striped tx-sportms-table">
+        <thead>
+        <tr>
+            <th>Verein</th>
+            <th>Mannschaft</th>
+            <th>Kadergröße</th>
+            <th>Spielplan</th>
+        </tr>
+        </thead>
+        <tbody>
+</f:section>
+
+<f:section name="tableend">
+    </tbody>
+    </table>
 </f:section>
 
 </html>

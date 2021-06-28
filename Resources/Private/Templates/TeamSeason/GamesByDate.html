@@ -26,7 +26,7 @@
                     <f:if condition="{games}">
                         <f:then>
                             <f:for as="game" each="{games}">
-                                <f:render partial="TeamSeason/GamesByDate/Item" arguments="{game: game}"/>
+                                <f:render partial="TeamSeason/GamesByDate/Item" arguments="{game: game, teamSeason: teamSeason}"/>
                             </f:for>
                         </f:then>
                         <f:else>
