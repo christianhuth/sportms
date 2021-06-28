@@ -22,8 +22,9 @@
 			'teamSeasonGuest.team.label' => QueryInterface::ORDER_ASCENDING,
 		);
 		
-		public function findAll(string $sportUids = NULL, string $sportAgeGroupUids = NULL, string $sportAgeLevelUids = NULL, string $competitionTypeUids = NULL, string $competitionUids = NULL, string $clubUids = NULL, string $teamUids = NULL, string $seasonUids = NULL, string $competitionSeasonGamedayUids = NULL, $onlyGamesBetweenTeams = FALSE) {
+		public function findAll(string $sportUids = NULL, string $sportAgeGroupUids = NULL, string $sportAgeLevelUids = NULL, string $competitionTypeUids = NULL, string $competitionUids = NULL, string $clubUids = NULL, string $teamUids = NULL, string $seasonUids = NULL, string $competitionSeasonGamedayUids = NULL, $onlyGamesBetweenTeams = FALSE, array $orderings = null) {
 			$query = $this->createQuery();
+            $this->addOrderingsToQuery($query, $orderings);
 			$constraints = [];
 			if($sportUids) {
 				$constraints[] = $this->constraintForSportUids($query, $sportUids);
@@ -76,9 +77,9 @@
         /**
          * @param TeamSeason $teamSeason
          */
-		public function findGamesByTeamSeason(TeamSeason $teamSeason, array $orderings) {
+		public function findGamesByTeamSeason(TeamSeason $teamSeason, array $orderings = null) {
             $query = $this->createQuery();
-            $query->setOrderings($orderings);
+            $this->addOrderingsToQuery($query, $orderings);
             $constraints = [];
             $constraints[] = $this->constraintForTeamSeasonUids($query, $teamSeason->getUid());
             $query->matching($query->logicalAnd($constraints));

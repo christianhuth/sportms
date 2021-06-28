@@ -214,11 +214,22 @@
             # TODO: check if desired action is in allowed actions
             # if no pageUid is defined, or the desired action is not allowed, than just display a span instead of a link
 			if(empty($pageUid) || empty($this->arguments[$controller])) {
-				$this->tagName = 'span';
-				$this->setTagBuilder(new \TYPO3Fluid\Fluid\Core\ViewHelper\TagBuilder($this->tagName));
-				$this->tag->setContent($this->renderChildren());
-				return $this->tag->render();
+			    return $this->renderSpan();
 			}
+
+			if($controller === "TeamSeason") {
+			    $teamSeason = $this->arguments['TeamSeason'];
+			    $showTeamSeason = $teamSeason->isDetailLink();
+			    if(!$showTeamSeason) {
+                    return $this->renderSpan();
+                } else {
+			        $team = $teamSeason->getTeam();
+			        $showTeam = $team->isDetailLink();
+			        if(!$showTeam) {
+			            return $this->renderSpan();
+                    }
+                }
+            }
 
 			$parameters = $this->arguments['arguments'] ? : array();
 			# add every given Domain Object as parameter for the link
@@ -245,5 +256,12 @@
 			$this->tag->forceClosingTag(TRUE);
 			return $this->tag->render();
 		}
+
+		private function renderSpan() {
+            $this->tagName = 'span';
+            $this->setTagBuilder(new \TYPO3Fluid\Fluid\Core\ViewHelper\TagBuilder($this->tagName));
+            $this->tag->setContent($this->renderChildren());
+            return $this->tag->render();
+        }
 		
 	}

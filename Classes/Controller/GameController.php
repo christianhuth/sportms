@@ -1,6 +1,8 @@
 <?php
 	
 	namespace Balumedien\Sportms\Controller;
+
+    use TYPO3\CMS\Extbase\Persistence\QueryInterface;
 	
 	/**
 	 * GameController
@@ -151,6 +153,10 @@
          */
         public function historyAction(\Balumedien\Sportms\Domain\Model\Game $game = NULL) {
             $this->initializeActions();
+            $orderings = [
+                'date' => QueryInterface::ORDER_DESCENDING,
+                'time' => QueryInterface::ORDER_DESCENDING,
+            ];
             $gamesInCompetition = $this->gameRepository->findAll(
                 null,
                 null,
@@ -161,7 +167,8 @@
                 $game->getTeamSeasonHome()->getTeam()->getUid() . "," . $game->getTeamSeasonGuest()->getTeam()->getUid(),
                 null,
                 null,
-                TRUE);
+                TRUE,
+                $orderings);
             $this->view->assign('gamesInCompetition', $gamesInCompetition);
 	        $this->view->assign('game', $game);
         }
