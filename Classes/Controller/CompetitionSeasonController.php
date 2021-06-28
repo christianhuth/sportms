@@ -69,6 +69,8 @@
                 $competitionSeason = $this->determineCompetitionSeason();
             }
             $this->view->assign('competitionSeason', $competitionSeason);
+            $competitionSeasons = $this->competitionSeasonRepository->findByCompetition($competitionSeason->getCompetition());
+            $this->view->assign('competitionSeasons', $competitionSeasons);
         }
 
         /**

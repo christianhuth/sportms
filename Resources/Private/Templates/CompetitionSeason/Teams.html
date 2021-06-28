@@ -6,6 +6,7 @@
 <f:section name="default">
     <div id="tx-sportms-competitionseason-teams">
         <f:render arguments="{competition: competitionSeason.competition, competitionSeason: competitionSeason}" partial="Competition/Navigation"/>
+        <f:render arguments="{competition: competitionSeason.competition, competitionSeason: competitionSeason, competitionSeasons: competitionSeasons, settings: settings}" partial="CompetitionSeason/Teams/Filter"/>
         <div class="tx-sportms-competitionseason-team">
             <f:if condition="{competitionSeason.competitionSeasonTeams}">
                 <f:then>
