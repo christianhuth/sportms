@@ -2,13 +2,19 @@
       xmlns:sportms="Balumedien\Sportms\ViewHelpers"
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
-<f:section name="default">
-    <f:if condition="{game.resultType} == 2">
-        <f:render section="halftime" arguments="{game: game}"></f:render>
-    </f:if>
+<f:render section="game_rating_{game.gameRating}" arguments="{game: game}"/>
+
+<f:section name="game_rating_1">
+    <f:render section="game_rating_1_{game.resultType}" arguments="{game: game}"/>
 </f:section>
 
-<f:section name="halftime">
+<f:section name="game_rating_2">
+    <sportms:link.action action="index" controller="Game" Game="{game}">
+        {game.resultSpecialHome} : {game.resultSpecialGuest}
+    </sportms:link.action>
+</f:section>
+
+<f:section name="game_rating_1_2">
     <sportms:link.action action="index" controller="Game" Game="{game}">
         {game.resultEndRegularHome} : {game.resultEndRegularGuest}
     </sportms:link.action>

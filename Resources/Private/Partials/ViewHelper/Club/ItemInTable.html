@@ -1,0 +1,18 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:sportms="Balumedien\Sportms\ViewHelpers">
+
+<f:if condition="{club}">
+  <f:then>
+    <div class="tx-sportms-club-in-table">
+      <sportms:link.action action="index" controller="Club" Club="{club}">
+        <f:render partial="ViewHelper/Club/LogoInTable" arguments="{club: club}"/>
+        <div class="tx-sportms-club-label-in-table">
+          {club.name}
+        </div>
+      </sportms:link.action>
+    </div>
+  </f:then>
+</f:if>
+
+</html>

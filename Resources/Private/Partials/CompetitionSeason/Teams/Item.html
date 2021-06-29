@@ -4,14 +4,7 @@
 
 <tr>
     <td class="tx-sportms-table-left">
-        <sportms:link.action action="index" controller="Club" Club="{teamSeason.team.club}">
-            {teamSeason.team.club.name}
-        </sportms:link.action>
-    </td>
-    <td class="tx-sportms-table-left">
-        <sportms:link.action action="index" controller="TeamSeason" TeamSeason="{teamSeason}">
-            {teamSeason.team.label}
-        </sportms:link.action>
+        <f:render partial="ViewHelper/TeamSeason/ItemInTable" arguments="{teamSeason: teamSeason}"/>
     </td>
     <td class="tx-sportms-table-center">
         <f:count>{teamSeason.teamSeasonSquadMembers}</f:count>

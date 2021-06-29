@@ -7,27 +7,17 @@
         <f:format.date format="{settings.format.timeLong}">{game.time}</f:format.date>
     </td>
     <td class="tx-sportms-table-right">
-        <sportms:link.action action="index" controller="TeamSeason" TeamSeason="{game.teamSeasonHome}">
-            {game.teamSeasonHome.team.label}
-            <f:if condition="{game.teamSeasonHome.team.club.logos.0}">
-                <f:image image="{game.teamSeasonHome.team.club.logos.0}" height="30"/>
-            </f:if>
-        </sportms:link.action>
+        <f:render partial="ViewHelper/TeamSeason/ItemInTable" arguments="{teamSeason: game.teamSeasonHome}"/>
     </td>
     <td class="tx-sportms-table-center"> - </td>
     <td class="tx-sportms-table-left">
-        <sportms:link.action action="index" controller="TeamSeason" TeamSeason="{game.teamSeasonGuest}">
-            <f:if condition="{game.teamSeasonGuest.team.club.logos.0}">
-                <f:image image="{game.teamSeasonGuest.team.club.logos.0}" height="30"/>
-            </f:if>
-            {game.teamSeasonGuest.team.label}
-        </sportms:link.action>
+        <f:render partial="ViewHelper/TeamSeason/ItemInTable" arguments="{teamSeason: game.teamSeasonGuest}"/>
     </td>
     <td class="tx-sportms-table-center">
         <f:render partial="ViewHelper/Game/Spectators" arguments="{spectators: game.spectators}" />
     </td>
     <td class="tx-sportms-table-center">
-        <f:render partial="ViewHelper/Game/Result" section="default" arguments="{game: game}" />
+        <f:render partial="ViewHelper/Game/Result" arguments="{game: game}" />
     </td>
 </tr>
 

@@ -20,18 +20,22 @@
             </f:else>
         </f:if>
     </td>
-    <td>
+    <td class="tx-sportms-table-left">
         <f:if condition="{teamSeason} == {game.teamSeasonHome}">
             <f:then>
-                <sportms:link.action action="index" controller="TeamSeason" TeamSeason="{game.teamSeasonGuest}">{game.teamSeasonGuest.team.label}</sportms:link.action>
+                <f:render partial="ViewHelper/TeamSeason/ItemInTable" arguments="{teamSeason: game.teamSeasonGuest}"/>
             </f:then>
             <f:else>
-                <sportms:link.action action="index" controller="TeamSeason" TeamSeason="{game.teamSeasonHome}">{game.teamSeasonHome.team.label}</sportms:link.action>
+                <f:render partial="ViewHelper/TeamSeason/ItemInTable" arguments="{teamSeason: game.teamSeasonHome}"/>
             </f:else>
         </f:if>
     </td>
-    <td class="tx-sportms-table-center"><f:render partial="ViewHelper/Game/Spectators" arguments="{spectators: game.spectators}"/></td>
-    <td class="tx-sportms-table-center"><f:render partial="ViewHelper/Game/Result" section="default" arguments="{game: game}" /></td>
+    <td class="tx-sportms-table-center">
+        <f:render partial="ViewHelper/Game/Spectators" arguments="{spectators: game.spectators}"/>
+    </td>
+    <td class="tx-sportms-table-center">
+        <f:render partial="ViewHelper/Game/Result" arguments="{game: game}" />
+    </td>
 </tr>
 
 </html>

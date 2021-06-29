@@ -388,6 +388,45 @@
     line-height: 1em;
 }
 
+.tx-sportms-club-in-table,
+.tx-sportms-club-in-table a,
+.tx-sportms-club-in-table span,
+.tx-sportms-team-in-table,
+.tx-sportms-team-in-table a,
+.tx-sportms-team-in-table span {
+    display: inline-grid;
+    grid-gap: 5px;
+}
+
+.tx-sportms-club-in-table .tx-sportms-club-label-in-table,
+.tx-sportms-club-in-table .tx-sportms-club-logo-in-table,
+.tx-sportms-team-in-table .tx-sportms-team-label-in-table,
+.tx-sportms-team-in-table .tx-sportms-club-logo-in-table {
+    grid-row: 1;
+}
+
+.tx-sportms-table-left .tx-sportms-club-in-table .tx-sportms-club-logo-in-table,
+.tx-sportms-table-right .tx-sportms-club-in-table .tx-sportms-club-label-in-table,
+.tx-sportms-table-left .tx-sportms-team-in-table .tx-sportms-club-logo-in-table,
+.tx-sportms-table-right .tx-sportms-team-in-table .tx-sportms-team-label-in-table {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.tx-sportms-table-left .tx-sportms-club-in-table .tx-sportms-club-label-in-table,
+.tx-sportms-table-right .tx-sportms-club-in-table .tx-sportms-club-logo-in-table,
+.tx-sportms-table-left .tx-sportms-team-in-table .tx-sportms-team-label-in-table,
+.tx-sportms-table-right .tx-sportms-team-in-table .tx-sportms-club-logo-in-table {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.tx-sportms-club-in-table .tx-sportms-club-label-in-table,
+.tx-sportms-team-in-table .tx-sportms-team-label-in-table {
+    display: flex;
+    align-items: center;
+}
+
 /**
  * BOOTSTRAP - BREAKPOINTS
  * v3.4: https://getbootstrap.com/docs/3.4/css/#grid-media-queries
