@@ -132,6 +132,9 @@
 				$description = lcfirst($sportMsDomainModel);
 				$this->registerArgument($name, $type, $description, FALSE);
 			}
+            $this->registerArgument("OfficialProfile", 'string', 'The OfficialProfile to be shown.', FALSE);
+            $this->registerArgument("PlayerProfile", 'string', 'The PlayerProfile to be shown.', FALSE);
+            $this->registerArgument("RefereeProfile", 'string', 'The RefereeProfile to be shown.', FALSE);
 			$this->overrideArgument("controller", "string", "Target controller. Needs to be defined.", TRUE);
 		}
 
@@ -147,16 +150,10 @@
 			$listOfAllowedSportMsDomainModels[] = 'ClubSection';
 			$listOfAllowedSportMsDomainModels[] = 'Competition';
 			$listOfAllowedSportMsDomainModels[] = 'CompetitionSeason';
-			$listOfAllowedSportMsDomainModels[] = 'CompetitionSeasonGameday';
 			$listOfAllowedSportMsDomainModels[] = 'Game';
 			$listOfAllowedSportMsDomainModels[] = 'Person';
-			$listOfAllowedSportMsDomainModels[] = 'Season';
-			$listOfAllowedSportMsDomainModels[] = 'Sport';
-			$listOfAllowedSportMsDomainModels[] = 'SportAgeGroup';
-			$listOfAllowedSportMsDomainModels[] = 'SportAgeLevel';
 			$listOfAllowedSportMsDomainModels[] = 'Team';
 			$listOfAllowedSportMsDomainModels[] = 'TeamSeason';
-			$listOfAllowedSportMsDomainModels[] = 'Venue';
 			$this->setListOfAllowedSportMsDomainModels($listOfAllowedSportMsDomainModels);
 		}
 		
@@ -228,6 +225,14 @@
 			        if(!$showTeam) {
 			            return $this->renderSpan();
                     }
+                }
+            }
+
+			if($controller === "Person") {
+			    $person = $this->arguments['Person'];
+			    $showPerson = $person->isDetailLink();
+                if(!$showPerson) {
+                    return $this->renderSpan();
                 }
             }
 
