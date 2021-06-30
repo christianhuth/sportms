@@ -150,6 +150,7 @@
 			$listOfAllowedSportMsDomainModels[] = 'ClubSection';
 			$listOfAllowedSportMsDomainModels[] = 'Competition';
 			$listOfAllowedSportMsDomainModels[] = 'CompetitionSeason';
+			$listOfAllowedSportMsDomainModels[] = 'CompetitionSeasonGameday';
 			$listOfAllowedSportMsDomainModels[] = 'Game';
 			$listOfAllowedSportMsDomainModels[] = 'Person';
 			$listOfAllowedSportMsDomainModels[] = 'Team';
