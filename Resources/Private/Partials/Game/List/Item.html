@@ -3,23 +3,25 @@
       xmlns:sportms="Balumedien\Sportms\ViewHelpers">
 
 <tr>
-    <td>
+    <td class="tx-sportms-table-center">
         {game.sport.label}
     </td>
-    <td>
-        <sportms:link.action action="games" controller="CompetitionSeason" CompetitionSeason="{game.competitionSeason}">{game.competitionSeason.competition.label}</sportms:link.action>
+    <td class="tx-sportms-table-center">
+        <sportms:link.action action="gameday" controller="CompetitionSeason" CompetitionSeason="{game.competitionSeason}">
+            {game.competitionSeason.competition.label}
+        </sportms:link.action>
     </td>
-    <td>
-        {game.competitionSeason.season.label}
+    <td class="tx-sportms-table-center">
+        {game.competitionSeason.season.abbreviation}
     </td>
-    <td>
-        <sportms:link.action action="index" controller="TeamSeason" TeamSeason="{game.teamSeasonHome}">{game.teamSeasonHome.team.label}</sportms:link.action>
+    <td class="tx-sportms-table-right">
+        <f:render partial="ViewHelper/TeamSeason/ItemInTable" arguments="{teamSeason: game.teamSeasonHome}"/>
     </td>
-    <td>-</td>
-    <td>
-        <sportms:link.action action="index" controller="TeamSeason" TeamSeason="{game.teamSeasonHome}">{game.teamSeasonGuest.team.label}</sportms:link.action>
+    <td class="tx-sportms-table-center">-</td>
+    <td class="tx-sportms-table-left">
+        <f:render partial="ViewHelper/TeamSeason/ItemInTable" arguments="{teamSeason: game.teamSeasonGuest}"/>
     </td>
-    <td class="tx-sportms-game-result">
+    <td class="tx-sportms-table-center">
         <f:render partial="ViewHelper/Game/Result" arguments="{game: game}"/>
     </td>
 </tr>
