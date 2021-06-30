@@ -5,6 +5,9 @@
 		<body>
 
 			<!-- General -->
+			<trans-unit id="tx_sportms_general.clock">
+				<source>Uhr</source>
+			</trans-unit>
 			<trans-unit id="tx_sportms_general.day">
 				<source>Tag</source>
 			</trans-unit>

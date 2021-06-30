@@ -18,6 +18,7 @@
 			'season.label' => QueryInterface::ORDER_ASCENDING,
 			'gameday' => QueryInterface::ORDER_ASCENDING,
 			'date' => QueryInterface::ORDER_ASCENDING,
+			'time' => QueryInterface::ORDER_ASCENDING,
 			'teamSeasonHome.team.label' => QueryInterface::ORDER_ASCENDING,
 			'teamSeasonGuest.team.label' => QueryInterface::ORDER_ASCENDING,
 		);

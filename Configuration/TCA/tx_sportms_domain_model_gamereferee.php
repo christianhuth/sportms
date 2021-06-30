@@ -90,8 +90,18 @@ return array(
         ],
 		
 		'game' => array(
+            'exclude' => 1,
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game',
             'config' => array(
-                'type' => 'passthrough',
+                'eval' => 'required',
+                'foreign_table' => 'tx_sportms_domain_model_game',
+                'items' => array(
+                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', 0),
+                ),
+                'maxItems' => 1,
+                'renderType' => 'selectSingle',
+                'size' => 1,
+                'type' => 'select',
             ),
 		),
 
@@ -118,7 +128,12 @@ return array(
             'config' => array(
                 'eval' => 'required',
                 'foreign_table' => 'tx_sportms_domain_model_person',
-                'foreign_table_where' => '  AND show_as_referee = 1
+                'foreign_table_where' => '  AND tx_sportms_domain_model_person.uid IN (
+                                                SELECT person FROM tx_sportms_domain_model_personprofile
+                                                WHERE tx_sportms_domain_model_personprofile.profile_type = "referee" AND tx_sportms_domain_model_personprofile.sport = (
+                                                    SELECT sport FROM tx_sportms_domain_model_game WHERE tx_sportms_domain_model_game.uid = ###REC_FIELD_game###
+                                                )
+                                            )
                                             ORDER BY tx_sportms_domain_model_person.lastname ASC, tx_sportms_domain_model_person.firstname ASC',
                 'items' => Array (
                     array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ""),

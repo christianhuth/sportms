@@ -1207,6 +1207,9 @@
 			<trans-unit id="tx_sportms_domain_model_teamseasonpractice.annotation">
 				<source>Anmerkung</source>
 			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_teamseasonpractice.palette_day_time">
+				<source>Zeitraum</source>
+			</trans-unit>
 
 
 			<!-- Domain Model TeamSeasonSquadMember -->

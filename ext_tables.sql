@@ -187,7 +187,7 @@ CREATE TABLE tx_sportms_domain_model_game (
     game_appointment int(11) DEFAULT 1 NOT NULL,
     gameday int(11) unsigned DEFAULT NULL,
     date int(11) unsigned DEFAULT NULL,
-    time int(11) unsigned DEFAULT NULL,
+    time varchar(255) DEFAULT '' NOT NULL,
     venue int(11) DEFAULT NULL,
     spectators int(11) DEFAULT NULL,
     period_count int(11) DEFAULT NULL,

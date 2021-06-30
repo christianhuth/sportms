@@ -19,7 +19,7 @@
 		protected $day;
 		
 		/**
-		 * @var    string
+		 * @var string
 		 */
 		protected $timeStart;
 		

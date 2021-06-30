@@ -48,11 +48,11 @@
 		 * @var int|null
 		 */
 		protected $date;
-		
-		/**
-		 * @var int|null
-		 */
-		protected $time;
+
+        /**
+         * @var string
+         */
+        protected $time;
 		
 		/**
 		 * @var \Balumedien\Sportms\Domain\Model\Venue|\TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy|null
@@ -458,20 +458,20 @@
 		public function setDate(?int $date): void {
 			$this->date = $date;
 		}
-		
-		/**
-		 * @return int|null
-		 */
-		public function getTime(): ?int {
-			return $this->time;
-		}
-		
-		/**
-		 * @param int|null $time
-		 */
-		public function setTime(?int $time): void {
-			$this->time = $time;
-		}
+
+        /**
+         * @return string
+         */
+        public function getTime(): string {
+            return $this->time;
+        }
+
+        /**
+         * @param string $time
+         */
+        public function setTime(string $time): void {
+            $this->time = $time;
+        }
 		
 		/**
 		 * @return Venue|\TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy|null

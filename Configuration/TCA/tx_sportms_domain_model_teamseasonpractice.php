@@ -27,12 +27,12 @@ return array(
 		'showRecordFieldList' => 'season',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'day, time_start, time_end, venue, annotation,
+		'1' => array('showitem' => '--palette--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_teamseasonpractice.palette_day_time;day_time, venue, annotation,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab_visibility, hidden,
 		                            '),
 	),
 	'palettes' => array(
-		'1' => array('showitem' => ''),
+		'day_time' => array('showitem' => 'day, time_start, time_end'),
 	),
 	'columns' => array(
         
@@ -121,9 +121,12 @@ return array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.time_start',
 			'config' => array(
-				'type' => 'input',
-				'size' => 30,
-				'eval' => 'trim, required'
+			    'dbType' => 'time',
+                'eval' => 'required, time',
+                'placeholder' => 'hh:mm',
+                'renderType' => 'inputDateTime',
+                'size' => 10,
+                'type' => 'input',
 			),
 		),
 		
@@ -131,9 +134,12 @@ return array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.time_end',
 			'config' => array(
-				'type' => 'input',
-				'size' => 30,
-				'eval' => 'trim, required'
+                'dbType' => 'time',
+                'eval' => 'required, time',
+                'placeholder' => 'hh:mm',
+                'renderType' => 'inputDateTime',
+                'size' => 10,
+                'type' => 'input',
 			),
 		),
 		
