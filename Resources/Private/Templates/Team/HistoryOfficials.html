@@ -23,7 +23,7 @@
             <f:for each="{officials}" as="official">
                 <tr>
                     <td>
-                        <sportms:link.action action="playerProfile" controller="Person" Person="{official.person}">{official.person.firstname} {official.person.lastname}</sportms:link.action>
+                        <sportms:link.action action="officialProfile" controller="Person" OfficialProfile="{official}" Person="{official.person}">{official.person.firstname} {official.person.lastname}</sportms:link.action>
                         <f:if condition="{official.person.dateOfBirth}">
                             <br/><f:format.date format="{settings.format.dateLong}">{official.person.dateOfBirth}</f:format.date>
                         </f:if>

@@ -4,7 +4,10 @@
 
     <div class="tx-sportms-teamseason-squadmember col-xs-4 col-sm-3 col-md-3">
         <div class="tx-sportms-teamseason-squadmember-wrapper">
-            <sportms:link.action controller="Person" action="playerProfile" Person="{squadCaptain}" Sport="{teamSeason.team.sport}">
+            <f:comment>
+                <sportms:link.action controller="Person" action="playerProfile" Person="{squadCaptain}" Sport="{teamSeason.team.sport}">
+                </sportms:link.action>
+            </f:comment>
                 <div class="squadmember-image">
                     <f:if condition="{squadCaptain.personProfiles}">
                         <f:then>
@@ -35,7 +38,9 @@
                         <span class="squadmember-lastname">{squadCaptain.lastname}</span>
                     </div>
                 </div>
-            </sportms:link.action>
+            <f:comment>
+                # TODO: close sportms-action ViewHelper here
+            </f:comment>
         </div>
     </div>
 

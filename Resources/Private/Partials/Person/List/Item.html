@@ -10,22 +10,25 @@
             <f:render arguments="{nationalities: person.nationalities}" partial="ViewHelper/Person/Nationalities"/>
         </td>
         <td>
-            <f:if condition="{person.personProfiles}">
-                <f:then>
-                    <ul>
-                        <f:for each="{person.personProfiles}" as="personProfile">
-                            <f:switch expression="{personProfile.profileType}">
-                                <f:case value="official"><li><sportms:link.action action="officialProfile" controller="Person" Person="{person}">Funktionärsprofil</sportms:link.action></li></f:case>
-                                <f:case value="player"><li><sportms:link.action action="playerProfile" controller="Person" Person="{person}">Spielerprofil</sportms:link.action></li></f:case>
-                                <f:case value="referee"><li><sportms:link.action action="refereeProfile" controller="Person" Person="{person}">Schiedsrichterprofil</sportms:link.action></li></f:case>
-                            </f:switch>
-                        </f:for>
-                    </ul>
-                </f:then>
-                <f:else>
-                    <div class="tx-sportms-table-center">-</div>
-                </f:else>
-            </f:if>
+            <f:comment>
+                <f:if condition="{person.personProfiles}">
+                    <f:then>
+                        <ul>
+                            <f:for each="{person.personProfiles}" as="personProfile">
+                                <f:switch expression="{personProfile.profileType}">
+                                    <f:case value="official"><li><sportms:link.action action="officialProfile" controller="Person" Person="{person}">Funktionärsprofil</sportms:link.action></li></f:case>
+                                    <f:case value="player"><li><sportms:link.action action="playerProfile" controller="Person" Person="{person}">Spielerprofil</sportms:link.action></li></f:case>
+                                    <f:case value="referee"><li><sportms:link.action action="refereeProfile" controller="Person" Person="{person}">Schiedsrichterprofil</sportms:link.action></li></f:case>
+                                </f:switch>
+                            </f:for>
+                        </ul>
+                    </f:then>
+                    <f:else>
+                        <div class="tx-sportms-table-center">-</div>
+                    </f:else>
+                </f:if>
+            </f:comment>
+            <div class="tx-sportms-table-center">-</div>
         </td>
     </tr>
 
