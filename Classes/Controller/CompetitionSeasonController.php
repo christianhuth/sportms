@@ -44,6 +44,8 @@
             $this->view->assign('competitionSeason', $competitionSeason);
             $competitionSeasons = $this->competitionSeasonRepository->findByCompetition($competitionSeason->getCompetition());
             $this->view->assign('competitionSeasons', $competitionSeasons);
+            # TODO: USE LOCALIZATION
+            $this->pagetitleForCompetitionSeason($competitionSeason, "Vereine");
         }
 
         /**
@@ -80,6 +82,8 @@
             $this->view->assign('competitionSeason', $competitionSeason);
             $competitionSeasons = $this->competitionSeasonRepository->findByCompetition($competitionSeason->getCompetition());
             $this->view->assign('competitionSeasons', $competitionSeasons);
+            # TODO: USE LOCALIZATION
+            $this->pagetitleForCompetitionSeason($competitionSeason, "Mannschaften");
         }
 
         /**
