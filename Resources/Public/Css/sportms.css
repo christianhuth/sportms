@@ -250,6 +250,10 @@
     text-align: left;
 }
 
+.tx-sportms-teamseason-practices table p {
+    margin: 0;
+}
+
 .tx-sportms-teamseason-practices,
 .tx-sportms-teamseason-officials,
 .tx-sportms-teamseason-squad-position,

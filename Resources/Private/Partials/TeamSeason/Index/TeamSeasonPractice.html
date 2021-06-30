@@ -8,7 +8,9 @@
             <f:format.date format="{settings.format.timeShort}">{teamSeasonPractice.timeStart}</f:format.date> - <f:format.date format="{settings.format.timeShort}">{teamSeasonPractice.timeEnd}</f:format.date> Uhr
         </td>
         <td class="tx-sportms-table-center">{teamSeasonPractice.venue.name}</td>
-        <td class="tx-sportms-table-center">{teamSeasonPractice.annotation}</td>
+        <td class="tx-sportms-table-center">
+            <f:format.html>{teamSeasonPractice.annotation}</f:format.html>
+        </td>
     </tr>
 
 </html>

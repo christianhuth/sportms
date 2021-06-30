@@ -9,8 +9,11 @@
         <th class="tx-sportms-table-left">Person</th>
         <th class="tx-sportms-table-center">Nationalität</th>
         <th class="tx-sportms-table-center">Spiele</th>
-        <th class="tx-sportms-table-center">Startformation</th>
-        <th class="tx-sportms-table-center">Quote</th>
+        <f:comment>
+            # TODO: add both values again
+            <th class="tx-sportms-table-center">Startformation</th>
+            <th class="tx-sportms-table-center">Quote</th>
+        </f:comment>
     </tr>
     </thead>
     <tbody>
@@ -26,18 +29,21 @@
                         <f:render arguments="{nationalities: playerWithMostGames.person.nationalities}" partial="ViewHelper/Person/Nationalities"/>
                     </td>
                     <td class="tx-sportms-table-center">{playerWithMostGames.numberOfGames}</td>
-                    <td class="tx-sportms-table-center">{playerWithMostGames.numberOfStartingFormation}</td>
-                    <td class="tx-sportms-table-center">
-                        <f:format.number decimals="2" decimalSeparator=",">
-                            {playerWithMostGames.numberOfStartingFormation / playerWithMostGames.numberOfGames * 100}
-                        </f:format.number>%
-                    </td>
+                    <f:comment>
+                        # TODO: add both values again
+                        <td class="tx-sportms-table-center">{playerWithMostGames.numberOfStartingFormation}</td>
+                        <td class="tx-sportms-table-center">
+                            <f:format.number decimals="2" decimalSeparator=",">
+                                {playerWithMostGames.numberOfStartingFormation / playerWithMostGames.numberOfGames * 100}
+                            </f:format.number>%
+                        </td>
+                    </f:comment>
                 </tr>
             </f:for>
         </f:then>
         <f:else>
             <tr>
-                <td class="tx-sportms-table-center" colspan="5">Keine Rekordspieler gefunden.</td>
+                <td class="tx-sportms-table-center" colspan="4">Keine Rekordspieler gefunden.</td>
             </tr>
         </f:else>
     </f:if>

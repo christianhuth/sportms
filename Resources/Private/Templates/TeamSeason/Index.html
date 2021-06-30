@@ -26,10 +26,20 @@
             <div class="tx-sportms-teamseason-practices">
                 <div class="tx-sportms-teamseason-practices col-xs-12"><h3>Trainingszeiten</h3></div>
                 <table class="table table-bordered table-condensed table-hover table-striped tx-sportms-table">
-                    <f:for as="teamSeasonPractice" each="{teamSeason.teamSeasonPractices}">
-                        <f:render arguments="{teamSeasonPractice: teamSeasonPractice}"
-                                  partial="TeamSeason/Index/TeamSeasonPractice"/>
-                    </f:for>
+                    <thead>
+                    <tr>
+                        <th>Wochentag</th>
+                        <th>Uhrzeit</th>
+                        <th>Sportstätte</th>
+                        <th>Anmerkungen</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <f:for as="teamSeasonPractice" each="{teamSeason.teamSeasonPractices}">
+                            <f:render arguments="{teamSeasonPractice: teamSeasonPractice}"
+                                      partial="TeamSeason/Index/TeamSeasonPractice"/>
+                        </f:for>
+                    </tbody>
                 </table>
                 <div class="tx-sportms-teamseason-practices-seperator col-xs-12"></div>
             </div>

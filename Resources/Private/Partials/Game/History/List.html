@@ -19,20 +19,22 @@
                 <f:for as="game" each="{games}">
                     <tr>
                         <td class="tx-sportms-table-center">
-                            <sportms:link.action action="gameday" controller="CompetitionSeason" CompetitionSeason="{game.competitionSeason}">{game.competitionSeason.competition.label}</sportms:link.action>
+                            <sportms:link.action action="gameday" controller="CompetitionSeason" CompetitionSeason="{game.competitionSeason}" CompetitionSeasonGameday="{game.gameday}">
+                                {game.competitionSeason.competition.label}
+                            </sportms:link.action>
                         </td>
                         <td class="tx-sportms-table-center">
-                            <f:format.date date="{game.date}" format="%d.%m.%Y"/>
+                            <f:format.date date="{game.date}" format="{settings.format.dateLong}"/>
                         </td>
-                        <td>
-                            <sportms:link.action action="index" controller="TeamSeason" TeamSeason="{game.teamSeasonHome}">{game.teamSeasonHome.team.label}</sportms:link.action>
+                        <td class="tx-sportms-table-right">
+                            <f:render partial="ViewHelper/TeamSeason/ItemInTable" arguments="{teamSeason: game.teamSeasonHome}"/>
                         </td>
                         <td class="tx-sportms-table-center">-</td>
-                        <td>
-                            <sportms:link.action action="index" controller="TeamSeason" TeamSeason="{game.teamSeasonGuest}">{game.teamSeasonGuest.team.label}</sportms:link.action>
+                        <td class="tx-sportms-table-left">
+                            <f:render partial="ViewHelper/TeamSeason/ItemInTable" arguments="{teamSeason: game.teamSeasonGuest}"/>
                         </td>
                         <td class="tx-sportms-table-center">
-                            <sportms:link.action action="index" controller="Game" Game="{game}">{game.resultEndRegularHome} : {game.resultEndRegularGuest}</sportms:link.action>
+                            <f:render partial="ViewHelper/Game/Result" arguments="{game: game}"/>
                         </td>
                     </tr>
                 </f:for>
