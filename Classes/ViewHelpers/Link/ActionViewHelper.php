@@ -216,27 +216,7 @@
 			    return $this->renderSpan();
 			}
 
-			if($controller === "TeamSeason") {
-			    $teamSeason = $this->arguments['TeamSeason'];
-			    $showTeamSeason = $teamSeason->isDetailLink();
-			    if(!$showTeamSeason) {
-                    return $this->renderSpan();
-                } else {
-			        $team = $teamSeason->getTeam();
-			        $showTeam = $team->isDetailLink();
-			        if(!$showTeam) {
-			            return $this->renderSpan();
-                    }
-                }
-            }
-
-			if($controller === "Person") {
-			    $person = $this->arguments['Person'];
-			    $showPerson = $person->isDetailLink();
-                if(!$showPerson) {
-                    return $this->renderSpan();
-                }
-            }
+			$this->checkIfDetailLink($controller);
 
 			$parameters = $this->arguments['arguments'] ? : array();
 			# add every given Domain Object as parameter for the link
@@ -263,6 +243,36 @@
 			$this->tag->forceClosingTag(TRUE);
 			return $this->tag->render();
 		}
+
+        /**
+         * @param String $controller
+         * @return mixed
+         */
+		private function checkIfDetailLink(String $controller) {
+
+		    if( $controller === "CompetitionSeason" ||
+                $controller === "Game" ||
+                $controller === "Person" ||
+                $controller === "TeamSeason") {
+                $object = $this->arguments[$controller];
+                $detailLinkForObject = $object->isDetailLink();
+                if(!$detailLinkForObject) {
+                    return $this->renderSpan();
+                }
+                if( $controller === "CompetitionSeason" ||
+                    $controller === "TeamSeason") {
+                    switch($controller) {
+                        case "CompetitionSeason": $parentObject = $object->getCompetition(); break;
+                        case "TeamSeason": $parentObject = $object->getTeam(); break;
+                    }
+                    $detailLinkForParentObject = $parentObject->isDetailLink();
+                    if(!$detailLinkForParentObject) {
+                        return $this->renderSpan();
+                    }
+                }
+            }
+
+        }
 
 		private function renderSpan() {
             $this->tagName = 'span';

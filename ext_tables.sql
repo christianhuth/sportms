@@ -577,7 +577,7 @@ CREATE TABLE tx_sportms_domain_model_teamseasonpractice (
 	time_start varchar(255) DEFAULT '' NOT NULL,
 	time_end varchar(255) DEFAULT '' NOT NULL,
 	venue int(11) DEFAULT '0' NOT NULL,
-	annotation varchar(255) DEFAULT '' NOT NULL,
+	annotation text DEFAULT NULL,
 	sorting int(11) DEFAULT '0' NOT NULL
 );
 
