@@ -2,7 +2,7 @@
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
       xmlns:sportms="Balumedien\Sportms\ViewHelpers">
 
-    <div class="tx-sportms-game-navigation">
+    <div class="tx-sportms-navigation tx-sportms-game-navigation">
         <nav class="navbar navbar-default">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -14,18 +14,27 @@
                 </div>
                 <div class="collapse navbar-collapse" id="gameNavbar">
                     <ul class="nav navbar-nav">
-                        <li><sportms:link.action action="index" controller="Game" Game="{game}">Schema</sportms:link.action></li>
-                        <li><sportms:link.action action="lineup" controller="Game" Game="{game}">Aufstellung</sportms:link.action></li>
+                        <li>
+                            <sportms:link.action action="index" controller="Game" Game="{game}">Schema</sportms:link.action>
+                        </li>
+                        <f:comment>
+                            <li><sportms:link.action action="lineup" controller="Game" Game="{game}">Aufstellung</sportms:link.action></li>
+                        </f:comment>
                         <f:if condition="{game.reports}">
                             <f:then>
                                 <li><sportms:link.action action="report" controller="Game" Game="{game}">Spielbericht</sportms:link.action></li>
                             </f:then>
                             <f:else>
-                                <li class="disabled"><sportms:link.action action="report" controller="Game" Game="{game}">Spielbericht</sportms:link.action></li>
+                                <li><span>Spielbericht</span></li>
                             </f:else>
                         </f:if>
-                        <li><sportms:link.action action="history" controller="Game" Game="{game}">Historie</sportms:link.action></li>
-                        <li><sportms:link.action action="gameday" controller="CompetitionSeason" CompetitionSeason="{game.competitionSeason}">Spieltagsübersicht</sportms:link.action></li>
+                        <li>
+                            <sportms:link.action action="history" controller="Game" Game="{game}">Historie</sportms:link.action></li>
+                        <li>
+                            <sportms:link.action action="gameday" controller="CompetitionSeason" CompetitionSeason="{game.competitionSeason}" CompetitionSeasonGameday="{game.gameday}">
+                                Spieltagsübersicht
+                            </sportms:link.action>
+                        </li>
                     </ul>
                 </div>
             </div>

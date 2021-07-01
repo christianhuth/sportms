@@ -185,6 +185,26 @@
 
 /*
  *
+ * SPORTMS - NAVIGATION
+ *
+ */
+.tx-sportms-navigation li > a,
+.tx-sportms-navigation li > span {
+    background-color: transparent;
+    color: #ccc;
+    padding: 15px;
+}
+
+.tx-sportms-navigation li > span {
+    cursor: not-allowed;
+    display: inline-block;
+}
+
+
+
+
+/*
+ *
  * SPORTMS - TABLES
  *
  */
