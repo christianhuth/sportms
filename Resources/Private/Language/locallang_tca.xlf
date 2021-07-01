@@ -491,7 +491,7 @@
 				<source>Spielabbruch</source>
 			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_game.result_special_reason.2">
-				<source>Nicht-Austragung</source>
+				<source>Spielabsetzung</source>
 			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_game.result_special_reason.3">
 				<source>Nicht-Antritt Heimmannschaft</source>
