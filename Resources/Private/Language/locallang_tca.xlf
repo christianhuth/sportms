@@ -306,6 +306,12 @@
 			<trans-unit id="tx_sportms_domain_model_competitionseasongamedays">
 				<source>Spieltage</source>
 			</trans-unit>
+            <trans-unit id="tx_sportms_domain_model_competitionseasongameday.startdate">
+                <source>Startdatum</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_competitionseasongameday.enddate">
+                <source>Enddatum</source>
+            </trans-unit>
 			<trans-unit id="tx_sportms_domain_model_competitionseasongameday.palette_startdate_enddate">
 				<source>Zeitraum</source>
 			</trans-unit>
@@ -353,10 +359,10 @@
 				<source>Spielwertung</source>
 			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_game.game_rating.normal">
-				<source>Normale Wertung</source>
+				<source>Wertung gemäß Endergebnis</source>
 			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_game.game_rating.special">
-				<source>Spezialwertung</source>
+				<source>Sonderwertung</source>
 			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_game.game_rating.invalid">
 				<source>Keine Wertung</source>
@@ -478,6 +484,21 @@
 			<trans-unit id="tx_sportms_domain_model_game.game_lineup_home_substitutes">
 				<source>Ersatzbank</source>
 			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_game.result_special_reason">
+				<source>Grund für die Sonderwertung</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_game.result_special_reason.1">
+				<source>Spielabbruch</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_game.result_special_reason.2">
+				<source>Nicht-Austragung</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_game.result_special_reason.3">
+				<source>Nicht-Antritt Heimmannschaft</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_game.result_special_reason.4">
+				<source>Nicht-Antritt Gastmannschaft</source>
+			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_game.trainer_home">
 				<source>Heimtrainer</source>
 			</trans-unit>
@@ -536,7 +557,7 @@
 				<source>Ergebnis nach Sätzen</source>
 			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_game.palette_result_special">
-				<source>Spezialwertung</source>
+				<source>Sonderwertung</source>
 			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_game.tab_details">
 				<source>Details</source>

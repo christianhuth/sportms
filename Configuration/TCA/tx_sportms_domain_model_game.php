@@ -29,6 +29,8 @@ return array(
         '1' => array('showitem' => 'sport, season, competition_season,
 		                            --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.tab_details, game_appointment, --palette--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.palette_gameday_date_time;gameday_date_time, --palette--;;venue_spectators, --palette--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.palette_periods;periods, game_periods,
 		                            --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.tab_result,
+		                                game_rating,
+		                                --palette--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.palette_result_special;result_special,
 		                                --palette--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.palette_result_end_regular;result_end_regular,
 		                                --palette--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.palette_result_end_additional;result_end_additional,
 		                                result_type,
@@ -36,8 +38,6 @@ return array(
 		                                --palette--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.palette_result_thirds;result_thirds,
 		                                --palette--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.palette_result_fourths;result_fourths,
 		                                --palette--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.palette_result_sets;result_sets,
-		                                game_rating,
-		                                --palette--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.palette_result_special;result_special,
 		                            --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.tab_home, team_season_home, game_lineup_home_starts, game_lineup_home_substitutes, captain_home, trainer_home,
 		                            --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.tab_guest, team_season_guest, game_lineup_guest_starts, game_lineup_guest_substitutes, captain_guest, trainer_guest,
 		                            --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.tab_changes, game_changes,
@@ -58,7 +58,7 @@ return array(
         'result_thirds' => array('showitem' => 'result_thirds_first_home, result_thirds_first_guest, result_thirds_second_home, result_thirds_second_guest, result_thirds_third_home, result_thirds_third_guest'),
         'result_fourths' => array('showitem' => 'result_fourths_first_home, result_fourths_first_guest, result_fourths_second_home, result_fourths_second_guest, result_fourths_third_home, result_fourths_third_guest, result_fourths_fourth_home, result_fourths_fourth_guest'),
         'result_sets' => array('showitem' => 'result_sets'),
-        'result_special' => array('showitem' => 'result_special_home, result_special_guest'),
+        'result_special' => array('showitem' => 'result_special_home, result_special_guest, result_special_reason'),
     ),
     'columns' => array(
 
@@ -318,6 +318,67 @@ return array(
             ),
         ),
 
+        'game_rating' => array(
+            'config' => array(
+                'items' => array(
+                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.game_rating.normal', 1),
+                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.game_rating.special', 2),
+                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.game_rating.invalid', 3),
+                ),
+                'renderType' => 'selectSingle',
+                'type' => 'select',
+            ),
+            'exclude' => TRUE,
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.game_rating',
+            'onChange' => 'reload',
+        ),
+        'result_special_reason' => array(
+            'config' => array(
+                'items' => array(
+                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', 0),
+                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.result_special_reason.1', 1),
+                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.result_special_reason.2', 2),
+                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.result_special_reason.3', 3),
+                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.result_special_reason.4', 4),
+                ),
+                'renderType' => 'selectSingle',
+                'type' => 'select',
+            ),
+            'displayCond' => 'FIELD:game_rating:=:2',
+            'exclude' => TRUE,
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.result_special_reason',
+        ),
+
+        'result_special_home' => array(
+            'config' => array(
+                'default' => null,
+                'eval' => 'null',
+                'range' => array(
+                    'lower' => '0',
+                    'upper' => '1000',
+                ),
+                'size' => 10,
+                'type' => 'input',
+            ),
+            'displayCond' => 'FIELD:game_rating:=:2',
+            'exclude' => TRUE,
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.result_special_home',
+        ),
+        'result_special_guest' => array(
+            'config' => array(
+                'default' => null,
+                'eval' => 'null',
+                'range' => array(
+                    'lower' => '0',
+                    'upper' => '1000',
+                ),
+                'size' => 10,
+                'type' => 'input',
+            ),
+            'displayCond' => 'FIELD:game_rating:=:2',
+            'exclude' => TRUE,
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.result_special_guest',
+        ),
         'result_end_regular_home' => array(
             'config' => array(
                 'default' => null,
@@ -329,7 +390,7 @@ return array(
                 'size' => 10,
                 'type' => 'input',
             ),
-            'exclude' => 1,
+            'exclude' => TRUE,
             'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.result_end_regular_home',
         ),
         'result_end_regular_guest' => array(
@@ -725,50 +786,6 @@ return array(
                 'foreign_table' => 'tx_sportms_domain_model_gameresultset',
                 'type' => 'inline',
             ),
-        ),
-        'game_rating' => array(
-            'config' => array(
-                'items' => array(
-                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.game_rating.normal', 1),
-                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.game_rating.special', 2),
-                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.game_rating.invalid', 3),
-                ),
-                'renderType' => 'selectSingle',
-                'type' => 'select',
-            ),
-            'exclude' => TRUE,
-            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.game_rating',
-            'onChange' => 'reload',
-        ),
-        'result_special_home' => array(
-            'config' => array(
-                'default' => null,
-                'eval' => 'null',
-                'range' => array(
-                    'lower' => '0',
-                    'upper' => '1000',
-                ),
-                'size' => 10,
-                'type' => 'input',
-            ),
-            'displayCond' => 'FIELD:game_rating:=:2',
-            'exclude' => 1,
-            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.result_special_home',
-        ),
-        'result_special_guest' => array(
-            'config' => array(
-                'default' => null,
-                'eval' => 'null',
-                'range' => array(
-                    'lower' => '0',
-                    'upper' => '1000',
-                ),
-                'size' => 10,
-                'type' => 'input',
-            ),
-            'displayCond' => 'FIELD:game_rating:=:2',
-            'exclude' => 1,
-            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game.result_special_guest',
         ),
 
         'team_season_home' => array(
