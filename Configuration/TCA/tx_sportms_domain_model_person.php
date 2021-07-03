@@ -28,15 +28,21 @@ return array(
 		'showRecordFieldList' => 'firstname, lastname, nickname, date_of_birth, zodiac_sign, place_of_birth, nationalities, sex, height, weight, hander, footer, address, phone, url',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'firstname, lastname, birthname, nickname, date_of_birth, zodiac_sign, place_of_birth, nationalities, sex,
-									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.tab_personal, weight, height, size_of_shoe, hander, footer, family_status, graduation, job, characteristics, hobbies, favorite_dish, favorite_drink,
+		'1' => array('showitem' => '--palette--;Name;firstname_lastname, --palette--;;birthname_nickname, --palette--;;birth, nationalities, sex,
+									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.tab_personal, --palette--;;weight_height_shoesize, --palette--;;hander_footer, family_status, --palette--;;graduation_job, characteristics, hobbies, --palette--;;dish_drink,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.tab_contact, addresses, phones, mails, urls,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.tab_profiles, person_profiles,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab_visibility, hidden, show_birthday, detail_link, slug,
 		                            '),
 	),
 	'palettes' => array(
-		'1' => array('showitem' => ''),
+		'firstname_lastname' => array('showitem' => 'firstname, lastname'),
+		'birthname_nickname' => array('showitem' => 'birthname, nickname'),
+		'birth' => array('showitem' => 'date_of_birth, zodiac_sign, place_of_birth'),
+		'weight_height_shoesize' => array('showitem' => 'weight, height, size_of_shoe'),
+		'hander_footer' => array('showitem' => 'hander, footer'),
+		'graduation_job' => array('showitem' => 'graduation, job'),
+		'dish_drink' => array('showitem' => 'favorite_dish, favorite_drink'),
 	),
 	'columns' => array(
         
@@ -136,7 +142,7 @@ return array(
             'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.date_of_birth',
             'config' => array(
                 'type' => 'input',
-                'size' => 8,
+                'size' => 12,
                 'eval' => 'date',
                 'placeholder' => 'dd-mm-yyyy',
 				'renderType' => 'inputDateTime',
@@ -180,13 +186,30 @@ return array(
 			'exclude' => true,
 			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.nationalities',
 			'config' => array(
-				'type' => 'select',
-				'renderType' => 'selectMultipleSideBySide',
-				'foreign_table' => 'static_countries',
-				'MM' => 'tx_sportms_person_nationality_mm',
-				'size' => 10,
-				'autoSizeMax' => 30,
-				'multiple' => 0,
+                'autoSizeMax' => 30,
+                'fieldControl' => [
+                    'editPopup' => [
+                        'disabled' => true,
+                    ],
+                    'addRecord' => [
+                        'disabled' => true,
+                    ],
+                    'listModule' => [
+                        'disabled' => true,
+                    ],
+                ],
+                'foreign_table' => 'static_countries',
+                'MM' => 'tx_sportms_person_nationality_mm',
+                'multiple' => 0,
+                'multiSelectFilterItems' => [
+                    ['', ''],
+                    ['54', 'Deutschland (DE)'],
+                    ['72', 'Frankreich (FR)'],
+                    ['74', 'Großbritannien (GB)'],
+                ],
+                'renderType' => 'selectMultipleSideBySide',
+                'size' => 10,
+                'type' => 'select',
 			),
 		),
         'sex' => array(
