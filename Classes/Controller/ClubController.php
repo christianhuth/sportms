@@ -2,7 +2,9 @@
 	
 	namespace Balumedien\Sportms\Controller;
 	
-	/**
+	use Balumedien\Sportms\Domain\Model\Club;
+
+    /**
 	 * ClubController
 	 */
 	class ClubController extends SportMSBaseController {
@@ -42,6 +44,7 @@
 			$this->initializeActions();
 			$clubs = $this->clubRepository->findAll($this->getClubsFilter());
 			$this->view->assign('clubs', $clubs);
+            $this->pagetitle("Vereine", "Liste");
 		}
 		
 		/**
@@ -55,6 +58,16 @@
 				$club = $this->clubRepository->findByUid($clubUid);
 			}
 			$this->view->assign('club', $club);
+			$this->pagetitleForClub($club, "Profil");
 		}
+
+        /**
+         * @param Club $club
+         * @param string $actionLabel
+         */
+        private function pagetitleForClub(Club $club, string $actionLabel) {
+            $clubName = $club->getName();
+            $this->pagetitle($clubName, $actionLabel);
+        }
 		
 	}

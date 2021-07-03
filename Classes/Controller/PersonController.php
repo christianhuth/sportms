@@ -52,6 +52,7 @@
 			$this->initializeActions();
 			$persons = $this->personRepository->findAll($this->getPersonsFilter());
 			$this->view->assign('persons', $persons);
+            $this->pagetitle("Personen", "Liste");
 		}
 
         /**

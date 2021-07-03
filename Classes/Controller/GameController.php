@@ -2,6 +2,7 @@
 	
 	namespace Balumedien\Sportms\Controller;
 
+	use Balumedien\Sportms\Domain\Model\Game;
     use TYPO3\CMS\Extbase\Persistence\QueryInterface;
 	
 	/**
@@ -138,6 +139,7 @@
 					$this->view->assign('competitionSeasonGamedaysSelectbox', $competitionSeasonGamedaysSelectbox);
 				}
 			}
+            $this->pagetitle("Spiele", "Liste");
 		}
 
         /**
@@ -146,6 +148,7 @@
         public function indexAction(\Balumedien\Sportms\Domain\Model\Game $game = NULL) {
             $this->initializeActions();
             $this->view->assign('game', $game);
+            $this->pagetitleForGame($game, "Spielinfo");
         }
 
         /**
@@ -171,6 +174,24 @@
                 $orderings);
             $this->view->assign('gamesInCompetition', $gamesInCompetition);
 	        $this->view->assign('game', $game);
+	        $this->pagetitleForGame($game, "Historie");
+        }
+
+        /**
+         * @param Game $game
+         * @param string $action
+         */
+        private function pagetitleForGame(Game $game, string $actionLabel) {
+            $teamSeasonHomeLabel = $game->getTeamSeasonHome()->getTeam()->getLabel();
+            $teamSeasonGuestLabel = $game->getTeamSeasonGuest()->getTeam()->getLabel();
+            $gameLabel = $teamSeasonHomeLabel . " - " . $teamSeasonGuestLabel;
+            $gameLabel .= " " . $this->settings['pagetitle']['seperator'];
+            $competitionLabel = $game->getCompetitionSeason()->getCompetition()->getLabel();
+            $gameLabel .= " " . $competitionLabel;
+            $competitionGamedayLabel = $game->getGameday()->getLabel();
+            $gameLabel .= " " . $this->settings['pagetitle']['seperator'];
+            $gameLabel .= " " . $competitionGamedayLabel;
+            $this->pagetitle($gameLabel, $actionLabel);
         }
 		
 	}

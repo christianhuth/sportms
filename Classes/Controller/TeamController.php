@@ -165,6 +165,7 @@
             $this->view->assign('officials', $officialsByTerm);
             $officialJobsSelectbox = $this->teamSeasonOfficialJobRepository->findAll();
             $this->view->assign('officialJobsSelectbox', $officialJobsSelectbox);
+            $this->pagetitleForTeam($team, "Funktionärshistorie");
         }
 
         /**
@@ -230,6 +231,7 @@
 				$seasonsSelectbox = $this->seasonRepository->findAll($this->getSeasonsFilter(FALSE));
 				$this->view->assign('seasonsSelectbox', $seasonsSelectbox);
 			}
+            $this->pagetitleForTeam($team, "Rekordspiele");
 		}
 		
 		/**
@@ -286,6 +288,7 @@
 				$sportPositionsSelectbox = $this->sportPositionRepository->findAll($this->getSportsFilter(), $this->getSportPositionGroupsFilter(), $this->getSportPositionsFilter(FALSE));
 				$this->view->assign('sportPositionsSelectbox', $sportPositionsSelectbox);
 			}
+            $this->pagetitleForTeam($team, "Rekordspieler");
 		}
 
         /**
@@ -312,6 +315,16 @@
                 $clubsSelectbox = $this->clubRepository->findAll($this->getClubsFilter(FALSE));
                 $this->view->assign('clubsSelectbox', $clubsSelectbox);
             }
+            $this->pagetitle("Mannschaften", "Liste");
+        }
+
+        /**
+         * @param Team $team
+         * @param string $action
+         */
+        private function pagetitleForTeam(Team $team, string $actionLabel) {
+            $teamLabel = $team->getLabel();
+            $this->pagetitle($teamLabel, $actionLabel);
         }
 		
 	}

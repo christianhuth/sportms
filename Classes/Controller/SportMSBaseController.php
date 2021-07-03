@@ -246,8 +246,10 @@
                 $pagetitle .= $this->settings['pagetitle']['prefix'] . " ";
             }
             $pagetitle .= $part1;
-            $pagetitle .= " " . $this->settings['pagetitle']['seperator'] . " ";
-            $pagetitle .= $part2;
+            if(!empty($part2)) {
+                $pagetitle .= " " . $this->settings['pagetitle']['seperator'] . " ";
+                $pagetitle .= $part2;
+            }
             if(!is_null($this->settings['pagetitle']['suffix'])) {
                 $pagetitle .= " " . $this->settings['pagetitle']['suffix'];
             }

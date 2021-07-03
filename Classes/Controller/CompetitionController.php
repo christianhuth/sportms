@@ -91,6 +91,7 @@
 					$this->view->assign('competitionTypesSelectbox', $competitionTypesSelectbox);
 				}
 			}
+            $this->pagetitle("Wettbewerbe", "Liste");
 		}
 		
 		/**
