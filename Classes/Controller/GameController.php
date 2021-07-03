@@ -143,18 +143,18 @@
 		}
 
         /**
-         * @param \Balumedien\Sportms\Domain\Model\Game $game
+         * @param Game $game
          */
-        public function indexAction(\Balumedien\Sportms\Domain\Model\Game $game = NULL) {
+        public function indexAction(Game $game = NULL) {
             $this->initializeActions();
             $this->view->assign('game', $game);
             $this->pagetitleForGame($game, "Spielinfo");
         }
 
         /**
-         * @param \Balumedien\Sportms\Domain\Model\Game $game
+         * @param Game $game
          */
-        public function historyAction(\Balumedien\Sportms\Domain\Model\Game $game = NULL) {
+        public function historyAction(Game $game = NULL) {
             $this->initializeActions();
             $orderings = [
                 'date' => QueryInterface::ORDER_DESCENDING,
@@ -175,6 +175,14 @@
             $this->view->assign('gamesInCompetition', $gamesInCompetition);
 	        $this->view->assign('game', $game);
 	        $this->pagetitleForGame($game, "Historie");
+        }
+
+        /**
+         * @param Game|null $game
+         */
+        public function reportAction(Game $game = NULL) {
+            $this->view->assign('game', $game);
+            $this->pagetitleForGame($game, "Spielbericht");
         }
 
         /**

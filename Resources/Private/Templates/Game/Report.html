@@ -1,0 +1,29 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:sportms="Balumedien\Sportms\ViewHelpers">
+
+<f:layout name="default"/>
+
+<f:section name="default">
+
+    <div id="tx-sportms-game-detail">
+
+        <f:render arguments="{_all}" partial="Game/Header"/>
+        <f:render arguments="{_all}" partial="Game/Navigation"/>
+
+        <div class="tx-sportms-game-report">
+
+            <f:if condition="{game.gameReports}">
+                <f:render partial="Game/Report/Report" arguments="{report: game.gameReports.0}"/>
+            </f:if>
+
+            <f:comment>
+                # TODO: IF more than 1 Report show Navigation to select another one
+            </f:comment>
+
+        </div>
+
+    </div>
+</f:section>
+
+</html>

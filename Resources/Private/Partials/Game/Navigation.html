@@ -20,7 +20,7 @@
                         <f:comment>
                             <li><sportms:link.action action="lineup" controller="Game" Game="{game}">Aufstellung</sportms:link.action></li>
                         </f:comment>
-                        <f:if condition="{game.reports}">
+                        <f:if condition="{game.gameReports}">
                             <f:then>
                                 <li><sportms:link.action action="report" controller="Game" Game="{game}">Spielbericht</sportms:link.action></li>
                             </f:then>
