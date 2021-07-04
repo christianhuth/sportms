@@ -14,8 +14,7 @@
 		protected $sport;
 		
 		/**
-		 * @var \Balumedien\Sportms\Domain\Model\Season|\TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy
-		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
+		 * @var \Balumedien\Sportms\Domain\Model\Season
 		 */
 		protected $season;
 		
@@ -367,14 +366,14 @@
 		}
 		
 		/**
-		 * @return Season|\TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy
+		 * @return Season
 		 */
 		public function getSeason() {
 			return $this->season;
 		}
 		
 		/**
-		 * @param Season|\TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy $season
+		 * @param Season $season
 		 */
 		public function setSeason($season): void {
 			$this->season = $season;

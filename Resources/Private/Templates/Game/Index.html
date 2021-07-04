@@ -6,62 +6,96 @@
 
 <f:section name="default">
 
-    <div id="tx-sportms-game-show">
+    <div id="tx-sportms-game-detail">
 
         <f:render arguments="{_all}" partial="Game/Header"/>
         <f:render arguments="{_all}" partial="Game/Navigation"/>
 
-        <div class="tx-sportms-game-showindex">
+        <div class="tx-sportms-game-index">
 
-            <div clas="tx-sportms-game-goals">
+            <div class="tx-sportms-game-goals">
                 <h4>Tore</h4>
-                <table>
-                    <f:for each="{game.gameGoals}" as="goal">
-                        <tr>
-                            <td><sportms:link.action action="playerProfile" controller="Person" Person="{goal.scorer}">{goal.scorer.lastname}</sportms:link.action></td>
-                            <td>{goal.minute}'</td>
-                            <td>{goal.goalHome} : {goal.goalGuest}</td>
-                            <td></td>
-                            <td></td>
-                        </tr>
+                <div class="tx-sportms-game-container">
+                    <f:comment>
+                        # TODO: Add support for owngoals
+                    </f:comment>
+                    <f:for each="{game.gameGoals}" as="goal" iteration="i">
+                        <sportms:PersonInTeamSeason person="{goal.scorer}" teamSeason="{game.teamSeasonHome}">
+                            <f:then>
+                                <f:render partial="ViewHelper/Game/IndexGoal" arguments="{goal: goal, type: 'home'}"/>
+                            </f:then>
+                            <f:else>
+                                <sportms:PersonInTeamSeason person="{goal.scorer}" teamSeason="{game.teamSeasonGuest}">
+                                    <f:then>
+                                        <f:render partial="ViewHelper/Game/IndexGoal" arguments="{goal: goal, type: 'guest'}"/>
+                                    </f:then>
+                                    <f:else>
+                                        <f:comment>
+                                            # TODO: think of a senseful error message
+                                        </f:comment>
+                                    </f:else>
+                                </sportms:PersonInTeamSeason>
+                            </f:else>
+                        </sportms:PersonInTeamSeason>
                     </f:for>
-                </table>
+                </div>
             </div>
 
             <div class="tx-sportms-game-lineup-start">
-                <h4>Aufstellung</h4>
-                <table>
-                    <f:for each="{game.gameLineupHomeStarts}" as="lineup">
-                        <tr>
-                            <td><sportms:link.action action="playerProfile" controller="Person" Person="{lineup.person}">{lineup.person.lastname}</sportms:link.action></td>
-                            <td>{lineup.}</td>
-                        </tr>
-                    </f:for>
-                </table>
+                <h4>Startaufstellung</h4>
+                <div class="tx-sportms-game-container">
+                    <div class="tx-sportms-game-lineup-home">
+                        <f:for each="{game.gameLineupHomeStarts}" as="lineup">
+                            <f:render partial="ViewHelper/Game/IndexLineup" arguments="{lineup: lineup}"/>
+                        </f:for>
+                    </div>
+                    <div class="tx-sportms-game-lineup-guest">
+                        <f:for each="{game.gameLineupGuestStarts}" as="lineup">
+                            <f:render partial="ViewHelper/Game/IndexLineup" arguments="{lineup: lineup}"/>
+                        </f:for>
+                    </div>
+                </div>
             </div>
 
             <div class="tx-sportms-game-lineup-substitute">
                 <h4>Reservebank</h4>
-                <table>
-                    <tr>
-                        <td>
-                            <f:for each="{game.gameLineupHomeSubstitutes}" as="lineup">
-                                {lineup.person.lastname}
-                            </f:for>
-                        </td>
-                        <td>
-                            <f:for each="{game.gameLineupGuestSubstitutes}" as="lineup">
-                                {lineup.person.lastname}
-                            </f:for>
-                        </td>
-                    </tr>
-                </table>
+                <div class="tx-sportms-game-container">
+                    <div class="tx-sportms-game-lineup-home">
+                        <f:for each="{game.gameLineupHomeSubstitutes}" as="lineup">
+                            <f:render partial="ViewHelper/Game/IndexLineup" arguments="{lineup: lineup}"/>
+                        </f:for>
+                    </div>
+                    <div class="tx-sportms-game-lineup-guest">
+                        <f:for each="{game.gameLineupGuestSubstitutes}" as="lineup">
+                            <f:render partial="ViewHelper/Game/IndexLineup" arguments="{lineup: lineup}"/>
+                        </f:for>
+                    </div>
+                </div>
             </div>
 
-            <div clas="tx-sportms-game-changes">
+            <div class="tx-sportms-game-changes">
                 <h4>Wechsel</h4>
-                <f:for each="{game.gameChanges}" as="change">
-                </f:for>
+                <div class="tx-sportms-game-container">
+                    <f:for each="{game.gameChanges}" as="change">
+                        <sportms:PersonInTeamSeason person="{change.personIn}" teamSeason="{game.teamSeasonHome}">
+                            <f:then>
+                                <f:render partial="ViewHelper/Game/IndexChange" arguments="{change: change, type: 'home'}"/>
+                            </f:then>
+                            <f:else>
+                                <sportms:PersonInTeamSeason person="{change.personIn}" teamSeason="{game.teamSeasonGuest}">
+                                    <f:then>
+                                        <f:render partial="ViewHelper/Game/IndexChange" arguments="{change: change, type: 'guest'}"/>
+                                    </f:then>
+                                    <f:else>
+                                        <f:comment>
+                                            # TODO: think of a senseful error message
+                                        </f:comment>
+                                    </f:else>
+                                </sportms:PersonInTeamSeason>
+                            </f:else>
+                        </sportms:PersonInTeamSeason>
+                    </f:for>
+                </div>
             </div>
 
         </div>

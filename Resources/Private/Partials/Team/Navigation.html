@@ -4,62 +4,60 @@
 
 <div class="tx-sportms-navigation tx-sportms-team-navigation">
     <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#teamNavbar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-            <div class="collapse navbar-collapse" id="teamNavbar">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <f:if condition="{teamSeason}">
-                            <f:then>
-                                <sportms:link.action action="index" controller="TeamSeason" TeamSeason="{teamSeason}">Übersicht</sportms:link.action>
-                            </f:then>
-                            <f:else>
-                                <sportms:link.action action="index" controller="TeamSeason" TeamSeason="{team.teamSeasons.0}">Übersicht</sportms:link.action>
-                            </f:else>
-                        </f:if>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Spielplan<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <f:if condition="{teamSeason}">
-                                    <f:then>
-                                        <sportms:link.action action="gamesByCompetition" controller="TeamSeason" TeamSeason="{teamSeason}">Spiele nach Wettbewerb</sportms:link.action>
-                                    </f:then>
-                                    <f:else>
-                                        <sportms:link.action action="gamesByCompetition" controller="TeamSeason" TeamSeason="{team.teamSeasons.0}">Spiele nach Wettbewerb</sportms:link.action>
-                                    </f:else>
-                                </f:if>
-                            </li>
-                            <li>
-                                <f:if condition="{teamSeason}">
-                                    <f:then>
-                                        <sportms:link.action action="gamesByDate" controller="TeamSeason" TeamSeason="{teamSeason}">Spiele nach Datum</sportms:link.action>
-                                    </f:then>
-                                    <f:else>
-                                        <sportms:link.action action="gamesByDate" controller="TeamSeason" TeamSeason="{team.teamSeasons.0}">Spiele nach Datum</sportms:link.action>
-                                    </f:else>
-                                </f:if>
-                            </li>
-                        </ul>
-                    </li>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#teamNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="teamNavbar">
+            <ul class="nav navbar-nav">
+                <li>
+                    <f:if condition="{teamSeason}">
+                        <f:then>
+                            <sportms:link.action action="index" controller="TeamSeason" TeamSeason="{teamSeason}">Übersicht</sportms:link.action>
+                        </f:then>
+                        <f:else>
+                            <sportms:link.action action="index" controller="TeamSeason" TeamSeason="{team.teamSeasons.0}">Übersicht</sportms:link.action>
+                        </f:else>
+                    </f:if>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Spielplan<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <f:if condition="{teamSeason}">
+                                <f:then>
+                                    <sportms:link.action action="gamesByCompetition" controller="TeamSeason" TeamSeason="{teamSeason}">Spiele nach Wettbewerb</sportms:link.action>
+                                </f:then>
+                                <f:else>
+                                    <sportms:link.action action="gamesByCompetition" controller="TeamSeason" TeamSeason="{team.teamSeasons.0}">Spiele nach Wettbewerb</sportms:link.action>
+                                </f:else>
+                            </f:if>
+                        </li>
+                        <li>
+                            <f:if condition="{teamSeason}">
+                                <f:then>
+                                    <sportms:link.action action="gamesByDate" controller="TeamSeason" TeamSeason="{teamSeason}">Spiele nach Datum</sportms:link.action>
+                                </f:then>
+                                <f:else>
+                                    <sportms:link.action action="gamesByDate" controller="TeamSeason" TeamSeason="{team.teamSeasons.0}">Spiele nach Datum</sportms:link.action>
+                                </f:else>
+                            </f:if>
+                        </li>
+                    </ul>
+                </li>
 
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Historie<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><sportms:link.action action="historyOfficials" controller="Team" Team="{team}">Funktionäre</sportms:link.action></li>
-                            <li><sportms:link.action action="historyRecordGames" controller="Team" Team="{team}">Rekordspiele</sportms:link.action></li>
-                            <li><sportms:link.action action="historyRecordPlayers" controller="Team" Team="{team}">Rekordspieler</sportms:link.action></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Historie<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><sportms:link.action action="historyOfficials" controller="Team" Team="{team}">Funktionäre</sportms:link.action></li>
+                        <li><sportms:link.action action="historyRecordGames" controller="Team" Team="{team}">Rekordspiele</sportms:link.action></li>
+                        <li><sportms:link.action action="historyRecordPlayers" controller="Team" Team="{team}">Rekordspieler</sportms:link.action></li>
+                    </ul>
+                </li>
+            </ul>
         </div>
     </nav>
 </div>

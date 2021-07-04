@@ -494,10 +494,10 @@
 				<source>Spielabsetzung</source>
 			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_game.result_special_reason.3">
-				<source>Nicht-Antritt Heimmannschaft</source>
+				<source>Nicht-Antritt Heim</source>
 			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_game.result_special_reason.4">
-				<source>Nicht-Antritt Gastmannschaft</source>
+				<source>Nicht-Antritt Gast</source>
 			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_game.trainer_home">
 				<source>Heimtrainer</source>

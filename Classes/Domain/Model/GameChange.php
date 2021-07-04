@@ -29,12 +29,12 @@
 		protected $minuteAdditional;
 		
 		/**
-		 * @var \Balumedien\Sportms\Domain\Model\TeamSeasonSquadMember
+		 * @var \Balumedien\Sportms\Domain\Model\Person
 		 */
 		protected $personIn;
 		
 		/**
-		 * @var \Balumedien\Sportms\Domain\Model\TeamSeasonSquadMember
+		 * @var \Balumedien\Sportms\Domain\Model\Person
 		 */
 		protected $personOut;
 		
@@ -100,28 +100,28 @@
 		}
 		
 		/**
-		 * @return TeamSeasonSquadMember
+		 * @return Person
 		 */
 		public function getPersonIn() {
 			return $this->personIn;
 		}
 		
 		/**
-		 * @param TeamSeasonSquadMember $personIn
+		 * @param Person $personIn
 		 */
 		public function setPersonIn($personIn) {
 			$this->personIn = $personIn;
 		}
 		
 		/**
-		 * @return TeamSeasonSquadMember
+		 * @return Person
 		 */
 		public function getPersonOut() {
 			return $this->personOut;
 		}
 		
 		/**
-		 * @param TeamSeasonSquadMember $personOut
+		 * @param Person $personOut
 		 */
 		public function setPersonOut($personOut) {
 			$this->personOut = $personOut;

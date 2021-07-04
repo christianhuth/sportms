@@ -1,0 +1,18 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:sportms="Balumedien\Sportms\ViewHelpers">
+
+<f:if condition="{lineup}">
+    <div class="tx-sportms-game-lineup-entry">
+        <div class="tx-sportms-game-lineup-person">
+            <sportms:link.action action="playerProfile" controller="Person" Person="{lineup.person}">
+                {lineup.person.lastname}
+            </sportms:link.action>
+        </div>
+        <div class="tx-sportms-game-lineup-jerseynumber">
+            <span class="tx-sportms-game-lineup-number">{lineup.jerseyNumber}</span>
+        </div>
+    </div>
+</f:if>
+
+</html>

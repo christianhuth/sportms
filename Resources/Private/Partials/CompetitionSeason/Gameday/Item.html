@@ -1,5 +1,6 @@
 <html data-namespace-typo3-fluid="true"
-      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:sportms="Balumedien\Sportms\ViewHelpers">
 
 <tr>
     <td class="tx-sportms-table-center">
@@ -16,7 +17,9 @@
         <f:render partial="ViewHelper/Game/Spectators" arguments="{spectators: game.spectators}" />
     </td>
     <td class="tx-sportms-table-center">
-        <f:render partial="ViewHelper/Game/Result" arguments="{game: game}" />
+        <sportms:link.action action="index" controller="Game" Game="{game}">
+            <f:render partial="ViewHelper/Game/ResultInTable" arguments="{game: game}" />
+        </sportms:link.action>
     </td>
 </tr>
 

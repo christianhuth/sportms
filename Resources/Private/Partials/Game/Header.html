@@ -2,26 +2,36 @@
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
       xmlns:sportms="Balumedien\Sportms\ViewHelpers">
 
-    <div class="container-fluid tx-sportms-game-show-header">
-        <div class="row">
-            <div class="col-xs-12">
-                <sportms:link.action action="gameday" controller="CompetitionSeason" CompetitionSeason="{game.competitionSeason}" CompetitionSeasonGameday="{game.gameday}">
-                    {game.competitionSeason.competition.label} {game.season.label} {game.gameday.label}
-                </sportms:link.action>
+    <div class="container-fluid tx-sportms-game-header tx-sportms-header">
+        <div class="tx-sportms-header-box tx-sportms-header-competition">
+            <sportms:link.action action="gameday" controller="CompetitionSeason" CompetitionSeason="{game.competitionSeason}" CompetitionSeasonGameday="{game.gameday}">
+                {game.competitionSeason.competition.label} {game.season.label}, {game.gameday.label}
+            </sportms:link.action>
+        </div>
+        <div class="tx-sportms-header-box tx-sportms-header-team">
+            <sportms:link.action action="index" controller="TeamSeason" TeamSeason="{game.teamSeasonHome}">
+                <div class="tx-sportms-header-team-logo">
+                    <f:render partial="ViewHelper/Club/LogoInHeader" arguments="{club: game.teamSeasonHome.team.club}"/>
+                </div>
+                <div class="tx-sportms-header-team-label">
+                    <h3>{game.teamSeasonHome.team.label}</h3>
+                </div>
+            </sportms:link.action>
+        </div>
+        <div class="tx-sportms-header-box tx-sportms-game-header-result">
+            <div class="tx-sportms-game-header-result">
+                <f:render partial="ViewHelper/Game/ResultInHeader" arguments="{game: game}"/>
             </div>
-            <div class="col-xs-4">
-                <sportms:link.action action="index" controller="TeamSeason" TeamSeason="{game.teamSeasonHome}">
-                    {game.teamSeasonHome.team.label}
-                </sportms:link.action>
-            </div>
-            <div class="col-xs-4">
-                <f:render partial="ViewHelper/Game/Result" arguments="{game: game}"/>
-            </div>
-            <div class="col-xs-4">
-                <sportms:link.action action="index" controller="TeamSeason" TeamSeason="{game.teamSeasonGuest}">
-                    {game.teamSeasonGuest.team.label}
-                </sportms:link.action>
-            </div>
+        </div>
+        <div class="tx-sportms-header-box tx-sportms-header-team">
+            <sportms:link.action action="index" controller="TeamSeason" TeamSeason="{game.teamSeasonGuest}">
+                <div class="tx-sportms-header-team-logo">
+                    <f:render partial="ViewHelper/Club/LogoInHeader" arguments="{club: game.teamSeasonGuest.team.club}"/>
+                </div>
+                <div class="tx-sportms-header-team-label">
+                    <h3>{game.teamSeasonGuest.team.label}</h3>
+                </div>
+            </sportms:link.action>
         </div>
     </div>
 

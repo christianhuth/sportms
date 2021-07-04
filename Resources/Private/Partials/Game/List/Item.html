@@ -22,7 +22,9 @@
         <f:render partial="ViewHelper/TeamSeason/ItemInTable" arguments="{teamSeason: game.teamSeasonGuest}"/>
     </td>
     <td class="tx-sportms-table-center">
-        <f:render partial="ViewHelper/Game/Result" arguments="{game: game}"/>
+        <sportms:link.action action="index" controller="Game" Game="{game}">
+            <f:render partial="ViewHelper/Game/ResultInTable" arguments="{game: game}" />
+        </sportms:link.action>
     </td>
 </tr>
 

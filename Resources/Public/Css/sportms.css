@@ -1,10 +1,21 @@
 /*
  *
+ * SPORTMS Colors
+ *
+ */
+:root {
+    --color1: #C30D00;
+    --color2: #DCDCDC;
+    --color3: #333333;
+}
+
+/*
+ *
  * SPORTMS Icons
  +
  */
 .sportmsicon {
-    background: var(--regular-red);
+    background: var(--color1);
     display: block;
     height: 20px;
     mask-position: center center !important;
@@ -115,7 +126,7 @@
 }
 
 .abteilungsaufzaehlung-inner a:hover {
-    color: var(--regular-red);
+    color: var(--color1);
 }
 
 
@@ -224,6 +235,200 @@
     text-align: right;
 }
 
+
+/*
+ *
+ * SPORTMS - HEADER
+ *
+ */
+.tx-sportms .tx-sportms-header {
+    display: grid;
+    margin: 0 0 25px 0;
+}
+
+.tx-sportms .tx-sportms-header .tx-sportms-header-box {
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.tx-sportms .tx-sportms-header .tx-sportms-header-box h3 {
+    margin: 10px 0 0 0;
+    padding: 0;
+}
+
+.tx-sportms .tx-sportms-header .tx-sportms-header-competition,
+.tx-sportms .tx-sportms-header .tx-sportms-game-header-result,
+.tx-sportms .tx-sportms-header .tx-sportms-header-team {
+    flex-direction: column;
+}
+
+.tx-sportms .tx-sportms-header .tx-sportms-game-header-result {
+    margin: 0 auto;
+    min-width: 120px;
+}
+
+.tx-sportms .tx-sportms-game-result-main {
+    background-color: var(--color3);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.tx-sportms .tx-sportms-header .tx-sportms-game-header-result .tx-sportms-game-header-result-main {
+    -webkit-border-bottom-right-radius: 0;
+    -webkit-border-bottom-left-radius: 0;
+    -moz-border-radius-bottomright: 0;
+    -moz-border-radius-bottomleft: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    font-size: 180%;
+    padding: 10px;
+}
+
+.tx-sportms .tx-sportms-header .tx-sportms-game-header-result .tx-sportms-game-header-result-sub {
+    background-color: var(--color2);
+    -webkit-border-bottom-right-radius: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    -moz-border-radius-bottomright: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    color: var(--color3);
+    padding: 4px;
+}
+
+
+
+
+
+/*
+ *
+ * GAME
+ *
+ */
+.tx-sportms .tx-sportms-game-header {
+    grid-row-gap: 5px;
+    grid-template-columns: 20% 16% 28% 16% 20%;
+}
+.tx-sportms .tx-sportms-game-header .tx-sportms-header-box.tx-sportms-header-competition {
+    grid-column: 2 / 5;
+}
+.tx-sportms .tx-sportms-game-header .tx-sportms-header-box.tx-sportms-header-competition a {
+    color: var(--color3);
+}
+.tx-sportms .tx-sportms-game-header .tx-sportms-header-box.tx-sportms-header-result {
+    grid-column: 3 / 4;
+}
+.tx-sportms .tx-sportms-game-header .tx-sportms-header-team:nth-of-type(2) {
+    grid-column: 1 / 3;
+}
+.tx-sportms .tx-sportms-game-header .tx-sportms-header-team:nth-of-type(4) {
+    grid-column: 4 / 6;
+}
+.tx-sportms .tx-sportms-game-index h4 {
+    display: block;
+    text-align: center;
+}
+.tx-sportms .tx-sportms-game-goal {
+    display: grid;
+    grid-template-columns: 1fr 80px 120px 80px 1fr;
+    margin: 6px 0;
+}
+.tx-sportms .tx-sportms-game-goal .tx-sportms-game-goal-time,
+.tx-sportms .tx-sportms-game-goal .tx-sportms-game-goal-score {
+    text-align: center;
+}
+.tx-sportms .tx-sportms-game-goal .tx-sportms-game-goal-score,
+.tx-sportms .tx-sportms-game-goal .tx-sportms-game-goal-person,
+.tx-sportms .tx-sportms-game-goal .tx-sportms-game-goal-time {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.tx-sportms .tx-sportms-game-goal .tx-sportms-game-goal-person {
+    flex-direction: column;
+}
+.tx-sportms .tx-sportms-game-goal .tx-sportms-game-goal-person-home {
+    align-items: flex-end;
+}
+.tx-sportms .tx-sportms-game-goal .tx-sportms-game-goal-person-guest {
+    align-items: flex-start;
+}
+.tx-sportms .tx-sportms-game-goal .tx-sportms-game-goal-person .tx-sportms-game-goal-scorer {
+    font-weight: bold;
+}
+.tx-sportms .tx-sportms-game-goal .tx-sportms-game-goal-person .tx-sportms-game-goal-assist {
+    color: var(--color3);
+    font-size: 90%;
+}
+.tx-sportms .tx-sportms-game-goal .tx-sportms-game-goal-score .tx-sportms-game-result-main {
+    width: 80px;
+}
+.tx-sportms .tx-sportms-game-container {
+    display: flex;
+    flex-direction: row;
+}
+.tx-sportms .tx-sportms-game-goals .tx-sportms-game-container {
+    flex-direction: column;
+}
+.tx-sportms .tx-sportms-game-lineup-home,
+.tx-sportms .tx-sportms-game-lineup-guest {
+    width: 50%;
+}
+.tx-sportms .tx-sportms-game-lineup-entry {
+    display: grid;
+    margin: 6px 0;
+}
+.tx-sportms .tx-sportms-game-lineup-entry .tx-sportms-game-lineup-person {
+    align-items: center;
+    display: flex;
+}
+.tx-sportms .tx-sportms-game-lineup-home .tx-sportms-game-lineup-entry {
+    grid-template-columns: 1fr 80px;
+}
+.tx-sportms .tx-sportms-game-lineup-guest .tx-sportms-game-lineup-entry {
+    grid-template-columns: 80px 1fr;
+}
+.tx-sportms .tx-sportms-game-lineup-guest .tx-sportms-game-lineup-entry .tx-sportms-game-lineup-person {
+    grid-column: 2 / 3;
+    grid-row: 1;
+}
+.tx-sportms .tx-sportms-game-lineup-guest .tx-sportms-game-lineup-entry .tx-sportms-game-lineup-jerseynumber {
+    grid-column: 1 / 2;
+    grid-row: 1;
+}
+.tx-sportms .tx-sportms-game-lineup-home .tx-sportms-game-lineup-entry .tx-sportms-game-lineup-person {
+    justify-content: right;
+}
+.tx-sportms .tx-sportms-game-lineup-entry .tx-sportms-game-lineup-jerseynumber {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.tx-sportms .tx-sportms-game-goal .tx-sportms-game-goal-time .tx-sportms-game-goal-minute,
+.tx-sportms .tx-sportms-game-lineup-entry .tx-sportms-game-lineup-jerseynumber .tx-sportms-game-lineup-number {
+    background-color: var(--color2);
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    text-align: center;
+    display: flex;
+    height: 40px;
+    width: 40px;
+    padding: 5px;
+}
+
+
+
+
+
+
 /*
  *
  * PERSON
@@ -285,7 +490,7 @@
 .tx-sportms-teamseason-officials .tx-sportms-teamseason-officials h3,
 .tx-sportms-teamseason-squad .tx-sportms-teamseason-squad-position h3,
 .tx-sportms-teamseason-squad-captains .tx-sportms-teamseason-squad-captains h3 {
-    color: #C30D00;
+    color: var(--color1);
     display: inline-block;
     font-family: sans-serif;
     font-size: 23px;
@@ -451,12 +656,20 @@
     align-items: center;
 }
 
+
+
+
+
 /**
  * BOOTSTRAP - BREAKPOINTS
  * v3.4: https://getbootstrap.com/docs/3.4/css/#grid-media-queries
  * v4.1: https://getbootstrap.com/docs/4.1/layout/overview/
  * v5.0: https://getbootstrap.com/docs/5.0/layout/breakpoints/
  */
+
+
+
+
 
 /*
  * MEDIAQUERIES - Phones
@@ -466,16 +679,33 @@
     .tx-sportms-teamseason-squadmember .squadmember-jerseynumber {
         display: none;
     }
+    .tx-sportms .tx-sportms-game-header .tx-sportms-header-box.tx-sportms-header-competition {
+        display: none;
+    }
+    .tx-sportms .tx-sportms-header .tx-sportms-header-result {
+        font-size: 90%;
+        min-width: 85px;
+    }
 }
+
+
+
+
 
 /*
  * MEDIAQUERIES - Tablets
  */
 @media screen and (max-width: 768px) {
+
 }
+
+
+
+
 
 /*
  * MEDIAQUERIES - Desktop
  */
 @media screen and (max-width: 992px) {
+
 }
