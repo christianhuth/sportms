@@ -16,18 +16,29 @@
             <div class="tx-sportms-game-goals">
                 <h4>Tore</h4>
                 <div class="tx-sportms-game-container">
-                    <f:comment>
-                        # TODO: Add support for owngoals
-                    </f:comment>
                     <f:for each="{game.gameGoals}" as="goal" iteration="i">
                         <sportms:PersonInTeamSeason person="{goal.scorer}" teamSeason="{game.teamSeasonHome}">
                             <f:then>
-                                <f:render partial="ViewHelper/Game/IndexGoal" arguments="{goal: goal, type: 'home'}"/>
+                                <f:if condition="!{goal.ownGoal}">
+                                    <f:then>
+                                        <f:render partial="ViewHelper/Game/IndexGoal" arguments="{goal: goal, type: 'home'}"/>
+                                    </f:then>
+                                    <f:else>
+                                        <f:render partial="ViewHelper/Game/IndexGoal" arguments="{goal: goal, type: 'guest'}"/>
+                                    </f:else>
+                                </f:if>
                             </f:then>
                             <f:else>
                                 <sportms:PersonInTeamSeason person="{goal.scorer}" teamSeason="{game.teamSeasonGuest}">
                                     <f:then>
-                                        <f:render partial="ViewHelper/Game/IndexGoal" arguments="{goal: goal, type: 'guest'}"/>
+                                        <f:if condition="!{goal.ownGoal}">
+                                            <f:then>
+                                                <f:render partial="ViewHelper/Game/IndexGoal" arguments="{goal: goal, type: 'guest'}"/>
+                                            </f:then>
+                                            <f:else>
+                                                <f:render partial="ViewHelper/Game/IndexGoal" arguments="{goal: goal, type: 'home'}"/>
+                                            </f:else>
+                                        </f:if>
                                     </f:then>
                                     <f:else>
                                         <f:comment>

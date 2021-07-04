@@ -334,15 +334,53 @@
     display: block;
     text-align: center;
 }
+.tx-sportms .tx-sportms-game-change-entry {
+    display: grid;
+    grid-template-columns: 1fr 80px 80px 1fr;
+    margin: 6px 0;
+}
+.tx-sportms .tx-sportms-game-change-entry .tx-sportms-game-change {
+    display: grid !important;
+}
+.tx-sportms .tx-sportms-game-change-entry .tx-sportms-game-change-home {
+    grid-template-columns: 1fr 40px;
+}
+.tx-sportms .tx-sportms-game-change-entry .tx-sportms-game-change-guest .tx-sportms-game-change-arrow-in,
+.tx-sportms .tx-sportms-game-change-entry .tx-sportms-game-change-guest .tx-sportms-game-change-arrow-out,
+.tx-sportms .tx-sportms-game-change-entry .tx-sportms-game-change-home .tx-sportms-game-change-person-in,
+.tx-sportms .tx-sportms-game-change-entry .tx-sportms-game-change-home .tx-sportms-game-change-person-out {
+    grid-column: 1 / 2;
+}
+.tx-sportms .tx-sportms-game-change-entry .tx-sportms-game-change-guest .tx-sportms-game-change-person-in,
+.tx-sportms .tx-sportms-game-change-entry .tx-sportms-game-change-guest .tx-sportms-game-change-person-out,
+.tx-sportms .tx-sportms-game-change-entry .tx-sportms-game-change-home .tx-sportms-game-change-arrow-in,
+.tx-sportms .tx-sportms-game-change-entry .tx-sportms-game-change-home .tx-sportms-game-change-arrow-out {
+    grid-column: 2 / 3;
+}
+.tx-sportms .tx-sportms-game-change-entry .tx-sportms-game-change-arrow-in,
+.tx-sportms .tx-sportms-game-change-entry .tx-sportms-game-change-person-in {
+    grid-row: 1;
+}
+.tx-sportms .tx-sportms-game-change-entry .tx-sportms-game-change-arrow-out,
+.tx-sportms .tx-sportms-game-change-entry .tx-sportms-game-change-person-out {
+    grid-row: 2;
+}
+.tx-sportms .tx-sportms-game-change-entry .tx-sportms-game-change-guest {
+    grid-template-columns: 40px 1fr;
+}
 .tx-sportms .tx-sportms-game-goal {
     display: grid;
     grid-template-columns: 1fr 80px 120px 80px 1fr;
     margin: 6px 0;
 }
-.tx-sportms .tx-sportms-game-goal .tx-sportms-game-goal-time,
-.tx-sportms .tx-sportms-game-goal .tx-sportms-game-goal-score {
+.tx-sportms .tx-sportms-game-change-entry .tx-sportms-game-change-arrow,
+.tx-sportms .tx-sportms-game-change-entry .tx-sportms-game-change-time,
+.tx-sportms .tx-sportms-game-goal .tx-sportms-game-goal-score,
+.tx-sportms .tx-sportms-game-goal .tx-sportms-game-goal-time {
     text-align: center;
 }
+.tx-sportms .tx-sportms-game-change-entry .tx-sportms-game-change-person,
+.tx-sportms .tx-sportms-game-change-entry .tx-sportms-game-change-time,
 .tx-sportms .tx-sportms-game-goal .tx-sportms-game-goal-score,
 .tx-sportms .tx-sportms-game-goal .tx-sportms-game-goal-person,
 .tx-sportms .tx-sportms-game-goal .tx-sportms-game-goal-time {
@@ -350,6 +388,24 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+}
+.tx-sportms .tx-sportms-game-change-entry .tx-sportms-game-change-home .tx-sportms-game-change-person {
+    justify-content: right;
+}
+.tx-sportms .tx-sportms-game-change-entry .tx-sportms-game-change-guest .tx-sportms-game-change-person {
+    justify-content: left;
+}
+.tx-sportms .tx-sportms-game-change-entry .tx-sportms-game-change-arrow {
+    align-items: center;
+    display: flex;
+    font-weight: bold;
+    justify-content: center;
+}
+.tx-sportms .tx-sportms-game-change-entry .tx-sportms-game-change-arrow-in {
+    color: darkgreen;
+}
+.tx-sportms .tx-sportms-game-change-entry .tx-sportms-game-change-arrow-out {
+    color: darkred;
 }
 .tx-sportms .tx-sportms-game-goal .tx-sportms-game-goal-person {
     flex-direction: column;
@@ -363,6 +419,11 @@
 .tx-sportms .tx-sportms-game-goal .tx-sportms-game-goal-person .tx-sportms-game-goal-scorer {
     font-weight: bold;
 }
+.tx-sportms .tx-sportms-game-goal .tx-sportms-game-goal-person .tx-sportms-game-goal-scorer .tx-sportms-game-goal-penalty {
+    color: var(--color3);
+    font-size: 90%;
+    font-weight: normal;
+}
 .tx-sportms .tx-sportms-game-goal .tx-sportms-game-goal-person .tx-sportms-game-goal-assist {
     color: var(--color3);
     font-size: 90%;
@@ -374,6 +435,7 @@
     display: flex;
     flex-direction: row;
 }
+.tx-sportms .tx-sportms-game-changes .tx-sportms-game-container,
 .tx-sportms .tx-sportms-game-goals .tx-sportms-game-container {
     flex-direction: column;
 }
@@ -406,11 +468,18 @@
 .tx-sportms .tx-sportms-game-lineup-home .tx-sportms-game-lineup-entry .tx-sportms-game-lineup-person {
     justify-content: right;
 }
+.tx-sportms .tx-sportms-game-change-entry .tx-sportms-game-change-home {
+    justify-content: right;
+}
+.tx-sportms .tx-sportms-game-change-entry .tx-sportms-game-change-guest {
+    justify-content: left;
+}
 .tx-sportms .tx-sportms-game-lineup-entry .tx-sportms-game-lineup-jerseynumber {
     display: flex;
     justify-content: center;
     text-align: center;
 }
+.tx-sportms .tx-sportms-game-change-entry .tx-sportms-game-change-time .tx-sportms-game-change-minute,
 .tx-sportms .tx-sportms-game-goal .tx-sportms-game-goal-time .tx-sportms-game-goal-minute,
 .tx-sportms .tx-sportms-game-lineup-entry .tx-sportms-game-lineup-jerseynumber .tx-sportms-game-lineup-number {
     background-color: var(--color2);

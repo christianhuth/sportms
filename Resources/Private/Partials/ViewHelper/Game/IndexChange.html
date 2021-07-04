@@ -1,0 +1,49 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:sportms="Balumedien\Sportms\ViewHelpers">
+
+<f:if condition="{change}">
+  <div class="tx-sportms-game-change-entry">
+    <div class="tx-sportms-game-change tx-sportms-game-change-home">
+      <f:if condition="{type} == home">
+        <f:render section="change" arguments="{change: change}"/>
+      </f:if>
+    </div>
+    <div class="tx-sportms-game-change-time">
+      <f:if condition="{type} == home">
+        <span class="tx-sportms-game-change-minute">{change.minute}'</span>
+      </f:if>
+    </div>
+    <div class="tx-sportms-game-change-time">
+      <f:if condition="{type} == guest">
+        <span class="tx-sportms-game-change-minute">{change.minute}'</span>
+      </f:if>
+    </div>
+    <div class="tx-sportms-game-change tx-sportms-game-change-guest">
+      <f:if condition="{type} == guest">
+        <f:render section="change" arguments="{change: change}"/>
+      </f:if>
+    </div>
+  </div>
+</f:if>
+
+<f:section name="change">
+  <f:if condition="{change.personIn}">
+    <div class="tx-sportms-game-change-arrow tx-sportms-game-change-arrow-in">&rarr;</div>
+    <div class="tx-sportms-game-change-person tx-sportms-game-change-person-in">
+      <sportms:link.action action="playerProfile" controller="Person" Person="{change.personIn}">
+        {change.personIn.lastname}
+      </sportms:link.action>
+    </div>
+  </f:if>
+  <f:if condition="{change.personOut}">
+    <div class="tx-sportms-game-change-arrow tx-sportms-game-change-arrow-out">&larr;</div>
+    <div class="tx-sportms-game-change-person tx-sportms-game-change-person-out">
+      <sportms:link.action action="playerProfile" controller="Person" Person="{change.personOut}">
+        {change.personOut.lastname}
+      </sportms:link.action>
+    </div>
+  </f:if>
+</f:section>
+
+</html>
