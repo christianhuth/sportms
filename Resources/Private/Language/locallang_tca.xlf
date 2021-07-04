@@ -946,9 +946,30 @@
 			<trans-unit id="tx_sportms_domain_model_person.hander_3">
 				<source>Beidhändig</source>
 			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_person.family_status">
-				<source>Familienstand</source>
-			</trans-unit>
+            <trans-unit id="tx_sportms_domain_model_person.family_status">
+                <source>Familienstand</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_person.family_status.1">
+                <source>ledig</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_person.family_status.2">
+                <source>verheiratet</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_person.family_status.3">
+                <source>verwitwet</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_person.family_status.4">
+                <source>geschieden</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_person.family_status.5">
+                <source>eingetragene Lebenspartnerschaft</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_person.family_status.6">
+                <source>eingetragene Lebenspartnerin/eingetragener Lebenspartner verstorben</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_person.family_status.7">
+                <source>eingetragene Lebenspartnerschaft aufgehoben</source>
+            </trans-unit>
 			<trans-unit id="tx_sportms_domain_model_person.graduation">
 				<source>Schulabschluss</source>
 			</trans-unit>

@@ -377,7 +377,7 @@ CREATE TABLE tx_sportms_domain_model_person (
 	size_of_shoe varchar(255) DEFAULT NULL,
 	footer int(11) DEFAULT NULL,
 	hander int(11) DEFAULT NULL,
-	family_status varchar(255) DEFAULT NULL,
+	family_status int(11) DEFAULT 0 NOT NULL,
 	graduation varchar(255) DEFAULT NULL,
 	job varchar(255) DEFAULT NULL,
 	characteristics varchar(255) DEFAULT NULL,

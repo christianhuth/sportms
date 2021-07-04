@@ -82,7 +82,7 @@
 		protected $hander;
 		
 		/**
-		 * @var string
+		 * @var int
 		 */
 		protected $familyStatus;
 		
@@ -383,16 +383,16 @@
 		}
 		
 		/**
-		 * @return string
+		 * @return int
 		 */
 		public function getFamilyStatus() {
 			return $this->familyStatus;
 		}
 		
 		/**
-		 * @param string $familyStatus
+		 * @param int $familyStatus
 		 */
-		public function setFamilyStatus($familyStatus) {
+		public function setFamilyStatus(int $familyStatus) {
 			$this->familyStatus = $familyStatus;
 		}
 		

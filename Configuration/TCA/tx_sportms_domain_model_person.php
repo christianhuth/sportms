@@ -289,11 +289,20 @@ return array(
         'family_status' => array(
             'exclude' => 1,
             'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.family_status',
-            'config' => array(
-                'type' => 'input',
-				'size' => 30,
-                'eval' => 'trim',
-            ),
+	        'config' => array(
+		        'items' => array(
+			        array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ''),
+			        array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.family_status.1', '1'),
+			        array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.family_status.2', '2'),
+			        array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.family_status.3', '3'),
+			        array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.family_status.4', '4'),
+			        array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.family_status.5', '5'),
+			        array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.family_status.6', '6'),
+			        array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.family_status.7', '7'),
+		        ),
+		        'renderType' => 'selectSingle',
+		        'type' => 'select',
+	        ),
         ),
         'graduation' => array(
             'exclude' => 1,
