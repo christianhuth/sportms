@@ -336,14 +336,14 @@
 }
 .tx-sportms .tx-sportms-game-change-entry {
     display: grid;
-    grid-template-columns: 1fr 80px 80px 1fr;
+    grid-template-columns: 1fr 50px 50px 1fr;
     margin: 6px 0;
 }
 .tx-sportms .tx-sportms-game-change-entry .tx-sportms-game-change {
     display: grid !important;
 }
 .tx-sportms .tx-sportms-game-change-entry .tx-sportms-game-change-home {
-    grid-template-columns: 1fr 40px;
+    grid-template-columns: 1fr 50px;
 }
 .tx-sportms .tx-sportms-game-change-entry .tx-sportms-game-change-guest .tx-sportms-game-change-arrow-in,
 .tx-sportms .tx-sportms-game-change-entry .tx-sportms-game-change-guest .tx-sportms-game-change-arrow-out,
@@ -366,11 +366,11 @@
     grid-row: 2;
 }
 .tx-sportms .tx-sportms-game-change-entry .tx-sportms-game-change-guest {
-    grid-template-columns: 40px 1fr;
+    grid-template-columns: 50px 1fr;
 }
 .tx-sportms .tx-sportms-game-goal {
     display: grid;
-    grid-template-columns: 1fr 80px 120px 80px 1fr;
+    grid-template-columns: 1fr 50px 120px 50px 1fr;
     margin: 6px 0;
 }
 .tx-sportms .tx-sportms-game-change-entry .tx-sportms-game-change-arrow,
@@ -452,10 +452,10 @@
     display: flex;
 }
 .tx-sportms .tx-sportms-game-lineup-home .tx-sportms-game-lineup-entry {
-    grid-template-columns: 1fr 80px;
+    grid-template-columns: 1fr 50px;
 }
 .tx-sportms .tx-sportms-game-lineup-guest .tx-sportms-game-lineup-entry {
-    grid-template-columns: 80px 1fr;
+    grid-template-columns: 50px 1fr;
 }
 .tx-sportms .tx-sportms-game-lineup-guest .tx-sportms-game-lineup-entry .tx-sportms-game-lineup-person {
     grid-column: 2 / 3;
@@ -482,15 +482,16 @@
 .tx-sportms .tx-sportms-game-change-entry .tx-sportms-game-change-time .tx-sportms-game-change-minute,
 .tx-sportms .tx-sportms-game-goal .tx-sportms-game-goal-time .tx-sportms-game-goal-minute,
 .tx-sportms .tx-sportms-game-lineup-entry .tx-sportms-game-lineup-jerseynumber .tx-sportms-game-lineup-number {
-    background-color: var(--color2);
-    justify-content: center;
     align-items: center;
+    background-color: var(--color2);
     border-radius: 100%;
-    text-align: center;
     display: flex;
-    height: 40px;
-    width: 40px;
+    font-size: 11px;
+    height: 32px;
+    justify-content: center;
     padding: 5px;
+    text-align: center;
+    width: 32px;
 }
 
 
@@ -751,9 +752,23 @@
     .tx-sportms .tx-sportms-game-header .tx-sportms-header-box.tx-sportms-header-competition {
         display: none;
     }
-    .tx-sportms .tx-sportms-header .tx-sportms-header-result {
-        font-size: 90%;
-        min-width: 85px;
+    .tx-sportms .tx-sportms-game-header .tx-sportms-header-box.tx-sportms-header-team img {
+        height: 40px;
+        width: auto !important;
+    }
+    .tx-sportms .tx-sportms-game-header .tx-sportms-header-box.tx-sportms-header-team h3 {
+        font-size: 85%;
+    }
+    .tx-sportms .tx-sportms-header .tx-sportms-game-header-result {
+        font-size: 80%;
+        min-width: 60px;
+    }
+    .tx-sportms .tx-sportms-header .tx-sportms-game-header-result .tx-sportms-game-header-result-main {
+        padding: 8px 6px;
+    }
+    .tx-sportms .tx-sportms-game-goal {
+        grid-template-columns: 1fr 50px 60px 50px 1fr;
+        margin: 4px 0;
     }
 }
 

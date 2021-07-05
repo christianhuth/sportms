@@ -2,7 +2,7 @@
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
       xmlns:sportms="Balumedien\Sportms\ViewHelpers">
 
-    <div class="container-fluid tx-sportms-game-header tx-sportms-header">
+    <div class="tx-sportms-game-header tx-sportms-header">
         <div class="tx-sportms-header-box tx-sportms-header-competition">
             <sportms:link.action action="gameday" controller="CompetitionSeason" CompetitionSeason="{game.competitionSeason}" CompetitionSeasonGameday="{game.gameday}">
                 {game.competitionSeason.competition.label} {game.season.label}, {game.gameday.label}

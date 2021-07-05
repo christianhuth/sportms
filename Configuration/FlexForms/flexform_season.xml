@@ -55,12 +55,13 @@
                             <numIndex index="competitionseason_clubs">FIELD:base.switchableControllerActions:=:CompetitionSeason->clubs</numIndex>
                             <numIndex index="competitionseason_gameday">FIELD:base.switchableControllerActions:=:CompetitionSeason->gameday</numIndex>
                             <numIndex index="competitionseason_teams">FIELD:base.switchableControllerActions:=:CompetitionSeason->teams</numIndex>
-                            <numIndex index="2">FIELD:base.switchableControllerActions:=:Game->list</numIndex>
-                            <numIndex index="3">FIELD:base.switchableControllerActions:=:Season->list</numIndex>
-                            <numIndex index="4">FIELD:base.switchableControllerActions:=:Team->historyRecordGames</numIndex>
-                            <numIndex index="5">FIELD:base.switchableControllerActions:=:Team->historyRecordPlayers</numIndex>
-                            <numIndex index="6">FIELD:base.switchableControllerActions:=:TeamSeason->gamesByCompetition</numIndex>
-                            <numIndex index="7">FIELD:base.switchableControllerActions:=:TeamSeason->gamesByDate</numIndex>
+                            <numIndex index="game_list">FIELD:base.switchableControllerActions:=:Game->list</numIndex>
+                            <numIndex index="season_list">FIELD:base.switchableControllerActions:=:Season->list</numIndex>
+                            <numIndex index="team_historyrecordgames">FIELD:base.switchableControllerActions:=:Team->historyRecordGames</numIndex>
+                            <numIndex index="team_historyrecordplayers">FIELD:base.switchableControllerActions:=:Team->historyRecordPlayers</numIndex>
+                            <numIndex index="teamseason_gamesbycompetition">FIELD:base.switchableControllerActions:=:TeamSeason->gamesByCompetition</numIndex>
+                            <numIndex index="teamseason_gamesbydate">FIELD:base.switchableControllerActions:=:TeamSeason->gamesByDate</numIndex>
+                            <numIndex index="teamseason_index">FIELD:base.switchableControllerActions:=:TeamSeason->index</numIndex>
                         </OR>
                     </displayCond>
                     <config>

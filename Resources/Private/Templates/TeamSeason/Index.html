@@ -7,6 +7,7 @@
     <div id="tx-sportms-teamseason-index">
 
         <f:render partial="Team/Navigation" arguments="{team: teamSeason.team, teamSeason: teamSeason}"/>
+        <f:render partial="TeamSeason/Index/Filter" arguments="{settings: settings, teamSeason: teamSeason, teamSeasons: teamSeasons}"/>
 
         <f:if condition="{teamSeason.teamSeasonImages}">
             <div class="tx-sportms-teamseason-image">

@@ -91,6 +91,8 @@
                 $teamSeason = $this->determineTeamSeason();
             }
             $this->view->assign('teamSeason', $teamSeason);
+	        $teamSeasons = $this->teamSeasonRepository->findByTeam($teamSeason->getTeam());
+	        $this->view->assign('teamSeasons', $teamSeasons);
             $this->pagetitleForTeamSeason($teamSeason, "Mannschaftsprofil");
         }
 
