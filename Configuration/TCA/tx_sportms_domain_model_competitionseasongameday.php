@@ -137,6 +137,26 @@
 					'renderType' => 'inputDateTime',
 				),
 			),
+			
+			'slug' => [
+				'exclude' => true,
+				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.slug',
+				'config' => [
+					'default' => '',
+					'eval' => 'uniqueInSite',
+					'fallbackCharacter' => '-',
+					'generatorOptions' => [
+						'fields' => ['label'],
+						'fieldSeparator' => '-',
+						'prefixParentPageSlug' => FALSE,
+						'replacements' => [
+							'/' => '',
+						],
+					],
+					'prependSlash' => FALSE,
+					'type' => 'slug',
+				],
+			],
 
 		),
 	);

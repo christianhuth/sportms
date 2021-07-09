@@ -8,10 +8,10 @@
 			'ClubSection' => 'list',
 			'Competition' => 'list',
 			'CompetitionSeason' => 'games, goals, list, teams',
-			'Game' => 'history, index, last',
+			'Game' => 'history, index, report',
 			'Person' => 'officialProfile, playerProfile, refereeProfile',
 			'Team' => 'list, historyRecordGames, historyRecordPlayers',
-            'TeamSeason' => 'games, goals, index, list, squad'
+            'TeamSeason' => 'games, index, list'
 		]
 	);
 	

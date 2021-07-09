@@ -164,7 +164,8 @@ CREATE TABLE tx_sportms_domain_model_competitionseasongameday (
     label varchar(255) DEFAULT '' NOT NULL,
     startdate int(11) unsigned DEFAULT NULL,
     enddate int(11) unsigned DEFAULT NULL,
-    sorting int(11) DEFAULT '0' NOT NULL
+    sorting int(11) DEFAULT '0' NOT NULL,
+    slug varchar(2048) DEFAULT ''
 );
 
 #
