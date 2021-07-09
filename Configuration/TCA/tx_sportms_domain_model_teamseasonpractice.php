@@ -7,6 +7,7 @@ return array(
 	'ctrl' => array(
 		'crdate' => 'crdate',
 		'cruser_id' => 'cruser_id',
+		'default_sortby' => 'day ASC, time_start ASC, time_end ASC',
 		'delete' => 'deleted',
 		'enablecolumns' => array(
 			'disabled' => 'hidden',
@@ -18,7 +19,6 @@ return array(
 		'label' => '',
 		'label_userFunc' => \Balumedien\Sportms\Configuration\TCA\UserFunc\UserFunc::class . '->teamSeasonPracticeLabel',
 		'searchFields' => '',
-		'sortby' => 'sorting',
 		'title'	=> 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_teamseasonpractice',
 		'tstamp' => 'tstamp',
 		'versioningWS' => TRUE,

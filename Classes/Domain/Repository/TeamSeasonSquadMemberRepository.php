@@ -3,12 +3,15 @@
 	namespace Balumedien\Sportms\Domain\Repository;
 	
 	use Balumedien\Sportms\Domain\Model\Person;
-
-    class TeamSeasonSquadMemberRepository extends SportMSBaseRepository {
+	use TYPO3\CMS\Extbase\Persistence\QueryInterface;
+	
+	class TeamSeasonSquadMemberRepository extends SportMSBaseRepository {
 
         protected $defaultOrderings = array(
-            'teamSeason.season.label' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING,
-            'teamSeason.team.label' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
+        	'person.lastname' => QueryInterface::ORDER_ASCENDING,
+        	'person.firstname' => QueryInterface::ORDER_ASCENDING,
+            'teamSeason.season.label' => QueryInterface::ORDER_DESCENDING,
+            'teamSeason.team.label' => QueryInterface::ORDER_ASCENDING,
         );
 
         /**
