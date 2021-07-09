@@ -8,10 +8,9 @@
 	class TeamSeasonSquadMemberRepository extends SportMSBaseRepository {
 
         protected $defaultOrderings = array(
+	        'teamSeason' => QueryInterface::ORDER_DESCENDING,
         	'person.lastname' => QueryInterface::ORDER_ASCENDING,
         	'person.firstname' => QueryInterface::ORDER_ASCENDING,
-            'teamSeason.season.label' => QueryInterface::ORDER_DESCENDING,
-            'teamSeason.team.label' => QueryInterface::ORDER_ASCENDING,
         );
 
         /**
