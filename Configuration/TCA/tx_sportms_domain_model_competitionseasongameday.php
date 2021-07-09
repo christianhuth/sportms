@@ -28,7 +28,7 @@
 			'showRecordFieldList' => '',
 		),
 		'types' => array(
-			'1' => array('showitem' => 'competition_season, label, --palette--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_competitionseasongameday.palette_startdate_enddate;startdate_enddate,
+			'1' => array('showitem' => 'competition_season, label, --palette--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_competitionseasongameday.palette_startdate_enddate;startdate_enddate,slug,
 			                            '),
 		),
 		'palettes' => array(
@@ -146,7 +146,7 @@
 					'eval' => 'uniqueInSite',
 					'fallbackCharacter' => '-',
 					'generatorOptions' => [
-						'fields' => ['label'],
+						'fields' => ['label', 'uid'],
 						'fieldSeparator' => '-',
 						'prefixParentPageSlug' => FALSE,
 						'replacements' => [
