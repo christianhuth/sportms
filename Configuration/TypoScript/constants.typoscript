@@ -63,8 +63,8 @@ plugin.tx_sportms {
         competitionSeason {
             # cat=plugin.tx_sportms/sportmsCompetition; type=int+; label=Default PID of CompetitionSeason->clubs
             clubs.pid = 
-            # cat=plugin.tx_sportms/sportmsCompetition; type=int+; label=Default PID of CompetitionSeason->gameday
-            gameday.pid = 
+            # cat=plugin.tx_sportms/sportmsCompetition; type=int+; label=Default PID of CompetitionSeason->games
+            games.pid =
             # cat=plugin.tx_sportms/sportmsCompetition; type=int+; label=Default PID of CompetitionSeason->teams
             teams.pid = 
         }
