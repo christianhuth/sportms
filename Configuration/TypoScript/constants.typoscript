@@ -48,11 +48,8 @@ plugin.tx_sportms {
         club {
             # cat=plugin.tx_sportms/sportmsClub; type=int+; label=Default PID of Club->list
             list.pid =
-        }
-
-        clubSection {
-            # cat=plugin.tx_sportms/sportmsClub; type=int+; label=Default PID of ClubSection->list
-            list.pid =
+            # cat=plugin.tx_sportms/sportmsClub; type=int+; label=Default PID of Club->sections
+            sections.pid =
         }
 
         competition {
@@ -91,8 +88,6 @@ plugin.tx_sportms {
             history.pid =
             # cat=plugin.tx_sportms/sportmsGame; type=int+; label=Default PID of Game->index
             index.pid =
-            # cat=plugin.tx_sportms/sportmsGame; type=int+; label=Default PID of Game->lineup
-            lineup.pid =
             # cat=plugin.tx_sportms/sportmsGame; type=int+; label=Default PID of Game->report
             report.pid =
         }
@@ -109,16 +104,6 @@ plugin.tx_sportms {
         person {
             # cat=plugin.tx_sportms/sportmsPerson; type=int+; label=Default PID of Person->list
             list.pid =
-            # cat=plugin.tx_sportms/sportmsPerson; type=int+; label=Default PID of Person->officialProfile
-            officialProfile.pid =
-            # cat=plugin.tx_sportms/sportmsPerson; type=int+; label=Default PID of Person->playerJerseys
-            playerJerseys.pid =
-            # cat=plugin.tx_sportms/sportmsPerson; type=int+; label=Default PID of Person->playerPerformance
-            playerPerformance.pid =
-            # cat=plugin.tx_sportms/sportmsPerson; type=int+; label=Default PID of Person->playerProfile
-            playerProfile.pid =
-            # cat=plugin.tx_sportms/sportmsPerson; type=int+; label=Default PID of Person->refereeProfile
-            refereeProfile.pid =
             # cat=plugin.tx_sportms/sportmsPerson; type=string; label=Path to default dummy image for a male person
             dummyImageMale = EXT:sportms/Resources/Public/Images/person-male.jpg
             # cat=plugin.tx_sportms/sportmsPerson; type=string; label=Path to default dummy image for a female person
@@ -144,13 +129,9 @@ plugin.tx_sportms {
             # cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of TeamSeason->gamesByCompetition
             gamesByCompetition.pid = 
             # cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of TeamSeason->gamesByDate
-            gamesByDate.pid = 
-            # cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of TeamSeason->goals
-            goals.pid = 
+            gamesByDate.pid =
             # cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of TeamSeason->index
-            index.pid = 
-            # cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of TeamSeason->squad
-            squad.pid = 
+            index.pid =
         }
 
     }

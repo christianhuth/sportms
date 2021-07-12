@@ -22,10 +22,7 @@ plugin.tx_sportms {
 
         club {
             list.pid = {$plugin.tx_sportms.settings.club.list.pid}
-        }
-
-        clubSection {
-            list.pid = {$plugin.tx_sportms.settings.clubSection.list.pid}
+            sections.pid = {$plugin.tx_sportms.settings.club.sections.pid}
         }
 
         competition {
@@ -51,7 +48,6 @@ plugin.tx_sportms {
             list.pid = {$plugin.tx_sportms.settings.game.list.pid}
             history.pid = {$plugin.tx_sportms.settings.game.history.pid}
             index.pid = {$plugin.tx_sportms.settings.game.index.pid}
-            lineup.pid = {$plugin.tx_sportms.settings.game.lineup.pid}
             report.pid = {$plugin.tx_sportms.settings.game.report.pid}
         }
 
@@ -63,11 +59,6 @@ plugin.tx_sportms {
 
         person {
             list.pid = {$plugin.tx_sportms.settings.person.list.pid}
-            officialProfile.pid = {$plugin.tx_sportms.settings.person.officialProfile.pid}
-            playerJerseys.pid = {$plugin.tx_sportms.settings.person.playerJerseys.pid}
-            playerPerformance.pid = {$plugin.tx_sportms.settings.person.playerPerformance.pid}
-            playerProfile.pid = {$plugin.tx_sportms.settings.person.playerProfile.pid}
-            refereeProfile.pid = {$plugin.tx_sportms.settings.person.refereeProfile.pid}
             dummyImageMale = {$plugin.tx_sportms.settings.person.dummyImageMale}
             dummyImageFemale = {$plugin.tx_sportms.settings.person.dummyImageFemale}
         }
@@ -86,7 +77,6 @@ plugin.tx_sportms {
             gamesByDate.pid = {$plugin.tx_sportms.settings.teamSeason.gamesByDate.pid}
             goals.pid = {$plugin.tx_sportms.settings.teamSeason.goals.pid}
             index.pid = {$plugin.tx_sportms.settings.teamSeason.index.pid}
-            squad.pid = {$plugin.tx_sportms.settings.teamSeason.squad.pid}
         }
 
     }
