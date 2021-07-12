@@ -17,12 +17,13 @@
                     <f:if condition="{teamSeason}">
                         <f:then>
                             <sportms:link.action action="index" controller="TeamSeason" TeamSeason="{teamSeason}">
-                                Übersicht
+                                <f:translate key="tx_sportms_action.teamseason.index"/>
                             </sportms:link.action>
                         </f:then>
                         <f:else>
                             <sportms:link.action action="index" controller="TeamSeason"
-                                                 TeamSeason="{team.teamSeasons.0}">Übersicht
+                                                 TeamSeason="{team.teamSeasons.0}">
+                                <f:translate key="tx_sportms_action.teamseason.index"/>
                             </sportms:link.action>
                         </f:else>
                     </f:if>
@@ -35,12 +36,14 @@
                             <f:if condition="{teamSeason}">
                                 <f:then>
                                     <sportms:link.action action="gamesByCompetition" controller="TeamSeason"
-                                                         TeamSeason="{teamSeason}">Spiele nach Wettbewerb
+                                                         TeamSeason="{teamSeason}">
+                                        <f:translate key="tx_sportms_action.teamseason.gamesByCompetition"/>
                                     </sportms:link.action>
                                 </f:then>
                                 <f:else>
                                     <sportms:link.action action="gamesByCompetition" controller="TeamSeason"
-                                                         TeamSeason="{team.teamSeasons.0}">Spiele nach Wettbewerb
+                                                         TeamSeason="{team.teamSeasons.0}">
+                                        <f:translate key="tx_sportms_action.teamseason.gamesByCompetition"/>
                                     </sportms:link.action>
                                 </f:else>
                             </f:if>
@@ -49,12 +52,14 @@
                             <f:if condition="{teamSeason}">
                                 <f:then>
                                     <sportms:link.action action="gamesByDate" controller="TeamSeason"
-                                                         TeamSeason="{teamSeason}">Spiele nach Datum
+                                                         TeamSeason="{teamSeason}">
+                                        <f:translate key="tx_sportms_action.teamseason.gamesByDate"/>
                                     </sportms:link.action>
                                 </f:then>
                                 <f:else>
                                     <sportms:link.action action="gamesByDate" controller="TeamSeason"
-                                                         TeamSeason="{team.teamSeasons.0}">Spiele nach Datum
+                                                         TeamSeason="{team.teamSeasons.0}">
+                                        <f:translate key="tx_sportms_action.teamseason.gamesByDate"/>
                                     </sportms:link.action>
                                 </f:else>
                             </f:if>
