@@ -207,7 +207,7 @@ return array(
 				'fallbackCharacter' => '-',
 				'generatorOptions' => [
 					'fields' => ['label', 'uid'],
-					'fieldSeparator' => '/',
+					'fieldSeparator' => '-',
 					'prefixParentPageSlug' => false,
 					'replacements' => [
 						'/' => '',

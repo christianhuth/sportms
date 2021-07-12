@@ -226,7 +226,7 @@
 					'fallbackCharacter' => '-',
 					'generatorOptions' => [
 						'fields' => ['label', 'uid'],
-						'fieldSeparator' => '/',
+						'fieldSeparator' => '-',
 						'prefixParentPageSlug' => FALSE,
 						'replacements' => [
 							'/' => '',

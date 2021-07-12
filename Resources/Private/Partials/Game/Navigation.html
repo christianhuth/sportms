@@ -2,41 +2,57 @@
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
       xmlns:sportms="Balumedien\Sportms\ViewHelpers">
 
-    <div class="tx-sportms-navigation tx-sportms-game-navigation">
-        <nav class="navbar navbar-default">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#gameNavbar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-            <div class="collapse navbar-collapse" id="gameNavbar">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <sportms:link.action action="index" controller="Game" Game="{game}">Schema</sportms:link.action>
-                    </li>
-                    <f:comment>
-                        <li><sportms:link.action action="lineup" controller="Game" Game="{game}">Aufstellung</sportms:link.action></li>
-                    </f:comment>
-                    <f:if condition="{game.gameReports}">
-                        <f:then>
-                            <li><sportms:link.action action="report" controller="Game" Game="{game}">Spielbericht</sportms:link.action></li>
-                        </f:then>
-                        <f:else>
-                            <li><span>Spielbericht</span></li>
-                        </f:else>
-                    </f:if>
-                    <li>
-                        <sportms:link.action action="history" controller="Game" Game="{game}">Historie</sportms:link.action></li>
-                    <li>
-                        <sportms:link.action action="gameday" controller="CompetitionSeason" CompetitionSeason="{game.competitionSeason}" CompetitionSeasonGameday="{game.gameday}">
-                            Spieltagsübersicht
-                        </sportms:link.action>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </div>
+<div class="tx-sportms-navigation tx-sportms-game-navigation">
+    <nav class="navbar navbar-default">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#gameNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="gameNavbar">
+            <ul class="nav navbar-nav">
+                <li>
+                    <sportms:link.action action="index" controller="Game" Game="{game}">
+                        <f:translate key="tx_sportms_action.game.index"/>
+                    </sportms:link.action>
+                </li>
+                <f:if condition="{game.gameReports}">
+                    <f:then>
+                        <li>
+                            <sportms:link.action action="report" controller="Game" Game="{game}">
+                                <f:translate key="tx_sportms_action.game.report"/>
+                            </sportms:link.action>
+                        </li>
+                    </f:then>
+                    <f:else>
+                        <li><span><f:translate key="tx_sportms_action.game.report"/></span></li>
+                    </f:else>
+                </f:if>
+                <li>
+                    <sportms:link.action action="history" controller="Game" Game="{game}">
+                        <f:translate key="tx_sportms_action.game.history"/>
+                    </sportms:link.action>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">
+                        <f:translate key="tx_sportms_navigation.game.competition.dropdown"/><span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <sportms:link.action action="games" controller="CompetitionSeason"
+                                                 CompetitionSeason="{game.competitionSeason}"
+                                                 CompetitionSeasonGameday="{game.gameday}">
+                                <f:translate key="tx_sportms_action.competitionseason.games"/>
+                            </sportms:link.action>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
 
 </html>

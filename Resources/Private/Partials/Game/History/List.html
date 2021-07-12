@@ -19,7 +19,7 @@
                 <f:for as="game" each="{games}">
                     <tr>
                         <td class="tx-sportms-table-center">
-                            <sportms:link.action action="gameday" controller="CompetitionSeason" CompetitionSeason="{game.competitionSeason}" CompetitionSeasonGameday="{game.gameday}">
+                            <sportms:link.action action="games" controller="CompetitionSeason" CompetitionSeason="{game.competitionSeason}" CompetitionSeasonGameday="{game.gameday}">
                                 {game.competitionSeason.competition.label}
                             </sportms:link.action>
                         </td>

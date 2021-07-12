@@ -124,7 +124,7 @@
          * @param Team|null $team
          */
 		public function historyOfficialsAction(Team $team = NULL) {
-            if($team === NULL) {
+			if($team === NULL) {
                 $team = $this->determineTeam();
             }
             $this->view->assign('team', $team);

@@ -11,7 +11,7 @@
 	# Configure Plugins and their allowed Actions
 	$pluginNamesAndTheirActions = [];
 	$pluginNamesAndTheirActions[0]['name'] = 'Club';
-	$pluginNamesAndTheirActions[0]['cacheableActions'] = ['Club' => 'list'];
+	$pluginNamesAndTheirActions[0]['cacheableActions'] = ['Club' => 'list, sections'];
 	$pluginNamesAndTheirActions[0]['nonCacheableActions'] = [];
 	$pluginNamesAndTheirActions[1]['name'] = 'Competition';
 	$pluginNamesAndTheirActions[1]['cacheableActions'] = ['Competition' => 'list', 'CompetitionSeason' => 'clubs, games, teams'];

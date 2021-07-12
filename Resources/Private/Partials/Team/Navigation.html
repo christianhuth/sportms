@@ -30,7 +30,9 @@
                 </li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                       aria-expanded="false">Spielplan<span class="caret"></span></a>
+                       aria-expanded="false">
+                        <f:translate key="tx_sportms_navigation.team.games.dropdown"/><span class="caret"></span>
+                    </a>
                     <ul class="dropdown-menu">
                         <li>
                             <f:if condition="{teamSeason}">
@@ -69,7 +71,9 @@
 
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                       aria-expanded="false">Historie<span class="caret"></span></a>
+                       aria-expanded="false">
+                        <f:translate key="tx_sportms_navigation.team.history.dropdown"/><span class="caret"></span>
+                    </a>
                     <ul class="dropdown-menu">
                         <li>
                             <sportms:link.action action="historyOfficials" controller="Team" Team="{team}">

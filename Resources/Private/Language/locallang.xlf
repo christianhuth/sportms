@@ -33,20 +33,6 @@
 				<source>Sonntag</source>
 			</trans-unit>
 
-			<!-- Pagetitle -->
-			<trans-unit id="tx_sportms_pagetitle.person.officialProfile">
-				<source>Funktionärsprofil</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_pagetitle.person.playerJerseys">
-				<source>Rückennummern-Historie</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_pagetitle.person.playerProfile">
-				<source>Spielerprofil</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_pagetitle.person.refereeProfile">
-				<source>Schiedsrichterprofil</source>
-			</trans-unit>
-
 			<!-- Action -->
 			<trans-unit id="tx_sportms_action.competition.list">
 				<source>Wettbewerbe</source>
@@ -59,6 +45,15 @@
 			</trans-unit>
 			<trans-unit id="tx_sportms_action.competitionseason.teams">
 				<source>Mannschaften</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_action.game.history">
+				<source>Historie</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_action.game.index">
+				<source>Schema</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_action.game.report">
+				<source>Spielbericht</source>
 			</trans-unit>
 			<trans-unit id="tx_sportms_action.person.playerJerseys">
 				<source>Rückennummern</source>
@@ -373,6 +368,16 @@
 				<source>Mannschaft</source>
 			</trans-unit>
 
+			<!-- Navigation -->
+			<trans-unit id="tx_sportms_navigation.game.competition.dropdown">
+				<source>Wettbewerb</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_navigation.team.games.dropdown">
+				<source>Spielplan</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_navigation.team.history.dropdown">
+				<source>Historie</source>
+			</trans-unit>
 
 		</body>
 	</file>
