@@ -78,7 +78,6 @@ plugin.tx_sportms {
             historyRecordGames.pid = {$plugin.tx_sportms.settings.team.historyRecordGames.pid}
             historyRecordPlayers.limit = {$plugin.tx_sportms.settings.team.historyRecordPlayers.limit}
             historyRecordPlayers.pid = {$plugin.tx_sportms.settings.team.historyRecordPlayers.pid}
-            list.limit = {$plugin.tx_sportms.settings.team.list.limit}
             list.pid = {$plugin.tx_sportms.settings.team.list.pid}
         }
 

@@ -136,8 +136,6 @@ plugin.tx_sportms {
             historyRecordPlayers.limit = 10
             # cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of Team->historyRecordPlayers
             historyRecordPlayers.pid =
-            # cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default Limit for Team->list
-            list.limit = 10
             # cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of Team->list
             list.pid =
         }
