@@ -1,7 +1,7 @@
 <html data-namespace-typo3-fluid="true"
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
-<f:if condition="{settings.season.seasonsSelectbox}">
+<f:if condition="{settings.season.selectbox.enabled}">
     <div class="tx-sportms-filter">
         <f:form action="gamesByCompetition" arguments="{teamSeason: teamSeason}" class="form-horizontal" controller="TeamSeason" extensionName="sportms" method="POST" pageUid="{settings.teamSeason.gamesByCompetition.pid}" pluginName="Team">
             <f:render arguments="{options: teamSeasons,             settings: settings,     value: teamSeason}" partial="Form/Select/TeamSeason"/>
