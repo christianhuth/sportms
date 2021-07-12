@@ -34,7 +34,7 @@
 		 * Use this method to solve tasks which all actions have in common.
 		 */
 		public function initializeAction() {
-			$this->mapRequestsToSettings();
+			#$this->mapRequestsToSettings();
 		}
 
 		protected function clubsAction(CompetitionSeason $competitionSeason = NULL) {
@@ -53,7 +53,7 @@
          * @param CompetitionSeasonGameday|null $competitionSeasonGameday
          */
         public function gamedayAction(CompetitionSeason $competitionSeason = NULL, CompetitionSeasonGameday $competitionSeasonGameday = NULL): void {
-            if($competitionSeason === NULL) {
+	        if($competitionSeason === NULL) {
                 $competitionSeason = $this->determineCompetitionSeason();
             }
             $this->view->assign('competitionSeason', $competitionSeason);

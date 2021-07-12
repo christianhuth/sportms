@@ -132,29 +132,41 @@
 
 /*
  *
- * SPORTMS
+ * SPORTMS - DBSTATS
  *
  */
-.tx-sportms .tx-sportms-container .tx-sportms-sportms-dbstats .tx-sportms-dbstat {
+.tx-sportms .tx-sportms-dbstats {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+.tx-sportms .tx-sportms-dbstats .tx-sportms-dbstat-item {
     margin: 25px 0 0 0;
 }
-
-.tx-sportms .tx-sportms-container .tx-sportms-sportms-dbstats .tx-sportms-dbstat:last-of-type {
-    margin-bottom: 25px;
+.tx-sportms .tx-sportms-dbstats .tx-sportms-dbstat-item:nth-of-type(1),
+.tx-sportms .tx-sportms-dbstats .tx-sportms-dbstat-item:nth-of-type(4) {
+    grid-column: 1/2;
 }
-
-.tx-sportms .tx-sportms-container .tx-sportms-sportms-dbstats .tx-sportms-dbstat .tx-sportms-dbstat-image,
-.tx-sportms .tx-sportms-container .tx-sportms-sportms-dbstats .tx-sportms-dbstat .tx-sportms-dbstat-label {
-    background-color: var(--regular-gray);
-    padding: 10px;
+.tx-sportms .tx-sportms-dbstats .tx-sportms-dbstat-item:nth-of-type(2),
+.tx-sportms .tx-sportms-dbstats .tx-sportms-dbstat-item:nth-of-type(5) {
+    grid-column: 2/3;
 }
-
-.tx-sportms .tx-sportms-container .tx-sportms-sportms-dbstats .tx-sportms-dbstat .tx-sportms-dbstat-image img {
-    background-color: white;
+.tx-sportms .tx-sportms-dbstats .tx-sportms-dbstat-item:nth-of-type(3),
+.tx-sportms .tx-sportms-dbstats .tx-sportms-dbstat-item:nth-of-type(6) {
+    grid-column: 3/4;
+}
+.tx-sportms .tx-sportms-dbstats .tx-sportms-dbstat-item .tx-sportms-dbstat-image,
+.tx-sportms .tx-sportms-dbstats .tx-sportms-dbstat-item .tx-sportms-dbstat-label {
+    text-align: center;
+}
+.tx-sportms .tx-sportms-dbstats .tx-sportms-dbstat-item .tx-sportms-dbstat-image img {
     height: auto !important;
     max-width: 100%;
     padding: 15px;
-    width: 100%;
+    width: 90%;
+}
+.tx-sportms .tx-sportms-dbstats .tx-sportms-dbstat-item .tx-sportms-dbstat-label h4 {
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -745,6 +757,19 @@
  * MEDIAQUERIES - Phones
  */
 @media screen and (max-width: 576px) {
+    .tx-sportms .tx-sportms-dbstats {
+        grid-template-columns: 50% 50%;
+    }
+    .tx-sportms .tx-sportms-dbstats .tx-sportms-dbstat-item:nth-of-type(1),
+    .tx-sportms .tx-sportms-dbstats .tx-sportms-dbstat-item:nth-of-type(3),
+    .tx-sportms .tx-sportms-dbstats .tx-sportms-dbstat-item:nth-of-type(5) {
+        grid-column: 1/2;
+    }
+    .tx-sportms .tx-sportms-dbstats .tx-sportms-dbstat-item:nth-of-type(2),
+    .tx-sportms .tx-sportms-dbstats .tx-sportms-dbstat-item:nth-of-type(4),
+    .tx-sportms .tx-sportms-dbstats .tx-sportms-dbstat-item:nth-of-type(6) {
+        grid-column: 2/3;
+    }
     .tx-sportms-teamseason-official .official-jerseynumber,
     .tx-sportms-teamseason-squadmember .squadmember-jerseynumber {
         display: none;

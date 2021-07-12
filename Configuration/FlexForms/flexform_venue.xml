@@ -9,7 +9,6 @@
 			<settings.venue.uid>
 				<TCEforms>
 					<label>Zeige folgende Sportstätte</label>
-					<displayCond>FIELD:base.switchableControllerActions:=:Venue->show</displayCond>
 					<config>
 						<type>group</type>
 						<internal_type>db</internal_type>
@@ -24,7 +23,6 @@
 			<settings.venue.showViews>
 				<TCEforms>
 					<label>Erlaube folgende Einzelansichten</label>
-					<displayCond>FIELD:base.switchableControllerActions:=:Venue->show</displayCond>
 					<config>
 						<type>select</type>
 						<renderType>selectMultipleSideBySide</renderType>
@@ -44,7 +42,6 @@
 			<settings.venue.showNavigation.enabled>
 				<TCEforms>
 					<label>Navigation für Einzelansichten?</label>
-					<displayCond>FIELD:base.switchableControllerActions:=:Venue->show</displayCond>
 					<config>
 						<default>1</default>
 						<renderType>checkboxToggle</renderType>
@@ -58,7 +55,6 @@
 					<label>Zeige folgende Navigationselemente</label>
 					<displayCond>
 						<AND>
-							<numIndex index="0">FIELD:base.switchableControllerActions:=:Venue->show</numIndex>
 							<numIndex index="1">FIELD:venue.settings.venue.showNavigation.enabled:REQ:TRUE</numIndex>
 						</AND>
 					</displayCond>
@@ -81,7 +77,6 @@
 			<settings.venue.venues>
 				<TCEforms>
 					<label>Welche Sportstätten sollen angezeigt werden?</label>
-					<displayCond>FIELD:base.switchableControllerActions:=:Venue->list</displayCond>
 					<config>
 						<foreign_table>tx_sportms_domain_model_venue</foreign_table>
 						<foreign_table_where>ORDER BY name ASC</foreign_table_where>

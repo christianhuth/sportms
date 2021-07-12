@@ -48,6 +48,18 @@
 			</trans-unit>
 
 			<!-- Action -->
+			<trans-unit id="tx_sportms_action.competition.list">
+				<source>Wettbewerbe</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_action.competitionseason.clubs">
+				<source>Vereine</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_action.competitionseason.games">
+				<source>Spielplan</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_action.competitionseason.teams">
+				<source>Mannschaften</source>
+			</trans-unit>
 			<trans-unit id="tx_sportms_action.person.playerJerseys">
 				<source>Rückennummern</source>
 			</trans-unit>
@@ -62,6 +74,12 @@
 			</trans-unit>
 			
 			<trans-unit id="tx_sportms_domain_model_club">
+				<source>Verein</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_club.plural">
+				<source>Vereine</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_club.singular">
 				<source>Verein</source>
 			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_club.name">
@@ -97,6 +115,12 @@
 			
 			
 			<trans-unit id="tx_sportms_domain_model_competition">
+				<source>Wettbewerb</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_competition.plural">
+				<source>Wettbewerbe</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_competition.singular">
 				<source>Wettbewerb</source>
 			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_competition.label">
@@ -144,6 +168,15 @@
 			</trans-unit>
 
 
+			<trans-unit id="tx_sportms_domain_model_game">
+				<source>Spiel</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_game.plural">
+				<source>Spiele</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_game.singular">
+				<source>Spiel</source>
+			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_game.result_special_reason">
 				<source>Grund für die Sonderwertung</source>
 			</trans-unit>
@@ -159,8 +192,17 @@
 			<trans-unit id="tx_sportms_domain_model_game.result_special_reason.4">
 				<source>Nicht-Antritt Gast</source>
 			</trans-unit>
-			
-			
+
+
+			<trans-unit id="tx_sportms_domain_model_person">
+				<source>Person</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_person.plural">
+				<source>Personen</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_person.singular">
+				<source>Person</source>
+			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_person.personalData">
 				<source>Persönliche Daten</source>
 			</trans-unit>
@@ -295,9 +337,25 @@
 			<trans-unit id="tx_sportms_domain_model_season">
 				<source>Saison</source>
 			</trans-unit>
-			
-			
-			
+			<trans-unit id="tx_sportms_domain_model_season.plural">
+				<source>Saisons</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_season.singular">
+				<source>Saison</source>
+			</trans-unit>
+
+
+			<trans-unit id="tx_sportms_domain_model_team">
+				<source>Mannschaft</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_team.plural">
+				<source>Mannschaften</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_team.singular">
+				<source>Mannschaft</source>
+			</trans-unit>
+
+
 		</body>
 	</file>
 </xliff>

@@ -193,6 +193,22 @@
             } else {
                 die("No Controller given to create Link in sportms Extension.");
             }
+            
+            if($controller === "Competition" || $controller === "CompetitionSeason") {
+            	$pluginName = "Competition";
+            }
+			
+			if($controller === "Game") {
+				$pluginName = "Game";
+			}
+            
+            if($controller === "Person") {
+            	$pluginName = "Person";
+            }
+			
+			if($controller === "Team" || $controller === "TeamSeason") {
+				$pluginName = "Team";
+			}
 			
 			# find out which action to use
 			if(is_null($this->arguments['action'])) {

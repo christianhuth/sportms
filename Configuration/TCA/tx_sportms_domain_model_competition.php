@@ -30,11 +30,11 @@
 		'types' => array(
 			'1' => array('showitem' => 'sport, sport_age_group, sport_age_level, competition_type, label, abbreviation,
 										--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_competition.tab_seasons, competition_seasons,
-										--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab_visibility, hidden, detail_link, slug,
+										--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab_visibility, --palette--;;hidden_detail, slug
 			                            '),
 		),
 		'palettes' => array(
-			'1' => array('showitem' => ''),
+			'hidden_detail' => array('showitem' => 'hidden, detail_link'),
 		),
 		'columns' => array(
 	        
@@ -225,8 +225,8 @@
 					'eval' => 'uniqueInSite',
 					'fallbackCharacter' => '-',
 					'generatorOptions' => [
-						'fields' => ['label'],
-						'fieldSeparator' => '-',
+						'fields' => ['label', 'uid'],
+						'fieldSeparator' => '/',
 						'prefixParentPageSlug' => FALSE,
 						'replacements' => [
 							'/' => '',

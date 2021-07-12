@@ -1,12 +1,48 @@
 mod.wizards.newContentElement.wizardItems.plugins {
 	elements {
-		sportms {
-			iconIdentifier = ext-sportms-wizard-icon
-			title = LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:CE_title
-			description = LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:CE_description
+		sportms_club {
+			iconIdentifier = sportms-ce-plugin-club-icon
+			title = LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:ce_plugin_club_title
+			description = LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:ce_plugin_club_description
 			tt_content_defValues {
 				CType = list
-				list_type = sportms_sportms
+				list_type = sportms_club
+			}
+		}
+		sportms_competition {
+			iconIdentifier = sportms-ce-plugin-competition-icon
+			title = LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:ce_plugin_competition_title
+			description = LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:ce_plugin_competition_description
+			tt_content_defValues {
+				CType = list
+				list_type = sportms_competition
+			}
+		}
+		sportms_game {
+			iconIdentifier = sportms-ce-plugin-game-icon
+			title = LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:ce_plugin_game_title
+			description = LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:ce_plugin_game_description
+			tt_content_defValues {
+				CType = list
+				list_type = sportms_game
+			}
+		}
+		sportms_person {
+			iconIdentifier = sportms-ce-plugin-person-icon
+			title = LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:ce_plugin_person_title
+			description = LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:ce_plugin_person_description
+			tt_content_defValues {
+				CType = list
+				list_type = sportms_person
+			}
+		}
+		sportms_team {
+			iconIdentifier = sportms-ce-plugin-team-icon
+			title = LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:ce_plugin_team_title
+			description = LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:ce_plugin_team_description
+			tt_content_defValues {
+				CType = list
+				list_type = sportms_team
 			}
 		}
 	}

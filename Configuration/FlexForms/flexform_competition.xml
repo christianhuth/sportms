@@ -9,11 +9,6 @@
 			<settings.competition.uid>
 				<TCEforms>
 					<label>Zeige folgenden Wettbewerb</label>
-					<displayCond>
-						<OR>
-							<numIndex index="1">FIELD:base.switchableControllerActions:=:Competition->show</numIndex>
-						</OR>
-					</displayCond>
 					<config>
 						<type>group</type>
 						<internal_type>db</internal_type>
@@ -28,7 +23,6 @@
 			<settings.competition.showViews>
 				<TCEforms>
 					<label>Erlaube folgende Einzelansichten</label>
-					<displayCond>FIELD:base.switchableControllerActions:=:Competition->show</displayCond>
 					<config>
 						<type>select</type>
 						<renderType>selectMultipleSideBySide</renderType>
@@ -52,14 +46,6 @@
 			<settings.competition.navigation.enabled>
 				<TCEforms>
 					<label>Navigation für Einzelansichten?</label>
-					<displayCond>
-						<OR>
-							<numIndex index="competitionseason_clubs">FIELD:base.switchableControllerActions:=:CompetitionSeason->clubs</numIndex>
-							<numIndex index="competitionseason_gameday">FIELD:base.switchableControllerActions:=:CompetitionSeason->gameday</numIndex>
-							<numIndex index="competitionseason_goals">FIELD:base.switchableControllerActions:=:CompetitionSeason->goals</numIndex>
-							<numIndex index="competitionseason_teams">FIELD:base.switchableControllerActions:=:CompetitionSeason->teams</numIndex>
-						</OR>
-					</displayCond>
 					<config>
 						<default>1</default>
 						<renderType>checkboxToggle</renderType>
@@ -73,7 +59,6 @@
 					<label>Zeige folgende Navigationselemente</label>
 					<displayCond>
 						<AND>
-							<numIndex index="0">FIELD:base.switchableControllerActions:=:Competition->show</numIndex>
 							<numIndex index="1">FIELD:competition.settings.competition.navigation.enabled:REQ:TRUE</numIndex>
 						</AND>
 					</displayCond>
@@ -100,14 +85,6 @@
 			<settings.competition.competitions>
 				<TCEforms>
 					<label>Welche Wettbewerbe sollen angezeigt werden?</label>
-					<displayCond>
-						<OR>
-							<numIndex index="0">FIELD:base.switchableControllerActions:=:Competition->list</numIndex>
-							<numIndex index="1">FIELD:base.switchableControllerActions:=:Game->list</numIndex>
-							<numIndex index="2">FIELD:base.switchableControllerActions:=:Team->historyRecordGames</numIndex>
-							<numIndex index="3">FIELD:base.switchableControllerActions:=:Team->historyRecordPlayers</numIndex>
-						</OR>
-					</displayCond>
 					<config>
 						<foreign_table>tx_sportms_domain_model_competition</foreign_table>
 						<foreign_table_where>ORDER BY label ASC</foreign_table_where>
@@ -119,14 +96,6 @@
 			<settings.competition.competitionsSelectbox>
 				<TCEforms>
 					<label>Selectbox für Wettbewerbe?</label>
-					<displayCond>
-						<OR>
-							<numIndex index="0">FIELD:base.switchableControllerActions:=:Competition->list</numIndex>
-							<numIndex index="1">FIELD:base.switchableControllerActions:=:Game->list</numIndex>
-							<numIndex index="2">FIELD:base.switchableControllerActions:=:Team->historyRecordGames</numIndex>
-							<numIndex index="3">FIELD:base.switchableControllerActions:=:Team->historyRecordPlayers</numIndex>
-						</OR>
-					</displayCond>
 					<config>
 						<default>1</default>
 						<renderType>checkboxToggle</renderType>
@@ -137,12 +106,6 @@
 			<settings.competitionType.competitionTypes>
 				<TCEforms>
 					<label>Welche Wettbewerbsarten sollen angezeigt werden?</label>
-					<displayCond>
-						<OR>
-							<numIndex index="0">FIELD:base.switchableControllerActions:=:Competition->list</numIndex>
-							<numIndex index="1">FIELD:base.switchableControllerActions:=:Game->list</numIndex>
-						</OR>
-					</displayCond>
 					<config>
 						<foreign_table>tx_sportms_domain_model_competitiontype</foreign_table>
 						<foreign_table_where>ORDER BY label ASC</foreign_table_where>
@@ -154,12 +117,6 @@
 			<settings.competitionType.competitionTypesSelectbox>
 				<TCEforms>
 					<label>Selectbox für Wettbewerbsarten?</label>
-					<displayCond>
-						<OR>
-							<numIndex index="0">FIELD:base.switchableControllerActions:=:Competition->list</numIndex>
-							<numIndex index="1">FIELD:base.switchableControllerActions:=:Game->list</numIndex>
-						</OR>
-					</displayCond>
 					<config>
 						<default>1</default>
 						<renderType>checkboxToggle</renderType>
@@ -170,11 +127,6 @@
 			<settings.competitionSeasonGameday.competitionSeasonGamedays>
 				<TCEforms>
 					<label>Welche Spieltage sollen angezeigt werden?</label>
-					<displayCond>
-						<OR>
-							<numIndex index="0">FIELD:base.switchableControllerActions:=:Game->list</numIndex>
-						</OR>
-					</displayCond>
 					<config>
 						<foreign_table>tx_sportms_domain_model_competitionseasongameday</foreign_table>
 						<foreign_table_where>ORDER BY label ASC</foreign_table_where>
@@ -186,12 +138,6 @@
 			<settings.competitionSeasonGameday.competitionSeasonGamedaysSelectbox>
 				<TCEforms>
 					<label>Selectbox für Spieltage?</label>
-					<displayCond>
-						<OR>
-							<numIndex index="0">FIELD:base.switchableControllerActions:=:CompetitionSeason->gameday</numIndex>
-							<numIndex index="1">FIELD:base.switchableControllerActions:=:Game->list</numIndex>
-						</OR>
-					</displayCond>
 					<config>
 						<default>1</default>
 						<renderType>checkboxToggle</renderType>

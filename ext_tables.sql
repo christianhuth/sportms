@@ -153,6 +153,7 @@ CREATE TABLE tx_sportms_domain_model_competitionseason (
     competition_season_gamedays int(11) DEFAULT NULL,
     competition_season_teams int(11) DEFAULT NULL,
     detail_link tinyint(4) unsigned DEFAULT '1' NOT NULL,
+    slug varchar(2048) DEFAULT '',
 	sorting int(11) DEFAULT '0' NOT NULL
 );
 
@@ -548,6 +549,7 @@ CREATE TABLE tx_sportms_domain_model_teamseason (
 	team_season_squad_captains int(11) DEFAULT NULL,
     competition_season_teams int(11) DEFAULT NULL,
     detail_link tinyint(4) unsigned DEFAULT '1' NOT NULL,
+    slug varchar(2048) DEFAULT '',
     sorting int(11) DEFAULT '0' NOT NULL
 );
 

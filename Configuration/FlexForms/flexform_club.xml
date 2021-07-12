@@ -9,12 +9,6 @@
             <settings.club.uid>
                 <TCEforms>
                     <label>Zeige folgenden Verein</label>
-                    <displayCond>
-                        <OR>
-                            <numIndex index="1">FIELD:base.switchableControllerActions:=:Club->show</numIndex>
-                            <numIndex index="2">FIELD:base.switchableControllerActions:=:ClubSection->show</numIndex>
-                        </OR>
-                    </displayCond>
                     <config>
                         <type>group</type>
                         <internal_type>db</internal_type>
@@ -29,7 +23,6 @@
             <settings.club.showViews>
                 <TCEforms>
                     <label>Erlaube folgende Einzelansichten</label>
-                    <displayCond>FIELD:base.switchableControllerActions:=:Club->show</displayCond>
                     <config>
                         <type>select</type>
                         <renderType>selectMultipleSideBySide</renderType>
@@ -53,7 +46,6 @@
             <settings.club.showNavigation.enabled>
                 <TCEforms>
                     <label>Navigation für Einzelansichten?</label>
-                    <displayCond>FIELD:base.switchableControllerActions:=:Club->show</displayCond>
                     <config>
                         <default>1</default>
                         <renderType>checkboxToggle</renderType>
@@ -65,12 +57,6 @@
             <settings.club.showNavigation.views>
                 <TCEforms>
                     <label>Zeige folgende Navigationselemente</label>
-                    <displayCond>
-                        <AND>
-                            <numIndex index="0">FIELD:base.switchableControllerActions:=:Club->show</numIndex>
-                            <numIndex index="1">FIELD:club.settings.club.showNavigation.enabled:REQ:TRUE</numIndex>
-                        </AND>
-                    </displayCond>
                     <config>
                         <type>select</type>
                         <renderType>selectMultipleSideBySide</renderType>
@@ -94,16 +80,6 @@
             <settings.club.clubs>
                 <TCEforms>
                     <label>Welche Vereine sollen angezeigt werden?</label>
-                    <displayCond>
-                        <OR>
-                            <numIndex index="0">FIELD:base.switchableControllerActions:=:Club->list</numIndex>
-                            <numIndex index="1">FIELD:base.switchableControllerActions:=:ClubSection->list</numIndex>
-                            <numIndex index="2">FIELD:base.switchableControllerActions:=:Game->list</numIndex>
-                            <numIndex index="3">FIELD:base.switchableControllerActions:=:Team->list</numIndex>
-                            <numIndex index="4">FIELD:base.switchableControllerActions:=:TeamSeason->list</numIndex>
-                            <numIndex index="5">FIELD:base.switchableControllerActions:=:Venue->list</numIndex>
-                        </OR>
-                    </displayCond>
                     <config>
                         <foreign_table>tx_sportms_domain_model_club</foreign_table>
                         <foreign_table_where>ORDER BY name ASC</foreign_table_where>
@@ -115,16 +91,6 @@
             <settings.club.clubsSelectbox>
                 <TCEforms>
                     <label>Selectbox für Vereine?</label>
-                    <displayCond>
-                        <OR>
-                            <numIndex index="0">FIELD:base.switchableControllerActions:=:Club->list</numIndex>
-                            <numIndex index="1">FIELD:base.switchableControllerActions:=:ClubSection->list</numIndex>
-                            <numIndex index="2">FIELD:base.switchableControllerActions:=:Game->list</numIndex>
-                            <numIndex index="3">FIELD:base.switchableControllerActions:=:Team->list</numIndex>
-                            <numIndex index="4">FIELD:base.switchableControllerActions:=:TeamSeason->list</numIndex>
-                            <numIndex index="5">FIELD:base.switchableControllerActions:=:Venue->list</numIndex>
-                        </OR>
-                    </displayCond>
                     <config>
                         <default>1</default>
                         <renderType>checkboxToggle</renderType>

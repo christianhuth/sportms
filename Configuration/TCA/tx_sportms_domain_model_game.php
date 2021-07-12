@@ -1175,7 +1175,7 @@ return array(
                 'default' => '',
                 'fallbackCharacter' => '-',
                 'generatorOptions' => [
-                    'fields' => ['uid', 'team_season_home', 'team_season_guest'],
+                    'fields' => ['uid'],
                     'fieldSeparator' => '_',
                     'prefixParentPageSlug' => false,
                     'replacements' => [

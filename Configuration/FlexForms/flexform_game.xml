@@ -9,7 +9,6 @@
 			<settings.game.uid>
 				<TCEforms>
 					<label>Zeige folgendes Spiel</label>
-					<displayCond>FIELD:base.switchableControllerActions:=:Game->showIndex</displayCond>
 					<config>
 						<type>group</type>
 						<internal_type>db</internal_type>
@@ -24,7 +23,6 @@
 			<settings.game.showViews>
 				<TCEforms>
 					<label>Erlaube folgende Einzelansichten</label>
-					<displayCond>FIELD:base.switchableControllerActions:=:Game->showIndex</displayCond>
 					<config>
 						<type>select</type>
 						<renderType>selectMultipleSideBySide</renderType>
@@ -40,7 +38,6 @@
 			<settings.game.showNavigation.enabled>
 				<TCEforms>
 					<label>Navigation für Einzelansichten?</label>
-					<displayCond>FIELD:base.switchableControllerActions:=:Game->showIndex</displayCond>
 					<config>
 						<default>1</default>
 						<renderType>checkboxToggle</renderType>
@@ -54,7 +51,6 @@
 					<label>Zeige folgende Navigationselemente</label>
 					<displayCond>
 						<AND>
-							<numIndex index="0">FIELD:base.switchableControllerActions:=:Game->showIndex</numIndex>
 							<numIndex index="1">FIELD:game.settings.game.showNavigation.enabled:REQ:TRUE</numIndex>
 						</AND>
 					</displayCond>

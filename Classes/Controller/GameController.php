@@ -196,6 +196,8 @@
             $gameLabel .= " " . $this->settings['pagetitle']['seperator'];
             $competitionLabel = $game->getCompetitionSeason()->getCompetition()->getLabel();
             $gameLabel .= " " . $competitionLabel;
+            $seasonLabel = $game->getSeason()->getLabel();
+            $gameLabel .= " " . $seasonLabel;
             $competitionGamedayLabel = $game->getGameday()->getLabel();
             $gameLabel .= " " . $this->settings['pagetitle']['seperator'];
             $gameLabel .= " " . $competitionGamedayLabel;

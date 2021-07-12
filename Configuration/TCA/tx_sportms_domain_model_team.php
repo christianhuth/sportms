@@ -206,8 +206,8 @@ return array(
 				'eval' => 'uniqueInSite',
 				'fallbackCharacter' => '-',
 				'generatorOptions' => [
-					'fields' => ['label', 'sport_age_level'],
-					'fieldSeparator' => '-',
+					'fields' => ['label', 'uid'],
+					'fieldSeparator' => '/',
 					'prefixParentPageSlug' => false,
 					'replacements' => [
 						'/' => '',

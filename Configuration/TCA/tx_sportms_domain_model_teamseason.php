@@ -31,11 +31,11 @@ return array(
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_teamseason.tab_officials, team_season_officials,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_teamseason.tab_squad_members, team_season_squad_members, team_season_squad_captains,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_teamseason.tab_competitions, competition_season_teams,
-									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab_visibility, hidden, detail_link,
+									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab_visibility, --palette--;;hidden_detail, slug,
 		                            '),
 	),
 	'palettes' => array(
-		'1' => array('showitem' => ''),
+		'hidden_detail' => array('showitem' => 'hidden, detail_link'),
 	),
 	'columns' => array(
         
@@ -272,6 +272,25 @@ return array(
 				'default' => FALSE,
 				'renderType' => 'checkboxToggle',
 				'type' => 'check',
+			],
+		],
+		
+		'slug' => [
+			'exclude' => true,
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.slug',
+			'config' => [
+				'default' => '',
+				'fallbackCharacter' => '-',
+				'generatorOptions' => [
+					'fields' => ['uid'],
+					'fieldSeparator' => '_',
+					'prefixParentPageSlug' => false,
+					'replacements' => [
+						'/' => '-',
+					],
+				],
+				'prependSlash' => false,
+				'type' => 'slug',
 			],
 		],
 		

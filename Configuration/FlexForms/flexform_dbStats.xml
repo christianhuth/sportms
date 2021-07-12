@@ -9,184 +9,31 @@
             <settings.dbStats>
                 <TCEforms>
                     <label>Für welche Datenmodelle sollen Statistiken berechnet werden?</label>
-                    <displayCond>FIELD:base.switchableControllerActions:=:SportMS->dbStats</displayCond>
                     <config>
                         <items type="array">
-                            <numIndex index="0">
-                                <numIndex index="0">Address</numIndex>
-                                <numIndex index="1">Address</numIndex>
-                            </numIndex>
-                            <numIndex index="1">
+                            <numIndex index="club">
                                 <numIndex index="0">Club</numIndex>
                                 <numIndex index="1">Club</numIndex>
                             </numIndex>
-                            <numIndex index="2">
-                                <numIndex index="0">ClubGround</numIndex>
-                                <numIndex index="1">ClubGround</numIndex>
-                            </numIndex>
-                            <numIndex index="3">
-                                <numIndex index="0">ClubMembers</numIndex>
-                                <numIndex index="1">ClubMembers</numIndex>
-                            </numIndex>
-                            <numIndex index="4">
-                                <numIndex index="0">ClubOfficial</numIndex>
-                                <numIndex index="1">ClubOfficial</numIndex>
-                            </numIndex>
-                            <numIndex index="5">
-                                <numIndex index="0">ClubOfficialJob</numIndex>
-                                <numIndex index="1">ClubOfficialJob</numIndex>
-                            </numIndex>
-                            <numIndex index="6">
-                                <numIndex index="0">ClubSection</numIndex>
-                                <numIndex index="1">ClubSection</numIndex>
-                            </numIndex>
-                            <numIndex index="7">
-                                <numIndex index="0">ClubSectionMembers</numIndex>
-                                <numIndex index="1">ClubSectionMembers</numIndex>
-                            </numIndex>
-                            <numIndex index="8">
-                                <numIndex index="0">ClubSectionOfficial</numIndex>
-                                <numIndex index="1">ClubSectionOfficial</numIndex>
-                            </numIndex>
-                            <numIndex index="9">
-                                <numIndex index="0">ClubSectionOfficialJob</numIndex>
-                                <numIndex index="1">ClubSectionOfficialJob</numIndex>
-                            </numIndex>
-                            <numIndex index="11">
+                            <numIndex index="competition">
                                 <numIndex index="0">Competition</numIndex>
                                 <numIndex index="1">Competition</numIndex>
                             </numIndex>
-                            <numIndex index="12">
-                                <numIndex index="0">CompetitionSeason</numIndex>
-                                <numIndex index="1">CompetitionSeason</numIndex>
-                            </numIndex>
-                            <numIndex index="13">
-                                <numIndex index="0">CompetitionSeasonGameday</numIndex>
-                                <numIndex index="1">CompetitionSeasonGameday</numIndex>
-                            </numIndex>
-                            <numIndex index="14">
-                                <numIndex index="0">CompetitionType</numIndex>
-                                <numIndex index="1">CompetitionType</numIndex>
-                            </numIndex>
-                            <numIndex index="15">
+                            <numIndex index="game">
                                 <numIndex index="0">Game</numIndex>
                                 <numIndex index="1">Game</numIndex>
                             </numIndex>
-                            <numIndex index="16">
-                                <numIndex index="0">GameChange</numIndex>
-                                <numIndex index="1">GameChange</numIndex>
-                            </numIndex>
-                            <numIndex index="17">
-                                <numIndex index="0">GameGoal</numIndex>
-                                <numIndex index="1">GameGoal</numIndex>
-                            </numIndex>
-                            <numIndex index="18">
-                                <numIndex index="0">GameLineup</numIndex>
-                                <numIndex index="1">GameLineup</numIndex>
-                            </numIndex>
-                            <numIndex index="19">
-                                <numIndex index="0">GamePeriod</numIndex>
-                                <numIndex index="1">GamePeriod</numIndex>
-                            </numIndex>
-                            <numIndex index="20">
-                                <numIndex index="0">GamePunishment</numIndex>
-                                <numIndex index="1">GamePunishment</numIndex>
-                            </numIndex>
-                            <numIndex index="21">
-                                <numIndex index="0">GameReferee</numIndex>
-                                <numIndex index="1">GameReferee</numIndex>
-                            </numIndex>
-                            <numIndex index="22">
-                                <numIndex index="0">GameReport</numIndex>
-                                <numIndex index="1">GameReport</numIndex>
-                            </numIndex>
-                            <numIndex index="23">
-                                <numIndex index="0">GameResultSet</numIndex>
-                                <numIndex index="1">GameResultSet</numIndex>
-                            </numIndex>
-                            <numIndex index="24">
-                                <numIndex index="0">Mail</numIndex>
-                                <numIndex index="1">Mail</numIndex>
-                            </numIndex>
-                            <numIndex index="25">
-                                <numIndex index="0">MailType</numIndex>
-                                <numIndex index="1">MailType</numIndex>
-                            </numIndex>
-                            <numIndex index="26">
+                            <numIndex index="person">
                                 <numIndex index="0">Person</numIndex>
                                 <numIndex index="1">Person</numIndex>
                             </numIndex>
-                            <numIndex index="27">
-                                <numIndex index="0">PersonProfile</numIndex>
-                                <numIndex index="1">PersonProfile</numIndex>
-                            </numIndex>
-                            <numIndex index="28">
-                                <numIndex index="0">Phone</numIndex>
-                                <numIndex index="1">Phone</numIndex>
-                            </numIndex>
-                            <numIndex index="29">
-                                <numIndex index="0">PhoneType</numIndex>
-                                <numIndex index="1">PhoneType</numIndex>
-                            </numIndex>
-                            <numIndex index="31">
-                                <numIndex index="0">RefereeJob</numIndex>
-                                <numIndex index="1">RefereeJob</numIndex>
-                            </numIndex>
-                            <numIndex index="32">
+                            <numIndex index="season">
                                 <numIndex index="0">Season</numIndex>
                                 <numIndex index="1">Season</numIndex>
                             </numIndex>
-                            <numIndex index="33">
-                                <numIndex index="0">Sport</numIndex>
-                                <numIndex index="1">Sport</numIndex>
-                            </numIndex>
-                            <numIndex index="34">
-                                <numIndex index="0">SportAgeGroup</numIndex>
-                                <numIndex index="1">SportAgeGroup</numIndex>
-                            </numIndex>
-                            <numIndex index="35">
-                                <numIndex index="0">SportAgeLevel</numIndex>
-                                <numIndex index="1">SportAgeLevel</numIndex>
-                            </numIndex>
-                            <numIndex index="36">
-                                <numIndex index="0">SportPosition</numIndex>
-                                <numIndex index="1">SportPosition</numIndex>
-                            </numIndex>
-                            <numIndex index="37">
-                                <numIndex index="0">SportPositionGroup</numIndex>
-                                <numIndex index="1">SportPositionGroup</numIndex>
-                            </numIndex>
-                            <numIndex index="38">
+                            <numIndex index="team">
                                 <numIndex index="0">Team</numIndex>
                                 <numIndex index="1">Team</numIndex>
-                            </numIndex>
-                            <numIndex index="39">
-                                <numIndex index="0">TeamSeason</numIndex>
-                                <numIndex index="1">TeamSeason</numIndex>
-                            </numIndex>
-                            <numIndex index="40">
-                                <numIndex index="0">TeamSeasonOfficial</numIndex>
-                                <numIndex index="1">TeamSeasonOfficial</numIndex>
-                            </numIndex>
-                            <numIndex index="41">
-                                <numIndex index="0">TeamSeasonOfficialJob</numIndex>
-                                <numIndex index="1">TeamSeasonOfficialJob</numIndex>
-                            </numIndex>
-                            <numIndex index="42">
-                                <numIndex index="0">TeamSeasonPractice</numIndex>
-                                <numIndex index="1">TeamSeasonPractice</numIndex>
-                            </numIndex>
-                            <numIndex index="43">
-                                <numIndex index="0">TeamSeasonSquadMember</numIndex>
-                                <numIndex index="1">TeamSeasonSquadMember</numIndex>
-                            </numIndex>
-                            <numIndex index="44">
-                                <numIndex index="0">URL</numIndex>
-                                <numIndex index="1">Url</numIndex>
-                            </numIndex>
-                            <numIndex index="45">
-                                <numIndex index="0">Venue</numIndex>
-                                <numIndex index="1">Venue</numIndex>
                             </numIndex>
                         </items>
                         <renderType>selectMultipleSideBySide</renderType>

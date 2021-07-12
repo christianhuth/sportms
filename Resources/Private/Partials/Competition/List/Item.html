@@ -3,14 +3,22 @@
       xmlns:sportms="Balumedien\Sportms\ViewHelpers">
 
 <tr>
-    <td class="tx-sportms-table-center">
-        {competition.sport.label}
-    </td>
-    <td>
-        <sportms:link.action action="gameday" controller="CompetitionSeason" CompetitionSeason="{competition.competitionSeasons.0}">{competition.label}</sportms:link.action>
-    </td>
+    <td class="tx-sportms-table-center">{competition.sport.label}</td>
+    <td>{competition.label}</td>
     <td class="tx-sportms-table-center">{competition.sportAgeLevel.label}</td>
     <td class="tx-sportms-table-center">{competition.competitionType.label}</td>
+    <td class="tx-sportms-table-center">
+        <sportms:link.action action="games" controller="CompetitionSeason"
+                             CompetitionSeason="{competition.competitionSeasons.0}">
+            <f:translate key="tx_sportms_action.competitionseason.games"/>
+        </sportms:link.action>
+    </td>
+    <td class="tx-sportms-table-center">
+        <sportms:link.action action="teams" controller="CompetitionSeason"
+                             CompetitionSeason="{competition.competitionSeasons.0}">
+            <f:translate key="tx_sportms_action.competitionseason.teams"/>
+        </sportms:link.action>
+    </td>
 </tr>
 
 </html>

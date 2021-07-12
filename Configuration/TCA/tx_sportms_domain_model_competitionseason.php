@@ -30,11 +30,11 @@
 		'types' => array(
 			'1' => array('showitem' => 'competition, season, competition_season_gamedays,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_competitionseason.tab_teams, competition_season_teams,
-									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab_visibility, hidden, detail_link,
+									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab_visibility, --palette--;;hidden_detail, slug
 		                            '),
 		),
 		'palettes' => array(
-			'1' => array('showitem' => ''),
+			'hidden_detail' => array('showitem' => 'hidden, detail_link'),
 		),
 		'columns' => array(
 	        
@@ -174,6 +174,26 @@
 							'disabled' => true,
 						],
 					],
+				],
+			],
+			
+			'slug' => [
+				'exclude' => true,
+				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.slug',
+				'config' => [
+					'default' => '',
+					'eval' => 'uniqueInSite',
+					'fallbackCharacter' => '-',
+					'generatorOptions' => [
+						'fields' => ['competition', 'season'],
+						'fieldSeparator' => '/',
+						'prefixParentPageSlug' => FALSE,
+						'replacements' => [
+							'/' => '',
+						],
+					],
+					'prependSlash' => FALSE,
+					'type' => 'slug',
 				],
 			],
 

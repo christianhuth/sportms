@@ -36,7 +36,7 @@
 				<source>Sonntag</source>
 			</trans-unit>
 			<trans-unit id="tx_sportms_general.detail_link">
-				<source>Link auf Einzelansicht möglich?</source>
+				<source>Einzelansicht möglich?</source>
 			</trans-unit>
 			<trans-unit id="tx_sportms_general.label">
 				<source>Bezeichnung</source>

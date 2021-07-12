@@ -2,17 +2,11 @@
 <T3DataStructure>
 	<sheets>
 		<base>EXT:sportms/Configuration/FlexForms/flexform_base.xml</base>
-		<dbStats>EXT:sportms/Configuration/FlexForms/flexform_dbStats.xml</dbStats>
 		<club>EXT:sportms/Configuration/FlexForms/flexform_club.xml</club>
-		<clubofficial>EXT:sportms/Configuration/FlexForms/flexform_clubofficial.xml</clubofficial>
-		<clubSection>EXT:sportms/Configuration/FlexForms/flexform_clubsection.xml</clubSection>
 		<competition>EXT:sportms/Configuration/FlexForms/flexform_competition.xml</competition>
 		<game>EXT:sportms/Configuration/FlexForms/flexform_game.xml</game>
-		<person>EXT:sportms/Configuration/FlexForms/flexform_person.xml</person>
 		<sport>EXT:sportms/Configuration/FlexForms/flexform_sport.xml</sport>
 		<team>EXT:sportms/Configuration/FlexForms/flexform_team.xml</team>
-		<teamSeason>EXT:sportms/Configuration/FlexForms/flexform_teamseason.xml</teamSeason>
-		<venue>EXT:sportms/Configuration/FlexForms/flexform_venue.xml</venue>
 		<season>EXT:sportms/Configuration/FlexForms/flexform_season.xml</season>
 	</sheets>
 </T3DataStructure>

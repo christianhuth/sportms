@@ -4,10 +4,10 @@
 <f:layout name="default"/>
 
 <f:section name="default">
-    <div id="tx-sportms-competitionseason-gameday">
+    <div class="tx-sportms-competitionseason-games">
         <f:render arguments="{competition: competitionSeason.competition, competitionSeason: competitionSeason}" partial="Competition/Navigation"/>
-        <f:render arguments="{competition: competitionSeason.competition, competitionSeason: competitionSeason, competitionSeasons: competitionSeasons, competitionSeasonGameday: competitionSeasonGameday, competitionSeasonGamedays: competitionSeasonGamedays, settings: settings}" partial="CompetitionSeason/Gameday/Filter"/>
-        <div class="tx-sportms-competitionseason-gameday">
+        <f:render arguments="{competition: competitionSeason.competition, competitionSeason: competitionSeason, competitionSeasons: competitionSeasons, competitionSeasonGameday: competitionSeasonGameday, competitionSeasonGamedays: competitionSeasonGamedays, settings: settings}" partial="CompetitionSeason/Games/Filter"/>
+        <div class="tx-sportms-competitionseason-games">
             <f:if condition="{games}">
                 <f:then>
                     <f:groupedFor as="gamesByDate" each="{games}" groupBy="date" groupKey="date">
@@ -15,7 +15,7 @@
                             <h4><f:render partial="ViewHelper/Date/DayOfTheWeek" arguments="{date: date}"/> <f:format.date format="{settings.format.dateLong}">{date}</f:format.date></h4>
                             <f:render section="tablestart"/>
                             <f:for as="game" each="{gamesByDate}">
-                                <f:render partial="CompetitionSeason/Gameday/Item" arguments="{game: game, settings: settings}"/>
+                                <f:render partial="CompetitionSeason/Games/Item" arguments="{game: game, settings: settings}"/>
                             </f:for>
                             <f:render section="tableend"/>
                         </div>

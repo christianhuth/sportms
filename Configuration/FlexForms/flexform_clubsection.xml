@@ -9,7 +9,6 @@
 			<settings.clubSection.showViews>
 				<TCEforms>
 					<label>Erlaube folgende Einzelansichten</label>
-					<displayCond>FIELD:base.switchableControllerActions:=:ClubSection->show</displayCond>
 					<config>
 						<type>select</type>
 						<renderType>selectMultipleSideBySide</renderType>
@@ -33,7 +32,6 @@
 			<settings.clubSection.showNavigation.enabled>
 				<TCEforms>
 					<label>Navigation für Einzelansichten?</label>
-					<displayCond>FIELD:base.switchableControllerActions:=:ClubSection->show</displayCond>
 					<config>
 						<default>1</default>
 						<renderType>checkboxToggle</renderType>
@@ -47,7 +45,6 @@
 					<label>Zeige folgende Navigationselemente</label>
 					<displayCond>
 						<AND>
-							<numIndex index="0">FIELD:base.switchableControllerActions:=:ClubSection->show</numIndex>
 							<numIndex index="1">FIELD:clubSection.settings.clubSection.showNavigation.enabled:REQ:TRUE</numIndex>
 						</AND>
 					</displayCond>

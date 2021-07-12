@@ -9,7 +9,6 @@
 			<settings.teamSeason.showViews>
 				<TCEforms>
 					<label>Erlaube folgende Einzelansichten</label>
-					<displayCond>FIELD:base.switchableControllerActions:=:TeamSeason->show</displayCond>
 					<config>
 						<type>select</type>
 						<renderType>selectMultipleSideBySide</renderType>
@@ -37,7 +36,6 @@
 			<settings.teamSeason.showNavigation.enabled>
 				<TCEforms>
 					<label>Navigation für Einzelansichten?</label>
-					<displayCond>FIELD:base.switchableControllerActions:=:TeamSeason->show</displayCond>
 					<config>
 						<default>1</default>
 						<renderType>checkboxToggle</renderType>
@@ -51,7 +49,6 @@
 					<label>Zeige folgende Navigationselemente</label>
 					<displayCond>
 						<AND>
-							<numIndex index="0">FIELD:base.switchableControllerActions:=:TeamSeason->show</numIndex>
 							<numIndex index="1">FIELD:teamSeason.settings.teamSeason.showNavigation.enabled:REQ:TRUE</numIndex>
 						</AND>
 					</displayCond>

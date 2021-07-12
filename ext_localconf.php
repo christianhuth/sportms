@@ -1,22 +1,45 @@
 <?php
 	
-	\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-		'Balumedien.' . $_EXTKEY,
-		'sportms',
-		[
-			'Club' => 'list, sections',
-			'ClubSection' => 'list',
-			'Competition' => 'list',
-			'CompetitionSeason' => 'games, goals, list, teams',
-			'Game' => 'history, index, report',
-			'Person' => 'officialProfile, playerProfile, refereeProfile',
-			'Team' => 'list, historyRecordGames, historyRecordPlayers',
-            'TeamSeason' => 'games, index, list'
-		]
-	);
+	defined('TYPO3_MODE') or die();
+	
+	use \TYPO3\CMS\Core\Utility\GeneralUtility;
+	
+	$vendor = 'Balumedien';
+	$_EXTKEY = 'sportms';
+	$extensionName = GeneralUtility::underscoredToUpperCamelCase($_EXTKEY);
+	
+	# Configure Plugins and their allowed Actions
+	$pluginNamesAndTheirActions = [];
+	$pluginNamesAndTheirActions[0]['name'] = 'Club';
+	$pluginNamesAndTheirActions[0]['cacheableActions'] = ['Club' => 'list'];
+	$pluginNamesAndTheirActions[0]['nonCacheableActions'] = [];
+	$pluginNamesAndTheirActions[1]['name'] = 'Competition';
+	$pluginNamesAndTheirActions[1]['cacheableActions'] = ['Competition' => 'list', 'CompetitionSeason' => 'clubs, games, teams'];
+	$pluginNamesAndTheirActions[1]['nonCacheableActions'] = [];
+	$pluginNamesAndTheirActions[2]['name'] = 'Game';
+	$pluginNamesAndTheirActions[2]['cacheableActions'] = ['Game' => 'list, history, index, report'];
+	$pluginNamesAndTheirActions[2]['nonCacheableActions'] = [];
+	$pluginNamesAndTheirActions[3]['name'] = 'Person';
+	$pluginNamesAndTheirActions[3]['cacheableActions'] = ['Person' => 'list'];
+	$pluginNamesAndTheirActions[3]['nonCacheableActions'] = [];
+	$pluginNamesAndTheirActions[4]['name'] = 'Team';
+	$pluginNamesAndTheirActions[4]['cacheableActions'] = ['Team' => 'list, historyOfficials, historyRecordGames, historyRecordPlayers', 'TeamSeason' => 'gamesByCompetition, gamesByDate, index'];
+	$pluginNamesAndTheirActions[4]['nonCacheableActions'] = [];
+	$pluginNamesAndTheirActions[5]['name'] = 'SportMS';
+	$pluginNamesAndTheirActions[5]['cacheableActions'] = ['SportMS' => 'dbstats'];
+	$pluginNamesAndTheirActions[5]['nonCacheableActions'] = [];
+	
+	for($i = 0; $i < count($pluginNamesAndTheirActions); $i++) {
+		\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+			$vendor . '.' . $extensionName,
+			$pluginNamesAndTheirActions[$i]['name'],
+			$pluginNamesAndTheirActions[$i]['cacheableActions'],
+			$pluginNamesAndTheirActions[$i]['nonCacheableActions']
+		);
+	}
 	
 	/* ===========================================================================
-		Add Plugin to PluginList
+		Add Plugins to PluginList
 	=========================================================================== */
 	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
 		'<INCLUDE_TYPOSCRIPT: source="FILE:EXT:sportms/Configuration/TSconfig/ContentElementWizard.txt">'
@@ -27,13 +50,12 @@
 	=========================================================================== */
 	if (TYPO3_MODE === 'BE') {
 		$icons = [
-			'ext-sportms-wizard-icon' => 'Extension.svg',
-			'ext-sportms-wizard-plugin-club-icon' => 'tx_sportms_domain_model_club.svg',
-			'ext-sportms-wizard-plugin-clubsection-icon' => 'tx_sportms_domain_model_clubsection.svg',
-			'ext-sportms-wizard-plugin-competition-icon' => 'tx_sportms_domain_model_game.svg',
-			'ext-sportms-wizard-plugin-game-icon' => 'tx_sportms_domain_model_game.svg',
-			'ext-sportms-wizard-plugin-person-icon' => 'tx_sportms_domain_model_person.svg',
-			'ext-sportms-wizard-plugin-team-icon' => 'tx_sportms_domain_model_team.svg',
+			'sportms-ce-plugin-sportms-icon' => 'Extension.svg',
+			'sportms-ce-plugin-club-icon' => 'tx_sportms_domain_model_club.svg',
+			'sportms-ce-plugin-competition-icon' => 'tx_sportms_domain_model_game.svg',
+			'sportms-ce-plugin-game-icon' => 'tx_sportms_domain_model_game.svg',
+			'sportms-ce-plugin-person-icon' => 'tx_sportms_domain_model_person.svg',
+			'sportms-ce-plugin-team-icon' => 'tx_sportms_domain_model_team.svg',
 		];
 		$iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
 		foreach ($icons as $identifier => $filename) {

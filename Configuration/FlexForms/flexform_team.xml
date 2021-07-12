@@ -9,16 +9,6 @@
 			<settings.team.uid>
 				<TCEforms>
 					<label>Zeige folgendes Team</label>
-					<displayCond>
-						<OR>
-							<numIndex index="01">FIELD:base.switchableControllerActions:=:Team->historyRecordGames</numIndex>
-							<numIndex index="02">FIELD:base.switchableControllerActions:=:Team->historyRecordPlayers</numIndex>
-							<numIndex index="10">FIELD:base.switchableControllerActions:=:TeamSeason->games</numIndex>
-							<numIndex index="11">FIELD:base.switchableControllerActions:=:TeamSeason->goals</numIndex>
-							<numIndex index="12">FIELD:base.switchableControllerActions:=:TeamSeason->index</numIndex>
-							<numIndex index="13">FIELD:base.switchableControllerActions:=:TeamSeason->squad</numIndex>
-						</OR>
-					</displayCond>
 					<config>
 						<type>group</type>
 						<internal_type>db</internal_type>
@@ -33,7 +23,6 @@
 			<settings.team.navigation.enabled>
 				<TCEforms>
 					<label>Navigation für Einzelansichten?</label>
-					<displayCond>FIELD:base.switchableControllerActions:=:Team->show</displayCond>
 					<config>
 						<default>1</default>
 						<renderType>checkboxToggle</renderType>
@@ -45,12 +34,6 @@
 			<settings.team.teams>
 				<TCEforms>
 					<label>Welche Teams sollen angezeigt werden?</label>
-					<displayCond>
-						<OR>
-							<numIndex index="1">FIELD:base.switchableControllerActions:=:Game->list</numIndex>
-							<numIndex index="2">FIELD:base.switchableControllerActions:=:Team->list</numIndex>
-						</OR>
-					</displayCond>
 					<config>
 						<foreign_table>tx_sportms_domain_model_team</foreign_table>
 						<foreign_table_where>ORDER BY label ASC</foreign_table_where>
@@ -62,12 +45,6 @@
 			<settings.team.teamsSelectbox>
 				<TCEforms>
 					<label>Selectbox für Teams?</label>
-					<displayCond>
-						<OR>
-							<numIndex index="1">FIELD:base.switchableControllerActions:=:Game->list</numIndex>
-							<numIndex index="2">FIELD:base.switchableControllerActions:=:Team->list</numIndex>
-						</OR>
-					</displayCond>
 					<config>
 						<default>1</default>
 						<renderType>checkboxToggle</renderType>

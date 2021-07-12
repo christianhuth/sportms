@@ -9,13 +9,6 @@
             <settings.person.uid>
                 <TCEforms>
                     <label>Zeige folgende Person</label>
-                    <displayCond>
-                        <OR>
-                            <numIndex index="1">FIELD:base.switchableControllerActions:=:Person->playerJerseys</numIndex>
-                            <numIndex index="2">FIELD:base.switchableControllerActions:=:Person->playerPerformance</numIndex>
-                            <numIndex index="3">FIELD:base.switchableControllerActions:=:Person->playerProfile</numIndex>
-                        </OR>
-                    </displayCond>
                     <config>
                         <type>group</type>
                         <internal_type>db</internal_type>
@@ -30,13 +23,6 @@
             <settings.person.playerNavigation.enabled>
                 <TCEforms>
                     <label>Navigation für Einzelansichten?</label>
-                    <displayCond>
-                        <OR>
-                            <numIndex index="1">FIELD:base.switchableControllerActions:=:Person->playerJerseys</numIndex>
-                            <numIndex index="2">FIELD:base.switchableControllerActions:=:Person->playerPerformance</numIndex>
-                            <numIndex index="3">FIELD:base.switchableControllerActions:=:Person->playerProfile</numIndex>
-                        </OR>
-                    </displayCond>
                     <config>
                         <default>1</default>
                         <renderType>checkboxToggle</renderType>
@@ -51,11 +37,6 @@
                     <displayCond>
                         <AND>
                             <numIndex index="1">FIELD:person.settings.person.playerNavigation.enabled:REQ:TRUE</numIndex>
-                            <OR>
-                                <numIndex index="1">FIELD:base.switchableControllerActions:=:Person->playerJerseys</numIndex>
-                                <numIndex index="2">FIELD:base.switchableControllerActions:=:Person->playerPerformance</numIndex>
-                                <numIndex index="3">FIELD:base.switchableControllerActions:=:Person->playerProfile</numIndex>
-                            </OR>
                         </AND>
                     </displayCond>
                     <config>
@@ -81,7 +62,6 @@
             <settings.person.persons>
                 <TCEforms>
                     <label>Welche Personen sollen angezeigt werden?</label>
-                    <displayCond>FIELD:base.switchableControllerActions:=:Person->list</displayCond>
                     <config>
                         <foreign_table>tx_sportms_domain_model_person</foreign_table>
                         <foreign_table_where>ORDER BY lastname ASC, firstname ASC</foreign_table_where>
@@ -93,7 +73,6 @@
             <settings.person.personsSelectbox>
                 <TCEforms>
                     <label>Selectbox für Personen?</label>
-                    <displayCond>FIELD:base.switchableControllerActions:=:Person->list</displayCond>
                     <config>
                         <default>1</default>
                         <renderType>checkboxToggle</renderType>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<T3DataStructure>
+	<sheets>
+		<base>EXT:sportms/Configuration/FlexForms/flexform_base.xml</base>
+		<club>EXT:sportms/Configuration/FlexForms/flexform_club.xml</club>
+		<sport>EXT:sportms/Configuration/FlexForms/flexform_sport.xml</sport>
+		<team>EXT:sportms/Configuration/FlexForms/flexform_team.xml</team>
+		<teamSeason>EXT:sportms/Configuration/FlexForms/flexform_teamseason.xml</teamSeason>
+		<season>EXT:sportms/Configuration/FlexForms/flexform_season.xml</season>
+	</sheets>
+</T3DataStructure>
