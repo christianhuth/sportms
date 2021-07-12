@@ -72,6 +72,15 @@
 			<trans-unit id="tx_sportms_action.person.playerDebutGoals">
 				<source>Debüttore</source>
 			</trans-unit>
+			<trans-unit id="tx_sportms_action.team.historyOfficials">
+				<source>Funktionärshistorie</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_action.team.historyRecordGames">
+				<source>Rekordspiele</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_action.team.historyRecordPlayers">
+				<source>Rekordspieler</source>
+			</trans-unit>
 			
 			<trans-unit id="tx_sportms_domain_model_club">
 				<source>Verein</source>
