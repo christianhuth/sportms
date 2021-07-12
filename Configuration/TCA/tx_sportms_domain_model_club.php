@@ -25,17 +25,29 @@ return array(
 		'showRecordFieldList' => '',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'name, favorite, colours, date_of_founding, year_of_founding, club_members,
-									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_club.tab_logos, logos,
-									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_club.tab_contact, addresses, phones, mails, urls,
-									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_club.tab_grounds, club_grounds, home_venues,
-									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_club.tab_sections, club_sections,
-									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_club.tab_officials, club_officials,
-									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab.visibility, hidden, detail_link, slug,
-		                            '),
+		'1' => array('showitem' => '--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab.general,
+										name,
+										colours,
+										--palette--;; founding,
+										club_members,
+									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_club.tab_logos,
+										logos,
+									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_club.tab_contact,
+										addresses, phones, mails, urls,
+									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_club.tab_grounds,
+										club_grounds, home_venues,
+									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_club.tab_sections,
+										club_sections,
+									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_club.tab_officials,
+										club_officials,
+									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab.visibility,
+										--palette--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.palette.visibility_general;visibility_general,
+										--palette--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.palette.visibility_detail;visibility_detail'),
 	),
 	'palettes' => array(
-		'1' => array('showitem' => ''),
+		'founding' => array('showitem' => 'date_of_founding, year_of_founding'),
+		'visibility_general' => array('showitem' => 'hidden, starttime, endtime'),
+		'visibility_detail' => array('showitem' => 'detail_link, slug')
 	),
 	'columns' => array(
         
@@ -137,7 +149,7 @@ return array(
 			),
 		),
 		'club_members' => array(
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_clubmembers',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_clubmembers.plural',
 			'config' => array(
 				'appearance' => array(
                     'enabledControls' => [
@@ -218,7 +230,7 @@ return array(
 			),
 		),
 		'mails' => array(
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_mails',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_mail.plural',
 			'config' => array(
 				'appearance' => array(
                     'enabledControls' => [
@@ -241,7 +253,7 @@ return array(
 			),
 		),
 		'urls' => array(
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_urls',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_url.plural',
 			'config' => array(
 				'appearance' => array(
                     'enabledControls' => [
@@ -366,7 +378,7 @@ return array(
 				'eval' => 'uniqueInSite',
 				'fallbackCharacter' => '-',
 				'generatorOptions' => [
-					'fields' => ['name'],
+					'fields' => ['uid', 'name'],
 					'fieldSeparator' => '/',
 					'prefixParentPageSlug' => FALSE,
 					'replacements' => [

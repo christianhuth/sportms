@@ -19,7 +19,13 @@
 		
 		public function clubMembersLabel(&$parameters, $parentObject): void {
 			$record = BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
-			$newLabel = $record['members'] . ' Mitglieder ' . '(' . date('d.m.Y', $record['date']) . ')';
+			$newLabel = date('d.m.Y', $record['date']) . ':' . $record['members'] . ' ' . LocalizationUtility::translate('tx_sportms_domain_model_clubmembers.members', 'sportms');
+			$parameters['title'] = $newLabel;
+		}
+		
+		public function clubSectionMembersLabel(&$parameters, $parentObject): void {
+			$record = BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
+			$newLabel = date('d.m.Y', $record['date']) . ':' . $record['members'] . ' ' . LocalizationUtility::translate('tx_sportms_domain_model_clubsectionmembers.members', 'sportms');
 			$parameters['title'] = $newLabel;
 		}
 		

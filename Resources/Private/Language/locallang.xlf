@@ -155,6 +155,42 @@
 			<trans-unit id="tx_sportms_domain_model_club.logos">
 				<source>Logos</source>
 			</trans-unit>
+
+
+            <!-- Domain Model ClubMembers -->
+			<trans-unit id="tx_sportms_domain_model_clubmembers">
+				<source>Vereinsmitglieder</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_clubmembers.plural">
+				<source>Vereinsmitglieder</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_clubmembers.singular">
+				<source>Vereinsmitglieder</source>
+			</trans-unit>
+            <trans-unit id="tx_sportms_domain_model_clubmembers.members">
+                <source>Mitglieder</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_clubmembers.date">
+                <source>Erfassungsdatum</source>
+            </trans-unit>
+
+
+			<!-- Domain Model ClubSectionMembers -->
+			<trans-unit id="tx_sportms_domain_model_clubsectionmembers">
+				<source>Abteilungsmitglieder</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_clubsectionmembers.plural">
+				<source>Abteilungsmitglieder</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_clubsectionmembers.singular">
+				<source>Abteilungsmitglieder</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_clubsectionmembers.members">
+				<source>Mitglieder</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_clubsectionmembers.date">
+				<source>Erfassungsdatum</source>
+			</trans-unit>
 			
 			
 			<trans-unit id="tx_sportms_domain_model_competition">
@@ -234,6 +270,33 @@
 			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_game.result_special_reason.4">
 				<source>Nicht-Antritt Gast</source>
+			</trans-unit>
+
+
+			<!-- Domain Model Mail -->
+			<trans-unit id="tx_sportms_domain_model_mail">
+				<source>Mail</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_mail.plural">
+				<source>Mails</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_mail.singular">
+				<source>Mail</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_mail.mail">
+				<source>Mail-Adresse</source>
+			</trans-unit>
+
+
+			<!-- Domain Model MailType -->
+			<trans-unit id="tx_sportms_domain_model_mailtype">
+				<source>Mailart</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_mailtype.plural">
+				<source>Mailarten</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_mailtype.singular">
+				<source>Mailart</source>
 			</trans-unit>
 
 
@@ -396,6 +459,21 @@
 			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_team.singular">
 				<source>Mannschaft</source>
+			</trans-unit>
+
+
+			<!-- Domain Model Url -->
+			<trans-unit id="tx_sportms_domain_model_url">
+				<source>URL</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_url.plural">
+				<source>URLs</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_url.singular">
+				<source>URL</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_url.url">
+				<source>URL</source>
 			</trans-unit>
 
 			<!-- Navigation -->

@@ -406,7 +406,7 @@ return array(
             ),
         ),
         'mails' => array(
-            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_mails',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_mail.plural',
             'config' => array(
 				'appearance' => array(
 					'enabledControls' => [

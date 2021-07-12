@@ -54,7 +54,7 @@
 				$club = $this->clubRepository->findByUid($clubUid);
 			}
 			$this->view->assign('club', $club);
-			$this->pagetitleForClub($club, "Profil");
+			$this->pagetitleForClub($club, "Abteilungen");
 		}
 
         /**

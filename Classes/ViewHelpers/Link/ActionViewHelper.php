@@ -162,13 +162,12 @@
 		protected function initListOfControllersAndTheirActions(): void {
 			$listofControllersAndTheirActions = array();
 			$listofControllersAndTheirActions['Club'] = ['list', 'sections'];
-			$listofControllersAndTheirActions['ClubSection'] = ['list'];
 			$listofControllersAndTheirActions['Competition'] = ['list'];
-			$listofControllersAndTheirActions['CompetitionSeason'] = ['games', 'teams'];
+			$listofControllersAndTheirActions['CompetitionSeason'] = ['clubs', 'games', 'teams'];
 			$listofControllersAndTheirActions['Game'] = ['history', 'index', 'list', 'report'];
 			$listofControllersAndTheirActions['Person'] = ['list', 'officialProfile', 'playerJerseys', 'playerProfile', 'refereeProfile'];
 			$listofControllersAndTheirActions['Team'] = ['historyOfficials', 'historyRecordGames', 'historyRecordPlayers', 'list'];
-			$listofControllersAndTheirActions['TeamSeason'] = ['gamesByCompetition', 'gamesByDate', 'goals', 'index', 'squad'];
+			$listofControllersAndTheirActions['TeamSeason'] = ['gamesByCompetition', 'gamesByDate', 'index'];
 			$this->setListOfControllersAndTheirActions($listofControllersAndTheirActions);
 		}
 		

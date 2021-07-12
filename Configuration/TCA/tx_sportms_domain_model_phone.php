@@ -27,11 +27,15 @@ return array(
 		'showRecordFieldList' => '',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'area_code, calling_number, international_area_code, phone_type, public,
-		                            '),
+		'1' => array('showitem' => '--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab.general,
+										phone_type,
+										--palette--;;phone,
+		                            --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab.visibility,
+		                                --palette--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.palette.visibility_general;visibility_general'),
 	),
 	'palettes' => array(
-		'1' => array('showitem' => ''),
+		'phone' => array('showitem' => 'international_area_code, area_code, calling_number'),
+		'visibility_general' => array('showitem' => 'hidden, starttime, endtime')
 	),
 	'columns' => array(
         
@@ -94,29 +98,28 @@ return array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_phone.area_code',
 			'config' => array(
-				'type' => 'input',
+				'eval' => 'required,trim',
 				'size' => 255,
-				'eval' => 'trim'
+				'type' => 'input',
 			),
 		),
 		'calling_number' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_phone.calling_number',
 			'config' => array(
-                'eval' => 'required',
-				'type' => 'input',
+				'eval' => 'required,trim',
 				'size' => 255,
-				'eval' => 'trim'
+				'type' => 'input',
 			),
 		),
 		'international_area_code' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_phone.international_area_code',
 			'config' => array(
-			    'eval' => 'required',
+			    'eval' => 'int',
 				'foreign_table' => 'static_countries',
 				'items' => Array (
-                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ""),
+                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', 0),
 				),
 				'maxItems' => 1,
 				'renderType' => 'selectSingle',
@@ -131,7 +134,7 @@ return array(
                 'foreign_table' => 'tx_sportms_domain_model_phonetype',
                 'foreign_table_where' => 'ORDER BY label ASC',
                 'items' => array(
-                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ""),
+                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', 0),
                 ),
                 'maxItems' => 1,
                 'minItems' => 1,
@@ -140,15 +143,6 @@ return array(
                 'type' => 'select',
             ),
         ),
-		'public' => array(
-			'exclude' => 1,
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.public',
-			'config' => array(
-				'default' => FALSE,
-				'renderType' => 'checkboxToggle',
-				'type' => 'check',
-			),
-		),
 		
 	),
 );

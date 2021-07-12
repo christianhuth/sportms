@@ -5,7 +5,7 @@
 <f:if condition="{club}">
   <f:then>
     <div class="tx-sportms-club-in-table">
-      <sportms:link.action action="index" controller="Club" Club="{club}">
+      <sportms:link.action action="sections" controller="Club" Club="{club}">
         <f:render partial="ViewHelper/Club/LogoInTable" arguments="{club: club}"/>
         <div class="tx-sportms-club-label-in-table">
           {club.name}

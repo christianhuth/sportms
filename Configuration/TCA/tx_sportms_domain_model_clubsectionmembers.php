@@ -17,9 +17,10 @@ return array(
         ),
 		'hideTable' => TRUE,
 		'iconfile' => 'EXT:sportms/Resources/Public/Icons/tx_sportms_domain_model_clubsectionmembers.svg',
-        'label' => 'date',
+	    'label' => '',
+	    'label_userFunc' => \Balumedien\Sportms\Configuration\TCA\UserFunc\UserFunc::class . '->clubSectionMembersLabel',
         'searchFields' => '',
-        'title'	=> 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_clubsectionmembers',
+        'title'	=> 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_clubsectionmembers',
         'tstamp' => 'tstamp',
 		'versioningWS' => TRUE,
     ),
@@ -27,11 +28,14 @@ return array(
 		'showRecordFieldList' => '',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'members, date,
-		                            '),
+		'1' => array('showitem' => '--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab.general,
+										--palette--;;members,
+		                            --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab.visibility,
+		                                --palette--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.palette.visibility_general;visibility_general'),
 	),
 	'palettes' => array(
-		'1' => array('showitem' => ''),
+		'members' => array('showitem' => 'date, members'),
+		'visibility_general' => array('showitem' => 'hidden, starttime, endtime')
 	),
 	'columns' => array(
         
@@ -97,7 +101,7 @@ return array(
 
         'members' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_clubsectionmembers.members',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_clubsectionmembers.members',
             'config' => array(
                 'type' => 'input',
                 'size' => 30,
@@ -106,7 +110,7 @@ return array(
         ),
 		'date' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_clubsectionmembers.date',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_clubsectionmembers.date',
 			'config' => array(
 				'type' => 'input',
 				'size' => 8,

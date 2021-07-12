@@ -9,7 +9,14 @@
         <f:render partial="Address/Show" arguments="{address: club.addresses.0}"/>
     </td>
     <td>
-        <f:render partial="Url/Show" arguments="{url: club.urls.0}"/>
+        <f:if condition="{club.urls}">
+            <f:then>
+                <f:link.external uri="{club.urls.0.url}" target="_blank">{club.urls.0.url}</f:link.external>
+            </f:then>
+            <f:else>
+                <div class="tx-sportms-table-center">-</div>
+            </f:else>
+        </f:if>
     </td>
 </tr>
 

@@ -10,7 +10,7 @@
                 <thead>
                 <tr>
                     <th><f:translate key="tx_sportms_domain_model_club"/></th>
-                    <th><f:translate key="tx_sportms_domain_model_adresse"/></th>
+                    <th><f:translate key="tx_sportms_domain_model_address"/></th>
                     <th><f:translate key="tx_sportms_domain_model_url"/></th>
                 </tr>
                 </thead>
@@ -18,7 +18,7 @@
                 <f:if condition="{clubs}">
                     <f:then>
                         <f:for as="club" each="{clubs}">
-                            <f:render arguments="{club: club, settings: settings}" partial="Club/List/Item"/>
+                            <f:render arguments="{club: club}" partial="Club/List/Item"/>
                         </f:for>
                     </f:then>
                     <f:else>

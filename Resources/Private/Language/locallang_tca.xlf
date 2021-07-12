@@ -36,7 +36,7 @@
 				<source>Sonntag</source>
 			</trans-unit>
 			<trans-unit id="tx_sportms_general.detail_link">
-				<source>Einzelansicht möglich?</source>
+				<source>Einzelansicht ermöglichen?</source>
 			</trans-unit>
 			<trans-unit id="tx_sportms_general.label">
 				<source>Bezeichnung</source>
@@ -64,6 +64,9 @@
 			</trans-unit>
             <trans-unit id="tx_sportms_general.palette.visibility_general">
                 <source>Generelle Sichtbarkeit im Frontend</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.palette.visibility_detail">
+                <source>Sichtbarkeit der Einzelansicht</source>
             </trans-unit>
             <trans-unit id="tx_sportms_general.tab.general">
                 <source>Allgemein</source>
@@ -157,18 +160,6 @@
             </trans-unit>
 
 
-            <!-- Domain Model ClubMembers -->
-			<trans-unit id="tx_sportms_domain_model_clubmembers">
-				<source>Vereinsmitglieder</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_clubmembers.members">
-				<source>Mitgliederanzahl</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_clubmembers.date">
-				<source>Erfassungsdatum</source>
-			</trans-unit>
-
-
 			<!-- Domain Model ClubOfficial -->
 			<trans-unit id="tx_sportms_domain_model_clubofficial">
 				<source>Vereinsfunktionär</source>
@@ -211,18 +202,6 @@
 			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_clubsection.tab_teams">
 				<source>Mannschaften</source>
-			</trans-unit>
-
-
-			<!-- Domain Model ClubSectionMembers -->
-			<trans-unit id="tx_sportms_domain_model_clubsectionmembers">
-				<source>Abteilungsmitglieder</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_clubsectionmembers.members">
-				<source>Mitgliederanzahl</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_clubsectionmembers.date">
-				<source>Erfassungsdatum</source>
 			</trans-unit>
 
 
@@ -789,27 +768,6 @@
             </trans-unit>
 
 
-			<!-- Domain Model Mail -->
-			<trans-unit id="tx_sportms_domain_model_mail">
-				<source>Mail</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_mails">
-				<source>Mails</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_mail.mail">
-				<source>Mail-Adresse</source>
-			</trans-unit>
-
-
-			<!-- Domain Model MailType -->
-			<trans-unit id="tx_sportms_domain_model_mailtype">
-				<source>Mailart</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_mailtypes">
-				<source>Mailarten</source>
-			</trans-unit>
-
-
 			<!-- Domain Model Person -->
 			<trans-unit id="tx_sportms_domain_model_person">
 				<source>Person</source>
@@ -1251,18 +1209,6 @@
 			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_teamseasonsquadmember.tab_transfer">
 				<source>Transfer</source>
-			</trans-unit>
-
-
-			<!-- Domain Model Url -->
-			<trans-unit id="tx_sportms_domain_model_url">
-				<source>URL</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_urls">
-				<source>URLs</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_url.url">
-				<source>URL</source>
 			</trans-unit>
 
 

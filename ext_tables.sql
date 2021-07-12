@@ -350,7 +350,6 @@ CREATE TABLE tx_sportms_domain_model_mail (
     foreign_table varchar(255) DEFAULT '' NOT NULL,
 	mail varchar(255) DEFAULT '' NOT NULL,
 	mail_type int(11) unsigned DEFAULT NULL,
-	public tinyint(4) unsigned DEFAULT '0' NULL,
 	sorting int(11) DEFAULT '0' NOT NULL
 );
 
@@ -422,7 +421,6 @@ CREATE TABLE tx_sportms_domain_model_phone (
 	calling_number varchar(255) DEFAULT '' NOT NULL,
 	international_area_code varchar(255) DEFAULT '' NOT NULL,
 	phone_type int(11) unsigned DEFAULT NULL,
-	public tinyint(4) unsigned DEFAULT '0' NOT NULL,
 	sorting int(11) DEFAULT '0' NOT NULL
 );
 
@@ -607,7 +605,6 @@ CREATE TABLE tx_sportms_domain_model_url (
     foreign_uid int(11) DEFAULT 0 NOT NULL,
     foreign_table varchar(255) DEFAULT '' NOT NULL,
 	url varchar(255) DEFAULT '0' NOT NULL,
-	public tinyint(4) unsigned DEFAULT '0' NOT NULL,
 	sorting int(11) DEFAULT '0' NOT NULL
 );
 

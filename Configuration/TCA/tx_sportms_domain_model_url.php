@@ -27,11 +27,13 @@ return array(
 		'showRecordFieldList' => '',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'url, public,
-		                            '),
+		'1' => array('showitem' => '--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab.general,
+										url,
+		                            --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab.visibility,
+		                                --palette--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.palette.visibility_general;visibility_general'),
 	),
 	'palettes' => array(
-		'1' => array('showitem' => ''),
+		'visibility_general' => array('showitem' => 'hidden, starttime, endtime')
 	),
 	'columns' => array(
         
@@ -103,15 +105,6 @@ return array(
 				'renderType' => 'inputLink',
 				'size' => 255,
 				'type' => 'input',
-			),
-		),
-		'public' => array(
-			'exclude' => 1,
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.public',
-			'config' => array(
-				'default' => FALSE,
-				'renderType' => 'checkboxToggle',
-				'type' => 'check',
 			),
 		),
 		

@@ -17,7 +17,7 @@ return array(
 		'iconfile' => 'EXT:sportms/Resources/Public/Icons/tx_sportms_domain_model_mailtype.svg',
 		'label' => 'label',
 		'searchFields' => '',
-		'title'	=> 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_mailtype',
+		'title'	=> 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_mailtype',
 		'tstamp' => 'tstamp',
 		'versioningWS' => TRUE,
 	),
