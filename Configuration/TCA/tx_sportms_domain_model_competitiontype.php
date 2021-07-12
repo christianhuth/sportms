@@ -26,7 +26,7 @@ return array(
 	),
 	'types' => array(
 		'1' => array('showitem' => 'label,
-		                            '),
+		                            --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab_visibility, hidden, slug'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -104,6 +104,26 @@ return array(
 				'eval' => 'trim, required'
 			),
 		),
+		
+		'slug' => [
+			'exclude' => true,
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.slug',
+			'config' => [
+				'default' => '',
+				'eval' => 'uniqueInSite',
+				'fallbackCharacter' => '-',
+				'generatorOptions' => [
+					'fields' => ['label'],
+					'fieldSeparator' => '-',
+					'prefixParentPageSlug' => FALSE,
+					'replacements' => [
+						'/' => '',
+					],
+				],
+				'prependSlash' => FALSE,
+				'type' => 'slug',
+			],
+		],
 		
 	),
 );

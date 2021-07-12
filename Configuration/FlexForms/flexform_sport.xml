@@ -6,23 +6,19 @@
 		</TCEforms>
 		<type>array</type>
 		<el>
-			<settings.sport.uid>
+			<settings.sport.selectbox.enabled>
 				<TCEforms>
-					<label>Zeige folgende Sportart</label>
+					<label>Selectbox für Sportarten anzeigen?</label>
 					<config>
-						<type>group</type>
-						<internal_type>db</internal_type>
-						<allowed>tx_sportms_domain_model_sport</allowed>
-						<size>1</size>
-						<maxItems>1</maxItems>
-						<minItems>0</minItems>
-						<show_thumbs>1</show_thumbs>
+						<default>1</default>
+						<renderType>checkboxToggle</renderType>
+						<type>check</type>
 					</config>
 				</TCEforms>
-			</settings.sport.uid>
+			</settings.sport.selectbox.enabled>
 			<settings.sport.sports>
 				<TCEforms>
-					<label>Welche Sportarten sollen angezeigt werden?</label>
+					<label>Welche Sportarten sollen berücksichtigt werden?</label>
 					<config>
 						<foreign_table>tx_sportms_domain_model_sport</foreign_table>
 						<foreign_table_where>ORDER BY label ASC</foreign_table_where>
@@ -31,58 +27,6 @@
 					</config>
 				</TCEforms>
 			</settings.sport.sports>
-			<settings.sport.sportsSelectbox>
-				<TCEforms>
-					<label>Selectbox für Sportarten?</label>
-					<config>
-						<default>1</default>
-						<renderType>checkboxToggle</renderType>
-						<type>check</type>
-					</config>
-				</TCEforms>
-			</settings.sport.sportsSelectbox>
-			<settings.sportAgeGroup.sportAgeGroups>
-				<TCEforms>
-					<label>Welche Altersgruppen sollen angezeigt werden?</label>
-					<config>
-						<foreign_table>tx_sportms_domain_model_sportagegroup</foreign_table>
-						<foreign_table_where>ORDER BY label ASC</foreign_table_where>
-						<renderType>selectMultipleSideBySide</renderType>
-						<type>select</type>
-					</config>
-				</TCEforms>
-			</settings.sportAgeGroup.sportAgeGroups>
-			<settings.sportAgeGroup.sportAgeGroupsSelectbox>
-				<TCEforms>
-					<label>Selectbox für Altersgruppen?</label>
-					<config>
-						<default>1</default>
-						<renderType>checkboxToggle</renderType>
-						<type>check</type>
-					</config>
-				</TCEforms>
-			</settings.sportAgeGroup.sportAgeGroupsSelectbox>
-			<settings.sportAgeLevel.sportAgeLevels>
-				<TCEforms>
-					<label>Welche Alterstufen sollen angezeigt werden?</label>
-					<config>
-						<foreign_table>tx_sportms_domain_model_sportagelevel</foreign_table>
-						<foreign_table_where>ORDER BY label ASC</foreign_table_where>
-						<renderType>selectMultipleSideBySide</renderType>
-						<type>select</type>
-					</config>
-				</TCEforms>
-			</settings.sportAgeLevel.sportAgeLevels>
-			<settings.sportAgeLevel.sportAgeLevelsSelectbox>
-				<TCEforms>
-					<label>Selectbox für Alterstufen?</label>
-					<config>
-						<default>1</default>
-						<renderType>checkboxToggle</renderType>
-						<type>check</type>
-					</config>
-				</TCEforms>
-			</settings.sportAgeLevel.sportAgeLevelsSelectbox>
 		</el>
 	</ROOT>
 </T3DataStructure>

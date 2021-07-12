@@ -102,8 +102,6 @@ plugin.tx_sportms {
 
 }
 
-lib.pageheadline {
-    data = test
-    value = test
-    wrap = <h1>|</h1>
+page.includeCSS {
+    sportms = {$plugin.tx_sportms.view.pathToCssFile}
 }

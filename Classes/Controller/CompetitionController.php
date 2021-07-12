@@ -6,8 +6,6 @@
 	 * CompetitionController
 	 */
 	class CompetitionController extends SportMSBaseController {
-		
-		protected $model = 'competition';
 
         /**
          * @var \Balumedien\Sportms\Domain\Repository\CompetitionRepository
@@ -57,11 +55,11 @@
 		 * Use this method to solve tasks which all actions have in common, when VIEW-Context is needed
 		 */
 		public function initializeActions() {
-			$listOfPossibleShowViews = 'index,games,teams';
-			$this->determineShowView($this->model);
-			$this->determineShowViews($this->model, $listOfPossibleShowViews);
-			$this->determineShowNavigationViews($this->model, $listOfPossibleShowViews);
-			$this->view->assign('settings', $this->settings);
+			#$listOfPossibleShowViews = 'index,games,teams';
+			#$this->determineShowView($this->model);
+			#$this->determineShowViews($this->model, $listOfPossibleShowViews);
+			#$this->determineShowNavigationViews($this->model, $listOfPossibleShowViews);
+			#$this->view->assign('settings', $this->settings);
 		}
 		
 		/**
@@ -73,8 +71,8 @@
 			$competitions = $this->competitionRepository->findAll($this->getSportsFilter(), $this->getSportAgeGroupsFilter(), $this->getSportAgeLevelsFilter(), $this->getCompetitionTypesFilter(), $this->getCompetitionsFilter());
 			$this->view->assign('competitions', $competitions);
 			/* FRONTEND FILTERS */
-			if($this->settings['sport']['sportsSelectbox'] || $this->settings['competition']['competitionTypesSelectbox']) {
-				if($this->settings['sport']['sportsSelectbox']) {
+			if($this->settings['sport']['selectbox']['enabled'] || $this->settings['competitionType']['selectbox']['enabled']) {
+				if($this->settings['sport']['selectbox']['enabled']) {
 					$sportsSelectbox = $this->sportRepository->findAll($this->getSportsFilter(FALSE));
 					$this->view->assign('sportsSelectbox', $sportsSelectbox);
 					if($this->settings['sport']['selected'] && $this->settings['sportAgeGroup']['sportAgeGroupsSelectbox']) {
@@ -86,23 +84,12 @@
 						}
 					}
 				}
-				if($this->settings['competitionType']['competitionTypesSelectbox']) {
+				if($this->settings['competitionType']['selectbox']['enabled']) {
 					$competitionTypesSelectbox = $this->competitionTypeRepository->findAll($this->getCompetitionTypesFilter(FALSE));
 					$this->view->assign('competitionTypesSelectbox', $competitionTypesSelectbox);
 				}
 			}
             $this->pagetitle("Wettbewerbe", "Liste");
-		}
-		
-		/**
-		 * @param \Balumedien\Sportms\Domain\Model\Competition $competition
-		 */
-		public function gamesAction(\Balumedien\Sportms\Domain\Model\Competition $competition = NULL): void {
-			if($competition === NULL) {
-				$competitionUid = $this->settings['competition']['uid'];
-				$competition = $this->competitionRepository->findByUid($competitionUid);
-			}
-			$this->view->assign('competition', $competition);
 		}
 		
 	}

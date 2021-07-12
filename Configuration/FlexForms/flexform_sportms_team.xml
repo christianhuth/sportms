@@ -5,7 +5,6 @@
 		<club>EXT:sportms/Configuration/FlexForms/flexform_club.xml</club>
 		<sport>EXT:sportms/Configuration/FlexForms/flexform_sport.xml</sport>
 		<team>EXT:sportms/Configuration/FlexForms/flexform_team.xml</team>
-		<teamSeason>EXT:sportms/Configuration/FlexForms/flexform_teamseason.xml</teamSeason>
 		<season>EXT:sportms/Configuration/FlexForms/flexform_season.xml</season>
 	</sheets>
 </T3DataStructure>

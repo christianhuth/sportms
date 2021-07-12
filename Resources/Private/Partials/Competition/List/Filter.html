@@ -1,8 +1,8 @@
 <html data-namespace-typo3-fluid="true"
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
-<f:if condition="{settings.sport.sportsSelectbox} ||
-                 {settings.competitionType.competitionTypesSelectbox}">
+<f:if condition="{settings.sport.selectbox.enabled} ||
+                 {settings.competitionType.selectbox.enabled}">
     <div class="tx-sportms-filter">
         <f:form action="list" class="form-horizontal" controller="Competition" extensionName="sportms" method="POST" pageUid="{settings.competition.listPid}" pluginName="Competition">
             <f:render arguments="{options: sportsSelectbox,             settings: settings,     value: settings.sport.selected}" partial="Form/Select/Sport"/>

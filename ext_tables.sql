@@ -174,6 +174,7 @@ CREATE TABLE tx_sportms_domain_model_competitionseasongameday (
 #
 CREATE TABLE tx_sportms_domain_model_competitiontype (
 	label varchar(255) DEFAULT NULL,
+    slug varchar(2048) DEFAULT '',
 	sorting int(11) DEFAULT '0' NOT NULL
 );
 

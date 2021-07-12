@@ -20,32 +20,9 @@
 					</config>
 				</TCEforms>
 			</settings.competition.uid>
-			<settings.competition.showViews>
-				<TCEforms>
-					<label>Erlaube folgende Einzelansichten</label>
-					<config>
-						<type>select</type>
-						<renderType>selectMultipleSideBySide</renderType>
-						<items type="array">
-							<numIndex index="0">
-								<numIndex index="0">Index</numIndex>
-								<numIndex index="1">index</numIndex>
-							</numIndex>
-							<numIndex index="1">
-								<numIndex index="0">Games</numIndex>
-								<numIndex index="1">games</numIndex>
-							</numIndex>
-							<numIndex index="2">
-								<numIndex index="0">Teams</numIndex>
-								<numIndex index="1">teams</numIndex>
-							</numIndex>
-						</items>
-					</config>
-				</TCEforms>
-			</settings.competition.showViews>
 			<settings.competition.navigation.enabled>
 				<TCEforms>
-					<label>Navigation für Einzelansichten?</label>
+					<label>Wettbewerbs-Navigation anzeigen?</label>
 					<config>
 						<default>1</default>
 						<renderType>checkboxToggle</renderType>
@@ -54,37 +31,19 @@
 					<onChange>reload</onChange>
 				</TCEforms>
 			</settings.competition.navigation.enabled>
-			<settings.competition.showNavigation.views>
+			<settings.competition.selectbox.enabled>
 				<TCEforms>
-					<label>Zeige folgende Navigationselemente</label>
-					<displayCond>
-						<AND>
-							<numIndex index="1">FIELD:competition.settings.competition.navigation.enabled:REQ:TRUE</numIndex>
-						</AND>
-					</displayCond>
+					<label>Selectbox für Wettbewerbe anzeigen?</label>
 					<config>
-						<type>select</type>
-						<renderType>selectMultipleSideBySide</renderType>
-						<items type="array">
-							<numIndex index="0">
-								<numIndex index="0">Index</numIndex>
-								<numIndex index="1">index</numIndex>
-							</numIndex>
-							<numIndex index="1">
-								<numIndex index="0">Games</numIndex>
-								<numIndex index="1">games</numIndex>
-							</numIndex>
-							<numIndex index="2">
-								<numIndex index="0">Teams</numIndex>
-								<numIndex index="1">teams</numIndex>
-							</numIndex>
-						</items>
+						<default>1</default>
+						<renderType>checkboxToggle</renderType>
+						<type>check</type>
 					</config>
 				</TCEforms>
-			</settings.competition.showNavigation.views>
+			</settings.competition.selectbox.enabled>
 			<settings.competition.competitions>
 				<TCEforms>
-					<label>Welche Wettbewerbe sollen angezeigt werden?</label>
+					<label>Welche Wettbewerbe sollen berücksichtigt werden?</label>
 					<config>
 						<foreign_table>tx_sportms_domain_model_competition</foreign_table>
 						<foreign_table_where>ORDER BY label ASC</foreign_table_where>
@@ -93,19 +52,19 @@
 					</config>
 				</TCEforms>
 			</settings.competition.competitions>
-			<settings.competition.competitionsSelectbox>
+			<settings.competitionType.selectbox.enabled>
 				<TCEforms>
-					<label>Selectbox für Wettbewerbe?</label>
+					<label>Selectbox für Wettbewerbsarten anzeigen?</label>
 					<config>
 						<default>1</default>
 						<renderType>checkboxToggle</renderType>
 						<type>check</type>
 					</config>
 				</TCEforms>
-			</settings.competition.competitionsSelectbox>
+			</settings.competitionType.selectbox.enabled>
 			<settings.competitionType.competitionTypes>
 				<TCEforms>
-					<label>Welche Wettbewerbsarten sollen angezeigt werden?</label>
+					<label>Welche Wettbewerbsarten sollen berücksichtigt werden?</label>
 					<config>
 						<foreign_table>tx_sportms_domain_model_competitiontype</foreign_table>
 						<foreign_table_where>ORDER BY label ASC</foreign_table_where>
@@ -114,37 +73,16 @@
 					</config>
 				</TCEforms>
 			</settings.competitionType.competitionTypes>
-			<settings.competitionType.competitionTypesSelectbox>
+			<settings.competitionSeasonGameday.selectbox.enbaled>
 				<TCEforms>
-					<label>Selectbox für Wettbewerbsarten?</label>
+					<label>Selectbox für Spieltage anzeigen?</label>
 					<config>
 						<default>1</default>
 						<renderType>checkboxToggle</renderType>
 						<type>check</type>
 					</config>
 				</TCEforms>
-			</settings.competitionType.competitionTypesSelectbox>
-			<settings.competitionSeasonGameday.competitionSeasonGamedays>
-				<TCEforms>
-					<label>Welche Spieltage sollen angezeigt werden?</label>
-					<config>
-						<foreign_table>tx_sportms_domain_model_competitionseasongameday</foreign_table>
-						<foreign_table_where>ORDER BY label ASC</foreign_table_where>
-						<renderType>selectMultipleSideBySide</renderType>
-						<type>select</type>
-					</config>
-				</TCEforms>
-			</settings.competitionSeasonGameday.competitionSeasonGamedays>
-			<settings.competitionSeasonGameday.competitionSeasonGamedaysSelectbox>
-				<TCEforms>
-					<label>Selectbox für Spieltage?</label>
-					<config>
-						<default>1</default>
-						<renderType>checkboxToggle</renderType>
-						<type>check</type>
-					</config>
-				</TCEforms>
-			</settings.competitionSeasonGameday.competitionSeasonGamedaysSelectbox>
+			</settings.competitionSeasonGameday.selectbox.enbaled>
 		</el>
 	</ROOT>
 </T3DataStructure>

@@ -20,9 +20,19 @@
                     </config>
                 </TCEforms>
             </settings.season.uid>
+            <settings.season.selectbox.enabled>
+                <TCEforms>
+                    <label>Selectbox für Saisons anzeigen?</label>
+                    <config>
+                        <default>1</default>
+                        <renderType>checkboxToggle</renderType>
+                        <type>check</type>
+                    </config>
+                </TCEforms>
+            </settings.season.selectbox.enabled>
             <settings.season.seasons>
                 <TCEforms>
-                    <label>Welche Saisons sollen angezeigt werden?</label>
+                    <label>Welche Saisons sollen berücksichtigt werden?</label>
                     <config>
                         <foreign_table>tx_sportms_domain_model_season</foreign_table>
                         <foreign_table_where>ORDER BY tx_sportms_domain_model_season.label DESC</foreign_table_where>
@@ -31,16 +41,6 @@
                     </config>
                 </TCEforms>
             </settings.season.seasons>
-            <settings.season.seasonsSelectbox>
-                <TCEforms>
-                    <label>Selectbox für Saisons?</label>
-                    <config>
-                        <default>1</default>
-                        <renderType>checkboxToggle</renderType>
-                        <type>check</type>
-                    </config>
-                </TCEforms>
-            </settings.season.seasonsSelectbox>
         </el>
     </ROOT>
 </T3DataStructure>

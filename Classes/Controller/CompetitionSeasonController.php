@@ -52,7 +52,7 @@
          * @param CompetitionSeason $competitionSeason
          * @param CompetitionSeasonGameday|null $competitionSeasonGameday
          */
-        public function gamedayAction(CompetitionSeason $competitionSeason = NULL, CompetitionSeasonGameday $competitionSeasonGameday = NULL): void {
+        public function gamesAction(CompetitionSeason $competitionSeason = NULL, CompetitionSeasonGameday $competitionSeasonGameday = NULL): void {
 	        if($competitionSeason === NULL) {
                 $competitionSeason = $this->determineCompetitionSeason();
             }

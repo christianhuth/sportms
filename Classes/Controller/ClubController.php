@@ -9,8 +9,6 @@
 	 */
 	class ClubController extends SportMSBaseController {
 		
-		protected $model = 'club';
-		
 		/**
 		 * @var \Balumedien\Sportms\Domain\Repository\ClubRepository
 		 * @TYPO3\CMS\Extbase\Annotation\Inject
@@ -48,12 +46,10 @@
 		}
 		
 		/**
-		 * @param \Balumedien\Sportms\Domain\Model\Club $club
+		 * @param Club $club
 		 */
-		public function showIndexAction(\Balumedien\Sportms\Domain\Model\Club $club = NULL): void {
-			$this->initializeActions();
+		public function sectionsActions(Club $club = NULL): void {
 			if($club === NULL) {
-				// TODO: CHECK IF SETTINGS IS SET ELSE DIE
 				$clubUid = $this->settings['club']['uid'];
 				$club = $this->clubRepository->findByUid($clubUid);
 			}

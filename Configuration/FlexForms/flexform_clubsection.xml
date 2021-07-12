@@ -6,32 +6,9 @@
 		</TCEforms>
 		<type>array</type>
 		<el>
-			<settings.clubSection.showViews>
+			<settings.clubSection.navigation.enabled>
 				<TCEforms>
-					<label>Erlaube folgende Einzelansichten</label>
-					<config>
-						<type>select</type>
-						<renderType>selectMultipleSideBySide</renderType>
-						<items type="array">
-							<numIndex index="0">
-								<numIndex index="0">Index</numIndex>
-								<numIndex index="1">index</numIndex>
-							</numIndex>
-							<numIndex index="1">
-								<numIndex index="0">Officials</numIndex>
-								<numIndex index="1">officials</numIndex>
-							</numIndex>
-							<numIndex index="2">
-								<numIndex index="0">Teams</numIndex>
-								<numIndex index="1">teams</numIndex>
-							</numIndex>
-						</items>
-					</config>
-				</TCEforms>
-			</settings.clubSection.showViews>
-			<settings.clubSection.showNavigation.enabled>
-				<TCEforms>
-					<label>Navigation für Einzelansichten?</label>
+					<label>Vereinsabteilungs-Navigation anzeigen?</label>
 					<config>
 						<default>1</default>
 						<renderType>checkboxToggle</renderType>
@@ -39,35 +16,7 @@
 					</config>
 					<onChange>reload</onChange>
 				</TCEforms>
-			</settings.clubSection.showNavigation.enabled>
-			<settings.clubSection.showNavigation.views>
-				<TCEforms>
-					<label>Zeige folgende Navigationselemente</label>
-					<displayCond>
-						<AND>
-							<numIndex index="1">FIELD:clubSection.settings.clubSection.showNavigation.enabled:REQ:TRUE</numIndex>
-						</AND>
-					</displayCond>
-					<config>
-						<type>select</type>
-						<renderType>selectMultipleSideBySide</renderType>
-						<items type="array">
-							<numIndex index="0">
-								<numIndex index="0">Index</numIndex>
-								<numIndex index="1">index</numIndex>
-							</numIndex>
-							<numIndex index="1">
-								<numIndex index="0">Officials</numIndex>
-								<numIndex index="1">officials</numIndex>
-							</numIndex>
-							<numIndex index="2">
-								<numIndex index="0">Teams</numIndex>
-								<numIndex index="1">teams</numIndex>
-							</numIndex>
-						</items>
-					</config>
-				</TCEforms>
-			</settings.clubSection.showNavigation.views>
+			</settings.clubSection.navigation.enabled>
 		</el>
 	</ROOT>
 </T3DataStructure>

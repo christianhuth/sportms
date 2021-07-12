@@ -20,24 +20,9 @@
 					</config>
 				</TCEforms>
 			</settings.game.uid>
-			<settings.game.showViews>
+			<settings.game.navigation.enabled>
 				<TCEforms>
-					<label>Erlaube folgende Einzelansichten</label>
-					<config>
-						<type>select</type>
-						<renderType>selectMultipleSideBySide</renderType>
-						<items type="array">
-							<numIndex index="0">
-								<numIndex index="0">Index</numIndex>
-								<numIndex index="1">showIndex</numIndex>
-							</numIndex>
-						</items>
-					</config>
-				</TCEforms>
-			</settings.game.showViews>
-			<settings.game.showNavigation.enabled>
-				<TCEforms>
-					<label>Navigation für Einzelansichten?</label>
+					<label>Spiel-Navigation anzeigen?</label>
 					<config>
 						<default>1</default>
 						<renderType>checkboxToggle</renderType>
@@ -45,27 +30,7 @@
 					</config>
 					<onChange>reload</onChange>
 				</TCEforms>
-			</settings.game.showNavigation.enabled>
-			<settings.game.showNavigation.views>
-				<TCEforms>
-					<label>Zeige folgende Navigationselemente</label>
-					<displayCond>
-						<AND>
-							<numIndex index="1">FIELD:game.settings.game.showNavigation.enabled:REQ:TRUE</numIndex>
-						</AND>
-					</displayCond>
-					<config>
-						<type>select</type>
-						<renderType>selectMultipleSideBySide</renderType>
-						<items type="array">
-							<numIndex index="0">
-								<numIndex index="0">Index</numIndex>
-								<numIndex index="1">showIndex</numIndex>
-							</numIndex>
-						</items>
-					</config>
-				</TCEforms>
-			</settings.game.showNavigation.views>
+			</settings.game.navigation.enabled>
 		</el>
 	</ROOT>
 </T3DataStructure>

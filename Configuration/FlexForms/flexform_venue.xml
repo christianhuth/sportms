@@ -20,28 +20,9 @@
 					</config>
 				</TCEforms>
 			</settings.venue.uid>
-			<settings.venue.showViews>
+			<settings.venue.navigation.enabled>
 				<TCEforms>
-					<label>Erlaube folgende Einzelansichten</label>
-					<config>
-						<type>select</type>
-						<renderType>selectMultipleSideBySide</renderType>
-						<items type="array">
-							<numIndex index="0">
-								<numIndex index="0">Index</numIndex>
-								<numIndex index="1">index</numIndex>
-							</numIndex>
-							<numIndex index="1">
-								<numIndex index="0">Games</numIndex>
-								<numIndex index="1">games</numIndex>
-							</numIndex>
-						</items>
-					</config>
-				</TCEforms>
-			</settings.venue.showViews>
-			<settings.venue.showNavigation.enabled>
-				<TCEforms>
-					<label>Navigation für Einzelansichten?</label>
+					<label>Sportstätten-Navigation anzeigen?</label>
 					<config>
 						<default>1</default>
 						<renderType>checkboxToggle</renderType>
@@ -49,34 +30,10 @@
 					</config>
 					<onChange>reload</onChange>
 				</TCEforms>
-			</settings.venue.showNavigation.enabled>
-			<settings.venue.showNavigation.views>
-				<TCEforms>
-					<label>Zeige folgende Navigationselemente</label>
-					<displayCond>
-						<AND>
-							<numIndex index="1">FIELD:venue.settings.venue.showNavigation.enabled:REQ:TRUE</numIndex>
-						</AND>
-					</displayCond>
-					<config>
-						<type>select</type>
-						<renderType>selectMultipleSideBySide</renderType>
-						<items type="array">
-							<numIndex index="0">
-								<numIndex index="0">Index</numIndex>
-								<numIndex index="1">index</numIndex>
-							</numIndex>
-							<numIndex index="1">
-								<numIndex index="0">Games</numIndex>
-								<numIndex index="1">games</numIndex>
-							</numIndex>
-						</items>
-					</config>
-				</TCEforms>
-			</settings.venue.showNavigation.views>
+			</settings.venue.navigation.enabled>
 			<settings.venue.venues>
 				<TCEforms>
-					<label>Welche Sportstätten sollen angezeigt werden?</label>
+					<label>Welche Sportstätten sollen berücksichtigt werden?</label>
 					<config>
 						<foreign_table>tx_sportms_domain_model_venue</foreign_table>
 						<foreign_table_where>ORDER BY name ASC</foreign_table_where>
