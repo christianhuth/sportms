@@ -385,6 +385,10 @@
     grid-template-columns: 1fr 50px 120px 50px 1fr;
     margin: 6px 0;
 }
+.tx-sportms .tx-sportms-game-goal-none {
+    display: inline-block;
+    text-align: center;
+}
 .tx-sportms .tx-sportms-game-change-entry .tx-sportms-game-change-arrow,
 .tx-sportms .tx-sportms-game-change-entry .tx-sportms-game-change-time,
 .tx-sportms .tx-sportms-game-goal .tx-sportms-game-goal-score,

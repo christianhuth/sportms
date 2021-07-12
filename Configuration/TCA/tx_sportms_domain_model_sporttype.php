@@ -26,7 +26,7 @@ return array(
 	),
 	'types' => array(
 		'1' => array('showitem' => 'label, sports,
-									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab_visibility,
+									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab.visibility,
 		                                --palette--;;visible,
 		                                --palette--;;visible_date,
 									'),

@@ -28,7 +28,7 @@ return array(
 		'1' => array('showitem' => 'label, --palette--;;team_individual, sport_types,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sport.tab_sport_age_groups, sport_age_groups,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sport.tab_sport_position_groups, sport_position_groups,
-									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab_visibility,
+									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab.visibility,
 		                                --palette--;;visible,
 		                                --palette--;;visible_date,
 									'),

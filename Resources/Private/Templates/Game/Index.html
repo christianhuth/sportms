@@ -16,39 +16,51 @@
             <div class="tx-sportms-game-goals">
                 <h4>Tore</h4>
                 <div class="tx-sportms-game-container">
-                    <f:for each="{game.gameGoals}" as="goal" iteration="i">
-                        <sportms:PersonInTeamSeason person="{goal.scorer}" teamSeason="{game.teamSeasonHome}">
-                            <f:then>
-                                <f:if condition="!{goal.ownGoal}">
-                                    <f:then>
-                                        <f:render partial="ViewHelper/Game/IndexGoal" arguments="{goal: goal, type: 'home'}"/>
-                                    </f:then>
-                                    <f:else>
-                                        <f:render partial="ViewHelper/Game/IndexGoal" arguments="{goal: goal, type: 'guest'}"/>
-                                    </f:else>
-                                </f:if>
-                            </f:then>
-                            <f:else>
-                                <sportms:PersonInTeamSeason person="{goal.scorer}" teamSeason="{game.teamSeasonGuest}">
+                    <f:if condition="{game.gameGoals}">
+                        <f:then>
+                            <f:for each="{game.gameGoals}" as="goal" iteration="i">
+                                <sportms:PersonInTeamSeason person="{goal.scorer}" teamSeason="{game.teamSeasonHome}">
                                     <f:then>
                                         <f:if condition="!{goal.ownGoal}">
                                             <f:then>
-                                                <f:render partial="ViewHelper/Game/IndexGoal" arguments="{goal: goal, type: 'guest'}"/>
+                                                <f:render partial="ViewHelper/Game/IndexGoal"
+                                                          arguments="{goal: goal, type: 'home'}"/>
                                             </f:then>
                                             <f:else>
-                                                <f:render partial="ViewHelper/Game/IndexGoal" arguments="{goal: goal, type: 'home'}"/>
+                                                <f:render partial="ViewHelper/Game/IndexGoal"
+                                                          arguments="{goal: goal, type: 'guest'}"/>
                                             </f:else>
                                         </f:if>
                                     </f:then>
                                     <f:else>
-                                        <f:comment>
-                                            # TODO: think of a senseful error message
-                                        </f:comment>
+                                        <sportms:PersonInTeamSeason person="{goal.scorer}"
+                                                                    teamSeason="{game.teamSeasonGuest}">
+                                            <f:then>
+                                                <f:if condition="!{goal.ownGoal}">
+                                                    <f:then>
+                                                        <f:render partial="ViewHelper/Game/IndexGoal"
+                                                                  arguments="{goal: goal, type: 'guest'}"/>
+                                                    </f:then>
+                                                    <f:else>
+                                                        <f:render partial="ViewHelper/Game/IndexGoal"
+                                                                  arguments="{goal: goal, type: 'home'}"/>
+                                                    </f:else>
+                                                </f:if>
+                                            </f:then>
+                                            <f:else>
+                                                <f:comment>
+                                                    # TODO: think of a senseful error message
+                                                </f:comment>
+                                            </f:else>
+                                        </sportms:PersonInTeamSeason>
                                     </f:else>
                                 </sportms:PersonInTeamSeason>
-                            </f:else>
-                        </sportms:PersonInTeamSeason>
-                    </f:for>
+                            </f:for>
+                        </f:then>
+                        <f:else>
+                            <div class="tx-sportms-game-goal tx-sportms-game-goal-none">keine Tore vorhanden</div>
+                        </f:else>
+                    </f:if>
                 </div>
             </div>
 
@@ -90,12 +102,15 @@
                     <f:for each="{game.gameChanges}" as="change">
                         <sportms:PersonInTeamSeason person="{change.personIn}" teamSeason="{game.teamSeasonHome}">
                             <f:then>
-                                <f:render partial="ViewHelper/Game/IndexChange" arguments="{change: change, type: 'home'}"/>
+                                <f:render partial="ViewHelper/Game/IndexChange"
+                                          arguments="{change: change, type: 'home'}"/>
                             </f:then>
                             <f:else>
-                                <sportms:PersonInTeamSeason person="{change.personIn}" teamSeason="{game.teamSeasonGuest}">
+                                <sportms:PersonInTeamSeason person="{change.personIn}"
+                                                            teamSeason="{game.teamSeasonGuest}">
                                     <f:then>
-                                        <f:render partial="ViewHelper/Game/IndexChange" arguments="{change: change, type: 'guest'}"/>
+                                        <f:render partial="ViewHelper/Game/IndexChange"
+                                                  arguments="{change: change, type: 'guest'}"/>
                                     </f:then>
                                     <f:else>
                                         <f:comment>

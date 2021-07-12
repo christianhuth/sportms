@@ -30,7 +30,7 @@
 		'types' => array(
 			'1' => array('showitem' => 'competition, season, competition_season_gamedays,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_competitionseason.tab_teams, competition_season_teams,
-									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab_visibility, --palette--;;hidden_detail, slug
+									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab.visibility, --palette--;;hidden_detail, slug
 		                            '),
 		),
 		'palettes' => array(

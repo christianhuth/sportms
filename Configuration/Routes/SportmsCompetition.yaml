@@ -1,10 +1,6 @@
 routeEnhancers:
   sportmsCompetition:
     aspects:
-      competition_slug:
-        type: PersistedAliasMapper
-        tableName: tx_sportms_domain_model_competition
-        routeFieldName: slug
       competitionseason_slug:
         type: PersistedAliasMapper
         tableName: tx_sportms_domain_model_competitionseason
@@ -12,10 +8,6 @@ routeEnhancers:
       competitionseasongameday_slug:
         type: PersistedAliasMapper
         tableName: tx_sportms_domain_model_competitionseasongameday
-        routeFieldName: slug
-      competitiontype_slug:
-        type: PersistedAliasMapper
-        tableName: tx_sportms_domain_model_competitiontype
         routeFieldName: slug
       localizedAction_clubs:
         type: LocaleModifier
@@ -52,7 +44,7 @@ routeEnhancers:
         _arguments:
           competitionseason_slug: competitionSeason
           competitionseasongameday_slug: competitionSeasonGameday
-      - routePath: '/{competitionseason_slug}/mannschaften/'
+      - routePath: '/{competitionseason_slug}/blabla'
         _controller: 'CompetitionSeason::teams'
         _arguments:
           competitionseason_slug: competitionSeason

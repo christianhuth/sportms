@@ -4,30 +4,18 @@
 <f:layout name="default"/>
 
 <f:section name="default">
-    <div id="tx-sportms-competition-list">
+    <div class="tx-sportms-competition-list">
         <f:render arguments="{_all}" partial="Competition/List/Filter"/>
         <div class="table-responsive">
             <table class="table table-bordered table-condensed table-hover table-striped tx-sportms-table">
                 <thead>
                     <tr>
-                        <th>
-                            <f:translate key="tx_sportms_domain_model_competition.sport"/>
-                        </th>
-                        <th>
-                            <f:translate key="tx_sportms_domain_model_competition.label"/>
-                        </th>
-                        <th>
-                            <f:translate key="tx_sportms_domain_model_competition.ageLevel"/>
-                        </th>
-                        <th>
-                            <f:translate key="tx_sportms_domain_model_competition_type"/>
-                        </th>
-                        <th>
-                            <f:translate key="tx_sportms_action.competitionseason.games"/>
-                        </th>
-                        <th>
-                            <f:translate key="tx_sportms_action.competitionseason.teams"/>
-                        </th>
+                        <th><f:translate key="tx_sportms_domain_model_competition.sport"/></th>
+                        <th><f:translate key="tx_sportms_domain_model_competition.label"/></th>
+                        <th><f:translate key="tx_sportms_domain_model_competition.ageLevel"/></th>
+                        <th><f:translate key="tx_sportms_domain_model_competition_type"/></th>
+                        <th><f:translate key="tx_sportms_action.competitionseason.games"/></th>
+                        <th><f:translate key="tx_sportms_action.competitionseason.teams"/></th>
                     </tr>
                 </thead>
                 <tbody>

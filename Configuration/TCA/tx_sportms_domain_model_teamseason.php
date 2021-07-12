@@ -31,7 +31,7 @@ return array(
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_teamseason.tab_officials, team_season_officials,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_teamseason.tab_squad_members, team_season_squad_members, team_season_squad_captains,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_teamseason.tab_competitions, competition_season_teams,
-									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab_visibility, --palette--;;hidden_detail, slug,
+									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab.visibility, --palette--;;hidden_detail, slug,
 		                            '),
 	),
 	'palettes' => array(

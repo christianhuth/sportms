@@ -20,19 +20,26 @@ return array(
 		'label_userFunc' => \Balumedien\Sportms\Configuration\TCA\UserFunc\UserFunc::class . '->addressLabel',
         'searchFields' => '',
         'sortby' => 'sorting',
-        'title'	=> 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_address',
+        'title'	=> 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_address',
         'tstamp' => 'tstamp',
 		'versioningWS' => TRUE,
     ),
 	'interface' => array(
-		'showRecordFieldList' => 'street, housenumber, zipcode, location, country, region, public',
+		'showRecordFieldList' => 'street, housenumber, zipcode, location, country, region',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'street, housenumber, zipcode, location, country, region, public,
-		                            '),
+		'1' => array('showitem' => '--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab.general,
+										--palette--;;street_housenumber,
+										--palette--;;zipcode_location,
+										--palette--;;region_country,
+		                            --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab.visibility,
+		                                --palette--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.palette.visibility_general;visibility_general'),
 	),
 	'palettes' => array(
-		'1' => array('showitem' => ''),
+		'street_housenumber' => array('showitem' => 'street, housenumber'),
+		'zipcode_location' => array('showitem' => 'zipcode, location'),
+		'region_country' => array('showitem' => 'region, country'),
+		'visibility_general' => array('showitem' => 'hidden, starttime, endtime')
 	),
 	'columns' => array(
         
@@ -93,7 +100,7 @@ return array(
 
 		'street' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_address.street',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_address.street',
 			'config' => array(
                 'eval' => 'required',
                 'size' => 255,
@@ -102,7 +109,7 @@ return array(
 		),
 		'housenumber' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_address.housenumber',
+			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_address.housenumber',
 			'config' => array(
                 'eval' => 'trim, trim',
 				'size' => 255,
@@ -111,7 +118,7 @@ return array(
 		),
         'zipcode' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_address.zipcode',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_address.zipcode',
             'config' => array(
                 'eval' => 'num, trim, trim',
                 'size' => 255,
@@ -120,7 +127,7 @@ return array(
         ),
         'location' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_address.location',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_address.location',
             'config' => array(
                 'eval' => 'required',
                 'size' => 255,
@@ -129,12 +136,12 @@ return array(
         ),
         'country' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_address.country',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_address.country',
             'config' => array(
                 'eval' => 'required',
 				'foreign_table' => 'static_countries',
 				'items' => Array (
-                    array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ''),
+                    array('LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_general.select', ''),
 				),
 				'maxItems' => 1,
 				'renderType' => 'selectSingle',
@@ -144,20 +151,11 @@ return array(
         ),
         'region' => array(
             'exclude' => 1,
-            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_address.region',
+            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_address.region',
             'config' => array(
                 'type' => 'input',
                 'size' => 255,
                 'eval' => 'trim'
-            ),
-        ),
-        'public' => array(
-            'exclude' => 1,
-            'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.public',
-            'config' => array(
-            	'default' => FALSE,
-	            'renderType' => 'checkboxToggle',
-	            'type' => 'check',
             ),
         ),
 		

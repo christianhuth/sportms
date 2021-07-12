@@ -28,7 +28,7 @@ return array(
 	),
 	'types' => array(
 		'1' => array('showitem' => '--palette--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_teamseasonpractice.palette_day_time;day_time, venue, annotation,
-									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab_visibility, hidden,
+									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab.visibility, hidden,
 		                            '),
 	),
 	'palettes' => array(

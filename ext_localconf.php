@@ -14,7 +14,7 @@
 	$pluginNamesAndTheirActions[0]['cacheableActions'] = ['Club' => 'list, sections'];
 	$pluginNamesAndTheirActions[0]['nonCacheableActions'] = [];
 	$pluginNamesAndTheirActions[1]['name'] = 'Competition';
-	$pluginNamesAndTheirActions[1]['cacheableActions'] = ['Competition' => 'list'];
+	$pluginNamesAndTheirActions[1]['cacheableActions'] = ['Competition' => 'list', 'CompetitionSeason' => 'clubs, games, teams'];
 	$pluginNamesAndTheirActions[1]['nonCacheableActions'] = [];
 	$pluginNamesAndTheirActions[2]['name'] = 'Game';
 	$pluginNamesAndTheirActions[2]['cacheableActions'] = ['Game' => 'list, history, index, report'];
@@ -48,7 +48,7 @@
 	/* ===========================================================================
 		Register Icons for the Backend
 	=========================================================================== */
-	if (TYPO3_MODE === 'BE') {
+	if(TYPO3_MODE === 'BE') {
 		$icons = [
 			'sportms-ce-plugin-sportms-icon' => 'Extension.svg',
 			'sportms-ce-plugin-club-icon' => 'tx_sportms_domain_model_club.svg',
@@ -58,8 +58,8 @@
 			'sportms-ce-plugin-team-icon' => 'tx_sportms_domain_model_team.svg',
 		];
 		$iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
-		foreach ($icons as $identifier => $filename) {
-			if (!$iconRegistry->isRegistered($identifier)) {
+		foreach($icons as $identifier => $filename) {
+			if(!$iconRegistry->isRegistered($identifier)) {
 				$iconRegistry->registerIcon(
 					$identifier,
 					\TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
@@ -68,11 +68,11 @@
 			}
 		}
 	}
-
-    /* ===========================================================================
-        Register PageTitleProvider
-    =========================================================================== */
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptSetup(trim('
+	
+	/* ===========================================================================
+		Register PageTitleProvider
+	=========================================================================== */
+	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptSetup(trim('
         config.pageTitleProviders {
             sportms {
                 provider = Balumedien\Sportms\PageTitle\PageTitleProvider

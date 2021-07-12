@@ -10,7 +10,6 @@ CREATE TABLE tx_sportms_domain_model_address (
 	location varchar(255) DEFAULT '' NOT NULL,
 	country int(11) DEFAULT '0' NOT NULL,
 	region varchar(255) DEFAULT NULL,
-	public tinyint(4) unsigned DEFAULT '0' NOT NULL,
 	sorting int(11) DEFAULT '0' NOT NULL
 );
 

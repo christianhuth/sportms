@@ -30,7 +30,7 @@ return array(
 		'1' => array('showitem' => 'club, label, sports, images, club_section_members,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_clubsection.tab_contact, addresses, phones, mails, urls,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_clubsection.tab_officials, club_section_officials,
-									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab_visibility, hidden, detail_link,
+									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab.visibility, hidden, detail_link,
 		                            '),
 	),
 	'palettes' => array(

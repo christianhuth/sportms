@@ -26,7 +26,7 @@ return array(
 	),
 	'types' => array(
 		'1' => array('showitem' => 'label,
-		                            --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab_visibility, hidden, slug'),
+		                            --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab.visibility, hidden, slug'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),

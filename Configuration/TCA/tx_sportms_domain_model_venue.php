@@ -27,7 +27,7 @@ return array(
 	),
 	'types' => array(
 		'1' => array('showitem' => 'name, address, home_venue_for_clubs, images, description, --palette--;;building, --palette--;;size,
-									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab_visibility, hidden, detail_link, slug,
+									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab.visibility, hidden, detail_link, slug,
 									'),
 	),
 	'palettes' => array(

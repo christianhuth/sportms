@@ -32,7 +32,7 @@ return array(
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.tab_personal, --palette--;;weight_height_shoesize, --palette--;;hander_footer, family_status, --palette--;;graduation_job, characteristics, hobbies, --palette--;;dish_drink,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.tab_contact, addresses, phones, mails, urls,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.tab_profiles, person_profiles,
-									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab_visibility, hidden, show_birthday, detail_link, slug,
+									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab.visibility, hidden, show_birthday, detail_link, slug,
 		                            '),
 	),
 	'palettes' => array(

@@ -73,7 +73,7 @@
 					</config>
 				</TCEforms>
 			</settings.competitionType.competitionTypes>
-			<settings.competitionSeasonGameday.selectbox.enbaled>
+			<settings.competitionSeasonGameday.selectbox.enabled>
 				<TCEforms>
 					<label>Selectbox für Spieltage anzeigen?</label>
 					<config>
@@ -82,7 +82,7 @@
 						<type>check</type>
 					</config>
 				</TCEforms>
-			</settings.competitionSeasonGameday.selectbox.enbaled>
+			</settings.competitionSeasonGameday.selectbox.enabled>
 		</el>
 	</ROOT>
 </T3DataStructure>

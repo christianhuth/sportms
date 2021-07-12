@@ -34,7 +34,7 @@
 		 * Use this method to solve tasks which all actions have in common.
 		 */
 		public function initializeAction() {
-			#$this->mapRequestsToSettings();
+			$this->mapRequestsToSettings();
 		}
 
 		protected function clubsAction(CompetitionSeason $competitionSeason = NULL) {
@@ -76,7 +76,8 @@
         }
 
         protected function teamsAction(CompetitionSeason $competitionSeason = NULL): void {
-            if ($competitionSeason === NULL) {
+	        \TYPO3\CMS\Core\Utility\DebugUtility::debug($competitionSeason, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
+        	if ($competitionSeason === NULL) {
                 $competitionSeason = $this->determineCompetitionSeason();
             }
             $this->view->assign('competitionSeason', $competitionSeason);
