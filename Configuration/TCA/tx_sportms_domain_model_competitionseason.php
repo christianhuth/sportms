@@ -185,8 +185,8 @@
 					'eval' => 'uniqueInSite',
 					'fallbackCharacter' => '-',
 					'generatorOptions' => [
-						'fields' => ['competition', 'season'],
-						'fieldSeparator' => '/',
+						'fields' => ['uid'],
+						'fieldSeparator' => '-',
 						'prefixParentPageSlug' => FALSE,
 						'replacements' => [
 							'/' => '',

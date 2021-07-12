@@ -4,7 +4,7 @@
 <f:if condition="{settings.season.selectbox.enabled} ||
                  {settings.competitionSeasonGameday.selectbox.enabled}">
     <div class="tx-sportms-filter">
-        <f:form action="games" arguments="{teamSeason: teamSeason}" class="form-horizontal" controller="CompetitionSeason" extensionName="sportms" method="GET" pageUid="{settings.competitionSeason.gameday.pid}" pluginName="competition">
+        <f:form action="games" arguments="{teamSeason: teamSeason}" class="form-horizontal" controller="CompetitionSeason" extensionName="sportms" method="POST" pageUid="{settings.competitionSeason.gameday.pid}" pluginName="competition">
             <f:render arguments="{options: competitionSeasons,             settings: settings,     value: competitionSeason}" partial="Form/Select/CompetitionSeason"/>
             <f:render arguments="{options: competitionSeasonGamedays,      settings: settings,     value: competitionSeasonGameday,     competitionSeason: competitionSeason}" partial="Form/Select/CompetitionSeasonGameday"/>
             <f:render partial="Form/Submit"/>

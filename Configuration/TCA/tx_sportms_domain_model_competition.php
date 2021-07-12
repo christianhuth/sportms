@@ -222,11 +222,11 @@
 				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.slug',
 				'config' => [
 					'default' => '',
-					'eval' => 'uniqueInSite',
+					'eval' => 'uniqueInPid',
 					'fallbackCharacter' => '-',
 					'generatorOptions' => [
-						'fields' => ['label', 'uid'],
-						'fieldSeparator' => '-',
+						'fields' => ['uid', 'label'],
+						'fieldSeparator' => '/',
 						'prefixParentPageSlug' => FALSE,
 						'replacements' => [
 							'/' => '',

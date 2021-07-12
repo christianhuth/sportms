@@ -1,0 +1,42 @@
+routeEnhancers:
+  sportmsGame:
+    aspects:
+      game_slug:
+        type: PersistedAliasMapper
+        tableName: tx_sportms_domain_model_game
+        routeFieldName: slug
+      localizedAction_history:
+        type: LocaleModifier
+        default: 'history'
+        localeMap:
+          - locale: 'de_DE.*'
+            value: 'historie'
+      localizedAction_index:
+        type: LocaleModifier
+        default: 'schema'
+        localeMap:
+          - locale: 'de_DE.*'
+            value: 'schema'
+      localizedAction_report:
+        type: LocaleModifier
+        default: 'report'
+        localeMap:
+          - locale: 'de_DE.*'
+            value: 'spielbericht'
+    defaultController: 'Game::list'
+    extension: Sportms
+    plugin: Game
+    routes:
+      - routePath: '/{game_slug}/{localizedAction_index}'
+        _controller: 'Game::index'
+        _arguments:
+          game_slug: game
+      - routePath: '/{game_slug}/{localizedAction_report}'
+        _controller: 'Game::report'
+        _arguments:
+          game_slug: game
+      - routePath: '/{game_slug}/{localizedAction_history}'
+        _controller: 'Game::history'
+        _arguments:
+          game_slug: game
+    type: Extbase

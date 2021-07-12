@@ -146,7 +146,7 @@
 					'eval' => 'uniqueInSite',
 					'fallbackCharacter' => '-',
 					'generatorOptions' => [
-						'fields' => ['label', 'uid'],
+						'fields' => ['uid', 'label'],
 						'fieldSeparator' => '/',
 						'prefixParentPageSlug' => FALSE,
 						'replacements' => [

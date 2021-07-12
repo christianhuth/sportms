@@ -272,19 +272,19 @@
 			}
 			$this->view->assign('playersWithMostAssists', $playersWithMostAssists);
 			/* FRONTEND FILTERS */
-			if($this->settings['competitionType']['competitionTypesSelectbox']) {
+			if($this->settings['competitionType']['selectbox']['enabled']) {
 				$competitionTypesSelectbox = $this->competitionTypeRepository->findAll($this->getCompetitionTypesFilter(FALSE));
 				$this->view->assign('competitionTypesSelectbox', $competitionTypesSelectbox);
 			}
-			if($this->settings['competition']['competitionsSelectbox']) {
+			if($this->settings['competition']['selectbox']['enabled']) {
 				$competitionsSelectbox = $this->competitionRepository->findAll($this->getSportsFilter(), $this->getSportAgeGroupsFilter(), $this->getSportAgeLevelsFilter(), $this->getCompetitionTypesFilter(), $this->getCompetitionsFilter(FALSE), $teamUid);
 				$this->view->assign('competitionsSelectbox', $competitionsSelectbox);
 			}
-			if($this->settings['sportPositionGroup']['sportPositionGroupsSelectbox']) {
+			if($this->settings['sportPositionGroup']['selectbox']['enabled']) {
 				$sportPositionGroupsSelectbox = $this->sportPositionGroupRepository->findAll($this->getSportsFilter(), $this->getSportPositionGroupsFilter(FALSE));
 				$this->view->assign('sportPositionGroupsSelectbox', $sportPositionGroupsSelectbox);
 			}
-			if($this->settings['sportPosition']['sportPositionsSelectbox']) {
+			if($this->settings['sportPosition']['selectbox']['enabled']) {
 				$sportPositionsSelectbox = $this->sportPositionRepository->findAll($this->getSportsFilter(), $this->getSportPositionGroupsFilter(), $this->getSportPositionsFilter(FALSE));
 				$this->view->assign('sportPositionsSelectbox', $sportPositionsSelectbox);
 			}
@@ -299,7 +299,7 @@
             $teams = $this->teamRepository->findAll($this->getSportsFilter(), $this->getSportAgeGroupsFilter(), $this->getSportAgeLevelsFilter(), $this->getClubsFilter(), $this->getTeamsFilter());
             $this->view->assign('teams', $teams);
             /* FRONTEND FILTERS */
-            if($this->settings['sport']['sportsSelectbox']) {
+            if($this->settings['sport']['selectbox']['enabled']) {
                 $sportsSelectbox = $this->sportRepository->findAll($this->getSportsFilter(FALSE));
                 $this->view->assign('sportsSelectbox', $sportsSelectbox);
                 if($this->settings['sport']['selected'] && $this->settings['sportAgeGroup']['sportAgeGroupsSelectbox']) {
@@ -311,7 +311,7 @@
                     }
                 }
             }
-            if($this->settings['club']['clubsSelectbox']) {
+            if($this->settings['club']['selectbox']['enabled']) {
                 $clubsSelectbox = $this->clubRepository->findAll($this->getClubsFilter(FALSE));
                 $this->view->assign('clubsSelectbox', $clubsSelectbox);
             }

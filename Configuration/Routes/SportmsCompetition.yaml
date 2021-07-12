@@ -1,0 +1,59 @@
+routeEnhancers:
+  sportmsCompetition:
+    aspects:
+      competition_slug:
+        type: PersistedAliasMapper
+        tableName: tx_sportms_domain_model_competition
+        routeFieldName: slug
+      competitionseason_slug:
+        type: PersistedAliasMapper
+        tableName: tx_sportms_domain_model_competitionseason
+        routeFieldName: uid
+      competitionseasongameday_slug:
+        type: PersistedAliasMapper
+        tableName: tx_sportms_domain_model_competitionseasongameday
+        routeFieldName: slug
+      competitiontype_slug:
+        type: PersistedAliasMapper
+        tableName: tx_sportms_domain_model_competitiontype
+        routeFieldName: slug
+      localizedAction_clubs:
+        type: LocaleModifier
+        default: 'clubs'
+        localeMap:
+          - locale: 'de_DE.*'
+            value: 'vereine'
+      localizedAction_games:
+        type: LocaleModifier
+        default: 'games'
+        localeMap:
+          - locale: 'de_DE.*'
+            value: 'spielplan'
+      localizedAction_teams:
+        type: LocaleModifier
+        default: 'teams'
+        localeMap:
+          - locale: 'de_DE.*'
+            value: 'mannschaften'
+    defaultController: 'Competition::list'
+    extension: Sportms
+    plugin: Competition
+    routes:
+      - routePath: '/{competitionseason_slug}/vereine'
+        _controller: 'CompetitionSeason::clubs'
+        _arguments:
+          competitionseason_slug: competitionSeason
+      - routePath: '/{competitionseason_slug}/spielplan'
+        _controller: 'CompetitionSeason::games'
+        _arguments:
+          competitionseason_slug: competitionSeason
+      - routePath: '/{competitionseason_slug}/spielplan/{competitionseasongameday_slug}'
+        _controller: 'CompetitionSeason::games'
+        _arguments:
+          competitionseason_slug: competitionSeason
+          competitionseasongameday_slug: competitionSeasonGameday
+      - routePath: '/{competitionseason_slug}/mannschaften/'
+        _controller: 'CompetitionSeason::teams'
+        _arguments:
+          competitionseason_slug: competitionSeason
+    type: Extbase

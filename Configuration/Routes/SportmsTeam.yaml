@@ -1,0 +1,80 @@
+routeEnhancers:
+  sportmsTeam:
+    aspects:
+      localizedAction_gamesByCompetition:
+        type: LocaleModifier
+        default: 'games-by-competition'
+        localeMap:
+          - locale: 'de_DE.*'
+            value: 'spielplan-nach-wettbewerb'
+      localizedAction_gamesByDate:
+        type: LocaleModifier
+        default: 'games-by-date'
+        localeMap:
+          - locale: 'de_DE.*'
+            value: 'spielplan-nach-datum'
+      localizedAction_historyOfficials:
+        type: LocaleModifier
+        default: 'officialshistory'
+        localeMap:
+          - locale: 'de_DE.*'
+            value: 'funktionaershistorie'
+      localizedAction_historyRecordGames:
+        type: LocaleModifier
+        default: 'recordgames'
+        localeMap:
+          - locale: 'de_DE.*'
+            value: 'rekordspiele'
+      localizedAction_historyRecordPlayers:
+        type: LocaleModifier
+        default: 'recordplayers'
+        localeMap:
+          - locale: 'de_DE.*'
+            value: 'rekordspieler'
+      localizedAction_index:
+        type: LocaleModifier
+        default: 'profile'
+        localeMap:
+          - locale: 'de_DE.*'
+            value: 'uebersicht'
+      season_slug:
+        type: PersistedAliasMapper
+        tableName: tx_sportms_domain_model_season
+        routeFieldName: slug
+      team_slug:
+        type: PersistedAliasMapper
+        tableName: tx_sportms_domain_model_team
+        routeFieldName: slug
+      teamseason_slug:
+        type: PersistedAliasMapper
+        tableName: tx_sportms_domain_model_teamseason
+        routeFieldName: slug
+    defaultController: 'Team::list'
+    extension: Sportms
+    plugin: Team
+    routes:
+      - routePath: '/{team_slug}/{localizedAction_historyOfficials}'
+        _controller: 'Team::historyOfficials'
+        _arguments:
+          team_slug: team
+      - routePath: '/{team_slug}/{localizedAction_historyRecordGames}'
+        _controller: 'Team::historyRecordGames'
+        _arguments:
+          team_slug: team
+      - routePath: '/{team_slug}/{localizedAction_historyRecordPlayers}'
+        _controller: 'Team::historyRecordPlayers'
+        _arguments:
+          team_slug: team
+      - routePath: '/{teamseason_slug}/{localizedAction_index}'
+        _controller: 'TeamSeason::index'
+        _arguments:
+          teamseason_slug: teamSeason
+      - routePath: '/{teamseason_slug}/{localizedAction_gamesByCompetition}'
+        _controller: 'TeamSeason::gamesByCompetition'
+        _arguments:
+          teamseason_slug: teamSeason
+      - routePath: '/{teamseason_slug}/{localizedAction_gamesByDate}'
+        _controller: 'TeamSeason::gamesByDate'
+        _arguments:
+          teamseason_slug: teamSeason
+    type: Extbase

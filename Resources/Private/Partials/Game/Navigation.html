@@ -48,6 +48,18 @@
                                 <f:translate key="tx_sportms_action.competitionseason.games"/>
                             </sportms:link.action>
                         </li>
+                        <li>
+                            <sportms:link.action action="teams" controller="CompetitionSeason"
+                                                 CompetitionSeason="{game.competitionSeason}">
+                                <f:translate key="tx_sportms_action.competitionseason.teams"/>
+                            </sportms:link.action>
+                        </li>
+                        <li>
+                            <sportms:link.action action="clubs" controller="CompetitionSeason"
+                                                 CompetitionSeason="{game.competitionSeason}">
+                                <f:translate key="tx_sportms_action.competitionseason.clubs"/>
+                            </sportms:link.action>
+                        </li>
                     </ul>
                 </li>
             </ul>

@@ -4,12 +4,19 @@
 
 <tr>
     <td class="tx-sportms-table-center">{competition.sport.label}</td>
-    <td>{competition.label}</td>
+    <td>
+        <sportms:link.action action="games" controller="CompetitionSeason"
+                             CompetitionSeason="{competition.competitionSeasons.0}"
+                             CompetitionSeasonGameday="{competition.competitionSeasons.0.competitionSeasonGamedays.0}">
+            {competition.label}
+        </sportms:link.action>
+    </td>
     <td class="tx-sportms-table-center">{competition.sportAgeLevel.label}</td>
     <td class="tx-sportms-table-center">{competition.competitionType.label}</td>
     <td class="tx-sportms-table-center">
         <sportms:link.action action="games" controller="CompetitionSeason"
-                             CompetitionSeason="{competition.competitionSeasons.0}">
+                             CompetitionSeason="{competition.competitionSeasons.0}"
+                             CompetitionSeasonGameday="{competition.competitionSeasons.0.competitionSeasonGamedays.0}">
             <f:translate key="tx_sportms_action.competitionseason.games"/>
         </sportms:link.action>
     </td>
