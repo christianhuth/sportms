@@ -13,3 +13,6 @@ rules:
     document-start:
         present: true
         level: error
+    line-length:
+        max: 80
+        level: warning
