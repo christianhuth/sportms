@@ -44,4 +44,5 @@ sql:
     stage: lint
     script:
         - composer require --dev liquipedia/sqllint
+        - ls -al .Build/bin
         - .Build/bin/sqllint ./ext_tables.sql
