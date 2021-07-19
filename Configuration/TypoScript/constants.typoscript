@@ -111,7 +111,7 @@ plugin.tx_sportms {
 		}
 
 		team {
-			
+
 			historyOfficials {
 				# cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of Team->historyOfficials
 				pid =

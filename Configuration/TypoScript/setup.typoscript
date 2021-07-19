@@ -65,10 +65,14 @@ plugin.tx_sportms {
 
 		team {
 			historyOfficials.pid = {$plugin.tx_sportms.settings.team.historyOfficials.pid}
-			historyRecordGames.limit = {$plugin.tx_sportms.settings.team.historyRecordGames.limit}
-			historyRecordGames.pid = {$plugin.tx_sportms.settings.team.historyRecordGames.pid}
-			historyRecordPlayers.limit = {$plugin.tx_sportms.settings.team.historyRecordPlayers.limit}
-			historyRecordPlayers.pid = {$plugin.tx_sportms.settings.team.historyRecordPlayers.pid}
+			historyRecordGames {
+				limit = {$plugin.tx_sportms.settings.team.historyRecordGames.limit}
+				pid = {$plugin.tx_sportms.settings.team.historyRecordGames.pid}
+			}
+			historyRecordPlayers {
+				limit = {$plugin.tx_sportms.settings.team.historyRecordPlayers.limit}
+				pid = {$plugin.tx_sportms.settings.team.historyRecordPlayers.pid}
+			}
 			list.pid = {$plugin.tx_sportms.settings.team.list.pid}
 		}
 
