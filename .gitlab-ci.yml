@@ -10,10 +10,6 @@ build:
         - apk add git --update
     script:
         - composer install --no-progress --no-ansi --no-interaction
-        - ls -al
-        - ls -al .Build
-        - ls -al .Build/bin
-        - ls -al .Build/vendor
     artifacts:
         name: typo3
         paths:
@@ -28,6 +24,10 @@ typoscript:
     stage: lint
     script:
         - composer require --dev helmich/typo3-typoscript-lint
+        - ls -al
+        - ls -al .Build
+        - ls -al .Build/bin
+        - ls -al .Build/vendor
         - .Build/vendor/bin/typoscript-lint
 
 yaml:
