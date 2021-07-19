@@ -36,6 +36,7 @@
 		"typo3/cms-core": "^9.5.17 || ^10.4.12"
 	},
 	"require-dev": {
+		"helmich/typo3-typoscript-lint": "^2.5.2",
 		"php-coveralls/php-coveralls": "^2.4.3"
 	},
 	"scripts": {},

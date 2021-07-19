@@ -2,13 +2,12 @@ stages:
     - build
     - lint
 
-build application with dev dependencies:
+build:
     stage: build
     image: composer:2.1.3
     before_script:
         - apk add bash --no-cache
         - apk add git --update
-        - ls -al
     script:
         - composer install --no-progress --no-ansi --no-interaction
     artifacts:
@@ -25,7 +24,6 @@ typoscript:
     before_script:
         - git clone https://christian.knell:$gitlab_token@git.knell.it/typo3/sportms/sportms.git /tmp/tx_ext
     script:
-        - composer require --dev helmich/typo3-typoscript-lint
         - ./vendor/bin/typoscript-lint
 
 yaml:
