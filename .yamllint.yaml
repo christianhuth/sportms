@@ -2,7 +2,7 @@
 extends: default
 
 ignore: |
-  ./.Build/
+  .Build/
 
 yaml-files:
     - '*.yaml'
