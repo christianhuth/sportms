@@ -2,7 +2,7 @@ filePatterns:
   - "*.typoscript"
 
 paths:
-  - ./Configuration/TsConfig/
+  - ./Configuration/TSconfig/
   - ./Configuration/TypoScript/
 
 sniffs:
@@ -10,7 +10,7 @@ sniffs:
     parameters:
       useSpaces: false
       indentPerLevel: 1
-      indentConditions: false
+      indentConditions: true
   - class: DeadCode
   - class: OperatorWhitespace
   - class: RepeatingRValue
