@@ -24,7 +24,7 @@ typoscript:
     stage: lint
     script:
         - composer require --dev helmich/typo3-typoscript-lint
-        - .Build/bin/typoscript-lint ./Configuration/TypoScript/*.typoscript
+        - .Build/bin/typoscript-lint
 
 yaml:
     image: python:alpine3.7
