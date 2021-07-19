@@ -31,6 +31,6 @@ yaml:
     image: python:alpine3.7
     stage: lint
     before_script:
-        - pip install yamllint==1.10.0
+        - pip install yamllint==1.26.1
     script:
         - yamllint .
