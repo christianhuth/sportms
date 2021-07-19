@@ -10,6 +10,7 @@ build:
         - apk add git --update
     script:
         - composer install --no-progress --no-ansi --no-interaction
+        - ls -al
     artifacts:
         name: typo3
         paths:
