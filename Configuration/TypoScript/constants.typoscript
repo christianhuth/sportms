@@ -111,18 +111,30 @@ plugin.tx_sportms {
 		}
 
 		team {
-			# cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of Team->historyOfficials
-			historyOfficials.pid =
-			# cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default Limit for Team->historyRecordGames
-			historyRecordGames.limit = 10
-			# cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of Team->historyRecordGames
-			historyRecordGames.pid =
-			# cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default Limit for Team->historyRecordPlayers
-			historyRecordPlayers.limit = 10
-			# cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of Team->historyRecordPlayers
-			historyRecordPlayers.pid =
-			# cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of Team->list
-			list.pid =
+			
+			historyOfficials {
+				# cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of Team->historyOfficials
+				pid =
+			}
+
+			historyRecordGames {
+				# cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default Limit for Team->historyRecordGames
+				limit = 10
+				# cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of Team->historyRecordGames
+				pid =
+			}
+
+			historyRecordPlayers {
+				# cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default Limit for Team->historyRecordPlayers
+				limit = 10
+				# cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of Team->historyRecordPlayers
+				pid =
+			}
+
+			list {
+				# cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of Team->list
+				pid =
+			}
 		}
 
 		teamSeason {
