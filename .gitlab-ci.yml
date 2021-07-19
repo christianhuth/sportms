@@ -11,6 +11,9 @@ build:
     script:
         - composer install --no-progress --no-ansi --no-interaction
         - ls -al
+        - ls -al .Build
+        - ls -al .Build/bin
+        - ls -al .Build/vendor
     artifacts:
         name: typo3
         paths:
