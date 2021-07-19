@@ -28,7 +28,7 @@ typoscript:
         - ls -al .Build
         - ls -al .Build/bin
         - ls -al .Build/vendor
-        - .Build/vendor/bin/typoscript-lint
+        - .Build/bin/typoscript-lint
 
 yaml:
     image: python:alpine3.7
