@@ -17,7 +17,6 @@ build application with dev dependencies:
             - ./vendor/
             - ./web/
             - ./composer.json
-            - ./composer.lock
         expire_in: '1h'
 
 typoscript:
