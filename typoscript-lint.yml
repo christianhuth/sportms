@@ -4,3 +4,21 @@ filePatterns:
 paths:
   - ./Configuration/TsConfig/
   - ./Configuration/TypoScript/
+
+sniffs:
+  - class: Indentation
+    parameters:
+      useSpaces: false
+      indentPerLevel: 1
+      indentConditions: false
+  - class: DeadCode
+  - class: OperatorWhitespace
+  - class: RepeatingRValue
+    parameters:
+      allowedRightValues:
+        - "TYPO3\\CMS\\Frontend\\DataProcessing\\DatabaseQueryProcessor"
+  - class: DuplicateAssignment
+  - class: EmptySection
+  - class: NestingConsistency
+    parameters:
+      commonPathPrefixThreshold: 1
