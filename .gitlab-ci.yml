@@ -1,16 +1,35 @@
 stages:
+    - build
     - lint
 
-lint:typoscriptcgl:
+build application with dev dependencies:
+    stage: build
+    image: composer:2.1.3
+    before_script:
+        - apk add bash --no-cache
+        - apk add git --update
+        - ls -al
+    script:
+        - composer install --no-progress --no-ansi --no-interaction
+    artifacts:
+        name: typo3
+        paths:
+            - ./vendor/
+            - ./web/
+            - ./composer.json
+            - ./composer.lock
+        expire_in: '1h'
+
+typoscript:
     image: composer:2.1.3
     stage: lint
     before_script:
         - git clone https://christian.knell:$gitlab_token@git.knell.it/typo3/sportms/sportms.git /tmp/tx_ext
     script:
-        - composer global require helmich/typo3-typoscript-lint
-        - /tmp/vendor/bin/typoscript-lint /tmp/tx_ext/Configuration/TypoScript/*.typoscript
+        - composer require --dev helmich/typo3-typoscript-lint
+        - ./vendor/bin/typoscript-lint
 
-lint:yaml:
+yaml:
     image: python:alpine3.7
     stage: lint
     before_script:
