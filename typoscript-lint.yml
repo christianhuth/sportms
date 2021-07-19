@@ -2,5 +2,5 @@ filePatterns:
   - "*.typoscript"
 
 paths:
-  - /Configuration/TsConfig/
-  - /Configuration/TypoScript/
+  - ./Configuration/TsConfig/
+  - ./Configuration/TypoScript/
