@@ -8,6 +8,7 @@ build application with dev dependencies:
     before_script:
         - apk add bash --no-cache
         - apk add git --update
+        - git clone https://christian.knell:$gitlab_token@git.knell.it/typo3/sportms/sportms.git .
     script:
         - composer global require hirak/prestissimo
         - composer install --no-progress --no-ansi --no-interaction
