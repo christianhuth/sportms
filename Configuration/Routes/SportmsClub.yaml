@@ -1,0 +1,30 @@
+routeEnhancers:
+  sportmsClub:
+    aspects:
+      club_slug:
+        type: PersistedAliasMapper
+        tableName: tx_sportms_domain_model_club
+        routeFieldName: slug
+      localizedModel:
+        type: LocaleModifier
+        default: 'club'
+        localeMap:
+          - locale: 'de_DE.*'
+            value: 'verein'
+      localizedAction_sections:
+        type: LocaleModifier
+        default: 'sections'
+        localeMap:
+          - locale: 'de_DE.*'
+            value: 'abteilungen'
+    defaultController: 'Club::list'
+    extension: Sportms
+    plugin: Club
+    routes:
+      - routePath: ''
+        _controller: 'Club::list'
+      - routePath: '/{localizedModel}/{club_slug}/{localizedAction_sections}'
+        _controller: 'Club::sections'
+        _arguments:
+          club_slug: club
+    type: Extbase

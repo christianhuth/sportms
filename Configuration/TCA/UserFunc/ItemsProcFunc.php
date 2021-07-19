@@ -9,9 +9,8 @@
 		 * @return void
 		 */
 		public function team_season_squad_member_GameLineup(&$config) {
-			
 			$game = $config['row']['game'][0];
-			if($game != null) {
+			if($game != NULL) {
 				$whichTeam = $config['row']['team'];
 				$teamSeasonColumn = "team_season_home";
 				if($whichTeam == "guest") {
@@ -25,9 +24,9 @@
 				
 				$gameTable = "tx_sportms_domain_model_game";
 				$queryBuilder = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Database\ConnectionPool::class)->getQueryBuilderForTable($gameTable);
-				$queryBuilder	->select($gameTable . '.' . $teamSeasonColumn)
-								->from($gameTable)
-								->where($queryBuilder->expr()->eq($gameTable . '.uid', $game));
+				$queryBuilder->select($gameTable . '.' . $teamSeasonColumn)
+					->from($gameTable)
+					->where($queryBuilder->expr()->eq($gameTable . '.uid', $game));
 				$result = $queryBuilder->execute()->fetchAll();
 				$teamSeasonId = $result[0][$teamSeasonColumn];
 				
@@ -35,31 +34,30 @@
 				$personTable = "tx_sportms_domain_model_person";
 				
 				$queryBuilder = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Database\ConnectionPool::class)->getQueryBuilderForTable($teamseasonsquadmemberTable);
-				$queryBuilder	->select($personTable . '.uid', $personTable . '.firstname', $personTable . '.lastname')
-								->from($teamseasonsquadmemberTable)
-								->innerJoin(
-									$teamseasonsquadmemberTable,
-									$personTable,
-									$personTable,
-									$queryBuilder->expr()->eq($personTable . '.uid', $queryBuilder->quoteIdentifier($teamseasonsquadmemberTable . '.person'))
-								)
-								->where($queryBuilder->expr()->eq($teamseasonsquadmemberTable . '.team_season', $teamSeasonId))
-								->orderBy('lastname', 'ASC')
-								->addOrderBy('firstname', 'ASC');
+				$queryBuilder->select($personTable . '.uid', $personTable . '.firstname', $personTable . '.lastname')
+					->from($teamseasonsquadmemberTable)
+					->innerJoin(
+						$teamseasonsquadmemberTable,
+						$personTable,
+						$personTable,
+						$queryBuilder->expr()->eq($personTable . '.uid', $queryBuilder->quoteIdentifier($teamseasonsquadmemberTable . '.person'))
+					)
+					->where($queryBuilder->expr()->eq($teamseasonsquadmemberTable . '.team_season', $teamSeasonId))
+					->orderBy('lastname', 'ASC')
+					->addOrderBy('firstname', 'ASC');
 				
 				// DEBUG GENERATED SQL
 				#array_push($config['items'], [$queryBuilder->getSQL(), '0']);
 				
 				$result = $queryBuilder->execute()->fetchAll();
 				
-				foreach ($result as $row) {
+				foreach($result as $row) {
 					// push it into the config array
 					array_push($config['items'], [$row['lastname'] . ", " . $row['firstname'], $row['uid']]);
 				}
 			}
-		
 		}
-	
+		
 	}
-
-?>
+	
+	?>

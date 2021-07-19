@@ -193,6 +193,10 @@
                 die("No Controller given to create Link in sportms Extension.");
             }
             
+			if($controller === "Club") {
+				$pluginName = "Club";
+			}
+            
             if($controller === "Competition" || $controller === "CompetitionSeason") {
             	$pluginName = "Competition";
             }
@@ -265,7 +269,8 @@
          */
 		private function checkIfDetailLink(String $controller) {
 
-		    if( $controller === "CompetitionSeason" ||
+		    if( $controller === "Club" ||
+		    	$controller === "CompetitionSeason" ||
                 $controller === "Game" ||
                 $controller === "Person" ||
                 $controller === "TeamSeason") {

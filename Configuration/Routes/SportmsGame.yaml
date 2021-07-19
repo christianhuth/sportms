@@ -27,6 +27,8 @@ routeEnhancers:
     extension: Sportms
     plugin: Game
     routes:
+      - routePath: '/'
+        _controller: 'Game::list'
       - routePath: '/{game_slug}/{localizedAction_index}'
         _controller: 'Game::index'
         _arguments:

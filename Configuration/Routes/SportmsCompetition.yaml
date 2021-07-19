@@ -31,7 +31,9 @@ routeEnhancers:
     extension: Sportms
     plugin: Competition
     routes:
-      - routePath: '/{competitionseason_slug}/vereine'
+      - routePath: '/'
+        _controller: 'Competition::list'
+      - routePath: '/{competitionseason_slug}/{localizedAction_clubs}'
         _controller: 'CompetitionSeason::clubs'
         _arguments:
           competitionseason_slug: competitionSeason
@@ -44,7 +46,7 @@ routeEnhancers:
         _arguments:
           competitionseason_slug: competitionSeason
           competitionseasongameday_slug: competitionSeasonGameday
-      - routePath: '/{competitionseason_slug}/blabla'
+      - routePath: '/{competitionseason_slug}/{localizedAction_teams}'
         _controller: 'CompetitionSeason::teams'
         _arguments:
           competitionseason_slug: competitionSeason

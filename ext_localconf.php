@@ -52,7 +52,7 @@
 		$icons = [
 			'sportms-ce-plugin-sportms-icon' => 'Extension.svg',
 			'sportms-ce-plugin-club-icon' => 'tx_sportms_domain_model_club.svg',
-			'sportms-ce-plugin-competition-icon' => 'tx_sportms_domain_model_game.svg',
+			'sportms-ce-plugin-competition-icon' => 'tx_sportms_domain_model_competition.svg',
 			'sportms-ce-plugin-game-icon' => 'tx_sportms_domain_model_game.svg',
 			'sportms-ce-plugin-person-icon' => 'tx_sportms_domain_model_person.svg',
 			'sportms-ce-plugin-team-icon' => 'tx_sportms_domain_model_team.svg',

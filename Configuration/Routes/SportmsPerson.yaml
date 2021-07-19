@@ -1,0 +1,9 @@
+routeEnhancers:
+  sportmsGame:
+    defaultController: 'Person::list'
+    extension: Sportms
+    plugin: Person
+    routes:
+      - routePath: '/'
+        _controller: 'Person::list'
+    type: Extbase

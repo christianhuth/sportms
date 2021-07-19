@@ -53,6 +53,8 @@ routeEnhancers:
     extension: Sportms
     plugin: Team
     routes:
+      - routePath: '/'
+        _controller: 'Team::list'
       - routePath: '/{team_slug}/{localizedAction_historyOfficials}'
         _controller: 'Team::historyOfficials'
         _arguments:

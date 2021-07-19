@@ -1,9 +1,9 @@
 <?php
 	
 	namespace Balumedien\Sportms\Configuration\TCA\UserFunc;
-
-    use TYPO3\CMS\Backend\Utility\BackendUtility;
-    use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
+	
+	use TYPO3\CMS\Backend\Utility\BackendUtility;
+	use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
 	
 	class UserFunc {
 		
@@ -250,7 +250,7 @@
 			$newLabel = LocalizationUtility::translate('tx_sportms_general.day.' . $record['day'], 'sportms') . ' (' . substr($record['time_start'], 0, 5) . ' - ' . substr($record['time_end'], 0, 5) . ' ' . LocalizationUtility::translate('tx_sportms_general.clock', 'sportms') . ')';
 			$parameters['title'] = $newLabel;
 		}
-
+		
 		public function teamSeasonSquadMemberLabel(&$parameters, $parentObject): void {
 			$record = BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
 			$person = BackendUtility::getRecord('tx_sportms_domain_model_person', $record['person']);

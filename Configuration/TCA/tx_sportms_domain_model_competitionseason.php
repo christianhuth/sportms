@@ -1,155 +1,155 @@
 <?php
-
-	if (!defined('TYPO3_MODE')) {
+	
+	if(!defined('TYPO3_MODE')) {
 		die ('Access denied.');
 	}
-
-	return array(
-		'ctrl' => array(
+	
+	return [
+		'ctrl' => [
 			'crdate' => 'crdate',
 			'cruser_id' => 'cruser_id',
 			'delete' => 'deleted',
-			'enablecolumns' => array(
+			'enablecolumns' => [
 				'disabled' => 'hidden',
 				'starttime' => 'starttime',
 				'endtime' => 'endtime',
-			),
+			],
 			'hideTable' => TRUE,
 			'iconfile' => 'EXT:sportms/Resources/Public/Icons/tx_sportms_domain_model_teamseason.svg',
-            'label' => '',
+			'label' => '',
 			'label_userFunc' => \Balumedien\Sportms\Configuration\TCA\UserFunc\UserFunc::class . '->CompetitionSeasonLabel',
 			'searchFields' => 'competition',
 			'sortby' => 'sorting',
 			'title' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_competitionseason',
 			'tstamp' => 'tstamp',
 			'versioningWS' => TRUE,
-		),
-		'interface' => array(
+		],
+		'interface' => [
 			'showRecordFieldList' => '',
-		),
-		'types' => array(
-			'1' => array('showitem' => 'competition, season, competition_season_gamedays,
+		],
+		'types' => [
+			'1' => ['showitem' => 'competition, season, competition_season_gamedays,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_competitionseason.tab_teams, competition_season_teams,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab.visibility, --palette--;;hidden_detail, slug
-		                            '),
-		),
-		'palettes' => array(
-			'hidden_detail' => array('showitem' => 'hidden, detail_link'),
-		),
-		'columns' => array(
-	        
-	        't3ver_label' => [
-	            'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.versionLabel',
-	            'config' => [
-	                'type' => 'input',
-	                'size' => 30,
-	                'max' => 255,
-	            ],
-	        ],
+		                            '],
+		],
+		'palettes' => [
+			'hidden_detail' => ['showitem' => 'hidden, detail_link'],
+		],
+		'columns' => [
+			
+			't3ver_label' => [
+				'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.versionLabel',
+				'config' => [
+					'type' => 'input',
+					'size' => 30,
+					'max' => 255,
+				],
+			],
 			
 			'hidden' => [
-				'exclude' => true,
+				'exclude' => TRUE,
 				'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.visible',
 				'config' => [
 					'items' => [
 						[
 							0 => '',
 							1 => '',
-							'invertStateDisplay' => true
-						]
+							'invertStateDisplay' => TRUE,
+						],
 					],
 					'renderType' => 'checkboxToggle',
 					'type' => 'check',
 				],
 			],
 			'starttime' => [
-	            'exclude' => true,
-	            'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.starttime',
-	            'config' => [
-	                'type' => 'input',
-	                'renderType' => 'inputDateTime',
-	                'eval' => 'datetime,int',
-	                'default' => 0,
-	                'behaviour' => [
-	                    'allowLanguageSynchronization' => true
-	                ]
-	            ],
-	        ],
+				'exclude' => TRUE,
+				'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.starttime',
+				'config' => [
+					'type' => 'input',
+					'renderType' => 'inputDateTime',
+					'eval' => 'datetime,int',
+					'default' => 0,
+					'behaviour' => [
+						'allowLanguageSynchronization' => TRUE,
+					],
+				],
+			],
 			'endtime' => [
-	            'exclude' => true,
-	            'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.endtime',
-	            'config' => [
-	                'type' => 'input',
-	                'renderType' => 'inputDateTime',
-	                'eval' => 'datetime,int',
-	                'default' => 0,
-	                'range' => [
-	                    'upper' => mktime(0, 0, 0, 1, 1, 2038)
-	                ],
-	                'behaviour' => [
-	                    'allowLanguageSynchronization' => true
-	                ]
-	            ],
-	        ],
+				'exclude' => TRUE,
+				'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.endtime',
+				'config' => [
+					'type' => 'input',
+					'renderType' => 'inputDateTime',
+					'eval' => 'datetime,int',
+					'default' => 0,
+					'range' => [
+						'upper' => mktime(0, 0, 0, 1, 1, 2038),
+					],
+					'behaviour' => [
+						'allowLanguageSynchronization' => TRUE,
+					],
+				],
+			],
 			
-			'competition' => array(
+			'competition' => [
 				'exclude' => 1,
 				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_competition',
-				'config' => array(
+				'config' => [
 					'eval' => 'required',
 					'foreign_table' => 'tx_sportms_domain_model_competition',
 					'foreign_table_where' => 'ORDER BY label ASC',
-					'items' => Array (
-						array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ""),
-					),
+					'items' => [
+						['LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ""],
+					],
 					'maxItems' => 1,
 					'renderType' => 'selectSingle',
 					'size' => 1,
 					'type' => 'select',
-				),
-			),
-
-			'season' => array(
+				],
+			],
+			
+			'season' => [
 				'exclude' => 1,
 				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_season',
-				'config' => array(
+				'config' => [
 					'eval' => 'required',
 					'foreign_table' => 'tx_sportms_domain_model_season',
 					'foreign_table_where' => 'ORDER BY label DESC',
-					'items' => Array(
-						array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ""),
-					),
+					'items' => [
+						['LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ""],
+					],
 					'maxItems' => 1,
 					'renderType' => 'selectSingle',
 					'size' => 1,
 					'type' => 'select',
-				),
-			),
-			'competition_season_gamedays' => array(
+				],
+			],
+			'competition_season_gamedays' => [
 				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_competitionseasongamedays',
-				'config' => array(
-					'appearance' => array(
+				'config' => [
+					'appearance' => [
 						'enabledControls' => [
-							'info' => false,
-							'new' => true,
-							'sort' => false,
-							'hide' => true,
-							'dragdrop' => true,
-							'delete' => true,
-							'localize' => true,
+							'info' => FALSE,
+							'new' => TRUE,
+							'sort' => FALSE,
+							'hide' => TRUE,
+							'dragdrop' => TRUE,
+							'delete' => TRUE,
+							'localize' => TRUE,
 						],
 						'levelLinksPosition' => 'bottom',
 						'useSortable' => 1,
-					),
+					],
 					'foreign_field' => 'competition_season',
 					'foreign_sortby' => 'sorting',
 					'foreign_table' => 'tx_sportms_domain_model_competitionseasongameday',
 					'type' => 'inline',
-				),
-			),
-
+				],
+			],
+			
 			'competition_season_teams' => [
-				'exclude' => true,
+				'exclude' => TRUE,
 				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_competitionseason.competition_season_teams',
 				'config' => [
 					'type' => 'select',
@@ -165,20 +165,20 @@
 					'multiple' => 0,
 					'fieldControl' => [
 						'editPopup' => [
-							'disabled' => true,
+							'disabled' => TRUE,
 						],
 						'addRecord' => [
-							'disabled' => true,
+							'disabled' => TRUE,
 						],
 						'listModule' => [
-							'disabled' => true,
+							'disabled' => TRUE,
 						],
 					],
 				],
 			],
 			
 			'slug' => [
-				'exclude' => true,
+				'exclude' => TRUE,
 				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.slug',
 				'config' => [
 					'default' => '',
@@ -196,9 +196,9 @@
 					'type' => 'slug',
 				],
 			],
-
+			
 			'detail_link' => [
-				'exclude' => true,
+				'exclude' => TRUE,
 				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.detail_link',
 				'config' => [
 					'default' => FALSE,
@@ -206,6 +206,6 @@
 					'type' => 'check',
 				],
 			],
-
-		),
-	);
+		
+		],
+	];

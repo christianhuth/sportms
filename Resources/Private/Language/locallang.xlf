@@ -175,6 +175,21 @@
             </trans-unit>
 
 
+			<!-- Domain Model ClubSection -->
+			<trans-unit id="tx_sportms_domain_model_clubsection">
+				<source>Vereinsabteilung</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_clubsection.plural">
+				<source>Vereinsabteilungen</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_clubsection.singular">
+				<source>Vereinsabteilung</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_clubsection.images">
+				<source>Bilder</source>
+			</trans-unit>
+
+
 			<!-- Domain Model ClubSectionMembers -->
 			<trans-unit id="tx_sportms_domain_model_clubsectionmembers">
 				<source>Abteilungsmitglieder</source>
@@ -438,8 +453,54 @@
 			<trans-unit id="tx_sportms_domain_model_person.favoriteDrink">
 				<source>Lieblingsgetränk</source>
 			</trans-unit>
-			
-			
+
+
+			<!-- Domain Model Phone -->
+			<trans-unit id="tx_sportms_domain_model_phone">
+				<source>Telefonnummer</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_phone.plural">
+				<source>Telefonnummern</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_phone.singular">
+				<source>Telefonnummer</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_phone.area_code">
+				<source>Vorwahl</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_phone.calling_number">
+				<source>Rufnummer</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_phone.international_area_code">
+				<source>Länder Code</source>
+			</trans-unit>
+
+
+			<!-- Domain Model PhoneType -->
+			<trans-unit id="tx_sportms_domain_model_phonetype">
+				<source>Telefonart</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_phonetype.plural">
+				<source>Telefonarten</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_phonetype.singular">
+				<source>Telefonart</source>
+			</trans-unit>
+
+
+			<!-- Domain Model RefereeJob -->
+			<trans-unit id="tx_sportms_domain_model_refereejob">
+				<source>Schiedsrichteraufgabe</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_refereejob.plural">
+				<source>Schiedsrichteraufgaben</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_refereejob.singular">
+				<source>Schiedsrichteraufgabe</source>
+			</trans-unit>
+
+
+			<!-- Domain Model Season -->
 			<trans-unit id="tx_sportms_domain_model_season">
 				<source>Saison</source>
 			</trans-unit>
@@ -449,8 +510,90 @@
 			<trans-unit id="tx_sportms_domain_model_season.singular">
 				<source>Saison</source>
 			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_season.winter_break">
+				<source>Winterpause</source>
+			</trans-unit>
 
 
+			<!-- Domain Model Sport -->
+			<trans-unit id="tx_sportms_domain_model_sport">
+				<source>Sportart</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_sport.plural">
+				<source>Sportarten</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_sport.singular">
+				<source>Sportart</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_sport.is_team_sport">
+				<source>Mannschaftssport?</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_sport.is_individual_sport">
+				<source>Einzelsport?</source>
+			</trans-unit>
+
+
+			<!-- Domain Model SportAgeGroup -->
+			<trans-unit id="tx_sportms_domain_model_sportagegroup">
+				<source>Altersgruppe</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_sportagegroup.plural">
+				<source>Altersgruppen</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_sportagegroup.singular">
+				<source>Altersgruppe</source>
+			</trans-unit>
+
+
+			<!-- Domain Model SportAgeLevel -->
+			<trans-unit id="tx_sportms_domain_model_sportagelevel">
+				<source>Altersstufe</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_sportagelevel.plural">
+				<source>Altersstufen</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_sportagelevel.singular">
+				<source>Altersstufe</source>
+			</trans-unit>
+
+
+			<!-- Domain Model SportPosition -->
+			<trans-unit id="tx_sportms_domain_model_sportposition">
+				<source>Position</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_sportposition.plural">
+				<source>Positionen</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_sportposition.singular">
+				<source>Position</source>
+			</trans-unit>
+
+
+			<!-- Domain Model SportPositionGroup -->
+			<trans-unit id="tx_sportms_domain_model_sportpositiongroup">
+				<source>Positionsgruppe</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_sportpositiongroup.plural">
+				<source>Positionsgruppen</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_sportpositiongroup.singular">
+				<source>Positionsgruppe</source>
+			</trans-unit>
+
+
+			<!-- Domain Model SportType -->
+			<trans-unit id="tx_sportms_domain_model_sporttype">
+				<source>Sporttyp</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_sporttype.plural">
+				<source>Sporttypen</source>
+			</trans-unit>
+			<trans-unit id="tx_sportms_domain_model_sporttype.singular">
+				<source>Sporttyp</source>
+			</trans-unit>
+
+
+			<!-- Domain Model Team -->
 			<trans-unit id="tx_sportms_domain_model_team">
 				<source>Mannschaft</source>
 			</trans-unit>

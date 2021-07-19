@@ -68,6 +68,9 @@
             <trans-unit id="tx_sportms_general.palette.visibility_detail">
                 <source>Sichtbarkeit der Einzelansicht</source>
             </trans-unit>
+            <trans-unit id="tx_sportms_general.tab.contact">
+                <source>Kontaktinformationen</source>
+            </trans-unit>
             <trans-unit id="tx_sportms_general.tab.general">
                 <source>Allgemein</source>
             </trans-unit>
@@ -106,9 +109,6 @@
 			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_club.tab_logos">
 				<source>Vereinslogos</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_club.tab_contact">
-				<source>Kontaktinformationen</source>
 			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_club.tab_grounds">
 				<source>Vereinsgelände</source>
@@ -184,25 +184,13 @@
 			</trans-unit>
 
 
-			<!-- Domain Model ClubSection -->
-			<trans-unit id="tx_sportms_domain_model_clubsection">
-				<source>Vereinsabteilung</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_clubsections">
-				<source>Vereinsabteilungen</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_clubsection.images">
-				<source>Bilder</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_clubsection.tab_contact">
-				<source>Kontaktinformationen</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_clubsection.tab_officials">
-				<source>Abteilungsfunktionäre</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_clubsection.tab_teams">
-				<source>Mannschaften</source>
-			</trans-unit>
+            <!-- Domain Model ClubSection -->
+            <trans-unit id="tx_sportms_domain_model_clubsection.tab_officials">
+                <source>Abteilungsfunktionäre</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_clubsection.tab_teams">
+                <source>Mannschaften</source>
+            </trans-unit>
 
 
 			<!-- Domain Model ClubSectionOfficial -->
@@ -937,9 +925,6 @@
 			<trans-unit id="tx_sportms_domain_model_person.tab_personal">
 				<source>Persönliche Daten</source>
 			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_person.tab_contact">
-				<source>Kontaktinformationen</source>
-			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_person.tab_profiles">
 				<source>Profile</source>
 			</trans-unit>
@@ -978,136 +963,22 @@
 			</trans-unit>
 
 
-			<!-- Domain Model Phone -->
-			<trans-unit id="tx_sportms_domain_model_phone">
-				<source>Telefonnummer</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_phones">
-				<source>Telefonnummern</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_phone.area_code">
-				<source>Vorwahl</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_phone.calling_number">
-				<source>Rufnummer</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_phone.international_area_code">
-				<source>Länder Code</source>
-			</trans-unit>
-
-
-			<!-- Domain Model PhoneType -->
-			<trans-unit id="tx_sportms_domain_model_phonetype">
-				<source>Telefonart</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_phonetypes">
-				<source>Telefonarten</source>
-			</trans-unit>
-
-
-			<!-- Domain Model RefereeJob -->
-			<trans-unit id="tx_sportms_domain_model_refereejob">
-				<source>Schiedsrichteraufgabe</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_refereejobs">
-				<source>Schiedsrichteraufgaben</source>
-			</trans-unit>
-
-
 			<!-- Domain Model Season -->
-			<trans-unit id="tx_sportms_domain_model_season">
-				<source>Saison</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_seasons">
-				<source>Saisons</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_season.winter_break">
-				<source>Winterpause</source>
-			</trans-unit>
 			<trans-unit id="tx_sportms_domain_model_season.tab_dates">
-				<source>Daten</source>
+				<source>Zeitraum</source>
 			</trans-unit>
 
 
-			<!-- Domain Model Sport -->
-			<trans-unit id="tx_sportms_domain_model_sport">
-				<source>Sportart</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_sports">
-				<source>Sportarten</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_sport.is_team_sport">
-				<source>Mannschaftssport?</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_sport.is_individual_sport">
-				<source>Einzelsport?</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_sport.tab_sport_age_groups">
-				<source>Altersgruppen</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_sport.tab_sport_position_groups">
-				<source>Positionsgruppen</source>
-			</trans-unit>
-
-
-			<!-- Domain Model SportAgeGroup -->
-			<trans-unit id="tx_sportms_domain_model_sportagegroup">
-				<source>Altersgruppe</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_sportagegroups">
-				<source>Altersgruppe</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_sportagegroup.tab_sport_age_levels">
-				<source>Altersstufen</source>
-			</trans-unit>
-
-
-			<!-- Domain Model SportAgeLevel -->
-			<trans-unit id="tx_sportms_domain_model_sportagelevel">
-				<source>Altersstufe</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_sportagelevels">
-				<source>Altersstufen</source>
-			</trans-unit>
-
-
-			<!-- Domain Model SportPosition -->
-			<trans-unit id="tx_sportms_domain_model_sportposition">
-				<source>Position</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_sportpositions">
-				<source>Positionen</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_sportposition.x_position">
-				<source>Position X-Achse</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_sportposition.y_position">
-				<source>Position Y-Achse</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_sportposition.tab_representation">
-				<source>Darstellung</source>
-			</trans-unit>
-
-
-			<!-- Domain Model SportPositionGroup -->
-			<trans-unit id="tx_sportms_domain_model_sportpositiongroup">
-				<source>Positionsgruppe</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_sportpositiongroups">
-				<source>Positionsgruppen</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_sportpositiongroup.tab_sport_positions">
-				<source>Positionen</source>
-			</trans-unit>
-
-
-			<!-- Domain Model SportType -->
-			<trans-unit id="tx_sportms_domain_model_sporttype">
-				<source>Sporttyp</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_sporttypes">
-				<source>Sporttypen</source>
-			</trans-unit>
+            <!-- Domain Model SportPosition -->
+            <trans-unit id="tx_sportms_domain_model_sportposition.x_position">
+                <source>Position X-Achse</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_sportposition.y_position">
+                <source>Position Y-Achse</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_sportposition.tab_representation">
+                <source>Darstellung</source>
+            </trans-unit>
 
 
 			<!-- Domain Model Team -->
@@ -1120,18 +991,18 @@
 			<trans-unit id="tx_sportms_domain_model_team.dummy">
 				<source>Spielfrei</source>
 			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_team.tab_seasons">
-				<source>Saison-Instanzen</source>
-			</trans-unit>
 
 
 			<!-- Domain Model TeamSeason -->
 			<trans-unit id="tx_sportms_domain_model_teamseason">
-				<source>Mannschafts-Instanz</source>
+				<source>Mannschaftsinstanz</source>
 			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_teamseasons">
-				<source>Mannschafts-Instanzen</source>
-			</trans-unit>
+            <trans-unit id="tx_sportms_domain_model_teamseason.plural">
+                <source>Mannschaftsinstanzen</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_teamseason.singular">
+                <source>Mannschaftsinstanz</source>
+            </trans-unit>
 			<trans-unit id="tx_sportms_domain_model_teamseason.team_season_images">
 				<source>Mannschaftsfoto</source>
 			</trans-unit>

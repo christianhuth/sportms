@@ -1,148 +1,155 @@
 <?php
-if (!defined ('TYPO3_MODE')) {
-	die ('Access denied.');
-}
-
-return array(
-	'ctrl' => array(
-		'crdate' => 'crdate',
-		'cruser_id' => 'cruser_id',
-		'delete' => 'deleted',
-		'enablecolumns' => array(
-			'disabled' => 'hidden',
-			'starttime' => 'starttime',
-			'endtime' => 'endtime',
-		),
-		'hideTable' => TRUE,
-		'iconfile' => 'EXT:sportms/Resources/Public/Icons/tx_sportms_domain_model_sportposition.svg',
-		'label' => 'label',
-		'searchFields' => 'label',
-		'sortby' => 'sorting',
-		'title'	=> 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sportposition',
-		'tstamp' => 'tstamp',
-		'versioningWS' => TRUE,
-	),
-	'interface' => array(
-		'showRecordFieldList' => 'label, abbreviation, x_position, y_position',
-	),
-	'types' => array(
-		'1' => array('showitem' => 'sport_position_group, label, abbreviation,
-									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sportposition.tab_representation, x_position, y_position,
-		                            '),
-	),
-	'palettes' => array(
-		'1' => array('showitem' => ''),
-	),
-	'columns' => array(
-        
-        't3ver_label' => [
-            'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.versionLabel',
-            'config' => [
-                'type' => 'input',
-                'size' => 30,
-                'max' => 255,
-            ],
-        ],
-		
-		'hidden' => [
-			'exclude' => true,
-			'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.visible',
-			'config' => [
-				'items' => [
-					[
-						0 => '',
-						1 => '',
-						'invertStateDisplay' => true
-					]
-				],
-				'renderType' => 'checkboxToggle',
-				'type' => 'check',
+	
+	if(!defined('TYPO3_MODE')) {
+		die ('Access denied.');
+	}
+	
+	return [
+		'ctrl' => [
+			'crdate' => 'crdate',
+			'cruser_id' => 'cruser_id',
+			'delete' => 'deleted',
+			'enablecolumns' => [
+				'disabled' => 'hidden',
+				'starttime' => 'starttime',
+				'endtime' => 'endtime',
 			],
+			'hideTable' => TRUE,
+			'iconfile' => 'EXT:sportms/Resources/Public/Icons/tx_sportms_domain_model_sportposition.svg',
+			'label' => 'label',
+			'searchFields' => 'label',
+			'sortby' => 'sorting',
+			'title' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sportposition',
+			'tstamp' => 'tstamp',
+			'versioningWS' => TRUE,
 		],
+		'interface' => [
+			'showRecordFieldList' => 'label, abbreviation, x_position, y_position',
+		],
+		'types' => [
+			'1' => ['showitem' => ' --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab.general,
+		                            	--palette--;;label_abbreviation,
+									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sportposition.tab_representation,
+										--palette--;;positions,
+		                            --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab.visibility,
+		                                --palette--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.palette.visibility_general;visibility_general,
+										--palette--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.palette.visibility_detail;visibility_detail'],
+		],
+		'palettes' => [
+			'label_abbreviation' => ['showitem' => 'label, abbreviation'],
+			'positions' => ['showitem' => 'x_position, y_position'],
+			'visibility_general' => ['showitem' => 'hidden, starttime, endtime'],
+		],
+		'columns' => [
+			
+			't3ver_label' => [
+				'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.versionLabel',
+				'config' => [
+					'type' => 'input',
+					'size' => 30,
+					'max' => 255,
+				],
+			],
+			
+			'hidden' => [
+				'exclude' => TRUE,
+				'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.visible',
+				'config' => [
+					'items' => [
+						[
+							0 => '',
+							1 => '',
+							'invertStateDisplay' => TRUE,
+						],
+					],
+					'renderType' => 'checkboxToggle',
+					'type' => 'check',
+				],
+			],
+			
+			'starttime' => [
+				'exclude' => TRUE,
+				'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.starttime',
+				'config' => [
+					'type' => 'input',
+					'renderType' => 'inputDateTime',
+					'eval' => 'datetime,int',
+					'default' => 0,
+					'behaviour' => [
+						'allowLanguageSynchronization' => TRUE,
+					],
+				],
+			],
+			'endtime' => [
+				'exclude' => TRUE,
+				'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.endtime',
+				'config' => [
+					'type' => 'input',
+					'renderType' => 'inputDateTime',
+					'eval' => 'datetime,int',
+					'default' => 0,
+					'range' => [
+						'upper' => mktime(0, 0, 0, 1, 1, 2038),
+					],
+					'behaviour' => [
+						'allowLanguageSynchronization' => TRUE,
+					],
+				],
+			],
+			
+			'sport_position_group' => [
+				'exclude' => 1,
+				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sportpositiongroup',
+				'config' => [
+					'eval' => 'required',
+					'foreign_table' => 'tx_sportms_domain_model_sportpositiongroup',
+					'foreign_table_where' => 'ORDER BY label ASC',
+					'items' => [
+						['LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ''],
+					],
+					'renderType' => 'selectSingle',
+					'size' => 1,
+					'type' => 'select',
+				],
+				'onChange' => 'reload',
+			],
+			'label' => [
+				'exclude' => 1,
+				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.label',
+				'config' => [
+					'eval' => 'required, trim',
+					'size' => 255,
+					'type' => 'input',
+				],
+			],
+			'abbreviation' => [
+				'exclude' => 1,
+				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.abbreviation',
+				'config' => [
+					'eval' => 'trim',
+					'size' => 255,
+					'type' => 'input',
+				],
+			],
+			
+			'x_position' => [
+				'exclude' => 1,
+				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sportposition.x_position',
+				'config' => [
+					'type' => 'input',
+					'size' => 30,
+					'eval' => 'alphanum, trim',
+				],
+			],
+			'y_position' => [
+				'exclude' => 1,
+				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sportposition.y_position',
+				'config' => [
+					'type' => 'input',
+					'size' => 30,
+					'eval' => 'alphanum, trim',
+				],
+			],
 		
-		'starttime' => [
-            'exclude' => true,
-            'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.starttime',
-            'config' => [
-                'type' => 'input',
-                'renderType' => 'inputDateTime',
-                'eval' => 'datetime,int',
-                'default' => 0,
-                'behaviour' => [
-                    'allowLanguageSynchronization' => true
-                ]
-            ],
-        ],
-		'endtime' => [
-            'exclude' => true,
-            'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.endtime',
-            'config' => [
-                'type' => 'input',
-                'renderType' => 'inputDateTime',
-                'eval' => 'datetime,int',
-                'default' => 0,
-                'range' => [
-                    'upper' => mktime(0, 0, 0, 1, 1, 2038)
-                ],
-                'behaviour' => [
-                    'allowLanguageSynchronization' => true
-                ]
-            ],
-        ],
-		
-		'sport_position_group' => array(
-			'exclude' => 1,
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sportpositiongroup',
-			'config' => array(
-				'eval' => 'required',
-				'foreign_table' => 'tx_sportms_domain_model_sportpositiongroup',
-				'foreign_table_where' => 'ORDER BY label ASC',
-				'items' => Array (
-					array('LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ''),
-				),
-				'renderType' => 'selectSingle',
-				'size' => 1,
-				'type' => 'select',
-			),
-			'onChange' => 'reload',
-		),
-		'label' => array(
-			'exclude' => 1,
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.label',
-			'config' => array(
-				'eval' => 'required, trim',
-				'size' => 255,
-				'type' => 'input',
-			),
-		),
-		'abbreviation' => array(
-			'exclude' => 1,
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.abbreviation',
-			'config' => array(
-				'eval' => 'trim',
-				'size' => 255,
-				'type' => 'input',
-			),
-		),
-		
-		'x_position' => array(
-			'exclude' => 1,
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sportposition.x_position',
-			'config' => array(
-				'type' => 'input',
-				'size' => 30,
-				'eval' => 'alphanum, trim'
-			),
-		),
-		'y_position' => array(
-			'exclude' => 1,
-			'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_sportposition.y_position',
-			'config' => array(
-				'type' => 'input',
-				'size' => 30,
-				'eval' => 'alphanum, trim'
-			),
-		),
-		
-	),
-);
+		],
+	];
