@@ -14,8 +14,8 @@ build:
     artifacts:
         name: typo3
         paths:
-            - ./vendor/
-            - ./web/
+            - .Build/vendor/
+            - .Build/Web/
             - ./composer.json
         expire_in: '1h'
 
@@ -26,7 +26,7 @@ typoscript:
     stage: lint
     script:
         - ls -al
-        - ./vendor/bin/typoscript-lint
+        - .Build/vendor/bin/typoscript-lint
 
 yaml:
     image: python:alpine3.7
