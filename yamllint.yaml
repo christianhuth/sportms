@@ -6,4 +6,5 @@ yaml-files:
 
 rules:
   document-start:
+    present: true
     level: error
