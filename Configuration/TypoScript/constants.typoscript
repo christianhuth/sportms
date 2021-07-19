@@ -22,129 +22,129 @@
 
 plugin.tx_sportms {
 
-    features {
-        # cat=plugin.tx_sportms/features; type=boolean; label=Ignore the enable fields in backend. Default is false.
-        ignoreAllEnableFieldsInBe = 0
-        # cat=plugin.tx_sportms/features; type=boolean; label=Do not force a cHash for arguments used in actions. If this is turned on, all requests with arguments but no, or an invalid cHash, are handled as pageNotFoundOnCHashError. Default is true
-        requireCHashArgumentForActionArguments = 1
-        # cat=plugin.tx_sportms/features; type=boolean; label=Skip default arguments in URLs. If a link to the default controller or action is created, the parameters are omitted. Default is false.
-        skipDefaultArguments = 0
-    }
+	features {
+		# cat=plugin.tx_sportms/features; type=boolean; label=Ignore the enable fields in backend. Default is false.
+		ignoreAllEnableFieldsInBe = 0
+		# cat=plugin.tx_sportms/features; type=boolean; label=Do not force a cHash for arguments used in actions. If this is turned on, all requests with arguments but no, or an invalid cHash, are handled as pageNotFoundOnCHashError. Default is true
+		requireCHashArgumentForActionArguments = 1
+		# cat=plugin.tx_sportms/features; type=boolean; label=Skip default arguments in URLs. If a link to the default controller or action is created, the parameters are omitted. Default is false.
+		skipDefaultArguments = 0
+	}
 
-    mvc {
-        # cat=plugin.tx_sportms/mvc; type=boolean; label=Will cause the controller to show its default action e.g. if the called action is not allowed by the controller.
-        callDefaultActionIfActionCantBeResolved = 1
-    }
+	mvc {
+		# cat=plugin.tx_sportms/mvc; type=boolean; label=Will cause the controller to show its default action e.g. if the called action is not allowed by the controller.
+		callDefaultActionIfActionCantBeResolved = 1
+	}
 
-    persistence {
-        # cat=plugin.tx_sportms/persistence; type=int+; label=Default storage PID
-        storagePid =
-        # cat=plugin.tx_sportms/persistence; type=int+; label=Recursion level of storage PID
-        recursive = 0
-    }
+	persistence {
+		# cat=plugin.tx_sportms/persistence; type=int+; label=Default storage PID
+		storagePid =
+		# cat=plugin.tx_sportms/persistence; type=int+; label=Recursion level of storage PID
+		recursive = 0
+	}
 
-    settings {
+	settings {
 
-        club {
-            # cat=plugin.tx_sportms/sportmsClub; type=int+; label=Default PID of Club->list
-            list.pid =
-            # cat=plugin.tx_sportms/sportmsClub; type=int+; label=Default PID of Club->sections
-            sections.pid =
-        }
+		club {
+			# cat=plugin.tx_sportms/sportmsClub; type=int+; label=Default PID of Club->list
+			list.pid =
+			# cat=plugin.tx_sportms/sportmsClub; type=int+; label=Default PID of Club->sections
+			sections.pid =
+		}
 
-        competition {
-            # cat=plugin.tx_sportms/sportmsCompetition; type=int+; label=Default PID of Competition->list
-            list.pid =
-        }
+		competition {
+			# cat=plugin.tx_sportms/sportmsCompetition; type=int+; label=Default PID of Competition->list
+			list.pid =
+		}
 
-        competitionSeason {
-            # cat=plugin.tx_sportms/sportmsCompetition; type=int+; label=Default PID of CompetitionSeason->clubs
-            clubs.pid = 
-            # cat=plugin.tx_sportms/sportmsCompetition; type=int+; label=Default PID of CompetitionSeason->games
-            games.pid =
-            # cat=plugin.tx_sportms/sportmsCompetition; type=int+; label=Default PID of CompetitionSeason->teams
-            teams.pid = 
-        }
+		competitionSeason {
+			# cat=plugin.tx_sportms/sportmsCompetition; type=int+; label=Default PID of CompetitionSeason->clubs
+			clubs.pid =
+			# cat=plugin.tx_sportms/sportmsCompetition; type=int+; label=Default PID of CompetitionSeason->games
+			games.pid =
+			# cat=plugin.tx_sportms/sportmsCompetition; type=int+; label=Default PID of CompetitionSeason->teams
+			teams.pid =
+		}
 
-        format {
-            # cat=plugin.tx_sportms/format; type=string; label=Long format for dates
-            dateLong = %d.%m.%Y
-            # cat=plugin.tx_sportms/format; type=string; label=Short format for dates
-            dateShort = %d.%m
-            # cat=plugin.tx_sportms/format; type=string; label=Long format for datetimes
-            dateTimeLong = %d.%m.%Y - %H:%M
-            # cat=plugin.tx_sportms/format; type=string; label=Short format for datetimes
-            dateTimeShort = %d.%m. - %H:%M
-            # cat=plugin.tx_sportms/format; type=string; label=Long format for times
-            timeLong = %H:%M
-            # cat=plugin.tx_sportms/format; type=string; label=Short format for times
-            timeShort = %H:%M
-        }
+		format {
+			# cat=plugin.tx_sportms/format; type=string; label=Long format for dates
+			dateLong = %d.%m.%Y
+			# cat=plugin.tx_sportms/format; type=string; label=Short format for dates
+			dateShort = %d.%m
+			# cat=plugin.tx_sportms/format; type=string; label=Long format for datetimes
+			dateTimeLong = %d.%m.%Y - %H:%M
+			# cat=plugin.tx_sportms/format; type=string; label=Short format for datetimes
+			dateTimeShort = %d.%m. - %H:%M
+			# cat=plugin.tx_sportms/format; type=string; label=Long format for times
+			timeLong = %H:%M
+			# cat=plugin.tx_sportms/format; type=string; label=Short format for times
+			timeShort = %H:%M
+		}
 
-        game {
-            # cat=plugin.tx_sportms/sportmsGame; type=int+; label=Default PID of Game->list
-            list.pid =
-            # cat=plugin.tx_sportms/sportmsGame; type=int+; label=Default PID of Game->history
-            history.pid =
-            # cat=plugin.tx_sportms/sportmsGame; type=int+; label=Default PID of Game->index
-            index.pid =
-            # cat=plugin.tx_sportms/sportmsGame; type=int+; label=Default PID of Game->report
-            report.pid =
-        }
+		game {
+			# cat=plugin.tx_sportms/sportmsGame; type=int+; label=Default PID of Game->list
+			list.pid =
+			# cat=plugin.tx_sportms/sportmsGame; type=int+; label=Default PID of Game->history
+			history.pid =
+			# cat=plugin.tx_sportms/sportmsGame; type=int+; label=Default PID of Game->index
+			index.pid =
+			# cat=plugin.tx_sportms/sportmsGame; type=int+; label=Default PID of Game->report
+			report.pid =
+		}
 
-        pagetitle {
-            # cat=plugin.tx_sportms/page; type=string; label=Prefix for Creation of PageTitle Tag
-            prefix =
-            # cat=plugin.tx_sportms/page; type=string; label=Separator used for Creation of PageTitle Tag
-            seperator = -
-            # cat=plugin.tx_sportms/page; type=string; label=Suffix for Creation of PageTitle Tag
-            suffix =
-        }
+		pagetitle {
+			# cat=plugin.tx_sportms/page; type=string; label=Prefix for Creation of PageTitle Tag
+			prefix =
+			# cat=plugin.tx_sportms/page; type=string; label=Separator used for Creation of PageTitle Tag
+			seperator = -
+			# cat=plugin.tx_sportms/page; type=string; label=Suffix for Creation of PageTitle Tag
+			suffix =
+		}
 
-        person {
-            # cat=plugin.tx_sportms/sportmsPerson; type=int+; label=Default PID of Person->list
-            list.pid =
-            # cat=plugin.tx_sportms/sportmsPerson; type=string; label=Path to default dummy image for a male person
-            dummyImageMale = EXT:sportms/Resources/Public/Images/person-male.jpg
-            # cat=plugin.tx_sportms/sportmsPerson; type=string; label=Path to default dummy image for a female person
-            dummyImageFemale = EXT:sportms/Resources/Public/Images/person-female.jpg
-        }
+		person {
+			# cat=plugin.tx_sportms/sportmsPerson; type=int+; label=Default PID of Person->list
+			list.pid =
+			# cat=plugin.tx_sportms/sportmsPerson; type=string; label=Path to default dummy image for a male person
+			dummyImageMale = EXT:sportms/Resources/Public/Images/person-male.jpg
+			# cat=plugin.tx_sportms/sportmsPerson; type=string; label=Path to default dummy image for a female person
+			dummyImageFemale = EXT:sportms/Resources/Public/Images/person-female.jpg
+		}
 
-        team {
-            # cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of Team->historyOfficials
-            historyOfficials.pid =
-            # cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default Limit for Team->historyRecordGames
-            historyRecordGames.limit = 10
-            # cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of Team->historyRecordGames
-            historyRecordGames.pid =
-            # cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default Limit for Team->historyRecordPlayers
-            historyRecordPlayers.limit = 10
-            # cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of Team->historyRecordPlayers
-            historyRecordPlayers.pid =
-            # cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of Team->list
-            list.pid =
-        }
+		team {
+			# cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of Team->historyOfficials
+			historyOfficials.pid =
+			# cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default Limit for Team->historyRecordGames
+			historyRecordGames.limit = 10
+			# cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of Team->historyRecordGames
+			historyRecordGames.pid =
+			# cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default Limit for Team->historyRecordPlayers
+			historyRecordPlayers.limit = 10
+			# cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of Team->historyRecordPlayers
+			historyRecordPlayers.pid =
+			# cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of Team->list
+			list.pid =
+		}
 
-        teamSeason {
-            # cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of TeamSeason->gamesByCompetition
-            gamesByCompetition.pid = 
-            # cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of TeamSeason->gamesByDate
-            gamesByDate.pid =
-            # cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of TeamSeason->index
-            index.pid =
-        }
+		teamSeason {
+			# cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of TeamSeason->gamesByCompetition
+			gamesByCompetition.pid =
+			# cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of TeamSeason->gamesByDate
+			gamesByDate.pid =
+			# cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of TeamSeason->index
+			index.pid =
+		}
 
-    }
+	}
 
-    view {
-        # cat=plugin.tx_sportms/view; type=string; label=Path to css file
-        pathToCssFile = EXT:sportms/Resources/Public/Css/sportms.css
-        # cat=plugin.tx_sportms/view; type=string; label=Path to template layouts (FE)
-        layoutRootPath = EXT:sportms/Resources/Private/Layouts/
-        # cat=plugin.tx_sportms/view; type=string; label=Path to template partials (FE)
-        partialRootPath = EXT:sportms/Resources/Private/Partials/
-        # cat=plugin.tx_sportms/view; type=string; label=Path to template root (FE)
-        templateRootPath = EXT:sportms/Resources/Private/Templates/
-    }
+	view {
+		# cat=plugin.tx_sportms/view; type=string; label=Path to css file
+		pathToCssFile = EXT:sportms/Resources/Public/Css/sportms.css
+		# cat=plugin.tx_sportms/view; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:sportms/Resources/Private/Layouts/
+		# cat=plugin.tx_sportms/view; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:sportms/Resources/Private/Partials/
+		# cat=plugin.tx_sportms/view; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:sportms/Resources/Private/Templates/
+	}
 
 }
