@@ -23,7 +23,8 @@
 	"extra": {
 		"typo3/cms": {
 			"cms-package-dir": "{$vendor-dir}/typo3/cms",
-			"extension-key": "sportms"
+			"extension-key": "sportms",
+			"web-dir": ".Build/Web"
 		}
 	},
 	"homepage": "https://knell.it",
