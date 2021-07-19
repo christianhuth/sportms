@@ -6,7 +6,7 @@ lint:typoscriptcgl:
     stage: lint
     script:
         - composer global require helmich/typo3-typoscript-lint
-        - vendor/bin/typoscript-lint Configuration/*.typoscript
+        - /tmp/vendor/bin/typoscript-lint Configuration/*.typoscript
 
 lint:yaml:
     image: python:alpine3.7
