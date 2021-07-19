@@ -10,7 +10,6 @@ build application with dev dependencies:
         - apk add git --update
         - ls -al
     script:
-        - composer global require hirak/prestissimo
         - composer install --no-progress --no-ansi --no-interaction
     artifacts:
         name: typo3
