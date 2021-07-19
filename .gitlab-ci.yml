@@ -2,7 +2,7 @@ stages:
     - lint
 
 lint:typoscriptcgl:
-    image: composer:1.6
+    image: composer:2.1.3
     stage: lint
     script:
         - composer global require helmich/typo3-typoscript-lint
