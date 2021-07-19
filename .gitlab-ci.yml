@@ -15,7 +15,6 @@ build:
         name: typo3
         paths:
             - .Build/vendor/
-            - .Build/Web/
             - ./composer.json
         expire_in: '1h'
 
