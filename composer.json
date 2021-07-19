@@ -1,0 +1,37 @@
+{
+	"authors": [
+		{
+			"name": "Christian Knell",
+			"role": "Developer"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"Balumedien\\Sportms\\": "Classes/"
+		}
+	},
+	"autoload-dev": {},
+	"config": {
+		"vendor-dir": ".Build/vendor",
+		"bin-dir": ".Build/bin"
+	},
+	"conflict": {},
+	"description": "Versatile sports extension, based on extbase & fluid for TYPO3 CMS",
+	"extra": {
+		"typo3/cms": {
+			"cms-package-dir": "{$vendor-dir}/typo3/cms",
+			"extension-key": "sportms"
+		}
+	},
+	"homepage": "https://knell.it",
+	"license": "GPL-2.0-or-later",
+	"name": "balumedien/sportms",
+	"replace": {
+		"typo3-ter/sportms": "self.version"
+	},
+	"require": {
+		"typo3/cms-core": "^9.5 || ^10.4"
+	},
+	"scripts": {},
+	"type": "typo3-cms-extension"
+}
