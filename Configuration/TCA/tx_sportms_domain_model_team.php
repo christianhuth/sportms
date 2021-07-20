@@ -24,9 +24,6 @@
 			'tstamp' => 'tstamp',
 			'versioningWS' => TRUE,
 		],
-		'interface' => [
-			'showRecordFieldList' => 'label, club, sport, team_seasons',
-		],
 		'types' => [
 			'1' => ['showitem' => 'club, sport, sport_age_group, sport_age_level, label, dummy,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_team.tab_seasons, team_seasons,

@@ -24,9 +24,6 @@
 			'tstamp' => 'tstamp',
 			'versioningWS' => TRUE,
 		],
-		'interface' => [
-			'showRecordFieldList' => '',
-		],
 		'types' => [
 			'1' => ['showitem' => 'person, team_season_official_job,
 		                            --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_teamseasonofficial.tab_date, startdate, enddate,

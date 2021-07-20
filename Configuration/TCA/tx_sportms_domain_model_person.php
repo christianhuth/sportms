@@ -25,9 +25,6 @@
 			'tstamp' => 'tstamp',
 			'versioningWS' => TRUE,
 		],
-		'interface' => [
-			'showRecordFieldList' => 'firstname, lastname, nickname, date_of_birth, zodiac_sign, place_of_birth, nationalities, sex, height, weight, hander, footer, address, phone, url',
-		],
 		'types' => [
 			'1' => ['showitem' => '--palette--;Name;firstname_lastname, --palette--;;birthname_nickname, --palette--;;birth, nationalities, sex,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.tab_personal, --palette--;;weight_height_shoesize, --palette--;;hander_footer, family_status, --palette--;;graduation_job, characteristics, hobbies, --palette--;;dish_drink,

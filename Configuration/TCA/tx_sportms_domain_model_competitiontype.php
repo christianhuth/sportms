@@ -22,9 +22,6 @@
 			'tstamp' => 'tstamp',
 			'versioningWS' => TRUE,
 		],
-		'interface' => [
-			'showRecordFieldList' => 'label',
-		],
 		'types' => [
 			'1' => ['showitem' => 'label,
 		                            --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab.visibility, hidden, slug'],

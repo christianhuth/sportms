@@ -24,9 +24,6 @@
 			'tstamp' => 'tstamp',
 			'versioningWS' => TRUE,
 		],
-		'interface' => [
-			'showRecordFieldList' => '',
-		],
 		'types' => [
 			'1' => ['showitem' => 'game, jersey_number, person, sport_position'],
 		],

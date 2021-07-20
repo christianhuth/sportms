@@ -24,9 +24,6 @@
 			'tstamp' => 'tstamp',
 			'versioningWS' => TRUE,
 		],
-		'interface' => [
-			'showRecordFieldList' => '',
-		],
 		'types' => [
 			'1' => ['showitem' => 'game, ---palette---;;goal, ---palette---;;time, ---palette---;;scorer_assist, ---palette---;;goal_details'],
 		],

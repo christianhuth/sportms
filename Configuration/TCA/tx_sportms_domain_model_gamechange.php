@@ -24,9 +24,6 @@
 			'tstamp' => 'tstamp',
 			'versioningWS' => TRUE,
 		],
-		'interface' => [
-			'showRecordFieldList' => '',
-		],
 		'types' => [
 			'1' => ['showitem' => 'game, ---palette---;;time, ---palette---;;person_in_person_out, reason'],
 		],

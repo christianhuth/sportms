@@ -23,9 +23,6 @@
 			'tstamp' => 'tstamp',
 			'versioningWS' => TRUE,
 		],
-		'interface' => [
-			'showRecordFieldList' => '',
-		],
 		'types' => [
 			'1' => ['showitem' => 'referee_job, person,
 		                            '],

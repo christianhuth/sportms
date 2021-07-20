@@ -24,9 +24,6 @@
 			'tstamp' => 'tstamp',
 			'versioningWS' => TRUE,
 		],
-		'interface' => [
-			'showRecordFieldList' => '',
-		],
 		'types' => [
 			'1' => ['showitem' => 'game, ---palette---;;goal, ---palette---;;time, punished_person, ---palette---;;punishment_details,
 		                            '],

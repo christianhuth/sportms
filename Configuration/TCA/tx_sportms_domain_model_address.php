@@ -25,9 +25,6 @@
 			'tstamp' => 'tstamp',
 			'versioningWS' => TRUE,
 		],
-		'interface' => [
-			'showRecordFieldList' => 'street, housenumber, zipcode, location, country, region',
-		],
 		'types' => [
 			'1' => ['showitem' => '--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab.general,
 										--palette--;;street_housenumber,

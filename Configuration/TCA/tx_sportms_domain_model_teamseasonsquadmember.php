@@ -24,9 +24,6 @@
 			'tstamp' => 'tstamp',
 			'versioningWS' => TRUE,
 		],
-		'interface' => [
-			'showRecordFieldList' => 'squad_number, person',
-		],
 		'types' => [
 			'1' => ['showitem' => 'person, sport_position_group, sport_position, squad_number,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_teamseasonsquadmember.tab_transfer, new_signing, leaving,

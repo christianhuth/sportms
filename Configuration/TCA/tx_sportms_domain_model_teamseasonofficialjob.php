@@ -22,9 +22,6 @@
 			'tstamp' => 'tstamp',
 			'versioningWS' => TRUE,
 		],
-		'interface' => [
-			'showRecordFieldList' => 'label',
-		],
 		'types' => [
 			'1' => ['showitem' => 'label,
 		                            '],

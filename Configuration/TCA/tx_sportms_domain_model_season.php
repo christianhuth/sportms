@@ -22,9 +22,6 @@
 			'tstamp' => 'tstamp',
 			'versioningWS' => TRUE,
 		],
-		'interface' => [
-			'showRecordFieldList' => 'hidden, label, abbreviation, startdate, enddate',
-		],
 		'types' => [
 			'1' => ['showitem' => ' --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab.general,
 		                                --palette--;;label_abbreviation,

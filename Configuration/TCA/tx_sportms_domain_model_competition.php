@@ -24,9 +24,6 @@
 			'tstamp' => 'tstamp',
 			'versioningWS' => TRUE,
 		],
-		'interface' => [
-			'showRecordFieldList' => 'sport, sport_age_group, sport_age_level, competition_type, label, abbreviation, slug',
-		],
 		'types' => [
 			'1' => ['showitem' => 'sport, sport_age_group, sport_age_level, competition_type, label, abbreviation,
 										--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_competition.tab_seasons, competition_seasons,
