@@ -1,51 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <T3DataStructure>
-	<ROOT>
-		<TCEforms>
-			<sheetTitle>View</sheetTitle>
-		</TCEforms>
-		<type>array</type>
-		<el>
-			<view.cssFile>
-				<TCEforms>
-					<label>Pfad zur CSS-Datei</label>
-					<config>
-						<default></default>
-						<type>input</type>
-						<size>30</size>
-					</config>
-				</TCEforms>
-			</view.cssFile>
-			<view.layoutRootPath>
-				<TCEforms>
-					<label>Pfad zu den Layouts</label>
-					<config>
-						<default></default>
-						<type>input</type>
-						<size>30</size>
-					</config>
-				</TCEforms>
-			</view.layoutRootPath>
-			<view.partialRootPath>
-				<TCEforms>
-					<label>Pfad zu den Partials</label>
-					<config>
-						<default></default>
-						<type>input</type>
-						<size>30</size>
-					</config>
-				</TCEforms>
-			</view.partialRootPath>
-			<view.templateRootPath>
-				<TCEforms>
-					<label>Pfad zu den Templates</label>
-					<config>
-						<default></default>
-						<type>input</type>
-						<size>30</size>
-					</config>
-				</TCEforms>
-			</view.templateRootPath>
-		</el>
-	</ROOT>
+    <ROOT>
+        <TCEforms>
+            <sheetTitle>View</sheetTitle>
+        </TCEforms>
+        <type>array</type>
+        <el>
+            <view.cssFile>
+                <TCEforms>
+                    <label>Pfad zur CSS-Datei</label>
+                    <config>
+                        <default></default>
+                        <type>input</type>
+                        <size>30</size>
+                    </config>
+                </TCEforms>
+            </view.cssFile>
+            <view.layoutRootPath>
+                <TCEforms>
+                    <label>Pfad zu den Layouts</label>
+                    <config>
+                        <default></default>
+                        <type>input</type>
+                        <size>30</size>
+                    </config>
+                </TCEforms>
+            </view.layoutRootPath>
+            <view.partialRootPath>
+                <TCEforms>
+                    <label>Pfad zu den Partials</label>
+                    <config>
+                        <default></default>
+                        <type>input</type>
+                        <size>30</size>
+                    </config>
+                </TCEforms>
+            </view.partialRootPath>
+            <view.templateRootPath>
+                <TCEforms>
+                    <label>Pfad zu den Templates</label>
+                    <config>
+                        <default></default>
+                        <type>input</type>
+                        <size>30</size>
+                    </config>
+                </TCEforms>
+            </view.templateRootPath>
+        </el>
+    </ROOT>
 </T3DataStructure>

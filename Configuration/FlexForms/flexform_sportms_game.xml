@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <T3DataStructure>
-	<sheets>
-		<base>EXT:sportms/Configuration/FlexForms/flexform_base.xml</base>
-		<club>EXT:sportms/Configuration/FlexForms/flexform_club.xml</club>
-		<competition>EXT:sportms/Configuration/FlexForms/flexform_competition.xml</competition>
-		<game>EXT:sportms/Configuration/FlexForms/flexform_game.xml</game>
-		<sport>EXT:sportms/Configuration/FlexForms/flexform_sport.xml</sport>
-		<team>EXT:sportms/Configuration/FlexForms/flexform_team.xml</team>
-		<season>EXT:sportms/Configuration/FlexForms/flexform_season.xml</season>
-	</sheets>
+    <sheets>
+        <base>EXT:sportms/Configuration/FlexForms/flexform_base.xml</base>
+        <club>EXT:sportms/Configuration/FlexForms/flexform_club.xml</club>
+        <competition>EXT:sportms/Configuration/FlexForms/flexform_competition.xml</competition>
+        <game>EXT:sportms/Configuration/FlexForms/flexform_game.xml</game>
+        <sport>EXT:sportms/Configuration/FlexForms/flexform_sport.xml</sport>
+        <team>EXT:sportms/Configuration/FlexForms/flexform_team.xml</team>
+        <season>EXT:sportms/Configuration/FlexForms/flexform_season.xml</season>
+    </sheets>
 </T3DataStructure>

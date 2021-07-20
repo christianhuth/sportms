@@ -1,35 +1,53 @@
 <html data-namespace-typo3-fluid="true"
-      xmlns:sportms="Balumedien\Sportms\ViewHelpers"
-      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:sportms="Balumedien\Sportms\ViewHelpers">
 
 <table class="table table-bordered table-condensed table-hover table-striped tx-sportms-table">
-    <thead>
-    <tr>
-        <th class="tx-sportms-table-center">#</th>
-        <th class="tx-sportms-table-left">Person</th>
-        <th class="tx-sportms-table-center">Nationalität</th>
-        <th class="tx-sportms-table-center">Tore</th>
-    </tr>
-    </thead>
-    <tbody>
-    <f:if condition="{playersWithMostGoals}">
-        <f:then>
-            <f:for as="playerWithMostGoal" each="{playersWithMostGoals}" iteration="iterator">
-                <tr>
-                    <td class="tx-sportms-table-center">{iterator.index + 1}</td>
-                    <td class="tx-sportms-table-left"><sportms:link.action action="playerProfile" controller="Person" Person="{playerWithMostGoal.person}">{playerWithMostGoal.person.firstname} {playerWithMostGoal.person.lastname}</sportms:link.action></td>
-                    <td class="tx-sportms-table-center"><f:render arguments="{nationalities: playerWithMostGoal.person.nationalities}" partial="ViewHelper/Person/Nationalities"/></td>
-                    <td class="tx-sportms-table-center">{playerWithMostGoal.numberOfGoals}</td>
-                </tr>
-            </f:for>
-        </f:then>
-        <f:else>
-            <tr>
-                <td class="tx-sportms-table-center" colspan="4">Keine Rekordspieler gefunden.</td>
-            </tr>
-        </f:else>
-    </f:if>
-    </tbody>
+	<thead>
+	<tr>
+		<th class="tx-sportms-table-center">#</th>
+		<th class="tx-sportms-table-left">Person</th>
+		<th class="tx-sportms-table-center">Nationalität</th>
+		<th class="tx-sportms-table-center">Tore</th>
+	</tr>
+	</thead>
+	<tbody>
+	<f:if condition="{playersWithMostGoals}">
+		<f:then>
+			<f:for as="playerWithMostGoal" each="{playersWithMostGoals}"
+				   iteration="iterator">
+				<tr>
+					<td class="tx-sportms-table-center">{iterator.index + 1}
+					</td>
+					<td class="tx-sportms-table-left">
+						<sportms:link.action Person="{playerWithMostGoal.person}"
+											 action="playerProfile"
+											 controller="Person">
+							{playerWithMostGoal.person.firstname}
+							{playerWithMostGoal.person.lastname}
+						</sportms:link.action>
+					</td>
+					<td class="tx-sportms-table-center">
+						<f:render
+								arguments="{nationalities: playerWithMostGoal.person.nationalities}"
+								partial="ViewHelper/Person/Nationalities"/>
+					</td>
+					<td class="tx-sportms-table-center">
+						{playerWithMostGoal.numberOfGoals}
+					</td>
+				</tr>
+			</f:for>
+		</f:then>
+		<f:else>
+			<tr>
+				<td class="tx-sportms-table-center" colspan="4">Keine
+																Rekordspieler
+																gefunden.
+				</td>
+			</tr>
+		</f:else>
+	</f:if>
+	</tbody>
 </table>
 
 </html>

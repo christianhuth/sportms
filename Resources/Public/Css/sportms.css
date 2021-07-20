@@ -139,31 +139,38 @@
     display: grid;
     grid-template-columns: 33% 33% 33%;
 }
+
 .tx-sportms .tx-sportms-dbstats .tx-sportms-dbstat-item {
     margin: 25px 0 0 0;
 }
+
 .tx-sportms .tx-sportms-dbstats .tx-sportms-dbstat-item:nth-of-type(1),
 .tx-sportms .tx-sportms-dbstats .tx-sportms-dbstat-item:nth-of-type(4) {
     grid-column: 1/2;
 }
+
 .tx-sportms .tx-sportms-dbstats .tx-sportms-dbstat-item:nth-of-type(2),
 .tx-sportms .tx-sportms-dbstats .tx-sportms-dbstat-item:nth-of-type(5) {
     grid-column: 2/3;
 }
+
 .tx-sportms .tx-sportms-dbstats .tx-sportms-dbstat-item:nth-of-type(3),
 .tx-sportms .tx-sportms-dbstats .tx-sportms-dbstat-item:nth-of-type(6) {
     grid-column: 3/4;
 }
+
 .tx-sportms .tx-sportms-dbstats .tx-sportms-dbstat-item .tx-sportms-dbstat-image,
 .tx-sportms .tx-sportms-dbstats .tx-sportms-dbstat-item .tx-sportms-dbstat-label {
     text-align: center;
 }
+
 .tx-sportms .tx-sportms-dbstats .tx-sportms-dbstat-item .tx-sportms-dbstat-image img {
     height: auto !important;
     max-width: 100%;
     padding: 15px;
     width: 90%;
 }
+
 .tx-sportms .tx-sportms-dbstats .tx-sportms-dbstat-item .tx-sportms-dbstat-label h4 {
     margin: 0;
     padding: 0;
@@ -179,20 +186,24 @@
     background-color: var(--light-gray);
     border: 1px solid var(--regular-gray);
     border-radius: 5px;
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
     margin-bottom: 25px;
     padding: 15px;
 }
+
 .tx-sportms .tx-sportms-filter .form-group:last-of-type {
     margin-bottom: 0;
 }
+
 .tx-sportms .tx-sportms-filter .form-group .col-xs-0 {
     margin: 0;
     padding: 0;
 }
+
 .tx-sportms .tx-sportms-filter .input-group-addon {
     padding: 4px;
 }
+
 .tx-sportms .tx-sportms-filter .input-group-addon .sportmsicon {
     background: var(--regular-red);
     display: block;
@@ -201,9 +212,6 @@
     mask-size: contain;
     width: 20px;
 }
-
-
-
 
 
 /*
@@ -224,8 +232,6 @@
 }
 
 
-
-
 /*
  *
  * SPORTMS - TABLES
@@ -234,15 +240,19 @@
 .tx-sportms .tx-sportms-table th {
     text-align: center;
 }
+
 .tx-sportms .tx-sportms-table td {
     vertical-align: middle;
 }
+
 .tx-sportms .tx-sportms-table .tx-sportms-table-center {
     text-align: center;
 }
+
 .tx-sportms .tx-sportms-table .tx-sportms-table-left {
     text-align: left;
 }
+
 .tx-sportms .tx-sportms-table .tx-sportms-table-right {
     text-align: right;
 }
@@ -315,9 +325,6 @@
 }
 
 
-
-
-
 /*
  *
  * GAME
@@ -327,74 +334,92 @@
     grid-row-gap: 5px;
     grid-template-columns: 20% 16% 28% 16% 20%;
 }
+
 .tx-sportms .tx-sportms-game-header .tx-sportms-header-box.tx-sportms-header-competition {
     grid-column: 2 / 5;
 }
+
 .tx-sportms .tx-sportms-game-header .tx-sportms-header-box.tx-sportms-header-competition a {
     color: var(--color3);
 }
+
 .tx-sportms .tx-sportms-game-header .tx-sportms-header-box.tx-sportms-header-result {
     grid-column: 3 / 4;
 }
+
 .tx-sportms .tx-sportms-game-header .tx-sportms-header-team:nth-of-type(2) {
     grid-column: 1 / 3;
 }
+
 .tx-sportms .tx-sportms-game-header .tx-sportms-header-team:nth-of-type(4) {
     grid-column: 4 / 6;
 }
+
 .tx-sportms .tx-sportms-game-index h4 {
     display: block;
     text-align: center;
 }
+
 .tx-sportms .tx-sportms-game-change-entry {
     display: grid;
     grid-template-columns: 1fr 50px 50px 1fr;
     margin: 6px 0;
 }
+
 .tx-sportms .tx-sportms-game-change-entry .tx-sportms-game-change {
     display: grid !important;
 }
+
 .tx-sportms .tx-sportms-game-change-entry .tx-sportms-game-change-home {
     grid-template-columns: 1fr 50px;
 }
+
 .tx-sportms .tx-sportms-game-change-entry .tx-sportms-game-change-guest .tx-sportms-game-change-arrow-in,
 .tx-sportms .tx-sportms-game-change-entry .tx-sportms-game-change-guest .tx-sportms-game-change-arrow-out,
 .tx-sportms .tx-sportms-game-change-entry .tx-sportms-game-change-home .tx-sportms-game-change-person-in,
 .tx-sportms .tx-sportms-game-change-entry .tx-sportms-game-change-home .tx-sportms-game-change-person-out {
     grid-column: 1 / 2;
 }
+
 .tx-sportms .tx-sportms-game-change-entry .tx-sportms-game-change-guest .tx-sportms-game-change-person-in,
 .tx-sportms .tx-sportms-game-change-entry .tx-sportms-game-change-guest .tx-sportms-game-change-person-out,
 .tx-sportms .tx-sportms-game-change-entry .tx-sportms-game-change-home .tx-sportms-game-change-arrow-in,
 .tx-sportms .tx-sportms-game-change-entry .tx-sportms-game-change-home .tx-sportms-game-change-arrow-out {
     grid-column: 2 / 3;
 }
+
 .tx-sportms .tx-sportms-game-change-entry .tx-sportms-game-change-arrow-in,
 .tx-sportms .tx-sportms-game-change-entry .tx-sportms-game-change-person-in {
     grid-row: 1;
 }
+
 .tx-sportms .tx-sportms-game-change-entry .tx-sportms-game-change-arrow-out,
 .tx-sportms .tx-sportms-game-change-entry .tx-sportms-game-change-person-out {
     grid-row: 2;
 }
+
 .tx-sportms .tx-sportms-game-change-entry .tx-sportms-game-change-guest {
     grid-template-columns: 50px 1fr;
 }
+
 .tx-sportms .tx-sportms-game-goal {
     display: grid;
     grid-template-columns: 1fr 50px 120px 50px 1fr;
     margin: 6px 0;
 }
+
 .tx-sportms .tx-sportms-game-goal-none {
     display: inline-block;
     text-align: center;
 }
+
 .tx-sportms .tx-sportms-game-change-entry .tx-sportms-game-change-arrow,
 .tx-sportms .tx-sportms-game-change-entry .tx-sportms-game-change-time,
 .tx-sportms .tx-sportms-game-goal .tx-sportms-game-goal-score,
 .tx-sportms .tx-sportms-game-goal .tx-sportms-game-goal-time {
     text-align: center;
 }
+
 .tx-sportms .tx-sportms-game-change-entry .tx-sportms-game-change-person,
 .tx-sportms .tx-sportms-game-change-entry .tx-sportms-game-change-time,
 .tx-sportms .tx-sportms-game-goal .tx-sportms-game-goal-score,
@@ -405,96 +430,122 @@
     flex-direction: row;
     justify-content: center;
 }
+
 .tx-sportms .tx-sportms-game-change-entry .tx-sportms-game-change-home .tx-sportms-game-change-person {
     justify-content: right;
 }
+
 .tx-sportms .tx-sportms-game-change-entry .tx-sportms-game-change-guest .tx-sportms-game-change-person {
     justify-content: left;
 }
+
 .tx-sportms .tx-sportms-game-change-entry .tx-sportms-game-change-arrow {
     align-items: center;
     display: flex;
     font-weight: bold;
     justify-content: center;
 }
+
 .tx-sportms .tx-sportms-game-change-entry .tx-sportms-game-change-arrow-in {
     color: darkgreen;
 }
+
 .tx-sportms .tx-sportms-game-change-entry .tx-sportms-game-change-arrow-out {
     color: darkred;
 }
+
 .tx-sportms .tx-sportms-game-goal .tx-sportms-game-goal-person {
     flex-direction: column;
 }
+
 .tx-sportms .tx-sportms-game-goal .tx-sportms-game-goal-person-home {
     align-items: flex-end;
 }
+
 .tx-sportms .tx-sportms-game-goal .tx-sportms-game-goal-person-guest {
     align-items: flex-start;
 }
+
 .tx-sportms .tx-sportms-game-goal .tx-sportms-game-goal-person .tx-sportms-game-goal-scorer {
     font-weight: bold;
 }
+
 .tx-sportms .tx-sportms-game-goal .tx-sportms-game-goal-person .tx-sportms-game-goal-scorer .tx-sportms-game-goal-penalty {
     color: var(--color3);
     font-size: 90%;
     font-weight: normal;
 }
+
 .tx-sportms .tx-sportms-game-goal .tx-sportms-game-goal-person .tx-sportms-game-goal-assist {
     color: var(--color3);
     font-size: 90%;
 }
+
 .tx-sportms .tx-sportms-game-goal .tx-sportms-game-goal-score .tx-sportms-game-result-main {
     width: 80px;
 }
+
 .tx-sportms .tx-sportms-game-container {
     display: flex;
     flex-direction: row;
 }
+
 .tx-sportms .tx-sportms-game-changes .tx-sportms-game-container,
 .tx-sportms .tx-sportms-game-goals .tx-sportms-game-container {
     flex-direction: column;
 }
+
 .tx-sportms .tx-sportms-game-lineup-home,
 .tx-sportms .tx-sportms-game-lineup-guest {
     width: 50%;
 }
+
 .tx-sportms .tx-sportms-game-lineup-entry {
     display: grid;
     margin: 6px 0;
 }
+
 .tx-sportms .tx-sportms-game-lineup-entry .tx-sportms-game-lineup-person {
     align-items: center;
     display: flex;
 }
+
 .tx-sportms .tx-sportms-game-lineup-home .tx-sportms-game-lineup-entry {
     grid-template-columns: 1fr 50px;
 }
+
 .tx-sportms .tx-sportms-game-lineup-guest .tx-sportms-game-lineup-entry {
     grid-template-columns: 50px 1fr;
 }
+
 .tx-sportms .tx-sportms-game-lineup-guest .tx-sportms-game-lineup-entry .tx-sportms-game-lineup-person {
     grid-column: 2 / 3;
     grid-row: 1;
 }
+
 .tx-sportms .tx-sportms-game-lineup-guest .tx-sportms-game-lineup-entry .tx-sportms-game-lineup-jerseynumber {
     grid-column: 1 / 2;
     grid-row: 1;
 }
+
 .tx-sportms .tx-sportms-game-lineup-home .tx-sportms-game-lineup-entry .tx-sportms-game-lineup-person {
     justify-content: right;
 }
+
 .tx-sportms .tx-sportms-game-change-entry .tx-sportms-game-change-home {
     justify-content: right;
 }
+
 .tx-sportms .tx-sportms-game-change-entry .tx-sportms-game-change-guest {
     justify-content: left;
 }
+
 .tx-sportms .tx-sportms-game-lineup-entry .tx-sportms-game-lineup-jerseynumber {
     display: flex;
     justify-content: center;
     text-align: center;
 }
+
 .tx-sportms .tx-sportms-game-change-entry .tx-sportms-game-change-time .tx-sportms-game-change-minute,
 .tx-sportms .tx-sportms-game-goal .tx-sportms-game-goal-time .tx-sportms-game-goal-minute,
 .tx-sportms .tx-sportms-game-lineup-entry .tx-sportms-game-lineup-jerseynumber .tx-sportms-game-lineup-number {
@@ -509,10 +560,6 @@
     text-align: center;
     width: 32px;
 }
-
-
-
-
 
 
 /*
@@ -743,18 +790,12 @@
 }
 
 
-
-
-
 /**
  * BOOTSTRAP - BREAKPOINTS
  * v3.4: https://getbootstrap.com/docs/3.4/css/#grid-media-queries
  * v4.1: https://getbootstrap.com/docs/4.1/layout/overview/
  * v5.0: https://getbootstrap.com/docs/5.0/layout/breakpoints/
  */
-
-
-
 
 
 /*
@@ -764,45 +805,51 @@
     .tx-sportms .tx-sportms-dbstats {
         grid-template-columns: 50% 50%;
     }
+
     .tx-sportms .tx-sportms-dbstats .tx-sportms-dbstat-item:nth-of-type(1),
     .tx-sportms .tx-sportms-dbstats .tx-sportms-dbstat-item:nth-of-type(3),
     .tx-sportms .tx-sportms-dbstats .tx-sportms-dbstat-item:nth-of-type(5) {
         grid-column: 1/2;
     }
+
     .tx-sportms .tx-sportms-dbstats .tx-sportms-dbstat-item:nth-of-type(2),
     .tx-sportms .tx-sportms-dbstats .tx-sportms-dbstat-item:nth-of-type(4),
     .tx-sportms .tx-sportms-dbstats .tx-sportms-dbstat-item:nth-of-type(6) {
         grid-column: 2/3;
     }
+
     .tx-sportms-teamseason-official .official-jerseynumber,
     .tx-sportms-teamseason-squadmember .squadmember-jerseynumber {
         display: none;
     }
+
     .tx-sportms .tx-sportms-game-header .tx-sportms-header-box.tx-sportms-header-competition {
         display: none;
     }
+
     .tx-sportms .tx-sportms-game-header .tx-sportms-header-box.tx-sportms-header-team img {
         height: 40px;
         width: auto !important;
     }
+
     .tx-sportms .tx-sportms-game-header .tx-sportms-header-box.tx-sportms-header-team h3 {
         font-size: 85%;
     }
+
     .tx-sportms .tx-sportms-header .tx-sportms-game-header-result {
         font-size: 80%;
         min-width: 60px;
     }
+
     .tx-sportms .tx-sportms-header .tx-sportms-game-header-result .tx-sportms-game-header-result-main {
         padding: 8px 6px;
     }
+
     .tx-sportms .tx-sportms-game-goal {
         grid-template-columns: 1fr 50px 60px 50px 1fr;
         margin: 4px 0;
     }
 }
-
-
-
 
 
 /*
@@ -811,9 +858,6 @@
 @media screen and (max-width: 768px) {
 
 }
-
-
-
 
 
 /*

@@ -1,175 +1,175 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="de" datatype="plaintext" original="messages" date="2015-05-13T11:46:05Z" product-name="sportms">
-		<header/>
-		<body>
+    <file source-language="de" datatype="plaintext" original="messages" date="2015-05-13T11:46:05Z" product-name="sportms">
+        <header />
+        <body>
 
-			<!-- General -->
-			<trans-unit id="tx_sportms_general.clock">
-				<source>Uhr</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_general.day">
-				<source>Tag</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_general.day.1">
-				<source>Montag</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_general.day.2">
-				<source>Dienstag</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_general.day.3">
-				<source>Mittwoch</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_general.day.4">
-				<source>Donnerstag</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_general.day.5">
-				<source>Freitag</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_general.day.6">
-				<source>Samstag</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_general.day.7">
-				<source>Sonntag</source>
-			</trans-unit>
+        <!-- General -->
+            <trans-unit id="tx_sportms_general.clock">
+                <source>Uhr</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.day">
+                <source>Tag</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.day.1">
+                <source>Montag</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.day.2">
+                <source>Dienstag</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.day.3">
+                <source>Mittwoch</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.day.4">
+                <source>Donnerstag</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.day.5">
+                <source>Freitag</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.day.6">
+                <source>Samstag</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.day.7">
+                <source>Sonntag</source>
+            </trans-unit>
 
-			<!-- Action -->
-			<trans-unit id="tx_sportms_action.club.sections">
-				<source>Abteilungen</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_action.competition.list">
-				<source>Wettbewerbe</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_action.competitionseason.clubs">
-				<source>Vereine</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_action.competitionseason.games">
-				<source>Spielplan</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_action.competitionseason.teams">
-				<source>Mannschaften</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_action.game.history">
-				<source>Historie</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_action.game.index">
-				<source>Schema</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_action.game.report">
-				<source>Spielbericht</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_action.person.playerJerseys">
-				<source>Rückennummern</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_action.person.playerRecordGames">
-				<source>Rekordspiele</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_action.person.playerDebutGames">
-				<source>Debütspiele</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_action.person.playerDebutGoals">
-				<source>Debüttore</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_action.team.historyOfficials">
-				<source>Funktionärshistorie</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_action.team.historyRecordGames">
-				<source>Rekordspiele</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_action.team.historyRecordPlayers">
-				<source>Rekordspieler</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_action.teamseason.gamesByCompetition">
-				<source>Spiele nach Wettbewerb</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_action.teamseason.gamesByDate">
-				<source>Spiele nach Datum</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_action.teamseason.index">
-				<source>Übersicht</source>
-			</trans-unit>
+        <!-- Action -->
+            <trans-unit id="tx_sportms_action.club.sections">
+                <source>Abteilungen</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_action.competition.list">
+                <source>Wettbewerbe</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_action.competitionseason.clubs">
+                <source>Vereine</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_action.competitionseason.games">
+                <source>Spielplan</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_action.competitionseason.teams">
+                <source>Mannschaften</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_action.game.history">
+                <source>Historie</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_action.game.index">
+                <source>Schema</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_action.game.report">
+                <source>Spielbericht</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_action.person.playerJerseys">
+                <source>Rückennummern</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_action.person.playerRecordGames">
+                <source>Rekordspiele</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_action.person.playerDebutGames">
+                <source>Debütspiele</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_action.person.playerDebutGoals">
+                <source>Debüttore</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_action.team.historyOfficials">
+                <source>Funktionärshistorie</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_action.team.historyRecordGames">
+                <source>Rekordspiele</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_action.team.historyRecordPlayers">
+                <source>Rekordspieler</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_action.teamseason.gamesByCompetition">
+                <source>Spiele nach Wettbewerb</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_action.teamseason.gamesByDate">
+                <source>Spiele nach Datum</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_action.teamseason.index">
+                <source>Übersicht</source>
+            </trans-unit>
 
-			<!-- Domain Model Address -->
-			<trans-unit id="tx_sportms_domain_model_address">
-				<source>Adresse</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_address.plural">
-				<source>Adressen</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_address.singular">
-				<source>Adresse</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_address.street">
-				<source>Straße</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_address.housenumber">
-				<source>Hausnummer</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_address.zipcode">
-				<source>Postleitzahl</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_address.location">
-				<source>Ort</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_address.country">
-				<source>Land</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_address.region">
-				<source>Region</source>
-			</trans-unit>
+        <!-- Domain Model Address -->
+            <trans-unit id="tx_sportms_domain_model_address">
+                <source>Adresse</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_address.plural">
+                <source>Adressen</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_address.singular">
+                <source>Adresse</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_address.street">
+                <source>Straße</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_address.housenumber">
+                <source>Hausnummer</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_address.zipcode">
+                <source>Postleitzahl</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_address.location">
+                <source>Ort</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_address.country">
+                <source>Land</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_address.region">
+                <source>Region</source>
+            </trans-unit>
 
-			<!-- Domain Model -->
-			<trans-unit id="tx_sportms_domain_model_club">
-				<source>Verein</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_club.plural">
-				<source>Vereine</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_club.singular">
-				<source>Verein</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_club.name">
-				<source>Vereinsname</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_club.colours">
-				<source>Vereinsfarben</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_club.image">
-				<source>Vereinslogos</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_club.contact">
-				<source>Kontaktdaten</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_club.section">
-				<source>Abteilungen</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_club.official">
-				<source>Funktionäre</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_club.dateOfFounding">
-				<source>Gründungsdatum</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_club.yearOfFounding">
-				<source>Gründungsjahr</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_club.clubMembers">
-				<source>Mitglieder</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_club.logos">
-				<source>Logos</source>
-			</trans-unit>
+        <!-- Domain Model -->
+            <trans-unit id="tx_sportms_domain_model_club">
+                <source>Verein</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_club.plural">
+                <source>Vereine</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_club.singular">
+                <source>Verein</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_club.name">
+                <source>Vereinsname</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_club.colours">
+                <source>Vereinsfarben</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_club.image">
+                <source>Vereinslogos</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_club.contact">
+                <source>Kontaktdaten</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_club.section">
+                <source>Abteilungen</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_club.official">
+                <source>Funktionäre</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_club.dateOfFounding">
+                <source>Gründungsdatum</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_club.yearOfFounding">
+                <source>Gründungsjahr</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_club.clubMembers">
+                <source>Mitglieder</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_club.logos">
+                <source>Logos</source>
+            </trans-unit>
 
 
-            <!-- Domain Model ClubMembers -->
-			<trans-unit id="tx_sportms_domain_model_clubmembers">
-				<source>Vereinsmitglieder</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_clubmembers.plural">
-				<source>Vereinsmitglieder</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_clubmembers.singular">
-				<source>Vereinsmitglieder</source>
-			</trans-unit>
+        <!-- Domain Model ClubMembers -->
+            <trans-unit id="tx_sportms_domain_model_clubmembers">
+                <source>Vereinsmitglieder</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_clubmembers.plural">
+                <source>Vereinsmitglieder</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_clubmembers.singular">
+                <source>Vereinsmitglieder</source>
+            </trans-unit>
             <trans-unit id="tx_sportms_domain_model_clubmembers.members">
                 <source>Mitglieder</source>
             </trans-unit>
@@ -178,461 +178,461 @@
             </trans-unit>
 
 
-			<!-- Domain Model ClubSection -->
-			<trans-unit id="tx_sportms_domain_model_clubsection">
-				<source>Vereinsabteilung</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_clubsection.plural">
-				<source>Vereinsabteilungen</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_clubsection.singular">
-				<source>Vereinsabteilung</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_clubsection.images">
-				<source>Bilder</source>
-			</trans-unit>
+        <!-- Domain Model ClubSection -->
+            <trans-unit id="tx_sportms_domain_model_clubsection">
+                <source>Vereinsabteilung</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_clubsection.plural">
+                <source>Vereinsabteilungen</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_clubsection.singular">
+                <source>Vereinsabteilung</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_clubsection.images">
+                <source>Bilder</source>
+            </trans-unit>
 
 
-			<!-- Domain Model ClubSectionMembers -->
-			<trans-unit id="tx_sportms_domain_model_clubsectionmembers">
-				<source>Abteilungsmitglieder</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_clubsectionmembers.plural">
-				<source>Abteilungsmitglieder</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_clubsectionmembers.singular">
-				<source>Abteilungsmitglieder</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_clubsectionmembers.members">
-				<source>Mitglieder</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_clubsectionmembers.date">
-				<source>Erfassungsdatum</source>
-			</trans-unit>
-			
-			
-			<trans-unit id="tx_sportms_domain_model_competition">
-				<source>Wettbewerb</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_competition.plural">
-				<source>Wettbewerbe</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_competition.singular">
-				<source>Wettbewerb</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_competition.label">
-				<source>Wettbewerbsbezeichnung</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_competition.short">
-				<source>Kurzform</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_competition.sport">
-				<source>Sportart</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_competition.ageGroup">
-				<source>Altersgruppe</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_competition.ageLevel">
-				<source>Altersstufe</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_competition.competitionType">
-				<source>Wettbewerbstyp</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_competition.visibility">
-				<source>Sichtbarkeit</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_competition.visibility_dataset">
-				<source>Wettbewerb verbergen</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_competition.detail_link">
-				<source>Link auf Einzelansicht möglich?</source>
-			</trans-unit>
-			
-			
-			<trans-unit id="tx_sportms_domain_model_competition_type">
-				<source>Wettbewerbsart</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_competition_type.label">
-				<source>Bezeichnung</source>
-			</trans-unit>
-			
-			
-			<trans-unit id="tx_sportms_domain_model_contact_type">
-				<source>Kontaktart</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_contact_type.label">
-				<source>Bezeichnung</source>
-			</trans-unit>
+        <!-- Domain Model ClubSectionMembers -->
+            <trans-unit id="tx_sportms_domain_model_clubsectionmembers">
+                <source>Abteilungsmitglieder</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_clubsectionmembers.plural">
+                <source>Abteilungsmitglieder</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_clubsectionmembers.singular">
+                <source>Abteilungsmitglieder</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_clubsectionmembers.members">
+                <source>Mitglieder</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_clubsectionmembers.date">
+                <source>Erfassungsdatum</source>
+            </trans-unit>
 
 
-			<trans-unit id="tx_sportms_domain_model_game">
-				<source>Spiel</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_game.plural">
-				<source>Spiele</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_game.singular">
-				<source>Spiel</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_game.result_special_reason">
-				<source>Grund für die Sonderwertung</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_game.result_special_reason.1">
-				<source>Spielabbruch</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_game.result_special_reason.2">
-				<source>Spielabsetzung</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_game.result_special_reason.3">
-				<source>Nicht-Antritt Heim</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_game.result_special_reason.4">
-				<source>Nicht-Antritt Gast</source>
-			</trans-unit>
+            <trans-unit id="tx_sportms_domain_model_competition">
+                <source>Wettbewerb</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_competition.plural">
+                <source>Wettbewerbe</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_competition.singular">
+                <source>Wettbewerb</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_competition.label">
+                <source>Wettbewerbsbezeichnung</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_competition.short">
+                <source>Kurzform</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_competition.sport">
+                <source>Sportart</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_competition.ageGroup">
+                <source>Altersgruppe</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_competition.ageLevel">
+                <source>Altersstufe</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_competition.competitionType">
+                <source>Wettbewerbstyp</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_competition.visibility">
+                <source>Sichtbarkeit</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_competition.visibility_dataset">
+                <source>Wettbewerb verbergen</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_competition.detail_link">
+                <source>Link auf Einzelansicht möglich?</source>
+            </trans-unit>
 
 
-			<!-- Domain Model Mail -->
-			<trans-unit id="tx_sportms_domain_model_mail">
-				<source>Mail</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_mail.plural">
-				<source>Mails</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_mail.singular">
-				<source>Mail</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_mail.mail">
-				<source>Mail-Adresse</source>
-			</trans-unit>
+            <trans-unit id="tx_sportms_domain_model_competition_type">
+                <source>Wettbewerbsart</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_competition_type.label">
+                <source>Bezeichnung</source>
+            </trans-unit>
 
 
-			<!-- Domain Model MailType -->
-			<trans-unit id="tx_sportms_domain_model_mailtype">
-				<source>Mailart</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_mailtype.plural">
-				<source>Mailarten</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_mailtype.singular">
-				<source>Mailart</source>
-			</trans-unit>
+            <trans-unit id="tx_sportms_domain_model_contact_type">
+                <source>Kontaktart</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_contact_type.label">
+                <source>Bezeichnung</source>
+            </trans-unit>
 
 
-			<trans-unit id="tx_sportms_domain_model_person">
-				<source>Person</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_person.plural">
-				<source>Personen</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_person.singular">
-				<source>Person</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_person.personalData">
-				<source>Persönliche Daten</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_person.name">
-				<source>Name</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_person.firstname">
-				<source>Vorname</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_person.lastname">
-				<source>Nachname</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_person.birthname">
-				<source>Geburtsname</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_person.nickname">
-				<source>Spitzname</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_person.dateOfBirth">
-				<source>Geburtsdatum</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_person.zodiac_sign">
-				<source>Sternzeichen</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_person.zodiac_sign_1">
-				<source>Wassermann</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_person.zodiac_sign_2">
-				<source>Fische</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_person.zodiac_sign_3">
-				<source>Widder</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_person.zodiac_sign_4">
-				<source>Stier</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_person.zodiac_sign_5">
-				<source>Zwillinge</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_person.zodiac_sign_6">
-				<source>Krebs</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_person.zodiac_sign_7">
-				<source>Löwe</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_person.zodiac_sign_8">
-				<source>Jungfrau</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_person.zodiac_sign_9">
-				<source>Waage</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_person.zodiac_sign_10">
-				<source>Skorpion</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_person.zodiac_sign_11">
-				<source>Schütze</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_person.zodiac_sign_12">
-				<source>Steinbock</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_person.placeOfBirth">
-				<source>Geburtsort</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_person.nationality">
-				<source>Nationalität</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_person.gender">
-				<source>Geschlecht</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_person.gender_male">
-				<source>Männlich</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_person.gender_female">
-				<source>Weiblich</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_person.weight">
-				<source>Gewicht</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_person.height">
-				<source>Größe</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_person.sizeOfShoe">
-				<source>Schuhgröße</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_person.footer">
-				<source>Spielfuß</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_person.footer_1">
-				<source>Rechts</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_person.footer_2">
-				<source>Links</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_person.footer_3">
-				<source>Beidfüßig</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_person.hander">
-				<source>Spielhand</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_person.hander_1">
-				<source>Rechts</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_person.hander_2">
-				<source>Links</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_person.hander_3">
-				<source>Beidhändig</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_person.familyStatus">
-				<source>Familienstand</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_person.graduation">
-				<source>Schulabschluss</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_person.job">
-				<source>Beruf</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_person.characteristics">
-				<source>Eigenschaften</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_person.hobbies">
-				<source>Hobbies</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_person.favoriteDish">
-				<source>Lieblingsgericht</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_person.favoriteDrink">
-				<source>Lieblingsgetränk</source>
-			</trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game">
+                <source>Spiel</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.plural">
+                <source>Spiele</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.singular">
+                <source>Spiel</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.result_special_reason">
+                <source>Grund für die Sonderwertung</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.result_special_reason.1">
+                <source>Spielabbruch</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.result_special_reason.2">
+                <source>Spielabsetzung</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.result_special_reason.3">
+                <source>Nicht-Antritt Heim</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.result_special_reason.4">
+                <source>Nicht-Antritt Gast</source>
+            </trans-unit>
 
 
-			<!-- Domain Model Phone -->
-			<trans-unit id="tx_sportms_domain_model_phone">
-				<source>Telefonnummer</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_phone.plural">
-				<source>Telefonnummern</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_phone.singular">
-				<source>Telefonnummer</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_phone.area_code">
-				<source>Vorwahl</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_phone.calling_number">
-				<source>Rufnummer</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_phone.international_area_code">
-				<source>Länder Code</source>
-			</trans-unit>
+        <!-- Domain Model Mail -->
+            <trans-unit id="tx_sportms_domain_model_mail">
+                <source>Mail</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_mail.plural">
+                <source>Mails</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_mail.singular">
+                <source>Mail</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_mail.mail">
+                <source>Mail-Adresse</source>
+            </trans-unit>
 
 
-			<!-- Domain Model PhoneType -->
-			<trans-unit id="tx_sportms_domain_model_phonetype">
-				<source>Telefonart</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_phonetype.plural">
-				<source>Telefonarten</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_phonetype.singular">
-				<source>Telefonart</source>
-			</trans-unit>
+        <!-- Domain Model MailType -->
+            <trans-unit id="tx_sportms_domain_model_mailtype">
+                <source>Mailart</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_mailtype.plural">
+                <source>Mailarten</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_mailtype.singular">
+                <source>Mailart</source>
+            </trans-unit>
 
 
-			<!-- Domain Model RefereeJob -->
-			<trans-unit id="tx_sportms_domain_model_refereejob">
-				<source>Schiedsrichteraufgabe</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_refereejob.plural">
-				<source>Schiedsrichteraufgaben</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_refereejob.singular">
-				<source>Schiedsrichteraufgabe</source>
-			</trans-unit>
+            <trans-unit id="tx_sportms_domain_model_person">
+                <source>Person</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_person.plural">
+                <source>Personen</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_person.singular">
+                <source>Person</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_person.personalData">
+                <source>Persönliche Daten</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_person.name">
+                <source>Name</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_person.firstname">
+                <source>Vorname</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_person.lastname">
+                <source>Nachname</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_person.birthname">
+                <source>Geburtsname</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_person.nickname">
+                <source>Spitzname</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_person.dateOfBirth">
+                <source>Geburtsdatum</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_person.zodiac_sign">
+                <source>Sternzeichen</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_person.zodiac_sign_1">
+                <source>Wassermann</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_person.zodiac_sign_2">
+                <source>Fische</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_person.zodiac_sign_3">
+                <source>Widder</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_person.zodiac_sign_4">
+                <source>Stier</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_person.zodiac_sign_5">
+                <source>Zwillinge</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_person.zodiac_sign_6">
+                <source>Krebs</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_person.zodiac_sign_7">
+                <source>Löwe</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_person.zodiac_sign_8">
+                <source>Jungfrau</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_person.zodiac_sign_9">
+                <source>Waage</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_person.zodiac_sign_10">
+                <source>Skorpion</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_person.zodiac_sign_11">
+                <source>Schütze</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_person.zodiac_sign_12">
+                <source>Steinbock</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_person.placeOfBirth">
+                <source>Geburtsort</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_person.nationality">
+                <source>Nationalität</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_person.gender">
+                <source>Geschlecht</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_person.gender_male">
+                <source>Männlich</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_person.gender_female">
+                <source>Weiblich</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_person.weight">
+                <source>Gewicht</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_person.height">
+                <source>Größe</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_person.sizeOfShoe">
+                <source>Schuhgröße</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_person.footer">
+                <source>Spielfuß</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_person.footer_1">
+                <source>Rechts</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_person.footer_2">
+                <source>Links</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_person.footer_3">
+                <source>Beidfüßig</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_person.hander">
+                <source>Spielhand</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_person.hander_1">
+                <source>Rechts</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_person.hander_2">
+                <source>Links</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_person.hander_3">
+                <source>Beidhändig</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_person.familyStatus">
+                <source>Familienstand</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_person.graduation">
+                <source>Schulabschluss</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_person.job">
+                <source>Beruf</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_person.characteristics">
+                <source>Eigenschaften</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_person.hobbies">
+                <source>Hobbies</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_person.favoriteDish">
+                <source>Lieblingsgericht</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_person.favoriteDrink">
+                <source>Lieblingsgetränk</source>
+            </trans-unit>
 
 
-			<!-- Domain Model Season -->
-			<trans-unit id="tx_sportms_domain_model_season">
-				<source>Saison</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_season.plural">
-				<source>Saisons</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_season.singular">
-				<source>Saison</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_season.winter_break">
-				<source>Winterpause</source>
-			</trans-unit>
+        <!-- Domain Model Phone -->
+            <trans-unit id="tx_sportms_domain_model_phone">
+                <source>Telefonnummer</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_phone.plural">
+                <source>Telefonnummern</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_phone.singular">
+                <source>Telefonnummer</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_phone.area_code">
+                <source>Vorwahl</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_phone.calling_number">
+                <source>Rufnummer</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_phone.international_area_code">
+                <source>Länder Code</source>
+            </trans-unit>
 
 
-			<!-- Domain Model Sport -->
-			<trans-unit id="tx_sportms_domain_model_sport">
-				<source>Sportart</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_sport.plural">
-				<source>Sportarten</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_sport.singular">
-				<source>Sportart</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_sport.is_team_sport">
-				<source>Mannschaftssport?</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_sport.is_individual_sport">
-				<source>Einzelsport?</source>
-			</trans-unit>
+        <!-- Domain Model PhoneType -->
+            <trans-unit id="tx_sportms_domain_model_phonetype">
+                <source>Telefonart</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_phonetype.plural">
+                <source>Telefonarten</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_phonetype.singular">
+                <source>Telefonart</source>
+            </trans-unit>
 
 
-			<!-- Domain Model SportAgeGroup -->
-			<trans-unit id="tx_sportms_domain_model_sportagegroup">
-				<source>Altersgruppe</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_sportagegroup.plural">
-				<source>Altersgruppen</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_sportagegroup.singular">
-				<source>Altersgruppe</source>
-			</trans-unit>
+        <!-- Domain Model RefereeJob -->
+            <trans-unit id="tx_sportms_domain_model_refereejob">
+                <source>Schiedsrichteraufgabe</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_refereejob.plural">
+                <source>Schiedsrichteraufgaben</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_refereejob.singular">
+                <source>Schiedsrichteraufgabe</source>
+            </trans-unit>
 
 
-			<!-- Domain Model SportAgeLevel -->
-			<trans-unit id="tx_sportms_domain_model_sportagelevel">
-				<source>Altersstufe</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_sportagelevel.plural">
-				<source>Altersstufen</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_sportagelevel.singular">
-				<source>Altersstufe</source>
-			</trans-unit>
+        <!-- Domain Model Season -->
+            <trans-unit id="tx_sportms_domain_model_season">
+                <source>Saison</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_season.plural">
+                <source>Saisons</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_season.singular">
+                <source>Saison</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_season.winter_break">
+                <source>Winterpause</source>
+            </trans-unit>
 
 
-			<!-- Domain Model SportPosition -->
-			<trans-unit id="tx_sportms_domain_model_sportposition">
-				<source>Position</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_sportposition.plural">
-				<source>Positionen</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_sportposition.singular">
-				<source>Position</source>
-			</trans-unit>
+        <!-- Domain Model Sport -->
+            <trans-unit id="tx_sportms_domain_model_sport">
+                <source>Sportart</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_sport.plural">
+                <source>Sportarten</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_sport.singular">
+                <source>Sportart</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_sport.is_team_sport">
+                <source>Mannschaftssport?</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_sport.is_individual_sport">
+                <source>Einzelsport?</source>
+            </trans-unit>
 
 
-			<!-- Domain Model SportPositionGroup -->
-			<trans-unit id="tx_sportms_domain_model_sportpositiongroup">
-				<source>Positionsgruppe</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_sportpositiongroup.plural">
-				<source>Positionsgruppen</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_sportpositiongroup.singular">
-				<source>Positionsgruppe</source>
-			</trans-unit>
+        <!-- Domain Model SportAgeGroup -->
+            <trans-unit id="tx_sportms_domain_model_sportagegroup">
+                <source>Altersgruppe</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_sportagegroup.plural">
+                <source>Altersgruppen</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_sportagegroup.singular">
+                <source>Altersgruppe</source>
+            </trans-unit>
 
 
-			<!-- Domain Model SportType -->
-			<trans-unit id="tx_sportms_domain_model_sporttype">
-				<source>Sporttyp</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_sporttype.plural">
-				<source>Sporttypen</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_sporttype.singular">
-				<source>Sporttyp</source>
-			</trans-unit>
+        <!-- Domain Model SportAgeLevel -->
+            <trans-unit id="tx_sportms_domain_model_sportagelevel">
+                <source>Altersstufe</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_sportagelevel.plural">
+                <source>Altersstufen</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_sportagelevel.singular">
+                <source>Altersstufe</source>
+            </trans-unit>
 
 
-			<!-- Domain Model Team -->
-			<trans-unit id="tx_sportms_domain_model_team">
-				<source>Mannschaft</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_team.plural">
-				<source>Mannschaften</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_team.singular">
-				<source>Mannschaft</source>
-			</trans-unit>
+        <!-- Domain Model SportPosition -->
+            <trans-unit id="tx_sportms_domain_model_sportposition">
+                <source>Position</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_sportposition.plural">
+                <source>Positionen</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_sportposition.singular">
+                <source>Position</source>
+            </trans-unit>
 
 
-			<!-- Domain Model Url -->
-			<trans-unit id="tx_sportms_domain_model_url">
-				<source>URL</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_url.plural">
-				<source>URLs</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_url.singular">
-				<source>URL</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_domain_model_url.url">
-				<source>URL</source>
-			</trans-unit>
+        <!-- Domain Model SportPositionGroup -->
+            <trans-unit id="tx_sportms_domain_model_sportpositiongroup">
+                <source>Positionsgruppe</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_sportpositiongroup.plural">
+                <source>Positionsgruppen</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_sportpositiongroup.singular">
+                <source>Positionsgruppe</source>
+            </trans-unit>
 
-			<!-- Navigation -->
-			<trans-unit id="tx_sportms_navigation.game.competition.dropdown">
-				<source>Wettbewerb</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_navigation.team.games.dropdown">
-				<source>Spielplan</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_navigation.team.history.dropdown">
-				<source>Historie</source>
-			</trans-unit>
 
-		</body>
-	</file>
+        <!-- Domain Model SportType -->
+            <trans-unit id="tx_sportms_domain_model_sporttype">
+                <source>Sporttyp</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_sporttype.plural">
+                <source>Sporttypen</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_sporttype.singular">
+                <source>Sporttyp</source>
+            </trans-unit>
+
+
+        <!-- Domain Model Team -->
+            <trans-unit id="tx_sportms_domain_model_team">
+                <source>Mannschaft</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_team.plural">
+                <source>Mannschaften</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_team.singular">
+                <source>Mannschaft</source>
+            </trans-unit>
+
+
+        <!-- Domain Model Url -->
+            <trans-unit id="tx_sportms_domain_model_url">
+                <source>URL</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_url.plural">
+                <source>URLs</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_url.singular">
+                <source>URL</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_url.url">
+                <source>URL</source>
+            </trans-unit>
+
+        <!-- Navigation -->
+            <trans-unit id="tx_sportms_navigation.game.competition.dropdown">
+                <source>Wettbewerb</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_navigation.team.games.dropdown">
+                <source>Spielplan</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_navigation.team.history.dropdown">
+                <source>Historie</source>
+            </trans-unit>
+
+        </body>
+    </file>
 </xliff>

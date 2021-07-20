@@ -6,7 +6,7 @@
 	 * ClubMembers
 	 */
 	class ClubMembers extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
-
+		
 		/**
 		 * @var \Balumedien\Sportms\Domain\Model\Club
 		 */

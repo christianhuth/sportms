@@ -1,26 +1,28 @@
 <html data-namespace-typo3-fluid="true"
-      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <f:if condition="{club}">
-  <f:then>
-    <f:if condition="{club.detailLink}">
-      <f:then>
-        <f:link.action action="sections" arguments="{club: club}"
-                       controller="club" extensionName="sportms"
-                       pageUid="{settings.club.sections.pid}" pluginName="club">
-          <f:translate key="tx_sportms_action.club.sections"/>
-        </f:link.action>
-      </f:then>
-      <f:else>
-        <span><f:translate key="tx_sportms_action.club.sections"/></span>
-      </f:else>
-    </f:if>
-  </f:then>
-  <f:else>
-    <f:comment>
-      #TODO: ERROR MESSAGE
-    </f:comment>
-  </f:else>
+	<f:then>
+		<f:if condition="{club.detailLink}">
+			<f:then>
+				<f:link.action action="sections" arguments="{club: club}"
+							   controller="club" extensionName="sportms"
+							   pageUid="{settings.club.sections.pid}"
+							   pluginName="club">
+					<f:translate key="tx_sportms_action.club.sections"/>
+				</f:link.action>
+			</f:then>
+			<f:else>
+				<span><f:translate
+						key="tx_sportms_action.club.sections"/></span>
+			</f:else>
+		</f:if>
+	</f:then>
+	<f:else>
+		<f:comment>
+			#TODO: ERROR MESSAGE
+		</f:comment>
+	</f:else>
 </f:if>
 
 </html>

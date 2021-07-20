@@ -4,9 +4,9 @@
 	
 	class SportAgeGroupRepository extends SportMSBaseRepository {
 		
-		protected $defaultOrderings = array(
+		protected $defaultOrderings = [
 			'sorting' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
-		);
+		];
 		
 		/**
 		 * @param string|null $sportUids
@@ -14,7 +14,7 @@
 		 * @return array|\TYPO3\CMS\Extbase\Persistence\QueryResultInterface
 		 * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
 		 */
-		public function findAll(string $sportUids = null, string $sportAgeGroupUids = null) {
+		public function findAll(string $sportUids = NULL, string $sportAgeGroupUids = NULL) {
 			$query = $this->createQuery();
 			$constraints = [];
 			if($sportUids) {

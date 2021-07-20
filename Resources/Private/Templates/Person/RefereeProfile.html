@@ -1,14 +1,16 @@
 <html data-namespace-typo3-fluid="true"
-      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <f:layout name="default"/>
 
 <f:section name="default">
-    <div id="tx-sportms-person-refereeprofile">
-        <f:render arguments="{person: person}" partial="Person/Referee/Header"/>
-        <f:render arguments="{person: person}" partial="Person/Referee/Navigation"/>
-        <f:render arguments="{person: person}" partial="Person/Referee/Profile"/>
-    </div>
+	<div id="tx-sportms-person-refereeprofile">
+		<f:render arguments="{person: person}" partial="Person/Referee/Header"/>
+		<f:render arguments="{person: person}"
+				  partial="Person/Referee/Navigation"/>
+		<f:render arguments="{person: person}"
+				  partial="Person/Referee/Profile"/>
+	</div>
 </f:section>
 
 </html>

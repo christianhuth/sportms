@@ -6,6 +6,7 @@
 	 * SportPosition
 	 */
 	class SportPosition extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
+		
 		/**
 		 * @var \Balumedien\Sportms\Domain\Model\SportPositionGroup
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy

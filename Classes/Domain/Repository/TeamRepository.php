@@ -1,18 +1,18 @@
 <?php
-
+	
 	namespace Balumedien\Sportms\Domain\Repository;
-
+	
 	class TeamRepository extends SportMSBaseRepository {
 		
-		protected $defaultOrderings = array(
+		protected $defaultOrderings = [
 			'club.name' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
 			'sport.label' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
 			'sportAgeGroup.sorting' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
 			'sportAgeLevel.sorting' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
 			'label' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
-		);
+		];
 		
-		public function findAll(string $sportUids = null, string $sportAgeGroupUids = null, string $sportAgeLevelUids = null, string $clubUids = null, string $teamUids = null) {
+		public function findAll(string $sportUids = NULL, string $sportAgeGroupUids = NULL, string $sportAgeLevelUids = NULL, string $clubUids = NULL, string $teamUids = NULL) {
 			$query = $this->createQuery();
 			$constraints = [];
 			if($teamUids) {
@@ -35,5 +35,5 @@
 			}
 			return $query->execute();
 		}
-
+		
 	}

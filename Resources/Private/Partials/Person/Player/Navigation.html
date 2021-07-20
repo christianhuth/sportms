@@ -1,58 +1,107 @@
 <html data-namespace-typo3-fluid="true"
-      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-      xmlns:sportms="Balumedien\Sportms\ViewHelpers">
+	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:sportms="Balumedien\Sportms\ViewHelpers">
 
-    <div class="tx-sportms-navigation tx-sportms-person-navigation">
-        <nav class="navbar navbar-default">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#personNavbar">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-                <div class="collapse navbar-collapse" id="personNavbar">
-                    <ul class="nav navbar-nav">
-                        <li><sportms:link.action action="playerProfile" controller="Person" Person="{person}">Profil</sportms:link.action></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Leistungsdaten<span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><sportms:link.action action="playerPerformance" controller="Person" Person="{person}">Leistungsdaten</sportms:link.action></li>
-                                <li><sportms:link.action action="playerPerformanceByCompetition" controller="Person" Person="{person}">Leistungsdaten nach Wettbewerb</sportms:link.action></li>
-                                <li><sportms:link.action action="playerPerformanceByClub" controller="Person" Person="{person}">Leistungsdaten nach Verein</sportms:link.action></li>
-                                <li><sportms:link.action action="playerPerformanceByTrainer" controller="Person" Person="{person}">Leistungsdaten nach Trainer</sportms:link.action></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Historie<span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <sportms:link.action action="playerJerseys" controller="Person" Person="{person}">
-                                        <f:translate key="tx_sportms_action.person.playerJerseys"/>
-                                    </sportms:link.action>
-                                </li>
-                                <li>
-                                    <sportms:link.action action="playerRecordGames" controller="Person" Person="{person}">
-                                        <f:translate key="tx_sportms_action.person.playerRecordGames"/>
-                                    </sportms:link.action>
-                                </li>
-                                <li>
-                                    <sportms:link.action action="playerDebutGames" controller="Person" Person="{person}">
-                                        <f:translate key="tx_sportms_action.person.playerDebutGames"/>
-                                    </sportms:link.action>
-                                </li>
-                                <li>
-                                    <sportms:link.action action="playerDebutGoals" controller="Person" Person="{person}">
-                                        <f:translate key="tx_sportms_action.person.playerDebutGoals"/>
-                                    </sportms:link.action>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </div>
+<div class="tx-sportms-navigation tx-sportms-person-navigation">
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button class="navbar-toggle" data-target="#personNavbar"
+						data-toggle="collapse" type="button">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<div class="collapse navbar-collapse" id="personNavbar">
+				<ul class="nav navbar-nav">
+					<li>
+						<sportms:link.action Person="{person}"
+											 action="playerProfile"
+											 controller="Person">Profil
+						</sportms:link.action>
+					</li>
+					<li class="dropdown">
+						<a aria-expanded="false" aria-haspopup="true"
+						   class="dropdown-toggle" data-toggle="dropdown"
+						   href="#" role="button">Leistungsdaten<span
+								class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li>
+								<sportms:link.action Person="{person}"
+													 action="playerPerformance"
+													 controller="Person">
+									Leistungsdaten
+								</sportms:link.action>
+							</li>
+							<li>
+								<sportms:link.action
+										Person="{person}"
+										action="playerPerformanceByCompetition" controller="Person">
+									Leistungsdaten nach Wettbewerb
+								</sportms:link.action>
+							</li>
+							<li>
+								<sportms:link.action
+										Person="{person}"
+										action="playerPerformanceByClub" controller="Person">
+									Leistungsdaten nach Verein
+								</sportms:link.action>
+							</li>
+							<li>
+								<sportms:link.action
+										Person="{person}"
+										action="playerPerformanceByTrainer" controller="Person">
+									Leistungsdaten nach Trainer
+								</sportms:link.action>
+							</li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a aria-expanded="false" aria-haspopup="true"
+						   class="dropdown-toggle" data-toggle="dropdown"
+						   href="#"
+						   role="button">Historie<span
+								class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li>
+								<sportms:link.action Person="{person}"
+													 action="playerJerseys"
+													 controller="Person">
+									<f:translate
+											key="tx_sportms_action.person.playerJerseys"/>
+								</sportms:link.action>
+							</li>
+							<li>
+								<sportms:link.action Person="{person}"
+													 action="playerRecordGames"
+													 controller="Person">
+									<f:translate
+											key="tx_sportms_action.person.playerRecordGames"/>
+								</sportms:link.action>
+							</li>
+							<li>
+								<sportms:link.action Person="{person}"
+													 action="playerDebutGames"
+													 controller="Person">
+									<f:translate
+											key="tx_sportms_action.person.playerDebutGames"/>
+								</sportms:link.action>
+							</li>
+							<li>
+								<sportms:link.action Person="{person}"
+													 action="playerDebutGoals"
+													 controller="Person">
+									<f:translate
+											key="tx_sportms_action.person.playerDebutGoals"/>
+								</sportms:link.action>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+</div>
 
 </html>

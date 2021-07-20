@@ -1,47 +1,55 @@
 <html data-namespace-typo3-fluid="true"
-      xmlns:sportms="Balumedien\Sportms\ViewHelpers"
-      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:sportms="Balumedien\Sportms\ViewHelpers">
 
 <tr>
-    <td class="tx-sportms-table-center">
-        <sportms:link.action action="games" controller="CompetitionSeason" CompetitionSeason="{game.competitionSeason}" CompetitionSeasonGameday="{game.gameday}">
-            {game.gameday.label}
-        </sportms:link.action>
-    </td>
-    <td class="tx-sportms-table-center">
-        <f:format.date format="{settings.format.dateLong}">{game.date}</f:format.date>
-    </td>
-    <td class="tx-sportms-table-center">
-        <f:format.date format="{settings.format.timeLong}">{game.time}</f:format.date>
-    </td>
-    <td class="tx-sportms-table-center">
-        <f:if condition="{teamSeason} == {game.teamSeasonHome}">
-            <f:then>
-                H
-            </f:then>
-            <f:else>
-                A
-            </f:else>
-        </f:if>
-    </td>
-    <td class="tx-sportms-table-left">
-        <f:if condition="{teamSeason} == {game.teamSeasonHome}">
-            <f:then>
-                <f:render partial="ViewHelper/TeamSeason/ItemInTable" arguments="{teamSeason: game.teamSeasonGuest}"/>
-            </f:then>
-            <f:else>
-                <f:render partial="ViewHelper/TeamSeason/ItemInTable" arguments="{teamSeason: game.teamSeasonHome}"/>
-            </f:else>
-        </f:if>
-    </td>
-    <td class="tx-sportms-table-center">
-        <f:render partial="ViewHelper/Game/Spectators" arguments="{spectators: game.spectators}"/>
-    </td>
-    <td class="tx-sportms-table-center">
-        <sportms:link.action action="index" controller="Game" Game="{game}">
-            <f:render partial="ViewHelper/Game/ResultInTable" arguments="{game: game}" />
-        </sportms:link.action>
-    </td>
+	<td class="tx-sportms-table-center">
+		<sportms:link.action CompetitionSeason="{game.competitionSeason}" CompetitionSeasonGameday="{game.gameday}"
+							 action="games"
+							 controller="CompetitionSeason">
+			{game.gameday.label}
+		</sportms:link.action>
+	</td>
+	<td class="tx-sportms-table-center">
+		<f:format.date format="{settings.format.dateLong}">{game.date}
+		</f:format.date>
+	</td>
+	<td class="tx-sportms-table-center">
+		<f:format.date format="{settings.format.timeLong}">{game.time}
+		</f:format.date>
+	</td>
+	<td class="tx-sportms-table-center">
+		<f:if condition="{teamSeason} == {game.teamSeasonHome}">
+			<f:then>
+				H
+			</f:then>
+			<f:else>
+				A
+			</f:else>
+		</f:if>
+	</td>
+	<td class="tx-sportms-table-left">
+		<f:if condition="{teamSeason} == {game.teamSeasonHome}">
+			<f:then>
+				<f:render arguments="{teamSeason: game.teamSeasonGuest}"
+						  partial="ViewHelper/TeamSeason/ItemInTable"/>
+			</f:then>
+			<f:else>
+				<f:render arguments="{teamSeason: game.teamSeasonHome}"
+						  partial="ViewHelper/TeamSeason/ItemInTable"/>
+			</f:else>
+		</f:if>
+	</td>
+	<td class="tx-sportms-table-center">
+		<f:render arguments="{spectators: game.spectators}"
+				  partial="ViewHelper/Game/Spectators"/>
+	</td>
+	<td class="tx-sportms-table-center">
+		<sportms:link.action Game="{game}" action="index" controller="Game">
+			<f:render arguments="{game: game}"
+					  partial="ViewHelper/Game/ResultInTable"/>
+		</sportms:link.action>
+	</td>
 </tr>
 
 </html>

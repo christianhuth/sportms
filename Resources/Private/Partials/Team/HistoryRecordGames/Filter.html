@@ -1,15 +1,23 @@
 <html data-namespace-typo3-fluid="true"
-      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <f:if condition="{settings.season.selectbox.enabled} ||
                  {settings.competition.selectbox.enabled}">
-    <div class="tx-sportms-filter">
-        <f:form action="historyRecordGames" arguments="{team: team}" class="form-horizontal" controller="Team" extensionName="sportms" method="POST" pageUid="{settings.team.historyRecordGames.pid}" pluginName="Team">
-            <f:render arguments="{options: seasonsSelectbox,             settings: settings,     value: settings.season.selected}" partial="Form/Select/Season"/>
-            <f:render arguments="{options: competitionsSelectbox,        settings: settings,     value: settings.competition.selected}" partial="Form/Select/Competition"/>
-            <f:render partial="Form/Submit"/>
-        </f:form>
-    </div>
+	<div class="tx-sportms-filter">
+		<f:form action="historyRecordGames" arguments="{team: team}"
+				class="form-horizontal" controller="Team"
+				extensionName="sportms" method="POST"
+				pageUid="{settings.team.historyRecordGames.pid}"
+				pluginName="Team">
+			<f:render
+					arguments="{options: seasonsSelectbox,             settings: settings,     value: settings.season.selected}"
+					partial="Form/Select/Season"/>
+			<f:render
+					arguments="{options: competitionsSelectbox,        settings: settings,     value: settings.competition.selected}"
+					partial="Form/Select/Competition"/>
+			<f:render partial="Form/Submit"/>
+		</f:form>
+	</div>
 </f:if>
 
 </html>

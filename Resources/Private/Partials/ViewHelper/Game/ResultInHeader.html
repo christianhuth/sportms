@@ -1,78 +1,106 @@
 <html data-namespace-typo3-fluid="true"
-      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <f:switch expression="{game.gameAppointment}">
-  <f:case value="1">
-    <f:variable name="resultMain">- : -</f:variable>
-    <f:variable name="resultSub"></f:variable>
-    <f:render section="output" arguments="{resultMain: resultMain, resultSub: resultSub}"/>
-  </f:case>
-  <f:case value="2">
-    <f:variable name="resultMain">- : -</f:variable>
-    <f:variable name="resultSub">abgesagt</f:variable>
-    <f:render section="output" arguments="{resultMain: resultMain, resultSub: resultSub}"/>
-  </f:case>
-  <f:case value="3">
-    <f:variable name="resultMain">- : -</f:variable>
-    <f:variable name="resultSub">abgesetzt</f:variable>
-    <f:render section="output" arguments="{resultMain: resultMain, resultSub: resultSub}"/>
-  </f:case>
-  <f:case value="4">
-    <f:variable name="resultMain">
-      <span class="tx-sportms-game-result-live">- : -</span>
-    </f:variable>
-    <f:variable name="resultSub"></f:variable>
-    <f:render section="output" arguments="{resultMain: resultMain, resultSub: resultSub}"/>
-  </f:case>
-  <f:case value="5">
-    <f:variable name="resultMain">- : -</f:variable>
-    <f:variable name="resultSub">abgebrochen</f:variable>
-    <f:render section="output" arguments="{resultMain: resultMain, resultSub: resultSub}"/>
-  </f:case>
-  <f:case value="6">
-    <f:render section="game_rating_{game.gameRating}" arguments="{game: game}"/>
-  </f:case>
+	<f:case value="1">
+		<f:variable name="resultMain">- : -</f:variable>
+		<f:variable name="resultSub"></f:variable>
+		<f:render arguments="{resultMain: resultMain, resultSub: resultSub}"
+				  section="output"/>
+	</f:case>
+	<f:case value="2">
+		<f:variable name="resultMain">- : -</f:variable>
+		<f:variable name="resultSub">abgesagt</f:variable>
+		<f:render arguments="{resultMain: resultMain, resultSub: resultSub}"
+				  section="output"/>
+	</f:case>
+	<f:case value="3">
+		<f:variable name="resultMain">- : -</f:variable>
+		<f:variable name="resultSub">abgesetzt</f:variable>
+		<f:render arguments="{resultMain: resultMain, resultSub: resultSub}"
+				  section="output"/>
+	</f:case>
+	<f:case value="4">
+		<f:variable name="resultMain">
+			<span class="tx-sportms-game-result-live">- : -</span>
+		</f:variable>
+		<f:variable name="resultSub"></f:variable>
+		<f:render arguments="{resultMain: resultMain, resultSub: resultSub}"
+				  section="output"/>
+	</f:case>
+	<f:case value="5">
+		<f:variable name="resultMain">- : -</f:variable>
+		<f:variable name="resultSub">abgebrochen</f:variable>
+		<f:render arguments="{resultMain: resultMain, resultSub: resultSub}"
+				  section="output"/>
+	</f:case>
+	<f:case value="6">
+		<f:render arguments="{game: game}"
+				  section="game_rating_{game.gameRating}"/>
+	</f:case>
 </f:switch>
 
 <f:section name="game_rating_1">
-  <f:if condition="!{game.resultEndAdditional}">
-    <f:then>
-      <f:variable name="resultMain">{game.resultEndRegularHome} : {game.resultEndRegularGuest}</f:variable>
-      <f:variable name="resultSub">{game.resultHalfsFirstHome} : {game.resultHalfsFirstGuest}</f:variable>
-    </f:then>
-    <f:else>
-      <f:if condition="{game.resultEndPenaltyHome} | {game.resultEndPenaltyGuest}">
-        <f:then>
-          <f:variable name="resultMain">{game.resultEndRegularHome + game.resultEndPenaltyHome} : {game.resultEndRegularGuest + game.resultEndPenaltyGuest}</f:variable>
-          <f:variable name="resultSub">n.E.</f:variable>
-        </f:then>
-        <f:else>
-          <f:variable name="resultMain">{game.resultEndRegularHome + game.resultEndOvertimeHome} : {game.resultEndRegularGuest + game.resultEndOvertimeGuest}</f:variable>
-          <f:variable name="resultSub">n.V.</f:variable>
-        </f:else>
-      </f:if>
-    </f:else>
-  </f:if>
-  <f:render section="output" arguments="{resultMain: resultMain, resultSub: resultSub}"/>
+	<f:if condition="!{game.resultEndAdditional}">
+		<f:then>
+			<f:variable name="resultMain">{game.resultEndRegularHome} :
+										  {game.resultEndRegularGuest}
+			</f:variable>
+			<f:variable name="resultSub">{game.resultHalfsFirstHome} :
+										 {game.resultHalfsFirstGuest}
+			</f:variable>
+		</f:then>
+		<f:else>
+			<f:if condition="{game.resultEndPenaltyHome} | {game.resultEndPenaltyGuest}">
+				<f:then>
+					<f:variable name="resultMain">{game.resultEndRegularHome +
+												  game.resultEndPenaltyHome} :
+												  {game.resultEndRegularGuest +
+												  game.resultEndPenaltyGuest}
+					</f:variable>
+					<f:variable name="resultSub">n.E.</f:variable>
+				</f:then>
+				<f:else>
+					<f:variable name="resultMain">{game.resultEndRegularHome +
+												  game.resultEndOvertimeHome} :
+												  {game.resultEndRegularGuest +
+												  game.resultEndOvertimeGuest}
+					</f:variable>
+					<f:variable name="resultSub">n.V.</f:variable>
+				</f:else>
+			</f:if>
+		</f:else>
+	</f:if>
+	<f:render arguments="{resultMain: resultMain, resultSub: resultSub}"
+			  section="output"/>
 </f:section>
 
 <f:section name="game_rating_2">
-  <f:variable name="resultMain">{game.resultSpecialHome} : {game.resultSpecialGuest}</f:variable>
-  <f:variable name="resultSub">
-    <f:translate key="tx_sportms_domain_model_game.result_special_reason.{game.resultSpecialReason}"/>
-  </f:variable>
-  <f:render section="output" arguments="{resultMain: resultMain, resultSub: resultSub}"/>
+	<f:variable name="resultMain">{game.resultSpecialHome} :
+								  {game.resultSpecialGuest}
+	</f:variable>
+	<f:variable name="resultSub">
+		<f:translate
+				key="tx_sportms_domain_model_game.result_special_reason.{game.resultSpecialReason}"/>
+	</f:variable>
+	<f:render arguments="{resultMain: resultMain, resultSub: resultSub}"
+			  section="output"/>
 </f:section>
 
 <f:section name="game_rating_3">
-  <f:variable name="resultMain">- : -</f:variable>
-  <f:variable name="resultSub">ohne Wertung</f:variable>
-  <f:render section="output" arguments="{resultMain: resultMain, resultSub: resultSub}"/>
+	<f:variable name="resultMain">- : -</f:variable>
+	<f:variable name="resultSub">ohne Wertung</f:variable>
+	<f:render arguments="{resultMain: resultMain, resultSub: resultSub}"
+			  section="output"/>
 </f:section>
 
 <f:section name="output">
-  <div class="tx-sportms-game-result-main tx-sportms-game-header-result-main">{resultMain}</div>
-  <div class="tx-sportms-game-result-sub tx-sportms-game-header-result-sub">{resultSub}</div>
+	<div class="tx-sportms-game-result-main tx-sportms-game-header-result-main">
+		{resultMain}
+	</div>
+	<div class="tx-sportms-game-result-sub tx-sportms-game-header-result-sub">
+		{resultSub}
+	</div>
 </f:section>
 
 </html>

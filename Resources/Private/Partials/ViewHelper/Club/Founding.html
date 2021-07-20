@@ -1,20 +1,21 @@
 <html data-namespace-typo3-fluid="true"
-      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <f:if condition="{club.dateOfFounding}">
-  <f:then>
-    <f:format.date date="{club.dateOfFounding}" format="{settings.format.dateLong}"/>
-  </f:then>
-  <f:else>
-    <f:if condition="{club.yearOfFounding}">
-      <f:then>
-        {club.yearOfFounding}
-      </f:then>
-      <f:else>
-        - - -
-      </f:else>
-    </f:if>
-  </f:else>
+	<f:then>
+		<f:format.date date="{club.dateOfFounding}"
+					   format="{settings.format.dateLong}"/>
+	</f:then>
+	<f:else>
+		<f:if condition="{club.yearOfFounding}">
+			<f:then>
+				{club.yearOfFounding}
+			</f:then>
+			<f:else>
+				- - -
+			</f:else>
+		</f:if>
+	</f:else>
 </f:if>
 
 

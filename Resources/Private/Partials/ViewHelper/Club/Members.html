@@ -1,15 +1,15 @@
 <html data-namespace-typo3-fluid="true"
-      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <f:section name="latestOnly">
-  <f:if condition="{club.clubMembers}">
-    <f:then>
-      {club.clubMembers.0.members}
-    </f:then>
-    <f:else>
-      - - -
-    </f:else>
-  </f:if>
+	<f:if condition="{club.clubMembers}">
+		<f:then>
+			{club.clubMembers.0.members}
+		</f:then>
+		<f:else>
+			- - -
+		</f:else>
+	</f:if>
 </f:section>
 
 

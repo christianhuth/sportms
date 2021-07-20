@@ -1,25 +1,30 @@
 <html data-namespace-typo3-fluid="true"
-      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <f:if condition="{teamSeason}">
-    <f:then>
-        <f:if condition="{teamSeason.team.detailLink} && {teamSeason.detailLink}">
-            <f:then>
-                <f:link.action action="index" arguments="{teamSeason: teamSeason}" controller="TeamSeason"
-                               extensionName="sportms" pageUid="{settings.teamSeason.index.pid}" pluginName="Team">
-                    <f:translate key="tx_sportms_action.teamseason.index"/>
-                </f:link.action>
-            </f:then>
-            <f:else>
-                <span><f:translate key="tx_sportms_action.teamseason.index"/></span>
-            </f:else>
-        </f:if>
-    </f:then>
-    <f:else>
-        <f:comment>
-            #TODO: ERROR MESSAGE
-        </f:comment>
-    </f:else>
+	<f:then>
+		<f:if condition="{teamSeason.team.detailLink} && {teamSeason.detailLink}">
+			<f:then>
+				<f:link.action action="index"
+							   arguments="{teamSeason: teamSeason}"
+							   controller="TeamSeason"
+							   extensionName="sportms"
+							   pageUid="{settings.teamSeason.index.pid}"
+							   pluginName="Team">
+					<f:translate key="tx_sportms_action.teamseason.index"/>
+				</f:link.action>
+			</f:then>
+			<f:else>
+				<span><f:translate
+						key="tx_sportms_action.teamseason.index"/></span>
+			</f:else>
+		</f:if>
+	</f:then>
+	<f:else>
+		<f:comment>
+			#TODO: ERROR MESSAGE
+		</f:comment>
+	</f:else>
 </f:if>
 
 </html>

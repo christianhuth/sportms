@@ -1,18 +1,24 @@
 <html data-namespace-typo3-fluid="true"
-      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <div class="form-group form-group-sm">
-    <label class="hidden-xs col-sm-3 control-label">Mannschaftsfunktion:</label>
-    <div class="col-xs-12 col-sm-9">
-        <div class="input-group">
-            <span class="input-group-addon"><i class="sportmsicon sportmsicon-teamseasonofficialjob"></i></span>
-            <f:form.select class="form-control" name="selectTeamSeasonOfficialJOb" optionLabelField="name" optionValueField="uid" prependOptionLabel="Alle Mannschaftsfunktionen" prependOptionValue="" value="{value}">
-                <f:for as="option" each="{options}">
-                    <f:form.select.option value="{option.uid}">{option.label}</f:form.select.option>
-                </f:for>
-            </f:form.select>
-        </div>
-    </div>
+	<label class="hidden-xs col-sm-3 control-label">Mannschaftsfunktion:</label>
+	<div class="col-xs-12 col-sm-9">
+		<div class="input-group">
+			<span class="input-group-addon"><i
+					class="sportmsicon sportmsicon-teamseasonofficialjob"></i></span>
+			<f:form.select class="form-control"
+						   name="selectTeamSeasonOfficialJOb"
+						   optionLabelField="name" optionValueField="uid"
+						   prependOptionLabel="Alle Mannschaftsfunktionen"
+						   prependOptionValue="" value="{value}">
+				<f:for as="option" each="{options}">
+					<f:form.select.option value="{option.uid}">{option.label}
+					</f:form.select.option>
+				</f:for>
+			</f:form.select>
+		</div>
+	</div>
 </div>
 
 </html>

@@ -9,9 +9,9 @@
 		 */
 		public function initializeArguments() {
 			parent::initializeArguments();
-			$this->registerArgument('startdate', 'string', 'start date', true);
-			$this->registerArgument('enddate', 'string', 'end date', false);
-			$this->registerArgument('format', 'string', 'format of the date range', true);
+			$this->registerArgument('startdate', 'string', 'start date', TRUE);
+			$this->registerArgument('enddate', 'string', 'end date', FALSE);
+			$this->registerArgument('format', 'string', 'format of the date range', TRUE);
 		}
 		
 		/**
@@ -19,7 +19,6 @@
 		 * @throws \Exception
 		 */
 		public function render() {
-			
 			$startdate = new \DateTime();
 			$startdate->setTimestamp($this->arguments['startdate']);
 			
@@ -33,7 +32,6 @@
 			
 			$dateRange = $enddate->diff($startdate)->format($this->arguments['format']);
 			return $dateRange;
-			
 		}
 		
 	}

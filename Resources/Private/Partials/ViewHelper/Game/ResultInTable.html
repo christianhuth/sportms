@@ -1,51 +1,54 @@
 <html data-namespace-typo3-fluid="true"
-      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <f:switch expression="{game.gameAppointment}">
-  <f:case value="1">
-    - : -
-  </f:case>
-  <f:case value="2">
-    abgesagt
-  </f:case>
-  <f:case value="3">
-    abgesetzt
-  </f:case>
-  <f:case value="4">
-    <span class="tx-sportms-game-result-live">- : -</span>
-  </f:case>
-  <f:case value="5">
-    abgebrochen
-  </f:case>
-  <f:case value="6">
-    <f:render section="game_rating_{game.gameRating}" arguments="{game: game}"/>
-  </f:case>
+	<f:case value="1">
+		- : -
+	</f:case>
+	<f:case value="2">
+		abgesagt
+	</f:case>
+	<f:case value="3">
+		abgesetzt
+	</f:case>
+	<f:case value="4">
+		<span class="tx-sportms-game-result-live">- : -</span>
+	</f:case>
+	<f:case value="5">
+		abgebrochen
+	</f:case>
+	<f:case value="6">
+		<f:render arguments="{game: game}"
+				  section="game_rating_{game.gameRating}"/>
+	</f:case>
 </f:switch>
 
 <f:section name="game_rating_1">
-  <f:if condition="!{game.resultEndAdditional}">
-    <f:then>
-      {game.resultEndRegularHome} : {game.resultEndRegularGuest}
-    </f:then>
-    <f:else>
-      <f:if condition="{game.resultEndPenaltyHome} | {game.resultEndPenaltyGuest}">
-        <f:then>
-          {game.resultEndPenaltyHome} : {game.resultEndPenaltyGuest} n.E.
-        </f:then>
-        <f:else>
-          {game.resultEndOvertimeHome} : {game.resultEndOvertimeGuest} n.V.
-        </f:else>
-      </f:if>
-    </f:else>
-  </f:if>
+	<f:if condition="!{game.resultEndAdditional}">
+		<f:then>
+			{game.resultEndRegularHome} : {game.resultEndRegularGuest}
+		</f:then>
+		<f:else>
+			<f:if condition="{game.resultEndPenaltyHome} | {game.resultEndPenaltyGuest}">
+				<f:then>
+					{game.resultEndPenaltyHome} : {game.resultEndPenaltyGuest}
+					n.E.
+				</f:then>
+				<f:else>
+					{game.resultEndOvertimeHome} : {game.resultEndOvertimeGuest}
+					n.V.
+				</f:else>
+			</f:if>
+		</f:else>
+	</f:if>
 </f:section>
 
 <f:section name="game_rating_2">
-  {game.resultSpecialHome} : {game.resultSpecialGuest}
+	{game.resultSpecialHome} : {game.resultSpecialGuest}
 </f:section>
 
 <f:section name="game_rating_3">
-  ohne Wertung
+	ohne Wertung
 </f:section>
 
 </html>

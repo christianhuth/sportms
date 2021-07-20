@@ -1,54 +1,60 @@
 <html data-namespace-typo3-fluid="true"
-      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <f:layout name="default"/>
 
 <f:section name="default">
-    <div class="tx-sportms-competitionseason-detail">
-        <f:render arguments="{competition: competitionSeason.competition, competitionSeason: competitionSeason}" partial="Competition/Navigation"/>
-        <f:render arguments="{competition: competitionSeason.competition, competitionSeason: competitionSeason, competitionSeasons: competitionSeasons, settings: settings}" partial="CompetitionSeason/Clubs/Filter"/>
-        <div class="tx-sportms-competitionseason-clubs">
-            <f:if condition="{competitionSeason.competitionSeasonTeams}">
-                <f:then>
-                    <div class="table-responsive">
-                        <f:render section="tablestart"/>
-                        <f:for as="teamSeason" each="{competitionSeason.competitionSeasonTeams}">
-                            <f:render partial="CompetitionSeason/Clubs/Item" arguments="{teamSeason: teamSeason, settings: settings}"/>
-                        </f:for>
-                        <f:render section="tableend"/>
-                    </div>
-                </f:then>
-                <f:else>
-                    <div class="table-responsive">
-                        <f:render section="tablestart"/>
-                        <tr>
-                            <td colspan="5">Keine Teams gefunden.</td>
-                        </tr>
-                        <f:render section="tableend"/>
-                    </div>
-                </f:else>
-            </f:if>
-        </div>
-    </div>
+	<div class="tx-sportms-competitionseason-detail">
+		<f:render
+				arguments="{competition: competitionSeason.competition, competitionSeason: competitionSeason}"
+				partial="Competition/Navigation"/>
+		<f:render
+				arguments="{competition: competitionSeason.competition, competitionSeason: competitionSeason, competitionSeasons: competitionSeasons, settings: settings}"
+				partial="CompetitionSeason/Clubs/Filter"/>
+		<div class="tx-sportms-competitionseason-clubs">
+			<f:if condition="{competitionSeason.competitionSeasonTeams}">
+				<f:then>
+					<div class="table-responsive">
+						<f:render section="tablestart"/>
+						<f:for as="teamSeason"
+							   each="{competitionSeason.competitionSeasonTeams}">
+							<f:render arguments="{teamSeason: teamSeason, settings: settings}"
+									  partial="CompetitionSeason/Clubs/Item"/>
+						</f:for>
+						<f:render section="tableend"/>
+					</div>
+				</f:then>
+				<f:else>
+					<div class="table-responsive">
+						<f:render section="tablestart"/>
+						<tr>
+							<td colspan="5">Keine Teams gefunden.</td>
+						</tr>
+						<f:render section="tableend"/>
+					</div>
+				</f:else>
+			</f:if>
+		</div>
+	</div>
 </f:section>
 
 <f:section name="tablestart">
-    <table class="table table-bordered table-condensed table-hover table-striped tx-sportms-table">
-        <thead>
-        <tr>
-            <th>Verein</th>
-            <th>Gründung</th>
-            <th>Mitglieder</th>
-            <th>Vereinsfarben</th>
-            <th>Homepage</th>
-        </tr>
-        </thead>
-        <tbody>
+	<table class="table table-bordered table-condensed table-hover table-striped tx-sportms-table">
+		<thead>
+		<tr>
+			<th>Verein</th>
+			<th>Gründung</th>
+			<th>Mitglieder</th>
+			<th>Vereinsfarben</th>
+			<th>Homepage</th>
+		</tr>
+		</thead>
+		<tbody>
 </f:section>
 
 <f:section name="tableend">
-    </tbody>
-    </table>
+	</tbody>
+	</table>
 </f:section>
 
 </html>

@@ -1,64 +1,79 @@
 <html data-namespace-typo3-fluid="true"
-      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <f:layout name="default"/>
 
 <f:section name="default">
-    <div id="tx-sportms-team-historyrecordgames">
-        <f:render arguments="{team: team}" partial="Team/Navigation"/>
-        <f:render arguments="{_all}" partial="Team/HistoryRecordGames/Filter"/>
-        <div class="tx-sportms-team-historyrecordgames">
-            <h3>Die höchsten Siege</h3>
-            <f:render arguments="{games: gamesWithHighestWins, settings: settings, team: team}" section="recordGames" />
-        </div>
-        <div class="tx-sportms-team-historyrecordgames">
-            <h3>Die höchsten Niederlagen</h3>
-            <f:render arguments="{games: gamesWithHighestLosts, settings: settings, team: team}" section="recordGames" />
-        </div>
-        <div class="tx-sportms-team-historyrecordgames">
-            <h3>Die meisten Tore</h3>
-            <f:render arguments="{games: gamesWithMostGoals, settings: settings, team: team}" section="recordGames" />
-        </div>
-        <div class="tx-sportms-team-historyrecordgames">
-            <h3>Die meisten Zuschauer</h3>
-            <f:render arguments="{games: gamesWithMostSpectators, settings: settings, team: team}" section="recordGames" />
-        </div>
-        <div class="tx-sportms-team-historyrecordgames">
-            <h3>Die wenigsten Zuschauer</h3>
-            <f:render arguments="{games: gamesWithFewestSpectators, settings: settings, team: team}" section="recordGames" />
-        </div>
-    </div>
+	<div id="tx-sportms-team-historyrecordgames">
+		<f:render arguments="{team: team}" partial="Team/Navigation"/>
+		<f:render arguments="{_all}" partial="Team/HistoryRecordGames/Filter"/>
+		<div class="tx-sportms-team-historyrecordgames">
+			<h3>Die höchsten Siege</h3>
+			<f:render
+					arguments="{games: gamesWithHighestWins, settings: settings, team: team}"
+					section="recordGames"/>
+		</div>
+		<div class="tx-sportms-team-historyrecordgames">
+			<h3>Die höchsten Niederlagen</h3>
+			<f:render
+					arguments="{games: gamesWithHighestLosts, settings: settings, team: team}"
+					section="recordGames"/>
+		</div>
+		<div class="tx-sportms-team-historyrecordgames">
+			<h3>Die meisten Tore</h3>
+			<f:render
+					arguments="{games: gamesWithMostGoals, settings: settings, team: team}"
+					section="recordGames"/>
+		</div>
+		<div class="tx-sportms-team-historyrecordgames">
+			<h3>Die meisten Zuschauer</h3>
+			<f:render
+					arguments="{games: gamesWithMostSpectators, settings: settings, team: team}"
+					section="recordGames"/>
+		</div>
+		<div class="tx-sportms-team-historyrecordgames">
+			<h3>Die wenigsten Zuschauer</h3>
+			<f:render
+					arguments="{games: gamesWithFewestSpectators, settings: settings, team: team}"
+					section="recordGames"/>
+		</div>
+	</div>
 </f:section>
 
 <f:section name="recordGames">
-    <table class="table table-bordered table-condensed table-hover table-striped tx-sportms-table">
-        <thead>
-        <tr>
-            <th class="tx-sportms-table-center">#</th>
-            <th class="tx-sportms-table-center">Datum</th>
-            <th class="tx-sportms-table-center">Saison</th>
-            <th class="tx-sportms-table-left">Wettbewerb</th>
-            <th class="tx-sportms-table-center">Ort</th>
-            <th class="tx-sportms-table-left">Gegner</th>
-            <th class="tx-sportms-table-center">Zuschauer</th>
-            <th class="tx-sportms-table-center">Ergebnis</th>
-        </tr>
-        </thead>
-        <tbody>
-        <f:if condition="{games}">
-            <f:then>
-                <f:for as="game" each="{games}" iteration="iterator">
-                    <f:render arguments="{position: iterator.index, game: game, settings: settings, team: team}" partial="Team/HistoryRecordGames/Item"/>
-                </f:for>
-            </f:then>
-            <f:else>
-                <tr>
-                    <td class="tx-sportms-table-nodata" colspan="8">Keine Rekordspiele gefunden.</td>
-                </tr>
-            </f:else>
-        </f:if>
-        </tbody>
-    </table>
+	<table class="table table-bordered table-condensed table-hover table-striped tx-sportms-table">
+		<thead>
+		<tr>
+			<th class="tx-sportms-table-center">#</th>
+			<th class="tx-sportms-table-center">Datum</th>
+			<th class="tx-sportms-table-center">Saison</th>
+			<th class="tx-sportms-table-left">Wettbewerb</th>
+			<th class="tx-sportms-table-center">Ort</th>
+			<th class="tx-sportms-table-left">Gegner</th>
+			<th class="tx-sportms-table-center">Zuschauer</th>
+			<th class="tx-sportms-table-center">Ergebnis</th>
+		</tr>
+		</thead>
+		<tbody>
+		<f:if condition="{games}">
+			<f:then>
+				<f:for as="game" each="{games}" iteration="iterator">
+					<f:render
+							arguments="{position: iterator.index, game: game, settings: settings, team: team}"
+							partial="Team/HistoryRecordGames/Item"/>
+				</f:for>
+			</f:then>
+			<f:else>
+				<tr>
+					<td class="tx-sportms-table-nodata" colspan="8">Keine
+																	Rekordspiele
+																	gefunden.
+					</td>
+				</tr>
+			</f:else>
+		</f:if>
+		</tbody>
+	</table>
 </f:section>
 
 </html>

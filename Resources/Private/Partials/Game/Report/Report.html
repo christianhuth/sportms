@@ -1,10 +1,16 @@
 <html data-namespace-typo3-fluid="true"
-      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <f:if condition="{report}">
-  <h3><f:format.raw>{report.headline}</f:format.raw></h3>
-  <f:format.html>{report.text}</f:format.html>
-  <p>von {report.author} (<f:format.date format="{settings.format.dateLong}">{report.date}</f:format.date>)</p>
+	<h3>
+		<f:format.raw>{report.headline}</f:format.raw>
+	</h3>
+	<f:format.html>{report.text}</f:format.html>
+	<p>von {report.author} (
+		<f:format.date format="{settings.format.dateLong}">{report.date}
+		</f:format.date>
+	   )
+	</p>
 </f:if>
 
 </html>

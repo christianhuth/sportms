@@ -1,16 +1,30 @@
 <html data-namespace-typo3-fluid="true"
-      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <f:if condition="{date}">
-    <f:switch expression="{date -> f:format.date(format: '%w')}">
-        <f:case value="0"><f:translate key="tx_sportms_general.day.7"/></f:case>
-        <f:case value="1"><f:translate key="tx_sportms_general.day.1"/></f:case>
-        <f:case value="2"><f:translate key="tx_sportms_general.day.2"/></f:case>
-        <f:case value="3"><f:translate key="tx_sportms_general.day.3"/></f:case>
-        <f:case value="4"><f:translate key="tx_sportms_general.day.4"/></f:case>
-        <f:case value="5"><f:translate key="tx_sportms_general.day.5"/></f:case>
-        <f:case value="6"><f:translate key="tx_sportms_general.day.6"/></f:case>
-    </f:switch>
+	<f:switch expression="{date -> f:format.date(format: '%w')}">
+		<f:case value="0">
+			<f:translate key="tx_sportms_general.day.7"/>
+		</f:case>
+		<f:case value="1">
+			<f:translate key="tx_sportms_general.day.1"/>
+		</f:case>
+		<f:case value="2">
+			<f:translate key="tx_sportms_general.day.2"/>
+		</f:case>
+		<f:case value="3">
+			<f:translate key="tx_sportms_general.day.3"/>
+		</f:case>
+		<f:case value="4">
+			<f:translate key="tx_sportms_general.day.4"/>
+		</f:case>
+		<f:case value="5">
+			<f:translate key="tx_sportms_general.day.5"/>
+		</f:case>
+		<f:case value="6">
+			<f:translate key="tx_sportms_general.day.6"/>
+		</f:case>
+	</f:switch>
 </f:if>
 
 </html>

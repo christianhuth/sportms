@@ -37,9 +37,8 @@
 				$this->arguments['src'] = $flagPath;
 				return parent::render();
 			} else {
-				return null;
+				return NULL;
 			}
 		}
-		
 		
 	}

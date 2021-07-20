@@ -1,11 +1,10 @@
 <?php
 	
 	namespace Balumedien\Sportms\Domain\Model;
-
+	
 	use Balumedien\Sportms\Domain\ModelPersonProfile;
-	use Balumedien\Sportms\Domain\Model\Sport;
-
-    /**
+	
+	/**
 	 * Person
 	 */
 	class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {

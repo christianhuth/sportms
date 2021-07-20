@@ -1,46 +1,51 @@
 <html data-namespace-typo3-fluid="true"
-      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <f:layout name="default"/>
 
 <f:section name="default">
-    <div id="tx-sportms-person-list">
-        <div class="table-responsive">
-            <table class="table table-bordered table-condensed table-hover table-striped tx-sportms-table">
-                <thead>
-                <tr>
-                    <th>
-                        <f:translate key="tx_sportms_domain_model_person.lastname"/>
-                    </th>
-                    <th>
-                        <f:translate key="tx_sportms_domain_model_person.firstname"/>
-                    </th>
-                    <th>
-                        <f:translate key="tx_sportms_domain_model_person.nickname"/>
-                    </th>
-                    <th>
-                        <f:translate key="tx_sportms_domain_model_person.nationality"/>
-                    </th>
-                    <th>Profile</th>
-                </tr>
-                </thead>
-                <tbody>
-                <f:if condition="{persons}">
-                    <f:then>
-                        <f:for as="person" each="{persons}">
-                            <f:render partial="Person/List/Item" arguments="{_all}"/>
-                        </f:for>
-                    </f:then>
-                    <f:else>
-                        <tr>
-                            <td colspan="5">Keine Personen gefunden.</td>
-                        </tr>
-                    </f:else>
-                </f:if>
-                </tbody>
-            </table>
-        </div>
-    </div>
+	<div id="tx-sportms-person-list">
+		<div class="table-responsive">
+			<table class="table table-bordered table-condensed table-hover table-striped tx-sportms-table">
+				<thead>
+				<tr>
+					<th>
+						<f:translate
+								key="tx_sportms_domain_model_person.lastname"/>
+					</th>
+					<th>
+						<f:translate
+								key="tx_sportms_domain_model_person.firstname"/>
+					</th>
+					<th>
+						<f:translate
+								key="tx_sportms_domain_model_person.nickname"/>
+					</th>
+					<th>
+						<f:translate
+								key="tx_sportms_domain_model_person.nationality"/>
+					</th>
+					<th>Profile</th>
+				</tr>
+				</thead>
+				<tbody>
+				<f:if condition="{persons}">
+					<f:then>
+						<f:for as="person" each="{persons}">
+							<f:render arguments="{_all}"
+									  partial="Person/List/Item"/>
+						</f:for>
+					</f:then>
+					<f:else>
+						<tr>
+							<td colspan="5">Keine Personen gefunden.</td>
+						</tr>
+					</f:else>
+				</f:if>
+				</tbody>
+			</table>
+		</div>
+	</div>
 </f:section>
 
 </html>

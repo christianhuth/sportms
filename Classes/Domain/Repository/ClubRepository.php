@@ -4,11 +4,11 @@
 	
 	class ClubRepository extends SportMSBaseRepository {
 		
-		protected $defaultOrderings = array(
-			'name' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING
-		);
+		protected $defaultOrderings = [
+			'name' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
+		];
 		
-		public function findAll(string $clubUids = null) {
+		public function findAll(string $clubUids = NULL) {
 			$query = $this->createQuery();
 			$constraints = [];
 			if($clubUids) {
@@ -22,4 +22,4 @@
 		
 	}
 	
-?>
+	?>

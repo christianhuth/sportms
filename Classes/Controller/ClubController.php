@@ -3,8 +3,8 @@
 	namespace Balumedien\Sportms\Controller;
 	
 	use Balumedien\Sportms\Domain\Model\Club;
-
-    /**
+	
+	/**
 	 * ClubController
 	 */
 	class ClubController extends SportMSBaseController {
@@ -24,6 +24,17 @@
 		}
 		
 		/**
+		 * @return void
+		 * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
+		 */
+		public function listAction(): void {
+			$this->initializeActions();
+			$clubs = $this->clubRepository->findAll($this->getClubsFilter());
+			$this->view->assign('clubs', $clubs);
+			$this->pagetitle("Vereine", "Liste");
+		}
+		
+		/**
 		 * Use this method to solve tasks which all actions have in common, when VIEW-Context is needed
 		 */
 		public function initializeActions(): void {
@@ -32,17 +43,6 @@
 			#$this->determineShowViews($this->model, $listOfPossibleShowViews);
 			#$this->determineShowNavigationViews($this->model, $listOfPossibleShowViews);
 			#$this->view->assign('settings', $this->settings);
-		}
-		
-		/**
-		 * @return void
-		 * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
-		 */
-		public function listAction(): void {
-			$this->initializeActions();
-			$clubs = $this->clubRepository->findAll($this->getClubsFilter());
-			$this->view->assign('clubs', $clubs);
-            $this->pagetitle("Vereine", "Liste");
 		}
 		
 		/**
@@ -56,14 +56,14 @@
 			$this->view->assign('club', $club);
 			$this->pagetitleForClub($club, "Abteilungen");
 		}
-
-        /**
-         * @param Club $club
-         * @param string $actionLabel
-         */
-        private function pagetitleForClub(Club $club, string $actionLabel) {
-            $clubName = $club->getName();
-            $this->pagetitle($clubName, $actionLabel);
-        }
+		
+		/**
+		 * @param Club $club
+		 * @param string $actionLabel
+		 */
+		private function pagetitleForClub(Club $club, string $actionLabel) {
+			$clubName = $club->getName();
+			$this->pagetitle($clubName, $actionLabel);
+		}
 		
 	}

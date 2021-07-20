@@ -1,24 +1,25 @@
 <html data-namespace-typo3-fluid="true"
-      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <f:layout name="default"/>
 
 <f:section name="default">
-
-    <div id="tx-sportms-game-show">
-
-        <f:render arguments="{game: game}" partial="Game/Header"/>
-
-        <f:render arguments="{game: game}" partial="Game/Navigation"/>
-
-        <div class="tx-sportms-game-showhistory">
-            <div clas="tx-sportms-game-list">
-                <h4>Bisherige Begegnungen</h4>
-                <f:render partial="Game/History/List" arguments="{games: gamesInCompetition}"/>
-            </div>
-        </div>
-
-    </div>
+	
+	<div id="tx-sportms-game-show">
+		
+		<f:render arguments="{game: game}" partial="Game/Header"/>
+		
+		<f:render arguments="{game: game}" partial="Game/Navigation"/>
+		
+		<div class="tx-sportms-game-showhistory">
+			<div clas="tx-sportms-game-list">
+				<h4>Bisherige Begegnungen</h4>
+				<f:render arguments="{games: gamesInCompetition}"
+						  partial="Game/History/List"/>
+			</div>
+		</div>
+	
+	</div>
 </f:section>
 
 </html>

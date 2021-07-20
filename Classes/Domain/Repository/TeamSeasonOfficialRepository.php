@@ -2,12 +2,11 @@
 	
 	namespace Balumedien\Sportms\Domain\Repository;
 	
-	use MongoDB\Driver\Query;
-    use TYPO3\CMS\Extbase\Persistence\QueryInterface;
-
-    class TeamSeasonOfficialRepository extends SportMSBaseRepository {
+	use TYPO3\CMS\Extbase\Persistence\QueryInterface;
+	
+	class TeamSeasonOfficialRepository extends SportMSBaseRepository {
 		
-		protected $defaultOrderings = array(
+		protected $defaultOrderings = [
 			'teamSeason.team.club.name' => QueryInterface::ORDER_ASCENDING,
 			'teamSeason.team.sport.label' => QueryInterface::ORDER_ASCENDING,
 			'teamSeason.team.sportAgeGroup.sorting' => QueryInterface::ORDER_ASCENDING,
@@ -16,10 +15,10 @@
 			'teamSeason.season.label' => QueryInterface::ORDER_DESCENDING,
 			'enddate' => QueryInterface::ORDER_ASCENDING,
 			'startdate' => QueryInterface::ORDER_DESCENDING,
-            'teamSeasonOfficialJob.label' => QueryInterface::ORDER_ASCENDING,
-		);
+			'teamSeasonOfficialJob.label' => QueryInterface::ORDER_ASCENDING,
+		];
 		
-		public function findAll(string $teamUids = null) {
+		public function findAll(string $teamUids = NULL) {
 			$query = $this->createQuery();
 			$constraints = [];
 			if($teamUids) {
@@ -30,22 +29,22 @@
 			}
 			return $query->execute();
 		}
-
-        /**
-         * @param \Balumedien\Sportms\Domain\Model\Team $team
-         */
+		
+		/**
+		 * @param \Balumedien\Sportms\Domain\Model\Team $team
+		 */
 		public function findAllByTeam(\Balumedien\Sportms\Domain\Model\Team $team) {
-            $orderings = array(
-                'person' => QueryInterface::ORDER_ASCENDING,
-                'teamSeasonOfficialJob.label' => QueryInterface::ORDER_ASCENDING,
-                'teamSeason.season.startdate' => QueryInterface::ORDER_ASCENDING,
-            );
-            $query = $this->createQuery();
-            $query->setOrderings($orderings);
-            $constraints = [];
-            $constraints[] = $query->equals('teamSeason.team', $team->getUid());
-            $query->matching($query->logicalAnd($constraints));
-            return $query->execute();
-        }
+			$orderings = [
+				'person' => QueryInterface::ORDER_ASCENDING,
+				'teamSeasonOfficialJob.label' => QueryInterface::ORDER_ASCENDING,
+				'teamSeason.season.startdate' => QueryInterface::ORDER_ASCENDING,
+			];
+			$query = $this->createQuery();
+			$query->setOrderings($orderings);
+			$constraints = [];
+			$constraints[] = $query->equals('teamSeason.team', $team->getUid());
+			$query->matching($query->logicalAnd($constraints));
+			return $query->execute();
+		}
 		
 	}

@@ -1,16 +1,25 @@
-<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-      xmlns:sportms="Balumedien\Sportms\ViewHelpers"
-      data-namespace-typo3-fluid="true">
+<html data-namespace-typo3-fluid="true"
+	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:sportms="Balumedien\Sportms\ViewHelpers">
 
-    <tr>
-        <td class="tx-sportms-table-center"><sportms:weekday weekday="{teamSeasonPractice.day}"/></td>
-        <td class="tx-sportms-table-center">
-            <f:format.date format="{settings.format.timeShort}">{teamSeasonPractice.timeStart}</f:format.date> - <f:format.date format="{settings.format.timeShort}">{teamSeasonPractice.timeEnd}</f:format.date> Uhr
-        </td>
-        <td class="tx-sportms-table-center">{teamSeasonPractice.venue.name}</td>
-        <td class="tx-sportms-table-center">
-            <f:format.html>{teamSeasonPractice.annotation}</f:format.html>
-        </td>
-    </tr>
+<tr>
+	<td class="tx-sportms-table-center">
+		<sportms:weekday weekday="{teamSeasonPractice.day}"/>
+	</td>
+	<td class="tx-sportms-table-center">
+		<f:format.date format="{settings.format.timeShort}">
+			{teamSeasonPractice.timeStart}
+		</f:format.date>
+		-
+		<f:format.date format="{settings.format.timeShort}">
+			{teamSeasonPractice.timeEnd}
+		</f:format.date>
+		Uhr
+	</td>
+	<td class="tx-sportms-table-center">{teamSeasonPractice.venue.name}</td>
+	<td class="tx-sportms-table-center">
+		<f:format.html>{teamSeasonPractice.annotation}</f:format.html>
+	</td>
+</tr>
 
 </html>

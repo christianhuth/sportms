@@ -1,26 +1,34 @@
 <html data-namespace-typo3-fluid="true"
-      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <div class="tx-sportms-dbstat-item">
-    <f:if condition="{controller} === Season">
-        <f:then>
-            <f:render section="content" arguments="{controller: controller, count: count}"/>
-        </f:then>
-        <f:else>
-            <f:link.action action="{action}" controller="{controller}" extensionName="sportms" pluginName="{controller}" pageUid="{pageUid}">
-                <f:render section="content" arguments="{controller: controller, count: count}"/>
-            </f:link.action>
-        </f:else>
-    </f:if>
+	<f:if condition="{controller} === Season">
+		<f:then>
+			<f:render arguments="{controller: controller, count: count}"
+					  section="content"/>
+		</f:then>
+		<f:else>
+			<f:link.action action="{action}" controller="{controller}"
+						   extensionName="sportms" pageUid="{pageUid}"
+						   pluginName="{controller}">
+				<f:render arguments="{controller: controller, count: count}"
+						  section="content"/>
+			</f:link.action>
+		</f:else>
+	</f:if>
 </div>
 
 <f:section name="content">
-    <div class="tx-sportms-dbstat-image">
-        <f:image src="EXT:sportms/Resources/Public/Icons/tx_sportms_domain_model_{controller -> f:format.case(mode: 'lower')}.svg"/>
-    </div>
-    <div class="tx-sportms-dbstat-label">
-        <h4>{count} <f:translate key="tx_sportms_domain_model_{controller -> f:format.case(mode: 'lower')}.plural"/></h4>
-    </div>
+	<div class="tx-sportms-dbstat-image">
+		<f:image
+				src="EXT:sportms/Resources/Public/Icons/tx_sportms_domain_model_{controller -> f:format.case(mode: 'lower')}.svg"/>
+	</div>
+	<div class="tx-sportms-dbstat-label">
+		<h4>{count}
+			<f:translate
+					key="tx_sportms_domain_model_{controller -> f:format.case(mode: 'lower')}.plural"/>
+		</h4>
+	</div>
 </f:section>
 
 </html>

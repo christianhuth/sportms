@@ -1,37 +1,38 @@
 <html data-namespace-typo3-fluid="true"
-      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <f:layout name="default"/>
 
 <f:section name="default">
-    <div id="tx-sportms-game-list">
-        <f:render arguments="{_all}" partial="Game/List/Filter"/>
-        <div class="table-responsive">
-            <table class="table table-bordered table-condensed table-hover table-striped tx-sportms-table">
-                <thead>
-                <tr>
-                    <th>Sportart</th>
-                    <th>Wettbewerb</th>
-                    <th>Saison</th>
-                    <th colspan="3">Begegnung</th>
-                    <th>Ergebnis</th>
-                </tr>
-                </thead>
-                <tbody>
-                <f:if condition="{games}">
-                    <f:then>
-                        <f:for as="game" each="{games}">
-                            <f:render partial="Game/List/Item" arguments="{game: game}"/>
-                        </f:for>
-                    </f:then>
-                    <f:else>
-                        <td colspan="9">Keine Spiele gefunden.</td>
-                    </f:else>
-                </f:if>
-                </tbody>
-            </table>
-        </div>
-    </div>
+	<div id="tx-sportms-game-list">
+		<f:render arguments="{_all}" partial="Game/List/Filter"/>
+		<div class="table-responsive">
+			<table class="table table-bordered table-condensed table-hover table-striped tx-sportms-table">
+				<thead>
+				<tr>
+					<th>Sportart</th>
+					<th>Wettbewerb</th>
+					<th>Saison</th>
+					<th colspan="3">Begegnung</th>
+					<th>Ergebnis</th>
+				</tr>
+				</thead>
+				<tbody>
+				<f:if condition="{games}">
+					<f:then>
+						<f:for as="game" each="{games}">
+							<f:render arguments="{game: game}"
+									  partial="Game/List/Item"/>
+						</f:for>
+					</f:then>
+					<f:else>
+						<td colspan="9">Keine Spiele gefunden.</td>
+					</f:else>
+				</f:if>
+				</tbody>
+			</table>
+		</div>
+	</div>
 </f:section>
 
 </html>

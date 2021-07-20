@@ -1,36 +1,43 @@
 <html data-namespace-typo3-fluid="true"
-      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <f:layout name="default"/>
 
 <f:section name="default">
-    <div class="tx-sportms-club-list">
-        <div class="table-responsive">
-            <table class="table table-bordered table-condensed table-hover table-striped tx-sportms-table">
-                <thead>
-                <tr>
-                    <th><f:translate key="tx_sportms_domain_model_club"/></th>
-                    <th><f:translate key="tx_sportms_domain_model_address"/></th>
-                    <th><f:translate key="tx_sportms_domain_model_url"/></th>
-                </tr>
-                </thead>
-                <tbody>
-                <f:if condition="{clubs}">
-                    <f:then>
-                        <f:for as="club" each="{clubs}">
-                            <f:render arguments="{club: club}" partial="Club/List/Item"/>
-                        </f:for>
-                    </f:then>
-                    <f:else>
-                        <tr>
-                            <td colspan="3">Keine Vereine gefunden.</td>
-                        </tr>
-                    </f:else>
-                </f:if>
-                </tbody>
-            </table>
-        </div>
-    </div>
+	<div class="tx-sportms-club-list">
+		<div class="table-responsive">
+			<table class="table table-bordered table-condensed table-hover table-striped tx-sportms-table">
+				<thead>
+				<tr>
+					<th>
+						<f:translate key="tx_sportms_domain_model_club"/>
+					</th>
+					<th>
+						<f:translate key="tx_sportms_domain_model_address"/>
+					</th>
+					<th>
+						<f:translate key="tx_sportms_domain_model_url"/>
+					</th>
+				</tr>
+				</thead>
+				<tbody>
+				<f:if condition="{clubs}">
+					<f:then>
+						<f:for as="club" each="{clubs}">
+							<f:render arguments="{club: club}"
+									  partial="Club/List/Item"/>
+						</f:for>
+					</f:then>
+					<f:else>
+						<tr>
+							<td colspan="3">Keine Vereine gefunden.</td>
+						</tr>
+					</f:else>
+				</f:if>
+				</tbody>
+			</table>
+		</div>
+	</div>
 </f:section>
 
 </html>

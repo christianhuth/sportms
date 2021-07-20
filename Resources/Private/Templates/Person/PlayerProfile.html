@@ -1,245 +1,276 @@
 <html data-namespace-typo3-fluid="true"
-      xmlns:sportms="Balumedien\Sportms\ViewHelpers"
-      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:sportms="Balumedien\Sportms\ViewHelpers">
 
 <f:layout name="default"/>
 
 <f:section name="default">
-    <div id="tx-sportms-person-playerprofile">
-        <f:render arguments="{person: person}" partial="Person/Player/Navigation"/>
-        <table class="table table-bordered table-condensed table-hover table-striped tx-sportms-table">
-            <thead>
-            <tr>
-                <th colspan="2"><f:translate key="tx_sportms_domain_model_person.personalData"/></th>
-            </tr>
-            </thead>
-            <tbody>
-
-            <f:if condition="{person.firstname}">
-                <tr>
-                    <td>
-                        <f:translate key="tx_sportms_domain_model_person.name"/>
-                    </td>
-                    <td class="content">{person.firstname} {person.lastname}
-                        <f:if condition="{person.birthname}">
-                            (geb. {person.birthname})
-                        </f:if>
-                    </td>
-                </tr>
-            </f:if>
-
-            <f:if condition="{person.nickname}">
-                <tr>
-                    <td>
-                        <f:translate key="tx_sportms_domain_model_person.nickname"/>
-                    </td>
-                    <td class="content">{person.nickname}</td>
-                </tr>
-            </f:if>
-
-            <f:if condition="{person.dateOfBirth}">
-                <f:if condition="{person.hiddenBirthday} == 0">
-                    <tr>
-                        <td>
-                            <f:translate key="tx_sportms_domain_model_person.dateOfBirth"/>
-                        </td>
-                        <td class="content">
-                            <f:format.date format="d.m.Y">{person.dateOfBirth}</f:format.date>
-                        </td>
-                    </tr>
-                </f:if>
-            </f:if>
-
-            <f:if condition="{person.zodiacSign}">
-                <tr>
-                    <td>
-                        <f:translate key="tx_sportms_domain_model_person.zodiacSign"/>
-                    </td>
-                    <td class="content">
-                        <sportms:person.zodiacSign zodiacSign="{person.zodiacSign}"/>
-                    </td>
-                </tr>
-            </f:if>
-
-            <f:if condition="{person.gender}">
-                <tr>
-                    <td>
-                        <f:translate key="tx_sportms_domain_model_person.gender"/>
-                    </td>
-                    <td class="content">
-                        <f:if condition="{0: person.gender} == {0: 'm'}">
-                            <f:then>
-                                <f:translate key="tx_sportms_domain_model_person.gender_male"/>
-                            </f:then>
-                            <f:else>
-                                <f:translate key="tx_sportms_domain_model_person.gender_female"/>
-                            </f:else>
-                        </f:if>
-                    </td>
-                </tr>
-            </f:if>
-
-            <f:if condition="{person.placeOfBirth}">
-                <tr>
-                    <td>
-                        <f:translate key="tx_sportms_domain_model_person.placeOfBirth"/>
-                    </td>
-                    <td class="content">{person.placeOfBirth}</td>
-                </tr>
-            </f:if>
-
-            <f:if condition="{person.nationality}">
-                <tr>
-                    <td>
-                        <f:translate key="tx_sportms_domain_model_person.nationality"/>
-                    </td>
-                    <td class="content">{person.nationality}</td>
-                </tr>
-            </f:if>
-
-            <f:if condition="{person.familyStatus}">
-                <tr>
-                    <td>
-                        <f:translate key="tx_sportms_domain_model_person.familyStatus"/>
-                    </td>
-                    <td class="content">{person.familyStatus}</td>
-                </tr>
-            </f:if>
-
-            <f:if condition="{person.weight}">
-                <tr>
-                    <td>
-                        <f:translate key="tx_sportms_domain_model_person.weight"/>
-                    </td>
-                    <td class="content">{person.weight} kg</td>
-                </tr>
-            </f:if>
-
-            <f:if condition="{person.height}">
-                <tr>
-                    <td>
-                        <f:translate key="tx_sportms_domain_model_person.height"/>
-                    </td>
-                    <td class="content">{person.height} cm</td>
-                </tr>
-            </f:if>
-
-            <f:if condition="{person.sizeOfShoe}">
-                <tr>
-                    <td>
-                        <f:translate key="tx_sportms_domain_model_person.sizeOfShoe"/>
-                    </td>
-                    <td class="content">{person.sizeOfShoe}</td>
-                </tr>
-            </f:if>
-
-            <f:if condition="{person.footer}">
-                <tr>
-                    <td>
-                        <f:translate key="tx_sportms_domain_model_person.footer"/>
-                    </td>
-                    <td class="content">
-                        <f:if condition="{0: person.footer} == {0: '1'}">
-                            <f:then>
-                                <f:translate key="tx_sportms_domain_model_person.footer_1"/>
-                            </f:then>
-                        </f:if>
-                        <f:if condition="{0: person.footer} == {0: '2'}">
-                            <f:then>
-                                <f:translate key="tx_sportms_domain_model_person.footer_2"/>
-                            </f:then>
-                        </f:if>
-                        <f:if condition="{0: person.footer} == {0: '3'}">
-                            <f:then>
-                                <f:translate key="tx_sportms_domain_model_person.footer_3"/>
-                            </f:then>
-                        </f:if>
-                    </td>
-                </tr>
-            </f:if>
-
-            <f:if condition="{person.hander}">
-                <tr>
-                    <td>
-                        <f:translate key="tx_sportms_domain_model_person.hander"/>
-                    </td>
-                    <td class="content">
-                        <f:if condition="{0: person.hander} == {0: '1'}">
-                            <f:then>
-                                <f:translate key="tx_sportms_domain_model_person.hander_1"/>
-                            </f:then>
-                        </f:if>
-                        <f:if condition="{0: person.hander} == {0: '2'}">
-                            <f:then>
-                                <f:translate key="tx_sportms_domain_model_person.hander_2"/>
-                            </f:then>
-                        </f:if>
-                        <f:if condition="{0: person.hander} == {0: '3'}">
-                            <f:then>
-                                <f:translate key="tx_sportms_domain_model_person.hander_3"/>
-                            </f:then>
-                        </f:if>
-                    </td>
-                </tr>
-            </f:if>
-
-            <f:if condition="{person.graduation}">
-                <tr>
-                    <td>
-                        <f:translate key="tx_sportms_domain_model_person.graduation"/>
-                    </td>
-                    <td class="content">{person.graduation}</td>
-                </tr>
-            </f:if>
-
-            <f:if condition="{person.job}">
-                <tr>
-                    <td>
-                        <f:translate key="tx_sportms_domain_model_person.job"/>
-                    </td>
-                    <td class="content">{person.job}</td>
-                </tr>
-            </f:if>
-
-            <f:if condition="{person.characteristics}">
-                <tr>
-                    <td>
-                        <f:translate key="tx_sportms_domain_model_person.characteristics"/>
-                    </td>
-                    <td class="content">{person.characteristics}</td>
-                </tr>
-            </f:if>
-
-            <f:if condition="{person.hobbies}">
-                <tr>
-                    <td>
-                        <f:translate key="tx_sportms_domain_model_person.hobbies"/>
-                    </td>
-                    <td class="content">{person.hobbies}</td>
-                </tr>
-            </f:if>
-
-            <f:if condition="{person.favoriteDish}">
-                <tr>
-                    <td>
-                        <f:translate key="tx_sportms_domain_model_person.favoriteDish"/>
-                    </td>
-                    <td class="content">{person.favoriteDish}</td>
-                </tr>
-            </f:if>
-
-            <f:if condition="{person.favoriteDrink}">
-                <tr>
-                    <td>
-                        <f:translate key="tx_sportms_domain_model_person.favoriteDrink"/>
-                    </td>
-                    <td class="content">{person.favoriteDrink}</td>
-                </tr>
-            </f:if>
-
-            </tbody>
-        </table>
-    </div>
+	<div id="tx-sportms-person-playerprofile">
+		<f:render arguments="{person: person}"
+				  partial="Person/Player/Navigation"/>
+		<table class="table table-bordered table-condensed table-hover table-striped tx-sportms-table">
+			<thead>
+			<tr>
+				<th colspan="2">
+					<f:translate
+							key="tx_sportms_domain_model_person.personalData"/>
+				</th>
+			</tr>
+			</thead>
+			<tbody>
+			
+			<f:if condition="{person.firstname}">
+				<tr>
+					<td>
+						<f:translate key="tx_sportms_domain_model_person.name"/>
+					</td>
+					<td class="content">{person.firstname} {person.lastname}
+						<f:if condition="{person.birthname}">
+							(geb. {person.birthname})
+						</f:if>
+					</td>
+				</tr>
+			</f:if>
+			
+			<f:if condition="{person.nickname}">
+				<tr>
+					<td>
+						<f:translate
+								key="tx_sportms_domain_model_person.nickname"/>
+					</td>
+					<td class="content">{person.nickname}</td>
+				</tr>
+			</f:if>
+			
+			<f:if condition="{person.dateOfBirth}">
+				<f:if condition="{person.hiddenBirthday} == 0">
+					<tr>
+						<td>
+							<f:translate
+									key="tx_sportms_domain_model_person.dateOfBirth"/>
+						</td>
+						<td class="content">
+							<f:format.date format="d.m.Y">{person.dateOfBirth}
+							</f:format.date>
+						</td>
+					</tr>
+				</f:if>
+			</f:if>
+			
+			<f:if condition="{person.zodiacSign}">
+				<tr>
+					<td>
+						<f:translate
+								key="tx_sportms_domain_model_person.zodiacSign"/>
+					</td>
+					<td class="content">
+						<sportms:person.zodiacSign
+								zodiacSign="{person.zodiacSign}"/>
+					</td>
+				</tr>
+			</f:if>
+			
+			<f:if condition="{person.gender}">
+				<tr>
+					<td>
+						<f:translate
+								key="tx_sportms_domain_model_person.gender"/>
+					</td>
+					<td class="content">
+						<f:if condition="{0: person.gender} == {0: 'm'}">
+							<f:then>
+								<f:translate
+										key="tx_sportms_domain_model_person.gender_male"/>
+							</f:then>
+							<f:else>
+								<f:translate
+										key="tx_sportms_domain_model_person.gender_female"/>
+							</f:else>
+						</f:if>
+					</td>
+				</tr>
+			</f:if>
+			
+			<f:if condition="{person.placeOfBirth}">
+				<tr>
+					<td>
+						<f:translate
+								key="tx_sportms_domain_model_person.placeOfBirth"/>
+					</td>
+					<td class="content">{person.placeOfBirth}</td>
+				</tr>
+			</f:if>
+			
+			<f:if condition="{person.nationality}">
+				<tr>
+					<td>
+						<f:translate
+								key="tx_sportms_domain_model_person.nationality"/>
+					</td>
+					<td class="content">{person.nationality}</td>
+				</tr>
+			</f:if>
+			
+			<f:if condition="{person.familyStatus}">
+				<tr>
+					<td>
+						<f:translate
+								key="tx_sportms_domain_model_person.familyStatus"/>
+					</td>
+					<td class="content">{person.familyStatus}</td>
+				</tr>
+			</f:if>
+			
+			<f:if condition="{person.weight}">
+				<tr>
+					<td>
+						<f:translate
+								key="tx_sportms_domain_model_person.weight"/>
+					</td>
+					<td class="content">{person.weight} kg</td>
+				</tr>
+			</f:if>
+			
+			<f:if condition="{person.height}">
+				<tr>
+					<td>
+						<f:translate
+								key="tx_sportms_domain_model_person.height"/>
+					</td>
+					<td class="content">{person.height} cm</td>
+				</tr>
+			</f:if>
+			
+			<f:if condition="{person.sizeOfShoe}">
+				<tr>
+					<td>
+						<f:translate
+								key="tx_sportms_domain_model_person.sizeOfShoe"/>
+					</td>
+					<td class="content">{person.sizeOfShoe}</td>
+				</tr>
+			</f:if>
+			
+			<f:if condition="{person.footer}">
+				<tr>
+					<td>
+						<f:translate
+								key="tx_sportms_domain_model_person.footer"/>
+					</td>
+					<td class="content">
+						<f:if condition="{0: person.footer} == {0: '1'}">
+							<f:then>
+								<f:translate
+										key="tx_sportms_domain_model_person.footer_1"/>
+							</f:then>
+						</f:if>
+						<f:if condition="{0: person.footer} == {0: '2'}">
+							<f:then>
+								<f:translate
+										key="tx_sportms_domain_model_person.footer_2"/>
+							</f:then>
+						</f:if>
+						<f:if condition="{0: person.footer} == {0: '3'}">
+							<f:then>
+								<f:translate
+										key="tx_sportms_domain_model_person.footer_3"/>
+							</f:then>
+						</f:if>
+					</td>
+				</tr>
+			</f:if>
+			
+			<f:if condition="{person.hander}">
+				<tr>
+					<td>
+						<f:translate
+								key="tx_sportms_domain_model_person.hander"/>
+					</td>
+					<td class="content">
+						<f:if condition="{0: person.hander} == {0: '1'}">
+							<f:then>
+								<f:translate
+										key="tx_sportms_domain_model_person.hander_1"/>
+							</f:then>
+						</f:if>
+						<f:if condition="{0: person.hander} == {0: '2'}">
+							<f:then>
+								<f:translate
+										key="tx_sportms_domain_model_person.hander_2"/>
+							</f:then>
+						</f:if>
+						<f:if condition="{0: person.hander} == {0: '3'}">
+							<f:then>
+								<f:translate
+										key="tx_sportms_domain_model_person.hander_3"/>
+							</f:then>
+						</f:if>
+					</td>
+				</tr>
+			</f:if>
+			
+			<f:if condition="{person.graduation}">
+				<tr>
+					<td>
+						<f:translate
+								key="tx_sportms_domain_model_person.graduation"/>
+					</td>
+					<td class="content">{person.graduation}</td>
+				</tr>
+			</f:if>
+			
+			<f:if condition="{person.job}">
+				<tr>
+					<td>
+						<f:translate key="tx_sportms_domain_model_person.job"/>
+					</td>
+					<td class="content">{person.job}</td>
+				</tr>
+			</f:if>
+			
+			<f:if condition="{person.characteristics}">
+				<tr>
+					<td>
+						<f:translate
+								key="tx_sportms_domain_model_person.characteristics"/>
+					</td>
+					<td class="content">{person.characteristics}</td>
+				</tr>
+			</f:if>
+			
+			<f:if condition="{person.hobbies}">
+				<tr>
+					<td>
+						<f:translate
+								key="tx_sportms_domain_model_person.hobbies"/>
+					</td>
+					<td class="content">{person.hobbies}</td>
+				</tr>
+			</f:if>
+			
+			<f:if condition="{person.favoriteDish}">
+				<tr>
+					<td>
+						<f:translate
+								key="tx_sportms_domain_model_person.favoriteDish"/>
+					</td>
+					<td class="content">{person.favoriteDish}</td>
+				</tr>
+			</f:if>
+			
+			<f:if condition="{person.favoriteDrink}">
+				<tr>
+					<td>
+						<f:translate
+								key="tx_sportms_domain_model_person.favoriteDrink"/>
+					</td>
+					<td class="content">{person.favoriteDrink}</td>
+				</tr>
+			</f:if>
+			
+			</tbody>
+		</table>
+	</div>
 </f:section>
 
 </html>

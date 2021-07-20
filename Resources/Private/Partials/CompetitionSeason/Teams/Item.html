@@ -1,19 +1,21 @@
 <html data-namespace-typo3-fluid="true"
-      xmlns:sportms="Balumedien\Sportms\ViewHelpers"
-      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:sportms="Balumedien\Sportms\ViewHelpers">
 
 <tr>
-    <td class="tx-sportms-table-left">
-        <f:render partial="ViewHelper/TeamSeason/ItemInTable" arguments="{teamSeason: teamSeason}"/>
-    </td>
-    <td class="tx-sportms-table-center">
-        <f:count>{teamSeason.teamSeasonSquadMembers}</f:count>
-    </td>
-    <td class="tx-sportms-table-center">
-        <sportms:link.action action="gamesByDate" controller="TeamSeason" TeamSeason="{teamSeason}">
-            Spielplan
-        </sportms:link.action>
-    </td>
+	<td class="tx-sportms-table-left">
+		<f:render arguments="{teamSeason: teamSeason}"
+				  partial="ViewHelper/TeamSeason/ItemInTable"/>
+	</td>
+	<td class="tx-sportms-table-center">
+		<f:count>{teamSeason.teamSeasonSquadMembers}</f:count>
+	</td>
+	<td class="tx-sportms-table-center">
+		<sportms:link.action TeamSeason="{teamSeason}" action="gamesByDate"
+							 controller="TeamSeason">
+			Spielplan
+		</sportms:link.action>
+	</td>
 </tr>
 
 </html>

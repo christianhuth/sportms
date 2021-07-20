@@ -47,11 +47,11 @@
 		 * @var int|null
 		 */
 		protected $date;
-
-        /**
-         * @var string
-         */
-        protected $time;
+		
+		/**
+		 * @var string
+		 */
+		protected $time;
 		
 		/**
 		 * @var \Balumedien\Sportms\Domain\Model\Venue|\TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy|null
@@ -80,26 +80,26 @@
 		 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
 		 */
 		protected $gamePeriods;
-
-        /**
-         * @var int|null
-         */
-        protected $gameRating;
-
-        /**
-         * @var int|null
-         */
-        protected $resultSpecialHome;
-
-        /**
-         * @var int|null
-         */
-        protected $resultSpecialGuest;
-
-        /**
-         * @var int|null
-         */
-        protected $resultSpecialReason;
+		
+		/**
+		 * @var int|null
+		 */
+		protected $gameRating;
+		
+		/**
+		 * @var int|null
+		 */
+		protected $resultSpecialHome;
+		
+		/**
+		 * @var int|null
+		 */
+		protected $resultSpecialGuest;
+		
+		/**
+		 * @var int|null
+		 */
+		protected $resultSpecialReason;
 		
 		/**
 		 * @var int|null
@@ -462,20 +462,20 @@
 		public function setDate(?int $date): void {
 			$this->date = $date;
 		}
-
-        /**
-         * @return string
-         */
-        public function getTime(): string {
-            return $this->time;
-        }
-
-        /**
-         * @param string $time
-         */
-        public function setTime(string $time): void {
-            $this->time = $time;
-        }
+		
+		/**
+		 * @return string
+		 */
+		public function getTime(): string {
+			return $this->time;
+		}
+		
+		/**
+		 * @param string $time
+		 */
+		public function setTime(string $time): void {
+			$this->time = $time;
+		}
 		
 		/**
 		 * @return Venue|\TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy|null
@@ -546,62 +546,62 @@
 		public function setGamePeriods($gamePeriods): void {
 			$this->gamePeriods = $gamePeriods;
 		}
-
-        /**
-         * @return int|null
-         */
-        public function getGameRating(): ?int {
-            return $this->gameRating;
-        }
-
-        /**
-         * @param int|null $gameRating
-         */
-        public function setGameRating(?int $gameRating): void {
-            $this->gameRating = $gameRating;
-        }
-
-        /**
-         * @return int|null
-         */
-        public function getResultSpecialHome(): ?int {
-            return $this->resultSpecialHome;
-        }
-
-        /**
-         * @param int|null $resultSpecialHome
-         */
-        public function setResultSpecialHome(?int $resultSpecialHome): void {
-            $this->resultSpecialHome = $resultSpecialHome;
-        }
-
-        /**
-         * @return int|null
-         */
-        public function getResultSpecialGuest(): ?int {
-            return $this->resultSpecialGuest;
-        }
-
-        /**
-         * @param int|null $resultSpecialGuest
-         */
-        public function setResultSpecialGuest(?int $resultSpecialGuest): void {
-            $this->resultSpecialGuest = $resultSpecialGuest;
-        }
-
-        /**
-         * @return int|null
-         */
-        public function getResultSpecialReason(): ?int {
-            return $this->resultSpecialReason;
-        }
-
-        /**
-         * @param int|null $resultSpecialReason
-         */
-        public function setResultSpecialReason(?int $resultSpecialReason): void {
-            $this->resultSpecialReason = $resultSpecialReason;
-        }
+		
+		/**
+		 * @return int|null
+		 */
+		public function getGameRating(): ?int {
+			return $this->gameRating;
+		}
+		
+		/**
+		 * @param int|null $gameRating
+		 */
+		public function setGameRating(?int $gameRating): void {
+			$this->gameRating = $gameRating;
+		}
+		
+		/**
+		 * @return int|null
+		 */
+		public function getResultSpecialHome(): ?int {
+			return $this->resultSpecialHome;
+		}
+		
+		/**
+		 * @param int|null $resultSpecialHome
+		 */
+		public function setResultSpecialHome(?int $resultSpecialHome): void {
+			$this->resultSpecialHome = $resultSpecialHome;
+		}
+		
+		/**
+		 * @return int|null
+		 */
+		public function getResultSpecialGuest(): ?int {
+			return $this->resultSpecialGuest;
+		}
+		
+		/**
+		 * @param int|null $resultSpecialGuest
+		 */
+		public function setResultSpecialGuest(?int $resultSpecialGuest): void {
+			$this->resultSpecialGuest = $resultSpecialGuest;
+		}
+		
+		/**
+		 * @return int|null
+		 */
+		public function getResultSpecialReason(): ?int {
+			return $this->resultSpecialReason;
+		}
+		
+		/**
+		 * @param int|null $resultSpecialReason
+		 */
+		public function setResultSpecialReason(?int $resultSpecialReason): void {
+			$this->resultSpecialReason = $resultSpecialReason;
+		}
 		
 		/**
 		 * @return int|null

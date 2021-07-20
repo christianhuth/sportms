@@ -1,41 +1,48 @@
 <html data-namespace-typo3-fluid="true"
-      xmlns:sportms="Balumedien\Sportms\ViewHelpers"
-      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:sportms="Balumedien\Sportms\ViewHelpers">
 
 <f:if condition="{settings.competition.navigation.enabled}">
-    <div class="tx-sportms-navigation tx-sportms-competition-navigation">
-        <nav class="navbar navbar-default">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#competitionNavbar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-            <div class="collapse navbar-collapse" id="competitionNavbar">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <sportms:link.action action="games" controller="CompetitionSeason"
-                                             CompetitionSeason="{competitionSeason}">
-                            <f:translate key="tx_sportms_action.competitionseason.games"/>
-                        </sportms:link.action>
-                    </li>
-                    <li>
-                        <sportms:link.action action="teams" controller="CompetitionSeason"
-                                             CompetitionSeason="{competitionSeason}">
-                            <f:translate key="tx_sportms_action.competitionseason.teams"/>
-                        </sportms:link.action>
-                    </li>
-                    <li>
-                        <sportms:link.action action="clubs" controller="CompetitionSeason"
-                                             CompetitionSeason="{competitionSeason}">
-                            <f:translate key="tx_sportms_action.competitionseason.clubs"/>
-                        </sportms:link.action>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </div>
+	<div class="tx-sportms-navigation tx-sportms-competition-navigation">
+		<nav class="navbar navbar-default">
+			<div class="navbar-header">
+				<button class="navbar-toggle" data-target="#competitionNavbar"
+						data-toggle="collapse" type="button">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<div class="collapse navbar-collapse" id="competitionNavbar">
+				<ul class="nav navbar-nav">
+					<li>
+						<sportms:link.action CompetitionSeason="{competitionSeason}"
+											 action="games"
+											 controller="CompetitionSeason">
+							<f:translate
+									key="tx_sportms_action.competitionseason.games"/>
+						</sportms:link.action>
+					</li>
+					<li>
+						<sportms:link.action CompetitionSeason="{competitionSeason}"
+											 action="teams"
+											 controller="CompetitionSeason">
+							<f:translate
+									key="tx_sportms_action.competitionseason.teams"/>
+						</sportms:link.action>
+					</li>
+					<li>
+						<sportms:link.action CompetitionSeason="{competitionSeason}"
+											 action="clubs"
+											 controller="CompetitionSeason">
+							<f:translate
+									key="tx_sportms_action.competitionseason.clubs"/>
+						</sportms:link.action>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
 </f:if>
 
 </html>

@@ -1,28 +1,28 @@
 <html data-namespace-typo3-fluid="true"
-      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-      xmlns:sportms="Balumedien\Sportms\ViewHelpers">
+	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <f:if condition="{teamSeason}">
-  <f:then>
-    <div class="tx-sportms-team-in-table">
-      <f:if condition="{teamSeason.detailLink} && {teamSeason.team.detailLink}">
-        <f:then>
-          <f:link.action action="index" arguments="{teamSeason: teamSeason}" controller="TeamSeason" extensionName="sportms" pageUid="{settings.team.index.pid}" pluginName="Team">
-            <f:render partial="ViewHelper/Club/LogoInTable" arguments="{club: teamSeason.team.club}"/>
-            <div class="tx-sportms-team-label-in-table">
-              {teamSeason.team.label}
-            </div>
-          </f:link.action>
-        </f:then>
-        <f:else>
-          <f:render partial="ViewHelper/Club/LogoInTable" arguments="{club: teamSeason.team.club}"/>
-          <div class="tx-sportms-team-label-in-table">
-            {teamSeason.team.label}
-          </div>
-        </f:else>
-      </f:if>
-    </div>
-  </f:then>
+	<f:then>
+		<div class="tx-sportms-team-in-table">
+			<f:if condition="{teamSeason.detailLink} && {teamSeason.team.detailLink}">
+				<f:then>
+					<f:link.action action="index"
+								   arguments="{teamSeason: teamSeason}"
+								   controller="TeamSeason"
+								   extensionName="sportms"
+								   pageUid="{settings.team.index.pid}"
+								   pluginName="Team">
+						<f:render arguments="{teamSeason: teamSeason}"
+								  partial="ViewHelper/TeamSeason/Label"/>
+					</f:link.action>
+				</f:then>
+				<f:else>
+					<f:render arguments="{teamSeason: teamSeason}"
+							  partial="ViewHelper/TeamSeason/Label"/>
+				</f:else>
+			</f:if>
+		</div>
+	</f:then>
 </f:if>
 
 </html>

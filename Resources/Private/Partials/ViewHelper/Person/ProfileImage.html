@@ -1,20 +1,22 @@
 <html data-namespace-typo3-fluid="true"
-      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <f:if condition="{personProfile}">
-    <f:then>
-        <f:if condition="{personProfile.profileImages}">
-            <f:then>
-                <f:image image="{personProfile.profileImages.0}"/>
-            </f:then>
-            <f:else>
-                <f:render partial="ViewHelper/Person/DummyImage" arguments="{person: person}"/>
-            </f:else>
-        </f:if>
-    </f:then>
-    <f:else>
-        <f:render partial="ViewHelper/Person/DummyImage" arguments="{person: person}"/>
-    </f:else>
+	<f:then>
+		<f:if condition="{personProfile.profileImages}">
+			<f:then>
+				<f:image image="{personProfile.profileImages.0}"/>
+			</f:then>
+			<f:else>
+				<f:render arguments="{person: person}"
+						  partial="ViewHelper/Person/DummyImage"/>
+			</f:else>
+		</f:if>
+	</f:then>
+	<f:else>
+		<f:render arguments="{person: person}"
+				  partial="ViewHelper/Person/DummyImage"/>
+	</f:else>
 </f:if>
 
 

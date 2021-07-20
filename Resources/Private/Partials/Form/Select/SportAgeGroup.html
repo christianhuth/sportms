@@ -1,23 +1,34 @@
 <html data-namespace-typo3-fluid="true"
-      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <f:if condition="{settings.sport.selected} && {settings.sportAgeGroup.selectbox.enabled}">
-    <div class="form-group form-group-sm">
-        <label class="hidden-xs col-sm-3 control-label">Altersgruppe:</label>
-        <div class="col-xs-12 col-sm-9">
-            <div class="input-group">
-                <span class="input-group-addon"><i class="sportmsicon sportmsicon-sportagegroup"></i></span>
-                <f:form.select class="form-control" name="selectSportAgeGroup" optionLabelField="label" optionValueField="uid" prependOptionLabel="Alle Altersgruppen" prependOptionValue="" value="{value}">
-                    <f:groupedFor as="sportAgeGroupsBySport" each="{options}" groupBy="sport" groupKey="sport">
-                        <f:form.select.optgroup class="form-control" label="{sport.label}" title="{sport.label}"/>
-                        <f:for as="sportAgeGroupBySport" each="{sportAgeGroupsBySport}">
-                            <f:form.select.option value="{sportAgeGroupBySport.uid}">{sportAgeGroupBySport.label}</f:form.select.option>
-                        </f:for>
-                    </f:groupedFor>
-                </f:form.select>
-            </div>
-        </div>
-    </div>
+	<div class="form-group form-group-sm">
+		<label class="hidden-xs col-sm-3 control-label">Altersgruppe:</label>
+		<div class="col-xs-12 col-sm-9">
+			<div class="input-group">
+				<span class="input-group-addon"><i
+						class="sportmsicon sportmsicon-sportagegroup"></i></span>
+				<f:form.select class="form-control" name="selectSportAgeGroup"
+							   optionLabelField="label" optionValueField="uid"
+							   prependOptionLabel="Alle Altersgruppen"
+							   prependOptionValue="" value="{value}">
+					<f:groupedFor as="sportAgeGroupsBySport" each="{options}"
+								  groupBy="sport" groupKey="sport">
+						<f:form.select.optgroup class="form-control"
+												label="{sport.label}"
+												title="{sport.label}"/>
+						<f:for as="sportAgeGroupBySport"
+							   each="{sportAgeGroupsBySport}">
+							<f:form.select.option
+									value="{sportAgeGroupBySport.uid}">
+								{sportAgeGroupBySport.label}
+							</f:form.select.option>
+						</f:for>
+					</f:groupedFor>
+				</f:form.select>
+			</div>
+		</div>
+	</div>
 </f:if>
 
 </html>

@@ -14,7 +14,7 @@
 		'version' => '0.0.2',
 		'autoload' => [
 			'psr-4' => [
-				'Balumedien\\Sportms\\' => 'Classes'
+				'Balumedien\\Sportms\\' => 'Classes',
 			],
 		],
 		'constraints' => [

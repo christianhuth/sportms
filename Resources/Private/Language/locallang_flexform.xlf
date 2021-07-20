@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="de" datatype="plaintext" original="messages" date="2015-05-13T11:46:05Z" product-name="sportms">
-		<header/>
-		<body>
-			
-			<trans-unit id="tx_sportms_flexform.sheet.general">
-				<source>Allgemeine Einstellungen</source>
-			</trans-unit>
-			<trans-unit id="tx_sportms_flexform.sheet.general.recursive.I.inherit">
+    <file source-language="de" datatype="plaintext" original="messages" date="2015-05-13T11:46:05Z" product-name="sportms">
+        <header />
+        <body>
+
+            <trans-unit id="tx_sportms_flexform.sheet.general">
+                <source>Allgemeine Einstellungen</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_flexform.sheet.general.recursive.I.inherit">
                 <source>Wie in TypoScript definiert</source>
             </trans-unit>
-			<trans-unit id="tx_sportms_flexform.sheet.scope">
-				<source>Scope</source>
-			</trans-unit>
-			
-		</body>
-	</file>
+            <trans-unit id="tx_sportms_flexform.sheet.scope">
+                <source>Scope</source>
+            </trans-unit>
+
+        </body>
+    </file>
 </xliff>

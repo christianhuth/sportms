@@ -1,13 +1,13 @@
 <html data-namespace-typo3-fluid="true"
-      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <f:if condition="{person.sex} == 'm'">
-    <f:then>
-        <f:image src="{settings.person.dummyImageMale}"/>
-    </f:then>
-    <f:else>
-        <f:image src="{settings.person.dummyImageFemale}"/>
-    </f:else>
+	<f:then>
+		<f:image src="{settings.person.dummyImageMale}"/>
+	</f:then>
+	<f:else>
+		<f:image src="{settings.person.dummyImageFemale}"/>
+	</f:else>
 </f:if>
 
 </html>

@@ -1,47 +1,50 @@
-<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-      data-namespace-typo3-fluid="true"
-      xmlns:sportms="Balumedien\Sportms\ViewHelpers">
+<html data-namespace-typo3-fluid="true"
+	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:sportms="Balumedien\Sportms\ViewHelpers">
 
-    <div class="tx-sportms-teamseason-squadmember col-xs-4 col-sm-3 col-md-3">
-        <div class="tx-sportms-teamseason-squadmember-wrapper">
-            <f:comment>
-                <sportms:link.action controller="Person" action="playerProfile" Person="{squadCaptain}" Sport="{teamSeason.team.sport}">
-                </sportms:link.action>
-            </f:comment>
-                <div class="squadmember-image">
-                    <f:if condition="{squadCaptain.personProfiles}">
-                        <f:then>
-                            <f:for each="{squadCaptain.personProfiles}" as="personProfile">
-                                <f:if condition="({personProfile.sport} == {teamSeason.team.sport}) && ({personProfile.profileType} == 'player') && {personProfile.profileImages.0}">
-                                    <f:image image="{personProfile.profileImages.0}"/>
-                                </f:if>
-                            </f:for>
-                        </f:then>
-                        <f:else>
-                            <f:if condition="{squadCaptain.sex} == 'm'">
-                                <f:then>
-                                    <f:image src="{settings.person.dummyImageMale}"/>
-                                </f:then>
-                                <f:else>
-                                    <f:image src="{settings.person.dummyImageFemale}"/>
-                                </f:else>
-                            </f:if>
-                        </f:else>
-                    </f:if>
-                </div>
-                <div class="squadmember-info">
-                    <div class="squadmember-jerseynumber">
-                        {position+1}.
-                    </div>
-                    <div class="squadmember-name">
-                        <span class="squadmember-firstname">{squadCaptain.firstname}</span>
-                        <span class="squadmember-lastname">{squadCaptain.lastname}</span>
-                    </div>
-                </div>
-            <f:comment>
-                # TODO: close sportms-action ViewHelper here
-            </f:comment>
-        </div>
-    </div>
+<div class="tx-sportms-teamseason-squadmember col-xs-4 col-sm-3 col-md-3">
+	<div class="tx-sportms-teamseason-squadmember-wrapper">
+		<f:comment>
+			<sportms:link.action Person="{squadCaptain}" Sport="{teamSeason.team.sport}"
+								 action="playerProfile"
+								 controller="Person">
+			</sportms:link.action>
+		</f:comment>
+		<div class="squadmember-image">
+			<f:if condition="{squadCaptain.personProfiles}">
+				<f:then>
+					<f:for as="personProfile"
+						   each="{squadCaptain.personProfiles}">
+						<f:if condition="({personProfile.sport} == {teamSeason.team.sport}) && ({personProfile.profileType} == 'player') && {personProfile.profileImages.0}">
+							<f:image image="{personProfile.profileImages.0}"/>
+						</f:if>
+					</f:for>
+				</f:then>
+				<f:else>
+					<f:if condition="{squadCaptain.sex} == 'm'">
+						<f:then>
+							<f:image src="{settings.person.dummyImageMale}"/>
+						</f:then>
+						<f:else>
+							<f:image src="{settings.person.dummyImageFemale}"/>
+						</f:else>
+					</f:if>
+				</f:else>
+			</f:if>
+		</div>
+		<div class="squadmember-info">
+			<div class="squadmember-jerseynumber">
+				{position+1}.
+			</div>
+			<div class="squadmember-name">
+				<span class="squadmember-firstname">{squadCaptain.firstname}</span>
+				<span class="squadmember-lastname">{squadCaptain.lastname}</span>
+			</div>
+		</div>
+		<f:comment>
+			# TODO: close sportms-action ViewHelper here
+		</f:comment>
+	</div>
+</div>
 
 </html>

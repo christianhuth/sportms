@@ -4,8 +4,8 @@
 	
 	class TeamSeasonOfficialJobRepository extends SportMSBaseRepository {
 		
-		protected $defaultOrderings = array(
+		protected $defaultOrderings = [
 			'label' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
-		);
+		];
 		
 	}

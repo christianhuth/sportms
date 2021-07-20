@@ -1,53 +1,71 @@
 <html data-namespace-typo3-fluid="true"
-      xmlns:sportms="Balumedien\Sportms\ViewHelpers"
-      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:sportms="Balumedien\Sportms\ViewHelpers">
 
 <table class="table table-bordered table-condensed table-hover table-striped tx-sportms-table">
-    <thead>
-    <tr>
-        <th class="tx-sportms-table-center">#</th>
-        <th class="tx-sportms-table-left">Person</th>
-        <th class="tx-sportms-table-center">Nationalität</th>
-        <th class="tx-sportms-table-center">Spiele</th>
-        <f:comment>
-            # TODO: add both values again
-            <th class="tx-sportms-table-center">Startformation</th>
-            <th class="tx-sportms-table-center">Quote</th>
-        </f:comment>
-    </tr>
-    </thead>
-    <tbody>
-    <f:if condition="{playersWithMostGames}">
-        <f:then>
-            <f:for as="playerWithMostGames" each="{playersWithMostGames}" iteration="iterator">
-                <tr>
-                    <td class="tx-sportms-table-center">{iterator.index + 1}</td>
-                    <td class="tx-sportms-table-left">
-                        <sportms:link.action action="playerProfile" controller="Person" Person="{playerWithMostGames.person}">{playerWithMostGames.person.firstname} {playerWithMostGames.person.lastname}</sportms:link.action>
-                    </td>
-                    <td class="tx-sportms-table-center">
-                        <f:render arguments="{nationalities: playerWithMostGames.person.nationalities}" partial="ViewHelper/Person/Nationalities"/>
-                    </td>
-                    <td class="tx-sportms-table-center">{playerWithMostGames.numberOfGames}</td>
-                    <f:comment>
-                        # TODO: add both values again
-                        <td class="tx-sportms-table-center">{playerWithMostGames.numberOfStartingFormation}</td>
-                        <td class="tx-sportms-table-center">
-                            <f:format.number decimals="2" decimalSeparator=",">
-                                {playerWithMostGames.numberOfStartingFormation / playerWithMostGames.numberOfGames * 100}
-                            </f:format.number>%
-                        </td>
-                    </f:comment>
-                </tr>
-            </f:for>
-        </f:then>
-        <f:else>
-            <tr>
-                <td class="tx-sportms-table-center" colspan="4">Keine Rekordspieler gefunden.</td>
-            </tr>
-        </f:else>
-    </f:if>
-    </tbody>
+	<thead>
+	<tr>
+		<th class="tx-sportms-table-center">#</th>
+		<th class="tx-sportms-table-left">Person</th>
+		<th class="tx-sportms-table-center">Nationalität</th>
+		<th class="tx-sportms-table-center">Spiele</th>
+		<f:comment>
+			# TODO: add both values again
+			<th class="tx-sportms-table-center">Startformation</th>
+			<th class="tx-sportms-table-center">Quote</th>
+		</f:comment>
+	</tr>
+	</thead>
+	<tbody>
+	<f:if condition="{playersWithMostGames}">
+		<f:then>
+			<f:for as="playerWithMostGames" each="{playersWithMostGames}"
+				   iteration="iterator">
+				<tr>
+					<td class="tx-sportms-table-center">{iterator.index + 1}
+					</td>
+					<td class="tx-sportms-table-left">
+						<sportms:link.action Person="{playerWithMostGames.person}"
+											 action="playerProfile"
+											 controller="Person">
+							{playerWithMostGames.person.firstname}
+							{playerWithMostGames.person.lastname}
+						</sportms:link.action>
+					</td>
+					<td class="tx-sportms-table-center">
+						<f:render
+								arguments="{nationalities: playerWithMostGames.person.nationalities}"
+								partial="ViewHelper/Person/Nationalities"/>
+					</td>
+					<td class="tx-sportms-table-center">
+						{playerWithMostGames.numberOfGames}
+					</td>
+					<f:comment>
+						# TODO: add both values again
+						<td class="tx-sportms-table-center">
+							{playerWithMostGames.numberOfStartingFormation}
+						</td>
+						<td class="tx-sportms-table-center">
+							<f:format.number decimalSeparator="," decimals="2">
+								{playerWithMostGames.numberOfStartingFormation /
+								playerWithMostGames.numberOfGames * 100}
+							</f:format.number>
+							%
+						</td>
+					</f:comment>
+				</tr>
+			</f:for>
+		</f:then>
+		<f:else>
+			<tr>
+				<td class="tx-sportms-table-center" colspan="4">Keine
+																Rekordspieler
+																gefunden.
+				</td>
+			</tr>
+		</f:else>
+	</f:if>
+	</tbody>
 </table>
 
 </html>

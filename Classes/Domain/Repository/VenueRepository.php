@@ -4,12 +4,12 @@
 	
 	class VenueRepository extends SportMSBaseRepository {
 		
-		protected $defaultOrderings = array(
+		protected $defaultOrderings = [
 			'club.name' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
 			'name' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
-		);
+		];
 		
-		public function findAll(string $clubUids = null, string $venueUids = null) {
+		public function findAll(string $clubUids = NULL, string $venueUids = NULL) {
 			$query = $this->createQuery();
 			$constraints = [];
 			if($clubUids) {
@@ -23,5 +23,5 @@
 			}
 			return $query->execute();
 		}
-	
+		
 	}

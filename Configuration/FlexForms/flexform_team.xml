@@ -1,57 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <T3DataStructure>
-	<ROOT>
-		<TCEforms>
-			<sheetTitle>Team</sheetTitle>
-		</TCEforms>
-		<type>array</type>
-		<el>
-			<settings.team.uid>
-				<TCEforms>
-					<label>Zeige folgendes Team</label>
-					<config>
-						<type>group</type>
-						<internal_type>db</internal_type>
-						<allowed>tx_sportms_domain_model_team</allowed>
-						<size>1</size>
-						<maxItems>1</maxItems>
-						<minItems>0</minItems>
-						<show_thumbs>1</show_thumbs>
-					</config>
-				</TCEforms>
-			</settings.team.uid>
-			<settings.team.navigation.enabled>
-				<TCEforms>
-					<label>Mannschafts-Navigation anzeigen?</label>
-					<config>
-						<default>1</default>
-						<renderType>checkboxToggle</renderType>
-						<type>check</type>
-					</config>
-					<onChange>reload</onChange>
-				</TCEforms>
-			</settings.team.navigation.enabled>
-			<settings.team.selectbox.enabled>
-				<TCEforms>
-					<label>Selectbox für Teams anzeigen?</label>
-					<config>
-						<default>1</default>
-						<renderType>checkboxToggle</renderType>
-						<type>check</type>
-					</config>
-				</TCEforms>
-			</settings.team.selectbox.enabled>
-			<settings.team.teams>
-				<TCEforms>
-					<label>Welche Teams sollen berücksichtigt werden?</label>
-					<config>
-						<foreign_table>tx_sportms_domain_model_team</foreign_table>
-						<foreign_table_where>ORDER BY label ASC</foreign_table_where>
-						<renderType>selectMultipleSideBySide</renderType>
-						<type>select</type>
-					</config>
-				</TCEforms>
-			</settings.team.teams>
-		</el>
-	</ROOT>
+    <ROOT>
+        <TCEforms>
+            <sheetTitle>Team</sheetTitle>
+        </TCEforms>
+        <type>array</type>
+        <el>
+            <settings.team.uid>
+                <TCEforms>
+                    <label>Zeige folgendes Team</label>
+                    <config>
+                        <type>group</type>
+                        <internal_type>db</internal_type>
+                        <allowed>tx_sportms_domain_model_team</allowed>
+                        <size>1</size>
+                        <maxItems>1</maxItems>
+                        <minItems>0</minItems>
+                        <show_thumbs>1</show_thumbs>
+                    </config>
+                </TCEforms>
+            </settings.team.uid>
+            <settings.team.navigation.enabled>
+                <TCEforms>
+                    <label>Mannschafts-Navigation anzeigen?</label>
+                    <config>
+                        <default>1</default>
+                        <renderType>checkboxToggle</renderType>
+                        <type>check</type>
+                    </config>
+                    <onChange>reload</onChange>
+                </TCEforms>
+            </settings.team.navigation.enabled>
+            <settings.team.selectbox.enabled>
+                <TCEforms>
+                    <label>Selectbox für Teams anzeigen?</label>
+                    <config>
+                        <default>1</default>
+                        <renderType>checkboxToggle</renderType>
+                        <type>check</type>
+                    </config>
+                </TCEforms>
+            </settings.team.selectbox.enabled>
+            <settings.team.teams>
+                <TCEforms>
+                    <label>Welche Teams sollen berücksichtigt werden?</label>
+                    <config>
+                        <foreign_table>tx_sportms_domain_model_team</foreign_table>
+                        <foreign_table_where>ORDER BY label ASC</foreign_table_where>
+                        <renderType>selectMultipleSideBySide</renderType>
+                        <type>select</type>
+                    </config>
+                </TCEforms>
+            </settings.team.teams>
+        </el>
+    </ROOT>
 </T3DataStructure>

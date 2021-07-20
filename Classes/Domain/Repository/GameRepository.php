@@ -3,13 +3,13 @@
 	namespace Balumedien\Sportms\Domain\Repository;
 	
 	use Balumedien\Sportms\Domain\Model\CompetitionSeason;
-    use Balumedien\Sportms\Domain\Model\CompetitionSeasonGameday;
-    use Balumedien\Sportms\Domain\Model\TeamSeason;
-    use TYPO3\CMS\Extbase\Persistence\QueryInterface;
-
-    class GameRepository extends SportMSBaseRepository {
+	use Balumedien\Sportms\Domain\Model\CompetitionSeasonGameday;
+	use Balumedien\Sportms\Domain\Model\TeamSeason;
+	use TYPO3\CMS\Extbase\Persistence\QueryInterface;
+	
+	class GameRepository extends SportMSBaseRepository {
 		
-		protected $defaultOrderings = array(
+		protected $defaultOrderings = [
 			'sport.label' => QueryInterface::ORDER_ASCENDING,
 			'competitionSeason.competition.label' => QueryInterface::ORDER_ASCENDING,
 			'competitionSeason.competition.competitionType.label' => QueryInterface::ORDER_ASCENDING,
@@ -21,11 +21,11 @@
 			'time' => QueryInterface::ORDER_ASCENDING,
 			'teamSeasonHome.team.label' => QueryInterface::ORDER_ASCENDING,
 			'teamSeasonGuest.team.label' => QueryInterface::ORDER_ASCENDING,
-		);
+		];
 		
-		public function findAll(string $sportUids = NULL, string $sportAgeGroupUids = NULL, string $sportAgeLevelUids = NULL, string $competitionTypeUids = NULL, string $competitionUids = NULL, string $clubUids = NULL, string $teamUids = NULL, string $seasonUids = NULL, string $competitionSeasonGamedayUids = NULL, $onlyGamesBetweenTeams = FALSE, array $orderings = null) {
+		public function findAll(string $sportUids = NULL, string $sportAgeGroupUids = NULL, string $sportAgeLevelUids = NULL, string $competitionTypeUids = NULL, string $competitionUids = NULL, string $clubUids = NULL, string $teamUids = NULL, string $seasonUids = NULL, string $competitionSeasonGamedayUids = NULL, $onlyGamesBetweenTeams = FALSE, array $orderings = NULL) {
 			$query = $this->createQuery();
-            $this->addOrderingsToQuery($query, $orderings);
+			$this->addOrderingsToQuery($query, $orderings);
 			$constraints = [];
 			if($sportUids) {
 				$constraints[] = $this->constraintForSportUids($query, $sportUids);
@@ -59,34 +59,86 @@
 			}
 			return $query->execute();
 		}
-
-        /**
-         * @param CompetitionSeason $competitionSeason
-         * @param CompetitionSeasonGameday|null $competitionSeasonGameday
-         */
-		public function findGamesbyCompetitionSeason(CompetitionSeason $competitionSeason, CompetitionSeasonGameday $competitionSeasonGameday = null) {
-            $query = $this->createQuery();
-            $constraints = [];
-            $constraints[] = $this->constraintForCompetitionSeasonUids($query, $competitionSeason->getUid());
-            if($competitionSeasonGameday) {
-                $constraints[] = $this->constraintForCompetitionSeasonGamedayUids($query, $competitionSeasonGameday->getUid());
-            }
-            $query->matching($query->logicalAnd($constraints));
-            return $query->execute();
-        }
-
-        /**
-         * @param TeamSeason $teamSeason
-         */
-		public function findGamesByTeamSeason(TeamSeason $teamSeason, array $orderings = null) {
-            $query = $this->createQuery();
-            $this->addOrderingsToQuery($query, $orderings);
-            $constraints = [];
-            $constraints[] = $this->constraintForTeamSeasonUids($query, $teamSeason->getUid());
-            $query->matching($query->logicalAnd($constraints));
-            return $query->execute();
+		
+		private function constraintForSportUids(QueryInterface $query, string $sportUids) {
+			return $query->in('competitionSeason.competition.sport', explode(',', $sportUids));
 		}
-
+		
+		private function constraintForSportAgeGroupUids(QueryInterface $query, string $sportAgeGroupUids) {
+			return $query->in('competitionSeason.competition.sportAgeGroup', explode(',', $sportAgeGroupUids));
+		}
+		
+		private function constraintForSportAgeLevelUids(QueryInterface $query, string $sportAgeLevelUids) {
+			return $query->in('competitionSeason.competition.sportAgeLevel', explode(',', $sportAgeLevelUids));
+		}
+		
+		private function constraintForCompetitionTypeUids(QueryInterface $query, string $competitionTypeUids) {
+			return $query->in('competitionSeason.competition.competitionType', explode(',', $competitionTypeUids));
+		}
+		
+		private function constraintForCompetitionUids(QueryInterface $query, string $competitionUids) {
+			return $query->in('competitionSeason.competition', explode(',', $competitionUids));
+		}
+		
+		private function constraintForClubUids(QueryInterface $query, string $clubUids) {
+			return $query->logicalOr($query->in('teamSeasonHome.team.club', explode(',', $clubUids)), $query->in('teamSeasonGuest.team.club', explode(',', $clubUids)));
+		}
+		
+		private function constraintForTeamUids(QueryInterface $query, string $teamUids, bool $onlyGamesBetweenTeams = FALSE) {
+			if($onlyGamesBetweenTeams === TRUE) {
+				return $query->logicalAnd($query->in('teamSeasonHome.team', explode(',', $teamUids)), $query->in('teamSeasonGuest.team', explode(',', $teamUids)));
+			} else {
+				return $query->logicalOr($query->in('teamSeasonHome.team', explode(',', $teamUids)), $query->in('teamSeasonGuest.team', explode(',', $teamUids)));
+			}
+		}
+		
+		private function constraintForSeasonUids(QueryInterface $query, string $seasonUids) {
+			return $query->in('season', explode(',', $seasonUids));
+		}
+		
+		private function constraintForCompetitionSeasonGamedayUids(QueryInterface $query, string $competitionSeasonGamedayUids) {
+			return $query->in('gameday', explode(',', $competitionSeasonGamedayUids));
+		}
+		
+		/**
+		 * @param CompetitionSeason $competitionSeason
+		 * @param CompetitionSeasonGameday|null $competitionSeasonGameday
+		 */
+		public function findGamesbyCompetitionSeason(CompetitionSeason $competitionSeason, CompetitionSeasonGameday $competitionSeasonGameday = NULL) {
+			$query = $this->createQuery();
+			$constraints = [];
+			$constraints[] = $this->constraintForCompetitionSeasonUids($query, $competitionSeason->getUid());
+			if($competitionSeasonGameday) {
+				$constraints[] = $this->constraintForCompetitionSeasonGamedayUids($query, $competitionSeasonGameday->getUid());
+			}
+			$query->matching($query->logicalAnd($constraints));
+			return $query->execute();
+		}
+		
+		private function constraintForCompetitionSeasonUids(QueryInterface $query, string $competitionSeasonUids) {
+			return $query->in('competitionSeason', explode(',', $competitionSeasonUids));
+		}
+		
+		/**
+		 * @param TeamSeason $teamSeason
+		 */
+		public function findGamesByTeamSeason(TeamSeason $teamSeason, array $orderings = NULL) {
+			$query = $this->createQuery();
+			$this->addOrderingsToQuery($query, $orderings);
+			$constraints = [];
+			$constraints[] = $this->constraintForTeamSeasonUids($query, $teamSeason->getUid());
+			$query->matching($query->logicalAnd($constraints));
+			return $query->execute();
+		}
+		
+		private function constraintForTeamSeasonUids(QueryInterface $query, string $teamSeasonUids, bool $onlyGamesBetweenTeams = FALSE) {
+			if($onlyGamesBetweenTeams === TRUE) {
+				return $query->logicalAnd($query->in('teamSeasonHome', explode(',', $teamSeasonUids)), $query->in('teamSeasonGuest', explode(',', $teamSeasonUids)));
+			} else {
+				return $query->logicalOr($query->in('teamSeasonHome', explode(',', $teamSeasonUids)), $query->in('teamSeasonGuest', explode(',', $teamSeasonUids)));
+			}
+		}
+		
 		public function findGamesWithHighestWinsForTeam(int $teamUid, int $limit = 5, string $competitionUids = NULL, string $seasonUids = NULL) {
 			$tableGame = 'tx_sportms_domain_model_game';
 			$tableGameAlias = 'game';
@@ -97,7 +149,7 @@
 			$tableTeamSeasonAliasGuest = 'teamseasonguest';
 			$queryBuilder = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Database\ConnectionPool::class)->getQueryBuilderForTable($tableGame);
 			$queryBuilder->SELECT($tableGameAlias . '.*')
-				->addSelectLiteral('ABS(' . $queryBuilder->quoteIdentifier('result_end_regular_home') . '-' . $queryBuilder->quoteIdentifier('result_end_regular_guest') .') AS ' . $queryBuilder->quoteIdentifier('difference'))
+				->addSelectLiteral('ABS(' . $queryBuilder->quoteIdentifier('result_end_regular_home') . '-' . $queryBuilder->quoteIdentifier('result_end_regular_guest') . ') AS ' . $queryBuilder->quoteIdentifier('difference'))
 				->FROM($tableGame, $tableGameAlias)
 				->INNERJOIN($tableGameAlias, $tableTeamSeason, $tableTeamSeasonAliasHome, $queryBuilder->expr()->eq($tableGameAlias . '.team_season_home', $queryBuilder->quoteIdentifier($tableTeamSeasonAliasHome . '.uid')))
 				->INNERJOIN($tableGameAlias, $tableTeamSeason, $tableTeamSeasonAliasGuest, $queryBuilder->expr()->eq($tableGameAlias . '.team_season_guest', $queryBuilder->quoteIdentifier($tableTeamSeasonAliasGuest . '.uid')));
@@ -129,10 +181,10 @@
 				$queryBuilder->andWhere($queryBuilder->expr()->in($tableGameAlias . '.season', explode(',', $seasonUids)));
 			}
 			$queryBuilder->GROUPBY($tableGameAlias . '.uid')
-							->ORDERBY('difference', QueryInterface::ORDER_DESCENDING)
-							->add('orderBy', 'GREATEST(result_end_regular_home, result_end_regular_guest) DESC', true)
-							->ADDORDERBY('result_end_regular_home', QueryInterface::ORDER_ASCENDING)    # a high win away is more powerful than at home
-							->setMaxResults($limit);
+				->ORDERBY('difference', QueryInterface::ORDER_DESCENDING)
+				->add('orderBy', 'GREATEST(result_end_regular_home, result_end_regular_guest) DESC', TRUE)
+				->ADDORDERBY('result_end_regular_home', QueryInterface::ORDER_ASCENDING)    # a high win away is more powerful than at home
+				->setMaxResults($limit);
 			$dataMapper = $this->objectManager->get(\TYPO3\CMS\Extbase\Persistence\Generic\Mapper\DataMapper::class);
 			return $dataMapper->map($this->objectType, $queryBuilder->execute()->fetchAll());
 		}
@@ -147,10 +199,10 @@
 			$tableTeamSeasonAliasGuest = 'teamseasonguest';
 			$queryBuilder = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Database\ConnectionPool::class)->getQueryBuilderForTable($tableGame);
 			$queryBuilder->SELECT($tableGameAlias . '.*')
-							->addSelectLiteral('ABS(' . $queryBuilder->quoteIdentifier('result_end_regular_home') . '-' . $queryBuilder->quoteIdentifier('result_end_regular_guest') .') AS ' . $queryBuilder->quoteIdentifier('difference'))
-							->FROM($tableGame, $tableGameAlias)
-							->INNERJOIN($tableGameAlias, $tableTeamSeason, $tableTeamSeasonAliasHome, $queryBuilder->expr()->eq($tableGameAlias . '.team_season_home', $queryBuilder->quoteIdentifier($tableTeamSeasonAliasHome . '.uid')))
-							->INNERJOIN($tableGameAlias, $tableTeamSeason, $tableTeamSeasonAliasGuest, $queryBuilder->expr()->eq($tableGameAlias . '.team_season_guest', $queryBuilder->quoteIdentifier($tableTeamSeasonAliasGuest . '.uid')));
+				->addSelectLiteral('ABS(' . $queryBuilder->quoteIdentifier('result_end_regular_home') . '-' . $queryBuilder->quoteIdentifier('result_end_regular_guest') . ') AS ' . $queryBuilder->quoteIdentifier('difference'))
+				->FROM($tableGame, $tableGameAlias)
+				->INNERJOIN($tableGameAlias, $tableTeamSeason, $tableTeamSeasonAliasHome, $queryBuilder->expr()->eq($tableGameAlias . '.team_season_home', $queryBuilder->quoteIdentifier($tableTeamSeasonAliasHome . '.uid')))
+				->INNERJOIN($tableGameAlias, $tableTeamSeason, $tableTeamSeasonAliasGuest, $queryBuilder->expr()->eq($tableGameAlias . '.team_season_guest', $queryBuilder->quoteIdentifier($tableTeamSeasonAliasGuest . '.uid')));
 			if($competitionUids) {
 				$queryBuilder->INNERJOIN($tableGameAlias, $tableCompetitionSeason, $tableCompetitionSeasonAlias, $queryBuilder->expr()->eq($tableGameAlias . '.competition_season', $queryBuilder->quoteIdentifier($tableCompetitionSeasonAlias . '.uid')));
 			}
@@ -179,10 +231,10 @@
 				$queryBuilder->andWhere($queryBuilder->expr()->in($tableGameAlias . '.season', explode(',', $seasonUids)));
 			}
 			$queryBuilder->GROUPBY($tableGameAlias . '.uid')
-							->ORDERBY('difference', QueryInterface::ORDER_DESCENDING)
-							->add('orderBy', 'GREATEST(result_end_regular_home, result_end_regular_guest) DESC', true)
-							->ADDORDERBY('result_end_regular_home', QueryInterface::ORDER_ASCENDING)    # a high lost at home is more crucial than away
-							->setMaxResults($limit);
+				->ORDERBY('difference', QueryInterface::ORDER_DESCENDING)
+				->add('orderBy', 'GREATEST(result_end_regular_home, result_end_regular_guest) DESC', TRUE)
+				->ADDORDERBY('result_end_regular_home', QueryInterface::ORDER_ASCENDING)    # a high lost at home is more crucial than away
+				->setMaxResults($limit);
 			$dataMapper = $this->objectManager->get(\TYPO3\CMS\Extbase\Persistence\Generic\Mapper\DataMapper::class);
 			return $dataMapper->map($this->objectType, $queryBuilder->execute()->fetchAll());
 		}
@@ -197,25 +249,25 @@
 			$tableTeamSeasonAliasGuest = 'teamseasonguest';
 			$queryBuilder = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Database\ConnectionPool::class)->getQueryBuilderForTable($tableGame);
 			$queryBuilder->SELECT($tableGameAlias . '.*')
-							->addSelectLiteral($queryBuilder->quoteIdentifier('result_end_regular_home') . '+' . $queryBuilder->quoteIdentifier('result_end_regular_guest') .' AS ' . $queryBuilder->quoteIdentifier('goals'))
-							->FROM($tableGame, $tableGameAlias)
-							->INNERJOIN($tableGameAlias, $tableTeamSeason, $tableTeamSeasonAliasHome, $queryBuilder->expr()->eq($tableGameAlias . '.team_season_home', $queryBuilder->quoteIdentifier($tableTeamSeasonAliasHome . '.uid')))
-							->INNERJOIN($tableGameAlias, $tableTeamSeason, $tableTeamSeasonAliasGuest, $queryBuilder->expr()->eq($tableGameAlias . '.team_season_guest', $queryBuilder->quoteIdentifier($tableTeamSeasonAliasGuest . '.uid')));
+				->addSelectLiteral($queryBuilder->quoteIdentifier('result_end_regular_home') . '+' . $queryBuilder->quoteIdentifier('result_end_regular_guest') . ' AS ' . $queryBuilder->quoteIdentifier('goals'))
+				->FROM($tableGame, $tableGameAlias)
+				->INNERJOIN($tableGameAlias, $tableTeamSeason, $tableTeamSeasonAliasHome, $queryBuilder->expr()->eq($tableGameAlias . '.team_season_home', $queryBuilder->quoteIdentifier($tableTeamSeasonAliasHome . '.uid')))
+				->INNERJOIN($tableGameAlias, $tableTeamSeason, $tableTeamSeasonAliasGuest, $queryBuilder->expr()->eq($tableGameAlias . '.team_season_guest', $queryBuilder->quoteIdentifier($tableTeamSeasonAliasGuest . '.uid')));
 			if($competitionUids) {
 				$queryBuilder->INNERJOIN($tableGameAlias, $tableCompetitionSeason, $tableCompetitionSeasonAlias, $queryBuilder->expr()->eq($tableGameAlias . '.competition_season', $queryBuilder->quoteIdentifier($tableCompetitionSeasonAlias . '.uid')));
 			}
 			$queryBuilder->WHERE(
-								$queryBuilder->expr()->eq('game_appointment', 6),               # Spiel ist beendet
-								$queryBuilder->expr()->eq('game_rating', 1),                    # Normale Wertung
-								$queryBuilder->expr()->andX(
-									$queryBuilder->expr()->isNotNull($tableGameAlias . '.result_end_regular_home'),
-									$queryBuilder->expr()->isNotNull($tableGameAlias . '.result_end_regular_guest')
-								),
-								$queryBuilder->expr()->orX(
-									$queryBuilder->expr()->eq($tableTeamSeasonAliasHome . '.team', $teamUid),
-									$queryBuilder->expr()->eq($tableTeamSeasonAliasGuest . '.team', $teamUid)
-								)
-							);
+				$queryBuilder->expr()->eq('game_appointment', 6),               # Spiel ist beendet
+				$queryBuilder->expr()->eq('game_rating', 1),                    # Normale Wertung
+				$queryBuilder->expr()->andX(
+					$queryBuilder->expr()->isNotNull($tableGameAlias . '.result_end_regular_home'),
+					$queryBuilder->expr()->isNotNull($tableGameAlias . '.result_end_regular_guest')
+				),
+				$queryBuilder->expr()->orX(
+					$queryBuilder->expr()->eq($tableTeamSeasonAliasHome . '.team', $teamUid),
+					$queryBuilder->expr()->eq($tableTeamSeasonAliasGuest . '.team', $teamUid)
+				)
+			);
 			if($competitionUids) {
 				$queryBuilder->andWhere($queryBuilder->expr()->in($tableCompetitionSeasonAlias . '.competition', explode(',', $competitionUids)));
 			}
@@ -223,7 +275,7 @@
 				$queryBuilder->andWhere($queryBuilder->expr()->in($tableGameAlias . '.season', explode(',', $seasonUids)));
 			}
 			$queryBuilder->ORDERBY('goals', QueryInterface::ORDER_DESCENDING)
-							->setMaxResults($limit);
+				->setMaxResults($limit);
 			$dataMapper = $this->objectManager->get(\TYPO3\CMS\Extbase\Persistence\Generic\Mapper\DataMapper::class);
 			return $dataMapper->map($this->objectType, $queryBuilder->execute()->fetchAll());
 		}
@@ -232,14 +284,10 @@
 			return $this->findRecordGamesBySpectatorsForTeam($teamUid, QueryInterface::ORDER_DESCENDING, $limit, $competitionUids, $seasonUids);
 		}
 		
-		public function findGamesWithFewestSpectatorsForTeam(int $teamUid, int $limit = 5, string $competitionUids = NULL, string $seasonUids = NULL) {
-			return $this->findRecordGamesBySpectatorsForTeam($teamUid, QueryInterface::ORDER_ASCENDING, $limit, $competitionUids, $seasonUids);
-		}
-		
 		public function findRecordGamesBySpectatorsForTeam(int $teamUid, string $ordering, int $limit = 5, string $competitionUids = NULL, string $seasonUids = NULL) {
 			$query = $this->createQuery();
 			$constraints = [];
-			$constraints[] = $this->constraintForTeamUids($query, (string) $teamUid);
+			$constraints[] = $this->constraintForTeamUids($query, (string)$teamUid);
 			$constraints[] = $query->greaterThanOrEqual('spectators', 0);
 			if($competitionUids) {
 				$constraints[] = $this->constraintForCompetitionUids($query, $competitionUids);
@@ -253,56 +301,8 @@
 			return $query->execute();
 		}
 		
-		private function constraintForClubUids(QueryInterface $query, string $clubUids) {
-			return $query->logicalOr($query->in('teamSeasonHome.team.club', explode(',', $clubUids)), $query->in('teamSeasonGuest.team.club', explode(',', $clubUids)));
+		public function findGamesWithFewestSpectatorsForTeam(int $teamUid, int $limit = 5, string $competitionUids = NULL, string $seasonUids = NULL) {
+			return $this->findRecordGamesBySpectatorsForTeam($teamUid, QueryInterface::ORDER_ASCENDING, $limit, $competitionUids, $seasonUids);
 		}
-		
-		private function constraintForCompetitionUids(QueryInterface $query, string $competitionUids) {
-			return $query->in('competitionSeason.competition', explode(',', $competitionUids));
-		}
-
-        private function constraintForCompetitionSeasonUids(QueryInterface $query, string $competitionSeasonUids) {
-            return $query->in('competitionSeason', explode(',', $competitionSeasonUids));
-        }
-		
-		private function constraintForCompetitionSeasonGamedayUids(QueryInterface $query, string $competitionSeasonGamedayUids) {
-			return $query->in('gameday', explode(',', $competitionSeasonGamedayUids));
-		}
-		
-		private function constraintForCompetitionTypeUids(QueryInterface $query, string $competitionTypeUids) {
-			return $query->in('competitionSeason.competition.competitionType', explode(',', $competitionTypeUids));
-		}
-		
-		private function constraintForSeasonUids(QueryInterface $query, string $seasonUids) {
-			return $query->in('season', explode(',', $seasonUids));
-		}
-		
-		private function constraintForSportUids(QueryInterface $query, string $sportUids) {
-			return $query->in('competitionSeason.competition.sport', explode(',', $sportUids));
-		}
-		
-		private function constraintForSportAgeGroupUids(QueryInterface $query, string $sportAgeGroupUids) {
-			return $query->in('competitionSeason.competition.sportAgeGroup', explode(',', $sportAgeGroupUids));
-		}
-		
-		private function constraintForSportAgeLevelUids(QueryInterface $query, string $sportAgeLevelUids) {
-			return $query->in('competitionSeason.competition.sportAgeLevel', explode(',', $sportAgeLevelUids));
-		}
-		
-		private function constraintForTeamUids(QueryInterface $query, string $teamUids, bool $onlyGamesBetweenTeams = FALSE) {
-			if($onlyGamesBetweenTeams === TRUE) {
-				return $query->logicalAnd($query->in('teamSeasonHome.team', explode(',', $teamUids)), $query->in('teamSeasonGuest.team', explode(',', $teamUids)));
-			} else {
-				return $query->logicalOr($query->in('teamSeasonHome.team', explode(',', $teamUids)), $query->in('teamSeasonGuest.team', explode(',', $teamUids)));
-			}
-		}
-
-		private function constraintForTeamSeasonUids(QueryInterface $query, string $teamSeasonUids, bool $onlyGamesBetweenTeams = FALSE) {
-            if($onlyGamesBetweenTeams === TRUE) {
-                return $query->logicalAnd($query->in('teamSeasonHome', explode(',', $teamSeasonUids)), $query->in('teamSeasonGuest', explode(',', $teamSeasonUids)));
-            } else {
-                return $query->logicalOr($query->in('teamSeasonHome', explode(',', $teamSeasonUids)), $query->in('teamSeasonGuest', explode(',', $teamSeasonUids)));
-            }
-        }
 		
 	}

@@ -8,7 +8,7 @@
 			'label' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
 		];
 		
-		public function findAll(string $clubOfficialJobUids = null) {
+		public function findAll(string $clubOfficialJobUids = NULL) {
 			$query = $this->createQuery();
 			$constraints = [];
 			if($clubOfficialJobUids) {
@@ -22,4 +22,4 @@
 		
 	}
 	
-?>
+	?>

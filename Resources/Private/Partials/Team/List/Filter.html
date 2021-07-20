@@ -1,17 +1,27 @@
 <html data-namespace-typo3-fluid="true"
-      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <f:if condition="{settings.sport.selectbox.enabled} ||
                  {settings.club.selectbox.enabled}">
-    <div class="tx-sportms-filter">
-        <f:form action="list" class="form-horizontal" controller="Team" extensionName="sportms" method="POST" pageUid="{settings.team.list.pid}" pluginName="Team">
-            <f:render arguments="{options: sportsSelectbox,             settings: settings,     value: settings.sport.selected}" partial="Form/Select/Sport"/>
-            <f:render arguments="{options: sportAgeGroupsSelectbox,     settings: settings,     value: settings.sportAgeGroup.selected}" partial="Form/Select/SportAgeGroup"/>
-            <f:render arguments="{options: sportAgeLevelsSelectbox,     settings: settings,     value: settings.sportAgeLevel.selected}" partial="Form/Select/SportAgeLevel"/>
-            <f:render arguments="{options: clubsSelectbox,              settings: settings,     value: settings.club.selected}" partial="Form/Select/Club"/>
-            <f:render partial="Form/Submit"/>
-        </f:form>
-    </div>
+	<div class="tx-sportms-filter">
+		<f:form action="list" class="form-horizontal" controller="Team"
+				extensionName="sportms" method="POST"
+				pageUid="{settings.team.list.pid}" pluginName="Team">
+			<f:render
+					arguments="{options: sportsSelectbox,             settings: settings,     value: settings.sport.selected}"
+					partial="Form/Select/Sport"/>
+			<f:render
+					arguments="{options: sportAgeGroupsSelectbox,     settings: settings,     value: settings.sportAgeGroup.selected}"
+					partial="Form/Select/SportAgeGroup"/>
+			<f:render
+					arguments="{options: sportAgeLevelsSelectbox,     settings: settings,     value: settings.sportAgeLevel.selected}"
+					partial="Form/Select/SportAgeLevel"/>
+			<f:render
+					arguments="{options: clubsSelectbox,              settings: settings,     value: settings.club.selected}"
+					partial="Form/Select/Club"/>
+			<f:render partial="Form/Submit"/>
+		</f:form>
+	</div>
 </f:if>
 
 </html>

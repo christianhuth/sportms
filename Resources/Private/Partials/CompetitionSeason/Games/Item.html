@@ -1,26 +1,31 @@
 <html data-namespace-typo3-fluid="true"
-      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-      xmlns:sportms="Balumedien\Sportms\ViewHelpers">
+	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:sportms="Balumedien\Sportms\ViewHelpers">
 
 <tr>
-    <td class="tx-sportms-table-center">
-        <f:format.date format="{settings.format.timeShort}">{game.time}</f:format.date>
-    </td>
-    <td class="tx-sportms-table-right">
-        <f:render partial="ViewHelper/TeamSeason/ItemInTable" arguments="{teamSeason: game.teamSeasonHome}"/>
-    </td>
-    <td class="tx-sportms-table-center"> - </td>
-    <td class="tx-sportms-table-left">
-        <f:render partial="ViewHelper/TeamSeason/ItemInTable" arguments="{teamSeason: game.teamSeasonGuest}"/>
-    </td>
-    <td class="tx-sportms-table-center">
-        <f:render partial="ViewHelper/Game/Spectators" arguments="{spectators: game.spectators}" />
-    </td>
-    <td class="tx-sportms-table-center">
-        <sportms:link.action action="index" controller="Game" Game="{game}">
-            <f:render partial="ViewHelper/Game/ResultInTable" arguments="{game: game}" />
-        </sportms:link.action>
-    </td>
+	<td class="tx-sportms-table-center">
+		<f:format.date format="{settings.format.timeShort}">{game.time}
+		</f:format.date>
+	</td>
+	<td class="tx-sportms-table-right">
+		<f:render arguments="{teamSeason: game.teamSeasonHome}"
+				  partial="ViewHelper/TeamSeason/ItemInTable"/>
+	</td>
+	<td class="tx-sportms-table-center"> -</td>
+	<td class="tx-sportms-table-left">
+		<f:render arguments="{teamSeason: game.teamSeasonGuest}"
+				  partial="ViewHelper/TeamSeason/ItemInTable"/>
+	</td>
+	<td class="tx-sportms-table-center">
+		<f:render arguments="{spectators: game.spectators}"
+				  partial="ViewHelper/Game/Spectators"/>
+	</td>
+	<td class="tx-sportms-table-center">
+		<sportms:link.action Game="{game}" action="index" controller="Game">
+			<f:render arguments="{game: game}"
+					  partial="ViewHelper/Game/ResultInTable"/>
+		</sportms:link.action>
+	</td>
 </tr>
 
 </html>

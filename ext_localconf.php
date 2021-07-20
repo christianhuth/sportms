@@ -2,7 +2,7 @@
 	
 	defined('TYPO3_MODE') or die();
 	
-	use \TYPO3\CMS\Core\Utility\GeneralUtility;
+	use TYPO3\CMS\Core\Utility\GeneralUtility;
 	
 	$vendor = 'Balumedien';
 	$_EXTKEY = 'sportms';

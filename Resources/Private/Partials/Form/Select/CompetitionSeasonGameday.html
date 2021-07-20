@@ -1,25 +1,36 @@
 <html data-namespace-typo3-fluid="true"
-      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <f:if condition="(({settings.competition.selected} && {settings.season.selected}) ||
                  ({competitionSeason})) &&
                 {settings.competitionSeasonGameday.selectbox.enabled}">
-    <div class="form-group form-group-sm">
-        <label class="hidden-xs col-sm-3 control-label">Spieltag:</label>
-        <div class="col-xs-12 col-sm-9">
-            <div class="input-group">
-                <span class="input-group-addon"><i class="sportmsicon sportmsicon-competitionseasongameday"></i></span>
-                <f:if condition="{prependAll} == true">
-                    <f:then>
-                        <f:form.select class="form-control" name="selectCompetitionSeasonGameday" optionLabelField="label" optionValueField="uid" options="{options}" prependOptionLabel="Alle Spieltage" prependOptionValue="" value="{value}"/>
-                    </f:then>
-                    <f:else>
-                        <f:form.select class="form-control" name="selectCompetitionSeasonGameday" optionLabelField="label" optionValueField="uid" options="{options}" value="{value}"/>
-                    </f:else>
-                </f:if>
-            </div>
-        </div>
-    </div>
+	<div class="form-group form-group-sm">
+		<label class="hidden-xs col-sm-3 control-label">Spieltag:</label>
+		<div class="col-xs-12 col-sm-9">
+			<div class="input-group">
+				<span class="input-group-addon"><i
+						class="sportmsicon sportmsicon-competitionseasongameday"></i></span>
+				<f:if condition="{prependAll} == true">
+					<f:then>
+						<f:form.select class="form-control"
+									   name="selectCompetitionSeasonGameday"
+									   optionLabelField="label"
+									   optionValueField="uid"
+									   options="{options}"
+									   prependOptionLabel="Alle Spieltage"
+									   prependOptionValue="" value="{value}"/>
+					</f:then>
+					<f:else>
+						<f:form.select class="form-control"
+									   name="selectCompetitionSeasonGameday"
+									   optionLabelField="label"
+									   optionValueField="uid"
+									   options="{options}" value="{value}"/>
+					</f:else>
+				</f:if>
+			</div>
+		</div>
+	</div>
 </f:if>
 
 </html>

@@ -1,47 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <T3DataStructure>
-	<ROOT>
-		<TCEforms>
-			<sheetTitle>Sportstätte</sheetTitle>
-		</TCEforms>
-		<type>array</type>
-		<el>
-			<settings.venue.uid>
-				<TCEforms>
-					<label>Zeige folgende Sportstätte</label>
-					<config>
-						<type>group</type>
-						<internal_type>db</internal_type>
-						<allowed>tx_sportms_domain_model_venue</allowed>
-						<size>1</size>
-						<maxItems>1</maxItems>
-						<minItems>0</minItems>
-						<show_thumbs>1</show_thumbs>
-					</config>
-				</TCEforms>
-			</settings.venue.uid>
-			<settings.venue.navigation.enabled>
-				<TCEforms>
-					<label>Sportstätten-Navigation anzeigen?</label>
-					<config>
-						<default>1</default>
-						<renderType>checkboxToggle</renderType>
-						<type>check</type>
-					</config>
-					<onChange>reload</onChange>
-				</TCEforms>
-			</settings.venue.navigation.enabled>
-			<settings.venue.venues>
-				<TCEforms>
-					<label>Welche Sportstätten sollen berücksichtigt werden?</label>
-					<config>
-						<foreign_table>tx_sportms_domain_model_venue</foreign_table>
-						<foreign_table_where>ORDER BY name ASC</foreign_table_where>
-						<renderType>selectMultipleSideBySide</renderType>
-						<type>select</type>
-					</config>
-				</TCEforms>
-			</settings.venue.venues>
-		</el>
-	</ROOT>
+    <ROOT>
+        <TCEforms>
+            <sheetTitle>Sportstätte</sheetTitle>
+        </TCEforms>
+        <type>array</type>
+        <el>
+            <settings.venue.uid>
+                <TCEforms>
+                    <label>Zeige folgende Sportstätte</label>
+                    <config>
+                        <type>group</type>
+                        <internal_type>db</internal_type>
+                        <allowed>tx_sportms_domain_model_venue</allowed>
+                        <size>1</size>
+                        <maxItems>1</maxItems>
+                        <minItems>0</minItems>
+                        <show_thumbs>1</show_thumbs>
+                    </config>
+                </TCEforms>
+            </settings.venue.uid>
+            <settings.venue.navigation.enabled>
+                <TCEforms>
+                    <label>Sportstätten-Navigation anzeigen?</label>
+                    <config>
+                        <default>1</default>
+                        <renderType>checkboxToggle</renderType>
+                        <type>check</type>
+                    </config>
+                    <onChange>reload</onChange>
+                </TCEforms>
+            </settings.venue.navigation.enabled>
+            <settings.venue.venues>
+                <TCEforms>
+                    <label>Welche Sportstätten sollen berücksichtigt werden?</label>
+                    <config>
+                        <foreign_table>tx_sportms_domain_model_venue</foreign_table>
+                        <foreign_table_where>ORDER BY name ASC</foreign_table_where>
+                        <renderType>selectMultipleSideBySide</renderType>
+                        <type>select</type>
+                    </config>
+                </TCEforms>
+            </settings.venue.venues>
+        </el>
+    </ROOT>
 </T3DataStructure>

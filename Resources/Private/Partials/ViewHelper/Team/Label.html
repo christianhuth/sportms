@@ -1,18 +1,18 @@
 <html data-namespace-typo3-fluid="true"
 	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
-<f:if condition="{club}">
-	<f:if condition="{club.logos}">
+<f:if condition="{team}">
+	<f:if condition="{team.club.logos}">
 		<f:then>
 			<div class="tx-sportms-club-logo">
-				<f:if condition="{club.logos.0}">
-					<f:image height="30" image="{club.logos.0}"/>
+				<f:if condition="{team.club.logos.0}">
+					<f:image height="30" image="{team.club.logos.0}"/>
 				</f:if>
 			</div>
 		</f:then>
 	</f:if>
-	<div class="tx-sportms-club-label">
-		{club.name}
+	<div class="tx-sportms-team-label">
+		{team.label}
 	</div>
 </f:if>
 

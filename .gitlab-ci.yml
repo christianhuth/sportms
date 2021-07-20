@@ -1,48 +1,36 @@
----
 stages:
-    - build
-    - lint
+  - build
+  - lint
 
 build:
-    stage: build
-    image: composer:2.1.3
-    before_script:
-        - apk add bash --no-cache
-        - apk add git --update
-    script:
-        - composer install --no-progress --no-ansi --no-interaction
-    artifacts:
-        name: typo3
-        paths:
-            - .Build/vendor/
-            - ./composer.json
-        expire_in: '1h'
+  stage: build
+  image: composer:2.1.3
+  before_script:
+    - apk add bash --no-cache
+    - apk add git --update
+  script:
+    - composer install --no-progress --no-ansi --no-interaction
+    - ls -al
+  artifacts:
+    name: typo3
+    paths:
+      - .Build/vendor/
+      - ./composer.json
+    expire_in: '1h'
 
 typoscript:
-    dependencies:
-        - build
-    image: composer:2.1.3
-    stage: lint
-    script:
-        - composer require --dev helmich/typo3-typoscript-lint
-        - .Build/bin/typoscript-lint
+  dependencies:
+    - build
+  image: composer:2.1.3
+  stage: lint
+  script:
+    - ls -al
+    - .Build/vendor/bin/typoscript-lint
 
 yaml:
-    dependencies:
-        - build
-    image: python:alpine3.7
-    stage: lint
-    before_script:
-        - pip install yamllint==1.26.1
-    script:
-        - yamllint .
-
-sql:
-    dependencies:
-        - build
-    image: composer:2.1.3
-    stage: lint
-    script:
-        - composer require --dev liquipedia/sqllint
-        - ls -al .Build/bin
-        - .Build/bin/sqllint
+  image: python:alpine3.7
+  stage: lint
+  before_script:
+    - pip install yamllint==1.10.0
+  script:
+    - yamllint -c yamllint.yaml localPackages/ yamllint.yaml .gitlab-ci.yml tslint.yaml

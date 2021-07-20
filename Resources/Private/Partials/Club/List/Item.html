@@ -1,23 +1,27 @@
 <html data-namespace-typo3-fluid="true"
-      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <tr>
-    <td class="tx-sportms-table-left">
-        <f:render partial="ViewHelper/Club/ItemInTable" arguments="{club: club}"/>
-    </td>
-    <td>
-        <f:render partial="Address/Show" arguments="{address: club.addresses.0}"/>
-    </td>
-    <td>
-        <f:if condition="{club.urls}">
-            <f:then>
-                <f:link.external uri="{club.urls.0.url}" target="_blank">{club.urls.0.url}</f:link.external>
-            </f:then>
-            <f:else>
-                <div class="tx-sportms-table-center">-</div>
-            </f:else>
-        </f:if>
-    </td>
+	<td class="tx-sportms-table-left">
+		<f:render arguments="{club: club}"
+				  partial="ViewHelper/Club/ItemInTable"/>
+	</td>
+	<td>
+		<f:render arguments="{address: club.addresses.0}"
+				  partial="Address/Show"/>
+	</td>
+	<td>
+		<f:if condition="{club.urls}">
+			<f:then>
+				<f:link.external target="_blank" uri="{club.urls.0.url}">
+					{club.urls.0.url}
+				</f:link.external>
+			</f:then>
+			<f:else>
+				<div class="tx-sportms-table-center">-</div>
+			</f:else>
+		</f:if>
+	</td>
 </tr>
 
 </html>

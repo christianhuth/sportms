@@ -2,9 +2,9 @@
 	
 	namespace Balumedien\Sportms\DataProcessing;
 	
-	use TYPO3\CMS\Core\Utility\GeneralUtility;
 	use TYPO3\CMS\Core\Database\ConnectionPool;
 	use TYPO3\CMS\Core\Database\Query\QueryBuilder;
+	use TYPO3\CMS\Core\Utility\GeneralUtility;
 	use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 	use TYPO3\CMS\Frontend\ContentObject\DataProcessorInterface;
 	
@@ -46,7 +46,7 @@
 						if(isset($processedData[$menu])) {
 							$this->addExtensionRecordToMenu($record, $processedData[$menu]);
 							$this->addActionToMenu(
-								\TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('tx_sportms_action.club.' . GeneralUtility::_GET('tx_sportms_team')['action'], 'sportms'),
+								\TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('tx_sportms_action.club.' . GeneralUtility::_GET('tx_sportms_club')['action'], 'sportms'),
 								$processedData[$menu]
 							);
 						}
@@ -78,6 +78,25 @@
 							$this->addExtensionRecordToMenu($season, $processedData[$menu]);
 							$this->addActionToMenu(
 								\TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('tx_sportms_action.competitionseason.' . GeneralUtility::_GET('tx_sportms_team')['action'], 'sportms'),
+								$processedData[$menu]
+							);
+						}
+					}
+				}
+			}
+			
+			// Configuration for "game" argument
+			if(GeneralUtility::_GET('tx_sportms_game')['game']) {
+				$recordTable = 'tx_sportms_domain_model_game';
+				$recordUid = (int)GeneralUtility::_GET('tx_sportms_game')['game'];
+				$record = $this->getExtensionRecord($recordTable, $recordUid);
+				if($record) {
+					$menus = GeneralUtility::trimExplode(',', $this->processorConfiguration['addToMenus'], TRUE);
+					foreach($menus as $menu) {
+						if(isset($processedData[$menu])) {
+							$this->addExtensionRecordToMenu($record, $processedData[$menu]);
+							$this->addActionToMenu(
+								\TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('tx_sportms_action.game.' . GeneralUtility::_GET('tx_sportms_game')['action'], 'sportms'),
 								$processedData[$menu]
 							);
 						}
@@ -177,19 +196,6 @@
 		}
 		
 		/**
-		 * Add the action name to the menu items
-		 *
-		 * @param String $actionName
-		 * @param array $menu
-		 */
-		protected function addActionToMenu(string $actionName, array &$menu) {
-			$element = [];
-			$element['data'] = NULL;
-			$element['title'] = $actionName;
-			$this->addElementToMenu($element, $menu);
-		}
-		
-		/**
 		 * Add an element to the menu items
 		 *
 		 * @param array $element
@@ -207,6 +213,19 @@
 				'current' => 1,
 				'link' => GeneralUtility::getIndpEnv('TYPO3_REQUEST_URL'),
 			];
+		}
+		
+		/**
+		 * Add the action name to the menu items
+		 *
+		 * @param String $actionName
+		 * @param array $menu
+		 */
+		protected function addActionToMenu(string $actionName, array &$menu) {
+			$element = [];
+			$element['data'] = NULL;
+			$element['title'] = $actionName;
+			$this->addElementToMenu($element, $menu);
 		}
 		
 	}

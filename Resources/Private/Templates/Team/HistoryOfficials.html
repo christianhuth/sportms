@@ -1,49 +1,67 @@
 <html data-namespace-typo3-fluid="true"
-      xmlns:sportms="Balumedien\Sportms\ViewHelpers"
-      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:sportms="Balumedien\Sportms\ViewHelpers">
 
 <f:layout name="default"/>
 
 <f:section name="default">
-    <div id="tx-sportms-team-historyofficials">
-        <f:render arguments="{team: team}" partial="Team/Navigation"/>
-        <table class="table table-bordered table-condensed table-hover table-striped tx-sportms-table">
-            <thead>
-            <tr>
-                <th>Person</th>
-                <th>Mannschaftsfunktion</th>
-                <th>Nationalität</th>
-                <th>Amtsantritt</th>
-                <th>Amtsende</th>
-                <th>Amtszeit</th>
-            </tr>
-            </thead>
-            <tbody>
-            <f:for each="{officials}" as="official">
-                <tr>
-                    <td>
-                        <sportms:link.action action="officialProfile" controller="Person" OfficialProfile="{official}" Person="{official.person}">{official.person.firstname} {official.person.lastname}</sportms:link.action>
-                        <f:if condition="{official.person.dateOfBirth}">
-                            <br/><f:format.date format="{settings.format.dateLong}">{official.person.dateOfBirth}</f:format.date>
-                        </f:if>
-                    </td>
-                    <td class="tx-sportms-table-center">{official.teamSeasonOfficialJob.label}</td>
-                    <td class="tx-sportms-table-center">
-                        <f:render partial="ViewHelper/Person/Nationalities" arguments="{nationalities: official.person.nationalities}"/>
-                    </td>
-                    <td class="tx-sportms-table-center">
-                        <f:format.date format="{settings.format.dateLong}">{official.startdate}</f:format.date>
-                    </td>
-                    <td class="tx-sportms-table-center">
-                        <f:format.date format="{settings.format.dateLong}">{official.enddate}</f:format.date>
-                    </td>
-                    <td class="tx-sportms-table-right">{official.dateDifference} Tage</td>
-                </tr>
-            </f:for>
-            </tbody>
-            <tr></tr>
-        </table>
-    </div>
+	<div id="tx-sportms-team-historyofficials">
+		<f:render arguments="{team: team}" partial="Team/Navigation"/>
+		<table class="table table-bordered table-condensed table-hover table-striped tx-sportms-table">
+			<thead>
+			<tr>
+				<th>Person</th>
+				<th>Mannschaftsfunktion</th>
+				<th>Nationalität</th>
+				<th>Amtsantritt</th>
+				<th>Amtsende</th>
+				<th>Amtszeit</th>
+			</tr>
+			</thead>
+			<tbody>
+			<f:for as="official" each="{officials}">
+				<tr>
+					<td>
+						<sportms:link.action OfficialProfile="{official}"
+											 Person="{official.person}"
+											 action="officialProfile"
+											 controller="Person">
+							{official.person.firstname}
+							{official.person.lastname}
+						</sportms:link.action>
+						<f:if condition="{official.person.dateOfBirth}">
+							<br/>
+							<f:format.date format="{settings.format.dateLong}">
+								{official.person.dateOfBirth}
+							</f:format.date>
+						</f:if>
+					</td>
+					<td class="tx-sportms-table-center">
+						{official.teamSeasonOfficialJob.label}
+					</td>
+					<td class="tx-sportms-table-center">
+						<f:render arguments="{nationalities: official.person.nationalities}"
+								  partial="ViewHelper/Person/Nationalities"/>
+					</td>
+					<td class="tx-sportms-table-center">
+						<f:format.date format="{settings.format.dateLong}">
+							{official.startdate}
+						</f:format.date>
+					</td>
+					<td class="tx-sportms-table-center">
+						<f:format.date format="{settings.format.dateLong}">
+							{official.enddate}
+						</f:format.date>
+					</td>
+					<td class="tx-sportms-table-right">{official.dateDifference}
+													   Tage
+					</td>
+				</tr>
+			</f:for>
+			</tbody>
+			<tr></tr>
+		</table>
+	</div>
 </f:section>
 
 </html>

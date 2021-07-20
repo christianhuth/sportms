@@ -1,19 +1,23 @@
 <html data-namespace-typo3-fluid="true"
-      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <tr>
-    <td class="tx-sportms-table-left">
-        <f:render partial="ViewHelper/TeamSeason/ItemInTable" arguments="{teamSeason: team.teamSeasons.0}"/>
-    </td>
-    <td class="tx-sportms-table-center">
-        <f:render partial="ViewHelper/LinkAction/Team/GamesByCompetition" arguments="{team: team}"/>
-    </td>
-    <td class="tx-sportms-table-center">
-        <f:render partial="ViewHelper/LinkAction/Team/HistoryRecordGames" arguments="{team: team}"/>
-    </td>
-    <td class="tx-sportms-table-center">
-        <f:render partial="ViewHelper/LinkAction/Team/HistoryRecordPlayers" arguments="{team: team}"/>
-    </td>
+	<td class="tx-sportms-table-left">
+		<f:render arguments="{teamSeason: team.teamSeasons.0}"
+				  partial="ViewHelper/TeamSeason/ItemInTable"/>
+	</td>
+	<td class="tx-sportms-table-center">
+		<f:render arguments="{team: team}"
+				  partial="ViewHelper/LinkAction/Team/GamesByCompetition"/>
+	</td>
+	<td class="tx-sportms-table-center">
+		<f:render arguments="{team: team}"
+				  partial="ViewHelper/LinkAction/Team/HistoryRecordGames"/>
+	</td>
+	<td class="tx-sportms-table-center">
+		<f:render arguments="{team: team}"
+				  partial="ViewHelper/LinkAction/Team/HistoryRecordPlayers"/>
+	</td>
 </tr>
 
 </html>

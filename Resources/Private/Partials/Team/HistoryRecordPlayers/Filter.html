@@ -1,19 +1,31 @@
 <html data-namespace-typo3-fluid="true"
-      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <f:if condition="{settings.competitionType.selectbox.enabled} ||
                  {settings.competition.selectbox.enabled} ||
                  {settings.sportPositionGroup.selectbox.enabled} ||
                  {settings.sportPosition.selectbox.enabled}">
-    <div class="tx-sportms-filter">
-        <f:form action="historyRecordPlayers" arguments="{team: team}" class="form-horizontal" controller="Team" extensionName="sportms" method="POST" pageUid="{settings.team.historyRecordPlayers.pid}" pluginName="Team">
-            <f:render arguments="{options: competitionTypesSelectbox,    settings: settings,     value: settings.competitionType.selected}" partial="Form/Select/CompetitionType"/>
-            <f:render arguments="{options: competitionsSelectbox,        settings: settings,     value: settings.competition.selected}" partial="Form/Select/Competition"/>
-            <f:render arguments="{options: sportPositionGroupsSelectbox, settings: settings,     value: settings.sportPositionGroup.selected}" partial="Form/Select/SportPositionGroup"/>
-            <f:render arguments="{options: sportPositionsSelectbox,      settings: settings,     value: settings.sportPosition.selected}" partial="Form/Select/SportPosition"/>
-            <f:render partial="Form/Submit"/>
-        </f:form>
-    </div>
+	<div class="tx-sportms-filter">
+		<f:form action="historyRecordPlayers" arguments="{team: team}"
+				class="form-horizontal" controller="Team"
+				extensionName="sportms" method="POST"
+				pageUid="{settings.team.historyRecordPlayers.pid}"
+				pluginName="Team">
+			<f:render
+					arguments="{options: competitionTypesSelectbox,    settings: settings,     value: settings.competitionType.selected}"
+					partial="Form/Select/CompetitionType"/>
+			<f:render
+					arguments="{options: competitionsSelectbox,        settings: settings,     value: settings.competition.selected}"
+					partial="Form/Select/Competition"/>
+			<f:render
+					arguments="{options: sportPositionGroupsSelectbox, settings: settings,     value: settings.sportPositionGroup.selected}"
+					partial="Form/Select/SportPositionGroup"/>
+			<f:render
+					arguments="{options: sportPositionsSelectbox,      settings: settings,     value: settings.sportPosition.selected}"
+					partial="Form/Select/SportPosition"/>
+			<f:render partial="Form/Submit"/>
+		</f:form>
+	</div>
 </f:if>
 
 </html>

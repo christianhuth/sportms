@@ -1,16 +1,24 @@
 <html data-namespace-typo3-fluid="true"
-      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <f:if condition="{settings.competitionType.selectbox.enabled}">
-    <div class="form-group form-group-sm">
-        <label class="hidden-xs col-sm-3 control-label"><f:translate key="tx_sportms_domain_model_competition_type"/>:</label>
-        <div class="col-xs-12 col-sm-9">
-            <div class="input-group">
-                <span class="input-group-addon"><i class="sportmsicon sportmsicon-competitiontype"></i></span>
-                <f:form.select class="form-control" name="selectCompetitionType" optionLabelField="label" optionValueField="uid" options="{options}" prependOptionLabel="Alle Wettbewerbsarten" prependOptionValue="" sortByOptionLabel="TRUE" value="{value}"/>
-            </div>
-        </div>
-    </div>
+	<div class="form-group form-group-sm">
+		<label class="hidden-xs col-sm-3 control-label">
+			<f:translate key="tx_sportms_domain_model_competition_type"/>
+			:</label>
+		<div class="col-xs-12 col-sm-9">
+			<div class="input-group">
+				<span class="input-group-addon"><i
+						class="sportmsicon sportmsicon-competitiontype"></i></span>
+				<f:form.select class="form-control" name="selectCompetitionType"
+							   optionLabelField="label" optionValueField="uid"
+							   options="{options}"
+							   prependOptionLabel="Alle Wettbewerbsarten"
+							   prependOptionValue="" sortByOptionLabel="TRUE"
+							   value="{value}"/>
+			</div>
+		</div>
+	</div>
 </f:if>
 
 </html>

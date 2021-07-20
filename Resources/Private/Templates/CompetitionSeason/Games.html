@@ -1,56 +1,69 @@
 <html data-namespace-typo3-fluid="true"
-      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <f:layout name="default"/>
 
 <f:section name="default">
-    <div class="tx-sportms-competitionseason-detail">
-        <f:render arguments="{competition: competitionSeason.competition, competitionSeason: competitionSeason}" partial="Competition/Navigation"/>
-        <f:render arguments="{competition: competitionSeason.competition, competitionSeason: competitionSeason, competitionSeasons: competitionSeasons, competitionSeasonGameday: competitionSeasonGameday, competitionSeasonGamedays: competitionSeasonGamedays, settings: settings}" partial="CompetitionSeason/Games/Filter"/>
-        <div class="tx-sportms-competitionseason-games">
-            <f:if condition="{games}">
-                <f:then>
-                    <f:groupedFor as="gamesByDate" each="{games}" groupBy="date" groupKey="date">
-                        <div class="table-responsive">
-                            <h4><f:render partial="ViewHelper/Date/DayOfTheWeek" arguments="{date: date}"/> <f:format.date format="{settings.format.dateLong}">{date}</f:format.date></h4>
-                            <f:render section="tablestart"/>
-                            <f:for as="game" each="{gamesByDate}">
-                                <f:render partial="CompetitionSeason/Games/Item" arguments="{game: game, settings: settings}"/>
-                            </f:for>
-                            <f:render section="tableend"/>
-                        </div>
-                    </f:groupedFor>
-                </f:then>
-                <f:else>
-                    <div class="table-responsive">
-                        <f:render section="tablestart"/>
-                        <tr>
-                            <td colspan="6">Keine Spiele gefunden.</td>
-                        </tr>
-                        <f:render section="tableend"/>
-                    </div>
-                </f:else>
-            </f:if>
-        </div>
-    </div>
+	<div class="tx-sportms-competitionseason-detail">
+		<f:render
+				arguments="{competition: competitionSeason.competition, competitionSeason: competitionSeason}"
+				partial="Competition/Navigation"/>
+		<f:render
+				arguments="{competition: competitionSeason.competition, competitionSeason: competitionSeason, competitionSeasons: competitionSeasons, competitionSeasonGameday: competitionSeasonGameday, competitionSeasonGamedays: competitionSeasonGamedays, settings: settings}"
+				partial="CompetitionSeason/Games/Filter"/>
+		<div class="tx-sportms-competitionseason-games">
+			<f:if condition="{games}">
+				<f:then>
+					<f:groupedFor as="gamesByDate" each="{games}" groupBy="date"
+								  groupKey="date">
+						<div class="table-responsive">
+							<h4>
+								<f:render arguments="{date: date}"
+										  partial="ViewHelper/Date/DayOfTheWeek"/>
+								<f:format.date
+										format="{settings.format.dateLong}">
+									{date}
+								</f:format.date>
+							</h4>
+							<f:render section="tablestart"/>
+							<f:for as="game" each="{gamesByDate}">
+								<f:render arguments="{game: game, settings: settings}"
+										  partial="CompetitionSeason/Games/Item"/>
+							</f:for>
+							<f:render section="tableend"/>
+						</div>
+					</f:groupedFor>
+				</f:then>
+				<f:else>
+					<div class="table-responsive">
+						<f:render section="tablestart"/>
+						<tr>
+							<td colspan="6">Keine Spiele gefunden.</td>
+						</tr>
+						<f:render section="tableend"/>
+					</div>
+				</f:else>
+			</f:if>
+		</div>
+	</div>
 </f:section>
 
 <f:section name="tablestart">
-    <table class="table table-bordered table-condensed table-hover table-striped tx-sportms-table">
-        <thead>
-        <tr>
-            <th>Uhrzeit</th>
-            <th colspan="3">Begegnung</th>
-            <th>Zuschauer</th>
-            <th>Ergebnis</th>
-        </tr>
-        </thead>
-        <tbody>
+	<table class="table table-bordered table-condensed table-hover table-striped tx-sportms-table">
+		<thead>
+		<tr>
+			<th>Uhrzeit</th>
+			<th colspan="3">Begegnung</th>
+			<th>Zuschauer</th>
+			<th>Ergebnis</th>
+		</tr>
+		</thead>
+		<tbody>
 </f:section>
 
 <f:section name="tableend">
-    </tbody>
-    </table>
+	</tbody>
+	</table>
 </f:section>
 
 </html>

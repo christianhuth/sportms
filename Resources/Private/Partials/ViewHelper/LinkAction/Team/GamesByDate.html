@@ -1,15 +1,16 @@
 <html data-namespace-typo3-fluid="true"
-      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <f:if condition="{team}">
-  <f:then>
-    <f:render partial="ViewHelper/LinkAction/TeamSeason/GamesByDate" arguments="{teamSeason: team.teamSeasons.0}"/>
-  </f:then>
-  <f:else>
-    <f:comment>
-      #TODO: ERROR MESSAGE
-    </f:comment>
-  </f:else>
+	<f:then>
+		<f:render arguments="{teamSeason: team.teamSeasons.0}"
+				  partial="ViewHelper/LinkAction/TeamSeason/GamesByDate"/>
+	</f:then>
+	<f:else>
+		<f:comment>
+			#TODO: ERROR MESSAGE
+		</f:comment>
+	</f:else>
 </f:if>
 
 </html>

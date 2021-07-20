@@ -1,9 +1,9 @@
 <?php
 	
 	namespace Balumedien\Sportms\Controller;
-
+	
 	use Balumedien\Sportms\Domain\Model\Game;
-    use TYPO3\CMS\Extbase\Persistence\QueryInterface;
+	use TYPO3\CMS\Extbase\Persistence\QueryInterface;
 	
 	/**
 	 * GameController
@@ -73,24 +73,11 @@
 		protected $competitionSeasonRepository;
 		
 		/**
-		
-		/**
 		 * Initializes the controller before invoking an action method.
 		 * Use this method to solve tasks which all actions have in common.
 		 */
 		public function initializeAction() {
 			#$this->mapRequestsToSettings();
-		}
-		
-		/**
-		 * Use this method to solve tasks which all actions have in common, when VIEW-Context is needed
-		 */
-		public function initializeActions() {
-			#$listOfPossibleShowViews = 'index,history,report,stats,ticket';
-			#$this->determineShowView($this->model);
-			#$this->determineShowViews($this->model, $listOfPossibleShowViews);
-			#$this->determineShowNavigationViews($this->model, $listOfPossibleShowViews);
-			#$this->view->assign('settings', $this->settings);
 		}
 		
 		/**
@@ -101,7 +88,7 @@
 			$games = $this->gameRepository->findAll($this->getSportsFilter(), $this->getSportAgeGroupsFilter(), $this->getSportAgeLevelsFilter(), $this->getCompetitionTypesFilter(), $this->getCompetitionsFilter(), $this->getClubsFilter(), $this->getTeamsFilter(), $this->getSeasonsFilter(), $this->getCompetitionSeasonGamedaysFilter());
 			$this->view->assign('games', $games);
 			/* FRONTEND FILTERS */
-			if($this->settings['sport']['sportsSelectbox'] || $this->settings['competitionType']['competitionTypesSelectbox']|| $this->settings['competition']['competitionsSelectbox'] || $this->settings['club']['clubsSelectbox'] || $this->settings['team']['teamsSelectbox'] || $this->settings['season']['seasonsSelectbox']) {
+			if($this->settings['sport']['sportsSelectbox'] || $this->settings['competitionType']['competitionTypesSelectbox'] || $this->settings['competition']['competitionsSelectbox'] || $this->settings['club']['clubsSelectbox'] || $this->settings['team']['teamsSelectbox'] || $this->settings['season']['seasonsSelectbox']) {
 				if($this->settings['sport']['sportsSelectbox']) {
 					$sportsSelectbox = $this->sportRepository->findAll($this->getSportsFilter(FALSE));
 					$this->view->assign('sportsSelectbox', $sportsSelectbox);
@@ -139,69 +126,80 @@
 					$this->view->assign('competitionSeasonGamedaysSelectbox', $competitionSeasonGamedaysSelectbox);
 				}
 			}
-            $this->pagetitle("Spiele", "Liste");
+			$this->pagetitle("Spiele", "Liste");
 		}
-
-        /**
-         * @param Game $game
-         */
-        public function indexAction(Game $game = NULL) {
-            $this->initializeActions();
-            $this->view->assign('game', $game);
-            $this->pagetitleForGame($game, "Spielinfo");
-        }
-
-        /**
-         * @param Game $game
-         */
-        public function historyAction(Game $game = NULL) {
-            $this->initializeActions();
-            $orderings = [
-                'date' => QueryInterface::ORDER_DESCENDING,
-                'time' => QueryInterface::ORDER_DESCENDING,
-            ];
-            $gamesInCompetition = $this->gameRepository->findAll(
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                $game->getTeamSeasonHome()->getTeam()->getUid() . "," . $game->getTeamSeasonGuest()->getTeam()->getUid(),
-                null,
-                null,
-                TRUE,
-                $orderings);
-            $this->view->assign('gamesInCompetition', $gamesInCompetition);
-	        $this->view->assign('game', $game);
-	        $this->pagetitleForGame($game, "Historie");
-        }
-
-        /**
-         * @param Game|null $game
-         */
-        public function reportAction(Game $game = NULL) {
-            $this->view->assign('game', $game);
-            $this->pagetitleForGame($game, "Spielbericht");
-        }
-
-        /**
-         * @param Game $game
-         * @param string $action
-         */
-        private function pagetitleForGame(Game $game, string $actionLabel) {
-            $teamSeasonHomeLabel = $game->getTeamSeasonHome()->getTeam()->getLabel();
-            $teamSeasonGuestLabel = $game->getTeamSeasonGuest()->getTeam()->getLabel();
-            $gameLabel = $teamSeasonHomeLabel . " - " . $teamSeasonGuestLabel;
-            $gameLabel .= " " . $this->settings['pagetitle']['seperator'];
-            $competitionLabel = $game->getCompetitionSeason()->getCompetition()->getLabel();
-            $gameLabel .= " " . $competitionLabel;
-            $seasonLabel = $game->getSeason()->getLabel();
-            $gameLabel .= " " . $seasonLabel;
-            $competitionGamedayLabel = $game->getGameday()->getLabel();
-            $gameLabel .= " " . $this->settings['pagetitle']['seperator'];
-            $gameLabel .= " " . $competitionGamedayLabel;
-            $this->pagetitle($gameLabel, $actionLabel);
-        }
+		
+		/**
+		 * Use this method to solve tasks which all actions have in common, when VIEW-Context is needed
+		 */
+		public function initializeActions() {
+			#$listOfPossibleShowViews = 'index,history,report,stats,ticket';
+			#$this->determineShowView($this->model);
+			#$this->determineShowViews($this->model, $listOfPossibleShowViews);
+			#$this->determineShowNavigationViews($this->model, $listOfPossibleShowViews);
+			#$this->view->assign('settings', $this->settings);
+		}
+		
+		/**
+		 * @param Game $game
+		 */
+		public function indexAction(Game $game = NULL) {
+			$this->initializeActions();
+			$this->view->assign('game', $game);
+			$this->pagetitleForGame($game, "Spielinfo");
+		}
+		
+		/**
+		 * @param Game $game
+		 * @param string $action
+		 */
+		private function pagetitleForGame(Game $game, string $actionLabel) {
+			$teamSeasonHomeLabel = $game->getTeamSeasonHome()->getTeam()->getLabel();
+			$teamSeasonGuestLabel = $game->getTeamSeasonGuest()->getTeam()->getLabel();
+			$gameLabel = $teamSeasonHomeLabel . " - " . $teamSeasonGuestLabel;
+			$gameLabel .= " " . $this->settings['pagetitle']['seperator'];
+			$competitionLabel = $game->getCompetitionSeason()->getCompetition()->getLabel();
+			$gameLabel .= " " . $competitionLabel;
+			$seasonLabel = $game->getSeason()->getLabel();
+			$gameLabel .= " " . $seasonLabel;
+			$competitionGamedayLabel = $game->getGameday()->getLabel();
+			$gameLabel .= " " . $this->settings['pagetitle']['seperator'];
+			$gameLabel .= " " . $competitionGamedayLabel;
+			$this->pagetitle($gameLabel, $actionLabel);
+		}
+		
+		/**
+		 * @param Game $game
+		 */
+		public function historyAction(Game $game = NULL) {
+			$this->initializeActions();
+			$orderings = [
+				'date' => QueryInterface::ORDER_DESCENDING,
+				'time' => QueryInterface::ORDER_DESCENDING,
+			];
+			$gamesInCompetition = $this->gameRepository->findAll(
+				NULL,
+				NULL,
+				NULL,
+				NULL,
+				NULL,
+				NULL,
+				$game->getTeamSeasonHome()->getTeam()->getUid() . "," . $game->getTeamSeasonGuest()->getTeam()->getUid(),
+				NULL,
+				NULL,
+				TRUE,
+				$orderings);
+			$this->view->assign('gamesInCompetition', $gamesInCompetition);
+			$this->view->assign('game', $game);
+			$this->pagetitleForGame($game, "Historie");
+		}
+		
+		/**
+		 * @param Game|null $game
+		 */
+		public function reportAction(Game $game = NULL) {
+			$this->view->assign('game', $game);
+			$this->pagetitleForGame($game, "Spielbericht");
+		}
 		
 	}

@@ -104,7 +104,7 @@
 			$this->setSports(new \TYPO3\CMS\Extbase\Persistence\ObjectStorage());
 			$this->setImages(new \TYPO3\CMS\Extbase\Persistence\ObjectStorage());
 			$this->setClubSectionMembers(new \TYPO3\CMS\Extbase\Persistence\ObjectStorage());
-			$this->setAddresses( new \TYPO3\CMS\Extbase\Persistence\ObjectStorage());
+			$this->setAddresses(new \TYPO3\CMS\Extbase\Persistence\ObjectStorage());
 			$this->setPhones(new \TYPO3\CMS\Extbase\Persistence\ObjectStorage());
 			$this->setMails(new \TYPO3\CMS\Extbase\Persistence\ObjectStorage());
 			$this->setUrls(new \TYPO3\CMS\Extbase\Persistence\ObjectStorage());

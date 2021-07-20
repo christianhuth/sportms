@@ -4,11 +4,11 @@
 	
 	class SportAgeLevelRepository extends SportMSBaseRepository {
 		
-		protected $defaultOrderings = array(
+		protected $defaultOrderings = [
 			'sportAgeGroup.sport.label' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
 			'sportAgeGroup.sorting' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
 			'sorting' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
-		);
+		];
 		
 		/**
 		 * @param string|null $sportUids
@@ -17,7 +17,7 @@
 		 * @return array|\TYPO3\CMS\Extbase\Persistence\QueryResultInterface
 		 * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
 		 */
-		public function findAll(string $sportUids = null, string $sportAgeGroupUids = null, string $sportAgeLevelUids = null) {
+		public function findAll(string $sportUids = NULL, string $sportAgeGroupUids = NULL, string $sportAgeLevelUids = NULL) {
 			$query = $this->createQuery();
 			$constraints = [];
 			if($sportUids) {
@@ -34,5 +34,5 @@
 			}
 			return $query->execute();
 		}
-	
+		
 	}

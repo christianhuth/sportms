@@ -6,18 +6,18 @@
 	 * CompetitionController
 	 */
 	class CompetitionController extends SportMSBaseController {
-
-        /**
-         * @var \Balumedien\Sportms\Domain\Repository\CompetitionRepository
-         * @TYPO3\CMS\Extbase\Annotation\Inject
-         */
-        protected $competitionRepository;
-
-        /**
-         * @var \Balumedien\Sportms\Domain\Repository\GameRepository
-         * @TYPO3\CMS\Extbase\Annotation\Inject
-         */
-        protected $gameRepository;
+		
+		/**
+		 * @var \Balumedien\Sportms\Domain\Repository\CompetitionRepository
+		 * @TYPO3\CMS\Extbase\Annotation\Inject
+		 */
+		protected $competitionRepository;
+		
+		/**
+		 * @var \Balumedien\Sportms\Domain\Repository\GameRepository
+		 * @TYPO3\CMS\Extbase\Annotation\Inject
+		 */
+		protected $gameRepository;
 		
 		/**
 		 * @var \Balumedien\Sportms\Domain\Repository\SportRepository
@@ -52,17 +52,6 @@
 		}
 		
 		/**
-		 * Use this method to solve tasks which all actions have in common, when VIEW-Context is needed
-		 */
-		public function initializeActions() {
-			#$listOfPossibleShowViews = 'index,games,teams';
-			#$this->determineShowView($this->model);
-			#$this->determineShowViews($this->model, $listOfPossibleShowViews);
-			#$this->determineShowNavigationViews($this->model, $listOfPossibleShowViews);
-			#$this->view->assign('settings', $this->settings);
-		}
-		
-		/**
 		 * @return void
 		 * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
 		 */
@@ -89,7 +78,18 @@
 					$this->view->assign('competitionTypesSelectbox', $competitionTypesSelectbox);
 				}
 			}
-            $this->pagetitle("Wettbewerbe", "Liste");
+			$this->pagetitle("Wettbewerbe", "Liste");
+		}
+		
+		/**
+		 * Use this method to solve tasks which all actions have in common, when VIEW-Context is needed
+		 */
+		public function initializeActions() {
+			#$listOfPossibleShowViews = 'index,games,teams';
+			#$this->determineShowView($this->model);
+			#$this->determineShowViews($this->model, $listOfPossibleShowViews);
+			#$this->determineShowNavigationViews($this->model, $listOfPossibleShowViews);
+			#$this->view->assign('settings', $this->settings);
 		}
 		
 	}

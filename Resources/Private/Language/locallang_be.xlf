@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2014-06-02T11:47:18Z" product-name="news">
-		<header/>
-		<body>
-			<trans-unit id="ce_plugin_club_title" xml:space="preserve">
-				<source>Club Management (sportms)</source>
-			</trans-unit>
-			<trans-unit id="ce_plugin_club_description" xml:space="preserve">
-				<source>Views for clubs managed by sportms</source>
-			</trans-unit>
-			<trans-unit id="ce_plugin_competition_title" xml:space="preserve">
-				<source>Competition Management (sportms)</source>
-			</trans-unit>
-			<trans-unit id="ce_plugin_club_description" xml:space="preserve">
-				<source>Views for competitions managed by sportms</source>
-			</trans-unit>
-			<trans-unit id="ce_plugin_game_title" xml:space="preserve">
-				<source>Game Management (sportms)</source>
-			</trans-unit>
-			<trans-unit id="ce_plugin_game_description" xml:space="preserve">
-				<source>Views for games managed by sportms</source>
-			</trans-unit>
-			<trans-unit id="ce_plugin_person_title" xml:space="preserve">
-				<source>Person Management (sportms)</source>
-			</trans-unit>
-			<trans-unit id="ce_plugin_person_description" xml:space="preserve">
-				<source>Views for persons managed by sportms</source>
-			</trans-unit>
-			<trans-unit id="ce_plugin_team_title" xml:space="preserve">
-				<source>Team Management (sportms)</source>
-			</trans-unit>
-			<trans-unit id="ce_plugin_team_description" xml:space="preserve">
-				<source>Views for teams managed by sportms</source>
-			</trans-unit>
-		</body>
-	</file>
+    <file source-language="en" datatype="plaintext" original="messages" date="2014-06-02T11:47:18Z" product-name="news">
+        <header />
+        <body>
+            <trans-unit id="ce_plugin_club_title" xml:space="preserve">
+                <source>Club Management (sportms)</source>
+            </trans-unit>
+            <trans-unit id="ce_plugin_club_description" xml:space="preserve">
+                <source>Views for clubs managed by sportms</source>
+            </trans-unit>
+            <trans-unit id="ce_plugin_competition_title" xml:space="preserve">
+                <source>Competition Management (sportms)</source>
+            </trans-unit>
+            <trans-unit id="ce_plugin_club_description" xml:space="preserve">
+                <source>Views for competitions managed by sportms</source>
+            </trans-unit>
+            <trans-unit id="ce_plugin_game_title" xml:space="preserve">
+                <source>Game Management (sportms)</source>
+            </trans-unit>
+            <trans-unit id="ce_plugin_game_description" xml:space="preserve">
+                <source>Views for games managed by sportms</source>
+            </trans-unit>
+            <trans-unit id="ce_plugin_person_title" xml:space="preserve">
+                <source>Person Management (sportms)</source>
+            </trans-unit>
+            <trans-unit id="ce_plugin_person_description" xml:space="preserve">
+                <source>Views for persons managed by sportms</source>
+            </trans-unit>
+            <trans-unit id="ce_plugin_team_title" xml:space="preserve">
+                <source>Team Management (sportms)</source>
+            </trans-unit>
+            <trans-unit id="ce_plugin_team_description" xml:space="preserve">
+                <source>Views for teams managed by sportms</source>
+            </trans-unit>
+        </body>
+    </file>
 </xliff>

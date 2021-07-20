@@ -1,44 +1,44 @@
 <html data-namespace-typo3-fluid="true"
-      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <f:if condition="{address}">
-    <f:then>
-        <f:if condition="{size}">
-            <f:then>
-                <f:render section="{size}" arguments="{_all}"/>
-            </f:then>
-            <f:else>
-                <f:render section="normal" arguments="{_all}"/>
-            </f:else>
-        </f:if>
-    </f:then>
-    <f:else>
-        <div class="tx-sportms-table-center">-</div>
-    </f:else>
+	<f:then>
+		<f:if condition="{size}">
+			<f:then>
+				<f:render arguments="{_all}" section="{size}"/>
+			</f:then>
+			<f:else>
+				<f:render arguments="{_all}" section="normal"/>
+			</f:else>
+		</f:if>
+	</f:then>
+	<f:else>
+		<div class="tx-sportms-table-center">-</div>
+	</f:else>
 </f:if>
 
 <f:section name="normal">
-    <f:if condition="{address.street} || {address.housenumber}">
-        {address.street} {address.housenumber}<br/>
-    </f:if>
-    <f:if condition="{address.zipcode} || {address.location}">
-        {address.zipcode} {address.location}
-    </f:if>
+	<f:if condition="{address.street} || {address.housenumber}">
+		{address.street} {address.housenumber}<br/>
+	</f:if>
+	<f:if condition="{address.zipcode} || {address.location}">
+		{address.zipcode} {address.location}
+	</f:if>
 </f:section>
 
 <f:section name="full">
-    <f:if condition="{address.street} || {address.housenumber}">
-        {address.street} {address.housenumber}<br/>
-    </f:if>
-    <f:if condition="{address.zipcode} || {address.location}">
-        {address.zipcode} {address.location}<br/>
-    </f:if>
-    <f:if condition="{address.region}">
-        {address.region}<br/>
-    </f:if>
-    <f:if condition="{address.country}">
-        {address.country}
-    </f:if>
+	<f:if condition="{address.street} || {address.housenumber}">
+		{address.street} {address.housenumber}<br/>
+	</f:if>
+	<f:if condition="{address.zipcode} || {address.location}">
+		{address.zipcode} {address.location}<br/>
+	</f:if>
+	<f:if condition="{address.region}">
+		{address.region}<br/>
+	</f:if>
+	<f:if condition="{address.country}">
+		{address.country}
+	</f:if>
 </f:section>
 
 </html>

@@ -1,14 +1,17 @@
 <html data-namespace-typo3-fluid="true"
-      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <f:layout name="default"/>
 
 <f:section name="default">
-    <div id="tx-sportms-person-playerjerseys">
-        <f:render arguments="{person: person}" partial="Person/Player/Navigation"/>
-        <f:render arguments="{jerseysByTeamSeason: jerseysByTeamSeason}" partial="Person/PlayerJerseys/JerseysByTeamSeason"/>
-        <f:render arguments="{jerseysByGames: jerseysByGames}" partial="Person/PlayerJerseys/JerseysByGames"/>
-    </div>
+	<div id="tx-sportms-person-playerjerseys">
+		<f:render arguments="{person: person}"
+				  partial="Person/Player/Navigation"/>
+		<f:render arguments="{jerseysByTeamSeason: jerseysByTeamSeason}"
+				  partial="Person/PlayerJerseys/JerseysByTeamSeason"/>
+		<f:render arguments="{jerseysByGames: jerseysByGames}"
+				  partial="Person/PlayerJerseys/JerseysByGames"/>
+	</div>
 </f:section>
 
 </html>

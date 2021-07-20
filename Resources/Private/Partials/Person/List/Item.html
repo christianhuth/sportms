@@ -1,35 +1,63 @@
 <html data-namespace-typo3-fluid="true"
-      xmlns:sportms="Balumedien\Sportms\ViewHelpers"
-      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:sportms="Balumedien\Sportms\ViewHelpers">
 
-    <tr>
-        <td>{person.lastname}</td>
-        <td>{person.firstname}</td>
-        <td>{person.nickname}</td>
-        <td class="tx-sportms-table-center">
-            <f:render arguments="{nationalities: person.nationalities}" partial="ViewHelper/Person/Nationalities"/>
-        </td>
-        <td>
-            <f:comment>
-                <f:if condition="{person.personProfiles}">
-                    <f:then>
-                        <ul>
-                            <f:for each="{person.personProfiles}" as="personProfile">
-                                <f:switch expression="{personProfile.profileType}">
-                                    <f:case value="official"><li><sportms:link.action action="officialProfile" controller="Person" Person="{person}">Funktionärsprofil</sportms:link.action></li></f:case>
-                                    <f:case value="player"><li><sportms:link.action action="playerProfile" controller="Person" Person="{person}">Spielerprofil</sportms:link.action></li></f:case>
-                                    <f:case value="referee"><li><sportms:link.action action="refereeProfile" controller="Person" Person="{person}">Schiedsrichterprofil</sportms:link.action></li></f:case>
-                                </f:switch>
-                            </f:for>
-                        </ul>
-                    </f:then>
-                    <f:else>
-                        <div class="tx-sportms-table-center">-</div>
-                    </f:else>
-                </f:if>
-            </f:comment>
-            <div class="tx-sportms-table-center">-</div>
-        </td>
-    </tr>
+<tr>
+	<td>{person.lastname}</td>
+	<td>{person.firstname}</td>
+	<td>{person.nickname}</td>
+	<td class="tx-sportms-table-center">
+		<f:render arguments="{nationalities: person.nationalities}"
+				  partial="ViewHelper/Person/Nationalities"/>
+	</td>
+	<td>
+		<f:comment>
+			<f:if condition="{person.personProfiles}">
+				<f:then>
+					<ul>
+						<f:for as="personProfile"
+							   each="{person.personProfiles}">
+							<f:switch expression="{personProfile.profileType}">
+								<f:case value="official">
+									<li>
+										<sportms:link.action
+												Person="{person}"
+												action="officialProfile"
+												controller="Person">
+											Funktionärsprofil
+										</sportms:link.action>
+									</li>
+								</f:case>
+								<f:case value="player">
+									<li>
+										<sportms:link.action
+												Person="{person}"
+												action="playerProfile"
+												controller="Person">Spielerprofil
+										</sportms:link.action>
+									</li>
+								</f:case>
+								<f:case value="referee">
+									<li>
+										<sportms:link.action
+												Person="{person}"
+												action="refereeProfile"
+												controller="Person">
+											Schiedsrichterprofil
+										</sportms:link.action>
+									</li>
+								</f:case>
+							</f:switch>
+						</f:for>
+					</ul>
+				</f:then>
+				<f:else>
+					<div class="tx-sportms-table-center">-</div>
+				</f:else>
+			</f:if>
+		</f:comment>
+		<div class="tx-sportms-table-center">-</div>
+	</td>
+</tr>
 
 </html>

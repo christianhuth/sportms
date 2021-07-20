@@ -1,34 +1,35 @@
 <html data-namespace-typo3-fluid="true"
-      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <f:layout name="default"/>
 
 <f:section name="default">
-    <div id="tx-sportms-team-list">
-        <f:render arguments="{_all}" partial="Team/List/Filter"/>
-        <div class="table-responsive">
-            <table class="table table-bordered table-condensed table-hover table-striped tx-sportms-table">
-                <thead>
-                <tr>
-                    <th>Mannschaft</th>
-                    <th colspan="3">Einzelansichten</th>
-                </tr>
-                </thead>
-                <tbody>
-                <f:if condition="{teams}">
-                    <f:then>
-                        <f:for as="team" each="{teams}">
-                            <f:render arguments="{team: team}" partial="Team/List/Item"/>
-                        </f:for>
-                    </f:then>
-                    <f:else>
-                        <td colspan="4">Keine Mannschaften gefunden</td>
-                    </f:else>
-                </f:if>
-                </tbody>
-            </table>
-        </div>
-    </div>
+	<div id="tx-sportms-team-list">
+		<f:render arguments="{_all}" partial="Team/List/Filter"/>
+		<div class="table-responsive">
+			<table class="table table-bordered table-condensed table-hover table-striped tx-sportms-table">
+				<thead>
+				<tr>
+					<th>Mannschaft</th>
+					<th colspan="3">Einzelansichten</th>
+				</tr>
+				</thead>
+				<tbody>
+				<f:if condition="{teams}">
+					<f:then>
+						<f:for as="team" each="{teams}">
+							<f:render arguments="{team: team}"
+									  partial="Team/List/Item"/>
+						</f:for>
+					</f:then>
+					<f:else>
+						<td colspan="4">Keine Mannschaften gefunden</td>
+					</f:else>
+				</f:if>
+				</tbody>
+			</table>
+		</div>
+	</div>
 </f:section>
 
 </html>

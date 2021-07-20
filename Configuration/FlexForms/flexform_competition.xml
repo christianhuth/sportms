@@ -1,88 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <T3DataStructure>
-	<ROOT>
-		<TCEforms>
-			<sheetTitle>Wettbewerb</sheetTitle>
-		</TCEforms>
-		<type>array</type>
-		<el>
-			<settings.competition.uid>
-				<TCEforms>
-					<label>Zeige folgenden Wettbewerb</label>
-					<config>
-						<type>group</type>
-						<internal_type>db</internal_type>
-						<allowed>tx_sportms_domain_model_competition</allowed>
-						<size>1</size>
-						<maxItems>1</maxItems>
-						<minItems>0</minItems>
-						<show_thumbs>1</show_thumbs>
-					</config>
-				</TCEforms>
-			</settings.competition.uid>
-			<settings.competition.navigation.enabled>
-				<TCEforms>
-					<label>Wettbewerbs-Navigation anzeigen?</label>
-					<config>
-						<default>1</default>
-						<renderType>checkboxToggle</renderType>
-						<type>check</type>
-					</config>
-					<onChange>reload</onChange>
-				</TCEforms>
-			</settings.competition.navigation.enabled>
-			<settings.competition.selectbox.enabled>
-				<TCEforms>
-					<label>Selectbox für Wettbewerbe anzeigen?</label>
-					<config>
-						<default>1</default>
-						<renderType>checkboxToggle</renderType>
-						<type>check</type>
-					</config>
-				</TCEforms>
-			</settings.competition.selectbox.enabled>
-			<settings.competition.competitions>
-				<TCEforms>
-					<label>Welche Wettbewerbe sollen berücksichtigt werden?</label>
-					<config>
-						<foreign_table>tx_sportms_domain_model_competition</foreign_table>
-						<foreign_table_where>ORDER BY label ASC</foreign_table_where>
-						<renderType>selectMultipleSideBySide</renderType>
-						<type>select</type>
-					</config>
-				</TCEforms>
-			</settings.competition.competitions>
-			<settings.competitionType.selectbox.enabled>
-				<TCEforms>
-					<label>Selectbox für Wettbewerbsarten anzeigen?</label>
-					<config>
-						<default>1</default>
-						<renderType>checkboxToggle</renderType>
-						<type>check</type>
-					</config>
-				</TCEforms>
-			</settings.competitionType.selectbox.enabled>
-			<settings.competitionType.competitionTypes>
-				<TCEforms>
-					<label>Welche Wettbewerbsarten sollen berücksichtigt werden?</label>
-					<config>
-						<foreign_table>tx_sportms_domain_model_competitiontype</foreign_table>
-						<foreign_table_where>ORDER BY label ASC</foreign_table_where>
-						<renderType>selectMultipleSideBySide</renderType>
-						<type>select</type>
-					</config>
-				</TCEforms>
-			</settings.competitionType.competitionTypes>
-			<settings.competitionSeasonGameday.selectbox.enabled>
-				<TCEforms>
-					<label>Selectbox für Spieltage anzeigen?</label>
-					<config>
-						<default>1</default>
-						<renderType>checkboxToggle</renderType>
-						<type>check</type>
-					</config>
-				</TCEforms>
-			</settings.competitionSeasonGameday.selectbox.enabled>
-		</el>
-	</ROOT>
+    <ROOT>
+        <TCEforms>
+            <sheetTitle>Wettbewerb</sheetTitle>
+        </TCEforms>
+        <type>array</type>
+        <el>
+            <settings.competition.uid>
+                <TCEforms>
+                    <label>Zeige folgenden Wettbewerb</label>
+                    <config>
+                        <type>group</type>
+                        <internal_type>db</internal_type>
+                        <allowed>tx_sportms_domain_model_competition</allowed>
+                        <size>1</size>
+                        <maxItems>1</maxItems>
+                        <minItems>0</minItems>
+                        <show_thumbs>1</show_thumbs>
+                    </config>
+                </TCEforms>
+            </settings.competition.uid>
+            <settings.competition.navigation.enabled>
+                <TCEforms>
+                    <label>Wettbewerbs-Navigation anzeigen?</label>
+                    <config>
+                        <default>1</default>
+                        <renderType>checkboxToggle</renderType>
+                        <type>check</type>
+                    </config>
+                    <onChange>reload</onChange>
+                </TCEforms>
+            </settings.competition.navigation.enabled>
+            <settings.competition.selectbox.enabled>
+                <TCEforms>
+                    <label>Selectbox für Wettbewerbe anzeigen?</label>
+                    <config>
+                        <default>1</default>
+                        <renderType>checkboxToggle</renderType>
+                        <type>check</type>
+                    </config>
+                </TCEforms>
+            </settings.competition.selectbox.enabled>
+            <settings.competition.competitions>
+                <TCEforms>
+                    <label>Welche Wettbewerbe sollen berücksichtigt werden?</label>
+                    <config>
+                        <foreign_table>tx_sportms_domain_model_competition</foreign_table>
+                        <foreign_table_where>ORDER BY label ASC</foreign_table_where>
+                        <renderType>selectMultipleSideBySide</renderType>
+                        <type>select</type>
+                    </config>
+                </TCEforms>
+            </settings.competition.competitions>
+            <settings.competitionType.selectbox.enabled>
+                <TCEforms>
+                    <label>Selectbox für Wettbewerbsarten anzeigen?</label>
+                    <config>
+                        <default>1</default>
+                        <renderType>checkboxToggle</renderType>
+                        <type>check</type>
+                    </config>
+                </TCEforms>
+            </settings.competitionType.selectbox.enabled>
+            <settings.competitionType.competitionTypes>
+                <TCEforms>
+                    <label>Welche Wettbewerbsarten sollen berücksichtigt werden?</label>
+                    <config>
+                        <foreign_table>tx_sportms_domain_model_competitiontype</foreign_table>
+                        <foreign_table_where>ORDER BY label ASC</foreign_table_where>
+                        <renderType>selectMultipleSideBySide</renderType>
+                        <type>select</type>
+                    </config>
+                </TCEforms>
+            </settings.competitionType.competitionTypes>
+            <settings.competitionSeasonGameday.selectbox.enabled>
+                <TCEforms>
+                    <label>Selectbox für Spieltage anzeigen?</label>
+                    <config>
+                        <default>1</default>
+                        <renderType>checkboxToggle</renderType>
+                        <type>check</type>
+                    </config>
+                </TCEforms>
+            </settings.competitionSeasonGameday.selectbox.enabled>
+        </el>
+    </ROOT>
 </T3DataStructure>

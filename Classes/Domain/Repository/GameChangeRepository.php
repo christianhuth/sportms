@@ -2,7 +2,6 @@
 	
 	namespace Balumedien\Sportms\Domain\Repository;
 	
-	use Balumedien\Sportms\Domain\Model\TeamSeason;
 	use TYPO3\CMS\Extbase\Persistence\QueryInterface;
 	
 	class GameChangeRepository extends SportMSBaseRepository {
@@ -12,5 +11,5 @@
 			'minute' => QueryInterface::ORDER_ASCENDING,
 			'minute_additional' => QueryInterface::ORDER_ASCENDING,
 		];
-	
+		
 	}

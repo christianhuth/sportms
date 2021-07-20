@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <T3DataStructure>
-	<sheets>
-		<base>EXT:sportms/Configuration/FlexForms/flexform_base.xml</base>
-		<person>EXT:sportms/Configuration/FlexForms/flexform_person.xml</person>
-		<sport>EXT:sportms/Configuration/FlexForms/flexform_sport.xml</sport>
-	</sheets>
+    <sheets>
+        <base>EXT:sportms/Configuration/FlexForms/flexform_base.xml</base>
+        <person>EXT:sportms/Configuration/FlexForms/flexform_person.xml</person>
+        <sport>EXT:sportms/Configuration/FlexForms/flexform_sport.xml</sport>
+    </sheets>
 </T3DataStructure>

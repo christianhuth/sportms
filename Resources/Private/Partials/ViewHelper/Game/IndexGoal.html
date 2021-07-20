@@ -1,51 +1,53 @@
 <html data-namespace-typo3-fluid="true"
-      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-      xmlns:sportms="Balumedien\Sportms\ViewHelpers">
+	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:sportms="Balumedien\Sportms\ViewHelpers">
 
 <f:if condition="{goal}">
-  <div class="tx-sportms-game-goal">
-    <div class="tx-sportms-game-goal-person tx-sportms-game-goal-person-home">
-      <f:if condition="{type} == home">
-        <f:render section="goal" arguments="{goal: goal}"/>
-      </f:if>
-    </div>
-    <div class="tx-sportms-game-goal-time">
-      <f:if condition="{type} == home">
-        <span class="tx-sportms-game-goal-minute">{goal.minute}'</span>
-      </f:if>
-    </div>
-    <div class="tx-sportms-game-goal-score">
-      <div class="tx-sportms-game-result-main">
-        {goal.goalHome} : {goal.goalGuest}
-      </div>
-    </div>
-    <div class="tx-sportms-game-goal-time">
-      <f:if condition="{type} == guest">
-        <span class="tx-sportms-game-goal-minute">{goal.minute}'</span>
-      </f:if>
-    </div>
-    <div class="tx-sportms-game-goal-person tx-sportms-game-goal-person-guest">
-      <f:if condition="{type} == guest">
-        <f:render section="goal" arguments="{goal: goal}"/>
-      </f:if>
-    </div>
-  </div>
+	<div class="tx-sportms-game-goal">
+		<div class="tx-sportms-game-goal-person tx-sportms-game-goal-person-home">
+			<f:if condition="{type} == home">
+				<f:render arguments="{goal: goal}" section="goal"/>
+			</f:if>
+		</div>
+		<div class="tx-sportms-game-goal-time">
+			<f:if condition="{type} == home">
+				<span class="tx-sportms-game-goal-minute">{goal.minute}'</span>
+			</f:if>
+		</div>
+		<div class="tx-sportms-game-goal-score">
+			<div class="tx-sportms-game-result-main">
+				{goal.goalHome} : {goal.goalGuest}
+			</div>
+		</div>
+		<div class="tx-sportms-game-goal-time">
+			<f:if condition="{type} == guest">
+				<span class="tx-sportms-game-goal-minute">{goal.minute}'</span>
+			</f:if>
+		</div>
+		<div class="tx-sportms-game-goal-person tx-sportms-game-goal-person-guest">
+			<f:if condition="{type} == guest">
+				<f:render arguments="{goal: goal}" section="goal"/>
+			</f:if>
+		</div>
+	</div>
 </f:if>
 
 <f:section name="goal">
-  <div class="tx-sportms-game-goal-scorer">
-    <sportms:link.action action="playerProfile" controller="Person" Person="{goal.scorer}">
-      {goal.scorer.lastname}
-    </sportms:link.action>
-    <f:if condition="{goal.goalType} == 1">
-      <span class="tx-sportms-game-goal-penalty">(Elfmeter)</span>
-    </f:if>
-  </div>
-  <div class="tx-sportms-game-goal-assist">
-    <sportms:link.action action="playerProfile" controller="Person" Person="{goal.assist}">
-      {goal.assist.lastname}
-    </sportms:link.action>
-  </div>
+	<div class="tx-sportms-game-goal-scorer">
+		<sportms:link.action Person="{goal.scorer}" action="playerProfile"
+							 controller="Person">
+			{goal.scorer.lastname}
+		</sportms:link.action>
+		<f:if condition="{goal.goalType} == 1">
+			<span class="tx-sportms-game-goal-penalty">(Elfmeter)</span>
+		</f:if>
+	</div>
+	<div class="tx-sportms-game-goal-assist">
+		<sportms:link.action Person="{goal.assist}" action="playerProfile"
+							 controller="Person">
+			{goal.assist.lastname}
+		</sportms:link.action>
+	</div>
 </f:section>
 
 </html>

@@ -47,7 +47,6 @@
 		 * @return void
 		 */
 		public function dbStatsAction() {
-			
 			$dbStats = $this->settings['dbStats'];
 			
 			/* Domain Model Club */
@@ -74,7 +73,6 @@
 			if(strpos($dbStats, 'Team') !== FALSE) {
 				$this->view->assign('teamCount', $this->teamRepository->findAll()->count());
 			}
-			
 		}
 		
 	}

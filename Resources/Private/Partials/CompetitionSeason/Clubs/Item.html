@@ -1,39 +1,43 @@
 <html data-namespace-typo3-fluid="true"
-      xmlns:sportms="Balumedien\Sportms\ViewHelpers"
-      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <tr>
-    <td class="tx-sportms-table-left">
-        <f:render partial="ViewHelper/Club/ItemInTable" arguments="{club: teamSeason.team.club}"/>
-    </td>
-    <td class="tx-sportms-table-center">
-        <f:render partial="ViewHelper/Club/Founding" arguments="{club: teamSeason.team.club, settings: settings}"/>
-    </td>
-    <td class="tx-sportms-table-center">
-        <f:render partial="ViewHelper/Club/Members" arguments="{club: teamSeason.team.club}" section="latestOnly"/>
-    </td>
-    <td class="tx-sportms-table-center">
-        <f:if condition="{teamSeason.team.club.colours}">
-            <f:then>
-                {teamSeason.team.club.colours}
-            </f:then>
-            <f:else>
-                - - -
-            </f:else>
-        </f:if>
-    </td>
-    <td class="tx-sportms-table-center">
-        <f:if condition="{teamSeason.team.club.urls}">
-            <f:then>
-                <f:link.typolink parameter="{teamSeason.team.club.urls.0.url}" target="_blank">
-                    {teamSeason.team.club.urls.0.url}
-                </f:link.typolink>
-            </f:then>
-            <f:else>
-                - - -
-            </f:else>
-        </f:if>
-    </td>
+	<td class="tx-sportms-table-left">
+		<f:render arguments="{club: teamSeason.team.club}"
+				  partial="ViewHelper/Club/ItemInTable"/>
+	</td>
+	<td class="tx-sportms-table-center">
+		<f:render arguments="{club: teamSeason.team.club, settings: settings}"
+				  partial="ViewHelper/Club/Founding"/>
+	</td>
+	<td class="tx-sportms-table-center">
+		<f:render arguments="{club: teamSeason.team.club}"
+				  partial="ViewHelper/Club/Members"
+				  section="latestOnly"/>
+	</td>
+	<td class="tx-sportms-table-center">
+		<f:if condition="{teamSeason.team.club.colours}">
+			<f:then>
+				{teamSeason.team.club.colours}
+			</f:then>
+			<f:else>
+				- - -
+			</f:else>
+		</f:if>
+	</td>
+	<td class="tx-sportms-table-center">
+		<f:if condition="{teamSeason.team.club.urls}">
+			<f:then>
+				<f:link.typolink parameter="{teamSeason.team.club.urls.0.url}"
+								 target="_blank">
+					{teamSeason.team.club.urls.0.url}
+				</f:link.typolink>
+			</f:then>
+			<f:else>
+				- - -
+			</f:else>
+		</f:if>
+	</td>
 </tr>
 
 </html>

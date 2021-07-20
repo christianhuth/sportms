@@ -4,11 +4,11 @@
 	
 	class SportPositionRepository extends SportMSBaseRepository {
 		
-		protected $defaultOrderings = array(
+		protected $defaultOrderings = [
 			'sorting' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
-		);
+		];
 		
-		public function findAll(string $sportUids = null, string $sportPositionGroupUids = null, string $sportPositionUids = null) {
+		public function findAll(string $sportUids = NULL, string $sportPositionGroupUids = NULL, string $sportPositionUids = NULL) {
 			$query = $this->createQuery();
 			$constraints = [];
 			if($sportUids) {
@@ -25,5 +25,5 @@
 			}
 			return $query->execute();
 		}
-	
+		
 	}

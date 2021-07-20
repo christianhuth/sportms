@@ -1,24 +1,30 @@
 <html data-namespace-typo3-fluid="true"
-      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <f:layout name="default"/>
 
 <f:section name="default">
-    <div id="tx-sportms-team-historyrecordplayers">
-        <f:render arguments="{team: team}" partial="Team/Navigation"/>
-        <div class="tx-sportms-team-historyrecordplayers">
-            <h3>Die meisten Spiele</h3>
-            <f:render arguments="{playersWithMostGames: playersWithMostGames, settings: settings}" partial="Team/HistoryRecordPlayers/MostGames" />
-        </div>
-        <div class="tx-sportms-team-historyrecordplayers">
-            <h3>Die meisten Tore</h3>
-            <f:render arguments="{playersWithMostGoals: playersWithMostGoals, settings: settings}" partial="Team/HistoryRecordPlayers/MostGoals" />
-        </div>
-        <div class="tx-sportms-team-historyrecordplayers">
-            <h3>Die meisten Vorlagen</h3>
-            <f:render arguments="{playersWithMostAssists: playersWithMostAssists, settings: settings}" partial="Team/HistoryRecordPlayers/MostAssists" />
-        </div>
-    </div>
+	<div id="tx-sportms-team-historyrecordplayers">
+		<f:render arguments="{team: team}" partial="Team/Navigation"/>
+		<div class="tx-sportms-team-historyrecordplayers">
+			<h3>Die meisten Spiele</h3>
+			<f:render
+					arguments="{playersWithMostGames: playersWithMostGames, settings: settings}"
+					partial="Team/HistoryRecordPlayers/MostGames"/>
+		</div>
+		<div class="tx-sportms-team-historyrecordplayers">
+			<h3>Die meisten Tore</h3>
+			<f:render
+					arguments="{playersWithMostGoals: playersWithMostGoals, settings: settings}"
+					partial="Team/HistoryRecordPlayers/MostGoals"/>
+		</div>
+		<div class="tx-sportms-team-historyrecordplayers">
+			<h3>Die meisten Vorlagen</h3>
+			<f:render
+					arguments="{playersWithMostAssists: playersWithMostAssists, settings: settings}"
+					partial="Team/HistoryRecordPlayers/MostAssists"/>
+		</div>
+	</div>
 </f:section>
 
 </html>
