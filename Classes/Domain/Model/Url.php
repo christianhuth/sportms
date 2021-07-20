@@ -14,6 +14,11 @@
         protected $url;
         
         /**
+         * @var UrlType
+         */
+        protected $urlType;
+        
+        /**
          * @var boolean
          */
         protected $public;
@@ -32,6 +37,22 @@
         public function setUrl($url)
         {
             $this->url = $url;
+        }
+        
+        /**
+         * @return UrlType
+         */
+        public function getUrlType(): UrlType
+        {
+            return $this->urlType;
+        }
+        
+        /**
+         * @param UrlType $urlType
+         */
+        public function setUrlType(UrlType $urlType): void
+        {
+            $this->urlType = $urlType;
         }
         
         /**
