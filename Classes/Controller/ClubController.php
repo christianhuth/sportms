@@ -20,8 +20,6 @@
 		 * Use this method to solve tasks which all actions have in common.
 		 */
 		public function initializeAction(): void {
-			\TYPO3\CMS\Core\Utility\DebugUtility::debug("test2", 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
-			
 			$this->mapRequestsToSettings();
 		}
 		
@@ -51,7 +49,6 @@
 		 * @param Club $club
 		 */
 		public function sectionsAction(Club $club = NULL): void {
-			\TYPO3\CMS\Core\Utility\DebugUtility::debug($club, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
 			if($club === NULL) {
 				$clubUid = $this->settings['club']['uid'];
 				$club = $this->clubRepository->findByUid($clubUid);

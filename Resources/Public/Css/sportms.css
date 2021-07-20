@@ -713,31 +713,31 @@
     grid-gap: 5px;
 }
 
-.tx-sportms-club-in-table .tx-sportms-club-label-in-table,
-.tx-sportms-club-in-table .tx-sportms-club-logo-in-table,
-.tx-sportms-team-in-table .tx-sportms-team-label-in-table,
-.tx-sportms-team-in-table .tx-sportms-club-logo-in-table {
+.tx-sportms-club-in-table .tx-sportms-club-label,
+.tx-sportms-club-in-table .tx-sportms-club-logo,
+.tx-sportms-team-in-table .tx-sportms-team-label,
+.tx-sportms-team-in-table .tx-sportms-club-logo {
     grid-row: 1;
 }
 
-.tx-sportms-table-left .tx-sportms-club-in-table .tx-sportms-club-logo-in-table,
-.tx-sportms-table-right .tx-sportms-club-in-table .tx-sportms-club-label-in-table,
-.tx-sportms-table-left .tx-sportms-team-in-table .tx-sportms-club-logo-in-table,
-.tx-sportms-table-right .tx-sportms-team-in-table .tx-sportms-team-label-in-table {
+.tx-sportms-table-left .tx-sportms-club-in-table .tx-sportms-club-logo,
+.tx-sportms-table-right .tx-sportms-club-in-table .tx-sportms-club-label,
+.tx-sportms-table-left .tx-sportms-team-in-table .tx-sportms-club-logo,
+.tx-sportms-table-right .tx-sportms-team-in-table .tx-sportms-team-label {
     grid-column-start: 1;
     grid-column-end: 2;
 }
 
-.tx-sportms-table-left .tx-sportms-club-in-table .tx-sportms-club-label-in-table,
-.tx-sportms-table-right .tx-sportms-club-in-table .tx-sportms-club-logo-in-table,
-.tx-sportms-table-left .tx-sportms-team-in-table .tx-sportms-team-label-in-table,
-.tx-sportms-table-right .tx-sportms-team-in-table .tx-sportms-club-logo-in-table {
+.tx-sportms-table-left .tx-sportms-club-in-table .tx-sportms-club-label,
+.tx-sportms-table-right .tx-sportms-club-in-table .tx-sportms-club-logo,
+.tx-sportms-table-left .tx-sportms-team-in-table .tx-sportms-team-label,
+.tx-sportms-table-right .tx-sportms-team-in-table .tx-sportms-club-logo {
     grid-column-start: 2;
     grid-column-end: 3;
 }
 
-.tx-sportms-club-in-table .tx-sportms-club-label-in-table,
-.tx-sportms-team-in-table .tx-sportms-team-label-in-table {
+.tx-sportms-club-in-table .tx-sportms-club-label,
+.tx-sportms-team-in-table .tx-sportms-team-label {
     display: flex;
     align-items: center;
 }

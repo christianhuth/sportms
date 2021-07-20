@@ -1,0 +1,19 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<f:if condition="{club}">
+    <f:if condition="{club.logos}">
+        <f:then>
+            <div class="tx-sportms-club-logo">
+                <f:if condition="{club.logos.0}">
+                    <f:image image="{club.logos.0}" height="30"/>
+                </f:if>
+            </div>
+        </f:then>
+    </f:if>
+    <div class="tx-sportms-club-label">
+        {club.name}
+    </div>
+</f:if>
+
+</html>

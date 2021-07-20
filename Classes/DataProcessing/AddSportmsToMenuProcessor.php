@@ -1,0 +1,212 @@
+<?php
+	
+	namespace Balumedien\Sportms\DataProcessing;
+	
+	use TYPO3\CMS\Core\Utility\GeneralUtility;
+	use TYPO3\CMS\Core\Database\ConnectionPool;
+	use TYPO3\CMS\Core\Database\Query\QueryBuilder;
+	use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
+	use TYPO3\CMS\Frontend\ContentObject\DataProcessorInterface;
+	
+	class AddSportmsToMenuProcessor implements DataProcessorInterface {
+		
+		/**
+		 * The content object renderer
+		 *
+		 * @var ContentObjectRenderer
+		 */
+		public $cObj;
+		
+		/**
+		 * @param ContentObjectRenderer $cObj The data of the content element or page
+		 * @param array $contentObjectConfiguration The configuration of Content Object
+		 * @param array $processorConfiguration The configuration of this processor
+		 * @param array $processedData Key/value store of processed data (e.g. to be passed to a Fluid View)
+		 * @return array the processed data as key/value store
+		 */
+		protected $processorConfiguration;
+		
+		public function process(ContentObjectRenderer $cObj, array $contentObjectConfiguration, array $processorConfiguration,
+		                        array $processedData) {
+			$this->cObj = $cObj;
+			$this->processorConfiguration = $processorConfiguration;
+			
+			if(!$this->processorConfiguration['addToMenus']) {
+				return $processedData;
+			}
+			
+			// Configuration for "club" argument
+			if(GeneralUtility::_GET('tx_sportms_club')['club']) {
+				$recordTable = 'tx_sportms_domain_model_club';
+				$recordUid = (int)GeneralUtility::_GET('tx_sportms_club')['club'];
+				$record = $this->getExtensionRecord($recordTable, $recordUid);
+				if($record) {
+					$menus = GeneralUtility::trimExplode(',', $this->processorConfiguration['addToMenus'], TRUE);
+					foreach($menus as $menu) {
+						if(isset($processedData[$menu])) {
+							$this->addExtensionRecordToMenu($record, $processedData[$menu]);
+							$this->addActionToMenu(
+								\TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('tx_sportms_action.club.' . GeneralUtility::_GET('tx_sportms_team')['action'], 'sportms'),
+								$processedData[$menu]
+							);
+						}
+					}
+				}
+			}
+			
+			// Configuration for "competitionSeason" argument
+			if(GeneralUtility::_GET('tx_sportms_competition')['competitionSeason']) {
+				$recordTable = 'tx_sportms_domain_model_competitionseason';
+				$recordUid = (int)GeneralUtility::_GET('tx_sportms_competition')['competitionSeason'];
+				$competitionSeason = $this->getExtensionRecord($recordTable, $recordUid);
+				if($competitionSeason) {
+					$recordTable = 'tx_sportms_domain_model_competition';
+					$recordUid = $competitionSeason['competition'];
+					$competition = $this->getExtensionRecord($recordTable, $recordUid);
+					$menus = GeneralUtility::trimExplode(',', $this->processorConfiguration['addToMenus'], TRUE);
+					foreach($menus as $menu) {
+						if(isset($processedData[$menu])) {
+							$this->addExtensionRecordToMenu($competition, $processedData[$menu]);
+						}
+					}
+					$recordTable = 'tx_sportms_domain_model_season';
+					$recordUid = $competitionSeason['season'];
+					$season = $this->getExtensionRecord($recordTable, $recordUid);
+					$menus = GeneralUtility::trimExplode(',', $this->processorConfiguration['addToMenus'], TRUE);
+					foreach($menus as $menu) {
+						if(isset($processedData[$menu])) {
+							$this->addExtensionRecordToMenu($season, $processedData[$menu]);
+							$this->addActionToMenu(
+								\TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('tx_sportms_action.competitionseason.' . GeneralUtility::_GET('tx_sportms_team')['action'], 'sportms'),
+								$processedData[$menu]
+							);
+						}
+					}
+				}
+			}
+			
+			// Configuration for "team" argument
+			if(GeneralUtility::_GET('tx_sportms_team')['team']) {
+				$recordTable = 'tx_sportms_domain_model_team';
+				$recordUid = (int)GeneralUtility::_GET('tx_sportms_team')['team'];
+				$team = $this->getExtensionRecord($recordTable, $recordUid);
+				if($team) {
+					$menus = GeneralUtility::trimExplode(',', $this->processorConfiguration['addToMenus'], TRUE);
+					foreach($menus as $menu) {
+						if(isset($processedData[$menu])) {
+							$this->addExtensionRecordToMenu($team, $processedData[$menu]);
+							$this->addActionToMenu(
+								\TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('tx_sportms_action.team.' . GeneralUtility::_GET('tx_sportms_team')['action'], 'sportms'),
+								$processedData[$menu]
+							);
+						}
+					}
+				}
+			}
+			
+			// Configuration for "teamSeason" argument
+			if(GeneralUtility::_GET('tx_sportms_team')['teamSeason']) {
+				$recordTable = 'tx_sportms_domain_model_teamseason';
+				$recordUid = (int)GeneralUtility::_GET('tx_sportms_team')['teamSeason'];
+				$teamSeason = $this->getExtensionRecord($recordTable, $recordUid);
+				if($teamSeason) {
+					$recordTable = 'tx_sportms_domain_model_team';
+					$recordUid = $teamSeason['team'];
+					$team = $this->getExtensionRecord($recordTable, $recordUid);
+					$menus = GeneralUtility::trimExplode(',', $this->processorConfiguration['addToMenus'], TRUE);
+					foreach($menus as $menu) {
+						if(isset($processedData[$menu])) {
+							$this->addExtensionRecordToMenu($team, $processedData[$menu]);
+						}
+					}
+					$recordTable = 'tx_sportms_domain_model_season';
+					$recordUid = $teamSeason['season'];
+					$season = $this->getExtensionRecord($recordTable, $recordUid);
+					$menus = GeneralUtility::trimExplode(',', $this->processorConfiguration['addToMenus'], TRUE);
+					foreach($menus as $menu) {
+						if(isset($processedData[$menu])) {
+							$this->addExtensionRecordToMenu($season, $processedData[$menu]);
+							$this->addActionToMenu(
+								\TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('tx_sportms_action.teamseason.' . GeneralUtility::_GET('tx_sportms_team')['action'], 'sportms'),
+								$processedData[$menu]
+							);
+						}
+					}
+				}
+			}
+			
+			return $processedData;
+		}
+		
+		/**
+		 * Get the extension record
+		 *
+		 * @param string $recordTable
+		 * @param int $recordUid
+		 * @return array
+		 */
+		protected function getExtensionRecord(string $recordTable, int $recordUid) {
+			if($recordTable && $recordUid) {
+				/** @var QueryBuilder $queryBuilder */
+				$queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getQueryBuilderForTable($recordTable);
+				$row = $queryBuilder
+					->select('*')
+					->from($recordTable, 't')
+					->where($queryBuilder->expr()->eq('t.uid', $queryBuilder->createNamedParameter($recordUid, \PDO::PARAM_INT)))
+					->execute()
+					->fetch();
+				
+				if(is_array($row) && !empty($row)) {
+					return $row;
+				}
+			}
+			return [];
+		}
+		
+		/**
+		 * Add the extension record to the menu items
+		 *
+		 * @param array $record
+		 * @param array $menu
+		 */
+		protected function addExtensionRecordToMenu(array $record, array &$menu) {
+			$element = [];
+			$element['data'] = $record;
+			$element['title'] = ($record['label']) ?: $record['name'];
+			$this->addElementToMenu($element, $menu);
+		}
+		
+		/**
+		 * Add the action name to the menu items
+		 *
+		 * @param String $actionName
+		 * @param array $menu
+		 */
+		protected function addActionToMenu(string $actionName, array &$menu) {
+			$element = [];
+			$element['data'] = NULL;
+			$element['title'] = $actionName;
+			$this->addElementToMenu($element, $menu);
+		}
+		
+		/**
+		 * Add an element to the menu items
+		 *
+		 * @param array $element
+		 * @param array $menu
+		 */
+		protected function addElementToMenu(array $element, array &$menu) {
+			# All other elements in the menu shall be treated as currently not active
+			foreach($menu as &$menuItem) {
+				$menuItem['current'] = 0;
+			}
+			$menu[] = [
+				'data' => $element['data'],
+				'title' => $element['title'],
+				'active' => 1,
+				'current' => 1,
+				'link' => GeneralUtility::getIndpEnv('TYPO3_REQUEST_URL'),
+			];
+		}
+		
+	}

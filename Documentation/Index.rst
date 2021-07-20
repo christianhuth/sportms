@@ -9,13 +9,13 @@
 .. _start:
 
 =============================================================
-Club Management System
+Sport Management System
 =============================================================
 
 .. only:: html
 
 	:Classification:
-		extension_key
+		news
 
 	:Version:
 		|release|
@@ -23,30 +23,24 @@ Club Management System
 	:Language:
 		en
 
-	:Description:
-		enter description.
-
 	:Keywords:
-		comma,separated,list,keywords
+		news
 
 	:Copyright:
-		2017
+		2015
 
 	:Author:
-		Christian Knell
-
-	:Email:
-		author@example.com
+		Georg Ringer
 
 	:License:
-		This document is published under the Open Publication License
-		available from http://www.opencontent.org/openpub/
+		This document is published under the Open Content License
+		available from http://www.opencontent.org/opl.shtml
 
 	:Rendered:
 		|today|
 
 	The content of this document is related to TYPO3,
-	a GNU/GPL CMS/Framework available from `www.typo3.org <https://typo3.org/>`__.
+	a GNU/GPL CMS/Framework available from `www.typo3.org <http://www.typo3.org/>`_.
 
 
 	**Table of Contents**
@@ -54,8 +48,11 @@ Club Management System
 .. toctree::
 	:maxdepth: 3
 	:titlesonly:
+	:glob:
 
 	Introduction/Index
 	UsersManual/Index
 	AdministratorManual/Index
-	Links
+	DeveloperManual/Index
+	Tutorials/Index
+	Misc/Index

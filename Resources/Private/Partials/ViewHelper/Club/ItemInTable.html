@@ -8,17 +8,11 @@
             <f:if condition="{club.detailLink}">
                 <f:then>
                     <f:link.action action="sections" arguments="{club: club}" controller="Club" extensionName="Sportms" pageUid="{settings.club.sections.pid}" pluginName="club">
-                        <f:render partial="ViewHelper/Club/LogoInTable" arguments="{club: club}"/>
-                        <div class="tx-sportms-club-label-in-table">
-                            {club.name}
-                        </div>
+                        <f:render partial="ViewHelper/Club/Label" arguments="{club: club}"/>
                     </f:link.action>
                 </f:then>
                 <f:else>
-                    <f:render partial="ViewHelper/Club/LogoInTable" arguments="{club: club}"/>
-                    <div class="tx-sportms-club-label-in-table">
-                        {club.name}
-                    </div>
+                    <f:render partial="ViewHelper/Club/Label" arguments="{club: club}"/>
                 </f:else>
             </f:if>
         </div>

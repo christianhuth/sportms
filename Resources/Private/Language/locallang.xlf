@@ -34,6 +34,9 @@
 			</trans-unit>
 
 			<!-- Action -->
+			<trans-unit id="tx_sportms_action.club.sections">
+				<source>Abteilungen</source>
+			</trans-unit>
 			<trans-unit id="tx_sportms_action.competition.list">
 				<source>Wettbewerbe</source>
 			</trans-unit>
