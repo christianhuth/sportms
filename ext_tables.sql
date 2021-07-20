@@ -653,6 +653,14 @@ CREATE TABLE tx_sportms_domain_model_url
     sorting       int(11) DEFAULT '0' NOT NULL
 );
 
+#
+# Table structure for table 'tx_sportms_domain_model_urltype'
+#
+CREATE TABLE tx_sportms_domain_model_urltype
+(
+    label varchar(255) DEFAULT NULL
+);
+
 
 
 #

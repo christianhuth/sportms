@@ -1,0 +1,12 @@
+<html data-namespace-typo3-fluid="true"
+	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<f:link.external defaultScheme="tel:"
+				 uri="{phone.areaCode} {phone.callingNumber}">
+	<f:if condition="{phone.internationalAreaCode}">
+		<f:then>(+{phone.internationalAreaCode})</f:then>
+	</f:if>
+	{phone.areaCode} / {phone.callingNumber}
+</f:link.external>
+
+</html>

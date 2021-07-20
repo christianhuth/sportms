@@ -8,6 +8,9 @@
             <trans-unit id="tx_sportms_general.clock">
                 <source>Uhr</source>
             </trans-unit>
+            <trans-unit id="tx_sportms_general.contact_information">
+                <source>Kontaktdaten</source>
+            </trans-unit>
             <trans-unit id="tx_sportms_general.day">
                 <source>Tag</source>
             </trans-unit>
@@ -622,6 +625,19 @@
                 <source>URL</source>
             </trans-unit>
 
+
+        <!-- Domain Model UrlType -->
+            <trans-unit id="tx_sportms_domain_model_urltype">
+                <source>URL-Art</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_urltype.plural">
+                <source>URL-Arten</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_urltype.singular">
+                <source>URL-Art</source>
+            </trans-unit>
+
+
         <!-- Navigation -->
             <trans-unit id="tx_sportms_navigation.game.competition.dropdown">
                 <source>Wettbewerb</source>
@@ -632,6 +648,7 @@
             <trans-unit id="tx_sportms_navigation.team.history.dropdown">
                 <source>Historie</source>
             </trans-unit>
+
 
         </body>
     </file>

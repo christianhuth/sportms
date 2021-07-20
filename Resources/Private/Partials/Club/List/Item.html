@@ -8,18 +8,40 @@
 	</td>
 	<td>
 		<f:render arguments="{address: club.addresses.0}"
-				  partial="Address/Show"/>
+				  partial="ViewHelper/Contact/Address"/>
 	</td>
 	<td>
+		<f:if condition="{club.phones}">
+			<f:then>
+				Tel.:
+				<f:for each="{club.phones}" as="phone">
+					<f:render partial="ViewHelper/Contact/Phone"
+							  arguments="{phone: phone}"/>
+				</f:for>
+				<br/>
+			</f:then>
+		</f:if>
+		<f:if condition="{club.mails}">
+			<f:then>
+				Mail:
+				<f:for each="{club.mails}" as="mail">
+					<f:render partial="ViewHelper/Contact/Mail"
+							  arguments="{mail: mail}"/>
+				</f:for>
+				<br/>
+			</f:then>
+		</f:if>
 		<f:if condition="{club.urls}">
 			<f:then>
-				<f:link.external target="_blank" uri="{club.urls.0.url}">
-					{club.urls.0.url}
-				</f:link.external>
+				Web:
+				<f:for each="{club.urls}" as="url">
+					<f:render partial="ViewHelper/Contact/Url"
+							  arguments="{url: url}"/>
+				</f:for>
 			</f:then>
-			<f:else>
-				<div class="tx-sportms-table-center">-</div>
-			</f:else>
+		</f:if>
+		<f:if condition="!{club.phones} && !{club.mails} && !{club.urls}">
+			<div class="tx-sportms-table-center">-</div>
 		</f:if>
 	</td>
 </tr>

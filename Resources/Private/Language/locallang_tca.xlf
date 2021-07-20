@@ -4,36 +4,12 @@
         <header />
         <body>
 
-        <!-- General -->
+            <!-- General -->
             <trans-unit id="tx_sportms_general.abbreviation">
                 <source>Abkürzung</source>
             </trans-unit>
             <trans-unit id="tx_sportms_general.date">
                 <source>Tag</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_general.day">
-                <source>Tag</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_general.day.1">
-                <source>Montag</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_general.day.2">
-                <source>Dienstag</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_general.day.3">
-                <source>Mittwoch</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_general.day.4">
-                <source>Donnerstag</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_general.day.5">
-                <source>Freitag</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_general.day.6">
-                <source>Samstag</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_general.day.7">
-                <source>Sonntag</source>
             </trans-unit>
             <trans-unit id="tx_sportms_general.detail_link">
                 <source>Einzelansicht ermöglichen?</source>
@@ -82,7 +58,7 @@
             </trans-unit>
 
 
-        <!-- Domain Model Club -->
+            <!-- Domain Model Club -->
             <trans-unit id="tx_sportms_domain_model_club">
                 <source>Verein</source>
             </trans-unit>

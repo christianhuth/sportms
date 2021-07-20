@@ -27,8 +27,9 @@
 							</h4>
 							<f:render section="tablestart"/>
 							<f:for as="game" each="{gamesByDate}">
-								<f:render arguments="{game: game, settings: settings}"
-										  partial="CompetitionSeason/Games/Item"/>
+								<f:render
+										arguments="{game: game, settings: settings}"
+										partial="CompetitionSeason/Games/Item"/>
 							</f:for>
 							<f:render section="tableend"/>
 						</div>

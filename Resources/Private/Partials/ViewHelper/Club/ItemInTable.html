@@ -1,27 +1,8 @@
 <html data-namespace-typo3-fluid="true"
-	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
->
+	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
-<f:if condition="{club}">
-	<f:then>
-		<div class="tx-sportms-club-in-table">
-			<f:if condition="{club.detailLink}">
-				<f:then>
-					<f:link.action action="sections" arguments="{club: club}"
-								   controller="Club" extensionName="Sportms"
-								   pageUid="{settings.club.sections.pid}"
-								   pluginName="club">
-						<f:render arguments="{club: club}"
-								  partial="ViewHelper/Club/Label"/>
-					</f:link.action>
-				</f:then>
-				<f:else>
-					<f:render arguments="{club: club}"
-							  partial="ViewHelper/Club/Label"/>
-				</f:else>
-			</f:if>
-		</div>
-	</f:then>
-</f:if>
+<div class="tx-sportms-club-in-table">
+	<f:render arguments="{club: club}" partial="ViewHelper/Club/Label"/>
+</div>
 
 </html>

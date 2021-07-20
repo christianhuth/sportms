@@ -7,8 +7,9 @@
 		<f:form action="games" arguments="{teamSeason: teamSeason}"
 				class="form-horizontal" controller="CompetitionSeason"
 				extensionName="sportms" method="POST"
+				objectName="competitionSeason"
 				pageUid="{settings.competitionSeason.gameday.pid}"
-				pluginName="Competition">
+				pluginName="competition" enctype="multipart/form-data">
 			<f:render
 					arguments="{options: competitionSeasons,             settings: settings,     value: competitionSeason}"
 					partial="Form/Select/CompetitionSeason"/>

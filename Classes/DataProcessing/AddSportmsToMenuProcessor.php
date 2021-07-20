@@ -42,9 +42,9 @@
             }
             
             // Configuration for "club" argument
-            if (GeneralUtility::_GET('tx_sportms_club')['club']) {
+            if (GeneralUtility::_GET('tx_sportms_club')['club'] || GeneralUtility::_POST('tx_sportms_club')['club']) {
                 $club = $this->getExtensionRecord('tx_sportms_domain_model_club',
-                    (int)GeneralUtility::_GET('tx_sportms_club')['club']);
+                    ((int)GeneralUtility::_GET('tx_sportms_club')['club']) ?: (int)GeneralUtility::_POST('tx_sportms_club')['club']);
                 if ($club) {
                     $menus = GeneralUtility::trimExplode(',', $this->processorConfiguration['addToMenus'], true);
                     foreach ($menus as $menu) {
@@ -61,10 +61,10 @@
             }
             
             // Configuration for "competitionSeason" argument
-            if (GeneralUtility::_GET('tx_sportms_competition')['competitionSeason']) {
-                $recordTable = 'tx_sportms_domain_model_competitionseason';
-                $recordUid = (int)GeneralUtility::_GET('tx_sportms_competition')['competitionSeason'];
-                $competitionSeason = $this->getExtensionRecord($recordTable, $recordUid);
+            if (GeneralUtility::_GET('tx_sportms_competition')['competitionSeason'] || GeneralUtility::_POST('tx_sportms_competition')['competitionSeason']) {
+                $competitionSeason = $this->getExtensionRecord('tx_sportms_domain_model_competitionseason',
+                    ((int)GeneralUtility::_GET('tx_sportms_competition')['competitionSeason']) ?: (int)GeneralUtility::_POST('tx_sportms_competition')['competitionSeason']);
+                
                 if ($competitionSeason) {
                     $recordTable = 'tx_sportms_domain_model_competition';
                     $recordUid = $competitionSeason['competition'];
@@ -232,7 +232,6 @@
          */
         protected function addGameRecordToMenu(array $game, array &$menu)
         {
-    
             $teamSeasonHome = $this->getExtensionRecord('tx_sportms_domain_model_teamseason',
                 $game['team_season_home']);
             $teamHome = $this->getExtensionRecord('tx_sportms_domain_model_team',

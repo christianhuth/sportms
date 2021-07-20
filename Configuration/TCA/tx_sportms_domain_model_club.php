@@ -208,7 +208,7 @@
 				],
 			],
 			'phones' => [
-				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_phones',
+				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_phone.plural',
 				'config' => [
 					'appearance' => [
 						'enabledControls' => [
