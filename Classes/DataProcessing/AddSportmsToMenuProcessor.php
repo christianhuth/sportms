@@ -8,7 +8,7 @@
     use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
     use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
     use TYPO3\CMS\Frontend\ContentObject\DataProcessorInterface;
-    
+
     class AddSportmsToMenuProcessor implements DataProcessorInterface
     {
         
@@ -207,6 +207,27 @@
         }
         
         /**
+         * Add an element to the menu items
+         *
+         * @param array $element
+         * @param array $menu
+         */
+        protected function addElementToMenu(array $element, array &$menu)
+        {
+            # All other elements in the menu shall be treated as currently not active
+            foreach ($menu as &$menuItem) {
+                $menuItem['current'] = 0;
+            }
+            $menu[] = [
+                'data' => $element['data'],
+                'title' => $element['title'],
+                'active' => 1,
+                'current' => 1,
+                'link' => GeneralUtility::getIndpEnv('TYPO3_REQUEST_URL'),
+            ];
+        }
+        
+        /**
          * Add the action name to the menu items
          *
          * @param String $actionName
@@ -245,27 +266,6 @@
             $element['data'] = $game;
             $element['title'] = $teamHome['label'] . " - " . $teamGuest['label'];
             $this->addElementToMenu($element, $menu);
-        }
-        
-        /**
-         * Add an element to the menu items
-         *
-         * @param array $element
-         * @param array $menu
-         */
-        protected function addElementToMenu(array $element, array &$menu)
-        {
-            # All other elements in the menu shall be treated as currently not active
-            foreach ($menu as &$menuItem) {
-                $menuItem['current'] = 0;
-            }
-            $menu[] = [
-                'data' => $element['data'],
-                'title' => $element['title'],
-                'active' => 1,
-                'current' => 1,
-                'link' => GeneralUtility::getIndpEnv('TYPO3_REQUEST_URL'),
-            ];
         }
         
     }

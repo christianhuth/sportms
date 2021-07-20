@@ -4,7 +4,6 @@
     
     use Balumedien\Sportms\Domain\Model\CompetitionSeason;
     use Balumedien\Sportms\Domain\Model\CompetitionSeasonGameday;
-    use TYPO3\CMS\Core\Utility\GeneralUtility;
 
     /**
      * CompetitionSeasonController

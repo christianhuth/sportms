@@ -2,8 +2,6 @@
     
     namespace Balumedien\Sportms\ViewHelpers\Page;
     
-    use TYPO3\CMS\Core\Utility\GeneralUtility;
-
     class HeadlineViewHelper extends \TYPO3\CMS\Fluid\ViewHelpers\Link\ActionViewHelper
     {
         

@@ -3,7 +3,6 @@
     namespace Balumedien\Sportms\Controller;
     
     use Balumedien\Sportms\Domain\Model\TeamSeason;
-    use TYPO3\CMS\Core\Utility\GeneralUtility;
     use TYPO3\CMS\Extbase\Persistence\QueryInterface;
 
     /**
