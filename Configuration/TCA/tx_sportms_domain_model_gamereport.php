@@ -1,146 +1,151 @@
 <?php
-	
-	if(!defined('TYPO3_MODE')) {
-		die ('Access denied.');
-	}
-	
-	return [
-		'ctrl' => [
-			'crdate' => 'crdate',
-			'cruser_id' => 'cruser_id',
-			'delete' => 'deleted',
-			'enablecolumns' => [
-				'disabled' => 'hidden',
-				'starttime' => 'starttime',
-				'endtime' => 'endtime',
-			],
-			'hideTable' => TRUE,
-			'iconfile' => 'EXT:sportms/Resources/Public/Icons/tx_sportms_domain_model_gamereport.svg',
-			'label' => 'headline',
-			'searchFields' => 'headline, text, author',
-			'sortby' => 'sorting',
-			'title' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_gamereport',
-			'tstamp' => 'tstamp',
-			'versioningWS' => TRUE,
-		],
-		'types' => [
-			'1' => ['showitem' => 'game, headline, text, author, date'],
-		],
-		'palettes' => [
-			'1' => ['showitem' => ''],
-		],
-		'columns' => [
-			
-			't3ver_label' => [
-				'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.versionLabel',
-				'config' => [
-					'type' => 'input',
-					'size' => 30,
-					'max' => 255,
-				],
-			],
-			
-			'hidden' => [
-				'exclude' => TRUE,
-				'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.visible',
-				'config' => [
-					'items' => [
-						[
-							0 => '',
-							1 => '',
-							'invertStateDisplay' => TRUE,
-						],
-					],
-					'renderType' => 'checkboxToggle',
-					'type' => 'check',
-				],
-			],
-			
-			'starttime' => [
-				'exclude' => TRUE,
-				'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.starttime',
-				'config' => [
-					'type' => 'input',
-					'renderType' => 'inputDateTime',
-					'eval' => 'datetime,int',
-					'default' => 0,
-					'behaviour' => [
-						'allowLanguageSynchronization' => TRUE,
-					],
-				],
-			],
-			'endtime' => [
-				'exclude' => TRUE,
-				'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.endtime',
-				'config' => [
-					'type' => 'input',
-					'renderType' => 'inputDateTime',
-					'eval' => 'datetime,int',
-					'default' => 0,
-					'range' => [
-						'upper' => mktime(0, 0, 0, 1, 1, 2038),
-					],
-					'behaviour' => [
-						'allowLanguageSynchronization' => TRUE,
-					],
-				],
-			],
-			
-			'game' => [
-				'exclude' => 1,
-				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_gamereport.game',
-				'config' => [
-					'eval' => 'required',
-					'foreign_table' => 'tx_sportms_domain_model_game',
-					'items' => [
-						['LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ""],
-					],
-					'maxItems' => 1,
-					'minItems' => 1,
-					'renderType' => 'selectSingle',
-					'size' => 1,
-					'type' => 'select',
-				],
-			],
-			
-			'headline' => [
-				'exclude' => 1,
-				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_gamereport.headline',
-				'config' => [
-					'eval' => 'trim, required',
-					'size' => 100,
-					'type' => 'input',
-				],
-			],
-			'text' => [
-				'exclude' => 1,
-				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_gamereport.text',
-				'config' => [
-					'enableRichtext' => TRUE,
-					'eval' => 'trim, required',
-					'type' => 'text',
-				],
-			],
-			'author' => [
-				'exclude' => 1,
-				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_gamereport.author',
-				'config' => [
-					'eval' => 'trim',
-					'size' => 30,
-					'type' => 'input',
-				],
-			],
-			'date' => [
-				'exclude' => 1,
-				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_gamereport.date',
-				'config' => [
-					'type' => 'input',
-					'size' => 8,
-					'eval' => 'date',
-					'placeholder' => 'dd-mm-yyyy',
-					'renderType' => 'inputDateTime',
-				],
-			],
-		
-		],
-	];
+    
+    if (!defined('TYPO3_MODE')) {
+        die ('Access denied.');
+    }
+    
+    return [
+        'ctrl' => [
+            'crdate' => 'crdate',
+            'cruser_id' => 'cruser_id',
+            'delete' => 'deleted',
+            'enablecolumns' => [
+                'disabled' => 'hidden',
+                'starttime' => 'starttime',
+                'endtime' => 'endtime',
+            ],
+            'hideTable' => true,
+            'iconfile' => 'EXT:sportms/Resources/Public/Icons/tx_sportms_domain_model_gamereport.svg',
+            'label' => 'headline',
+            'searchFields' => 'headline, text, author',
+            'sortby' => 'sorting',
+            'title' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_gamereport',
+            'tstamp' => 'tstamp',
+            'versioningWS' => true,
+        ],
+        'types' => [
+            '1' => [
+                'showitem' => ' --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.tab.general,
+                                        game,
+                                        headline,
+                                        --palette;;author_date,
+                                        text',
+            ],
+        ],
+        'palettes' => [
+            'author_date' => ['showitem' => 'author, date'],
+        ],
+        'columns' => [
+            
+            't3ver_label' => [
+                'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.versionLabel',
+                'config' => [
+                    'type' => 'input',
+                    'size' => 30,
+                    'max' => 255,
+                ],
+            ],
+            
+            'hidden' => [
+                'exclude' => true,
+                'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.visible',
+                'config' => [
+                    'items' => [
+                        [
+                            0 => '',
+                            1 => '',
+                            'invertStateDisplay' => true,
+                        ],
+                    ],
+                    'renderType' => 'checkboxToggle',
+                    'type' => 'check',
+                ],
+            ],
+            'starttime' => [
+                'exclude' => true,
+                'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.starttime',
+                'config' => [
+                    'type' => 'input',
+                    'renderType' => 'inputDateTime',
+                    'eval' => 'datetime,int',
+                    'default' => 0,
+                    'behaviour' => [
+                        'allowLanguageSynchronization' => true,
+                    ],
+                ],
+            ],
+            'endtime' => [
+                'exclude' => true,
+                'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.endtime',
+                'config' => [
+                    'type' => 'input',
+                    'renderType' => 'inputDateTime',
+                    'eval' => 'datetime,int',
+                    'default' => 0,
+                    'range' => [
+                        'upper' => mktime(0, 0, 0, 1, 1, 2038),
+                    ],
+                    'behaviour' => [
+                        'allowLanguageSynchronization' => true,
+                    ],
+                ],
+            ],
+            
+            'game' => [
+                'exclude' => 1,
+                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_game',
+                'config' => [
+                    'eval' => 'required',
+                    'foreign_table' => 'tx_sportms_domain_model_game',
+                    'items' => [
+                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.select', ""],
+                    ],
+                    'maxItems' => 1,
+                    'minItems' => 1,
+                    'renderType' => 'selectSingle',
+                    'size' => 1,
+                    'type' => 'select',
+                ],
+            ],
+            
+            'headline' => [
+                'exclude' => 1,
+                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_gamereport.headline',
+                'config' => [
+                    'eval' => 'trim, required',
+                    'size' => 100,
+                    'type' => 'input',
+                ],
+            ],
+            'text' => [
+                'exclude' => 1,
+                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_gamereport.text',
+                'config' => [
+                    'enableRichtext' => true,
+                    'eval' => 'trim, required',
+                    'type' => 'text',
+                ],
+            ],
+            'author' => [
+                'exclude' => 1,
+                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_gamereport.author',
+                'config' => [
+                    'eval' => 'trim',
+                    'size' => 30,
+                    'type' => 'input',
+                ],
+            ],
+            'date' => [
+                'exclude' => 1,
+                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.date',
+                'config' => [
+                    'type' => 'input',
+                    'size' => 8,
+                    'eval' => 'date',
+                    'placeholder' => 'dd-mm-yyyy',
+                    'renderType' => 'inputDateTime',
+                ],
+            ],
+        
+        ],
+    ];

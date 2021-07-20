@@ -1,6 +1,8 @@
 <?php
-	
-	if(!defined('TYPO3_MODE')) {
+    
+    use Balumedien\Sportms\Classes\UserFunc\UserFunc;
+    
+    if(!defined('TYPO3_MODE')) {
 		die ('Access denied.');
 	}
 	
@@ -17,10 +19,10 @@
 			'hideTable' => TRUE,
 			'iconfile' => 'EXT:sportms/Resources/Public/Icons/tx_sportms_domain_model_gameresultset.svg',
 			'label' => '',
-			'label_userFunc' => \Balumedien\Sportms\Classes\UserFunc\UserFunc::class . '->GameResultSetLabel',
+			'label_userFunc' => UserFunc::class . '->GameResultSetLabel',
 			'searchFields' => '',
 			'sortby' => 'sorting',
-			'title' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_gameresultset',
+			'title' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_gameresultset',
 			'tstamp' => 'tstamp',
 			'versioningWS' => TRUE,
 		],
@@ -90,12 +92,12 @@
 			
 			'game' => [
 				'exclude' => 1,
-				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_gameresultset.game',
+				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_gameresultset.game',
 				'config' => [
 					'eval' => 'required',
 					'foreign_table' => 'tx_sportms_domain_model_game',
 					'items' => [
-						['LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ""],
+						['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.select', ""],
 					],
 					'maxItems' => 1,
 					'renderType' => 'selectSingle',
@@ -106,7 +108,7 @@
 			
 			'set_number' => [
 				'exclude' => 1,
-				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_gameresultset.set_number',
+				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_gameresultset.set_number',
 				'config' => [
 					'type' => 'input',
 					'size' => 10,
@@ -115,7 +117,7 @@
 			],
 			'result_home' => [
 				'exclude' => 1,
-				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_gameresultset.result_home',
+				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_gameresultset.result_home',
 				'config' => [
 					'type' => 'input',
 					'size' => 10,
@@ -124,7 +126,7 @@
 			],
 			'result_guest' => [
 				'exclude' => 1,
-				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_gameresultset.result_guest',
+				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_gameresultset.result_guest',
 				'config' => [
 					'type' => 'input',
 					'size' => 10,

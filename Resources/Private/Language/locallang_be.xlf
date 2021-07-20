@@ -3,6 +3,8 @@
     <file source-language="en" datatype="plaintext" original="messages" date="2014-06-02T11:47:18Z" product-name="news">
         <header />
         <body>
+
+        <!-- Content Element -->
             <trans-unit id="ce_plugin_club_title" xml:space="preserve">
                 <source>Club Management (sportms)</source>
             </trans-unit>
@@ -33,6 +35,177 @@
             <trans-unit id="ce_plugin_team_description" xml:space="preserve">
                 <source>Views for teams managed by sportms</source>
             </trans-unit>
+
+        <!-- General -->
+            <trans-unit id="tx_sportms_general.abbreviation">
+                <source>Abkürzung</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.date">
+                <source>Datum</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.detail_link">
+                <source>Einzelansicht ermöglichen?</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.select">
+                <source>Bitte wählen</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.slug">
+                <source>Sprechende URL</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.startdate">
+                <source>Startdatum</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.enddate">
+                <source>Enddatum</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.time">
+                <source>Uhrzeit</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.time_start">
+                <source>Startzeit</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.time_end">
+                <source>Endzeit</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.palette.date">
+                <source>Zeitraum</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.palette.visibility_general">
+                <source>Generelle Sichtbarkeit im Frontend</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.palette.visibility_detail">
+                <source>Sichtbarkeit der Einzelansicht</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.tab.date">
+                <source>Zeitraum</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.tab.details">
+                <source>Details</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.tab.general">
+                <source>Allgemein</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.tab.language">
+                <source>Sprache</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.tab.visibility">
+                <source>Sichtbarkeit</source>
+            </trans-unit>
+
+
+        <!-- Domain Model Game -->
+            <trans-unit id="tx_sportms_domain_model_game.game_appointment">
+                <source>Ansetzungsstatus</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.game_appointment.canceled">
+                <source>Abgesagt</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.game_appointment.dropped">
+                <source>Abgesetzt</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.game_appointment.finished">
+                <source>Beendet</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.game_appointment.planned">
+                <source>Geplant</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.game_appointment.running">
+                <source>Laufend</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.game_appointment.uncompleted">
+                <source>Abgebrochen</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.palette.result_end_regular">
+                <source>Endergebnis nach regulärer Spielzeit</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.palette.result_end_additional">
+                <source>Endergebnis nach erweiterter Spielzeit</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.palette.result_halfs">
+                <source>Ergebnis nach Halbzeiten</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.palette.result_thirds">
+                <source>Ergebnis nach Dritteln</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.palette.result_fourths">
+                <source>Ergebnis nach Vierteln</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.palette.result_sets">
+                <source>Ergebnis nach Sätzen</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.palette.result_special">
+                <source>Sonderwertung</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.tab.result">
+                <source>Ergebnis</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.tab.home">
+                <source>Heim</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.tab.guest">
+                <source>Gast</source>
+            </trans-unit>
+
+
+        <!-- Domain Model Person -->
+            <trans-unit id="tx_sportms_domain_model_person.show_birthday">
+                <source>Geburtsdatum zeigen</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_person.tab.personal">
+                <source>Persönliche Daten</source>
+            </trans-unit>
+
+
+        <!-- Domain Model PersonProfile -->
+            <trans-unit id="tx_sportms_domain_model_personprofile.palette.main_position">
+                <source>Hauptposition</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_personprofile.palette.side_positions">
+                <source>Nebenpositionen</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_personprofile.profiletype">
+                <source>Profilart</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_personprofile.profiletype.official">
+                <source>Funktionär</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_personprofile.profiletype.player">
+                <source>Spieler</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_personprofile.profiletype.referee">
+                <source>Schiedsrichter</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_personprofile.profile_images">
+                <source>Profilbilder</source>
+            </trans-unit>
+
+
+        <!-- Domain Model SportPosition -->
+            <trans-unit id="tx_sportms_domain_model_sportposition.x_position">
+                <source>Position X-Achse</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_sportposition.y_position">
+                <source>Position Y-Achse</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_sportposition.tab.representation">
+                <source>Darstellung</source>
+            </trans-unit>
+
+
+        <!-- Domain Model Team -->
+            <trans-unit id="tx_sportms_domain_model_team.dummy">
+                <source>Spielfrei</source>
+            </trans-unit>
+
+
+        <!-- Domain Model TeamSeasonSquadMember -->
+            <trans-unit id="tx_sportms_domain_model_teamseasonsquadmember.palette.visibility_squad">
+                <source>Sichtbarkeit im Mannschaftkader</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_teamseasonsquadmember.palette.transfer">
+                <source>Transfer</source>
+            </trans-unit>
+
         </body>
     </file>
 </xliff>

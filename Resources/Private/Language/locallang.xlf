@@ -434,27 +434,6 @@
             <trans-unit id="tx_sportms_domain_model_game.captain">
                 <source>Mannschaftskapitän</source>
             </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_game.game_appointment">
-                <source>Ansetzungsstatus</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_game.game_appointment.canceled">
-                <source>Abgesagt</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_game.game_appointment.dropped">
-                <source>Abgesetzt</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_game.game_appointment.finished">
-                <source>Beendet</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_game.game_appointment.planned">
-                <source>Geplant</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_game.game_appointment.running">
-                <source>Laufend</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_game.game_appointment.uncompleted">
-                <source>Abgebrochen</source>
-            </trans-unit>
             <trans-unit id="tx_sportms_domain_model_game.game_lineup_guest_starts">
                 <source>Startaufstellung</source>
             </trans-unit>
@@ -559,9 +538,6 @@
             </trans-unit>
             <trans-unit id="tx_sportms_domain_model_game.result_thirds_third_guest">
                 <source>Gastergebnis (3.Drittel)</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_game.result_sets">
-                <source>Spielsätze</source>
             </trans-unit>
             <trans-unit id="tx_sportms_domain_model_game.result_special_guest">
                 <source>Sonderwertung (Gast)</source>
@@ -725,8 +701,11 @@
             <trans-unit id="tx_sportms_domain_model_gameperiod">
                 <source>Spielabschnitt</source>
             </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_gameperiods">
+            <trans-unit id="tx_sportms_domain_model_gameperiod.plural">
                 <source>Spielabschnitte</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gameperiod.singular">
+                <source>Spielabschnitt</source>
             </trans-unit>
             <trans-unit id="tx_sportms_domain_model_gameperiod.duration">
                 <source>Dauer (in Minuten)</source>
@@ -1004,21 +983,6 @@
             <trans-unit id="tx_sportms_domain_model_personprofile.singular">
                 <source>Profil</source>
             </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_personprofile.profiletype">
-                <source>Profilart</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_personprofile.profiletype.official">
-                <source>Funktionär</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_personprofile.profiletype.player">
-                <source>Spieler</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_personprofile.profiletype.referee">
-                <source>Schiedsrichter</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_personprofile.profile_images">
-                <source>Profilbilder</source>
-            </trans-unit>
 
 
         <!-- Domain Model Phone -->
@@ -1246,9 +1210,6 @@
             </trans-unit>
             <trans-unit id="tx_sportms_domain_model_teamseasonsquadmember.leaving">
                 <source>Abgang</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_teamseasonsquadmember.hidden_in_squad_list">
-                <source>In Kaderliste sichtbar</source>
             </trans-unit>
 
 
