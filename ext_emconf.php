@@ -1,6 +1,6 @@
 <?php
 	
-	$EM_CONF[$_EXTKEY] = array(
+	$EM_CONF[$_EXTKEY] = [
 		'title' => 'Sport Management System',
 		'description' => '',
 		'category' => 'plugin',
@@ -12,14 +12,19 @@
 		'createDirs' => '',
 		'clearCacheOnLoad' => 0,
 		'version' => '0.0.2',
-		'constraints' => array(
-			'depends' => array(
+		'autoload' => [
+			'psr-4' => [
+				'Balumedien\\Sportms\\' => 'Classes'
+			],
+		],
+		'constraints' => [
+			'depends' => [
 				'static_info_tables' => '',
 				'typo3' => '9.5',
-			),
-			'conflicts' => array(
-			),
-			'suggests' => array(
-			),
-		),
-	);
+			],
+			'conflicts' => [
+			],
+			'suggests' => [
+			],
+		],
+	];
