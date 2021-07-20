@@ -1,9 +1,10 @@
 <?php
-	
-	namespace Balumedien\Sportms\Domain\Repository;
-	
-	class ClubMembersRepository extends SportMSBaseRepository {
-		
-	}
-	
-	?>
+    
+    namespace Balumedien\Sportms\Domain\Repository;
+    
+    class ClubMembersRepository extends SportMSBaseRepository
+    {
+    
+    }
+    
+    ?>

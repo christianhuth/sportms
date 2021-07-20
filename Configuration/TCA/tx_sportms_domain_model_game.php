@@ -1,6 +1,8 @@
 <?php
-	
-	if(!defined('TYPO3_MODE')) {
+    
+    use Balumedien\Sportms\Configuration\TCA\UserFunc\UserFunc;
+    
+    if(!defined('TYPO3_MODE')) {
 		die ('Access denied.');
 	}
 	
@@ -17,7 +19,7 @@
 			],
 			'iconfile' => 'EXT:sportms/Resources/Public/Icons/tx_sportms_domain_model_game.svg',
 			'label' => '',
-			'label_userFunc' => \Balumedien\Sportms\Configuration\TCA\UserFunc\UserFunc::class . '->GameLabel',
+			'label_userFunc' => UserFunc::class . '->GameLabel',
 			'searchFields' => '',
 			'title' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_game',
 			'tstamp' => 'tstamp',

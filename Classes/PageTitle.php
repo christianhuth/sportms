@@ -1,7 +1,8 @@
 <?php
-	
-	namespace Balumedien\Sportms\PageTitle;
-	
-	class PageTitle {
-	
-	}
+    
+    namespace Balumedien\Sportms\PageTitle;
+    
+    class PageTitle
+    {
+    
+    }
