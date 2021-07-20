@@ -649,6 +649,7 @@ CREATE TABLE tx_sportms_domain_model_url
 (
     foreign_uid   int(11) DEFAULT 0 NOT NULL,
     foreign_table varchar(255) DEFAULT ''  NOT NULL,
+    url_type      int(11) unsigned DEFAULT NULL,
     url           varchar(255) DEFAULT '0' NOT NULL,
     sorting       int(11) DEFAULT '0' NOT NULL
 );
