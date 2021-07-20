@@ -154,7 +154,7 @@
                         if (isset($processedData[$menu])) {
                             $this->addExtensionRecordToMenu($season, $processedData[$menu]);
                             $this->addActionToMenu(
-                                LocalizationUtility::translate('tx_sportms_action.teamseason.' . GeneralUtility::_GET('tx_sportms_teamseason')['action'],
+                                LocalizationUtility::translate('tx_sportms_action.teamseason.' . GeneralUtility::_GET('tx_sportms_team')['action'],
                                     'sportms'),
                                 $processedData[$menu]
                             );

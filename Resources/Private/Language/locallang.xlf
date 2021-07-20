@@ -35,6 +35,60 @@
             <trans-unit id="tx_sportms_general.day.7">
                 <source>Sonntag</source>
             </trans-unit>
+            <trans-unit id="tx_sportms_general.sex">
+                <source>Biologisches Geschlecht</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.sex.diverse">
+                <source>divers</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.sex.male">
+                <source>männlich</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.sex.female">
+                <source>weiblich</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.label">
+                <source>Bezeichnung</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.zodiac_sign">
+                <source>Sternzeichen</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.zodiac_sign.1">
+                <source>Wassermann</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.zodiac_sign.2">
+                <source>Fische</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.zodiac_sign.3">
+                <source>Widder</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.zodiac_sign.4">
+                <source>Stier</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.zodiac_sign.5">
+                <source>Zwillinge</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.zodiac_sign.6">
+                <source>Krebs</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.zodiac_sign.7">
+                <source>Löwe</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.zodiac_sign.8">
+                <source>Jungfrau</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.zodiac_sign.9">
+                <source>Waage</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.zodiac_sign.10">
+                <source>Skorpion</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.zodiac_sign.11">
+                <source>Schütze</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.zodiac_sign.12">
+                <source>Steinbock</source>
+            </trans-unit>
 
         <!-- Action -->
             <trans-unit id="tx_sportms_action.club.sections">
@@ -121,7 +175,7 @@
                 <source>Region</source>
             </trans-unit>
 
-        <!-- Domain Model -->
+        <!-- Domain Model Club -->
             <trans-unit id="tx_sportms_domain_model_club">
                 <source>Verein</source>
             </trans-unit>
@@ -137,29 +191,50 @@
             <trans-unit id="tx_sportms_domain_model_club.colours">
                 <source>Vereinsfarben</source>
             </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_club.image">
-                <source>Vereinslogos</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_club.contact">
-                <source>Kontaktdaten</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_club.section">
-                <source>Abteilungen</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_club.official">
-                <source>Funktionäre</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_club.dateOfFounding">
+            <trans-unit id="tx_sportms_domain_model_club.date_of_founding">
                 <source>Gründungsdatum</source>
             </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_club.yearOfFounding">
+            <trans-unit id="tx_sportms_domain_model_club.year_of_founding">
                 <source>Gründungsjahr</source>
             </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_club.clubMembers">
-                <source>Mitglieder</source>
-            </trans-unit>
             <trans-unit id="tx_sportms_domain_model_club.logos">
-                <source>Logos</source>
+                <source>Vereinslogos</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_club.home_venues">
+                <source>Heimspielstätten</source>
+            </trans-unit>
+
+
+        <!-- Domain Model ClubGround -->
+            <trans-unit id="tx_sportms_domain_model_clubground">
+                <source>Vereinsgelände</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_clubground.plural">
+                <source>Vereinsgelände</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_clubground.singular">
+                <source>Vereinsgelände</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_clubground.journey">
+                <source>Anfahrt</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_clubground.description">
+                <source>Beschreibung</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_clubground.images">
+                <source>Bilder</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_clubground.club_owned">
+                <source>In Vereinsbesitz?</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_clubground.club_owned_since">
+                <source>In Vereinsbesitz seit</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_clubground.year_of_building">
+                <source>Baujahr</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_clubground.date_of_building">
+                <source>Baudatum</source>
             </trans-unit>
 
 
@@ -178,6 +253,33 @@
             </trans-unit>
             <trans-unit id="tx_sportms_domain_model_clubmembers.date">
                 <source>Erfassungsdatum</source>
+            </trans-unit>
+
+
+        <!-- Domain Model ClubOfficial -->
+            <trans-unit id="tx_sportms_domain_model_clubofficial">
+                <source>Vereinsfunktionär</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_clubofficial.plural">
+                <source>Vereinsfunktionäre</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_clubofficial.singular">
+                <source>Vereinsfunktionär</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_clubofficial.until_today">
+                <source>Wird bis heute ausgeführt?</source>
+            </trans-unit>
+
+
+        <!-- Domain Model ClubOfficialJob -->
+            <trans-unit id="tx_sportms_domain_model_clubofficialjob">
+                <source>Vereinsfunktionärsaufgabe</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_clubofficialjob.plural">
+                <source>Vereinsfunktionärsaufgaben</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_clubofficialjob.plural">
+                <source>Vereinsfunktionärsaufgabe</source>
             </trans-unit>
 
 
@@ -214,6 +316,31 @@
             </trans-unit>
 
 
+        <!-- Domain Model ClubSectionOfficial -->
+            <trans-unit id="tx_sportms_domain_model_clubsectionofficial">
+                <source>Abteilungsfunktionär</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_clubsectionofficial.plural">
+                <source>Abteilungsfunktionäre</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_clubsectionofficial.singular">
+                <source>Abteilungsfunktionär</source>
+            </trans-unit>
+
+
+        <!-- Domain Model ClubSectionOfficialJob -->
+            <trans-unit id="tx_sportms_domain_model_clubsectionofficialjob">
+                <source>Abteilungsfunktionärsaufgabe</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_clubsectionofficialjob.plural">
+                <source>Abteilungsfunktionärsaufgaben</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_clubsectionofficialjob.singular">
+                <source>Abteilungsfunktionärsaufgabe</source>
+            </trans-unit>
+
+
+        <!-- Domain Model Competition -->
             <trans-unit id="tx_sportms_domain_model_competition">
                 <source>Wettbewerb</source>
             </trans-unit>
@@ -222,9 +349,6 @@
             </trans-unit>
             <trans-unit id="tx_sportms_domain_model_competition.singular">
                 <source>Wettbewerb</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_competition.label">
-                <source>Wettbewerbsbezeichnung</source>
             </trans-unit>
             <trans-unit id="tx_sportms_domain_model_competition.short">
                 <source>Kurzform</source>
@@ -252,22 +376,52 @@
             </trans-unit>
 
 
-            <trans-unit id="tx_sportms_domain_model_competition_type">
+        <!-- Domain Model CompetitionSeason -->
+            <trans-unit id="tx_sportms_domain_model_competitionseason">
+                <source>Wettbewerbsinstanz</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_competitionseason.plural">
+                <source>Wettbewerbinstanzen</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_competitionseason.singular">
+                <source>Wettbewerbinstanz</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_competitionseason.competition_season_teams">
+                <source>Teilnehmende Mannschaften</source>
+            </trans-unit>
+
+
+        <!-- Domain Model CompetitionSeasonGameday -->
+            <trans-unit id="tx_sportms_domain_model_competitionseasongameday">
+                <source>Spieltag</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_competitionseasongameday.plural">
+                <source>Spieltage</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_competitionseasongameday.singular">
+                <source>Spieltag</source>
+            </trans-unit>
+
+
+        <!-- Domain Model CompetitionType -->
+            <trans-unit id="tx_sportms_domain_model_competitiontype">
                 <source>Wettbewerbsart</source>
             </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_competition_type.label">
-                <source>Bezeichnung</source>
+            <trans-unit id="tx_sportms_domain_model_competitiontype.plural">
+                <source>Wettbewerbsarten</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_competitiontype.singular">
+                <source>Wettbewerbsart</source>
             </trans-unit>
 
 
+        <!-- Domain Model ContactType -->
             <trans-unit id="tx_sportms_domain_model_contact_type">
                 <source>Kontaktart</source>
             </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_contact_type.label">
-                <source>Bezeichnung</source>
-            </trans-unit>
 
 
+        <!-- Domain Model Game -->
             <trans-unit id="tx_sportms_domain_model_game">
                 <source>Spiel</source>
             </trans-unit>
@@ -275,7 +429,145 @@
                 <source>Spiele</source>
             </trans-unit>
             <trans-unit id="tx_sportms_domain_model_game.singular">
-                <source>Spiel</source>
+                <source>Spiele</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.captain">
+                <source>Mannschaftskapitän</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.game_appointment">
+                <source>Ansetzungsstatus</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.game_appointment.canceled">
+                <source>Abgesagt</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.game_appointment.dropped">
+                <source>Abgesetzt</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.game_appointment.finished">
+                <source>Beendet</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.game_appointment.planned">
+                <source>Geplant</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.game_appointment.running">
+                <source>Laufend</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.game_appointment.uncompleted">
+                <source>Abgebrochen</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.game_lineup_guest_starts">
+                <source>Startaufstellung</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.game_lineup_guest_substitutes">
+                <source>Ersatzbank</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.game_lineup_home_starts">
+                <source>Startaufstellung</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.game_lineup_home_substitutes">
+                <source>Ersatzbank</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.game_rating">
+                <source>Spielwertung</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.game_rating.normal">
+                <source>Wertung gemäß Endergebnis</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.game_rating.special">
+                <source>Sonderwertung</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.game_rating.invalid">
+                <source>Keine Wertung</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.period_count">
+                <source>Anzahl der Spielabschnitte</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.period_duration">
+                <source>Dauer der Spielabschnitte (in Minuten)</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.result_end_additional">
+                <source>Spiel nicht beendet nach regulärer Spielzeit?</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.result_end_overtime_guest">
+                <source>Gastergebnis (Verlängerung)</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.result_end_overtime_home">
+                <source>Heimergebnis (Verlängerung)</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.result_end_penalty_guest">
+                <source>Gastergebnis (Elfmeterschießen)</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.result_end_penalty_home">
+                <source>Heimergebnis (Elfmeterschießen)</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.result_end_regular_home">
+                <source>Heimergebnis (reguläre Spielzeit)</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.result_end_regular_guest">
+                <source>Gastergebnis (reguläre Spielzeit)</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.result_fourths_first_home">
+                <source>Heimergebnis (1.Viertel)</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.result_fourths_first_guest">
+                <source>Gastergebnis (1.Viertel)</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.result_fourths_second_home">
+                <source>Heimergebnis (2.Viertel)</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.result_fourths_second_guest">
+                <source>Gastergebnis (2.Viertel)</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.result_fourths_third_home">
+                <source>Heimergebnis (3.Viertel)</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.result_fourths_third_guest">
+                <source>Gastergebnis (3.Viertel)</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.result_fourths_fourth_home">
+                <source>Heimergebnis (4.Viertel)</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.result_fourths_fourth_guest">
+                <source>Gastergebnis (4.Viertel)</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.result_halfs_first_home">
+                <source>Heimergebnis (1. Halbzeit)</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.result_halfs_first_guest">
+                <source>Gastergebnis (1. Halbzeit)</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.result_halfs_second_home">
+                <source>Heimergebnis (2. Halbzeit)</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.result_halfs_second_guest">
+                <source>Gastergebnis (2. Halbzeit)</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.result_thirds_first_home">
+                <source>Heimergebnis (1.Drittel)</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.result_thirds_first_guest">
+                <source>Gastergebnis (1.Drittel)</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.result_thirds_second_home">
+                <source>Heimergebnis (2.Drittel)</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.result_thirds_second_guest">
+                <source>Gastergebnis (2.Drittel)</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.result_thirds_third_home">
+                <source>Heimergebnis (3.Drittel)</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.result_thirds_third_guest">
+                <source>Gastergebnis (3.Drittel)</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.result_sets">
+                <source>Spielsätze</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.result_special_guest">
+                <source>Sonderwertung (Gast)</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.result_special_home">
+                <source>Sonderwertung (Heim)</source>
             </trans-unit>
             <trans-unit id="tx_sportms_domain_model_game.result_special_reason">
                 <source>Grund für die Sonderwertung</source>
@@ -291,6 +583,279 @@
             </trans-unit>
             <trans-unit id="tx_sportms_domain_model_game.result_special_reason.4">
                 <source>Nicht-Antritt Gast</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.result_type">
+                <source>Ergebnisart</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.result_type_halfs">
+                <source>Halbzeiten</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.result_type_thirds">
+                <source>Drittel</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.result_type_quarters">
+                <source>Viertel</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.result_type_sets">
+                <source>Sätze</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.spectators">
+                <source>Zuschauerzahl</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.team_season_guest">
+                <source>Gastmannschaft</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.team_season_home">
+                <source>Heimmannschaft</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.trainer_guest">
+                <source>Gasttrainer</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.trainer_home">
+                <source>Heimtrainer</source>
+            </trans-unit>
+
+
+        <!-- Domain Model GameChange -->
+            <trans-unit id="tx_sportms_domain_model_gamechange">
+                <source>Auswechslung</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gamechange.plural">
+                <source>Auswechslungen</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gamechange.singular">
+                <source>Auswechslung</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gamechange.period">
+                <source>Spielabschnitt</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gamechange.minute">
+                <source>Spielminute</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gamechange.minute_additional">
+                <source>Nachspielzeit</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gamechange.person_in">
+                <source>Eingewechselte Person</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gamechange.person_out">
+                <source>Ausgewechselte Person</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gamechange.reason">
+                <source>Wechselgrund</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gamechange.reason.performance">
+                <source>Leistung</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gamechange.reason.tactics">
+                <source>Taktik</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gamechange.reason.injury">
+                <source>Verletzung</source>
+            </trans-unit>
+
+
+        <!-- Domain Model GameGoal -->
+            <trans-unit id="tx_sportms_domain_model_gamegoal">
+                <source>Tor</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gamegoal.plural">
+                <source>Tore</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gamegoal.singular">
+                <source>Tor</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gamegoal.goal_home">
+                <source>Spielstand (Heim)</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gamegoal.goal_guest">
+                <source>Spielstand (Gast)</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gamegoal.period">
+                <source>Spielabschnitt</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gamegoal.minute">
+                <source>Spielminute</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gamegoal.minute_additional">
+                <source>Nachspielzeit</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gamegoal.scorer">
+                <source>Torschütze</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gamegoal.assist">
+                <source>Vorlagengeber</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gamegoal.own_goal">
+                <source>Eigentor?</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gamegoal.goal_type">
+                <source>Torart</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gamegoal.goal_type.penalty">
+                <source>Elfmeter</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gamegoal.goal_type.freekick">
+                <source>Direkter Freistoß</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gamegoal.goal_type.corner">
+                <source>Direkter Eckball</source>
+            </trans-unit>
+
+
+        <!-- Domain Model GameLineup -->
+            <trans-unit id="tx_sportms_domain_model_gamelineup">
+                <source>Aufstellung</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gamelineup.plural">
+                <source>Aufstellungen</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gamelineup.singular">
+                <source>Aufstellung</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gamelineup.type">
+                <source>Aufstellungsart</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gamelineup.jersey_number">
+                <source>Rückennummer</source>
+            </trans-unit>
+
+
+        <!-- Domain Model GamePeriod -->
+            <trans-unit id="tx_sportms_domain_model_gameperiod">
+                <source>Spielabschnitt</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gameperiods">
+                <source>Spielabschnitte</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gameperiod.duration">
+                <source>Dauer (in Minuten)</source>
+            </trans-unit>
+
+
+        <!-- Domain Model GamePunishment -->
+            <trans-unit id="tx_sportms_domain_model_gamepunishment">
+                <source>Spielerstrafe</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gamepunishment.plural">
+                <source>Spielerstrafen</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gamepunishment.singular">
+                <source>Spielerstrafen</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gamepunishment.period">
+                <source>Spielabschnitt</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gamepunishment.minute">
+                <source>Spielminute</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gamepunishment.minute_additional">
+                <source>Nachspielzeit</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gamepunishment.punished_person">
+                <source>Bestrafte Person</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gamepunishment.type">
+                <source>Art der Bestrafung</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gamepunishment.type.yellow">
+                <source>Gelbe Karte</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gamepunishment.type.yellowred">
+                <source>Gelbrote Karte</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gamepunishment.type.red">
+                <source>Rote Karte</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gamepunishment.type.time">
+                <source>Zeitstrafe</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gamepunishment.duration">
+                <source>Dauer der (Zeit)Strafe</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gamepunishment.reason">
+                <source>Grund der Bestrafung</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gamepunishment.reason.foul">
+                <source>Foulspiel</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gamepunishment.reason.beef">
+                <source>Meckern</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gamepunishment.reason.insult">
+                <source>Beleidigung</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gamepunishment.reason.violence">
+                <source>Tätlichkeit</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gamepunishment.reason.hands">
+                <source>Handspiel</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gamepunishment.reason.hoalding">
+                <source>Halten/Trikot ziehen</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gamepunishment.reason.last_man">
+                <source>Notbremse</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gamepunishment.reason.time_play">
+                <source>Zeitspiel</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gamepunishment.reason.unsportsmanlike">
+                <source>Unsportlichkeit</source>
+            </trans-unit>
+
+
+        <!-- Domain Model GameReferee -->
+            <trans-unit id="tx_sportms_domain_model_gamereferee">
+                <source>Schiedsrichter</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gamereferee.plural">
+                <source>Schiedsrichter</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gamereferee.singular">
+                <source>Schiedsrichter</source>
+            </trans-unit>
+
+
+        <!-- Domain Model GameReport -->
+            <trans-unit id="tx_sportms_domain_model_gamereport">
+                <source>Spielbericht</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gamereport.plural">
+                <source>Spielberichte</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gamereport.singular">
+                <source>Spielbericht</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gamereport.headline">
+                <source>Überschrift</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gamereport.text">
+                <source>Bericht</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gamereport.author">
+                <source>Autor</source>
+            </trans-unit>
+
+
+        <!-- Domain Model GameResultSet -->
+            <trans-unit id="tx_sportms_domain_model_gameresultset">
+                <source>Spielsatz</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gameresultset.plural">
+                <source>Spielsätze</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gameresultset.singular">
+                <source>Spielsatz</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gameresultset.set_number">
+                <source>Satznummer</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gameresultset.result_home">
+                <source>Heimergebnis</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gameresultset.result_guest">
+                <source>Gastergebnis</source>
             </trans-unit>
 
 
@@ -321,6 +886,7 @@
             </trans-unit>
 
 
+        <!-- Domain Model Person -->
             <trans-unit id="tx_sportms_domain_model_person">
                 <source>Person</source>
             </trans-unit>
@@ -328,94 +894,52 @@
                 <source>Personen</source>
             </trans-unit>
             <trans-unit id="tx_sportms_domain_model_person.singular">
-                <source>Person</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_person.personalData">
-                <source>Persönliche Daten</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_person.name">
-                <source>Name</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_person.firstname">
-                <source>Vorname</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_person.lastname">
-                <source>Nachname</source>
+                <source>Personen</source>
             </trans-unit>
             <trans-unit id="tx_sportms_domain_model_person.birthname">
                 <source>Geburtsname</source>
             </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_person.nickname">
-                <source>Spitzname</source>
+            <trans-unit id="tx_sportms_domain_model_person.characteristics">
+                <source>Eigenschaften</source>
             </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_person.dateOfBirth">
+            <trans-unit id="tx_sportms_domain_model_person.date_of_birth">
                 <source>Geburtsdatum</source>
             </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_person.zodiac_sign">
-                <source>Sternzeichen</source>
+            <trans-unit id="tx_sportms_domain_model_person.family_status">
+                <source>Familienstand</source>
             </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_person.zodiac_sign_1">
-                <source>Wassermann</source>
+            <trans-unit id="tx_sportms_domain_model_person.family_status.1">
+                <source>ledig</source>
             </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_person.zodiac_sign_2">
-                <source>Fische</source>
+            <trans-unit id="tx_sportms_domain_model_person.family_status.2">
+                <source>verheiratet</source>
             </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_person.zodiac_sign_3">
-                <source>Widder</source>
+            <trans-unit id="tx_sportms_domain_model_person.family_status.3">
+                <source>verwitwet</source>
             </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_person.zodiac_sign_4">
-                <source>Stier</source>
+            <trans-unit id="tx_sportms_domain_model_person.family_status.4">
+                <source>geschieden</source>
             </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_person.zodiac_sign_5">
-                <source>Zwillinge</source>
+            <trans-unit id="tx_sportms_domain_model_person.family_status.5">
+                <source>eingetragene Lebenspartnerschaft</source>
             </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_person.zodiac_sign_6">
-                <source>Krebs</source>
+            <trans-unit id="tx_sportms_domain_model_person.family_status.6">
+                <source>eingetragene Lebenspartnerin/eingetragener Lebenspartner verstorben</source>
             </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_person.zodiac_sign_7">
-                <source>Löwe</source>
+            <trans-unit id="tx_sportms_domain_model_person.family_status.7">
+                <source>eingetragene Lebenspartnerschaft aufgehoben</source>
             </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_person.zodiac_sign_8">
-                <source>Jungfrau</source>
+            <trans-unit id="tx_sportms_domain_model_person.favorite_dish">
+                <source>Lieblingsgericht</source>
             </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_person.zodiac_sign_9">
-                <source>Waage</source>
+            <trans-unit id="tx_sportms_domain_model_person.favorite_drink">
+                <source>Lieblinsgetränk</source>
             </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_person.zodiac_sign_10">
-                <source>Skorpion</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_person.zodiac_sign_11">
-                <source>Schütze</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_person.zodiac_sign_12">
-                <source>Steinbock</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_person.placeOfBirth">
-                <source>Geburtsort</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_person.nationality">
-                <source>Nationalität</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_person.gender">
-                <source>Geschlecht</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_person.gender_male">
-                <source>Männlich</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_person.gender_female">
-                <source>Weiblich</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_person.weight">
-                <source>Gewicht</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_person.height">
-                <source>Größe</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_person.sizeOfShoe">
-                <source>Schuhgröße</source>
+            <trans-unit id="tx_sportms_domain_model_person.firstname">
+                <source>Vorname</source>
             </trans-unit>
             <trans-unit id="tx_sportms_domain_model_person.footer">
-                <source>Spielfuß</source>
+                <source>Starker Fuß</source>
             </trans-unit>
             <trans-unit id="tx_sportms_domain_model_person.footer_1">
                 <source>Rechts</source>
@@ -426,8 +950,11 @@
             <trans-unit id="tx_sportms_domain_model_person.footer_3">
                 <source>Beidfüßig</source>
             </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_person.graduation">
+                <source>Schulabschluss</source>
+            </trans-unit>
             <trans-unit id="tx_sportms_domain_model_person.hander">
-                <source>Spielhand</source>
+                <source>Starke Hand</source>
             </trans-unit>
             <trans-unit id="tx_sportms_domain_model_person.hander_1">
                 <source>Rechts</source>
@@ -438,26 +965,59 @@
             <trans-unit id="tx_sportms_domain_model_person.hander_3">
                 <source>Beidhändig</source>
             </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_person.familyStatus">
-                <source>Familienstand</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_person.graduation">
-                <source>Schulabschluss</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_person.job">
-                <source>Beruf</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_person.characteristics">
-                <source>Eigenschaften</source>
+            <trans-unit id="tx_sportms_domain_model_person.height">
+                <source>Größe</source>
             </trans-unit>
             <trans-unit id="tx_sportms_domain_model_person.hobbies">
                 <source>Hobbies</source>
             </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_person.favoriteDish">
-                <source>Lieblingsgericht</source>
+            <trans-unit id="tx_sportms_domain_model_person.job">
+                <source>Beruf</source>
             </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_person.favoriteDrink">
-                <source>Lieblingsgetränk</source>
+            <trans-unit id="tx_sportms_domain_model_person.lastname">
+                <source>Nachname</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_person.nationalities">
+                <source>Nationalität(en)</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_person.nickname">
+                <source>Spitzname</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_person.place_of_birth">
+                <source>Geburtsort</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_person.size_of_shoe">
+                <source>Schuhgröße</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_person.weight">
+                <source>Gewicht</source>
+            </trans-unit>
+
+
+        <!-- Domain Model PersonProfile -->
+            <trans-unit id="tx_sportms_domain_model_personprofile">
+                <source>Profil</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_personprofile.plural">
+                <source>Profile</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_personprofile.singular">
+                <source>Profil</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_personprofile.profiletype">
+                <source>Profilart</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_personprofile.profiletype.official">
+                <source>Funktionär</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_personprofile.profiletype.player">
+                <source>Spieler</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_personprofile.profiletype.referee">
+                <source>Schiedsrichter</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_personprofile.profile_images">
+                <source>Profilbilder</source>
             </trans-unit>
 
 
@@ -611,6 +1171,87 @@
             </trans-unit>
 
 
+        <!-- Domain Model TeamSeason -->
+            <trans-unit id="tx_sportms_domain_model_teamseason">
+                <source>Mannschaftsinstanz</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_teamseason.plural">
+                <source>Mannschaftsinstanzen</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_teamseason.singular">
+                <source>Mannschaftsinstanz</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_teamseason.team_season_images">
+                <source>Mannschaftsfoto</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_teamseason.team_season_squad_captains">
+                <source>Mannschaftskapitäne</source>
+            </trans-unit>
+
+
+        <!-- Domain Model TeamSeasonOfficial -->
+            <trans-unit id="tx_sportms_domain_model_teamseasonofficial">
+                <source>Mannschaftsfunktionär</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_teamseasonofficial.plural">
+                <source>Mannschaftsfunktionäre</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_teamseasonofficial.singular">
+                <source>Mannschaftsfunktionär</source>
+            </trans-unit>
+
+
+        <!-- Domain Model TeamSeasonOfficialJob -->
+            <trans-unit id="tx_sportms_domain_model_teamseasonofficialjob">
+                <source>Mannschaftsfunktionärsaufgabe</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_teamseasonofficialjob.plural">
+                <source>Mannschaftsfunktionärsaufgaben</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_teamseasonofficialjob.singular">
+                <source>Mannschaftsfunktionärsaufgabe</source>
+            </trans-unit>
+
+
+        <!-- Domain Model TeamSeasonPractice -->
+            <trans-unit id="tx_sportms_domain_model_teamseasonpractice">
+                <source>Trainingszeit</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_teamseasonpractice.plural">
+                <source>Trainingszeiten</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_teamseasonpractice.singular">
+                <source>Trainingszeit</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_teamseasonpractice.annotation">
+                <source>Anmerkung</source>
+            </trans-unit>
+
+
+        <!-- Domain Model TeamSeasonSquadMember -->
+            <trans-unit id="tx_sportms_domain_model_teamseasonsquadmember">
+                <source>Mannschaftsmitglied</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_teamseasonsquadmember.plural">
+                <source>Mannschaftsmitglieder</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_teamseasonsquadmember.singular">
+                <source>Mannschaftsmitglied</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_teamseasonsquadmember.squad_number">
+                <source>Rückennummer</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_teamseasonsquadmember.new_signing">
+                <source>Neuzugang</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_teamseasonsquadmember.leaving">
+                <source>Abgang</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_teamseasonsquadmember.hidden_in_squad_list">
+                <source>In Kaderliste sichtbar</source>
+            </trans-unit>
+
+
         <!-- Domain Model Url -->
             <trans-unit id="tx_sportms_domain_model_url">
                 <source>URL</source>
@@ -635,6 +1276,45 @@
             </trans-unit>
             <trans-unit id="tx_sportms_domain_model_urltype.singular">
                 <source>URL-Art</source>
+            </trans-unit>
+
+
+        <!-- Domain Model Venue -->
+            <trans-unit id="tx_sportms_domain_model_venue">
+                <source>Sportstätte</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_venue.plural">
+                <source>Sportstätten</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_venue.singular">
+                <source>Sportstätten</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_venue.date_of_building">
+                <source>Baudatum</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_venue.description">
+                <source>Beschreibung</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_venue.dimensions">
+                <source>Maße</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_venue.home_venue_for_clubs">
+                <source>Heimspielstätte für folgende Vereine</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_venue.images">
+                <source>Bilder</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_venue.name">
+                <source>Name</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_venue.spectator_capacity">
+                <source>Zuschauerkapazität</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_venue.surface">
+                <source>Bodenbelag</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_venue.year_of_building">
+                <source>Baujahr</source>
             </trans-unit>
 
 

@@ -19,18 +19,21 @@
 			'label' => '',
 			'label_userFunc' => \Balumedien\Sportms\Classes\UserFunc\UserFunc::class . '->VenueLabel',
 			'searchFields' => 'name',
-			'title' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_venue',
+			'title' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_venue',
 			'tstamp' => 'tstamp',
 			'versioningWS' => TRUE,
 		],
 		'types' => [
 			'1' => ['showitem' => 'name, address, home_venue_for_clubs, images, description, --palette--;;building, --palette--;;size,
-									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab.visibility, hidden, detail_link, slug,
-									'],
+									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab.visibility,
+										--palette--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.palette.visibility_general;visibility_general,
+										--palette--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.palette.visibility_detail;visibility_detail'],
 		],
 		'palettes' => [
 			'building' => ['showitem' => 'date_of_building, year_of_building'],
 			'size' => ['showitem' => 'dimensions, surface, spectator_capacity'],
+            'visibility_general' => ['showitem' => 'hidden, starttime, endtime'],
+            'visibility_detail' => ['showitem' => 'detail_link, slug'],
 		],
 		'columns' => [
 			
@@ -58,7 +61,6 @@
 					'type' => 'check',
 				],
 			],
-			
 			'starttime' => [
 				'exclude' => TRUE,
 				'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.starttime',
@@ -91,7 +93,7 @@
 			
 			'name' => [
 				'exclude' => 1,
-				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_venue.name',
+				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_venue.name',
 				'config' => [
 					'eval' => 'required, trim',
 					'size' => 30,
@@ -99,7 +101,7 @@
 				],
 			],
 			'address' => [
-				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_address',
+				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_address',
 				'config' => [
 					'appearance' => [
 						'enabledControls' => [
@@ -124,7 +126,7 @@
 			],
 			'home_venue_for_clubs' => [
 				'exclude' => TRUE,
-				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_venue.home_venue_for_clubs',
+				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_venue.home_venue_for_clubs',
 				'config' => [
 					'autoSizeMax' => 30,
 					'fieldControl' => [
@@ -164,7 +166,7 @@
 			
 			'description' => [
 				'exclude' => 1,
-				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_venue.description',
+				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_venue.description',
 				'config' => [
 					'cols' => '40',
 					'rows' => '15',
@@ -174,7 +176,7 @@
 			
 			'date_of_building' => [
 				'exclude' => 1,
-				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_venue.date_of_building',
+				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_venue.date_of_building',
 				'config' => [
 					'type' => 'input',
 					'size' => 8,
@@ -185,7 +187,7 @@
 			],
 			'year_of_building' => [
 				'exclude' => 1,
-				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_venue.year_of_building',
+				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_venue.year_of_building',
 				'config' => [
 					'eval' => 'trim',
 					'size' => 5,
@@ -195,7 +197,7 @@
 			
 			'dimensions' => [
 				'exclude' => 1,
-				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_venue.dimensions',
+				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_venue.dimensions',
 				'config' => [
 					'type' => 'input',
 					'size' => 12,
@@ -204,7 +206,7 @@
 			],
 			'surface' => [
 				'exclude' => 1,
-				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_venue.surface',
+				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_venue.surface',
 				'config' => [
 					'items' => [
 						['LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', 0],
@@ -218,7 +220,7 @@
 			],
 			'spectator_capacity' => [
 				'exclude' => 1,
-				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_venue.spectator_capacity',
+				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_venue.spectator_capacity',
 				'config' => [
 					'type' => 'input',
 					'size' => 6,

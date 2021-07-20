@@ -26,7 +26,7 @@
 		],
 		'types' => [
 			'1' => ['showitem' => 'competition, season, competition_season_gamedays,
-									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_competitionseason.tab_teams, competition_season_teams,
+									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_team.plural, competition_season_teams,
 									--div--;LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.tab.visibility, --palette--;;hidden_detail, slug
 		                            '],
 		],
@@ -91,7 +91,7 @@
 			
 			'competition' => [
 				'exclude' => 1,
-				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_competition',
+				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_competition',
 				'config' => [
 					'eval' => 'required',
 					'foreign_table' => 'tx_sportms_domain_model_competition',
@@ -108,7 +108,7 @@
 			
 			'season' => [
 				'exclude' => 1,
-				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_season',
+				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_season',
 				'config' => [
 					'eval' => 'required',
 					'foreign_table' => 'tx_sportms_domain_model_season',
@@ -123,7 +123,7 @@
 				],
 			],
 			'competition_season_gamedays' => [
-				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_competitionseasongamedays',
+				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_competitionseasongameday.plural',
 				'config' => [
 					'appearance' => [
 						'enabledControls' => [
@@ -147,7 +147,7 @@
 			
 			'competition_season_teams' => [
 				'exclude' => TRUE,
-				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_competitionseason.competition_season_teams',
+				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_competitionseason.competition_season_teams',
 				'config' => [
 					'type' => 'select',
 					'renderType' => 'selectMultipleSideBySide',

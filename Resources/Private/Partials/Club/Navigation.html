@@ -1,30 +1,20 @@
 <html data-namespace-typo3-fluid="true"
-	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-	  xmlns:sportms="Balumedien\Sportms\ViewHelpers">
+	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
-<f:if condition="{settings.club.showNavigation.enabled}">
+<f:if condition="{settings.club.navigation.enabled}">
 	<ul>
-		<f:if condition="{settings.club.showNavigation.index}">
-			<li>
-				<sportms:link.action Club="{club}" action="showIndex"
-									 controller="Club">Index
-				</sportms:link.action>
-			</li>
-		</f:if>
-		<f:if condition="{settings.club.showNavigation.officials}">
-			<li>
-				<sportms:link.action Club="{club}" action="showOfficials"
-									 controller="Club">Officials
-				</sportms:link.action>
-			</li>
-		</f:if>
-		<f:if condition="{settings.club.showNavigation.sections}">
-			<li>
-				<sportms:link.action Club="{club}" action="showSections"
-									 controller="Club">Sections
-				</sportms:link.action>
-			</li>
-		</f:if>
+		<li>
+			<f:render partial="ViewHelper/LinkAction/Club/Index"
+					  arguments="{club: cub}"/>
+		</li>
+		<li>
+			<f:render partial="ViewHelper/LinkAction/Club/Officials"
+					  arguments="{club: cub}"/>
+		</li>
+		<li>
+			<f:render partial="ViewHelper/LinkAction/Club/Sections"
+					  arguments="{club: cub}"/>
+		</li>
 	</ul>
 </f:if>
 

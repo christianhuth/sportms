@@ -105,7 +105,7 @@
 			
 			'label' => [
 				'exclude' => 1,
-				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.label',
+				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_general.label',
 				'config' => [
 					'type' => 'input',
 					'size' => 30,

@@ -212,13 +212,13 @@
 			],
 			'sex' => [
 				'exclude' => 1,
-				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.sex',
+				'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_general.sex',
 				'config' => [
 					'items' => [
 						['LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_general.select', ''],
-						['LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.sex_diverse', 'd'],
-						['LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.sex_male', 'm'],
-						['LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_person.sex_female', 'f'],
+						['LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_general.sex.diverse', 'd'],
+						['LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_general.sex.male', 'm'],
+						['LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_general.sex.female', 'f'],
 					],
 					'renderType' => 'selectSingle',
 					'type' => 'select',

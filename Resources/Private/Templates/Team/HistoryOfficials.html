@@ -22,13 +22,8 @@
 			<f:for as="official" each="{officials}">
 				<tr>
 					<td>
-						<sportms:link.action OfficialProfile="{official}"
-											 Person="{official.person}"
-											 action="officialProfile"
-											 controller="Person">
-							{official.person.firstname}
-							{official.person.lastname}
-						</sportms:link.action>
+						<f:render partial="ViewHelper/LinkAction/Person/OfficialProfile"
+								  arguments="{officialProfile: official, person: official.person}"/>
 						<f:if condition="{official.person.dateOfBirth}">
 							<br/>
 							<f:format.date format="{settings.format.dateLong}">
