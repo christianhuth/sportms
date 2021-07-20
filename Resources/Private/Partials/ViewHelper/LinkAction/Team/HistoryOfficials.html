@@ -1,0 +1,26 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<f:if condition="{team}">
+  <f:then>
+    <f:if condition="{team.detailLink} && {team.teamSeasons.0.detailLink}">
+      <f:then>
+        <f:link.action action="historyOfficials" arguments="{team: team}"
+                       controller="Team" extensionName="sportms"
+                       pageUid="{settings.team.historyOfficials.pid}" pluginName="Team">
+          <f:translate key="tx_sportms_action.team.historyOfficials"/>
+        </f:link.action>
+      </f:then>
+      <f:else>
+        <span><f:translate key="tx_sportms_action.team.historyOfficials"/></span>
+      </f:else>
+    </f:if>
+  </f:then>
+  <f:else>
+    <f:comment>
+      #TODO: ERROR MESSAGE
+    </f:comment>
+  </f:else>
+</f:if>
+
+</html>

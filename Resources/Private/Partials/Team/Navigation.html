@@ -1,6 +1,5 @@
 <html data-namespace-typo3-fluid="true"
-      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-      xmlns:sportms="Balumedien\Sportms\ViewHelpers">
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <div class="tx-sportms-navigation tx-sportms-team-navigation">
     <nav class="navbar navbar-default">
@@ -16,53 +15,42 @@
                 <li>
                     <f:if condition="{teamSeason}">
                         <f:then>
-                            <sportms:link.action action="index" controller="TeamSeason" TeamSeason="{teamSeason}">
-                                <f:translate key="tx_sportms_action.teamseason.index"/>
-                            </sportms:link.action>
+                            <f:render partial="ViewHelper/LinkAction/TeamSeason/Index"
+                                      arguments="{teamSeason: teamSeason}"/>
                         </f:then>
                         <f:else>
-                            <sportms:link.action action="index" controller="TeamSeason"
-                                                 TeamSeason="{team.teamSeasons.0}">
-                                <f:translate key="tx_sportms_action.teamseason.index"/>
-                            </sportms:link.action>
+                            <f:render partial="ViewHelper/LinkAction/Team/Index" arguments="{team: team}"/>
                         </f:else>
                     </f:if>
                 </li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">
-                        <f:translate key="tx_sportms_navigation.team.games.dropdown"/><span class="caret"></span>
+                        <f:translate key="tx_sportms_navigation.team.games.dropdown"/>
+                        <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu">
                         <li>
                             <f:if condition="{teamSeason}">
                                 <f:then>
-                                    <sportms:link.action action="gamesByCompetition" controller="TeamSeason"
-                                                         TeamSeason="{teamSeason}">
-                                        <f:translate key="tx_sportms_action.teamseason.gamesByCompetition"/>
-                                    </sportms:link.action>
+                                    <f:render partial="ViewHelper/LinkAction/TeamSeason/GamesByCompetition"
+                                              arguments="{teamSeason: teamSeason}"/>
                                 </f:then>
                                 <f:else>
-                                    <sportms:link.action action="gamesByCompetition" controller="TeamSeason"
-                                                         TeamSeason="{team.teamSeasons.0}">
-                                        <f:translate key="tx_sportms_action.teamseason.gamesByCompetition"/>
-                                    </sportms:link.action>
+                                    <f:render partial="ViewHelper/LinkAction/Team/GamesByCompetition"
+                                              arguments="{team: team}"/>
                                 </f:else>
                             </f:if>
                         </li>
                         <li>
                             <f:if condition="{teamSeason}">
                                 <f:then>
-                                    <sportms:link.action action="gamesByDate" controller="TeamSeason"
-                                                         TeamSeason="{teamSeason}">
-                                        <f:translate key="tx_sportms_action.teamseason.gamesByDate"/>
-                                    </sportms:link.action>
+                                    <f:render partial="ViewHelper/LinkAction/TeamSeason/GamesByDate"
+                                              arguments="{teamSeason: teamSeason}"/>
                                 </f:then>
                                 <f:else>
-                                    <sportms:link.action action="gamesByDate" controller="TeamSeason"
-                                                         TeamSeason="{team.teamSeasons.0}">
-                                        <f:translate key="tx_sportms_action.teamseason.gamesByDate"/>
-                                    </sportms:link.action>
+                                    <f:render partial="ViewHelper/LinkAction/Team/GamesByDate"
+                                              arguments="{team: team}"/>
                                 </f:else>
                             </f:if>
                         </li>
@@ -72,23 +60,45 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">
-                        <f:translate key="tx_sportms_navigation.team.history.dropdown"/><span class="caret"></span>
+                        <f:translate key="tx_sportms_navigation.team.history.dropdown"/>
+                        <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu">
                         <li>
-                            <sportms:link.action action="historyOfficials" controller="Team" Team="{team}">
-                                <f:translate key="tx_sportms_action.team.historyOfficials"/>
-                            </sportms:link.action>
+                            <f:if condition="{teamSeason}">
+                                <f:then>
+                                    <f:render partial="ViewHelper/LinkAction/Team/HistoryOfficials"
+                                              arguments="{team: teamSeason.team}"/>
+                                </f:then>
+                                <f:else>
+                                    <f:render partial="ViewHelper/LinkAction/Team/HistoryOfficials"
+                                              arguments="{team: team}"/>
+                                </f:else>
+                            </f:if>
                         </li>
                         <li>
-                            <sportms:link.action action="historyRecordGames" controller="Team" Team="{team}">
-                                <f:translate key="tx_sportms_action.team.historyRecordGames"/>
-                            </sportms:link.action>
+                            <f:if condition="{teamSeason}">
+                                <f:then>
+                                    <f:render partial="ViewHelper/LinkAction/Team/HistoryRecordGames"
+                                              arguments="{team: teamSeason.team}"/>
+                                </f:then>
+                                <f:else>
+                                    <f:render partial="ViewHelper/LinkAction/Team/HistoryRecordGames"
+                                              arguments="{team: team}"/>
+                                </f:else>
+                            </f:if>
                         </li>
                         <li>
-                            <sportms:link.action action="historyRecordPlayers" controller="Team" Team="{team}">
-                                <f:translate key="tx_sportms_action.team.historyRecordPlayers"/>
-                            </sportms:link.action>
+                            <f:if condition="{teamSeason}">
+                                <f:then>
+                                    <f:render partial="ViewHelper/LinkAction/Team/HistoryRecordPlayers"
+                                              arguments="{team: teamSeason.team}"/>
+                                </f:then>
+                                <f:else>
+                                    <f:render partial="ViewHelper/LinkAction/Team/HistoryRecordPlayers"
+                                              arguments="{team: team}"/>
+                                </f:else>
+                            </f:if>
                         </li>
                     </ul>
                 </li>
