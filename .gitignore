@@ -1,5 +1,6 @@
 /.Build
 .idea
+.vscode
 
 !Classes
 !Configuration
