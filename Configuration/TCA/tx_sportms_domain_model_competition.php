@@ -18,7 +18,7 @@
 			'hideTable' => FALSE,
 			'iconfile' => 'EXT:sportms/Resources/Public/Icons/tx_sportms_domain_model_competition.svg',
 			'label' => '',
-			'label_userFunc' => \Balumedien\Sportms\Configuration\TCA\UserFunc\UserFunc::class . '->CompetitionLabel',
+			'label_userFunc' => \Balumedien\Sportms\Classes\UserFunc\UserFunc::class . '->CompetitionLabel',
 			'searchFields' => 'label, abbreviation',
 			'title' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_competition',
 			'tstamp' => 'tstamp',

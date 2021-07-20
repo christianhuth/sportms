@@ -17,7 +17,7 @@
 			'hideTable' => TRUE,
 			'iconfile' => 'EXT:sportms/Resources/Public/Icons/tx_sportms_domain_model_teamseasonofficial.svg',
 			'label' => '',
-			'label_userFunc' => \Balumedien\Sportms\Configuration\TCA\UserFunc\UserFunc::class . '->teamSeasonOfficialLabel',
+			'label_userFunc' => \Balumedien\Sportms\Classes\UserFunc\UserFunc::class . '->teamSeasonOfficialLabel',
 			'searchFields' => '',
 			'sortby' => 'sorting',
 			'title' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_teamseasonofficial',

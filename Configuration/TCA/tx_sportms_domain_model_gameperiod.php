@@ -17,7 +17,7 @@
 			'hideTable' => TRUE,
 			'iconfile' => 'EXT:sportms/Resources/Public/Icons/tx_sportms_domain_model_gameperiod.svg',
 			'label' => '',
-			'label_userFunc' => \Balumedien\Sportms\Configuration\TCA\UserFunc\UserFunc::class . '->GamePeriodLabel',
+			'label_userFunc' => \Balumedien\Sportms\Classes\UserFunc\UserFunc::class . '->GamePeriodLabel',
 			'searchFields' => '',
 			'sortby' => 'sorting',
 			'title' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_gameperiod',

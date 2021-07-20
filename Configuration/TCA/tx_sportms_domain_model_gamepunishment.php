@@ -18,7 +18,7 @@
 			'hideTable' => TRUE,
 			'iconfile' => 'EXT:sportms/Resources/Public/Icons/tx_sportms_domain_model_gamepunishment.svg',
 			'label' => '',
-			'label_userFunc' => \Balumedien\Sportms\Configuration\TCA\UserFunc\UserFunc::class . '->GamePunishmentLabel',
+			'label_userFunc' => \Balumedien\Sportms\Classes\UserFunc\UserFunc::class . '->GamePunishmentLabel',
 			'searchFields' => '',
 			'title' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_tca.xlf:tx_sportms_domain_model_gamepunishment',
 			'tstamp' => 'tstamp',

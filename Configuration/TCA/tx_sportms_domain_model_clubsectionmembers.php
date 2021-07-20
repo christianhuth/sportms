@@ -19,7 +19,7 @@
 			'hideTable' => TRUE,
 			'iconfile' => 'EXT:sportms/Resources/Public/Icons/tx_sportms_domain_model_clubsectionmembers.svg',
 			'label' => '',
-			'label_userFunc' => \Balumedien\Sportms\Configuration\TCA\UserFunc\UserFunc::class . '->clubSectionMembersLabel',
+			'label_userFunc' => \Balumedien\Sportms\Classes\UserFunc\UserFunc::class . '->clubSectionMembersLabel',
 			'searchFields' => '',
 			'title' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_clubsectionmembers',
 			'tstamp' => 'tstamp',

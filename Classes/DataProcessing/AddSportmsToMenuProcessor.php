@@ -83,7 +83,7 @@
                         if (isset($processedData[$menu])) {
                             $this->addExtensionRecordToMenu($season, $processedData[$menu]);
                             $this->addActionToMenu(
-                                LocalizationUtility::translate('tx_sportms_action.competitionseason.' . GeneralUtility::_GET('tx_sportms_team')['action'],
+                                LocalizationUtility::translate('tx_sportms_action.competitionseason.' . GeneralUtility::_GET('tx_sportms_competition')['action'],
                                     'sportms'),
                                 $processedData[$menu]
                             );
@@ -94,18 +94,13 @@
             
             // Configuration for "game" argument
             if (GeneralUtility::_GET('tx_sportms_game')['game']) {
-                $recordTable = 'tx_sportms_domain_model_game';
-                $recordUid = (int)GeneralUtility::_GET('tx_sportms_game')['game'];
-                $record = $this->getExtensionRecord($recordTable, $recordUid);
-                if ($record) {
-                    $recordTable = 'tx_sportms_domain_model_competitionseason';
-                    $recordUid = $record['competitionSeason'];
-                    $competition = $this->getExtensionRecord($recordTable, $recordUid);
+                $game = $this->getExtensionRecord('tx_sportms_domain_model_game',
+                    (int)GeneralUtility::_GET('tx_sportms_game')['game']);
+                if ($game) {
                     $menus = GeneralUtility::trimExplode(',', $this->processorConfiguration['addToMenus'], true);
                     foreach ($menus as $menu) {
                         if (isset($processedData[$menu])) {
-                            $this->addExtensionRecordToMenu($competition, $processedData[$menu]);
-                            $this->addGameRecordToMenu($record, $processedData[$menu]);
+                            $this->addGameRecordToMenu($game, $processedData[$menu]);
                             $this->addActionToMenu(
                                 LocalizationUtility::translate('tx_sportms_action.game.' . GeneralUtility::_GET('tx_sportms_game')['action'],
                                     'sportms'),
@@ -159,7 +154,7 @@
                         if (isset($processedData[$menu])) {
                             $this->addExtensionRecordToMenu($season, $processedData[$menu]);
                             $this->addActionToMenu(
-                                LocalizationUtility::translate('tx_sportms_action.teamseason.' . GeneralUtility::_GET('tx_sportms_team')['action'],
+                                LocalizationUtility::translate('tx_sportms_action.teamseason.' . GeneralUtility::_GET('tx_sportms_teamseason')['action'],
                                     'sportms'),
                                 $processedData[$menu]
                             );
@@ -219,10 +214,13 @@
          */
         protected function addActionToMenu(string $actionName, array &$menu)
         {
-            $element = [];
-            $element['data'] = null;
-            $element['title'] = $actionName;
-            $this->addElementToMenu($element, $menu);
+            $menu[] = [
+                'data' => null,
+                'title' => $actionName,
+                'active' => 1,
+                'current' => 1,
+                'link' => GeneralUtility::getIndpEnv('TYPO3_REQUEST_URL'),
+            ];
         }
         
         /**
@@ -234,23 +232,19 @@
          */
         protected function addGameRecordToMenu(array $game, array &$menu)
         {
-            $gameTable = 'tx_sportms_domain_model_game';
-            /** @var QueryBuilder $queryBuilder */
-            $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getQueryBuilderForTable($gameTable);
-            $row = $queryBuilder
-                ->select('*')
-                ->from($gameTable, 't')
-                ->where($queryBuilder->expr()->eq('t.uid',
-                    $queryBuilder->createNamedParameter($game['uid'], \PDO::PARAM_INT)))
-                ->execute()
-                ->fetch();
-            
-            if (is_array($row) && !empty($row)) {
-            }
+    
+            $teamSeasonHome = $this->getExtensionRecord('tx_sportms_domain_model_teamseason',
+                $game['team_season_home']);
+            $teamHome = $this->getExtensionRecord('tx_sportms_domain_model_team',
+                $teamSeasonHome['team']);
+            $teamSeasonGuest = $this->getExtensionRecord('tx_sportms_domain_model_teamseason',
+                $game['team_season_guest']);
+            $teamGuest = $this->getExtensionRecord('tx_sportms_domain_model_team',
+                $teamSeasonGuest['team']);
             
             $element = [];
             $element['data'] = $game;
-            $element['title'] = "Bla";
+            $element['title'] = $teamHome['label'] . " - " . $teamGuest['label'];
             $this->addElementToMenu($element, $menu);
         }
         

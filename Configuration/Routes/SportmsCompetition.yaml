@@ -1,4 +1,3 @@
----
 routeEnhancers:
   sportmsCompetition:
     aspects:
@@ -38,11 +37,11 @@ routeEnhancers:
         _controller: 'CompetitionSeason::clubs'
         _arguments:
           competitionseason_slug: competitionSeason
-      - routePath: '/{competitionseason_slug}/spielplan'
+      - routePath: '/{competitionseason_slug}/{localizedAction_games}'
         _controller: 'CompetitionSeason::games'
         _arguments:
           competitionseason_slug: competitionSeason
-      - routePath: '/{competitionseason_slug}/spielplan/{competitionseasongameday_slug}'
+      - routePath: '/{competitionseason_slug}/spieltag/{competitionseasongameday_slug}'
         _controller: 'CompetitionSeason::games'
         _arguments:
           competitionseason_slug: competitionSeason
