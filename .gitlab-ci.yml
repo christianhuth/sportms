@@ -1,3 +1,4 @@
+---
 stages:
     - build
     - lint
@@ -18,7 +19,7 @@ build:
         expire_in: '1h'
 
 typoscript:
-    dependencies: 
+    dependencies:
         - build
     image: composer:2.1.3
     stage: lint
@@ -27,9 +28,21 @@ typoscript:
         - .Build/bin/typoscript-lint
 
 yaml:
+    dependencies:
+        - build
     image: python:alpine3.7
     stage: lint
     before_script:
-        - pip install yamllint==1.10.0
+        - pip install yamllint==1.26.1
     script:
         - yamllint .
+
+sql:
+    dependencies:
+        - build
+    image: composer:2.1.3
+    stage: lint
+    script:
+        - composer require --dev liquipedia/sqllint
+        - ls -al .Build/bin
+        - .Build/bin/sqllint

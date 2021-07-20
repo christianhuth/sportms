@@ -1,5 +1,7 @@
+---
 filePatterns:
   - "*.typoscript"
+  - "*.ts"
 
 paths:
   - ./Configuration/TSconfig/
