@@ -17,10 +17,14 @@
 				<tbody>
 				<f:if condition="{teams}">
 					<f:then>
-						<f:for as="team" each="{teams}">
-							<f:render arguments="{team: team}"
-									  partial="Team/List/Item"/>
-						</f:for>
+						<f:widget.paginate objects="{teams}"
+										   as="paginatedTeams"
+										   configuration="{itemsPerPage: settings.team.list.pagination.itemsPerPage, insertAbove: settings.team.list.pagination.insertAbove, insertBelow: settings.team.list.pagination.insertBelow, maximumNumberOfLinks: settings.team.list.pagination.maximumNumberOfLinks}">
+							<f:for as="team" each="{paginatedTeams}">
+								<f:render arguments="{team: team}"
+										  partial="Team/List/Item"/>
+							</f:for>
+						</f:widget.paginate>
 					</f:then>
 					<f:else>
 						<td colspan="4">Keine Mannschaften gefunden</td>

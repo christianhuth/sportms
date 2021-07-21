@@ -24,10 +24,14 @@
 				<tbody>
 				<f:if condition="{clubs}">
 					<f:then>
-						<f:for as="club" each="{clubs}">
-							<f:render arguments="{club: club}"
-									  partial="Club/List/Item"/>
-						</f:for>
+						<f:widget.paginate objects="{clubs}"
+										   as="paginatedClubs"
+										   configuration="{itemsPerPage: settings.club.list.pagination.itemsPerPage, insertAbove: settings.club.list.pagination.insertAbove, insertBelow: settings.club.list.pagination.insertBelow, maximumNumberOfLinks: settings.club.list.pagination.maximumNumberOfLinks}">
+							<f:for as="club" each="{paginatedClubs}">
+								<f:render arguments="{club: club}"
+										  partial="Club/List/Item"/>
+							</f:for>
+						</f:widget.paginate>
 					</f:then>
 					<f:else>
 						<tr>

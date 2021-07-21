@@ -7,7 +7,7 @@
 	$vendor = 'Balumedien';
 	$_EXTKEY = 'sportms';
 	$extensionName = \TYPO3\CMS\Core\Utility\GeneralUtility::underscoredToUpperCamelCase($_EXTKEY);
-	$pluginNames = ['Club', 'Competition', 'Game', 'Person', 'Team'];
+	$pluginNames = ['Club', 'CompetitionSeason', 'Game', 'Person', 'Team'];
 	foreach($pluginNames as $pluginName) {
 		// Add the Plugin to Plugin Selection DROPDOWN in the Backend
 		ExtensionUtility::registerPlugin(

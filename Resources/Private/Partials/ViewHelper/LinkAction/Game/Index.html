@@ -1,0 +1,20 @@
+<html data-namespace-typo3-fluid="true"
+	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<f:if condition="{game.detailLink}">
+	<f:then>
+		<f:link.action action="index"
+					   arguments="{game: game}"
+					   controller="Game" extensionName="sportms"
+					   pageUid="{settings.game.index.pid}"
+					   pluginName="game">
+			<f:translate key="tx_sportms_action.game.index"/>
+		</f:link.action>
+	</f:then>
+	<f:else>
+		<span><f:translate
+				key="tx_sportms_action.game.index"/></span>
+	</f:else>
+</f:if>
+
+</html>

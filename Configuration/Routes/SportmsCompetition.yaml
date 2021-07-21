@@ -27,12 +27,28 @@ routeEnhancers:
         localeMap:
           - locale: 'de_DE.*'
             value: 'mannschaften'
-    defaultController: 'Competition::list'
+      localizedPage:
+        type: LocaleModifier
+        default: 'page'
+        localeMap:
+          - locale: 'de_DE.*'
+            value: 'seite'
+      page:
+        type: StaticRangeMapper
+        start: '1'
+        end: '100'
+    defaults:
+      page: '1'
+    defaultController: 'CompetitionSeason::list'
     extension: Sportms
-    plugin: Competition
+    plugin: CompetitionSeason
     routes:
       - routePath: '/'
-        _controller: 'Competition::list'
+        _controller: 'CompetitionSeason::list'
+      - routePath: '/{localizedPage}/{page}'
+        _controller: 'CompetitionSeason::list'
+        _arguments:
+          page: '@widget_0/currentPage'
       - routePath: '/{competitionseason_slug}/{localizedAction_clubs}'
         _controller: 'CompetitionSeason::clubs'
         _arguments:

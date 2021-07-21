@@ -4,14 +4,12 @@
     
     use Balumedien\Sportms\Domain\Model\Person;
     use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
-
+    
     /**
      * PersonController
      */
     class PersonController extends SportMSBaseController
     {
-        
-        protected $extensionsKey = 'sportms';
         
         /**
          * @var \Balumedien\Sportms\Domain\Repository\PersonRepository

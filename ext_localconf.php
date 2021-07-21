@@ -13,8 +13,8 @@
 	$pluginNamesAndTheirActions[0]['name'] = 'Club';
 	$pluginNamesAndTheirActions[0]['cacheableActions'] = ['Club' => 'list, sections'];
 	$pluginNamesAndTheirActions[0]['nonCacheableActions'] = [];
-	$pluginNamesAndTheirActions[1]['name'] = 'Competition';
-	$pluginNamesAndTheirActions[1]['cacheableActions'] = ['Competition' => 'list', 'CompetitionSeason' => 'clubs, games, teams'];
+	$pluginNamesAndTheirActions[1]['name'] = 'CompetitionSeason';
+	$pluginNamesAndTheirActions[1]['cacheableActions'] = ['CompetitionSeason' => 'list', 'CompetitionSeason' => 'clubs, games, teams'];
 	$pluginNamesAndTheirActions[1]['nonCacheableActions'] = [];
 	$pluginNamesAndTheirActions[2]['name'] = 'Game';
 	$pluginNamesAndTheirActions[2]['cacheableActions'] = ['Game' => 'list, history, index, report'];

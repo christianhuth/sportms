@@ -1,4 +1,3 @@
----
 routeEnhancers:
   sportmsTeam:
     aspects:
@@ -38,6 +37,16 @@ routeEnhancers:
         localeMap:
           - locale: 'de_DE.*'
             value: 'uebersicht'
+      localizedPage:
+        type: LocaleModifier
+        default: 'page'
+        localeMap:
+          - locale: 'de_DE.*'
+            value: 'seite'
+      page:
+        type: StaticRangeMapper
+        start: '1'
+        end: '100'
       season_slug:
         type: PersistedAliasMapper
         tableName: tx_sportms_domain_model_season
@@ -50,12 +59,18 @@ routeEnhancers:
         type: PersistedAliasMapper
         tableName: tx_sportms_domain_model_teamseason
         routeFieldName: slug
+    defaults:
+      page: '0'
     defaultController: 'Team::list'
     extension: Sportms
     plugin: Team
     routes:
       - routePath: '/'
         _controller: 'Team::list'
+      - routePath: '/{localizedPage}/{page}'
+        _controller: 'Team::list'
+        _arguments:
+          page: '@widget_0/currentPage'
       - routePath: '/{team_slug}/{localizedAction_historyOfficials}'
         _controller: 'Team::historyOfficials'
         _arguments:

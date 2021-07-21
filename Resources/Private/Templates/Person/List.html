@@ -11,28 +11,23 @@
 				<tr>
 					<th>
 						<f:translate
-								key="tx_sportms_domain_model_person.lastname"/>
-					</th>
-					<th>
-						<f:translate
-								key="tx_sportms_domain_model_person.firstname"/>
-					</th>
-					<th>
-						<f:translate
-								key="tx_sportms_domain_model_person.nickname"/>
+								key="tx_sportms_domain_model_person"/>
 					</th>
 					<th>
 						<f:translate
 								key="tx_sportms_domain_model_person.nationality"/>
 					</th>
-					<th>Profile</th>
+					<th>
+						<f:translate
+								key="tx_sportms_domain_model_personprofile"/>
+					</th>
 				</tr>
 				</thead>
 				<tbody>
 				<f:if condition="{persons}">
 					<f:then>
 						<f:for as="person" each="{persons}">
-							<f:render arguments="{_all}"
+							<f:render arguments="{person: person}"
 									  partial="Person/List/Item"/>
 						</f:for>
 					</f:then>

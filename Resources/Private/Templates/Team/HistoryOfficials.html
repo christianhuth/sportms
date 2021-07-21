@@ -26,7 +26,7 @@
 								  arguments="{officialProfile: official, person: official.person}"/>
 						<f:if condition="{official.person.dateOfBirth}">
 							<br/>
-							<f:format.date format="{settings.format.dateLong}">
+							<f:format.date format="{settings.format.date.long}">
 								{official.person.dateOfBirth}
 							</f:format.date>
 						</f:if>
@@ -39,12 +39,12 @@
 								  partial="ViewHelper/Person/Nationalities"/>
 					</td>
 					<td class="tx-sportms-table-center">
-						<f:format.date format="{settings.format.dateLong}">
+						<f:format.date format="{settings.format.date.long}">
 							{official.startdate}
 						</f:format.date>
 					</td>
 					<td class="tx-sportms-table-center">
-						<f:format.date format="{settings.format.dateLong}">
+						<f:format.date format="{settings.format.date.long}">
 							{official.enddate}
 						</f:format.date>
 					</td>

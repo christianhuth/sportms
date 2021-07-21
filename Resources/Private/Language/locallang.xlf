@@ -115,6 +115,12 @@
             <trans-unit id="tx_sportms_action.game.report">
                 <source>Spielbericht</source>
             </trans-unit>
+            <trans-unit id="tx_sportms_action.person.officialProfile">
+                <source>Funktionärsprofil</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_action.person.playerProfile">
+                <source>Spielerprofil</source>
+            </trans-unit>
             <trans-unit id="tx_sportms_action.person.playerJerseys">
                 <source>Rückennummern</source>
             </trans-unit>
@@ -126,6 +132,9 @@
             </trans-unit>
             <trans-unit id="tx_sportms_action.person.playerDebutGoals">
                 <source>Debüttore</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_action.person.refereeProfile">
+                <source>Schiedsrichterprofil</source>
             </trans-unit>
             <trans-unit id="tx_sportms_action.team.historyOfficials">
                 <source>Funktionärshistorie</source>
@@ -340,7 +349,7 @@
             </trans-unit>
 
 
-        <!-- Domain Model Competition -->
+        <!-- Domain Model CompetitionSeason -->
             <trans-unit id="tx_sportms_domain_model_competition">
                 <source>Wettbewerb</source>
             </trans-unit>
@@ -955,6 +964,9 @@
             </trans-unit>
             <trans-unit id="tx_sportms_domain_model_person.lastname">
                 <source>Nachname</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_person.nationality">
+                <source>Nationalität</source>
             </trans-unit>
             <trans-unit id="tx_sportms_domain_model_person.nationalities">
                 <source>Nationalität(en)</source>

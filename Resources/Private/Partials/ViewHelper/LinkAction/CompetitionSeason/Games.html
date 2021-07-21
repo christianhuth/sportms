@@ -1,0 +1,21 @@
+<html data-namespace-typo3-fluid="true"
+	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<f:if
+		condition="{competitionSeason.competition.detailLink} && {competitionSeason.detailLink}">
+	<f:then>
+		<f:link.action action="games"
+					   arguments="{competitionSeason: competitionSeason}"
+					   controller="CompetitionSeason" extensionName="sportms"
+					   pageUid="{settings.competitionSeason.games.pid}"
+					   pluginName="competition">
+			<f:translate key="tx_sportms_action.competitionSeason.games"/>
+		</f:link.action>
+	</f:then>
+	<f:else>
+		<span><f:translate
+				key="tx_sportms_action.competitionSeason.games"/></span>
+	</f:else>
+</f:if>
+
+</html>

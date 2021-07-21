@@ -33,7 +33,7 @@
                                     --palette--;;birth,
                                     nationalities,
                                     sex,
-                                --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_person.tab_personal,
+                                --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_person.tab.personal,
                                     --palette--;;weight_height_shoesize,
                                     --palette--;;hander_footer,
                                     family_status,

@@ -21,12 +21,28 @@ plugin.tx_sportms {
 	settings {
 
 		club {
-			list.pid = {$plugin.tx_sportms.settings.club.list.pid}
+			list {
+				pagination {
+					insertAbove = {$plugin.tx_sportms.settings.club.list.pagination.insertAbove}
+					insertBelow = {$plugin.tx_sportms.settings.club.list.pagination.insertBelow}
+					itemsPerPage = {$plugin.tx_sportms.settings.club.list.pagination.itemsPerPage}
+					maximumNumberOfLinks = {$plugin.tx_sportms.settings.club.list.pagination.maximumNumberOfLinks}
+				}
+				pid = {$plugin.tx_sportms.settings.club.list.pid}
+			}
 			sections.pid = {$plugin.tx_sportms.settings.club.sections.pid}
 		}
 
 		competition {
-			list.pid = {$plugin.tx_sportms.settings.competition.list.pid}
+			list {
+				pagination {
+					insertAbove = {$plugin.tx_sportms.settings.competition.list.pagination.insertAbove}
+					insertBelow = {$plugin.tx_sportms.settings.competition.list.pagination.insertBelow}
+					itemsPerPage = {$plugin.tx_sportms.settings.competition.list.pagination.itemsPerPage}
+					maximumNumberOfLinks = {$plugin.tx_sportms.settings.competition.list.pagination.maximumNumberOfLinks}
+				}
+				pid = {$plugin.tx_sportms.settings.competition.list.pid}
+			}
 		}
 
 		competitionSeason {
@@ -36,16 +52,30 @@ plugin.tx_sportms {
 		}
 
 		format {
-			dateLong = {$plugin.tx_sportms.settings.format.dateLong}
-			dateShort = {$plugin.tx_sportms.settings.format.dateShort}
-			dateTimeLong = {$plugin.tx_sportms.settings.format.dateTimeLong}
-			dateTimeShort = {$plugin.tx_sportms.settings.format.dateTimeShort}
-			timeLong = {$plugin.tx_sportms.settings.format.timeLong}
-			timeShort = {$plugin.tx_sportms.settings.format.timeShort}
+			date {
+				long = {$plugin.tx_sportms.settings.format.date.long}
+				short = {$plugin.tx_sportms.settings.format.date.short}
+			}
+			datetime {
+				long = {$plugin.tx_sportms.settings.format.datetime.long}
+				short = {$plugin.tx_sportms.settings.format.datetime.short}
+			}
+			time {
+				long = {$plugin.tx_sportms.settings.format.time.long}
+				short = {$plugin.tx_sportms.settings.format.time.short}
+			}
 		}
 
 		game {
-			list.pid = {$plugin.tx_sportms.settings.game.list.pid}
+			list {
+				pagination {
+					insertAbove = {$plugin.tx_sportms.settings.game.list.pagination.insertAbove}
+					insertBelow = {$plugin.tx_sportms.settings.game.list.pagination.insertBelow}
+					itemsPerPage = {$plugin.tx_sportms.settings.game.list.pagination.itemsPerPage}
+					maximumNumberOfLinks = {$plugin.tx_sportms.settings.game.list.pagination.maximumNumberOfLinks}
+				}
+				pid = {$plugin.tx_sportms.settings.game.list.pid}
+			}
 			history.pid = {$plugin.tx_sportms.settings.game.history.pid}
 			index.pid = {$plugin.tx_sportms.settings.game.index.pid}
 			report.pid = {$plugin.tx_sportms.settings.game.report.pid}
@@ -73,7 +103,15 @@ plugin.tx_sportms {
 				limit = {$plugin.tx_sportms.settings.team.historyRecordPlayers.limit}
 				pid = {$plugin.tx_sportms.settings.team.historyRecordPlayers.pid}
 			}
-			list.pid = {$plugin.tx_sportms.settings.team.list.pid}
+			list {
+				pagination {
+					insertAbove = {$plugin.tx_sportms.settings.team.list.pagination.insertAbove}
+					insertBelow = {$plugin.tx_sportms.settings.team.list.pagination.insertBelow}
+					itemsPerPage = {$plugin.tx_sportms.settings.team.list.pagination.itemsPerPage}
+					maximumNumberOfLinks = {$plugin.tx_sportms.settings.team.list.pagination.maximumNumberOfLinks}
+				}
+				pid = {$plugin.tx_sportms.settings.team.list.pid}
+			}
 		}
 
 		teamSeason {
@@ -101,6 +139,11 @@ plugin.tx_sportms {
 		templateRootPaths {
 			0 = EXT:sportms/Resources/Private/Templates/
 			1 = {$plugin.tx_sportms.view.templateRootPath}
+		}
+		widget {
+			TYPO3\CMS\Fluid\ViewHelpers\Widget\PaginateViewHelper {
+				templateRootPath = {$plugin.tx_sportms.view.widget.TYPO3\CMS\Fluid\ViewHelpers\Widget\PaginateViewHelper.templateRootPath}
+			}
 		}
 	}
 

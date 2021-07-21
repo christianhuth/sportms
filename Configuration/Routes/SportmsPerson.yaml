@@ -1,10 +1,26 @@
----
 routeEnhancers:
-  sportmsGame:
+  sportmsPerson:
+    aspects:
+      localizedPage:
+        type: LocaleModifier
+        default: 'page'
+        localeMap:
+          - locale: 'de_DE.*'
+            value: 'seite'
+      page:
+        type: StaticRangeMapper
+        start: '1'
+        end: '100'
+    defaults:
+      page: '0'
     defaultController: 'Person::list'
     extension: Sportms
     plugin: Person
     routes:
       - routePath: '/'
         _controller: 'Person::list'
+      - routePath: '/{localizedPage}/{page}'
+        _controller: 'Person::list'
+        _arguments:
+          page: '@widget_0/currentPage'
     type: Extbase

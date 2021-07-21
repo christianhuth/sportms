@@ -1,0 +1,26 @@
+<html data-namespace-typo3-fluid="true"
+	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<div class="tx-sportms-person-in-table">
+	<div class="tx-sportms-person-image">
+		<f:render partial="ViewHelper/Person/ProfileImage"
+				  arguments="{personProfile: person.personProfiles.0}"/>
+	</div>
+	<div class="tx-sportms-person-name">
+		{person.lastname} {person.firstname}
+	</div>
+	<div class="tx-sportms-person-date-of-birth">
+		<f:if condition="{person.dateOfBirth} && {person.showBirthday}">
+			<f:then>
+				<f:format.date format="{settings.format.date.long}">
+					{person.dateOfBirth}
+				</f:format.date>
+			</f:then>
+			<f:else>
+			
+			</f:else>
+		</f:if>
+	</div>
+</div>
+
+</html>

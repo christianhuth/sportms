@@ -20,10 +20,14 @@
 				<tbody>
 				<f:if condition="{games}">
 					<f:then>
-						<f:for as="game" each="{games}">
-							<f:render arguments="{game: game}"
-									  partial="Game/List/Item"/>
-						</f:for>
+						<f:widget.paginate objects="{games}"
+										   as="paginatedGames"
+										   configuration="{itemsPerPage: settings.game.list.pagination.itemsPerPage, insertAbove: settings.game.list.pagination.insertAbove, insertBelow: settings.game.list.pagination.insertBelow, maximumNumberOfLinks: settings.game.list.pagination.maximumNumberOfLinks}">
+							<f:for as="game" each="{paginatedGames}">
+								<f:render arguments="{game: game}"
+										  partial="Game/List/Item"/>
+							</f:for>
+						</f:widget.paginate>
 					</f:then>
 					<f:else>
 						<td colspan="9">Keine Spiele gefunden.</td>

@@ -46,15 +46,39 @@ plugin.tx_sportms {
 	settings {
 
 		club {
-			# cat=plugin.tx_sportms/sportmsClub; type=int+; label=Default PID of Club->list
-			list.pid =
+			list {
+				pagination {
+					# cat=plugin.tx_sportms/sportmsClub; type=boolean; label=Show pagination above Club->list
+					insertAbove = 0
+					# cat=plugin.tx_sportms/sportmsClub; type=boolean; label=Show pagination below Club->list
+					insertBelow = 1
+					# cat=plugin.tx_sportms/sportmsClub; type=int+; label=Items per Page for Club->list
+					itemsPerPage = 25
+					# cat=plugin.tx_sportms/sportmsClub; type=int+; label=Maximum number of links in the pagination for Club->list
+					maximumNumberOfLinks = 10
+				}
+				# cat=plugin.tx_sportms/sportmsClub; type=int+; label=Default PID of Club->list
+				pid =
+			}
 			# cat=plugin.tx_sportms/sportmsClub; type=int+; label=Default PID of Club->sections
 			sections.pid =
 		}
 
 		competition {
-			# cat=plugin.tx_sportms/sportmsCompetition; type=int+; label=Default PID of Competition->list
-			list.pid =
+			list {
+				pagination {
+					# cat=plugin.tx_sportms/sportmsClub; type=boolean; label=Show pagination above Competition->list
+					insertAbove = 0
+					# cat=plugin.tx_sportms/sportmsClub; type=boolean; label=Show pagination below Competition->list
+					insertBelow = 1
+					# cat=plugin.tx_sportms/sportmsClub; type=int+; label=Items per Page for Competition->list
+					itemsPerPage = 25
+					# cat=plugin.tx_sportms/sportmsClub; type=int+; label=Maximum number of links in the pagination for Competition->list
+					maximumNumberOfLinks = 10
+				}
+				# cat=plugin.tx_sportms/sportmsCompetition; type=int+; label=Default PID of Competition->list
+				pid =
+			}
 		}
 
 		competitionSeason {
@@ -67,23 +91,41 @@ plugin.tx_sportms {
 		}
 
 		format {
-			# cat=plugin.tx_sportms/format; type=string; label=Long format for dates
-			dateLong = %d.%m.%Y
-			# cat=plugin.tx_sportms/format; type=string; label=Short format for dates
-			dateShort = %d.%m
-			# cat=plugin.tx_sportms/format; type=string; label=Long format for datetimes
-			dateTimeLong = %d.%m.%Y - %H:%M
-			# cat=plugin.tx_sportms/format; type=string; label=Short format for datetimes
-			dateTimeShort = %d.%m. - %H:%M
-			# cat=plugin.tx_sportms/format; type=string; label=Long format for times
-			timeLong = %H:%M
-			# cat=plugin.tx_sportms/format; type=string; label=Short format for times
-			timeShort = %H:%M
+			date {
+				# cat=plugin.tx_sportms/format; type=string; label=Long format for dates
+				long = %d.%m.%Y
+				# cat=plugin.tx_sportms/format; type=string; label=Short format for dates
+				short = %d.%m
+			}
+			datetime {
+				# cat=plugin.tx_sportms/format; type=string; label=Long format for datetimes
+				long = %d.%m.%Y - %H:%M
+				# cat=plugin.tx_sportms/format; type=string; label=Short format for datetimes
+				short = %d.%m. - %H:%M
+			}
+			time {
+				# cat=plugin.tx_sportms/format; type=string; label=Long format for times
+				long = %H:%M
+				# cat=plugin.tx_sportms/format; type=string; label=Short format for times
+				short = %H:%M
+			}
 		}
 
 		game {
-			# cat=plugin.tx_sportms/sportmsGame; type=int+; label=Default PID of Game->list
-			list.pid =
+			list {
+				pagination {
+					# cat=plugin.tx_sportms/sportmsClub; type=boolean; label=Show pagination above Game->list
+					insertAbove = 0
+					# cat=plugin.tx_sportms/sportmsClub; type=boolean; label=Show pagination below Game->list
+					insertBelow = 1
+					# cat=plugin.tx_sportms/sportmsClub; type=int+; label=Items per Page for Game->list
+					itemsPerPage = 25
+					# cat=plugin.tx_sportms/sportmsClub; type=int+; label=Maximum number of links in the pagination for Game->list
+					maximumNumberOfLinks = 10
+				}
+				# cat=plugin.tx_sportms/sportmsGame; type=int+; label=Default PID of Game->list
+				pid =
+			}
 			# cat=plugin.tx_sportms/sportmsGame; type=int+; label=Default PID of Game->history
 			history.pid =
 			# cat=plugin.tx_sportms/sportmsGame; type=int+; label=Default PID of Game->index
@@ -102,8 +144,20 @@ plugin.tx_sportms {
 		}
 
 		person {
-			# cat=plugin.tx_sportms/sportmsPerson; type=int+; label=Default PID of Person->list
-			list.pid =
+			list {
+				pagination {
+					# cat=plugin.tx_sportms/sportmsClub; type=boolean; label=Show pagination above Person->list
+					insertAbove = 0
+					# cat=plugin.tx_sportms/sportmsClub; type=boolean; label=Show pagination below Person->list
+					insertBelow = 1
+					# cat=plugin.tx_sportms/sportmsClub; type=int+; label=Items per Page for Person->list
+					itemsPerPage = 25
+					# cat=plugin.tx_sportms/sportmsClub; type=int+; label=Maximum number of links in the pagination for Person->list
+					maximumNumberOfLinks = 10
+				}
+				# cat=plugin.tx_sportms/sportmsPerson; type=int+; label=Default PID of Person->list
+				pid =
+			}
 			# cat=plugin.tx_sportms/sportmsPerson; type=string; label=Path to default dummy image for a male person
 			dummyImageMale = EXT:sportms/Resources/Public/Images/person-male.jpg
 			# cat=plugin.tx_sportms/sportmsPerson; type=string; label=Path to default dummy image for a female person
@@ -132,6 +186,16 @@ plugin.tx_sportms {
 			}
 
 			list {
+				pagination {
+					# cat=plugin.tx_sportms/sportmsClub; type=boolean; label=Show pagination above Team->list
+					insertAbove = 0
+					# cat=plugin.tx_sportms/sportmsClub; type=boolean; label=Show pagination below Team->list
+					insertBelow = 1
+					# cat=plugin.tx_sportms/sportmsClub; type=int+; label=Items per Page for Team->list
+					itemsPerPage = 25
+					# cat=plugin.tx_sportms/sportmsClub; type=int+; label=Maximum number of links in the pagination for Team->list
+					maximumNumberOfLinks = 10
+				}
 				# cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of Team->list
 				pid =
 			}
@@ -157,6 +221,12 @@ plugin.tx_sportms {
 		partialRootPath = EXT:sportms/Resources/Private/Partials/
 		# cat=plugin.tx_sportms/view; type=string; label=Path to template root (FE)
 		templateRootPath = EXT:sportms/Resources/Private/Templates/
+		# cat=plugin.tx_sportms/view; type=string; label=Path to widget root (FE)
+		widget {
+			TYPO3\CMS\Fluid\ViewHelpers\Widget\PaginateViewHelper {
+				templateRootPath = EXT:sportms/Resources/Private/Templates/
+			}
+		}
 	}
 
 }

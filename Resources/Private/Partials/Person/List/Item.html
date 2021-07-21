@@ -1,62 +1,70 @@
 <html data-namespace-typo3-fluid="true"
 	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-	  xmlns:sportms="Balumedien\Sportms\ViewHelpers">
+>
 
 <tr>
-	<td>{person.lastname}</td>
-	<td>{person.firstname}</td>
-	<td>{person.nickname}</td>
+	<td>
+		<f:render partial="ViewHelper/Person/ItemInTable"
+				  arguments="{person: person}"/>
+	</td>
 	<td class="tx-sportms-table-center">
 		<f:render arguments="{nationalities: person.nationalities}"
 				  partial="ViewHelper/Person/Nationalities"/>
 	</td>
 	<td>
-		<f:comment>
-			<f:if condition="{person.personProfiles}">
-				<f:then>
-					<ul>
-						<f:for as="personProfile"
-							   each="{person.personProfiles}">
-							<f:switch expression="{personProfile.profileType}">
-								<f:case value="official">
-									<li>
-										<sportms:link.action
-												Person="{person}"
-												action="officialProfile"
-												controller="Person">
-											Funktionärsprofil
-										</sportms:link.action>
-									</li>
-								</f:case>
-								<f:case value="player">
-									<li>
-										<sportms:link.action
-												Person="{person}"
-												action="playerProfile"
-												controller="Person">Spielerprofil
-										</sportms:link.action>
-									</li>
-								</f:case>
-								<f:case value="referee">
-									<li>
-										<sportms:link.action
-												Person="{person}"
-												action="refereeProfile"
-												controller="Person">
-											Schiedsrichterprofil
-										</sportms:link.action>
-									</li>
-								</f:case>
-							</f:switch>
-						</f:for>
-					</ul>
-				</f:then>
-				<f:else>
-					<div class="tx-sportms-table-center">-</div>
-				</f:else>
-			</f:if>
-		</f:comment>
-		<div class="tx-sportms-table-center">-</div>
+		<f:if condition="{person.personProfiles}">
+			<f:then>
+				<ul>
+					<f:for as="personProfile"
+						   each="{person.personProfiles}">
+						<f:switch expression="{personProfile.profileType}">
+							<f:case value="official">
+								<li>
+									<f:link.action
+											action="officialProfile"
+											controller="person"
+											extensionName="sportms"
+											pageUid="{settings.person.officialProfile.pid}"
+											pluginName="person">
+										<f:translate
+												key="tx_sportms_action.person.officialProfile"/>
+									</f:link.action>
+								</li>
+							</f:case>
+							<f:case value="player">
+								<li>
+									<f:link.action
+											action="playerProfile"
+											controller="person"
+											extensionName="sportms"
+											pageUid="{settings.person.playerProfile.pid}"
+											pluginName="person">
+										<f:translate
+												key="tx_sportms_action.person.playerProfile"/>
+									</f:link.action>
+								</li>
+							</f:case>
+							<f:case value="referee">
+								<li>
+									<f:link.action
+											action="refereeProfile"
+											controller="person"
+											extensionName="sportms"
+											pageUid="{settings.person.refereeProfile.pid}"
+											pluginName="person">
+										<f:translate
+												key="tx_sportms_action.person.refereeProfile"/>
+									</f:link.action>
+								</li>
+							</f:case>
+						</f:switch>
+					</f:for>
+				</ul>
+			</f:then>
+			<f:else>
+				<div class="tx-sportms-table-center">-</div>
+			</f:else>
+		</f:if>
 	</td>
 </tr>
 

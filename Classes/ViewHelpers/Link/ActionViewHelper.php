@@ -107,7 +107,7 @@
             $listOfAllowedSportMsDomainModels = [];
             $listOfAllowedSportMsDomainModels[] = 'Club';
             $listOfAllowedSportMsDomainModels[] = 'ClubSection';
-            $listOfAllowedSportMsDomainModels[] = 'Competition';
+            $listOfAllowedSportMsDomainModels[] = 'CompetitionSeason';
             $listOfAllowedSportMsDomainModels[] = 'CompetitionSeason';
             $listOfAllowedSportMsDomainModels[] = 'CompetitionSeasonGameday';
             $listOfAllowedSportMsDomainModels[] = 'Game';
@@ -160,8 +160,8 @@
                 $pluginName = "Club";
             }
             
-            if ($controller === "Competition" || $controller === "CompetitionSeason") {
-                $pluginName = "Competition";
+            if ($controller === "CompetitionSeason" || $controller === "CompetitionSeason") {
+                $pluginName = "CompetitionSeason";
             }
             
             if ($controller === "Game") {
@@ -238,7 +238,7 @@
         {
             $listofControllersAndTheirActions = [];
             $listofControllersAndTheirActions['Club'] = ['list', 'sections'];
-            $listofControllersAndTheirActions['Competition'] = ['list'];
+            $listofControllersAndTheirActions['CompetitionSeason'] = ['list'];
             $listofControllersAndTheirActions['CompetitionSeason'] = ['clubs', 'games', 'teams'];
             $listofControllersAndTheirActions['Game'] = ['history', 'index', 'list', 'report'];
             $listofControllersAndTheirActions['Person'] = [

@@ -14,7 +14,7 @@
         protected $url;
         
         /**
-         * @var UrlType
+         * @var \Balumedien\Sportms\Domain\Model\UrlType
          */
         protected $urlType;
         
