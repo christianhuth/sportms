@@ -18,18 +18,20 @@
             'iconfile' => 'EXT:sportms/Resources/Public/Icons/tx_sportms_domain_model_clubsectionofficialjob.svg',
             'label' => 'label',
             'searchFields' => '',
-            'title' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_clubsectionofficialjob',
+            'title' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_clubsectionofficialjob',
             'tstamp' => 'tstamp',
             'versioningWS' => true,
         ],
         'types' => [
             '1' => [
                 'showitem' => ' --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.tab.general,
-                                    label',
+                                    label,
+                                --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.tab.visibility,
+                                    --palette--;LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.palette.visibility_general;visibility_general',
             ],
         ],
         'palettes' => [
-            '1' => ['showitem' => ''],
+            'visibility_general' => ['showitem' => 'hidden, starttime, endtime'],
         ],
         'columns' => [
             

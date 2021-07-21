@@ -29,16 +29,16 @@
         'types' => [
             '1' => [
                 'showitem' => ' --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.tab.general,
-                                    club_official_job,
-                                    person,
-                                --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_clubofficial.tab_date,
-                                    startdate,
-                                    until_today,
-                                    enddate',
+                                    --palette--;LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_teamseasonofficial;person_job,
+                                    --palette--;LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.palette.date;date,
+                                --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.tab.visibility,
+                                    --palette--;LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.palette.visibility_general;visibility_general',
             ],
         ],
         'palettes' => [
-            '1' => ['showitem' => ''],
+            'person_job' => ['showitem' => 'club_official_job, person'],
+            'date' => ['showitem' => 'startdate, until_today, enddate'],
+            'visibility_general' => ['showitem' => 'hidden, starttime, endtime'],
         ],
         'columns' => [
             
@@ -110,7 +110,7 @@
                     'foreign_table' => 'tx_sportms_domain_model_clubofficialjob',
                     'foreign_table_where' => 'ORDER BY tx_sportms_domain_model_clubofficialjob.label ASC',
                     'items' => [
-                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.select', "0"],
+                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.select', null],
                     ],
                     'maxItems' => 1,
                     'renderType' => 'selectSingle',
@@ -129,7 +129,7 @@
                                             )
                                             ORDER BY tx_sportms_domain_model_person.lastname ASC, tx_sportms_domain_model_person.firstname ASC',
                     'items' => [
-                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.select', "0"],
+                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.select', null],
                     ],
                     'maxItems' => 1,
                     'minItems' => 1,
@@ -140,6 +140,8 @@
             ],
             
             'startdate' => [
+                'exclude' => 1,
+                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_general.official.startdate',
                 'config' => [
                     'type' => 'input',
                     'size' => 8,
@@ -147,8 +149,6 @@
                     'placeholder' => 'dd-mm-yyyy',
                     'renderType' => 'inputDateTime',
                 ],
-                'exclude' => 1,
-                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.startdate',
             ],
             'until_today' => [
                 'config' => [
@@ -157,10 +157,13 @@
                     'type' => 'check',
                 ],
                 'exclude' => 1,
-                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_clubofficial.until_today',
+                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_general.official.until_today',
                 'onChange' => 'reload',
             ],
             'enddate' => [
+                'displayCond' => 'FIELD:until_today:<:1',
+                'exclude' => 1,
+                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_general.official.enddate',
                 'config' => [
                     'type' => 'input',
                     'size' => 8,
@@ -168,9 +171,6 @@
                     'placeholder' => 'dd-mm-yyyy',
                     'renderType' => 'inputDateTime',
                 ],
-                'displayCond' => 'FIELD:until_today:=:0',
-                'exclude' => 1,
-                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.enddate',
             ],
         
         ],

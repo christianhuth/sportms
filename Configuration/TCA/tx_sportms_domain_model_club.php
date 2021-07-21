@@ -18,7 +18,7 @@
             'iconfile' => 'EXT:sportms/Resources/Public/Icons/tx_sportms_domain_model_club.svg',
             'label' => 'name',
             'searchFields' => 'name',
-            'title' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_club',
+            'title' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_club',
             'tstamp' => 'tstamp',
             'versioningWS' => true,
         ],
@@ -29,15 +29,15 @@
                                     colours,
                                     --palette--;; founding,
                                     club_members,
-                                --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_club.tab_logos,
+                                --div--;LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_club.logos,
                                     logos,
-                                --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.tab.contact,
+                                --div--;LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_general.contact_information,
                                     addresses, phones, mails, urls,
-                                --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_club.tab_grounds,
+                                --div--;LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_clubground.plural,
                                     club_grounds, home_venues,
-                                --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_club.tab_sections,
+                                --div--;LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_clubsection.plural,
                                     club_sections,
-                                --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_club.tab_officials,
+                                --div--;LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_clubofficial.plural,
                                     club_officials,
                                 --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.tab.visibility,
                                     --palette--;LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.palette.visibility_general;visibility_general,
@@ -107,7 +107,7 @@
             
             'name' => [
                 'exclude' => 1,
-                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_club.name',
+                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_club.name',
                 'config' => [
                     'type' => 'input',
                     'size' => 30,
@@ -116,7 +116,7 @@
             ],
             'colours' => [
                 'exclude' => 1,
-                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_club.colours',
+                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_club.colours',
                 'config' => [
                     'eval' => 'trim',
                     'size' => 30,
@@ -125,7 +125,7 @@
             ],
             'date_of_founding' => [
                 'exclude' => 1,
-                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_club.date_of_founding',
+                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_club.date_of_founding',
                 'config' => [
                     'type' => 'input',
                     'size' => 8,
@@ -136,7 +136,7 @@
             ],
             'year_of_founding' => [
                 'exclude' => 1,
-                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_club.year_of_founding',
+                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_club.year_of_founding',
                 'config' => [
                     'eval' => 'int, trim',
                     'max' => 4,
@@ -171,7 +171,7 @@
             
             'logos' => [
                 'exclude' => 1,
-                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_club.logos',
+                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_club.logos',
                 'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
                     'image',
                     [
@@ -277,7 +277,7 @@
             ],
             
             'club_grounds' => [
-                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_clubgrounds',
+                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_clubground.plural',
                 'config' => [
                     'appearance' => [
                         'enabledControls' => [
@@ -300,7 +300,7 @@
             ],
             'home_venues' => [
                 'exclude' => true,
-                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_club.home_venues',
+                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_club.home_venues',
                 'config' => [
                     'autoSizeMax' => 30,
                     'fieldControl' => [
@@ -349,7 +349,7 @@
             ],
             
             'club_officials' => [
-                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_clubofficials',
+                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_clubofficial.plural',
                 'config' => [
                     'appearance' => [
                         'enabledControls' => [
@@ -369,7 +369,16 @@
                     'type' => 'inline',
                 ],
             ],
-            
+    
+            'detail_link' => [
+                'exclude' => true,
+                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.detail_link',
+                'config' => [
+                    'default' => false,
+                    'renderType' => 'checkboxToggle',
+                    'type' => 'check',
+                ],
+            ],
             'slug' => [
                 'exclude' => true,
                 'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.slug',
@@ -387,16 +396,6 @@
                     ],
                     'prependSlash' => false,
                     'type' => 'slug',
-                ],
-            ],
-            
-            'detail_link' => [
-                'exclude' => true,
-                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.detail_link',
-                'config' => [
-                    'default' => false,
-                    'renderType' => 'checkboxToggle',
-                    'type' => 'check',
                 ],
             ],
         

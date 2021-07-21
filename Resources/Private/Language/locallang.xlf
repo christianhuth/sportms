@@ -35,6 +35,18 @@
             <trans-unit id="tx_sportms_general.day.7">
                 <source>Sonntag</source>
             </trans-unit>
+            <trans-unit id="tx_sportms_general.official.duration">
+                <source>Amtszeit</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.official.enddate">
+                <source>Amtsende</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.official.startdate">
+                <source>Amtsantritt</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.official.until_today">
+                <source>Wird bis heute ausgeführt?</source>
+            </trans-unit>
             <trans-unit id="tx_sportms_general.sex">
                 <source>Biologisches Geschlecht</source>
             </trans-unit>
@@ -89,6 +101,7 @@
             <trans-unit id="tx_sportms_general.zodiac_sign.12">
                 <source>Steinbock</source>
             </trans-unit>
+
 
         <!-- Action -->
             <trans-unit id="tx_sportms_action.club.sections">
@@ -274,9 +287,6 @@
             </trans-unit>
             <trans-unit id="tx_sportms_domain_model_clubofficial.singular">
                 <source>Vereinsfunktionär</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_clubofficial.until_today">
-                <source>Wird bis heute ausgeführt?</source>
             </trans-unit>
 
 
@@ -1174,6 +1184,12 @@
             </trans-unit>
             <trans-unit id="tx_sportms_domain_model_teamseasonofficial.singular">
                 <source>Mannschaftsfunktionär</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_teamseasonofficial.startdate">
+                <source>Amtsantritt</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_teamseasonofficial.enddate">
+                <source>Amtsende</source>
             </trans-unit>
 
 

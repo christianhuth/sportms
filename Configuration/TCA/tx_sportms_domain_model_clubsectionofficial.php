@@ -29,15 +29,16 @@
         'types' => [
             '1' => [
                 'showitem' => ' --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.tab.general,
-                                    club_section_official_job,
-                                    person,
-                                --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_clubsectionofficial.tab_date,
-                                    startdate,
-                                    enddate',
+                                    --palette--;LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_clubsectionofficial;person_job,
+                                    --palette--;LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.palette.date;date,
+                                --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.tab.visibility,
+                                    --palette--;LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.palette.visibility_general;visibility_general',
             ],
         ],
         'palettes' => [
-            '1' => ['showitem' => ''],
+            'person_job' => ['showitem' => 'club_section_official_job, person'],
+            'date' => ['showitem' => 'startdate, until_today, enddate'],
+            'visibility_general' => ['showitem' => 'hidden, starttime, endtime'],
         ],
         'columns' => [
             
@@ -151,7 +152,7 @@
             
             'startdate' => [
                 'exclude' => 1,
-                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.startdate',
+                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_general.official.startdate',
                 'config' => [
                     'type' => 'input',
                     'size' => 8,
@@ -160,9 +161,19 @@
                     'renderType' => 'inputDateTime',
                 ],
             ],
+            'until_today' => [
+                'config' => [
+                    'default' => true,
+                    'renderType' => 'checkboxToggle',
+                    'type' => 'check',
+                ],
+                'exclude' => 1,
+                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_general.official.until_today',
+                'onChange' => 'reload',
+            ],
             'enddate' => [
                 'exclude' => 1,
-                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.enddate',
+                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_general.official.enddate',
                 'config' => [
                     'type' => 'input',
                     'size' => 8,

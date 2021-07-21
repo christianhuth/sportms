@@ -1,61 +1,73 @@
 <html data-namespace-typo3-fluid="true"
 	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-	  xmlns:sportms="Balumedien\Sportms\ViewHelpers">
+>
 
 <f:layout name="default"/>
 
 <f:section name="default">
 	<div id="tx-sportms-team-historyofficials">
 		<f:render arguments="{team: team}" partial="Team/Navigation"/>
-		<table class="table table-bordered table-condensed table-hover table-striped tx-sportms-table">
-			<thead>
-			<tr>
-				<th>Person</th>
-				<th>Mannschaftsfunktion</th>
-				<th>Nationalität</th>
-				<th>Amtsantritt</th>
-				<th>Amtsende</th>
-				<th>Amtszeit</th>
-			</tr>
-			</thead>
-			<tbody>
-			<f:for as="official" each="{officials}">
+		<div class="table-responsive">
+			<table class="table table-bordered table-condensed table-hover table-striped tx-sportms-table">
+				<thead>
 				<tr>
-					<td>
-						<f:render partial="ViewHelper/LinkAction/Person/OfficialProfile"
-								  arguments="{officialProfile: official, person: official.person}"/>
-						<f:if condition="{official.person.dateOfBirth}">
-							<br/>
-							<f:format.date format="{settings.format.date.long}">
-								{official.person.dateOfBirth}
-							</f:format.date>
-						</f:if>
-					</td>
-					<td class="tx-sportms-table-center">
-						{official.teamSeasonOfficialJob.label}
-					</td>
-					<td class="tx-sportms-table-center">
-						<f:render arguments="{nationalities: official.person.nationalities}"
-								  partial="ViewHelper/Person/Nationalities"/>
-					</td>
-					<td class="tx-sportms-table-center">
-						<f:format.date format="{settings.format.date.long}">
-							{official.startdate}
-						</f:format.date>
-					</td>
-					<td class="tx-sportms-table-center">
-						<f:format.date format="{settings.format.date.long}">
-							{official.enddate}
-						</f:format.date>
-					</td>
-					<td class="tx-sportms-table-right">{official.dateDifference}
-													   Tage
-					</td>
+					<th>
+						<f:translate key="tx_sportms_domain_model_person"/>
+					</th>
+					<th>
+						<f:translate
+								key="tx_sportms_domain_model_teamseasonofficialjob"/>
+					</th>
+					<th>
+						<f:translate
+								key="tx_sportms_domain_model_person.nationality"/>
+					</th>
+					<th>
+						<f:translate
+								key="tx_sportms_general.official.startdate"/>
+					</th>
+					<th>
+						<f:translate
+								key="tx_sportms_general.official.enddate"/>
+					</th>
+					<th>Amtszeit</th>
 				</tr>
-			</f:for>
-			</tbody>
-			<tr></tr>
-		</table>
+				</thead>
+				<tbody>
+				<f:for as="official" each="{officials}">
+					<tr>
+						<td>
+							<f:render partial="ViewHelper/Person/ItemInTable"
+									  arguments="{person: official.person}"/>
+						</td>
+						<td class="tx-sportms-table-center">
+							{official.teamSeasonOfficialJob.label}
+						</td>
+						<td class="tx-sportms-table-center">
+							<f:render
+									arguments="{nationalities: official.person.nationalities}"
+									partial="ViewHelper/Person/Nationalities"/>
+						</td>
+						<td class="tx-sportms-table-center">
+							<f:format.date format="{settings.format.date.long}">
+								{official.startdate}
+							</f:format.date>
+						</td>
+						<td class="tx-sportms-table-center">
+							<f:format.date format="{settings.format.date.long}">
+								{official.enddate}
+							</f:format.date>
+						</td>
+						<td class="tx-sportms-table-right">
+							{official.dateDifference}
+							Tage
+						</td>
+					</tr>
+				</f:for>
+				</tbody>
+				<tr></tr>
+			</table>
+		</div>
 	</div>
 </f:section>
 
