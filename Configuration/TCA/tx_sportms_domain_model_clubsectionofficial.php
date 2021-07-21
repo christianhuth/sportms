@@ -172,8 +172,6 @@
                 'onChange' => 'reload',
             ],
             'enddate' => [
-                'exclude' => 1,
-                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_general.official.enddate',
                 'config' => [
                     'type' => 'input',
                     'size' => 8,
@@ -181,6 +179,9 @@
                     'placeholder' => 'dd-mm-yyyy',
                     'renderType' => 'inputDateTime',
                 ],
+                'displayCond' => 'FIELD:until_today:<:1',
+                'exclude' => 1,
+                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_general.official.enddate',
             ],
         
         ],

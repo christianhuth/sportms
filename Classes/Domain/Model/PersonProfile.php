@@ -21,12 +21,12 @@
         protected $sport;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Model\SportPositionGroup
+         * @var \Balumedien\Sportms\Domain\Model\SportPositionGroup|null
          */
         protected $mainSportPositionGroup;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Model\SportPosition
+         * @var \Balumedien\Sportms\Domain\Model\SportPosition|null
          */
         protected $mainSportPosition;
         
@@ -119,35 +119,35 @@
         {
             $this->sport = $sport;
         }
-        
+    
         /**
-         * @return SportPositionGroup
+         * @return SportPositionGroup|null
          */
-        public function getMainSportPositionGroup(): SportPositionGroup
+        public function getMainSportPositionGroup(): ?SportPositionGroup
         {
             return $this->mainSportPositionGroup;
         }
-        
+    
         /**
-         * @param SportPositionGroup $mainSportPositionGroup
+         * @param SportPositionGroup|null $mainSportPositionGroup
          */
-        public function setMainSportPositionGroup(SportPositionGroup $mainSportPositionGroup): void
+        public function setMainSportPositionGroup(?SportPositionGroup $mainSportPositionGroup): void
         {
             $this->mainSportPositionGroup = $mainSportPositionGroup;
         }
-        
+    
         /**
-         * @return SportPosition
+         * @return SportPosition|null
          */
-        public function getMainSportPosition(): SportPosition
+        public function getMainSportPosition(): ?SportPosition
         {
             return $this->mainSportPosition;
         }
-        
+    
         /**
-         * @param SportPosition $mainSportPosition
+         * @param SportPosition|null $mainSportPosition
          */
-        public function setMainSportPosition(SportPosition $mainSportPosition): void
+        public function setMainSportPosition(?SportPosition $mainSportPosition): void
         {
             $this->mainSportPosition = $mainSportPosition;
         }

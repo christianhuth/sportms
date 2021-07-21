@@ -10,58 +10,23 @@
 		<f:render arguments="{nationalities: person.nationalities}"
 				  partial="ViewHelper/Person/Nationalities"/>
 	</td>
-	<td>
+	<td class="tx-sportms-table-center">
 		<f:if condition="{person.personProfiles}">
 			<f:then>
-				<ul>
-					<f:for as="personProfile"
-						   each="{person.personProfiles}">
-						<f:switch expression="{personProfile.profileType}">
-							<f:case value="official">
-								<li>
-									<f:link.action
-											action="officialProfile"
-											controller="person"
-											extensionName="sportms"
-											pageUid="{settings.person.officialProfile.pid}"
-											pluginName="person">
-										<f:translate
-												key="tx_sportms_action.person.officialProfile"/>
-									</f:link.action>
-								</li>
-							</f:case>
-							<f:case value="player">
-								<li>
-									<f:link.action
-											action="playerProfile"
-											controller="person"
-											extensionName="sportms"
-											pageUid="{settings.person.playerProfile.pid}"
-											pluginName="person">
-										<f:translate
-												key="tx_sportms_action.person.playerProfile"/>
-									</f:link.action>
-								</li>
-							</f:case>
-							<f:case value="referee">
-								<li>
-									<f:link.action
-											action="refereeProfile"
-											controller="person"
-											extensionName="sportms"
-											pageUid="{settings.person.refereeProfile.pid}"
-											pluginName="person">
-										<f:translate
-												key="tx_sportms_action.person.refereeProfile"/>
-									</f:link.action>
-								</li>
-							</f:case>
-						</f:switch>
-					</f:for>
-				</ul>
+				<f:for each="{person.personProfiles}" as="personProfile">
+					<f:if
+							condition="{personProfile.profileType} == player && {personProfile.mainSportPositionGroup}">
+						<f:then>
+							{personProfile.mainSportPositionGroup.label}
+							<f:variable name="sportPositionGroupFound"
+										value="true"/>
+						</f:then>
+					</f:if>
+				</f:for>
+				<f:if condition="!{sportPositionGroupFound}">-</f:if>
 			</f:then>
 			<f:else>
-				<div class="tx-sportms-table-center">-</div>
+				-
 			</f:else>
 		</f:if>
 	</td>

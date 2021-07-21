@@ -88,7 +88,15 @@ plugin.tx_sportms {
 		}
 
 		person {
-			list.pid = {$plugin.tx_sportms.settings.person.list.pid}
+			list {
+				pagination {
+					insertAbove = {$plugin.tx_sportms.settings.person.list.pagination.insertAbove}
+					insertBelow = {$plugin.tx_sportms.settings.person.list.pagination.insertBelow}
+					itemsPerPage = {$plugin.tx_sportms.settings.person.list.pagination.itemsPerPage}
+					maximumNumberOfLinks = {$plugin.tx_sportms.settings.person.list.pagination.maximumNumberOfLinks}
+				}
+				pid = {$plugin.tx_sportms.settings.person.list.pid}
+			}
 			dummyImageMale = {$plugin.tx_sportms.settings.person.dummyImageMale}
 			dummyImageFemale = {$plugin.tx_sportms.settings.person.dummyImageFemale}
 		}

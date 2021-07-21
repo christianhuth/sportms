@@ -19,17 +19,27 @@
 					</th>
 					<th>
 						<f:translate
-								key="tx_sportms_domain_model_personprofile"/>
+								key="tx_sportms_domain_model_sportposition"/>
 					</th>
+					<f:comment>
+						<th>
+							<f:translate
+									key="tx_sportms_domain_model_personprofile"/>
+						</th>
+					</f:comment>
 				</tr>
 				</thead>
 				<tbody>
 				<f:if condition="{persons}">
 					<f:then>
-						<f:for as="person" each="{persons}">
-							<f:render arguments="{person: person}"
-									  partial="Person/List/Item"/>
-						</f:for>
+						<f:widget.paginate as="paginatedObjects"
+										   objects="{persons}"
+										   configuration="{itemsPerPage: settings.person.list.pagination.itemsPerPage, insertAbove: settings.person.list.pagination.insertAbove, insertBelow: settings.person.list.pagination.insertBelow, maximumNumberOfLinks: settings.person.list.pagination.maximumNumberOfLinks}">
+							<f:for as="person" each="{paginatedObjects}">
+								<f:render arguments="{person: person}"
+										  partial="Person/List/Item"/>
+							</f:for>
+						</f:widget.paginate>
 					</f:then>
 					<f:else>
 						<tr>

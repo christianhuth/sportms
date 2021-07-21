@@ -6,7 +6,7 @@
 		<f:image image="{personProfile.profileImages.0}" height="50"/>
 	</f:then>
 	<f:else>
-		<f:render arguments="{person: person}"
+		<f:render arguments="{person: personProfile.person}"
 				  partial="ViewHelper/Person/DummyImage"/>
 	</f:else>
 </f:if>
