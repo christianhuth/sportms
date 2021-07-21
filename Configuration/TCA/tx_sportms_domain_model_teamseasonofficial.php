@@ -37,7 +37,7 @@
         ],
         'palettes' => [
             'person_job' => ['showitem' => 'team_season_official_job, person'],
-            'date' => ['showitem' => 'startdate, until_today, enddate'],
+            'date' => ['showitem' => 'startdate, enddate'],
             'visibility_general' => ['showitem' => 'hidden, starttime, endtime'],
         ],
         'columns' => [
@@ -160,16 +160,6 @@
                     'placeholder' => 'dd-mm-yyyy',
                     'renderType' => 'inputDateTime',
                 ],
-            ],
-            'until_today' => [
-                'config' => [
-                    'default' => true,
-                    'renderType' => 'checkboxToggle',
-                    'type' => 'check',
-                ],
-                'exclude' => 1,
-                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_general.official.until_today',
-                'onChange' => 'reload',
             ],
             'enddate' => [
                 'exclude' => 1,

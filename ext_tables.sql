@@ -601,7 +601,6 @@ CREATE TABLE tx_sportms_domain_model_teamseasonofficial
     person                   int(11) DEFAULT '0' NOT NULL,
     team_season_official_job int(11) DEFAULT '0' NOT NULL,
     startdate                int(11) DEFAULT NULL,
-    until_today              tinyint(4) unsigned DEFAULT '0' NOT NULL,
     enddate                  int(11) DEFAULT NULL,
     sorting                  int(11) DEFAULT '0' NOT NULL
 );
