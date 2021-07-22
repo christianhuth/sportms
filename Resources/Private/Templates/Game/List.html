@@ -6,37 +6,65 @@
 <f:section name="default">
 	<div id="tx-sportms-game-list">
 		<f:render arguments="{_all}" partial="Game/List/Filter"/>
-		<div class="table-responsive">
-			<table class="table table-bordered table-condensed table-hover table-striped tx-sportms-table">
-				<thead>
-				<tr>
-					<th>Sportart</th>
-					<th>Wettbewerb</th>
-					<th>Saison</th>
-					<th colspan="3">Begegnung</th>
-					<th>Ergebnis</th>
-				</tr>
-				</thead>
-				<tbody>
-				<f:if condition="{games}">
-					<f:then>
-						<f:widget.paginate objects="{games}"
-										   as="paginatedGames"
-										   configuration="{itemsPerPage: settings.game.list.pagination.itemsPerPage, insertAbove: settings.game.list.pagination.insertAbove, insertBelow: settings.game.list.pagination.insertBelow, maximumNumberOfLinks: settings.game.list.pagination.maximumNumberOfLinks}">
+		<f:if condition="{games}">
+			<f:then>
+				<f:widget.paginate objects="{games}"
+								   as="paginatedGames"
+								   configuration="{itemsPerPage: settings.game.list.pagination.itemsPerPage, insertAbove: settings.game.list.pagination.insertAbove, insertBelow: settings.game.list.pagination.insertBelow, maximumNumberOfLinks: settings.game.list.pagination.maximumNumberOfLinks}">
+					<div class="table-responsive">
+						<table class="table table-bordered table-condensed table-hover table-striped tx-sportms-table">
+							<f:render section="tablehead"/>
+							<tbody>
 							<f:for as="game" each="{paginatedGames}">
 								<f:render arguments="{game: game}"
 										  partial="Game/List/Item"/>
 							</f:for>
-						</f:widget.paginate>
-					</f:then>
-					<f:else>
-						<td colspan="9">Keine Spiele gefunden.</td>
-					</f:else>
-				</f:if>
-				</tbody>
-			</table>
-		</div>
+							</tbody>
+						</table>
+					</div>
+				</f:widget.paginate>
+			</f:then>
+			<f:else>
+				<div class="table-responsive">
+					<table class="table table-bordered table-condensed table-hover table-striped tx-sportms-table">
+						<f:render section="tablehead"/>
+						<tbody>
+						<tr>
+							<td colspan="9">Keine Spiele gefunden.</td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+			</f:else>
+		</f:if>
 	</div>
+</f:section>
+
+<f:section name="tablehead">
+	<thead>
+	<tr>
+		<th>
+			<f:translate
+					key="tx_sportms_domain_model_sport"/>
+		</th>
+		<th>
+			<f:translate
+					key="tx_sportms_domain_model_competition"/>
+		</th>
+		<th>
+			<f:translate
+					key="tx_sportms_domain_model_season"/>
+		</th>
+		<th colspan="3">
+			<f:translate
+					key="tx_sportms_domain_model_game"/>
+		</th>
+		<th>
+			<f:translate
+					key="tx_sportms_domain_model_game.result"/>
+		</th>
+	</tr>
+	</thead>
 </f:section>
 
 </html>

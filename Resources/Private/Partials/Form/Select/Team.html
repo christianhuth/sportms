@@ -1,10 +1,10 @@
 <html data-namespace-typo3-fluid="true"
 	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
-<f:if condition="{  settings.sport.selectbox.enabled ||
-                    settings.club.selectbox.enabled ||
-                    settings.team.selectbox.enabled ||
-                    settings.season.selectbox.enabled}">
+<f:if	condition="	{settings.sport.selectbox.enabled} ||
+					{settings.club.selectbox.enabled} ||
+					{settings.team.selectbox.enabled} ||
+					{settings.season.selectbox.enabled}">
 	<div class="form-group form-group-sm">
 		<label class="hidden-xs col-sm-3 control-label">Team:</label>
 		<div class="col-xs-12 col-sm-9">

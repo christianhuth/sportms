@@ -21,8 +21,8 @@
 				  partial="ViewHelper/TeamSeason/ItemInTable"/>
 	</td>
 	<td class="tx-sportms-table-center">
-		<f:render arguments="{game: game}"
-				  partial="ViewHelper/Game/ResultInTable"/>
+		<f:render partial="ViewHelper/LinkAction/Game/Index"
+				  arguments="{linkLabel: 'result', game: game}"/>
 	</td>
 </tr>
 

@@ -4,17 +4,17 @@
 <f:if
 		condition="{competitionSeason.competition.detailLink} && {competitionSeason.detailLink}">
 	<f:then>
-		<f:link.action action="games"
+		<f:link.action action="teams"
 					   arguments="{competitionSeason: competitionSeason}"
 					   controller="CompetitionSeason" extensionName="sportms"
-					   pageUid="{settings.competitionSeason.games.pid}"
+					   pageUid="{settings.competitionSeason.teams.pid}"
 					   pluginName="competition">
-			<f:translate key="tx_sportms_action.competitionseason.games"/>
+			<f:translate key="tx_sportms_action.competitionseason.teams"/>
 		</f:link.action>
 	</f:then>
 	<f:else>
 		<span><f:translate
-				key="tx_sportms_action.competitionseason.games"/></span>
+				key="tx_sportms_action.competitionseason.teams"/></span>
 	</f:else>
 </f:if>
 

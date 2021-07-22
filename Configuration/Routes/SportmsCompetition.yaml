@@ -38,15 +38,15 @@ routeEnhancers:
         start: '1'
         end: '100'
     defaults:
-      page: '1'
-    defaultController: 'CompetitionSeason::list'
+      page: '0'
+    defaultController: 'Competition::list'
     extension: Sportms
-    plugin: CompetitionSeason
+    plugin: Competition
     routes:
       - routePath: '/'
-        _controller: 'CompetitionSeason::list'
+        _controller: 'Competition::list'
       - routePath: '/{localizedPage}/{page}'
-        _controller: 'CompetitionSeason::list'
+        _controller: 'Competition::list'
         _arguments:
           page: '@widget_0/currentPage'
       - routePath: '/{competitionseason_slug}/{localizedAction_clubs}'

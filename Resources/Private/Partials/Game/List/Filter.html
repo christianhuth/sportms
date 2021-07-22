@@ -1,13 +1,13 @@
 <html data-namespace-typo3-fluid="true"
 	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
-<f:if condition="{  settings.sport.selectbox.enabled ||
-                    settings.competitionType.selectbox.enabled ||
-                    settings.competition.selectbox.enabled ||
-                    settings.club.selectbox.enabled ||
-                    settings.team.selectbox.enabled ||
-                    settings.season.selectbox.enabled ||
-                    settings.competitionSeasonGameday.selectbox.enabled}">
+<f:if condition="	{settings.sport.selectbox.enabled} ||
+					{settings.competitionType.selectbox.enabled} ||
+					{settings.competition.selectbox.enabled} ||
+					{settings.club.selectbox.enabled} ||
+					{settings.team.selectbox.enabled} ||
+					{settings.season.selectbox.enabled} ||
+					{settings.competitionSeasonGameday.selectbox.enabled}">
 	<div class="tx-sportms-filter">
 		<f:form action="list" class="form-horizontal" controller="Game"
 				extensionName="sportms" method="POST"

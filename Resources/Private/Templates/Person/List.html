@@ -5,52 +5,57 @@
 
 <f:section name="default">
 	<div id="tx-sportms-person-list">
-		<div class="table-responsive">
-			<table class="table table-bordered table-condensed table-hover table-striped tx-sportms-table">
-				<thead>
-				<tr>
-					<th>
-						<f:translate
-								key="tx_sportms_domain_model_person"/>
-					</th>
-					<th>
-						<f:translate
-								key="tx_sportms_domain_model_person.nationality"/>
-					</th>
-					<th>
-						<f:translate
-								key="tx_sportms_domain_model_sportposition"/>
-					</th>
-					<f:comment>
-						<th>
-							<f:translate
-									key="tx_sportms_domain_model_personprofile"/>
-						</th>
-					</f:comment>
-				</tr>
-				</thead>
-				<tbody>
-				<f:if condition="{persons}">
-					<f:then>
-						<f:widget.paginate as="paginatedObjects"
-										   objects="{persons}"
-										   configuration="{itemsPerPage: settings.person.list.pagination.itemsPerPage, insertAbove: settings.person.list.pagination.insertAbove, insertBelow: settings.person.list.pagination.insertBelow, maximumNumberOfLinks: settings.person.list.pagination.maximumNumberOfLinks}">
+		<f:if condition="{persons}">
+			<f:then>
+				<f:widget.paginate as="paginatedObjects"
+								   objects="{persons}"
+								   configuration="{itemsPerPage: settings.person.list.pagination.itemsPerPage, insertAbove: settings.person.list.pagination.insertAbove, insertBelow: settings.person.list.pagination.insertBelow, maximumNumberOfLinks: settings.person.list.pagination.maximumNumberOfLinks}">
+					<div class="table-responsive">
+						<table class="table table-bordered table-condensed table-hover table-striped tx-sportms-table">
+							<tbody>
 							<f:for as="person" each="{paginatedObjects}">
 								<f:render arguments="{person: person}"
 										  partial="Person/List/Item"/>
 							</f:for>
-						</f:widget.paginate>
-					</f:then>
-					<f:else>
+							</tbody>
+						</table>
+					</div>
+				</f:widget.paginate>
+			</f:then>
+			<f:else>
+				<div class="table-responsive">
+					<table class="table table-bordered table-condensed table-hover table-striped tx-sportms-table">
+						<tbody>
+						<f:render section="tablehead"/>
+						<tbody>
 						<tr>
 							<td colspan="5">Keine Personen gefunden.</td>
 						</tr>
-					</f:else>
-				</f:if>
-				</tbody>
-			</table>
-		</div>
+						</tbody>
+					</table>
+				</div>
+			</f:else>
+		</f:if>
 	</div>
+</f:section>
+
+<f:section name="tablehead">
+	<thead>
+	<tr>
+		<th>
+			<f:translate
+					key="tx_sportms_domain_model_person"/>
+		</th>
+		<th>
+			<f:translate
+					key="tx_sportms_domain_model_person.nationality"/>
+		</th>
+		<th>
+			<f:translate
+					key="tx_sportms_domain_model_sportposition"/>
+		</th>
+	</tr>
+	</thead>
 </f:section>
 
 </html>

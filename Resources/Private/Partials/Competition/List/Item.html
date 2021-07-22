@@ -14,17 +14,12 @@
 	<td class="tx-sportms-table-center">{competition.sportAgeLevel.label}</td>
 	<td class="tx-sportms-table-center">{competition.competitionType.label}</td>
 	<td class="tx-sportms-table-center">
-		<sportms:link.action CompetitionSeason="{competition.competitionSeasons.0}" CompetitionSeasonGameday="{competition.competitionSeasons.0.competitionSeasonGamedays.0}"
-							 action="games"
-							 controller="CompetitionSeason">
-			<f:translate key="tx_sportms_action.competitionseason.games"/>
-		</sportms:link.action>
+		<f:render partial="ViewHelper/LinkAction/CompetitionSeason/Games"
+				  arguments="{competitionSeason: competition.competitionSeasons.0}"/>
 	</td>
 	<td class="tx-sportms-table-center">
-		<sportms:link.action CompetitionSeason="{competition.competitionSeasons.0}" action="teams"
-							 controller="CompetitionSeason">
-			<f:translate key="tx_sportms_action.competitionseason.teams"/>
-		</sportms:link.action>
+		<f:render partial="ViewHelper/LinkAction/CompetitionSeason/Teams"
+				  arguments="{competitionSeason: competition.competitionSeasons.0}"/>
 	</td>
 </tr>
 

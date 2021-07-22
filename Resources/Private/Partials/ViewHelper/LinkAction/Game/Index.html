@@ -8,13 +8,29 @@
 					   controller="Game" extensionName="sportms"
 					   pageUid="{settings.game.index.pid}"
 					   pluginName="game">
-			<f:translate key="tx_sportms_action.game.index"/>
+			<f:render section="label"
+					  arguments="{game: game, linkLabel: linkLabel}"/>
 		</f:link.action>
 	</f:then>
 	<f:else>
-		<span><f:translate
-				key="tx_sportms_action.game.index"/></span>
+		<f:render section="label"
+				  arguments="{game: game, linkLabel: linkLabel}"/>
 	</f:else>
 </f:if>
+
+<f:section name="label">
+	<f:switch expression="{linkLabel}">
+		<f:case value="result">
+			<f:render partial="ViewHelper/Game/ResultInTable"
+					  arguments="{game: game}"/>
+		</f:case>
+		<f:defaultCase>
+			<span>
+				<f:translate
+						key="tx_sportms_action.game.index"/>
+			</span>
+		</f:defaultCase>
+	</f:switch>
+</f:section>
 
 </html>

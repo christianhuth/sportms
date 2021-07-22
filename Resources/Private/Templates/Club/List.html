@@ -5,44 +5,55 @@
 
 <f:section name="default">
 	<div class="tx-sportms-club-list">
-		<div class="table-responsive">
-			<table class="table table-bordered table-condensed table-hover table-striped tx-sportms-table">
-				<thead>
-				<tr>
-					<th>
-						<f:translate key="tx_sportms_domain_model_club"/>
-					</th>
-					<th>
-						<f:translate key="tx_sportms_domain_model_address"/>
-					</th>
-					<th>
-						<f:translate
-								key="tx_sportms_general.contact_information"/>
-					</th>
-				</tr>
-				</thead>
-				<tbody>
-				<f:if condition="{clubs}">
-					<f:then>
-						<f:widget.paginate objects="{clubs}"
-										   as="paginatedClubs"
-										   configuration="{itemsPerPage: settings.club.list.pagination.itemsPerPage, insertAbove: settings.club.list.pagination.insertAbove, insertBelow: settings.club.list.pagination.insertBelow, maximumNumberOfLinks: settings.club.list.pagination.maximumNumberOfLinks}">
+		<f:if condition="{clubs}">
+			<f:then>
+				<f:widget.paginate objects="{clubs}"
+								   as="paginatedClubs"
+								   configuration="{itemsPerPage: settings.club.list.pagination.itemsPerPage, insertAbove: settings.club.list.pagination.insertAbove, insertBelow: settings.club.list.pagination.insertBelow, maximumNumberOfLinks: settings.club.list.pagination.maximumNumberOfLinks}">
+					<div class="table-responsive">
+						<table class="table table-bordered table-condensed table-hover table-striped tx-sportms-table">
+							<f:render section="tablehead"/>
+							<tbody>
 							<f:for as="club" each="{paginatedClubs}">
 								<f:render arguments="{club: club}"
 										  partial="Club/List/Item"/>
 							</f:for>
-						</f:widget.paginate>
-					</f:then>
-					<f:else>
+							</tbody>
+						</table>
+					</div>
+				</f:widget.paginate>
+			</f:then>
+			<f:else>
+				<div class="table-responsive">
+					<table class="table table-bordered table-condensed table-hover table-striped tx-sportms-table">
+						<f:render section="tablehead"/>
+						<tbody>
 						<tr>
 							<td colspan="3">Keine Vereine gefunden.</td>
 						</tr>
-					</f:else>
-				</f:if>
-				</tbody>
-			</table>
-		</div>
+						</tbody>
+					</table>
+				</div>
+			</f:else>
+		</f:if>
 	</div>
+</f:section>
+
+<f:section name="tablehead">
+	<thead>
+	<tr>
+		<th>
+			<f:translate key="tx_sportms_domain_model_club"/>
+		</th>
+		<th>
+			<f:translate key="tx_sportms_domain_model_address"/>
+		</th>
+		<th>
+			<f:translate
+					key="tx_sportms_general.contact_information"/>
+		</th>
+	</tr>
+	</thead>
 </f:section>
 
 </html>

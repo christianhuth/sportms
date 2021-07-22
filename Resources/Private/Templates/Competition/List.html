@@ -6,56 +6,71 @@
 <f:section name="default">
 	<div class="tx-sportms-competition-list">
 		<f:render arguments="{_all}" partial="Competition/List/Filter"/>
-		<div class="table-responsive">
-			<table class="table table-bordered table-condensed table-hover table-striped tx-sportms-table">
-				<thead>
-				<tr>
-					<th>
-						<f:translate
-								key="tx_sportms_domain_model_competition.sport"/>
-					</th>
-					<th>
-						<f:translate
-								key="tx_sportms_domain_model_competition.label"/>
-					</th>
-					<th>
-						<f:translate
-								key="tx_sportms_domain_model_competition.ageLevel"/>
-					</th>
-					<th>
-						<f:translate
-								key="tx_sportms_domain_model_competition_type"/>
-					</th>
-					<th>
-						<f:translate
-								key="tx_sportms_action.competitionseason.games"/>
-					</th>
-					<th>
-						<f:translate
-								key="tx_sportms_action.competitionseason.teams"/>
-					</th>
-				</tr>
-				</thead>
-				<tbody>
-				<f:if condition="{competitions}">
-					<f:then>
-						<f:widget.paginate objects="{competitions}"
-										   as="paginatedCompetitions"
-										   configuration="{itemsPerPage: settings.competition.list.pagination.itemsPerPage, insertAbove: settings.competition.list.pagination.insertAbove, insertBelow: settings.competition.list.pagination.insertBelow, maximumNumberOfLinks: settings.competition.list.pagination.maximumNumberOfLinks}">
-							<f:for as="competition" each="{paginatedCompetitions}">
+		<f:if condition="{competitions}">
+			<f:then>
+				<f:widget.paginate objects="{competitions}"
+								   as="paginatedCompetitions"
+								   configuration="{itemsPerPage: settings.competition.list.pagination.itemsPerPage, insertAbove: settings.competition.list.pagination.insertAbove, insertBelow: settings.competition.list.pagination.insertBelow, maximumNumberOfLinks: settings.competition.list.pagination.maximumNumberOfLinks}">
+					
+					<div class="table-responsive">
+						<table class="table table-bordered table-condensed table-hover table-striped tx-sportms-table">
+							<f:render section="tablehead"/>
+							<tbody>
+							<f:for as="competition"
+								   each="{paginatedCompetitions}">
 								<f:render arguments="{competition: competition}"
 										  partial="Competition/List/Item"/>
 							</f:for>
-						</f:widget.paginate>
-					</f:then>
-					<f:else>
+							</tbody>
+						</table>
+					</div>
+				</f:widget.paginate>
+			</f:then>
+			<f:else>
+			</f:else>
+			<div class="table-responsive">
+				<table class="table table-bordered table-condensed table-hover table-striped tx-sportms-table">
+					<f:render section="tablehead"/>
+					<tbody>
+					<tr>
 						<td colspan="6">Keine Wettbewerbe gefunden.</td>
-					</f:else>
-				</f:if>
-				</tbody>
-			</table>
-		</div>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+		</f:if>
 	</div>
+</f:section>
+
+<f:section name="tablehead">
+	<thead>
+	<tr>
+		<th>
+			<f:translate
+					key="tx_sportms_domain_model_competition.sport"/>
+		</th>
+		<th>
+			<f:translate
+					key="tx_sportms_general.label"/>
+		</th>
+		<th>
+			<f:translate
+					key="tx_sportms_domain_model_competition.ageLevel"/>
+		</th>
+		<th>
+			<f:translate
+					key="tx_sportms_domain_model_competitiontype"/>
+		</th>
+		<th>
+			<f:translate
+					key="tx_sportms_action.competitionseason.games"/>
+		</th>
+		<th>
+			<f:translate
+					key="tx_sportms_action.competitionseason.teams"/>
+		</th>
+	</tr>
+	</thead>
 </f:section>
 
 </html>

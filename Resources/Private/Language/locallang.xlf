@@ -128,40 +128,40 @@
             <trans-unit id="tx_sportms_action.game.report">
                 <source>Spielbericht</source>
             </trans-unit>
-            <trans-unit id="tx_sportms_action.person.officialProfile">
+            <trans-unit id="tx_sportms_action.person.officialprofile">
                 <source>Funktionärsprofil</source>
             </trans-unit>
-            <trans-unit id="tx_sportms_action.person.playerProfile">
+            <trans-unit id="tx_sportms_action.person.playerprofile">
                 <source>Spielerprofil</source>
             </trans-unit>
-            <trans-unit id="tx_sportms_action.person.playerJerseys">
+            <trans-unit id="tx_sportms_action.person.playerjerseys">
                 <source>Rückennummern</source>
             </trans-unit>
-            <trans-unit id="tx_sportms_action.person.playerRecordGames">
+            <trans-unit id="tx_sportms_action.person.playerrecordgames">
                 <source>Rekordspiele</source>
             </trans-unit>
-            <trans-unit id="tx_sportms_action.person.playerDebutGames">
+            <trans-unit id="tx_sportms_action.person.playerdebutgames">
                 <source>Debütspiele</source>
             </trans-unit>
-            <trans-unit id="tx_sportms_action.person.playerDebutGoals">
+            <trans-unit id="tx_sportms_action.person.playerdebutgoals">
                 <source>Debüttore</source>
             </trans-unit>
-            <trans-unit id="tx_sportms_action.person.refereeProfile">
+            <trans-unit id="tx_sportms_action.person.refereeprofile">
                 <source>Schiedsrichterprofil</source>
             </trans-unit>
-            <trans-unit id="tx_sportms_action.team.historyOfficials">
+            <trans-unit id="tx_sportms_action.team.historyofficials">
                 <source>Funktionärshistorie</source>
             </trans-unit>
-            <trans-unit id="tx_sportms_action.team.historyRecordGames">
+            <trans-unit id="tx_sportms_action.team.historyrecordgames">
                 <source>Rekordspiele</source>
             </trans-unit>
-            <trans-unit id="tx_sportms_action.team.historyRecordPlayers">
+            <trans-unit id="tx_sportms_action.team.historyrecordplayers">
                 <source>Rekordspieler</source>
             </trans-unit>
-            <trans-unit id="tx_sportms_action.teamseason.gamesByCompetition">
+            <trans-unit id="tx_sportms_action.teamseason.gamesbycompetition">
                 <source>Spiele nach Wettbewerb</source>
             </trans-unit>
-            <trans-unit id="tx_sportms_action.teamseason.gamesByDate">
+            <trans-unit id="tx_sportms_action.teamseason.gamesbydate">
                 <source>Spiele nach Datum</source>
             </trans-unit>
             <trans-unit id="tx_sportms_action.teamseason.index">
@@ -482,6 +482,9 @@
             </trans-unit>
             <trans-unit id="tx_sportms_domain_model_game.period_duration">
                 <source>Dauer der Spielabschnitte (in Minuten)</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.result">
+                <source>Ergebnis</source>
             </trans-unit>
             <trans-unit id="tx_sportms_domain_model_game.result_end_additional">
                 <source>Spiel nicht beendet nach regulärer Spielzeit?</source>

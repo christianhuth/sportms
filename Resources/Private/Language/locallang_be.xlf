@@ -136,9 +136,6 @@
             <trans-unit id="tx_sportms_domain_model_game.palette.result_special">
                 <source>Sonderwertung</source>
             </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_game.tab.result">
-                <source>Ergebnis</source>
-            </trans-unit>
             <trans-unit id="tx_sportms_domain_model_game.tab.home">
                 <source>Heim</source>
             </trans-unit>

@@ -6,34 +6,50 @@
 <f:section name="default">
 	<div id="tx-sportms-team-list">
 		<f:render arguments="{_all}" partial="Team/List/Filter"/>
-		<div class="table-responsive">
-			<table class="table table-bordered table-condensed table-hover table-striped tx-sportms-table">
-				<thead>
-				<tr>
-					<th>Mannschaft</th>
-					<th colspan="3">Einzelansichten</th>
-				</tr>
-				</thead>
-				<tbody>
-				<f:if condition="{teams}">
-					<f:then>
-						<f:widget.paginate objects="{teams}"
-										   as="paginatedTeams"
-										   configuration="{itemsPerPage: settings.team.list.pagination.itemsPerPage, insertAbove: settings.team.list.pagination.insertAbove, insertBelow: settings.team.list.pagination.insertBelow, maximumNumberOfLinks: settings.team.list.pagination.maximumNumberOfLinks}">
+		<f:if condition="{teams}">
+			<f:then>
+				<f:widget.paginate objects="{teams}"
+								   as="paginatedTeams"
+								   configuration="{itemsPerPage: settings.team.list.pagination.itemsPerPage, insertAbove: settings.team.list.pagination.insertAbove, insertBelow: settings.team.list.pagination.insertBelow, maximumNumberOfLinks: settings.team.list.pagination.maximumNumberOfLinks}">
+					<div class="table-responsive">
+						<table class="table table-bordered table-condensed table-hover table-striped tx-sportms-table">
+							<f:render section="tablehead"/>
+							<tbody>
 							<f:for as="team" each="{paginatedTeams}">
 								<f:render arguments="{team: team}"
 										  partial="Team/List/Item"/>
 							</f:for>
-						</f:widget.paginate>
-					</f:then>
-					<f:else>
-						<td colspan="4">Keine Mannschaften gefunden</td>
-					</f:else>
-				</f:if>
-				</tbody>
-			</table>
-		</div>
+							</tbody>
+						</table>
+					</div>
+				</f:widget.paginate>
+			</f:then>
+			<f:else>
+				<div class="table-responsive">
+					<table class="table table-bordered table-condensed table-hover table-striped tx-sportms-table">
+						<f:render section="tablehead"/>
+						<tbody>
+						<tr>
+							<td colspan="4">Keine Mannschaften gefunden</td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+			</f:else>
+		</f:if>
 	</div>
+</f:section>
+
+<f:section name="tablehead">
+	<thead>
+	<tr>
+		<th>
+			<f:translate key="tx_sportms_domain_model_team"/>
+			>
+		</th>
+		<th colspan="3">Einzelansichten</th>
+	</tr>
+	</thead>
 </f:section>
 
 </html>

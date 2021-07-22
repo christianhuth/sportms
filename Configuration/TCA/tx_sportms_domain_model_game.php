@@ -37,7 +37,7 @@
                                     --palette--;;venue_spectators,
                                     --palette--;LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_gameperiod.plural;periods,
                                     game_periods,
-                                --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_game.tab.result,
+                                --div--;LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_game.result,
                                     game_rating,
                                     --palette--;LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_game.palette.result_special;result_special,
                                     --palette--;LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_game.palette.result_end_regular;result_end_regular,
