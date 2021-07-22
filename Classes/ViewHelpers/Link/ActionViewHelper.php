@@ -107,7 +107,7 @@
             $listOfAllowedSportMsDomainModels = [];
             $listOfAllowedSportMsDomainModels[] = 'Club';
             $listOfAllowedSportMsDomainModels[] = 'ClubSection';
-            $listOfAllowedSportMsDomainModels[] = 'CompetitionSeason';
+            $listOfAllowedSportMsDomainModels[] = 'Competition';
             $listOfAllowedSportMsDomainModels[] = 'CompetitionSeason';
             $listOfAllowedSportMsDomainModels[] = 'CompetitionSeasonGameday';
             $listOfAllowedSportMsDomainModels[] = 'Game';
