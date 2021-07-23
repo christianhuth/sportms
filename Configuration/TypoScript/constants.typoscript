@@ -67,13 +67,13 @@ plugin.tx_sportms {
 		competition {
 			list {
 				pagination {
-					# cat=plugin.tx_sportms/sportmsClub; type=boolean; label=Show pagination above Competition->list
+					# cat=plugin.tx_sportms/sportmsCompetition; type=boolean; label=Show pagination above Competition->list
 					insertAbove = 0
-					# cat=plugin.tx_sportms/sportmsClub; type=boolean; label=Show pagination below Competition->list
+					# cat=plugin.tx_sportms/sportmsCompetition; type=boolean; label=Show pagination below Competition->list
 					insertBelow = 1
-					# cat=plugin.tx_sportms/sportmsClub; type=int+; label=Items per Page for Competition->list
+					# cat=plugin.tx_sportms/sportmsCompetition; type=int+; label=Items per Page for Competition->list
 					itemsPerPage = 25
-					# cat=plugin.tx_sportms/sportmsClub; type=int+; label=Maximum number of links in the pagination for Competition->list
+					# cat=plugin.tx_sportms/sportmsCompetition; type=int+; label=Maximum number of links in the pagination for Competition->list
 					maximumNumberOfLinks = 5
 				}
 				# cat=plugin.tx_sportms/sportmsCompetition; type=int+; label=Default PID of Competition->list
@@ -114,13 +114,13 @@ plugin.tx_sportms {
 		game {
 			list {
 				pagination {
-					# cat=plugin.tx_sportms/sportmsClub; type=boolean; label=Show pagination above Game->list
+					# cat=plugin.tx_sportms/sportmsGame; type=boolean; label=Show pagination above Game->list
 					insertAbove = 0
-					# cat=plugin.tx_sportms/sportmsClub; type=boolean; label=Show pagination below Game->list
+					# cat=plugin.tx_sportms/sportmsGame; type=boolean; label=Show pagination below Game->list
 					insertBelow = 1
-					# cat=plugin.tx_sportms/sportmsClub; type=int+; label=Items per Page for Game->list
+					# cat=plugin.tx_sportms/sportmsGame; type=int+; label=Items per Page for Game->list
 					itemsPerPage = 25
-					# cat=plugin.tx_sportms/sportmsClub; type=int+; label=Maximum number of links in the pagination for Game->list
+					# cat=plugin.tx_sportms/sportmsGame; type=int+; label=Maximum number of links in the pagination for Game->list
 					maximumNumberOfLinks = 5
 				}
 				# cat=plugin.tx_sportms/sportmsGame; type=int+; label=Default PID of Game->list
@@ -146,13 +146,13 @@ plugin.tx_sportms {
 		person {
 			list {
 				pagination {
-					# cat=plugin.tx_sportms/sportmsClub; type=boolean; label=Show pagination above Person->list
+					# cat=plugin.tx_sportms/sportmsPerson; type=boolean; label=Show pagination above Person->list
 					insertAbove = 0
-					# cat=plugin.tx_sportms/sportmsClub; type=boolean; label=Show pagination below Person->list
+					# cat=plugin.tx_sportms/sportmsPerson; type=boolean; label=Show pagination below Person->list
 					insertBelow = 1
-					# cat=plugin.tx_sportms/sportmsClub; type=int+; label=Items per Page for Person->list
+					# cat=plugin.tx_sportms/sportmsPerson; type=int+; label=Items per Page for Person->list
 					itemsPerPage = 25
-					# cat=plugin.tx_sportms/sportmsClub; type=int+; label=Maximum number of links in the pagination for Person->list
+					# cat=plugin.tx_sportms/sportmsPerson; type=int+; label=Maximum number of links in the pagination for Person->list
 					maximumNumberOfLinks = 5
 				}
 				# cat=plugin.tx_sportms/sportmsPerson; type=int+; label=Default PID of Person->list

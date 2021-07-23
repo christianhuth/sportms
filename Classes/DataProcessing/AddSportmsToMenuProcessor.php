@@ -51,7 +51,7 @@
                         if (isset($processedData[$menu])) {
                             $this->addExtensionRecordToMenu($club, $processedData[$menu]);
                             $this->addActionToMenu(
-                                LocalizationUtility::translate('tx_sportms_action.club.' . GeneralUtility::_GET('tx_sportms_club')['action'],
+                                LocalizationUtility::translate('tx_sportms_action.club.' . strtolower(GeneralUtility::_GET('tx_sportms_club')['action']),
                                     'sportms'),
                                 $processedData[$menu]
                             );
@@ -83,7 +83,7 @@
                         if (isset($processedData[$menu])) {
                             $this->addExtensionRecordToMenu($season, $processedData[$menu]);
                             $this->addActionToMenu(
-                                LocalizationUtility::translate('tx_sportms_action.competitionseason.' . GeneralUtility::_GET('tx_sportms_competition')['action'],
+                                LocalizationUtility::translate('tx_sportms_action.competitionseason.' . strtolower(GeneralUtility::_GET('tx_sportms_competition')['action']),
                                     'sportms'),
                                 $processedData[$menu]
                             );
@@ -102,7 +102,7 @@
                         if (isset($processedData[$menu])) {
                             $this->addGameRecordToMenu($game, $processedData[$menu]);
                             $this->addActionToMenu(
-                                LocalizationUtility::translate('tx_sportms_action.game.' . GeneralUtility::_GET('tx_sportms_game')['action'],
+                                LocalizationUtility::translate('tx_sportms_action.game.' . strtolower(GeneralUtility::_GET('tx_sportms_game')['action']),
                                     'sportms'),
                                 $processedData[$menu]
                             );
@@ -122,7 +122,7 @@
                         if (isset($processedData[$menu])) {
                             $this->addExtensionRecordToMenu($team, $processedData[$menu]);
                             $this->addActionToMenu(
-                                LocalizationUtility::translate('tx_sportms_action.team.' . GeneralUtility::_GET('tx_sportms_team')['action'],
+                                LocalizationUtility::translate('tx_sportms_action.team.' . strtolower(GeneralUtility::_GET('tx_sportms_team')['action']),
                                     'sportms'),
                                 $processedData[$menu]
                             );
@@ -154,7 +154,7 @@
                         if (isset($processedData[$menu])) {
                             $this->addExtensionRecordToMenu($season, $processedData[$menu]);
                             $this->addActionToMenu(
-                                LocalizationUtility::translate('tx_sportms_action.teamseason.' . GeneralUtility::_GET('tx_sportms_team')['action'],
+                                LocalizationUtility::translate('tx_sportms_action.teamseason.' . strtolower(GeneralUtility::_GET('tx_sportms_team')['action']),
                                     'sportms'),
                                 $processedData[$menu]
                             );

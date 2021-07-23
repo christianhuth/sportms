@@ -78,70 +78,104 @@
 			<div class="tx-sportms-game-lineup-start">
 				<h4>Startaufstellung</h4>
 				<div class="tx-sportms-game-container">
-					<div class="tx-sportms-game-lineup-home">
-						<f:for as="lineup" each="{game.gameLineupHomeStarts}">
-							<f:render arguments="{lineup: lineup}"
-									  partial="ViewHelper/Game/IndexLineup"/>
-						</f:for>
-					</div>
-					<div class="tx-sportms-game-lineup-guest">
-						<f:for as="lineup" each="{game.gameLineupGuestStarts}">
-							<f:render arguments="{lineup: lineup}"
-									  partial="ViewHelper/Game/IndexLineup"/>
-						</f:for>
-					</div>
+					<f:if condition="{game.gameLineupHomeStarts} || {game.gameLineupGuestStarts}">
+						<f:then>
+							<div class="tx-sportms-game-lineup-home">
+								<f:for as="lineup"
+									   each="{game.gameLineupHomeStarts}">
+									<f:render arguments="{lineup: lineup}"
+											  partial="ViewHelper/Game/IndexLineup"/>
+								</f:for>
+							</div>
+							<div class="tx-sportms-game-lineup-guest">
+								<f:for as="lineup"
+									   each="{game.gameLineupGuestStarts}">
+									<f:render arguments="{lineup: lineup}"
+											  partial="ViewHelper/Game/IndexLineup"/>
+								</f:for>
+							</div>
+						</f:then>
+						<f:else>
+							<div class="tx-sportms-game-lineup tx-sportms-game-lineup-none">
+								keine Aufstellungen vorhanden
+							</div>
+						</f:else>
+					</f:if>
 				</div>
 			</div>
 			
 			<div class="tx-sportms-game-lineup-substitute">
 				<h4>Reservebank</h4>
 				<div class="tx-sportms-game-container">
-					<div class="tx-sportms-game-lineup-home">
-						<f:for as="lineup"
-							   each="{game.gameLineupHomeSubstitutes}">
-							<f:render arguments="{lineup: lineup}"
-									  partial="ViewHelper/Game/IndexLineup"/>
-						</f:for>
-					</div>
-					<div class="tx-sportms-game-lineup-guest">
-						<f:for as="lineup"
-							   each="{game.gameLineupGuestSubstitutes}">
-							<f:render arguments="{lineup: lineup}"
-									  partial="ViewHelper/Game/IndexLineup"/>
-						</f:for>
-					</div>
+					<f:if condition="{game.gameLineupHomeSubstitutes} || {game.gameLineupGuestSubstitutes}">
+						<f:then>
+							<div class="tx-sportms-game-lineup-home">
+								<f:for as="lineup"
+									   each="{game.gameLineupHomeSubstitutes}">
+									<f:render arguments="{lineup: lineup}"
+											  partial="ViewHelper/Game/IndexLineup"/>
+								</f:for>
+							</div>
+							<div class="tx-sportms-game-lineup-guest">
+								<f:for as="lineup"
+									   each="{game.gameLineupGuestSubstitutes}">
+									<f:render arguments="{lineup: lineup}"
+											  partial="ViewHelper/Game/IndexLineup"/>
+								</f:for>
+							</div>
+						</f:then>
+						<f:else>
+							<div
+									class="tx-sportms-game-substitute tx-sportms-game-substitute-none">
+								keine Reservebank vorhanden
+							</div>
+						</f:else>
+					</f:if>
 				</div>
 			</div>
 			
 			<div class="tx-sportms-game-changes">
 				<h4>Wechsel</h4>
 				<div class="tx-sportms-game-container">
-					<f:for as="change" each="{game.gameChanges}">
-						<sportms:PersonInTeamSeason person="{change.personIn}"
-													teamSeason="{game.teamSeasonHome}">
-							<f:then>
-								<f:render arguments="{change: change, type: 'home'}"
-										  partial="ViewHelper/Game/IndexChange"/>
-							</f:then>
-							<f:else>
+					<f:if condition="{game.gameChanges}">
+						<f:then>
+							<f:for as="change" each="{game.gameChanges}">
 								<sportms:PersonInTeamSeason
 										person="{change.personIn}"
-										teamSeason="{game.teamSeasonGuest}">
+										teamSeason="{game.teamSeasonHome}">
 									<f:then>
 										<f:render
-												arguments="{change: change, type: 'guest'}"
+												arguments="{change: change, type: 'home'}"
 												partial="ViewHelper/Game/IndexChange"/>
 									</f:then>
 									<f:else>
-										<f:comment>
-											# TODO: think of a senseful error
-											message
-										</f:comment>
+										<sportms:PersonInTeamSeason
+												person="{change.personIn}"
+												teamSeason="{game.teamSeasonGuest}">
+											<f:then>
+												<f:render
+														arguments="{change: change, type: 'guest'}"
+														partial="ViewHelper/Game/IndexChange"/>
+											</f:then>
+											<f:else>
+												<f:comment>
+													# TODO: think of a senseful
+													error
+													message
+												</f:comment>
+											</f:else>
+										</sportms:PersonInTeamSeason>
 									</f:else>
 								</sportms:PersonInTeamSeason>
-							</f:else>
-						</sportms:PersonInTeamSeason>
-					</f:for>
+							</f:for>
+						</f:then>
+						<f:else>
+							<div
+									class="tx-sportms-game-change tx-sportms-game-change-none">
+								keine Wechsel vorhanden
+							</div>
+						</f:else>
+					</f:if>
 				</div>
 			</div>
 		

@@ -9,13 +9,28 @@
 					   controller="CompetitionSeason" extensionName="sportms"
 					   pageUid="{settings.competitionSeason.games.pid}"
 					   pluginName="competition">
-			<f:translate key="tx_sportms_action.competitionseason.games"/>
+			<f:render section="label"
+					  arguments="{competitionSeason: competitionSeason, linkLabel: linkLabel}"/>
 		</f:link.action>
 	</f:then>
 	<f:else>
-		<span><f:translate
-				key="tx_sportms_action.competitionseason.games"/></span>
+		<f:render section="label"
+				  arguments="{competitionSeason: competitionSeason, linkLabel: linkLabel}"/>
 	</f:else>
 </f:if>
+
+<f:section name="label">
+	<f:switch expression="{linkLabel}">
+		<f:case value="competition">
+			{competitionSeason.competition.label}
+		</f:case>
+		<f:defaultCase>
+			<span>
+				<f:translate
+						key="tx_sportms_action.competitionseason.games"/>
+			</span>
+		</f:defaultCase>
+	</f:switch>
+</f:section>
 
 </html>

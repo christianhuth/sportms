@@ -3,7 +3,7 @@
     <ROOT>
         <TCEforms>
             <sheetTitle>
-                LLL:EXT:sportms/Resources/Private/Language/locallang_flexform.xlf:tx_sportms_flexform.sheet.general
+                LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_flexform.sheet.general
             </sheetTitle>
         </TCEforms>
         <type>array</type>
@@ -34,7 +34,7 @@
                         <items type="array">
                             <numIndex index="1" type="array">
                                 <numIndex index="0">
-                                    LLL:EXT:sportms/Resources/Private/Language/locallang_flexform.xlf:tx_sportms_flexform.sheet.general.recursive.I.inherit
+                                    LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_flexform.sheet.general.recursive.I.inherit
                                 </numIndex>
                                 <numIndex index="1"></numIndex>
                             </numIndex>

@@ -4,12 +4,82 @@
         <header />
         <body>
 
+
+        <!-- Action -->
+            <trans-unit id="tx_sportms_action.club.sections">
+                <source>Abteilungen</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_action.competition.list">
+                <source>Wettbewerbe</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_action.competitionseason.clubs">
+                <source>Vereine</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_action.competitionseason.games">
+                <source>Spielplan</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_action.competitionseason.teams">
+                <source>Mannschaften</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_action.game.history">
+                <source>Historie</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_action.game.index">
+                <source>Schema</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_action.game.report">
+                <source>Spielbericht</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_action.person.officialprofile">
+                <source>Funktionärsprofil</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_action.person.playerprofile">
+                <source>Spielerprofil</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_action.person.playerjerseys">
+                <source>Rückennummern</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_action.person.playerrecordgames">
+                <source>Rekordspiele</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_action.person.playerdebutgames">
+                <source>Debütspiele</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_action.person.playerdebutgoals">
+                <source>Debüttore</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_action.person.refereeprofile">
+                <source>Schiedsrichterprofil</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_action.team.historyofficials">
+                <source>Funktionärshistorie</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_action.team.historyrecordgames">
+                <source>Rekordspiele</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_action.team.historyrecordplayers">
+                <source>Rekordspieler</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_action.teamseason.gamesbycompetition">
+                <source>Spiele nach Wettbewerb</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_action.teamseason.gamesbydate">
+                <source>Spiele nach Datum</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_action.teamseason.index">
+                <source>Übersicht</source>
+            </trans-unit>
+
+
         <!-- General -->
             <trans-unit id="tx_sportms_general.clock">
                 <source>Uhr</source>
             </trans-unit>
             <trans-unit id="tx_sportms_general.contact_information">
                 <source>Kontaktdaten</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.date">
+                <source>Datum</source>
             </trans-unit>
             <trans-unit id="tx_sportms_general.day">
                 <source>Tag</source>
@@ -102,71 +172,6 @@
                 <source>Steinbock</source>
             </trans-unit>
 
-
-        <!-- Action -->
-            <trans-unit id="tx_sportms_action.club.sections">
-                <source>Abteilungen</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_action.competition.list">
-                <source>Wettbewerbe</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_action.competitionseason.clubs">
-                <source>Vereine</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_action.competitionseason.games">
-                <source>Spielplan</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_action.competitionseason.teams">
-                <source>Mannschaften</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_action.game.history">
-                <source>Historie</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_action.game.index">
-                <source>Schema</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_action.game.report">
-                <source>Spielbericht</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_action.person.officialprofile">
-                <source>Funktionärsprofil</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_action.person.playerprofile">
-                <source>Spielerprofil</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_action.person.playerjerseys">
-                <source>Rückennummern</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_action.person.playerrecordgames">
-                <source>Rekordspiele</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_action.person.playerdebutgames">
-                <source>Debütspiele</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_action.person.playerdebutgoals">
-                <source>Debüttore</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_action.person.refereeprofile">
-                <source>Schiedsrichterprofil</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_action.team.historyofficials">
-                <source>Funktionärshistorie</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_action.team.historyrecordgames">
-                <source>Rekordspiele</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_action.team.historyrecordplayers">
-                <source>Rekordspieler</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_action.teamseason.gamesbycompetition">
-                <source>Spiele nach Wettbewerb</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_action.teamseason.gamesbydate">
-                <source>Spiele nach Datum</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_action.teamseason.index">
-                <source>Übersicht</source>
-            </trans-unit>
 
         <!-- Domain Model Address -->
             <trans-unit id="tx_sportms_domain_model_address">

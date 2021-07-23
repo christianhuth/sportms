@@ -263,7 +263,7 @@
             ],
             'date' => [
                 'exclude' => 1,
-                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.date',
+                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_general.date',
                 'config' => [
                     'eval' => 'date',
                     'placeholder' => 'dd-mm-yyyy',

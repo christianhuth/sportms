@@ -422,9 +422,13 @@
     margin: 6px 0;
 }
 
-.tx-sportms .tx-sportms-game-goal-none {
+.tx-sportms .tx-sportms-game-goal-none,
+.tx-sportms .tx-sportms-game-lineup-none,
+.tx-sportms .tx-sportms-game-substitute-none,
+.tx-sportms .tx-sportms-game-change-none {
     display: inline-block;
     text-align: center;
+    width: 100%;
 }
 
 .tx-sportms .tx-sportms-game-change-entry .tx-sportms-game-change-arrow,

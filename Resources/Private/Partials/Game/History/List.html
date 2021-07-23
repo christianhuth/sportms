@@ -1,16 +1,22 @@
 <html data-namespace-typo3-fluid="true"
 	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-	  xmlns:sportms="Balumedien\Sportms\ViewHelpers">
+>
 
 
 <div class="table-responsive">
 	<table class="table table-bordered table-condensed table-hover table-striped tx-sportms-table">
 		<thead>
 		<tr>
-			<th>Wettbewerb</th>
+			<th>
+				<f:translate key="tx_sportms_domain_model_competition"/>
+			</th>
 			<th>Datum</th>
-			<th colspan="3">Begegnung</th>
-			<th>Ergebnis</th>
+			<th colspan="3">
+				<f:translate key="tx_sportms_domain_model_game"/>
+			</th>
+			<th>
+				<f:translate key="tx_sportms_domain_model_game.result"/>
+			</th>
 		</tr>
 		</thead>
 		<tbody>
@@ -19,12 +25,9 @@
 				<f:for as="game" each="{games}">
 					<tr>
 						<td class="tx-sportms-table-center">
-							<sportms:link.action CompetitionSeason="{game.competitionSeason}"
-												 CompetitionSeasonGameday="{game.gameday}"
-												 action="games"
-												 controller="CompetitionSeason">
-								{game.competitionSeason.competition.label}
-							</sportms:link.action>
+							<f:render
+									partial="ViewHelper/LinkAction/CompetitionSeason/Games"
+									arguments="{competitionSeason: game.competitionSeason, linkLabel: 'competition'}"/>
 						</td>
 						<td class="tx-sportms-table-center">
 							<f:format.date date="{game.date}"
@@ -42,13 +45,8 @@
 									partial="ViewHelper/TeamSeason/ItemInTable"/>
 						</td>
 						<td class="tx-sportms-table-center">
-							<sportms:link.action Game="{game}"
-												 action="index"
-												 controller="Game">
-								<f:render
-										arguments="{game: game}"
-										partial="ViewHelper/Game/ResultInTable"/>
-							</sportms:link.action>
+							<f:render partial="ViewHelper/LinkAction/Game/Index"
+									  arguments="{game: game, linkLabel: 'result'}"/>
 						</td>
 					</tr>
 				</f:for>

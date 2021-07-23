@@ -40,9 +40,6 @@
             <trans-unit id="tx_sportms_general.abbreviation">
                 <source>Abkürzung</source>
             </trans-unit>
-            <trans-unit id="tx_sportms_general.date">
-                <source>Datum</source>
-            </trans-unit>
             <trans-unit id="tx_sportms_general.detail_link">
                 <source>Einzelansicht ermöglichen?</source>
             </trans-unit>
@@ -201,6 +198,17 @@
             </trans-unit>
             <trans-unit id="tx_sportms_domain_model_teamseasonsquadmember.palette.transfer">
                 <source>Transfer</source>
+            </trans-unit>
+
+        <!-- Flexform -->
+            <trans-unit id="tx_sportms_flexform.sheet.general">
+                <source>Allgemeine Einstellungen</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_flexform.sheet.general.recursive.I.inherit">
+                <source>Wie in TypoScript definiert</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_flexform.sheet.scope">
+                <source>Scope</source>
             </trans-unit>
 
         </body>

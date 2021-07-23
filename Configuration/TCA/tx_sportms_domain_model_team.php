@@ -221,8 +221,8 @@
                     'default' => '',
                     'fallbackCharacter' => '-',
                     'generatorOptions' => [
-                        'fields' => ['uid', 'label'],
-                        'fieldSeparator' => '/',
+                        'fields' => ['label'],
+                        'fieldSeparator' => '-',
                         'prefixParentPageSlug' => false,
                         'replacements' => [
                             '/' => '-',
