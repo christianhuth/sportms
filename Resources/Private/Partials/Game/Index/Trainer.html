@@ -1,0 +1,17 @@
+<html data-namespace-typo3-fluid="true"
+	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<div class="tx-sportms-game-trainer-entry">
+	<div class="tx-sportms-game-trainer-person">
+		<f:render partial="ViewHelper/LinkAction/Person/OfficialProfile"
+				  arguments="{linkLabel: 'lastname', person: trainer}"/>
+	</div>
+	<div class="tx-sportms-game-trainer-jerseynumber">
+		<span class="tx-sportms-game-trainer-number">
+			<f:format.crop append="."
+						   maxCharacters="1">{trainer.firstname}</f:format.crop>
+		</span>
+	</div>
+</div>
+
+</html>

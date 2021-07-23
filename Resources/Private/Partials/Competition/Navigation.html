@@ -16,28 +16,18 @@
 			<div class="collapse navbar-collapse" id="competitionNavbar">
 				<ul class="nav navbar-nav">
 					<li>
-						<sportms:link.action CompetitionSeason="{competitionSeason}"
-											 action="games"
-											 controller="CompetitionSeason">
-							<f:translate
-									key="tx_sportms_action.competitionseason.games"/>
-						</sportms:link.action>
+						<f:render partial="ViewHelper/LinkAction/CompetitionSeason/Games"
+								  arguments="{competitionSeason: competitionSeason}"/>
 					</li>
 					<li>
-						<sportms:link.action CompetitionSeason="{competitionSeason}"
-											 action="teams"
-											 controller="CompetitionSeason">
-							<f:translate
-									key="tx_sportms_action.competitionseason.teams"/>
-						</sportms:link.action>
+						<f:render
+								partial="ViewHelper/LinkAction/CompetitionSeason/Teams"
+								  arguments="{competitionSeason: competitionSeason}"/>
 					</li>
 					<li>
-						<sportms:link.action CompetitionSeason="{competitionSeason}"
-											 action="clubs"
-											 controller="CompetitionSeason">
-							<f:translate
-									key="tx_sportms_action.competitionseason.clubs"/>
-						</sportms:link.action>
+						<f:render
+								partial="ViewHelper/LinkAction/CompetitionSeason/Clubs"
+								arguments="{competitionSeason: competitionSeason}"/>
 					</li>
 				</ul>
 			</div>

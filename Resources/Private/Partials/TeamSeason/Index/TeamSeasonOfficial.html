@@ -4,15 +4,10 @@
 
 <div class="tx-sportms-teamseason-official col-xs-4 col-sm-3 col-md-3">
 	<div class="tx-sportms-teamseason-official-wrapper">
-		<f:comment>
-			<sportms:link.action Person="{teamSeasonOfficial.person}" Sport="{teamSeason.team.sport}"
-								 action="officialProfile"
-								 controller="Person">
-			</sportms:link.action>
-		</f:comment>
 		<div class="official-image">
-			<f:render arguments="{person: teamSeasonOfficial.person, personProfile: '{sportms:person.profile(person: teamSeasonOfficial.person, profileType: \'official\', sport: teamSeason.team.sport)}'}"
-					  partial="ViewHelper/Person/ProfileImage"/>
+			<f:render
+					arguments="{imageHeight: 512, person: teamSeasonOfficial.person, personProfile: '{sportms:person.profile(person: teamSeasonOfficial.person, profileType: \'official\', sport: teamSeason.team.sport)}'}"
+					partial="ViewHelper/Person/ProfileImage"/>
 		</div>
 		<div class="official-info">
 			<div class="official-jerseynumber">
@@ -30,9 +25,6 @@
 				<span class="official-lastname">{teamSeasonOfficial.person.lastname}</span>
 			</div>
 		</div>
-		<f:comment>
-			# TODO: close sportms-action ViewHelper here
-		</f:comment>
 	</div>
 </div>
 

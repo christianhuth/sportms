@@ -1,6 +1,38 @@
 <html data-namespace-typo3-fluid="true"
 	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
-{person.firstname} {person.lastname}
+<f:if condition="{person.detailLink}">
+	<f:then>
+		<f:link.action action="officialProfile"
+					   arguments="{person: person}"
+					   controller="Person" extensionName="sportms"
+					   pageUid="{settings.person.officialProfile.pid}"
+					   pluginName="person">
+			<f:render section="label"
+					  arguments="{person: person, linkLabel: linkLabel}"/>
+		</f:link.action>
+	</f:then>
+	<f:else>
+		<f:render section="label"
+				  arguments="{person: person, linkLabel: linkLabel}"/>
+	</f:else>
+</f:if>
+
+<f:section name="label">
+	<f:switch expression="{linkLabel}">
+		<f:case value="lastname">
+			{person.lastname}
+		</f:case>
+		<f:case value="name">
+			{person.firstname} {person.lastname}
+		</f:case>
+		<f:defaultCase>
+			<span>
+				<f:translate
+						key="tx_sportms_action.person.officialprofile"/>
+			</span>
+		</f:defaultCase>
+	</f:switch>
+</f:section>
 
 </html>

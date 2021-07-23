@@ -5,7 +5,8 @@
 <div class="tx-sportms-navigation tx-sportms-game-navigation">
 	<nav class="navbar navbar-default">
 		<div class="navbar-header">
-			<button class="navbar-toggle" data-target="#gameNavbar" data-toggle="collapse"
+			<button class="navbar-toggle" data-target="#gameNavbar"
+					data-toggle="collapse"
 					type="button">
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
@@ -15,36 +16,34 @@
 		<div class="collapse navbar-collapse" id="gameNavbar">
 			<ul class="nav navbar-nav">
 				<li>
-					<sportms:link.action Game="{game}" action="index"
-										 controller="Game">
-						<f:translate key="tx_sportms_action.game.index"/>
-					</sportms:link.action>
+					<f:render partial="ViewHelper/LinkAction/Game/Index"
+							  arguments="{game: game}"/>
 				</li>
 				<f:if condition="{game.gameReports}">
 					<f:then>
 						<li>
-							<sportms:link.action Game="{game}"
-												 action="report"
-												 controller="Game">
-								<f:translate
-										key="tx_sportms_action.game.report"/>
-							</sportms:link.action>
+							<f:render
+									partial="ViewHelper/LinkAction/Game/Report"
+									arguments="{game: game}"/>
 						</li>
 					</f:then>
 					<f:else>
-						<li><span><f:translate
-								key="tx_sportms_action.game.report"/></span>
+						<li>
+							<span>
+								<f:translate
+										key="tx_sportms_action.game.report"/>
+							</span>
 						</li>
 					</f:else>
 				</f:if>
 				<li>
-					<sportms:link.action Game="{game}" action="history"
-										 controller="Game">
-						<f:translate key="tx_sportms_action.game.history"/>
-					</sportms:link.action>
+					<f:render
+							partial="ViewHelper/LinkAction/Game/History"
+							arguments="{game: game}"/>
 				</li>
 				<li class="dropdown">
-					<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle"
+					<a aria-expanded="false" aria-haspopup="true"
+					   class="dropdown-toggle"
 					   data-toggle="dropdown" href="#"
 					   role="button">
 						<f:translate
@@ -53,29 +52,19 @@
 					</a>
 					<ul class="dropdown-menu">
 						<li>
-							<sportms:link.action CompetitionSeason="{game.competitionSeason}"
-												 CompetitionSeasonGameday="{game.gameday}"
-												 action="games"
-												 controller="CompetitionSeason">
-								<f:translate
-										key="tx_sportms_action.competitionseason.games"/>
-							</sportms:link.action>
+							<f:render
+									partial="ViewHelper/LinkAction/CompetitionSeason/Games"
+									arguments="{competitionSeason: game.competitionSeason}"/>
 						</li>
 						<li>
-							<sportms:link.action CompetitionSeason="{game.competitionSeason}"
-												 action="teams"
-												 controller="CompetitionSeason">
-								<f:translate
-										key="tx_sportms_action.competitionseason.teams"/>
-							</sportms:link.action>
+							<f:render
+									partial="ViewHelper/LinkAction/CompetitionSeason/Teams"
+									arguments="{competitionSeason: game.competitionSeason}"/>
 						</li>
 						<li>
-							<sportms:link.action CompetitionSeason="{game.competitionSeason}"
-												 action="clubs"
-												 controller="CompetitionSeason">
-								<f:translate
-										key="tx_sportms_action.competitionseason.clubs"/>
-							</sportms:link.action>
+							<f:render
+									partial="ViewHelper/LinkAction/CompetitionSeason/Clubs"
+									arguments="{competitionSeason: game.competitionSeason}"/>
 						</li>
 					</ul>
 				</li>

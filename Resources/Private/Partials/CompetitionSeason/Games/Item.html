@@ -1,10 +1,10 @@
 <html data-namespace-typo3-fluid="true"
-	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-	  xmlns:sportms="Balumedien\Sportms\ViewHelpers">
+	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <tr>
 	<td class="tx-sportms-table-center">
-		<f:format.date format="{settings.format.time.short}">{game.time}
+		<f:format.date format="{settings.format.time.short}">
+			{game.time}
 		</f:format.date>
 	</td>
 	<td class="tx-sportms-table-right">
@@ -21,10 +21,8 @@
 				  partial="ViewHelper/Game/Spectators"/>
 	</td>
 	<td class="tx-sportms-table-center">
-		<sportms:link.action Game="{game}" action="index" controller="Game">
-			<f:render arguments="{game: game}"
-					  partial="ViewHelper/Game/ResultInTable"/>
-		</sportms:link.action>
+		<f:render arguments="{game: game, linkLabel: 'result'}"
+				  partial="ViewHelper/LinkAction/Game/Index"/>
 	</td>
 </tr>
 

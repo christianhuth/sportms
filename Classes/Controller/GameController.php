@@ -159,6 +159,26 @@
         public function indexAction(Game $game = null)
         {
             $this->initializeActions();
+            $gameGoalsWithType = $game->getGameGoals();
+            for($i=0; $i < count($gameGoalsWithType); $i++) {
+                $currentGoalHome = $gameGoalsWithType[$i]->getGoalHome();
+                $currentGoalGuest = $gameGoalsWithType[$i]->getGoalGuest();
+                if($i == 0) {
+                    ($currentGoalHome > $currentGoalGuest) ? $type = 'home' : $type = 'guest';
+                } else {
+                    if($currentGoalHome > $previousGoalHome) {
+                        $type = 'home';
+                    } else if($currentGoalGuest > $previousGoalGuest) {
+                        $type = 'guest';
+                    } else {
+                        $type = 'error';
+                    }
+                }
+                $gameGoalsWithType[$i]->setType($type);
+                $previousGoalHome = $currentGoalHome;
+                $previousGoalGuest = $currentGoalGuest;
+            }
+            $game->setGameGoals($gameGoalsWithType);
             $this->view->assign('game', $game);
             $this->pagetitleForGame($game, "Spielinfo");
         }

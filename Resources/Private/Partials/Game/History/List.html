@@ -10,7 +10,9 @@
 			<th>
 				<f:translate key="tx_sportms_domain_model_competition"/>
 			</th>
-			<th>Datum</th>
+			<th>
+				<f:translate key="tx_sportms_general.date"/>
+			</th>
 			<th colspan="3">
 				<f:translate key="tx_sportms_domain_model_game"/>
 			</th>
@@ -27,7 +29,7 @@
 						<td class="tx-sportms-table-center">
 							<f:render
 									partial="ViewHelper/LinkAction/CompetitionSeason/Games"
-									arguments="{competitionSeason: game.competitionSeason, linkLabel: 'competition'}"/>
+									arguments="{competitionSeason: game.competitionSeason, linkLabel: 'competitionLabel'}"/>
 						</td>
 						<td class="tx-sportms-table-center">
 							<f:format.date date="{game.date}"
@@ -52,7 +54,10 @@
 				</f:for>
 			</f:then>
 			<f:else>
-				<td colspan="6">Keine Spiele gefunden.</td>
+				<td colspan="6">
+					<f:translate
+							key="tx_sportms_repository.game.none"/>
+				</td>
 			</f:else>
 		</f:if>
 		</tbody>

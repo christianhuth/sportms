@@ -20,12 +20,8 @@
 					<td class="tx-sportms-table-center">{iterator.index + 1}
 					</td>
 					<td class="tx-sportms-table-left">
-						<sportms:link.action Person="{playerWithMostGoal.person}"
-											 action="playerProfile"
-											 controller="Person">
-							{playerWithMostGoal.person.firstname}
-							{playerWithMostGoal.person.lastname}
-						</sportms:link.action>
+						<f:render partial="ViewHelper/LinkAction/Person/PlayerProfile"
+								  arguments="{linkLabel: 'name', person: playerWithMostGoal.person}"/>
 					</td>
 					<td class="tx-sportms-table-center">
 						<f:render

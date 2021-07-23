@@ -6,10 +6,10 @@
 
 <f:section name="default">
 	
-	<div id="tx-sportms-game-detail">
+	<div class="tx-sportms-game-detail">
 		
-		<f:render arguments="{_all}" partial="Game/Header"/>
-		<f:render arguments="{_all}" partial="Game/Navigation"/>
+		<f:render arguments="{game: game}" partial="Game/Header"/>
+		<f:render arguments="{game: game}" partial="Game/Navigation"/>
 		
 		<div class="tx-sportms-game-index">
 			
@@ -18,57 +18,16 @@
 				<div class="tx-sportms-game-container">
 					<f:if condition="{game.gameGoals}">
 						<f:then>
-							<f:for as="goal" each="{game.gameGoals}"
-								   iteration="i">
-								<sportms:PersonInTeamSeason
-										person="{goal.scorer}"
-										teamSeason="{game.teamSeasonHome}">
-									<f:then>
-										<f:if condition="!{goal.ownGoal}">
-											<f:then>
-												<f:render
-														arguments="{goal: goal, type: 'home'}"
-														partial="ViewHelper/Game/IndexGoal"/>
-											</f:then>
-											<f:else>
-												<f:render
-														arguments="{goal: goal, type: 'guest'}"
-														partial="ViewHelper/Game/IndexGoal"/>
-											</f:else>
-										</f:if>
-									</f:then>
-									<f:else>
-										<sportms:PersonInTeamSeason
-												person="{goal.scorer}"
-												teamSeason="{game.teamSeasonGuest}">
-											<f:then>
-												<f:if condition="!{goal.ownGoal}">
-													<f:then>
-														<f:render
-																arguments="{goal: goal, type: 'guest'}"
-																partial="ViewHelper/Game/IndexGoal"/>
-													</f:then>
-													<f:else>
-														<f:render
-																arguments="{goal: goal, type: 'home'}"
-																partial="ViewHelper/Game/IndexGoal"/>
-													</f:else>
-												</f:if>
-											</f:then>
-											<f:else>
-												<f:comment>
-													# TODO: think of a senseful
-													error message
-												</f:comment>
-											</f:else>
-										</sportms:PersonInTeamSeason>
-									</f:else>
-								</sportms:PersonInTeamSeason>
+							<f:for as="goal" each="{game.gameGoals}">
+								<f:render
+										arguments="{goal: goal}"
+										partial="Game/Index/Goal"/>
 							</f:for>
 						</f:then>
 						<f:else>
 							<div class="tx-sportms-game-goal tx-sportms-game-goal-none">
-								keine Tore vorhanden
+								<f:translate
+										key="tx_sportms_repository.game.none"/>
 							</div>
 						</f:else>
 					</f:if>
@@ -84,20 +43,51 @@
 								<f:for as="lineup"
 									   each="{game.gameLineupHomeStarts}">
 									<f:render arguments="{lineup: lineup}"
-											  partial="ViewHelper/Game/IndexLineup"/>
+											  partial="Game/Index/Lineup"/>
 								</f:for>
 							</div>
 							<div class="tx-sportms-game-lineup-guest">
 								<f:for as="lineup"
 									   each="{game.gameLineupGuestStarts}">
 									<f:render arguments="{lineup: lineup}"
-											  partial="ViewHelper/Game/IndexLineup"/>
+											  partial="Game/Index/Lineup"/>
 								</f:for>
 							</div>
 						</f:then>
 						<f:else>
 							<div class="tx-sportms-game-lineup tx-sportms-game-lineup-none">
-								keine Aufstellungen vorhanden
+								<f:translate
+										key="tx_sportms_repository.game.lineup.none"/>
+							</div>
+						</f:else>
+					</f:if>
+				</div>
+			</div>
+			
+			<div class="tx-sportms-game-trainer">
+				<h4>Trainer</h4>
+				<div class="tx-sportms-game-container">
+					<f:if
+							condition="{game.trainerHome} || {game.trainerGuest}">
+						<f:then>
+							<div class="tx-sportms-game-trainer-home">
+								<f:if condition="{game.trainerHome}">
+									<f:render partial="Game/Index/Trainer"
+											  arguments="{trainer: game.trainerHome}"/>
+								</f:if>
+							</div>
+							<div class="tx-sportms-game-trainer-guest">
+								<f:if condition="{game.trainerGuest}">
+									<f:render partial="Game/Index/Trainer"
+											  arguments="{trainer: game.trainerGuest}"/>
+								</f:if>
+							</div>
+						</f:then>
+						<f:else>
+							<div
+									class="tx-sportms-game-trainer-none">
+								<f:translate
+										key="tx_sportms_repository.game.trainer.none"/>
 							</div>
 						</f:else>
 					</f:if>
@@ -113,21 +103,22 @@
 								<f:for as="lineup"
 									   each="{game.gameLineupHomeSubstitutes}">
 									<f:render arguments="{lineup: lineup}"
-											  partial="ViewHelper/Game/IndexLineup"/>
+											  partial="Game/Index/Lineup"/>
 								</f:for>
 							</div>
 							<div class="tx-sportms-game-lineup-guest">
 								<f:for as="lineup"
 									   each="{game.gameLineupGuestSubstitutes}">
 									<f:render arguments="{lineup: lineup}"
-											  partial="ViewHelper/Game/IndexLineup"/>
+											  partial="Game/Index/Lineup"/>
 								</f:for>
 							</div>
 						</f:then>
 						<f:else>
 							<div
 									class="tx-sportms-game-substitute tx-sportms-game-substitute-none">
-								keine Reservebank vorhanden
+								<f:translate
+										key="tx_sportms_repository.game.substitute.none"/>
 							</div>
 						</f:else>
 					</f:if>
@@ -146,7 +137,7 @@
 									<f:then>
 										<f:render
 												arguments="{change: change, type: 'home'}"
-												partial="ViewHelper/Game/IndexChange"/>
+												partial="Game/Index/Change"/>
 									</f:then>
 									<f:else>
 										<sportms:PersonInTeamSeason
@@ -155,7 +146,7 @@
 											<f:then>
 												<f:render
 														arguments="{change: change, type: 'guest'}"
-														partial="ViewHelper/Game/IndexChange"/>
+														partial="Game/Index/Change"/>
 											</f:then>
 											<f:else>
 												<f:comment>
@@ -172,7 +163,8 @@
 						<f:else>
 							<div
 									class="tx-sportms-game-change tx-sportms-game-change-none">
-								keine Wechsel vorhanden
+								<f:translate
+										key="tx_sportms_repository.gamechange.none"/>
 							</div>
 						</f:else>
 					</f:if>

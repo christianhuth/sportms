@@ -58,6 +58,11 @@
          * @var int
          */
         protected $goalType;
+    
+        /**
+         * @var string
+         */
+        protected $type;
         
         /**
          * @return \Balumedien\Sportms\Domain\Model\Game
@@ -217,6 +222,22 @@
         public function setGoalType($goalType)
         {
             $this->goalType = $goalType;
+        }
+    
+        /**
+         * @return string
+         */
+        public function getType(): string
+        {
+            return $this->type;
+        }
+    
+        /**
+         * @param string $type
+         */
+        public function setType(string $type): void
+        {
+            $this->type = $type;
         }
         
     }

@@ -9,11 +9,8 @@
 	</td>
 	<td class="tx-sportms-table-center">{game.season.abbreviation}</td>
 	<td class="tx-sportms-table-left">
-		<sportms:link.action CompetitionSeason="{game.competitionSeason}" CompetitionSeasonGameday="{game.gameday}"
-							 action="games"
-							 controller="CompetitionSeason">
-			{game.competitionSeason.competition.label}
-		</sportms:link.action>
+		<f:render partial="ViewHelper/LinkAction/CompetitionSeason/Games"
+				  arguments="{competitionSeason: game.competitionSeason, competitionSeasonGameday: game.gameday, linkLabel: 'competitionLabel'}"/>
 	</td>
 	<td class="tx-sportms-table-center">
 		<f:if condition="{team} == {game.teamSeasonHome.team}">
@@ -42,10 +39,8 @@
 				  partial="ViewHelper/Game/Spectators"/>
 	</td>
 	<td class="tx-sportms-table-center">
-		<sportms:link.action Game="{game}" action="index" controller="Game">
-			<f:render arguments="{game: game}"
-					  partial="ViewHelper/Game/ResultInTable"/>
-		</sportms:link.action>
+		<f:render partial="ViewHelper/LinkAction/Game/Index"
+				  arguments="{game: game, linkLabel: 'result'}"/>
 	</td>
 </tr>
 

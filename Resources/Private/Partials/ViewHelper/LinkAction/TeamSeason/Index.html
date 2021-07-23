@@ -1,30 +1,45 @@
 <html data-namespace-typo3-fluid="true"
 	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
-<f:if condition="{teamSeason}">
+<f:if condition="{teamSeason.team.detailLink} && {teamSeason.detailLink}">
 	<f:then>
-		<f:if condition="{teamSeason.team.detailLink} && {teamSeason.detailLink}">
-			<f:then>
-				<f:link.action action="index"
-							   arguments="{teamSeason: teamSeason}"
-							   controller="TeamSeason"
-							   extensionName="sportms"
-							   pageUid="{settings.teamSeason.index.pid}"
-							   pluginName="Team">
-					<f:translate key="tx_sportms_action.teamseason.index"/>
-				</f:link.action>
-			</f:then>
-			<f:else>
-				<span><f:translate
-						key="tx_sportms_action.teamseason.index"/></span>
-			</f:else>
-		</f:if>
+		<f:link.action action="index"
+					   arguments="{teamSeason: teamSeason}"
+					   controller="TeamSeason"
+					   extensionName="sportms"
+					   pageUid="{settings.teamSeason.index.pid}"
+					   pluginName="Team">
+			<f:render section="label"
+					  arguments="{teamSeason: teamSeason, linkLabel: linkLabel}"/>
+		</f:link.action>
 	</f:then>
 	<f:else>
-		<f:comment>
-			#TODO: ERROR MESSAGE
-		</f:comment>
+		<f:render section="label"
+				  arguments="{teamSeason: teamSeason, linkLabel: linkLabel}"/>
 	</f:else>
 </f:if>
+
+<f:section name="label">
+	<f:switch expression="{linkLabel}">
+		<f:case value="team">
+			{teamSeason.team.label}
+		</f:case>
+		<f:case value="teamInGameHeader">
+			<div class="tx-sportms-header-team-logo">
+				<f:render arguments="{club: teamSeason.team.club}"
+						  partial="ViewHelper/Club/LogoInHeader"/>
+			</div>
+			<div class="tx-sportms-header-team-label">
+				<h3>{teamSeason.team.label}</h3>
+			</div>
+		</f:case>
+		<f:defaultCase>
+			<span>
+				<f:translate
+						key="tx_sportms_action.teamseason.index"/>
+			</span>
+		</f:defaultCase>
+	</f:switch>
+</f:section>
 
 </html>

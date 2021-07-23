@@ -4,8 +4,10 @@
 <f:layout name="default"/>
 
 <f:section name="default">
-	<div id="tx-sportms-game-list">
+	<div class="tx-sportms-game-list">
+		
 		<f:render arguments="{_all}" partial="Game/List/Filter"/>
+		
 		<f:if condition="{games}">
 			<f:then>
 				<f:widget.paginate objects="{games}"

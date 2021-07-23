@@ -224,15 +224,15 @@
                             0,
                         ],
                         [
-                            'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_gamegoal.goal_type.penalty',
+                            'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_gamegoal.goal_type.1',
                             1,
                         ],
                         [
-                            'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_gamegoal.goal_type.freekick',
+                            'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_gamegoal.goal_type.2',
                             2,
                         ],
                         [
-                            'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_gamegoal.goal_type.corner',
+                            'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_gamegoal.goal_type.3',
                             3,
                         ],
                     ],

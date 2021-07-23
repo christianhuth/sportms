@@ -3,11 +3,29 @@
 
 <f:if condition="{personProfile} && {personProfile.profileImages}">
 	<f:then>
-		<f:image image="{personProfile.profileImages.0}" height="50"/>
+		<f:if condition="{imageHeight}">
+			<f:then>
+				<f:image image="{personProfile.profileImages.0}"
+						 height="{imageHeight}"/>
+			</f:then>
+			<f:else>
+				<f:image image="{personProfile.profileImages.0}" height="50"/>
+			</f:else>
+		</f:if>
 	</f:then>
 	<f:else>
-		<f:render arguments="{person: personProfile.person}"
-				  partial="ViewHelper/Person/DummyImage"/>
+		<f:if condition="{imageHeight}">
+			<f:then>
+				<f:render
+						arguments="{imageHeight: imageHeight, person: personProfile.person}"
+						  partial="ViewHelper/Person/DummyImage"/>
+			</f:then>
+			<f:else>
+				<f:render
+						arguments="{imageHeight: 50, person: personProfile.person}"
+						  partial="ViewHelper/Person/DummyImage"/>
+			</f:else>
+		</f:if>
 	</f:else>
 </f:if>
 

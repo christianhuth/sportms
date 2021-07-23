@@ -1,15 +1,12 @@
 <html data-namespace-typo3-fluid="true"
 	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-	  xmlns:sportms="Balumedien\Sportms\ViewHelpers">
+>
 
 <tr>
 	<td class="tx-sportms-table-center">{competition.sport.label}</td>
 	<td>
-		<sportms:link.action CompetitionSeason="{competition.competitionSeasons.0}" CompetitionSeasonGameday="{competition.competitionSeasons.0.competitionSeasonGamedays.0}"
-							 action="games"
-							 controller="CompetitionSeason">
-			{competition.label}
-		</sportms:link.action>
+		<f:render partial="ViewHelper/LinkAction/CompetitionSeason/Games"
+				  arguments="{competitionSeason: competition.competitionSeasons.0, linkLabel: 'competitionLabel'}"/>
 	</td>
 	<td class="tx-sportms-table-center">{competition.sportAgeLevel.label}</td>
 	<td class="tx-sportms-table-center">{competition.competitionType.label}</td>

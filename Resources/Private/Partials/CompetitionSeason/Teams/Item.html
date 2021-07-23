@@ -1,6 +1,5 @@
 <html data-namespace-typo3-fluid="true"
-	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-	  xmlns:sportms="Balumedien\Sportms\ViewHelpers">
+	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <tr>
 	<td class="tx-sportms-table-left">
@@ -11,10 +10,8 @@
 		<f:count>{teamSeason.teamSeasonSquadMembers}</f:count>
 	</td>
 	<td class="tx-sportms-table-center">
-		<sportms:link.action TeamSeason="{teamSeason}" action="gamesByDate"
-							 controller="TeamSeason">
-			Spielplan
-		</sportms:link.action>
+		<f:render partial="ViewHelper/LinkAction/TeamSeason/GamesByDate"
+				  arguments="{teamSeason: teamSeason}"/>
 	</td>
 </tr>
 

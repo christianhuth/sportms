@@ -3,10 +3,10 @@
 
 <f:if condition="{person.detailLink}">
 	<f:then>
-		<f:link.action action="playerProfile"
+		<f:link.action action="playerRecordGames"
 					   arguments="{person: person}"
 					   controller="Person" extensionName="sportms"
-					   pageUid="{settings.person.playerProfile.pid}"
+					   pageUid="{settings.person.playerRecordGames.pid}"
 					   pluginName="person">
 			<f:render section="label"
 					  arguments="{person: person, linkLabel: linkLabel}"/>
@@ -29,7 +29,7 @@
 		<f:defaultCase>
 			<span>
 				<f:translate
-						key="tx_sportms_action.person.playerprofile"/>
+						key="tx_sportms_action.person.playerrecordgames"/>
 			</span>
 		</f:defaultCase>
 	</f:switch>

@@ -4,24 +4,12 @@
 
 <div class="tx-sportms-game-header tx-sportms-header">
 	<div class="tx-sportms-header-box tx-sportms-header-competition">
-		<sportms:link.action CompetitionSeason="{game.competitionSeason}" CompetitionSeasonGameday="{game.gameday}"
-							 action="games"
-							 controller="CompetitionSeason">
-			{game.competitionSeason.competition.label} {game.season.label},
-			{game.gameday.label}
-		</sportms:link.action>
+		<f:render partial="ViewHelper/LinkAction/CompetitionSeason/Games"
+				  arguments="{competitionSeason: game.competitionSeason, competitionSeasonGameday: game.gameday, linkLabel: 'competitionInGameHeader'}"/>
 	</div>
 	<div class="tx-sportms-header-box tx-sportms-header-team">
-		<sportms:link.action TeamSeason="{game.teamSeasonHome}" action="index"
-							 controller="TeamSeason">
-			<div class="tx-sportms-header-team-logo">
-				<f:render arguments="{club: game.teamSeasonHome.team.club}"
-						  partial="ViewHelper/Club/LogoInHeader"/>
-			</div>
-			<div class="tx-sportms-header-team-label">
-				<h3>{game.teamSeasonHome.team.label}</h3>
-			</div>
-		</sportms:link.action>
+		<f:render partial="ViewHelper/LinkAction/TeamSeason/Index"
+				  arguments="{linkLabel: 'teamInGameHeader', teamSeason: game.teamSeasonHome}"/>
 	</div>
 	<div class="tx-sportms-header-box tx-sportms-game-header-result">
 		<div class="tx-sportms-game-header-result">
@@ -30,16 +18,8 @@
 		</div>
 	</div>
 	<div class="tx-sportms-header-box tx-sportms-header-team">
-		<sportms:link.action TeamSeason="{game.teamSeasonGuest}" action="index"
-							 controller="TeamSeason">
-			<div class="tx-sportms-header-team-logo">
-				<f:render arguments="{club: game.teamSeasonGuest.team.club}"
-						  partial="ViewHelper/Club/LogoInHeader"/>
-			</div>
-			<div class="tx-sportms-header-team-label">
-				<h3>{game.teamSeasonGuest.team.label}</h3>
-			</div>
-		</sportms:link.action>
+		<f:render partial="ViewHelper/LinkAction/TeamSeason/Index"
+				  arguments="{linkLabel: 'teamInGameHeader', teamSeason: game.teamSeasonGuest}"/>
 	</div>
 </div>
 

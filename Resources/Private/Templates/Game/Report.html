@@ -1,15 +1,14 @@
 <html data-namespace-typo3-fluid="true"
-	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
->
+	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <f:layout name="default"/>
 
 <f:section name="default">
 	
-	<div id="tx-sportms-game-detail">
+	<div class="tx-sportms-game-detail">
 		
-		<f:render arguments="{_all}" partial="Game/Header"/>
-		<f:render arguments="{_all}" partial="Game/Navigation"/>
+		<f:render arguments="{game: game}" partial="Game/Header"/>
+		<f:render arguments="{game: game}" partial="Game/Navigation"/>
 		
 		<div class="tx-sportms-game-report">
 			

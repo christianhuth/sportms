@@ -4,18 +4,12 @@
 
 <tr>
 	<td class="tx-sportms-table-center">
-		<sportms:link.action CompetitionSeason="{game.competitionSeason}" CompetitionSeasonGameday="{game.gameday}"
-							 action="games"
-							 controller="CompetitionSeason">
-			{game.competitionSeason.competition.abbreviation}
-		</sportms:link.action>
+		<f:render partial="ViewHelper/LinkAction/CompetitionSeason/Games"
+				  arguments="{competitionSeason: game.competitionSeason, competitionSeasonGameday: game.gameday, linkLabel: 'competitionAbbreviation'}"/>
 	</td>
 	<td class="tx-sportms-table-center">
-		<sportms:link.action CompetitionSeason="{game.competitionSeason}" CompetitionSeasonGameday="{game.gameday}"
-							 action="games"
-							 controller="CompetitionSeason">
-			{game.gameday.label}
-		</sportms:link.action>
+		<f:render partial="ViewHelper/LinkAction/CompetitionSeason/Games"
+				  arguments="{competitionSeason: game.competitionSeason, competitionSeasonGameday: game.gameday, linkLabel: 'gamedayLabel'}"/>
 	</td>
 	<td class="tx-sportms-table-center">
 		<f:format.date format="{settings.format.date.long}">{game.date}
@@ -52,10 +46,8 @@
 				  partial="ViewHelper/Game/Spectators"/>
 	</td>
 	<td class="tx-sportms-table-center">
-		<sportms:link.action Game="{game}" action="index" controller="Game">
-			<f:render arguments="{game: game}"
-					  partial="ViewHelper/Game/ResultInTable"/>
-		</sportms:link.action>
+		<f:render partial="ViewHelper/LinkAction/Game/Index"
+				  arguments="{game: game, linkLabel: 'result'}"/>
 	</td>
 </tr>
 

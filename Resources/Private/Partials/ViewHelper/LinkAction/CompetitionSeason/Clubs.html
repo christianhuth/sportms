@@ -4,41 +4,30 @@
 <f:if
 		condition="{competitionSeason.competition.detailLink} && {competitionSeason.detailLink}">
 	<f:then>
-		<f:link.action action="games"
+		<f:link.action action="clubs"
 					   arguments="{competitionSeason: competitionSeason}"
 					   controller="CompetitionSeason" extensionName="sportms"
-					   pageUid="{settings.competitionSeason.games.pid}"
+					   pageUid="{settings.competitionSeason.clubs.pid}"
 					   pluginName="competition">
 			<f:render section="label"
-					  arguments="{_all}"/>
+					  arguments="{competitionSeason: competitionSeason, linkLabel: linkLabel}"/>
 		</f:link.action>
 	</f:then>
 	<f:else>
 		<f:render section="label"
-				  arguments="{_all}"/>
+				  arguments="{competitionSeason: competitionSeason, linkLabel: linkLabel}"/>
 	</f:else>
 </f:if>
 
 <f:section name="label">
 	<f:switch expression="{linkLabel}">
-		<f:case value="competitionAbbreviation">
-			{competitionSeason.competition.abbreviation}
-		</f:case>
-		<f:case value="competitionInGameHeader">
+		<f:case value="competition">
 			{competitionSeason.competition.label}
-			{competitionSeason.season.label},
-			{competitionSeasonGameday.label}
-		</f:case>
-		<f:case value="competitionLabel">
-			{competitionSeason.competition.label}
-		</f:case>
-		<f:case value="gamedayLabel">
-			{competitionSeasonGameday.label}
 		</f:case>
 		<f:defaultCase>
 			<span>
 				<f:translate
-						key="tx_sportms_action.competitionseason.games"/>
+						key="tx_sportms_action.competitionseason.clubs"/>
 			</span>
 		</f:defaultCase>
 	</f:switch>

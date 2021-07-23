@@ -4,14 +4,9 @@
 
 <div class="tx-sportms-teamseason-squadmember col-xs-4 col-sm-3 col-md-3">
 	<div class="tx-sportms-teamseason-squadmember-wrapper">
-		<f:comment>
-			<sportms:link.action Person="{squadMember.person}" Sport="{teamSeason.team.sport}"
-								 action="playerProfile"
-								 controller="Person">
-			</sportms:link.action>
-		</f:comment>
 		<div class="squadmember-image">
-			<f:render arguments="{person: squadMember.person, personProfile: '{sportms:person.profile(person: squadMember.person, profileType: \'player\', sport: teamSeason.team.sport)}'}"
+			<f:render
+					arguments="{imageHeight: 512, person: squadMember.person, personProfile: '{sportms:person.profile(person: squadMember.person, profileType: \'player\', sport: teamSeason.team.sport)}'}"
 					  partial="ViewHelper/Person/ProfileImage"/>
 		</div>
 		<div class="squadmember-info">

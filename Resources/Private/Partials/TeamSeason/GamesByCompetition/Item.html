@@ -45,10 +45,8 @@
 				  partial="ViewHelper/Game/Spectators"/>
 	</td>
 	<td class="tx-sportms-table-center">
-		<sportms:link.action Game="{game}" action="index" controller="Game">
-			<f:render arguments="{game: game}"
-					  partial="ViewHelper/Game/ResultInTable"/>
-		</sportms:link.action>
+		<f:render partial="ViewHelper/LinkAction/Game/Index"
+				  arguments="{game: game, linkLabel: 'result'}"/>
 	</td>
 </tr>
 

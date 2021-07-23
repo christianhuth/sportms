@@ -424,6 +424,7 @@
 
 .tx-sportms .tx-sportms-game-goal-none,
 .tx-sportms .tx-sportms-game-lineup-none,
+.tx-sportms .tx-sportms-game-trainer-none,
 .tx-sportms .tx-sportms-game-substitute-none,
 .tx-sportms .tx-sportms-game-change-none {
     display: inline-block;
@@ -488,7 +489,7 @@
     font-weight: bold;
 }
 
-.tx-sportms .tx-sportms-game-goal .tx-sportms-game-goal-person .tx-sportms-game-goal-scorer .tx-sportms-game-goal-penalty {
+.tx-sportms .tx-sportms-game-goal .tx-sportms-game-goal-person .tx-sportms-game-goal-scorer .tx-sportms-game-goal-type {
     color: var(--color3);
     font-size: 90%;
     font-weight: normal;
@@ -514,39 +515,48 @@
 }
 
 .tx-sportms .tx-sportms-game-lineup-home,
-.tx-sportms .tx-sportms-game-lineup-guest {
+.tx-sportms .tx-sportms-game-lineup-guest,
+.tx-sportms .tx-sportms-game-trainer-home,
+.tx-sportms .tx-sportms-game-trainer-guest {
     width: 50%;
 }
 
-.tx-sportms .tx-sportms-game-lineup-entry {
+.tx-sportms .tx-sportms-game-lineup-entry,
+.tx-sportms .tx-sportms-game-trainer-entry {
     display: grid;
     margin: 6px 0;
 }
 
-.tx-sportms .tx-sportms-game-lineup-entry .tx-sportms-game-lineup-person {
+.tx-sportms .tx-sportms-game-lineup-entry .tx-sportms-game-lineup-person,
+.tx-sportms .tx-sportms-game-trainer-entry .tx-sportms-game-trainer-person {
     align-items: center;
     display: flex;
 }
 
-.tx-sportms .tx-sportms-game-lineup-home .tx-sportms-game-lineup-entry {
+.tx-sportms .tx-sportms-game-lineup-home .tx-sportms-game-lineup-entry,
+.tx-sportms .tx-sportms-game-trainer-home .tx-sportms-game-trainer-entry {
     grid-template-columns: 1fr 50px;
 }
 
-.tx-sportms .tx-sportms-game-lineup-guest .tx-sportms-game-lineup-entry {
+.tx-sportms .tx-sportms-game-lineup-guest .tx-sportms-game-lineup-entry,
+.tx-sportms .tx-sportms-game-trainer-guest .tx-sportms-game-trainer-entry {
     grid-template-columns: 50px 1fr;
 }
 
-.tx-sportms .tx-sportms-game-lineup-guest .tx-sportms-game-lineup-entry .tx-sportms-game-lineup-person {
+.tx-sportms .tx-sportms-game-lineup-guest .tx-sportms-game-lineup-entry .tx-sportms-game-lineup-person,
+.tx-sportms .tx-sportms-game-trainer-guest .tx-sportms-game-trainer-entry .tx-sportms-game-trainer-person {
     grid-column: 2 / 3;
     grid-row: 1;
 }
 
-.tx-sportms .tx-sportms-game-lineup-guest .tx-sportms-game-lineup-entry .tx-sportms-game-lineup-jerseynumber {
+.tx-sportms .tx-sportms-game-lineup-guest .tx-sportms-game-lineup-entry .tx-sportms-game-lineup-jerseynumber,
+.tx-sportms .tx-sportms-game-trainer-guest .tx-sportms-game-trainer-entry .tx-sportms-game-trainer-jerseynumber {
     grid-column: 1 / 2;
     grid-row: 1;
 }
 
-.tx-sportms .tx-sportms-game-lineup-home .tx-sportms-game-lineup-entry .tx-sportms-game-lineup-person {
+.tx-sportms .tx-sportms-game-lineup-home .tx-sportms-game-lineup-entry .tx-sportms-game-lineup-person,
+.tx-sportms .tx-sportms-game-trainer-home .tx-sportms-game-trainer-entry .tx-sportms-game-trainer-person {
     justify-content: right;
 }
 
@@ -558,7 +568,8 @@
     justify-content: left;
 }
 
-.tx-sportms .tx-sportms-game-lineup-entry .tx-sportms-game-lineup-jerseynumber {
+.tx-sportms .tx-sportms-game-lineup-entry .tx-sportms-game-lineup-jerseynumber,
+.tx-sportms .tx-sportms-game-trainer-entry .tx-sportms-game-trainer-jerseynumber {
     display: flex;
     justify-content: center;
     text-align: center;
@@ -566,7 +577,8 @@
 
 .tx-sportms .tx-sportms-game-change-entry .tx-sportms-game-change-time .tx-sportms-game-change-minute,
 .tx-sportms .tx-sportms-game-goal .tx-sportms-game-goal-time .tx-sportms-game-goal-minute,
-.tx-sportms .tx-sportms-game-lineup-entry .tx-sportms-game-lineup-jerseynumber .tx-sportms-game-lineup-number {
+.tx-sportms .tx-sportms-game-lineup-entry .tx-sportms-game-lineup-jerseynumber .tx-sportms-game-lineup-number,
+.tx-sportms .tx-sportms-game-trainer-entry .tx-sportms-game-trainer-jerseynumber .tx-sportms-game-trainer-number {
     align-items: center;
     background-color: var(--color2);
     border-radius: 100%;
@@ -585,7 +597,7 @@
  * PERSON
  *
  */
-.tx-sportms-container #tx-sportms-person-show .label {
+.tx-sportms-container .tx-sportms-person-detail .label {
     background-color: #d5d5d5;
     border-bottom: 1px solid #ffffff;
     border-radius: 0;

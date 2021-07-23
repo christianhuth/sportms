@@ -1,6 +1,6 @@
 <html data-namespace-typo3-fluid="true"
 	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-	  xmlns:sportms="Balumedien\Sportms\ViewHelpers">
+>
 
 <h4>Rückennummern nach Mannschaften</h4>
 <div>Diese Statistik zeigt, welche Rückennummer der Person in verschiedenen
@@ -23,11 +23,9 @@
 				<tr>
 					<td>{jerseyByTeamSeason.teamSeason.season.label}</td>
 					<td>
-						<sportms:link.action TeamSeason="{jerseyByTeamSeason.teamSeason}"
-											 action="index"
-											 controller="TeamSeason">
-							{jerseyByTeamSeason.teamSeason.team.label}
-						</sportms:link.action>
+						<f:render
+								partial="ViewHelper/LinkAction/TeamSeason/Index"
+								arguments="{linkLabel: 'team', teamSeason: jerseyByTeamSeason.teamSeason}"/>
 					</td>
 					<td>{jerseyByTeamSeason.squadNumber}</td>
 				</tr>

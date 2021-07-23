@@ -1,16 +1,16 @@
 <html data-namespace-typo3-fluid="true"
 	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-	  xmlns:sportms="Balumedien\Sportms\ViewHelpers">
+>
 
 <f:if condition="{goal}">
 	<div class="tx-sportms-game-goal">
 		<div class="tx-sportms-game-goal-person tx-sportms-game-goal-person-home">
-			<f:if condition="{type} == home">
+			<f:if condition="{goal.type} == home">
 				<f:render arguments="{goal: goal}" section="goal"/>
 			</f:if>
 		</div>
 		<div class="tx-sportms-game-goal-time">
-			<f:if condition="{type} == home">
+			<f:if condition="{goal.type} == home">
 				<span class="tx-sportms-game-goal-minute">{goal.minute}'</span>
 			</f:if>
 		</div>
@@ -20,12 +20,12 @@
 			</div>
 		</div>
 		<div class="tx-sportms-game-goal-time">
-			<f:if condition="{type} == guest">
+			<f:if condition="{goal.type} == guest">
 				<span class="tx-sportms-game-goal-minute">{goal.minute}'</span>
 			</f:if>
 		</div>
 		<div class="tx-sportms-game-goal-person tx-sportms-game-goal-person-guest">
-			<f:if condition="{type} == guest">
+			<f:if condition="{goal.type} == guest">
 				<f:render arguments="{goal: goal}" section="goal"/>
 			</f:if>
 		</div>
@@ -34,19 +34,31 @@
 
 <f:section name="goal">
 	<div class="tx-sportms-game-goal-scorer">
-		<sportms:link.action Person="{goal.scorer}" action="playerProfile"
-							 controller="Person">
-			{goal.scorer.lastname}
-		</sportms:link.action>
-		<f:if condition="{goal.goalType} == 1">
-			<span class="tx-sportms-game-goal-penalty">(Elfmeter)</span>
+		<f:if condition="{goal.scorer}">
+			<f:then>
+				<f:render partial="ViewHelper/LinkAction/Person/PlayerProfile"
+						  arguments="{linkLabel: 'lastname', person: goal.scorer}"/>
+			</f:then>
+			<f:else>
+				unbekannt
+			</f:else>
+		</f:if>
+		<f:if condition="{goal.goalType}">
+			<span class="tx-sportms-game-goal-type">(<f:translate
+					key="tx_sportms_domain_model_gamegoal.goal_type.{goal.goalType}"/>)
+			</span>
+		</f:if>
+		<f:if condition="{goal.ownGoal}">
+			<span class="tx-sportms-game-goal-type">(Eigentor)</span>
 		</f:if>
 	</div>
 	<div class="tx-sportms-game-goal-assist">
-		<sportms:link.action Person="{goal.assist}" action="playerProfile"
-							 controller="Person">
-			{goal.assist.lastname}
-		</sportms:link.action>
+		<f:if condition="{goal.assist}">
+			<f:then>
+				<f:render partial="ViewHelper/LinkAction/Person/PlayerProfile"
+						  arguments="{linkLabel: 'lastname', person: goal.assist}"/>
+			</f:then>
+		</f:if>
 	</div>
 </f:section>
 

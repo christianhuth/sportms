@@ -4,11 +4,13 @@
 <f:layout name="default"/>
 
 <f:section name="default">
-	<div id="tx-sportms-teamseason-games">
+	<div id="tx-sportms-teamseason-detail">
+		
 		<f:render arguments="{team: teamSeason.team, teamSeason: teamSeason}"
 				  partial="Team/Navigation"/>
 		<f:render arguments="{settings: settings, teamSeason: teamSeason, teamSeasons: teamSeasons}"
 				  partial="TeamSeason/GamesByDate/Filter"/>
+		
 		<div class="tx-sportms-teamseason-gamesbydate">
 			<div class="table-responsive">
 				<table class="table table-bordered table-condensed table-hover table-striped tx-sportms-table">

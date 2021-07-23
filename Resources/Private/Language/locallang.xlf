@@ -695,13 +695,13 @@
             <trans-unit id="tx_sportms_domain_model_gamegoal.goal_type">
                 <source>Torart</source>
             </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_gamegoal.goal_type.penalty">
+            <trans-unit id="tx_sportms_domain_model_gamegoal.goal_type.1">
                 <source>Elfmeter</source>
             </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_gamegoal.goal_type.freekick">
+            <trans-unit id="tx_sportms_domain_model_gamegoal.goal_type.2">
                 <source>Direkter Freistoß</source>
             </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_gamegoal.goal_type.corner">
+            <trans-unit id="tx_sportms_domain_model_gamegoal.goal_type.3">
                 <source>Direkter Eckball</source>
             </trans-unit>
 
@@ -1324,6 +1324,27 @@
             </trans-unit>
             <trans-unit id="tx_sportms_navigation.team.history.dropdown">
                 <source>Historie</source>
+            </trans-unit>
+
+
+        <!-- Repositories -->
+            <trans-unit id="tx_sportms_repository.game.none">
+                <source>keine Spiele vorhanden</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_repository.game.lineup.none">
+                <source>keine Aufstellungen vorhanden</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_repository.game.substitute.none">
+                <source>keine Reservebank vorhanden</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_repository.game.trainer.none">
+                <source>keine Trainer vorhanden</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_repository.gamechange.none">
+                <source>keine Wechsel vorhanden</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_repository.gamegoal.none">
+                <source>keine Tore vorhanden</source>
             </trans-unit>
 
 

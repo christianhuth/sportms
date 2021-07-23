@@ -1,10 +1,9 @@
 <html data-namespace-typo3-fluid="true"
-	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-	  xmlns:sportms="Balumedien\Sportms\ViewHelpers">
+	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <tr>
 	<td class="tx-sportms-table-center">
-		<sportms:weekday weekday="{teamSeasonPractice.day}"/>
+		<f:translate key="tx_sportms_general.day.{teamSeasonPractice.day}"/>
 	</td>
 	<td class="tx-sportms-table-center">
 		<f:format.date format="{settings.format.time.short}">
