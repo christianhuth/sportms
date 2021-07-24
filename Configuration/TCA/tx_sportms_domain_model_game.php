@@ -982,7 +982,7 @@
                     'foreign_table' => 'tx_sportms_domain_model_person',
                     'foreign_table_where' => ' AND tx_sportms_domain_model_person.uid IN (SELECT tx_sportms_domain_model_teamseasonofficial.person FROM tx_sportms_domain_model_teamseasonofficial WHERE tx_sportms_domain_model_teamseasonofficial.team_season = ###REC_FIELD_team_season_home###)',
                     'items' => [
-                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.select', 0],
+                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_game.select.trainer', 0],
                     ],
                     'maxItems' => 1,
                     'minItems' => 0,
@@ -1116,7 +1116,7 @@
                     'foreign_table' => 'tx_sportms_domain_model_person',
                     'foreign_table_where' => ' AND tx_sportms_domain_model_person.uid IN (SELECT tx_sportms_domain_model_teamseasonofficial.person FROM tx_sportms_domain_model_teamseasonofficial WHERE tx_sportms_domain_model_teamseasonofficial.team_season = ###REC_FIELD_team_season_guest###)',
                     'items' => [
-                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.select', 0],
+                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_game.select.trainer', 0],
                     ],
                     'maxItems' => 1,
                     'minItems' => 0,

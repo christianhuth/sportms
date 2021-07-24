@@ -139,6 +139,9 @@
             <trans-unit id="tx_sportms_domain_model_game.tab.guest">
                 <source>Gast</source>
             </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_game.select.trainer">
+                <source>Trainer gemäß Mannschaftszuordnung</source>
+            </trans-unit>
 
 
         <!-- Domain Model Person -->

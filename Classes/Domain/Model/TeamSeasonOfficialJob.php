@@ -12,6 +12,11 @@
          * @var string
          */
         protected $label = '';
+    
+        /**
+         * @var bool
+         */
+        protected $isCheftrainerJob = false;
         
         /**
          * @return string
@@ -27,6 +32,22 @@
         public function setLabel($label)
         {
             $this->label = $label;
+        }
+    
+        /**
+         * @return bool
+         */
+        public function isCheftrainerJob(): bool
+        {
+            return $this->isCheftrainerJob;
+        }
+    
+        /**
+         * @param bool $isCheftrainerJob
+         */
+        public function setIsCheftrainerJob(bool $isCheftrainerJob): void
+        {
+            $this->isCheftrainerJob = $isCheftrainerJob;
         }
         
     }

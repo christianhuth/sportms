@@ -68,12 +68,26 @@
 				<h4>Trainer</h4>
 				<div class="tx-sportms-game-container">
 					<f:if
-							condition="{game.trainerHome} || {game.trainerGuest}">
+							condition="{game.trainerHome} || {game.teamSeasonHome.teamSeasonCheftrainers} || {game.trainerGuest} || {game.teamSeasonGuest.teamSeasonCheftrainers}">
 						<f:then>
 							<div class="tx-sportms-game-trainer-home">
 								<f:if condition="{game.trainerHome}">
-									<f:render partial="Game/Index/Trainer"
-											  arguments="{trainer: game.trainerHome}"/>
+									<f:then>
+										<f:render partial="Game/Index/Trainer"
+												  arguments="{trainer: game.trainerHome}"/>
+									</f:then>
+									<f:else>
+										<f:if
+												condition="{game.teamSeasonHome.teamSeasonCheftrainers}">
+											<f:then>
+												<f:for
+														each="{game.teamSeasonHome.teamSeasonCheftrainers}" as="cheftrainer">
+													<f:render partial="Game/Index/Trainer"
+															  arguments="{trainer: cheftrainer.person}"/>
+												</f:for>
+											</f:then>
+										</f:if>
+									</f:else>
 								</f:if>
 							</div>
 							<div class="tx-sportms-game-trainer-guest">
