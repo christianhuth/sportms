@@ -11,7 +11,12 @@
 		</div>
 		<div class="tx-sportms-game-goal-time">
 			<f:if condition="{goal.type} == home">
-				<span class="tx-sportms-game-goal-minute">{goal.minute}'</span>
+				<span class="tx-sportms-game-goal-minute">
+					{goal.minute}.
+					<f:if condition="{goal.minuteAdditional}">
+						+ {goal.minuteAdditional}
+					</f:if>
+				</span>
 			</f:if>
 		</div>
 		<div class="tx-sportms-game-goal-score">
@@ -21,7 +26,14 @@
 		</div>
 		<div class="tx-sportms-game-goal-time">
 			<f:if condition="{goal.type} == guest">
-				<span class="tx-sportms-game-goal-minute">{goal.minute}'</span>
+				<span class="tx-sportms-game-goal-minute">
+					<f:spaceless>
+						{goal.minute}.
+						<f:if condition="{goal.minuteAdditional}">
+							+
+						</f:if>
+					</f:spaceless>
+				</span>
 			</f:if>
 		</div>
 		<div class="tx-sportms-game-goal-person tx-sportms-game-goal-person-guest">

@@ -2,15 +2,16 @@
     
     namespace Balumedien\Sportms\Domain\Model;
     
+    use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
+
     /**
      * Game
      */
-    class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
+    class Game extends AbstractEntity
     {
         
         /**
-         * @var \Balumedien\Sportms\Domain\Model\Sport|\TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy
-         * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
+         * @var \Balumedien\Sportms\Domain\Model\Sport
          */
         protected $sport;
         
@@ -355,7 +356,7 @@
         }
         
         /**
-         * @return Sport|\TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy
+         * @return Sport
          */
         public function getSport()
         {
@@ -363,7 +364,7 @@
         }
         
         /**
-         * @param Sport|\TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy $sport
+         * @param Sport $sport
          */
         public function setSport($sport): void
         {
@@ -1217,13 +1218,58 @@
         {
             $this->gameChanges = $gameChanges;
         }
+    
+        /**
+         * Adds a GameGoal
+         *
+         * @param \Balumedien\Sportms\Domain\Model\GameGoal $gameGoal
+         * @return void
+         */
+        public function addGameGoal(\Balumedien\Sportms\Domain\Model\GameGoal $gameGoal)
+        {
+            $this->gameGoals->attach($gameGoal);
+        }
         
         /**
          * @return \TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy|\TYPO3\CMS\Extbase\Persistence\ObjectStorage|null
          */
         public function getGameGoals()
         {
+            $this->orderGameGoals($this->gameGoals);
             return $this->gameGoals;
+        }
+        
+        private function orderGameGoals($gameGoals)
+        {
+            // write GameGoal-Objects to a temporary array
+            $temporaryArray = [];
+            foreach ($gameGoals as $gameGoal) {
+                $temporaryArray[] = $gameGoal;
+            }
+    
+            // Sort Objects in Array
+            usort($temporaryArray, ["\\Balumedien\\Sportms\\Domain\\Model\\Game", "compareGameGoals"]);
+    
+            // create new Data-Object and add Category-Objects
+            $gameGoalsOrdered = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+            foreach ($temporaryArray as $gameGoal) {
+                $gameGoalsOrdered->attach($gameGoal);
+            }
+            $this->setGameGoals($gameGoalsOrdered);
+        }
+        
+        private static function compareGameGoals($a, $b): int
+        {
+            if ($a->getMinute() < $b->getMinute()) {
+                $retVal = -1;
+            } else {
+                if ($a->getMinute() == $b->getMinute()) {
+                    $retVal = 0;
+                } else {
+                    $retVal = 1;
+                }
+            }
+            return $retVal;
         }
         
         /**

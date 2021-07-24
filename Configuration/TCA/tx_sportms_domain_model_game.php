@@ -259,7 +259,6 @@
                     'size' => 1,
                     'type' => 'select',
                 ],
-                'onChange' => 'reload',
             ],
             'date' => [
                 'exclude' => 1,

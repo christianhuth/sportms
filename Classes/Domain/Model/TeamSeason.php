@@ -2,10 +2,12 @@
     
     namespace Balumedien\Sportms\Domain\Model;
     
+    use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
+
     /**
      * TeamSeason
      */
-    class TeamSeason extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
+    class TeamSeason extends AbstractEntity
     {
         
         /**

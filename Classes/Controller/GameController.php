@@ -4,7 +4,7 @@
     
     use Balumedien\Sportms\Domain\Model\Game;
     use TYPO3\CMS\Extbase\Persistence\QueryInterface;
-
+    
     /**
      * GameController
      */
@@ -18,6 +18,12 @@
          * @TYPO3\CMS\Extbase\Annotation\Inject
          */
         protected $gameRepository;
+        
+        /**
+         * @var \Balumedien\Sportms\Domain\Repository\GameGoalRepository
+         * @TYPO3\CMS\Extbase\Annotation\Inject
+         */
+        protected $gameGoalRepository;
         
         /**
          * @var \Balumedien\Sportms\Domain\Repository\SportRepository
@@ -160,25 +166,29 @@
         {
             $this->initializeActions();
             $gameGoalsWithType = $game->getGameGoals();
-            for($i=0; $i < count($gameGoalsWithType); $i++) {
-                $currentGoalHome = $gameGoalsWithType[$i]->getGoalHome();
-                $currentGoalGuest = $gameGoalsWithType[$i]->getGoalGuest();
-                if($i == 0) {
-                    ($currentGoalHome > $currentGoalGuest) ? $type = 'home' : $type = 'guest';
-                } else {
-                    if($currentGoalHome > $previousGoalHome) {
-                        $type = 'home';
-                    } else if($currentGoalGuest > $previousGoalGuest) {
-                        $type = 'guest';
+            if ($gameGoalsWithType) {
+                for ($i = 0; $i < count($gameGoalsWithType); $i++) {
+                    $currentGoalHome = $gameGoalsWithType[$i]->getGoalHome();
+                    $currentGoalGuest = $gameGoalsWithType[$i]->getGoalGuest();
+                    if ($i == 0) {
+                        ($currentGoalHome > $currentGoalGuest) ? $type = 'home' : $type = 'guest';
                     } else {
-                        $type = 'error';
+                        if ($currentGoalHome > $previousGoalHome) {
+                            $type = 'home';
+                        } else {
+                            if ($currentGoalGuest > $previousGoalGuest) {
+                                $type = 'guest';
+                            } else {
+                                $type = 'error';
+                            }
+                        }
                     }
+                    $gameGoalsWithType[$i]->setType($type);
+                    $previousGoalHome = $currentGoalHome;
+                    $previousGoalGuest = $currentGoalGuest;
                 }
-                $gameGoalsWithType[$i]->setType($type);
-                $previousGoalHome = $currentGoalHome;
-                $previousGoalGuest = $currentGoalGuest;
+                $game->setGameGoals($gameGoalsWithType);
             }
-            $game->setGameGoals($gameGoalsWithType);
             $this->view->assign('game', $game);
             $this->pagetitleForGame($game, "Spielinfo");
         }
