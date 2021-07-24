@@ -610,7 +610,8 @@ CREATE TABLE tx_sportms_domain_model_teamseasonofficial
 #
 CREATE TABLE tx_sportms_domain_model_teamseasonofficialjob
 (
-    label varchar(255) DEFAULT NULL
+    label varchar(255) DEFAULT NULL,
+    is_cheftrainer_job smallint(5) unsigned NOT NULL DEFAULT '0',
 );
 
 #

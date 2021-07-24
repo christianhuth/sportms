@@ -192,6 +192,12 @@
             </trans-unit>
 
 
+        <!-- Domain Model TeamSeasonOfficialJob -->
+            <trans-unit id="tx_sportms_domain_model_teamseasonofficialjob.is_cheftrainer_job">
+                <source>Ist die Cheftrainer-Aufgabe?</source>
+            </trans-unit>
+
+
         <!-- Domain Model TeamSeasonSquadMember -->
             <trans-unit id="tx_sportms_domain_model_teamseasonsquadmember.palette.visibility_squad">
                 <source>Sichtbarkeit im Mannschaftkader</source>
