@@ -18,7 +18,6 @@
 <f:if condition="	{competition.detailLink} &&
 					{competitionSeason.detailLink}">
 	<f:then>
-		<f:debug>{competition}</f:debug>
 		<f:link.action action="seasonGames"
 					   arguments="{competition: competition, season: season}"
 					   controller="Competition" extensionName="Sportms"

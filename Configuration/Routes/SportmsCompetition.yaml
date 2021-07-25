@@ -31,6 +31,12 @@ routeEnhancers:
         localeMap:
           - locale: 'de_DE.*'
             value: 'mannschaften'
+      localizedModel_CompetitionSeasonGameday:
+        type: LocaleModifier
+        default: 'gameday'
+        localeMap:
+          - locale: 'de_DE.*'
+            value: 'spieltag'
       localizedModel_CompetitionType:
         type: LocaleModifier
         default: 'competitiontype'
@@ -97,6 +103,12 @@ routeEnhancers:
         _arguments:
           competition_slug: competition
           season_slug: season
+      - routePath: '/{competition_slug}/{localizedAction_seasonGames}/{localizedSeason}/{season_slug}/{localizedModel_CompetitionSeasonGameday}/{competitionseasongameday_slug}'
+        _controller: 'Competition::seasonGames'
+        _arguments:
+          competition_slug: competition
+          season_slug: season
+          competitionseasongameday_slug: competitionSeasonGameday
       - routePath: '/{competition_slug}/{localizedAction_seasonTeams}'
         _controller: 'Competition::seasonTeams'
         _arguments:

@@ -161,7 +161,6 @@
                 return $this->competitionRepository->findByUid($competitionUid);
             } else {
                 if ($this->request->hasArgument('competition')) {
-                    \TYPO3\CMS\Core\Utility\DebugUtility::debug($this->request->getArgument('competition'), 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
                     return $this->request->getArgument('competition');
                 } else {
                     // TODO: DIE IF NO TEAM IS SELECTED VIA FLEXFORM AND GIVEN VIA REQUEST
@@ -219,7 +218,6 @@
                 return $this->seasonRepository->findByUid($seasonUid);
             } else {
                 if ($this->request->hasArgument('season')) {
-                    \TYPO3\CMS\Core\Utility\DebugUtility::debug($this->request->getArgument('season'), 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
                     return $this->request->getArgument('season');
                 } else {
                     return null;
@@ -238,7 +236,6 @@
                 return $this->teamRepository->findByUid($teamUid);
             } else {
                 if ($this->request->hasArgument('team')) {
-                    \TYPO3\CMS\Core\Utility\DebugUtility::debug($this->request->getArgument('team'), 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
                     return $this->request->getArgument('team');
                 } else {
                     // TODO: DIE IF NO TEAM IS SELECTED VIA FLEXFORM AND GIVEN VIA REQUEST

@@ -368,8 +368,6 @@
          */
         public function seasonGamesByCompetitionAction(Team $team = null, Season $season = null)
         {
-            \TYPO3\CMS\Core\Utility\DebugUtility::debug($team, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
-    
             $team = $this->assignTeamToView($team);
             $season = $this->assignSeasonToView($team, $season);
             $teamSeason = $this->assignTeamSeasonToView($team, $season);

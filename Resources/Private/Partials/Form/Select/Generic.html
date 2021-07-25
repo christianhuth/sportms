@@ -1,6 +1,23 @@
 <html data-namespace-typo3-fluid="true"
 	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
+<f:comment>
+	# DEFINE SOME DEFAULT VALUES
+</f:comment>
+<f:if condition="!{optionLabelField}">
+	<f:variable name="optionLabelField" value="label"/>
+</f:if>
+<f:if condition="!{optionValueField}">
+	<f:variable name="optionValueField" value="uid"/>
+</f:if>
+<f:if condition="!{prependOption}">
+	<f:variable name="prependOption" value="true"/>
+</f:if>
+<f:if condition="!{prependOptionValue}">
+	<f:variable name="prependOptionValue" value="0"/>
+</f:if>
+
+
 <div class="form-group form-group-sm">
 	<label class="hidden-xs col-sm-3 control-label">
 		<f:translate key="tx_sportms_domain_model_{f:format.case(mode: 'lower', value: model)}"/>
@@ -11,15 +28,28 @@
 			<span class="input-group-addon">
 				<i class="sportmsicon sportmsicon-{f:format.case(mode: 'lower', value: model)}"></i>
 			</span>
-			<f:form.select class="form-control"
-						   name="{model}"
-						   optionLabelField="{optionLabelField}"
-						   optionValueField="{optionValueField}"
-						   options="{options}"
-						   prependOptionLabel="{f:translate(key: 'tx_sportms_select.{f:format.case(mode: \'lower\', value: model)}.all')}"
-						   prependOptionValue="{prependOptionValue}"
-						   sortByOptionLabel="{sortByOptionLabel}"
-						   value="{value}"/>
+			<f:if condition="{prependOption}">
+				<f:then>
+					<f:form.select class="form-control"
+								   name="{model}"
+								   optionLabelField="{optionLabelField}"
+								   optionValueField="{optionValueField}"
+								   options="{options}"
+								   prependOptionLabel="{f:translate(key: 'tx_sportms_select.{f:format.case(mode: \'lower\', value: model)}.all')}"
+								   prependOptionValue="{prependOptionValue}"
+								   sortByOptionLabel="{sortByOptionLabel}"
+								   value="{value}"/>
+				</f:then>
+				<f:else>
+					<f:form.select class="form-control"
+								   name="{model}"
+								   optionLabelField="{optionLabelField}"
+								   optionValueField="{optionValueField}"
+								   options="{options}"
+								   sortByOptionLabel="{sortByOptionLabel}"
+								   value="{value}"/>
+				</f:else>
+			</f:if>
 		</div>
 	</div>
 </div>

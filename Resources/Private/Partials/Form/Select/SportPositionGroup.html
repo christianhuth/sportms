@@ -1,9 +1,0 @@
-<html data-namespace-typo3-fluid="true"
-	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
-
-<f:if condition="{settings.sportPositionGroup.selectbox.enabled}">
-	<f:render partial="Form/Select/Generic"
-			  arguments="{model: 'sportPositionGroup', optionLabelField: 'label', options: options, optionValueField: 'uid', prependOptionValue: 0, sortByOptionLabel: TRUE, value: settings.sportPositionGroup.selectbox.selected}"/>
-</f:if>
-
-</html>

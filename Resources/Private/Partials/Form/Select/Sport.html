@@ -3,7 +3,7 @@
 
 <f:if condition="{settings.sport.selectbox.enabled}">
 	<f:render partial="Form/Select/Generic"
-			  arguments="{model: 'sport', optionLabelField: 'label', options: options, optionValueField: 'uid', prependOptionValue: 0, sortByOptionLabel: TRUE, value: settings.sport.selectbox.selected}"/>
+			  arguments="{model: 'sport', options: options, sortByOptionLabel: TRUE, value: settings.sport.selectbox.selected}"/>
 </f:if>
 
 </html>

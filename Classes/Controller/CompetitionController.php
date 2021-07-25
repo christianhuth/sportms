@@ -18,12 +18,18 @@
          * @TYPO3\CMS\Extbase\Annotation\Inject
          */
         protected $competitionRepository;
-        
+    
         /**
          * @var \Balumedien\Sportms\Domain\Repository\CompetitionSeasonRepository
          * @TYPO3\CMS\Extbase\Annotation\Inject
          */
         protected $competitionSeasonRepository;
+    
+        /**
+         * @var \Balumedien\Sportms\Domain\Repository\CompetitionSeasonGamedayRepository
+         * @TYPO3\CMS\Extbase\Annotation\Inject
+         */
+        protected $competitionSeasonGamedayRepository;
         
         /**
          * @var \Balumedien\Sportms\Domain\Repository\GameRepository
@@ -120,12 +126,9 @@
             Season $season = null,
             CompetitionSeasonGameday $competitionSeasonGameday = null
         ): void {
-            \TYPO3\CMS\Core\Utility\DebugUtility::debug($competition, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
             $competition = $this->assignCompetitionToView($competition);
             $season = $this->assignSeasonToView($competition, $season);
             $competitionSeason = $this->assignCompetitionSeasonToView($competition, $season);
-            $competitionSeasons = $this->competitionSeasonRepository->findByCompetition($competitionSeason->getCompetition());
-            $this->view->assign('competitionSeasons', $competitionSeasons);
             if ($competitionSeasonGameday === null) {
                 if ($this->settings['competitionSeasonGameday']['selected'] === null) {
                     $competitionSeasonGameday = $competitionSeason->getCompetitionSeasonGamedays()[0];
@@ -141,10 +144,12 @@
             $this->view->assign('games', $games);
             /* FRONTEND FILTERS */
             $this->assignSeasonSelectboxValuesToView($competition);
+            $this->assignCompetitionSeasonGamedaySelectboxValuesToView($competitionSeason);
             # TODO: USE LOCALISATION
             $this->pagetitleForCompetition(
-                $competitionSeason,
-                $competitionSeasonGameday->getLabel()
+                $competition,
+                $competitionSeasonGameday->getLabel(),
+                $season
             );
         }
         
@@ -155,6 +160,7 @@
         protected function seasonTeamsAction(Competition $competition = null, Season $season = null): void
         {
             $competition = $this->assignCompetitionToView($competition);
+            \TYPO3\CMS\Core\Utility\DebugUtility::debug($competition, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
             $season = $this->assignSeasonToView($competition, $season);
             $competitionSeason = $this->assignCompetitionSeasonToView($competition, $season);
             # TODO: USE LOCALIZATION
@@ -213,6 +219,15 @@
         {
             $seasonSelectboxValues = $this->competitionSeasonRepository->findbyCompetition($competition);
             $this->view->assign('seasonSelectboxValues', $seasonSelectboxValues);
+        }
+    
+        /**
+         * @param CompetitionSeason $competitionSeason
+         */
+        private function assignCompetitionSeasonGamedaySelectboxValuesToView(CompetitionSeason $competitionSeason)
+        {
+            $competitionSeasonGamedaySelectboxValues = $competitionSeason->getCompetitionSeasonGamedays();
+            $this->view->assign('competitionSeasonGamedaySelectboxValues', $competitionSeasonGamedaySelectboxValues);
         }
         
     }

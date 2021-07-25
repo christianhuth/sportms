@@ -6,7 +6,7 @@
 					{settings.team.selectbox.enabled} ||
 					{settings.season.selectbox.enabled}">
 	<f:render partial="Form/Select/Generic"
-			  arguments="{model: 'team', optionLabelField: 'label', options: options, optionValueField: 'uid', prependOptionValue: 0, sortByOptionLabel: TRUE, value: settings.team.selectbox.selected}"/>
+			  arguments="{model: 'team', options: options, sortByOptionLabel: TRUE, value: settings.team.selectbox.selected}"/>
 </f:if>
 
 </html>

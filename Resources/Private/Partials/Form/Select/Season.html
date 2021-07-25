@@ -3,7 +3,7 @@
 
 <f:if condition="{settings.season.selectbox.selected}">
 	<f:render partial="Form/Select/Generic"
-			  arguments="{model: 'season', optionLabelField: 'label', options: options, optionValueField: 'uid', prependOptionValue: 0, sortByOptionLabel: TRUE, value: value}"/>
+			  arguments="{model: 'season', options: options, sortByOptionLabel: TRUE, value: settings.season.selectbox.selected}"/>
 </f:if>
 
 </html>

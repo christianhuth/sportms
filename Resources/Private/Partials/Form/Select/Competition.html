@@ -3,7 +3,7 @@
 
 <f:if condition="{settings.competition.selectbox.enabled}">
 	<f:render partial="Form/Select/Generic"
-			  arguments="{model: 'competition', optionLabelField: 'label', options: options, optionValueField: 'uid', prependOptionValue: 0, sortByOptionLabel: TRUE, value: settings.competition.selectbox.selected}"/>
+			  arguments="{model: 'competition', options: options, sortByOptionLabel: TRUE, value: settings.competition.selectbox.selected}"/>
 </f:if>
 
 </html>

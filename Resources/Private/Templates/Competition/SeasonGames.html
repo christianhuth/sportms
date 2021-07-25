@@ -10,7 +10,7 @@
 				arguments="{competition: competition, competitionSeason: competitionSeason, season: season}"
 				partial="Competition/Navigation"/>
 		<f:render
-				arguments="{competitionSeasonGamedaySelectboxValues: competitionSeasonGamedaySelectboxValues, seasonSelectboxValues: seasonSelectboxValues}"
+				arguments="{competition: competition, competitionSeasonGamedaySelectboxValues: competitionSeasonGamedaySelectboxValues, seasonSelectboxValues: seasonSelectboxValues}"
 				partial="Competition/SeasonGames/Filter"/>
 		
 		<div class="tx-sportms-competition-seasongames">
@@ -31,7 +31,7 @@
 							<f:for as="game" each="{gamesByDate}">
 								<f:render
 										arguments="{game: game, settings: settings}"
-										partial="CompetitionSeason/Games/Item"/>
+										partial="Competition/SeasonGames/Item"/>
 							</f:for>
 							<f:render section="tableend"/>
 						</div>

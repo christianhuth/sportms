@@ -1250,7 +1250,7 @@
             // Sort Objects in Array
             usort($temporaryArray, ["\\Balumedien\\Sportms\\Domain\\Model\\Game", "compareGameGoals"]);
     
-            // create new Data-Object and add Category-Objects
+            // create new ObjectStorage and add ordered GameGoal-Objects
             $gameGoalsOrdered = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
             foreach ($temporaryArray as $gameGoal) {
                 $gameGoalsOrdered->attach($gameGoal);
