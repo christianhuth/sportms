@@ -3,8 +3,8 @@
 
 <tr>
 	<td class="tx-sportms-table-left">
-		<f:render arguments="{club: club}"
-				  partial="ViewHelper/Club/ItemInTable"/>
+		<f:render partial="ViewHelper/LinkAction/Club/Sections"
+				  arguments="{club: club, linkLabel: 'clubLogoAndLabel'}"/>
 	</td>
 	<td>
 		<f:render arguments="{address: club.addresses.0}"

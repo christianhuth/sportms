@@ -6,6 +6,9 @@
 
 
         <!-- Action -->
+            <trans-unit id="tx_sportms_action.club.list">
+                <source>Liste</source>
+            </trans-unit>
             <trans-unit id="tx_sportms_action.club.sections">
                 <source>Abteilungen</source>
             </trans-unit>
@@ -25,6 +28,9 @@
                 <source>Historie</source>
             </trans-unit>
             <trans-unit id="tx_sportms_action.game.index">
+                <source>Schema</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_action.game.list">
                 <source>Schema</source>
             </trans-unit>
             <trans-unit id="tx_sportms_action.game.report">
@@ -50,6 +56,9 @@
             </trans-unit>
             <trans-unit id="tx_sportms_action.person.refereeprofile">
                 <source>Schiedsrichterprofil</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_action.season.list">
+                <source>Liste</source>
             </trans-unit>
             <trans-unit id="tx_sportms_action.season.teams">
                 <source>Mannschaften</source>
@@ -1219,6 +1228,39 @@
             </trans-unit>
 
 
+        <!-- Formular Fields -->
+            <trans-unit id="tx_sportms_form.select.club.all">
+                <source>Alle Vereine</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_form.select.competition.all">
+                <source>Alle Wettbewerbe</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_form.select.competitionseasongameday.all">
+                <source>Alle Spieltage</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_form.select.competitiontype.all">
+                <source>Alle Wettbewerbsarten</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_form.select.season.all">
+                <source>Alle Saisons</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_form.select.sport.all">
+                <source>Alle Sportarten</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_form.select.sportagegroup.all">
+                <source>Alle Altersgruppen</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_form.select.sportagelevel.all">
+                <source>Alle Altersstufen</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_form.submit">
+                <source>Anzeigen</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_form.select.team.all">
+                <source>Alle Mannschaften</source>
+            </trans-unit>
+
+
         <!-- General -->
             <trans-unit id="tx_sportms_general.abbreviation">
                 <source>Abkürzung</source>
@@ -1360,38 +1402,6 @@
             </trans-unit>
             <trans-unit id="tx_sportms_repository.gamegoal.none">
                 <source>keine Tore vorhanden</source>
-            </trans-unit>
-
-        <!-- Formular Fields -->
-            <trans-unit id="tx_sportms_form.select.club.all">
-                <source>Alle Vereine</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_form.select.competition.all">
-                <source>Alle Wettbewerbe</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_form.select.competitionseasongameday.all">
-                <source>Alle Spieltage</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_form.select.competitiontype.all">
-                <source>Alle Wettbewerbsarten</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_form.select.season.all">
-                <source>Alle Saisons</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_form.select.sport.all">
-                <source>Alle Sportarten</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_form.select.sportagegroup.all">
-                <source>Alle Altersgruppen</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_form.select.sportagelevel.all">
-                <source>Alle Altersstufen</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_form.submit">
-                <source>Anzeigen</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_form.select.team.all">
-                <source>Alle Mannschaften</source>
             </trans-unit>
 
 

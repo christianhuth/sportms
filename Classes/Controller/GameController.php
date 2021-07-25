@@ -4,7 +4,8 @@
     
     use Balumedien\Sportms\Domain\Model\Game;
     use TYPO3\CMS\Extbase\Persistence\QueryInterface;
-    
+    use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
+
     /**
      * GameController
      */
@@ -89,8 +90,8 @@
             
             /* PAGETITLE */
             $this->pagetitle(
-                "Spiele",
-                "Liste"
+                LocalizationUtility::translate('tx_sportms_domain_model_game.plural', "sportms"),
+                LocalizationUtility::translate('tx_sportms_action.game.lis', "sportms")
             );
         }
         
@@ -129,7 +130,7 @@
             /* PAGETITLE */
             $this->pagetitleForGame(
                 $game,
-                "Spielinfo"
+                LocalizationUtility::translate('tx_sportms_action.game.index', "sportms")
             );
         }
         
@@ -181,7 +182,7 @@
             /* PAGETITLE */
             $this->pagetitleForGame(
                 $game,
-                "Historie"
+                LocalizationUtility::translate('tx_sportms_action.game.history', "sportms")
             );
         }
         
@@ -196,7 +197,7 @@
             /* PAGETITLE */
             $this->pagetitleForGame(
                 $game,
-                "Spielbericht"
+                LocalizationUtility::translate('tx_sportms_action.game.report', "sportms")
             );
         }
         

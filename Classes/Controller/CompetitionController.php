@@ -6,6 +6,7 @@
     use Balumedien\Sportms\Domain\Model\CompetitionSeason;
     use Balumedien\Sportms\Domain\Model\CompetitionSeasonGameday;
     use Balumedien\Sportms\Domain\Model\Season;
+    use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
     
     /**
      * CompetitionController
@@ -18,13 +19,13 @@
          * @TYPO3\CMS\Extbase\Annotation\Inject
          */
         protected $competitionRepository;
-    
+        
         /**
          * @var \Balumedien\Sportms\Domain\Repository\CompetitionSeasonRepository
          * @TYPO3\CMS\Extbase\Annotation\Inject
          */
         protected $competitionSeasonRepository;
-    
+        
         /**
          * @var \Balumedien\Sportms\Domain\Repository\CompetitionSeasonGamedayRepository
          * @TYPO3\CMS\Extbase\Annotation\Inject
@@ -67,18 +68,22 @@
          */
         public function listAction(): void
         {
+            /* MAIN CONTENT */
             $competitions = $this->competitionRepository->findAll($this->getSportsFilter(),
                 $this->getSportAgeGroupsFilter(), $this->getSportAgeLevelsFilter(), $this->getCompetitionTypesFilter(),
                 $this->getCompetitionsFilter());
             $this->view->assign('competitions', $competitions);
+            
             /* FRONTEND FILTERS */
             $this->assignSelectboxValues('sport');
             $this->assignSelectboxValues('sportAgeGroup');
             $this->assignSelectboxValues('sportAgeLevel');
             $this->assignSelectboxValues('competitionType');
+            
+            /* PAGETITLE */
             $this->pagetitle(
-                "Wettbewerbe",
-                "Liste"
+                LocalizationUtility::translate('tx_sportms_domain_model_competition.plural', "sportms"),
+                LocalizationUtility::translate('tx_sportms_action.competition.list', "sportms")
             );
         }
         
@@ -87,31 +92,42 @@
          * @param string $actionLabel
          * @param Season|null $season
          */
-        private function pagetitleForCompetition(Competition $competition, string $actionLabel, Season $season = null)
-        {
+        private function pagetitleForCompetition(
+            Competition $competition,
+            string $actionLabel,
+            Season $season = null,
+            CompetitionSeasonGameday $competitionSeasonGameday = null
+        ) {
             $competitionLabel = $competition->getLabel();
             if ($season) {
                 $seasonLabel = $season->getLabel();
                 $competitionLabel .= " " . $seasonLabel;
             }
+            if ($competitionSeasonGameday) {
+                $competitionSeasonGamedayLabel = $competitionSeasonGameday->getLabel();
+                $competitionLabel .= " " . $competitionSeasonGamedayLabel;
+            }
             $this->pagetitle($competitionLabel, $actionLabel);
         }
-    
+        
         /**
          * @param Competition|null $competition
          * @param Season|null $season
          */
         protected function seasonClubsAction(Competition $competition = null, Season $season = null)
         {
+            /* MAIN CONTENT */
             $competition = $this->assignCompetitionToView($competition);
             $season = $this->assignSeasonToView($competition, $season);
             $competitionSeason = $this->assignCompetitionSeasonToView($competition, $season);
+            
             /* FRONTEND FILTERS */
             $this->assignSeasonSelectboxValuesToView($competition);
-            # TODO: USE LOCALIZATION
+            
+            /* PAGETITLE */
             $this->pagetitleForCompetition(
                 $competition,
-                "Vereine",
+                LocalizationUtility::translate('tx_sportms_action.competition.seasonclubs', "sportms"),
                 $season
             );
         }
@@ -126,6 +142,7 @@
             Season $season = null,
             CompetitionSeasonGameday $competitionSeasonGameday = null
         ): void {
+            /* MAIN CONTENT */
             $competition = $this->assignCompetitionToView($competition);
             $season = $this->assignSeasonToView($competition, $season);
             $competitionSeason = $this->assignCompetitionSeasonToView($competition, $season);
@@ -137,19 +154,19 @@
                     $competitionSeasonGameday = $this->competitionSeasonGamedayRepository->findByUid($competitionSeasonGamedayUid);
                 }
             }
-            $this->view->assign('competitionSeasonGameday', $competitionSeasonGameday);
-            $competitionSeasonGamedays = $this->competitionSeasonGamedayRepository->findByCompetitionSeason($competitionSeason);
-            $this->view->assign('competitionSeasonGamedays', $competitionSeasonGamedays);
             $games = $this->gameRepository->findGamesbyCompetitionSeason($competitionSeason, $competitionSeasonGameday);
             $this->view->assign('games', $games);
+            
             /* FRONTEND FILTERS */
             $this->assignSeasonSelectboxValuesToView($competition);
             $this->assignCompetitionSeasonGamedaySelectboxValuesToView($competitionSeason);
-            # TODO: USE LOCALISATION
+            
+            /* PAGETITLE */
             $this->pagetitleForCompetition(
                 $competition,
-                $competitionSeasonGameday->getLabel(),
-                $season
+                LocalizationUtility::translate('tx_sportms_action.competition.seasongames', "sportms"),
+                $season,
+                $competitionSeasonGameday
             );
         }
         
@@ -163,11 +180,14 @@
             \TYPO3\CMS\Core\Utility\DebugUtility::debug($competition, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
             $season = $this->assignSeasonToView($competition, $season);
             $competitionSeason = $this->assignCompetitionSeasonToView($competition, $season);
-            # TODO: USE LOCALIZATION
+            
+            /* FRONTEND FILTERS */
             $this->assignSeasonSelectboxValuesToView($competition);
+            
+            /* PAGETITLE */
             $this->pagetitleForCompetition(
                 $competition,
-                "Mannschaften",
+                LocalizationUtility::translate('tx_sportms_action.competition.seasonteams', "sportms"),
                 $season
             );
         }
@@ -220,7 +240,7 @@
             $seasonSelectboxValues = $this->competitionSeasonRepository->findbyCompetition($competition);
             $this->view->assign('seasonSelectboxValues', $seasonSelectboxValues);
         }
-    
+        
         /**
          * @param CompetitionSeason $competitionSeason
          */

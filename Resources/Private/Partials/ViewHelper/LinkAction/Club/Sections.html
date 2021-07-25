@@ -4,15 +4,31 @@
 <f:if condition="{club.detailLink}">
 	<f:then>
 		<f:link.action action="sections" arguments="{club: club}"
-					   controller="club" extensionName="Sportms"
+					   controller="Club" extensionName="Sportms"
 					   pageUid="{settings.club.sections.pid}"
-					   pluginName="club">
-			<f:translate key="tx_sportms_action.club.sections"/>
+					   pluginName="Club">
+			<f:render section="label"
+					  arguments="{club: club, linkLabel: linkLabel}"/>
 		</f:link.action>
 	</f:then>
 	<f:else>
-		<span><f:translate key="tx_sportms_action.club.sections"/></span>
+		<f:render section="label"
+				  arguments="{club: club, linkLabel: linkLabel}"/>
 	</f:else>
 </f:if>
+
+<f:section name="label">
+	<f:switch expression="{linkLabel}">
+		<f:case value="clubLogoAndLabel">
+			<f:render partial="ViewHelper/Club/ItemInTable"
+					  arguments="{club: club}"/>
+		</f:case>
+		<f:defaultCase>
+			<span>
+				<f:translate key="tx_sportms_action.club.sections"/>
+			</span>
+		</f:defaultCase>
+	</f:switch>
+</f:section>
 
 </html>

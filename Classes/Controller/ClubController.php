@@ -50,7 +50,7 @@
             /* PAGETITLE */
             $this->pagetitleForClub(
                 $club,
-                "Abteilungen"
+                LocalizationUtility::translate('tx_sportms_action.club.sections', "sportms")
             );
         }
         
@@ -60,10 +60,7 @@
          */
         private function pagetitleForClub(Club $club, string $actionLabel)
         {
-            /* MAIN CONTENT */
             $clubName = $club->getName();
-            
-            /* PAGETITLE */
             $this->pagetitle($clubName, $actionLabel);
         }
         
