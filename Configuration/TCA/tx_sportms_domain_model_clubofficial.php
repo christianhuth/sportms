@@ -110,7 +110,7 @@
                     'foreign_table' => 'tx_sportms_domain_model_clubofficialjob',
                     'foreign_table_where' => 'ORDER BY tx_sportms_domain_model_clubofficialjob.label ASC',
                     'items' => [
-                        ['LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_select.something', null],
+                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_select.something', null],
                     ],
                     'maxItems' => 1,
                     'renderType' => 'selectSingle',
@@ -129,7 +129,7 @@
                                             )
                                             ORDER BY tx_sportms_domain_model_person.lastname ASC, tx_sportms_domain_model_person.firstname ASC',
                     'items' => [
-                        ['LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_select.something', null],
+                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_select.something', null],
                     ],
                     'maxItems' => 1,
                     'minItems' => 1,

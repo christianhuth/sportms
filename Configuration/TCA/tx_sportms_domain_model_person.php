@@ -173,7 +173,7 @@
                 'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_general.zodiac_sign',
                 'config' => [
                     'items' => [
-                        ['LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_select.something', 0],
+                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_select.something', 0],
                         [
                             'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_general.zodiac_sign.1',
                             1,
@@ -273,7 +273,7 @@
                 'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_general.sex',
                 'config' => [
                     'items' => [
-                        ['LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_select.something', ''],
+                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_select.something', ''],
                         [
                             'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_general.sex.diverse',
                             'd',
@@ -318,7 +318,7 @@
                 'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_person.footer',
                 'config' => [
                     'items' => [
-                        ['LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_select.something', ""],
+                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_select.something', ""],
                         [
                             'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_person.footer_1',
                             1,
@@ -343,7 +343,7 @@
                 'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_person.hander',
                 'config' => [
                     'items' => [
-                        ['LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_select.something', ""],
+                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_select.something', ""],
                         [
                             'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_person.hander_1',
                             1,
@@ -368,7 +368,7 @@
                 'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_person.family_status',
                 'config' => [
                     'items' => [
-                        ['LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_select.something', ''],
+                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_select.something', ''],
                         [
                             'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_person.family_status.1',
                             '1',

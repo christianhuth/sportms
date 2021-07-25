@@ -9,7 +9,7 @@
 	</div>
 	<div class="tx-sportms-header-box tx-sportms-header-team">
 		<f:render partial="ViewHelper/LinkAction/Team/SeasonIndex"
-				  arguments="{linkLabel: 'teamInGameHeader', teamSeason: game.teamSeasonHome}"/>
+				  arguments="{linkLabel: 'teamInGameHeader', team: game.teamSeasonHome.team, teamSeason: game.teamSeasonHome}"/>
 	</div>
 	<div class="tx-sportms-header-box tx-sportms-game-header-result">
 		<div class="tx-sportms-game-header-result">
@@ -19,7 +19,7 @@
 	</div>
 	<div class="tx-sportms-header-box tx-sportms-header-team">
 		<f:render partial="ViewHelper/LinkAction/Team/SeasonIndex"
-				  arguments="{linkLabel: 'teamInGameHeader', teamSeason: game.teamSeasonGuest}"/>
+				  arguments="{linkLabel: 'teamInGameHeader', team: game.teamSeasonGuest.team, teamSeason: game.teamSeasonGuest}"/>
 	</div>
 </div>
 

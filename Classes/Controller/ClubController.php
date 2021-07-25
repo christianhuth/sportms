@@ -4,6 +4,7 @@
     
     use Balumedien\Sportms\Domain\Model\Club;
     use TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException;
+    use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
 
     /**
      * ClubController
@@ -23,21 +24,15 @@
          */
         public function listAction(): void
         {
-            $this->initializeActions();
+            /* MAIN CONTENT */
             $clubs = $this->clubRepository->findAll($this->getClubsFilter());
             $this->view->assign('clubs', $clubs);
-            $this->pagetitle("Vereine", "Liste");
-        }
-        
-        /**
-         * Use this method to solve tasks which all actions have in common, when VIEW-Context is needed
-         */
-        public function initializeActions(): void
-        {
-            #$listOfPossibleShowViews = 'index,officials,sections';
-            #$this->determineShowView($this->model);
-            #$this->determineShowViews($this->model, $listOfPossibleShowViews);
-            #$this->view->assign('settings', $this->settings);
+            
+            /* PAGETITLE */
+            $this->pagetitle(
+                LocalizationUtility::translate('tx_sportms_domain_model_club.plural', "sportms"),
+                LocalizationUtility::translate('tx_sportms_action.club.list', "sportms")
+            );
         }
         
         /**
@@ -45,12 +40,18 @@
          */
         public function sectionsAction(Club $club = null): void
         {
+            /* MAIN CONTENT */
             if ($club === null) {
                 $clubUid = $this->settings['club']['uid'];
                 $club = $this->clubRepository->findByUid($clubUid);
             }
             $this->view->assign('club', $club);
-            $this->pagetitleForClub($club, "Abteilungen");
+            
+            /* PAGETITLE */
+            $this->pagetitleForClub(
+                $club,
+                "Abteilungen"
+            );
         }
         
         /**
@@ -59,7 +60,10 @@
          */
         private function pagetitleForClub(Club $club, string $actionLabel)
         {
+            /* MAIN CONTENT */
             $clubName = $club->getName();
+            
+            /* PAGETITLE */
             $this->pagetitle($clubName, $actionLabel);
         }
         

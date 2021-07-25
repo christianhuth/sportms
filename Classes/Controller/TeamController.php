@@ -368,6 +368,8 @@
          */
         public function seasonGamesByCompetitionAction(Team $team = null, Season $season = null)
         {
+            
+            /* MAIN CONTENT */
             $team = $this->assignTeamToView($team);
             $season = $this->assignSeasonToView($team, $season);
             $teamSeason = $this->assignTeamSeasonToView($team, $season);
@@ -379,7 +381,11 @@
             ];
             $games = $this->gameRepository->findGamesByTeamSeason($teamSeason, $orderings);
             $this->view->assign('games', $games);
+            
+            /* FRONTEND FILTERS */
             $this->assignSeasonSelectboxValuesToView($team);
+            
+            /* PAGETITLE */
             $this->pageTitleForTeam(
                 $team,
                 LocalizationUtility::translate('tx_sportms_action.team.seasongamesbycompetition', "sportms"),

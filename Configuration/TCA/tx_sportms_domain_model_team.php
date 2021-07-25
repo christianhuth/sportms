@@ -107,7 +107,7 @@
                     'foreign_table' => 'tx_sportms_domain_model_club',
                     'foreign_table_where' => 'ORDER BY name ASC',
                     'items' => [
-                        ['LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_select.something', ""],
+                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_select.something', ""],
                     ],
                     'renderType' => 'selectSingle',
                     'size' => 1,
@@ -122,7 +122,7 @@
                     'foreign_table' => 'tx_sportms_domain_model_sport',
                     'foreign_table_where' => ' ORDER BY tx_sportms_domain_model_sport.label ASC',
                     'items' => [
-                        ['LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_select.something', ''],
+                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_select.something', ''],
                     ],
                     'renderType' => 'selectSingle',
                     'size' => 1,
@@ -139,7 +139,7 @@
                     'foreign_table' => 'tx_sportms_domain_model_sportagegroup',
                     'foreign_table_where' => ' AND tx_sportms_domain_model_sportagegroup.sport = ###REC_FIELD_sport### ORDER BY tx_sportms_domain_model_sportagegroup.label ASC',
                     'items' => [
-                        ['LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_select.something', ''],
+                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_select.something', ''],
                     ],
                     'renderType' => 'selectSingle',
                     'size' => 1,
@@ -156,7 +156,7 @@
                     'foreign_table' => 'tx_sportms_domain_model_sportagelevel',
                     'foreign_table_where' => ' AND tx_sportms_domain_model_sportagelevel.sport_age_group = ###REC_FIELD_sport_age_group### ORDER BY tx_sportms_domain_model_sportagelevel.label ASC',
                     'items' => [
-                        ['LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_select.something', ''],
+                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_select.something', ''],
                     ],
                     'renderType' => 'selectSingle',
                     'size' => 1,

@@ -100,7 +100,7 @@
                     'eval' => 'required',
                     'foreign_table' => 'tx_sportms_domain_model_game',
                     'items' => [
-                        ['LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_select.something', 0],
+                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_select.something', 0],
                     ],
                     'maxItems' => 1,
                     'renderType' => 'selectSingle',

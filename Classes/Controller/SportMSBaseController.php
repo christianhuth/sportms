@@ -3,7 +3,6 @@
     namespace Balumedien\Sportms\Controller;
     
     use Balumedien\Sportms\Domain\Model\Competition;
-    use Balumedien\Sportms\Domain\Model\CompetitionSeason;
     use Balumedien\Sportms\Domain\Model\CompetitionSeasonGameday;
     use Balumedien\Sportms\Domain\Model\Person;
     use Balumedien\Sportms\Domain\Model\Season;
@@ -13,10 +12,10 @@
     use TYPO3\CMS\Core\Utility\GeneralUtility;
     use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
     use TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException;
-
+    
     class SportMSBaseController extends ActionController
     {
-    
+        
         /**
          * @param string $model
          * @param string|null $callingController
@@ -29,8 +28,17 @@
                     case "club":
                         $selectBoxValues = $this->clubRepository->findAll($this->getClubsFilter(false));
                         break;
+                    case "competition":
+                        $selectBoxValues = $this->competitionRepository->findAll($this->getSportsFilter(),
+                            $this->getSportAgeGroupsFilter(), $this->getSportAgeLevelsFilter(),
+                            $this->getCompetitionTypesFilter(), $this->getCompetitionsFilter(false)
+                        );
+                        break;
                     case "competitionType":
                         $selectBoxValues = $this->competitionTypeRepository->findAll($this->getCompetitionTypesFilter(false));
+                        break;
+                    case "season":
+                        $selectBoxValues = $this->seasonRepository->findAll($this->getSeasonsFilter(false));
                         break;
                     case "sport":
                         $selectBoxValues = $this->sportRepository->findAll($this->getSportsFilter(false));
@@ -42,6 +50,11 @@
                     case "sportAgeLevel":
                         $selectBoxValues = $this->sportAgeLevelRepository->findAll($this->getSportsFilter(),
                             $this->getSportAgeGroupsFilter(), $this->getSportAgeLevelsFilter(false));
+                        break;
+                    case "team":
+                        $selectBoxValues = $this->teamRepository->findAll($this->getSportsFilter(),
+                            $this->getSportAgeGroupsFilter(), $this->getSportAgeLevelsFilter(), $this->getClubsFilter(),
+                            $this->getTeamsFilter(false));
                         break;
                 }
                 $this->view->assign($model . 'SelectboxValues', $selectBoxValues);
@@ -117,7 +130,7 @@
         {
             return $this->getFilter('venue', 'venues', $useSelected);
         }
-    
+        
         /**
          * Initializes the controller before invoking an action method.
          * Use this method to solve tasks which all actions have in common.
@@ -150,7 +163,7 @@
                 $this->settings['sportPosition']['selected'] = '';
             }
         }
-    
+        
         /**
          * @return Competition
          */

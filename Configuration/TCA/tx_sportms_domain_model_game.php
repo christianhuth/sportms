@@ -159,7 +159,7 @@
                     'foreign_table' => 'tx_sportms_domain_model_sport',
                     'foreign_table_where' => 'ORDER BY label ASC',
                     'items' => [
-                        ['LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_select.something', ""],
+                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_select.something', ""],
                     ],
                     'maxItems' => 1,
                     'minItems' => 1,
@@ -177,7 +177,7 @@
                     'foreign_table' => 'tx_sportms_domain_model_season',
                     'foreign_table_where' => 'ORDER BY tx_sportms_domain_model_season.label DESC',
                     'items' => [
-                        ['LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_select.something', ""],
+                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_select.something', ""],
                     ],
                     'maxItems' => 1,
                     'minItems' => 1,
@@ -198,7 +198,7 @@
 	                                        AND tx_sportms_domain_model_competitionseason.competition IN (SELECT competition FROM tx_sportms_domain_model_competition WHERE sport = ###REC_FIELD_sport###)
 	                                        ORDER BY tx_sportms_domain_model_competitionseason.competition ASC',
                     'items' => [
-                        ['LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_select.something', ""],
+                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_select.something', ""],
                     ],
                     'maxItems' => 1,
                     'minItems' => 1,
@@ -251,7 +251,7 @@
                     'foreign_table_where' => ' AND tx_sportms_domain_model_competitionseasongameday.competition_season = ###REC_FIELD_competition_season###
 											ORDER BY tx_sportms_domain_model_competitionseasongameday.sorting ASC',
                     'items' => [
-                        ['LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_select.something', ""],
+                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_select.something', ""],
                     ],
                     'maxItems' => 1,
                     'minItems' => 1,
@@ -290,7 +290,7 @@
                     'foreign_table' => 'tx_sportms_domain_model_venue',
                     'foreign_table_where' => 'ORDER BY name ASC',
                     'items' => [
-                        ['LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_select.something', ''],
+                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_select.something', ''],
                     ],
                     'renderType' => 'selectSingle',
                     'size' => 1,
@@ -388,7 +388,7 @@
             'result_special_reason' => [
                 'config' => [
                     'items' => [
-                        ['LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_select.something', 0],
+                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_select.something', 0],
                         [
                             'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_game.result_special_reason.1',
                             1,
@@ -876,7 +876,7 @@
 	                                        AND tx_sportms_domain_model_teamseason.season = ###REC_FIELD_season###
 	                                        ORDER BY tx_sportms_domain_model_teamseason.team ASC',
                     'items' => [
-                        ['LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_select.something', 0],
+                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_select.something', 0],
                     ],
                     'maxItems' => 1,
                     'minItems' => 1,
@@ -966,7 +966,7 @@
                     'foreign_table' => 'tx_sportms_domain_model_person',
                     'foreign_table_where' => 'AND tx_sportms_domain_model_person.uid IN (SELECT tx_sportms_domain_model_gamelineup.person FROM tx_sportms_domain_model_gamelineup WHERE tx_sportms_domain_model_gamelineup.team = "home" AND tx_sportms_domain_model_gamelineup.game = ###THIS_UID###)',
                     'items' => [
-                        ['LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_select.something', 0],
+                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_select.something', 0],
                     ],
                     'maxItems' => 1,
                     'minItems' => 0,
@@ -1009,7 +1009,7 @@
                                                 AND tx_sportms_domain_model_teamseason.season = ###REC_FIELD_season###
                                                 ORDER BY tx_sportms_domain_model_teamseason.team ASC',
                     'items' => [
-                        ['LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_select.something', 0],
+                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_select.something', 0],
                     ],
                     'maxItems' => 1,
                     'minItems' => 1,
@@ -1099,7 +1099,7 @@
                     'foreign_table' => 'tx_sportms_domain_model_person',
                     'foreign_table_where' => 'AND tx_sportms_domain_model_person.uid IN (SELECT tx_sportms_domain_model_gamelineup.person FROM tx_sportms_domain_model_gamelineup WHERE tx_sportms_domain_model_gamelineup.team = "guest" AND tx_sportms_domain_model_gamelineup.game = ###THIS_UID###)',
                     'items' => [
-                        ['LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_select.something', 0],
+                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_select.something', 0],
                     ],
                     'maxItems' => 1,
                     'minItems' => 0,

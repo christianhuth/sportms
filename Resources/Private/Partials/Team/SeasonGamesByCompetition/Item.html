@@ -4,6 +4,8 @@
 
 <tr>
 	<td class="tx-sportms-table-center">
+		<f:render partial="ViewHelper/LinkAction/Competition/SeasonGames"
+				  arguments="{_all}"/>
 		<sportms:link.action CompetitionSeason="{game.competitionSeason}" CompetitionSeasonGameday="{game.gameday}"
 							 action="seasonGames"
 							 controller="Competition">

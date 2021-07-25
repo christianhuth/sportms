@@ -10,20 +10,36 @@
      */
     class GameController extends SportMSBaseController
     {
-        
-        protected $model = 'game';
+    
+        /**
+         * @var \Balumedien\Sportms\Domain\Repository\ClubRepository
+         * @TYPO3\CMS\Extbase\Annotation\Inject
+         */
+        protected $clubRepository;
+    
+        /**
+         * @var \Balumedien\Sportms\Domain\Repository\CompetitionTypeRepository
+         * @TYPO3\CMS\Extbase\Annotation\Inject
+         */
+        protected $competitionTypeRepository;
+    
+        /**
+         * @var \Balumedien\Sportms\Domain\Repository\CompetitionRepository
+         * @TYPO3\CMS\Extbase\Annotation\Inject
+         */
+        protected $competitionRepository;
         
         /**
          * @var \Balumedien\Sportms\Domain\Repository\GameRepository
          * @TYPO3\CMS\Extbase\Annotation\Inject
          */
         protected $gameRepository;
-        
+    
         /**
-         * @var \Balumedien\Sportms\Domain\Repository\GameGoalRepository
+         * @var \Balumedien\Sportms\Domain\Repository\SeasonRepository
          * @TYPO3\CMS\Extbase\Annotation\Inject
          */
-        protected $gameGoalRepository;
+        protected $seasonRepository;
         
         /**
          * @var \Balumedien\Sportms\Domain\Repository\SportRepository
@@ -44,109 +60,38 @@
         protected $sportAgeLevelRepository;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Repository\CompetitionTypeRepository
-         * @TYPO3\CMS\Extbase\Annotation\Inject
-         */
-        protected $competitionTypeRepository;
-        
-        /**
-         * @var \Balumedien\Sportms\Domain\Repository\CompetitionRepository
-         * @TYPO3\CMS\Extbase\Annotation\Inject
-         */
-        protected $competitionRepository;
-        
-        /**
-         * @var \Balumedien\Sportms\Domain\Repository\ClubRepository
-         * @TYPO3\CMS\Extbase\Annotation\Inject
-         */
-        protected $clubRepository;
-        
-        /**
          * @var \Balumedien\Sportms\Domain\Repository\TeamRepository
          * @TYPO3\CMS\Extbase\Annotation\Inject
          */
         protected $teamRepository;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Repository\SeasonRepository
-         * @TYPO3\CMS\Extbase\Annotation\Inject
-         */
-        protected $seasonRepository;
-        
-        /**
-         * @var \Balumedien\Sportms\Domain\Repository\CompetitionSeasonRepository
-         * @TYPO3\CMS\Extbase\Annotation\Inject
-         */
-        protected $competitionSeasonRepository;
-        
-        /**
          * @return void
          */
         public function listAction()
         {
-            $this->initializeActions();
+            /* MAIN CONTENT */
             $games = $this->gameRepository->findAll($this->getSportsFilter(), $this->getSportAgeGroupsFilter(),
                 $this->getSportAgeLevelsFilter(), $this->getCompetitionTypesFilter(), $this->getCompetitionsFilter(),
                 $this->getClubsFilter(), $this->getTeamsFilter(), $this->getSeasonsFilter(),
                 $this->getCompetitionSeasonGamedaysFilter());
             $this->view->assign('games', $games);
+            
             /* FRONTEND FILTERS */
-            if ($this->settings['sport']['sportsSelectbox'] || $this->settings['competitionType']['competitionTypesSelectbox'] || $this->settings['competition']['competitionsSelectbox'] || $this->settings['club']['clubsSelectbox'] || $this->settings['team']['teamsSelectbox'] || $this->settings['season']['seasonsSelectbox']) {
-                if ($this->settings['sport']['sportsSelectbox']) {
-                    $sportsSelectbox = $this->sportRepository->findAll($this->getSportsFilter(false));
-                    $this->view->assign('sportsSelectbox', $sportsSelectbox);
-                    if ($this->settings['sport']['selected'] && $this->settings['sportAgeGroup']['sportAgeGroupsSelectbox']) {
-                        $sportAgeGroupsSelectbox = $this->sportAgeGroupRepository->findAll($this->getSportsFilter(),
-                            $this->getSportAgeGroupsFilter(false));
-                        $this->view->assign('sportAgeGroupsSelectbox', $sportAgeGroupsSelectbox);
-                        if ($this->settings['sportAgeGroup']['selected'] && $this->settings['sportAgeLevel']['sportAgeLevelsSelectbox']) {
-                            $sportAgeLevelsSelectbox = $this->sportAgeLevelRepository->findAll($this->getSportsFilter(),
-                                $this->getSportAgeGroupsFilter(), $this->getSportAgeLevelsFilter(false));
-                            $this->view->assign('sportAgeLevelsSelectbox', $sportAgeLevelsSelectbox);
-                        }
-                    }
-                }
-                if ($this->settings['competitionType']['competitionTypesSelectbox']) {
-                    $competitionTypesSelectbox = $this->competitionTypeRepository->findAll($this->getCompetitionTypesFilter(false));
-                    $this->view->assign('competitionTypesSelectbox', $competitionTypesSelectbox);
-                }
-                if ($this->settings['competition']['competitionsSelectbox']) {
-                    $competitionsSelectbox = $this->competitionRepository->findAll($this->getSportsFilter(),
-                        $this->getSportAgeGroupsFilter(), $this->getSportAgeLevelsFilter(),
-                        $this->getCompetitionTypesFilter(), $this->getCompetitionsFilter(false));
-                    $this->view->assign('competitionsSelectbox', $competitionsSelectbox);
-                }
-                if ($this->settings['club']['clubsSelectbox']) {
-                    $clubsSelectbox = $this->clubRepository->findAll($this->getClubsFilter(false));
-                    $this->view->assign('clubsSelectbox', $clubsSelectbox);
-                }
-                if ($this->settings['team']['teamsSelectbox']) {
-                    $teamsSelectbox = $this->teamRepository->findAll($this->getSportsFilter(),
-                        $this->getSportAgeGroupsFilter(), $this->getSportAgeLevelsFilter(), $this->getClubsFilter(),
-                        $this->getTeamsFilter(false));
-                    $this->view->assign('teamsSelectbox', $teamsSelectbox);
-                }
-                if ($this->settings['season']['seasonsSelectbox']) {
-                    $seasonsSelectbox = $this->seasonRepository->findAll($this->getSeasonsFilter(false));
-                    $this->view->assign('seasonsSelectbox', $seasonsSelectbox);
-                }
-                if ($this->settings['competition']['selected'] && $this->settings['season']['selected'] && $this->settings['competitionSeasonGameday']['competitionSeasonGamedaysSelectbox']) {
-                    $competitionSeasonGamedaysSelectbox = $this->competitionSeasonRepository->findAll($this->getSeasonsFilter(false));
-                    $this->view->assign('competitionSeasonGamedaysSelectbox', $competitionSeasonGamedaysSelectbox);
-                }
-            }
-            $this->pagetitle("Spiele", "Liste");
-        }
-        
-        /**
-         * Use this method to solve tasks which all actions have in common, when VIEW-Context is needed
-         */
-        public function initializeActions()
-        {
-            #$listOfPossibleShowViews = 'index,history,report,stats,ticket';
-            #$this->determineShowView($this->model);
-            #$this->determineShowViews($this->model, $listOfPossibleShowViews);
-            #$this->view->assign('settings', $this->settings);
+            $this->assignSelectboxValues('club');
+            $this->assignSelectboxValues('competition');
+            $this->assignSelectboxValues('competitionType');
+            $this->assignSelectboxValues('season');
+            $this->assignSelectboxValues('sport');
+            $this->assignSelectboxValues('sportAgeGroup');
+            $this->assignSelectboxValues('sportAgeLevel');
+            $this->assignSelectboxValues('team');
+            
+            /* PAGETITLE */
+            $this->pagetitle(
+                "Spiele",
+                "Liste"
+            );
         }
         
         /**
@@ -154,7 +99,7 @@
          */
         public function indexAction(Game $game = null)
         {
-            $this->initializeActions();
+            /* MAIN CONTENT */
             $gameGoalsWithType = $game->getGameGoals();
             if ($gameGoalsWithType) {
                 for ($i = 0; $i < count($gameGoalsWithType); $i++) {
@@ -180,7 +125,12 @@
                 $game->setGameGoals($gameGoalsWithType);
             }
             $this->view->assign('game', $game);
-            $this->pagetitleForGame($game, "Spielinfo");
+            
+            /* PAGETITLE */
+            $this->pagetitleForGame(
+                $game,
+                "Spielinfo"
+            );
         }
         
         /**
@@ -208,7 +158,7 @@
          */
         public function historyAction(Game $game = null)
         {
-            $this->initializeActions();
+            /* MAIN CONTENT */
             $orderings = [
                 'date' => QueryInterface::ORDER_DESCENDING,
                 'time' => QueryInterface::ORDER_DESCENDING,
@@ -227,7 +177,12 @@
                 $orderings);
             $this->view->assign('gamesInCompetition', $gamesInCompetition);
             $this->view->assign('game', $game);
-            $this->pagetitleForGame($game, "Historie");
+            
+            /* PAGETITLE */
+            $this->pagetitleForGame(
+                $game,
+                "Historie"
+            );
         }
         
         /**
@@ -235,8 +190,14 @@
          */
         public function reportAction(Game $game = null)
         {
+            /* MAIN CONTENT */
             $this->view->assign('game', $game);
-            $this->pagetitleForGame($game, "Spielbericht");
+            
+            /* PAGETITLE */
+            $this->pagetitleForGame(
+                $game,
+                "Spielbericht"
+            );
         }
         
     }

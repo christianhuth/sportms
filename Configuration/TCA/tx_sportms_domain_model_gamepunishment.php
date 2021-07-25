@@ -103,7 +103,7 @@
                     'eval' => 'required',
                     'foreign_table' => 'tx_sportms_domain_model_game',
                     'items' => [
-                        ['LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_select.something', 0],
+                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_select.something', 0],
                     ],
                     'maxItems' => 1,
                     'renderType' => 'selectSingle',
@@ -166,7 +166,7 @@
                                                     WHERE tx_sportms_domain_model_gamelineup.game = ###REC_FIELD_game###
                                                 )',
                     'items' => [
-                        ['LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_select.something', ""],
+                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_select.something', ""],
                     ],
                     'maxItems' => 1,
                     'minIteams' => 1,
@@ -180,7 +180,7 @@
                 'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_gamepunishment.type',
                 'config' => [
                     'items' => [
-                        ['LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_select.something', 0],
+                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_select.something', 0],
                         [
                             'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_gamepunishment.type.yellow',
                             1,
@@ -221,7 +221,7 @@
                 'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_gamepunishment.reason',
                 'config' => [
                     'items' => [
-                        ['LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_select.something', 0],
+                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_select.something', 0],
                         [
                             'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_gamepunishment.reason.foul',
                             1,

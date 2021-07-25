@@ -107,7 +107,7 @@
                     'foreign_table' => 'tx_sportms_domain_model_competition',
                     'foreign_table_where' => 'ORDER BY label ASC',
                     'items' => [
-                        ['LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_select.something', ""],
+                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_select.something', ""],
                     ],
                     'maxItems' => 1,
                     'renderType' => 'selectSingle',
@@ -124,7 +124,7 @@
                     'foreign_table' => 'tx_sportms_domain_model_season',
                     'foreign_table_where' => 'ORDER BY label DESC',
                     'items' => [
-                        ['LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_select.something', ""],
+                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_select.something', ""],
                     ],
                     'maxItems' => 1,
                     'renderType' => 'selectSingle',

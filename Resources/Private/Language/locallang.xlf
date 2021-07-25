@@ -1362,33 +1362,36 @@
                 <source>keine Tore vorhanden</source>
             </trans-unit>
 
-        <!-- Select Fields -->
-            <trans-unit id="tx_sportms_select.club.all">
+        <!-- Formular Fields -->
+            <trans-unit id="tx_sportms_form.select.club.all">
                 <source>Alle Vereine</source>
             </trans-unit>
-            <trans-unit id="tx_sportms_select.competition.all">
+            <trans-unit id="tx_sportms_form.select.competition.all">
                 <source>Alle Wettbewerbe</source>
             </trans-unit>
-            <trans-unit id="tx_sportms_select.competitionseasongameday.all">
+            <trans-unit id="tx_sportms_form.select.competitionseasongameday.all">
                 <source>Alle Spieltage</source>
             </trans-unit>
-            <trans-unit id="tx_sportms_select.competitiontype.all">
+            <trans-unit id="tx_sportms_form.select.competitiontype.all">
                 <source>Alle Wettbewerbsarten</source>
             </trans-unit>
-            <trans-unit id="tx_sportms_select.season.all">
+            <trans-unit id="tx_sportms_form.select.season.all">
                 <source>Alle Saisons</source>
             </trans-unit>
-            <trans-unit id="tx_sportms_select.something">
-                <source>Bitte wählen</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_select.sport.all">
+            <trans-unit id="tx_sportms_form.select.sport.all">
                 <source>Alle Sportarten</source>
             </trans-unit>
-            <trans-unit id="tx_sportms_select.sportagegroup.all">
+            <trans-unit id="tx_sportms_form.select.sportagegroup.all">
                 <source>Alle Altersgruppen</source>
             </trans-unit>
-            <trans-unit id="tx_sportms_select.sportagelevel.all">
+            <trans-unit id="tx_sportms_form.select.sportagelevel.all">
                 <source>Alle Altersstufen</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_form.submit">
+                <source>Anzeigen</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_form.select.team.all">
+                <source>Alle Mannschaften</source>
             </trans-unit>
 
 

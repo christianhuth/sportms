@@ -112,7 +112,7 @@
                     'foreign_table' => 'tx_sportms_domain_model_mailtype',
                     'foreign_table_where' => 'ORDER BY label ASC',
                     'items' => [
-                        ['LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_select.something', 0],
+                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_select.something', 0],
                     ],
                     'maxItems' => 1,
                     'minItems' => 1,

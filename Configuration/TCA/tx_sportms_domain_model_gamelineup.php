@@ -99,7 +99,7 @@
                     'eval' => 'required',
                     'foreign_table' => 'tx_sportms_domain_model_game',
                     'items' => [
-                        ['LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_select.something', 0],
+                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_select.something', 0],
                     ],
                     'maxItems' => 1,
                     'renderType' => 'selectSingle',
@@ -134,7 +134,7 @@
                     'eval' => '',
                     'foreign_table' => 'tx_sportms_domain_model_person',
                     'items' => [
-                        ['LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_select.something', ''],
+                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_select.something', ''],
                     ],
                     'renderType' => 'selectSingle',
                     'size' => 1,
@@ -148,7 +148,7 @@
                     'foreign_table' => 'tx_sportms_domain_model_sportposition',
                     'foreign_table_where' => '  ORDER BY tx_sportms_domain_model_sportposition.label ASC',
                     'items' => [
-                        ['LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_select.something', ''],
+                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_select.something', ''],
                     ],
                     'maxItems' => 1,
                     'renderType' => 'selectSingle',

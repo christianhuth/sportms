@@ -115,7 +115,7 @@
                     'foreign_table' => 'tx_sportms_domain_model_club',
                     'foreign_table_where' => 'ORDER BY tx_sportms_domain_model_club.name ASC',
                     'items' => [
-                        ['LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_select.something', ""],
+                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_select.something', ""],
                     ],
                     'maxItems' => 1,
                     'renderType' => 'selectSingle',
