@@ -19,7 +19,7 @@
             'iconfile' => 'EXT:sportms/Resources/Public/Icons/tx_sportms_domain_model_clubground.svg',
             'label' => 'name',
             'searchFields' => '',
-            'title' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_clubground',
+            'title' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_clubground',
             'tstamp' => 'tstamp',
             'versioningWS' => true,
         ],

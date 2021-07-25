@@ -22,7 +22,7 @@
             'label_userFunc' => UserFunc::class . '->CompetitionSeasonLabel',
             'searchFields' => 'competition',
             'sortby' => 'sorting',
-            'title' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_competitionseason',
+            'title' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_competitionseason',
             'tstamp' => 'tstamp',
             'versioningWS' => true,
         ],
@@ -107,7 +107,7 @@
                     'foreign_table' => 'tx_sportms_domain_model_competition',
                     'foreign_table_where' => 'ORDER BY label ASC',
                     'items' => [
-                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.select', ""],
+                        ['LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_select.something', ""],
                     ],
                     'maxItems' => 1,
                     'renderType' => 'selectSingle',
@@ -124,7 +124,7 @@
                     'foreign_table' => 'tx_sportms_domain_model_season',
                     'foreign_table_where' => 'ORDER BY label DESC',
                     'items' => [
-                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.select', ""],
+                        ['LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_select.something', ""],
                     ],
                     'maxItems' => 1,
                     'renderType' => 'selectSingle',
@@ -183,23 +183,19 @@
                     ],
                 ],
             ],
-            
             'slug' => [
                 'exclude' => true,
                 'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.slug',
                 'config' => [
-                    'default' => '',
-                    'eval' => 'uniqueInSite',
                     'fallbackCharacter' => '-',
                     'generatorOptions' => [
                         'fields' => ['uid'],
                         'fieldSeparator' => '-',
                         'prefixParentPageSlug' => false,
                         'replacements' => [
-                            '/' => '',
+                            '/' => '-',
                         ],
                     ],
-                    'prependSlash' => false,
                     'type' => 'slug',
                 ],
             ],

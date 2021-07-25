@@ -22,7 +22,7 @@
             'label' => '',
             'label_userFunc' => UserFunc::class . '->teamSeasonPracticeLabel',
             'searchFields' => '',
-            'title' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_teamseasonpractice',
+            'title' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_teamseasonpractice',
             'tstamp' => 'tstamp',
             'versioningWS' => true,
         ],
@@ -109,7 +109,7 @@
                 'config' => [
                     'eval' => 'required',
                     'items' => [
-                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.select', 0],
+                        ['LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_select.something', 0],
                         ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.day.1', 1],
                         ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.day.2', 2],
                         ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.day.3', 3],
@@ -155,7 +155,7 @@
                 'config' => [
                     'foreign_table' => 'tx_sportms_domain_model_venue',
                     'items' => [
-                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.select', ''],
+                        ['LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_select.something', ''],
                     ],
                     'maxItems' => 1,
                     'minItems' => 1,

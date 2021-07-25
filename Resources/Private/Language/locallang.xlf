@@ -63,6 +63,9 @@
             <trans-unit id="tx_sportms_action.team.historyrecordplayers">
                 <source>Rekordspieler</source>
             </trans-unit>
+            <trans-unit id="tx_sportms_action.team.list">
+                <source>Liste</source>
+            </trans-unit>
             <trans-unit id="tx_sportms_action.team.seasonindex">
                 <source>Saisonindex</source>
             </trans-unit>
@@ -74,117 +77,6 @@
             </trans-unit>
             <trans-unit id="tx_sportms_action.teamseason.index">
                 <source>Übersicht</source>
-            </trans-unit>
-
-
-        <!-- General -->
-            <trans-unit id="tx_sportms_general.abbreviation">
-                <source>Abkürzung</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_general.clock">
-                <source>Uhr</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_general.contact_information">
-                <source>Kontaktdaten</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_general.date">
-                <source>Datum</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_general.day">
-                <source>Tag</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_general.day.1">
-                <source>Montag</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_general.day.2">
-                <source>Dienstag</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_general.day.3">
-                <source>Mittwoch</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_general.day.4">
-                <source>Donnerstag</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_general.day.5">
-                <source>Freitag</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_general.day.6">
-                <source>Samstag</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_general.day.7">
-                <source>Sonntag</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_general.enddate">
-                <source>Enddatum</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_general.label">
-                <source>Bezeichnung</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_general.official.duration">
-                <source>Amtszeit</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_general.official.enddate">
-                <source>Amtsende</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_general.official.startdate">
-                <source>Amtsantritt</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_general.official.until_today">
-                <source>Wird bis heute ausgeführt?</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_general.sex">
-                <source>Biologisches Geschlecht</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_general.sex.diverse">
-                <source>divers</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_general.sex.male">
-                <source>männlich</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_general.sex.female">
-                <source>weiblich</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_general.startdate">
-                <source>Startdatum</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_general.zodiac_sign">
-                <source>Sternzeichen</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_general.zodiac_sign.1">
-                <source>Wassermann</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_general.zodiac_sign.2">
-                <source>Fische</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_general.zodiac_sign.3">
-                <source>Widder</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_general.zodiac_sign.4">
-                <source>Stier</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_general.zodiac_sign.5">
-                <source>Zwillinge</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_general.zodiac_sign.6">
-                <source>Krebs</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_general.zodiac_sign.7">
-                <source>Löwe</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_general.zodiac_sign.8">
-                <source>Jungfrau</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_general.zodiac_sign.9">
-                <source>Waage</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_general.zodiac_sign.10">
-                <source>Skorpion</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_general.zodiac_sign.11">
-                <source>Schütze</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_general.zodiac_sign.12">
-                <source>Steinbock</source>
             </trans-unit>
 
 
@@ -1330,6 +1222,117 @@
             </trans-unit>
 
 
+        <!-- General -->
+            <trans-unit id="tx_sportms_general.abbreviation">
+                <source>Abkürzung</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.clock">
+                <source>Uhr</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.contact_information">
+                <source>Kontaktdaten</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.date">
+                <source>Datum</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.day">
+                <source>Tag</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.day.1">
+                <source>Montag</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.day.2">
+                <source>Dienstag</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.day.3">
+                <source>Mittwoch</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.day.4">
+                <source>Donnerstag</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.day.5">
+                <source>Freitag</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.day.6">
+                <source>Samstag</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.day.7">
+                <source>Sonntag</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.enddate">
+                <source>Enddatum</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.label">
+                <source>Bezeichnung</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.official.duration">
+                <source>Amtszeit</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.official.enddate">
+                <source>Amtsende</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.official.startdate">
+                <source>Amtsantritt</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.official.until_today">
+                <source>Wird bis heute ausgeführt?</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.sex">
+                <source>Biologisches Geschlecht</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.sex.diverse">
+                <source>divers</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.sex.male">
+                <source>männlich</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.sex.female">
+                <source>weiblich</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.startdate">
+                <source>Startdatum</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.zodiac_sign">
+                <source>Sternzeichen</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.zodiac_sign.1">
+                <source>Wassermann</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.zodiac_sign.2">
+                <source>Fische</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.zodiac_sign.3">
+                <source>Widder</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.zodiac_sign.4">
+                <source>Stier</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.zodiac_sign.5">
+                <source>Zwillinge</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.zodiac_sign.6">
+                <source>Krebs</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.zodiac_sign.7">
+                <source>Löwe</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.zodiac_sign.8">
+                <source>Jungfrau</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.zodiac_sign.9">
+                <source>Waage</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.zodiac_sign.10">
+                <source>Skorpion</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.zodiac_sign.11">
+                <source>Schütze</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.zodiac_sign.12">
+                <source>Steinbock</source>
+            </trans-unit>
+
+
         <!-- Navigation -->
             <trans-unit id="tx_sportms_navigation.game.competition.dropdown">
                 <source>Wettbewerb</source>
@@ -1360,6 +1363,23 @@
             </trans-unit>
             <trans-unit id="tx_sportms_repository.gamegoal.none">
                 <source>keine Tore vorhanden</source>
+            </trans-unit>
+
+        <!-- Select Fields -->
+            <trans-unit id="tx_sportms_select.club.all">
+                <source>Alle Vereine</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_select.something">
+                <source>Bitte wählen</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_select.sport.all">
+                <source>Alle Sportarten</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_select.sportagegroup.all">
+                <source>Alle Altersgruppen</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_select.sportagelevel.all">
+                <source>Alle Altersstufen</source>
             </trans-unit>
 
 

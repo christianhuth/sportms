@@ -5,7 +5,8 @@
     use Balumedien\Sportms\Domain\Model\Season;
     use Balumedien\Sportms\Domain\Model\Team;
     use Balumedien\Sportms\Domain\Model\TeamSeasonOfficial;
-
+    use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
+    
     /**
      * TeamController
      */
@@ -113,15 +114,6 @@
          * @TYPO3\CMS\Extbase\Annotation\Inject
          */
         protected $teamSeasonOfficialJobRepository;
-        
-        /**
-         * Initializes the controller before invoking an action method.
-         * Use this method to solve tasks which all actions have in common.
-         */
-        public function initializeAction(): void
-        {
-            $this->mapRequestsToSettings();
-        }
         
         /**
          * @param Team|null $team
@@ -345,40 +337,54 @@
          */
         public function listAction(): void
         {
-    
-            if($this->request->hasArgument("club")) {
-                \TYPO3\CMS\Core\Utility\DebugUtility::debug($this->request->getArgument("club"), 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
+            if ($this->request->hasArgument("sport")) {
+                \TYPO3\CMS\Core\Utility\DebugUtility::debug($this->request->getArgument("sport"),
+                    'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
             }
-            
-            
+            if ($this->request->hasArgument("sportAgeGroup")) {
+                \TYPO3\CMS\Core\Utility\DebugUtility::debug($this->request->getArgument("sportAgeGroup"),
+                    'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
+            }
             
             $teams = $this->teamRepository->findAll($this->getSportsFilter(), $this->getSportAgeGroupsFilter(),
                 $this->getSportAgeLevelsFilter(), $this->getClubsFilter(), $this->getTeamsFilter());
             $this->view->assign('teams', $teams);
             /* FRONTEND FILTERS */
-            if ($this->settings['sport']['selectbox']['enabled']) {
-                $sportsSelectbox = $this->sportRepository->findAll($this->getSportsFilter(false));
-                $this->view->assign('sportsSelectbox', $sportsSelectbox);
-                if ($this->settings['sport']['selected'] && $this->settings['sportAgeGroup']['sportAgeGroupsSelectbox']) {
-                    $sportAgeGroupsSelectbox = $this->sportAgeGroupRepository->findAll($this->getSportsFilter(),
-                        $this->getSportAgeGroupsFilter(false));
-                    $this->view->assign('sportAgeGroupsSelectbox', $sportAgeGroupsSelectbox);
-                    if ($this->settings['sportAgeGroup']['selected'] && $this->settings['sportAgeLevel']['sportAgeLevelsSelectbox']) {
-                        $sportAgeLevelsSelectbox = $this->sportAgeLevelRepository->findAll($this->getSportsFilter(),
-                            $this->getSportAgeGroupsFilter(), $this->getSportAgeLevelsFilter(false));
-                        $this->view->assign('sportAgeLevelsSelectbox', $sportAgeLevelsSelectbox);
-                    }
+            $this->addSelectbox('sport');
+            $this->addSelectbox('sportAgeGroup');
+            $this->addSelectbox('sportAgeLevel');
+            if ($this->settings['sport']['selectbox']['selected'] && $this->settings['sportAgeGroup']['selectbox']['enabled']) {
+                $sportAgeGroupsSelectbox = $this->sportAgeGroupRepository->findAll($this->getSportsFilter(),
+                    $this->getSportAgeGroupsFilter(false));
+                $this->view->assign('sportAgeGroupsSelectbox', $sportAgeGroupsSelectbox);
+                if ($this->settings['sportAgeGroup']['selected'] && $this->settings['sportAgeLevel']['sportAgeLevelsSelectbox']) {
+                    $sportAgeLevelsSelectbox = $this->sportAgeLevelRepository->findAll($this->getSportsFilter(),
+                        $this->getSportAgeGroupsFilter(), $this->getSportAgeLevelsFilter(false));
+                    $this->view->assign('sportAgeLevelsSelectbox', $sportAgeLevelsSelectbox);
                 }
             }
-            if ($this->settings['club']['selectbox']['enabled']) {
-                $clubsSelectbox = $this->clubRepository->findAll($this->getClubsFilter(false));
-                $this->view->assign('clubsSelectbox', $clubsSelectbox);
-            }
-            $this->pagetitle("Mannschaften", "Liste");
+            $this->addSelectbox('club');
+            $this->pagetitle(
+                LocalizationUtility::translate('tx_sportms_domain_model_team.plural', "sportms"),
+                LocalizationUtility::translate('tx_sportms_action.team.list', "sportms")
+            );
         }
         
+        private function addSelectbox(string $model)
+        {
+            if($this->settings[$model]['selectbox']['enabled']) {
+                switch($model) {
+                    case "club": $selectBoxValues = $this->clubRepository->findAll($this->getClubsFilter(false)); break;
+                    case "sport": $selectBoxValues = $this->sportRepository->findAll($this->getSportsFilter(false)); break;
+                    case "sportAgeGroup": $selectBoxValues = $this->sportAgeGroupRepository->findAll($this->getSportAgeGroupsFilter(false)); break;
+                    case "sportAgeLevel": $selectBoxValues = $this->sportAgeLevelRepository->findAll($this->getSportAgeLevelsFilter(false)); break;
+                }
+                $this->view->assign($model . 'SelectboxValues', $selectBoxValues);
+            }
+        }
         
-        public function seasonIndexAction(Team $team = null, Season $season = null) {
+        public function seasonIndexAction(Team $team = null, Season $season = null)
+        {
             if ($team === null) {
                 $team = $this->determineTeam();
             }
@@ -387,7 +393,7 @@
                 $season = $this->determineSeason();
             }
             if ($season === null) {
-                if($team->getTeamSeasons()) {
+                if ($team->getTeamSeasons()) {
                     $season = $team->getTeamSeasons()[0]->getSeason();
                 } else {
                     die();

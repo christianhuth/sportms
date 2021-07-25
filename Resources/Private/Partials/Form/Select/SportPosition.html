@@ -11,7 +11,9 @@
 				<f:form.select class="form-control" name="selectSportPosition"
 							   optionLabelField="label" optionValueField="uid"
 							   prependOptionLabel="Alle Positionen"
-							   prependOptionValue="" value="{value}">
+							   prependOptionValue=""
+							   property=""
+							   value="{value}">
 					<f:groupedFor as="sportPositionsBySportPositionGroup"
 								  each="{options}" groupBy="sportPositionGroup"
 								  groupKey="sportPositionGroup">

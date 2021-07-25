@@ -94,7 +94,7 @@
                     'eval' => 'required',
                     'foreign_table' => 'tx_sportms_domain_model_game',
                     'items' => [
-                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.select', 0],
+                        ['LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_select.something', 0],
                     ],
                     'maxItems' => 1,
                     'renderType' => 'selectSingle',
@@ -111,7 +111,7 @@
                     'foreign_table' => 'tx_sportms_domain_model_refereejob',
                     'foreign_table_where' => 'ORDER BY label ASC',
                     'items' => [
-                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.select', ""],
+                        ['LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_select.something', ""],
                     ],
                     'maxItems' => 1,
                     'minItems' => 1,
@@ -134,7 +134,7 @@
                                             )
                                             ORDER BY tx_sportms_domain_model_person.lastname ASC, tx_sportms_domain_model_person.firstname ASC',
                     'items' => [
-                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.select', ""],
+                        ['LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_select.something', ""],
                     ],
                     'maxItems' => 1,
                     'minItems' => 1,

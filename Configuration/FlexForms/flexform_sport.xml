@@ -27,6 +27,26 @@
                     </config>
                 </TCEforms>
             </settings.sport.sports>
+            <settings.sportAgeGroup.selectbox.enabled>
+                <TCEforms>
+                    <label>Selectbox für Altersgruppen anzeigen?</label>
+                    <config>
+                        <default>1</default>
+                        <renderType>checkboxToggle</renderType>
+                        <type>check</type>
+                    </config>
+                </TCEforms>
+            </settings.sportAgeGroup.selectbox.enabled>
+            <settings.sportAgeLevel.selectbox.enabled>
+                <TCEforms>
+                    <label>Selectbox für Altersstufen anzeigen?</label>
+                    <config>
+                        <default>1</default>
+                        <renderType>checkboxToggle</renderType>
+                        <type>check</type>
+                    </config>
+                </TCEforms>
+            </settings.sportAgeLevel.selectbox.enabled>
         </el>
     </ROOT>
 </T3DataStructure>

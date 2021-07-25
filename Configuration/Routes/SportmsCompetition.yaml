@@ -4,7 +4,7 @@ routeEnhancers:
       competitionseason_slug:
         type: PersistedAliasMapper
         tableName: tx_sportms_domain_model_competitionseason
-        routeFieldName: uid
+        routeFieldName: slug
       competitionseasongameday_slug:
         type: PersistedAliasMapper
         tableName: tx_sportms_domain_model_competitionseasongameday

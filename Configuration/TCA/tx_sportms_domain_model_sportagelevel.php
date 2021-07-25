@@ -19,7 +19,7 @@
             'label' => 'label',
             'searchFields' => 'label',
             'sortby' => 'sorting',
-            'title' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_sportagelevel',
+            'title' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_sportagelevel',
             'tstamp' => 'tstamp',
             'versioningWS' => true,
         ],
@@ -101,7 +101,7 @@
                     'foreign_table' => 'tx_sportms_domain_model_sportagegroup',
                     'foreign_table_where' => 'ORDER BY label ASC',
                     'items' => [
-                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.select', ''],
+                        ['LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_select.something', ''],
                     ],
                     'renderType' => 'selectSingle',
                     'size' => 1,

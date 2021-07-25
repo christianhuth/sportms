@@ -103,7 +103,7 @@
                     'foreign_table' => 'tx_sportms_domain_model_sport',
                     'foreign_table_where' => 'ORDER BY label ASC',
                     'items' => [
-                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.select', ""],
+                        ['LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_select.something', ""],
                     ],
                     'maxItems' => 1,
                     'renderType' => 'selectSingle',

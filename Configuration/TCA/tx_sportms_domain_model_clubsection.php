@@ -22,7 +22,7 @@
             'label' => '',
             'label_userFunc' => UserFunc::class . '->clubSectionLabel',
             'searchFields' => '',
-            'title' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_clubsection',
+            'title' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_clubsection',
             'tstamp' => 'tstamp',
             'versioningWS' => true,
         ],
@@ -115,7 +115,7 @@
                     'foreign_table' => 'tx_sportms_domain_model_club',
                     'foreign_table_where' => 'ORDER BY tx_sportms_domain_model_club.name ASC',
                     'items' => [
-                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.select', ""],
+                        ['LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_select.something', ""],
                     ],
                     'maxItems' => 1,
                     'renderType' => 'selectSingle',

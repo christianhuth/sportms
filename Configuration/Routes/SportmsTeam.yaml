@@ -82,13 +82,16 @@ routeEnhancers:
         tableName: tx_sportms_domain_model_teamseason
         routeFieldName: slug
     defaults:
-      club: '0'
+      club: ''
       page: '0'
-      season: '0'
+      season: ''
+      sport: ''
     defaultController: 'Team::list'
     extension: Sportms
     plugin: Team
     routes:
+      - routePath: '/'
+        _controller: 'Team::list'
       - routePath: '/{localizedModel_Club}/{club_slug}'
         _controller: 'Team::list'
         _arguments:

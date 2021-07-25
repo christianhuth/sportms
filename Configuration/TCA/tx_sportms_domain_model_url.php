@@ -20,7 +20,7 @@
             'label' => 'url',
             'searchFields' => '',
             'sortby' => 'sorting',
-            'title' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_url',
+            'title' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_url',
             'tstamp' => 'tstamp',
             'versioningWS' => true,
         ],
@@ -115,7 +115,7 @@
                     'foreign_table' => 'tx_sportms_domain_model_urltype',
                     'foreign_table_where' => 'ORDER BY label ASC',
                     'items' => [
-                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.select', 0],
+                        ['LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_select.something', 0],
                     ],
                     'maxItems' => 1,
                     'minItems' => 1,

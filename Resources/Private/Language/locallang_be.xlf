@@ -40,9 +40,6 @@
             <trans-unit id="tx_sportms_general.detail_link">
                 <source>Einzelansicht ermöglichen?</source>
             </trans-unit>
-            <trans-unit id="tx_sportms_general.select">
-                <source>Bitte wählen</source>
-            </trans-unit>
             <trans-unit id="tx_sportms_general.slug">
                 <source>Sprechende URL</source>
             </trans-unit>

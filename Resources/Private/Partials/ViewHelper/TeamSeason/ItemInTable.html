@@ -6,11 +6,10 @@
 		<div class="tx-sportms-team-in-table">
 			<f:if condition="{teamSeason.detailLink} && {teamSeason.team.detailLink}">
 				<f:then>
-					<f:link.action action="index"
-								   arguments="{teamSeason: teamSeason}"
-								   controller="TeamSeason"
-								   extensionName="sportms"
-								   pageUid="{settings.teamSeason.index.pid}"
+					<f:link.action action="seasonIndex"
+								   arguments="{season: teamSeason.season, team: teamSeason.team}"
+								   controller="Team" extensionName="Sportms"
+								   pageUid="{settings.team.seasonIndex.pid}"
 								   pluginName="Team">
 						<f:render arguments="{teamSeason: teamSeason}"
 								  partial="ViewHelper/TeamSeason/Label"/>

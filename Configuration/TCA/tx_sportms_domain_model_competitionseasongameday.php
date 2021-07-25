@@ -22,7 +22,7 @@
             'label_userFunc' => UserFunc::class . '->CompetitionSeasonGamedayLabel',
             'searchFields' => '',
             'sortby' => 'sorting',
-            'title' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_competitionseasongameday',
+            'title' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_competitionseasongameday',
             'tstamp' => 'tstamp',
             'versioningWS' => true,
         ],
@@ -105,7 +105,7 @@
                     'eval' => 'required',
                     'foreign_table' => 'tx_sportms_domain_model_competitionseason',
                     'items' => [
-                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.select', ""],
+                        ['LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_select.something', ""],
                     ],
                     'maxItems' => 1,
                     'renderType' => 'selectSingle',
@@ -145,23 +145,19 @@
                     'renderType' => 'inputDateTime',
                 ],
             ],
-            
             'slug' => [
                 'exclude' => true,
                 'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.slug',
                 'config' => [
-                    'default' => '',
-                    'eval' => 'uniqueInSite',
                     'fallbackCharacter' => '-',
                     'generatorOptions' => [
                         'fields' => ['uid', 'label'],
                         'fieldSeparator' => '-',
                         'prefixParentPageSlug' => false,
                         'replacements' => [
-                            '/' => '',
+                            '/' => '-',
                         ],
                     ],
-                    'prependSlash' => false,
                     'type' => 'slug',
                 ],
             ],

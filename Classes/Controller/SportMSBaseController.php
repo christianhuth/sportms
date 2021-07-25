@@ -8,7 +8,7 @@
     use Balumedien\Sportms\PageTitle\PageTitleProvider;
     use TYPO3\CMS\Core\Utility\GeneralUtility;
     use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
-
+    
     class SportMSBaseController extends ActionController
     {
         
@@ -19,7 +19,7 @@
         
         protected function getFilter($key1, $key2, $useSelected)
         {
-            return ($useSelected && ($this->settings[$key1]['selected'])) ? $this->settings[$key1]['selected'] : $this->settings[$key1][$key2];
+            return ($useSelected && ($this->settings[$key1]['selectbox']['selected'])) ? $this->settings[$key1]['selectbox']['selected'] : $this->settings[$key1][$key2];
         }
         
         protected function getCompetitionsFilter($useSelected = true)
@@ -81,6 +81,15 @@
         {
             return $this->getFilter('venue', 'venues', $useSelected);
         }
+    
+        /**
+         * Initializes the controller before invoking an action method.
+         * Use this method to solve tasks which all actions have in common.
+         */
+        public function initializeAction(): void
+        {
+            $this->mapRequestsToSettings();
+        }
         
         protected function mapRequestsToSettings(): void
         {
@@ -88,11 +97,11 @@
             $listOfSelectModels = 'sport,sportAgeGroup,sportAgeLevel,competitionType,competition,club,team,season,competitionSeasonGameday';
             foreach (explode(',', $listOfSelectModels) as $selectModel) {
                 if ($this->request->hasArgument('select' . ucfirst($selectModel))) {
-                    $selectedValue = $this->request->getArgument('select' . ucfirst($selectModel));
+                    $selectedValue = $this->request->getArgument($selectModel);
                     if (is_array($selectedValue)) {
-                        $this->settings[$selectModel]['selected'] = $selectedValue['__identity'];
+                        $this->settings[$selectModel]['selectbox']['selected'] = $selectedValue['__identity'];
                     } else {
-                        $this->settings[$selectModel]['selected'] = $selectedValue;
+                        $this->settings[$selectModel]['selectbox']['selected'] = $selectedValue;
                     }
                 }
             }
@@ -103,27 +112,6 @@
             /* BugFix, if the sportPositionGroup has been cleared but not the sportPosition */
             if (!$this->settings['sportPositionGroup']['selected']) {
                 $this->settings['sportPosition']['selected'] = '';
-            }
-            /* ShowView */
-            if ($this->request->hasArgument('showView') && $this->request->hasArgument('controller')) {
-                $model = lcfirst($this->request->getArgument('controller'));
-                $this->settings[$model]['showView']['current'] = $this->request->getArgument('showView');
-            }
-        }
-        
-        protected function determineShowViews($model, $listOfPossibleShowViews): void
-        {
-            foreach (explode(',', $listOfPossibleShowViews) as $showView) {
-                $this->settings[$model]['showView'][$showView] = ($this->settings[$model]['showViews']) ? strpos($this->settings[$model]['showViews'],
-                        $showView) !== false : true;
-            }
-        }
-        
-        protected function determineShowView($model): void
-        {
-            if (!$this->settings[$model]['showView']['current']) {
-                $this->settings[$model]['showView']['current'] = ($this->settings[$model]['showViews']) ? explode(',',
-                    $this->settings[$model]['showViews'])[0] : 'profile';
             }
         }
         
@@ -188,7 +176,7 @@
                 }
             }
         }
-    
+        
         /**
          * @return \Balumedien\Sportms\Domain\Model\Season|null
          */

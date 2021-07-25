@@ -5,6 +5,7 @@
 
 <f:section name="default">
 	<div class="tx-sportms-team-list">
+		<f:debug>{settings}</f:debug>
 		<f:render arguments="{_all}" partial="Team/List/Filter"/>
 		<f:if condition="{teams}">
 			<f:then>
