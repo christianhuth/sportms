@@ -1,9 +1,9 @@
 routeEnhancers:
   sportmsCompetition:
     aspects:
-      competitionseason_slug:
+      competition_slug:
         type: PersistedAliasMapper
-        tableName: tx_sportms_domain_model_competitionseason
+        tableName: tx_sportms_domain_model_competition
         routeFieldName: slug
       competitionseasongameday_slug:
         type: PersistedAliasMapper
@@ -13,19 +13,19 @@ routeEnhancers:
         type: PersistedAliasMapper
         tableName: tx_sportms_domain_model_competitiontype
         routeFieldName: slug
-      localizedAction_clubs:
+      localizedAction_seasonClubs:
         type: LocaleModifier
         default: 'clubs'
         localeMap:
           - locale: 'de_DE.*'
             value: 'vereine'
-      localizedAction_games:
+      localizedAction_seasonGames:
         type: LocaleModifier
         default: 'games'
         localeMap:
           - locale: 'de_DE.*'
             value: 'spielplan'
-      localizedAction_teams:
+      localizedAction_seasonTeams:
         type: LocaleModifier
         default: 'teams'
         localeMap:
@@ -43,17 +43,29 @@ routeEnhancers:
         localeMap:
           - locale: 'de_DE.*'
             value: 'seite'
+      localizedSeason:
+        type: LocaleModifier
+        default: 'season'
+        localeMap:
+          - locale: 'de_DE.*'
+            value: 'saison'
       page:
         type: StaticRangeMapper
         start: '1'
         end: '100'
+      season_slug:
+        type: PersistedAliasMapper
+        tableName: tx_sportms_domain_model_season
+        routeFieldName: slug
     defaults:
-      competitionType: '0'
+      competitionType: ''
       page: '0'
     defaultController: 'Competition::list'
     extension: Sportms
     plugin: Competition
     routes:
+      - routePath: '/'
+        _controller: 'Competition::list'
       - routePath: '/{localizedModel_CompetitionType}/{competitiontype_slug}'
         _controller: 'Competition::list'
         _arguments:
@@ -67,21 +79,31 @@ routeEnhancers:
         _arguments:
           competitiontype_slug: competitionType
           page: '@widget_0/currentPage'
-      - routePath: '/{competitionseason_slug}/{localizedAction_clubs}'
-        _controller: 'Competition::clubs'
+      - routePath: '/{competition_slug}/{localizedAction_seasonClubs}'
+        _controller: 'Competition::seasonClubs'
         _arguments:
-          competitionseason_slug: competitionSeason
-      - routePath: '/{competitionseason_slug}/{localizedAction_games}'
-        _controller: 'Competition::games'
+          competition_slug: competition
+      - routePath: '/{competition_slug}/{localizedAction_seasonClubs}/{localizedSeason}/{season_slug}'
+        _controller: 'Competition::seasonClubs'
         _arguments:
-          competitionseason_slug: competitionSeason
-      - routePath: '/{competitionseason_slug}/spieltag/{competitionseasongameday_slug}'
-        _controller: 'Competition::games'
+          competition_slug: competition
+          season_slug: season
+      - routePath: '/{competition_slug}/{localizedAction_seasonGames}'
+        _controller: 'Competition::seasonGames'
         _arguments:
-          competitionseason_slug: competitionSeason
-          competitionseasongameday_slug: competitionSeasonGameday
-      - routePath: '/{competitionseason_slug}/{localizedAction_teams}'
-        _controller: 'Competition::teams'
+          competition_slug: competition
+      - routePath: '/{competition_slug}/{localizedAction_seasonGames}/{localizedSeason}/{season_slug}'
+        _controller: 'Competition::seasonGames'
         _arguments:
-          competitionseason_slug: competitionSeason
+          competition_slug: competition
+          season_slug: season
+      - routePath: '/{competition_slug}/{localizedAction_seasonTeams}'
+        _controller: 'Competition::seasonTeams'
+        _arguments:
+          competition_slug: competition
+      - routePath: '/{competition_slug}/{localizedAction_seasonTeams}/{localizedSeason}/{season_slug}'
+        _controller: 'Competition::seasonTeams'
+        _arguments:
+          competition_slug: competition
+          season_slug: season
     type: Extbase

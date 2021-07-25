@@ -108,7 +108,7 @@
             $listOfAllowedSportMsDomainModels[] = 'Club';
             $listOfAllowedSportMsDomainModels[] = 'ClubSection';
             $listOfAllowedSportMsDomainModels[] = 'Competition';
-            $listOfAllowedSportMsDomainModels[] = 'Competition';
+            $listOfAllowedSportMsDomainModels[] = 'CompetitionSeason';
             $listOfAllowedSportMsDomainModels[] = 'CompetitionSeasonGameday';
             $listOfAllowedSportMsDomainModels[] = 'Game';
             $listOfAllowedSportMsDomainModels[] = 'Person';
@@ -238,7 +238,7 @@
         {
             $listofControllersAndTheirActions = [];
             $listofControllersAndTheirActions['Club'] = ['list', 'sections'];
-            $listofControllersAndTheirActions['Competition'] = ['list'];
+            $listofControllersAndTheirActions['Competition'] = ['list, seasonGames'];
             $listofControllersAndTheirActions['Competition'] = ['clubs', 'games', 'teams'];
             $listofControllersAndTheirActions['Game'] = ['history', 'index', 'list', 'report'];
             $listofControllersAndTheirActions['Person'] = [

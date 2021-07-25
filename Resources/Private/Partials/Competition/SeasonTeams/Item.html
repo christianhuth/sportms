@@ -10,8 +10,8 @@
 		<f:count>{teamSeason.teamSeasonSquadMembers}</f:count>
 	</td>
 	<td class="tx-sportms-table-center">
-		<f:render partial="ViewHelper/LinkAction/TeamSeason/GamesByDate"
-				  arguments="{teamSeason: teamSeason}"/>
+		<f:render partial="ViewHelper/LinkAction/Team/SeasonGamesByDate"
+				  arguments="{season: teamSeason.season, team: teamSeason.team}"/>
 	</td>
 </tr>
 

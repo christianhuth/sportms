@@ -207,21 +207,6 @@
         }
         
         /**
-         * @param Team $team
-         * @param string $actionLabel
-         * @param Season|null $season
-         */
-        private function pagetitleForTeam(Team $team, string $actionLabel, Season $season = null)
-        {
-            $teamLabel = $team->getLabel();
-            if ($season) {
-                $seasonLabel = $season->getLabel();
-                $teamLabel .= " " . $seasonLabel;
-            }
-            $this->pagetitle($teamLabel, $actionLabel);
-        }
-        
-        /**
          * @param Team|null $team
          */
         public function historyRecordGamesAction(Team $team = null)
@@ -361,6 +346,21 @@
                 LocalizationUtility::translate('tx_sportms_action.team.list', "sportms")
             );
         }
+    
+        /**
+         * @param Team $team
+         * @param string $actionLabel
+         * @param Season|null $season
+         */
+        private function pagetitleForTeam(Team $team, string $actionLabel, Season $season = null)
+        {
+            $teamLabel = $team->getLabel();
+            if ($season) {
+                $seasonLabel = $season->getLabel();
+                $teamLabel .= " " . $seasonLabel;
+            }
+            $this->pagetitle($teamLabel, $actionLabel);
+        }
         
         /**
          * @param Team|null $team
@@ -368,6 +368,8 @@
          */
         public function seasonGamesByCompetitionAction(Team $team = null, Season $season = null)
         {
+            \TYPO3\CMS\Core\Utility\DebugUtility::debug($team, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
+    
             $team = $this->assignTeamToView($team);
             $season = $this->assignSeasonToView($team, $season);
             $teamSeason = $this->assignTeamSeasonToView($team, $season);
@@ -402,6 +404,7 @@
             ];
             $games = $this->gameRepository->findGamesByTeamSeason($teamSeason, $orderings);
             $this->view->assign('games', $games);
+            /* FRONTEND FILTERS */
             $this->assignSeasonSelectboxValuesToView($team);
             $this->pagetitleForTeam(
                 $team,
@@ -422,6 +425,15 @@
                 $season
             );
         }
+    
+        private function assignTeamToView(Team $team = null): Team
+        {
+            if ($team === null) {
+                $team = $this->determineTeam();
+            }
+            $this->view->assign('team', $team);
+            return $team;
+        }
         
         /**
          * @param Team|null $team
@@ -441,15 +453,6 @@
             }
             $this->view->assign('season', $season);
             return $season;
-        }
-        
-        private function assignTeamToView(Team $team = null): Team
-        {
-            if ($team === null) {
-                $team = $this->determineTeam();
-            }
-            $this->view->assign('team', $team);
-            return $team;
         }
     
         /**

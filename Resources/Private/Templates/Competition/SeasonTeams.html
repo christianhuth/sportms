@@ -11,7 +11,7 @@
 				partial="Competition/Navigation"/>
 		<f:render
 				arguments="{competition: competitionSeason.competition, competitionSeason: competitionSeason, competitionSeasons: competitionSeasons, settings: settings}"
-				partial="CompetitionSeason/Teams/Filter"/>
+				partial="Competition/SeasonTeams/Filter"/>
 		
 		<div class="tx-sportms-competitionseason-teams">
 			<f:if condition="{competitionSeason.competitionSeasonTeams}">
@@ -21,7 +21,7 @@
 						<f:for as="teamSeason"
 							   each="{competitionSeason.competitionSeasonTeams}">
 							<f:render arguments="{teamSeason: teamSeason, settings: settings}"
-									  partial="CompetitionSeason/Teams/Item"/>
+									  partial="Competition/SeasonTeams/Item"/>
 						</f:for>
 						<f:render section="tableend"/>
 					</div>

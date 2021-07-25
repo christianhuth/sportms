@@ -2,6 +2,11 @@
     
     namespace Balumedien\Sportms\Controller;
     
+    use Balumedien\Sportms\Domain\Model\Competition;
+    use Balumedien\Sportms\Domain\Model\CompetitionSeason;
+    use Balumedien\Sportms\Domain\Model\CompetitionSeasonGameday;
+    use Balumedien\Sportms\Domain\Model\Season;
+    
     /**
      * CompetitionController
      */
@@ -13,6 +18,12 @@
          * @TYPO3\CMS\Extbase\Annotation\Inject
          */
         protected $competitionRepository;
+        
+        /**
+         * @var \Balumedien\Sportms\Domain\Repository\CompetitionSeasonRepository
+         * @TYPO3\CMS\Extbase\Annotation\Inject
+         */
+        protected $competitionSeasonRepository;
         
         /**
          * @var \Balumedien\Sportms\Domain\Repository\GameRepository
@@ -63,6 +74,145 @@
                 "Wettbewerbe",
                 "Liste"
             );
+        }
+        
+        /**
+         * @param Competition $competition
+         * @param string $actionLabel
+         * @param Season|null $season
+         */
+        private function pagetitleForCompetition(Competition $competition, string $actionLabel, Season $season = null)
+        {
+            $competitionLabel = $competition->getLabel();
+            if ($season) {
+                $seasonLabel = $season->getLabel();
+                $competitionLabel .= " " . $seasonLabel;
+            }
+            $this->pagetitle($competitionLabel, $actionLabel);
+        }
+    
+        /**
+         * @param Competition|null $competition
+         * @param Season|null $season
+         */
+        protected function seasonClubsAction(Competition $competition = null, Season $season = null)
+        {
+            $competition = $this->assignCompetitionToView($competition);
+            $season = $this->assignSeasonToView($competition, $season);
+            $competitionSeason = $this->assignCompetitionSeasonToView($competition, $season);
+            /* FRONTEND FILTERS */
+            $this->assignSeasonSelectboxValuesToView($competition);
+            # TODO: USE LOCALIZATION
+            $this->pagetitleForCompetition(
+                $competition,
+                "Vereine",
+                $season
+            );
+        }
+        
+        /**
+         * @param Competition|null $competition
+         * @param Season|null $season
+         * @param CompetitionSeasonGameday|null $competitionSeasonGameday
+         */
+        public function seasonGamesAction(
+            Competition $competition = null,
+            Season $season = null,
+            CompetitionSeasonGameday $competitionSeasonGameday = null
+        ): void {
+            \TYPO3\CMS\Core\Utility\DebugUtility::debug($competition, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
+            $competition = $this->assignCompetitionToView($competition);
+            $season = $this->assignSeasonToView($competition, $season);
+            $competitionSeason = $this->assignCompetitionSeasonToView($competition, $season);
+            $competitionSeasons = $this->competitionSeasonRepository->findByCompetition($competitionSeason->getCompetition());
+            $this->view->assign('competitionSeasons', $competitionSeasons);
+            if ($competitionSeasonGameday === null) {
+                if ($this->settings['competitionSeasonGameday']['selected'] === null) {
+                    $competitionSeasonGameday = $competitionSeason->getCompetitionSeasonGamedays()[0];
+                } else {
+                    $competitionSeasonGamedayUid = $this->settings['competitionSeasonGameday']['selected'];
+                    $competitionSeasonGameday = $this->competitionSeasonGamedayRepository->findByUid($competitionSeasonGamedayUid);
+                }
+            }
+            $this->view->assign('competitionSeasonGameday', $competitionSeasonGameday);
+            $competitionSeasonGamedays = $this->competitionSeasonGamedayRepository->findByCompetitionSeason($competitionSeason);
+            $this->view->assign('competitionSeasonGamedays', $competitionSeasonGamedays);
+            $games = $this->gameRepository->findGamesbyCompetitionSeason($competitionSeason, $competitionSeasonGameday);
+            $this->view->assign('games', $games);
+            /* FRONTEND FILTERS */
+            $this->assignSeasonSelectboxValuesToView($competition);
+            # TODO: USE LOCALISATION
+            $this->pagetitleForCompetition(
+                $competitionSeason,
+                $competitionSeasonGameday->getLabel()
+            );
+        }
+        
+        /**
+         * @param Competition|null $competition
+         * @param Season|null $season
+         */
+        protected function seasonTeamsAction(Competition $competition = null, Season $season = null): void
+        {
+            $competition = $this->assignCompetitionToView($competition);
+            $season = $this->assignSeasonToView($competition, $season);
+            $competitionSeason = $this->assignCompetitionSeasonToView($competition, $season);
+            # TODO: USE LOCALIZATION
+            $this->assignSeasonSelectboxValuesToView($competition);
+            $this->pagetitleForCompetition(
+                $competition,
+                "Mannschaften",
+                $season
+            );
+        }
+        
+        private function assignCompetitionToView(Competition $competition = null): Competition
+        {
+            if ($competition === null) {
+                $competition = $this->determineCompetition();
+            }
+            $this->view->assign('competition', $competition);
+            return $competition;
+        }
+        
+        /**
+         * @param Competition|null $competition
+         * @param Season|null $season
+         */
+        private function assignSeasonToView(Competition $competition = null, Season $season = null): Season
+        {
+            if ($season === null) {
+                $season = $this->determineSeason();
+            }
+            if ($season === null) {
+                if ($competition->getCompetitionSeasons()) {
+                    $season = $competition->getCompetitionSeasons()[0]->getSeason();
+                } else {
+                    die();
+                }
+            }
+            $this->view->assign('season', $season);
+            return $season;
+        }
+        
+        /**
+         * @param Competition $competition
+         * @param Season $season
+         */
+        private function assignCompetitionSeasonToView(Competition $competition, Season $season): CompetitionSeason
+        {
+            $competitionSeason = $this->competitionSeasonRepository->findByCompetitionAndSeason($competition, $season);
+            $this->view->assign('competitionSeason', $competitionSeason);
+            return $competitionSeason;
+        }
+        
+        /**
+         * @param Competition $competition
+         */
+        private function assignSeasonSelectboxValuesToView(Competition $competition)
+        {
+            $seasonSelectboxValues = $this->competitionSeasonRepository->findbyCompetition($competition);
+            $this->view->assign('seasonSelectboxValues', $seasonSelectboxValues);
         }
         
     }

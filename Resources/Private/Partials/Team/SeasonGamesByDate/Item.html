@@ -1,14 +1,13 @@
 <html data-namespace-typo3-fluid="true"
-	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-	  xmlns:sportms="Balumedien\Sportms\ViewHelpers">
+	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <tr>
 	<td class="tx-sportms-table-center">
-		<f:render partial="ViewHelper/LinkAction/CompetitionSeason/Games"
+		<f:render partial="ViewHelper/LinkAction/Competition/SeasonGames"
 				  arguments="{competitionSeason: game.competitionSeason, competitionSeasonGameday: game.gameday, linkLabel: 'competitionAbbreviation'}"/>
 	</td>
 	<td class="tx-sportms-table-center">
-		<f:render partial="ViewHelper/LinkAction/CompetitionSeason/Games"
+		<f:render partial="ViewHelper/LinkAction/Competition/SeasonGames"
 				  arguments="{competitionSeason: game.competitionSeason, competitionSeasonGameday: game.gameday, linkLabel: 'gamedayLabel'}"/>
 	</td>
 	<td class="tx-sportms-table-center">

@@ -12,13 +12,13 @@
             <trans-unit id="tx_sportms_action.competition.list">
                 <source>Wettbewerbe</source>
             </trans-unit>
-            <trans-unit id="tx_sportms_action.competitionseason.clubs">
+            <trans-unit id="tx_sportms_action.competition.seasonclubs">
                 <source>Vereine</source>
             </trans-unit>
-            <trans-unit id="tx_sportms_action.competitionseason.games">
+            <trans-unit id="tx_sportms_action.competition.seasongames">
                 <source>Spielplan</source>
             </trans-unit>
-            <trans-unit id="tx_sportms_action.competitionseason.teams">
+            <trans-unit id="tx_sportms_action.competition.seasonteams">
                 <source>Mannschaften</source>
             </trans-unit>
             <trans-unit id="tx_sportms_action.game.history">

@@ -122,11 +122,19 @@ routeEnhancers:
         _arguments:
           team_slug: team
           season_slug: season
+      - routePath: '{team_slug}/{localizedAction_seasonGamesByCompetition}'
+        _controller: 'Team::seasonGamesByCompetition'
+        _arguments:
+          team_slug: team
       - routePath: '{team_slug}/{localizedAction_seasonGamesByCompetition}/{localizedSeason}/{season_slug}'
         _controller: 'Team::seasonGamesByCompetition'
         _arguments:
           team_slug: team
           season_slug: season
+      - routePath: '{team_slug}/{localizedAction_seasonGamesByDate}'
+        _controller: 'Team::seasonGamesByDate'
+        _arguments:
+          team_slug: team
       - routePath: '{team_slug}/{localizedAction_seasonGamesByDate}/{localizedSeason}/{season_slug}'
         _controller: 'Team::seasonGamesByDate'
         _arguments:

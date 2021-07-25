@@ -2,8 +2,12 @@
     
     namespace Balumedien\Sportms\Controller;
     
+    use Balumedien\Sportms\Domain\Model\Competition;
     use Balumedien\Sportms\Domain\Model\CompetitionSeason;
     use Balumedien\Sportms\Domain\Model\CompetitionSeasonGameday;
+    use Balumedien\Sportms\Domain\Model\Person;
+    use Balumedien\Sportms\Domain\Model\Season;
+    use Balumedien\Sportms\Domain\Model\Team;
     use Balumedien\Sportms\Domain\Model\TeamSeason;
     use Balumedien\Sportms\PageTitle\PageTitleProvider;
     use TYPO3\CMS\Core\Utility\GeneralUtility;
@@ -146,25 +150,21 @@
                 $this->settings['sportPosition']['selected'] = '';
             }
         }
-        
+    
         /**
-         * @return CompetitionSeason
+         * @return Competition
          */
-        protected function determineCompetitionSeason(): CompetitionSeason
+        protected function determineCompetition(): Competition
         {
-            if ($this->settings['competitionseason']['uid']) {
-                $competitionSeasonUid = $this->settings['competitionseason']['uid'];
-                return $this->competitionSeasonRepository->findByUid($competitionSeasonUid);
+            if ($this->settings['competition']['uid']) {
+                $competitionUid = $this->settings['competition']['uid'];
+                return $this->competitionRepository->findByUid($competitionUid);
             } else {
-                if ($this->request->hasArgument('competitionSeason')) {
-                    $competitionSeason = $this->request->getArgument('competitionSeason');
-                    if ($competitionSeason instanceof CompetitionSeason) {
-                        return $competitionSeason;
-                    } else {
-                        return $this->competitionSeasonRepository->findByUid($competitionSeason);
-                    }
+                if ($this->request->hasArgument('competition')) {
+                    \TYPO3\CMS\Core\Utility\DebugUtility::debug($this->request->getArgument('competition'), 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
+                    return $this->request->getArgument('competition');
                 } else {
-                    // TODO: DIE IF NO COMPETITIONSEASON IS SELECTED VIA FLEXFORM AND GIVEN VIA REQUEST
+                    // TODO: DIE IF NO TEAM IS SELECTED VIA FLEXFORM AND GIVEN VIA REQUEST
                 }
             }
         }
@@ -192,9 +192,9 @@
         }
         
         /**
-         * @return \Balumedien\Sportms\Domain\Model\Person
+         * @return Person
          */
-        protected function determinePerson(): \Balumedien\Sportms\Domain\Model\Person
+        protected function determinePerson(): Person
         {
             # check if a person is defined via flexform
             if ($this->settings['person']['uid']) {
@@ -210,9 +210,9 @@
         }
         
         /**
-         * @return \Balumedien\Sportms\Domain\Model\Season|null
+         * @return Season|null
          */
-        protected function determineSeason(): ?\Balumedien\Sportms\Domain\Model\Season
+        protected function determineSeason(): ?Season
         {
             if ($this->settings['season']['uid']) {
                 $seasonUid = $this->settings['season']['uid'];
@@ -229,15 +229,16 @@
         }
         
         /**
-         * @return \Balumedien\Sportms\Domain\Model\Team
+         * @return Team
          */
-        protected function determineTeam(): \Balumedien\Sportms\Domain\Model\Team
+        protected function determineTeam(): Team
         {
             if ($this->settings['team']['uid']) {
                 $teamUid = $this->settings['team']['uid'];
                 return $this->teamRepository->findByUid($teamUid);
             } else {
                 if ($this->request->hasArgument('team')) {
+                    \TYPO3\CMS\Core\Utility\DebugUtility::debug($this->request->getArgument('team'), 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
                     return $this->request->getArgument('team');
                 } else {
                     // TODO: DIE IF NO TEAM IS SELECTED VIA FLEXFORM AND GIVEN VIA REQUEST
@@ -246,9 +247,9 @@
         }
         
         /**
-         * @return \Balumedien\Sportms\Domain\Model\TeamSeason
+         * @return TeamSeason
          */
-        protected function determineTeamSeason(): \Balumedien\Sportms\Domain\Model\TeamSeason
+        protected function determineTeamSeason(): TeamSeason
         {
             if ($this->settings['teamseason']['uid']) {
                 $teamSeasonUid = $this->settings['teamseason']['uid'];
