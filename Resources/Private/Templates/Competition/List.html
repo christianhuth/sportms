@@ -5,13 +5,14 @@
 
 <f:section name="default">
 	<div class="tx-sportms-competition-list">
+		
 		<f:render arguments="{_all}" partial="Competition/List/Filter"/>
+		
 		<f:if condition="{competitions}">
 			<f:then>
 				<f:widget.paginate objects="{competitions}"
 								   as="paginatedCompetitions"
 								   configuration="{itemsPerPage: settings.competition.list.pagination.itemsPerPage, insertAbove: settings.competition.list.pagination.insertAbove, insertBelow: settings.competition.list.pagination.insertBelow, maximumNumberOfLinks: settings.competition.list.pagination.maximumNumberOfLinks}">
-					
 					<div class="table-responsive">
 						<table class="table table-bordered table-condensed table-hover table-striped tx-sportms-table">
 							<f:render section="tablehead"/>

@@ -26,12 +26,13 @@
         'types' => [
             '1' => [
                 'showitem' => ' --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.tab.general,
-                                    label,
+                                    --palette--;;label_main,
                                 --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.tab.visibility,
                                     --palette--;LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.palette.visibility_general;visibility_general',
             ],
         ],
         'palettes' => [
+            'label_main' => ['showitem' => 'label, is_mainreferee_job'],
             'visibility_general' => ['showitem' => 'hidden, starttime, endtime'],
         ],
         'columns' => [
@@ -97,6 +98,20 @@
                     'type' => 'input',
                     'size' => 30,
                     'eval' => 'trim, required',
+                ],
+            ],
+            'is_mainreferee_job' => [
+                'exclude' => true,
+                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_refereejob.is_mainreferee_job',
+                'config' => [
+                    'items' => [
+                        [
+                            0 => '',
+                            1 => '',
+                        ],
+                    ],
+                    'renderType' => 'checkboxToggle',
+                    'type' => 'check',
                 ],
             ],
         

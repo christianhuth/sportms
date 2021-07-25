@@ -117,7 +117,9 @@ plugin.tx_sportms {
 		}
 
 		team {
-			historyOfficials.pid = {$plugin.tx_sportms.settings.team.historyOfficials.pid}
+			historyOfficials {
+				pid = {$plugin.tx_sportms.settings.team.historyOfficials.pid}
+			}
 			historyRecordGames {
 				limit = {$plugin.tx_sportms.settings.team.historyRecordGames.limit}
 				pid = {$plugin.tx_sportms.settings.team.historyRecordGames.pid}
@@ -135,16 +137,15 @@ plugin.tx_sportms {
 				}
 				pid = {$plugin.tx_sportms.settings.team.list.pid}
 			}
+			seasonGamesByCompetition {
+				pid = {$plugin.tx_sportms.settings.team.seasonGamesByCompetition.pid}
+			}
+			seasonGamesByDate {
+				pid = {$plugin.tx_sportms.settings.team.seasonGamesByDate.pid}
+			}
 			seasonIndex {
 				pid = {$plugin.tx_sportms.settings.team.seasonIndex.pid}
 			}
-		}
-
-		teamSeason {
-			gamesByCompetition.pid = {$plugin.tx_sportms.settings.teamSeason.gamesByCompetition.pid}
-			gamesByDate.pid = {$plugin.tx_sportms.settings.teamSeason.gamesByDate.pid}
-			goals.pid = {$plugin.tx_sportms.settings.teamSeason.goals.pid}
-			index.pid = {$plugin.tx_sportms.settings.teamSeason.index.pid}
 		}
 
 	}

@@ -5,18 +5,18 @@
 <tr>
 	<td class="tx-sportms-table-center">{competition.sport.label}</td>
 	<td>
-		<f:render partial="ViewHelper/LinkAction/CompetitionSeason/Games"
-				  arguments="{competitionSeason: competition.competitionSeasons.0, linkLabel: 'competitionLabel'}"/>
+		<f:render partial="ViewHelper/LinkAction/Competition/SeasonGames"
+				  arguments="{competition: competition, linkLabel: 'competitionLabel'}"/>
 	</td>
 	<td class="tx-sportms-table-center">{competition.sportAgeLevel.label}</td>
 	<td class="tx-sportms-table-center">{competition.competitionType.label}</td>
 	<td class="tx-sportms-table-center">
-		<f:render partial="ViewHelper/LinkAction/CompetitionSeason/Games"
-				  arguments="{competitionSeason: competition.competitionSeasons.0}"/>
+		<f:render partial="ViewHelper/LinkAction/Competition/SeasonGames"
+				  arguments="{competition: competition}"/>
 	</td>
 	<td class="tx-sportms-table-center">
-		<f:render partial="ViewHelper/LinkAction/CompetitionSeason/Teams"
-				  arguments="{competitionSeason: competition.competitionSeasons.0}"/>
+		<f:render partial="ViewHelper/LinkAction/Competition/SeasonTeams"
+				  arguments="{competition: competition}"/>
 	</td>
 </tr>
 

@@ -3,13 +3,15 @@
 
 <f:if condition="{settings.season.selectbox.enabled}">
 	<div class="tx-sportms-filter">
-		<f:form action="gamesByDate" arguments="{teamSeason: teamSeason}"
-				class="form-horizontal" controller="TeamSeason"
+		<f:form action="gamesByDate"
+				arguments="{season: season,  team: team}"
+				class="form-horizontal" controller="Team"
 				extensionName="Sportms" method="POST"
-				pageUid="{settings.teamSeason.gamesByDate.pid}"
+				pageUid="{settings.team.seasonGamesByDate.pid}"
 				pluginName="Team">
+			<f:form.hidden name="team" value="{team}"/>
 			<f:render
-					arguments="{options: teamSeasons,             settings: settings,     value: teamSeason}"
+					arguments="{options: seasonSelectboxValues}"
 					partial="Form/Select/TeamSeason"/>
 			<f:render partial="Form/Submit"/>
 		</f:form>

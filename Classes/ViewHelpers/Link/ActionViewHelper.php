@@ -108,7 +108,7 @@
             $listOfAllowedSportMsDomainModels[] = 'Club';
             $listOfAllowedSportMsDomainModels[] = 'ClubSection';
             $listOfAllowedSportMsDomainModels[] = 'Competition';
-            $listOfAllowedSportMsDomainModels[] = 'CompetitionSeason';
+            $listOfAllowedSportMsDomainModels[] = 'Competition';
             $listOfAllowedSportMsDomainModels[] = 'CompetitionSeasonGameday';
             $listOfAllowedSportMsDomainModels[] = 'Game';
             $listOfAllowedSportMsDomainModels[] = 'Person';
@@ -160,8 +160,8 @@
                 $pluginName = "Club";
             }
             
-            if ($controller === "CompetitionSeason" || $controller === "CompetitionSeason") {
-                $pluginName = "CompetitionSeason";
+            if ($controller === "Competition" || $controller === "Competition") {
+                $pluginName = "Competition";
             }
             
             if ($controller === "Game") {
@@ -238,8 +238,8 @@
         {
             $listofControllersAndTheirActions = [];
             $listofControllersAndTheirActions['Club'] = ['list', 'sections'];
-            $listofControllersAndTheirActions['CompetitionSeason'] = ['list'];
-            $listofControllersAndTheirActions['CompetitionSeason'] = ['clubs', 'games', 'teams'];
+            $listofControllersAndTheirActions['Competition'] = ['list'];
+            $listofControllersAndTheirActions['Competition'] = ['clubs', 'games', 'teams'];
             $listofControllersAndTheirActions['Game'] = ['history', 'index', 'list', 'report'];
             $listofControllersAndTheirActions['Person'] = [
                 'list',
@@ -307,7 +307,7 @@
         private function checkIfDetailLink(string $controller)
         {
             if ($controller === "Club" ||
-                $controller === "CompetitionSeason" ||
+                $controller === "Competition" ||
                 $controller === "Game" ||
                 $controller === "Person" ||
                 $controller === "TeamSeason") {
@@ -316,10 +316,10 @@
                 if (!$detailLinkForObject) {
                     return $this->renderSpan();
                 }
-                if ($controller === "CompetitionSeason" ||
+                if ($controller === "Competition" ||
                     $controller === "TeamSeason") {
                     switch ($controller) {
-                        case "CompetitionSeason":
+                        case "Competition":
                             $parentObject = $object->getCompetition();
                             break;
                         case "TeamSeason":

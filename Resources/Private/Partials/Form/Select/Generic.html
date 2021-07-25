@@ -9,7 +9,7 @@
 	<div class="col-xs-12 col-sm-9">
 		<div class="input-group">
 			<span class="input-group-addon">
-				<i class="sportmsicon sportmsicon-{model}"></i>
+				<i class="sportmsicon sportmsicon-{f:format.case(mode: 'lower', value: model)}"></i>
 			</span>
 			<f:form.select class="form-control"
 						   name="{model}"

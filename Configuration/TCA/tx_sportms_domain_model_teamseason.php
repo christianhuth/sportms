@@ -47,7 +47,7 @@
         ],
         'palettes' => [
             'visibility_general' => ['showitem' => 'hidden, starttime, endtime'],
-            'visibility_detail' => ['showitem' => 'detail_link, slug'],
+            'visibility_detail' => ['showitem' => 'detail_link'],
         ],
         'columns' => [
             
@@ -282,25 +282,6 @@
                     'default' => false,
                     'renderType' => 'checkboxToggle',
                     'type' => 'check',
-                ],
-            ],
-            
-            'slug' => [
-                'exclude' => true,
-                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.slug',
-                'config' => [
-                    'default' => '',
-                    'fallbackCharacter' => '-',
-                    'generatorOptions' => [
-                        'fields' => ['uid'],
-                        'fieldSeparator' => '_',
-                        'prefixParentPageSlug' => false,
-                        'replacements' => [
-                            '/' => '-',
-                        ],
-                    ],
-                    'prependSlash' => false,
-                    'type' => 'slug',
                 ],
             ],
         

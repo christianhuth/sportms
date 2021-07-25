@@ -4,14 +4,16 @@
 <f:layout name="default"/>
 
 <f:section name="default">
-	<div id="tx-sportms-teamseason-detail">
+	<div class="tx-sportms-team-detail">
 		
-		<f:render arguments="{team: teamSeason.team, teamSeason: teamSeason}"
-				  partial="Team/Navigation"/>
-		<f:render arguments="{settings: settings, teamSeason: teamSeason, teamSeasons: teamSeasons}"
-				  partial="TeamSeason/GamesByDate/Filter"/>
+		<f:render
+				arguments="{season: season, team: team, teamSeason: teamSeason}"
+				partial="Team/Navigation"/>
+		<f:render
+				arguments="{season: season, seasonSelectboxValues: seasonSelectboxValues, team: team}"
+				partial="Team/SeasonGamesByDate/Filter"/>
 		
-		<div class="tx-sportms-teamseason-gamesbydate">
+		<div class="tx-sportms-team-seasongamesbydate">
 			<div class="table-responsive">
 				<table class="table table-bordered table-condensed table-hover table-striped tx-sportms-table">
 					<thead>
@@ -30,8 +32,9 @@
 					<f:if condition="{games}">
 						<f:then>
 							<f:for as="game" each="{games}">
-								<f:render arguments="{game: game, teamSeason: teamSeason}"
-										  partial="TeamSeason/GamesByDate/Item"/>
+								<f:render
+										arguments="{game: game, teamSeason: teamSeason}"
+										partial="Team/SeasonGamesByDate/Item"/>
 							</f:for>
 						</f:then>
 						<f:else>

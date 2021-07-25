@@ -4,6 +4,9 @@
 <f:if condition="(({settings.competition.selected} && {settings.season.selected}) ||
                  ({competitionSeason})) &&
                 {settings.competitionSeasonGameday.selectbox.enabled}">
+	<f:render partial="Form/Select/Generic"
+			  arguments="{model: 'competitionSeasonGameday', optionLabelField: 'label', options: options, optionValueField: 'uid', prependOptionValue: 0, sortByOptionLabel: TRUE, value: settings.competitionSeasonGameday.selectbox.selected}"/>
+	
 	<div class="form-group form-group-sm">
 		<label class="hidden-xs col-sm-3 control-label">Spieltag:</label>
 		<div class="col-xs-12 col-sm-9">

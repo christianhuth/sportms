@@ -110,5 +110,16 @@
             $query->matching($query->logicalAnd($constraints));
             return $query->execute()[0];
         }
+    
+        /**
+         * @param Team $team
+         */
+        public function findByTeam(Team $team) {
+            $query = $this->createQuery();
+            $constraints = [];
+            $constraints[] = $query->equals('team', $team);
+            $query->matching($query->logicalAnd($constraints));
+            return $query->execute();
+        }
         
     }

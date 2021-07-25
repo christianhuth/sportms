@@ -5,31 +5,8 @@
 					{settings.club.selectbox.enabled} ||
 					{settings.team.selectbox.enabled} ||
 					{settings.season.selectbox.enabled}">
-	<div class="form-group form-group-sm">
-		<label class="hidden-xs col-sm-3 control-label">Team:</label>
-		<div class="col-xs-12 col-sm-9">
-			<div class="input-group">
-				<span class="input-group-addon"><i
-						class="sportmsicon sportmsicon-team"></i></span>
-				<f:form.select class="form-control" name="selectTeam"
-							   optionLabelField="name" optionValueField="uid"
-							   prependOptionLabel="Alle Teams"
-							   prependOptionValue="" value="{value}">
-					<f:groupedFor as="teamsBySport" each="{options}"
-								  groupBy="sport" groupKey="sport">
-						<f:form.select.optgroup class="form-control"
-												label="{sport.label}"
-												title="{sport.label}"/>
-						<f:for as="teamBySport" each="{teamsBySport}">
-							<f:form.select.option value="{teamBySport.uid}">
-								{teamBySport.label}
-							</f:form.select.option>
-						</f:for>
-					</f:groupedFor>
-				</f:form.select>
-			</div>
-		</div>
-	</div>
+	<f:render partial="Form/Select/Generic"
+			  arguments="{model: 'team', optionLabelField: 'label', options: options, optionValueField: 'uid', prependOptionValue: 0, sortByOptionLabel: TRUE, value: settings.team.selectbox.selected}"/>
 </f:if>
 
 </html>

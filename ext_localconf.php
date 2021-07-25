@@ -14,7 +14,7 @@
 	$pluginNamesAndTheirActions[0]['cacheableActions'] = ['Club' => 'list, sections'];
 	$pluginNamesAndTheirActions[0]['nonCacheableActions'] = [];
 	$pluginNamesAndTheirActions[1]['name'] = 'Competition';
-	$pluginNamesAndTheirActions[1]['cacheableActions'] = ['Competition' => 'list', 'CompetitionSeason' => 'clubs, games, teams'];
+	$pluginNamesAndTheirActions[1]['cacheableActions'] = ['Competition' => 'list, seasonClubs, seasonGames, seasonTeams'];
 	$pluginNamesAndTheirActions[1]['nonCacheableActions'] = [];
 	$pluginNamesAndTheirActions[2]['name'] = 'Game';
 	$pluginNamesAndTheirActions[2]['cacheableActions'] = ['Game' => 'list, history, index, report'];
@@ -23,7 +23,7 @@
 	$pluginNamesAndTheirActions[3]['cacheableActions'] = ['Person' => 'list'];
 	$pluginNamesAndTheirActions[3]['nonCacheableActions'] = [];
 	$pluginNamesAndTheirActions[4]['name'] = 'Team';
-	$pluginNamesAndTheirActions[4]['cacheableActions'] = ['Team' => 'list, historyOfficials, historyRecordGames, historyRecordPlayers, seasonIndex', 'TeamSeason' => 'gamesByCompetition, gamesByDate, index'];
+	$pluginNamesAndTheirActions[4]['cacheableActions'] = ['Team' => 'list, historyOfficials, historyRecordGames, historyRecordPlayers, seasonGamesByCompetition, seasonGamesByDate, seasonIndex'];
 	$pluginNamesAndTheirActions[4]['nonCacheableActions'] = [];
     $pluginNamesAndTheirActions[5]['name'] = 'Season';
     $pluginNamesAndTheirActions[5]['cacheableActions'] = ['Season' => 'list, teams'];

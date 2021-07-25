@@ -3,15 +3,19 @@
 
 <f:if condition="{settings.season.selectbox.enabled}">
 	<div class="form-group form-group-sm">
-		<label class="hidden-xs col-sm-3 control-label">Saison:</label>
+		<label class="hidden-xs col-sm-3 control-label">
+			<f:translate key="tx_sportms_domain_model_season"/>:
+		</label>
 		<div class="col-xs-12 col-sm-9">
 			<div class="input-group">
-				<span class="input-group-addon"><i
-						class="sportmsicon sportmsicon-season"></i></span>
-				<f:form.select class="form-control" name="teamSeason"
-							   required="required" value="{value}">
+				<span class="input-group-addon">
+					<i class="sportmsicon sportmsicon-season"></i>
+				</span>
+				<f:form.select class="form-control" name="season"
+							   required="required"
+							   value="{settings.season.selectbox.selected}">
 					<f:for as="option" each="{options}">
-						<f:form.select.option value="{option.uid}">
+						<f:form.select.option value="{option.season.uid}">
 							{option.season.label}
 						</f:form.select.option>
 					</f:for>

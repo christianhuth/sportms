@@ -68,20 +68,20 @@ routeEnhancers:
           competitiontype_slug: competitionType
           page: '@widget_0/currentPage'
       - routePath: '/{competitionseason_slug}/{localizedAction_clubs}'
-        _controller: 'CompetitionSeason::clubs'
+        _controller: 'Competition::clubs'
         _arguments:
           competitionseason_slug: competitionSeason
       - routePath: '/{competitionseason_slug}/{localizedAction_games}'
-        _controller: 'CompetitionSeason::games'
+        _controller: 'Competition::games'
         _arguments:
           competitionseason_slug: competitionSeason
       - routePath: '/{competitionseason_slug}/spieltag/{competitionseasongameday_slug}'
-        _controller: 'CompetitionSeason::games'
+        _controller: 'Competition::games'
         _arguments:
           competitionseason_slug: competitionSeason
           competitionseasongameday_slug: competitionSeasonGameday
       - routePath: '/{competitionseason_slug}/{localizedAction_teams}'
-        _controller: 'CompetitionSeason::teams'
+        _controller: 'Competition::teams'
         _arguments:
           competitionseason_slug: competitionSeason
     type: Extbase

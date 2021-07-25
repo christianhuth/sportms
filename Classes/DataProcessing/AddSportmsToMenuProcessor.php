@@ -8,7 +8,7 @@
     use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
     use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
     use TYPO3\CMS\Frontend\ContentObject\DataProcessorInterface;
-
+    
     class AddSportmsToMenuProcessor implements DataProcessorInterface
     {
         
@@ -55,6 +55,39 @@
                                     'sportms'),
                                 $processedData[$menu]
                             );
+                        }
+                    }
+                }
+            }
+            
+            // Configuration for "competition" argument
+            if (GeneralUtility::_GET('tx_sportms_competition')['competition']) {
+                $recordTable = 'tx_sportms_domain_model_competition';
+                $recordUid = (int)GeneralUtility::_GET('tx_sportms_competition')['competition'];
+                $competition = $this->getExtensionRecord($recordTable, $recordUid);
+                if ($competition) {
+                    $menus = GeneralUtility::trimExplode(',', $this->processorConfiguration['addToMenus'], true);
+                    foreach ($menus as $menu) {
+                        if (isset($processedData[$menu])) {
+                            $this->addExtensionRecordToMenu($competition, $processedData[$menu]);
+                            $this->addActionToMenu(
+                                LocalizationUtility::translate('tx_sportms_action.competition.' . strtolower(GeneralUtility::_GET('tx_sportms_competition')['action']),
+                                    'sportms'),
+                                $processedData[$menu]
+                            );
+                        }
+                    }
+                    // Configuration for "season" argument
+                    if (GeneralUtility::_GET('tx_sportms_competition')['season']) {
+                        $recordTable = 'tx_sportms_domain_model_season';
+                        $recordUid = (int)GeneralUtility::_GET('tx_sportms_competition')['season'];
+                        $season = $this->getExtensionRecord($recordTable, $recordUid);
+                        if ($season) {
+                            foreach ($menus as $menu) {
+                                if (isset($processedData[$menu])) {
+                                    $this->addExtensionRecordToMenu($season, $processedData[$menu], false);
+                                }
+                            }
                         }
                     }
                 }
@@ -128,36 +161,17 @@
                             );
                         }
                     }
-                }
-            }
-            
-            // Configuration for "teamSeason" argument
-            if (GeneralUtility::_GET('tx_sportms_team')['teamSeason']) {
-                $recordTable = 'tx_sportms_domain_model_teamseason';
-                $recordUid = (int)GeneralUtility::_GET('tx_sportms_team')['teamSeason'];
-                $teamSeason = $this->getExtensionRecord($recordTable, $recordUid);
-                if ($teamSeason) {
-                    $recordTable = 'tx_sportms_domain_model_team';
-                    $recordUid = $teamSeason['team'];
-                    $team = $this->getExtensionRecord($recordTable, $recordUid);
-                    $menus = GeneralUtility::trimExplode(',', $this->processorConfiguration['addToMenus'], true);
-                    foreach ($menus as $menu) {
-                        if (isset($processedData[$menu])) {
-                            $this->addExtensionRecordToMenu($team, $processedData[$menu]);
-                        }
-                    }
-                    $recordTable = 'tx_sportms_domain_model_season';
-                    $recordUid = $teamSeason['season'];
-                    $season = $this->getExtensionRecord($recordTable, $recordUid);
-                    $menus = GeneralUtility::trimExplode(',', $this->processorConfiguration['addToMenus'], true);
-                    foreach ($menus as $menu) {
-                        if (isset($processedData[$menu])) {
-                            $this->addExtensionRecordToMenu($season, $processedData[$menu]);
-                            $this->addActionToMenu(
-                                LocalizationUtility::translate('tx_sportms_action.teamseason.' . strtolower(GeneralUtility::_GET('tx_sportms_team')['action']),
-                                    'sportms'),
-                                $processedData[$menu]
-                            );
+                    // Configuration for "season" argument
+                    if (GeneralUtility::_GET('tx_sportms_team')['season']) {
+                        $recordTable = 'tx_sportms_domain_model_season';
+                        $recordUid = (int)GeneralUtility::_GET('tx_sportms_team')['season'];
+                        $season = $this->getExtensionRecord($recordTable, $recordUid);
+                        if ($season) {
+                            foreach ($menus as $menu) {
+                                if (isset($processedData[$menu])) {
+                                    $this->addExtensionRecordToMenu($season, $processedData[$menu], false);
+                                }
+                            }
                         }
                     }
                 }
@@ -198,12 +212,12 @@
          * @param array $record
          * @param array $menu
          */
-        protected function addExtensionRecordToMenu(array $record, array &$menu)
+        protected function addExtensionRecordToMenu(array $record, array &$menu, $setCurrent = true)
         {
             $element = [];
             $element['data'] = $record;
             $element['title'] = ($record['label']) ?: $record['name'];
-            $this->addElementToMenu($element, $menu);
+            $this->addElementToMenu($element, $menu, $setCurrent);
         }
         
         /**
@@ -212,11 +226,13 @@
          * @param array $element
          * @param array $menu
          */
-        protected function addElementToMenu(array $element, array &$menu)
+        protected function addElementToMenu(array $element, array &$menu, $setCurrent = true)
         {
             # All other elements in the menu shall be treated as currently not active
-            foreach ($menu as &$menuItem) {
-                $menuItem['current'] = 0;
+            if ($setCurrent) {
+                foreach ($menu as &$menuItem) {
+                    $menuItem['current'] = 0;
+                }
             }
             $menu[] = [
                 'data' => $element['data'],

@@ -3,7 +3,7 @@
     namespace Balumedien\Sportms\Domain\Model;
     
     /**
-     * CompetitionSeason
+     * Competition
      */
     class CompetitionSeason extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {

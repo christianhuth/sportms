@@ -1,0 +1,33 @@
+<html data-namespace-typo3-fluid="true"
+	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<f:if condition="!{teamSeason}">
+	<f:variable name="teamSeason" value="{team.teamSeasons.0}"/>
+</f:if>
+<f:if condition="!{season}">
+	<f:variable name="season" value="{teamSeason.season}"/>
+</f:if>
+
+<f:if condition="{team.detailLink} && {teamSeason.detailLink}">
+	<f:then>
+		<f:link.action action="seasonGamesByCompetition"
+					   arguments="{season: season, team: team}"
+					   controller="Team" extensionName="Sportms"
+					   pageUid="{settings.team.seasonGamesByCompetition.pid}"
+					   pluginName="Team">
+			<f:render section="label"/>
+		</f:link.action>
+	</f:then>
+	<f:else>
+		<span>
+			<f:render section="label"/>
+		</span>
+	</f:else>
+</f:if>
+
+<f:section name="label">
+	<f:translate
+			key="tx_sportms_action.team.seasongamesbycompetition"/>
+</f:section>
+
+</html>

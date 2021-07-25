@@ -1,29 +1,22 @@
 <html data-namespace-typo3-fluid="true"
 	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
-<f:if condition="{team}">
+<f:if condition="{team.detailLink}">
 	<f:then>
-		<f:if condition="{team.detailLink} && {team.teamSeasons.0.detailLink}">
-			<f:then>
-				<f:link.action action="historyRecordPlayers"
-							   arguments="{team: team}"
-							   controller="Team" extensionName="Sportms"
-							   pageUid="{settings.team.historyRecordPlayers.pid}"
-							   pluginName="Team">
-					<f:translate
-							key="tx_sportms_action.team.historyrecordplayers"/>
-				</f:link.action>
-			</f:then>
-			<f:else>
-				<span><f:translate
-						key="tx_sportms_action.team.historyrecordplayers"/></span>
-			</f:else>
-		</f:if>
+		<f:link.action action="historyRecordPlayers"
+					   arguments="{team: team}"
+					   controller="Team" extensionName="Sportms"
+					   pageUid="{settings.team.historyRecordPlayers.pid}"
+					   pluginName="Team">
+			<f:translate
+					key="tx_sportms_action.team.historyrecordplayers"/>
+		</f:link.action>
 	</f:then>
 	<f:else>
-		<f:comment>
-			#TODO: ERROR MESSAGE
-		</f:comment>
+		<span>
+			<f:translate
+					key="tx_sportms_action.team.historyrecordplayers"/>
+		</span>
 	</f:else>
 </f:if>
 

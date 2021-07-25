@@ -10,10 +10,10 @@
 				pageUid="{settings.team.historyRecordGames.pid}"
 				pluginName="Team">
 			<f:render
-					arguments="{options: seasonsSelectbox,             settings: settings,     value: settings.season.selected}"
+					arguments="{options: seasonSelectboxValues}"
 					partial="Form/Select/Season"/>
 			<f:render
-					arguments="{options: competitionsSelectbox,        settings: settings,     value: settings.competition.selected}"
+					arguments="{options: competitionSelectboxValues}"
 					partial="Form/Select/Competition"/>
 			<f:render partial="Form/Submit"/>
 		</f:form>

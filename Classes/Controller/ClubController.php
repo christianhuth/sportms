@@ -18,15 +18,6 @@
         protected $clubRepository;
         
         /**
-         * Initializes the controller before invoking an action method.
-         * Use this method to solve tasks which all actions have in common.
-         */
-        public function initializeAction(): void
-        {
-            $this->mapRequestsToSettings();
-        }
-        
-        /**
          * @return void
          * @throws InvalidQueryException
          */

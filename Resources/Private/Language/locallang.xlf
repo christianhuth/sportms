@@ -66,16 +66,13 @@
             <trans-unit id="tx_sportms_action.team.list">
                 <source>Liste</source>
             </trans-unit>
-            <trans-unit id="tx_sportms_action.team.seasonindex">
-                <source>Saisonindex</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_action.teamseason.gamesbycompetition">
+            <trans-unit id="tx_sportms_action.team.seasongamesbycompetition">
                 <source>Spiele nach Wettbewerb</source>
             </trans-unit>
-            <trans-unit id="tx_sportms_action.teamseason.gamesbydate">
+            <trans-unit id="tx_sportms_action.team.seasongamesbydate">
                 <source>Spiele nach Datum</source>
             </trans-unit>
-            <trans-unit id="tx_sportms_action.teamseason.index">
+            <trans-unit id="tx_sportms_action.team.seasonindex">
                 <source>Übersicht</source>
             </trans-unit>
 
@@ -271,7 +268,7 @@
             </trans-unit>
 
 
-        <!-- Domain Model CompetitionSeason -->
+        <!-- Domain Model Competition -->
             <trans-unit id="tx_sportms_domain_model_competition">
                 <source>Wettbewerb</source>
             </trans-unit>
@@ -307,7 +304,7 @@
             </trans-unit>
 
 
-        <!-- Domain Model CompetitionSeason -->
+        <!-- Domain Model Competition -->
             <trans-unit id="tx_sportms_domain_model_competitionseason">
                 <source>Wettbewerbsinstanz</source>
             </trans-unit>
@@ -1368,6 +1365,12 @@
         <!-- Select Fields -->
             <trans-unit id="tx_sportms_select.club.all">
                 <source>Alle Vereine</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_select.competitiontype.all">
+                <source>Alle Wettbewerbsarten</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_select.season.all">
+                <source>Alle Saisons</source>
             </trans-unit>
             <trans-unit id="tx_sportms_select.something">
                 <source>Bitte wählen</source>

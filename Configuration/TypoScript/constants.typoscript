@@ -198,26 +198,22 @@ plugin.tx_sportms {
 		}
 
 		team {
-
 			historyOfficials {
 				# cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of Team->historyOfficials
 				pid =
 			}
-
 			historyRecordGames {
 				# cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default Limit for Team->historyRecordGames
 				limit = 10
 				# cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of Team->historyRecordGames
 				pid =
 			}
-
 			historyRecordPlayers {
 				# cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default Limit for Team->historyRecordPlayers
 				limit = 10
 				# cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of Team->historyRecordPlayers
 				pid =
 			}
-
 			list {
 				pagination {
 					# cat=plugin.tx_sportms/sportmsClub; type=boolean; label=Show pagination above Team->list
@@ -232,22 +228,19 @@ plugin.tx_sportms {
 				# cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of Team->list
 				pid =
 			}
-
+			# cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of Team->seasonGamesByCompetition
+			seasonGamesByCompetition {
+				pid =
+			}
+			# cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of Team->seasonGamesByDate
+			seasonGamesByDate {
+				pid =
+			}
 			seasonIndex {
 				# cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of Team->seasonIndex
 				pid =
 			}
 		}
-
-		teamSeason {
-			# cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of TeamSeason->gamesByCompetition
-			gamesByCompetition.pid =
-			# cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of TeamSeason->gamesByDate
-			gamesByDate.pid =
-			# cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of TeamSeason->index
-			index.pid =
-		}
-
 	}
 
 	view {

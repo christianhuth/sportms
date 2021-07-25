@@ -80,15 +80,6 @@
         protected $competitionSeasonRepository;
         
         /**
-         * Initializes the controller before invoking an action method.
-         * Use this method to solve tasks which all actions have in common.
-         */
-        public function initializeAction()
-        {
-            #$this->mapRequestsToSettings();
-        }
-        
-        /**
          * @return void
          */
         public function listAction()

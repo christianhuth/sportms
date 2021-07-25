@@ -1,24 +1,26 @@
 <html data-namespace-typo3-fluid="true"
 	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
-<f:if condition="{settings.sport.selectbox.enabled} ||
-                 {settings.competitionType.selectbox.enabled}">
+<f:if condition="	{settings.sport.selectbox.enabled} ||
+					{settings.sportAgeGroup.selectbox.enabled} ||
+					{settings.sportAgeLevel.selectbox.enabled} ||
+                 	{settings.competitionType.selectbox.enabled}">
 	<div class="tx-sportms-filter">
 		<f:form action="list" class="form-horizontal" controller="Competition"
 				extensionName="Sportms" method="POST"
 				pageUid="{settings.competition.list.pid}"
 				pluginName="Competition">
 			<f:render
-					arguments="{options: sportsSelectbox,             settings: settings,     value: settings.sport.selected}"
+					arguments="{options: sportSelectboxValues}"
 					partial="Form/Select/Sport"/>
 			<f:render
-					arguments="{options: sportAgeGroupsSelectbox,     settings: settings,     value: settings.sportAgeGroup.selected}"
+					arguments="{options: sportAgeGroupSelectboxValues}"
 					partial="Form/Select/SportAgeGroup"/>
 			<f:render
-					arguments="{options: sportAgeLevelsSelectbox,     settings: settings,     value: settings.sportAgeLevel.selected}"
+					arguments="{options: sportAgeLevelSelectboxValues}"
 					partial="Form/Select/SportAgeLevel"/>
 			<f:render
-					arguments="{options: competitionTypesSelectbox,   settings: settings,     value: settings.competitionType.selected}"
+					arguments="{options: competitionTypeSelectboxValues}"
 					partial="Form/Select/CompetitionType"/>
 			<f:render partial="Form/Submit"/>
 		</f:form>

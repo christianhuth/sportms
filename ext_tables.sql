@@ -165,7 +165,6 @@ CREATE TABLE tx_sportms_domain_model_competitionseason
     competition_season_gamedays int(11) DEFAULT NULL,
     competition_season_teams    int(11) DEFAULT NULL,
     detail_link                 tinyint(4) unsigned DEFAULT '1' NOT NULL,
-    slug                        varchar(2048) DEFAULT '',
     sorting                     int(11) DEFAULT '0' NOT NULL
 );
 
@@ -467,7 +466,8 @@ CREATE TABLE tx_sportms_domain_model_phonetype
 #
 CREATE TABLE tx_sportms_domain_model_refereejob
 (
-    label varchar(255) DEFAULT '0' NOT NULL
+    label varchar(255) DEFAULT '0' NOT NULL,
+    is_mainreferee_job smallint(5) unsigned NOT NULL DEFAULT '0',
 );
 
 #
@@ -588,7 +588,6 @@ CREATE TABLE tx_sportms_domain_model_teamseason
     team_season_squad_captains int(11) DEFAULT NULL,
     competition_season_teams   int(11) DEFAULT NULL,
     detail_link                tinyint(4) unsigned DEFAULT '1' NOT NULL,
-    slug                       varchar(2048) DEFAULT '',
     sorting                    int(11) DEFAULT '0' NOT NULL
 );
 

@@ -16,7 +16,7 @@
 			<ul class="nav navbar-nav">
 				<li>
 					<f:render
-							arguments="{season: season, team: team}"
+							arguments="{season: season, team: team, teamSeason: teamSeason}"
 							partial="ViewHelper/LinkAction/Team/SeasonIndex"/>
 				</li>
 				<li class="dropdown">
@@ -30,32 +30,14 @@
 					</a>
 					<ul class="dropdown-menu">
 						<li>
-							<f:if condition="{teamSeason}">
-								<f:then>
-									<f:render
-											arguments="{teamSeason: teamSeason}"
-											partial="ViewHelper/LinkAction/TeamSeason/GamesByCompetition"/>
-								</f:then>
-								<f:else>
-									<f:render
-											arguments="{team: team}"
-											partial="ViewHelper/LinkAction/Team/GamesByCompetition"/>
-								</f:else>
-							</f:if>
+							<f:render
+									arguments="{season: season, team: team, teamSeason: teamSeason}"
+									partial="ViewHelper/LinkAction/Team/SeasonGamesByCompetition"/>
 						</li>
 						<li>
-							<f:if condition="{teamSeason}">
-								<f:then>
-									<f:render
-											arguments="{teamSeason: teamSeason}"
-											partial="ViewHelper/LinkAction/TeamSeason/GamesByDate"/>
-								</f:then>
-								<f:else>
-									<f:render
-											arguments="{team: team}"
-											partial="ViewHelper/LinkAction/Team/GamesByDate"/>
-								</f:else>
-							</f:if>
+							<f:render
+									arguments="{season: season, team: team, teamSeason: teamSeason}"
+									partial="ViewHelper/LinkAction/Team/SeasonGamesByDate"/>
 						</li>
 					</ul>
 				</li>
@@ -71,46 +53,19 @@
 					</a>
 					<ul class="dropdown-menu">
 						<li>
-							<f:if condition="{teamSeason}">
-								<f:then>
-									<f:render
-											arguments="{team: teamSeason.team}"
-											partial="ViewHelper/LinkAction/Team/HistoryOfficials"/>
-								</f:then>
-								<f:else>
-									<f:render
-											arguments="{team: team}"
-											partial="ViewHelper/LinkAction/Team/HistoryOfficials"/>
-								</f:else>
-							</f:if>
+							<f:render
+									arguments="{team: team}"
+									partial="ViewHelper/LinkAction/Team/HistoryOfficials"/>
 						</li>
 						<li>
-							<f:if condition="{teamSeason}">
-								<f:then>
-									<f:render
-											arguments="{team: teamSeason.team}"
-											partial="ViewHelper/LinkAction/Team/HistoryRecordGames"/>
-								</f:then>
-								<f:else>
-									<f:render
-											arguments="{team: team}"
-											partial="ViewHelper/LinkAction/Team/HistoryRecordGames"/>
-								</f:else>
-							</f:if>
+							<f:render
+									arguments="{team: team}"
+									partial="ViewHelper/LinkAction/Team/HistoryRecordGames"/>
 						</li>
 						<li>
-							<f:if condition="{teamSeason}">
-								<f:then>
-									<f:render
-											arguments="{team: teamSeason.team}"
-											partial="ViewHelper/LinkAction/Team/HistoryRecordPlayers"/>
-								</f:then>
-								<f:else>
-									<f:render
-											arguments="{team: team}"
-											partial="ViewHelper/LinkAction/Team/HistoryRecordPlayers"/>
-								</f:else>
-							</f:if>
+							<f:render
+									arguments="{team: team}"
+									partial="ViewHelper/LinkAction/Team/HistoryRecordPlayers"/>
 						</li>
 					</ul>
 				</li>

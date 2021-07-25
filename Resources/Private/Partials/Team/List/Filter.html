@@ -8,16 +8,16 @@
 				extensionName="Sportms" method="POST"
 				pageUid="{settings.team.list.pid}" pluginName="Team">
 			<f:render
-					arguments="{options: sportSelectboxValues,			value: settings.sport.selectbox.selected}"
+					arguments="{options: sportSelectboxValues}"
 					partial="Form/Select/Sport"/>
 			<f:render
-					arguments="{options: sportAgeGroupSelectboxValues,	value: settings.sportAgeGroup.selectbox.selected}"
+					arguments="{options: sportAgeGroupSelectboxValues}"
 					partial="Form/Select/SportAgeGroup"/>
 			<f:render
-					arguments="{options: sportAgeLevelSelectboxValues,	value: settings.sportAgeLevel.selectbox.selected}"
+					arguments="{options: sportAgeLevelSelectboxValues}"
 					partial="Form/Select/SportAgeLevel"/>
 			<f:render
-					arguments="{options: clubSelectboxValues,			value: settings.club.selectbox.selected}"
+					arguments="{options: clubSelectboxValues}"
 					partial="Form/Select/Club"/>
 			<f:render partial="Form/Submit"/>
 		</f:form>

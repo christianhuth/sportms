@@ -165,6 +165,12 @@
             </trans-unit>
 
 
+        <!-- Domain Model RefereeJob -->
+            <trans-unit id="tx_sportms_domain_model_refereejob.is_mainreferee_job">
+                <source>Ist die Hauptschiedsrichter-Aufgabe?</source>
+            </trans-unit>
+
+
         <!-- Domain Model SportPosition -->
             <trans-unit id="tx_sportms_domain_model_sportposition.x_position">
                 <source>Position X-Achse</source>

@@ -2,36 +2,8 @@
 	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <f:if condition="{settings.sportPosition.selectbox.enabled}">
-	<div class="form-group form-group-sm">
-		<label class="hidden-xs col-sm-3 control-label">Altersstufe:</label>
-		<div class="col-xs-12 col-sm-9">
-			<div class="input-group">
-				<span class="input-group-addon"><i
-						class="sportmsicon sportmsicon-sportagelevel"></i></span>
-				<f:form.select class="form-control" name="selectSportPosition"
-							   optionLabelField="label" optionValueField="uid"
-							   prependOptionLabel="Alle Positionen"
-							   prependOptionValue=""
-							   property=""
-							   value="{value}">
-					<f:groupedFor as="sportPositionsBySportPositionGroup"
-								  each="{options}" groupBy="sportPositionGroup"
-								  groupKey="sportPositionGroup">
-						<f:form.select.optgroup class="form-control"
-												label="{sportPositionGroup.label}"
-												title="{sportPositionGroup.label}"/>
-						<f:for as="sportPositionBySportPositionGroup"
-							   each="{sportPositionsBySportPositionGroup}">
-							<f:form.select.option
-									value="{sportPositionBySportPositionGroup.uid}">
-								{sportPositionBySportPositionGroup.label}
-							</f:form.select.option>
-						</f:for>
-					</f:groupedFor>
-				</f:form.select>
-			</div>
-		</div>
-	</div>
+	<f:render partial="Form/Select/Generic"
+			  arguments="{model: 'sportPosition', optionLabelField: 'label', options: options, optionValueField: 'uid', prependOptionValue: 0, sortByOptionLabel: TRUE, value: settings.sportPosition.selectbox.selected}"/>
 </f:if>
 
 </html>

@@ -5,13 +5,13 @@ routeEnhancers:
         type: PersistedAliasMapper
         tableName: tx_sportms_domain_model_club
         routeFieldName: slug
-      localizedAction_gamesByCompetition:
+      localizedAction_seasonGamesByCompetition:
         type: LocaleModifier
         default: 'games-by-competition'
         localeMap:
           - locale: 'de_DE.*'
             value: 'spielplan-nach-wettbewerb'
-      localizedAction_gamesByDate:
+      localizedAction_seasonGamesByDate:
         type: LocaleModifier
         default: 'games-by-date'
         localeMap:
@@ -77,10 +77,6 @@ routeEnhancers:
         type: PersistedAliasMapper
         tableName: tx_sportms_domain_model_team
         routeFieldName: slug
-      teamseason_slug:
-        type: PersistedAliasMapper
-        tableName: tx_sportms_domain_model_teamseason
-        routeFieldName: slug
     defaults:
       club: ''
       page: '0'
@@ -126,16 +122,14 @@ routeEnhancers:
         _arguments:
           team_slug: team
           season_slug: season
-      - routePath: '/{teamseason_slug}/{localizedAction_index}'
-        _controller: 'TeamSeason::index'
+      - routePath: '{team_slug}/{localizedAction_seasonGamesByCompetition}/{localizedSeason}/{season_slug}'
+        _controller: 'Team::seasonGamesByCompetition'
         _arguments:
-          teamseason_slug: teamSeason
-      - routePath: '/{teamseason_slug}/{localizedAction_gamesByCompetition}'
-        _controller: 'TeamSeason::gamesByCompetition'
+          team_slug: team
+          season_slug: season
+      - routePath: '{team_slug}/{localizedAction_seasonGamesByDate}/{localizedSeason}/{season_slug}'
+        _controller: 'Team::seasonGamesByDate'
         _arguments:
-          teamseason_slug: teamSeason
-      - routePath: '/{teamseason_slug}/{localizedAction_gamesByDate}'
-        _controller: 'TeamSeason::gamesByDate'
-        _arguments:
-          teamseason_slug: teamSeason
+          team_slug: team
+          season_slug: season
     type: Extbase

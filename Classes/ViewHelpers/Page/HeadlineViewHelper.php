@@ -124,7 +124,7 @@
         }
         
         /**
-         * Headline for CompetitionSeason --> gameday
+         * Headline for Competition --> gameday
          */
         private function competitionSeasonGameday()
         {

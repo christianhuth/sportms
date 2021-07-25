@@ -4,7 +4,7 @@
 <f:if condition="	{settings.sport.selectbox.selected} &&
 					{settings.sportAgeGroup.selectbox.enabled}">
 	<f:render partial="Form/Select/Generic"
-			  arguments="{model: 'sportAgeGroup', optionLabelField: 'label', options: options, optionValueField: 'uid', prependOptionValue: 0, sortByOptionLabel: TRUE, value: value}"/>
+			  arguments="{model: 'sportAgeGroup', optionLabelField: 'label', options: options, optionValueField: 'uid', prependOptionValue: 0, sortByOptionLabel: TRUE, value: settings.sportAgeGroup.selectbox.selected}"/>
 </f:if>
 
 </html>

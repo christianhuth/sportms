@@ -55,7 +55,7 @@
             if (strpos($dbStats, 'Club') !== false) {
                 $this->view->assign('clubCount', $this->clubRepository->findAll()->count());
             }
-            /* Domain Model CompetitionSeason */
+            /* Domain Model Competition */
             if (strpos($dbStats, 'Competition') !== false) {
                 $this->view->assign('competitionCount', $this->competitionRepository->findAll()->count());
             }

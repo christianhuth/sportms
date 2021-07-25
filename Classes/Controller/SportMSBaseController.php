@@ -8,9 +8,41 @@
     use Balumedien\Sportms\PageTitle\PageTitleProvider;
     use TYPO3\CMS\Core\Utility\GeneralUtility;
     use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
-    
+    use TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException;
+
     class SportMSBaseController extends ActionController
     {
+    
+        /**
+         * @param string $model
+         * @param string|null $callingController
+         * @throws InvalidQueryException
+         */
+        protected function assignSelectboxValues(string $model): void
+        {
+            if ($this->settings[$model]['selectbox']['enabled']) {
+                switch ($model) {
+                    case "club":
+                        $selectBoxValues = $this->clubRepository->findAll($this->getClubsFilter(false));
+                        break;
+                    case "competitionType":
+                        $selectBoxValues = $this->competitionTypeRepository->findAll($this->getCompetitionTypesFilter(false));
+                        break;
+                    case "sport":
+                        $selectBoxValues = $this->sportRepository->findAll($this->getSportsFilter(false));
+                        break;
+                    case "sportAgeGroup":
+                        $selectBoxValues = $this->sportAgeGroupRepository->findAll($this->getSportsFilter(),
+                            $this->getSportAgeGroupsFilter(false));
+                        break;
+                    case "sportAgeLevel":
+                        $selectBoxValues = $this->sportAgeLevelRepository->findAll($this->getSportsFilter(),
+                            $this->getSportAgeGroupsFilter(), $this->getSportAgeLevelsFilter(false));
+                        break;
+                }
+                $this->view->assign($model . 'SelectboxValues', $selectBoxValues);
+            }
+        }
         
         protected function getClubsFilter($useSelected = true)
         {
@@ -96,7 +128,7 @@
             /* SelectModel */
             $listOfSelectModels = 'sport,sportAgeGroup,sportAgeLevel,competitionType,competition,club,team,season,competitionSeasonGameday';
             foreach (explode(',', $listOfSelectModels) as $selectModel) {
-                if ($this->request->hasArgument('select' . ucfirst($selectModel))) {
+                if ($this->request->hasArgument($selectModel)) {
                     $selectedValue = $this->request->getArgument($selectModel);
                     if (is_array($selectedValue)) {
                         $this->settings[$selectModel]['selectbox']['selected'] = $selectedValue['__identity'];
@@ -187,6 +219,7 @@
                 return $this->seasonRepository->findByUid($seasonUid);
             } else {
                 if ($this->request->hasArgument('season')) {
+                    \TYPO3\CMS\Core\Utility\DebugUtility::debug($this->request->getArgument('season'), 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
                     return $this->request->getArgument('season');
                 } else {
                     return null;

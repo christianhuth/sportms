@@ -1,14 +1,14 @@
 <html data-namespace-typo3-fluid="true"
 	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
-<f:if
-		condition="{competitionSeason.competition.detailLink} && {competitionSeason.detailLink}">
+<f:if condition="	{competitionSeason.competition.detailLink} &&
+					{competitionSeason.detailLink}">
 	<f:then>
 		<f:link.action action="games"
-					   arguments="{competitionSeason: competitionSeason}"
-					   controller="CompetitionSeason" extensionName="Sportms"
-					   pageUid="{settings.competitionSeason.games.pid}"
-					   pluginName="competition">
+					   arguments="{competition: competition}"
+					   controller="Competition" extensionName="Sportms"
+					   pageUid="{settings.competition.seasonGames.pid}"
+					   pluginName="Competition">
 			<f:render section="label"
 					  arguments="{_all}"/>
 		</f:link.action>
