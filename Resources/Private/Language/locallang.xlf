@@ -31,10 +31,13 @@
                 <source>Schema</source>
             </trans-unit>
             <trans-unit id="tx_sportms_action.game.list">
-                <source>Schema</source>
+                <source>Liste</source>
             </trans-unit>
             <trans-unit id="tx_sportms_action.game.report">
                 <source>Spielbericht</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_action.person.list">
+                <source>Liste</source>
             </trans-unit>
             <trans-unit id="tx_sportms_action.person.officialprofile">
                 <source>Funktionärsprofil</source>

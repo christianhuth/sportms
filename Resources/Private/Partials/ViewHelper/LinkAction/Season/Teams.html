@@ -1,11 +1,11 @@
 <html data-namespace-typo3-fluid="true"
 	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
-<f:link.action action="teams"
+<f:link.action action="list"
 			   arguments="{season: season}"
-			   controller="Season" extensionName="Sportms"
-			   pageUid="{settings.season.teams.pid}"
-			   pluginName="Season">
+			   controller="Team" extensionName="Sportms"
+			   pageUid="{settings.team.list.pid}"
+			   pluginName="Team">
 	<f:render section="label"
 			  arguments="{season: season, linkLabel: linkLabel}"/>
 </f:link.action>

@@ -4,6 +4,7 @@
     
     use Balumedien\Sportms\Domain\Model\Season;
     use TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException;
+    use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
 
     /**
      * SeasonController
@@ -23,9 +24,15 @@
          */
         public function listAction(): void
         {
+            /* MAIN CONTENT */
             $seasons = $this->seasonRepository->findAll();
             $this->view->assign('seasons', $seasons);
-            $this->pagetitle("Saisons", "Liste");
+            
+            /* PAGETITLE */
+            $this->pagetitle(
+                LocalizationUtility::translate('tx_sportms_domain_model_season.plural', "sportms"),
+                LocalizationUtility::translate('tx_sportms_action.season.list', "sportms")
+            );
         }
         
         /**
@@ -33,12 +40,18 @@
          */
         public function teamsAction(Season $season = null): void
         {
+            /* MAIN CONTENT */
             if ($season === null) {
                 $seasonUid = $this->settings['season']['uid'];
                 $season = $this->seasonRepository->findByUid($seasonUid);
             }
             $this->view->assign('season', $season);
-            $this->pagetitleForSeason($season, "Mannschaften");
+            
+            /* PAGETITLE */
+            $this->pagetitleForSeason(
+                $season,
+                LocalizationUtility::translate('tx_sportms_action.season.teams', "sportms")
+            );
         }
         
         /**

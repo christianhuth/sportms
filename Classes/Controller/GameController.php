@@ -91,7 +91,7 @@
             /* PAGETITLE */
             $this->pagetitle(
                 LocalizationUtility::translate('tx_sportms_domain_model_game.plural', "sportms"),
-                LocalizationUtility::translate('tx_sportms_action.game.lis', "sportms")
+                LocalizationUtility::translate('tx_sportms_action.game.list', "sportms")
             );
         }
         

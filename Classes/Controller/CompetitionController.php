@@ -176,8 +176,8 @@
          */
         protected function seasonTeamsAction(Competition $competition = null, Season $season = null): void
         {
+            /* MAIN CONTENT */
             $competition = $this->assignCompetitionToView($competition);
-            \TYPO3\CMS\Core\Utility\DebugUtility::debug($competition, 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
             $season = $this->assignSeasonToView($competition, $season);
             $competitionSeason = $this->assignCompetitionSeasonToView($competition, $season);
             

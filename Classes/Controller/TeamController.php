@@ -123,6 +123,7 @@
          */
         public function historyOfficialsAction(Team $team = null)
         {
+            /* MAIN CONTENT */
             if ($team === null) {
                 $team = $this->determineTeam();
             }
@@ -164,7 +165,12 @@
             $this->view->assign('officials', $officialsByTerm);
             $officialJobsSelectbox = $this->teamSeasonOfficialJobRepository->findAll();
             $this->view->assign('officialJobsSelectbox', $officialJobsSelectbox);
-            $this->pagetitleForTeam($team, "Funktionärshistorie");
+            
+            /* PAGETITLE */
+            $this->pagetitleForTeam(
+                $team,
+                LocalizationUtility::translate('tx_sportms_action.team.historyofficials', "sportms")
+            );
         }
         
         /**
@@ -211,6 +217,7 @@
          */
         public function historyRecordGamesAction(Team $team = null)
         {
+            /* MAIN CONTENT */
             if ($team === null) {
                 $team = $this->determineTeam();
             }
@@ -236,7 +243,9 @@
                 $this->settings['team']['historyRecordGames']['limit'], $this->getCompetitionsFilter(),
                 $this->getSeasonsFilter());
             $this->view->assign('gamesWithFewestSpectators', $gamesWithFewestSpectators);
+            
             /* FRONTEND FILTERS */
+            # TODO: NEW WAY OF FRONTEND FILTERS
             if ($this->settings['competition']['competitionsSelectbox']) {
                 $competitionsSelectbox = $this->competitionRepository->findAll($this->getSportsFilter(),
                     $this->getSportAgeGroupsFilter(), $this->getSportAgeLevelsFilter(),
@@ -247,9 +256,11 @@
                 $seasonsSelectbox = $this->seasonRepository->findAll($this->getSeasonsFilter(false));
                 $this->view->assign('seasonsSelectbox', $seasonsSelectbox);
             }
+            
+            /* PAGETITLE */
             $this->pagetitleForTeam(
                 $team,
-                "Rekordspiele"
+                LocalizationUtility::translate('tx_sportms_action.team.historyrecordgames', "sportms")
             );
         }
         
@@ -258,6 +269,7 @@
          */
         public function historyRecordPlayersAction(Team $team = null)
         {
+            /* MAIN CONTENT */
             if ($team === null) {
                 $team = $this->determineTeam();
             }
@@ -303,7 +315,9 @@
                 $playersWithMostAssists[] = $playerWithMostAssists;
             }
             $this->view->assign('playersWithMostAssists', $playersWithMostAssists);
+            
             /* FRONTEND FILTERS */
+            # TODO: NEW WAY OF FRONTEND FILTERS
             if ($this->settings['competitionType']['selectbox']['enabled']) {
                 $competitionTypesSelectbox = $this->competitionTypeRepository->findAll($this->getCompetitionTypesFilter(false));
                 $this->view->assign('competitionTypesSelectbox', $competitionTypesSelectbox);
@@ -324,7 +338,12 @@
                     $this->getSportPositionGroupsFilter(), $this->getSportPositionsFilter(false));
                 $this->view->assign('sportPositionsSelectbox', $sportPositionsSelectbox);
             }
-            $this->pagetitleForTeam($team, "Rekordspieler");
+            
+            /* PAGETITLE */
+            $this->pagetitleForTeam(
+                $team,
+                LocalizationUtility::translate('tx_sportms_action.team.historyrecordplayers', "sportms")
+            );
         }
         
         /**
@@ -333,20 +352,24 @@
          */
         public function listAction(): void
         {
+            /* MAIN CONTENT */
             $teams = $this->teamRepository->findAll($this->getSportsFilter(), $this->getSportAgeGroupsFilter(),
                 $this->getSportAgeLevelsFilter(), $this->getClubsFilter(), $this->getTeamsFilter());
             $this->view->assign('teams', $teams);
+            
             /* FRONTEND FILTERS */
             $this->assignSelectboxValues('sport');
             $this->assignSelectboxValues('sportAgeGroup');
             $this->assignSelectboxValues('sportAgeLevel');
             $this->assignSelectboxValues('club');
+            
+            /* PAGETITLE */
             $this->pagetitle(
                 LocalizationUtility::translate('tx_sportms_domain_model_team.plural', "sportms"),
                 LocalizationUtility::translate('tx_sportms_action.team.list', "sportms")
             );
         }
-    
+        
         /**
          * @param Team $team
          * @param string $actionLabel
@@ -368,7 +391,6 @@
          */
         public function seasonGamesByCompetitionAction(Team $team = null, Season $season = null)
         {
-            
             /* MAIN CONTENT */
             $team = $this->assignTeamToView($team);
             $season = $this->assignSeasonToView($team, $season);
@@ -399,6 +421,7 @@
          */
         public function seasonGamesByDateAction(Team $team = null, Season $season = null): void
         {
+            /* MAIN CONTENT */
             $team = $this->assignTeamToView($team);
             $season = $this->assignSeasonToView($team, $season);
             $teamSeason = $this->assignTeamSeasonToView($team, $season);
@@ -408,8 +431,11 @@
             ];
             $games = $this->gameRepository->findGamesByTeamSeason($teamSeason, $orderings);
             $this->view->assign('games', $games);
+            
             /* FRONTEND FILTERS */
             $this->assignSeasonSelectboxValuesToView($team);
+            
+            /* PAGETITLE */
             $this->pagetitleForTeam(
                 $team,
                 LocalizationUtility::translate('tx_sportms_action.team.seasongamesbydate', "sportms"),
@@ -419,17 +445,22 @@
         
         public function seasonIndexAction(Team $team = null, Season $season = null)
         {
+            /* MAIN CONTENT */
             $team = $this->assignTeamToView($team);
             $season = $this->assignSeasonToView($team, $season);
             $teamSeason = $this->assignTeamSeasonToView($team, $season);
+            
+            /* FRONTEND FILTERS */
             $this->assignSeasonSelectboxValuesToView($team);
+            
+            /* PAGETITLE */
             $this->pagetitleForTeam(
                 $team,
                 LocalizationUtility::translate('tx_sportms_action.team.seasonindex', "sportms"),
                 $season
             );
         }
-    
+        
         private function assignTeamToView(Team $team = null): Team
         {
             if ($team === null) {
@@ -458,12 +489,13 @@
             $this->view->assign('season', $season);
             return $season;
         }
-    
+        
         /**
          * @param Team $team
          * @param Season $season
          */
-        private function assignTeamSeasonToView(Team $team, Season $season): TeamSeason {
+        private function assignTeamSeasonToView(Team $team, Season $season): TeamSeason
+        {
             $teamSeason = $this->teamSeasonRepository->findByTeamAndSeason($team, $season);
             $this->view->assign('teamSeason', $teamSeason);
             return $teamSeason;
