@@ -5,8 +5,10 @@
 	<div class="tx-sportms-filter">
 		<f:form action="seasonGamesByCompetition"
 				arguments="{season: season, team: team}"
-				class="form-horizontal" controller="Team"
-				extensionName="Sportms" method="POST"
+				class="form-horizontal"
+				controller="Team"
+				extensionName="Sportms"
+				method="POST"
 				pageUid="{settings.team.seasonGamesByCompetition.pid}"
 				pluginName="Team">
 			<f:form.hidden name="team" value="{team}"/>

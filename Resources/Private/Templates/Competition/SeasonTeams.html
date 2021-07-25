@@ -4,16 +4,16 @@
 <f:layout name="default"/>
 
 <f:section name="default">
-	<div class="tx-sportms-competitionseason-detail">
+	<div class="tx-sportms-competition-detail">
 		
 		<f:render
-				arguments="{competition: competitionSeason.competition, competitionSeason: competitionSeason}"
+				arguments="{competition: competition, competitionSeason: competitionSeason, season: season}"
 				partial="Competition/Navigation"/>
 		<f:render
-				arguments="{competition: competitionSeason.competition, competitionSeason: competitionSeason, competitionSeasons: competitionSeasons, settings: settings}"
+				arguments="{seasonSelectboxValues: seasonSelectboxValues}"
 				partial="Competition/SeasonTeams/Filter"/>
 		
-		<div class="tx-sportms-competitionseason-teams">
+		<div class="tx-sportms-competition-seasonteams">
 			<f:if condition="{competitionSeason.competitionSeasonTeams}">
 				<f:then>
 					<div class="table-responsive">

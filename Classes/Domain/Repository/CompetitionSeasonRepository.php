@@ -120,7 +120,7 @@
         public function findByCompetition(Competition $competition) {
             $query = $this->createQuery();
             $constraints = [];
-            $constraints[] = $query->equals('compettion', $competition);
+            $constraints[] = $query->equals('competition', $competition);
             $query->matching($query->logicalAnd($constraints));
             return $query->execute();
         }

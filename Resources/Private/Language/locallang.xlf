@@ -1366,6 +1366,9 @@
             <trans-unit id="tx_sportms_select.club.all">
                 <source>Alle Vereine</source>
             </trans-unit>
+            <trans-unit id="tx_sportms_select.competition.all">
+                <source>Alle Wettbewerbe</source>
+            </trans-unit>
             <trans-unit id="tx_sportms_select.competitiontype.all">
                 <source>Alle Wettbewerbsarten</source>
             </trans-unit>

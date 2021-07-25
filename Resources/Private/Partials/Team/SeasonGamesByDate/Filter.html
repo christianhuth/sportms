@@ -4,9 +4,11 @@
 <f:if condition="{settings.season.selectbox.enabled}">
 	<div class="tx-sportms-filter">
 		<f:form action="gamesByDate"
-				arguments="{season: season,  team: team}"
-				class="form-horizontal" controller="Team"
-				extensionName="Sportms" method="POST"
+				arguments="{season: season, team: team}"
+				class="form-horizontal"
+				controller="Team"
+				extensionName="Sportms"
+				method="POST"
 				pageUid="{settings.team.seasonGamesByDate.pid}"
 				pluginName="Team">
 			<f:form.hidden name="team" value="{team}"/>
