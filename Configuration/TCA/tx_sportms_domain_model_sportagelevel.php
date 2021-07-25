@@ -120,7 +120,7 @@
             ],
             'abbreviation' => [
                 'exclude' => 1,
-                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.abbreviation',
+                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_general.abbreviation',
                 'config' => [
                     'eval' => 'trim',
                     'size' => 255,

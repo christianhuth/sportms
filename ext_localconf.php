@@ -23,11 +23,14 @@
 	$pluginNamesAndTheirActions[3]['cacheableActions'] = ['Person' => 'list'];
 	$pluginNamesAndTheirActions[3]['nonCacheableActions'] = [];
 	$pluginNamesAndTheirActions[4]['name'] = 'Team';
-	$pluginNamesAndTheirActions[4]['cacheableActions'] = ['Team' => 'list, historyOfficials, historyRecordGames, historyRecordPlayers', 'TeamSeason' => 'gamesByCompetition, gamesByDate, index'];
+	$pluginNamesAndTheirActions[4]['cacheableActions'] = ['Team' => 'list, historyOfficials, historyRecordGames, historyRecordPlayers, seasonIndex', 'TeamSeason' => 'gamesByCompetition, gamesByDate, index'];
 	$pluginNamesAndTheirActions[4]['nonCacheableActions'] = [];
-	$pluginNamesAndTheirActions[5]['name'] = 'SportMS';
-	$pluginNamesAndTheirActions[5]['cacheableActions'] = ['SportMS' => 'dbstats'];
-	$pluginNamesAndTheirActions[5]['nonCacheableActions'] = [];
+    $pluginNamesAndTheirActions[5]['name'] = 'Season';
+    $pluginNamesAndTheirActions[5]['cacheableActions'] = ['Season' => 'list, teams'];
+    $pluginNamesAndTheirActions[5]['nonCacheableActions'] = [];
+	$pluginNamesAndTheirActions[6]['name'] = 'SportMS';
+	$pluginNamesAndTheirActions[6]['cacheableActions'] = ['SportMS' => 'dbstats'];
+	$pluginNamesAndTheirActions[6]['nonCacheableActions'] = [];
 	
 	for($i = 0; $i < count($pluginNamesAndTheirActions); $i++) {
 		\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
@@ -55,6 +58,7 @@
 			'sportms-ce-plugin-competition-icon' => 'tx_sportms_domain_model_competition.svg',
 			'sportms-ce-plugin-game-icon' => 'tx_sportms_domain_model_game.svg',
 			'sportms-ce-plugin-person-icon' => 'tx_sportms_domain_model_person.svg',
+			'sportms-ce-plugin-season-icon' => 'tx_sportms_domain_model_season.svg',
 			'sportms-ce-plugin-team-icon' => 'tx_sportms_domain_model_team.svg',
 		];
 		$iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);

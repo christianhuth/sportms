@@ -14,6 +14,11 @@
 		<div class="collapse navbar-collapse" id="teamNavbar">
 			<ul class="nav navbar-nav">
 				<li>
+					<f:render
+							arguments="{season: season, team: team}"
+							partial="ViewHelper/LinkAction/Team/SeasonIndex"/>
+				</li>
+				<li>
 					<f:if condition="{teamSeason}">
 						<f:then>
 							<f:render

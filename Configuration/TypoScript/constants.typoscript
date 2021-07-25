@@ -14,6 +14,8 @@
 
 # customsubcategory=sportmsPerson=SportMS - Person
 
+# customsubcategory=sportmsSeason=SportMS - Season
+
 # customsubcategory=sportmsTeam=SportMS - Team
 
 # customsubcategory=format=Formatierungen
@@ -164,6 +166,37 @@ plugin.tx_sportms {
 			dummyImageFemale = EXT:sportms/Resources/Public/Images/person-female.jpg
 		}
 
+		season {
+			list {
+				pagination {
+					# cat=plugin.tx_sportms/sportmsSeason; type=boolean; label=Show pagination above Season->list
+					insertAbove = 0
+					# cat=plugin.tx_sportms/sportmsSeason; type=boolean; label=Show pagination below Season->list
+					insertBelow = 1
+					# cat=plugin.tx_sportms/sportmsSeason; type=int+; label=Items per Page for Season->list
+					itemsPerPage = 25
+					# cat=plugin.tx_sportms/sportmsSeason; type=int+; label=Maximum number of links in the pagination for Season->list
+					maximumNumberOfLinks = 5
+				}
+				# cat=plugin.tx_sportms/sportmsSeason; type=int+; label=Default PID of Season->list
+				pid =
+			}
+			teams {
+				pagination {
+					# cat=plugin.tx_sportms/sportmsSeason; type=boolean; label=Show pagination above Season->teams
+					insertAbove = 0
+					# cat=plugin.tx_sportms/sportmsSeason; type=boolean; label=Show pagination below Season->teams
+					insertBelow = 1
+					# cat=plugin.tx_sportms/sportmsSeason; type=int+; label=Items per Page for Season->teams
+					itemsPerPage = 25
+					# cat=plugin.tx_sportms/sportmsSeason; type=int+; label=Maximum number of links in the pagination for Season->teams
+					maximumNumberOfLinks = 5
+				}
+				# cat=plugin.tx_sportms/sportmsSeason; type=int+; label=Default PID of Season->teams
+				pid =
+			}
+		}
+
 		team {
 
 			historyOfficials {
@@ -197,6 +230,11 @@ plugin.tx_sportms {
 					maximumNumberOfLinks = 5
 				}
 				# cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of Team->list
+				pid =
+			}
+
+			seasonIndex {
+				# cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of Team->seasonIndex
 				pid =
 			}
 		}

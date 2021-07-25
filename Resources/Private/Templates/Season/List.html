@@ -1,0 +1,70 @@
+<html data-namespace-typo3-fluid="true"
+	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<f:layout name="default"/>
+
+<f:section name="default">
+	<div class="tx-sportms-season-list">
+		<f:if condition="{seasons}">
+			<f:then>
+				<f:widget.paginate objects="{seasons}"
+								   as="paginatedSeasons"
+								   configuration="{itemsPerPage: settings.season.list.pagination.itemsPerPage, insertAbove: settings.season.list.pagination.insertAbove, insertBelow: settings.season.list.pagination.insertBelow, maximumNumberOfLinks: settings.season.list.pagination.maximumNumberOfLinks}">
+					<div class="table-responsive">
+						<table class="table table-bordered table-condensed table-hover table-striped tx-sportms-table">
+							<f:render section="tablehead"/>
+							<tbody>
+							<f:for as="season" each="{paginatedSeasons}">
+								<f:render arguments="{season: season}"
+										  partial="Season/List/Item"/>
+							</f:for>
+							</tbody>
+						</table>
+					</div>
+				</f:widget.paginate>
+			</f:then>
+			<f:else>
+				<div class="table-responsive">
+					<table class="table table-bordered table-condensed table-hover table-striped tx-sportms-table">
+						<f:render section="tablehead"/>
+						<tbody>
+						<tr>
+							<td colspan="5">Keine Saisons gefunden.</td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+			</f:else>
+		</f:if>
+	</div>
+</f:section>
+
+<f:section name="tablehead">
+	<thead>
+	<tr>
+		<th>
+			<f:translate key="tx_sportms_general.label"/>
+		</th>
+		<th>
+			<f:translate key="tx_sportms_general.abbreviation"/>
+		</th>
+		<th>
+			<f:translate
+					key="tx_sportms_general.startdate"/>
+		</th>
+		<th>
+			<f:translate
+					key="tx_sportms_domain_model_season.winter_break"/>
+		</th>
+		<th>
+			<f:translate
+					key="tx_sportms_general.enddate"/>
+		</th>
+		<th>
+			<f:translate key="tx_sportms_action.season.teams"/>
+		</th>
+	</tr>
+	</thead>
+</f:section>
+
+</html>

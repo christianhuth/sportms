@@ -2,20 +2,20 @@
     
     namespace Balumedien\Sportms\Controller;
     
-    use Balumedien\Sportms\Domain\Model\Club;
+    use Balumedien\Sportms\Domain\Model\Season;
     use TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException;
 
     /**
-     * ClubController
+     * SeasonController
      */
-    class ClubController extends SportMSBaseController
+    class SeasonController extends SportMSBaseController
     {
         
         /**
-         * @var \Balumedien\Sportms\Domain\Repository\ClubRepository
+         * @var \Balumedien\Sportms\Domain\Repository\SeasonRepository
          * @TYPO3\CMS\Extbase\Annotation\Inject
          */
-        protected $clubRepository;
+        protected $seasonRepository;
         
         /**
          * Initializes the controller before invoking an action method.
@@ -33,9 +33,9 @@
         public function listAction(): void
         {
             $this->initializeActions();
-            $clubs = $this->clubRepository->findAll($this->getClubsFilter());
-            $this->view->assign('clubs', $clubs);
-            $this->pagetitle("Vereine", "Liste");
+            $seasons = $this->seasonRepository->findAll();
+            $this->view->assign('seasons', $seasons);
+            $this->pagetitle("Saisons", "Liste");
         }
         
         /**
@@ -50,26 +50,26 @@
         }
         
         /**
-         * @param Club $club
+         * @param Season $season
          */
-        public function sectionsAction(Club $club = null): void
+        public function teamsAction(Season $season = null): void
         {
-            if ($club === null) {
-                $clubUid = $this->settings['club']['uid'];
-                $club = $this->clubRepository->findByUid($clubUid);
+            if ($season === null) {
+                $seasonUid = $this->settings['season']['uid'];
+                $season = $this->seasonRepository->findByUid($seasonUid);
             }
-            $this->view->assign('club', $club);
-            $this->pagetitleForClub($club, "Abteilungen");
+            $this->view->assign('season', $season);
+            $this->pagetitleForSeason($season, "Mannschaften");
         }
         
         /**
-         * @param Club $club
+         * @param Season $season
          * @param string $actionLabel
          */
-        private function pagetitleForClub(Club $club, string $actionLabel)
+        private function pagetitleForSeason(Season $season, string $actionLabel)
         {
-            $clubName = $club->getName();
-            $this->pagetitle($clubName, $actionLabel);
+            $seasonLabel = $season->getLabel();
+            $this->pagetitle($seasonLabel, $actionLabel);
         }
         
     }

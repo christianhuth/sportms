@@ -1,0 +1,56 @@
+<html data-namespace-typo3-fluid="true"
+	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<tr>
+	<td class="tx-sportms-table-center">
+		{season.label}
+	</td>
+	<td class="tx-sportms-table-center">
+		{season.abbreviation}
+	</td>
+	<td class="tx-sportms-table-center">
+		<f:if condition="{season.startdate}">
+			<f:then>
+				<f:format.date
+						format="{settings.format.date.long}">
+					{season.startdate}
+				</f:format.date>
+			</f:then>
+			<f:else>
+				-
+			</f:else>
+		</f:if>
+	</td>
+	<td class="tx-sportms-table-center">
+		<f:if condition="{season.winterBreak}">
+			<f:then>
+				<f:format.date
+						format="{settings.format.date.long}">
+					{season.winterBreak}
+				</f:format.date>
+			</f:then>
+			<f:else>
+				-
+			</f:else>
+		</f:if>
+	</td>
+	<td class="tx-sportms-table-center">
+		<f:if condition="{season.enddate}">
+			<f:then>
+				<f:format.date
+						format="{settings.format.date.long}">
+					{season.enddate}
+				</f:format.date>
+			</f:then>
+			<f:else>
+				-
+			</f:else>
+		</f:if>
+	</td>
+	<td class="tx-sportms-table-center">
+		<f:render partial="ViewHelper/LinkAction/Season/Teams"
+				  arguments="{season: season}"/>
+	</td>
+</tr>
+
+</html>

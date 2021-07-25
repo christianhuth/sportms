@@ -37,9 +37,6 @@
             </trans-unit>
 
         <!-- General -->
-            <trans-unit id="tx_sportms_general.abbreviation">
-                <source>Abkürzung</source>
-            </trans-unit>
             <trans-unit id="tx_sportms_general.detail_link">
                 <source>Einzelansicht ermöglichen?</source>
             </trans-unit>
@@ -48,12 +45,6 @@
             </trans-unit>
             <trans-unit id="tx_sportms_general.slug">
                 <source>Sprechende URL</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_general.startdate">
-                <source>Startdatum</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_general.enddate">
-                <source>Enddatum</source>
             </trans-unit>
             <trans-unit id="tx_sportms_general.time">
                 <source>Uhrzeit</source>

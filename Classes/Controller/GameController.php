@@ -155,7 +155,6 @@
             #$listOfPossibleShowViews = 'index,history,report,stats,ticket';
             #$this->determineShowView($this->model);
             #$this->determineShowViews($this->model, $listOfPossibleShowViews);
-            #$this->determineShowNavigationViews($this->model, $listOfPossibleShowViews);
             #$this->view->assign('settings', $this->settings);
         }
         

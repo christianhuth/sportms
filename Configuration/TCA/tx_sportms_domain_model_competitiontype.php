@@ -108,23 +108,20 @@
                     'eval' => 'trim, required',
                 ],
             ],
-            
+    
             'slug' => [
                 'exclude' => true,
                 'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.slug',
                 'config' => [
-                    'default' => '',
-                    'eval' => 'uniqueInSite',
                     'fallbackCharacter' => '-',
                     'generatorOptions' => [
                         'fields' => ['label'],
                         'fieldSeparator' => '-',
                         'prefixParentPageSlug' => false,
                         'replacements' => [
-                            '/' => '',
+                            '/' => '-',
                         ],
                     ],
-                    'prependSlash' => false,
                     'type' => 'slug',
                 ],
             ],

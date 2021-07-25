@@ -105,7 +105,7 @@
             ],
             'abbreviation' => [
                 'exclude' => 1,
-                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.abbreviation',
+                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_general.abbreviation',
                 'config' => [
                     'type' => 'input',
                     'size' => 30,
@@ -115,7 +115,7 @@
             
             'startdate' => [
                 'exclude' => 1,
-                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.startdate',
+                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_general.startdate',
                 'config' => [
                     'type' => 'input',
                     'size' => 8,
@@ -126,7 +126,7 @@
             ],
             'enddate' => [
                 'exclude' => 1,
-                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.enddate',
+                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_general.enddate',
                 'config' => [
                     'type' => 'input',
                     'size' => 8,
@@ -160,8 +160,6 @@
                 'exclude' => true,
                 'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.slug',
                 'config' => [
-                    'default' => '',
-                    'eval' => 'uniqueInSite',
                     'fallbackCharacter' => '-',
                     'generatorOptions' => [
                         'fields' => ['label'],
@@ -171,7 +169,6 @@
                             '/' => '-',
                         ],
                     ],
-                    'prependSlash' => false,
                     'type' => 'slug',
                 ],
             ],

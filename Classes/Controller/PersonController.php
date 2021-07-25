@@ -52,7 +52,6 @@
             $listOfPossibleShowViews = 'profile,officials';
             $this->determineShowView($this->model);
             $this->determineShowViews($this->model, $listOfPossibleShowViews);
-            $this->determineShowNavigationViews($this->model, $listOfPossibleShowViews);
         }
         
         /**

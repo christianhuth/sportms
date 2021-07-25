@@ -127,38 +127,6 @@
             }
         }
         
-        protected function determineShowNavigationViews($model, $listOfPossibleShowViews): void
-        {
-            if ($this->settings[$model]['showNavigation']['enabled']) {
-                $showNavigationEnabled = false;
-                foreach (explode(',', $listOfPossibleShowViews) as $showView) {
-                    if ($this->settings[$model]['showViews']) {
-                        if (strpos($this->settings[$model]['showViews'], $showView) !== false) {
-                            if ($this->settings[$model]['showNavigation']['views']) {
-                                $this->settings[$model]['showNavigation'][$showView] = strpos($this->settings[$model]['showNavigation']['views'],
-                                        $showView) !== false;
-                            } else {
-                                $this->settings[$model]['showNavigation'][$showView] = true;
-                            }
-                        } else {
-                            $this->settings[$model]['showNavigation'][$showView] = false;
-                        }
-                    } else {
-                        if ($this->settings[$model]['showNavigation']['views']) {
-                            $this->settings[$model]['showNavigation'][$showView] = strpos($this->settings[$model]['showNavigation']['views'],
-                                    $showView) !== false;
-                        } else {
-                            $this->settings[$model]['showNavigation'][$showView] = true;
-                        }
-                    }
-                    if ($this->settings[$model]['showNavigation'][$showView] && !$showNavigationEnabled) {
-                        $showNavigationEnabled = true;
-                    }
-                }
-                $this->settings[$model]['showNavigation']['enabled'] = $showNavigationEnabled;
-            }
-        }
-        
         /**
          * @return CompetitionSeason
          */
@@ -217,6 +185,24 @@
                     return $this->request->getArgument('person');
                 } else {
                     // TODO: DIE IF NO PERSON IS SELECTED VIA FLEXFORM AND GIVEN VIA REQUEST
+                }
+            }
+        }
+    
+        /**
+         * @return \Balumedien\Sportms\Domain\Model\Season|null
+         */
+        protected function determineSeason(): ?\Balumedien\Sportms\Domain\Model\Season
+        {
+            if ($this->settings['season']['uid']) {
+                $seasonUid = $this->settings['season']['uid'];
+                return $this->seasonRepository->findByUid($seasonUid);
+            } else {
+                if ($this->request->hasArgument('season')) {
+                    return $this->request->getArgument('season');
+                } else {
+                    return null;
+                    // TODO: DIE IF NO TEAM IS SELECTED VIA FLEXFORM AND GIVEN VIA REQUEST
                 }
             }
         }

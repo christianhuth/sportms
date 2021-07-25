@@ -1,0 +1,27 @@
+<html data-namespace-typo3-fluid="true"
+	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<f:link.action action="teams"
+			   arguments="{season: season}"
+			   controller="Season" extensionName="Sportms"
+			   pageUid="{settings.season.teams.pid}"
+			   pluginName="Season">
+	<f:render section="label"
+			  arguments="{season: season, linkLabel: linkLabel}"/>
+</f:link.action>
+
+<f:section name="label">
+	<f:switch expression="{linkLabel}">
+		<f:case value="teams">
+			Mannschaften
+		</f:case>
+		<f:defaultCase>
+			<span>
+				<f:translate
+						key="tx_sportms_action.season.teams"/>
+			</span>
+		</f:defaultCase>
+	</f:switch>
+</f:section>
+
+</html>

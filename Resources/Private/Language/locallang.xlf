@@ -51,6 +51,9 @@
             <trans-unit id="tx_sportms_action.person.refereeprofile">
                 <source>Schiedsrichterprofil</source>
             </trans-unit>
+            <trans-unit id="tx_sportms_action.season.teams">
+                <source>Mannschaften</source>
+            </trans-unit>
             <trans-unit id="tx_sportms_action.team.historyofficials">
                 <source>Funktionärshistorie</source>
             </trans-unit>
@@ -59,6 +62,9 @@
             </trans-unit>
             <trans-unit id="tx_sportms_action.team.historyrecordplayers">
                 <source>Rekordspieler</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_action.team.seasonindex">
+                <source>Saisonindex</source>
             </trans-unit>
             <trans-unit id="tx_sportms_action.teamseason.gamesbycompetition">
                 <source>Spiele nach Wettbewerb</source>
@@ -72,6 +78,9 @@
 
 
         <!-- General -->
+            <trans-unit id="tx_sportms_general.abbreviation">
+                <source>Abkürzung</source>
+            </trans-unit>
             <trans-unit id="tx_sportms_general.clock">
                 <source>Uhr</source>
             </trans-unit>
@@ -105,6 +114,12 @@
             <trans-unit id="tx_sportms_general.day.7">
                 <source>Sonntag</source>
             </trans-unit>
+            <trans-unit id="tx_sportms_general.enddate">
+                <source>Enddatum</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.label">
+                <source>Bezeichnung</source>
+            </trans-unit>
             <trans-unit id="tx_sportms_general.official.duration">
                 <source>Amtszeit</source>
             </trans-unit>
@@ -129,8 +144,8 @@
             <trans-unit id="tx_sportms_general.sex.female">
                 <source>weiblich</source>
             </trans-unit>
-            <trans-unit id="tx_sportms_general.label">
-                <source>Bezeichnung</source>
+            <trans-unit id="tx_sportms_general.startdate">
+                <source>Startdatum</source>
             </trans-unit>
             <trans-unit id="tx_sportms_general.zodiac_sign">
                 <source>Sternzeichen</source>

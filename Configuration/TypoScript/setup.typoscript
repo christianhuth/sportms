@@ -101,6 +101,21 @@ plugin.tx_sportms {
 			dummyImageFemale = {$plugin.tx_sportms.settings.person.dummyImageFemale}
 		}
 
+		season {
+			list {
+				pagination {
+					insertAbove = {$plugin.tx_sportms.settings.season.list.pagination.insertAbove}
+					insertBelow = {$plugin.tx_sportms.settings.season.list.pagination.insertBelow}
+					itemsPerPage = {$plugin.tx_sportms.settings.season.list.pagination.itemsPerPage}
+					maximumNumberOfLinks = {$plugin.tx_sportms.settings.season.list.pagination.maximumNumberOfLinks}
+				}
+				pid = {$plugin.tx_sportms.settings.season.list.pid}
+			}
+			teams {
+				pid = {$plugin.tx_sportms.settings.season.teams.pid}
+			}
+		}
+
 		team {
 			historyOfficials.pid = {$plugin.tx_sportms.settings.team.historyOfficials.pid}
 			historyRecordGames {
@@ -119,6 +134,9 @@ plugin.tx_sportms {
 					maximumNumberOfLinks = {$plugin.tx_sportms.settings.team.list.pagination.maximumNumberOfLinks}
 				}
 				pid = {$plugin.tx_sportms.settings.team.list.pid}
+			}
+			seasonIndex {
+				pid = {$plugin.tx_sportms.settings.team.seasonIndex.pid}
 			}
 		}
 

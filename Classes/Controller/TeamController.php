@@ -2,6 +2,7 @@
     
     namespace Balumedien\Sportms\Controller;
     
+    use Balumedien\Sportms\Domain\Model\Season;
     use Balumedien\Sportms\Domain\Model\Team;
     use Balumedien\Sportms\Domain\Model\TeamSeasonOfficial;
 
@@ -344,6 +345,13 @@
          */
         public function listAction(): void
         {
+    
+            if($this->request->hasArgument("club")) {
+                \TYPO3\CMS\Core\Utility\DebugUtility::debug($this->request->getArgument("club"), 'Debug: ' . __FILE__ . ' in Line: ' . __LINE__);
+            }
+            
+            
+            
             $teams = $this->teamRepository->findAll($this->getSportsFilter(), $this->getSportAgeGroupsFilter(),
                 $this->getSportAgeLevelsFilter(), $this->getClubsFilter(), $this->getTeamsFilter());
             $this->view->assign('teams', $teams);
@@ -367,6 +375,27 @@
                 $this->view->assign('clubsSelectbox', $clubsSelectbox);
             }
             $this->pagetitle("Mannschaften", "Liste");
+        }
+        
+        
+        public function seasonIndexAction(Team $team = null, Season $season = null) {
+            if ($team === null) {
+                $team = $this->determineTeam();
+            }
+            $this->view->assign('team', $team);
+            if ($season === null) {
+                $season = $this->determineSeason();
+            }
+            if ($season === null) {
+                if($team->getTeamSeasons()) {
+                    $season = $team->getTeamSeasons()[0]->getSeason();
+                } else {
+                    die();
+                }
+            }
+            $this->view->assign('season', $season);
+            $teamSeason = $this->teamSeasonRepository->findByTeamAndSeason($team, $season);
+            $this->view->assign('teamSeason', $teamSeason);
         }
         
     }

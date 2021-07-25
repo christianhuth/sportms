@@ -1,6 +1,10 @@
 routeEnhancers:
   sportmsTeam:
     aspects:
+      club_slug:
+        type: PersistedAliasMapper
+        tableName: tx_sportms_domain_model_club
+        routeFieldName: slug
       localizedAction_gamesByCompetition:
         type: LocaleModifier
         default: 'games-by-competition'
@@ -37,12 +41,30 @@ routeEnhancers:
         localeMap:
           - locale: 'de_DE.*'
             value: 'uebersicht'
+      localizedAction_seasonIndex:
+        type: LocaleModifier
+        default: 'profile'
+        localeMap:
+          - locale: 'de_DE.*'
+            value: 'uebersicht'
+      localizedModel_Club:
+        type: LocaleModifier
+        default: 'club'
+        localeMap:
+          - locale: 'de_DE.*'
+            value: 'verein'
       localizedPage:
         type: LocaleModifier
         default: 'page'
         localeMap:
           - locale: 'de_DE.*'
             value: 'seite'
+      localizedSeason:
+        type: LocaleModifier
+        default: 'season'
+        localeMap:
+          - locale: 'de_DE.*'
+            value: 'saison'
       page:
         type: StaticRangeMapper
         start: '1'
@@ -60,16 +82,25 @@ routeEnhancers:
         tableName: tx_sportms_domain_model_teamseason
         routeFieldName: slug
     defaults:
+      club: '0'
       page: '0'
+      season: '0'
     defaultController: 'Team::list'
     extension: Sportms
     plugin: Team
     routes:
-      - routePath: '/'
+      - routePath: '/{localizedModel_Club}/{club_slug}'
         _controller: 'Team::list'
+        _arguments:
+          club_slug: club
       - routePath: '/{localizedPage}/{page}'
         _controller: 'Team::list'
         _arguments:
+          page: '@widget_0/currentPage'
+      - routePath: '/{localizedModel_Club}/{club_slug}/{localizedPage}/{page}'
+        _controller: 'Team::list'
+        _arguments:
+          club_slug: club
           page: '@widget_0/currentPage'
       - routePath: '/{team_slug}/{localizedAction_historyOfficials}'
         _controller: 'Team::historyOfficials'
@@ -83,6 +114,15 @@ routeEnhancers:
         _controller: 'Team::historyRecordPlayers'
         _arguments:
           team_slug: team
+      - routePath: '{team_slug}/{localizedAction_seasonIndex}'
+        _controller: 'Team::seasonIndex'
+        _arguments:
+          team_slug: team
+      - routePath: '{team_slug}/{localizedAction_seasonIndex}/{localizedSeason}/{season_slug}'
+        _controller: 'Team::seasonIndex'
+        _arguments:
+          team_slug: team
+          season_slug: season
       - routePath: '/{teamseason_slug}/{localizedAction_index}'
         _controller: 'TeamSeason::index'
         _arguments:

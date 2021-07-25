@@ -218,7 +218,6 @@
                 'exclude' => true,
                 'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.slug',
                 'config' => [
-                    'default' => '',
                     'fallbackCharacter' => '-',
                     'generatorOptions' => [
                         'fields' => ['label'],
@@ -228,7 +227,6 @@
                             '/' => '-',
                         ],
                     ],
-                    'prependSlash' => false,
                     'type' => 'slug',
                 ],
             ],

@@ -125,7 +125,7 @@
             ],
             'startdate' => [
                 'exclude' => 1,
-                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.startdate',
+                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_general.startdate',
                 'config' => [
                     'type' => 'input',
                     'size' => 10,
@@ -136,7 +136,7 @@
             ],
             'enddate' => [
                 'exclude' => 1,
-                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.enddate',
+                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_general.enddate',
                 'config' => [
                     'type' => 'input',
                     'size' => 10,
