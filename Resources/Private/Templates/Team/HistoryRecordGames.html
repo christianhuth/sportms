@@ -4,9 +4,11 @@
 <f:layout name="default"/>
 
 <f:section name="default">
-	<div id="tx-sportms-team-historyrecordgames">
+	<div class="tx-sportms-team-detail">
+		
 		<f:render arguments="{team: team}" partial="Team/Navigation"/>
 		<f:render arguments="{_all}" partial="Team/HistoryRecordGames/Filter"/>
+		
 		<div class="tx-sportms-team-historyrecordgames">
 			<h3>Die höchsten Siege</h3>
 			<f:render

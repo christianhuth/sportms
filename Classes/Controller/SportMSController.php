@@ -2,6 +2,8 @@
     
     namespace Balumedien\Sportms\Controller;
     
+    use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
+
     /**
      * SportMSController
      */
@@ -75,6 +77,12 @@
             if (strpos($dbStats, 'Team') !== false) {
                 $this->view->assign('teamCount', $this->teamRepository->findAll()->count());
             }
+    
+            /* PAGETITLE */
+            $this->pagetitle(
+                "Sport Management System",
+                LocalizationUtility::translate('tx_sportms_action.sportms.dbstats', "sportms")
+            );
         }
         
     }

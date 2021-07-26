@@ -152,6 +152,10 @@
                     } else {
                         $this->settings[$selectModel]['selectbox']['selected'] = $selectedValue;
                     }
+                } else {
+                    if($this->settings[$selectModel]['uid']) {
+                        $this->settings[$selectModel]['selectbox']['selected'] = $this->settings[$selectModel]['uid'];
+                    }
                 }
             }
             /* BugFix, if the sportAgeGroup has been cleared but not the sportAgeLevel */

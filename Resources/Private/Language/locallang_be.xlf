@@ -14,7 +14,7 @@
             <trans-unit id="ce_plugin_competition_title" xml:space="preserve">
                 <source>Competition Management (sportms)</source>
             </trans-unit>
-            <trans-unit id="ce_plugin_club_description" xml:space="preserve">
+            <trans-unit id="ce_plugin_competition_description" xml:space="preserve">
                 <source>Views for competitions managed by sportms</source>
             </trans-unit>
             <trans-unit id="ce_plugin_game_title" xml:space="preserve">

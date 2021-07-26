@@ -13,18 +13,19 @@
 		<div class="tx-sportms-game-report">
 			
 			<f:if condition="{game.gameReports}">
-				<f:render arguments="{report: game.gameReports.0}"
-						  partial="Game/Report/Report"/>
+				<f:then>
+					<f:render arguments="{report: game.gameReports.0}"
+							  partial="Game/Report/Report"/>
+				</f:then>
+				<f:else>
+					Leider kein Spielbericht vorhanden
+				</f:else>
 			</f:if>
-			
-			<f:comment>
-				# TODO: IF more than 1 Report show Navigation to select another
-				one
-			</f:comment>
 		
 		</div>
 	
 	</div>
+
 </f:section>
 
 </html>

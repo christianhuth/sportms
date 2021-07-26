@@ -1,6 +1,6 @@
 <html data-namespace-typo3-fluid="true"
 	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-	  xmlns:sportms="Balumedien\Sportms\ViewHelpers">
+>
 
 <tr>
 	<td class="tx-sportms-table-center">
@@ -8,11 +8,13 @@
 				  arguments="{competition: game.competitionSeason.competition, competitionSeason: game.competitionSeason, competitionSeasonGameday: game.gameday, linkLabel: 'gamedayLabel', season: game.competitionSeason.season}"/>
 	</td>
 	<td class="tx-sportms-table-center">
-		<f:format.date format="{settings.format.date.long}">{game.date}
+		<f:format.date format="{settings.format.date.long}">
+			{game.date}
 		</f:format.date>
 	</td>
 	<td class="tx-sportms-table-center">
-		<f:format.date format="{settings.format.time.long}">{game.time}
+		<f:format.date format="{settings.format.time.long}">
+			{game.time}
 		</f:format.date>
 	</td>
 	<td class="tx-sportms-table-center">

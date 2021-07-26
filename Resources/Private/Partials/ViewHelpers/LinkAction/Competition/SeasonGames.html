@@ -14,12 +14,16 @@
 		</f:if>
 	</f:else>
 </f:if>
+<f:if condition="!{competitionSeasonGameday}">
+	<f:variable name="competitionSeasonGameday"
+				value="{competitionSeason.competitionSeasonGamedays.0}"/>
+</f:if>
 
 <f:if condition="	{competition.detailLink} &&
 					{competitionSeason.detailLink}">
 	<f:then>
 		<f:link.action action="seasonGames"
-					   arguments="{competition: competition, season: season}"
+					   arguments="{competition: competition, competitionSeasonGameday: competitionSeasonGameday, season: season}"
 					   controller="Competition" extensionName="Sportms"
 					   pageUid="{settings.competition.seasonGames.pid}"
 					   pluginName="Competition">

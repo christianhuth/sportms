@@ -41,8 +41,9 @@
                 return $processedData;
             }
             
-            // Configuration for "club" argument
-            if (GeneralUtility::_GET('tx_sportms_club')['club'] || GeneralUtility::_POST('tx_sportms_club')['club']) {
+            // Configuration for "club" argument in club plugin
+            if (GeneralUtility::_GET('tx_sportms_club')['club'] ||
+                GeneralUtility::_POST('tx_sportms_club')['club']) {
                 $club = $this->getExtensionRecord('tx_sportms_domain_model_club',
                     ((int)GeneralUtility::_GET('tx_sportms_club')['club']) ?: (int)GeneralUtility::_POST('tx_sportms_club')['club']);
                 if ($club) {
@@ -55,6 +56,21 @@
                                     'sportms'),
                                 $processedData[$menu]
                             );
+                        }
+                    }
+                }
+            }
+    
+            // Configuration for "club" argument in team plugin
+            if (GeneralUtility::_GET('tx_sportms_team')['club'] ||
+                GeneralUtility::_POST('tx_sportms_team')['club']) {
+                $club = $this->getExtensionRecord('tx_sportms_domain_model_club',
+                    ((int)GeneralUtility::_GET('tx_sportms_team')['club']) ?: (int)GeneralUtility::_POST('tx_sportms_team')['club']);
+                if ($club) {
+                    $menus = GeneralUtility::trimExplode(',', $this->processorConfiguration['addToMenus'], true);
+                    foreach ($menus as $menu) {
+                        if (isset($processedData[$menu])) {
+                            $this->addExtensionRecordToMenu($club, $processedData[$menu]);
                         }
                     }
                 }
