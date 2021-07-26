@@ -37,7 +37,7 @@
 				<f:for as="official" each="{officials}">
 					<tr>
 						<td>
-							<f:render partial="ViewHelper/Person/ItemInTable"
+							<f:render partial="ViewHelpers/Person/ItemInTable"
 									  arguments="{person: official.person}"/>
 						</td>
 						<td class="tx-sportms-table-center">
@@ -46,7 +46,7 @@
 						<td class="tx-sportms-table-center">
 							<f:render
 									arguments="{nationalities: official.person.nationalities}"
-									partial="ViewHelper/Person/Nationalities"/>
+									partial="ViewHelpers/Person/Nationalities"/>
 						</td>
 						<td class="tx-sportms-table-center">
 							<f:format.date format="{settings.format.date.long}">

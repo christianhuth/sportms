@@ -48,7 +48,7 @@
 	<div class="tx-sportms-game-goal-scorer">
 		<f:if condition="{goal.scorer}">
 			<f:then>
-				<f:render partial="ViewHelper/LinkAction/Person/PlayerProfile"
+				<f:render partial="ViewHelpers/LinkAction/Person/PlayerProfile"
 						  arguments="{linkLabel: 'lastname', person: goal.scorer}"/>
 			</f:then>
 			<f:else>
@@ -67,7 +67,7 @@
 	<div class="tx-sportms-game-goal-assist">
 		<f:if condition="{goal.assist}">
 			<f:then>
-				<f:render partial="ViewHelper/LinkAction/Person/PlayerProfile"
+				<f:render partial="ViewHelpers/LinkAction/Person/PlayerProfile"
 						  arguments="{linkLabel: 'lastname', person: goal.assist}"/>
 			</f:then>
 		</f:if>

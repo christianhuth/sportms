@@ -4,17 +4,17 @@
 <tr>
 	<td class="tx-sportms-table-center">{competition.sport.label}</td>
 	<td>
-		<f:render partial="ViewHelper/LinkAction/Competition/SeasonGames"
+		<f:render partial="ViewHelpers/LinkAction/Competition/SeasonGames"
 				  arguments="{competition: competition, linkLabel: 'competitionLabel'}"/>
 	</td>
 	<td class="tx-sportms-table-center">{competition.sportAgeLevel.label}</td>
 	<td class="tx-sportms-table-center">{competition.competitionType.label}</td>
 	<td class="tx-sportms-table-center">
-		<f:render partial="ViewHelper/LinkAction/Competition/SeasonGames"
+		<f:render partial="ViewHelpers/LinkAction/Competition/SeasonGames"
 				  arguments="{competition: competition}"/>
 	</td>
 	<td class="tx-sportms-table-center">
-		<f:render partial="ViewHelper/LinkAction/Competition/SeasonTeams"
+		<f:render partial="ViewHelpers/LinkAction/Competition/SeasonTeams"
 				  arguments="{competition: competition}"/>
 	</td>
 </tr>

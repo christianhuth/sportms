@@ -4,21 +4,21 @@
 
 <div class="tx-sportms-game-header tx-sportms-header">
 	<div class="tx-sportms-header-box tx-sportms-header-competition">
-		<f:render partial="ViewHelper/LinkAction/Competition/SeasonGames"
+		<f:render partial="ViewHelpers/LinkAction/Competition/SeasonGames"
 				  arguments="{competitionSeason: game.competitionSeason, competitionSeasonGameday: game.gameday, linkLabel: 'competitionInGameHeader'}"/>
 	</div>
 	<div class="tx-sportms-header-box tx-sportms-header-team">
-		<f:render partial="ViewHelper/LinkAction/Team/SeasonIndex"
+		<f:render partial="ViewHelpers/LinkAction/Team/SeasonIndex"
 				  arguments="{linkLabel: 'teamInGameHeader', team: game.teamSeasonHome.team, teamSeason: game.teamSeasonHome}"/>
 	</div>
 	<div class="tx-sportms-header-box tx-sportms-game-header-result">
 		<div class="tx-sportms-game-header-result">
 			<f:render arguments="{game: game}"
-					  partial="ViewHelper/Game/ResultInHeader"/>
+					  partial="ViewHelpers/Game/ResultInHeader"/>
 		</div>
 	</div>
 	<div class="tx-sportms-header-box tx-sportms-header-team">
-		<f:render partial="ViewHelper/LinkAction/Team/SeasonIndex"
+		<f:render partial="ViewHelpers/LinkAction/Team/SeasonIndex"
 				  arguments="{linkLabel: 'teamInGameHeader', team: game.teamSeasonGuest.team, teamSeason: game.teamSeasonGuest}"/>
 	</div>
 </div>

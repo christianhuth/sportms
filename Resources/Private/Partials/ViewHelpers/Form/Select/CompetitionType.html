@@ -2,7 +2,7 @@
 	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <f:if condition="{settings.competitionType.selectbox.enabled}">
-	<f:render partial="Form/Select/Generic"
+	<f:render partial="ViewHelpers/Form/Select/Generic"
 			  arguments="{model: 'competitionType', options: options, sortByOptionLabel: TRUE, value: settings.competitionType.selectbox.selected}"/>
 </f:if>
 

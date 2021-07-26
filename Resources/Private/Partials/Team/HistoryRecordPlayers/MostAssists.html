@@ -20,13 +20,13 @@
 					<td class="tx-sportms-table-center">{iterator.index + 1}
 					</td>
 					<td class="tx-sportms-table-left">
-						<f:render partial="ViewHelper/LinkAction/Person/PlayerProfile"
+						<f:render partial="ViewHelpers/LinkAction/Person/PlayerProfile"
 								  arguments="{linkLabel: 'name', person: playerWithMostAssists.person}"/>
 					</td>
 					<td class="tx-sportms-table-center">
 						<f:render
 								arguments="{nationalities: playerWithMostAssists.person.nationalities}"
-								partial="ViewHelper/Person/Nationalities"/>
+								partial="ViewHelpers/Person/Nationalities"/>
 					</td>
 					<td class="tx-sportms-table-center">
 						{playerWithMostAssists.numberOfAssists}

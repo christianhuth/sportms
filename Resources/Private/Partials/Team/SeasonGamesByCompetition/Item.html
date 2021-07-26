@@ -4,7 +4,7 @@
 
 <tr>
 	<td class="tx-sportms-table-center">
-		<f:render partial="ViewHelper/LinkAction/Competition/SeasonGames"
+		<f:render partial="ViewHelpers/LinkAction/Competition/SeasonGames"
 				  arguments="{_all}"/>
 		<sportms:link.action CompetitionSeason="{game.competitionSeason}" CompetitionSeasonGameday="{game.gameday}"
 							 action="seasonGames"
@@ -34,20 +34,20 @@
 		<f:if condition="{teamSeason} == {game.teamSeasonHome}">
 			<f:then>
 				<f:render arguments="{teamSeason: game.teamSeasonGuest}"
-						  partial="ViewHelper/TeamSeason/ItemInTable"/>
+						  partial="ViewHelpers/TeamSeason/ItemInTable"/>
 			</f:then>
 			<f:else>
 				<f:render arguments="{teamSeason: game.teamSeasonHome}"
-						  partial="ViewHelper/TeamSeason/ItemInTable"/>
+						  partial="ViewHelpers/TeamSeason/ItemInTable"/>
 			</f:else>
 		</f:if>
 	</td>
 	<td class="tx-sportms-table-center">
 		<f:render arguments="{spectators: game.spectators}"
-				  partial="ViewHelper/Game/Spectators"/>
+				  partial="ViewHelpers/Game/Spectators"/>
 	</td>
 	<td class="tx-sportms-table-center">
-		<f:render partial="ViewHelper/LinkAction/Game/Index"
+		<f:render partial="ViewHelpers/LinkAction/Game/Index"
 				  arguments="{game: game, linkLabel: 'result'}"/>
 	</td>
 </tr>

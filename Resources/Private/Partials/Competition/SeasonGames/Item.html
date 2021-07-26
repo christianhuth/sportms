@@ -9,20 +9,20 @@
 	</td>
 	<td class="tx-sportms-table-right">
 		<f:render arguments="{teamSeason: game.teamSeasonHome}"
-				  partial="ViewHelper/TeamSeason/ItemInTable"/>
+				  partial="ViewHelpers/TeamSeason/ItemInTable"/>
 	</td>
 	<td class="tx-sportms-table-center"> -</td>
 	<td class="tx-sportms-table-left">
 		<f:render arguments="{teamSeason: game.teamSeasonGuest}"
-				  partial="ViewHelper/TeamSeason/ItemInTable"/>
+				  partial="ViewHelpers/TeamSeason/ItemInTable"/>
 	</td>
 	<td class="tx-sportms-table-center">
 		<f:render arguments="{spectators: game.spectators}"
-				  partial="ViewHelper/Game/Spectators"/>
+				  partial="ViewHelpers/Game/Spectators"/>
 	</td>
 	<td class="tx-sportms-table-center">
 		<f:render arguments="{game: game, linkLabel: 'result'}"
-				  partial="ViewHelper/LinkAction/Game/Index"/>
+				  partial="ViewHelpers/LinkAction/Game/Index"/>
 	</td>
 </tr>
 

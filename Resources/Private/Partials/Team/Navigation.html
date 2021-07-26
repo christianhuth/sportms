@@ -19,7 +19,7 @@
 					<li>
 						<f:render
 								arguments="{season: season, team: team, teamSeason: teamSeason}"
-								partial="ViewHelper/LinkAction/Team/SeasonIndex"/>
+								partial="ViewHelpers/LinkAction/Team/SeasonIndex"/>
 					</li>
 					<li class="dropdown">
 						<a aria-expanded="false" aria-haspopup="true"
@@ -34,12 +34,12 @@
 							<li>
 								<f:render
 										arguments="{season: season, team: team, teamSeason: teamSeason}"
-										partial="ViewHelper/LinkAction/Team/SeasonGamesByCompetition"/>
+										partial="ViewHelpers/LinkAction/Team/SeasonGamesByCompetition"/>
 							</li>
 							<li>
 								<f:render
 										arguments="{season: season, team: team, teamSeason: teamSeason}"
-										partial="ViewHelper/LinkAction/Team/SeasonGamesByDate"/>
+										partial="ViewHelpers/LinkAction/Team/SeasonGamesByDate"/>
 							</li>
 						</ul>
 					</li>
@@ -57,17 +57,17 @@
 							<li>
 								<f:render
 										arguments="{team: team}"
-										partial="ViewHelper/LinkAction/Team/HistoryOfficials"/>
+										partial="ViewHelpers/LinkAction/Team/HistoryOfficials"/>
 							</li>
 							<li>
 								<f:render
 										arguments="{team: team}"
-										partial="ViewHelper/LinkAction/Team/HistoryRecordGames"/>
+										partial="ViewHelpers/LinkAction/Team/HistoryRecordGames"/>
 							</li>
 							<li>
 								<f:render
 										arguments="{team: team}"
-										partial="ViewHelper/LinkAction/Team/HistoryRecordPlayers"/>
+										partial="ViewHelpers/LinkAction/Team/HistoryRecordPlayers"/>
 							</li>
 						</ul>
 					</li>

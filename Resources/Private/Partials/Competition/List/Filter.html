@@ -12,17 +12,17 @@
 				pluginName="Competition">
 			<f:render
 					arguments="{options: sportSelectboxValues}"
-					partial="Form/Select/Sport"/>
+					partial="ViewHelpers/Form/Select/Sport"/>
 			<f:render
 					arguments="{options: sportAgeGroupSelectboxValues}"
-					partial="Form/Select/SportAgeGroup"/>
+					partial="ViewHelpers/Form/Select/SportAgeGroup"/>
 			<f:render
 					arguments="{options: sportAgeLevelSelectboxValues}"
-					partial="Form/Select/SportAgeLevel"/>
+					partial="ViewHelpers/Form/Select/SportAgeLevel"/>
 			<f:render
 					arguments="{options: competitionTypeSelectboxValues}"
-					partial="Form/Select/CompetitionType"/>
-			<f:render partial="Form/Submit"/>
+					partial="ViewHelpers/Form/Select/CompetitionType"/>
+			<f:render partial="ViewHelpers/Form/Submit"/>
 		</f:form>
 	</div>
 </f:if>

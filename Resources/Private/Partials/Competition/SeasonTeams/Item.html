@@ -4,13 +4,13 @@
 <tr>
 	<td class="tx-sportms-table-left">
 		<f:render arguments="{teamSeason: teamSeason}"
-				  partial="ViewHelper/TeamSeason/ItemInTable"/>
+				  partial="ViewHelpers/TeamSeason/ItemInTable"/>
 	</td>
 	<td class="tx-sportms-table-center">
 		<f:count>{teamSeason.teamSeasonSquadMembers}</f:count>
 	</td>
 	<td class="tx-sportms-table-center">
-		<f:render partial="ViewHelper/LinkAction/Team/SeasonGamesByDate"
+		<f:render partial="ViewHelpers/LinkAction/Team/SeasonGamesByDate"
 				  arguments="{season: teamSeason.season, team: teamSeason.team}"/>
 	</td>
 </tr>

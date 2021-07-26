@@ -15,11 +15,11 @@
 			<f:form.hidden name="competition" value="{competition}"/>
 			<f:render
 					arguments="{options: seasonSelectboxValues}"
-					partial="Form/Select/CompetitionSeason"/>
+					partial="ViewHelpers/Form/Select/CompetitionSeason"/>
 			<f:render
 					arguments="{options: competitionSeasonGamedaySelectboxValues}"
-					partial="Form/Select/CompetitionSeasonGameday"/>
-			<f:render partial="Form/Submit"/>
+					partial="ViewHelpers/Form/Select/CompetitionSeasonGameday"/>
+			<f:render partial="ViewHelpers/Form/Submit"/>
 		</f:form>
 	</div>
 </f:if>

@@ -4,7 +4,7 @@
 <f:if condition="	{settings.competitionSeasonGameday.selectbox.enabled} &&
 					{settings.competition.selectbox.selected} &&
 					{settings.season.selectbox.selected}">
-	<f:render partial="Form/Select/Generic"
+	<f:render partial="ViewHelpers/Form/Select/Generic"
 			  arguments="{model: 'competitionSeasonGameday', options: options, prependOption: 'false', sortByOptionLabel: TRUE, value: settings.competitionSeasonGameday.selectbox.selected}"/>
 </f:if>
 

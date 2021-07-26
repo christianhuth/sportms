@@ -14,29 +14,29 @@
 				pageUid="{settings.game.list.pid}" pluginName="Game">
 			<f:render
 					arguments="{options: sportSelectboxValues}"
-					partial="Form/Select/Sport"/>
+					partial="ViewHelpers/Form/Select/Sport"/>
 			<f:render
 					arguments="{options: sportAgeGroupSelectboxValues}"
-					partial="Form/Select/SportAgeGroup"/>
+					partial="ViewHelpers/Form/Select/SportAgeGroup"/>
 			<f:render
 					arguments="{options: sportAgeLevelSelectboxValues}"
-					partial="Form/Select/SportAgeLevel"/>
+					partial="ViewHelpers/Form/Select/SportAgeLevel"/>
 			<f:render
 					arguments="{options: competitionTypeSelectboxValues}"
-					partial="Form/Select/CompetitionType"/>
+					partial="ViewHelpers/Form/Select/CompetitionType"/>
 			<f:render
 					arguments="{options: competitionSelectboxValues, groupedSelectbox: true}"
-					partial="Form/Select/Competition"/>
+					partial="ViewHelpers/Form/Select/Competition"/>
 			<f:render
 					arguments="{options: clubSelectboxValues}"
-					partial="Form/Select/Club"/>
+					partial="ViewHelpers/Form/Select/Club"/>
 			<f:render
 					arguments="{options: teamSelectboxValues}"
-					partial="Form/Select/Team"/>
+					partial="ViewHelpers/Form/Select/Team"/>
 			<f:render
 					arguments="{options: seasonSelectboxValues}"
-					partial="Form/Select/Season"/>
-			<f:render partial="Form/Submit"/>
+					partial="ViewHelpers/Form/Select/Season"/>
+			<f:render partial="ViewHelpers/Form/Submit"/>
 		</f:form>
 	</div>
 </f:if>

@@ -3,12 +3,12 @@
 
 <tr>
 	<td>
-		<f:render partial="ViewHelper/Person/ItemInTable"
+		<f:render partial="ViewHelpers/Person/ItemInTable"
 				  arguments="{person: person}"/>
 	</td>
 	<td class="tx-sportms-table-center">
 		<f:render arguments="{nationalities: person.nationalities}"
-				  partial="ViewHelper/Person/Nationalities"/>
+				  partial="ViewHelpers/Person/Nationalities"/>
 	</td>
 	<td class="tx-sportms-table-center">
 		<f:if condition="{person.personProfiles}">

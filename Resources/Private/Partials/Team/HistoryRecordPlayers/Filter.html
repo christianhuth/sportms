@@ -13,17 +13,17 @@
 				pluginName="Team">
 			<f:render
 					arguments="{options: competitionTypeSelectboxValues}"
-					partial="Form/Select/CompetitionType"/>
+					partial="ViewHelpers/Form/Select/CompetitionType"/>
 			<f:render
 					arguments="{options: competitionSelectboxValues}"
-					partial="Form/Select/Competition"/>
+					partial="ViewHelpers/Form/Select/Competition"/>
 			<f:render
 					arguments="{options: sportPositionGroupSelectboxValues}"
-					partial="Form/Select/SportPositionGroup"/>
+					partial="ViewHelpers/Form/Select/SportPositionGroup"/>
 			<f:render
 					arguments="{options: sportPositionSelectboxValues}"
-					partial="Form/Select/SportPosition"/>
-			<f:render partial="Form/Submit"/>
+					partial="ViewHelpers/Form/Select/SportPosition"/>
+			<f:render partial="ViewHelpers/Form/Submit"/>
 		</f:form>
 	</div>
 </f:if>

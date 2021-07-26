@@ -3,19 +3,19 @@
 
 <tr>
 	<td class="tx-sportms-table-left">
-		<f:render partial="ViewHelper/LinkAction/Club/Sections"
+		<f:render partial="ViewHelpers/LinkAction/Club/Sections"
 				  arguments="{club: club, linkLabel: 'clubLogoAndLabel'}"/>
 	</td>
 	<td>
 		<f:render arguments="{address: club.addresses.0}"
-				  partial="ViewHelper/Contact/Address"/>
+				  partial="ViewHelpers/Contact/Address"/>
 	</td>
 	<td>
 		<f:if condition="{club.phones}">
 			<f:then>
 				Tel.:
 				<f:for each="{club.phones}" as="phone">
-					<f:render partial="ViewHelper/Contact/Phone"
+					<f:render partial="ViewHelpers/Contact/Phone"
 							  arguments="{phone: phone}"/>
 				</f:for>
 				<br/>
@@ -25,7 +25,7 @@
 			<f:then>
 				Mail:
 				<f:for each="{club.mails}" as="mail">
-					<f:render partial="ViewHelper/Contact/Mail"
+					<f:render partial="ViewHelpers/Contact/Mail"
 							  arguments="{mail: mail}"/>
 				</f:for>
 				<br/>
@@ -35,7 +35,7 @@
 			<f:then>
 				Web:
 				<f:for each="{club.urls}" as="url">
-					<f:render partial="ViewHelper/Contact/Url"
+					<f:render partial="ViewHelpers/Contact/Url"
 							  arguments="{url: url}"/>
 				</f:for>
 			</f:then>

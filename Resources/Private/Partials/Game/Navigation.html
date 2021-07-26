@@ -16,14 +16,14 @@
 		<div class="collapse navbar-collapse" id="gameNavbar">
 			<ul class="nav navbar-nav">
 				<li>
-					<f:render partial="ViewHelper/LinkAction/Game/Index"
+					<f:render partial="ViewHelpers/LinkAction/Game/Index"
 							  arguments="{game: game}"/>
 				</li>
 				<f:if condition="{game.gameReports}">
 					<f:then>
 						<li>
 							<f:render
-									partial="ViewHelper/LinkAction/Game/Report"
+									partial="ViewHelpers/LinkAction/Game/Report"
 									arguments="{game: game}"/>
 						</li>
 					</f:then>
@@ -38,7 +38,7 @@
 				</f:if>
 				<li>
 					<f:render
-							partial="ViewHelper/LinkAction/Game/History"
+							partial="ViewHelpers/LinkAction/Game/History"
 							arguments="{game: game}"/>
 				</li>
 				<li class="dropdown">
@@ -53,17 +53,17 @@
 					<ul class="dropdown-menu">
 						<li>
 							<f:render
-									partial="ViewHelper/LinkAction/Competition/SeasonGames"
+									partial="ViewHelpers/LinkAction/Competition/SeasonGames"
 									arguments="{competitionSeason: game.competitionSeason}"/>
 						</li>
 						<li>
 							<f:render
-									partial="ViewHelper/LinkAction/Competition/SeasonTeams"
+									partial="ViewHelpers/LinkAction/Competition/SeasonTeams"
 									arguments="{competitionSeason: game.competitionSeason}"/>
 						</li>
 						<li>
 							<f:render
-									partial="ViewHelper/LinkAction/Competition/SeasonClubs"
+									partial="ViewHelpers/LinkAction/Competition/SeasonClubs"
 									arguments="{competitionSeason: game.competitionSeason}"/>
 						</li>
 					</ul>
