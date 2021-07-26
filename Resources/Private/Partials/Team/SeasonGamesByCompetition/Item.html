@@ -5,12 +5,7 @@
 <tr>
 	<td class="tx-sportms-table-center">
 		<f:render partial="ViewHelpers/LinkAction/Competition/SeasonGames"
-				  arguments="{_all}"/>
-		<sportms:link.action CompetitionSeason="{game.competitionSeason}" CompetitionSeasonGameday="{game.gameday}"
-							 action="seasonGames"
-							 controller="Competition">
-			{game.gameday.label}
-		</sportms:link.action>
+				  arguments="{competition: game.competitionSeason.competition, competitionSeason: game.competitionSeason, competitionSeasonGameday: game.gameday, linkLabel: 'gamedayLabel', season: game.competitionSeason.season}"/>
 	</td>
 	<td class="tx-sportms-table-center">
 		<f:format.date format="{settings.format.date.long}">{game.date}

@@ -69,6 +69,9 @@
             <trans-unit id="tx_sportms_action.season.teams">
                 <source>Mannschaften</source>
             </trans-unit>
+            <trans-unit id="tx_sportms_action.sportms.dbstats">
+                <source>Datenbank-Statistiken</source>
+            </trans-unit>
             <trans-unit id="tx_sportms_action.team.historyofficials">
                 <source>Funktionärshistorie</source>
             </trans-unit>
