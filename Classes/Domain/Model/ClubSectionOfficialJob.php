@@ -12,6 +12,11 @@
          * @var string
          */
         protected $label = '';
+    
+        /**
+         * @var bool
+         */
+        protected $isClubsectionheadJob = false;
         
         /**
          * @return string
@@ -27,6 +32,22 @@
         public function setLabel($label)
         {
             $this->label = $label;
+        }
+    
+        /**
+         * @return bool
+         */
+        public function isClubsectionheadJob(): bool
+        {
+            return $this->isClubsectionheadJob;
+        }
+    
+        /**
+         * @param bool $isClubsectionheadJob
+         */
+        public function setIsClubsectionheadJob(bool $isClubsectionheadJob): void
+        {
+            $this->isClubsectionheadJob = $isClubsectionheadJob;
         }
         
     }

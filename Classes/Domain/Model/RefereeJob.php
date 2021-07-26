@@ -12,6 +12,11 @@
          * @var string
          */
         protected $label = '';
+    
+        /**
+         * @var bool
+         */
+        protected $isMainrefereeJob = false;
         
         /**
          * @return string
@@ -27,6 +32,22 @@
         public function setLabel(string $label): void
         {
             $this->label = $label;
+        }
+    
+        /**
+         * @return bool
+         */
+        public function isMainrefereeJob(): bool
+        {
+            return $this->isMainrefereeJob;
+        }
+    
+        /**
+         * @param bool $isMainrefereeJob
+         */
+        public function setIsMainrefereeJob(bool $isMainrefereeJob): void
+        {
+            $this->isMainrefereeJob = $isMainrefereeJob;
         }
         
     }

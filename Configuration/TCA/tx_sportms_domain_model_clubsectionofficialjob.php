@@ -25,12 +25,13 @@
         'types' => [
             '1' => [
                 'showitem' => ' --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.tab.general,
-                                    label,
+                                     --palette--;;label_head,
                                 --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.tab.visibility,
                                     --palette--;LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.palette.visibility_general;visibility_general',
             ],
         ],
         'palettes' => [
+            'label_head' => ['showitem' => 'label, is_clubsectionhead_job'],
             'visibility_general' => ['showitem' => 'hidden, starttime, endtime'],
         ],
         'columns' => [
@@ -96,6 +97,20 @@
                     'type' => 'input',
                     'size' => 30,
                     'eval' => 'trim, required',
+                ],
+            ],
+            'is_clubsectionhead_job' => [
+                'exclude' => true,
+                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_clubsectionofficialjob.is_clubsectionhead_job',
+                'config' => [
+                    'items' => [
+                        [
+                            0 => '',
+                            1 => '',
+                        ],
+                    ],
+                    'renderType' => 'checkboxToggle',
+                    'type' => 'check',
                 ],
             ],
         

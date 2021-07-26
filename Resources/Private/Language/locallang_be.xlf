@@ -78,6 +78,18 @@
             </trans-unit>
 
 
+        <!-- Domain Model ClubOfficialJob -->
+            <trans-unit id="tx_sportms_domain_model_clubofficialjob.is_clubhead_job">
+                <source>Ist die Vereinsleitungs-Aufgabe?</source>
+            </trans-unit>
+
+
+        <!-- Domain Model ClubSectionOfficialJob -->
+            <trans-unit id="tx_sportms_domain_model_clubsectionofficialjob.is_clubsectionhead_job">
+                <source>Ist die Abteilungsleitungs-Aufgabe?</source>
+            </trans-unit>
+
+
         <!-- Domain Model Game -->
             <trans-unit id="tx_sportms_domain_model_game.game_appointment">
                 <source>Ansetzungsstatus</source>
