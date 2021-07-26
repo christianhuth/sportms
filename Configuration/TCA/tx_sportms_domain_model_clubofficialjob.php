@@ -31,7 +31,7 @@
             ],
         ],
         'palettes' => [
-            'label_head' => ['showitem' => 'label, is_clubhead_job'],
+            'label_head' => ['showitem' => 'label, is_club_head_job'],
             'visibility_general' => ['showitem' => 'hidden, starttime, endtime'],
         ],
         'columns' => [
@@ -99,9 +99,9 @@
                     'eval' => 'trim, required',
                 ],
             ],
-            'is_clubhead_job' => [
+            'is_club_head_job' => [
                 'exclude' => true,
-                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_clubofficialjob.is_clubhead_job',
+                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_clubofficialjob.is_club_head_job',
                 'config' => [
                     'items' => [
                         [

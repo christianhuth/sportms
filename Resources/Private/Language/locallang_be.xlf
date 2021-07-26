@@ -79,13 +79,13 @@
 
 
         <!-- Domain Model ClubOfficialJob -->
-            <trans-unit id="tx_sportms_domain_model_clubofficialjob.is_clubhead_job">
+            <trans-unit id="tx_sportms_domain_model_clubofficialjob.is_club_head_job">
                 <source>Ist die Vereinsleitungs-Aufgabe?</source>
             </trans-unit>
 
 
         <!-- Domain Model ClubSectionOfficialJob -->
-            <trans-unit id="tx_sportms_domain_model_clubsectionofficialjob.is_clubsectionhead_job">
+            <trans-unit id="tx_sportms_domain_model_clubsectionofficialjob.is_club_section_head_job">
                 <source>Ist die Abteilungsleitungs-Aufgabe?</source>
             </trans-unit>
 

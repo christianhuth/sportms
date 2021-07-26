@@ -85,7 +85,7 @@ CREATE TABLE tx_sportms_domain_model_clubofficial
 CREATE TABLE tx_sportms_domain_model_clubofficialjob
 (
     label varchar(255) DEFAULT NULL,
-    is_clubhead_job smallint(5) unsigned NOT NULL DEFAULT '0',
+    is_club_head_job smallint(5) unsigned NOT NULL DEFAULT '0',
 );
 
 #
@@ -138,7 +138,7 @@ CREATE TABLE tx_sportms_domain_model_clubsectionofficial
 CREATE TABLE tx_sportms_domain_model_clubsectionofficialjob
 (
     label varchar(255) DEFAULT NULL,
-    is_clubsectionhead_job smallint(5) unsigned NOT NULL DEFAULT '0',
+    is_club_section_head_job smallint(5) unsigned NOT NULL DEFAULT '0',
 );
 
 #

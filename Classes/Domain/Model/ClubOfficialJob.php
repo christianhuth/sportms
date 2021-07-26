@@ -16,7 +16,7 @@
         /**
          * @var bool
          */
-        protected $isClubheadJob = false;
+        protected $isClubHeadJob = false;
         
         /**
          * @return string
@@ -37,17 +37,17 @@
         /**
          * @return bool
          */
-        public function isClubheadJob(): bool
+        public function isClubHeadJob(): bool
         {
-            return $this->isClubheadJob;
+            return $this->isClubHeadJob;
         }
     
         /**
-         * @param bool $isClubheadJob
+         * @param bool $isClubHeadJob
          */
-        public function setIsClubheadJob(bool $isClubheadJob): void
+        public function setIsClubHeadJob(bool $isClubHeadJob): void
         {
-            $this->isClubheadJob = $isClubheadJob;
+            $this->isClubHeadJob = $isClubHeadJob;
         }
         
     }
