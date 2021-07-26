@@ -37,25 +37,6 @@
         
         /**
          * @param Season $season
-         */
-        public function teamsAction(Season $season = null): void
-        {
-            /* MAIN CONTENT */
-            if ($season === null) {
-                $seasonUid = $this->settings['season']['uid'];
-                $season = $this->seasonRepository->findByUid($seasonUid);
-            }
-            $this->view->assign('season', $season);
-            
-            /* PAGETITLE */
-            $this->pagetitleForSeason(
-                $season,
-                LocalizationUtility::translate('tx_sportms_action.season.teams', "sportms")
-            );
-        }
-        
-        /**
-         * @param Season $season
          * @param string $actionLabel
          */
         private function pagetitleForSeason(Season $season, string $actionLabel)

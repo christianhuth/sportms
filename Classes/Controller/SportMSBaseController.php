@@ -63,72 +63,72 @@
         
         protected function getClubsFilter($useSelected = true)
         {
-            return $this->getFilter('club', 'clubs', $useSelected);
+            return $this->getFilter('club', $useSelected);
         }
         
-        protected function getFilter($key1, $key2, $useSelected)
+        protected function getFilter($model, $useSelected)
         {
-            return ($useSelected && ($this->settings[$key1]['selectbox']['selected'])) ? $this->settings[$key1]['selectbox']['selected'] : $this->settings[$key1][$key2];
+            return ($useSelected && ($this->settings[$model]['selectbox']['selected'])) ? $this->settings[$model]['selectbox']['selected'] : $this->settings[$model][$model . "s"];
         }
         
         protected function getCompetitionsFilter($useSelected = true)
         {
-            return $this->getFilter('competition', 'competitions', $useSelected);
+            return $this->getFilter('competition', $useSelected);
         }
         
         protected function getCompetitionTypesFilter($useSelected = true)
         {
-            return $this->getFilter('competitionType', 'competitionTypes', $useSelected);
+            return $this->getFilter('competitionType', $useSelected);
         }
         
         protected function getCompetitionSeasonGamedaysFilter($useSelected = true)
         {
-            return $this->getFilter('competitionSeasonGameDay', 'competitionSeasonGameDays', $useSelected);
+            return $this->getFilter('competitionSeasonGameDay', $useSelected);
         }
         
         protected function getPersonsFilter($useSelected = true)
         {
-            return $this->getFilter('person', 'persons', $useSelected);
+            return $this->getFilter('person', $useSelected);
         }
         
         protected function getSeasonsFilter($useSelected = true)
         {
-            return $this->getFilter('season', 'seasons', $useSelected);
+            return $this->getFilter('season', $useSelected);
         }
         
         protected function getSportsFilter($useSelected = true)
         {
-            return $this->getFilter('sport', 'sports', $useSelected);
+            return $this->getFilter('sport', $useSelected);
         }
         
         protected function getSportAgeGroupsFilter($useSelected = true)
         {
-            return $this->getFilter('sportAgeGroup', 'sportAgeGroups', $useSelected);
+            return $this->getFilter('sportAgeGroup', $useSelected);
         }
         
         protected function getSportPositionGroupsFilter($useSelected = true)
         {
-            return $this->getFilter('sportPositionGroup', 'sportPositionGroups', $useSelected);
+            return $this->getFilter('sportPositionGroup', $useSelected);
         }
         
         protected function getSportPositionsFilter($useSelected = true)
         {
-            return $this->getFilter('sportPosition', 'sportPositions', $useSelected);
+            return $this->getFilter('sportPosition', $useSelected);
         }
         
         protected function getSportAgeLevelsFilter($useSelected = true)
         {
-            return $this->getFilter('sportAgeLevel', 'sportAgeLevels', $useSelected);
+            return $this->getFilter('sportAgeLevel', $useSelected);
         }
         
         protected function getTeamsFilter($useSelected = true)
         {
-            return $this->getFilter('team', 'teams', $useSelected);
+            return $this->getFilter('team', $useSelected);
         }
         
         protected function getVenuesFilter($useSelected = true)
         {
-            return $this->getFilter('venue', 'venues', $useSelected);
+            return $this->getFilter('venue', $useSelected);
         }
         
         /**

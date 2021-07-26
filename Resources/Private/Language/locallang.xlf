@@ -60,6 +60,9 @@
             <trans-unit id="tx_sportms_action.person.refereeprofile">
                 <source>Schiedsrichterprofil</source>
             </trans-unit>
+            <trans-unit id="tx_sportms_action.season.games">
+                <source>Spiele</source>
+            </trans-unit>
             <trans-unit id="tx_sportms_action.season.list">
                 <source>Liste</source>
             </trans-unit>
