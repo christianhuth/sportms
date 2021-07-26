@@ -20,7 +20,8 @@
 
 <div class="form-group form-group-sm">
 	<label class="hidden-xs col-sm-3 control-label">
-		<f:translate key="tx_sportms_domain_model_{f:format.case(mode: 'lower', value: model)}"/>
+		<f:translate
+				key="tx_sportms_domain_model_{f:format.case(mode: 'lower', value: model)}"/>
 		:
 	</label>
 	<div class="col-xs-12 col-sm-9">
@@ -30,28 +31,88 @@
 			</span>
 			<f:if condition="{prependOption}">
 				<f:then>
-					<f:form.select class="form-control"
-								   name="{model}"
-								   optionLabelField="{optionLabelField}"
-								   optionValueField="{optionValueField}"
-								   options="{options}"
-								   prependOptionLabel="{f:translate(key: 'tx_sportms_form.select.{f:format.case(mode: \'lower\', value: model)}.all')}"
-								   prependOptionValue="{prependOptionValue}"
-								   sortByOptionLabel="{sortByOptionLabel}"
-								   value="{value}"/>
+					<f:if condition="{groupBy}">
+						<f:then>
+							<f:render section="groupedAndPrepend"
+									  arguments="{_all}"/>
+						</f:then>
+						<f:else>
+							<f:form.select class="form-control"
+										   name="{model}"
+										   optionLabelField="{optionLabelField}"
+										   optionValueField="{optionValueField}"
+										   options="{options}"
+										   prependOptionLabel="{f:translate(key: 'tx_sportms_form.select.{f:format.case(mode: \'lower\', value: model)}.all')}"
+										   prependOptionValue="{prependOptionValue}"
+										   sortByOptionLabel="{sortByOptionLabel}"
+										   value="{value}"/>
+						</f:else>
+					</f:if>
 				</f:then>
 				<f:else>
-					<f:form.select class="form-control"
-								   name="{model}"
-								   optionLabelField="{optionLabelField}"
-								   optionValueField="{optionValueField}"
-								   options="{options}"
-								   sortByOptionLabel="{sortByOptionLabel}"
-								   value="{value}"/>
+					<f:if condition="{groupBy}">
+						<f:then>
+							<f:render section="grouped"
+									  arguments="{_all}"/>
+						</f:then>
+						<f:else>
+							<f:form.select class="form-control"
+										   name="{model}"
+										   optionLabelField="{optionLabelField}"
+										   optionValueField="{optionValueField}"
+										   options="{options}"
+										   sortByOptionLabel="{sortByOptionLabel}"
+										   value="{value}"/>
+						</f:else>
+					</f:if>
 				</f:else>
 			</f:if>
 		</div>
 	</div>
 </div>
+
+<f:section name="groupedAndPrepend">
+	<f:form.select class="form-control"
+				   name="{model}"
+				   prependOptionLabel="{f:translate(key: 'tx_sportms_form.select.{f:format.case(mode: \'lower\', value: model)}.all')}"
+				   prependOptionValue="{prependOptionValue}"
+				   sortByOptionLabel="{sortByOptionLabel}"
+				   value="{value}">
+		<f:groupedFor as="groupedOptions"
+					  groupBy="{groupBy}"
+					  groupKey="group"
+					  each="{options}">
+			<f:form.select.optgroup label="{group.label}">
+				<f:for each="{groupedOptions}" as="option">
+					<f:form.select.option
+							value="{option.uid}">
+						{option.label}
+					</f:form.select.option>
+				</f:for>
+			</f:form.select.optgroup>
+		</f:groupedFor>
+	</f:form.select>
+</f:section>
+
+<f:section name="grouped">
+	<f:form.select class="form-control"
+				   name="{model}"
+				   sortByOptionLabel="{sortByOptionLabel}"
+				   value="{value}">
+		<f:groupedFor as="groupedOptions"
+					  groupBy="{groupBy}"
+					  groupKey="group"
+					  each="{options}">
+			<f:form.select.optgroup label="{group.label}">
+				<f:for each="{groupedOptions}" as="option">
+					<f:form.select.option
+							value="{option.uid}">
+						{option.label}
+					</f:form.select.option>
+				</f:for>
+			</f:form.select.optgroup>
+		</f:groupedFor>
+	</f:form.select>
+</f:section>
 
 </html>

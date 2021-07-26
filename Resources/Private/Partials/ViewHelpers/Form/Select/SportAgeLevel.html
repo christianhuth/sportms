@@ -1,10 +1,27 @@
 <html data-namespace-typo3-fluid="true"
 	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
-<f:if condition="	{settings.sportAgeLevel.selectbox.enabled} &&
-					{settings.sportAgeGroup.selectbox.selected}">
-	<f:render partial="ViewHelpers/Form/Select/Generic"
-			  arguments="{model: 'sportAgeLevel', options: options, sortByOptionLabel: TRUE, value: settings.sportAgeLevel.selectbox.selected}"/>
+<f:if condition="{settings.sportAgeLevel.selectbox.enabled}">
+	
+	<f:if condition="{settings.sportAgeGroup.selectbox.selected}">
+		<f:then>
+			<f:render partial="ViewHelpers/Form/Select/Generic"
+					  arguments="{model: 'sportAgeLevel', options: options, sortByOptionLabel: TRUE, value: settings.sportAgeLevel.selectbox.selected}"/>
+		</f:then>
+		<f:else>
+			<f:if condition="{settings.sport.selectbox.selected}">
+				<f:then>
+					<f:render partial="ViewHelpers/Form/Select/Generic"
+							  arguments="{groupBy: 'sportAgeGroup', model: 'sportAgeLevel', options: options, sortByOptionLabel: TRUE, value: settings.sportAgeLevel.selectbox.selected}"/>
+				</f:then>
+				<f:else>
+					<f:render partial="ViewHelpers/Form/Select/Generic"
+							  arguments="{groupBy: 'sportAgeGroup.sport', model: 'sportAgeLevel', options: options, sortByOptionLabel: TRUE, value: settings.sportAgeLevel.selectbox.selected}"/>
+				</f:else>
+			</f:if>
+		</f:else>
+	</f:if>
+
 </f:if>
 
 </html>
