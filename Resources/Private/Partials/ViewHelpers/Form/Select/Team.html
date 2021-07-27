@@ -1,12 +1,17 @@
 <html data-namespace-typo3-fluid="true"
 	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
-<f:if	condition="	{settings.sport.selectbox.enabled} ||
-					{settings.club.selectbox.enabled} ||
-					{settings.team.selectbox.enabled} ||
-					{settings.season.selectbox.enabled}">
-	<f:render partial="ViewHelpers/Form/Select/Generic"
-			  arguments="{model: 'team', options: options, sortByOptionLabel: TRUE, value: settings.team.selectbox.selected}"/>
+<f:if condition="{settings.team.selectbox.enabled}">
+	<f:if condition="{settings.club.selectbox.selected}">
+		<f:then>
+			<f:render partial="ViewHelpers/Form/Select/Generic"
+					  arguments="{model: 'team', options: options, sortByOptionLabel: TRUE, value: settings.team.selectbox.selected}"/>
+		</f:then>
+		<f:else>
+			<f:render partial="ViewHelpers/Form/Select/Generic"
+					  arguments="{groupBy: 'club', model: 'team', options: options, sortByOptionLabel: TRUE, value: settings.team.selectbox.selected}"/>
+		</f:else>
+	</f:if>
 </f:if>
 
 </html>

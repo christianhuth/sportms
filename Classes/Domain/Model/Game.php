@@ -317,11 +317,11 @@
         protected $gameReferees;
         
         /**
-         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\GameReport>|\TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy|null
+         * @var \Balumedien\Sportms\Domain\Model\GameReport|\TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy|null
          * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
          * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
          */
-        protected $gameReports;
+        protected $gameReport;
         
         /**
          * @var boolean
@@ -1311,21 +1311,21 @@
         {
             $this->gameReferees = $gameReferees;
         }
-        
+    
         /**
-         * @return \TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy|\TYPO3\CMS\Extbase\Persistence\ObjectStorage|null
+         * @return GameReport|\TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy|null
          */
-        public function getGameReports()
+        public function getGameReport()
         {
-            return $this->gameReports;
+            return $this->gameReport;
         }
-        
+    
         /**
-         * @param \TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy|\TYPO3\CMS\Extbase\Persistence\ObjectStorage|null $gameReports
+         * @param GameReport|\TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy|null $gameReport
          */
-        public function setGameReports($gameReports): void
+        public function setGameReport($gameReport): void
         {
-            $this->gameReports = $gameReports;
+            $this->gameReport = $gameReport;
         }
         
         /**

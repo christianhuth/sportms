@@ -6,22 +6,16 @@
     use Balumedien\Sportms\Domain\Model\CompetitionSeasonGameday;
     use Balumedien\Sportms\Domain\Model\TeamSeason;
     use TYPO3\CMS\Extbase\Persistence\QueryInterface;
-
+    
     class GameRepository extends SportMSBaseRepository
     {
         
         protected $defaultOrderings = [
-            'sport.label' => QueryInterface::ORDER_ASCENDING,
+            'season.label' => QueryInterface::ORDER_DESCENDING,
             'competitionSeason.competition.label' => QueryInterface::ORDER_ASCENDING,
-            'competitionSeason.competition.competitionType.label' => QueryInterface::ORDER_ASCENDING,
-            'competitionSeason.competition.sportAgeGroup.label' => QueryInterface::ORDER_ASCENDING,
-            'competitionSeason.competition.sportAgeLevel.label' => QueryInterface::ORDER_ASCENDING,
-            'season.label' => QueryInterface::ORDER_ASCENDING,
-            'gameday' => QueryInterface::ORDER_ASCENDING,
             'date' => QueryInterface::ORDER_ASCENDING,
             'time' => QueryInterface::ORDER_ASCENDING,
             'teamSeasonHome.team.label' => QueryInterface::ORDER_ASCENDING,
-            'teamSeasonGuest.team.label' => QueryInterface::ORDER_ASCENDING,
         ];
         
         public function findAll(

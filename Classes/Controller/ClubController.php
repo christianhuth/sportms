@@ -5,7 +5,7 @@
     use Balumedien\Sportms\Domain\Model\Club;
     use TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException;
     use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
-
+    
     /**
      * ClubController
      */
@@ -41,11 +41,7 @@
         public function sectionsAction(Club $club = null): void
         {
             /* MAIN CONTENT */
-            if ($club === null) {
-                $clubUid = $this->settings['club']['uid'];
-                $club = $this->clubRepository->findByUid($clubUid);
-            }
-            $this->view->assign('club', $club);
+            $club = $this->assignClubToView($club);
             
             /* PAGETITLE */
             $this->pagetitleForClub(

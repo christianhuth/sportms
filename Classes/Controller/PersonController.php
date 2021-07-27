@@ -47,8 +47,7 @@
         {
             /* MAIN CONTENT */
             if ($person === null) {
-                $personUid = $this->settings['single']['person'];
-                $person = $this->personRepository->findByUid($personUid);
+                $person = $this->determinePerson();
             }
             $this->view->assign('person', $person);
             
@@ -114,8 +113,7 @@
         {
             /* MAIN CONTENT */
             if ($person === null) {
-                $personUid = $this->settings['single']['person'];
-                $person = $this->personRepository->findByUid($personUid);
+                $person = $this->determinePerson();
             }
             $this->view->assign('person', $person);
             

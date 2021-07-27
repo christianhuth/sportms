@@ -192,15 +192,6 @@
             );
         }
         
-        private function assignCompetitionToView(Competition $competition = null): Competition
-        {
-            if ($competition === null) {
-                $competition = $this->determineCompetition();
-            }
-            $this->view->assign('competition', $competition);
-            return $competition;
-        }
-        
         /**
          * @param Competition|null $competition
          * @param Season|null $season
@@ -219,17 +210,6 @@
             }
             $this->view->assign('season', $season);
             return $season;
-        }
-        
-        /**
-         * @param Competition $competition
-         * @param Season $season
-         */
-        private function assignCompetitionSeasonToView(Competition $competition, Season $season): CompetitionSeason
-        {
-            $competitionSeason = $this->competitionSeasonRepository->findByCompetitionAndSeason($competition, $season);
-            $this->view->assign('competitionSeason', $competitionSeason);
-            return $competitionSeason;
         }
         
         /**

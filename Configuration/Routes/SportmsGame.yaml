@@ -23,6 +23,12 @@ routeEnhancers:
         localeMap:
           - locale: 'de_DE.*'
             value: 'spielbericht'
+      localizedModel_Season:
+        type: LocaleModifier
+        default: 'season'
+        localeMap:
+          - locale: 'de_DE.*'
+            value: 'saison'
       localizedPage:
         type: LocaleModifier
         default: 'page'
@@ -33,6 +39,10 @@ routeEnhancers:
         type: StaticRangeMapper
         start: '1'
         end: '100'
+      season_slug:
+        type: PersistedAliasMapper
+        tableName: tx_sportms_domain_model_season
+        routeFieldName: slug
     defaults:
       page: '0'
     defaultController: 'Game::list'
@@ -45,6 +55,10 @@ routeEnhancers:
         _controller: 'Game::list'
         _arguments:
           page: '@widget_0/currentPage'
+      - routePath: '/{localizedModel_Season}/{season_slug}'
+        _controller: 'Game::list'
+        _arguments:
+          season_slug: season
       - routePath: '/{game_slug}/{localizedAction_index}'
         _controller: 'Game::index'
         _arguments:

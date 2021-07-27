@@ -84,7 +84,7 @@ CREATE TABLE tx_sportms_domain_model_clubofficial
 #
 CREATE TABLE tx_sportms_domain_model_clubofficialjob
 (
-    label varchar(255) DEFAULT NULL,
+    label            varchar(255) DEFAULT NULL,
     is_club_head_job smallint(5) unsigned NOT NULL DEFAULT '0',
 );
 
@@ -137,7 +137,7 @@ CREATE TABLE tx_sportms_domain_model_clubsectionofficial
 #
 CREATE TABLE tx_sportms_domain_model_clubsectionofficialjob
 (
-    label varchar(255) DEFAULT NULL,
+    label                    varchar(255) DEFAULT NULL,
     is_club_section_head_job smallint(5) unsigned NOT NULL DEFAULT '0',
 );
 
@@ -255,7 +255,7 @@ CREATE TABLE tx_sportms_domain_model_game
     game_goals                    int(11) DEFAULT NULL,
     game_punishments              int(11) DEFAULT NULL,
     game_referees                 int(11) DEFAULT NULL,
-    game_reports                  int(11) DEFAULT NULL,
+    game_report                   int(11) DEFAULT NULL,
     detail_link                   tinyint(4) unsigned DEFAULT '1' NOT NULL,
     slug                          varchar(2048) DEFAULT ''
 );
@@ -468,7 +468,7 @@ CREATE TABLE tx_sportms_domain_model_phonetype
 #
 CREATE TABLE tx_sportms_domain_model_refereejob
 (
-    label varchar(255) DEFAULT '0' NOT NULL,
+    label              varchar(255) DEFAULT '0' NOT NULL,
     is_mainreferee_job smallint(5) unsigned NOT NULL DEFAULT '0',
 );
 
@@ -584,7 +584,7 @@ CREATE TABLE tx_sportms_domain_model_teamseason
     team                       int(11) DEFAULT '0' NOT NULL,
     season                     int(11) DEFAULT '0' NOT NULL,
     team_season_practices      int(11) DEFAULT NULL,
-    team_season_images         varchar(255)  DEFAULT NULL,
+    team_season_images         varchar(255) DEFAULT NULL,
     team_season_officials      int(11) DEFAULT NULL,
     team_season_squad_members  int(11) DEFAULT NULL,
     team_season_squad_captains int(11) DEFAULT NULL,
@@ -611,7 +611,7 @@ CREATE TABLE tx_sportms_domain_model_teamseasonofficial
 #
 CREATE TABLE tx_sportms_domain_model_teamseasonofficialjob
 (
-    label varchar(255) DEFAULT NULL,
+    label              varchar(255) DEFAULT NULL,
     is_cheftrainer_job smallint(5) unsigned NOT NULL DEFAULT '0',
 );
 

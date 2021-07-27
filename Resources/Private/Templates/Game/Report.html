@@ -12,10 +12,22 @@
 		
 		<div class="tx-sportms-game-report">
 			
-			<f:if condition="{game.gameReports}">
+			<f:if condition="{game.gameReport}">
 				<f:then>
-					<f:render arguments="{report: game.gameReports.0}"
-							  partial="Game/Report/Report"/>
+					<f:debug>{game.gameReport}</f:debug>
+					<h3>
+						<f:format.raw>{game.gameReport.headline}</f:format.raw>
+					</h3>
+					<f:format.html>{game.gameReport.text}</f:format.html>
+					<p>von {game.gameReport.author}
+						<f:spaceless>
+							(
+							<f:format.date format="{settings.format.date.long}">
+								{game.gameReport.date}
+							</f:format.date>
+							)
+						</f:spaceless>
+					</p>
 				</f:then>
 				<f:else>
 					Leider kein Spielbericht vorhanden

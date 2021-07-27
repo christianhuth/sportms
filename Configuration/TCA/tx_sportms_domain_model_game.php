@@ -67,8 +67,8 @@
                                     game_punishments,
                                 --div--;LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_gamereferee.plural,
                                     game_referees,
-                                --div--;LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_gamereport.plural,
-                                    game_reports,
+                                --div--;LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_gamereport,
+                                    game_report,
                                 --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.tab.visibility,
                                     --palette--;LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.palette.visibility_general;visibility_general,
                                     --palette--;LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.palette.visibility_detail;visibility_detail,',
@@ -1212,8 +1212,8 @@
                 ],
             ],
             
-            'game_reports' => [
-                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_gamereport.plural',
+            'game_report' => [
+                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_gamereport',
                 'config' => [
                     'appearance' => [
                         'enabledControls' => [
@@ -1226,11 +1226,10 @@
                             'localize' => true,
                         ],
                         'levelLinksPosition' => 'bottom',
-                        'useSortable' => 1,
                     ],
                     'foreign_field' => 'game',
-                    'foreign_sortby' => 'sorting',
                     'foreign_table' => 'tx_sportms_domain_model_gamereport',
+                    'maxitems' => 1,
                     'type' => 'inline',
                 ],
             ],
