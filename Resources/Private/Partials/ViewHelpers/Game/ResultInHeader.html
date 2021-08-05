@@ -46,9 +46,19 @@
 			<f:variable name="resultMain">{game.resultEndRegularHome} :
 										  {game.resultEndRegularGuest}
 			</f:variable>
-			<f:variable name="resultSub">{game.resultHalfsFirstHome} :
-										 {game.resultHalfsFirstGuest}
-			</f:variable>
+			<f:if condition="	{game.resultHalfsFirstHome} &&
+								{game.resultHalfsFirstGuest}">
+				<f:then>
+					<f:variable name="resultSub">{game.resultHalfsFirstHome} :
+												 {game.resultHalfsFirstGuest}
+					</f:variable>
+				</f:then>
+				<f:else>
+					<f:variable name="resultSub">
+						unbekannt
+					</f:variable>
+				</f:else>
+			</f:if>
 		</f:then>
 		<f:else>
 			<f:if condition="{game.resultEndPenaltyHome} | {game.resultEndPenaltyGuest}">

@@ -81,9 +81,11 @@
 												condition="{game.teamSeasonHome.teamSeasonCheftrainers}">
 											<f:then>
 												<f:for
-														each="{game.teamSeasonHome.teamSeasonCheftrainers}" as="cheftrainer">
-													<f:render partial="Game/Index/Trainer"
-															  arguments="{trainer: cheftrainer.person}"/>
+														each="{game.teamSeasonHome.teamSeasonCheftrainers}"
+														as="cheftrainer">
+													<f:render
+															partial="Game/Index/Trainer"
+															arguments="{trainer: cheftrainer.person}"/>
 												</f:for>
 											</f:then>
 										</f:if>
@@ -92,8 +94,24 @@
 							</div>
 							<div class="tx-sportms-game-trainer-guest">
 								<f:if condition="{game.trainerGuest}">
-									<f:render partial="Game/Index/Trainer"
-											  arguments="{trainer: game.trainerGuest}"/>
+									<f:then>
+										<f:render partial="Game/Index/Trainer"
+												  arguments="{trainer: game.trainerGuest}"/>
+									</f:then>
+									<f:else>
+										<f:if
+												condition="{game.teamSeasonguest.teamSeasonCheftrainers}">
+											<f:then>
+												<f:for
+														each="{game.teamSeasonguest.teamSeasonCheftrainers}"
+														as="cheftrainer">
+													<f:render
+															partial="Game/Index/Trainer"
+															arguments="{trainer: cheftrainer.person}"/>
+												</f:for>
+											</f:then>
+										</f:if>
+									</f:else>
 								</f:if>
 							</div>
 						</f:then>
