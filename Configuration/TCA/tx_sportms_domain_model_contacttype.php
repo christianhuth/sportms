@@ -104,7 +104,7 @@
     
             'mail_contacttype' => [
                 'config' => [
-                    'default' => false,
+                    'default' => true,
                     'renderType' => 'checkboxToggle',
                     'type' => 'check',
                 ],
@@ -113,7 +113,7 @@
             ],
             'phone_contacttype' => [
                 'config' => [
-                    'default' => false,
+                    'default' => true,
                     'renderType' => 'checkboxToggle',
                     'type' => 'check',
                 ],
@@ -122,7 +122,7 @@
             ],
             'url_contacttype' => [
                 'config' => [
-                    'default' => false,
+                    'default' => true,
                     'renderType' => 'checkboxToggle',
                     'type' => 'check',
                 ],

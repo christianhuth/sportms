@@ -7,21 +7,32 @@
      */
     class Mail extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
+    
+        /**
+         * @var ContactType
+         */
+        protected $contactType;
         
         /**
          * @var string
          */
         protected $mail;
-        
+    
         /**
-         * @var \Balumedien\Sportms\Domain\Model\MailType
+         * @return ContactType
          */
-        protected $mailType;
-        
+        public function getContactType(): ContactType
+        {
+            return $this->contactType;
+        }
+    
         /**
-         * @var boolean
+         * @param ContactType $contactType
          */
-        protected $public;
+        public function setContactType(ContactType $contactType): void
+        {
+            $this->contactType = $contactType;
+        }
         
         /**
          * @return string
@@ -30,45 +41,13 @@
         {
             return $this->mail;
         }
-        
+    
         /**
          * @param string $mail
          */
         public function setMail($mail): void
         {
             $this->mail = $mail;
-        }
-        
-        /**
-         * @return \Balumedien\Sportms\Domain\Model\MailType
-         */
-        public function getMailType(): \Balumedien\Sportms\Domain\Model\MailType
-        {
-            return $this->mailType;
-        }
-        
-        /**
-         * @param \Balumedien\Sportms\Domain\Model\MailType $mailType
-         */
-        public function setMailType(\Balumedien\Sportms\Domain\Model\MailType $mailType): void
-        {
-            $this->mailType = $mailType;
-        }
-        
-        /**
-         * @return bool
-         */
-        public function isPublic(): bool
-        {
-            return $this->public;
-        }
-        
-        /**
-         * @param bool $public
-         */
-        public function setPublic($public): void
-        {
-            $this->public = $public;
         }
         
     }

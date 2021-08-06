@@ -4,6 +4,11 @@
     
     class Phone extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
+    
+        /**
+         * @var ContactType
+         */
+        protected $contactType;
         
         /**
          * @var string
@@ -19,16 +24,22 @@
          * @var string
          */
         protected $internationalAreaCode;
-        
+    
         /**
-         * @var \Balumedien\Sportms\Domain\Model\PhoneType
+         * @return ContactType
          */
-        protected $phoneType;
-        
+        public function getContactType(): ContactType
+        {
+            return $this->contactType;
+        }
+    
         /**
-         * @var bool
+         * @param ContactType $contactType
          */
-        protected $public;
+        public function setContactType(ContactType $contactType): void
+        {
+            $this->contactType = $contactType;
+        }
         
         /**
          * @return string
@@ -76,38 +87,6 @@
         public function setInternationalAreaCode(string $internationalAreaCode): void
         {
             $this->internationalAreaCode = $internationalAreaCode;
-        }
-        
-        /**
-         * @return \Balumedien\Sportms\Domain\Model\PhoneType
-         */
-        public function getPhoneType(): \Balumedien\Sportms\Domain\Model\PhoneType
-        {
-            return $this->phoneType;
-        }
-        
-        /**
-         * @param \Balumedien\Sportms\Domain\Model\PhoneType $phoneType
-         */
-        public function setPhoneType(\Balumedien\Sportms\Domain\Model\PhoneType $phoneType): void
-        {
-            $this->phoneType = $phoneType;
-        }
-        
-        /**
-         * @return bool
-         */
-        public function getPublic(): bool
-        {
-            return $this->public;
-        }
-        
-        /**
-         * @param bool $public
-         */
-        public function setPublic(bool $public): void
-        {
-            $this->public = $public;
         }
         
     }

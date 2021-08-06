@@ -808,18 +808,6 @@
             </trans-unit>
 
 
-        <!-- Domain Model MailType -->
-            <trans-unit id="tx_sportms_domain_model_mailtype">
-                <source>Mailart</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_mailtype.plural">
-                <source>Mailarten</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_mailtype.singular">
-                <source>Mailart</source>
-            </trans-unit>
-
-
         <!-- Domain Model Person -->
             <trans-unit id="tx_sportms_domain_model_person">
                 <source>Person</source>
@@ -961,18 +949,6 @@
             </trans-unit>
             <trans-unit id="tx_sportms_domain_model_phone.international_area_code">
                 <source>Länder Code</source>
-            </trans-unit>
-
-
-        <!-- Domain Model PhoneType -->
-            <trans-unit id="tx_sportms_domain_model_phonetype">
-                <source>Telefonart</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_phonetype.plural">
-                <source>Telefonarten</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_phonetype.singular">
-                <source>Telefonart</source>
             </trans-unit>
 
 
@@ -1189,18 +1165,6 @@
             </trans-unit>
             <trans-unit id="tx_sportms_domain_model_url.url">
                 <source>URL</source>
-            </trans-unit>
-
-
-        <!-- Domain Model UrlType -->
-            <trans-unit id="tx_sportms_domain_model_urltype">
-                <source>URL-Art</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_urltype.plural">
-                <source>URL-Arten</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_urltype.singular">
-                <source>URL-Art</source>
             </trans-unit>
 
 

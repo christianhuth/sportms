@@ -219,17 +219,6 @@
             $parameters['title'] = $newLabel;
         }
         
-        public function mailLabel(&$parameters, $parentObject): void
-        {
-            $record = BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
-            $newLabel = $record['mail'];
-            if ($record['mail_type']) {
-                $mailType = BackendUtility::getRecord('tx_sportms_domain_model_mailtype', $record['mail_type']);
-                $newLabel .= ' (' . $mailType['label'] . ')';
-            }
-            $parameters['title'] = $newLabel;
-        }
-        
         public function personProfileLabel(&$parameters, $parentObject): void
         {
             $record = BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);

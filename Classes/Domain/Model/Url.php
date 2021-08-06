@@ -9,19 +9,30 @@
     {
         
         /**
+         * @var ContactType
+         */
+        protected $contactType;
+        
+        /**
          * @var string
          */
         protected $url;
-        
+    
         /**
-         * @var \Balumedien\Sportms\Domain\Model\UrlType
+         * @return ContactType
          */
-        protected $urlType;
-        
+        public function getContactType(): ContactType
+        {
+            return $this->contactType;
+        }
+    
         /**
-         * @var boolean
+         * @param ContactType $contactType
          */
-        protected $public;
+        public function setContactType(ContactType $contactType): void
+        {
+            $this->contactType = $contactType;
+        }
         
         /**
          * @return string
@@ -37,38 +48,6 @@
         public function setUrl($url)
         {
             $this->url = $url;
-        }
-        
-        /**
-         * @return UrlType
-         */
-        public function getUrlType(): UrlType
-        {
-            return $this->urlType;
-        }
-        
-        /**
-         * @param UrlType $urlType
-         */
-        public function setUrlType(UrlType $urlType): void
-        {
-            $this->urlType = $urlType;
-        }
-        
-        /**
-         * @return bool
-         */
-        public function isPublic()
-        {
-            return $this->public;
-        }
-        
-        /**
-         * @param bool $public
-         */
-        public function setPublic($public)
-        {
-            $this->public = $public;
         }
         
     }

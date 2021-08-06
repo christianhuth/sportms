@@ -385,17 +385,9 @@ CREATE TABLE tx_sportms_domain_model_mail
 (
     foreign_uid   int(11) DEFAULT 0 NOT NULL,
     foreign_table varchar(255) DEFAULT '' NOT NULL,
+    contact_type  int(11) unsigned DEFAULT NULL,
     mail          varchar(255) DEFAULT '' NOT NULL,
-    mail_type     int(11) unsigned DEFAULT NULL,
     sorting       int(11) DEFAULT '0' NOT NULL
-);
-
-#
-# Table structure for table 'tx_sportms_domain_model_mailtype'
-#
-CREATE TABLE tx_sportms_domain_model_mailtype
-(
-    label varchar(255) DEFAULT NULL
 );
 
 #
@@ -459,19 +451,11 @@ CREATE TABLE tx_sportms_domain_model_phone
 (
     foreign_uid             int(11) DEFAULT 0 NOT NULL,
     foreign_table           varchar(255) DEFAULT '' NOT NULL,
+    contact_type            int(11) unsigned DEFAULT NULL,
     area_code               varchar(255) DEFAULT NULL,
     calling_number          varchar(255) DEFAULT '' NOT NULL,
     international_area_code varchar(255) DEFAULT '' NOT NULL,
-    phone_type              int(11) unsigned DEFAULT NULL,
     sorting                 int(11) DEFAULT '0' NOT NULL
-);
-
-#
-# Table structure for table 'tx_sportms_domain_model_phonetype'
-#
-CREATE TABLE tx_sportms_domain_model_phonetype
-(
-    label varchar(255) DEFAULT NULL
 );
 
 #
@@ -663,20 +647,10 @@ CREATE TABLE tx_sportms_domain_model_url
 (
     foreign_uid   int(11) DEFAULT 0 NOT NULL,
     foreign_table varchar(255) DEFAULT ''  NOT NULL,
-    url_type      int(11) unsigned DEFAULT NULL,
+    contact_type  int(11) unsigned DEFAULT NULL,
     url           varchar(255) DEFAULT '0' NOT NULL,
     sorting       int(11) DEFAULT '0' NOT NULL
 );
-
-#
-# Table structure for table 'tx_sportms_domain_model_urltype'
-#
-CREATE TABLE tx_sportms_domain_model_urltype
-(
-    label varchar(255) DEFAULT NULL
-);
-
-
 
 #
 # Table structure for table 'tx_sportms_domain_model_venue'
