@@ -151,7 +151,7 @@
                 'config' => [
                     'fallbackCharacter' => '-',
                     'generatorOptions' => [
-                        'fields' => ['uid', 'label'],
+                        'fields' => ['label', 'uid'],
                         'fieldSeparator' => '-',
                         'prefixParentPageSlug' => false,
                         'replacements' => [
