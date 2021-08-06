@@ -194,6 +194,17 @@ CREATE TABLE tx_sportms_domain_model_competitiontype
 );
 
 #
+# Table structure for table 'tx_sportms_domain_model_contacttype'
+#
+CREATE TABLE tx_sportms_domain_model_contacttype
+(
+    label             varchar(255) DEFAULT NULL,
+    mail_contacttype  tinyint(4) unsigned DEFAULT '1' NOT NULL,
+    phone_contacttype tinyint(4) unsigned DEFAULT '1' NOT NULL,
+    url_contacttype   tinyint(4) unsigned DEFAULT '1' NOT NULL
+);
+
+#
 # Table structure for table 'tx_sportms_domain_model_game'
 #
 CREATE TABLE tx_sportms_domain_model_game

@@ -362,7 +362,13 @@
 
 
         <!-- Domain Model ContactType -->
-            <trans-unit id="tx_sportms_domain_model_contact_type">
+            <trans-unit id="tx_sportms_domain_model_contacttype">
+                <source>Kontaktart</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_contacttype.plural">
+                <source>Kontaktarten</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_contacttype.singular">
                 <source>Kontaktart</source>
             </trans-unit>
 

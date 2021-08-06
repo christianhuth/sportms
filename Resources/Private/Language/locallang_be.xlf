@@ -90,6 +90,18 @@
             </trans-unit>
 
 
+        <!-- Domain Model ContactType -->
+            <trans-unit id="tx_sportms_domain_model_contacttype.mail_contacttype">
+                <source>Für Mail-Adressen verfügbar?</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_contacttype.phone_contacttype">
+                <source>Für Telefonnummern verfügbar?</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_contacttype.url_contacttype">
+                <source>Für Webseiten verfügbar?</source>
+            </trans-unit>
+
+
         <!-- Domain Model Game -->
             <trans-unit id="tx_sportms_domain_model_game.game_appointment">
                 <source>Ansetzungsstatus</source>
