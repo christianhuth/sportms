@@ -170,7 +170,7 @@
             $teamSeasonOfficials = $this->getTeamSeasonOfficials();
             $teamSeasonCheftrainers = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
             foreach ($teamSeasonOfficials as $teamSeasonOfficial) {
-                if($teamSeasonOfficial->getTeamSeasonOfficialJob()->isCheftrainerJob()) {
+                if($teamSeasonOfficial->getOfficialJob()->isCheftrainerJob()) {
                     $teamSeasonCheftrainers->attach($teamSeasonOfficial);
                 }
             }

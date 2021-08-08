@@ -15,23 +15,28 @@
                 'starttime' => 'starttime',
                 'endtime' => 'endtime',
             ],
-            'iconfile' => 'EXT:sportms/Resources/Public/Icons/tx_sportms_domain_model_teamseasonofficialjob.svg',
+            'iconfile' => 'EXT:sportms/Resources/Public/Icons/tx_sportms_domain_model_officialjob.svg',
             'label' => 'label',
             'searchFields' => '',
-            'title' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_teamseasonofficialjob',
+            'title' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_officialjob',
             'tstamp' => 'tstamp',
             'versioningWS' => true,
         ],
         'types' => [
             '1' => [
                 'showitem' => ' --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.tab.general,
-                                    --palette--;;label_chef,
+                                     label,
+                                     --palette--;;club_job,
+                                     --palette--;;club_section_job,
+                                     --palette--;;team_season_job,
                                 --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.tab.visibility,
                                     --palette--;LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.palette.visibility_general;visibility_general',
             ],
         ],
         'palettes' => [
-            'label_chef' => ['showitem' => 'label, is_cheftrainer_job'],
+            'club_job' => ['showitem' => 'is_club_job, is_club_head_job'],
+            'club_section_job' => ['showitem' => 'is_club_section_job, is_club_section_head_job'],
+            'team_season_job' => ['showitem' => 'is_team_season_job, is_cheftrainer_job'],
             'visibility_general' => ['showitem' => 'hidden, starttime, endtime'],
         ],
         'columns' => [
@@ -99,9 +104,88 @@
                     'eval' => 'trim, required',
                 ],
             ],
-            'is_cheftrainer_job' => [
+            
+            'is_club_job' => [
                 'exclude' => true,
-                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_teamseasonofficialjob.is_cheftrainer_job',
+                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_officialjob.is_club_job',
+                'config' => [
+                    'items' => [
+                        [
+                            0 => '',
+                            1 => '',
+                        ],
+                    ],
+                    'renderType' => 'checkboxToggle',
+                    'type' => 'check',
+                ],
+                'onChange' => 'reload',
+            ],
+            'is_club_head_job' => [
+                'displayCond' => 'FIELD:is_club_job:=:1',
+                'exclude' => true,
+                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_officialjob.is_club_head_job',
+                'config' => [
+                    'items' => [
+                        [
+                            0 => '',
+                            1 => '',
+                        ],
+                    ],
+                    'renderType' => 'checkboxToggle',
+                    'type' => 'check',
+                ],
+            ],
+            
+            'is_club_section_job' => [
+                'exclude' => true,
+                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_officialjob.is_club_section_job',
+                'config' => [
+                    'items' => [
+                        [
+                            0 => '',
+                            1 => '',
+                        ],
+                    ],
+                    'renderType' => 'checkboxToggle',
+                    'type' => 'check',
+                ],
+                'onChange' => 'reload',
+            ],
+            'is_club_section_head_job' => [
+                'displayCond' => 'FIELD:is_club_section_job:=:1',
+                'exclude' => true,
+                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_officialjob.is_club_section_head_job',
+                'config' => [
+                    'items' => [
+                        [
+                            0 => '',
+                            1 => '',
+                        ],
+                    ],
+                    'renderType' => 'checkboxToggle',
+                    'type' => 'check',
+                ],
+            ],
+    
+            'is_team_season_job' => [
+                'exclude' => true,
+                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_officialjob.is_team_season_job',
+                'config' => [
+                    'items' => [
+                        [
+                            0 => '',
+                            1 => '',
+                        ],
+                    ],
+                    'renderType' => 'checkboxToggle',
+                    'type' => 'check',
+                ],
+                'onChange' => 'reload',
+            ],
+            'is_cheftrainer_job' => [
+                'displayCond' => 'FIELD:is_team_season_job:=:1',
+                'exclude' => true,
+                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_officialjob.is_cheftrainer_job',
                 'config' => [
                     'items' => [
                         [

@@ -36,7 +36,7 @@
             ],
         ],
         'palettes' => [
-            'person_job' => ['showitem' => 'club_official_job, person'],
+            'person_job' => ['showitem' => 'official_job, person'],
             'date' => ['showitem' => 'startdate, until_today, enddate'],
             'visibility_general' => ['showitem' => 'hidden, starttime, endtime'],
         ],
@@ -102,13 +102,13 @@
                 ],
             ],
             
-            'club_official_job' => [
+            'official_job' => [
                 'exclude' => 1,
-                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_clubofficialjob',
+                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_officialjob',
                 'config' => [
                     'eval' => 'required',
-                    'foreign_table' => 'tx_sportms_domain_model_clubofficialjob',
-                    'foreign_table_where' => 'ORDER BY tx_sportms_domain_model_clubofficialjob.label ASC',
+                    'foreign_table' => 'tx_sportms_domain_model_officialjob',
+                    'foreign_table_where' => ' AND tx_sportms_domain_model_officialjob.is_club_job = 1 ORDER BY tx_sportms_domain_model_officialjob.label ASC',
                     'items' => [
                         ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_select.something', null],
                     ],

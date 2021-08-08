@@ -20,9 +20,9 @@
         protected $person;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Model\ClubSectionOfficialJob
+         * @var \Balumedien\Sportms\Domain\Model\OfficialJob
          */
-        protected $clubSectionOfficialJob;
+        protected $officialJob;
         
         /**
          * @var int
@@ -65,21 +65,21 @@
         {
             $this->person = $person;
         }
-        
+    
         /**
-         * @return ClubSectionOfficialJob
+         * @return OfficialJob
          */
-        public function getClubSectionOfficialJob()
+        public function getOfficialJob(): OfficialJob
         {
-            return $this->clubSectionOfficialJob;
+            return $this->officialJob;
         }
-        
+    
         /**
-         * @param ClubSectionOfficialJob $clubSectionOfficialJob
+         * @param OfficialJob $officialJob
          */
-        public function setClubSectionOfficialJob($clubSectionOfficialJob)
+        public function setOfficialJob(OfficialJob $officialJob): void
         {
-            $this->clubSectionOfficialJob = $clubSectionOfficialJob;
+            $this->officialJob = $officialJob;
         }
         
         /**

@@ -217,18 +217,6 @@
             </trans-unit>
 
 
-        <!-- Domain Model ClubOfficialJob -->
-            <trans-unit id="tx_sportms_domain_model_clubofficialjob">
-                <source>Vereinsfunktionärsaufgabe</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_clubofficialjob.plural">
-                <source>Vereinsfunktionärsaufgaben</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_clubofficialjob.plural">
-                <source>Vereinsfunktionärsaufgabe</source>
-            </trans-unit>
-
-
         <!-- Domain Model ClubSection -->
             <trans-unit id="tx_sportms_domain_model_clubsection">
                 <source>Vereinsabteilung</source>
@@ -271,18 +259,6 @@
             </trans-unit>
             <trans-unit id="tx_sportms_domain_model_clubsectionofficial.singular">
                 <source>Abteilungsfunktionär</source>
-            </trans-unit>
-
-
-        <!-- Domain Model ClubSectionOfficialJob -->
-            <trans-unit id="tx_sportms_domain_model_clubsectionofficialjob">
-                <source>Abteilungsfunktionärsaufgabe</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_clubsectionofficialjob.plural">
-                <source>Abteilungsfunktionärsaufgaben</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_clubsectionofficialjob.singular">
-                <source>Abteilungsfunktionärsaufgabe</source>
             </trans-unit>
 
 
@@ -808,6 +784,18 @@
             </trans-unit>
 
 
+        <!-- Domain Model OfficialJob -->
+            <trans-unit id="tx_sportms_domain_model_officialjob">
+                <source>Funktionärstätigkeit</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_officialjob.plural">
+                <source>Funktionärstätigkeiten</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_officialjob.plural">
+                <source>Funktionärstätigkeit</source>
+            </trans-unit>
+
+
         <!-- Domain Model Person -->
             <trans-unit id="tx_sportms_domain_model_person">
                 <source>Person</source>
@@ -1102,18 +1090,6 @@
             </trans-unit>
             <trans-unit id="tx_sportms_domain_model_teamseasonofficial.enddate">
                 <source>Amtsende</source>
-            </trans-unit>
-
-
-        <!-- Domain Model TeamSeasonOfficialJob -->
-            <trans-unit id="tx_sportms_domain_model_teamseasonofficialjob">
-                <source>Mannschaftsfunktionärsaufgabe</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_teamseasonofficialjob.plural">
-                <source>Mannschaftsfunktionärsaufgaben</source>
-            </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_teamseasonofficialjob.singular">
-                <source>Mannschaftsfunktionärsaufgabe</source>
             </trans-unit>
 
 

@@ -159,6 +159,27 @@
             </trans-unit>
 
 
+        <!-- Domain Model OfficialJob -->
+            <trans-unit id="tx_sportms_domain_model_officialjob.is_cheftrainer_job">
+                <source>Ist die Cheftrainer-Tätigkeit?</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_officialjob.is_club_job">
+                <source>Ist eine Vereinstätigkeit?</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_officialjob.is_club_head_job">
+                <source>Ist die Vereinsleitungs-Tätigkeit?</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_officialjob.is_club_section_job">
+                <source>Ist eine Abteilungstätigkeit?</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_officialjob.is_club_section_head_job">
+                <source>Ist die Abteilungsleitungs-Tätigkeit?</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_officialjob.is_team_season_job">
+                <source>Ist eine Mannschaftstätigkeit?</source>
+            </trans-unit>
+
+
         <!-- Domain Model Person -->
             <trans-unit id="tx_sportms_domain_model_person.show_birthday">
                 <source>Geburtsdatum zeigen</source>

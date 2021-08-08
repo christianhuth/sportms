@@ -15,14 +15,14 @@
         protected $club;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Model\Person
+         * @var Person
          */
         protected $person;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Model\ClubOfficialJob
+         * @var OfficialJob
          */
-        protected $clubOfficialJob;
+        protected $officialJob;
         
         /**
          * @var int
@@ -71,22 +71,21 @@
         {
             $this->person = $person;
         }
-        
+    
         /**
-         * @return \Balumedien\Sportms\Domain\Model\ClubOfficialJob ClubOfficialJob
+         * @return OfficialJob
          */
-        public function getClubOfficialJob()
+        public function getOfficialJob(): OfficialJob
         {
-            return $this->clubOfficialJob;
+            return $this->officialJob;
         }
-        
+    
         /**
-         * @param \Balumedien\Sportms\Domain\Model\ClubOfficialJob $clubOfficialJob
-         * @return void
+         * @param OfficialJob $officialJob
          */
-        public function setClubOfficialJob(\Balumedien\Sportms\Domain\Model\ClubOfficialJob $clubOfficialJob)
+        public function setOfficialJob(OfficialJob $officialJob): void
         {
-            $this->clubOfficialJob = $clubOfficialJob;
+            $this->officialJob = $officialJob;
         }
         
         /**

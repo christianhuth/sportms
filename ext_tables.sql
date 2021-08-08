@@ -70,22 +70,13 @@ CREATE TABLE tx_sportms_domain_model_clubmembers
 #
 CREATE TABLE tx_sportms_domain_model_clubofficial
 (
-    club              int(11) DEFAULT '0' NOT NULL,
-    person            int(11) DEFAULT '0' NOT NULL,
-    club_official_job int(11) DEFAULT '0' NOT NULL,
-    startdate         int(11) DEFAULT NULL,
-    until_today       tinyint(4) unsigned DEFAULT '0' NOT NULL,
-    enddate           int(11) DEFAULT NULL,
-    sorting           int(11) DEFAULT '0' NOT NULL
-);
-
-#
-# Table structure for table 'tx_sportms_domain_model_clubofficialjob'
-#
-CREATE TABLE tx_sportms_domain_model_clubofficialjob
-(
-    label            varchar(255) DEFAULT NULL,
-    is_club_head_job smallint(5) unsigned NOT NULL DEFAULT '0',
+    club         int(11) DEFAULT '0' NOT NULL,
+    person       int(11) DEFAULT '0' NOT NULL,
+    official_job int(11) DEFAULT '0' NOT NULL,
+    startdate    int(11) DEFAULT NULL,
+    until_today  tinyint(4) unsigned DEFAULT '0' NOT NULL,
+    enddate      int(11) DEFAULT NULL,
+    sorting      int(11) DEFAULT '0' NOT NULL
 );
 
 #
@@ -123,22 +114,13 @@ CREATE TABLE tx_sportms_domain_model_clubsectionmembers
 #
 CREATE TABLE tx_sportms_domain_model_clubsectionofficial
 (
-    club_section              int(11) DEFAULT '0' NOT NULL,
-    person                    int(11) DEFAULT '0' NOT NULL,
-    club_section_official_job int(11) DEFAULT '0' NOT NULL,
-    startdate                 int(11) DEFAULT NULL,
-    until_today               tinyint(4) unsigned DEFAULT '0' NOT NULL,
-    enddate                   int(11) DEFAULT NULL,
-    sorting                   int(11) DEFAULT '0' NOT NULL
-);
-
-#
-# Table structure for table 'tx_sportms_domain_model_clubsectionofficialjob'
-#
-CREATE TABLE tx_sportms_domain_model_clubsectionofficialjob
-(
-    label                    varchar(255) DEFAULT NULL,
-    is_club_section_head_job smallint(5) unsigned NOT NULL DEFAULT '0',
+    club_section int(11) DEFAULT '0' NOT NULL,
+    person       int(11) DEFAULT '0' NOT NULL,
+    official_job int(11) DEFAULT '0' NOT NULL,
+    startdate    int(11) DEFAULT NULL,
+    until_today  tinyint(4) unsigned DEFAULT '0' NOT NULL,
+    enddate      int(11) DEFAULT NULL,
+    sorting      int(11) DEFAULT '0' NOT NULL
 );
 
 #
@@ -391,6 +373,20 @@ CREATE TABLE tx_sportms_domain_model_mail
 );
 
 #
+# Table structure for table 'tx_sportms_domain_model_officialjob'
+#
+CREATE TABLE tx_sportms_domain_model_officialjob
+(
+    label                    varchar(255) DEFAULT NULL,
+    is_club_job              smallint(5) unsigned NOT NULL DEFAULT '0',
+    is_club_head_job         smallint(5) unsigned NOT NULL DEFAULT '0',
+    is_club_section_job      smallint(5) unsigned NOT NULL DEFAULT '0',
+    is_club_section_head_job smallint(5) unsigned NOT NULL DEFAULT '0',
+    is_team_season_job       smallint(5) unsigned NOT NULL DEFAULT '0',
+    is_cheftrainer_job       smallint(5) unsigned NOT NULL DEFAULT '0',
+);
+
+#
 # Table structure for table 'tx_sportms_domain_model_person'
 #
 CREATE TABLE tx_sportms_domain_model_person
@@ -406,13 +402,13 @@ CREATE TABLE tx_sportms_domain_model_person
     sex            varchar(1)   DEFAULT NULL,
     weight         double(11, 4
 ) DEFAULT NULL,
-	height double(11,4) DEFAULT NULL,
-	size_of_shoe varchar(255) DEFAULT NULL,
-	footer int(11) DEFAULT NULL,
-	hander int(11) DEFAULT NULL,
-	family_status int(11) DEFAULT 0 NOT NULL,
-	graduation varchar(255) DEFAULT NULL,
-	job varchar(255) DEFAULT NULL,
+    height double(11,4) DEFAULT NULL,
+    size_of_shoe varchar(255) DEFAULT NULL,
+    footer int(11) DEFAULT NULL,
+    hander int(11) DEFAULT NULL,
+    family_status int(11) DEFAULT 0 NOT NULL,
+    graduation varchar(255) DEFAULT NULL,
+    job varchar(255) DEFAULT NULL,
 	characteristics varchar(255) DEFAULT NULL,
 	hobbies varchar(255) DEFAULT NULL,
 	favorite_dish varchar(255) DEFAULT NULL,
@@ -593,21 +589,12 @@ CREATE TABLE tx_sportms_domain_model_teamseason
 #
 CREATE TABLE tx_sportms_domain_model_teamseasonofficial
 (
-    team_season              int(11) DEFAULT '0' NOT NULL,
-    person                   int(11) DEFAULT '0' NOT NULL,
-    team_season_official_job int(11) DEFAULT '0' NOT NULL,
-    startdate                int(11) DEFAULT NULL,
-    enddate                  int(11) DEFAULT NULL,
-    sorting                  int(11) DEFAULT '0' NOT NULL
-);
-
-#
-# Table structure for table 'tx_sportms_domain_model_teamseasonofficialjob'
-#
-CREATE TABLE tx_sportms_domain_model_teamseasonofficialjob
-(
-    label              varchar(255) DEFAULT NULL,
-    is_cheftrainer_job smallint(5) unsigned NOT NULL DEFAULT '0',
+    team_season  int(11) DEFAULT '0' NOT NULL,
+    person       int(11) DEFAULT '0' NOT NULL,
+    official_job int(11) DEFAULT '0' NOT NULL,
+    startdate    int(11) DEFAULT NULL,
+    enddate      int(11) DEFAULT NULL,
+    sorting      int(11) DEFAULT '0' NOT NULL
 );
 
 #

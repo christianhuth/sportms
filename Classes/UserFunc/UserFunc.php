@@ -4,7 +4,7 @@
     
     use TYPO3\CMS\Backend\Utility\BackendUtility;
     use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
-
+    
     class UserFunc
     {
         
@@ -39,12 +39,7 @@
         
         public function clubOfficialLabel(&$parameters, $parentObject): void
         {
-            $record = BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
-            $person = BackendUtility::getRecord('tx_sportms_domain_model_person', $record['person']);
-            $officialJob = BackendUtility::getRecord('tx_sportms_domain_model_clubofficialjob',
-                $record['club_official_job']);
-            $newLabel = $person['lastname'] . ', ' . $person['firstname'] . ' (' . $officialJob['label'] . ')';
-            $parameters['title'] = $newLabel;
+            $parameters['title'] = $this->officialLabel($parameters, $parentObject);
         }
         
         public function clubSectionLabel(&$parameters, $parentObject): void
@@ -57,12 +52,7 @@
         
         public function clubSectionOfficialLabel(&$parameters, $parentObject): void
         {
-            $record = BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
-            $person = BackendUtility::getRecord('tx_sportms_domain_model_person', $record['person']);
-            $officialJob = BackendUtility::getRecord('tx_sportms_domain_model_clubsectionofficialjob',
-                $record['club_section_official_job']);
-            $newLabel = $officialJob['label'] . ': ' . $person['firstname'] . ' ' . $person['lastname'];
-            $parameters['title'] = $newLabel;
+            $parameters['title'] = $this->officialLabel($parameters, $parentObject);
         }
         
         public function competitionLabel(&$parameters, $parentObject): void
@@ -219,6 +209,14 @@
             $parameters['title'] = $newLabel;
         }
         
+        private function officialLabel(&$parameters, $parentObject): string {
+            $record = BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
+            $person = BackendUtility::getRecord('tx_sportms_domain_model_person', $record['person']);
+            $officialJob = BackendUtility::getRecord('tx_sportms_domain_model_officialjob',
+                $record['official_job']);
+            return $officialJob['label'] . ': ' . $person['firstname'] . ' ' . $person['lastname'];
+        }
+        
         public function personProfileLabel(&$parameters, $parentObject): void
         {
             $record = BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
@@ -262,12 +260,7 @@
         
         public function teamSeasonOfficialLabel(&$parameters, $parentObject): void
         {
-            $record = BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
-            $person = BackendUtility::getRecord('tx_sportms_domain_model_person', $record['person']);
-            $officialJob = BackendUtility::getRecord('tx_sportms_domain_model_teamseasonofficialjob',
-                $record['team_season_official_job']);
-            $newLabel = $officialJob['label'] . ': ' . $person['lastname'] . ', ' . $person['firstname'];
-            $parameters['title'] = $newLabel;
+            $parameters['title'] = $this->officialLabel($parameters, $parentObject);
         }
         
         public function teamSeasonPracticeLabel(&$parameters, $parentObject): void
