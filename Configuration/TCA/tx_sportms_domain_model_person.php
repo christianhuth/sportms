@@ -559,6 +559,11 @@
                     'foreign_field' => 'person',
                     'foreign_sortby' => 'sorting',
                     'foreign_table' => 'tx_sportms_domain_model_personprofile',
+                    'overrideChildTca' => [
+                        'ctrl' => [
+                            'label_userFunc' => UserFunc::class . '->personProfileInlineLabel',
+                        ],
+                    ],
                     'type' => 'inline',
                 ],
             ],

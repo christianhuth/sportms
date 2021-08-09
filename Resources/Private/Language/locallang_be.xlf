@@ -78,18 +78,6 @@
             </trans-unit>
 
 
-        <!-- Domain Model ClubOfficialJob -->
-            <trans-unit id="tx_sportms_domain_model_clubofficialjob.is_club_head_job">
-                <source>Ist die Vereinsleitungs-Aufgabe?</source>
-            </trans-unit>
-
-
-        <!-- Domain Model ClubSectionOfficialJob -->
-            <trans-unit id="tx_sportms_domain_model_clubsectionofficialjob.is_club_section_head_job">
-                <source>Ist die Abteilungsleitungs-Aufgabe?</source>
-            </trans-unit>
-
-
         <!-- Domain Model ContactType -->
             <trans-unit id="tx_sportms_domain_model_contacttype.mail_contacttype">
                 <source>Für Mail-Adressen verfügbar?</source>
@@ -234,12 +222,6 @@
         <!-- Domain Model Team -->
             <trans-unit id="tx_sportms_domain_model_team.dummy">
                 <source>Spielfrei</source>
-            </trans-unit>
-
-
-        <!-- Domain Model TeamSeasonOfficialJob -->
-            <trans-unit id="tx_sportms_domain_model_teamseasonofficialjob.is_cheftrainer_job">
-                <source>Ist die Cheftrainer-Aufgabe?</source>
             </trans-unit>
 
 

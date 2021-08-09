@@ -60,6 +60,9 @@
 			'sportms-ce-plugin-person-icon' => 'tx_sportms_domain_model_person.svg',
 			'sportms-ce-plugin-season-icon' => 'tx_sportms_domain_model_season.svg',
 			'sportms-ce-plugin-team-icon' => 'tx_sportms_domain_model_team.svg',
+			'sportms-domain-model-officialprofile-icon' => 'tx_sportms_domain_model_officialjob.svg',
+			'sportms-domain-model-playerprofile-icon' => 'tx_sportms_domain_model_sport.svg',
+			'sportms-domain-model-refereeprofile-icon' => 'tx_sportms_domain_model_refereejob.svg',
 		];
 		$iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
 		foreach($icons as $identifier => $filename) {

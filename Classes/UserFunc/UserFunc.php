@@ -211,30 +211,18 @@
         
         private function officialLabel(&$parameters, $parentObject): string {
             $record = BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
-            $person = BackendUtility::getRecord('tx_sportms_domain_model_person', $record['person']);
+            $personProfile = BackendUtility::getRecord('tx_sportms_domain_model_personprofile', $record['person_profile']);
+            $person = BackendUtility::getRecord('tx_sportms_domain_model_person', $personProfile['person']);
             $officialJob = BackendUtility::getRecord('tx_sportms_domain_model_officialjob',
                 $record['official_job']);
-            return $officialJob['label'] . ': ' . $person['firstname'] . ' ' . $person['lastname'];
+            return $officialJob['label'] . ': ' . $person['lastname'] . ', ' . $person['firstname'];
         }
-        
+    
         public function personProfileLabel(&$parameters, $parentObject): void
         {
             $record = BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
-            $sport = BackendUtility::getRecord('tx_sportms_domain_model_sport', $record['sport']);
-            $profile_type = $record['profile_type'];
-            switch ($profile_type) {
-                # TODO: USE LOCALISATION
-                case 'official':
-                    $profile_type = 'FunktionärIn';
-                    break;
-                case 'player':
-                    $profile_type = 'SpielerIn';
-                    break;
-                case 'referee':
-                    $profile_type = 'SchiedsrichterIn';
-                    break;
-            }
-            $newLabel = $sport['label'] . ' (' . $profile_type . ')';
+            $person = BackendUtility::getRecord('tx_sportms_domain_model_person', $record['person']);
+            $newLabel = $person['lastname'] . ', ' . $person['firstname'];
             $parameters['title'] = $newLabel;
         }
         

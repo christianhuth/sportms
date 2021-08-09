@@ -15,9 +15,9 @@
         protected $clubSection;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Model\Person
+         * @var \Balumedien\Sportms\Domain\Model\PersonProfile
          */
-        protected $person;
+        protected $personProfile;
         
         /**
          * @var \Balumedien\Sportms\Domain\Model\OfficialJob
@@ -51,27 +51,27 @@
         }
         
         /**
-         * @return Person
-         */
-        public function getPerson()
-        {
-            return $this->person;
-        }
-        
-        /**
-         * @param Person $person
-         */
-        public function setPerson($person)
-        {
-            $this->person = $person;
-        }
-    
-        /**
          * @return OfficialJob
          */
         public function getOfficialJob(): OfficialJob
         {
             return $this->officialJob;
+        }
+    
+        /**
+         * @return PersonProfile
+         */
+        public function getPersonProfile(): PersonProfile
+        {
+            return $this->personProfile;
+        }
+    
+        /**
+         * @param PersonProfile $personProfile
+         */
+        public function setPersonProfile(PersonProfile $personProfile): void
+        {
+            $this->personProfile = $personProfile;
         }
     
         /**

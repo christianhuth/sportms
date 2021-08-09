@@ -36,7 +36,7 @@
             ],
         ],
         'palettes' => [
-            'person_job' => ['showitem' => 'official_job, person'],
+            'person_job' => ['showitem' => 'official_job, person_profile'],
             'date' => ['showitem' => 'startdate, until_today, enddate'],
             'visibility_general' => ['showitem' => 'hidden, starttime, endtime'],
         ],
@@ -118,16 +118,13 @@
                     'type' => 'select',
                 ],
             ],
-            'person' => [
+            'person_profile' => [
                 'exclude' => 1,
                 'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_person',
                 'config' => [
                     'eval' => 'required',
-                    'foreign_table' => 'tx_sportms_domain_model_person',
-                    'foreign_table_where' => '  tx_sportms_domain_model_person.uid IN (
-                                                SELECT person FROM tx_sportms_domain_model_personprofile WHERE profile_type = "official"
-                                            )
-                                            ORDER BY tx_sportms_domain_model_person.lastname ASC, tx_sportms_domain_model_person.firstname ASC',
+                    'foreign_table' => 'tx_sportms_domain_model_personprofile',
+                    'foreign_table_where' => ' AND tx_sportms_domain_model_personprofile.profile_type = 1',
                     'items' => [
                         ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_select.something', null],
                     ],

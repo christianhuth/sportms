@@ -15,9 +15,9 @@
         protected $club;
         
         /**
-         * @var Person
+         * @var PersonProfile
          */
-        protected $person;
+        protected $personProfile;
         
         /**
          * @var OfficialJob
@@ -56,22 +56,21 @@
         }
         
         /**
-         * @return Person
+         * @return PersonProfile
          */
-        public function getPerson()
+        public function getPersonProfile(): PersonProfile
         {
-            return $this->person;
+            return $this->personProfile;
         }
         
         /**
-         * @param Person $person
-         * @return void
+         * @param PersonProfile $personProfile
          */
-        public function setPerson($person)
+        public function setPersonProfile(PersonProfile $personProfile): void
         {
-            $this->person = $person;
+            $this->personProfile = $personProfile;
         }
-    
+        
         /**
          * @return OfficialJob
          */
@@ -79,7 +78,7 @@
         {
             return $this->officialJob;
         }
-    
+        
         /**
          * @param OfficialJob $officialJob
          */

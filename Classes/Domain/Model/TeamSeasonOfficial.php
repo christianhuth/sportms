@@ -15,9 +15,9 @@
         protected $teamSeason;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Model\Person
+         * @var \Balumedien\Sportms\Domain\Model\PersonProfile
          */
-        protected $person;
+        protected $personProfile;
         
         /**
          * @var \Balumedien\Sportms\Domain\Model\OfficialJob
@@ -54,23 +54,23 @@
         {
             $this->teamSeason = $teamSeason;
         }
-        
+    
         /**
-         * @return Person
+         * @return PersonProfile
          */
-        public function getPerson()
+        public function getPersonProfile(): PersonProfile
         {
-            return $this->person;
-        }
-        
-        /**
-         * @param Person $person
-         */
-        public function setPerson($person)
-        {
-            $this->person = $person;
+            return $this->personProfile;
         }
     
+        /**
+         * @param PersonProfile $personProfile
+         */
+        public function setPersonProfile(PersonProfile $personProfile): void
+        {
+            $this->personProfile = $personProfile;
+        }
+        
         /**
          * @return OfficialJob
          */

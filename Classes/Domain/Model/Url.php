@@ -9,7 +9,7 @@
     {
         
         /**
-         * @var ContactType
+         * @var \Balumedien\Sportms\Domain\Model\ContactType
          */
         protected $contactType;
         
@@ -19,17 +19,17 @@
         protected $url;
     
         /**
-         * @return ContactType
+         * @return \Balumedien\Sportms\Domain\Model\ContactType
          */
-        public function getContactType(): ContactType
+        public function getContactType(): \Balumedien\Sportms\Domain\Model\ContactType
         {
             return $this->contactType;
         }
     
         /**
-         * @param ContactType $contactType
+         * @param \Balumedien\Sportms\Domain\Model\ContactType $contactType
          */
-        public function setContactType(ContactType $contactType): void
+        public function setContactType(\Balumedien\Sportms\Domain\Model\ContactType $contactType): void
         {
             $this->contactType = $contactType;
         }

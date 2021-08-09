@@ -25,6 +25,13 @@
             'sortby' => 'sorting',
             'title' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_personprofile',
             'tstamp' => 'tstamp',
+            'type' => 'profile_type',
+            'typeicon_classes' => [
+                'default' => 'sportms-domain-model-playerprofile-icon',
+                '1' => 'sportms-domain-model-officialprofile-icon',
+                '2' => 'sportms-domain-model-refereeprofile-icon',
+            ],
+            'typeicon_column' => 'profile_type',
             'versioningWS' => true,
         ],
         'types' => [
@@ -120,23 +127,36 @@
                 'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_personprofile.profiletype',
                 'config' => [
                     'eval' => 'required',
+                    'fieldWizard' => [
+                        'selectIcons' => [
+                            'disabled' => false,
+                        ],
+                    ],
                     'items' => [
-                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_select.something', ''],
                         [
-                            'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_personprofile.profiletype.official',
-                            'official',
+                            'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_select.something',
+                            null,
                         ],
                         [
                             'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_personprofile.profiletype.player',
-                            'player',
+                            0,
+                            'sportms-domain-model-playerprofile-icon',
+                        ],
+                        [
+                            'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_personprofile.profiletype.official',
+                            1,
+                            'sportms-domain-model-officialprofile-icon',
                         ],
                         [
                             'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_personprofile.profiletype.referee',
-                            'referee',
+                            2,
+                            'sportms-domain-model-refereeprofile-icon',
                         ],
                     ],
                     'renderType' => 'selectSingle',
                     'type' => 'select',
+                    'size' => 1,
+                    'maxitems' => 1,
                 ],
                 'onChange' => 'reload',
             ],
@@ -160,7 +180,7 @@
             'main_sport_position_group' => [
                 'displayCond' => [
                     'AND' => [
-                        'FIELD:profile_type:=:player',
+                        'FIELD:profile_type:=:0',
                         'FIELD:sport:>:0',
                     ],
                 ],
@@ -184,7 +204,7 @@
             'main_sport_position' => [
                 'displayCond' => [
                     'AND' => [
-                        'FIELD:profile_type:=:player',
+                        'FIELD:profile_type:=:0',
                         'FIELD:sport:>:0',
                     ],
                 ],
@@ -206,7 +226,7 @@
             'side_sport_position_groups' => [
                 'displayCond' => [
                     'AND' => [
-                        'FIELD:profile_type:=:player',
+                        'FIELD:profile_type:=:0',
                         'FIELD:sport:>:0',
                     ],
                 ],
@@ -238,7 +258,7 @@
             'side_sport_positions' => [
                 'displayCond' => [
                     'AND' => [
-                        'FIELD:profile_type:=:player',
+                        'FIELD:profile_type:=:0',
                         'FIELD:sport:>:0',
                     ],
                 ],
