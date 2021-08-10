@@ -4,7 +4,7 @@
     
     class Phone extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
-    
+        
         /**
          * @var \Balumedien\Sportms\Domain\Model\ContactType
          */
@@ -24,7 +24,7 @@
          * @var string
          */
         protected $internationalAreaCode;
-    
+        
         /**
          * @return \Balumedien\Sportms\Domain\Model\ContactType
          */
@@ -32,7 +32,7 @@
         {
             return $this->contactType;
         }
-    
+        
         /**
          * @param \Balumedien\Sportms\Domain\Model\ContactType $contactType
          */

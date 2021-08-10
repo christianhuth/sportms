@@ -912,9 +912,17 @@
                     'foreign_table' => 'tx_sportms_domain_model_gamelineup',
                     'overrideChildTca' => [
                         'columns' => [
-                            'person' => [
+                            'person_profile' => [
                                 'config' => [
-                                    'foreign_table_where' => 'AND tx_sportms_domain_model_person.uid IN (SELECT tx_sportms_domain_model_teamseasonsquadmember.person FROM tx_sportms_domain_model_teamseasonsquadmember WHERE tx_sportms_domain_model_teamseasonsquadmember.team_season = (SELECT tx_sportms_domain_model_game.team_season_home FROM tx_sportms_domain_model_game WHERE tx_sportms_domain_model_game.uid = ###REC_FIELD_game###))',
+                                    'foreign_table_where' => '  AND tx_sportms_domain_model_personprofile.uid IN (
+                                                                    SELECT  tx_sportms_domain_model_teamseasonsquadmember.person_profile
+                                                                    FROM    tx_sportms_domain_model_teamseasonsquadmember
+                                                                    WHERE   tx_sportms_domain_model_teamseasonsquadmember.team_season = (
+                                                                        SELECT  tx_sportms_domain_model_game.team_season_home
+                                                                        FROM    tx_sportms_domain_model_game
+                                                                        WHERE   tx_sportms_domain_model_game.uid = ###REC_FIELD_game###
+                                                                    )
+                                                                )',
                                 ],
                             ],
                         ],
@@ -948,9 +956,17 @@
                     'foreign_table' => 'tx_sportms_domain_model_gamelineup',
                     'overrideChildTca' => [
                         'columns' => [
-                            'person' => [
+                            'person_profile' => [
                                 'config' => [
-                                    'foreign_table_where' => 'AND tx_sportms_domain_model_person.uid IN (SELECT tx_sportms_domain_model_teamseasonsquadmember.person FROM tx_sportms_domain_model_teamseasonsquadmember WHERE tx_sportms_domain_model_teamseasonsquadmember.team_season = (SELECT tx_sportms_domain_model_game.team_season_home FROM tx_sportms_domain_model_game WHERE tx_sportms_domain_model_game.uid = ###REC_FIELD_game###))',
+                                    'foreign_table_where' => '  AND tx_sportms_domain_model_personprofile.uid IN (
+                                                                    SELECT  tx_sportms_domain_model_teamseasonsquadmember.person_profile
+                                                                    FROM    tx_sportms_domain_model_teamseasonsquadmember
+                                                                    WHERE   tx_sportms_domain_model_teamseasonsquadmember.team_season = (
+                                                                        SELECT  tx_sportms_domain_model_game.team_season_home
+                                                                        FROM    tx_sportms_domain_model_game
+                                                                        WHERE   tx_sportms_domain_model_game.uid = ###REC_FIELD_game###
+                                                                    )
+                                                                )',
                                 ],
                             ],
                         ],
@@ -963,8 +979,13 @@
                 'exclude' => 1,
                 'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_game.captain',
                 'config' => [
-                    'foreign_table' => 'tx_sportms_domain_model_person',
-                    'foreign_table_where' => 'AND tx_sportms_domain_model_person.uid IN (SELECT tx_sportms_domain_model_gamelineup.person FROM tx_sportms_domain_model_gamelineup WHERE tx_sportms_domain_model_gamelineup.team = "home" AND tx_sportms_domain_model_gamelineup.game = ###THIS_UID###)',
+                    'foreign_table' => 'tx_sportms_domain_model_personprofile',
+                    'foreign_table_where' => '  AND tx_sportms_domain_model_personprofile.uid IN (
+                                                    SELECT  tx_sportms_domain_model_gamelineup.person_profile
+                                                    FROM    tx_sportms_domain_model_gamelineup
+                                                    WHERE   tx_sportms_domain_model_gamelineup.team = "home" AND
+                                                            tx_sportms_domain_model_gamelineup.game = ###THIS_UID###
+                                                )',
                     'items' => [
                         ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_select.something', 0],
                     ],
@@ -979,10 +1000,17 @@
                 'exclude' => 1,
                 'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_game.trainer_home',
                 'config' => [
-                    'foreign_table' => 'tx_sportms_domain_model_person',
-                    'foreign_table_where' => ' AND tx_sportms_domain_model_person.uid IN (SELECT tx_sportms_domain_model_teamseasonofficial.person FROM tx_sportms_domain_model_teamseasonofficial WHERE tx_sportms_domain_model_teamseasonofficial.team_season = ###REC_FIELD_team_season_home###)',
+                    'foreign_table' => 'tx_sportms_domain_model_personprofile',
+                    'foreign_table_where' => '  AND tx_sportms_domain_model_personprofile.uid IN (
+                                                    SELECT  tx_sportms_domain_model_teamseasonofficial.person_profile
+                                                    FROM    tx_sportms_domain_model_teamseasonofficial
+                                                    WHERE   tx_sportms_domain_model_teamseasonofficial.team_season = ###REC_FIELD_team_season_home###
+                                                )',
                     'items' => [
-                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_game.select.trainer', 0],
+                        [
+                            'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_game.select.trainer',
+                            0,
+                        ],
                     ],
                     'maxItems' => 1,
                     'minItems' => 0,
@@ -1045,9 +1073,17 @@
                     'foreign_table' => 'tx_sportms_domain_model_gamelineup',
                     'overrideChildTca' => [
                         'columns' => [
-                            'person' => [
+                            'person_profile' => [
                                 'config' => [
-                                    'foreign_table_where' => 'AND tx_sportms_domain_model_person.uid IN (SELECT tx_sportms_domain_model_teamseasonsquadmember.person FROM tx_sportms_domain_model_teamseasonsquadmember WHERE tx_sportms_domain_model_teamseasonsquadmember.team_season = (SELECT tx_sportms_domain_model_game.team_season_guest FROM tx_sportms_domain_model_game WHERE tx_sportms_domain_model_game.uid = ###REC_FIELD_game###))',
+                                    'foreign_table_where' => '  AND tx_sportms_domain_model_personprofile.uid IN (
+                                                                    SELECT  tx_sportms_domain_model_teamseasonsquadmember.person_profile
+                                                                    FROM    tx_sportms_domain_model_teamseasonsquadmember
+                                                                    WHERE   tx_sportms_domain_model_teamseasonsquadmember.team_season = (
+                                                                        SELECT  tx_sportms_domain_model_game.team_season_guest
+                                                                        FROM    tx_sportms_domain_model_game
+                                                                        WHERE   tx_sportms_domain_model_game.uid = ###REC_FIELD_game###
+                                                                    )
+                                                                )',
                                 ],
                             ],
                         ],
@@ -1081,9 +1117,17 @@
                     'foreign_table' => 'tx_sportms_domain_model_gamelineup',
                     'overrideChildTca' => [
                         'columns' => [
-                            'person' => [
+                            'person_profile' => [
                                 'config' => [
-                                    'foreign_table_where' => 'AND tx_sportms_domain_model_person.uid IN (SELECT tx_sportms_domain_model_teamseasonsquadmember.person FROM tx_sportms_domain_model_teamseasonsquadmember WHERE tx_sportms_domain_model_teamseasonsquadmember.team_season = (SELECT tx_sportms_domain_model_game.team_season_guest FROM tx_sportms_domain_model_game WHERE tx_sportms_domain_model_game.uid = ###REC_FIELD_game###))',
+                                    'foreign_table_where' => '  AND tx_sportms_domain_model_personprofile.uid IN (
+                                                                    SELECT  tx_sportms_domain_model_teamseasonsquadmember.person_profile
+                                                                    FROM    tx_sportms_domain_model_teamseasonsquadmember
+                                                                    WHERE   tx_sportms_domain_model_teamseasonsquadmember.team_season = (
+                                                                        SELECT  tx_sportms_domain_model_game.team_season_guest
+                                                                        FROM    tx_sportms_domain_model_game
+                                                                        WHERE   tx_sportms_domain_model_game.uid = ###REC_FIELD_game###
+                                                                    )
+                                                                )',
                                 ],
                             ],
                         ],
@@ -1096,8 +1140,13 @@
                 'exclude' => 1,
                 'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_game.captain',
                 'config' => [
-                    'foreign_table' => 'tx_sportms_domain_model_person',
-                    'foreign_table_where' => 'AND tx_sportms_domain_model_person.uid IN (SELECT tx_sportms_domain_model_gamelineup.person FROM tx_sportms_domain_model_gamelineup WHERE tx_sportms_domain_model_gamelineup.team = "guest" AND tx_sportms_domain_model_gamelineup.game = ###THIS_UID###)',
+                    'foreign_table' => 'tx_sportms_domain_model_personprofile',
+                    'foreign_table_where' => '  AND tx_sportms_domain_model_personprofile.uid IN (
+                                                    SELECT  tx_sportms_domain_model_gamelineup.person_profile
+                                                    FROM    tx_sportms_domain_model_gamelineup
+                                                    WHERE   tx_sportms_domain_model_gamelineup.team = "guest" AND
+                                                            tx_sportms_domain_model_gamelineup.game = ###THIS_UID###
+                                                )',
                     'items' => [
                         ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_select.something', 0],
                     ],
@@ -1113,10 +1162,17 @@
                 'exclude' => 1,
                 'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_game.trainer_guest',
                 'config' => [
-                    'foreign_table' => 'tx_sportms_domain_model_person',
-                    'foreign_table_where' => ' AND tx_sportms_domain_model_person.uid IN (SELECT tx_sportms_domain_model_teamseasonofficial.person FROM tx_sportms_domain_model_teamseasonofficial WHERE tx_sportms_domain_model_teamseasonofficial.team_season = ###REC_FIELD_team_season_guest###)',
+                    'foreign_table' => 'tx_sportms_domain_model_personprofile',
+                    'foreign_table_where' => '  AND tx_sportms_domain_model_personprofile.uid IN (
+                                                    SELECT  tx_sportms_domain_model_teamseasonofficial.person_profile
+                                                    FROM    tx_sportms_domain_model_teamseasonofficial
+                                                    WHERE   tx_sportms_domain_model_teamseasonofficial.team_season = ###REC_FIELD_team_season_guest###
+                                                )',
                     'items' => [
-                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_game.select.trainer', 0],
+                        [
+                            'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_game.select.trainer',
+                            0,
+                        ],
                     ],
                     'maxItems' => 1,
                     'minItems' => 0,

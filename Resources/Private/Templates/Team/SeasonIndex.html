@@ -79,8 +79,6 @@
 				</div>
 			</f:if>
 			
-			<f:debug>{teamSeason.teamSeasonSquadMembers}</f:debug>
-			
 			<f:if condition="{teamSeason.teamSeasonSquadMembers}">
 				<div class="tx-sportms-teamseason-squad">
 					<f:groupedFor as="squadMembersByPosition"
@@ -105,8 +103,8 @@
 			<f:if condition="{teamSeason.teamSeasonSquadCaptains}">
 				<div class="tx-sportms-teamseason-squad-captains">
 					<div class="tx-sportms-teamseason-squad-captains col-xs-12">
-						<h3>
-							Mannschaftskapitäne</h3></div>
+						<h3>Mannschaftskapitäne</h3>
+					</div>
 					<f:for as="squadCaptain"
 						   each="{teamSeason.teamSeasonSquadCaptains}"
 						   iteration="iterator">

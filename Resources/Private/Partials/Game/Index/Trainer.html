@@ -4,12 +4,12 @@
 <div class="tx-sportms-game-trainer-entry">
 	<div class="tx-sportms-game-trainer-person">
 		<f:render partial="ViewHelpers/LinkAction/Person/OfficialProfile"
-				  arguments="{linkLabel: 'lastname', person: trainer}"/>
+				  arguments="{linkLabel: 'lastname', person: trainer.person}"/>
 	</div>
 	<div class="tx-sportms-game-trainer-jerseynumber">
 		<span class="tx-sportms-game-trainer-number">
-			<f:format.crop append="."
-						   maxCharacters="1">{trainer.firstname}</f:format.crop>
+			{trainer.person.firstname -> f:format.crop(append:
+			".", maxCharacters:	1)}
 		</span>
 	</div>
 </div>

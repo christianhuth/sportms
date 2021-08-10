@@ -108,7 +108,7 @@
                     'eval' => 'trim, required',
                 ],
             ],
-    
+            
             'slug' => [
                 'exclude' => true,
                 'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.slug',

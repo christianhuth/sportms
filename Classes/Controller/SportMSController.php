@@ -77,7 +77,7 @@
             if (strpos($dbStats, 'Team') !== false) {
                 $this->view->assign('teamCount', $this->teamRepository->findAll()->count());
             }
-    
+            
             /* PAGETITLE */
             $this->pagetitle(
                 "Sport Management System",

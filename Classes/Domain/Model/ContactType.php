@@ -7,27 +7,27 @@
      */
     class ContactType extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
-    
+        
         /**
          * @var string
          */
         protected $label;
-    
+        
         /**
          * @var boolean
          */
         protected $mailContactType;
-    
+        
         /**
          * @var boolean
          */
         protected $phoneContactType;
-    
+        
         /**
          * @var boolean
          */
         protected $urlContactType;
-    
+        
         /**
          * @return string $label
          */
@@ -35,7 +35,7 @@
         {
             return $this->label;
         }
-    
+        
         /**
          * @param string $label
          * @return void
@@ -44,7 +44,7 @@
         {
             $this->label = $label;
         }
-    
+        
         /**
          * @return bool
          */
@@ -52,7 +52,7 @@
         {
             return $this->mailContactType;
         }
-    
+        
         /**
          * @param bool $mailContactType
          */
@@ -60,7 +60,7 @@
         {
             $this->mailContactType = $mailContactType;
         }
-    
+        
         /**
          * @return bool
          */
@@ -68,7 +68,7 @@
         {
             return $this->phoneContactType;
         }
-    
+        
         /**
          * @param bool $phoneContactType
          */
@@ -76,7 +76,7 @@
         {
             $this->phoneContactType = $phoneContactType;
         }
-    
+        
         /**
          * @return bool
          */
@@ -84,7 +84,7 @@
         {
             return $this->urlContactType;
         }
-    
+        
         /**
          * @param bool $urlContactType
          */

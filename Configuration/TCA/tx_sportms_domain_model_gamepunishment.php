@@ -32,7 +32,7 @@
                                     game,
                                     ---palette---;;goal,
                                     ---palette---;;time,
-                                    punished_person,
+                                    punished_person_profile,
                                     ---palette---;;punishment_details',
             ],
         ],
@@ -153,17 +153,17 @@
                     'size' => 10,
                 ],
             ],
-            'punished_person' => [
+            'punished_person_profile' => [
                 'exclude' => 1,
                 'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_gamepunishment.punished_person',
                 'config' => [
                     'eval' => 'required',
-                    'foreign_table' => 'tx_sportms_domain_model_person',
-                    'foreign_table_where' => '  AND tx_sportms_domain_model_person.uid IN
+                    'foreign_table' => 'tx_sportms_domain_model_personprofile',
+                    'foreign_table_where' => '  AND tx_sportms_domain_model_personprofile.uid IN
                                                 (
-                                                    SELECT tx_sportms_domain_model_gamelineup.person
-                                                    FROM tx_sportms_domain_model_gamelineup
-                                                    WHERE tx_sportms_domain_model_gamelineup.game = ###REC_FIELD_game###
+                                                    SELECT  tx_sportms_domain_model_gamelineup.person_profile
+                                                    FROM    tx_sportms_domain_model_gamelineup
+                                                    WHERE   tx_sportms_domain_model_gamelineup.game = ###REC_FIELD_game###
                                                 )',
                     'items' => [
                         ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_select.something', ""],

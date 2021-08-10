@@ -11,19 +11,19 @@
      */
     class GameController extends SportMSBaseController
     {
-    
+        
         /**
          * @var \Balumedien\Sportms\Domain\Repository\ClubRepository
          * @TYPO3\CMS\Extbase\Annotation\Inject
          */
         protected $clubRepository;
-    
+        
         /**
          * @var \Balumedien\Sportms\Domain\Repository\CompetitionTypeRepository
          * @TYPO3\CMS\Extbase\Annotation\Inject
          */
         protected $competitionTypeRepository;
-    
+        
         /**
          * @var \Balumedien\Sportms\Domain\Repository\CompetitionRepository
          * @TYPO3\CMS\Extbase\Annotation\Inject
@@ -35,7 +35,7 @@
          * @TYPO3\CMS\Extbase\Annotation\Inject
          */
         protected $gameRepository;
-    
+        
         /**
          * @var \Balumedien\Sportms\Domain\Repository\SeasonRepository
          * @TYPO3\CMS\Extbase\Annotation\Inject

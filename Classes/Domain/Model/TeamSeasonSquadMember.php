@@ -14,9 +14,9 @@
         protected $teamSeason;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Model\Person
+         * @var \Balumedien\Sportms\Domain\Model\PersonProfile
          */
-        protected $person;
+        protected $personProfile;
         
         /**
          * @var \Balumedien\Sportms\Domain\Model\SportPositionGroup
@@ -65,19 +65,19 @@
         }
         
         /**
-         * @return Person
+         * @return PersonProfile
          */
-        public function getPerson()
+        public function getPersonProfile(): PersonProfile
         {
-            return $this->person;
+            return $this->personProfile;
         }
         
         /**
-         * @param Person $person
+         * @param PersonProfile $personProfile
          */
-        public function setPerson($person)
+        public function setPersonProfile(PersonProfile $personProfile): void
         {
-            $this->person = $person;
+            $this->personProfile = $personProfile;
         }
         
         /**

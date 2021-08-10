@@ -293,7 +293,7 @@ CREATE TABLE tx_sportms_domain_model_gamelineup
     team           varchar(255) DEFAULT ''      NOT NULL,
     type           varchar(10)  DEFAULT 'start' NOT NULL,
     jersey_number  varchar(255) DEFAULT NULL,
-    person         int(11) DEFAULT 0 NOT NULL,
+    person_profile int(11) DEFAULT 0 NOT NULL,
     sport_position int(11) DEFAULT NULL,
     sorting        int(11) DEFAULT 0 NOT NULL
 );
@@ -314,14 +314,14 @@ CREATE TABLE tx_sportms_domain_model_gameperiod
 #
 CREATE TABLE tx_sportms_domain_model_gamepunishment
 (
-    game              int(11) DEFAULT '0' NOT NULL,
+    game                    int(11) DEFAULT '0' NOT NULL,
     period int (11) DEFAULT NULL,
-    minute            int(11) DEFAULT '0' NOT NULL,
-    minute_additional int(11) DEFAULT NULL,
-    punished_person   int(11) DEFAULT '0' NOT NULL,
-    type              int(11) DEFAULT NULL,
-    duration          int(11) DEFAULT NULL,
-    reason            int(11) DEFAULT NULL
+    minute                  int(11) DEFAULT '0' NOT NULL,
+    minute_additional       int(11) DEFAULT NULL,
+    punished_person_profile int(11) DEFAULT '0' NOT NULL,
+    type                    int(11) DEFAULT NULL,
+    duration                int(11) DEFAULT NULL,
+    reason                  int(11) DEFAULT NULL
 );
 
 #
@@ -329,10 +329,10 @@ CREATE TABLE tx_sportms_domain_model_gamepunishment
 #
 CREATE TABLE tx_sportms_domain_model_gamereferee
 (
-    game        int(11) unsigned DEFAULT '0' NOT NULL,
-    person      int(11) unsigned DEFAULT '0' NOT NULL,
-    referee_job int(11) unsigned DEFAULT NULL,
-    sorting     int(11) DEFAULT '0' NOT NULL
+    game           int(11) unsigned DEFAULT '0' NOT NULL,
+    person_profile int(11) unsigned DEFAULT '0' NOT NULL,
+    referee_job    int(11) unsigned DEFAULT NULL,
+    sorting        int(11) DEFAULT '0' NOT NULL
 );
 
 #
@@ -617,14 +617,15 @@ CREATE TABLE tx_sportms_domain_model_teamseasonpractice
 CREATE TABLE tx_sportms_domain_model_teamseasonsquadmember
 (
     team_season          int(11) DEFAULT '0' NOT NULL,
-    person               int(11) DEFAULT '0' NOT NULL,
+    person_profile       int(11) DEFAULT '0' NOT NULL,
     sport_position_group int(11) DEFAULT NULL,
     sport_position       int(11) DEFAULT NULL,
     squad_number         varchar(255) DEFAULT NULL,
     new_signing          tinyint(4) unsigned DEFAULT '0' NOT NULL,
     leaving              tinyint(4) unsigned DEFAULT '0' NOT NULL,
     hidden_in_squad_list smallint(5) unsigned NOT NULL DEFAULT '0',
-    sorting              int(11) DEFAULT NULL
+    sorting              int(11) DEFAULT NULL,
+    UNIQUE KEY teamseason_personprofile(team_season, person_profile)
 );
 
 #
@@ -715,9 +716,9 @@ CREATE TABLE tx_sportms_sport_sporttype_mm
 );
 
 #
-# Table structure for table 'tx_sportms_teamseason_person_mm'
+# Table structure for table 'tx_sportms_teamseason_personprofile_mm'
 #
-CREATE TABLE tx_sportms_teamseason_person_mm
+CREATE TABLE tx_sportms_teamseason_personprofile_mm
 (
     uid_local       int(11) unsigned DEFAULT '0' NOT NULL,
     uid_foreign     int(11) unsigned DEFAULT '0' NOT NULL,

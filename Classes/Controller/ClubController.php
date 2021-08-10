@@ -5,7 +5,7 @@
     use Balumedien\Sportms\Domain\Model\Club;
     use TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException;
     use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
-    
+
     /**
      * ClubController
      */

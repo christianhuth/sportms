@@ -101,7 +101,7 @@
                     'eval' => 'trim, required',
                 ],
             ],
-    
+            
             'mail_contacttype' => [
                 'config' => [
                     'default' => true,

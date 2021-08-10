@@ -58,6 +58,11 @@
             $this->setCompetitionSeasonTeams(new \TYPO3\CMS\Extbase\Persistence\ObjectStorage());
         }
         
+        private static function compareTeamSeasons($a, $b): int
+        {
+            return strcasecmp($a->getTeam()->getLabel(), $b->getTeam()->getLabel());
+        }
+        
         /**
          * @return \Balumedien\Sportms\Domain\Model\Competition
          */
@@ -114,30 +119,6 @@
             $this->orderCompetitionSeasonTeams($this->competitionSeasonTeams);
             return $this->competitionSeasonTeams;
         }
-    
-        private function orderCompetitionSeasonTeams($competitionSeasonTeams)
-        {
-            // write TeamSeason-Objects to a temporary array
-            $temporaryArray = [];
-            foreach ($competitionSeasonTeams as $competitionSeasonTeam) {
-                $temporaryArray[] = $competitionSeasonTeam;
-            }
-        
-            // Sort Objects in Array
-            usort($temporaryArray, ["\\Balumedien\\Sportms\\Domain\\Model\\CompetitionSeason", "compareTeamSeasons"]);
-        
-            // create new ObjectStorage and add ordered TeamSeason-Objects
-            $competitionSeasonTeamsOrdered = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-            foreach ($temporaryArray as $competitionSeasonTeam) {
-                $competitionSeasonTeamsOrdered->attach($competitionSeasonTeam);
-            }
-            $this->setCompetitionSeasonTeams($competitionSeasonTeamsOrdered);
-        }
-    
-        private static function compareTeamSeasons($a, $b): int
-        {
-            return strcasecmp($a->getTeam()->getLabel(), $b->getTeam()->getLabel());
-        }
         
         /**
          * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $competitionSeasonTeams
@@ -145,6 +126,25 @@
         public function setCompetitionSeasonTeams($competitionSeasonTeams)
         {
             $this->competitionSeasonTeams = $competitionSeasonTeams;
+        }
+        
+        private function orderCompetitionSeasonTeams($competitionSeasonTeams)
+        {
+            // write TeamSeason-Objects to a temporary array
+            $temporaryArray = [];
+            foreach ($competitionSeasonTeams as $competitionSeasonTeam) {
+                $temporaryArray[] = $competitionSeasonTeam;
+            }
+            
+            // Sort Objects in Array
+            usort($temporaryArray, ["\\Balumedien\\Sportms\\Domain\\Model\\CompetitionSeason", "compareTeamSeasons"]);
+            
+            // create new ObjectStorage and add ordered TeamSeason-Objects
+            $competitionSeasonTeamsOrdered = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+            foreach ($temporaryArray as $competitionSeasonTeam) {
+                $competitionSeasonTeamsOrdered->attach($competitionSeasonTeam);
+            }
+            $this->setCompetitionSeasonTeams($competitionSeasonTeamsOrdered);
         }
         
         /**

@@ -4,7 +4,7 @@
     
     use Balumedien\Sportms\Domain\Model\Person;
     use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
-    
+
     /**
      * PersonController
      */
@@ -78,7 +78,7 @@
                 $person = $this->determinePerson();
             }
             $this->view->assign('person', $person);
-    
+            
             /* PAGETITLE */
             $this->pagetitleForPerson(
                 $person,

@@ -7,7 +7,7 @@
      */
     class Mail extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
-    
+        
         /**
          * @var \Balumedien\Sportms\Domain\Model\ContactType
          */
@@ -17,7 +17,7 @@
          * @var string
          */
         protected $mail;
-    
+        
         /**
          * @return \Balumedien\Sportms\Domain\Model\ContactType
          */
@@ -25,7 +25,7 @@
         {
             return $this->contactType;
         }
-    
+        
         /**
          * @param \Balumedien\Sportms\Domain\Model\ContactType $contactType
          */
@@ -41,7 +41,7 @@
         {
             return $this->mail;
         }
-    
+        
         /**
          * @param string $mail
          */

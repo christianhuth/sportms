@@ -1,7 +1,5 @@
 <?php
     
-    use Balumedien\Sportms\Classes\UserFunc\UserFunc;
-    
     if (!defined('TYPO3_MODE')) {
         die ('Access denied.');
     }
@@ -93,7 +91,7 @@
                     ],
                 ],
             ],
-    
+            
             'contact_type' => [
                 'exclude' => 1,
                 'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_contacttype',

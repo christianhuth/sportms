@@ -34,7 +34,7 @@
             ],
         ],
         'palettes' => [
-            'gamelineup' => ['showitem' => 'person, jersey_number, sport_position'],
+            'gamelineup' => ['showitem' => 'person_profile, jersey_number, sport_position'],
         ],
         'columns' => [
             
@@ -127,12 +127,12 @@
                     'eval' => 'trim',
                 ],
             ],
-            'person' => [
+            'person_profile' => [
                 'exclude' => 1,
                 'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_person',
                 'config' => [
                     'eval' => '',
-                    'foreign_table' => 'tx_sportms_domain_model_person',
+                    'foreign_table' => 'tx_sportms_domain_model_personprofile',
                     'items' => [
                         ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_select.something', ''],
                     ],

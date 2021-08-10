@@ -9,7 +9,7 @@
     use TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException;
     use TYPO3\CMS\Extbase\Persistence\QueryInterface;
     use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
-    
+
     /**
      * TeamController
      */
@@ -210,6 +210,21 @@
         }
         
         /**
+         * @param Team $team
+         * @param string $actionLabel
+         * @param Season|null $season
+         */
+        private function pagetitleForTeam(Team $team, string $actionLabel, Season $season = null)
+        {
+            $teamLabel = $team->getLabel();
+            if ($season) {
+                $seasonLabel = $season->getLabel();
+                $teamLabel .= " " . $seasonLabel;
+            }
+            $this->pagetitle($teamLabel, $actionLabel);
+        }
+        
+        /**
          * @param Team|null $team
          */
         public function historyRecordGamesAction(Team $team = null)
@@ -353,21 +368,6 @@
         }
         
         /**
-         * @param Team $team
-         * @param string $actionLabel
-         * @param Season|null $season
-         */
-        private function pagetitleForTeam(Team $team, string $actionLabel, Season $season = null)
-        {
-            $teamLabel = $team->getLabel();
-            if ($season) {
-                $seasonLabel = $season->getLabel();
-                $teamLabel .= " " . $seasonLabel;
-            }
-            $this->pagetitle($teamLabel, $actionLabel);
-        }
-        
-        /**
          * @param Team|null $team
          * @param Season|null $season
          */
@@ -395,6 +395,46 @@
                 LocalizationUtility::translate('tx_sportms_action.team.seasongamesbycompetition', "sportms"),
                 $season
             );
+        }
+        
+        /**
+         * @param Team|null $team
+         * @param Season|null $season
+         */
+        private function assignSeasonToView(Team $team = null, Season $season = null): Season
+        {
+            if ($season === null) {
+                $season = $this->determineSeason();
+            }
+            if ($season === null) {
+                if ($team->getTeamSeasons()) {
+                    $season = $team->getTeamSeasons()[0]->getSeason();
+                } else {
+                    die();
+                }
+            }
+            $this->view->assign('season', $season);
+            return $season;
+        }
+        
+        /**
+         * @param Team $team
+         * @param Season $season
+         */
+        private function assignTeamSeasonToView(Team $team, Season $season): TeamSeason
+        {
+            $teamSeason = $this->teamSeasonRepository->findByTeamAndSeason($team, $season);
+            $this->view->assign('teamSeason', $teamSeason);
+            return $teamSeason;
+        }
+        
+        /**
+         * @param Team $team
+         */
+        private function assignSeasonSelectboxValuesToView(Team $team)
+        {
+            $seasonSelectboxValues = $this->teamSeasonRepository->findbyTeam($team);
+            $this->view->assign('seasonSelectboxValues', $seasonSelectboxValues);
         }
         
         /**
@@ -441,46 +481,6 @@
                 LocalizationUtility::translate('tx_sportms_action.team.seasonindex', "sportms"),
                 $season
             );
-        }
-        
-        /**
-         * @param Team|null $team
-         * @param Season|null $season
-         */
-        private function assignSeasonToView(Team $team = null, Season $season = null): Season
-        {
-            if ($season === null) {
-                $season = $this->determineSeason();
-            }
-            if ($season === null) {
-                if ($team->getTeamSeasons()) {
-                    $season = $team->getTeamSeasons()[0]->getSeason();
-                } else {
-                    die();
-                }
-            }
-            $this->view->assign('season', $season);
-            return $season;
-        }
-        
-        /**
-         * @param Team $team
-         * @param Season $season
-         */
-        private function assignTeamSeasonToView(Team $team, Season $season): TeamSeason
-        {
-            $teamSeason = $this->teamSeasonRepository->findByTeamAndSeason($team, $season);
-            $this->view->assign('teamSeason', $teamSeason);
-            return $teamSeason;
-        }
-        
-        /**
-         * @param Team $team
-         */
-        private function assignSeasonSelectboxValuesToView(Team $team)
-        {
-            $seasonSelectboxValues = $this->teamSeasonRepository->findbyTeam($team);
-            $this->view->assign('seasonSelectboxValues', $seasonSelectboxValues);
         }
         
     }

@@ -355,6 +355,20 @@
             $this->setGameReports(new \TYPO3\CMS\Extbase\Persistence\ObjectStorage());
         }
         
+        private static function compareGameGoals($a, $b): int
+        {
+            if ($a->getMinute() < $b->getMinute()) {
+                $retVal = -1;
+            } else {
+                if ($a->getMinute() == $b->getMinute()) {
+                    $retVal = 0;
+                } else {
+                    $retVal = 1;
+                }
+            }
+            return $retVal;
+        }
+        
         /**
          * @return Sport
          */
@@ -1218,7 +1232,7 @@
         {
             $this->gameChanges = $gameChanges;
         }
-    
+        
         /**
          * Adds a GameGoal
          *
@@ -1239,6 +1253,14 @@
             return $this->gameGoals;
         }
         
+        /**
+         * @param \TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy|\TYPO3\CMS\Extbase\Persistence\ObjectStorage|null $gameGoals
+         */
+        public function setGameGoals($gameGoals): void
+        {
+            $this->gameGoals = $gameGoals;
+        }
+        
         private function orderGameGoals($gameGoals)
         {
             // write GameGoal-Objects to a temporary array
@@ -1246,38 +1268,16 @@
             foreach ($gameGoals as $gameGoal) {
                 $temporaryArray[] = $gameGoal;
             }
-    
+            
             // Sort Objects in Array
             usort($temporaryArray, ["\\Balumedien\\Sportms\\Domain\\Model\\Game", "compareGameGoals"]);
-    
+            
             // create new ObjectStorage and add ordered GameGoal-Objects
             $gameGoalsOrdered = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
             foreach ($temporaryArray as $gameGoal) {
                 $gameGoalsOrdered->attach($gameGoal);
             }
             $this->setGameGoals($gameGoalsOrdered);
-        }
-        
-        private static function compareGameGoals($a, $b): int
-        {
-            if ($a->getMinute() < $b->getMinute()) {
-                $retVal = -1;
-            } else {
-                if ($a->getMinute() == $b->getMinute()) {
-                    $retVal = 0;
-                } else {
-                    $retVal = 1;
-                }
-            }
-            return $retVal;
-        }
-        
-        /**
-         * @param \TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy|\TYPO3\CMS\Extbase\Persistence\ObjectStorage|null $gameGoals
-         */
-        public function setGameGoals($gameGoals): void
-        {
-            $this->gameGoals = $gameGoals;
         }
         
         /**
@@ -1311,7 +1311,7 @@
         {
             $this->gameReferees = $gameReferees;
         }
-    
+        
         /**
          * @return GameReport|\TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy|null
          */
@@ -1319,7 +1319,7 @@
         {
             return $this->gameReport;
         }
-    
+        
         /**
          * @param GameReport|\TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy|null $gameReport
          */

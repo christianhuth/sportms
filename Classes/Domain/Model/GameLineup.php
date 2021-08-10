@@ -30,9 +30,9 @@
         protected $jerseyNumber;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Model\Person
+         * @var \Balumedien\Sportms\Domain\Model\PersonProfile
          */
-        protected $person;
+        protected $personProfile;
         
         /**
          * @var \Balumedien\Sportms\Domain\Model\SportPosition
@@ -104,19 +104,19 @@
         }
         
         /**
-         * @return Person
+         * @return PersonProfile
          */
-        public function getPerson(): Person
+        public function getPersonProfile(): PersonProfile
         {
-            return $this->person;
+            return $this->personProfile;
         }
         
         /**
-         * @param Person $person
+         * @param PersonProfile $personProfile
          */
-        public function setPerson(Person $person): void
+        public function setPersonProfile(PersonProfile $personProfile): void
         {
-            $this->person = $person;
+            $this->personProfile = $personProfile;
         }
         
         /**

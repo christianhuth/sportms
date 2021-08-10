@@ -40,12 +40,12 @@
         protected $minuteAdditional;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Model\Person
+         * @var \Balumedien\Sportms\Domain\Model\PersonProfile
          */
         protected $scorer;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Model\Person
+         * @var \Balumedien\Sportms\Domain\Model\PersonProfile
          */
         protected $assist;
         
@@ -58,7 +58,7 @@
          * @var int
          */
         protected $goalType;
-    
+        
         /**
          * @var string
          */
@@ -161,33 +161,33 @@
         }
         
         /**
-         * @return Person
+         * @return PersonProfile
          */
-        public function getScorer()
+        public function getScorer(): PersonProfile
         {
             return $this->scorer;
         }
         
         /**
-         * @param Person $scorer
+         * @param PersonProfile $scorer
          */
-        public function setScorer($scorer)
+        public function setScorer(PersonProfile $scorer): void
         {
             $this->scorer = $scorer;
         }
         
         /**
-         * @return Person
+         * @return PersonProfile
          */
-        public function getAssist()
+        public function getAssist(): PersonProfile
         {
             return $this->assist;
         }
         
         /**
-         * @param Person $assist
+         * @param PersonProfile $assist
          */
-        public function setAssist($assist)
+        public function setAssist(PersonProfile $assist): void
         {
             $this->assist = $assist;
         }
@@ -223,7 +223,7 @@
         {
             $this->goalType = $goalType;
         }
-    
+        
         /**
          * @return string
          */
@@ -231,7 +231,7 @@
         {
             return $this->type;
         }
-    
+        
         /**
          * @param string $type
          */

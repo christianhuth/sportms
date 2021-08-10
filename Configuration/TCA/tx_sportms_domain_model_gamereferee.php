@@ -29,7 +29,7 @@
             '1' => ['showitem' => '--palette;;referee_person'],
         ],
         'palettes' => [
-            'referee_person' => ['showitem' => 'referee_job, person'],
+            'referee_person' => ['showitem' => 'referee_job, person_profile'],
         ],
         'columns' => [
             
@@ -120,21 +120,23 @@
                     'type' => 'select',
                 ],
             ],
-            'person' => [
+            'person_profile' => [
                 'exclude' => 1,
                 'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_person',
                 'config' => [
                     'eval' => 'required',
-                    'foreign_table' => 'tx_sportms_domain_model_person',
-                    'foreign_table_where' => '  AND tx_sportms_domain_model_person.uid IN (
-                                                SELECT person FROM tx_sportms_domain_model_personprofile
-                                                WHERE tx_sportms_domain_model_personprofile.profile_type = "referee" AND tx_sportms_domain_model_personprofile.sport = (
-                                                    SELECT sport FROM tx_sportms_domain_model_game WHERE tx_sportms_domain_model_game.uid = ###REC_FIELD_game###
-                                                )
-                                            )
-                                            ORDER BY tx_sportms_domain_model_person.lastname ASC, tx_sportms_domain_model_person.firstname ASC',
+                    'foreign_table' => 'tx_sportms_domain_model_personprofile',
+                    'foreign_table_where' => '  AND tx_sportms_domain_model_personprofile.profile_type = 3
+                                                AND tx_sportms_domain_model_personprofile.sport = (
+                                                    SELECT tx_sportms_domain_model_game.sport
+                                                    FROM tx_sportms_domain_model_game
+                                                    WHERE tx_sportms_domain_model_game.uid = ###REC_FIELD_game###
+                                                )',
                     'items' => [
-                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_select.something', ""],
+                        [
+                            'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_select.something',
+                            null,
+                        ],
                     ],
                     'maxItems' => 1,
                     'minItems' => 1,

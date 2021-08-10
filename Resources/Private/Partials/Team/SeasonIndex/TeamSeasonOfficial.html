@@ -1,31 +1,28 @@
 <html data-namespace-typo3-fluid="true"
-	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-	  xmlns:sportms="Balumedien\Sportms\ViewHelpers">
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+>
 
 <div class="tx-sportms-teamseason-official col-xs-4 col-sm-3 col-md-3">
-	<div class="tx-sportms-teamseason-official-wrapper">
-		<div class="official-image">
-			<f:render
-					arguments="{imageHeight: 512, person: teamSeasonOfficial.person, personProfile: '{sportms:person.profile(person: teamSeasonOfficial.person, profileType: \'official\', sport: teamSeason.team.sport)}'}"
-					partial="ViewHelpers/Person/ProfileImage"/>
-		</div>
-		<div class="official-info">
-			<div class="official-jerseynumber">
-				<f:spaceless>
-					<f:format.crop append="" maxCharacters="1">
-						{teamSeasonOfficial.person.firstname}
-					</f:format.crop>
-					<f:format.crop append="" maxCharacters="1">
-						{teamSeasonOfficial.person.lastname}
-					</f:format.crop>
-				</f:spaceless>
-			</div>
-			<div class="official-name">
-				<span class="official-firstname">{teamSeasonOfficial.person.firstname}</span>
-				<span class="official-lastname">{teamSeasonOfficial.person.lastname}</span>
-			</div>
-		</div>
-	</div>
+    <div class="tx-sportms-teamseason-official-wrapper">
+        <div class="official-image">
+            <f:render
+                    arguments="{imageHeight: 512, person: teamSeasonOfficial.personProfile.person, personProfile: teamSeasonOfficial.personProfile}"
+                    partial="ViewHelpers/Person/ProfileImage"/>
+        </div>
+        <div class="official-info">
+            <div class="official-jerseynumber">
+                <f:spaceless>{teamSeasonOfficial.personProfile.person.firstname -> f:format.crop(append: "", maxCharacters: "1")}{teamSeasonOfficial.personProfile.person.lastname -> f:format.crop(append: "", maxCharacters: "1")}</f:spaceless>
+            </div>
+            <div class="official-name">
+				<span class="official-firstname">
+					{teamSeasonOfficial.personProfile.person.firstname}
+				</span>
+                <span class="official-lastname">
+					{teamSeasonOfficial.personProfile.person.lastname}
+				</span>
+            </div>
+        </div>
+    </div>
 </div>
 
 </html>

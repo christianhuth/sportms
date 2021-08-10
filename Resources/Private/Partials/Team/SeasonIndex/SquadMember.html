@@ -1,48 +1,41 @@
 <html data-namespace-typo3-fluid="true"
-	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-      xmlns:sportms="Balumedien\Sportms\ViewHelpers">
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <div class="tx-sportms-teamseason-squadmember col-xs-4 col-sm-3 col-md-3">
-	<div class="tx-sportms-teamseason-squadmember-wrapper">
-		<div class="squadmember-image">
-			<f:render
-					arguments="{imageHeight: 512, person: squadMember.person, personProfile: '{sportms:person.profile(person: squadMember.person, profileType: \'player\', sport: teamSeason.team.sport)}'}"
-					  partial="ViewHelpers/Person/ProfileImage"/>
-		</div>
-		<div class="squadmember-info">
-			<div class="squadmember-jerseynumber">
-				<f:if condition="{squadMember.squadNumber}">
-					<f:then>
-						<f:if condition="{squadMember.squadNumber} > 9">
-							<f:then>
-								{squadMember.squadNumber}
-							</f:then>
-							<f:else>
-								0{squadMember.squadNumber}
-							</f:else>
-						</f:if>
-					</f:then>
-					<f:else>
-						<f:spaceless>
-							<f:format.crop append="" maxCharacters="1">
-								{squadMember.person.firstname}
-							</f:format.crop>
-							<f:format.crop append="" maxCharacters="1">
-								{squadMember.person.lastname}
-							</f:format.crop>
-						</f:spaceless>
-					</f:else>
-				</f:if>
-			</div>
-			<div class="squadmember-name">
-				<span class="squadmember-firstname">{squadMember.person.firstname}</span>
-				<span class="squadmember-lastname">{squadMember.person.lastname}</span>
-			</div>
-		</div>
-		<f:comment>
-			# TODO: close sportms-action ViewHelper here
-		</f:comment>
-	</div>
+    <div class="tx-sportms-teamseason-squadmember-wrapper">
+        <div class="squadmember-image">
+            <f:render
+                    arguments="{imageHeight: 512, person: squadMember.personProfile.person, personProfile: squadMember.personProfile}"
+                    partial="ViewHelpers/Person/ProfileImage"/>
+        </div>
+        <div class="squadmember-info">
+            <div class="squadmember-jerseynumber">
+                <f:if condition="{squadMember.squadNumber}">
+                    <f:then>
+                        <f:if condition="{squadMember.squadNumber} > 9">
+                            <f:then>
+                                {squadMember.squadNumber}
+                            </f:then>
+                            <f:else>
+                                0{squadMember.squadNumber}
+                            </f:else>
+                        </f:if>
+                    </f:then>
+                    <f:else>
+                        <f:spaceless>{squadMember.personProfile.person.firstname -> f:format.crop(append: "", maxCharacters: "1")}{squadMember.personProfile.person.lastname -> f:format.crop(append: "", maxCharacters: "1")}</f:spaceless>
+                    </f:else>
+                </f:if>
+            </div>
+            <div class="squadmember-name">
+				<span class="squadmember-firstname">
+					{squadMember.personProfile.person.firstname}
+				</span>
+                <span class="squadmember-lastname">
+					{squadMember.personProfile.person.lastname}
+				</span>
+            </div>
+        </div>
+    </div>
 </div>
 
 </html>

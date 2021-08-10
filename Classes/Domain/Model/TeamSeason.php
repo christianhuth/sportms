@@ -34,7 +34,7 @@
          * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\TeamSeasonOfficial>
          */
         protected $teamSeasonOfficials;
-    
+        
         /**
          * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\TeamSeasonOfficial>
          */
@@ -46,7 +46,7 @@
         protected $teamSeasonSquadMembers;
         
         /**
-         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\Person>
+         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\PersonProfile>
          */
         protected $teamSeasonSquadCaptains;
         
@@ -149,6 +149,29 @@
         /**
          * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
          */
+        public function getTeamSeasonCheftrainers(): \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+        {
+            $teamSeasonOfficials = $this->getTeamSeasonOfficials();
+            $teamSeasonCheftrainers = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+            foreach ($teamSeasonOfficials as $teamSeasonOfficial) {
+                if ($teamSeasonOfficial->getOfficialJob()->isCheftrainerJob()) {
+                    $teamSeasonCheftrainers->attach($teamSeasonOfficial);
+                }
+            }
+            return $teamSeasonCheftrainers;
+        }
+        
+        /**
+         * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $teamSeasonCheftrainers
+         */
+        public function setTeamSeasonCheftrainers(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $teamSeasonCheftrainers
+        ): void {
+            $this->teamSeasonCheftrainers = $teamSeasonCheftrainers;
+        }
+        
+        /**
+         * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+         */
         public function getTeamSeasonOfficials()
         {
             return $this->teamSeasonOfficials;
@@ -160,29 +183,6 @@
         public function setTeamSeasonOfficials($teamSeasonOfficials)
         {
             $this->teamSeasonOfficials = $teamSeasonOfficials;
-        }
-    
-        /**
-         * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
-         */
-        public function getTeamSeasonCheftrainers(): \TYPO3\CMS\Extbase\Persistence\ObjectStorage
-        {
-            $teamSeasonOfficials = $this->getTeamSeasonOfficials();
-            $teamSeasonCheftrainers = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-            foreach ($teamSeasonOfficials as $teamSeasonOfficial) {
-                if($teamSeasonOfficial->getOfficialJob()->isCheftrainerJob()) {
-                    $teamSeasonCheftrainers->attach($teamSeasonOfficial);
-                }
-            }
-            return $teamSeasonCheftrainers;
-        }
-    
-        /**
-         * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $teamSeasonCheftrainers
-         */
-        public function setTeamSeasonCheftrainers(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $teamSeasonCheftrainers
-        ): void {
-            $this->teamSeasonCheftrainers = $teamSeasonCheftrainers;
         }
         
         /**
@@ -204,7 +204,7 @@
         /**
          * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
          */
-        public function getTeamSeasonSquadCaptains()
+        public function getTeamSeasonSquadCaptains(): \TYPO3\CMS\Extbase\Persistence\ObjectStorage
         {
             return $this->teamSeasonSquadCaptains;
         }
@@ -212,8 +212,8 @@
         /**
          * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $teamSeasonSquadCaptains
          */
-        public function setTeamSeasonSquadCaptains($teamSeasonSquadCaptains)
-        {
+        public function setTeamSeasonSquadCaptains(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $teamSeasonSquadCaptains
+        ): void {
             $this->teamSeasonSquadCaptains = $teamSeasonSquadCaptains;
         }
         

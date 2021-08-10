@@ -4,9 +4,9 @@ config.tx_extbase {
 		classes {
 			Balumedien\Sportms\Domain\Model\PersonProfile {
 				subclasses {
-					0 = Balumedien\Sportms\Domain\Model\PlayerProfile
 					1 = Balumedien\Sportms\Domain\Model\OfficialProfile
-					2 = Balumedien\Sportms\Domain\Model\RefereeProfile
+					2 = Balumedien\Sportms\Domain\Model\PlayerProfile
+					3 = Balumedien\Sportms\Domain\Model\RefereeProfile
 				}
 			}
 			Balumedien\Sportms\Domain\Model\OfficialProfile {
@@ -17,13 +17,13 @@ config.tx_extbase {
 			}
 			Balumedien\Sportms\Domain\Model\PlayerProfile {
 				mapping {
-					recordType = 0
+					recordType = 2
 					tableName = tx_sportms_domain_model_personprofile
 				}
 			}
 			Balumedien\Sportms\Domain\Model\RefereeProfile {
 				mapping {
-					recordType = 2
+					recordType = 3
 					tableName = tx_sportms_domain_model_personprofile
 				}
 			}

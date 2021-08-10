@@ -15,9 +15,46 @@
     use TYPO3\CMS\Core\Utility\GeneralUtility;
     use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
     use TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException;
-    
+
     class SportMSBaseController extends ActionController
     {
+        
+        /**
+         * Initializes the controller before invoking an action method.
+         * Use this method to solve tasks which all actions have in common.
+         */
+        public function initializeAction(): void
+        {
+            $this->mapRequestsToSettings();
+        }
+        
+        protected function mapRequestsToSettings(): void
+        {
+            /* SelectModel */
+            $listOfSelectModels = 'sport,sportAgeGroup,sportAgeLevel,competitionType,competition,club,team,season,competitionSeasonGameday';
+            foreach (explode(',', $listOfSelectModels) as $selectModel) {
+                if ($this->request->hasArgument($selectModel)) {
+                    $selectedValue = $this->request->getArgument($selectModel);
+                    if (is_array($selectedValue)) {
+                        $this->settings[$selectModel]['selectbox']['selected'] = $selectedValue['__identity'];
+                    } else {
+                        $this->settings[$selectModel]['selectbox']['selected'] = $selectedValue;
+                    }
+                } else {
+                    if ($this->settings[$selectModel]['uid']) {
+                        $this->settings[$selectModel]['selectbox']['selected'] = $this->settings[$selectModel]['uid'];
+                    }
+                }
+            }
+            /* BugFix, if the sportAgeGroup has been cleared but not the sportAgeLevel */
+            if (!$this->settings['sportAgeGroup']['selected']) {
+                $this->settings['sportAgeLevel']['selected'] = '';
+            }
+            /* BugFix, if the sportPositionGroup has been cleared but not the sportPosition */
+            if (!$this->settings['sportPositionGroup']['selected']) {
+                $this->settings['sportPosition']['selected'] = '';
+            }
+        }
         
         /**
          * @param string $model
@@ -76,14 +113,39 @@
             return ($useSelected && ($this->settings[$model]['selectbox']['selected'])) ? $this->settings[$model]['selectbox']['selected'] : (($this->settings[$model][$model . "s"] != '') ? $this->settings[$model][$model . "s"] : null);
         }
         
-        protected function getCompetitionsFilter($useSelected = true)
+        protected function getSportsFilter($useSelected = true)
         {
-            return $this->getFilter('competition', $useSelected);
+            return $this->getFilter('sport', $useSelected);
+        }
+        
+        protected function getSportAgeGroupsFilter($useSelected = true)
+        {
+            return $this->getFilter('sportAgeGroup', $useSelected);
+        }
+        
+        protected function getSportAgeLevelsFilter($useSelected = true)
+        {
+            return $this->getFilter('sportAgeLevel', $useSelected);
         }
         
         protected function getCompetitionTypesFilter($useSelected = true)
         {
             return $this->getFilter('competitionType', $useSelected);
+        }
+        
+        protected function getCompetitionsFilter($useSelected = true)
+        {
+            return $this->getFilter('competition', $useSelected);
+        }
+        
+        protected function getSeasonsFilter($useSelected = true)
+        {
+            return $this->getFilter('season', $useSelected);
+        }
+        
+        protected function getTeamsFilter($useSelected = true)
+        {
+            return $this->getFilter('team', $useSelected);
         }
         
         protected function getCompetitionSeasonGamedaysFilter($useSelected = true)
@@ -96,21 +158,6 @@
             return $this->getFilter('person', $useSelected);
         }
         
-        protected function getSeasonsFilter($useSelected = true)
-        {
-            return $this->getFilter('season', $useSelected);
-        }
-        
-        protected function getSportsFilter($useSelected = true)
-        {
-            return $this->getFilter('sport', $useSelected);
-        }
-        
-        protected function getSportAgeGroupsFilter($useSelected = true)
-        {
-            return $this->getFilter('sportAgeGroup', $useSelected);
-        }
-        
         protected function getSportPositionGroupsFilter($useSelected = true)
         {
             return $this->getFilter('sportPositionGroup', $useSelected);
@@ -121,54 +168,11 @@
             return $this->getFilter('sportPosition', $useSelected);
         }
         
-        protected function getSportAgeLevelsFilter($useSelected = true)
-        {
-            return $this->getFilter('sportAgeLevel', $useSelected);
-        }
-        
-        protected function getTeamsFilter($useSelected = true)
-        {
-            return $this->getFilter('team', $useSelected);
-        }
-        
         protected function getVenuesFilter($useSelected = true)
         {
             return $this->getFilter('venue', $useSelected);
         }
         
-        /**
-         * Initializes the controller before invoking an action method.
-         * Use this method to solve tasks which all actions have in common.
-         */
-        public function initializeAction(): void
-        {
-            $this->mapRequestsToSettings();
-        }
-        
-        /**
-         * @return Club
-         */
-        protected function determineClub(): Club
-        {
-            return $this->determineDetailModel('club');
-        }
-        
-        /**
-         * @return Game
-         */
-        protected function determineGame(): Game
-        {
-            return $this->determineDetailModel('game');
-        }
-    
-        /**
-         * @return Competition
-         */
-        protected function determineCompetition(): Competition
-        {
-            return $this->determineDetailModel('competition');
-        }
-    
         /**
          * @return CompetitionSeasonGameday
          */
@@ -190,60 +194,13 @@
                 }
             }
         }
-    
+        
         /**
          * @return Person
          */
         protected function determinePerson(): Person
         {
             return $this->determineDetailModel('person');
-        }
-    
-        /**
-         * @return Season|null
-         */
-        protected function determineSeason(): ?Season
-        {
-            return $this->determineDetailModel('season');
-        }
-    
-        /**
-         * @return Team
-         */
-        protected function determineTeam(): Team
-        {
-            return $this->determineDetailModel('team');
-        }
-    
-        /**
-         * @return TeamSeason
-         */
-        protected function determineTeamSeason(): TeamSeason
-        {
-            if ($this->settings['teamseason']['uid']) {
-                $teamSeasonUid = $this->settings['teamseason']['uid'];
-                return $this->teamSeasonRepository->findByUid($teamSeasonUid);
-            } else {
-                if ($this->request->hasArgument('teamSeason')) {
-                    $teamSeason = $this->request->getArgument('teamSeason');
-                    if ($teamSeason instanceof TeamSeason) {
-                        return $teamSeason;
-                    } else {
-                        return $this->teamSeasonRepository->findByUid($teamSeason);
-                    }
-                } else {
-                    if ($this->settings['team']['uid']) {
-                        if ($this->settings['season']['uid']) {
-                            return $this->teamSeasonRepository->findByTeamUidAndSeasonUid($this->settings['team']['uid'],
-                                $this->settings['season']['uid']);
-                        } else {
-                            return $this->teamSeasonRepository->findCurrentByTeamUid($this->settings['team']['uid']);
-                        }
-                    } else {
-                        // TODO: DIE IF NO TEAMSEASON IS SELECTED VIA FLEXFORM NOR GIVEN VIA REQUEST NOR A TEAM IS SELECTED
-                    }
-                }
-            }
         }
         
         protected function determineDetailModel(string $model)
@@ -280,31 +237,42 @@
             }
         }
         
-        protected function mapRequestsToSettings(): void
+        /**
+         * @return Season|null
+         */
+        protected function determineSeason(): ?Season
         {
-            /* SelectModel */
-            $listOfSelectModels = 'sport,sportAgeGroup,sportAgeLevel,competitionType,competition,club,team,season,competitionSeasonGameday';
-            foreach (explode(',', $listOfSelectModels) as $selectModel) {
-                if ($this->request->hasArgument($selectModel)) {
-                    $selectedValue = $this->request->getArgument($selectModel);
-                    if (is_array($selectedValue)) {
-                        $this->settings[$selectModel]['selectbox']['selected'] = $selectedValue['__identity'];
+            return $this->determineDetailModel('season');
+        }
+        
+        /**
+         * @return TeamSeason
+         */
+        protected function determineTeamSeason(): TeamSeason
+        {
+            if ($this->settings['teamseason']['uid']) {
+                $teamSeasonUid = $this->settings['teamseason']['uid'];
+                return $this->teamSeasonRepository->findByUid($teamSeasonUid);
+            } else {
+                if ($this->request->hasArgument('teamSeason')) {
+                    $teamSeason = $this->request->getArgument('teamSeason');
+                    if ($teamSeason instanceof TeamSeason) {
+                        return $teamSeason;
                     } else {
-                        $this->settings[$selectModel]['selectbox']['selected'] = $selectedValue;
+                        return $this->teamSeasonRepository->findByUid($teamSeason);
                     }
                 } else {
-                    if ($this->settings[$selectModel]['uid']) {
-                        $this->settings[$selectModel]['selectbox']['selected'] = $this->settings[$selectModel]['uid'];
+                    if ($this->settings['team']['uid']) {
+                        if ($this->settings['season']['uid']) {
+                            return $this->teamSeasonRepository->findByTeamUidAndSeasonUid($this->settings['team']['uid'],
+                                $this->settings['season']['uid']);
+                        } else {
+                            return $this->teamSeasonRepository->findCurrentByTeamUid($this->settings['team']['uid']);
+                        }
+                    } else {
+                        // TODO: DIE IF NO TEAMSEASON IS SELECTED VIA FLEXFORM NOR GIVEN VIA REQUEST NOR A TEAM IS SELECTED
                     }
                 }
-            }
-            /* BugFix, if the sportAgeGroup has been cleared but not the sportAgeLevel */
-            if (!$this->settings['sportAgeGroup']['selected']) {
-                $this->settings['sportAgeLevel']['selected'] = '';
-            }
-            /* BugFix, if the sportPositionGroup has been cleared but not the sportPosition */
-            if (!$this->settings['sportPositionGroup']['selected']) {
-                $this->settings['sportPosition']['selected'] = '';
             }
         }
         
@@ -338,7 +306,15 @@
             $this->view->assign('club', $club);
             return $club;
         }
-    
+        
+        /**
+         * @return Club
+         */
+        protected function determineClub(): Club
+        {
+            return $this->determineDetailModel('club');
+        }
+        
         protected function assignCompetitionToView(Competition $competition = null): Competition
         {
             if ($competition === null) {
@@ -347,7 +323,15 @@
             $this->view->assign('competition', $competition);
             return $competition;
         }
-    
+        
+        /**
+         * @return Competition
+         */
+        protected function determineCompetition(): Competition
+        {
+            return $this->determineDetailModel('competition');
+        }
+        
         /**
          * @param Competition $competition
          * @param Season $season
@@ -373,6 +357,14 @@
         }
         
         /**
+         * @return Game
+         */
+        protected function determineGame(): Game
+        {
+            return $this->determineDetailModel('game');
+        }
+        
+        /**
          * @param Team|null $team
          * @return Team
          */
@@ -383,6 +375,14 @@
             }
             $this->view->assign('team', $team);
             return $team;
+        }
+        
+        /**
+         * @return Team
+         */
+        protected function determineTeam(): Team
+        {
+            return $this->determineDetailModel('team');
         }
         
     }

@@ -8,7 +8,7 @@
     use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
     use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
     use TYPO3\CMS\Frontend\ContentObject\DataProcessorInterface;
-    
+
     class AddSportmsToMenuProcessor implements DataProcessorInterface
     {
         
@@ -60,7 +60,7 @@
                     }
                 }
             }
-    
+            
             // Configuration for "club" argument in team plugin
             if (GeneralUtility::_GET('tx_sportms_team')['club'] ||
                 GeneralUtility::_POST('tx_sportms_team')['club']) {

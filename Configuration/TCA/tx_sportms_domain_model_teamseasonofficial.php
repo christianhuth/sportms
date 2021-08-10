@@ -119,7 +119,10 @@
                     'foreign_table' => 'tx_sportms_domain_model_officialjob',
                     'foreign_table_where' => ' AND tx_sportms_domain_model_officialjob.is_team_season_job = 1 ORDER BY tx_sportms_domain_model_officialjob.label ASC',
                     'items' => [
-                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_select.something', null],
+                        [
+                            'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_select.something',
+                            null,
+                        ],
                     ],
                     'maxItems' => 1,
                     'renderType' => 'selectSingle',

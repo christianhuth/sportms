@@ -4,34 +4,21 @@
 <div class="tx-sportms-teamseason-squadmember col-xs-4 col-sm-3 col-md-3">
 	<div class="tx-sportms-teamseason-squadmember-wrapper">
 		<div class="squadmember-image">
-			<f:if condition="{squadCaptain.personProfiles}">
-				<f:then>
-					<f:for as="personProfile"
-						   each="{squadCaptain.personProfiles}">
-						<f:if condition="({personProfile.sport} == {teamSeason.team.sport}) && ({personProfile.profileType} == 'player') && {personProfile.profileImages.0}">
-							<f:image image="{personProfile.profileImages.0}"/>
-						</f:if>
-					</f:for>
-				</f:then>
-				<f:else>
-					<f:if condition="{squadCaptain.sex} == 'm'">
-						<f:then>
-							<f:image src="{settings.person.dummyImageMale}"/>
-						</f:then>
-						<f:else>
-							<f:image src="{settings.person.dummyImageFemale}"/>
-						</f:else>
-					</f:if>
-				</f:else>
-			</f:if>
+			<f:render
+					arguments="{imageHeight: 512, person: squadCaptain.person, personProfile: squadCaptain}"
+					partial="ViewHelpers/Person/ProfileImage"/>
 		</div>
 		<div class="squadmember-info">
 			<div class="squadmember-jerseynumber">
 				{position+1}.
 			</div>
 			<div class="squadmember-name">
-				<span class="squadmember-firstname">{squadCaptain.firstname}</span>
-				<span class="squadmember-lastname">{squadCaptain.lastname}</span>
+				<span class="squadmember-firstname">
+					{squadCaptain.person.firstname}
+				</span>
+				<span class="squadmember-lastname">
+					{squadCaptain.person.lastname}
+				</span>
 			</div>
 		</div>
 		<f:comment>

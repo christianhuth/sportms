@@ -15,12 +15,12 @@
         protected $club;
         
         /**
-         * @var PersonProfile
+         * @var \Balumedien\Sportms\Domain\Model\PersonProfile
          */
         protected $personProfile;
         
         /**
-         * @var OfficialJob
+         * @var \Balumedien\Sportms\Domain\Model\OfficialJob
          */
         protected $officialJob;
         
@@ -56,17 +56,17 @@
         }
         
         /**
-         * @return PersonProfile
+         * @return \Balumedien\Sportms\Domain\Model\PersonProfile
          */
-        public function getPersonProfile(): PersonProfile
+        public function getPersonProfile(): \Balumedien\Sportms\Domain\Model\PersonProfile
         {
             return $this->personProfile;
         }
         
         /**
-         * @param PersonProfile $personProfile
+         * @param \Balumedien\Sportms\Domain\Model\PersonProfile $personProfile
          */
-        public function setPersonProfile(PersonProfile $personProfile): void
+        public function setPersonProfile(\Balumedien\Sportms\Domain\Model\PersonProfile $personProfile): void
         {
             $this->personProfile = $personProfile;
         }

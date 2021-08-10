@@ -38,7 +38,7 @@
             ],
         ],
         'palettes' => [
-            'person_number' => ['showitem' => 'person, squad_number'],
+            'person_number' => ['showitem' => 'person_profile, squad_number'],
             'position' => ['showitem' => 'sport_position_group, sport_position'],
             'transfer' => ['showitem' => 'new_signing, leaving'],
             'visibility_general' => ['showitem' => 'hidden, starttime, endtime'],
@@ -116,21 +116,29 @@
                 ],
             ],
             
-            'person' => [
+            'person_profile' => [
                 'exclude' => 1,
                 'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_person',
                 'config' => [
                     'eval' => 'required',
-                    'foreign_table' => 'tx_sportms_domain_model_person',
-                    'foreign_table_where' => '  tx_sportms_domain_model_person.uid IN (
-                                                SELECT person FROM tx_sportms_domain_model_personprofile WHERE profile_type = "player" AND sport = 
-                                                (SELECT sport FROM tx_sportms_domain_model_team WHERE tx_sportms_domain_model_team.uid = 
-                                                    (SELECT team FROM tx_sportms_domain_model_teamseason WHERE tx_sportms_domain_model_teamseason.uid = ###REC_FIELD_team_season###)
-                                                )
-                                            )
-                                            ORDER BY lastname ASC, firstname ASC',
+                    'foreign_table' => 'tx_sportms_domain_model_personprofile',
+                    'foreign_table_where' => '  AND tx_sportms_domain_model_personprofile.profile_type = 1
+                                                AND tx_sportms_domain_model_personprofile.sport =
+                                                (
+                                                    SELECT sport
+                                                    FROM tx_sportms_domain_model_team
+                                                    WHERE tx_sportms_domain_model_team.uid =
+                                                    (
+                                                        SELECT team
+                                                        FROM tx_sportms_domain_model_teamseason
+                                                        WHERE tx_sportms_domain_model_teamseason.uid = ###REC_FIELD_team_season###
+                                                    )
+                                                )',
                     'items' => [
-                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_select.something', 0],
+                        [
+                            'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_select.something',
+                            null,
+                        ],
                     ],
                     'maxItems' => 1,
                     'renderType' => 'selectSingle',
@@ -154,7 +162,10 @@
                     'foreign_table' => 'tx_sportms_domain_model_sportpositiongroup',
                     'foreign_table_where' => ' ORDER BY tx_sportms_domain_model_sportpositiongroup.sorting ASC',
                     'items' => [
-                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_select.something', 0],
+                        [
+                            'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_select.something',
+                            null,
+                        ],
                     ],
                     'maxItems' => 1,
                     'renderType' => 'selectSingle',

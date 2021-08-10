@@ -57,29 +57,29 @@
         {
             return $this->officialJob;
         }
-    
-        /**
-         * @return PersonProfile
-         */
-        public function getPersonProfile(): PersonProfile
-        {
-            return $this->personProfile;
-        }
-    
-        /**
-         * @param PersonProfile $personProfile
-         */
-        public function setPersonProfile(PersonProfile $personProfile): void
-        {
-            $this->personProfile = $personProfile;
-        }
-    
+        
         /**
          * @param OfficialJob $officialJob
          */
         public function setOfficialJob(OfficialJob $officialJob): void
         {
             $this->officialJob = $officialJob;
+        }
+        
+        /**
+         * @return \Balumedien\Sportms\Domain\Model\PersonProfile
+         */
+        public function getPersonProfile(): \Balumedien\Sportms\Domain\Model\PersonProfile
+        {
+            return $this->personProfile;
+        }
+        
+        /**
+         * @param \Balumedien\Sportms\Domain\Model\PersonProfile $personProfile
+         */
+        public function setPersonProfile(\Balumedien\Sportms\Domain\Model\PersonProfile $personProfile): void
+        {
+            $this->personProfile = $personProfile;
         }
         
         /**

@@ -13,17 +13,17 @@
          */
         protected static function evaluateCondition($arguments = null)
         {
-            $person = $arguments['person'];
+            $personProfile = $arguments['personProfile'];
             $teamSeason = $arguments['teamSeason'];
-            
-            $personsInTeamSeasonSquad = [];
+    
+            $personProfilesInTeamSeasonSquad = [];
             $teamSeasonSquadMembers = $teamSeason->getTeamSeasonSquadMembers();
             
             foreach ($teamSeasonSquadMembers as $teamSeasonSquadMember) {
-                $personsInTeamSeasonSquad[] = $teamSeasonSquadMember->getPerson();
+                $personProfilesInTeamSeasonSquad[] = $teamSeasonSquadMember->getPersonProfile();
             }
             
-            if (in_array($person, $personsInTeamSeasonSquad)) {
+            if (in_array($personProfile, $personProfilesInTeamSeasonSquad)) {
                 return true;
             } else {
                 return false;
@@ -35,8 +35,8 @@
             parent::initializeArguments();
             $this->registerArgument('teamSeason', 'Balumedien\Sportms\Domain\Model\TeamSeason',
                 'View helper haystack. Needs to be a TeamSeason', true);
-            $this->registerArgument('person', 'Balumedien\Sportms\Domain\Model\Person',
-                'View helper needle. Needs to be a Person!', true);
+            $this->registerArgument('personProfile', 'Balumedien\Sportms\Domain\Model\PersonProfile',
+                'View helper needle. Needs to be a PersonProfile!', true);
         }
         
     }

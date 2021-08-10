@@ -166,7 +166,7 @@
                     'type' => 'check',
                 ],
             ],
-    
+            
             'is_team_season_job' => [
                 'exclude' => true,
                 'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_officialjob.is_team_season_job',

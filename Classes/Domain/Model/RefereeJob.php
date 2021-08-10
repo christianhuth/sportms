@@ -12,7 +12,7 @@
          * @var string
          */
         protected $label = '';
-    
+        
         /**
          * @var bool
          */
@@ -33,7 +33,7 @@
         {
             $this->label = $label;
         }
-    
+        
         /**
          * @return bool
          */
@@ -41,7 +41,7 @@
         {
             return $this->isMainrefereeJob;
         }
-    
+        
         /**
          * @param bool $isMainrefereeJob
          */

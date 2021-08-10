@@ -16,10 +16,10 @@
         ],
         \Balumedien\Sportms\Domain\Model\PlayerProfile::class => [
             'tableName' => 'tx_sportms_domain_model_personprofile',
-            'recordType' => 0,
+            'recordType' => 2,
         ],
         \Balumedien\Sportms\Domain\Model\RefereeProfile::class => [
             'tableName' => 'tx_sportms_domain_model_personprofile',
-            'recordType' => 2,
+            'recordType' => 3,
         ],
     ];

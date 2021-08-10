@@ -369,7 +369,7 @@
                     'type' => 'inline',
                 ],
             ],
-    
+            
             'detail_link' => [
                 'exclude' => true,
                 'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.detail_link',

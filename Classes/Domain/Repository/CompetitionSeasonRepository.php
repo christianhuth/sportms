@@ -5,7 +5,6 @@
     use Balumedien\Sportms\Domain\Model\Competition;
     use Balumedien\Sportms\Domain\Model\CompetitionSeason;
     use Balumedien\Sportms\Domain\Model\Season;
-    use Balumedien\Sportms\Domain\Model\Team;
     use TYPO3\CMS\Extbase\Persistence\QueryInterface;
 
     class CompetitionSeasonRepository extends SportMSBaseRepository
@@ -113,11 +112,12 @@
             $query->matching($query->logicalAnd($constraints));
             return $query->execute()[0];
         }
-    
+        
         /**
          * @param Competition $competition
          */
-        public function findByCompetition(Competition $competition) {
+        public function findByCompetition(Competition $competition)
+        {
             $query = $this->createQuery();
             $constraints = [];
             $constraints[] = $query->equals('competition', $competition);

@@ -34,7 +34,7 @@
 		</div>
 		<div class="tx-sportms-game-change-person tx-sportms-game-change-person-in">
 			<f:render partial="ViewHelpers/LinkAction/Person/PlayerProfile"
-					  arguments="{linkLabel: 'lastname', person: change.personIn}"/>
+					  arguments="{linkLabel: 'lastname', person: change.personIn.person}"/>
 		</div>
 	</f:if>
 	<f:if condition="{change.personOut}">
@@ -43,7 +43,7 @@
 		</div>
 		<div class="tx-sportms-game-change-person tx-sportms-game-change-person-out">
 			<f:render partial="ViewHelpers/LinkAction/Person/PlayerProfile"
-					  arguments="{linkLabel: 'lastname', person: change.personOut}"/>
+					  arguments="{linkLabel: 'lastname', person: change.personOut.person}"/>
 		</div>
 	</f:if>
 </f:section>

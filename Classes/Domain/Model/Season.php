@@ -101,7 +101,7 @@
         {
             $this->enddate = $enddate;
         }
-    
+        
         /**
          * @return int|null
          */
@@ -109,7 +109,7 @@
         {
             return $this->winterBreak;
         }
-    
+        
         /**
          * @param int|null $winterBreak
          */

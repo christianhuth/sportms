@@ -85,7 +85,7 @@
 														as="cheftrainer">
 													<f:render
 															partial="Game/Index/Trainer"
-															arguments="{trainer: cheftrainer.person}"/>
+															arguments="{trainer: cheftrainer.personProfile}"/>
 												</f:for>
 											</f:then>
 										</f:if>
@@ -107,7 +107,7 @@
 														as="cheftrainer">
 													<f:render
 															partial="Game/Index/Trainer"
-															arguments="{trainer: cheftrainer.person}"/>
+															arguments="{trainer: cheftrainer.personProfile}"/>
 												</f:for>
 											</f:then>
 										</f:if>
@@ -164,7 +164,7 @@
 						<f:then>
 							<f:for as="change" each="{game.gameChanges}">
 								<sportms:PersonInTeamSeason
-										person="{change.personIn}"
+										personProfile="{change.personIn}"
 										teamSeason="{game.teamSeasonHome}">
 									<f:then>
 										<f:render
@@ -173,7 +173,7 @@
 									</f:then>
 									<f:else>
 										<sportms:PersonInTeamSeason
-												person="{change.personIn}"
+												personProfile="{change.personIn}"
 												teamSeason="{game.teamSeasonGuest}">
 											<f:then>
 												<f:render

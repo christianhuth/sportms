@@ -17,7 +17,7 @@
          * @var string
          */
         protected $url;
-    
+        
         /**
          * @return \Balumedien\Sportms\Domain\Model\ContactType
          */
@@ -25,7 +25,7 @@
         {
             return $this->contactType;
         }
-    
+        
         /**
          * @param \Balumedien\Sportms\Domain\Model\ContactType $contactType
          */

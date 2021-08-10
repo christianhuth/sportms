@@ -4,7 +4,7 @@
     
     use TYPO3\CMS\Backend\Utility\BackendUtility;
     use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
-    
+
     class UserFunc
     {
         
@@ -40,6 +40,27 @@
         public function clubOfficialLabel(&$parameters, $parentObject): void
         {
             $parameters['title'] = $this->officialLabel($parameters, $parentObject);
+        }
+        
+        private function officialLabel(&$parameters, $parentObject): string
+        {
+            $record = BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
+            $profileLabel = $this->profileLabel($record['person_profile']);
+            $officialJob = BackendUtility::getRecord('tx_sportms_domain_model_officialjob',
+                $record['official_job']);
+            return $officialJob['label'] . ': ' . $profileLabel;
+        }
+        
+        private function profileLabel(?int $personProfileUid): string
+        {
+            if ($personProfileUid) {
+                $personProfile = BackendUtility::getRecord('tx_sportms_domain_model_personprofile', $personProfileUid);
+                $person = BackendUtility::getRecord('tx_sportms_domain_model_person', $personProfile['person']);
+                return $person['lastname'] . ', ' . $person['firstname'];
+            } else {
+                # TODO: USE LOCALIZATION
+                return "Please select Person from dropdown";
+            }
         }
         
         public function clubSectionLabel(&$parameters, $parentObject): void
@@ -113,8 +134,11 @@
         public function gameChangeLabel(&$parameters, $parentObject): void
         {
             $record = BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
-            $personIn = BackendUtility::getRecord('tx_sportms_domain_model_person', $record['person_in']);
-            $personOut = BackendUtility::getRecord('tx_sportms_domain_model_person', $record['person_out']);
+            $personProfileIn = BackendUtility::getRecord('tx_sportms_domain_model_personprofile', $record['person_in']);
+            $personIn = BackendUtility::getRecord('tx_sportms_domain_model_person', $personProfileIn['person']);
+            $personProfileOut = BackendUtility::getRecord('tx_sportms_domain_model_personprofile',
+                $record['person_out']);
+            $personOut = BackendUtility::getRecord('tx_sportms_domain_model_person', $personProfileOut['person']);
             $newLabel = '';
             if ($personIn) {
                 $newLabel .= $personIn['lastname'];
@@ -133,8 +157,8 @@
         {
             $record = BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
             if ($record['scorer']) {
-                $person = BackendUtility::getRecord('tx_sportms_domain_model_person', $record['scorer']);
-                $newLabel = $record['goal_home'] . ':' . $record['goal_guest'] . ' - ' . $person['lastname'] . ', ' . $person['firstname'] . ' (' . $record['minute'] . '.)';
+                $profileLabel = $this->profileLabel($record['scorer']);
+                $newLabel = $record['goal_home'] . ':' . $record['goal_guest'] . ' - ' . $profileLabel . ' (' . $record['minute'] . '.)';
             } else {
                 $newLabel = $record['goal_home'] . ':' . $record['goal_guest'] . ' (' . $record['minute'] . '.)';
             }
@@ -144,15 +168,15 @@
         public function gameLineupLabel(&$parameters, $parentObject): void
         {
             $record = BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
-            $person = BackendUtility::getRecord('tx_sportms_domain_model_person', $record['person']);
-            $newLabel = $person['lastname'] . ', ' . $person['firstname'];
-            if ($record['jersey_number']) {
-                $newLabel .= ' (' . $record['jersey_number'] . ')';
-            }
+            $profileLabel = $this->profileLabel($record['person_profile']);
+            $newLabel = $profileLabel;
             if ($record['sport_position']) {
                 $sportPosition = BackendUtility::getRecord('tx_sportms_domain_model_sportposition',
                     $record['sport_position']);
                 $newLabel .= ' (' . $sportPosition['label_short'] . ')';
+            }
+            if ($record['jersey_number']) {
+                $newLabel .= ' (' . $record['jersey_number'] . ')';
             }
             $parameters['title'] = $newLabel;
         }
@@ -196,8 +220,8 @@
         {
             $record = BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
             $refereeJob = BackendUtility::getRecord('tx_sportms_domain_model_refereejob', $record['referee_job']);
-            $person = BackendUtility::getRecord('tx_sportms_domain_model_person', $record['person']);
-            $newLabel = $refereeJob['label'] . ': ' . $person['lastname'] . ', ' . $person['firstname'];
+            $profileLabel = $this->profileLabel($record['person_profile']);
+            $newLabel = $refereeJob['label'] . ': ' . $profileLabel;
             $parameters['title'] = $newLabel;
         }
         
@@ -209,15 +233,6 @@
             $parameters['title'] = $newLabel;
         }
         
-        private function officialLabel(&$parameters, $parentObject): string {
-            $record = BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
-            $personProfile = BackendUtility::getRecord('tx_sportms_domain_model_personprofile', $record['person_profile']);
-            $person = BackendUtility::getRecord('tx_sportms_domain_model_person', $personProfile['person']);
-            $officialJob = BackendUtility::getRecord('tx_sportms_domain_model_officialjob',
-                $record['official_job']);
-            return $officialJob['label'] . ': ' . $person['lastname'] . ', ' . $person['firstname'];
-        }
-    
         public function personProfileLabel(&$parameters, $parentObject): void
         {
             $record = BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
@@ -263,8 +278,8 @@
         public function teamSeasonSquadMemberLabel(&$parameters, $parentObject): void
         {
             $record = BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
-            $person = BackendUtility::getRecord('tx_sportms_domain_model_person', $record['person']);
-            $newLabel = $person['lastname'] . ', ' . $person['firstname'];
+            $profileLabel = $this->profileLabel($record['person_profile']);
+            $newLabel = $profileLabel;
             if ($record['sport_position_group']) {
                 $sportPositionGroup = BackendUtility::getRecord('tx_sportms_domain_model_sportpositiongroup',
                     $record['sport_position_group']);

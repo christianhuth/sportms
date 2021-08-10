@@ -6,7 +6,7 @@
     use Balumedien\Sportms\Domain\Model\CompetitionSeasonGameday;
     use Balumedien\Sportms\Domain\Model\TeamSeason;
     use TYPO3\CMS\Extbase\Persistence\QueryInterface;
-    
+
     class GameRepository extends SportMSBaseRepository
     {
         

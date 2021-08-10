@@ -7,7 +7,7 @@
     use Balumedien\Sportms\Domain\Model\CompetitionSeasonGameday;
     use Balumedien\Sportms\Domain\Model\Season;
     use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
-    
+
     /**
      * CompetitionController
      */
@@ -88,51 +88,6 @@
         }
         
         /**
-         * @param Competition $competition
-         * @param string $actionLabel
-         * @param Season|null $season
-         */
-        private function pagetitleForCompetition(
-            Competition $competition,
-            string $actionLabel,
-            Season $season = null,
-            CompetitionSeasonGameday $competitionSeasonGameday = null
-        ) {
-            $competitionLabel = $competition->getLabel();
-            if ($season) {
-                $seasonLabel = $season->getLabel();
-                $competitionLabel .= " " . $seasonLabel;
-            }
-            if ($competitionSeasonGameday) {
-                $competitionSeasonGamedayLabel = $competitionSeasonGameday->getLabel();
-                $competitionLabel .= " " . $competitionSeasonGamedayLabel;
-            }
-            $this->pagetitle($competitionLabel, $actionLabel);
-        }
-        
-        /**
-         * @param Competition|null $competition
-         * @param Season|null $season
-         */
-        protected function seasonClubsAction(Competition $competition = null, Season $season = null)
-        {
-            /* MAIN CONTENT */
-            $competition = $this->assignCompetitionToView($competition);
-            $season = $this->assignSeasonToView($competition, $season);
-            $competitionSeason = $this->assignCompetitionSeasonToView($competition, $season);
-            
-            /* FRONTEND FILTERS */
-            $this->assignSeasonSelectboxValuesToView($competition);
-            
-            /* PAGETITLE */
-            $this->pagetitleForCompetition(
-                $competition,
-                LocalizationUtility::translate('tx_sportms_action.competition.seasonclubs', "sportms"),
-                $season
-            );
-        }
-        
-        /**
          * @param Competition|null $competition
          * @param Season|null $season
          * @param CompetitionSeasonGameday|null $competitionSeasonGameday
@@ -171,10 +126,19 @@
         }
         
         /**
+         * @param CompetitionSeason $competitionSeason
+         */
+        private function assignCompetitionSeasonGamedaySelectboxValuesToView(CompetitionSeason $competitionSeason)
+        {
+            $competitionSeasonGamedaySelectboxValues = $competitionSeason->getCompetitionSeasonGamedays();
+            $this->view->assign('competitionSeasonGamedaySelectboxValues', $competitionSeasonGamedaySelectboxValues);
+        }
+        
+        /**
          * @param Competition|null $competition
          * @param Season|null $season
          */
-        protected function seasonTeamsAction(Competition $competition = null, Season $season = null): void
+        protected function seasonClubsAction(Competition $competition = null, Season $season = null)
         {
             /* MAIN CONTENT */
             $competition = $this->assignCompetitionToView($competition);
@@ -187,7 +151,7 @@
             /* PAGETITLE */
             $this->pagetitleForCompetition(
                 $competition,
-                LocalizationUtility::translate('tx_sportms_action.competition.seasonteams', "sportms"),
+                LocalizationUtility::translate('tx_sportms_action.competition.seasonclubs', "sportms"),
                 $season
             );
         }
@@ -222,12 +186,48 @@
         }
         
         /**
-         * @param CompetitionSeason $competitionSeason
+         * @param Competition $competition
+         * @param string $actionLabel
+         * @param Season|null $season
          */
-        private function assignCompetitionSeasonGamedaySelectboxValuesToView(CompetitionSeason $competitionSeason)
+        private function pagetitleForCompetition(
+            Competition $competition,
+            string $actionLabel,
+            Season $season = null,
+            CompetitionSeasonGameday $competitionSeasonGameday = null
+        ) {
+            $competitionLabel = $competition->getLabel();
+            if ($season) {
+                $seasonLabel = $season->getLabel();
+                $competitionLabel .= " " . $seasonLabel;
+            }
+            if ($competitionSeasonGameday) {
+                $competitionSeasonGamedayLabel = $competitionSeasonGameday->getLabel();
+                $competitionLabel .= " " . $competitionSeasonGamedayLabel;
+            }
+            $this->pagetitle($competitionLabel, $actionLabel);
+        }
+        
+        /**
+         * @param Competition|null $competition
+         * @param Season|null $season
+         */
+        protected function seasonTeamsAction(Competition $competition = null, Season $season = null): void
         {
-            $competitionSeasonGamedaySelectboxValues = $competitionSeason->getCompetitionSeasonGamedays();
-            $this->view->assign('competitionSeasonGamedaySelectboxValues', $competitionSeasonGamedaySelectboxValues);
+            /* MAIN CONTENT */
+            $competition = $this->assignCompetitionToView($competition);
+            $season = $this->assignSeasonToView($competition, $season);
+            $competitionSeason = $this->assignCompetitionSeasonToView($competition, $season);
+            
+            /* FRONTEND FILTERS */
+            $this->assignSeasonSelectboxValuesToView($competition);
+            
+            /* PAGETITLE */
+            $this->pagetitleForCompetition(
+                $competition,
+                LocalizationUtility::translate('tx_sportms_action.competition.seasonteams', "sportms"),
+                $season
+            );
         }
         
     }

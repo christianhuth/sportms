@@ -27,9 +27,9 @@
             'tstamp' => 'tstamp',
             'type' => 'profile_type',
             'typeicon_classes' => [
-                'default' => 'sportms-domain-model-playerprofile-icon',
                 '1' => 'sportms-domain-model-officialprofile-icon',
-                '2' => 'sportms-domain-model-refereeprofile-icon',
+                '2' => 'sportms-domain-model-playerprofile-icon',
+                '3' => 'sportms-domain-model-refereeprofile-icon',
             ],
             'typeicon_column' => 'profile_type',
             'versioningWS' => true,
@@ -138,18 +138,18 @@
                             null,
                         ],
                         [
-                            'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_personprofile.profiletype.player',
-                            0,
-                            'sportms-domain-model-playerprofile-icon',
-                        ],
-                        [
                             'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_personprofile.profiletype.official',
                             1,
                             'sportms-domain-model-officialprofile-icon',
                         ],
                         [
-                            'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_personprofile.profiletype.referee',
+                            'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_personprofile.profiletype.player',
                             2,
+                            'sportms-domain-model-playerprofile-icon',
+                        ],
+                        [
+                            'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_personprofile.profiletype.referee',
+                            3,
                             'sportms-domain-model-refereeprofile-icon',
                         ],
                     ],

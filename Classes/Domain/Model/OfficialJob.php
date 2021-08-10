@@ -3,7 +3,7 @@
     namespace Balumedien\Sportms\Domain\Model;
     
     use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
-    
+
     /**
      * OfficialJob
      */
@@ -14,7 +14,7 @@
          * @var string
          */
         protected $label = '';
-    
+        
         /**
          * @var bool
          */
@@ -24,22 +24,22 @@
          * @var bool
          */
         protected $isClubHeadJob = false;
-    
+        
         /**
          * @var bool
          */
         protected $isClubSectionJob = false;
-    
+        
         /**
          * @var bool
          */
         protected $isClubSectionHeadJob = false;
-    
+        
         /**
          * @var bool
          */
         protected $isTeamSeasonJob = false;
-    
+        
         /**
          * @var bool
          */
@@ -60,7 +60,7 @@
         {
             $this->label = $label;
         }
-    
+        
         /**
          * @return bool
          */
@@ -68,7 +68,7 @@
         {
             return $this->isClubJob;
         }
-    
+        
         /**
          * @param bool $isClubJob
          */
@@ -92,7 +92,7 @@
         {
             $this->isClubHeadJob = $isClubHeadJob;
         }
-    
+        
         /**
          * @return bool
          */
@@ -100,7 +100,7 @@
         {
             return $this->isClubSectionJob;
         }
-    
+        
         /**
          * @param bool $isClubSectionJob
          */
@@ -108,7 +108,7 @@
         {
             $this->isClubSectionJob = $isClubSectionJob;
         }
-    
+        
         /**
          * @return bool
          */
@@ -116,7 +116,7 @@
         {
             return $this->isClubSectionHeadJob;
         }
-    
+        
         /**
          * @param bool $isClubSectionHeadJob
          */
@@ -124,7 +124,7 @@
         {
             $this->isClubSectionHeadJob = $isClubSectionHeadJob;
         }
-    
+        
         /**
          * @return bool
          */
@@ -132,7 +132,7 @@
         {
             return $this->isTeamSeasonJob;
         }
-    
+        
         /**
          * @param bool $isTeamSeasonJob
          */
@@ -140,7 +140,7 @@
         {
             $this->isTeamSeasonJob = $isTeamSeasonJob;
         }
-    
+        
         /**
          * @return bool
          */
@@ -148,7 +148,7 @@
         {
             return $this->isCheftrainerJob;
         }
-    
+        
         /**
          * @param bool $isCheftrainerJob
          */
