@@ -180,7 +180,7 @@
             'main_sport_position_group' => [
                 'displayCond' => [
                     'AND' => [
-                        'FIELD:profile_type:=:0',
+                        'FIELD:profile_type:=:2',
                         'FIELD:sport:>:0',
                     ],
                 ],
@@ -204,7 +204,7 @@
             'main_sport_position' => [
                 'displayCond' => [
                     'AND' => [
-                        'FIELD:profile_type:=:0',
+                        'FIELD:profile_type:=:2',
                         'FIELD:sport:>:0',
                     ],
                 ],
@@ -226,7 +226,7 @@
             'side_sport_position_groups' => [
                 'displayCond' => [
                     'AND' => [
-                        'FIELD:profile_type:=:0',
+                        'FIELD:profile_type:=:2',
                         'FIELD:sport:>:0',
                     ],
                 ],
@@ -258,7 +258,7 @@
             'side_sport_positions' => [
                 'displayCond' => [
                     'AND' => [
-                        'FIELD:profile_type:=:0',
+                        'FIELD:profile_type:=:2',
                         'FIELD:sport:>:0',
                     ],
                 ],

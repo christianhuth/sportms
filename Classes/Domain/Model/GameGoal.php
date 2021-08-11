@@ -35,17 +35,17 @@
         protected $minute;
         
         /**
-         * @var int
+         * @var int|null
          */
         protected $minuteAdditional;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Model\PersonProfile
+         * @var \Balumedien\Sportms\Domain\Model\PersonProfile|null
          */
         protected $scorer;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Model\PersonProfile
+         * @var \Balumedien\Sportms\Domain\Model\PersonProfile|null
          */
         protected $assist;
         
@@ -143,51 +143,51 @@
         {
             $this->minute = $minute;
         }
-        
+    
         /**
-         * @return int
+         * @return int|null
          */
-        public function getMinuteAdditional()
+        public function getMinuteAdditional(): ?int
         {
             return $this->minuteAdditional;
         }
-        
+    
         /**
-         * @param int $minuteAdditional
+         * @param int|null $minuteAdditional
          */
-        public function setMinuteAdditional($minuteAdditional)
+        public function setMinuteAdditional(?int $minuteAdditional): void
         {
             $this->minuteAdditional = $minuteAdditional;
         }
-        
+    
         /**
-         * @return PersonProfile
+         * @return PersonProfile|null
          */
-        public function getScorer(): PersonProfile
+        public function getScorer(): ?PersonProfile
         {
             return $this->scorer;
         }
-        
+    
         /**
-         * @param PersonProfile $scorer
+         * @param PersonProfile|null $scorer
          */
-        public function setScorer(PersonProfile $scorer): void
+        public function setScorer(?PersonProfile $scorer): void
         {
             $this->scorer = $scorer;
         }
-        
+    
         /**
-         * @return PersonProfile
+         * @return PersonProfile|null
          */
-        public function getAssist(): PersonProfile
+        public function getAssist(): ?PersonProfile
         {
             return $this->assist;
         }
-        
+    
         /**
-         * @param PersonProfile $assist
+         * @param PersonProfile|null $assist
          */
-        public function setAssist(PersonProfile $assist): void
+        public function setAssist(?PersonProfile $assist): void
         {
             $this->assist = $assist;
         }

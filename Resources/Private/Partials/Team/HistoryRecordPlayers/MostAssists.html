@@ -1,49 +1,49 @@
 <html data-namespace-typo3-fluid="true"
-	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-	  xmlns:sportms="Balumedien\Sportms\ViewHelpers">
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+>
 
 <table class="table table-bordered table-condensed table-hover table-striped tx-sportms-table">
-	<thead>
-	<tr>
-		<th class="tx-sportms-table-center">#</th>
-		<th class="tx-sportms-table-left">Person</th>
-		<th class="tx-sportms-table-center">Nationalität</th>
-		<th class="tx-sportms-table-center">Vorlagen</th>
-	</tr>
-	</thead>
-	<tbody>
-	<f:if condition="{playersWithMostAssists}">
-		<f:then>
-			<f:for as="playerWithMostAssists" each="{playersWithMostAssists}"
-				   iteration="iterator">
-				<tr>
-					<td class="tx-sportms-table-center">{iterator.index + 1}
-					</td>
-					<td class="tx-sportms-table-left">
-						<f:render partial="ViewHelpers/LinkAction/Person/PlayerProfile"
-								  arguments="{linkLabel: 'name', person: playerWithMostAssists.person}"/>
-					</td>
-					<td class="tx-sportms-table-center">
-						<f:render
-								arguments="{nationalities: playerWithMostAssists.person.nationalities}"
-								partial="ViewHelpers/Person/Nationalities"/>
-					</td>
-					<td class="tx-sportms-table-center">
-						{playerWithMostAssists.numberOfAssists}
-					</td>
-				</tr>
-			</f:for>
-		</f:then>
-		<f:else>
-			<tr>
-				<td class="tx-sportms-table-center" colspan="4">Keine
-																Rekordspieler
-																gefunden.
-				</td>
-			</tr>
-		</f:else>
-	</f:if>
-	</tbody>
+    <thead>
+    <tr>
+        <th class="tx-sportms-table-center">#</th>
+        <th class="tx-sportms-table-left">Person</th>
+        <th class="tx-sportms-table-center">Nationalität</th>
+        <th class="tx-sportms-table-center">Vorlagen</th>
+    </tr>
+    </thead>
+    <tbody>
+    <f:if condition="{playersWithMostAssists}">
+        <f:then>
+            <f:for as="playerWithMostAssists" each="{playersWithMostAssists}"
+                   iteration="iterator">
+                <tr>
+                    <td class="tx-sportms-table-center">{iterator.index + 1}
+                    </td>
+                    <td class="tx-sportms-table-left">
+                        <f:render
+                                partial="ViewHelpers/LinkAction/Person/PlayerProfile"
+                                arguments="{linkLabel: 'name', person: playerWithMostAssists.person.person}"/>
+                    </td>
+                    <td class="tx-sportms-table-center">
+                        <f:render
+                                arguments="{nationalities: playerWithMostAssists.person.person.nationalities}"
+                                partial="ViewHelpers/Person/Nationalities"/>
+                    </td>
+                    <td class="tx-sportms-table-center">
+                        {playerWithMostAssists.numberOfAssists}
+                    </td>
+                </tr>
+            </f:for>
+        </f:then>
+        <f:else>
+            <tr>
+                <td class="tx-sportms-table-center" colspan="4">
+                    Keine Rekordspieler gefunden.
+                </td>
+            </tr>
+        </f:else>
+    </f:if>
+    </tbody>
 </table>
 
 </html>

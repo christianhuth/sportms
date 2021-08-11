@@ -9,7 +9,7 @@
     use TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException;
     use TYPO3\CMS\Extbase\Persistence\QueryInterface;
     use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
-
+    
     /**
      * TeamController
      */
@@ -57,6 +57,12 @@
          * @TYPO3\CMS\Extbase\Annotation\Inject
          */
         protected $personRepository;
+        
+        /**
+         * @var \Balumedien\Sportms\Domain\Repository\PersonProfileRepository
+         * @TYPO3\CMS\Extbase\Annotation\Inject
+         */
+        protected $personProfileRepository;
         
         /**
          * @var \Balumedien\Sportms\Domain\Repository\SeasonRepository
@@ -280,7 +286,7 @@
             $playersWithMostGames = [];
             foreach ($playersWithMostGamesAsArray as $playerWithMostGamesAsArray) {
                 $playerWithMostGames = new \Balumedien\Sportms\Domain\Model\PlayerStat();
-                $playerWithMostGames->setPerson($this->personRepository->findByUid($playerWithMostGamesAsArray['person']));
+                $playerWithMostGames->setPerson($this->personProfileRepository->findByUid($playerWithMostGamesAsArray['person_profile']));
                 $playerWithMostGames->setNumberOfGames($playerWithMostGamesAsArray['numberOfGames']);
                 $playerWithMostGames->setNumberOfStartingFormation($playerWithMostGamesAsArray['numberOfStartingFormation']);
                 $playersWithMostGames[] = $playerWithMostGames;
@@ -294,7 +300,7 @@
             $playersWithMostGoals = [];
             foreach ($playersWithMostGoalsAsArray as $playerWithMostGoalsAsArray) {
                 $playerWithMostGoals = new \Balumedien\Sportms\Domain\Model\PlayerStat();
-                $playerWithMostGoals->setPerson($this->personRepository->findByUid($playerWithMostGoalsAsArray['scorer']));
+                $playerWithMostGoals->setPerson($this->personProfileRepository->findByUid($playerWithMostGoalsAsArray['scorer']));
                 $playerWithMostGoals->setNumberOfGoals($playerWithMostGoalsAsArray['numberOfGoals']);
                 $playersWithMostGoals[] = $playerWithMostGoals;
             }
@@ -307,7 +313,7 @@
             $playersWithMostAssists = [];
             foreach ($playersWithMostAssistsAsArray as $playerWithMostAssistsAsArray) {
                 $playerWithMostAssists = new \Balumedien\Sportms\Domain\Model\PlayerStat();
-                $playerWithMostAssists->setPerson($this->personRepository->findByUid($playerWithMostAssistsAsArray['assist']));
+                $playerWithMostAssists->setPerson($this->personProfileRepository->findByUid($playerWithMostAssistsAsArray['assist']));
                 $playerWithMostAssists->setNumberOfAssists($playerWithMostAssistsAsArray['numberOfAssists']);
                 $playersWithMostAssists[] = $playerWithMostAssists;
             }

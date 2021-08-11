@@ -6,7 +6,7 @@
     {
         
         /**
-         * @var \Balumedien\Sportms\Domain\Model\Person
+         * @var \Balumedien\Sportms\Domain\Model\PersonProfile
          */
         protected $person;
         
@@ -29,19 +29,19 @@
          * @var int|null
          */
         protected $numberOfAssists;
-        
+    
         /**
-         * @return Person
+         * @return PersonProfile
          */
-        public function getPerson(): Person
+        public function getPerson(): PersonProfile
         {
             return $this->person;
         }
-        
+    
         /**
-         * @param Person $person
+         * @param PersonProfile $person
          */
-        public function setPerson(Person $person): void
+        public function setPerson(PersonProfile $person): void
         {
             $this->person = $person;
         }

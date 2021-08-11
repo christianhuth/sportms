@@ -50,7 +50,7 @@
                 ->WHERE(
                     $queryBuilder->expr()->eq('type', $queryBuilder->createNamedParameter('start'))
                 )
-                ->GROUPBY($tableGameLineupAlias . '.person')
+                ->GROUPBY($tableGameLineupAlias . '.person_profile')
                 ->ORDERBY('numberOfGames', \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING)
                 ->setMaxResults($limit);
             #debug($queryBuilder->getSQL());
