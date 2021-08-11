@@ -2,7 +2,7 @@
     
     namespace Balumedien\Sportms\Domain\Repository;
     
-    class TeamSeasonOfficialJobRepository extends SportMSBaseRepository
+    class OfficialJobRepository extends SportMSBaseRepository
     {
         
         protected $defaultOrderings = [

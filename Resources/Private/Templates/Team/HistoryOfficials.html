@@ -1,76 +1,75 @@
 <html data-namespace-typo3-fluid="true"
-	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
 >
 
 <f:layout name="default"/>
 
 <f:section name="default">
-	<div class="tx-sportms-team-detail">
-		
-		<f:render arguments="{team: team}" partial="Team/Navigation"/>
-		
-		<div class="table-responsive">
-			<table class="table table-bordered table-condensed table-hover table-striped tx-sportms-table">
-				<thead>
-				<tr>
-					<th>
-						<f:translate key="tx_sportms_domain_model_person"/>
-					</th>
-					<th>
-						<f:translate
-								key="tx_sportms_domain_model_teamseasonofficialjob"/>
-					</th>
-					<th>
-						<f:translate
-								key="tx_sportms_domain_model_person.nationality"/>
-					</th>
-					<th>
-						<f:translate
-								key="tx_sportms_general.official.startdate"/>
-					</th>
-					<th>
-						<f:translate
-								key="tx_sportms_general.official.enddate"/>
-					</th>
-					<th>Amtszeit</th>
-				</tr>
-				</thead>
-				<tbody>
-				<f:for as="official" each="{officials}">
-					<tr>
-						<td>
-							<f:render partial="ViewHelpers/Person/ItemInTable"
-									  arguments="{person: official.person}"/>
-						</td>
-						<td class="tx-sportms-table-center">
-							{official.teamSeasonOfficialJob.label}
-						</td>
-						<td class="tx-sportms-table-center">
-							<f:render
-									arguments="{nationalities: official.person.nationalities}"
-									partial="ViewHelpers/Person/Nationalities"/>
-						</td>
-						<td class="tx-sportms-table-center">
-							<f:format.date format="{settings.format.date.long}">
-								{official.startdate}
-							</f:format.date>
-						</td>
-						<td class="tx-sportms-table-center">
-							<f:format.date format="{settings.format.date.long}">
-								{official.enddate}
-							</f:format.date>
-						</td>
-						<td class="tx-sportms-table-right">
-							{official.dateDifference}
-							Tage
-						</td>
-					</tr>
-				</f:for>
-				</tbody>
-				<tr></tr>
-			</table>
-		</div>
-	</div>
+    <div class="tx-sportms-team-detail">
+        
+        <f:render arguments="{team: team}" partial="Team/Navigation"/>
+        
+        <div class="table-responsive">
+            <table class="table table-bordered table-condensed table-hover table-striped tx-sportms-table">
+                <thead>
+                <tr>
+                    <th>
+                        <f:translate key="tx_sportms_domain_model_person"/>
+                    </th>
+                    <th>
+                        <f:translate
+                                key="tx_sportms_domain_model_officialjob"/>
+                    </th>
+                    <th>
+                        <f:translate
+                                key="tx_sportms_domain_model_person.nationality"/>
+                    </th>
+                    <th>
+                        <f:translate
+                                key="tx_sportms_general.official.startdate"/>
+                    </th>
+                    <th>
+                        <f:translate
+                                key="tx_sportms_general.official.enddate"/>
+                    </th>
+                    <th>Amtszeit</th>
+                </tr>
+                </thead>
+                <tbody>
+                <f:for as="official" each="{officials}">
+                    <tr>
+                        <td>
+                            <f:render partial="ViewHelpers/Person/ItemInTable"
+                                      arguments="{person: official.personProfile.person}"/>
+                        </td>
+                        <td class="tx-sportms-table-center">
+                            {official.officialJob.label}
+                        </td>
+                        <td class="tx-sportms-table-center">
+                            <f:render
+                                    arguments="{nationalities: official.personProfile.person.nationalities}"
+                                    partial="ViewHelpers/Person/Nationalities"/>
+                        </td>
+                        <td class="tx-sportms-table-center">
+                            <f:format.date format="{settings.format.date.long}">
+                                {official.startdate}
+                            </f:format.date>
+                        </td>
+                        <td class="tx-sportms-table-center">
+                            <f:format.date format="{settings.format.date.long}">
+                                {official.enddate}
+                            </f:format.date>
+                        </td>
+                        <td class="tx-sportms-table-right">
+                            {official.dateDifference} Tage
+                        </td>
+                    </tr>
+                </f:for>
+                </tbody>
+                <tr></tr>
+            </table>
+        </div>
+    </div>
 </f:section>
 
 </html>

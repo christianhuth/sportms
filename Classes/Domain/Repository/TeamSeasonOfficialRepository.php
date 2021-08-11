@@ -16,7 +16,7 @@
             'teamSeason.season.label' => QueryInterface::ORDER_DESCENDING,
             'enddate' => QueryInterface::ORDER_ASCENDING,
             'startdate' => QueryInterface::ORDER_DESCENDING,
-            'teamSeasonOfficialJob.label' => QueryInterface::ORDER_ASCENDING,
+            'officialJob.label' => QueryInterface::ORDER_ASCENDING,
         ];
         
         public function findAll(string $teamUids = null)
@@ -38,8 +38,8 @@
         public function findAllByTeam(\Balumedien\Sportms\Domain\Model\Team $team)
         {
             $orderings = [
-                'person' => QueryInterface::ORDER_ASCENDING,
-                'teamSeasonOfficialJob.label' => QueryInterface::ORDER_ASCENDING,
+                'personProfile.person' => QueryInterface::ORDER_ASCENDING,
+                'officialJob.label' => QueryInterface::ORDER_ASCENDING,
                 'teamSeason.season.startdate' => QueryInterface::ORDER_ASCENDING,
             ];
             $query = $this->createQuery();

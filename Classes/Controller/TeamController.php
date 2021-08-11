@@ -53,6 +53,12 @@
         protected $gameLineupRepository;
         
         /**
+         * @var \Balumedien\Sportms\Domain\Repository\OfficialJobRepository
+         * @TYPO3\CMS\Extbase\Annotation\Inject
+         */
+        protected $officialJobRepository;
+        
+        /**
          * @var \Balumedien\Sportms\Domain\Repository\PersonRepository
          * @TYPO3\CMS\Extbase\Annotation\Inject
          */
@@ -119,12 +125,6 @@
         protected $teamSeasonOfficialRepository;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Repository\TeamSeasonOfficialJobRepository
-         * @TYPO3\CMS\Extbase\Annotation\Inject
-         */
-        protected $teamSeasonOfficialJobRepository;
-        
-        /**
          * @param Team|null $team
          */
         public function historyOfficialsAction(Team $team = null)
@@ -146,7 +146,7 @@
                 if ($lastOfficial === null) {
                     $lastOfficial = $official;
                 }
-                if (($lastOfficial->getPerson() !== $official->getPerson()) || ($lastOfficial->getTeamSeasonOfficialJob() !== $official->getTeamSeasonOfficialJob())) {
+                if (($lastOfficial->getPersonProfile() !== $official->getPersonProfile()) || ($lastOfficial->getOfficialJob() !== $official->getOfficialJob())) {
                     $officialsByTerm[] = $lastOfficial;
                 } else {
                     if ($this->consecutiveTeamSeasonOfficials($lastOfficial, $official)) {
@@ -166,7 +166,9 @@
             }
             $officialsByTerm = $this->orderTeamSeasonOfficials($officialsByTerm);
             $this->view->assign('officials', $officialsByTerm);
-            $officialJobsSelectbox = $this->teamSeasonOfficialJobRepository->findAll();
+            
+            # TODO: FRONTEND FILTERS THE NEW WAY
+            $officialJobsSelectbox = $this->officialJobRepository->findAll();
             $this->view->assign('officialJobsSelectbox', $officialJobsSelectbox);
             
             /* PAGETITLE */
@@ -210,7 +212,7 @@
                 if ($startDateDiff) {
                     return $startDateDiff;
                 }
-                return strcmp($a->getPerson()->getLastname(), $b->getPerson()->getFirstname());
+                return strcmp($a->getPersonProfile()->getPerson()->getLastname(), $b->getPersonProfile()->getPerson()->getFirstname());
             });
             return $teamSeasonOfficials;
         }
