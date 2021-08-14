@@ -4,7 +4,7 @@
 <tr>
 	<td>
 		<f:render partial="ViewHelpers/Person/ItemInTable"
-				  arguments="{person: person}"/>
+				  arguments="{personProfile: person.personProfiles.0}"/>
 	</td>
 	<td class="tx-sportms-table-center">
 		<f:render arguments="{nationalities: person.nationalities}"
@@ -15,7 +15,7 @@
 			<f:then>
 				<f:for each="{person.personProfiles}" as="personProfile">
 					<f:if
-							condition="{personProfile.profileType} == player && {personProfile.mainSportPositionGroup}">
+                            condition="{personProfile.profileType} == 2 && {personProfile.mainSportPositionGroup}">
 						<f:then>
 							{personProfile.mainSportPositionGroup.label}
 							<f:variable name="sportPositionGroupFound"

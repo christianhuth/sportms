@@ -4,20 +4,21 @@
 <div class="tx-sportms-person-in-table">
     <div class="tx-sportms-person-image">
         <f:render partial="ViewHelpers/Person/ProfileImage"
-                  arguments="{personProfile: person.personProfiles.0}"/>
+                  arguments="{personProfile: personProfile}"/>
     </div>
     <div class="tx-sportms-person-name">
-        {person.lastname} {person.firstname}
+        {personProfile.person.lastname} {personProfile.person.firstname}
     </div>
     <div class="tx-sportms-person-date-of-birth">
-        <f:if condition="{person.dateOfBirth} && {person.showBirthday}">
+        <f:if
+                condition="{personProfile.person.dateOfBirth} && {personProfile.person.showBirthday}">
             <f:then>
                 <f:format.date format="{settings.format.date.long}">
-                    {person.dateOfBirth}
+                    {personProfile.person.dateOfBirth}
                 </f:format.date>
             </f:then>
             <f:else>
-            
+                <span>unknown</span>
             </f:else>
         </f:if>
     </div>

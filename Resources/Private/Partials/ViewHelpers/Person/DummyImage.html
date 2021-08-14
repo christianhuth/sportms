@@ -1,7 +1,7 @@
 <html data-namespace-typo3-fluid="true"
 	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
-<f:if condition="{person.sex} == 'm'">
+<f:if condition="{personProfile.person.sex} == 'm'">
 	<f:then>
 		<f:image src="{settings.person.dummyImageMale}" height="{imageHeight}"/>
 	</f:then>

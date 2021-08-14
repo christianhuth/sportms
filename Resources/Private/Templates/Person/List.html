@@ -12,7 +12,8 @@
 								   configuration="{itemsPerPage: settings.person.list.pagination.itemsPerPage, insertAbove: settings.person.list.pagination.insertAbove, insertBelow: settings.person.list.pagination.insertBelow, maximumNumberOfLinks: settings.person.list.pagination.maximumNumberOfLinks}">
 					<div class="table-responsive">
 						<table class="table table-bordered table-condensed table-hover table-striped tx-sportms-table">
-							<tbody>
+                            <f:render section="tablehead"/>
+                            <tbody>
 							<f:for as="person" each="{paginatedObjects}">
 								<f:render arguments="{person: person}"
 										  partial="Person/List/Item"/>
@@ -25,7 +26,6 @@
 			<f:else>
 				<div class="table-responsive">
 					<table class="table table-bordered table-condensed table-hover table-striped tx-sportms-table">
-						<tbody>
 						<f:render section="tablehead"/>
 						<tbody>
 						<tr>

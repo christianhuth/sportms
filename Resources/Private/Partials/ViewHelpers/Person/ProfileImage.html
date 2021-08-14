@@ -17,12 +17,12 @@
 		<f:if condition="{imageHeight}">
 			<f:then>
 				<f:render
-						arguments="{imageHeight: imageHeight, person: personProfile.person}"
+						arguments="{imageHeight: imageHeight, personProfile: personProfile}"
 						partial="ViewHelpers/Person/DummyImage"/>
 			</f:then>
 			<f:else>
 				<f:render
-						arguments="{imageHeight: 50, person: personProfile.person}"
+						arguments="{imageHeight: 50, personProfile: personProfile}"
 						partial="ViewHelpers/Person/DummyImage"/>
 			</f:else>
 		</f:if>
