@@ -27,9 +27,11 @@
             'tstamp' => 'tstamp',
             'type' => 'profile_type',
             'typeicon_classes' => [
-                '1' => 'sportms-domain-model-officialprofile-icon',
-                '2' => 'sportms-domain-model-playerprofile-icon',
-                '3' => 'sportms-domain-model-refereeprofile-icon',
+                1 => 'sportms-domain-model-clubofficialprofile-icon',
+                2 => 'sportms-domain-model-clubsectionofficialprofile-icon',
+                3 => 'sportms-domain-model-playerprofile-icon',
+                4 => 'sportms-domain-model-refereeprofile-icon',
+                5 => 'sportms-domain-model-teamseasonofficialprofile-icon',
             ],
             'typeicon_column' => 'profile_type',
             'versioningWS' => true,
@@ -41,13 +43,18 @@
                                     --palette--;LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_personprofile.palette.main_position;main_position,
                                     --palette--;LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_personprofile.palette.side_positions;side_positions,
                                 --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_personprofile.profile_images,
-                                    profile_images',
+                                    profile_images,
+                                --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.tab.visibility,
+                                    --palette--;LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.palette.visibility_general;visibility_general,
+                                    --palette--;LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.palette.visibility_detail;visibility_detail,',
             ],
         ],
         'palettes' => [
             'sport_profile' => ['showitem' => 'sport, profile_type'],
             'main_position' => ['showitem' => 'main_sport_position_group, main_sport_position'],
             'side_positions' => ['showitem' => 'side_sport_position_groups, side_sport_positions'],
+            'visibility_general' => ['showitem' => 'hidden, starttime, endtime'],
+            'visibility_detail' => ['showitem' => 'detail_link'],
         ],
         'columns' => [
             
@@ -138,19 +145,29 @@
                             null,
                         ],
                         [
-                            'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_personprofile.profiletype.official',
+                            'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_personprofile.profiletype.clubofficial',
                             1,
-                            'sportms-domain-model-officialprofile-icon',
+                            'sportms-domain-model-clubofficialprofile-icon',
+                        ],
+                        [
+                            'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_personprofile.profiletype.clubsectionofficial',
+                            2,
+                            'sportms-domain-model-clubsectionofficialprofile-icon',
                         ],
                         [
                             'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_personprofile.profiletype.player',
-                            2,
+                            3,
                             'sportms-domain-model-playerprofile-icon',
                         ],
                         [
                             'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_personprofile.profiletype.referee',
-                            3,
+                            4,
                             'sportms-domain-model-refereeprofile-icon',
+                        ],
+                        [
+                            'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_personprofile.profiletype.teamseasonofficial',
+                            5,
+                            'sportms-domain-model-teamseasonofficialprofile-icon',
                         ],
                     ],
                     'renderType' => 'selectSingle',
@@ -161,6 +178,14 @@
                 'onChange' => 'reload',
             ],
             'sport' => [
+                'displayCond' => [
+                    'OR' => [
+                        'FIELD:profile_type:=:2',
+                        'FIELD:profile_type:=:3',
+                        'FIELD:profile_type:=:4',
+                        'FIELD:profile_type:=:5',
+                    ],
+                ],
                 'exclude' => 1,
                 'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_sport',
                 'config' => [
@@ -180,7 +205,7 @@
             'main_sport_position_group' => [
                 'displayCond' => [
                     'AND' => [
-                        'FIELD:profile_type:=:2',
+                        'FIELD:profile_type:=:3',
                         'FIELD:sport:>:0',
                     ],
                 ],
@@ -204,7 +229,7 @@
             'main_sport_position' => [
                 'displayCond' => [
                     'AND' => [
-                        'FIELD:profile_type:=:2',
+                        'FIELD:profile_type:=:3',
                         'FIELD:sport:>:0',
                     ],
                 ],
@@ -226,7 +251,7 @@
             'side_sport_position_groups' => [
                 'displayCond' => [
                     'AND' => [
-                        'FIELD:profile_type:=:2',
+                        'FIELD:profile_type:=:3',
                         'FIELD:sport:>:0',
                     ],
                 ],
@@ -258,7 +283,7 @@
             'side_sport_positions' => [
                 'displayCond' => [
                     'AND' => [
-                        'FIELD:profile_type:=:2',
+                        'FIELD:profile_type:=:3',
                         'FIELD:sport:>:0',
                     ],
                 ],
@@ -300,6 +325,16 @@
                     ],
                     $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']
                 ),
+            ],
+            
+            'detail_link' => [
+                'exclude' => true,
+                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.detail_link',
+                'config' => [
+                    'default' => false,
+                    'renderType' => 'checkboxToggle',
+                    'type' => 'check',
+                ],
             ],
         
         ],

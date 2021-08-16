@@ -137,7 +137,7 @@
                 'config' => [
                     'eval' => 'required',
                     'foreign_table' => 'tx_sportms_domain_model_personprofile',
-                    'foreign_table_where' => '  AND tx_sportms_domain_model_personprofile.profile_type = 1
+                    'foreign_table_where' => '  AND tx_sportms_domain_model_personprofile.profile_type = 2
                                                 AND tx_sportms_domain_model_personprofile.sport IN
                                                 (
                                                     SELECT uid_foreign

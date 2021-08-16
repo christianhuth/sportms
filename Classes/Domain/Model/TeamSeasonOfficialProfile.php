@@ -2,7 +2,7 @@
     
     namespace Balumedien\Sportms\Domain\Model;
     
-    class OfficialProfile extends PersonProfile
+    class TeamSeasonOfficialProfile extends PersonProfile
     {
         
     }

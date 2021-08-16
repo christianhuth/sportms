@@ -126,7 +126,7 @@
                 'config' => [
                     'eval' => 'required',
                     'foreign_table' => 'tx_sportms_domain_model_personprofile',
-                    'foreign_table_where' => '  AND tx_sportms_domain_model_personprofile.profile_type = 3
+                    'foreign_table_where' => '  AND tx_sportms_domain_model_personprofile.profile_type = 4
                                                 AND tx_sportms_domain_model_personprofile.sport = (
                                                     SELECT tx_sportms_domain_model_game.sport
                                                     FROM tx_sportms_domain_model_game

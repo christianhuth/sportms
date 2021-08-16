@@ -187,14 +187,20 @@
             <trans-unit id="tx_sportms_domain_model_personprofile.profiletype">
                 <source>Profilart</source>
             </trans-unit>
-            <trans-unit id="tx_sportms_domain_model_personprofile.profiletype.official">
-                <source>Funktionär</source>
+            <trans-unit id="tx_sportms_domain_model_personprofile.profiletype.clubofficial">
+                <source>Vereinsfunktionär</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_personprofile.profiletype.clubsectionofficial">
+                <source>Abteilungsfunktionär</source>
             </trans-unit>
             <trans-unit id="tx_sportms_domain_model_personprofile.profiletype.player">
                 <source>Spieler</source>
             </trans-unit>
             <trans-unit id="tx_sportms_domain_model_personprofile.profiletype.referee">
                 <source>Schiedsrichter</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_personprofile.profiletype.teamseasonofficial">
+                <source>Mannschaftsfunktionär</source>
             </trans-unit>
             <trans-unit id="tx_sportms_domain_model_personprofile.profile_images">
                 <source>Profilbilder</source>
