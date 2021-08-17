@@ -1,6 +1,6 @@
 <?php
     
-    use Balumedien\Sportms\Classes\UserFunc\UserFunc;
+    use Balumedien\Sportms\UserFunc\UserFunc;
     
     if (!defined('TYPO3_MODE')) {
         die ('Access denied.');

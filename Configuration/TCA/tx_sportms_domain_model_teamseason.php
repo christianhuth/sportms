@@ -1,6 +1,6 @@
 <?php
     
-    use Balumedien\Sportms\Classes\UserFunc\UserFunc;
+    use Balumedien\Sportms\UserFunc\UserFunc;
     
     if (!defined('TYPO3_MODE')) {
         die ('Access denied.');
@@ -238,10 +238,10 @@
                     'multiple' => 0,
                     'fieldControl' => [
                         'editPopup' => [
-                            'disabled' => false,
+                            'disabled' => true,
                         ],
                         'addRecord' => [
-                            'disabled' => false,
+                            'disabled' => true,
                         ],
                         'listModule' => [
                             'disabled' => true,

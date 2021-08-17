@@ -1,6 +1,7 @@
 <?php
     
-    use Balumedien\Sportms\Classes\UserFunc\UserFunc;
+    use Balumedien\Sportms\UserFunc\ItemsProcFunc;
+    use Balumedien\Sportms\UserFunc\UserFunc;
     
     if (!defined('TYPO3_MODE')) {
         die ('Access denied.');
@@ -126,13 +127,15 @@
                 'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_person',
                 'config' => [
                     'eval' => 'required',
-                    'foreign_table' => 'tx_sportms_domain_model_personprofile',
-                    'foreign_table_where' => ' AND tx_sportms_domain_model_personprofile.profile_type = 1',
                     'items' => [
                         [
                             'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_select.something',
                             null,
                         ],
+                    ],
+                    'itemsProcFunc' => ItemsProcFunc::class . '->tx_sportms_domain_model_personprofile',
+                    'itemsProcConfig' => [
+                        'profile_type' => '1'
                     ],
                     'maxItems' => 1,
                     'minItems' => 1,
