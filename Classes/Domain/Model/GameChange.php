@@ -1,5 +1,7 @@
 <?php
     
+    declare(strict_types=1);
+    
     namespace ChristianKnell\Sportms\Domain\Model;
     
     /**
@@ -107,7 +109,7 @@
         {
             $this->minuteAdditional = $minuteAdditional;
         }
-    
+        
         /**
          * @return PersonProfile|null
          */
@@ -115,7 +117,7 @@
         {
             return $this->personIn;
         }
-    
+        
         /**
          * @param PersonProfile|null $personIn
          */
@@ -123,7 +125,7 @@
         {
             $this->personIn = $personIn;
         }
-    
+        
         /**
          * @return PersonProfile|null
          */
@@ -131,7 +133,7 @@
         {
             return $this->personOut;
         }
-    
+        
         /**
          * @param PersonProfile|null $personOut
          */

@@ -1,5 +1,7 @@
 <?php
     
+    declare(strict_types=1);
+    
     namespace ChristianKnell\Sportms\PageTitle;
     
     use TYPO3\CMS\Core\PageTitle\AbstractPageTitleProvider;

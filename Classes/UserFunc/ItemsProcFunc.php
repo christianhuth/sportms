@@ -1,11 +1,13 @@
 <?php
     
+    declare(strict_types=1);
+    
     namespace ChristianKnell\Sportms\UserFunc;
     
     use TYPO3\CMS\Core\Database\Connection;
     use TYPO3\CMS\Core\Database\ConnectionPool;
     use TYPO3\CMS\Core\Utility\GeneralUtility;
-    
+
     class ItemsProcFunc
     {
         

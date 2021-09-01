@@ -1,5 +1,7 @@
 <?php
     
+    declare(strict_types=1);
+    
     namespace ChristianKnell\Sportms\Domain\Repository;
     
     use ChristianKnell\Sportms\Domain\Model\CompetitionSeason;
@@ -135,10 +137,10 @@
         ) {
             $query = $this->createQuery();
             $constraints = [];
-            $constraints[] = $this->constraintForCompetitionSeasonUids($query, $competitionSeason->getUid());
+            $constraints[] = $this->constraintForCompetitionSeasonUids($query, (string) $competitionSeason->getUid());
             if ($competitionSeasonGameday) {
                 $constraints[] = $this->constraintForCompetitionSeasonGamedayUids($query,
-                    $competitionSeasonGameday->getUid());
+                    (string) $competitionSeasonGameday->getUid());
             }
             $query->matching($query->logicalAnd($constraints));
             return $query->execute();
@@ -157,7 +159,7 @@
             $query = $this->createQuery();
             $this->addOrderingsToQuery($query, $orderings);
             $constraints = [];
-            $constraints[] = $this->constraintForTeamSeasonUids($query, $teamSeason->getUid());
+            $constraints[] = $this->constraintForTeamSeasonUids($query, (string) $teamSeason->getUid());
             $query->matching($query->logicalAnd($constraints));
             return $query->execute();
         }

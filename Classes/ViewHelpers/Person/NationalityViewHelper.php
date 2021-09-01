@@ -1,5 +1,7 @@
 <?php
     
+    declare(strict_types=1);
+    
     namespace ChristianKnell\Sportms\ViewHelpers;
     
     class NationalityViewHelper extends \TYPO3\CMS\Fluid\ViewHelpers\ImageViewHelper

@@ -1,5 +1,7 @@
 <?php
     
+    declare(strict_types=1);
+    
     namespace ChristianKnell\Sportms\Domain\Model;
     
     /**
@@ -137,7 +139,8 @@
             }
             
             // Sort Objects in Array
-            usort($temporaryArray, ["\\ChristianKnell\\Sportms\\Domain\\Model\\CompetitionSeason", "compareTeamSeasons"]);
+            usort($temporaryArray,
+                ["\\ChristianKnell\\Sportms\\Domain\\Model\\CompetitionSeason", "compareTeamSeasons"]);
             
             // create new ObjectStorage and add ordered TeamSeason-Objects
             $competitionSeasonTeamsOrdered = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();

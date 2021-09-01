@@ -1,5 +1,7 @@
 <?php
     
+    declare(strict_types=1);
+    
     namespace ChristianKnell\Sportms\Domain\Model;
     
     /**
@@ -148,9 +150,9 @@
          */
         private function calculateDateDifference(int $startdate, int $enddate): int
         {
-            return ($enddate - $startdate) / 60 / 60 / 24;
+            return (int) (($enddate - $startdate) / 60 / 60 / 24);
         }
-        
+    
         /**
          * @return int
          */
@@ -158,7 +160,7 @@
         {
             return $this->dateDifference;
         }
-        
+    
         /**
          * @param int $dateDifference
          */

@@ -1,5 +1,7 @@
 <?php
     
+    declare(strict_types=1);
+    
     namespace ChristianKnell\Sportms\DataProcessing;
     
     use TYPO3\CMS\Core\Database\ConnectionPool;

@@ -1,5 +1,7 @@
 <?php
     
+    declare(strict_types=1);
+    
     namespace ChristianKnell\Sportms\Domain\Repository;
     
     use TYPO3\CMS\Core\Database\ConnectionPool;
@@ -56,7 +58,7 @@
                 ->GROUPBY($tableGameLineupAlias . '.person_profile')
                 ->ORDERBY('numberOfGames', \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING)
                 ->setMaxResults($limit);
-            if($teamUids) {
+            if ($teamUids) {
                 /*$gameDatabaseTable = 'tx_sportms_domain_model_game';
                 $gameDatabaseTableAlias = 'game';
                 $queryBuilder->join(

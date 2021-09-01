@@ -1,5 +1,7 @@
 <?php
     
+    declare(strict_types=1);
+    
     namespace ChristianKnell\Sportms\Domain\Model;
     
     /**
@@ -45,7 +47,8 @@
         /**
          * @param \ChristianKnell\Sportms\Domain\Model\SportPositionGroup $sportPositionGroup
          */
-        public function setSportPositionGroup(\ChristianKnell\Sportms\Domain\Model\SportPositionGroup $sportPositionGroup
+        public function setSportPositionGroup(
+            \ChristianKnell\Sportms\Domain\Model\SportPositionGroup $sportPositionGroup
         ): void {
             $this->sportPositionGroup = $sportPositionGroup;
         }

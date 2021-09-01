@@ -1,5 +1,7 @@
 <?php
     
+    declare(strict_types=1);
+    
     namespace ChristianKnell\Sportms\Domain\Model;
     
     class PersonProfile extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity

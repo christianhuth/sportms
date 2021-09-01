@@ -1,5 +1,7 @@
 <?php
     
+    declare(strict_types=1);
+    
     namespace ChristianKnell\Sportms\Domain\Model;
     
     /**
@@ -42,7 +44,7 @@
          * @var boolean
          */
         protected $detailLink;
-    
+        
         /**
          * @var int|null
          */
@@ -184,7 +186,7 @@
         {
             $this->detailLink = $detailLink;
         }
-    
+        
         /**
          * @return int|null
          */
@@ -192,7 +194,7 @@
         {
             return $this->detailPid;
         }
-    
+        
         /**
          * @param int|null $detailPid
          */

@@ -1,5 +1,7 @@
 <?php
     
+    declare(strict_types=1);
+    
     namespace ChristianKnell\Sportms\Controller;
     
     use ChristianKnell\Sportms\Domain\Model\Game;

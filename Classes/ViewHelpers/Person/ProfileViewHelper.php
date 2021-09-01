@@ -1,5 +1,7 @@
 <?php
     
+    declare(strict_types=1);
+    
     namespace ChristianKnell\Sportms\ViewHelpers\Person;
     
     use ChristianKnell\Sportms\Domain\Model\PersonProfile;
