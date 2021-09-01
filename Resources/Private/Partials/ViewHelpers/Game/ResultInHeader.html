@@ -46,8 +46,8 @@
 			<f:variable name="resultMain">{game.resultEndRegularHome} :
 										  {game.resultEndRegularGuest}
 			</f:variable>
-			<f:if condition="	{game.resultHalfsFirstHome} &&
-								{game.resultHalfsFirstGuest}">
+			<f:if condition="	{game.resultHalfsFirstHome} >= 0 &&
+								{game.resultHalfsFirstGuest} >= 0">
 				<f:then>
 					<f:variable name="resultSub">{game.resultHalfsFirstHome} :
 												 {game.resultHalfsFirstGuest}
