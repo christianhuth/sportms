@@ -1,5 +1,7 @@
 <?php
     
+    declare(strict_types=1);
+    
     namespace ChristianKnell\Sportms\Controller;
     
     use ChristianKnell\Sportms\Domain\Model\Season;
@@ -9,7 +11,7 @@
     use TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException;
     use TYPO3\CMS\Extbase\Persistence\QueryInterface;
     use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
-    
+
     /**
      * TeamController
      */
@@ -204,15 +206,16 @@
             # a - b = ASC
             # b - a = DESC
             usort($teamSeasonOfficials, static function ($a, $b) {
-                $endDateDiff = strcmp($b->getEnddate(), $a->getEnddate());
+                $endDateDiff = strcmp((string) $b->getEnddate(), (string) $a->getEnddate());
                 if ($endDateDiff) {
                     return $endDateDiff;
                 }
-                $startDateDiff = strcmp($b->getStartdate(), $a->getStartdate());
+                $startDateDiff = strcmp((string) $b->getStartdate(), (string) $a->getStartdate());
                 if ($startDateDiff) {
                     return $startDateDiff;
                 }
-                return strcmp($a->getPersonProfile()->getPerson()->getLastname(), $b->getPersonProfile()->getPerson()->getFirstname());
+                return strcmp($a->getPersonProfile()->getPerson()->getLastname(),
+                    $b->getPersonProfile()->getPerson()->getFirstname());
             });
             return $teamSeasonOfficials;
         }
@@ -241,23 +244,23 @@
             $team = $this->assignTeamToView($team);
             $teamUid = $team->getUid();
             $gamesWithHighestWins = $this->gameRepository->findGamesWithHighestWinsForTeam($teamUid,
-                $this->settings['team']['historyRecordGames']['limit'], $this->getCompetitionsFilter(),
+                (int) $this->settings['team']['historyRecordGames']['limit'], $this->getCompetitionsFilter(),
                 $this->getSeasonsFilter());
             $this->view->assign('gamesWithHighestWins', $gamesWithHighestWins);
             $gamesWithHighestLosts = $this->gameRepository->findGamesWithHighestLostsForTeam($teamUid,
-                $this->settings['team']['historyRecordGames']['limit'], $this->getCompetitionsFilter(),
+                (int) $this->settings['team']['historyRecordGames']['limit'], $this->getCompetitionsFilter(),
                 $this->getSeasonsFilter());
             $this->view->assign('gamesWithHighestLosts', $gamesWithHighestLosts);
             $gamesWithMostGoals = $this->gameRepository->findGamesWithMostGoalsForTeam($teamUid,
-                $this->settings['team']['historyRecordGames']['limit'], $this->getCompetitionsFilter(),
+                (int) $this->settings['team']['historyRecordGames']['limit'], $this->getCompetitionsFilter(),
                 $this->getSeasonsFilter());
             $this->view->assign('gamesWithMostGoals', $gamesWithMostGoals);
             $gamesWithMostSpectators = $this->gameRepository->findGamesWithMostSpectatorsForTeam($teamUid,
-                $this->settings['team']['historyRecordGames']['limit'], $this->getCompetitionsFilter(),
+                (int) $this->settings['team']['historyRecordGames']['limit'], $this->getCompetitionsFilter(),
                 $this->getSeasonsFilter());
             $this->view->assign('gamesWithMostSpectators', $gamesWithMostSpectators);
             $gamesWithFewestSpectators = $this->gameRepository->findGamesWithFewestSpectatorsForTeam($teamUid,
-                $this->settings['team']['historyRecordGames']['limit'], $this->getCompetitionsFilter(),
+                (int) $this->settings['team']['historyRecordGames']['limit'], $this->getCompetitionsFilter(),
                 $this->getSeasonsFilter());
             $this->view->assign('gamesWithFewestSpectators', $gamesWithFewestSpectators);
             
@@ -283,22 +286,22 @@
             $playersWithMostGamesAsArray = $this->gameLineupRepository->findPlayersWithMostGames($this->getSportsFilter(),
                 $this->getSportAgeGroupsFilter(), $this->getSportAgeLevelsFilter(),
                 $this->getSportPositionGroupsFilter(), $this->getSportPositionsFilter(),
-                $this->getCompetitionTypesFilter(), $this->getCompetitionsFilter(), $this->getClubsFilter(), array($teamUid),
-                $this->getSeasonsFilter(), $this->settings['team']['historyRecordPlayers']['limit']);
+                $this->getCompetitionTypesFilter(), $this->getCompetitionsFilter(), $this->getClubsFilter(), [$teamUid],
+                $this->getSeasonsFilter(), (int) $this->settings['team']['historyRecordPlayers']['limit']);
             $playersWithMostGames = [];
             foreach ($playersWithMostGamesAsArray as $playerWithMostGamesAsArray) {
                 $playerWithMostGames = new \ChristianKnell\Sportms\Domain\Model\PlayerStat();
                 $playerWithMostGames->setPerson($this->personProfileRepository->findByUid($playerWithMostGamesAsArray['person_profile']));
                 $playerWithMostGames->setNumberOfGames($playerWithMostGamesAsArray['numberOfGames']);
-                $playerWithMostGames->setNumberOfStartingFormation($playerWithMostGamesAsArray['numberOfStartingFormation']);
+                $playerWithMostGames->setNumberOfStartingFormation((int) $playerWithMostGamesAsArray['numberOfStartingFormation']);
                 $playersWithMostGames[] = $playerWithMostGames;
             }
             $this->view->assign('playersWithMostGames', $playersWithMostGames);
             $playersWithMostGoalsAsArray = $this->gameGoalRepository->findPlayersWithMostGoals($this->getSportsFilter(),
                 $this->getSportAgeGroupsFilter(), $this->getSportAgeLevelsFilter(),
                 $this->getSportPositionGroupsFilter(), $this->getSportPositionsFilter(),
-                $this->getCompetitionTypesFilter(), $this->getCompetitionsFilter(), $this->getClubsFilter(), $teamUid,
-                $this->getSeasonsFilter(), $this->settings['team']['historyRecordPlayers']['limit']);
+                $this->getCompetitionTypesFilter(), $this->getCompetitionsFilter(), $this->getClubsFilter(), (string) $teamUid,
+                $this->getSeasonsFilter(), (int) $this->settings['team']['historyRecordPlayers']['limit']);
             $playersWithMostGoals = [];
             foreach ($playersWithMostGoalsAsArray as $playerWithMostGoalsAsArray) {
                 $playerWithMostGoals = new \ChristianKnell\Sportms\Domain\Model\PlayerStat();
@@ -310,8 +313,8 @@
             $playersWithMostAssistsAsArray = $this->gameGoalRepository->findPlayersWithMostAssists($this->getSportsFilter(),
                 $this->getSportAgeGroupsFilter(), $this->getSportAgeLevelsFilter(),
                 $this->getSportPositionGroupsFilter(), $this->getSportPositionsFilter(),
-                $this->getCompetitionTypesFilter(), $this->getCompetitionsFilter(), $this->getClubsFilter(), $teamUid,
-                $this->getSeasonsFilter(), $this->settings['team']['historyRecordPlayers']['limit']);
+                $this->getCompetitionTypesFilter(), $this->getCompetitionsFilter(), $this->getClubsFilter(), (string) $teamUid,
+                $this->getSeasonsFilter(), (int) $this->settings['team']['historyRecordPlayers']['limit']);
             $playersWithMostAssists = [];
             foreach ($playersWithMostAssistsAsArray as $playerWithMostAssistsAsArray) {
                 $playerWithMostAssists = new \ChristianKnell\Sportms\Domain\Model\PlayerStat();
@@ -330,7 +333,7 @@
             if ($this->settings['competition']['selectbox']['enabled']) {
                 $competitionsSelectbox = $this->competitionRepository->findAll($this->getSportsFilter(),
                     $this->getSportAgeGroupsFilter(), $this->getSportAgeLevelsFilter(),
-                    $this->getCompetitionTypesFilter(), $this->getCompetitionsFilter(false), $teamUid);
+                    $this->getCompetitionTypesFilter(), $this->getCompetitionsFilter(false), (string) $teamUid);
                 $this->view->assign('competitionsSelectbox', $competitionsSelectbox);
             }
             if ($this->settings['sportPositionGroup']['selectbox']['enabled']) {
@@ -479,7 +482,7 @@
             $team = $this->assignTeamToView($team);
             $season = $this->assignSeasonToView($team, $season);
             $teamSeason = $this->assignTeamSeasonToView($team, $season);
-    
+            
             /* FRONTEND FILTERS */
             $this->assignSeasonSelectboxValuesToView($team);
             

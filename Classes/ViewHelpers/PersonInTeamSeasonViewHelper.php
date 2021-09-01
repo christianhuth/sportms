@@ -1,5 +1,7 @@
 <?php
     
+    declare(strict_types=1);
+    
     namespace ChristianKnell\Sportms\ViewHelpers;
     
     use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractConditionViewHelper;
@@ -15,7 +17,7 @@
         {
             $personProfile = $arguments['personProfile'];
             $teamSeason = $arguments['teamSeason'];
-    
+            
             $personProfilesInTeamSeasonSquad = [];
             $teamSeasonSquadMembers = $teamSeason->getTeamSeasonSquadMembers();
             

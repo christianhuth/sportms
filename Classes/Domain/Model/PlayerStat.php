@@ -1,5 +1,7 @@
 <?php
     
+    declare(strict_types=1);
+    
     namespace ChristianKnell\Sportms\Domain\Model;
     
     class PlayerStat extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
@@ -29,7 +31,7 @@
          * @var int|null
          */
         protected $numberOfAssists;
-    
+        
         /**
          * @return PersonProfile
          */
@@ -37,7 +39,7 @@
         {
             return $this->person;
         }
-    
+        
         /**
          * @param PersonProfile $person
          */

@@ -1,5 +1,7 @@
 <?php
     
+    declare(strict_types=1);
+    
     namespace ChristianKnell\Sportms\Domain\Model;
     
     /**
@@ -43,32 +45,32 @@
          * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
          */
         protected $sportPositionGroups;
-    
+        
         /**
          * @var int|null
          */
         protected $competitionDetailPid;
-    
+        
         /**
          * @var int|null
          */
         protected $competitionListPid;
-    
+        
         /**
          * @var int|null
          */
         protected $gameDetailPid;
-    
+        
         /**
          * @var int|null
          */
         protected $gameListPid;
-    
+        
         /**
          * @var int|null
          */
         protected $teamDetailPid;
-    
+        
         /**
          * @var int|null
          */
@@ -190,7 +192,7 @@
         {
             $this->sportPositionGroups = $sportPositionGroups;
         }
-    
+        
         /**
          * @return int|null
          */
@@ -198,7 +200,7 @@
         {
             return $this->competitionDetailPid;
         }
-    
+        
         /**
          * @param int|null $competitionDetailPid
          */
@@ -206,7 +208,7 @@
         {
             $this->competitionDetailPid = $competitionDetailPid;
         }
-    
+        
         /**
          * @return int|null
          */
@@ -214,7 +216,7 @@
         {
             return $this->competitionListPid;
         }
-    
+        
         /**
          * @param int|null $competitionListPid
          */
@@ -222,7 +224,7 @@
         {
             $this->competitionListPid = $competitionListPid;
         }
-    
+        
         /**
          * @return int|null
          */
@@ -230,7 +232,7 @@
         {
             return $this->gameDetailPid;
         }
-    
+        
         /**
          * @param int|null $gameDetailPid
          */
@@ -238,7 +240,7 @@
         {
             $this->gameDetailPid = $gameDetailPid;
         }
-    
+        
         /**
          * @return int|null
          */
@@ -246,7 +248,7 @@
         {
             return $this->gameListPid;
         }
-    
+        
         /**
          * @param int|null $gameListPid
          */
@@ -254,7 +256,7 @@
         {
             $this->gameListPid = $gameListPid;
         }
-    
+        
         /**
          * @return int|null
          */
@@ -262,7 +264,7 @@
         {
             return $this->teamDetailPid;
         }
-    
+        
         /**
          * @param int|null $teamDetailPid
          */
@@ -270,7 +272,7 @@
         {
             $this->teamDetailPid = $teamDetailPid;
         }
-    
+        
         /**
          * @return int|null
          */
@@ -278,7 +280,7 @@
         {
             return $this->teamListPid;
         }
-    
+        
         /**
          * @param int|null $teamListPid
          */

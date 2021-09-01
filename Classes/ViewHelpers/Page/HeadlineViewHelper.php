@@ -1,5 +1,7 @@
 <?php
     
+    declare(strict_types=1);
+    
     namespace ChristianKnell\Sportms\ViewHelpers\Page;
     
     class HeadlineViewHelper extends \TYPO3\CMS\Fluid\ViewHelpers\Link\ActionViewHelper
