@@ -283,7 +283,7 @@
             $playersWithMostGamesAsArray = $this->gameLineupRepository->findPlayersWithMostGames($this->getSportsFilter(),
                 $this->getSportAgeGroupsFilter(), $this->getSportAgeLevelsFilter(),
                 $this->getSportPositionGroupsFilter(), $this->getSportPositionsFilter(),
-                $this->getCompetitionTypesFilter(), $this->getCompetitionsFilter(), $this->getClubsFilter(), $teamUid,
+                $this->getCompetitionTypesFilter(), $this->getCompetitionsFilter(), $this->getClubsFilter(), array($teamUid),
                 $this->getSeasonsFilter(), $this->settings['team']['historyRecordPlayers']['limit']);
             $playersWithMostGames = [];
             foreach ($playersWithMostGamesAsArray as $playerWithMostGamesAsArray) {
@@ -479,7 +479,7 @@
             $team = $this->assignTeamToView($team);
             $season = $this->assignSeasonToView($team, $season);
             $teamSeason = $this->assignTeamSeasonToView($team, $season);
-            
+    
             /* FRONTEND FILTERS */
             $this->assignSeasonSelectboxValuesToView($team);
             

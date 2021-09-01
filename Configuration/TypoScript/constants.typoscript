@@ -14,6 +14,8 @@
 
 # customsubcategory=sportmsPerson=SportMS - Person
 
+# customsubcategory=sportmsPlayer=SportMS - Player
+
 # customsubcategory=sportmsSeason=SportMS - Season
 
 # customsubcategory=sportmsTeam=SportMS - Team
@@ -48,6 +50,10 @@ plugin.tx_sportms {
 	settings {
 
 		club {
+			detail {
+				# cat=plugin.tx_sportms/sportmsClub; type=int+; label=Default PID of all Club detail actions
+                pid =
+			}
 			list {
 				pagination {
 					# cat=plugin.tx_sportms/sportmsClub; type=boolean; label=Show pagination above Club->list
@@ -59,16 +65,16 @@ plugin.tx_sportms {
 					# cat=plugin.tx_sportms/sportmsClub; type=int+; label=Maximum number of links in the pagination for Club->list
 					maximumNumberOfLinks = 5
 				}
-
 				# cat=plugin.tx_sportms/sportmsClub; type=int+; label=Default PID of Club->list
 				pid =
 			}
-
-			# cat=plugin.tx_sportms/sportmsClub; type=int+; label=Default PID of Club->sections
-			sections.pid =
 		}
 
 		competition {
+			detail {
+				# cat=plugin.tx_sportms/sportmsCompetition; type=int+; label=Default PID of all Competition detail actions
+                pid =
+			}
 			list {
 				pagination {
 					# cat=plugin.tx_sportms/sportmsCompetition; type=boolean; label=Show pagination above Competition->list
@@ -80,24 +86,8 @@ plugin.tx_sportms {
 					# cat=plugin.tx_sportms/sportmsCompetition; type=int+; label=Maximum number of links in the pagination for Competition->list
 					maximumNumberOfLinks = 5
 				}
-
 				# cat=plugin.tx_sportms/sportmsCompetition; type=int+; label=Default PID of Competition->list
 				pid =
-			}
-
-			seasonClubs {
-				# cat=plugin.tx_sportms/sportmsCompetition; type=int+; label=Default PID of Competition->seasonClubs
-				pid =
-			}
-
-			seasonGames {
-				# cat=plugin.tx_sportms/sportmsCompetition; type=int+; label=Default PID of Competition->seasonGames
-				games.pid =
-			}
-
-			seasonTeams {
-				# cat=plugin.tx_sportms/sportmsCompetition; type=int+; label=Default PID of Competition->seasonTeams
-				teams.pid =
 			}
 		}
 
@@ -108,14 +98,12 @@ plugin.tx_sportms {
 				# cat=plugin.tx_sportms/format; type=string; label=Short format for dates
 				short = %d.%m
 			}
-
 			datetime {
 				# cat=plugin.tx_sportms/format; type=string; label=Long format for datetimes
 				long = %d.%m.%Y - %H:%M
 				# cat=plugin.tx_sportms/format; type=string; label=Short format for datetimes
 				short = %d.%m. - %H:%M
 			}
-
 			time {
 				# cat=plugin.tx_sportms/format; type=string; label=Long format for times
 				long = %H:%M
@@ -125,6 +113,10 @@ plugin.tx_sportms {
 		}
 
 		game {
+			detail {
+				# cat=plugin.tx_sportms/sportmsGame; type=int+; label=Default PID of all Game detail actions
+				pid =
+			}
 			list {
 				pagination {
 					# cat=plugin.tx_sportms/sportmsGame; type=boolean; label=Show pagination above Game->list
@@ -136,17 +128,9 @@ plugin.tx_sportms {
 					# cat=plugin.tx_sportms/sportmsGame; type=int+; label=Maximum number of links in the pagination for Game->list
 					maximumNumberOfLinks = 5
 				}
-
 				# cat=plugin.tx_sportms/sportmsGame; type=int+; label=Default PID of Game->list
 				pid =
 			}
-
-			# cat=plugin.tx_sportms/sportmsGame; type=int+; label=Default PID of Game->history
-			history.pid =
-			# cat=plugin.tx_sportms/sportmsGame; type=int+; label=Default PID of Game->index
-			index.pid =
-			# cat=plugin.tx_sportms/sportmsGame; type=int+; label=Default PID of Game->report
-			report.pid =
 		}
 
 		pagetitle {
@@ -170,18 +154,27 @@ plugin.tx_sportms {
 					# cat=plugin.tx_sportms/sportmsPerson; type=int+; label=Maximum number of links in the pagination for Person->list
 					maximumNumberOfLinks = 5
 				}
-
 				# cat=plugin.tx_sportms/sportmsPerson; type=int+; label=Default PID of Person->list
 				pid =
 			}
-
 			# cat=plugin.tx_sportms/sportmsPerson; type=string; label=Path to default dummy image for a male person
 			dummyImageMale = EXT:sportms/Resources/Public/Images/person-male.jpg
 			# cat=plugin.tx_sportms/sportmsPerson; type=string; label=Path to default dummy image for a female person
 			dummyImageFemale = EXT:sportms/Resources/Public/Images/person-female.jpg
 		}
 
+		player {
+			detail {
+				# cat=plugin.tx_sportms/sportmsPlayer; type=int+; label=Default PID of all Player detail actions
+				pid =
+			}
+		}
+
 		season {
+			detail {
+				# cat=plugin.tx_sportms/sportmsSeason; type=int+; label=Default PID of all Season detail actions
+				pid =
+			}
 			list {
 				pagination {
 					# cat=plugin.tx_sportms/sportmsSeason; type=boolean; label=Show pagination above Season->list
@@ -193,7 +186,6 @@ plugin.tx_sportms {
 					# cat=plugin.tx_sportms/sportmsSeason; type=int+; label=Maximum number of links in the pagination for Season->list
 					maximumNumberOfLinks = 5
 				}
-
 				# cat=plugin.tx_sportms/sportmsSeason; type=int+; label=Default PID of Season->list
 				pid =
 			}
@@ -209,32 +201,22 @@ plugin.tx_sportms {
 					# cat=plugin.tx_sportms/sportmsSeason; type=int+; label=Maximum number of links in the pagination for Season->teams
 					maximumNumberOfLinks = 5
 				}
-
-				# cat=plugin.tx_sportms/sportmsSeason; type=int+; label=Default PID of Season->teams
-				pid =
 			}
 		}
 
 		team {
-			historyOfficials {
-				# cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of Team->historyOfficials
+			detail {
+				# cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of all detail Team actions
 				pid =
 			}
-
 			historyRecordGames {
 				# cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default Limit for Team->historyRecordGames
 				limit = 10
-				# cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of Team->historyRecordGames
-				pid =
 			}
-
 			historyRecordPlayers {
 				# cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default Limit for Team->historyRecordPlayers
 				limit = 10
-				# cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of Team->historyRecordPlayers
-				pid =
 			}
-
 			list {
 				pagination {
 					# cat=plugin.tx_sportms/sportmsClub; type=boolean; label=Show pagination above Team->list
@@ -246,23 +228,7 @@ plugin.tx_sportms {
 					# cat=plugin.tx_sportms/sportmsClub; type=int+; label=Maximum number of links in the pagination for Team->list
 					maximumNumberOfLinks = 5
 				}
-
 				# cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of Team->list
-				pid =
-			}
-
-			# cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of Team->seasonGamesByCompetition
-			seasonGamesByCompetition {
-				pid =
-			}
-
-			# cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of Team->seasonGamesByDate
-			seasonGamesByDate {
-				pid =
-			}
-
-			seasonIndex {
-				# cat=plugin.tx_sportms/sportmsTeam; type=int+; label=Default PID of Team->seasonIndex
 				pid =
 			}
 		}

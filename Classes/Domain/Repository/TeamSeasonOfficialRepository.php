@@ -38,7 +38,7 @@
         public function findAllByTeam(\Balumedien\Sportms\Domain\Model\Team $team)
         {
             $orderings = [
-                'personProfile.person' => QueryInterface::ORDER_ASCENDING,
+                'personProfile' => QueryInterface::ORDER_ASCENDING,
                 'officialJob.label' => QueryInterface::ORDER_ASCENDING,
                 'teamSeason.season.startdate' => QueryInterface::ORDER_ASCENDING,
             ];

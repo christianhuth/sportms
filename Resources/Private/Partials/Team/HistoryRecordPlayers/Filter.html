@@ -1,31 +1,53 @@
 <html data-namespace-typo3-fluid="true"
-	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <f:if condition="{settings.competitionType.selectbox.enabled} ||
                  {settings.competition.selectbox.enabled} ||
                  {settings.sportPositionGroup.selectbox.enabled} ||
                  {settings.sportPosition.selectbox.enabled}">
-	<div class="tx-sportms-filter">
-		<f:form action="historyRecordPlayers" arguments="{team: team}"
-				class="form-horizontal" controller="Team"
-				extensionName="Sportms" method="POST"
-				pageUid="{settings.team.historyRecordPlayers.pid}"
-				pluginName="Team">
-			<f:render
-					arguments="{options: competitionTypeSelectboxValues}"
-					partial="ViewHelpers/Form/Select/CompetitionType"/>
-			<f:render
-					arguments="{options: competitionSelectboxValues}"
-					partial="ViewHelpers/Form/Select/Competition"/>
-			<f:render
-					arguments="{options: sportPositionGroupSelectboxValues}"
-					partial="ViewHelpers/Form/Select/SportPositionGroup"/>
-			<f:render
-					arguments="{options: sportPositionSelectboxValues}"
-					partial="ViewHelpers/Form/Select/SportPosition"/>
-			<f:render partial="ViewHelpers/Form/Submit"/>
-		</f:form>
-	</div>
+    <div class="tx-sportms-filter">
+        <f:if condition="{team.detailPid}">
+            <f:then>
+                <f:form action="historyRecordPlayers"
+                        class="form-horizontal"
+                        controller="Team"
+                        extensionName="Sportms"
+                        method="POST"
+                        pageUid="{team.detailPid}"
+                        pluginName="TeamDetail">
+                    <f:render section="formcontent" arguments="{_all}"/>
+                </f:form>
+            </f:then>
+            <f:else>
+                <f:form action="historyRecordPlayers"
+                        arguments="{team: team}"
+                        class="form-horizontal"
+                        controller="Team"
+                        extensionName="Sportms"
+                        method="POST"
+                        pageUid="{settings.team.detail.pid}"
+                        pluginName="TeamDetail">
+                    <f:render section="formcontent" arguments="{_all}"/>
+                </f:form>
+            </f:else>
+        </f:if>
+    </div>
 </f:if>
+
+<f:section name="formcontent">
+    <f:render
+            arguments="{options: competitionTypeSelectboxValues}"
+            partial="ViewHelpers/Form/Select/CompetitionType"/>
+    <f:render
+            arguments="{options: competitionSelectboxValues}"
+            partial="ViewHelpers/Form/Select/Competition"/>
+    <f:render
+            arguments="{options: sportPositionGroupSelectboxValues}"
+            partial="ViewHelpers/Form/Select/SportPositionGroup"/>
+    <f:render
+            arguments="{options: sportPositionSelectboxValues}"
+            partial="ViewHelpers/Form/Select/SportPosition"/>
+    <f:render partial="ViewHelpers/Form/Submit"/>
+</f:section>
 
 </html>

@@ -2,7 +2,9 @@
 <T3DataStructure>
     <ROOT>
         <TCEforms>
-            <sheetTitle>Sportart</sheetTitle>
+            <sheetTitle>
+                LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_sport
+            </sheetTitle>
         </TCEforms>
         <type>array</type>
         <el>

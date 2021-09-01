@@ -1,29 +1,29 @@
 <html data-namespace-typo3-fluid="true"
-	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <f:if condition="	{settings.sport.selectbox.enabled} ||
 					{settings.sportAgeGroup.selectbox.enabled} ||
 					{settings.sportAgeLevel.selectbox.enabled} ||
 					{settings.club.selectbox.enabled}">
-	<div class="tx-sportms-filter">
-		<f:form action="list" class="form-horizontal" controller="Team"
-				extensionName="Sportms" method="POST"
-				pageUid="{settings.team.list.pid}" pluginName="Team">
-			<f:render
-					arguments="{options: sportSelectboxValues}"
-					partial="ViewHelpers/Form/Select/Sport"/>
-			<f:render
-					arguments="{options: sportAgeGroupSelectboxValues}"
-					partial="ViewHelpers/Form/Select/SportAgeGroup"/>
-			<f:render
-					arguments="{options: sportAgeLevelSelectboxValues}"
-					partial="ViewHelpers/Form/Select/SportAgeLevel"/>
-			<f:render
-					arguments="{options: clubSelectboxValues}"
-					partial="ViewHelpers/Form/Select/Club"/>
-			<f:render partial="ViewHelpers/Form/Submit"/>
-		</f:form>
-	</div>
+    <div class="tx-sportms-filter">
+        <f:form action="list" class="form-horizontal" controller="Team"
+                extensionName="Sportms" method="POST"
+                pageUid="{settings.team.list.pid}" pluginName="TeamList">
+            <f:render
+                    arguments="{options: sportSelectboxValues}"
+                    partial="ViewHelpers/Form/Select/Sport"/>
+            <f:render
+                    arguments="{options: sportAgeGroupSelectboxValues}"
+                    partial="ViewHelpers/Form/Select/SportAgeGroup"/>
+            <f:render
+                    arguments="{options: sportAgeLevelSelectboxValues}"
+                    partial="ViewHelpers/Form/Select/SportAgeLevel"/>
+            <f:render
+                    arguments="{options: clubSelectboxValues}"
+                    partial="ViewHelpers/Form/Select/Club"/>
+            <f:render partial="ViewHelpers/Form/Submit"/>
+        </f:form>
+    </div>
 </f:if>
 
 </html>

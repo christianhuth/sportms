@@ -1,0 +1,24 @@
+routeEnhancers:
+  sportmsClubList:
+    aspects:
+      localizedPage:
+        type: LocaleModifier
+        default: 'page'
+        localeMap:
+          - locale: 'de_DE.*'
+            value: 'seite'
+      page:
+        type: StaticRangeMapper
+        start: '1'
+        end: '100'
+    defaultController: 'Club::list'
+    extension: Sportms
+    plugin: ClubList
+    routes:
+      - routePath: '/'
+        _controller: 'Club::list'
+      - routePath: '/{localizedPage}/{page}'
+        _controller: 'Club::list'
+        _arguments:
+          page: '@widget_0/currentPage'
+    type: Extbase

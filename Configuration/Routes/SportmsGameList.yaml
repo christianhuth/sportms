@@ -1,16 +1,12 @@
 routeEnhancers:
-  sportmsSeason:
+  sportmsGameList:
     aspects:
-      season_slug:
-        type: PersistedAliasMapper
-        tableName: tx_sportms_domain_model_season
-        routeFieldName: slug
-      localizedAction_teams:
+      localizedModel_Season:
         type: LocaleModifier
-        default: 'teams'
+        default: 'season'
         localeMap:
           - locale: 'de_DE.*'
-            value: 'mannschaften'
+            value: 'saison'
       localizedPage:
         type: LocaleModifier
         default: 'page'
@@ -21,20 +17,18 @@ routeEnhancers:
         type: StaticRangeMapper
         start: '1'
         end: '100'
-    defaults:
-      page: '0'
-    defaultController: 'Season::list'
+    defaultController: 'Game::list'
     extension: Sportms
-    plugin: Season
+    plugin: GameList
     routes:
       - routePath: '/'
-        _controller: 'Season::list'
+        _controller: 'Game::list'
       - routePath: '/{localizedPage}/{page}'
-        _controller: 'Season::list'
+        _controller: 'Game::list'
         _arguments:
           page: '@widget_0/currentPage'
-      - routePath: '/{season_slug}/{localizedAction_teams}'
-        _controller: 'Season::teams'
+      - routePath: '/{localizedModel_Season}/{season_slug}'
+        _controller: 'Game::list'
         _arguments:
           season_slug: season
     type: Extbase

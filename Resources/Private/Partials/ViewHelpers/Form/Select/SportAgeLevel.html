@@ -9,7 +9,7 @@
 					  arguments="{model: 'sportAgeLevel', options: options, sortByOptionLabel: TRUE, value: settings.sportAgeLevel.selectbox.selected}"/>
 		</f:then>
 		<f:else>
-			<f:if condition="{settings.sport.selectbox.selected}">
+			<f:if condition="{settings.sport.selectbox.selected} || !{settings.sport.selectbox.enabled}">
 				<f:then>
 					<f:render partial="ViewHelpers/Form/Select/Generic"
 							  arguments="{groupBy: 'sportAgeGroup', model: 'sportAgeLevel', options: options, sortByOptionLabel: TRUE, value: settings.sportAgeLevel.selectbox.selected}"/>

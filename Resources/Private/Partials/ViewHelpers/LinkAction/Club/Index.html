@@ -1,18 +1,18 @@
 <html data-namespace-typo3-fluid="true"
-	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <f:if condition="{club.detailLink}">
-	<f:then>
-		<f:link.action action="index" arguments="{club: club}"
-					   controller="club" extensionName="Sportms"
-					   pageUid="{settings.club.index.pid}"
-					   pluginName="club">
-			<f:translate key="tx_sportms_action.club.index"/>
-		</f:link.action>
-	</f:then>
-	<f:else>
-		<span><f:translate key="tx_sportms_action.club.index"/></span>
-	</f:else>
+    <f:then>
+        <f:link.action action="index" arguments="{club: club}"
+                       controller="Club" extensionName="Sportms"
+                       pageUid="{settings.club.detail.pid}"
+                       pluginName="Club">
+            <f:translate key="tx_sportms_action.club.index"/>
+        </f:link.action>
+    </f:then>
+    <f:else>
+        <span><f:translate key="tx_sportms_action.club.index"/></span>
+    </f:else>
 </f:if>
 
 </html>

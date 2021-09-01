@@ -7,14 +7,15 @@
     $vendor = 'Balumedien';
     $_EXTKEY = 'sportms';
     $extensionName = \TYPO3\CMS\Core\Utility\GeneralUtility::underscoredToUpperCamelCase($_EXTKEY);
-    $pluginNames = ['Club', 'Competition', 'Game', 'Person', 'Season', 'Team'];
+    $pluginNames = ['ClubDetail', 'ClubList', 'CompetitionDetail', 'CompetitionList', 'GameDetail', 'GameList', 'PersonList', 'SeasonList', 'TeamDetail', 'TeamList'];
     foreach ($pluginNames as $pluginName) {
         // Add the Plugin to Plugin Selection DROPDOWN in the Backend
         ExtensionUtility::registerPlugin(
             $extensionName,
             $pluginName,
             $pluginName . ' Management (' . strtolower($extensionName) . ')',
-            'EXT:sportms/Resources/Public/Icons/tx_sportms_domain_model_' . strtolower($pluginName) . '.svg'
+            'EXT:sportms/Resources/Public/Icons/tx_sportms_domain_model_' . strtolower(str_replace("List", "",
+                str_replace("Detail", "", $pluginName))) . '.svg'
         );
         $pluginSignature = strtolower($extensionName) . '_' . strtolower($pluginName);
         $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_excludelist'][$pluginSignature] = 'layout,select_key,pages';
@@ -40,5 +41,8 @@
     );
     
     // Add Static Template File
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript',
-        'Sport Management System');
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+        $_EXTKEY,
+        'Configuration/TypoScript',
+        'Sport Management System'
+    );

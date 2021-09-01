@@ -1,0 +1,53 @@
+routeEnhancers:
+  sportmsCompetitionList:
+    aspects:
+      competitiontype_slug:
+        type: PersistedAliasMapper
+        tableName: tx_sportms_domain_model_competitiontype
+        routeFieldName: slug
+      localizedModel_CompetitionType:
+        type: LocaleModifier
+        default: 'competitiontype'
+        localeMap:
+          - locale: 'de_DE.*'
+            value: 'wettbewerbsart'
+      localizedPage:
+        type: LocaleModifier
+        default: 'page'
+        localeMap:
+          - locale: 'de_DE.*'
+            value: 'seite'
+      localizedSeason:
+        type: LocaleModifier
+        default: 'season'
+        localeMap:
+          - locale: 'de_DE.*'
+            value: 'saison'
+      page:
+        type: StaticRangeMapper
+        start: '1'
+        end: '100'
+      season_slug:
+        type: PersistedAliasMapper
+        tableName: tx_sportms_domain_model_season
+        routeFieldName: slug
+    defaultController: 'Competition::list'
+    extension: Sportms
+    plugin: CompetitionList
+    routes:
+      - routePath: '/'
+        _controller: 'Competition::list'
+      - routePath: '/{localizedModel_CompetitionType}/{competitiontype_slug}'
+        _controller: 'Competition::list'
+        _arguments:
+          competitiontype_slug: competitionType
+      - routePath: '/{localizedPage}/{page}'
+        _controller: 'Competition::list'
+        _arguments:
+          page: '@widget_0/currentPage'
+      - routePath: '/{localizedModel_CompetitionType}/{competitiontype_slug}/{localizedPage}/{page}'
+        _controller: 'Competition::list'
+        _arguments:
+          competitiontype_slug: competitionType
+          page: '@widget_0/currentPage'
+    type: Extbase

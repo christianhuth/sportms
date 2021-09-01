@@ -1,5 +1,5 @@
 routeEnhancers:
-  sportmsCompetition:
+  sportmsCompetitionDetail:
     aspects:
       competition_slug:
         type: PersistedAliasMapper
@@ -43,48 +43,20 @@ routeEnhancers:
         localeMap:
           - locale: 'de_DE.*'
             value: 'wettbewerbsart'
-      localizedPage:
-        type: LocaleModifier
-        default: 'page'
-        localeMap:
-          - locale: 'de_DE.*'
-            value: 'seite'
       localizedSeason:
         type: LocaleModifier
         default: 'season'
         localeMap:
           - locale: 'de_DE.*'
             value: 'saison'
-      page:
-        type: StaticRangeMapper
-        start: '1'
-        end: '100'
       season_slug:
         type: PersistedAliasMapper
         tableName: tx_sportms_domain_model_season
         routeFieldName: slug
-    defaults:
-      competitionType: ''
-      page: '0'
-    defaultController: 'Competition::list'
+    defaultController: 'Competition::seasonGames'
     extension: Sportms
-    plugin: Competition
+    plugin: CompetitionDetail
     routes:
-      - routePath: '/'
-        _controller: 'Competition::list'
-      - routePath: '/{localizedModel_CompetitionType}/{competitiontype_slug}'
-        _controller: 'Competition::list'
-        _arguments:
-          competitiontype_slug: competitionType
-      - routePath: '/{localizedPage}/{page}'
-        _controller: 'Competition::list'
-        _arguments:
-          page: '@widget_0/currentPage'
-      - routePath: '/{localizedModel_CompetitionType}/{competitiontype_slug}/{localizedPage}/{page}'
-        _controller: 'Competition::list'
-        _arguments:
-          competitiontype_slug: competitionType
-          page: '@widget_0/currentPage'
       - routePath: '/{competition_slug}/{localizedAction_seasonClubs}'
         _controller: 'Competition::seasonClubs'
         _arguments:

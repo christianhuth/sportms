@@ -1,38 +1,39 @@
 <html data-namespace-typo3-fluid="true"
-	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
-<f:if condition="{person.detailLink}">
-	<f:then>
-		<f:link.action action="officialProfile"
-					   arguments="{person: person}"
-					   controller="Person" extensionName="Sportms"
-					   pageUid="{settings.person.officialProfile.pid}"
-					   pluginName="person">
-			<f:render section="label"
-					  arguments="{person: person, linkLabel: linkLabel}"/>
-		</f:link.action>
-	</f:then>
-	<f:else>
-		<f:render section="label"
-				  arguments="{person: person, linkLabel: linkLabel}"/>
-	</f:else>
+<f:if condition="   {personProfile.detailLink} &&
+                    {personProfile.person.detailLink}">
+    <f:then>
+        <f:link.action action="index"
+                       arguments="{person: person, personProfile: personProfile}"
+                       controller="TeamSeasonOfficial" extensionName="Sportms"
+                       pageUid="{settings.teamSeasonOfficial.detail.pid}"
+                       pluginName="TeamSeasonOfficialDetail">
+            <f:render section="label"
+                      arguments="{personProfile: personProfile, linkLabel: linkLabel}"/>
+        </f:link.action>
+    </f:then>
+    <f:else>
+        <f:render section="label"
+                  arguments="{personProfile: personProfile, linkLabel: linkLabel}"/>
+    </f:else>
 </f:if>
 
 <f:section name="label">
-	<f:switch expression="{linkLabel}">
-		<f:case value="lastname">
-			{person.lastname}
-		</f:case>
-		<f:case value="name">
-			{person.firstname} {person.lastname}
-		</f:case>
-		<f:defaultCase>
+    <f:switch expression="{linkLabel}">
+        <f:case value="lastname">
+            {personProfile.person.lastname}
+        </f:case>
+        <f:case value="name">
+            {personProfile.person.firstname} {personProfile.person.lastname}
+        </f:case>
+        <f:defaultCase>
 			<span>
 				<f:translate
-						key="tx_sportms_action.person.officialprofile"/>
+                        key="tx_sportms_action.person.officialprofile"/>
 			</span>
-		</f:defaultCase>
-	</f:switch>
+        </f:defaultCase>
+    </f:switch>
 </f:section>
 
 </html>

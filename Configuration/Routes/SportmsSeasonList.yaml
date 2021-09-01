@@ -1,5 +1,5 @@
 routeEnhancers:
-  sportmsPerson:
+  sportmsSeasonList:
     aspects:
       localizedPage:
         type: LocaleModifier
@@ -11,16 +11,14 @@ routeEnhancers:
         type: StaticRangeMapper
         start: '1'
         end: '100'
-    defaults:
-      page: '0'
-    defaultController: 'Person::list'
+    defaultController: 'Season::list'
     extension: Sportms
-    plugin: Person
+    plugin: SeasonList
     routes:
       - routePath: '/'
-        _controller: 'Person::list'
+        _controller: 'Season::list'
       - routePath: '/{localizedPage}/{page}'
-        _controller: 'Person::list'
+        _controller: 'Season::list'
         _arguments:
           page: '@widget_0/currentPage'
     type: Extbase

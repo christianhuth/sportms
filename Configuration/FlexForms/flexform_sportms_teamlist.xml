@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<T3DataStructure>
+    <sheets>
+        <base>EXT:sportms/Configuration/FlexForms/flexform_base.xml</base>
+        <sport>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>
+                        LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_sport
+                    </sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.sport.selectbox.enabled>
+                        <TCEforms>
+                            <label>Selectbox für Sportarten anzeigen?</label>
+                            <config>
+                                <default>1</default>
+                                <renderType>checkboxToggle</renderType>
+                                <type>check</type>
+                            </config>
+                        </TCEforms>
+                    </settings.sport.selectbox.enabled>
+                    <settings.sport.sports>
+                        <TCEforms>
+                            <label>Welche Sportarten sollen berücksichtigt werden?</label>
+                            <config>
+                                <foreign_table>tx_sportms_domain_model_sport</foreign_table>
+                                <foreign_table_where>ORDER BY label ASC</foreign_table_where>
+                                <renderType>selectMultipleSideBySide</renderType>
+                                <type>select</type>
+                            </config>
+                        </TCEforms>
+                    </settings.sport.sports>
+                    <settings.sportAgeGroup.selectbox.enabled>
+                        <TCEforms>
+                            <label>Selectbox für Altersgruppen anzeigen?</label>
+                            <config>
+                                <default>1</default>
+                                <renderType>checkboxToggle</renderType>
+                                <type>check</type>
+                            </config>
+                        </TCEforms>
+                    </settings.sportAgeGroup.selectbox.enabled>
+                    <settings.sportAgeLevel.selectbox.enabled>
+                        <TCEforms>
+                            <label>Selectbox für Altersstufen anzeigen?</label>
+                            <config>
+                                <default>1</default>
+                                <renderType>checkboxToggle</renderType>
+                                <type>check</type>
+                            </config>
+                        </TCEforms>
+                    </settings.sportAgeLevel.selectbox.enabled>
+                </el>
+            </ROOT>
+        </sport>
+        <club>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>
+                        LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_club
+                    </sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.club.selectbox.enabled>
+                        <TCEforms>
+                            <label>Selectbox für Vereine?</label>
+                            <config>
+                                <default>1</default>
+                                <renderType>checkboxToggle</renderType>
+                                <type>check</type>
+                            </config>
+                        </TCEforms>
+                    </settings.club.selectbox.enabled>
+                    <settings.club.clubs>
+                        <TCEforms>
+                            <label>Welche Vereine sollen berücksichtigt werden?</label>
+                            <config>
+                                <foreign_table>tx_sportms_domain_model_club</foreign_table>
+                                <foreign_table_where>ORDER BY name ASC</foreign_table_where>
+                                <renderType>selectMultipleSideBySide</renderType>
+                                <type>select</type>
+                            </config>
+                        </TCEforms>
+                    </settings.club.clubs>
+                </el>
+            </ROOT>
+        </club>
+        <team>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>
+                        LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_team
+                    </sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.team.teams>
+                        <TCEforms>
+                            <label>Welche Teams sollen berücksichtigt werden?</label>
+                            <config>
+                                <foreign_table>tx_sportms_domain_model_team</foreign_table>
+                                <foreign_table_where>ORDER BY label ASC</foreign_table_where>
+                                <renderType>selectMultipleSideBySide</renderType>
+                                <type>select</type>
+                            </config>
+                        </TCEforms>
+                    </settings.team.teams>
+                </el>
+            </ROOT>
+        </team>
+    </sheets>
+</T3DataStructure>

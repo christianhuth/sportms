@@ -1,5 +1,5 @@
 routeEnhancers:
-  sportmsTeam:
+  sportmsTeamDetailWithoutTeamSlug:
     aspects:
       club_slug:
         type: PersistedAliasMapper
@@ -73,71 +73,34 @@ routeEnhancers:
         type: PersistedAliasMapper
         tableName: tx_sportms_domain_model_season
         routeFieldName: slug
-      team_slug:
-        type: PersistedAliasMapper
-        tableName: tx_sportms_domain_model_team
-        routeFieldName: slug
-    defaults:
-      club: ''
-      page: '0'
-      season: ''
-      sport: ''
-    defaultController: 'Team::list'
+    defaultController: 'Team::seasonIndex'
     extension: Sportms
-    plugin: Team
+    plugin: TeamDetail
     routes:
       - routePath: '/'
-        _controller: 'Team::list'
-      - routePath: '/{localizedModel_Club}/{club_slug}'
-        _controller: 'Team::list'
-        _arguments:
-          club_slug: club
-      - routePath: '/{localizedPage}/{page}'
-        _controller: 'Team::list'
-        _arguments:
-          page: '@widget_0/currentPage'
-      - routePath: '/{localizedModel_Club}/{club_slug}/{localizedPage}/{page}'
-        _controller: 'Team::list'
-        _arguments:
-          club_slug: club
-          page: '@widget_0/currentPage'
-      - routePath: '/{team_slug}/{localizedAction_historyOfficials}'
+        _controller: 'Team::seasonIndex'
+      - routePath: '/{localizedAction_historyOfficials}'
         _controller: 'Team::historyOfficials'
-        _arguments:
-          team_slug: team
-      - routePath: '/{team_slug}/{localizedAction_historyRecordGames}'
+      - routePath: '/{localizedAction_historyRecordGames}'
         _controller: 'Team::historyRecordGames'
-        _arguments:
-          team_slug: team
-      - routePath: '/{team_slug}/{localizedAction_historyRecordPlayers}'
+      - routePath: '/{localizedAction_historyRecordPlayers}'
         _controller: 'Team::historyRecordPlayers'
-        _arguments:
-          team_slug: team
-      - routePath: '{team_slug}/{localizedAction_seasonIndex}'
+      - routePath: '/{localizedAction_seasonIndex}'
+        _controller: 'Team::seasonIndex'
+      - routePath: '/{localizedAction_seasonIndex}/{localizedSeason}/{season_slug}'
         _controller: 'Team::seasonIndex'
         _arguments:
-          team_slug: team
-      - routePath: '{team_slug}/{localizedAction_seasonIndex}/{localizedSeason}/{season_slug}'
-        _controller: 'Team::seasonIndex'
-        _arguments:
-          team_slug: team
           season_slug: season
-      - routePath: '{team_slug}/{localizedAction_seasonGamesByCompetition}'
+      - routePath: '/{localizedAction_seasonGamesByCompetition}'
+        _controller: 'Team::seasonGamesByCompetition'
+      - routePath: '/{localizedAction_seasonGamesByCompetition}/{localizedSeason}/{season_slug}'
         _controller: 'Team::seasonGamesByCompetition'
         _arguments:
-          team_slug: team
-      - routePath: '{team_slug}/{localizedAction_seasonGamesByCompetition}/{localizedSeason}/{season_slug}'
-        _controller: 'Team::seasonGamesByCompetition'
-        _arguments:
-          team_slug: team
           season_slug: season
-      - routePath: '{team_slug}/{localizedAction_seasonGamesByDate}'
+      - routePath: '/{localizedAction_seasonGamesByDate}'
+        _controller: 'Team::seasonGamesByDate'
+      - routePath: '/{localizedAction_seasonGamesByDate}/{localizedSeason}/{season_slug}'
         _controller: 'Team::seasonGamesByDate'
         _arguments:
-          team_slug: team
-      - routePath: '{team_slug}/{localizedAction_seasonGamesByDate}/{localizedSeason}/{season_slug}'
-        _controller: 'Team::seasonGamesByDate'
-        _arguments:
-          team_slug: team
           season_slug: season
     type: Extbase

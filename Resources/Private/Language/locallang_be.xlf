@@ -5,40 +5,76 @@
         <body>
 
         <!-- Content Element -->
-            <trans-unit id="ce_plugin_club_title" xml:space="preserve">
-                <source>Club Management (sportms)</source>
+            <trans-unit id="ce_plugin_clubdetail_title" xml:space="preserve">
+                <source>Club Details</source>
             </trans-unit>
-            <trans-unit id="ce_plugin_club_description" xml:space="preserve">
-                <source>Views for clubs managed by sportms</source>
+            <trans-unit id="ce_plugin_clubdetail_description" xml:space="preserve">
+                <source>Detail views of clubs managed by sportms</source>
             </trans-unit>
-            <trans-unit id="ce_plugin_competition_title" xml:space="preserve">
-                <source>Competition Management (sportms)</source>
+            <trans-unit id="ce_plugin_clublist_title" xml:space="preserve">
+                <source>Club List</source>
             </trans-unit>
-            <trans-unit id="ce_plugin_competition_description" xml:space="preserve">
-                <source>Views for competitions managed by sportms</source>
+            <trans-unit id="ce_plugin_clublist_description" xml:space="preserve">
+                <source>List of clubs managed by sportms</source>
             </trans-unit>
-            <trans-unit id="ce_plugin_game_title" xml:space="preserve">
-                <source>Game Management (sportms)</source>
+            <trans-unit id="ce_plugin_competitiondetail_title" xml:space="preserve">
+                <source>Competition Details</source>
             </trans-unit>
-            <trans-unit id="ce_plugin_game_description" xml:space="preserve">
-                <source>Views for games managed by sportms</source>
+            <trans-unit id="ce_plugin_competitiondetail_description" xml:space="preserve">
+                <source>Detail views of competitions managed by sportms</source>
             </trans-unit>
-            <trans-unit id="ce_plugin_person_title" xml:space="preserve">
-                <source>Person Management (sportms)</source>
+            <trans-unit id="ce_plugin_competitionlist_title" xml:space="preserve">
+                <source>Competition List</source>
             </trans-unit>
-            <trans-unit id="ce_plugin_person_description" xml:space="preserve">
-                <source>Views for persons managed by sportms</source>
+            <trans-unit id="ce_plugin_competitionlist_description" xml:space="preserve">
+                <source>List of competitions managed by sportms</source>
             </trans-unit>
-            <trans-unit id="ce_plugin_team_title" xml:space="preserve">
-                <source>Team Management (sportms)</source>
+            <trans-unit id="ce_plugin_gamedetail_title" xml:space="preserve">
+                <source>Game Details</source>
             </trans-unit>
-            <trans-unit id="ce_plugin_team_description" xml:space="preserve">
-                <source>Views for teams managed by sportms</source>
+            <trans-unit id="ce_plugin_gamedetail_description" xml:space="preserve">
+                <source>Detail views of games managed by sportms</source>
+            </trans-unit>
+            <trans-unit id="ce_plugin_gamelist_title" xml:space="preserve">
+                <source>Game List</source>
+            </trans-unit>
+            <trans-unit id="ce_plugin_gamelist_description" xml:space="preserve">
+                <source>List of games managed by sportms</source>
+            </trans-unit>
+            <trans-unit id="ce_plugin_personlist_title" xml:space="preserve">
+                <source>Person List</source>
+            </trans-unit>
+            <trans-unit id="ce_plugin_personlist_description" xml:space="preserve">
+                <source>List of persons managed by sportms</source>
+            </trans-unit>
+            <trans-unit id="ce_plugin_seasonlist_title" xml:space="preserve">
+                <source>Season List</source>
+            </trans-unit>
+            <trans-unit id="ce_plugin_seasonlist_description" xml:space="preserve">
+                <source>List of seasons managed by sportms</source>
+            </trans-unit>
+            <trans-unit id="ce_plugin_teamdetail_title" xml:space="preserve">
+                <source>Team Details</source>
+            </trans-unit>
+            <trans-unit id="ce_plugin_teamdetail_description" xml:space="preserve">
+                <source>Detail views of teams managed by sportms</source>
+            </trans-unit>
+            <trans-unit id="ce_plugin_teamlist_title" xml:space="preserve">
+                <source>Team List</source>
+            </trans-unit>
+            <trans-unit id="ce_plugin_teamlist_description" xml:space="preserve">
+                <source>List of teams managed by sportms</source>
             </trans-unit>
 
         <!-- General -->
             <trans-unit id="tx_sportms_general.detail_link">
                 <source>Einzelansicht ermöglichen?</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.detail_pid">
+                <source>PID mit dem Detail-Plugin</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_general.list_pid">
+                <source>PID mit dem List-Plugin</source>
             </trans-unit>
             <trans-unit id="tx_sportms_general.slug">
                 <source>Sprechende URL</source>
@@ -213,6 +249,18 @@
             </trans-unit>
 
 
+        <!-- Domain Model Sport -->
+            <trans-unit id="tx_sportms_domain_model_sport.palette.competition_pids">
+                <source>PIDs für Wettbewerbe dieser Sportart</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_sport.palette.game_pids">
+                <source>PIDs für Spiele dieser Sportart</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_sport.palette.team_pids">
+                <source>PIDs für Mannschaften dieser Sportart</source>
+            </trans-unit>
+
+
         <!-- Domain Model SportPosition -->
             <trans-unit id="tx_sportms_domain_model_sportposition.x_position">
                 <source>Position X-Achse</source>
@@ -228,6 +276,9 @@
         <!-- Domain Model Team -->
             <trans-unit id="tx_sportms_domain_model_team.dummy">
                 <source>Spielfrei</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_team.detail_pid">
+                <source>PID mit dem Detail-Plugin für dieses Team</source>
             </trans-unit>
 
 

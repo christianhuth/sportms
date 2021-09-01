@@ -1,23 +1,43 @@
 <html data-namespace-typo3-fluid="true"
-	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <f:if condition="{settings.season.selectbox.enabled}">
-	<div class="tx-sportms-filter">
-		<f:form action="seasonGamesByCompetition"
-				arguments="{season: season, team: team}"
-				class="form-horizontal"
-				controller="Team"
-				extensionName="Sportms"
-				method="POST"
-				pageUid="{settings.team.seasonGamesByCompetition.pid}"
-				pluginName="Team">
-			<f:form.hidden name="team" value="{team}"/>
-			<f:render
-					arguments="{options: seasonSelectboxValues}"
-					partial="ViewHelpers/Form/Select/TeamSeason"/>
-			<f:render partial="ViewHelpers/Form/Submit"/>
-		</f:form>
-	</div>
+    <div class="tx-sportms-filter">
+        <f:if condition="{team.detailPid}">
+            <f:then>
+                <f:form action="seasonGamesByCompetition"
+                        arguments="{season: season}"
+                        class="form-horizontal"
+                        controller="Team"
+                        extensionName="Sportms"
+                        method="POST"
+                        pageUid="{team.detailPid}"
+                        pluginName="TeamDetail">
+                    <f:render section="formcontent" arguments="{_all}"/>
+                </f:form>
+            </f:then>
+            <f:else>
+                <f:form action="seasonGamesByCompetition"
+                        arguments="{season: season, team: team}"
+                        class="form-horizontal"
+                        controller="Team"
+                        extensionName="Sportms"
+                        method="POST"
+                        pageUid="{settings.team.detail.pid}"
+                        pluginName="TeamDetail">
+                    <f:render section="formcontent" arguments="{_all}"/>
+                </f:form>
+            </f:else>
+        </f:if>
+    </div>
 </f:if>
+
+<f:section name="formcontent">
+    <f:form.hidden name="team" value="{team}"/>
+    <f:render
+            arguments="{options: seasonSelectboxValues}"
+            partial="ViewHelpers/Form/Select/TeamSeason"/>
+    <f:render partial="ViewHelpers/Form/Submit"/>
+</f:section>
 
 </html>

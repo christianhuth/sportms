@@ -1,0 +1,27 @@
+routeEnhancers:
+  sportmsClubDetail:
+    aspects:
+      localizedAction_index:
+        type: LocaleModifier
+        default: 'profile'
+        localeMap:
+          - locale: 'de_DE.*'
+            value: 'profil'
+      person_slug:
+        type: PersistedAliasMapper
+        tableName: tx_sportms_domain_model_person
+        routeFieldName: slug
+      personprofile_slug:
+        type: PersistedAliasMapper
+        tableName: tx_sportms_domain_model_personprofile
+        routeFieldName: uid
+    defaultController: 'Player::index'
+    extension: Sportms
+    plugin: PlayerDetail
+    routes:
+      - routePath: '/{person_slug}/{personprofile_slug}/{localizedAction_index}'
+        _controller: 'Player::index'
+        _arguments:
+          person_slug: person
+          personprofile_slug: personProfile
+    type: Extbase

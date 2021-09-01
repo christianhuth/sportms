@@ -30,12 +30,12 @@
         protected $minuteAdditional;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Model\PersonProfile
+         * @var \Balumedien\Sportms\Domain\Model\PersonProfile|null
          */
         protected $personIn;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Model\PersonProfile
+         * @var \Balumedien\Sportms\Domain\Model\PersonProfile|null
          */
         protected $personOut;
         
@@ -107,35 +107,35 @@
         {
             $this->minuteAdditional = $minuteAdditional;
         }
-        
+    
         /**
-         * @return PersonProfile
+         * @return PersonProfile|null
          */
-        public function getPersonIn(): PersonProfile
+        public function getPersonIn(): ?PersonProfile
         {
             return $this->personIn;
         }
-        
+    
         /**
-         * @param PersonProfile $personIn
+         * @param PersonProfile|null $personIn
          */
-        public function setPersonIn(PersonProfile $personIn): void
+        public function setPersonIn(?PersonProfile $personIn): void
         {
             $this->personIn = $personIn;
         }
-        
+    
         /**
-         * @return PersonProfile
+         * @return PersonProfile|null
          */
-        public function getPersonOut(): PersonProfile
+        public function getPersonOut(): ?PersonProfile
         {
             return $this->personOut;
         }
-        
+    
         /**
-         * @param PersonProfile $personOut
+         * @param PersonProfile|null $personOut
          */
-        public function setPersonOut(PersonProfile $personOut): void
+        public function setPersonOut(?PersonProfile $personOut): void
         {
             $this->personOut = $personOut;
         }
