@@ -1,6 +1,6 @@
 <?php
     
-    namespace Balumedien\Sportms\Domain\Model;
+    namespace ChristianKnell\Sportms\Domain\Model;
     
     /**
      * ClubSectionMembers
@@ -9,7 +9,7 @@
     {
         
         /**
-         * @var \Balumedien\Sportms\Domain\Model\ClubSection
+         * @var \ChristianKnell\Sportms\Domain\Model\ClubSection
          * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
          */
         protected $clubSection;
@@ -25,7 +25,7 @@
         protected $date;
         
         /**
-         * @return \Balumedien\Sportms\Domain\Model\ClubSection
+         * @return \ChristianKnell\Sportms\Domain\Model\ClubSection
          */
         public function getClubSection()
         {
@@ -33,7 +33,7 @@
         }
         
         /**
-         * @param \Balumedien\Sportms\Domain\Model\ClubSection $clubSection
+         * @param \ChristianKnell\Sportms\Domain\Model\ClubSection $clubSection
          */
         public function setClubSection($clubSection)
         {

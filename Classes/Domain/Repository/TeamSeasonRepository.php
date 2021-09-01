@@ -1,9 +1,9 @@
 <?php
     
-    namespace Balumedien\Sportms\Domain\Repository;
+    namespace ChristianKnell\Sportms\Domain\Repository;
     
-    use Balumedien\Sportms\Domain\Model\Team;
-    use Balumedien\Sportms\Domain\Model\TeamSeason;
+    use ChristianKnell\Sportms\Domain\Model\Team;
+    use ChristianKnell\Sportms\Domain\Model\TeamSeason;
 
     class TeamSeasonRepository extends SportMSBaseRepository
     {
@@ -88,10 +88,10 @@
         
         /**
          * @param Team $team
-         * @param \Balumedien\Sportms\Domain\Model\Season $season
+         * @param \ChristianKnell\Sportms\Domain\Model\Season $season
          * @return TeamSeason
          */
-        public function findByTeamAndSeason(Team $team, \Balumedien\Sportms\Domain\Model\Season $season): TeamSeason
+        public function findByTeamAndSeason(Team $team, \ChristianKnell\Sportms\Domain\Model\Season $season): TeamSeason
         {
             return $this->findByTeamUidAndSeasonUid($team->getUid(), $season->getUid());
         }

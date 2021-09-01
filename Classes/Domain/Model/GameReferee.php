@@ -1,6 +1,6 @@
 <?php
     
-    namespace Balumedien\Sportms\Domain\Model;
+    namespace ChristianKnell\Sportms\Domain\Model;
     
     /**
      * GameReferee
@@ -9,23 +9,23 @@
     {
         
         /**
-         * @var \Balumedien\Sportms\Domain\Model\Game
+         * @var \ChristianKnell\Sportms\Domain\Model\Game
          * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
          */
         protected $game;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Model\PersonProfile
+         * @var \ChristianKnell\Sportms\Domain\Model\PersonProfile
          */
         protected $personProfile;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Model\RefereeJob
+         * @var \ChristianKnell\Sportms\Domain\Model\RefereeJob
          */
         protected $refereeJob;
         
         /**
-         * @return \Balumedien\Sportms\Domain\Model\Game
+         * @return \ChristianKnell\Sportms\Domain\Model\Game
          */
         public function getGame()
         {
@@ -33,9 +33,9 @@
         }
         
         /**
-         * @param \Balumedien\Sportms\Domain\Model\Game $game
+         * @param \ChristianKnell\Sportms\Domain\Model\Game $game
          */
-        public function setGame(\Balumedien\Sportms\Domain\Model\Game $game)
+        public function setGame(\ChristianKnell\Sportms\Domain\Model\Game $game)
         {
             $this->game = $game;
         }

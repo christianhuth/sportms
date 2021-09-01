@@ -1,6 +1,6 @@
 <?php
     
-    namespace Balumedien\Sportms\PageTitle;
+    namespace ChristianKnell\Sportms\PageTitle;
     
     class PageTitle
     {

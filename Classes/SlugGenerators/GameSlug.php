@@ -1,6 +1,6 @@
 <?php
     
-    namespace Balumedien\Sportms\SlugGenerators;
+    namespace ChristianKnell\Sportms\SlugGenerators;
     
     class GameSlug extends BasicSlug
     {

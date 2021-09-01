@@ -1,6 +1,6 @@
 <?php
     
-    namespace Balumedien\Sportms\Domain\Model;
+    namespace ChristianKnell\Sportms\Domain\Model;
     
     /**
      * ClubSection
@@ -9,13 +9,13 @@
     {
         
         /**
-         * @var \Balumedien\Sportms\Domain\Model\Club
+         * @var \ChristianKnell\Sportms\Domain\Model\Club
          * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
          */
         protected $club;
         
         /**
-         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\Sport>
+         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\Sport>
          * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
          */
         protected $sports;
@@ -32,49 +32,49 @@
         protected $images;
         
         /**
-         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\ClubSectionMembers>
+         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\ClubSectionMembers>
          * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
          * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
          */
         protected $clubSectionMembers;
         
         /**
-         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\Address>
+         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\Address>
          * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
          * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
          */
         protected $addresses;
         
         /**
-         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\Phone>
+         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\Phone>
          * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
          * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
          */
         protected $phones;
         
         /**
-         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\Mail>
+         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\Mail>
          * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
          * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
          */
         protected $mails;
         
         /**
-         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\Url>
+         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\Url>
          * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
          * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
          */
         protected $urls;
         
         /**
-         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\ClubSectionOfficial>
+         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\ClubSectionOfficial>
          * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
          * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
          */
         protected $clubSectionOfficials;
         
         /**
-         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\Team>
+         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\Team>
          * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
          * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
          */
@@ -116,17 +116,17 @@
         }
         
         /**
-         * @return \Balumedien\Sportms\Domain\Model\Club
+         * @return \ChristianKnell\Sportms\Domain\Model\Club
          */
-        public function getClub(): \Balumedien\Sportms\Domain\Model\Club
+        public function getClub(): \ChristianKnell\Sportms\Domain\Model\Club
         {
             return $this->club;
         }
         
         /**
-         * @param \Balumedien\Sportms\Domain\Model\Club $club
+         * @param \ChristianKnell\Sportms\Domain\Model\Club $club
          */
-        public function setClub(\Balumedien\Sportms\Domain\Model\Club $club): void
+        public function setClub(\ChristianKnell\Sportms\Domain\Model\Club $club): void
         {
             $this->club = $club;
         }

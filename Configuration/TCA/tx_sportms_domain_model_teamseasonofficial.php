@@ -1,7 +1,7 @@
 <?php
     
-    use Balumedien\Sportms\UserFunc\ItemsProcFunc;
-    use Balumedien\Sportms\UserFunc\UserFunc;
+    use ChristianKnell\Sportms\UserFunc\ItemsProcFunc;
+    use ChristianKnell\Sportms\UserFunc\UserFunc;
     
     if (!defined('TYPO3_MODE')) {
         die ('Access denied.');

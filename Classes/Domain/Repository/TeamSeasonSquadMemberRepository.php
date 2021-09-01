@@ -1,8 +1,8 @@
 <?php
     
-    namespace Balumedien\Sportms\Domain\Repository;
+    namespace ChristianKnell\Sportms\Domain\Repository;
     
-    use Balumedien\Sportms\Domain\Model\Person;
+    use ChristianKnell\Sportms\Domain\Model\Person;
     use TYPO3\CMS\Extbase\Persistence\QueryInterface;
 
     class TeamSeasonSquadMemberRepository extends SportMSBaseRepository

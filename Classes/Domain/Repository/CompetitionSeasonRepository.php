@@ -1,10 +1,10 @@
 <?php
     
-    namespace Balumedien\Sportms\Domain\Repository;
+    namespace ChristianKnell\Sportms\Domain\Repository;
     
-    use Balumedien\Sportms\Domain\Model\Competition;
-    use Balumedien\Sportms\Domain\Model\CompetitionSeason;
-    use Balumedien\Sportms\Domain\Model\Season;
+    use ChristianKnell\Sportms\Domain\Model\Competition;
+    use ChristianKnell\Sportms\Domain\Model\CompetitionSeason;
+    use ChristianKnell\Sportms\Domain\Model\Season;
     use TYPO3\CMS\Extbase\Persistence\QueryInterface;
 
     class CompetitionSeasonRepository extends SportMSBaseRepository

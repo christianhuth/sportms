@@ -1,6 +1,6 @@
 <?php
     
-    namespace Balumedien\Sportms\Domain\Model;
+    namespace ChristianKnell\Sportms\Domain\Model;
     
     /**
      * SportType
@@ -16,7 +16,7 @@
         /**
          * sportTypes
          *
-         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\Sport>
+         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\Sport>
          */
         protected $sports;
         

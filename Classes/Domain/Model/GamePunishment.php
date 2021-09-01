@@ -1,6 +1,6 @@
 <?php
     
-    namespace Balumedien\Sportms\Domain\Model;
+    namespace ChristianKnell\Sportms\Domain\Model;
     
     /**
      * GamePunishment
@@ -9,7 +9,7 @@
     {
         
         /**
-         * @var \Balumedien\Sportms\Domain\Model\Game
+         * @var \ChristianKnell\Sportms\Domain\Model\Game
          * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
          */
         protected $game;
@@ -30,7 +30,7 @@
         protected $minuteAdditional;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Model\Person
+         * @var \ChristianKnell\Sportms\Domain\Model\Person
          */
         protected $punishedPerson;
         
@@ -50,7 +50,7 @@
         protected $reason;
         
         /**
-         * @return \Balumedien\Sportms\Domain\Model\Game
+         * @return \ChristianKnell\Sportms\Domain\Model\Game
          */
         public function getGame()
         {
@@ -58,9 +58,9 @@
         }
         
         /**
-         * @param \Balumedien\Sportms\Domain\Model\Game $game
+         * @param \ChristianKnell\Sportms\Domain\Model\Game $game
          */
-        public function setGame(\Balumedien\Sportms\Domain\Model\Game $game)
+        public function setGame(\ChristianKnell\Sportms\Domain\Model\Game $game)
         {
             $this->game = $game;
         }

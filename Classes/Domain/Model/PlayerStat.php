@@ -1,12 +1,12 @@
 <?php
     
-    namespace Balumedien\Sportms\Domain\Model;
+    namespace ChristianKnell\Sportms\Domain\Model;
     
     class PlayerStat extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         
         /**
-         * @var \Balumedien\Sportms\Domain\Model\PersonProfile
+         * @var \ChristianKnell\Sportms\Domain\Model\PersonProfile
          */
         protected $person;
         

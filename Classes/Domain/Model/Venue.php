@@ -1,6 +1,6 @@
 <?php
     
-    namespace Balumedien\Sportms\Domain\Model;
+    namespace ChristianKnell\Sportms\Domain\Model;
     
     /**
      * Venue
@@ -19,7 +19,7 @@
         protected $description;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Model\Address
+         * @var \ChristianKnell\Sportms\Domain\Model\Address
          */
         protected $address;
         
@@ -116,17 +116,17 @@
         }
         
         /**
-         * @return \Balumedien\Sportms\Domain\Model\Address
+         * @return \ChristianKnell\Sportms\Domain\Model\Address
          */
-        public function getAddress(): \Balumedien\Sportms\Domain\Model\Address
+        public function getAddress(): \ChristianKnell\Sportms\Domain\Model\Address
         {
             return $this->address;
         }
         
         /**
-         * @param \Balumedien\Sportms\Domain\Model\Address $address
+         * @param \ChristianKnell\Sportms\Domain\Model\Address $address
          */
-        public function setAddress(\Balumedien\Sportms\Domain\Model\Address $address): void
+        public function setAddress(\ChristianKnell\Sportms\Domain\Model\Address $address): void
         {
             $this->address = $address;
         }

@@ -1,8 +1,8 @@
 <?php
     
-    namespace Balumedien\Sportms\Controller;
+    namespace ChristianKnell\Sportms\Controller;
     
-    use Balumedien\Sportms\Domain\Model\Person;
+    use ChristianKnell\Sportms\Domain\Model\Person;
     use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
 
     /**
@@ -12,13 +12,13 @@
     {
         
         /**
-         * @var \Balumedien\Sportms\Domain\Repository\PersonRepository
+         * @var \ChristianKnell\Sportms\Domain\Repository\PersonRepository
          * @TYPO3\CMS\Extbase\Annotation\Inject
          */
         protected $personRepository;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Repository\TeamSeasonSquadMemberRepository
+         * @var \ChristianKnell\Sportms\Domain\Repository\TeamSeasonSquadMemberRepository
          * @TYPO3\CMS\Extbase\Annotation\Inject
          */
         protected $teamSeasonSquadMemberRepository;

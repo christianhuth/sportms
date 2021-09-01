@@ -1,6 +1,6 @@
 <?php
     
-    namespace Balumedien\Sportms\Domain\Model;
+    namespace ChristianKnell\Sportms\Domain\Model;
     
     /**
      * ClubMembers
@@ -9,7 +9,7 @@
     {
         
         /**
-         * @var \Balumedien\Sportms\Domain\Model\Club
+         * @var \ChristianKnell\Sportms\Domain\Model\Club
          */
         protected $club;
         
@@ -24,7 +24,7 @@
         protected $members;
         
         /**
-         * @return \Balumedien\Sportms\Domain\Model\Club
+         * @return \ChristianKnell\Sportms\Domain\Model\Club
          */
         public function getClub()
         {
@@ -32,7 +32,7 @@
         }
         
         /**
-         * @param \Balumedien\Sportms\Domain\Model\Club $club
+         * @param \ChristianKnell\Sportms\Domain\Model\Club $club
          */
         public function setClub($club)
         {

@@ -1,6 +1,6 @@
 <?php
     
-    namespace Balumedien\Sportms\Domain\Model;
+    namespace ChristianKnell\Sportms\Domain\Model;
     
     /**
      * SportPosition
@@ -9,7 +9,7 @@
     {
         
         /**
-         * @var \Balumedien\Sportms\Domain\Model\SportPositionGroup
+         * @var \ChristianKnell\Sportms\Domain\Model\SportPositionGroup
          * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
          */
         protected $sportPositionGroup;
@@ -35,17 +35,17 @@
         protected $yPosition;
         
         /**
-         * @return \Balumedien\Sportms\Domain\Model\SportPositionGroup
+         * @return \ChristianKnell\Sportms\Domain\Model\SportPositionGroup
          */
-        public function getSportPositionGroup(): \Balumedien\Sportms\Domain\Model\SportPositionGroup
+        public function getSportPositionGroup(): \ChristianKnell\Sportms\Domain\Model\SportPositionGroup
         {
             return $this->sportPositionGroup;
         }
         
         /**
-         * @param \Balumedien\Sportms\Domain\Model\SportPositionGroup $sportPositionGroup
+         * @param \ChristianKnell\Sportms\Domain\Model\SportPositionGroup $sportPositionGroup
          */
-        public function setSportPositionGroup(\Balumedien\Sportms\Domain\Model\SportPositionGroup $sportPositionGroup
+        public function setSportPositionGroup(\ChristianKnell\Sportms\Domain\Model\SportPositionGroup $sportPositionGroup
         ): void {
             $this->sportPositionGroup = $sportPositionGroup;
         }

@@ -1,6 +1,6 @@
 <?php
     
-    namespace Balumedien\Sportms\Domain\Model;
+    namespace ChristianKnell\Sportms\Domain\Model;
     
     /**
      * GameLineup
@@ -9,7 +9,7 @@
     {
         
         /**
-         * @var \Balumedien\Sportms\Domain\Model\Game
+         * @var \ChristianKnell\Sportms\Domain\Model\Game
          * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
          */
         protected $game;
@@ -30,12 +30,12 @@
         protected $jerseyNumber;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Model\PersonProfile
+         * @var \ChristianKnell\Sportms\Domain\Model\PersonProfile
          */
         protected $personProfile;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Model\SportPosition
+         * @var \ChristianKnell\Sportms\Domain\Model\SportPosition
          */
         protected $sportPosition;
         

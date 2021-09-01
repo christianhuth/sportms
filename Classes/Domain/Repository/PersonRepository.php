@@ -1,6 +1,6 @@
 <?php
     
-    namespace Balumedien\Sportms\Domain\Repository;
+    namespace ChristianKnell\Sportms\Domain\Repository;
     
     class PersonRepository extends SportMSBaseRepository
     {

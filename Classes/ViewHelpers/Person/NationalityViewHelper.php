@@ -1,6 +1,6 @@
 <?php
     
-    namespace Balumedien\Sportms\ViewHelpers;
+    namespace ChristianKnell\Sportms\ViewHelpers;
     
     class NationalityViewHelper extends \TYPO3\CMS\Fluid\ViewHelpers\ImageViewHelper
     {

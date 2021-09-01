@@ -1,6 +1,6 @@
 <?php
     
-    namespace Balumedien\Sportms\Domain\Model;
+    namespace ChristianKnell\Sportms\Domain\Model;
     
     /**
      * SportAgeLevel
@@ -9,7 +9,7 @@
     {
         
         /**
-         * @var \Balumedien\Sportms\Domain\Model\SportAgeGroup
+         * @var \ChristianKnell\Sportms\Domain\Model\SportAgeGroup
          */
         protected $sportAgeGroup;
         
@@ -24,17 +24,17 @@
         protected $abbreviation;
         
         /**
-         * @return \Balumedien\Sportms\Domain\Model\SportAgeGroup
+         * @return \ChristianKnell\Sportms\Domain\Model\SportAgeGroup
          */
-        public function getSportAgeGroup(): \Balumedien\Sportms\Domain\Model\SportAgeGroup
+        public function getSportAgeGroup(): \ChristianKnell\Sportms\Domain\Model\SportAgeGroup
         {
             return $this->sportAgeGroup;
         }
         
         /**
-         * @param \Balumedien\Sportms\Domain\Model\SportAgeGroup $sportAgeGroup
+         * @param \ChristianKnell\Sportms\Domain\Model\SportAgeGroup $sportAgeGroup
          */
-        public function setSportAgeGroup(\Balumedien\Sportms\Domain\Model\SportAgeGroup $sportAgeGroup): void
+        public function setSportAgeGroup(\ChristianKnell\Sportms\Domain\Model\SportAgeGroup $sportAgeGroup): void
         {
             $this->sportAgeGroup = $sportAgeGroup;
         }

@@ -1,6 +1,6 @@
 <?php
     
-    namespace Balumedien\Sportms\SlugGenerators;
+    namespace ChristianKnell\Sportms\SlugGenerators;
     
     use TYPO3\CMS\Backend\Utility\BackendUtility;
 

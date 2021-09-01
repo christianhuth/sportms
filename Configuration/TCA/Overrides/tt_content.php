@@ -4,7 +4,7 @@
     
     defined('TYPO3_MODE') or die();
     
-    $vendor = 'Balumedien';
+    $vendor = 'ChristianKnell';
     $_EXTKEY = 'sportms';
     $extensionName = \TYPO3\CMS\Core\Utility\GeneralUtility::underscoredToUpperCamelCase($_EXTKEY);
     $pluginNames = ['ClubDetail', 'ClubList', 'CompetitionDetail', 'CompetitionList', 'GameDetail', 'GameList', 'PersonList', 'SeasonList', 'TeamDetail', 'TeamList'];

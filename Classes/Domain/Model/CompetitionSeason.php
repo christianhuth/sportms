@@ -1,6 +1,6 @@
 <?php
     
-    namespace Balumedien\Sportms\Domain\Model;
+    namespace ChristianKnell\Sportms\Domain\Model;
     
     /**
      * Competition
@@ -9,23 +9,23 @@
     {
         
         /**
-         * @var \Balumedien\Sportms\Domain\Model\Competition
+         * @var \ChristianKnell\Sportms\Domain\Model\Competition
          */
         protected $competition;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Model\Season
+         * @var \ChristianKnell\Sportms\Domain\Model\Season
          */
         protected $season;
         
         /**
-         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\CompetitionSeasonGameday>
+         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\CompetitionSeasonGameday>
          * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
          */
         protected $competitionSeasonGamedays;
         
         /**
-         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\TeamSeason>
+         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\TeamSeason>
          * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
          */
         protected $competitionSeasonTeams;
@@ -64,7 +64,7 @@
         }
         
         /**
-         * @return \Balumedien\Sportms\Domain\Model\Competition
+         * @return \ChristianKnell\Sportms\Domain\Model\Competition
          */
         public function getCompetition()
         {
@@ -72,25 +72,25 @@
         }
         
         /**
-         * @param \Balumedien\Sportms\Domain\Model\Competition $competition
+         * @param \ChristianKnell\Sportms\Domain\Model\Competition $competition
          */
-        public function setCompetition(\Balumedien\Sportms\Domain\Model\Competition $competition)
+        public function setCompetition(\ChristianKnell\Sportms\Domain\Model\Competition $competition)
         {
             $this->competition = $competition;
         }
         
         /**
-         * @return \Balumedien\Sportms\Domain\Model\Season
+         * @return \ChristianKnell\Sportms\Domain\Model\Season
          */
-        public function getSeason(): \Balumedien\Sportms\Domain\Model\Season
+        public function getSeason(): \ChristianKnell\Sportms\Domain\Model\Season
         {
             return $this->season;
         }
         
         /**
-         * @param \Balumedien\Sportms\Domain\Model\Season $season
+         * @param \ChristianKnell\Sportms\Domain\Model\Season $season
          */
-        public function setSeason(\Balumedien\Sportms\Domain\Model\Season $season)
+        public function setSeason(\ChristianKnell\Sportms\Domain\Model\Season $season)
         {
             $this->season = $season;
         }
@@ -137,7 +137,7 @@
             }
             
             // Sort Objects in Array
-            usort($temporaryArray, ["\\Balumedien\\Sportms\\Domain\\Model\\CompetitionSeason", "compareTeamSeasons"]);
+            usort($temporaryArray, ["\\ChristianKnell\\Sportms\\Domain\\Model\\CompetitionSeason", "compareTeamSeasons"]);
             
             // create new ObjectStorage and add ordered TeamSeason-Objects
             $competitionSeasonTeamsOrdered = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();

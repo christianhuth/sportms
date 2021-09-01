@@ -1,8 +1,8 @@
 <?php
     
-    namespace Balumedien\Sportms\Controller;
+    namespace ChristianKnell\Sportms\Controller;
     
-    use Balumedien\Sportms\Domain\Model\Game;
+    use ChristianKnell\Sportms\Domain\Model\Game;
     use TYPO3\CMS\Extbase\Persistence\QueryInterface;
     use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
 
@@ -13,55 +13,55 @@
     {
         
         /**
-         * @var \Balumedien\Sportms\Domain\Repository\ClubRepository
+         * @var \ChristianKnell\Sportms\Domain\Repository\ClubRepository
          * @TYPO3\CMS\Extbase\Annotation\Inject
          */
         protected $clubRepository;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Repository\CompetitionTypeRepository
+         * @var \ChristianKnell\Sportms\Domain\Repository\CompetitionTypeRepository
          * @TYPO3\CMS\Extbase\Annotation\Inject
          */
         protected $competitionTypeRepository;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Repository\CompetitionRepository
+         * @var \ChristianKnell\Sportms\Domain\Repository\CompetitionRepository
          * @TYPO3\CMS\Extbase\Annotation\Inject
          */
         protected $competitionRepository;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Repository\GameRepository
+         * @var \ChristianKnell\Sportms\Domain\Repository\GameRepository
          * @TYPO3\CMS\Extbase\Annotation\Inject
          */
         protected $gameRepository;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Repository\SeasonRepository
+         * @var \ChristianKnell\Sportms\Domain\Repository\SeasonRepository
          * @TYPO3\CMS\Extbase\Annotation\Inject
          */
         protected $seasonRepository;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Repository\SportRepository
+         * @var \ChristianKnell\Sportms\Domain\Repository\SportRepository
          * @TYPO3\CMS\Extbase\Annotation\Inject
          */
         protected $sportRepository;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Repository\SportAgeGroupRepository
+         * @var \ChristianKnell\Sportms\Domain\Repository\SportAgeGroupRepository
          * @TYPO3\CMS\Extbase\Annotation\Inject
          */
         protected $sportAgeGroupRepository;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Repository\SportAgeLevelRepository
+         * @var \ChristianKnell\Sportms\Domain\Repository\SportAgeLevelRepository
          * @TYPO3\CMS\Extbase\Annotation\Inject
          */
         protected $sportAgeLevelRepository;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Repository\TeamRepository
+         * @var \ChristianKnell\Sportms\Domain\Repository\TeamRepository
          * @TYPO3\CMS\Extbase\Annotation\Inject
          */
         protected $teamRepository;

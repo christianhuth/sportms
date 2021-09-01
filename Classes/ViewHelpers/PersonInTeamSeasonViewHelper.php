@@ -1,6 +1,6 @@
 <?php
     
-    namespace Balumedien\Sportms\ViewHelpers;
+    namespace ChristianKnell\Sportms\ViewHelpers;
     
     use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractConditionViewHelper;
 
@@ -33,9 +33,9 @@
         public function initializeArguments()
         {
             parent::initializeArguments();
-            $this->registerArgument('teamSeason', 'Balumedien\Sportms\Domain\Model\TeamSeason',
+            $this->registerArgument('teamSeason', 'ChristianKnell\Sportms\Domain\Model\TeamSeason',
                 'View helper haystack. Needs to be a TeamSeason', true);
-            $this->registerArgument('personProfile', 'Balumedien\Sportms\Domain\Model\PersonProfile',
+            $this->registerArgument('personProfile', 'ChristianKnell\Sportms\Domain\Model\PersonProfile',
                 'View helper needle. Needs to be a PersonProfile!', true);
         }
         

@@ -1,6 +1,6 @@
 <?php
     
-    namespace Balumedien\Sportms\Domain\Model;
+    namespace ChristianKnell\Sportms\Domain\Model;
     
     /**
      * TeamSeasonOfficial
@@ -9,18 +9,18 @@
     {
         
         /**
-         * @var \Balumedien\Sportms\Domain\Model\TeamSeason
+         * @var \ChristianKnell\Sportms\Domain\Model\TeamSeason
          * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
          */
         protected $teamSeason;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Model\PersonProfile
+         * @var \ChristianKnell\Sportms\Domain\Model\PersonProfile
          */
         protected $personProfile;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Model\OfficialJob
+         * @var \ChristianKnell\Sportms\Domain\Model\OfficialJob
          */
         protected $officialJob;
         
@@ -56,17 +56,17 @@
         }
         
         /**
-         * @return \Balumedien\Sportms\Domain\Model\PersonProfile
+         * @return \ChristianKnell\Sportms\Domain\Model\PersonProfile
          */
-        public function getPersonProfile(): \Balumedien\Sportms\Domain\Model\PersonProfile
+        public function getPersonProfile(): \ChristianKnell\Sportms\Domain\Model\PersonProfile
         {
             return $this->personProfile;
         }
         
         /**
-         * @param \Balumedien\Sportms\Domain\Model\PersonProfile $personProfile
+         * @param \ChristianKnell\Sportms\Domain\Model\PersonProfile $personProfile
          */
-        public function setPersonProfile(\Balumedien\Sportms\Domain\Model\PersonProfile $personProfile): void
+        public function setPersonProfile(\ChristianKnell\Sportms\Domain\Model\PersonProfile $personProfile): void
         {
             $this->personProfile = $personProfile;
         }

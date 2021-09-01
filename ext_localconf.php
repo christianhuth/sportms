@@ -4,7 +4,7 @@
     
     use TYPO3\CMS\Core\Utility\GeneralUtility;
     
-    $vendor = 'Balumedien';
+    $vendor = 'ChristianKnell';
     $_EXTKEY = 'sportms';
     $extensionName = GeneralUtility::underscoredToUpperCamelCase($_EXTKEY);
     
@@ -96,7 +96,7 @@
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptSetup(trim('
         config.pageTitleProviders {
             sportms {
-                provider = Balumedien\Sportms\PageTitle\PageTitleProvider
+                provider = ChristianKnell\Sportms\PageTitle\PageTitleProvider
                 before = record
                 after = altPageTitle
             }

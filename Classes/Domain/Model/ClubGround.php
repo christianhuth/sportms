@@ -1,6 +1,6 @@
 <?php
     
-    namespace Balumedien\Sportms\Domain\Model;
+    namespace ChristianKnell\Sportms\Domain\Model;
     
     /**
      * ClubGround
@@ -9,7 +9,7 @@
     {
         
         /**
-         * @var \Balumedien\Sportms\Domain\Model\Club
+         * @var \ChristianKnell\Sportms\Domain\Model\Club
          */
         protected $club;
         
@@ -19,7 +19,7 @@
         protected $name;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Model\Address
+         * @var \ChristianKnell\Sportms\Domain\Model\Address
          */
         protected $address;
         

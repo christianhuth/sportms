@@ -1,6 +1,6 @@
 <?php
     
-    namespace Balumedien\Sportms\ViewHelpers;
+    namespace ChristianKnell\Sportms\ViewHelpers;
     
     class ZodiacSignViewHelper extends \TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper
     {

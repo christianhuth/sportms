@@ -1,6 +1,6 @@
 <?php
     
-    namespace Balumedien\Sportms\Domain\Model;
+    namespace ChristianKnell\Sportms\Domain\Model;
     
     /**
      * TeamSeasonSquadMember
@@ -9,22 +9,22 @@
     {
         
         /**
-         * @var \Balumedien\Sportms\Domain\Model\TeamSeason
+         * @var \ChristianKnell\Sportms\Domain\Model\TeamSeason
          */
         protected $teamSeason;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Model\PersonProfile
+         * @var \ChristianKnell\Sportms\Domain\Model\PersonProfile
          */
         protected $personProfile;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Model\SportPositionGroup
+         * @var \ChristianKnell\Sportms\Domain\Model\SportPositionGroup
          */
         protected $sportPositionGroup;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Model\SportPosition
+         * @var \ChristianKnell\Sportms\Domain\Model\SportPosition
          */
         protected $sportPosition;
         
@@ -49,7 +49,7 @@
         protected $hiddenInSquadList;
         
         /**
-         * @return \Balumedien\Sportms\Domain\Model\TeamSeason
+         * @return \ChristianKnell\Sportms\Domain\Model\TeamSeason
          */
         public function getTeamSeason()
         {
@@ -57,9 +57,9 @@
         }
         
         /**
-         * @param \Balumedien\Sportms\Domain\Model\TeamSeason $teamSeason
+         * @param \ChristianKnell\Sportms\Domain\Model\TeamSeason $teamSeason
          */
-        public function setTeamSeason(\Balumedien\Sportms\Domain\Model\TeamSeason $teamSeason)
+        public function setTeamSeason(\ChristianKnell\Sportms\Domain\Model\TeamSeason $teamSeason)
         {
             $this->teamSeason = $teamSeason;
         }

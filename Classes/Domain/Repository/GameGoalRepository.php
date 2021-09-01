@@ -1,8 +1,8 @@
 <?php
     
-    namespace Balumedien\Sportms\Domain\Repository;
+    namespace ChristianKnell\Sportms\Domain\Repository;
     
-    use Balumedien\Sportms\Domain\Model\TeamSeason;
+    use ChristianKnell\Sportms\Domain\Model\TeamSeason;
 
     class GameGoalRepository extends SportMSBaseRepository
     {

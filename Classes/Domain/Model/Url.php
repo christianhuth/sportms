@@ -1,6 +1,6 @@
 <?php
     
-    namespace Balumedien\Sportms\Domain\Model;
+    namespace ChristianKnell\Sportms\Domain\Model;
     
     /**
      * Url
@@ -9,7 +9,7 @@
     {
         
         /**
-         * @var \Balumedien\Sportms\Domain\Model\ContactType
+         * @var \ChristianKnell\Sportms\Domain\Model\ContactType
          */
         protected $contactType;
         
@@ -19,17 +19,17 @@
         protected $url;
         
         /**
-         * @return \Balumedien\Sportms\Domain\Model\ContactType
+         * @return \ChristianKnell\Sportms\Domain\Model\ContactType
          */
-        public function getContactType(): \Balumedien\Sportms\Domain\Model\ContactType
+        public function getContactType(): \ChristianKnell\Sportms\Domain\Model\ContactType
         {
             return $this->contactType;
         }
         
         /**
-         * @param \Balumedien\Sportms\Domain\Model\ContactType $contactType
+         * @param \ChristianKnell\Sportms\Domain\Model\ContactType $contactType
          */
-        public function setContactType(\Balumedien\Sportms\Domain\Model\ContactType $contactType): void
+        public function setContactType(\ChristianKnell\Sportms\Domain\Model\ContactType $contactType): void
         {
             $this->contactType = $contactType;
         }

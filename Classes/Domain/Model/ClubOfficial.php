@@ -1,6 +1,6 @@
 <?php
     
-    namespace Balumedien\Sportms\Domain\Model;
+    namespace ChristianKnell\Sportms\Domain\Model;
     
     /**
      * ClubOfficial
@@ -9,18 +9,18 @@
     {
         
         /**
-         * @var \Balumedien\Sportms\Domain\Model\Club
+         * @var \ChristianKnell\Sportms\Domain\Model\Club
          * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
          */
         protected $club;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Model\PersonProfile
+         * @var \ChristianKnell\Sportms\Domain\Model\PersonProfile
          */
         protected $personProfile;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Model\OfficialJob
+         * @var \ChristianKnell\Sportms\Domain\Model\OfficialJob
          */
         protected $officialJob;
         
@@ -40,7 +40,7 @@
         protected $untilToday;
         
         /**
-         * @return \Balumedien\Sportms\Domain\Model\Club
+         * @return \ChristianKnell\Sportms\Domain\Model\Club
          */
         public function getClub()
         {
@@ -48,25 +48,25 @@
         }
         
         /**
-         * @param \Balumedien\Sportms\Domain\Model\Club $club
+         * @param \ChristianKnell\Sportms\Domain\Model\Club $club
          */
-        public function setClub(\Balumedien\Sportms\Domain\Model\Club $club)
+        public function setClub(\ChristianKnell\Sportms\Domain\Model\Club $club)
         {
             $this->club = $club;
         }
         
         /**
-         * @return \Balumedien\Sportms\Domain\Model\PersonProfile
+         * @return \ChristianKnell\Sportms\Domain\Model\PersonProfile
          */
-        public function getPersonProfile(): \Balumedien\Sportms\Domain\Model\PersonProfile
+        public function getPersonProfile(): \ChristianKnell\Sportms\Domain\Model\PersonProfile
         {
             return $this->personProfile;
         }
         
         /**
-         * @param \Balumedien\Sportms\Domain\Model\PersonProfile $personProfile
+         * @param \ChristianKnell\Sportms\Domain\Model\PersonProfile $personProfile
          */
-        public function setPersonProfile(\Balumedien\Sportms\Domain\Model\PersonProfile $personProfile): void
+        public function setPersonProfile(\ChristianKnell\Sportms\Domain\Model\PersonProfile $personProfile): void
         {
             $this->personProfile = $personProfile;
         }

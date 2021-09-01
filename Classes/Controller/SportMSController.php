@@ -1,6 +1,6 @@
 <?php
     
-    namespace Balumedien\Sportms\Controller;
+    namespace ChristianKnell\Sportms\Controller;
     
     use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
 
@@ -11,37 +11,37 @@
     {
         
         /**
-         * @var \Balumedien\Sportms\Domain\Repository\ClubRepository
+         * @var \ChristianKnell\Sportms\Domain\Repository\ClubRepository
          * @TYPO3\CMS\Extbase\Annotation\Inject
          */
         protected $clubRepository = null;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Repository\CompetitionRepository
+         * @var \ChristianKnell\Sportms\Domain\Repository\CompetitionRepository
          * @TYPO3\CMS\Extbase\Annotation\Inject
          */
         protected $competitionRepository = null;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Repository\GameRepository
+         * @var \ChristianKnell\Sportms\Domain\Repository\GameRepository
          * @TYPO3\CMS\Extbase\Annotation\Inject
          */
         protected $gameRepository = null;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Repository\PersonRepository
+         * @var \ChristianKnell\Sportms\Domain\Repository\PersonRepository
          * @TYPO3\CMS\Extbase\Annotation\Inject
          */
         protected $personRepository = null;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Repository\SeasonRepository
+         * @var \ChristianKnell\Sportms\Domain\Repository\SeasonRepository
          * @TYPO3\CMS\Extbase\Annotation\Inject
          */
         protected $seasonRepository = null;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Repository\TeamRepository
+         * @var \ChristianKnell\Sportms\Domain\Repository\TeamRepository
          * @TYPO3\CMS\Extbase\Annotation\Inject
          */
         protected $teamRepository = null;

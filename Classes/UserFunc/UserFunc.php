@@ -1,6 +1,6 @@
 <?php
     
-    namespace Balumedien\Sportms\UserFunc;
+    namespace ChristianKnell\Sportms\UserFunc;
     
     use TYPO3\CMS\Backend\Utility\BackendUtility;
     use TYPO3\CMS\Extbase\Utility\LocalizationUtility;

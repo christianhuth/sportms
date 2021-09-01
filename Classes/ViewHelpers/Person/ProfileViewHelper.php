@@ -1,8 +1,8 @@
 <?php
     
-    namespace Balumedien\Sportms\ViewHelpers\Person;
+    namespace ChristianKnell\Sportms\ViewHelpers\Person;
     
-    use Balumedien\Sportms\Domain\Model\PersonProfile;
+    use ChristianKnell\Sportms\Domain\Model\PersonProfile;
 
     class ProfileViewHelper extends \TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper
     {
@@ -13,10 +13,10 @@
         public function initializeArguments()
         {
             parent::initializeArguments();
-            $this->registerArgument('person', 'Balumedien\Sportms\Domain\Model\Person',
+            $this->registerArgument('person', 'ChristianKnell\Sportms\Domain\Model\Person',
                 'the person we should be searching the profile for', true);
             $this->registerArgument('profileType', 'string', 'the desired profile type', true);
-            $this->registerArgument('sport', 'Balumedien\Sportms\Domain\Model\Sport', 'the desired sport', false);
+            $this->registerArgument('sport', 'ChristianKnell\Sportms\Domain\Model\Sport', 'the desired sport', false);
         }
         
         /**

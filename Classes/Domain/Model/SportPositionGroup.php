@@ -1,6 +1,6 @@
 <?php
     
-    namespace Balumedien\Sportms\Domain\Model;
+    namespace ChristianKnell\Sportms\Domain\Model;
     
     /**
      * SportPositionGroup
@@ -9,7 +9,7 @@
     {
         
         /**
-         * @var \Balumedien\Sportms\Domain\Model\Sport
+         * @var \ChristianKnell\Sportms\Domain\Model\Sport
          */
         protected $sport;
         
@@ -24,7 +24,7 @@
         protected $abbreviation;
         
         /**
-         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\SportPosition>
+         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\SportPosition>
          * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
          * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
          */
@@ -50,17 +50,17 @@
         }
         
         /**
-         * @return \Balumedien\Sportms\Domain\Model\Sport
+         * @return \ChristianKnell\Sportms\Domain\Model\Sport
          */
-        public function getSport(): \Balumedien\Sportms\Domain\Model\Sport
+        public function getSport(): \ChristianKnell\Sportms\Domain\Model\Sport
         {
             return $this->sport;
         }
         
         /**
-         * @param \Balumedien\Sportms\Domain\Model\Sport $sport
+         * @param \ChristianKnell\Sportms\Domain\Model\Sport $sport
          */
-        public function setSport(\Balumedien\Sportms\Domain\Model\Sport $sport): void
+        public function setSport(\ChristianKnell\Sportms\Domain\Model\Sport $sport): void
         {
             $this->sport = $sport;
         }

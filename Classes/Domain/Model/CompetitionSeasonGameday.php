@@ -1,6 +1,6 @@
 <?php
     
-    namespace Balumedien\Sportms\Domain\Model;
+    namespace ChristianKnell\Sportms\Domain\Model;
     
     use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 
@@ -11,7 +11,7 @@
     {
         
         /**
-         * @var \Balumedien\Sportms\Domain\Model\CompetitionSeason
+         * @var \ChristianKnell\Sportms\Domain\Model\CompetitionSeason
          * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
          */
         protected $competitionSeason;
@@ -32,7 +32,7 @@
         protected $enddate;
         
         /**
-         * @return \Balumedien\Sportms\Domain\Model\CompetitionSeason
+         * @return \ChristianKnell\Sportms\Domain\Model\CompetitionSeason
          */
         public function getCompetitionSeason()
         {
@@ -40,7 +40,7 @@
         }
         
         /**
-         * @param \Balumedien\Sportms\Domain\Model\CompetitionSeason $competitionSeason
+         * @param \ChristianKnell\Sportms\Domain\Model\CompetitionSeason $competitionSeason
          */
         public function setCompetitionSeason($competitionSeason)
         {

@@ -1,6 +1,6 @@
 <?php
     
-    namespace Balumedien\Sportms\Domain\Model;
+    namespace ChristianKnell\Sportms\Domain\Model;
     
     /**
      * TeamSeasonPractice
@@ -9,7 +9,7 @@
     {
         
         /**
-         * @var \Balumedien\Sportms\Domain\Model\TeamSeason
+         * @var \ChristianKnell\Sportms\Domain\Model\TeamSeason
          * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
          */
         protected $teamSeason;
@@ -30,7 +30,7 @@
         protected $timeEnd;
         
         /**
-         * @var    \Balumedien\Sportms\Domain\Model\Venue
+         * @var    \ChristianKnell\Sportms\Domain\Model\Venue
          */
         protected $venue;
         

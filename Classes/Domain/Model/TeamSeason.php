@@ -1,6 +1,6 @@
 <?php
     
-    namespace Balumedien\Sportms\Domain\Model;
+    namespace ChristianKnell\Sportms\Domain\Model;
     
     use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 
@@ -11,17 +11,17 @@
     {
         
         /**
-         * @var \Balumedien\Sportms\Domain\Model\Team
+         * @var \ChristianKnell\Sportms\Domain\Model\Team
          */
         protected $team;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Model\Season
+         * @var \ChristianKnell\Sportms\Domain\Model\Season
          */
         protected $season;
         
         /**
-         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\TeamSeasonPractice>
+         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\TeamSeasonPractice>
          */
         protected $teamSeasonPractices;
         
@@ -31,22 +31,22 @@
         protected $teamSeasonImages;
         
         /**
-         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\TeamSeasonOfficial>
+         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\TeamSeasonOfficial>
          */
         protected $teamSeasonOfficials;
         
         /**
-         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\TeamSeasonOfficial>
+         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\TeamSeasonOfficial>
          */
         protected $teamSeasonCheftrainers;
         
         /**
-         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\TeamSeasonSquadMember>
+         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\TeamSeasonSquadMember>
          */
         protected $teamSeasonSquadMembers;
         
         /**
-         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\PersonProfile>
+         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\PersonProfile>
          */
         protected $teamSeasonSquadCaptains;
         

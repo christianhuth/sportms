@@ -2,40 +2,40 @@
 config.tx_extbase {
 	persistence {
 		classes {
-			Balumedien\Sportms\Domain\Model\PersonProfile {
+			ChristianKnell\Sportms\Domain\Model\PersonProfile {
 				subclasses {
-					1 = Balumedien\Sportms\Domain\Model\ClubOfficialProfile
-					2 = Balumedien\Sportms\Domain\Model\ClubSectionOfficialProfile
-					3 = Balumedien\Sportms\Domain\Model\PlayerProfile
-					4 = Balumedien\Sportms\Domain\Model\RefereeProfile
-					5 = Balumedien\Sportms\Domain\Model\TeamSeasonOfficialProfile
+					1 = ChristianKnell\Sportms\Domain\Model\ClubOfficialProfile
+					2 = ChristianKnell\Sportms\Domain\Model\ClubSectionOfficialProfile
+					3 = ChristianKnell\Sportms\Domain\Model\PlayerProfile
+					4 = ChristianKnell\Sportms\Domain\Model\RefereeProfile
+					5 = ChristianKnell\Sportms\Domain\Model\TeamSeasonOfficialProfile
 				}
 			}
-			Balumedien\Sportms\Domain\Model\ClubOfficialProfile {
+			ChristianKnell\Sportms\Domain\Model\ClubOfficialProfile {
 				mapping {
 					recordType = 1
 					tableName = tx_sportms_domain_model_personprofile
 				}
 			}
-			Balumedien\Sportms\Domain\Model\ClubSectionOfficialProfile {
+			ChristianKnell\Sportms\Domain\Model\ClubSectionOfficialProfile {
 				mapping {
 					recordType = 2
 					tableName = tx_sportms_domain_model_personprofile
 				}
 			}
-			Balumedien\Sportms\Domain\Model\PlayerProfile {
+			ChristianKnell\Sportms\Domain\Model\PlayerProfile {
 				mapping {
 					recordType = 3
 					tableName = tx_sportms_domain_model_personprofile
 				}
 			}
-			Balumedien\Sportms\Domain\Model\RefereeProfile {
+			ChristianKnell\Sportms\Domain\Model\RefereeProfile {
 				mapping {
 					recordType = 4
 					tableName = tx_sportms_domain_model_personprofile
 				}
 			}
-			Balumedien\Sportms\Domain\Model\TeamSeasonOfficialProfile {
+			ChristianKnell\Sportms\Domain\Model\TeamSeasonOfficialProfile {
 				mapping {
 					recordType = 5
 					tableName = tx_sportms_domain_model_personprofile

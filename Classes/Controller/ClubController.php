@@ -1,8 +1,8 @@
 <?php
     
-    namespace Balumedien\Sportms\Controller;
+    namespace ChristianKnell\Sportms\Controller;
     
-    use Balumedien\Sportms\Domain\Model\Club;
+    use ChristianKnell\Sportms\Domain\Model\Club;
     use TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException;
     use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
 
@@ -13,7 +13,7 @@
     {
         
         /**
-         * @var \Balumedien\Sportms\Domain\Repository\ClubRepository
+         * @var \ChristianKnell\Sportms\Domain\Repository\ClubRepository
          * @TYPO3\CMS\Extbase\Annotation\Inject
          */
         protected $clubRepository;

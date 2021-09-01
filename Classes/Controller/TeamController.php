@@ -1,11 +1,11 @@
 <?php
     
-    namespace Balumedien\Sportms\Controller;
+    namespace ChristianKnell\Sportms\Controller;
     
-    use Balumedien\Sportms\Domain\Model\Season;
-    use Balumedien\Sportms\Domain\Model\Team;
-    use Balumedien\Sportms\Domain\Model\TeamSeason;
-    use Balumedien\Sportms\Domain\Model\TeamSeasonOfficial;
+    use ChristianKnell\Sportms\Domain\Model\Season;
+    use ChristianKnell\Sportms\Domain\Model\Team;
+    use ChristianKnell\Sportms\Domain\Model\TeamSeason;
+    use ChristianKnell\Sportms\Domain\Model\TeamSeasonOfficial;
     use TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException;
     use TYPO3\CMS\Extbase\Persistence\QueryInterface;
     use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
@@ -17,109 +17,109 @@
     {
         
         /**
-         * @var \Balumedien\Sportms\Domain\Repository\ClubRepository
+         * @var \ChristianKnell\Sportms\Domain\Repository\ClubRepository
          * @TYPO3\CMS\Extbase\Annotation\Inject
          */
         protected $clubRepository;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Repository\CompetitionRepository
+         * @var \ChristianKnell\Sportms\Domain\Repository\CompetitionRepository
          * @TYPO3\CMS\Extbase\Annotation\Inject
          */
         protected $competitionRepository;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Repository\CompetitionTypeRepository
+         * @var \ChristianKnell\Sportms\Domain\Repository\CompetitionTypeRepository
          * @TYPO3\CMS\Extbase\Annotation\Inject
          */
         protected $competitionTypeRepository;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Repository\GameRepository
+         * @var \ChristianKnell\Sportms\Domain\Repository\GameRepository
          * @TYPO3\CMS\Extbase\Annotation\Inject
          */
         protected $gameRepository;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Repository\GameGoalRepository
+         * @var \ChristianKnell\Sportms\Domain\Repository\GameGoalRepository
          * @TYPO3\CMS\Extbase\Annotation\Inject
          */
         protected $gameGoalRepository;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Repository\GameLineupRepository
+         * @var \ChristianKnell\Sportms\Domain\Repository\GameLineupRepository
          * @TYPO3\CMS\Extbase\Annotation\Inject
          */
         protected $gameLineupRepository;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Repository\OfficialJobRepository
+         * @var \ChristianKnell\Sportms\Domain\Repository\OfficialJobRepository
          * @TYPO3\CMS\Extbase\Annotation\Inject
          */
         protected $officialJobRepository;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Repository\PersonRepository
+         * @var \ChristianKnell\Sportms\Domain\Repository\PersonRepository
          * @TYPO3\CMS\Extbase\Annotation\Inject
          */
         protected $personRepository;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Repository\PersonProfileRepository
+         * @var \ChristianKnell\Sportms\Domain\Repository\PersonProfileRepository
          * @TYPO3\CMS\Extbase\Annotation\Inject
          */
         protected $personProfileRepository;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Repository\SeasonRepository
+         * @var \ChristianKnell\Sportms\Domain\Repository\SeasonRepository
          * @TYPO3\CMS\Extbase\Annotation\Inject
          */
         protected $seasonRepository;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Repository\SportRepository
+         * @var \ChristianKnell\Sportms\Domain\Repository\SportRepository
          * @TYPO3\CMS\Extbase\Annotation\Inject
          */
         protected $sportRepository;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Repository\SportAgeGroupRepository
+         * @var \ChristianKnell\Sportms\Domain\Repository\SportAgeGroupRepository
          * @TYPO3\CMS\Extbase\Annotation\Inject
          */
         protected $sportAgeGroupRepository;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Repository\SportAgeLevelRepository
+         * @var \ChristianKnell\Sportms\Domain\Repository\SportAgeLevelRepository
          * @TYPO3\CMS\Extbase\Annotation\Inject
          */
         protected $sportAgeLevelRepository;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Repository\SportPositionGroupRepository
+         * @var \ChristianKnell\Sportms\Domain\Repository\SportPositionGroupRepository
          * @TYPO3\CMS\Extbase\Annotation\Inject
          */
         protected $sportPositionGroupRepository;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Repository\SportPositionRepository
+         * @var \ChristianKnell\Sportms\Domain\Repository\SportPositionRepository
          * @TYPO3\CMS\Extbase\Annotation\Inject
          */
         protected $sportPositionRepository;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Repository\TeamRepository
+         * @var \ChristianKnell\Sportms\Domain\Repository\TeamRepository
          * @TYPO3\CMS\Extbase\Annotation\Inject
          */
         protected $teamRepository;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Repository\TeamSeasonRepository
+         * @var \ChristianKnell\Sportms\Domain\Repository\TeamSeasonRepository
          * @TYPO3\CMS\Extbase\Annotation\Inject
          */
         protected $teamSeasonRepository;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Repository\TeamSeasonOfficialRepository
+         * @var \ChristianKnell\Sportms\Domain\Repository\TeamSeasonOfficialRepository
          * @TYPO3\CMS\Extbase\Annotation\Inject
          */
         protected $teamSeasonOfficialRepository;
@@ -183,7 +183,7 @@
          * @param TeamSeasonOfficial $officialTerm2
          */
         private function consecutiveTeamSeasonOfficials(
-            \Balumedien\Sportms\Domain\Model\TeamSeasonOfficial $officialTerm1,
+            \ChristianKnell\Sportms\Domain\Model\TeamSeasonOfficial $officialTerm1,
             TeamSeasonOfficial $officialTerm2
         ): bool {
             # the difference between the old end and the new start is equal to one day OR
@@ -287,7 +287,7 @@
                 $this->getSeasonsFilter(), $this->settings['team']['historyRecordPlayers']['limit']);
             $playersWithMostGames = [];
             foreach ($playersWithMostGamesAsArray as $playerWithMostGamesAsArray) {
-                $playerWithMostGames = new \Balumedien\Sportms\Domain\Model\PlayerStat();
+                $playerWithMostGames = new \ChristianKnell\Sportms\Domain\Model\PlayerStat();
                 $playerWithMostGames->setPerson($this->personProfileRepository->findByUid($playerWithMostGamesAsArray['person_profile']));
                 $playerWithMostGames->setNumberOfGames($playerWithMostGamesAsArray['numberOfGames']);
                 $playerWithMostGames->setNumberOfStartingFormation($playerWithMostGamesAsArray['numberOfStartingFormation']);
@@ -301,7 +301,7 @@
                 $this->getSeasonsFilter(), $this->settings['team']['historyRecordPlayers']['limit']);
             $playersWithMostGoals = [];
             foreach ($playersWithMostGoalsAsArray as $playerWithMostGoalsAsArray) {
-                $playerWithMostGoals = new \Balumedien\Sportms\Domain\Model\PlayerStat();
+                $playerWithMostGoals = new \ChristianKnell\Sportms\Domain\Model\PlayerStat();
                 $playerWithMostGoals->setPerson($this->personProfileRepository->findByUid($playerWithMostGoalsAsArray['scorer']));
                 $playerWithMostGoals->setNumberOfGoals($playerWithMostGoalsAsArray['numberOfGoals']);
                 $playersWithMostGoals[] = $playerWithMostGoals;
@@ -314,7 +314,7 @@
                 $this->getSeasonsFilter(), $this->settings['team']['historyRecordPlayers']['limit']);
             $playersWithMostAssists = [];
             foreach ($playersWithMostAssistsAsArray as $playerWithMostAssistsAsArray) {
-                $playerWithMostAssists = new \Balumedien\Sportms\Domain\Model\PlayerStat();
+                $playerWithMostAssists = new \ChristianKnell\Sportms\Domain\Model\PlayerStat();
                 $playerWithMostAssists->setPerson($this->personProfileRepository->findByUid($playerWithMostAssistsAsArray['assist']));
                 $playerWithMostAssists->setNumberOfAssists($playerWithMostAssistsAsArray['numberOfAssists']);
                 $playersWithMostAssists[] = $playerWithMostAssists;

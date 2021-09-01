@@ -1,6 +1,6 @@
 <?php
     
-    namespace Balumedien\Sportms\UserFunc;
+    namespace ChristianKnell\Sportms\UserFunc;
     
     use TYPO3\CMS\Core\Database\Connection;
     use TYPO3\CMS\Core\Database\ConnectionPool;

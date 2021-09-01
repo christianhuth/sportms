@@ -1,28 +1,28 @@
 <?php
     
-    namespace Balumedien\Sportms\Domain\Model;
+    namespace ChristianKnell\Sportms\Domain\Model;
     
     class PlayerProfile extends PersonProfile
     {
         
         /**
-         * @var \Balumedien\Sportms\Domain\Model\SportPositionGroup|null
+         * @var \ChristianKnell\Sportms\Domain\Model\SportPositionGroup|null
          */
         protected $mainSportPositionGroup;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Model\SportPosition|null
+         * @var \ChristianKnell\Sportms\Domain\Model\SportPosition|null
          */
         protected $mainSportPosition;
         
         /**
-         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\SportPositionGroup>|null
+         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\SportPositionGroup>|null
          * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
          */
         protected $sideSportPositionGroups;
         
         /**
-         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\SportPosition>|null
+         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\SportPosition>|null
          * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
          */
         protected $sideSportPositions;

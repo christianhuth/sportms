@@ -1,6 +1,6 @@
 <?php
     
-    namespace Balumedien\Sportms\Domain\Repository;
+    namespace ChristianKnell\Sportms\Domain\Repository;
     
     use TYPO3\CMS\Extbase\Persistence\QueryInterface;
 
@@ -33,9 +33,9 @@
         }
         
         /**
-         * @param \Balumedien\Sportms\Domain\Model\Team $team
+         * @param \ChristianKnell\Sportms\Domain\Model\Team $team
          */
-        public function findAllByTeam(\Balumedien\Sportms\Domain\Model\Team $team)
+        public function findAllByTeam(\ChristianKnell\Sportms\Domain\Model\Team $team)
         {
             $orderings = [
                 'personProfile' => QueryInterface::ORDER_ASCENDING,

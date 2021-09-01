@@ -1,17 +1,17 @@
 <?php
     
-    namespace Balumedien\Sportms\Controller;
+    namespace ChristianKnell\Sportms\Controller;
     
-    use Balumedien\Sportms\Domain\Model\Club;
-    use Balumedien\Sportms\Domain\Model\Competition;
-    use Balumedien\Sportms\Domain\Model\CompetitionSeason;
-    use Balumedien\Sportms\Domain\Model\CompetitionSeasonGameday;
-    use Balumedien\Sportms\Domain\Model\Game;
-    use Balumedien\Sportms\Domain\Model\Person;
-    use Balumedien\Sportms\Domain\Model\Season;
-    use Balumedien\Sportms\Domain\Model\Team;
-    use Balumedien\Sportms\Domain\Model\TeamSeason;
-    use Balumedien\Sportms\PageTitle\PageTitleProvider;
+    use ChristianKnell\Sportms\Domain\Model\Club;
+    use ChristianKnell\Sportms\Domain\Model\Competition;
+    use ChristianKnell\Sportms\Domain\Model\CompetitionSeason;
+    use ChristianKnell\Sportms\Domain\Model\CompetitionSeasonGameday;
+    use ChristianKnell\Sportms\Domain\Model\Game;
+    use ChristianKnell\Sportms\Domain\Model\Person;
+    use ChristianKnell\Sportms\Domain\Model\Season;
+    use ChristianKnell\Sportms\Domain\Model\Team;
+    use ChristianKnell\Sportms\Domain\Model\TeamSeason;
+    use ChristianKnell\Sportms\PageTitle\PageTitleProvider;
     use TYPO3\CMS\Core\Utility\GeneralUtility;
     use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
     use TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException;

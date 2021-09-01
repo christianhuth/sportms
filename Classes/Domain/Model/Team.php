@@ -1,6 +1,6 @@
 <?php
     
-    namespace Balumedien\Sportms\Domain\Model;
+    namespace ChristianKnell\Sportms\Domain\Model;
     
     /**
      * Team
@@ -9,22 +9,22 @@
     {
         
         /**
-         * @var \Balumedien\Sportms\Domain\Model\Club
+         * @var \ChristianKnell\Sportms\Domain\Model\Club
          */
         protected $club;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Model\Sport
+         * @var \ChristianKnell\Sportms\Domain\Model\Sport
          */
         protected $sport;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Model\SportAgeGroup
+         * @var \ChristianKnell\Sportms\Domain\Model\SportAgeGroup
          */
         protected $sportAgeGroup;
         
         /**
-         * @var \Balumedien\Sportms\Domain\Model\SportAgeLevel
+         * @var \ChristianKnell\Sportms\Domain\Model\SportAgeLevel
          */
         protected $sportAgeLevel;
         
@@ -49,7 +49,7 @@
         protected $detailPid;
         
         /**
-         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\TeamSeason>
+         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\TeamSeason>
          * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
          */
         protected $teamSeasons;
@@ -74,65 +74,65 @@
         }
         
         /**
-         * @return \Balumedien\Sportms\Domain\Model\Club
+         * @return \ChristianKnell\Sportms\Domain\Model\Club
          */
-        public function getClub(): \Balumedien\Sportms\Domain\Model\Club
+        public function getClub(): \ChristianKnell\Sportms\Domain\Model\Club
         {
             return $this->club;
         }
         
         /**
-         * @param \Balumedien\Sportms\Domain\Model\Club $club
+         * @param \ChristianKnell\Sportms\Domain\Model\Club $club
          */
-        public function setClub(\Balumedien\Sportms\Domain\Model\Club $club): void
+        public function setClub(\ChristianKnell\Sportms\Domain\Model\Club $club): void
         {
             $this->club = $club;
         }
         
         /**
-         * @return \Balumedien\Sportms\Domain\Model\Sport
+         * @return \ChristianKnell\Sportms\Domain\Model\Sport
          */
-        public function getSport(): \Balumedien\Sportms\Domain\Model\Sport
+        public function getSport(): \ChristianKnell\Sportms\Domain\Model\Sport
         {
             return $this->sport;
         }
         
         /**
-         * @param \Balumedien\Sportms\Domain\Model\Sport $sport
+         * @param \ChristianKnell\Sportms\Domain\Model\Sport $sport
          */
-        public function setSport(\Balumedien\Sportms\Domain\Model\Sport $sport): void
+        public function setSport(\ChristianKnell\Sportms\Domain\Model\Sport $sport): void
         {
             $this->sport = $sport;
         }
         
         /**
-         * @return \Balumedien\Sportms\Domain\Model\SportAgeGroup
+         * @return \ChristianKnell\Sportms\Domain\Model\SportAgeGroup
          */
-        public function getSportAgeGroup(): \Balumedien\Sportms\Domain\Model\SportAgeGroup
+        public function getSportAgeGroup(): \ChristianKnell\Sportms\Domain\Model\SportAgeGroup
         {
             return $this->sportAgeGroup;
         }
         
         /**
-         * @param \Balumedien\Sportms\Domain\Model\SportAgeGroup $sportAgeGroup
+         * @param \ChristianKnell\Sportms\Domain\Model\SportAgeGroup $sportAgeGroup
          */
-        public function setSportAgeGroup(\Balumedien\Sportms\Domain\Model\SportAgeGroup $sportAgeGroup): void
+        public function setSportAgeGroup(\ChristianKnell\Sportms\Domain\Model\SportAgeGroup $sportAgeGroup): void
         {
             $this->sportAgeGroup = $sportAgeGroup;
         }
         
         /**
-         * @return \Balumedien\Sportms\Domain\Model\SportAgeLevel
+         * @return \ChristianKnell\Sportms\Domain\Model\SportAgeLevel
          */
-        public function getSportAgeLevel(): \Balumedien\Sportms\Domain\Model\SportAgeLevel
+        public function getSportAgeLevel(): \ChristianKnell\Sportms\Domain\Model\SportAgeLevel
         {
             return $this->sportAgeLevel;
         }
         
         /**
-         * @param \Balumedien\Sportms\Domain\Model\SportAgeLevel $sportAgeLevel
+         * @param \ChristianKnell\Sportms\Domain\Model\SportAgeLevel $sportAgeLevel
          */
-        public function setSportAgeLevel(\Balumedien\Sportms\Domain\Model\SportAgeLevel $sportAgeLevel): void
+        public function setSportAgeLevel(\ChristianKnell\Sportms\Domain\Model\SportAgeLevel $sportAgeLevel): void
         {
             $this->sportAgeLevel = $sportAgeLevel;
         }
