@@ -2,6 +2,50 @@
 <T3DataStructure>
     <sheets>
         <base>EXT:sportms/Configuration/FlexForms/flexform_base.xml</base>
-        <dbStats>EXT:sportms/Configuration/FlexForms/flexform_dbStats.xml</dbStats>
+        <dbStats>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>Datenbank-Statistiken</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.dbStats>
+                        <TCEforms>
+                            <label>Für welche Datenmodelle sollen Statistiken berechnet werden?</label>
+                            <config>
+                                <items type="array">
+                                    <numIndex index="club">
+                                        <numIndex index="0">Club</numIndex>
+                                        <numIndex index="1">Club</numIndex>
+                                    </numIndex>
+                                    <numIndex index="competition">
+                                        <numIndex index="0">Competition</numIndex>
+                                        <numIndex index="1">Competition</numIndex>
+                                    </numIndex>
+                                    <numIndex index="game">
+                                        <numIndex index="0">Game</numIndex>
+                                        <numIndex index="1">Game</numIndex>
+                                    </numIndex>
+                                    <numIndex index="person">
+                                        <numIndex index="0">Person</numIndex>
+                                        <numIndex index="1">Person</numIndex>
+                                    </numIndex>
+                                    <numIndex index="season">
+                                        <numIndex index="0">Season</numIndex>
+                                        <numIndex index="1">Season</numIndex>
+                                    </numIndex>
+                                    <numIndex index="team">
+                                        <numIndex index="0">Team</numIndex>
+                                        <numIndex index="1">Team</numIndex>
+                                    </numIndex>
+                                </items>
+                                <renderType>selectMultipleSideBySide</renderType>
+                                <type>select</type>
+                            </config>
+                        </TCEforms>
+                    </settings.dbStats>
+                </el>
+            </ROOT>
+        </dbStats>
     </sheets>
 </T3DataStructure>

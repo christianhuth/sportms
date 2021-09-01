@@ -440,6 +440,7 @@ CREATE TABLE tx_sportms_domain_model_personprofile
     detail_link                tinyint(4) unsigned DEFAULT 0 NOT NULL,
 );
 
+#
 # TODO: add unique key back
 # UNIQUE KEY person_profile_sport(person, profile_type, sport)
 
@@ -485,13 +486,19 @@ CREATE TABLE tx_sportms_domain_model_season
 #
 CREATE TABLE tx_sportms_domain_model_sport
 (
-    label                 varchar(255)  DEFAULT NULL,
-    is_team_sport         tinyint(4) unsigned DEFAULT '0' NOT NULL,
-    is_individual_sport   tinyint(4) unsigned DEFAULT '0' NOT NULL,
-    sport_types           int(11) DEFAULT NULL,
-    sport_age_groups      int(11) DEFAULT NULL,
-    sport_position_groups int(11) DEFAULT NULL,
-    slug                  varchar(2048) DEFAULT ''
+    label                  varchar(255)  DEFAULT NULL,
+    is_team_sport          tinyint(4) unsigned DEFAULT '0' NOT NULL,
+    is_individual_sport    tinyint(4) unsigned DEFAULT '0' NOT NULL,
+    sport_types            int(11) DEFAULT NULL,
+    sport_age_groups       int(11) DEFAULT NULL,
+    sport_position_groups  int(11) DEFAULT NULL,
+    slug                   varchar(2048) DEFAULT '',
+    competition_detail_pid int(11) DEFAULT NULL,
+    competition_list_pid   int(11) DEFAULT NULL,
+    game_detail_pid        int(11) DEFAULT NULL,
+    game_list_pid          int(11) DEFAULT NULL,
+    team_detail_pid        int(11) DEFAULT NULL,
+    team_list_pid          int(11) DEFAULT NULL
 );
 
 #
@@ -567,7 +574,8 @@ CREATE TABLE tx_sportms_domain_model_team
     dummy           tinyint(4) unsigned DEFAULT '0' NOT NULL,
     detail_link     tinyint(4) unsigned DEFAULT '1' NOT NULL,
     team_seasons    int(11) DEFAULT NULL,
-    slug            varchar(2048) DEFAULT ''
+    slug            varchar(2048) DEFAULT '',
+    detail_pid      int(11) DEFAULT NULL
 );
 
 #
@@ -630,6 +638,7 @@ CREATE TABLE tx_sportms_domain_model_teamseasonsquadmember
     sorting              int(11) DEFAULT NULL,
 );
 
+#
 # TODO: add unique key back
 # UNIQUE KEY teamseason_personprofile(team_season, person_profile)
 

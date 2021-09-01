@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<T3DataStructure>
+    <sheets>
+        <base>EXT:sportms/Configuration/FlexForms/flexform_base.xml</base>
+        <season>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>
+                        LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_season
+                    </sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.season.seasons>
+                        <TCEforms>
+                            <label>Welche Saisons sollen berücksichtigt werden?</label>
+                            <config>
+                                <foreign_table>tx_sportms_domain_model_season</foreign_table>
+                                <foreign_table_where>ORDER BY tx_sportms_domain_model_season.label DESC</foreign_table_where>
+                                <renderType>selectMultipleSideBySide</renderType>
+                                <type>select</type>
+                            </config>
+                        </TCEforms>
+                    </settings.season.seasons>
+                </el>
+            </ROOT>
+        </season>
+    </sheets>
+</T3DataStructure>

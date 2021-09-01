@@ -17,7 +17,7 @@
             ],
             'iconfile' => 'EXT:sportms/Resources/Public/Icons/tx_sportms_domain_model_sport.svg',
             'label' => 'label',
-            'searchFields' => '',
+            'searchFields' => 'label',
             'title' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_sport',
             'tstamp' => 'tstamp',
             'versioningWS' => true,
@@ -33,13 +33,19 @@
                                     sport_position_groups,
                                 --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.tab.visibility,
                                     --palette--;LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.palette.visibility_general;visibility_general,
-                                    --palette--;LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.palette.visibility_detail;visibility_detail',
+                                    --palette--;LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.palette.visibility_detail;visibility_detail,
+                                    --palette--;LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_sport.palette.competition_pids;competition_pids,
+                                    --palette--;LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_sport.palette.game_pids;game_pids,
+                                    --palette--;LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_sport.palette.team_pids;team_pids',
             ],
         ],
         'palettes' => [
             'team_individual' => ['showitem' => 'is_team_sport, is_individual_sport'],
             'visibility_general' => ['showitem' => 'hidden, starttime, endtime'],
             'visibility_detail' => ['showitem' => 'slug'],
+            'competition_pids' => ['showitem' => 'competition_detail_pid, competition_list_pid'],
+            'game_pids' => ['showitem' => 'game_detail_pid, game_list_pid'],
+            'team_pids' => ['showitem' => 'team_detail_pid, team_list_pid'],
         ],
         'columns' => [
             
@@ -201,6 +207,108 @@
                     ],
                     'prependSlash' => false,
                     'type' => 'slug',
+                ],
+            ],
+            'competition_detail_pid' => [
+                'exclude' => true,
+                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.detail_pid',
+                'config' => [
+                    'allowed' => 'pages',
+                    'default' => 0,
+                    'internal_type' => 'db',
+                    'maxitems' => 1,
+                    'size' => 1,
+                    'suggestOptions' => [
+                        'default' => [
+                            'searchWholePhrase' => true,
+                        ],
+                    ],
+                    'type' => 'group',
+                ],
+            ],
+            'competition_list_pid' => [
+                'exclude' => true,
+                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.list_pid',
+                'config' => [
+                    'allowed' => 'pages',
+                    'default' => 0,
+                    'internal_type' => 'db',
+                    'maxitems' => 1,
+                    'size' => 1,
+                    'suggestOptions' => [
+                        'default' => [
+                            'searchWholePhrase' => true,
+                        ],
+                    ],
+                    'type' => 'group',
+                ],
+            ],
+            'game_detail_pid' => [
+                'exclude' => true,
+                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.detail_pid',
+                'config' => [
+                    'allowed' => 'pages',
+                    'default' => 0,
+                    'internal_type' => 'db',
+                    'maxitems' => 1,
+                    'size' => 1,
+                    'suggestOptions' => [
+                        'default' => [
+                            'searchWholePhrase' => true,
+                        ],
+                    ],
+                    'type' => 'group',
+                ],
+            ],
+            'game_list_pid' => [
+                'exclude' => true,
+                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.list_pid',
+                'config' => [
+                    'allowed' => 'pages',
+                    'default' => 0,
+                    'internal_type' => 'db',
+                    'maxitems' => 1,
+                    'size' => 1,
+                    'suggestOptions' => [
+                        'default' => [
+                            'searchWholePhrase' => true,
+                        ],
+                    ],
+                    'type' => 'group',
+                ],
+            ],
+            'team_detail_pid' => [
+                'exclude' => true,
+                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.detail_pid',
+                'config' => [
+                    'allowed' => 'pages',
+                    'default' => 0,
+                    'internal_type' => 'db',
+                    'maxitems' => 1,
+                    'size' => 1,
+                    'suggestOptions' => [
+                        'default' => [
+                            'searchWholePhrase' => true,
+                        ],
+                    ],
+                    'type' => 'group',
+                ],
+            ],
+            'team_list_pid' => [
+                'exclude' => true,
+                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.list_pid',
+                'config' => [
+                    'allowed' => 'pages',
+                    'default' => 0,
+                    'internal_type' => 'db',
+                    'maxitems' => 1,
+                    'size' => 1,
+                    'suggestOptions' => [
+                        'default' => [
+                            'searchWholePhrase' => true,
+                        ],
+                    ],
+                    'type' => 'group',
                 ],
             ],
         

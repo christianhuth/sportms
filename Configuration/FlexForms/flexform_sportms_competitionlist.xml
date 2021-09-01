@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<T3DataStructure>
+    <sheets>
+        <base>EXT:sportms/Configuration/FlexForms/flexform_base.xml</base>
+        <competition>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>
+                        LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_competition
+                    </sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.competition.competitions>
+                        <TCEforms>
+                            <label>Welche Wettbewerbe sollen berücksichtigt werden?</label>
+                            <config>
+                                <foreign_table>tx_sportms_domain_model_competition</foreign_table>
+                                <foreign_table_where>ORDER BY label ASC</foreign_table_where>
+                                <renderType>selectMultipleSideBySide</renderType>
+                                <type>select</type>
+                            </config>
+                        </TCEforms>
+                    </settings.competition.competitions>
+                    <settings.competitionType.selectbox.enabled>
+                        <TCEforms>
+                            <label>Selectbox für Wettbewerbsarten anzeigen?</label>
+                            <config>
+                                <default>1</default>
+                                <renderType>checkboxToggle</renderType>
+                                <type>check</type>
+                            </config>
+                        </TCEforms>
+                    </settings.competitionType.selectbox.enabled>
+                    <settings.competitionType.competitionTypes>
+                        <TCEforms>
+                            <label>Welche Wettbewerbsarten sollen berücksichtigt werden?</label>
+                            <config>
+                                <foreign_table>tx_sportms_domain_model_competitiontype</foreign_table>
+                                <foreign_table_where>ORDER BY label ASC</foreign_table_where>
+                                <renderType>selectMultipleSideBySide</renderType>
+                                <type>select</type>
+                            </config>
+                        </TCEforms>
+                    </settings.competitionType.competitionTypes>
+                </el>
+            </ROOT>
+        </competition>
+        <sport>EXT:sportms/Configuration/FlexForms/flexform_sport.xml</sport>
+    </sheets>
+</T3DataStructure>

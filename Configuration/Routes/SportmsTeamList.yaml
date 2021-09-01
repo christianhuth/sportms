@@ -1,22 +1,16 @@
 routeEnhancers:
-  sportmsClub:
+  sportmsTeamList:
     aspects:
       club_slug:
         type: PersistedAliasMapper
         tableName: tx_sportms_domain_model_club
         routeFieldName: slug
-      localizedModel:
+      localizedModel_Club:
         type: LocaleModifier
         default: 'club'
         localeMap:
           - locale: 'de_DE.*'
             value: 'verein'
-      localizedAction_sections:
-        type: LocaleModifier
-        default: 'sections'
-        localeMap:
-          - locale: 'de_DE.*'
-            value: 'abteilungen'
       localizedPage:
         type: LocaleModifier
         default: 'page'
@@ -27,20 +21,23 @@ routeEnhancers:
         type: StaticRangeMapper
         start: '1'
         end: '100'
-    defaults:
-      page: '0'
-    defaultController: 'Club::list'
+    defaultController: 'Team::list'
     extension: Sportms
-    plugin: Club
+    plugin: TeamList
     routes:
       - routePath: '/'
-        _controller: 'Club::list'
-      - routePath: '/{localizedPage}/{page}'
-        _controller: 'Club::list'
-        _arguments:
-          page: '@widget_0/currentPage'
-      - routePath: '/{localizedModel}/{club_slug}/{localizedAction_sections}'
-        _controller: 'Club::sections'
+        _controller: 'Team::list'
+      - routePath: '/{localizedModel_Club}/{club_slug}'
+        _controller: 'Team::list'
         _arguments:
           club_slug: club
+      - routePath: '/{localizedPage}/{page}'
+        _controller: 'Team::list'
+        _arguments:
+          page: '@widget_0/currentPage'
+      - routePath: '/{localizedModel_Club}/{club_slug}/{localizedPage}/{page}'
+        _controller: 'Team::list'
+        _arguments:
+          club_slug: club
+          page: '@widget_0/currentPage'
     type: Extbase

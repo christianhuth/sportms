@@ -3,11 +3,11 @@
 
 <f:if condition="{person.detailLink}">
 	<f:then>
-		<f:link.action action="playerPerformanceByClub"
+		<f:link.action action="performanceByClub"
 					   arguments="{person: person}"
-					   controller="Person" extensionName="Sportms"
-					   pageUid="{settings.person.playerPerformanceByClub.pid}"
-					   pluginName="person">
+					   controller="Player" extensionName="Sportms"
+					   pageUid="{settings.player.detail.pid}"
+					   pluginName="PlayerDetail">
 			<f:render section="label"
 					  arguments="{person: person, linkLabel: linkLabel}"/>
 		</f:link.action>

@@ -1,48 +1,93 @@
 mod.wizards.newContentElement.wizardItems.plugins {
 	elements {
-		sportms_club {
+		sportms_clubdetail {
 			iconIdentifier = sportms-ce-plugin-club-icon
-			title = LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:ce_plugin_club_title
-			description = LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:ce_plugin_club_description
+			title = LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:ce_plugin_clubdetail_title
+			description = LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:ce_plugin_clubdetail_description
 			tt_content_defValues {
 				CType = list
-				list_type = sportms_club
+				list_type = sportms_clubdetail
 			}
 		}
-		sportms_competition {
+		sportms_clublist {
+			iconIdentifier = sportms-ce-plugin-club-icon
+			title = LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:ce_plugin_clublist_title
+			description = LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:ce_plugin_clublist_description
+			tt_content_defValues {
+				CType = list
+				list_type = sportms_clublist
+			}
+		}
+		sportms_competitiondetail {
 			iconIdentifier = sportms-ce-plugin-competition-icon
-			title = LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:ce_plugin_competition_title
-			description = LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:ce_plugin_competition_description
+			title = LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:ce_plugin_competitiondetail_title
+			description = LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:ce_plugin_competitiondetail_description
 			tt_content_defValues {
 				CType = list
-				list_type = sportms_competition
+				list_type = sportms_competitiondetail
 			}
 		}
-		sportms_game {
+		sportms_competitionlist {
+			iconIdentifier = sportms-ce-plugin-competition-icon
+			title = LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:ce_plugin_competitionlist_title
+			description = LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:ce_plugin_competitionlist_description
+			tt_content_defValues {
+				CType = list
+				list_type = sportms_competitionlist
+			}
+		}
+		sportms_gamedetail {
 			iconIdentifier = sportms-ce-plugin-game-icon
-			title = LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:ce_plugin_game_title
-			description = LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:ce_plugin_game_description
+			title = LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:ce_plugin_gamedetail_title
+			description = LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:ce_plugin_gamedetail_description
 			tt_content_defValues {
 				CType = list
-				list_type = sportms_game
+				list_type = sportms_gamedetail
 			}
 		}
-		sportms_person {
+		sportms_gamelist {
+			iconIdentifier = sportms-ce-plugin-game-icon
+			title = LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:ce_plugin_gamelist_title
+			description = LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:ce_plugin_gamelist_description
+			tt_content_defValues {
+				CType = list
+				list_type = sportms_gamelist
+			}
+		}
+		sportms_personlist {
 			iconIdentifier = sportms-ce-plugin-person-icon
-			title = LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:ce_plugin_person_title
-			description = LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:ce_plugin_person_description
+			title = LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:ce_plugin_personlist_title
+			description = LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:ce_plugin_personlist_description
 			tt_content_defValues {
 				CType = list
-				list_type = sportms_person
+				list_type = sportms_personlist
 			}
 		}
-		sportms_team {
-			iconIdentifier = sportms-ce-plugin-team-icon
-			title = LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:ce_plugin_team_title
-			description = LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:ce_plugin_team_description
+		sportms_seasonlist {
+			iconIdentifier = sportms-ce-plugin-season-icon
+			title = LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:ce_plugin_seasonlist_title
+			description = LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:ce_plugin_seasonlist_description
 			tt_content_defValues {
 				CType = list
-				list_type = sportms_team
+				list_type = sportms_seasonlist
+			}
+		}
+		sportms_teamdetail {
+			iconIdentifier = sportms-ce-plugin-team-icon
+			title = LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:ce_plugin_teamdetail_title
+			description = LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:ce_plugin_teamdetail_description
+			tt_content_defValues {
+				CType = list
+				list_type = sportms_teamdetail
+			}
+		}
+		sportms_teamlist {
+			iconIdentifier = sportms-ce-plugin-team-icon
+			title = LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:ce_plugin_teamlist_title
+			description = LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:ce_plugin_teamlist_description
+			tt_content_defValues {
+				CType = list
+				list_type = sportms_teamlist
 			}
 		}
 	}

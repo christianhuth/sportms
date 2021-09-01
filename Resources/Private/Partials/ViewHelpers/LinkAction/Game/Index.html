@@ -1,36 +1,36 @@
 <html data-namespace-typo3-fluid="true"
-	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <f:if condition="{game.detailLink}">
-	<f:then>
-		<f:link.action action="index"
-					   arguments="{game: game}"
-					   controller="Game" extensionName="Sportms"
-					   pageUid="{settings.game.index.pid}"
-					   pluginName="game">
-			<f:render section="label"
-					  arguments="{game: game, linkLabel: linkLabel}"/>
-		</f:link.action>
-	</f:then>
-	<f:else>
-		<f:render section="label"
-				  arguments="{game: game, linkLabel: linkLabel}"/>
-	</f:else>
+    <f:then>
+        <f:link.action action="index"
+                       arguments="{game: game}"
+                       controller="Game" extensionName="Sportms"
+                       pageUid="{settings.game.detail.pid}"
+                       pluginName="GameDetail">
+            <f:render section="label"
+                      arguments="{game: game, linkLabel: linkLabel}"/>
+        </f:link.action>
+    </f:then>
+    <f:else>
+        <f:render section="label"
+                  arguments="{game: game, linkLabel: linkLabel}"/>
+    </f:else>
 </f:if>
 
 <f:section name="label">
-	<f:switch expression="{linkLabel}">
-		<f:case value="result">
-			<f:render partial="ViewHelpers/Game/ResultInTable"
-					  arguments="{game: game}"/>
-		</f:case>
-		<f:defaultCase>
+    <f:switch expression="{linkLabel}">
+        <f:case value="result">
+            <f:render partial="ViewHelpers/Game/ResultInTable"
+                      arguments="{game: game}"/>
+        </f:case>
+        <f:defaultCase>
 			<span>
 				<f:translate
-						key="tx_sportms_action.game.index"/>
+                        key="tx_sportms_action.game.index"/>
 			</span>
-		</f:defaultCase>
-	</f:switch>
+        </f:defaultCase>
+    </f:switch>
 </f:section>
 
 </html>

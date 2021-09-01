@@ -41,7 +41,7 @@
         'palettes' => [
             'sport' => ['showitem' => 'sport, sport_age_group, sport_age_level'],
             'visibility_general' => ['showitem' => 'hidden, starttime, endtime'],
-            'visibility_detail' => ['showitem' => 'detail_link, slug'],
+            'visibility_detail' => ['showitem' => 'detail_link, slug, detail_pid'],
         ],
         'columns' => [
             
@@ -228,6 +228,23 @@
                         ],
                     ],
                     'type' => 'slug',
+                ],
+            ],
+            'detail_pid' => [
+                'exclude' => true,
+                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_team.detail_pid',
+                'config' => [
+                    'allowed' => 'pages',
+                    'default' => 0,
+                    'internal_type' => 'db',
+                    'maxitems' => 1,
+                    'size' => 1,
+                    'suggestOptions' => [
+                        'default' => [
+                            'searchWholePhrase' => true,
+                        ],
+                    ],
+                    'type' => 'group',
                 ],
             ],
         

@@ -1,5 +1,5 @@
 <html data-namespace-typo3-fluid="true"
-	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <f:if condition="	{settings.sport.selectbox.enabled} ||
 					{settings.competitionType.selectbox.enabled} ||
@@ -8,38 +8,38 @@
 					{settings.team.selectbox.enabled} ||
 					{settings.season.selectbox.enabled} ||
 					{settings.competitionSeasonGameday.selectbox.enabled}">
-	<div class="tx-sportms-filter">
-		<f:form action="list" class="form-horizontal" controller="Game"
-				extensionName="Sportms" method="POST"
-				pageUid="{settings.game.list.pid}" pluginName="Game">
-			
-			<f:render
-					arguments="{options: sportSelectboxValues}"
-					partial="ViewHelpers/Form/Select/Sport"/>
-			<f:render
-					arguments="{options: sportAgeGroupSelectboxValues}"
-					partial="ViewHelpers/Form/Select/SportAgeGroup"/>
-			<f:render
-					arguments="{options: sportAgeLevelSelectboxValues}"
-					partial="ViewHelpers/Form/Select/SportAgeLevel"/>
-			<f:render
-					arguments="{options: competitionTypeSelectboxValues}"
-					partial="ViewHelpers/Form/Select/CompetitionType"/>
-			<f:render
-					arguments="{options: competitionSelectboxValues, groupedSelectbox: true}"
-					partial="ViewHelpers/Form/Select/Competition"/>
-			<f:render
-					arguments="{options: clubSelectboxValues}"
-					partial="ViewHelpers/Form/Select/Club"/>
-			<f:render
-					arguments="{options: teamSelectboxValues}"
-					partial="ViewHelpers/Form/Select/Team"/>
-			<f:render
-					arguments="{options: seasonSelectboxValues}"
-					partial="ViewHelpers/Form/Select/Season"/>
-			<f:render partial="ViewHelpers/Form/Submit"/>
-		</f:form>
-	</div>
+    <div class="tx-sportms-filter">
+        <f:form action="list" class="form-horizontal" controller="Game"
+                extensionName="Sportms" method="POST"
+                pageUid="{settings.game.list.pid}" pluginName="GameList">
+            
+            <f:render
+                    arguments="{options: sportSelectboxValues}"
+                    partial="ViewHelpers/Form/Select/Sport"/>
+            <f:render
+                    arguments="{options: sportAgeGroupSelectboxValues}"
+                    partial="ViewHelpers/Form/Select/SportAgeGroup"/>
+            <f:render
+                    arguments="{options: sportAgeLevelSelectboxValues}"
+                    partial="ViewHelpers/Form/Select/SportAgeLevel"/>
+            <f:render
+                    arguments="{options: competitionTypeSelectboxValues}"
+                    partial="ViewHelpers/Form/Select/CompetitionType"/>
+            <f:render
+                    arguments="{options: competitionSelectboxValues, groupedSelectbox: true}"
+                    partial="ViewHelpers/Form/Select/Competition"/>
+            <f:render
+                    arguments="{options: clubSelectboxValues}"
+                    partial="ViewHelpers/Form/Select/Club"/>
+            <f:render
+                    arguments="{options: teamSelectboxValues}"
+                    partial="ViewHelpers/Form/Select/Team"/>
+            <f:render
+                    arguments="{options: seasonSelectboxValues}"
+                    partial="ViewHelpers/Form/Select/Season"/>
+            <f:render partial="ViewHelpers/Form/Submit"/>
+        </f:form>
+    </div>
 </f:if>
 
 </html>

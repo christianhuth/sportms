@@ -1,0 +1,111 @@
+routeEnhancers:
+  sportmsTeamDetail:
+    aspects:
+      club_slug:
+        type: PersistedAliasMapper
+        tableName: tx_sportms_domain_model_club
+        routeFieldName: slug
+      localizedAction_seasonGamesByCompetition:
+        type: LocaleModifier
+        default: 'games-by-competition'
+        localeMap:
+          - locale: 'de_DE.*'
+            value: 'spielplan-nach-wettbewerb'
+      localizedAction_seasonGamesByDate:
+        type: LocaleModifier
+        default: 'games-by-date'
+        localeMap:
+          - locale: 'de_DE.*'
+            value: 'spielplan-nach-datum'
+      localizedAction_historyOfficials:
+        type: LocaleModifier
+        default: 'officialshistory'
+        localeMap:
+          - locale: 'de_DE.*'
+            value: 'funktionaershistorie'
+      localizedAction_historyRecordGames:
+        type: LocaleModifier
+        default: 'recordgames'
+        localeMap:
+          - locale: 'de_DE.*'
+            value: 'rekordspiele'
+      localizedAction_historyRecordPlayers:
+        type: LocaleModifier
+        default: 'recordplayers'
+        localeMap:
+          - locale: 'de_DE.*'
+            value: 'rekordspieler'
+      localizedAction_seasonIndex:
+        type: LocaleModifier
+        default: 'profile'
+        localeMap:
+          - locale: 'de_DE.*'
+            value: 'uebersicht'
+      localizedModel_Club:
+        type: LocaleModifier
+        default: 'club'
+        localeMap:
+          - locale: 'de_DE.*'
+            value: 'verein'
+      localizedSeason:
+        type: LocaleModifier
+        default: 'season'
+        localeMap:
+          - locale: 'de_DE.*'
+            value: 'saison'
+      page:
+        type: StaticRangeMapper
+        start: '1'
+        end: '100'
+      season_slug:
+        type: PersistedAliasMapper
+        tableName: tx_sportms_domain_model_season
+        routeFieldName: slug
+      team_slug:
+        type: PersistedAliasMapper
+        tableName: tx_sportms_domain_model_team
+        routeFieldName: slug
+    defaultController: 'Team::seasonIndex'
+    extension: Sportms
+    plugin: TeamDetail
+    routes:
+      - routePath: '/{team_slug}/{localizedAction_historyOfficials}'
+        _controller: 'Team::historyOfficials'
+        _arguments:
+          team_slug: team
+      - routePath: '/{team_slug}/{localizedAction_historyRecordGames}'
+        _controller: 'Team::historyRecordGames'
+        _arguments:
+          team_slug: team
+      - routePath: '/{team_slug}/{localizedAction_historyRecordPlayers}'
+        _controller: 'Team::historyRecordPlayers'
+        _arguments:
+          team_slug: team
+      - routePath: '{team_slug}/{localizedAction_seasonIndex}'
+        _controller: 'Team::seasonIndex'
+        _arguments:
+          team_slug: team
+      - routePath: '{team_slug}/{localizedAction_seasonIndex}/{localizedSeason}/{season_slug}'
+        _controller: 'Team::seasonIndex'
+        _arguments:
+          team_slug: team
+          season_slug: season
+      - routePath: '{team_slug}/{localizedAction_seasonGamesByCompetition}'
+        _controller: 'Team::seasonGamesByCompetition'
+        _arguments:
+          team_slug: team
+      - routePath: '{team_slug}/{localizedAction_seasonGamesByCompetition}/{localizedSeason}/{season_slug}'
+        _controller: 'Team::seasonGamesByCompetition'
+        _arguments:
+          team_slug: team
+          season_slug: season
+      - routePath: '{team_slug}/{localizedAction_seasonGamesByDate}'
+        _controller: 'Team::seasonGamesByDate'
+        _arguments:
+          team_slug: team
+      - routePath: '{team_slug}/{localizedAction_seasonGamesByDate}/{localizedSeason}/{season_slug}'
+        _controller: 'Team::seasonGamesByDate'
+        _arguments:
+          team_slug: team
+          season_slug: season
+    type: Extbase

@@ -10,13 +10,41 @@
 
 <f:if condition="{team.detailLink} && {teamSeason.detailLink}">
 	<f:then>
-		<f:link.action action="seasonGamesByCompetition"
-					   arguments="{season: season, team: team}"
-					   controller="Team" extensionName="Sportms"
-					   pageUid="{settings.team.seasonGamesByCompetition.pid}"
-					   pluginName="Team">
-			<f:render section="label"/>
-		</f:link.action>
+        <f:if condition="{team.detailPid}">
+            <f:then>
+                <f:variable name="actionPid" value="{team.detailPid}"/>
+            </f:then>
+            <f:else>
+                <f:if condition="{team.sport.teamDetailPid}">
+                    <f:then>
+                        <f:variable name="actionPid" value="{team.sport.teamDetailPid}"/>
+                    </f:then>
+                    <f:else>
+                        <f:variable name="actionPid" value="{settings.team.detail.pid}"/>
+                    </f:else>
+                </f:if>
+            </f:else>
+        </f:if>
+        <f:if condition="{settings.team.uid}">
+            <f:then>
+                <f:link.action action="seasonGamesByCompetition"
+                               arguments="{season: season}"
+                               controller="Team" extensionName="Sportms"
+                               pageUid="{actionPid}"
+                               pluginName="TeamDetail">
+                    <f:render section="label"/>
+                </f:link.action>
+            </f:then>
+            <f:else>
+                <f:link.action action="seasonGamesByCompetition"
+                               arguments="{season: season, team: team}"
+                               controller="Team" extensionName="Sportms"
+                               pageUid="{actionPid}"
+                               pluginName="TeamDetail">
+                    <f:render section="label"/>
+                </f:link.action>
+            </f:else>
+        </f:if>
 	</f:then>
 	<f:else>
 		<span>

@@ -1,42 +1,45 @@
 <html data-namespace-typo3-fluid="true"
-	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <f:if condition="{settings.competition.selectbox.enabled}">
-	<f:if condition="{settings.competitionType.selectbox.selected}">
-		<f:then>
-			<f:render partial="ViewHelpers/Form/Select/Generic"
-					  arguments="{model: 'competition', options: options, sortByOptionLabel: TRUE, value: settings.competition.selectbox.selected}"/>
-		</f:then>
-		<f:else>
-			
-			<f:if condition="{settings.sportAgeLevel.selectbox.selected}">
-				<f:then>
-					<f:render partial="ViewHelpers/Form/Select/Generic"
-							  arguments="{groupBy: 'competitionType', model: 'competition', options: options, sortByOptionLabel: TRUE, value: settings.competition.selectbox.selected}"/>
-				</f:then>
-				<f:else>
-					<f:if condition="{settings.sportAgeGroup.selectbox.selected}">
-						<f:then>
-							<f:render partial="ViewHelpers/Form/Select/Generic"
-									  arguments="{groupBy: 'sportAgeLevel', model: 'competition', options: options, sortByOptionLabel: TRUE, value: settings.competition.selectbox.selected}"/>
-						</f:then>
-						<f:else>
-							<f:if condition="{settings.sport.selectbox.selected}">
-								<f:then>
-									<f:render partial="ViewHelpers/Form/Select/Generic"
-											  arguments="{groupBy: 'sportAgeGroup', model: 'competition', options: options, sortByOptionLabel: TRUE, value: settings.competition.selectbox.selected}"/>
-								</f:then>
-								<f:else>
-									<f:render partial="ViewHelpers/Form/Select/Generic"
-											  arguments="{groupBy: 'sport', model: 'competition', options: options, sortByOptionLabel: TRUE, value: settings.competition.selectbox.selected}"/>
-								</f:else>
-							</f:if>
-						</f:else>
-					</f:if>
-				</f:else>
-			</f:if>
-		</f:else>
-	</f:if>
+    <f:if condition="{settings.competitionType.selectbox.selected}">
+        <f:then>
+            <f:render partial="ViewHelpers/Form/Select/Generic"
+                      arguments="{model: 'competition', options: options, sortByOptionLabel: TRUE, value: settings.competition.selectbox.selected}"/>
+        </f:then>
+        <f:else>
+            
+            <f:if condition="{settings.sportAgeLevel.selectbox.selected}">
+                <f:then>
+                    <f:render partial="ViewHelpers/Form/Select/Generic"
+                              arguments="{groupBy: 'competitionType', model: 'competition', options: options, sortByOptionLabel: TRUE, value: settings.competition.selectbox.selected}"/>
+                </f:then>
+                <f:else>
+                    <f:if condition="{settings.sportAgeGroup.selectbox.selected}">
+                        <f:then>
+                            <f:render partial="ViewHelpers/Form/Select/Generic"
+                                      arguments="{groupBy: 'sportAgeLevel', model: 'competition', options: options, sortByOptionLabel: TRUE, value: settings.competition.selectbox.selected}"/>
+                        </f:then>
+                        <f:else>
+                            <f:if
+                                    condition="{settings.sport.selectbox.selected} || !{settings.sport.selectbox.enabled}">
+                                <f:then>
+                                    <f:render
+                                            partial="ViewHelpers/Form/Select/Generic"
+                                            arguments="{groupBy: 'sportAgeGroup', model: 'competition', options: options, sortByOptionLabel: TRUE, value: settings.competition.selectbox.selected}"/>
+                                </f:then>
+                                <f:else>
+                                    <f:render
+                                            partial="ViewHelpers/Form/Select/Generic"
+                                            arguments="{groupBy: 'sport', model: 'competition', options: options, sortByOptionLabel: TRUE, value: settings.competition.selectbox.selected}"/>
+                                </f:else>
+                            </f:if>
+                        </f:else>
+                    </f:if>
+                </f:else>
+            </f:if>
+        </f:else>
+    </f:if>
 </f:if>
 
 </html>

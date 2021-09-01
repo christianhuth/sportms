@@ -2,7 +2,8 @@
 	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <f:if condition="{settings.sportAgeGroup.selectbox.enabled}">
-	<f:if condition="{settings.sport.selectbox.selected}">
+	<f:if
+            condition="{settings.sport.selectbox.selected} || !{settings.sport.selectbox.enabled}">
 		<f:then>
 			<f:render partial="ViewHelpers/Form/Select/Generic"
 					  arguments="{model: 'sportAgeGroup', options: options, sortByOptionLabel: TRUE, value: settings.sportAgeGroup.selectbox.selected}"/>

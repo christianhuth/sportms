@@ -2,7 +2,9 @@
 <T3DataStructure>
     <ROOT>
         <TCEforms>
-            <sheetTitle>Saison</sheetTitle>
+            <sheetTitle>
+                LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_season
+            </sheetTitle>
         </TCEforms>
         <type>array</type>
         <el>

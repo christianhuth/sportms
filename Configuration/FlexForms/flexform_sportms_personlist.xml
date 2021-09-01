@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<T3DataStructure>
+    <sheets>
+        <base>EXT:sportms/Configuration/FlexForms/flexform_base.xml</base>
+        <person>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>
+                        LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_person
+                    </sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.person.persons>
+                        <TCEforms>
+                            <label>Welche Personen sollen angezeigt werden?</label>
+                            <config>
+                                <foreign_table>tx_sportms_domain_model_person</foreign_table>
+                                <foreign_table_where>ORDER BY lastname ASC, firstname ASC</foreign_table_where>
+                                <renderType>selectMultipleSideBySide</renderType>
+                                <type>select</type>
+                            </config>
+                        </TCEforms>
+                    </settings.person.persons>
+                </el>
+            </ROOT>
+        </person>
+        <sport>EXT:sportms/Configuration/FlexForms/flexform_sport.xml</sport>
+    </sheets>
+</T3DataStructure>

@@ -42,6 +42,11 @@
          * @var boolean
          */
         protected $detailLink;
+    
+        /**
+         * @var int|null
+         */
+        protected $detailPid;
         
         /**
          * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Balumedien\Sportms\Domain\Model\TeamSeason>
@@ -178,6 +183,22 @@
         public function setDetailLink(bool $detailLink): void
         {
             $this->detailLink = $detailLink;
+        }
+    
+        /**
+         * @return int|null
+         */
+        public function getDetailPid(): ?int
+        {
+            return $this->detailPid;
+        }
+    
+        /**
+         * @param int|null $detailPid
+         */
+        public function setDetailPid(?int $detailPid): void
+        {
+            $this->detailPid = $detailPid;
         }
         
         /**
