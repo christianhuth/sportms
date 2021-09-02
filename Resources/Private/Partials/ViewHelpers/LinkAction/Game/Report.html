@@ -3,10 +3,18 @@
 
 <f:if condition="{game.detailLink}">
     <f:then>
+        <f:if condition="{game.sport.gameDetailPid}">
+            <f:then>
+                <f:variable name="actionPid" value="{game.sport.gameDetailPid}"/>
+            </f:then>
+            <f:else>
+                <f:variable name="actionPid" value="{settings.game.detail.pid}"/>
+            </f:else>
+        </f:if>
         <f:link.action action="report"
                        arguments="{game: game}"
                        controller="Game" extensionName="Sportms"
-                       pageUid="{settings.game.detail.pid}"
+                       pageUid="{actionPid}"
                        pluginName="GameDetail">
             <f:render section="label"
                       arguments="{game: game, linkLabel: linkLabel}"/>

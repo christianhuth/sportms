@@ -22,10 +22,20 @@
 <f:if condition="	{competition.detailLink} &&
 					{competitionSeason.detailLink}">
     <f:then>
+        <f:if condition="{competition.sport.competitionDetailPid}">
+            <f:then>
+                <f:variable name="actionPid"
+                            value="{competition.sport.competitionDetailPid}"/>
+            </f:then>
+            <f:else>
+                <f:variable name="actionPid"
+                            value="{settings.competition.detail.pid}"/>
+            </f:else>
+        </f:if>
         <f:link.action action="seasonGames"
                        arguments="{competition: competition, competitionSeasonGameday: competitionSeasonGameday, season: season}"
                        controller="Competition" extensionName="Sportms"
-                       pageUid="{settings.competition.detail.pid}"
+                       pageUid="{actionPid}"
                        pluginName="CompetitionDetail">
             <f:render section="label" arguments="{_all}"/>
         </f:link.action>

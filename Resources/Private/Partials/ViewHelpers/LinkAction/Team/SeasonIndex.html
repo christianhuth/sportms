@@ -15,6 +15,7 @@
                 <f:variable name="actionPid" value="{team.detailPid}"/>
             </f:then>
             <f:else>
+                <f:debug>{team.sport}</f:debug>
                 <f:if condition="{team.sport.teamDetailPid}">
                     <f:then>
                         <f:variable name="actionPid"
