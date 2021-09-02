@@ -5,6 +5,7 @@
     namespace ChristianKnell\Sportms\Domain\Model;
     
     use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
+    use TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy;
 
     /**
      * Game
@@ -58,7 +59,7 @@
         protected $time;
         
         /**
-         * @var \ChristianKnell\Sportms\Domain\Model\Venue|\TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy|null
+         * @var \ChristianKnell\Sportms\Domain\Model\Venue|LazyLoadingProxy|null
          * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
          */
         protected $venue;
@@ -79,7 +80,7 @@
         protected $periodDuration;
         
         /**
-         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\GamePeriod>|\TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy|null
+         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\GamePeriod>|LazyLoadingProxy|null
          * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
          * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
          */
@@ -236,21 +237,21 @@
         protected $resultFourthsFourthGuest;
         
         /**
-         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\GameResultSet>|\TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy|null
+         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\GameResultSet>|LazyLoadingProxy|null
          * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
          * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
          */
         protected $resultSets;
         
         /**
-         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\GameLineup>|\TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy|null
+         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\GameLineup>|LazyLoadingProxy|null
          * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
          * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
          */
         protected $gameLineupHomeStarts;
         
         /**
-         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\GameLineup>|\TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy|null
+         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\GameLineup>|LazyLoadingProxy|null
          * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
          * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
          */
@@ -267,14 +268,14 @@
         protected $trainerHome;
         
         /**
-         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\GameLineup>|\TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy|null
+         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\GameLineup>|LazyLoadingProxy|null
          * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
          * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
          */
         protected $gameLineupGuestStarts;
         
         /**
-         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\GameLineup>|\TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy|null
+         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\GameLineup>|LazyLoadingProxy|null
          * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
          * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
          */
@@ -291,35 +292,35 @@
         protected $trainerGuest;
         
         /**
-         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\GameChange>|\TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy|null
+         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\GameChange>|LazyLoadingProxy|null
          * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
          * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
          */
         protected $gameChanges;
         
         /**
-         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\GameGoal>|\TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy|null
+         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\GameGoal>|LazyLoadingProxy|null
          * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
          * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
          */
         protected $gameGoals;
         
         /**
-         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\GamePunishment>|\TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy|null
+         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\GamePunishment>|LazyLoadingProxy|null
          * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
          * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
          */
         protected $gamePunishments;
         
         /**
-         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\GameReferee>|\TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy|null
+         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\GameReferee>|LazyLoadingProxy|null
          * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
          * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
          */
         protected $gameReferees;
         
         /**
-         * @var \ChristianKnell\Sportms\Domain\Model\GameReport|\TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy|null
+         * @var \ChristianKnell\Sportms\Domain\Model\GameReport|LazyLoadingProxy|null
          * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
          * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
          */
@@ -516,7 +517,7 @@
         }
         
         /**
-         * @return Venue|\TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy|null
+         * @return Venue|LazyLoadingProxy|null
          */
         public function getVenue()
         {
@@ -524,7 +525,7 @@
         }
         
         /**
-         * @param Venue|\TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy|null $venue
+         * @param Venue|LazyLoadingProxy|null $venue
          */
         public function setVenue($venue): void
         {
@@ -580,7 +581,7 @@
         }
         
         /**
-         * @return \TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy|\TYPO3\CMS\Extbase\Persistence\ObjectStorage|null
+         * @return LazyLoadingProxy|\TYPO3\CMS\Extbase\Persistence\ObjectStorage|null
          */
         public function getGamePeriods()
         {
@@ -588,7 +589,7 @@
         }
         
         /**
-         * @param \TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy|\TYPO3\CMS\Extbase\Persistence\ObjectStorage|null $gamePeriods
+         * @param LazyLoadingProxy|\TYPO3\CMS\Extbase\Persistence\ObjectStorage|null $gamePeriods
          */
         public function setGamePeriods($gamePeriods): void
         {
@@ -1076,7 +1077,7 @@
         }
         
         /**
-         * @return \TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy|\TYPO3\CMS\Extbase\Persistence\ObjectStorage|null
+         * @return LazyLoadingProxy|\TYPO3\CMS\Extbase\Persistence\ObjectStorage|null
          */
         public function getResultSets()
         {
@@ -1084,7 +1085,7 @@
         }
         
         /**
-         * @param \TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy|\TYPO3\CMS\Extbase\Persistence\ObjectStorage|null $resultSets
+         * @param LazyLoadingProxy|\TYPO3\CMS\Extbase\Persistence\ObjectStorage|null $resultSets
          */
         public function setResultSets($resultSets): void
         {
@@ -1092,7 +1093,7 @@
         }
         
         /**
-         * @return \TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy|\TYPO3\CMS\Extbase\Persistence\ObjectStorage|null
+         * @return LazyLoadingProxy|\TYPO3\CMS\Extbase\Persistence\ObjectStorage|null
          */
         public function getGameLineupHomeStarts()
         {
@@ -1100,7 +1101,7 @@
         }
         
         /**
-         * @param \TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy|\TYPO3\CMS\Extbase\Persistence\ObjectStorage|null $gameLineupHomeStarts
+         * @param LazyLoadingProxy|\TYPO3\CMS\Extbase\Persistence\ObjectStorage|null $gameLineupHomeStarts
          */
         public function setGameLineupHomeStarts($gameLineupHomeStarts): void
         {
@@ -1108,7 +1109,7 @@
         }
         
         /**
-         * @return \TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy|\TYPO3\CMS\Extbase\Persistence\ObjectStorage|null
+         * @return LazyLoadingProxy|\TYPO3\CMS\Extbase\Persistence\ObjectStorage|null
          */
         public function getGameLineupHomeSubstitutes()
         {
@@ -1116,7 +1117,7 @@
         }
         
         /**
-         * @param \TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy|\TYPO3\CMS\Extbase\Persistence\ObjectStorage|null $gameLineupHomeSubstitutes
+         * @param LazyLoadingProxy|\TYPO3\CMS\Extbase\Persistence\ObjectStorage|null $gameLineupHomeSubstitutes
          */
         public function setGameLineupHomeSubstitutes($gameLineupHomeSubstitutes): void
         {
@@ -1156,7 +1157,7 @@
         }
         
         /**
-         * @return \TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy|\TYPO3\CMS\Extbase\Persistence\ObjectStorage|null
+         * @return LazyLoadingProxy|\TYPO3\CMS\Extbase\Persistence\ObjectStorage|null
          */
         public function getGameLineupGuestStarts()
         {
@@ -1164,7 +1165,7 @@
         }
         
         /**
-         * @param \TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy|\TYPO3\CMS\Extbase\Persistence\ObjectStorage|null $gameLineupGuestStarts
+         * @param LazyLoadingProxy|\TYPO3\CMS\Extbase\Persistence\ObjectStorage|null $gameLineupGuestStarts
          */
         public function setGameLineupGuestStarts($gameLineupGuestStarts): void
         {
@@ -1172,7 +1173,7 @@
         }
         
         /**
-         * @return \TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy|\TYPO3\CMS\Extbase\Persistence\ObjectStorage|null
+         * @return LazyLoadingProxy|\TYPO3\CMS\Extbase\Persistence\ObjectStorage|null
          */
         public function getGameLineupGuestSubstitutes()
         {
@@ -1180,7 +1181,7 @@
         }
         
         /**
-         * @param \TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy|\TYPO3\CMS\Extbase\Persistence\ObjectStorage|null $gameLineupGuestSubstitutes
+         * @param LazyLoadingProxy|\TYPO3\CMS\Extbase\Persistence\ObjectStorage|null $gameLineupGuestSubstitutes
          */
         public function setGameLineupGuestSubstitutes($gameLineupGuestSubstitutes): void
         {
@@ -1220,7 +1221,7 @@
         }
         
         /**
-         * @return \TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy|\TYPO3\CMS\Extbase\Persistence\ObjectStorage|null
+         * @return LazyLoadingProxy|\TYPO3\CMS\Extbase\Persistence\ObjectStorage|null
          */
         public function getGameChanges()
         {
@@ -1228,7 +1229,7 @@
         }
         
         /**
-         * @param \TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy|\TYPO3\CMS\Extbase\Persistence\ObjectStorage|null $gameChanges
+         * @param LazyLoadingProxy|\TYPO3\CMS\Extbase\Persistence\ObjectStorage|null $gameChanges
          */
         public function setGameChanges($gameChanges): void
         {
@@ -1247,7 +1248,7 @@
         }
         
         /**
-         * @return \TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy|\TYPO3\CMS\Extbase\Persistence\ObjectStorage|null
+         * @return LazyLoadingProxy|\TYPO3\CMS\Extbase\Persistence\ObjectStorage|null
          */
         public function getGameGoals()
         {
@@ -1256,7 +1257,7 @@
         }
         
         /**
-         * @param \TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy|\TYPO3\CMS\Extbase\Persistence\ObjectStorage|null $gameGoals
+         * @param LazyLoadingProxy|\TYPO3\CMS\Extbase\Persistence\ObjectStorage|null $gameGoals
          */
         public function setGameGoals($gameGoals): void
         {
@@ -1283,7 +1284,7 @@
         }
         
         /**
-         * @return \TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy|\TYPO3\CMS\Extbase\Persistence\ObjectStorage|null
+         * @return LazyLoadingProxy|\TYPO3\CMS\Extbase\Persistence\ObjectStorage|null
          */
         public function getGamePunishments()
         {
@@ -1291,7 +1292,7 @@
         }
         
         /**
-         * @param \TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy|\TYPO3\CMS\Extbase\Persistence\ObjectStorage|null $gamePunishments
+         * @param LazyLoadingProxy|\TYPO3\CMS\Extbase\Persistence\ObjectStorage|null $gamePunishments
          */
         public function setGamePunishments($gamePunishments): void
         {
@@ -1299,7 +1300,7 @@
         }
         
         /**
-         * @return \TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy|\TYPO3\CMS\Extbase\Persistence\ObjectStorage|null
+         * @return LazyLoadingProxy|\TYPO3\CMS\Extbase\Persistence\ObjectStorage|null
          */
         public function getGameReferees()
         {
@@ -1307,7 +1308,7 @@
         }
         
         /**
-         * @param \TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy|\TYPO3\CMS\Extbase\Persistence\ObjectStorage|null $gameReferees
+         * @param LazyLoadingProxy|\TYPO3\CMS\Extbase\Persistence\ObjectStorage|null $gameReferees
          */
         public function setGameReferees($gameReferees): void
         {
@@ -1315,15 +1316,18 @@
         }
         
         /**
-         * @return GameReport|\TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy|null
+         * @return GameReport|LazyLoadingProxy|null
          */
         public function getGameReport()
         {
+            if($this->gameReport instanceof LazyLoadingProxy) {
+                $this->gameReport->_loadRealInstance();
+            }
             return $this->gameReport;
         }
         
         /**
-         * @param GameReport|\TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy|null $gameReport
+         * @param GameReport|LazyLoadingProxy|null $gameReport
          */
         public function setGameReport($gameReport): void
         {

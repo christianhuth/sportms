@@ -746,6 +746,9 @@
             <trans-unit id="tx_sportms_domain_model_gamereport.author">
                 <source>Autor</source>
             </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gamereport.unavailable">
+                <source>Leider kein Spielbericht vorhanden.</source>
+            </trans-unit>
 
 
         <!-- Domain Model GameResultSet -->

@@ -19,20 +19,12 @@
                     </h3>
                     <f:format.html>{game.gameReport.text}</f:format.html>
                     <p>von {game.gameReport.author}
-                        <f:spaceless>
-                            (
-                            <f:format.date format="{settings.format.date.long}">
-                                {game.gameReport.date}
-                            </f:format.date>
-                            )
-                        </f:spaceless>
+                       ({game.gameReport.date -> f:format.date(format:
+                       settings.format.date.long)})
                     </p>
                 </f:then>
                 <f:else>
-                    <f:comment>
-                        <!-- TODO: USE LOCALIZATION -->
-                    </f:comment>
-                    Leider kein Spielbericht vorhanden
+                    <f:translate key="tx_sportms_domain_model_gamereport.unavailable"/>
                 </f:else>
             </f:if>
         
