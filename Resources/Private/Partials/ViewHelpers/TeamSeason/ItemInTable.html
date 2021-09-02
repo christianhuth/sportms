@@ -8,10 +8,27 @@
                 <f:then>
                     <f:if condition="{teamSeason.team.detailPid}">
                         <f:then>
+                            <f:variable name="actionPid" value="{teamSeason.team.detailPid}"/>
+                        </f:then>
+                        <f:else>
+                            <f:if condition="{teamSeason.team.sport.teamDetailPid}">
+                                <f:then>
+                                    <f:variable name="actionPid"
+                                                value="{teamSeason.team.sport.teamDetailPid}"/>
+                                </f:then>
+                                <f:else>
+                                    <f:variable name="actionPid"
+                                                value="{settings.team.detail.pid}"/>
+                                </f:else>
+                            </f:if>
+                        </f:else>
+                    </f:if>
+                    <f:if condition="{teamSeason.team.detailPid}">
+                        <f:then>
                             <f:link.action action="seasonIndex"
                                            arguments="{season: teamSeason.season}"
                                            controller="Team" extensionName="Sportms"
-                                           pageUid="{teamSeason.team.detailPid}"
+                                           pageUid="{actionPid}"
                                            pluginName="TeamDetail">
                                 <f:render arguments="{teamSeason: teamSeason}"
                                           partial="ViewHelpers/TeamSeason/Label"/>
@@ -21,7 +38,7 @@
                             <f:link.action action="seasonIndex"
                                            arguments="{season: teamSeason.season, team: teamSeason.team}"
                                            controller="Team" extensionName="Sportms"
-                                           pageUid="{settings.team.detail.pid}"
+                                           pageUid="{actionPid}"
                                            pluginName="TeamDetail">
                                 <f:render arguments="{teamSeason: teamSeason}"
                                           partial="ViewHelpers/TeamSeason/Label"/>
@@ -43,9 +60,26 @@
                 <f:then>
                     <f:if condition="{team.detailPid}">
                         <f:then>
+                            <f:variable name="actionPid" value="{team.detailPid}"/>
+                        </f:then>
+                        <f:else>
+                            <f:if condition="{team.sport.teamDetailPid}">
+                                <f:then>
+                                    <f:variable name="actionPid"
+                                                value="{team.sport.teamDetailPid}"/>
+                                </f:then>
+                                <f:else>
+                                    <f:variable name="actionPid"
+                                                value="{settings.team.detail.pid}"/>
+                                </f:else>
+                            </f:if>
+                        </f:else>
+                    </f:if>
+                    <f:if condition="{team.detailPid}">
+                        <f:then>
                             <f:link.action action="seasonIndex"
                                            controller="Team" extensionName="Sportms"
-                                           pageUid="{team.detailPid}"
+                                           pageUid="{actionPid}"
                                            pluginName="TeamDetail">
                                 <f:render arguments="{team: team}"
                                           partial="ViewHelpers/Team/Label"/>
@@ -57,7 +91,7 @@
                             <f:link.action action="seasonIndex"
                                            arguments="{team: team}"
                                            controller="Team" extensionName="Sportms"
-                                           pageUid="{settings.team.detail.pid}"
+                                           pageUid="{actionPid}"
                                            pluginName="TeamDetail">
                                 <f:render arguments="{team: team}"
                                           partial="ViewHelpers/Team/Label"/>

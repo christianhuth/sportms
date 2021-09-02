@@ -15,7 +15,6 @@
                 <f:variable name="actionPid" value="{team.detailPid}"/>
             </f:then>
             <f:else>
-                <f:debug>{team.sport}</f:debug>
                 <f:if condition="{team.sport.teamDetailPid}">
                     <f:then>
                         <f:variable name="actionPid"
@@ -28,7 +27,7 @@
                 </f:if>
             </f:else>
         </f:if>
-        <f:if condition="{settings.team.uid}">
+        <f:if condition="{team.detailPid}">
             <f:then>
                 <f:link.action action="seasonIndex"
                                arguments="{season: season}"

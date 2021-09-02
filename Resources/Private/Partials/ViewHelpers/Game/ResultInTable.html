@@ -26,7 +26,14 @@
 <f:section name="game_rating_1">
 	<f:if condition="!{game.resultEndAdditional}">
 		<f:then>
-			{game.resultEndRegularHome} : {game.resultEndRegularGuest}
+            <f:if condition="">
+                <f:then>
+                    {game.resultEndRegularHome} : {game.resultEndRegularGuest}
+                </f:then>
+                <f:else>
+                    unbekannt
+                </f:else>
+            </f:if>
 		</f:then>
 		<f:else>
 			<f:if condition="{game.resultEndPenaltyHome} | {game.resultEndPenaltyGuest}">

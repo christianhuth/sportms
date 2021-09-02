@@ -6,7 +6,8 @@
     
     use ChristianKnell\Sportms\Domain\Model\Team;
     use ChristianKnell\Sportms\Domain\Model\TeamSeason;
-
+    use TYPO3\CMS\Extbase\Persistence\Generic\Typo3QuerySettings;
+    
     class TeamSeasonRepository extends SportMSBaseRepository
     {
         
@@ -18,6 +19,29 @@
             'team.label' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
             'season.label' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING,
         ];
+        
+        // Repository wide settings
+        public function initializeObject()
+        {
+            $querySettings = new Typo3QuerySettings();
+            
+            // don't add the pid constraint
+            $querySettings->setRespectStoragePage(false);
+            
+            // define the enablecolumn fields to be ignored, true ignores all of them
+            $querySettings->setIgnoreEnableFields(false);
+            
+            // define single fields to be ignored
+            // $querySettings->setEnableFieldsToBeIgnored(['disabled', 'starttime']);
+            
+            // add deleted rows to the result
+            $querySettings->setIncludeDeleted(false);
+            
+            // don't add sys_language_uid constraint
+            $querySettings->setRespectSysLanguage(false);
+            
+            $this->setDefaultQuerySettings($querySettings);
+        }
         
         /**
          * @param string|null $sportUids
@@ -119,8 +143,11 @@
         public function findByTeam(Team $team)
         {
             $query = $this->createQuery();
+            # TODO: FIX THIS AND REMOVE LINE 150
+            $query->getQuerySettings()->setIgnoreEnableFields(false);
             $constraints = [];
             $constraints[] = $query->equals('team', $team);
+            $constraints[] = $query->equals('hidden', 0);
             $query->matching($query->logicalAnd($constraints));
             return $query->execute();
         }

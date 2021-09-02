@@ -5,7 +5,7 @@
     namespace ChristianKnell\Sportms\Domain\Model;
     
     use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
-
+    
     /**
      * TeamSeason
      */
@@ -53,9 +53,14 @@
         protected $teamSeasonSquadCaptains;
         
         /**
-         * @var    boolean
+         * @var boolean
          */
         protected $detailLink;
+        
+        /**
+         * @var boolean
+         */
+        protected $hidden;
         
         /**
          * TeamSeason constructor.
@@ -233,6 +238,22 @@
         public function setDetailLink($detailLink)
         {
             $this->detailLink = $detailLink;
+        }
+    
+        /**
+         * @return bool
+         */
+        public function isHidden(): bool
+        {
+            return $this->hidden;
+        }
+    
+        /**
+         * @param bool $hidden
+         */
+        public function setHidden(bool $hidden): void
+        {
+            $this->hidden = $hidden;
         }
         
     }
