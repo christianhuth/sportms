@@ -370,6 +370,7 @@
 }
 
 .tx-sportms .tx-sportms-game-index h4 {
+    border: none;
     display: block;
     font-weight: bold;
     text-align: center;
