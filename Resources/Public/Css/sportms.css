@@ -298,6 +298,10 @@
     padding: 0;
 }
 
+.tx-sportms .tx-sportms-header .tx-sportms-header-box a {
+    color: var(--color1);
+}
+
 .tx-sportms .tx-sportms-header .tx-sportms-header-competition,
 .tx-sportms .tx-sportms-header .tx-sportms-game-header-result,
 .tx-sportms .tx-sportms-header .tx-sportms-header-team {
