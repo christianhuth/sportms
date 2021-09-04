@@ -294,11 +294,12 @@
     display: inline-block;
     font-weight: bolder;
     line-height: 1.5em;
-    margin: 10px 0 0 0;
-    padding: 0;
+    margin: 10px 0 0 0 !important;
+    padding: 0 !important;
 }
 
-.tx-sportms .tx-sportms-header .tx-sportms-header-box a {
+.tx-sportms .tx-sportms-header .tx-sportms-header-box a,
+.tx-sportms .tx-sportms-header .tx-sportms-header-box a * {
     color: var(--color1);
 }
 
