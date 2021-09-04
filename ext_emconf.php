@@ -20,7 +20,7 @@
 		'constraints' => [
 			'depends' => [
 				'static_info_tables' => '',
-				'typo3' => '9.5',
+				'typo3' => '10.4',
 			],
 			'conflicts' => [
 			],

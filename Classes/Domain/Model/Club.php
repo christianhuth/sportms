@@ -2,8 +2,6 @@
     
     declare(strict_types=1);
     
-    declare(strict_types=1);
-    
     namespace ChristianKnell\Sportms\Domain\Model;
     
     /**
@@ -323,7 +321,7 @@
         /**
          * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
          */
-        public function getHomeVenue()
+        public function getHomeVenues()
         {
             return $this->homeVenues;
         }

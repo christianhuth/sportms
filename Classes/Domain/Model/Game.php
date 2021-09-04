@@ -59,60 +59,59 @@
         protected $time;
         
         /**
-         * @var \ChristianKnell\Sportms\Domain\Model\Venue|LazyLoadingProxy|null
-         * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
+         * @var Venue
          */
         protected $venue;
         
         /**
-         * @var int|null
+         * @var int
          */
         protected $spectators;
         
         /**
-         * @var int|null
+         * @var int
          */
         protected $periodCount;
         
         /**
-         * @var int|null
+         * @var int
          */
         protected $periodDuration;
         
         /**
-         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\GamePeriod>|LazyLoadingProxy|null
+         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\GamePeriod>
          * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
          * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
          */
         protected $gamePeriods;
         
         /**
-         * @var int|null
+         * @var int
          */
         protected $gameRating;
         
         /**
-         * @var int|null
+         * @var int
          */
         protected $resultSpecialHome;
         
         /**
-         * @var int|null
+         * @var int
          */
         protected $resultSpecialGuest;
         
         /**
-         * @var int|null
+         * @var int
          */
         protected $resultSpecialReason;
         
         /**
-         * @var int|null
+         * @var int
          */
         protected $resultEndRegularHome;
         
         /**
-         * @var int|null
+         * @var int
          */
         protected $resultEndRegularGuest;
         
@@ -122,22 +121,22 @@
         protected $resultEndAdditional;
         
         /**
-         * @var int|null
+         * @var int
          */
         protected $resultEndOvertimeHome;
         
         /**
-         * @var int|null
+         * @var int
          */
         protected $resultEndOvertimeGuest;
         
         /**
-         * @var int|null
+         * @var int
          */
         protected $resultEndPenaltyHome;
         
         /**
-         * @var int|null
+         * @var int
          */
         protected $resultEndPenaltyGuest;
         
@@ -147,180 +146,180 @@
         protected $resultType;
         
         /**
-         * @var int|null
+         * @var int
          */
         protected $resultHalfsFirstHome;
         
         /**
-         * @var int|null
+         * @var int
          */
         protected $resultHalfsFirstGuest;
         
         /**
-         * @var int|null
+         * @var int
          */
         protected $resultHalfsSecondHome;
         
         /**
-         * @var int|null
+         * @var int
          */
         protected $resultHalfsSecondGuest;
         
         /**
-         * @var int|null
+         * @var int
          */
         protected $resultThirdsFirstHome;
         
         /**
-         * @var int|null
+         * @var int
          */
         protected $resultThirdsFirstGuest;
         
         /**
-         * @var int|null
+         * @var int
          */
         protected $resultThirdsSecondHome;
         
         /**
-         * @var int|null
+         * @var int
          */
         protected $resultThirdsSecondGuest;
         
         /**
-         * @var int|null
+         * @var int
          */
         protected $resultThirdsThirdHome;
         
         /**
-         * @var int|null
+         * @var int
          */
         protected $resultThirdsThirdGuest;
         
         /**
-         * @var int|null
+         * @var int
          */
         protected $resultFourthsFirstHome;
         
         /**
-         * @var int|null
+         * @var int
          */
         protected $resultFourthsFirstGuest;
         
         /**
-         * @var int|null
+         * @var int
          */
         protected $resultFourthsSecondHome;
         
         /**
-         * @var int|null
+         * @var int
          */
         protected $resultFourthsSecondGuest;
         
         /**
-         * @var int|null
+         * @var int
          */
         protected $resultFourthsThirdHome;
         
         /**
-         * @var int|null
+         * @var int
          */
         protected $resultFourthsThirdGuest;
         
         /**
-         * @var int|null
+         * @var int
          */
         protected $resultFourthsFourthHome;
         
         /**
-         * @var int|null
+         * @var int
          */
         protected $resultFourthsFourthGuest;
         
         /**
-         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\GameResultSet>|LazyLoadingProxy|null
+         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\GameResultSet>
          * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
          * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
          */
         protected $resultSets;
         
         /**
-         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\GameLineup>|LazyLoadingProxy|null
+         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\GameLineup>
          * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
          * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
          */
         protected $gameLineupHomeStarts;
         
         /**
-         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\GameLineup>|LazyLoadingProxy|null
+         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\GameLineup>
          * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
          * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
          */
         protected $gameLineupHomeSubstitutes;
         
         /**
-         * @var \ChristianKnell\Sportms\Domain\Model\Person|null
+         * @var \ChristianKnell\Sportms\Domain\Model\Person
          */
         protected $captainHome;
         
         /**
-         * @var \ChristianKnell\Sportms\Domain\Model\Person|null
+         * @var \ChristianKnell\Sportms\Domain\Model\Person
          */
         protected $trainerHome;
         
         /**
-         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\GameLineup>|LazyLoadingProxy|null
+         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\GameLineup>
          * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
          * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
          */
         protected $gameLineupGuestStarts;
         
         /**
-         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\GameLineup>|LazyLoadingProxy|null
+         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\GameLineup>
          * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
          * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
          */
         protected $gameLineupGuestSubstitutes;
         
         /**
-         * @var \ChristianKnell\Sportms\Domain\Model\Person|null
+         * @var \ChristianKnell\Sportms\Domain\Model\Person
          */
         protected $captainGuest;
         
         /**
-         * @var \ChristianKnell\Sportms\Domain\Model\Person|null
+         * @var \ChristianKnell\Sportms\Domain\Model\Person
          */
         protected $trainerGuest;
         
         /**
-         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\GameChange>|LazyLoadingProxy|null
+         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\GameChange>
          * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
          * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
          */
         protected $gameChanges;
         
         /**
-         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\GameGoal>|LazyLoadingProxy|null
+         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\GameGoal>
          * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
          * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
          */
         protected $gameGoals;
         
         /**
-         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\GamePunishment>|LazyLoadingProxy|null
+         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\GamePunishment>
          * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
          * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
          */
         protected $gamePunishments;
         
         /**
-         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\GameReferee>|LazyLoadingProxy|null
+         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\GameReferee>
          * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
          * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
          */
         protected $gameReferees;
         
         /**
-         * @var \ChristianKnell\Sportms\Domain\Model\GameReport|LazyLoadingProxy|null
+         * @var \ChristianKnell\Sportms\Domain\Model\GameReport
          * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
          * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
          */

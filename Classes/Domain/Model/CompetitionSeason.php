@@ -68,7 +68,7 @@
         /**
          * @return \ChristianKnell\Sportms\Domain\Model\Competition
          */
-        public function getCompetition()
+        public function getCompetition(): Competition
         {
             return $this->competition;
         }
