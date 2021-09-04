@@ -26,7 +26,8 @@
 <f:section name="game_rating_1">
 	<f:if condition="!{game.resultEndAdditional}">
 		<f:then>
-            <f:if condition="">
+            <f:if
+                    condition="({game.resultEndRegularHome}) >= 0 && ({game.resultEndRegularGuest} >= 0)">
                 <f:then>
                     {game.resultEndRegularHome} : {game.resultEndRegularGuest}
                 </f:then>
