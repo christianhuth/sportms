@@ -896,6 +896,7 @@
     }
 
     .tx-sportms .tx-sportms-game-header .tx-sportms-header-box.tx-sportms-header-team h3 {
+        border: none;
         display: inline-block;
         font-size: 85%;
         font-weight: bolder;
