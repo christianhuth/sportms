@@ -290,6 +290,10 @@
 }
 
 .tx-sportms .tx-sportms-header .tx-sportms-header-box h3 {
+    border: none;
+    display: inline-block;
+    font-weight: bolder;
+    line-height: 1.5em;
     margin: 10px 0 0 0;
     padding: 0;
 }
@@ -896,13 +900,7 @@
     }
 
     .tx-sportms .tx-sportms-game-header .tx-sportms-header-box.tx-sportms-header-team h3 {
-        border: none;
-        display: inline-block;
         font-size: 85%;
-        font-weight: bolder;
-        line-height: 1.5em;
-        margin: 10px 0 0 0;
-        padding: 0;
     }
 
     .tx-sportms .tx-sportms-header .tx-sportms-game-header-result {
