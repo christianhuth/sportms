@@ -848,8 +848,8 @@
 }
 
 .tx-sportms .tx-sportms-header .tx-sportms-header-box a:hover img {
-    -webkit-transform: none;
-    transform: none;
+    -webkit-transform: none !important;
+    transform: none !important;
 }
 
 .tx-sportms-table-left .tx-sportms-club-in-table .tx-sportms-club-label,
