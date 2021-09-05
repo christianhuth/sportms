@@ -847,7 +847,7 @@
     grid-column-end: 2;
 }
 
-.tx-sportms .tx-sportms-header a:hover img {
+.tx-sportms .tx-sportms-header .tx-sportms-header-box a:hover img {
     -webkit-transform: none;
     transform: none;
 }
