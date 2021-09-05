@@ -847,6 +847,11 @@
     grid-column-end: 2;
 }
 
+.tx-sportms .tx-sportms-header a:hover img {
+    -webkit-transform: none;
+    transform: none;
+}
+
 .tx-sportms-table-left .tx-sportms-club-in-table .tx-sportms-club-label,
 .tx-sportms-table-right .tx-sportms-club-in-table .tx-sportms-club-logo,
 .tx-sportms-table-left .tx-sportms-team-in-table .tx-sportms-team-label,
