@@ -6,9 +6,15 @@
     <thead>
     <tr>
         <th class="tx-sportms-table-center">#</th>
-        <th class="tx-sportms-table-left">Person</th>
-        <th class="tx-sportms-table-center">Nationalität</th>
-        <th class="tx-sportms-table-center">Tore</th>
+        <th>
+            <f:translate key="tx_sportms_domain_model_person"/>
+        </th>
+        <th>
+            <f:translate key="tx_sportms_domain_model_person.nationality"/>
+        </th>
+        <th>
+            <f:translate key="tx_sportms_domain_model_gamegoal.plural"/>
+        </th>
     </tr>
     </thead>
     <tbody>
@@ -21,8 +27,8 @@
                     </td>
                     <td class="tx-sportms-table-left">
                         <f:render
-                                partial="ViewHelpers/LinkAction/Person/PlayerProfile"
-                                arguments="{linkLabel: 'name', personProfile: playerWithMostGoal.person}"/>
+                                partial="ViewHelpers/Person/ItemInTable"
+                                arguments="{personProfile: playerWithMostGoal.person}"/>
                     </td>
                     <td class="tx-sportms-table-center">
                         <f:render

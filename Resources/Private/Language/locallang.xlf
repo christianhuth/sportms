@@ -593,6 +593,9 @@
             <trans-unit id="tx_sportms_domain_model_gamegoal.assist">
                 <source>Vorlagengeber</source>
             </trans-unit>
+            <trans-unit id="tx_sportms_domain_model_gamegoal.assists">
+                <source>Vorlagen</source>
+            </trans-unit>
             <trans-unit id="tx_sportms_domain_model_gamegoal.own_goal">
                 <source>Eigentor?</source>
             </trans-unit>

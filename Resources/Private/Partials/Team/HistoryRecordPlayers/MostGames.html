@@ -6,14 +6,15 @@
     <thead>
     <tr>
         <th class="tx-sportms-table-center">#</th>
-        <th class="tx-sportms-table-left">Person</th>
-        <th class="tx-sportms-table-center">Nationalität</th>
-        <th class="tx-sportms-table-center">Spiele</th>
-        <f:comment>
-            # TODO: add both values again
-            <th class="tx-sportms-table-center">Startformation</th>
-            <th class="tx-sportms-table-center">Quote</th>
-        </f:comment>
+        <th>
+            <f:translate key="tx_sportms_domain_model_person"/>
+        </th>
+        <th>
+            <f:translate key="tx_sportms_domain_model_person.nationality"/>
+        </th>
+        <th>
+            <f:translate key="tx_sportms_domain_model_game.plural"/>
+        </th>
     </tr>
     </thead>
     <tbody>
@@ -26,8 +27,8 @@
                     </td>
                     <td class="tx-sportms-table-left">
                         <f:render
-                                partial="ViewHelpers/LinkAction/Person/PlayerProfile"
-                                arguments="{linkLabel: 'name', personProfile: playerWithMostGames.person}"/>
+                                partial="ViewHelpers/Person/ItemInTable"
+                                arguments="{personProfile: playerWithMostGames.person}"/>
                     </td>
                     <td class="tx-sportms-table-center">
                         <f:render
