@@ -200,6 +200,9 @@
                         'useSortable' => 1,
                     ],
                     'foreign_field' => 'foreign_uid',
+                    'foreign_match_fields' => [
+                        'foreign_table' => 'tx_sportms_domain_model_club'
+                    ],
                     'foreign_sortby' => 'sorting',
                     'foreign_table' => 'tx_sportms_domain_model_address',
                     'foreign_table_field' => 'foreign_table',
