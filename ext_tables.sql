@@ -438,11 +438,8 @@ CREATE TABLE tx_sportms_domain_model_personprofile
     profile_images             int(11) DEFAULT NULL,
     sorting                    int(11) DEFAULT '0' NOT NULL,
     detail_link                tinyint(4) unsigned DEFAULT 0 NOT NULL,
+    UNIQUE KEY person_profile_sport(person, profile_type, sport)
 );
-
-#
-# TODO: add unique key back
-# UNIQUE KEY person_profile_sport(person, profile_type, sport)
 
 #
 # Table structure for table 'tx_sportms_domain_model_phone'
@@ -636,11 +633,9 @@ CREATE TABLE tx_sportms_domain_model_teamseasonsquadmember
     leaving              tinyint(4) unsigned DEFAULT '0' NOT NULL,
     hidden_in_squad_list smallint(5) unsigned NOT NULL DEFAULT '0',
     sorting              int(11) DEFAULT NULL,
+    UNIQUE KEY teamseason_personprofile(team_season, person_profile)
 );
 
-#
-# TODO: add unique key back
-# UNIQUE KEY teamseason_personprofile(team_season, person_profile)
 
 #
 # Table structure for table 'tx_sportms_domain_model_url'
