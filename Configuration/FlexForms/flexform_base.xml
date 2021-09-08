@@ -32,12 +32,6 @@
                         <type>select</type>
                         <renderType>selectSingle</renderType>
                         <items type="array">
-                            <numIndex index="1" type="array">
-                                <numIndex index="0">
-                                    LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_flexform.sheet.general.recursive.I.inherit
-                                </numIndex>
-                                <numIndex index="1"></numIndex>
-                            </numIndex>
                             <numIndex index="2" type="array">
                                 <numIndex index="0">
                                     LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:recursive.I.0
