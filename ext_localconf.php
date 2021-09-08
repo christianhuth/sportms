@@ -11,37 +11,37 @@
     # Configure Plugins and their allowed Actions
     $pluginNamesAndTheirActions = [];
     $pluginNamesAndTheirActions[0]['name'] = 'ClubDetail';
-    $pluginNamesAndTheirActions[0]['cacheableActions'] = ['Club' => 'sections'];
+    $pluginNamesAndTheirActions[0]['cacheableActions'] = [\ChristianKnell\Sportms\Controller\ClubController::class => 'sections'];
     $pluginNamesAndTheirActions[0]['nonCacheableActions'] = [];
     $pluginNamesAndTheirActions[1]['name'] = 'ClubList';
-    $pluginNamesAndTheirActions[1]['cacheableActions'] = ['Club' => 'list'];
+    $pluginNamesAndTheirActions[1]['cacheableActions'] = [\ChristianKnell\Sportms\Controller\ClubController::class => 'list'];
     $pluginNamesAndTheirActions[1]['nonCacheableActions'] = [];
     $pluginNamesAndTheirActions[2]['name'] = 'CompetitionDetail';
-    $pluginNamesAndTheirActions[2]['cacheableActions'] = ['Competition' => 'seasonGames, seasonClubs, seasonTeams'];
+    $pluginNamesAndTheirActions[2]['cacheableActions'] = [\ChristianKnell\Sportms\Controller\CompetitionController::class => 'seasonGames, seasonClubs, seasonTeams'];
     $pluginNamesAndTheirActions[2]['nonCacheableActions'] = [];
     $pluginNamesAndTheirActions[3]['name'] = 'CompetitionList';
-    $pluginNamesAndTheirActions[3]['cacheableActions'] = ['Competition' => 'list'];
+    $pluginNamesAndTheirActions[3]['cacheableActions'] = [\ChristianKnell\Sportms\Controller\CompetitionController::class => 'list'];
     $pluginNamesAndTheirActions[3]['nonCacheableActions'] = [];
     $pluginNamesAndTheirActions[4]['name'] = 'PersonList';
-    $pluginNamesAndTheirActions[4]['cacheableActions'] = ['Person' => 'list'];
+    $pluginNamesAndTheirActions[4]['cacheableActions'] = [\ChristianKnell\Sportms\Controller\PersonController::class => 'list'];
     $pluginNamesAndTheirActions[4]['nonCacheableActions'] = [];
     $pluginNamesAndTheirActions[5]['name'] = 'SeasonList';
-    $pluginNamesAndTheirActions[5]['cacheableActions'] = ['Season' => 'list'];
+    $pluginNamesAndTheirActions[5]['cacheableActions'] = [\ChristianKnell\Sportms\Controller\SeasonController::class => 'list'];
     $pluginNamesAndTheirActions[5]['nonCacheableActions'] = [];
     $pluginNamesAndTheirActions[6]['name'] = 'SportMS';
-    $pluginNamesAndTheirActions[6]['cacheableActions'] = ['SportMS' => 'dbstats'];
+    $pluginNamesAndTheirActions[6]['cacheableActions'] = [\ChristianKnell\Sportms\Controller\SportMSController::class => 'dbstats'];
     $pluginNamesAndTheirActions[6]['nonCacheableActions'] = [];
     $pluginNamesAndTheirActions[7]['name'] = 'GameDetail';
-    $pluginNamesAndTheirActions[7]['cacheableActions'] = ['Game' => 'index, history, report'];
+    $pluginNamesAndTheirActions[7]['cacheableActions'] = [\ChristianKnell\Sportms\Controller\GameController::class => 'index, history, report'];
     $pluginNamesAndTheirActions[7]['nonCacheableActions'] = [];
     $pluginNamesAndTheirActions[8]['name'] = 'GameList';
-    $pluginNamesAndTheirActions[8]['cacheableActions'] = ['Game' => 'list'];
+    $pluginNamesAndTheirActions[8]['cacheableActions'] = [\ChristianKnell\Sportms\Controller\GameController::class => 'list'];
     $pluginNamesAndTheirActions[8]['nonCacheableActions'] = [];
     $pluginNamesAndTheirActions[9]['name'] = 'TeamDetail';
-    $pluginNamesAndTheirActions[9]['cacheableActions'] = ['Team' => 'seasonIndex, historyOfficials, historyRecordGames, historyRecordPlayers, seasonGamesByCompetition, seasonGamesByDate'];
+    $pluginNamesAndTheirActions[9]['cacheableActions'] = [\ChristianKnell\Sportms\Controller\TeamController::class => 'seasonIndex, historyOfficials, historyRecordGames, historyRecordPlayers, seasonGamesByCompetition, seasonGamesByDate'];
     $pluginNamesAndTheirActions[9]['nonCacheableActions'] = [];
     $pluginNamesAndTheirActions[10]['name'] = 'TeamList';
-    $pluginNamesAndTheirActions[10]['cacheableActions'] = ['Team' => 'list'];
+    $pluginNamesAndTheirActions[10]['cacheableActions'] = [\ChristianKnell\Sportms\Controller\TeamController::class => 'list'];
     $pluginNamesAndTheirActions[10]['nonCacheableActions'] = [];
     
     for ($i = 0; $i < count($pluginNamesAndTheirActions); $i++) {
