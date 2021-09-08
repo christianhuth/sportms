@@ -87,11 +87,13 @@
                                         arguments="{team: team}"
                                         partial="ViewHelpers/LinkAction/Team/HistoryRecordGames"/>
                             </li>
-                            <li>
-                                <f:render
-                                        arguments="{team: team}"
-                                        partial="ViewHelpers/LinkAction/Team/HistoryRecordPlayers"/>
-                            </li>
+                            <f:comment>
+                                <li>
+                                    <f:render
+                                            arguments="{team: team}"
+                                            partial="ViewHelpers/LinkAction/Team/HistoryRecordPlayers"/>
+                                </li>
+                            </f:comment>
                         </ul>
                     </li>
 				</ul>
