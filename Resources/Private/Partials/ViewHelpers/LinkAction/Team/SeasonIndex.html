@@ -35,7 +35,7 @@
                                pageUid="{actionPid}"
                                pluginName="TeamDetail">
                     <f:render section="label"
-                              arguments="{team: team, linkLabel: linkLabel}"/>
+                              arguments="{team: team, teamSeason: teamSeason, linkLabel: linkLabel}"/>
                 </f:link.action>
             </f:then>
             <f:else>
@@ -45,14 +45,14 @@
                                pageUid="{actionPid}"
                                pluginName="TeamDetail">
                     <f:render section="label"
-                              arguments="{team: team, linkLabel: linkLabel}"/>
+                              arguments="{team: team, teamSeason: teamSeason, linkLabel: linkLabel}"/>
                 </f:link.action>
             </f:else>
         </f:if>
     </f:then>
     <f:else>
         <f:render section="label"
-                  arguments="{team: team, linkLabel: linkLabel}"/>
+                  arguments="{team: team, teamSeason: teamSeason, linkLabel: linkLabel}"/>
     </f:else>
 </f:if>
 
@@ -84,6 +84,9 @@
             <div class="tx-sportms-team-label">
                 {teamSeason.team.label}
             </div>
+        </f:case>
+        <f:case value="seasonLabel">
+            {teamSeason.season.label}
         </f:case>
         <f:defaultCase>
 			<span>

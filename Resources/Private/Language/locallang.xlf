@@ -75,6 +75,9 @@
             <trans-unit id="tx_sportms_action.team.historycompetitions">
                 <source>Wettbewerbsteilnahmen</source>
             </trans-unit>
+            <trans-unit id="tx_sportms_action.team.historyimages">
+                <source>Mannschaftsfotos</source>
+            </trans-unit>
             <trans-unit id="tx_sportms_action.team.historyofficials">
                 <source>Funktionärshistorie</source>
             </trans-unit>

@@ -465,6 +465,16 @@
             $team = $this->assignTeamToView($team);
             
         }
+    
+        /**
+         * @param Team|null $team
+         */
+        public function historyImagesAction(Team $team = null): void
+        {
+            /* MAIN CONTENT */
+            $team = $this->assignTeamToView($team);
+        
+        }
         
         /**
          * @param Team|null $team

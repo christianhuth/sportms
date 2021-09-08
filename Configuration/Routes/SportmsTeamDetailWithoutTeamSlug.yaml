@@ -23,6 +23,12 @@ routeEnhancers:
         localeMap:
           - locale: 'de_DE.*'
             value: 'wettbewerbsteilnahmen'
+      localizedAction_historyImages:
+        type: LocaleModifier
+        default: 'teamphotos'
+        localeMap:
+          - locale: 'de_DE.*'
+            value: 'mannschaftsfotos'
       localizedAction_historyOfficials:
         type: LocaleModifier
         default: 'officialshistory'
@@ -87,6 +93,8 @@ routeEnhancers:
         _controller: 'Team::seasonIndex'
       - routePath: '/{localizedAction_historyCompetitions}'
         _controller: 'Team::historyCompetitions'
+      - routePath: '/{localizedAction_historyImages}'
+        _controller: 'Team::historyImages'
       - routePath: '/{localizedAction_historyOfficials}'
         _controller: 'Team::historyOfficials'
       - routePath: '/{localizedAction_historyRecordGames}'
