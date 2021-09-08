@@ -82,11 +82,6 @@
                       groupBy="{groupBy}"
                       groupKey="group"
                       each="{options}">
-            <f:comment>
-                Currently it is hard-coded to use the label field of the group
-                object
-                # TODO: make it possible to use others fields as well
-            </f:comment>
             <f:if condition="{groupBy} == club">
                 <f:then>
                     <f:form.select.optgroup label="{group.name}">
