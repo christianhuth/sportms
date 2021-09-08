@@ -1,4 +1,6 @@
-To define default upload folders of FAL images or files i recommend the usage of EXT:default_upload_folder
+To define default upload folders of FAL images or files i recommend the usage of EXT:default_upload_folder, which can be found for TYPO3 10.4 LTS here:
+- https://github.com/beechit/default_upload_folder
+- composer require beechit/default-upload-folder
 
 After installation you add following snippet to the Page TSconfig of the folder containing the sportms data:
 
@@ -13,3 +15,5 @@ default_upload_folders {
 }
 
 the number - 1 in the example - indicates which datastore to use. In the example i use the default "fileadmin" datastore.
+
+IMPORTANT: you have to manually create the folders beforehand. Else the files will still be uploaded to their default location.
