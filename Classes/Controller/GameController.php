@@ -103,6 +103,7 @@
         public function indexAction(Game $game = null)
         {
             /* MAIN CONTENT */
+            // we need to define if the goal is for the home or the away team here
             $gameGoalsWithType = $game->getGameGoals();
             if ($gameGoalsWithType) {
                 for ($i = 0; $i < count($gameGoalsWithType); $i++) {

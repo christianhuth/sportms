@@ -6,6 +6,7 @@
     
     use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
     use TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy;
+    use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 
     /**
      * Game
@@ -79,7 +80,7 @@
         protected $periodDuration;
         
         /**
-         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\GamePeriod>
+         * @var ObjectStorage<\ChristianKnell\Sportms\Domain\Model\GamePeriod>
          * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
          * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
          */
@@ -236,21 +237,21 @@
         protected $resultFourthsFourthGuest;
         
         /**
-         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\GameResultSet>
+         * @var ObjectStorage<\ChristianKnell\Sportms\Domain\Model\GameResultSet>
          * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
          * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
          */
         protected $resultSets;
         
         /**
-         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\GameLineup>
+         * @var ObjectStorage<\ChristianKnell\Sportms\Domain\Model\GameLineup>
          * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
          * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
          */
         protected $gameLineupHomeStarts;
         
         /**
-         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\GameLineup>
+         * @var ObjectStorage<\ChristianKnell\Sportms\Domain\Model\GameLineup>
          * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
          * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
          */
@@ -267,14 +268,19 @@
         protected $trainerHome;
         
         /**
-         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\GameLineup>
+         * @var ObjectStorage<\ChristianKnell\Sportms\Domain\Model\TeamSeasonOfficial>
+         */
+        protected $trainerHomeInGame;
+        
+        /**
+         * @var ObjectStorage<\ChristianKnell\Sportms\Domain\Model\GameLineup>
          * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
          * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
          */
         protected $gameLineupGuestStarts;
         
         /**
-         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\GameLineup>
+         * @var ObjectStorage<\ChristianKnell\Sportms\Domain\Model\GameLineup>
          * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
          * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
          */
@@ -289,30 +295,35 @@
          * @var \ChristianKnell\Sportms\Domain\Model\Person
          */
         protected $trainerGuest;
+    
+        /**
+         * @var ObjectStorage<\ChristianKnell\Sportms\Domain\Model\TeamSeasonOfficial>
+         */
+        protected $trainerGuestInGame;
         
         /**
-         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\GameChange>
+         * @var ObjectStorage<\ChristianKnell\Sportms\Domain\Model\GameChange>
          * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
          * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
          */
         protected $gameChanges;
         
         /**
-         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\GameGoal>
+         * @var ObjectStorage<\ChristianKnell\Sportms\Domain\Model\GameGoal>
          * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
          * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
          */
         protected $gameGoals;
         
         /**
-         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\GamePunishment>
+         * @var ObjectStorage<\ChristianKnell\Sportms\Domain\Model\GamePunishment>
          * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
          * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
          */
         protected $gamePunishments;
         
         /**
-         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\GameReferee>
+         * @var ObjectStorage<\ChristianKnell\Sportms\Domain\Model\GameReferee>
          * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
          * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
          */
@@ -346,15 +357,14 @@
          */
         protected function initStorageObjects(): void
         {
-            $this->setResultSets(new \TYPO3\CMS\Extbase\Persistence\ObjectStorage());
-            $this->setGameLineupHomeStarts(new \TYPO3\CMS\Extbase\Persistence\ObjectStorage());
-            $this->setGameLineupHomeSubstitutes(new \TYPO3\CMS\Extbase\Persistence\ObjectStorage());
-            $this->setGameLineupGuestStarts(new \TYPO3\CMS\Extbase\Persistence\ObjectStorage());
-            $this->setGameLineupGuestSubstitutes(new \TYPO3\CMS\Extbase\Persistence\ObjectStorage());
-            $this->setGameChanges(new \TYPO3\CMS\Extbase\Persistence\ObjectStorage());
-            $this->setGameGoals(new \TYPO3\CMS\Extbase\Persistence\ObjectStorage());
-            $this->setGameReferees(new \TYPO3\CMS\Extbase\Persistence\ObjectStorage());
-            $this->setGameReports(new \TYPO3\CMS\Extbase\Persistence\ObjectStorage());
+            $this->setResultSets(new ObjectStorage());
+            $this->setGameLineupHomeStarts(new ObjectStorage());
+            $this->setGameLineupHomeSubstitutes(new ObjectStorage());
+            $this->setGameLineupGuestStarts(new ObjectStorage());
+            $this->setGameLineupGuestSubstitutes(new ObjectStorage());
+            $this->setGameChanges(new ObjectStorage());
+            $this->setGameGoals(new ObjectStorage());
+            $this->setGameReferees(new ObjectStorage());
         }
         
         private static function compareGameGoals($a, $b): int
@@ -580,7 +590,7 @@
         }
         
         /**
-         * @return LazyLoadingProxy|\TYPO3\CMS\Extbase\Persistence\ObjectStorage|null
+         * @return LazyLoadingProxy|ObjectStorage|null
          */
         public function getGamePeriods()
         {
@@ -588,7 +598,7 @@
         }
         
         /**
-         * @param LazyLoadingProxy|\TYPO3\CMS\Extbase\Persistence\ObjectStorage|null $gamePeriods
+         * @param LazyLoadingProxy|ObjectStorage|null $gamePeriods
          */
         public function setGamePeriods($gamePeriods): void
         {
@@ -1076,7 +1086,7 @@
         }
         
         /**
-         * @return LazyLoadingProxy|\TYPO3\CMS\Extbase\Persistence\ObjectStorage|null
+         * @return LazyLoadingProxy|ObjectStorage|null
          */
         public function getResultSets()
         {
@@ -1084,7 +1094,7 @@
         }
         
         /**
-         * @param LazyLoadingProxy|\TYPO3\CMS\Extbase\Persistence\ObjectStorage|null $resultSets
+         * @param LazyLoadingProxy|ObjectStorage|null $resultSets
          */
         public function setResultSets($resultSets): void
         {
@@ -1092,7 +1102,7 @@
         }
         
         /**
-         * @return LazyLoadingProxy|\TYPO3\CMS\Extbase\Persistence\ObjectStorage|null
+         * @return LazyLoadingProxy|ObjectStorage|null
          */
         public function getGameLineupHomeStarts()
         {
@@ -1100,7 +1110,7 @@
         }
         
         /**
-         * @param LazyLoadingProxy|\TYPO3\CMS\Extbase\Persistence\ObjectStorage|null $gameLineupHomeStarts
+         * @param LazyLoadingProxy|ObjectStorage|null $gameLineupHomeStarts
          */
         public function setGameLineupHomeStarts($gameLineupHomeStarts): void
         {
@@ -1108,7 +1118,7 @@
         }
         
         /**
-         * @return LazyLoadingProxy|\TYPO3\CMS\Extbase\Persistence\ObjectStorage|null
+         * @return LazyLoadingProxy|ObjectStorage|null
          */
         public function getGameLineupHomeSubstitutes()
         {
@@ -1116,7 +1126,7 @@
         }
         
         /**
-         * @param LazyLoadingProxy|\TYPO3\CMS\Extbase\Persistence\ObjectStorage|null $gameLineupHomeSubstitutes
+         * @param LazyLoadingProxy|ObjectStorage|null $gameLineupHomeSubstitutes
          */
         public function setGameLineupHomeSubstitutes($gameLineupHomeSubstitutes): void
         {
@@ -1154,9 +1164,32 @@
         {
             $this->trainerHome = $trainerHome;
         }
+    
+        /**
+         * @return ObjectStorage|null
+         */
+        public function getTrainerHomeInGame(): ?ObjectStorage
+        {
+            if($this->getTrainerHome() > 0) {
+                $objectStorage = new ObjectStorage();
+                $objectStorage->attach($this->getTrainerHome());
+                return $objectStorage;
+            } else {
+                $teamSeasonHome = $this->getTeamSeasonHome();
+                return $teamSeasonHome->getTeamSeasonCheftrainerByDate($this->getDate());
+            }
+        }
+    
+        /**
+         * @param Person $trainerHomeInGame
+         */
+        public function setTrainerHomeInGame(Person $trainerHomeInGame): void
+        {
+            $this->trainerHomeInGame = $trainerHomeInGame;
+        }
         
         /**
-         * @return LazyLoadingProxy|\TYPO3\CMS\Extbase\Persistence\ObjectStorage|null
+         * @return LazyLoadingProxy|ObjectStorage|null
          */
         public function getGameLineupGuestStarts()
         {
@@ -1164,7 +1197,7 @@
         }
         
         /**
-         * @param LazyLoadingProxy|\TYPO3\CMS\Extbase\Persistence\ObjectStorage|null $gameLineupGuestStarts
+         * @param LazyLoadingProxy|ObjectStorage|null $gameLineupGuestStarts
          */
         public function setGameLineupGuestStarts($gameLineupGuestStarts): void
         {
@@ -1172,7 +1205,7 @@
         }
         
         /**
-         * @return LazyLoadingProxy|\TYPO3\CMS\Extbase\Persistence\ObjectStorage|null
+         * @return LazyLoadingProxy|ObjectStorage|null
          */
         public function getGameLineupGuestSubstitutes()
         {
@@ -1180,7 +1213,7 @@
         }
         
         /**
-         * @param LazyLoadingProxy|\TYPO3\CMS\Extbase\Persistence\ObjectStorage|null $gameLineupGuestSubstitutes
+         * @param LazyLoadingProxy|ObjectStorage|null $gameLineupGuestSubstitutes
          */
         public function setGameLineupGuestSubstitutes($gameLineupGuestSubstitutes): void
         {
@@ -1218,9 +1251,32 @@
         {
             $this->trainerGuest = $trainerGuest;
         }
+    
+        /**
+         * @return ObjectStorage|null
+         */
+        public function getTrainerGuestInGame(): ?ObjectStorage
+        {
+            if($this->getTrainerGuest() > 0) {
+                $objectStorage = new ObjectStorage();
+                $objectStorage->attach($this->getTrainerGuest());
+                return $objectStorage;
+            } else {
+                $teamSeasonGuest = $this->getTeamSeasonGuest();
+                return $teamSeasonGuest->getTeamSeasonCheftrainerByDate($this->getDate());
+            }
+        }
         
         /**
-         * @return LazyLoadingProxy|\TYPO3\CMS\Extbase\Persistence\ObjectStorage|null
+         * @param Person $trainerGuestInGame
+         */
+        public function setTrainerGuestInGame(Person $trainerGuestInGame): void
+        {
+            $this->trainerGuestInGame = $trainerGuestInGame;
+        }
+        
+        /**
+         * @return LazyLoadingProxy|ObjectStorage|null
          */
         public function getGameChanges()
         {
@@ -1228,7 +1284,7 @@
         }
         
         /**
-         * @param LazyLoadingProxy|\TYPO3\CMS\Extbase\Persistence\ObjectStorage|null $gameChanges
+         * @param LazyLoadingProxy|ObjectStorage|null $gameChanges
          */
         public function setGameChanges($gameChanges): void
         {
@@ -1247,7 +1303,7 @@
         }
         
         /**
-         * @return LazyLoadingProxy|\TYPO3\CMS\Extbase\Persistence\ObjectStorage|null
+         * @return LazyLoadingProxy|ObjectStorage|null
          */
         public function getGameGoals()
         {
@@ -1256,7 +1312,7 @@
         }
         
         /**
-         * @param LazyLoadingProxy|\TYPO3\CMS\Extbase\Persistence\ObjectStorage|null $gameGoals
+         * @param LazyLoadingProxy|ObjectStorage|null $gameGoals
          */
         public function setGameGoals($gameGoals): void
         {
@@ -1275,7 +1331,7 @@
             usort($temporaryArray, ["\\ChristianKnell\\Sportms\\Domain\\Model\\Game", "compareGameGoals"]);
             
             // create new ObjectStorage and add ordered GameGoal-Objects
-            $gameGoalsOrdered = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+            $gameGoalsOrdered = new ObjectStorage();
             foreach ($temporaryArray as $gameGoal) {
                 $gameGoalsOrdered->attach($gameGoal);
             }
@@ -1283,7 +1339,7 @@
         }
         
         /**
-         * @return LazyLoadingProxy|\TYPO3\CMS\Extbase\Persistence\ObjectStorage|null
+         * @return LazyLoadingProxy|ObjectStorage|null
          */
         public function getGamePunishments()
         {
@@ -1291,7 +1347,7 @@
         }
         
         /**
-         * @param LazyLoadingProxy|\TYPO3\CMS\Extbase\Persistence\ObjectStorage|null $gamePunishments
+         * @param LazyLoadingProxy|ObjectStorage|null $gamePunishments
          */
         public function setGamePunishments($gamePunishments): void
         {
@@ -1299,7 +1355,7 @@
         }
         
         /**
-         * @return LazyLoadingProxy|\TYPO3\CMS\Extbase\Persistence\ObjectStorage|null
+         * @return LazyLoadingProxy|ObjectStorage|null
          */
         public function getGameReferees()
         {
@@ -1307,7 +1363,7 @@
         }
         
         /**
-         * @param LazyLoadingProxy|\TYPO3\CMS\Extbase\Persistence\ObjectStorage|null $gameReferees
+         * @param LazyLoadingProxy|ObjectStorage|null $gameReferees
          */
         public function setGameReferees($gameReferees): void
         {

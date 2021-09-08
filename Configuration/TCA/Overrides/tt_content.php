@@ -1,5 +1,6 @@
 <?php
     
+    use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
     use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
     
     defined('TYPO3_MODE') or die();
@@ -15,12 +16,13 @@
             $pluginName,
             $pluginName . ' Management (' . strtolower($extensionName) . ')',
             'EXT:sportms/Resources/Public/Icons/tx_sportms_domain_model_' . strtolower(str_replace("List", "",
-                str_replace("Detail", "", $pluginName))) . '.svg'
+                str_replace("Detail", "", $pluginName))) . '.svg',
+            'Sport Management System'
         );
         $pluginSignature = strtolower($extensionName) . '_' . strtolower($pluginName);
         $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_excludelist'][$pluginSignature] = 'layout,select_key,pages';
         $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist'][$pluginSignature] = 'pi_flexform';
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
+        ExtensionManagementUtility::addPiFlexFormValue(
             $pluginSignature, 'FILE:EXT:' . $_EXTKEY . '/Configuration/FlexForms/flexform_' . $pluginSignature . '.xml'
         );
     }
@@ -36,12 +38,12 @@
     $pluginSignature = strtolower($extensionName) . '_' . strtolower($pluginName);
     $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_excludelist'][$pluginSignature] = 'layout,select_key,pages';
     $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist'][$pluginSignature] = 'pi_flexform';
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
+    ExtensionManagementUtility::addPiFlexFormValue(
         $pluginSignature, 'FILE:EXT:' . $_EXTKEY . '/Configuration/FlexForms/flexform_' . $pluginSignature . '.xml'
     );
     
     // Add Static Template File
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+    ExtensionManagementUtility::addStaticFile(
         $_EXTKEY,
         'Configuration/TypoScript',
         'Sport Management System'
