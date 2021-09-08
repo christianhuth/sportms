@@ -1,0 +1,49 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<f:if condition="{team.detailLink}">
+    <f:then>
+        <f:if condition="{team.detailPid}">
+            <f:then>
+                <f:variable name="actionPid" value="{team.detailPid}"/>
+            </f:then>
+            <f:else>
+                <f:if condition="{team.sport.teamDetailPid}">
+                    <f:then>
+                        <f:variable name="actionPid" value="{team.sport.teamDetailPid}"/>
+                    </f:then>
+                    <f:else>
+                        <f:variable name="actionPid" value="{settings.team.detail.pid}"/>
+                    </f:else>
+                </f:if>
+            </f:else>
+        </f:if>
+        <f:if condition="{settings.team.uid}">
+            <f:then>
+                <f:link.action action="historyCompetitions"
+                               controller="Team" extensionName="Sportms"
+                               pageUid="{actionPid}"
+                               pluginName="TeamDetail">
+                    <f:translate key="tx_sportms_action.team.historycompetitions"/>
+                </f:link.action>
+            </f:then>
+            <f:else>
+                <f:link.action action="historyCompetitions"
+                               arguments="{team: team}"
+                               controller="Team" extensionName="Sportms"
+                               pageUid="{actionPid}"
+                               pluginName="TeamDetail">
+                    <f:translate key="tx_sportms_action.team.historycompetitions"/>
+                </f:link.action>
+            </f:else>
+        </f:if>
+    </f:then>
+    <f:else>
+		<span>
+			<f:translate
+                    key="tx_sportms_action.team.historycompetitions"/>
+		</span>
+    </f:else>
+</f:if>
+
+</html>

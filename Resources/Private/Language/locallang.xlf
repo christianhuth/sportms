@@ -72,6 +72,9 @@
             <trans-unit id="tx_sportms_action.sportms.dbstats">
                 <source>Datenbank-Statistiken</source>
             </trans-unit>
+            <trans-unit id="tx_sportms_action.team.historycompetitions">
+                <source>Wettbewerbsteilnahmen</source>
+            </trans-unit>
             <trans-unit id="tx_sportms_action.team.historyofficials">
                 <source>Funktionärshistorie</source>
             </trans-unit>
@@ -1342,6 +1345,9 @@
             </trans-unit>
             <trans-unit id="tx_sportms_navigation.team.history.dropdown">
                 <source>Historie</source>
+            </trans-unit>
+            <trans-unit id="tx_sportms_navigation.team.records.dropdown">
+                <source>Rekorde</source>
             </trans-unit>
 
 

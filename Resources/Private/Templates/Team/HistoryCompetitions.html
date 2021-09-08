@@ -1,0 +1,58 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+>
+
+<f:layout name="default"/>
+
+<f:section name="default">
+    <div class="tx-sportms-team-detail">
+        
+        <f:render arguments="{team: team}" partial="Team/Navigation"/>
+        
+        <div class="table-responsive">
+            <table class="table table-bordered table-condensed table-hover table-striped tx-sportms-table">
+                <thead>
+                <tr>
+                    <th>
+                        <f:translate key="tx_sportms_domain_model_season"/>
+                    </th>
+                    <th>
+                        <f:translate
+                                key="tx_sportms_domain_model_competitiontype"/>
+                    </th>
+                    <th>
+                        <f:translate
+                                key="tx_sportms_domain_model_competition"/>
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <f:for as="teamSeason" each="{team.teamSeasons}">
+                    <f:if condition="{teamSeason.competitionSeasonTeams}">
+                        <f:for each="{teamSeason.competitionSeasonTeams}"
+                               as="competitionSeason" iteration="iterator">
+                            <tr>
+                                <f:if condition="{iterator.isFirst}">
+                                    <td class="tx-sportms-table-center"
+                                        rowspan="{f:count(subject: teamSeason.competitionSeasonTeams)}">
+                                        {teamSeason.season.label}
+                                    </td>
+                                </f:if>
+                                <td class="tx-sportms-table-center">
+                                    {competitionSeason.competition.competitionType.label}
+                                </td>
+                                <td class="tx-sportms-table-left">
+                                    <f:render partial="ViewHelpers/LinkAction/Competition/SeasonGames"
+                                              arguments="{competition: competitionSeason.competition, linkLabel: 'competitionLabel'}"/>
+                                </td>
+                            </tr>
+                        </f:for>
+                    </f:if>
+                </f:for>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</f:section>
+
+</html>

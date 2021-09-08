@@ -2,6 +2,7 @@
     
     defined('TYPO3_MODE') or die();
     
+    use ChristianKnell\Sportms\Controller\TeamController;
     use TYPO3\CMS\Core\Utility\GeneralUtility;
     
     $vendor = 'ChristianKnell';
@@ -38,10 +39,10 @@
     $pluginNamesAndTheirActions[8]['cacheableActions'] = [\ChristianKnell\Sportms\Controller\GameController::class => 'list'];
     $pluginNamesAndTheirActions[8]['nonCacheableActions'] = [];
     $pluginNamesAndTheirActions[9]['name'] = 'TeamDetail';
-    $pluginNamesAndTheirActions[9]['cacheableActions'] = [\ChristianKnell\Sportms\Controller\TeamController::class => 'seasonIndex, historyOfficials, historyRecordGames, historyRecordPlayers, seasonGamesByCompetition, seasonGamesByDate'];
+    $pluginNamesAndTheirActions[9]['cacheableActions'] = [TeamController::class => 'seasonIndex, historyCompetitions, historyOfficials, historyRecordGames, historyRecordPlayers, seasonGamesByCompetition, seasonGamesByDate'];
     $pluginNamesAndTheirActions[9]['nonCacheableActions'] = [];
     $pluginNamesAndTheirActions[10]['name'] = 'TeamList';
-    $pluginNamesAndTheirActions[10]['cacheableActions'] = [\ChristianKnell\Sportms\Controller\TeamController::class => 'list'];
+    $pluginNamesAndTheirActions[10]['cacheableActions'] = [TeamController::class => 'list'];
     $pluginNamesAndTheirActions[10]['nonCacheableActions'] = [];
     
     for ($i = 0; $i < count($pluginNamesAndTheirActions); $i++) {

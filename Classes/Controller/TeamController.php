@@ -23,12 +23,18 @@
          * @TYPO3\CMS\Extbase\Annotation\Inject
          */
         protected $clubRepository;
-        
+    
         /**
          * @var \ChristianKnell\Sportms\Domain\Repository\CompetitionRepository
          * @TYPO3\CMS\Extbase\Annotation\Inject
          */
         protected $competitionRepository;
+    
+        /**
+         * @var \ChristianKnell\Sportms\Domain\Repository\CompetitionSeasonRepository
+         * @TYPO3\CMS\Extbase\Annotation\Inject
+         */
+        protected $competitionSeasonRepository;
         
         /**
          * @var \ChristianKnell\Sportms\Domain\Repository\CompetitionTypeRepository
@@ -448,6 +454,16 @@
         {
             $seasonSelectboxValues = $this->teamSeasonRepository->findbyTeam($team);
             $this->view->assign('seasonSelectboxValues', $seasonSelectboxValues);
+        }
+    
+        /**
+         * @param Team|null $team
+         */
+        public function historyCompetitionsAction(Team $team = null): void
+        {
+            /* MAIN CONTENT */
+            $team = $this->assignTeamToView($team);
+            
         }
         
         /**

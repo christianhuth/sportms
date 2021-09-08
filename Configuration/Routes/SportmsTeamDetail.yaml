@@ -17,6 +17,12 @@ routeEnhancers:
         localeMap:
           - locale: 'de_DE.*'
             value: 'spielplan-nach-datum'
+      localizedAction_historyCompetitions:
+        type: LocaleModifier
+        default: 'competitionshistory'
+        localeMap:
+          - locale: 'de_DE.*'
+            value: 'wettbewerbsteilnahmen'
       localizedAction_historyOfficials:
         type: LocaleModifier
         default: 'officialshistory'
@@ -69,6 +75,10 @@ routeEnhancers:
     extension: Sportms
     plugin: TeamDetail
     routes:
+      - routePath: '/{team_slug}/{localizedAction_historyCompetitions}'
+        _controller: 'Team::historyCompetitions'
+        _arguments:
+          team_slug: team
       - routePath: '/{team_slug}/{localizedAction_historyOfficials}'
         _controller: 'Team::historyOfficials'
         _arguments:

@@ -52,6 +52,11 @@
          * @var ObjectStorage<\ChristianKnell\Sportms\Domain\Model\PersonProfile>
          */
         protected $teamSeasonSquadCaptains;
+    
+        /**
+         * @var ObjectStorage<\ChristianKnell\Sportms\Domain\Model\CompetitionSeason>
+         */
+        protected $competitionSeasonTeams;
         
         /**
          * @var boolean
@@ -238,6 +243,22 @@
         public function setTeamSeasonSquadCaptains(ObjectStorage $teamSeasonSquadCaptains
         ): void {
             $this->teamSeasonSquadCaptains = $teamSeasonSquadCaptains;
+        }
+    
+        /**
+         * @return ObjectStorage
+         */
+        public function getCompetitionSeasonTeams(): ObjectStorage
+        {
+            return $this->competitionSeasonTeams;
+        }
+    
+        /**
+         * @param ObjectStorage $competitionSeasonTeams
+         */
+        public function setCompetitionSeasonTeams(ObjectStorage $competitionSeasonTeams): void
+        {
+            $this->competitionSeasonTeams = $competitionSeasonTeams;
         }
         
         /**
