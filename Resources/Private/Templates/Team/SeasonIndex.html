@@ -24,9 +24,7 @@
                     </a>
                     <f:if condition="{teamSeason.teamSeasonImages.0.originalResource.description}">
                         <div class="tx-sportms-teamseason-image-description">
-                            <f:format.html>
-                                {teamSeason.teamSeasonImages.0.originalResource.description}
-                            </f:format.html>
+                            {teamSeason.teamSeasonImages.0.originalResource.description -> f:format.html()}
                         </div>
                     </f:if>
                     <div class="tx-sportms-teamseason-image-seperator col-xs-12"></div>
