@@ -66,7 +66,7 @@
         }
         
         /**
-         * @return \ChristianKnell\Sportms\Domain\Model\Competition
+         * @return Competition
          */
         public function getCompetition(): Competition
         {
@@ -74,9 +74,9 @@
         }
         
         /**
-         * @param \ChristianKnell\Sportms\Domain\Model\Competition $competition
+         * @param Competition $competition
          */
-        public function setCompetition(\ChristianKnell\Sportms\Domain\Model\Competition $competition)
+        public function setCompetition(Competition $competition)
         {
             $this->competition = $competition;
         }
