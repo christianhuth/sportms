@@ -33,7 +33,8 @@
         $extensionName,
         $pluginName,
         'Database Statistics (' . strtolower($extensionName) . ')',
-        'EXT:sportms/Resources/Public/Icons/Extension.svg'
+        'EXT:sportms/Resources/Public/Icons/Extension.svg',
+        'Sport Management System'
     );
     $pluginSignature = strtolower($extensionName) . '_' . strtolower($pluginName);
     $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_excludelist'][$pluginSignature] = 'layout,select_key,pages';
