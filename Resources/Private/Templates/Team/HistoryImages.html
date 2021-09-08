@@ -23,8 +23,9 @@
                 <f:for as="teamSeason" each="{team.teamSeasons}">
                     <tr>
                         <td class="tx-sportms-table-center">
-                            <f:render partial="ViewHelpers/LinkAction/Team/SeasonIndex"
-                                      arguments="{linkLabel: 'seasonLabel', team: teamSeason.team, teamSeason: teamSeason}"/>
+                            <f:render
+                                    partial="ViewHelpers/LinkAction/Team/SeasonIndex"
+                                    arguments="{linkLabel: 'seasonLabel', team: teamSeason.team, teamSeason: teamSeason}"/>
                         </td>
                         <td class="tx-sportms-table-center">
                             <f:if condition="{teamSeason.teamSeasonImages}">
@@ -34,8 +35,12 @@
                                            iteration="iterator">
                                         <a class="t3colorbox"
                                            href="{f:uri.image(image: teamSeasonImage)}"
-                                           rel="lightbox[sportms]">
-                                            <f:image image="{teamSeasonImage}" width="350px"/>
+                                           rel="lightbox[sportms]"
+                                           style="display: inline-block;
+                                                  width: 350px;">
+                                            <f:image image="{teamSeasonImage}"
+                                                     width="350px"
+                                                     style="width: 350px;"/>
                                         </a>
                                     </f:for>
                                 </f:then>
