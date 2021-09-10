@@ -4,10 +4,12 @@
     
     namespace ChristianKnell\Sportms\Domain\Model;
     
+    use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
+
     /**
      * Competition
      */
-    class Competition extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
+    class Competition extends AbstractEntity
     {
         
         /**

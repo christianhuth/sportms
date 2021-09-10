@@ -4,16 +4,18 @@
     
     namespace ChristianKnell\Sportms\Domain\Model;
     
+    use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
+
     /**
      * Competition
      */
-    class CompetitionSeason extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
+    class CompetitionSeason extends AbstractEntity
     {
         
         /**
          * @var \ChristianKnell\Sportms\Domain\Model\Competition
          */
-        protected $competition;
+        public $competition;
         
         /**
          * @var \ChristianKnell\Sportms\Domain\Model\Season
@@ -24,13 +26,13 @@
          * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\CompetitionSeasonGameday>
          * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
          */
-        protected $competitionSeasonGamedays;
+        public $competitionSeasonGamedays;
         
         /**
          * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\TeamSeason>
          * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
          */
-        protected $competitionSeasonTeams;
+        public $competitionSeasonTeams;
         
         /**
          * @var bool
