@@ -83,7 +83,7 @@
             if ($profileType == 2) {
                 $clubSection = $config['row']['club_section'];
                 if (!empty($clubSection)) {
-                    $this->determineSportUidsForClubSectionProfile($clubSection);
+                    $this->determineSportUidsForClubSectionProfile((int) $clubSection);
                 } else {
                     throw new \UnexpectedValueException('No club section given to determine sports.', 1381823570);
                 }
@@ -92,7 +92,7 @@
             if ($profileType == 3) {
                 $teamSeason = $config['row']['team_season'];
                 if (!empty($teamSeason)) {
-                    $sportUids = $this->determineSportUidsForPlayerProfile($teamSeason);
+                    $sportUids = $this->determineSportUidsForPlayerProfile((int) $teamSeason);
                 } else {
                     throw new \UnexpectedValueException('No teamSeason given to determine sport.', 1381823570);
                 }
@@ -101,7 +101,7 @@
             if ($profileType == 4) {
                 $game = $config['row']['game'];
                 if (!empty($game)) {
-                    $sportUids = $this->determineSportUidsForRefereeProfile($game);
+                    $sportUids = $this->determineSportUidsForRefereeProfile((int) $game);
                 } else {
                     throw new \UnexpectedValueException('No game given to determine sport.', 1381823570);
                 }
@@ -110,7 +110,7 @@
             if ($profileType == 5) {
                 $teamSeason = $config['row']['team_season'];
                 if (!empty($teamSeason)) {
-                    $sportUids = $this->determineSportUidsForTeamSeasonOfficialProfile($teamSeason);
+                    $sportUids = $this->determineSportUidsForTeamSeasonOfficialProfile((int) $teamSeason);
                 } else {
                     throw new \UnexpectedValueException('No teamSeason given to determine sport.', 1381823570);
                 }
