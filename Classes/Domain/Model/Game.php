@@ -263,7 +263,7 @@
         protected $captainHome;
         
         /**
-         * @var \ChristianKnell\Sportms\Domain\Model\PersonProfile
+         * @var \ChristianKnell\Sportms\Domain\Model\TeamSeasonOfficial
          */
         protected $trainerHome;
         
@@ -292,7 +292,7 @@
         protected $captainGuest;
         
         /**
-         * @var \ChristianKnell\Sportms\Domain\Model\PersonProfile
+         * @var \ChristianKnell\Sportms\Domain\Model\TeamSeasonOfficial
          */
         protected $trainerGuest;
         
@@ -1148,19 +1148,19 @@
         {
             $this->captainHome = $captainHome;
         }
-        
+    
         /**
-         * @return PersonProfile|null
+         * @return TeamSeasonOfficial
          */
-        public function getTrainerHome(): ?PersonProfile
+        public function getTrainerHome(): ?TeamSeasonOfficial
         {
             return $this->trainerHome;
         }
-        
+    
         /**
-         * @param PersonProfile $trainerHome
+         * @param TeamSeasonOfficial $trainerHome
          */
-        public function setTrainerHome(PersonProfile $trainerHome): void
+        public function setTrainerHome(TeamSeasonOfficial $trainerHome): void
         {
             $this->trainerHome = $trainerHome;
         }
@@ -1237,17 +1237,17 @@
         }
     
         /**
-         * @return PersonProfile|null
+         * @return TeamSeasonOfficial
          */
-        public function getTrainerGuest(): ?PersonProfile
+        public function getTrainerGuest(): ?TeamSeasonOfficial
         {
             return $this->trainerGuest;
         }
     
         /**
-         * @param PersonProfile $trainerGuest
+         * @param TeamSeasonOfficial $trainerGuest
          */
-        public function setTrainerGuest(PersonProfile $trainerGuest): void
+        public function setTrainerGuest(TeamSeasonOfficial $trainerGuest): void
         {
             $this->trainerGuest = $trainerGuest;
         }
