@@ -14,10 +14,14 @@
         {
             $game = $hookParameters['record'];
             $teamSeasonHomeUid = $game['team_season_home'];
-            $teamHomeSlug = $this->generateSlugForTeamSeasonByUid($teamSeasonHomeUid);
             $teamSeasonGuestUid = $game['team_season_guest'];
-            $teamGuestSlug = $this->generateSlugForTeamSeasonByUid($teamSeasonGuestUid);
-            return $teamHomeSlug . "-gegen-" . $teamGuestSlug . "-" . $game['uid'];
+            if (($teamSeasonHomeUid > 0) && ($teamSeasonGuestUid > 0)) {
+                $teamHomeSlug = $this->generateSlugForTeamSeasonByUid($teamSeasonHomeUid);
+                $teamGuestSlug = $this->generateSlugForTeamSeasonByUid($teamSeasonGuestUid);
+                return $teamHomeSlug . "-gegen-" . $teamGuestSlug . "-" . $game['uid'];
+            } else {
+                return '';
+            }
         }
         
     }

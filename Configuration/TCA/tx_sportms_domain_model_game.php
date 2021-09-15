@@ -264,7 +264,7 @@
                 'exclude' => 1,
                 'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_general.date',
                 'config' => [
-                    'eval' => 'date',
+                    'eval' => 'date, required',
                     'placeholder' => 'dd-mm-yyyy',
                     'renderType' => 'inputDateTime',
                     'size' => 10,
