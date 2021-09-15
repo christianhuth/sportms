@@ -247,11 +247,12 @@
                 'exclude' => 1,
                 'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_competitionseasongameday',
                 'config' => [
+                    'eval' => 'required',
                     'foreign_table' => 'tx_sportms_domain_model_competitionseasongameday',
                     'foreign_table_where' => ' AND tx_sportms_domain_model_competitionseasongameday.competition_season = ###REC_FIELD_competition_season###
 											ORDER BY tx_sportms_domain_model_competitionseasongameday.sorting ASC',
                     'items' => [
-                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_select.something', ""],
+                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_select.something', null],
                     ],
                     'maxItems' => 1,
                     'minItems' => 1,
