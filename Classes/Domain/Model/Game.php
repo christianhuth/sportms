@@ -7,7 +7,7 @@
     use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
     use TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy;
     use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
-
+    
     /**
      * Game
      */
@@ -263,7 +263,7 @@
         protected $captainHome;
         
         /**
-         * @var \ChristianKnell\Sportms\Domain\Model\Person
+         * @var \ChristianKnell\Sportms\Domain\Model\PersonProfile
          */
         protected $trainerHome;
         
@@ -292,10 +292,10 @@
         protected $captainGuest;
         
         /**
-         * @var \ChristianKnell\Sportms\Domain\Model\Person
+         * @var \ChristianKnell\Sportms\Domain\Model\PersonProfile
          */
         protected $trainerGuest;
-    
+        
         /**
          * @var ObjectStorage<\ChristianKnell\Sportms\Domain\Model\TeamSeasonOfficial>
          */
@@ -1150,27 +1150,27 @@
         }
         
         /**
-         * @return Person|null
+         * @return PersonProfile|null
          */
-        public function getTrainerHome(): ?Person
+        public function getTrainerHome(): ?PersonProfile
         {
             return $this->trainerHome;
         }
         
         /**
-         * @param Person|null $trainerHome
+         * @param PersonProfile $trainerHome
          */
-        public function setTrainerHome(?Person $trainerHome): void
+        public function setTrainerHome(PersonProfile $trainerHome): void
         {
             $this->trainerHome = $trainerHome;
         }
-    
+        
         /**
          * @return ObjectStorage|null
          */
         public function getTrainerHomeInGame(): ?ObjectStorage
         {
-            if($this->getTrainerHome() > 0) {
+            if ($this->getTrainerHome() > 0) {
                 $objectStorage = new ObjectStorage();
                 $objectStorage->attach($this->getTrainerHome());
                 return $objectStorage;
@@ -1179,7 +1179,7 @@
                 return $teamSeasonHome->getTeamSeasonCheftrainerByDate($this->getDate());
             }
         }
-    
+        
         /**
          * @param Person $trainerHomeInGame
          */
@@ -1235,29 +1235,29 @@
         {
             $this->captainGuest = $captainGuest;
         }
-        
+    
         /**
-         * @return Person|null
+         * @return PersonProfile|null
          */
-        public function getTrainerGuest(): ?Person
+        public function getTrainerGuest(): ?PersonProfile
         {
             return $this->trainerGuest;
         }
-        
+    
         /**
-         * @param Person|null $trainerGuest
+         * @param PersonProfile $trainerGuest
          */
-        public function setTrainerGuest(?Person $trainerGuest): void
+        public function setTrainerGuest(PersonProfile $trainerGuest): void
         {
             $this->trainerGuest = $trainerGuest;
         }
-    
+        
         /**
          * @return ObjectStorage|null
          */
         public function getTrainerGuestInGame(): ?ObjectStorage
         {
-            if($this->getTrainerGuest() > 0) {
+            if ($this->getTrainerGuest() > 0) {
                 $objectStorage = new ObjectStorage();
                 $objectStorage->attach($this->getTrainerGuest());
                 return $objectStorage;
@@ -1375,7 +1375,7 @@
          */
         public function getGameReport()
         {
-            if($this->gameReport instanceof LazyLoadingProxy) {
+            if ($this->gameReport instanceof LazyLoadingProxy) {
                 $this->gameReport->_loadRealInstance();
             }
             return $this->gameReport;
