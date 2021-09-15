@@ -1163,12 +1163,8 @@
                 'exclude' => 1,
                 'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_game.trainer_guest',
                 'config' => [
-                    'foreign_table' => 'tx_sportms_domain_model_personprofile',
-                    'foreign_table_where' => '  AND tx_sportms_domain_model_personprofile.uid IN (
-                                                    SELECT  tx_sportms_domain_model_teamseasonofficial.person_profile
-                                                    FROM    tx_sportms_domain_model_teamseasonofficial
-                                                    WHERE   tx_sportms_domain_model_teamseasonofficial.team_season = ###REC_FIELD_team_season_guest###
-                                                )',
+                    'foreign_table' => 'tx_sportms_domain_model_teamseasonofficial',
+                    'foreign_table_where' => 'tx_sportms_domain_model_teamseasonofficial.team_season = ###REC_FIELD_team_season_guest###',
                     'items' => [
                         [
                             'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_domain_model_game.select.trainer',
