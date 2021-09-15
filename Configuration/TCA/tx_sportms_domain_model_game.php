@@ -876,7 +876,7 @@
 	                                        AND tx_sportms_domain_model_teamseason.season = ###REC_FIELD_season###
 	                                        ORDER BY tx_sportms_domain_model_teamseason.team ASC',
                     'items' => [
-                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_select.something', 0],
+                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_select.something', null],
                     ],
                     'maxItems' => 1,
                     'minItems' => 1,
@@ -1037,7 +1037,7 @@
                                                 AND tx_sportms_domain_model_teamseason.season = ###REC_FIELD_season###
                                                 ORDER BY tx_sportms_domain_model_teamseason.team ASC',
                     'items' => [
-                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_select.something', 0],
+                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_select.something', null],
                     ],
                     'maxItems' => 1,
                     'minItems' => 1,
