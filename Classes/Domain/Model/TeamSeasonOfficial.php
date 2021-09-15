@@ -44,7 +44,7 @@
         /**
          * @return TeamSeason
          */
-        public function getTeamSeason()
+        public function getTeamSeason(): TeamSeason
         {
             return $this->teamSeason;
         }
@@ -52,7 +52,7 @@
         /**
          * @param TeamSeason $teamSeason
          */
-        public function setTeamSeason($teamSeason)
+        public function setTeamSeason(TeamSeason $teamSeason): void
         {
             $this->teamSeason = $teamSeason;
         }
@@ -150,9 +150,9 @@
          */
         private function calculateDateDifference(int $startdate, int $enddate): int
         {
-            return (int) (($enddate - $startdate) / 60 / 60 / 24);
+            return (int)(($enddate - $startdate) / 60 / 60 / 24);
         }
-    
+        
         /**
          * @return int
          */
@@ -160,7 +160,7 @@
         {
             return $this->dateDifference;
         }
-    
+        
         /**
          * @param int $dateDifference
          */
