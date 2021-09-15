@@ -1294,7 +1294,7 @@
                 'exclude' => true,
                 'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.detail_link',
                 'config' => [
-                    'default' => false,
+                    'default' => true,
                     'renderType' => 'checkboxToggle',
                     'type' => 'check',
                 ],
