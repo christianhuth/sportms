@@ -131,10 +131,10 @@
                 'exclude' => 1,
                 'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_person',
                 'config' => [
-                    'eval' => '',
+                    'eval' => 'required',
                     'foreign_table' => 'tx_sportms_domain_model_personprofile',
                     'items' => [
-                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_select.something', ''],
+                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_select.something', null],
                     ],
                     'renderType' => 'selectSingle',
                     'size' => 1,
@@ -148,7 +148,7 @@
                     'foreign_table' => 'tx_sportms_domain_model_sportposition',
                     'foreign_table_where' => '  ORDER BY tx_sportms_domain_model_sportposition.label ASC',
                     'items' => [
-                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_select.something', ''],
+                        ['LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_select.something', null],
                     ],
                     'maxItems' => 1,
                     'renderType' => 'selectSingle',
