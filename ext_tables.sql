@@ -20,11 +20,12 @@ CREATE TABLE tx_sportms_domain_model_address
 CREATE TABLE tx_sportms_domain_model_club
 (
     name             varchar(255)  DEFAULT '' NOT NULL,
-    colours          varchar(255)  DEFAULT NULL,
     date_of_founding int(11) DEFAULT NULL,
     year_of_founding int(11) DEFAULT NULL,
     club_members     int(11) DEFAULT NULL,
     logos            varchar(255)  DEFAULT NULL,
+    colours          varchar(255)  DEFAULT NULL,
+    colour_pickers   int(11) DEFAULT NULL,
     addresses        int(11) DEFAULT NULL,
     phones           int(11) DEFAULT NULL,
     mails            int(11) DEFAULT NULL,
@@ -121,6 +122,18 @@ CREATE TABLE tx_sportms_domain_model_clubsectionofficial
     until_today    tinyint(4) unsigned DEFAULT '0' NOT NULL,
     enddate        int(11) DEFAULT NULL,
     sorting        int(11) DEFAULT '0' NOT NULL
+);
+
+#
+# Table structure for table 'tx_sportms_domain_model_colour'
+#
+CREATE TABLE tx_sportms_domain_model_colour
+(
+    foreign_uid   int(11) DEFAULT 0 NOT NULL,
+    foreign_table varchar(255) DEFAULT '' NOT NULL,
+    label         varchar(255) DEFAULT NULL,
+    colour        varchar(255) DEFAULT NULL,
+    sorting       int(11) DEFAULT '0' NOT NULL
 );
 
 #

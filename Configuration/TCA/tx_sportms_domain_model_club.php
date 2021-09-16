@@ -31,6 +31,7 @@
                                 --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.tab.appearance,
                                     logos,
                                     colours,
+                                    colour_pickers,
                                 --div--;LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_general.contact_information,
                                     addresses, phones, mails, urls,
                                 --div--;LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_clubground.plural,
@@ -135,11 +136,12 @@
                     'range' => [
                         'lower' => 0,
                     ],
-                    'size' => 30,
+                    'size' => 10,
                     'type' => 'input',
                 ],
             ],
             'club_members' => [
+                'exclude' => 1,
                 'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_clubmembers.plural',
                 'config' => [
                     'appearance' => [
@@ -180,6 +182,29 @@
                     'eval' => 'trim',
                     'size' => 30,
                     'type' => 'input',
+                ],
+            ],
+            'colour_pickers' => [
+                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_colour.plural',
+                'config' => [
+                    'appearance' => [
+                        'enabledControls' => [
+                            'info' => false,
+                            'new' => true,
+                            'sort' => false,
+                            'hide' => true,
+                            'dragdrop' => true,
+                            'delete' => true,
+                            'localize' => true,
+                        ],
+                        'levelLinksPosition' => 'bottom',
+                        'useSortable' => 1,
+                    ],
+                    'foreign_field' => 'foreign_uid',
+                    'foreign_sortby' => 'sorting',
+                    'foreign_table' => 'tx_sportms_domain_model_colour',
+                    'foreign_table_field' => 'foreign_table',
+                    'type' => 'inline',
                 ],
             ],
             
