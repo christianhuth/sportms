@@ -29,8 +29,8 @@
         'types' => [
             '1' => [
                 'showitem' => ' --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.tab.general,
-                                    --palette;;sport,
-                                    --palette;;competition,
+                                    --palette--;;sport,
+                                    --palette--;;competition,
                                 --div--;LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_competitionseason.plural,
                                     competition_seasons,
                                 --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.tab.visibility,

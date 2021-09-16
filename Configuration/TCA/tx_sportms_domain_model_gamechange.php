@@ -30,8 +30,8 @@
             '1' => [
                 'showitem' => ' --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.tab.general,
                                         game,
-                                        ---palette---;;time,
-                                        ---palette---;;person_in_person_out,
+                                        --palette--;;time,
+                                        --palette--;;person_in_person_out,
                                         reason',
             ],
         ],

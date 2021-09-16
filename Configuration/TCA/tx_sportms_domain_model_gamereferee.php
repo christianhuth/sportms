@@ -27,7 +27,7 @@
             'versioningWS' => true,
         ],
         'types' => [
-            '1' => ['showitem' => '--palette;;referee_person'],
+            '1' => ['showitem' => '--palette--;;referee_person'],
         ],
         'palettes' => [
             'referee_person' => ['showitem' => 'referee_job, person_profile'],
