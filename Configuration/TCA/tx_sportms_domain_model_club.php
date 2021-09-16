@@ -26,11 +26,11 @@
             '1' => [
                 'showitem' => ' --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.tab.general,
                                     name,
-                                    colours,
                                     --palette--;; founding,
                                     club_members,
-                                --div--;LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_club.logos,
+                                --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.tab.appearance,
                                     logos,
+                                    colours,
                                 --div--;LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_general.contact_information,
                                     addresses, phones, mails, urls,
                                 --div--;LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_clubground.plural,
@@ -114,15 +114,6 @@
                     'eval' => 'trim, required',
                 ],
             ],
-            'colours' => [
-                'exclude' => 1,
-                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_club.colours',
-                'config' => [
-                    'eval' => 'trim',
-                    'size' => 30,
-                    'type' => 'input',
-                ],
-            ],
             'date_of_founding' => [
                 'exclude' => 1,
                 'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_club.date_of_founding',
@@ -181,6 +172,15 @@
                     ],
                     $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']
                 ),
+            ],
+            'colours' => [
+                'exclude' => 1,
+                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_club.colours',
+                'config' => [
+                    'eval' => 'trim',
+                    'size' => 30,
+                    'type' => 'input',
+                ],
             ],
             
             'addresses' => [
