@@ -37,13 +37,13 @@ yaml:
   script:
     - pwd
     - ls -al
-    - yamllint -c .yamllint.yaml .
+    - yamllint -c .yamllint .
 
 sql:
-    dependencies:
-        - build
-    image: composer:2.1.3
-    stage: lint
-    script:
-        - composer require --dev liquipedia/sqllint
-        - .Build/bin/sqllint
+  dependencies:
+    - build
+  image: composer:2.1.3
+  stage: lint
+  script:
+    - composer require --dev liquipedia/sqllint
+    - .Build/bin/sqllint
