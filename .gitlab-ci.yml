@@ -36,7 +36,7 @@ yaml:
     - pip install yamllint==1.10.0
   script:
     - pwd
-    - yamllint -c /.yamllint.yaml .
+    - yamllint -c .yamllint.yaml .
 
 sql:
     dependencies:
