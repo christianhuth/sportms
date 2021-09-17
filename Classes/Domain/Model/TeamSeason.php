@@ -236,13 +236,17 @@
             # a - b = ASC
             # b - a = DESC
             usort($teamSeasonSquadMembersAsArray, static function ($a, $b) {
-                $sportPositionGroupDiff = $a->getSportPositionGroup()->getSorting() - $b->getSportPositionGroup()->getSorting();
-                if ($sportPositionGroupDiff) {
-                    return $sportPositionGroupDiff;
+                if(!is_null($a->getSportPositionGroup()) && !is_null($b->getSportPositionGroup())) {
+                    $sportPositionGroupDiff = $a->getSportPositionGroup()->getSorting() - $b->getSportPositionGroup()->getSorting();
+                    if ($sportPositionGroupDiff) {
+                        return $sportPositionGroupDiff;
+                    }
                 }
-                $sportPositionDiff = $a->getSportPosition()->getSorting() - $b->getSportPosition()->getSorting();
-                if ($sportPositionDiff) {
-                    return $sportPositionDiff;
+                if(!is_null($a->getSportPosition()) && !is_null($b->getSportPosition())) {
+                    $sportPositionDiff = $a->getSportPosition()->getSorting() - $b->getSportPosition()->getSorting();
+                    if ($sportPositionDiff) {
+                        return $sportPositionDiff;
+                    }
                 }
                 $lastnameDiff = strcmp($a->getPersonProfile()->getPerson()->getLastname(),
                     $b->getPersonProfile()->getPerson()->getLastname());
