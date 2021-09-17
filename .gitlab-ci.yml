@@ -25,7 +25,7 @@ fluid:
   image: composer:2.1.3
   stage: lint
   script:
-    - compose require --dev typo3fluid/fluid-lint
+    - composer require --dev typo3fluid/fluid-lint
     - .Build/bin/fluidline Resoures/Private/.html
 
 sql:
@@ -53,6 +53,9 @@ xliff:
   stage: lint
   script:
     - composer require --dev symfony/translation
+    - ls -al .Build
+    - ls -al .Build/bin
+    - ls -al .Build/vendor
     - php .Build/bin/console lint:xliff /Resources/Private/Language
 
 yaml:
