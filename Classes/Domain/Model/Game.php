@@ -1293,6 +1293,7 @@
             // new ObjectStorage, where we will append the ordered GameChanges
             $orderedGameChanges = new ObjectStorage();
             
+            // sort the array with the game changes
             # a - b = ASC
             # b - a = DESC
             usort($gameChangesAsArray, static function ($a, $b) {
@@ -1302,6 +1303,8 @@
                     return -1;
                 }
             });
+            
+            // convert ordered array to ObjectStorage
             foreach($gameChangesAsArray AS $gameChangeAsArray) {
                 $orderedGameChanges->attach($gameChangeAsArray);
             }
