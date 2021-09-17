@@ -109,6 +109,9 @@
             <trans-unit id="tx_sportms_general.tab.general">
                 <source>Allgemein</source>
             </trans-unit>
+            <trans-unit id="tx_sportms_general.tab.history">
+                <source>Geschichte</source>
+            </trans-unit>
             <trans-unit id="tx_sportms_general.tab.language">
                 <source>Sprache</source>
             </trans-unit>
