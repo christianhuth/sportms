@@ -34,9 +34,7 @@ yaml:
   before_script:
     - pip install yamllint==1.10.0
   script:
-    script:
-        - yamllint .
-
+    - yamllint .
 
 sql:
     dependencies:
