@@ -36,6 +36,7 @@ yaml:
     - pip install yamllint==1.10.0
   script:
     - pwd
+    - ls -al
     - yamllint -c .yamllint.yaml .
 
 sql:
@@ -45,5 +46,4 @@ sql:
     stage: lint
     script:
         - composer require --dev liquipedia/sqllint
-        - ls -al .Build/bin
         - .Build/bin/sqllint
