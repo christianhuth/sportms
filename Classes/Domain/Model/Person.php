@@ -3,7 +3,8 @@
     declare(strict_types=1);
     
     namespace ChristianKnell\Sportms\Domain\Model;
-    use TYPO3\CMS\Extbase\Annotation\ORM\Lazy; # do not remove
+    
+    # do not remove
     
     /**
      * Person

@@ -7,7 +7,7 @@
     use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
     use TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy;
     use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
-    
+
     /**
      * Game
      */
@@ -430,38 +430,6 @@
         }
         
         /**
-         * @return TeamSeason
-         */
-        public function getTeamSeasonHome(): TeamSeason
-        {
-            return $this->teamSeasonHome;
-        }
-        
-        /**
-         * @param TeamSeason $teamSeasonHome
-         */
-        public function setTeamSeasonHome(TeamSeason $teamSeasonHome): void
-        {
-            $this->teamSeasonHome = $teamSeasonHome;
-        }
-        
-        /**
-         * @return TeamSeason
-         */
-        public function getTeamSeasonGuest(): TeamSeason
-        {
-            return $this->teamSeasonGuest;
-        }
-        
-        /**
-         * @param TeamSeason $teamSeasonGuest
-         */
-        public function setTeamSeasonGuest(TeamSeason $teamSeasonGuest): void
-        {
-            $this->teamSeasonGuest = $teamSeasonGuest;
-        }
-        
-        /**
          * @return int|null
          */
         public function getGameAppointment(): ?int
@@ -491,22 +459,6 @@
         public function setGameday(?CompetitionSeasonGameday $gameday): void
         {
             $this->gameday = $gameday;
-        }
-        
-        /**
-         * @return int|null
-         */
-        public function getDate(): ?int
-        {
-            return $this->date;
-        }
-        
-        /**
-         * @param int|null $date
-         */
-        public function setDate(?int $date): void
-        {
-            $this->date = $date;
         }
         
         /**
@@ -1148,22 +1100,6 @@
         {
             $this->captainHome = $captainHome;
         }
-    
-        /**
-         * @return TeamSeasonOfficial
-         */
-        public function getTrainerHome(): ?TeamSeasonOfficial
-        {
-            return $this->trainerHome;
-        }
-    
-        /**
-         * @param TeamSeasonOfficial $trainerHome
-         */
-        public function setTrainerHome(TeamSeasonOfficial $trainerHome): void
-        {
-            $this->trainerHome = $trainerHome;
-        }
         
         /**
          * @return ObjectStorage|null
@@ -1186,6 +1122,54 @@
         public function setTrainerHomeInGame(Person $trainerHomeInGame): void
         {
             $this->trainerHomeInGame = $trainerHomeInGame;
+        }
+        
+        /**
+         * @return TeamSeasonOfficial
+         */
+        public function getTrainerHome(): ?TeamSeasonOfficial
+        {
+            return $this->trainerHome;
+        }
+        
+        /**
+         * @param TeamSeasonOfficial $trainerHome
+         */
+        public function setTrainerHome(TeamSeasonOfficial $trainerHome): void
+        {
+            $this->trainerHome = $trainerHome;
+        }
+        
+        /**
+         * @return TeamSeason
+         */
+        public function getTeamSeasonHome(): TeamSeason
+        {
+            return $this->teamSeasonHome;
+        }
+        
+        /**
+         * @param TeamSeason $teamSeasonHome
+         */
+        public function setTeamSeasonHome(TeamSeason $teamSeasonHome): void
+        {
+            $this->teamSeasonHome = $teamSeasonHome;
+        }
+        
+        /**
+         * @return int|null
+         */
+        public function getDate(): ?int
+        {
+            return $this->date;
+        }
+        
+        /**
+         * @param int|null $date
+         */
+        public function setDate(?int $date): void
+        {
+            $this->date = $date;
         }
         
         /**
@@ -1235,22 +1219,6 @@
         {
             $this->captainGuest = $captainGuest;
         }
-    
-        /**
-         * @return TeamSeasonOfficial
-         */
-        public function getTrainerGuest(): ?TeamSeasonOfficial
-        {
-            return $this->trainerGuest;
-        }
-    
-        /**
-         * @param TeamSeasonOfficial $trainerGuest
-         */
-        public function setTrainerGuest(TeamSeasonOfficial $trainerGuest): void
-        {
-            $this->trainerGuest = $trainerGuest;
-        }
         
         /**
          * @return ObjectStorage|null
@@ -1273,6 +1241,38 @@
         public function setTrainerGuestInGame(Person $trainerGuestInGame): void
         {
             $this->trainerGuestInGame = $trainerGuestInGame;
+        }
+        
+        /**
+         * @return TeamSeasonOfficial
+         */
+        public function getTrainerGuest(): ?TeamSeasonOfficial
+        {
+            return $this->trainerGuest;
+        }
+        
+        /**
+         * @param TeamSeasonOfficial $trainerGuest
+         */
+        public function setTrainerGuest(TeamSeasonOfficial $trainerGuest): void
+        {
+            $this->trainerGuest = $trainerGuest;
+        }
+        
+        /**
+         * @return TeamSeason
+         */
+        public function getTeamSeasonGuest(): TeamSeason
+        {
+            return $this->teamSeasonGuest;
+        }
+        
+        /**
+         * @param TeamSeason $teamSeasonGuest
+         */
+        public function setTeamSeasonGuest(TeamSeason $teamSeasonGuest): void
+        {
+            $this->teamSeasonGuest = $teamSeasonGuest;
         }
         
         /**

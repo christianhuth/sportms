@@ -16,24 +16,20 @@
          * @var \ChristianKnell\Sportms\Domain\Model\Competition
          */
         public $competition;
-        
-        /**
-         * @var \ChristianKnell\Sportms\Domain\Model\Season
-         */
-        protected $season;
-        
         /**
          * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\CompetitionSeasonGameday>
          * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
          */
         public $competitionSeasonGamedays;
-        
         /**
          * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ChristianKnell\Sportms\Domain\Model\TeamSeason>
          * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
          */
         public $competitionSeasonTeams;
-        
+        /**
+         * @var \ChristianKnell\Sportms\Domain\Model\Season
+         */
+        protected $season;
         /**
          * @var bool
          */

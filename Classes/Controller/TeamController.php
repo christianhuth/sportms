@@ -11,7 +11,7 @@
     use TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException;
     use TYPO3\CMS\Extbase\Persistence\QueryInterface;
     use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
-    
+
     /**
      * TeamController
      */
@@ -23,13 +23,13 @@
          * @TYPO3\CMS\Extbase\Annotation\Inject
          */
         protected $clubRepository;
-    
+        
         /**
          * @var \ChristianKnell\Sportms\Domain\Repository\CompetitionRepository
          * @TYPO3\CMS\Extbase\Annotation\Inject
          */
         protected $competitionRepository;
-    
+        
         /**
          * @var \ChristianKnell\Sportms\Domain\Repository\CompetitionSeasonRepository
          * @TYPO3\CMS\Extbase\Annotation\Inject
@@ -455,7 +455,7 @@
             $seasonSelectboxValues = $this->teamSeasonRepository->findbyTeam($team);
             $this->view->assign('seasonSelectboxValues', $seasonSelectboxValues);
         }
-    
+        
         /**
          * @param Team|null $team
          */
@@ -463,9 +463,8 @@
         {
             /* MAIN CONTENT */
             $team = $this->assignTeamToView($team);
-            
         }
-    
+        
         /**
          * @param Team|null $team
          */
@@ -473,7 +472,6 @@
         {
             /* MAIN CONTENT */
             $team = $this->assignTeamToView($team);
-        
         }
         
         /**

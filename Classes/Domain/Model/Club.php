@@ -135,14 +135,6 @@
         }
         
         /**
-         * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $homeVenues
-         */
-        public function setHomeVenues($homeVenues)
-        {
-            $this->homeVenues = $homeVenues;
-        }
-        
-        /**
          * @return string
          */
         public function getName()
@@ -324,6 +316,14 @@
         public function getHomeVenues()
         {
             return $this->homeVenues;
+        }
+        
+        /**
+         * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $homeVenues
+         */
+        public function setHomeVenues($homeVenues)
+        {
+            $this->homeVenues = $homeVenues;
         }
         
         /**

@@ -4,8 +4,6 @@
     
     namespace ChristianKnell\Sportms\Domain\Model;
     
-    use function Sodium\add;
-
     /**
      * Team
      */
@@ -212,8 +210,8 @@
         {
             $teamSeasons = $this->teamSeasons;
             $objectStorage = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-            foreach ($teamSeasons AS $teamSeason) {
-                if(!$teamSeason->isHidden()) {
+            foreach ($teamSeasons as $teamSeason) {
+                if (!$teamSeason->isHidden()) {
                     $objectStorage->attach($teamSeason);
                 }
             }

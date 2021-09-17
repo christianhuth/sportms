@@ -7,7 +7,7 @@
     use ChristianKnell\Sportms\Domain\Model\Team;
     use ChristianKnell\Sportms\Domain\Model\TeamSeason;
     use TYPO3\CMS\Extbase\Persistence\Generic\Typo3QuerySettings;
-    
+
     class TeamSeasonRepository extends SportMSBaseRepository
     {
         

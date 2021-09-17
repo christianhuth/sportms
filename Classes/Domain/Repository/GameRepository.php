@@ -137,10 +137,10 @@
         ) {
             $query = $this->createQuery();
             $constraints = [];
-            $constraints[] = $this->constraintForCompetitionSeasonUids($query, (string) $competitionSeason->getUid());
+            $constraints[] = $this->constraintForCompetitionSeasonUids($query, (string)$competitionSeason->getUid());
             if ($competitionSeasonGameday) {
                 $constraints[] = $this->constraintForCompetitionSeasonGamedayUids($query,
-                    (string) $competitionSeasonGameday->getUid());
+                    (string)$competitionSeasonGameday->getUid());
             }
             $query->matching($query->logicalAnd($constraints));
             return $query->execute();
@@ -159,7 +159,7 @@
             $query = $this->createQuery();
             $this->addOrderingsToQuery($query, $orderings);
             $constraints = [];
-            $constraints[] = $this->constraintForTeamSeasonUids($query, (string) $teamSeason->getUid());
+            $constraints[] = $this->constraintForTeamSeasonUids($query, (string)$teamSeason->getUid());
             $query->matching($query->logicalAnd($constraints));
             return $query->execute();
         }

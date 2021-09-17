@@ -52,7 +52,7 @@
          * @var ObjectStorage<\ChristianKnell\Sportms\Domain\Model\PersonProfile>
          */
         protected $teamSeasonSquadCaptains;
-    
+        
         /**
          * @var ObjectStorage<\ChristianKnell\Sportms\Domain\Model\CompetitionSeason>
          */
@@ -160,6 +160,22 @@
         }
         
         /**
+         * @param int $date
+         * @return ObjectStorage|null
+         */
+        public function getTeamSeasonCheftrainerByDate(int $date): ?ObjectStorage
+        {
+            $teamSeasonCheftrainers = $this->getTeamSeasonCheftrainers();
+            $teamSeasonCheftrainersByDate = new ObjectStorage();
+            foreach ($teamSeasonCheftrainers as $teamSeasonCheftrainer) {
+                if (($teamSeasonCheftrainer->getStartdate() <= $date) && ($teamSeasonCheftrainer->getEnddate() >= $date)) {
+                    $teamSeasonCheftrainersByDate->attach($teamSeasonCheftrainer);
+                }
+            }
+            return $teamSeasonCheftrainersByDate;
+        }
+        
+        /**
          * @return ObjectStorage
          */
         public function getTeamSeasonCheftrainers(): ObjectStorage
@@ -180,21 +196,6 @@
         public function setTeamSeasonCheftrainers(ObjectStorage $teamSeasonCheftrainers
         ): void {
             $this->teamSeasonCheftrainers = $teamSeasonCheftrainers;
-        }
-    
-        /**
-         * @param int $date
-         * @return ObjectStorage|null
-         */
-        public function getTeamSeasonCheftrainerByDate(int $date): ?ObjectStorage {
-            $teamSeasonCheftrainers = $this->getTeamSeasonCheftrainers();
-            $teamSeasonCheftrainersByDate = new ObjectStorage();
-            foreach($teamSeasonCheftrainers as $teamSeasonCheftrainer) {
-                if(($teamSeasonCheftrainer->getStartdate() <= $date) && ($teamSeasonCheftrainer->getEnddate() >= $date)) {
-                    $teamSeasonCheftrainersByDate->attach($teamSeasonCheftrainer);
-                }
-            }
-            return $teamSeasonCheftrainersByDate;
         }
         
         /**
@@ -244,7 +245,7 @@
         ): void {
             $this->teamSeasonSquadCaptains = $teamSeasonSquadCaptains;
         }
-    
+        
         /**
          * @return ObjectStorage
          */
@@ -252,7 +253,7 @@
         {
             return $this->competitionSeasonTeams;
         }
-    
+        
         /**
          * @param ObjectStorage $competitionSeasonTeams
          */
@@ -276,7 +277,7 @@
         {
             $this->detailLink = $detailLink;
         }
-    
+        
         /**
          * @return bool
          */
@@ -284,7 +285,7 @@
         {
             return $this->hidden;
         }
-    
+        
         /**
          * @param bool $hidden
          */
