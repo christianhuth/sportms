@@ -25,6 +25,7 @@ fluid:
   image: composer:2.1.3
   stage: lint
   script:
+    - composer config repositories.fluid-lint vcs git@github.com:NamelessCoder/TYPO3.Fluid.Lint.git
     - composer require --dev typo3fluid/fluid-lint:dev-master
     - .Build/bin/fluidline Resoures/Private/.html
 
