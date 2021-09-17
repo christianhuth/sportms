@@ -1,23 +1,38 @@
 <html data-namespace-typo3-fluid="true"
-	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <f:if condition="{settings.season.selectbox.enabled}">
-	<div class="tx-sportms-filter">
-		<f:form action="seasonTeams"
-				arguments="{competition: competition, season: season}"
-				class="form-horizontal"
-				controller="Competition"
-				extensionName="Sportms"
-				method="POST"
-				pageUid="{settings.competition.detail.pid}"
-				pluginName="Competition">
-			<f:form.hidden name="competition" value="{competition}"/>
-			<f:render
-					arguments="{options: seasonSelectboxValues}"
-					partial="ViewHelpers/Form/Select/CompetitionSeason"/>
-			<f:render partial="ViewHelpers/Form/Submit"/>
-		</f:form>
-	</div>
+    <div class="tx-sportms-filter">
+        <f:if condition="{competition.sport.competitionDetailPid}">
+            <f:then>
+                <f:variable name="actionPid"
+                            value="{competition.sport.competitionDetailPid}"/>
+            </f:then>
+            <f:else>
+                <f:variable name="actionPid"
+                            value="{settings.competition.detail.pid}"/>
+            </f:else>
+        </f:if>
+        <f:form action="seasonTeams"
+                arguments="{competition: competition, season: season}"
+                class="form-horizontal"
+                controller="Competition"
+                extensionName="Sportms"
+                method="POST"
+                pageUid="{actionPid}"
+                pluginName="CompetitionDetail">
+            <f:render section="formcontent"
+                      arguments="{competition: competition, seasonSelectboxValues: seasonSelectboxValues}"/>
+        </f:form>
+    </div>
 </f:if>
+
+<f:section name="formcontent">
+    <f:form.hidden name="competition" value="{competition}"/>
+    <f:render
+            arguments="{options: seasonSelectboxValues}"
+            partial="ViewHelpers/Form/Select/CompetitionSeason"/>
+    <f:render partial="ViewHelpers/Form/Submit"/>
+</f:section>
 
 </html>
