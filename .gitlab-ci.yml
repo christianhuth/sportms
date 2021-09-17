@@ -36,7 +36,7 @@ yaml:
     - pip install yamllint==1.10.0
   script:
     - pwd
-    - yamllint .Configuration/*/*.yaml .Configuration/*/*.yml .*.yaml .*.yml
+    - yamllint -c /.yamllint.yaml .Configuration/*/*.yaml .Configuration/*/*.yml .*.yaml .*.yml
 
 sql:
     dependencies:
