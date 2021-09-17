@@ -7,7 +7,7 @@
     use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
     use TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy;
     use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
-
+    
     /**
      * Game
      */
@@ -1278,9 +1278,34 @@
         /**
          * @return LazyLoadingProxy|ObjectStorage|null
          */
-        public function getGameChanges()
+        public function getGameChanges(): ?ObjectStorage
         {
-            return $this->gameChanges;
+            return $this->orderGameChanges($this->gameChanges);
+        }
+        
+        /**
+         * @param ObjectStorage|null $gameChanges
+         */
+        private function orderGameChanges(?ObjectStorage $gameChanges): ObjectStorage
+        {
+            // convert ObjectStorage to array
+            $gameChangesAsArray = $gameChanges->toArray();
+            // new ObjectStorage, where we will append the ordered GameChanges
+            $orderedGameChanges = new ObjectStorage();
+            
+            # a - b = ASC
+            # b - a = DESC
+            usort($gameChangesAsArray, static function ($a, $b) {
+                if($a->getMinute() > $b->getMinute()) {
+                    return 1;
+                } else {
+                    return -1;
+                }
+            });
+            foreach($gameChangesAsArray AS $gameChangeAsArray) {
+                $orderedGameChanges->attach($gameChangeAsArray);
+            }
+            return $orderedGameChanges;
         }
         
         /**
