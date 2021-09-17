@@ -35,6 +35,11 @@
          * @var int
          */
         protected $yPosition;
+    
+        /**
+         * @var int
+         */
+        protected $sorting;
         
         /**
          * @return \ChristianKnell\Sportms\Domain\Model\SportPositionGroup
@@ -115,6 +120,22 @@
         public function setYPosition(int $yPosition): void
         {
             $this->yPosition = $yPosition;
+        }
+    
+        /**
+         * @return int
+         */
+        public function getSorting(): int
+        {
+            return $this->sorting;
+        }
+    
+        /**
+         * @param int $sorting
+         */
+        public function setSorting(int $sorting): void
+        {
+            $this->sorting = $sorting;
         }
         
     }

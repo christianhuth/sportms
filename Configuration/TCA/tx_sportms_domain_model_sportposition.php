@@ -149,6 +149,11 @@
                     'eval' => 'alphanum, trim',
                 ],
             ],
+            'sorting' => [
+                'config' => [
+                    'type' => 'passthrough'
+                ],
+            ],
         
         ],
     ];
