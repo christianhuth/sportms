@@ -236,7 +236,7 @@
             # a - b = ASC
             # b - a = DESC
             usort($teamSeasonSquadMembersAsArray, static function ($a, $b) {
-                $sportPositionGroupDiff = $b->getSportPositionGroup()->getSorting() - $a->getSportPositionGroup()->getSorting();
+                $sportPositionGroupDiff = $a->getSportPositionGroup()->getSorting() - $b->getSportPositionGroup()->getSorting();
                 if ($sportPositionGroupDiff) {
                     return $sportPositionGroupDiff;
                 }
