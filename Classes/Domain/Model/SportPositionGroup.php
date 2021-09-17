@@ -32,6 +32,11 @@
          */
         protected $sportPositions;
         
+        /**
+         * @var int
+         */
+        protected $sorting;
+        
         public function __construct()
         {
             //Do not remove the next line: It would break the functionality
@@ -113,6 +118,22 @@
         public function setSportPositions(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $sportPositions): void
         {
             $this->sportPositions = $sportPositions;
+        }
+    
+        /**
+         * @return int
+         */
+        public function getSorting(): int
+        {
+            return $this->sorting;
+        }
+    
+        /**
+         * @param int $sorting
+         */
+        public function setSorting(int $sorting): void
+        {
+            $this->sorting = $sorting;
         }
         
     }
