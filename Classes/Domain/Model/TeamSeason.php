@@ -228,40 +228,45 @@
         private function orderTeamSeasonSquadMembers(?ObjectStorage $teamSeasonSquadMembers): ObjectStorage
         {
             // convert ObjectStorage to array
-            $teamSeasonSquadMembersAsArray = $teamSeasonSquadMembers->toArray();
-            // new ObjectStorage, where we will append the ordered GameChanges
-            $orderedTeamSeasonSquadMembers = new ObjectStorage();
-        
-            // sort the array with the game changes
-            # a - b = ASC
-            # b - a = DESC
-            usort($teamSeasonSquadMembersAsArray, static function ($a, $b) {
-                if(!is_null($a->getSportPositionGroup()) && !is_null($b->getSportPositionGroup())) {
-                    $sportPositionGroupDiff = $a->getSportPositionGroup()->getSorting() - $b->getSportPositionGroup()->getSorting();
-                    if ($sportPositionGroupDiff) {
-                        return $sportPositionGroupDiff;
+            if(!is_null($teamSeasonSquadMembers)) {
+    
+                $teamSeasonSquadMembersAsArray = $teamSeasonSquadMembers->toArray();
+                // new ObjectStorage, where we will append the ordered GameChanges
+                $orderedTeamSeasonSquadMembers = new ObjectStorage();
+    
+                // sort the array with the game changes
+                # a - b = ASC
+                # b - a = DESC
+                usort($teamSeasonSquadMembersAsArray, static function ($a, $b) {
+                    if(!is_null($a->getSportPositionGroup()) && !is_null($b->getSportPositionGroup())) {
+                        $sportPositionGroupDiff = $a->getSportPositionGroup()->getSorting() - $b->getSportPositionGroup()->getSorting();
+                        if ($sportPositionGroupDiff) {
+                            return $sportPositionGroupDiff;
+                        }
                     }
-                }
-                if(!is_null($a->getSportPosition()) && !is_null($b->getSportPosition())) {
-                    $sportPositionDiff = $a->getSportPosition()->getSorting() - $b->getSportPosition()->getSorting();
-                    if ($sportPositionDiff) {
-                        return $sportPositionDiff;
+                    if(!is_null($a->getSportPosition()) && !is_null($b->getSportPosition())) {
+                        $sportPositionDiff = $a->getSportPosition()->getSorting() - $b->getSportPosition()->getSorting();
+                        if ($sportPositionDiff) {
+                            return $sportPositionDiff;
+                        }
                     }
+                    $lastnameDiff = strcmp($a->getPersonProfile()->getPerson()->getLastname(),
+                        $b->getPersonProfile()->getPerson()->getLastname());
+                    if ($lastnameDiff) {
+                        return $lastnameDiff;
+                    }
+                    return strcmp($a->getPersonProfile()->getPerson()->getFirstname(),
+                        $b->getPersonProfile()->getPerson()->getFirstname());
+                });
+    
+                // convert ordered array to ObjectStorage
+                foreach($teamSeasonSquadMembersAsArray AS $teamSeasonSquadMemberAsArray) {
+                    $orderedTeamSeasonSquadMembers->attach($teamSeasonSquadMemberAsArray);
                 }
-                $lastnameDiff = strcmp($a->getPersonProfile()->getPerson()->getLastname(),
-                    $b->getPersonProfile()->getPerson()->getLastname());
-                if ($lastnameDiff) {
-                    return $lastnameDiff;
-                }
-                return strcmp($a->getPersonProfile()->getPerson()->getFirstname(),
-                    $b->getPersonProfile()->getPerson()->getFirstname());
-            });
-        
-            // convert ordered array to ObjectStorage
-            foreach($teamSeasonSquadMembersAsArray AS $teamSeasonSquadMemberAsArray) {
-                $orderedTeamSeasonSquadMembers->attach($teamSeasonSquadMemberAsArray);
+                return $orderedTeamSeasonSquadMembers;
+            } else {
+                return $teamSeasonSquadMembers;
             }
-            return $orderedTeamSeasonSquadMembers;
         }
         
         /**
