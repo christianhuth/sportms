@@ -26,6 +26,7 @@ typoscript:
   stage: lint
   script:
     - composer require --dev helmich/typo3-typoscript-lint
+    - ls -al .Build
     - .Build/vendor/bin/typoscript-lint
 
 yaml:
