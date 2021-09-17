@@ -1289,26 +1289,30 @@
         private function orderGameChanges(?ObjectStorage $gameChanges): ObjectStorage
         {
             // convert ObjectStorage to array
-            $gameChangesAsArray = $gameChanges->toArray();
-            // new ObjectStorage, where we will append the ordered GameChanges
-            $orderedGameChanges = new ObjectStorage();
-            
-            // sort the array with the game changes
-            # a - b = ASC
-            # b - a = DESC
-            usort($gameChangesAsArray, static function ($a, $b) {
-                if($a->getMinute() > $b->getMinute()) {
-                    return 1;
-                } else {
-                    return -1;
+            if(!is_null($gameChanges)) {
+                $gameChangesAsArray = $gameChanges->toArray();
+                // new ObjectStorage, where we will append the ordered GameChanges
+                $orderedGameChanges = new ObjectStorage();
+    
+                // sort the array with the game changes
+                # a - b = ASC
+                # b - a = DESC
+                usort($gameChangesAsArray, static function ($a, $b) {
+                    if($a->getMinute() > $b->getMinute()) {
+                        return 1;
+                    } else {
+                        return -1;
+                    }
+                });
+    
+                // convert ordered array to ObjectStorage
+                foreach($gameChangesAsArray AS $gameChangeAsArray) {
+                    $orderedGameChanges->attach($gameChangeAsArray);
                 }
-            });
-            
-            // convert ordered array to ObjectStorage
-            foreach($gameChangesAsArray AS $gameChangeAsArray) {
-                $orderedGameChanges->attach($gameChangeAsArray);
+                return $orderedGameChanges;
+            } else {
+                return $gameChanges;
             }
-            return $orderedGameChanges;
         }
         
         /**
