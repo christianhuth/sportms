@@ -1286,7 +1286,7 @@
         /**
          * @param ObjectStorage|null $gameChanges
          */
-        private function orderGameChanges(?ObjectStorage $gameChanges): ObjectStorage
+        private function orderGameChanges(?ObjectStorage $gameChanges): ?ObjectStorage
         {
             // convert ObjectStorage to array
             if(!is_null($gameChanges)) {

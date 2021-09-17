@@ -225,7 +225,7 @@
         /**
          * @param ObjectStorage|null $teamSeasonSquadMembers
          */
-        private function orderTeamSeasonSquadMembers(?ObjectStorage $teamSeasonSquadMembers): ObjectStorage
+        private function orderTeamSeasonSquadMembers(?ObjectStorage $teamSeasonSquadMembers): ?ObjectStorage
         {
             // convert ObjectStorage to array
             if(!is_null($teamSeasonSquadMembers)) {
