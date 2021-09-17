@@ -150,6 +150,11 @@
                     'type' => 'inline',
                 ],
             ],
+            'sorting' => [
+                'config' => [
+                    'type' => 'passthrough'
+                ],
+            ],
         
         ],
     ];
