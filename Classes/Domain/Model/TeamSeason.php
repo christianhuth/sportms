@@ -219,7 +219,41 @@
          */
         public function getTeamSeasonSquadMembers()
         {
-            return $this->teamSeasonSquadMembers;
+            return $this->orderTeamSeasonSquadMembers($this->teamSeasonSquadMembers);
+        }
+    
+        /**
+         * @param ObjectStorage|null $teamSeasonSquadMembers
+         */
+        private function orderTeamSeasonSquadMembers(?ObjectStorage $teamSeasonSquadMembers): ObjectStorage
+        {
+            // convert ObjectStorage to array
+            $teamSeasonSquadMembersAsArray = $teamSeasonSquadMembers->toArray();
+            // new ObjectStorage, where we will append the ordered GameChanges
+            $orderedTeamSeasonSquadMembers = new ObjectStorage();
+        
+            // sort the array with the game changes
+            # a - b = ASC
+            # b - a = DESC
+            usort($teamSeasonSquadMembersAsArray, static function ($a, $b) {
+                $sportPositionGroupDiff = strcmp((string)$b->getSportPositionGroup()->getLabel(), (string)$a->getSportPositionGroup()->getLabel());
+                if ($sportPositionGroupDiff) {
+                    return $sportPositionGroupDiff;
+                }
+                $lastnameDiff = strcmp($a->getPersonProfile()->getPerson()->getLastname(),
+                    $b->getPersonProfile()->getPerson()->getLastname());
+                if ($lastnameDiff) {
+                    return $lastnameDiff;
+                }
+                return strcmp($a->getPersonProfile()->getPerson()->getFirstname(),
+                    $b->getPersonProfile()->getPerson()->getFirstname());
+            });
+        
+            // convert ordered array to ObjectStorage
+            foreach($teamSeasonSquadMembersAsArray AS $teamSeasonSquadMemberAsArray) {
+                $orderedTeamSeasonSquadMembers->attach($teamSeasonSquadMemberAsArray);
+            }
+            return $orderedTeamSeasonSquadMembers;
         }
         
         /**
