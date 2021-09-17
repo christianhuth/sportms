@@ -47,5 +47,3 @@ sql:
         - composer require --dev liquipedia/sqllint
         - ls -al .Build/bin
         - .Build/bin/sqllint
-
-    - yamllint -c yamllint.yaml localPackages/ yamllint.yaml .gitlab-ci.yml tslint.yaml
