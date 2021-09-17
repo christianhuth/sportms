@@ -240,6 +240,10 @@
                 if ($sportPositionGroupDiff) {
                     return $sportPositionGroupDiff;
                 }
+                $sportPositionDiff = $a->getSportPosition()->getSorting() - $b->getSportPosition()->getSorting();
+                if ($sportPositionDiff) {
+                    return $sportPositionDiff;
+                }
                 $lastnameDiff = strcmp($a->getPersonProfile()->getPerson()->getLastname(),
                     $b->getPersonProfile()->getPerson()->getLastname());
                 if ($lastnameDiff) {
