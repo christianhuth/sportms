@@ -271,10 +271,14 @@
         public function teamSeasonPracticeLabel(&$parameters, $parentObject): void
         {
             $record = BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
-            $newLabel = LocalizationUtility::translate('tx_sportms_general.day.' . $record['day'],
+	    if($record['day'] && $record['time_start'] && $record['time_end']) {
+	    	$newLabel = LocalizationUtility::translate('tx_sportms_general.day.' . $record['day'],
                     'sportms') . ' (' . substr($record['time_start'], 0, 5) . ' - ' . substr($record['time_end'], 0,
                     5) . ' ' . LocalizationUtility::translate('tx_sportms_general.clock', 'sportms') . ')';
-            $parameters['title'] = $newLabel;
+	    } else {
+	    	$newLabel = "";
+	    }
+	    $parameters['title'] = $newLabel;
         }
         
         public function teamSeasonSquadMemberLabel(&$parameters, $parentObject): void
