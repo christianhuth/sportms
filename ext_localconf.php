@@ -1,6 +1,6 @@
 <?php
     
-    defined('TYPO3_MODE') or die();
+    defined('TYPO3') or die();
     
     use ChristianKnell\Sportms\Controller\ClubController;
     use ChristianKnell\Sportms\Controller\CompetitionController;
