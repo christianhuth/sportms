@@ -70,7 +70,7 @@
     /* ===========================================================================
         Register Icons for the Backend
     =========================================================================== */
-    if (TYPO3_MODE === 'BE') {
+    if (TYPO3 === 'BE') {
         $icons = [
             'sportms-ce-plugin-sportms-icon' => 'Extension.svg',
             'sportms-ce-plugin-club-icon' => 'tx_sportms_domain_model_club.svg',
