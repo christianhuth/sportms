@@ -3,11 +3,13 @@
     declare(strict_types=1);
     
     namespace ChristianKnell\Sportms\Domain\Model;
+
+    use \TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
     
     /**
      * TeamSeasonSquadMember
      */
-    class TeamSeasonSquadMember extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
+    class TeamSeasonSquadMember extends AbstractEntity
     {
         
         /**
