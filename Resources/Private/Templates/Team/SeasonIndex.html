@@ -1,4 +1,4 @@
-<html data-namespace-typo3-fluid="true"
+ data-namespace-typo3-fluid="true"
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <f:layout name="default"/>
@@ -14,7 +14,6 @@
                 partial="Team/SeasonIndex/Filter"/>
         
         <div class="tx-sportms-team-seasonindex">
-            
             <f:if condition="{teamSeason.teamSeasonImages}">
                 <div class="tx-sportms-teamseason-image">
                     <a class="t3colorbox"
@@ -64,12 +63,14 @@
                     <div class="tx-sportms-teamseason-officials-members">
                         <f:for as="teamSeasonOfficial"
                                each="{teamSeason.teamSeasonOfficials}">
-                            <f:if condition="{teamSeasonOfficial.enddate} == ''">
+                            <f:if condition="{teamSeasonOfficial.enddate}">
                                 <f:then>
+				</f:then>
+				<f:else>
                                     <f:render
                                             arguments="{teamSeasonOfficial: teamSeasonOfficial, settings: settings}"
                                             partial="Team/SeasonIndex/TeamSeasonOfficial"/>
-                                </f:then>
+                                </f:else>
                             </f:if>
                         </f:for>
                     </div>
