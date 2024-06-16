@@ -6,6 +6,8 @@
     
     use ChristianKnell\Sportms\Domain\Model\Team;
     use ChristianKnell\Sportms\Domain\Model\TeamSeason;
+    use TYPO3\CMS\Core\Utility\GeneralUtility;
+    use TYPO3\CMS\Extbase\Persistence\Generic\QuerySettingsInterface;
     use TYPO3\CMS\Extbase\Persistence\Generic\Typo3QuerySettings;
 
     class TeamSeasonRepository extends SportMSBaseRepository
@@ -23,7 +25,8 @@
         // Repository wide settings
         public function initializeObject()
         {
-            $querySettings = new Typo3QuerySettings();
+            /** @var QuerySettingsInterface $querySettings */
+            $querySettings = GeneralUtility::makeInstance(Typo3QuerySettings::class);
             
             // don't add the pid constraint
             $querySettings->setRespectStoragePage(false);
