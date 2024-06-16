@@ -8,6 +8,8 @@
     use ChristianKnell\Sportms\Domain\Model\Team;
     use ChristianKnell\Sportms\Domain\Model\TeamSeason;
     use ChristianKnell\Sportms\Domain\Model\TeamSeasonOfficial;
+    use ChristianKnell\Sportms\Domain\Repository\SeasonRepository;
+    use ChristianKnell\Sportms\Domain\Repository\TeamRepository;
     use TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException;
     use TYPO3\CMS\Extbase\Persistence\QueryInterface;
     use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
@@ -131,6 +133,15 @@
          * @TYPO3\CMS\Extbase\Annotation\Inject
          */
         protected $teamSeasonOfficialRepository;
+
+        /**
+         * @ param TeamRepository
+         */
+        public function __construct(SeasonRepository $seasonRepository, TeamRepository $teamRepository)
+        {
+            $this->seasonRepository = $seasonRepository;
+            $this->teamRepository = $teamRepository;
+        }
         
         /**
          * @param Team|null $team
