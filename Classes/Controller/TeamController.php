@@ -10,6 +10,7 @@
     use ChristianKnell\Sportms\Domain\Model\TeamSeasonOfficial;
     use ChristianKnell\Sportms\Domain\Repository\SeasonRepository;
     use ChristianKnell\Sportms\Domain\Repository\TeamRepository;
+    use ChristianKnell\Sportms\Domain\Repository\TeamSeasonRepository;
     use TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException;
     use TYPO3\CMS\Extbase\Persistence\QueryInterface;
     use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
@@ -137,9 +138,10 @@
         /**
          * @ param TeamRepository
          */
-        public function __construct(SeasonRepository $seasonRepository, TeamRepository $teamRepository)
+        public function __construct(SeasonRepository $seasonRepository, TeamSeasonRepository $teamSeasonRepository, TeamRepository $teamRepository)
         {
             $this->seasonRepository = $seasonRepository;
+            $this->teamSeasonRepository = $teamSeasonRepository;
             $this->teamRepository = $teamRepository;
         }
         
@@ -383,7 +385,7 @@
             $teams = $this->teamRepository->findAll($this->getSportsFilter(), $this->getSportAgeGroupsFilter(),
                 $this->getSportAgeLevelsFilter(), $this->getClubsFilter(), $this->getTeamsFilter());
             $this->view->assign('teams', $teams);
-            
+
             /* FRONTEND FILTERS */
             $this->assignSelectboxValues('sport');
             $this->assignSelectboxValues('sportAgeGroup');
