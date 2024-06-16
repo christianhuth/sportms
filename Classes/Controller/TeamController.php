@@ -141,13 +141,13 @@
         /**
          * @ param TeamRepository
          */
-        public function __construct(ClubRepository $clubRepository, CompetitionRepository $competitionRepository, SeasonRepository $seasonRepository, TeamSeasonRepository $teamSeasonRepository, TeamRepository $teamRepository, TeamSeasonOfficialRepository $teamSeasonOfficialRepository)
+        public function __construct(ClubRepository $clubRepository, CompetitionRepository $competitionRepository, SeasonRepository $seasonRepository, TeamRepository $teamRepository, TeamSeasonRepository $teamSeasonRepository, TeamSeasonOfficialRepository $teamSeasonOfficialRepository)
         {
             $this->clubRepository = $clubRepository;
             $this->competitionRepository = $competitionRepository;
             $this->seasonRepository = $seasonRepository;
-            $this->teamSeasonRepository = $teamSeasonRepository;
             $this->teamRepository = $teamRepository;
+            $this->teamSeasonRepository = $teamSeasonRepository;
             $this->teamSeasonOfficialRepository = $teamSeasonOfficialRepository;
         }
         
