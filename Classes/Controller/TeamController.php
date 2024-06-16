@@ -8,9 +8,12 @@
     use ChristianKnell\Sportms\Domain\Model\Team;
     use ChristianKnell\Sportms\Domain\Model\TeamSeason;
     use ChristianKnell\Sportms\Domain\Model\TeamSeasonOfficial;
+    use ChristianKnell\Sportms\Domain\Repository\ClubRepository;
+    use ChristianKnell\Sportms\Domain\Repository\CompetitionRepository;
     use ChristianKnell\Sportms\Domain\Repository\SeasonRepository;
     use ChristianKnell\Sportms\Domain\Repository\TeamRepository;
     use ChristianKnell\Sportms\Domain\Repository\TeamSeasonRepository;
+    use ChristianKnell\Sportms\Domain\Repository\TeamSeasonOfficialRepository;
     use TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException;
     use TYPO3\CMS\Extbase\Persistence\QueryInterface;
     use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
@@ -138,11 +141,14 @@
         /**
          * @ param TeamRepository
          */
-        public function __construct(SeasonRepository $seasonRepository, TeamSeasonRepository $teamSeasonRepository, TeamRepository $teamRepository)
+        public function __construct(ClubRepository $clubRepository, CompetitionRepository $competitionRepository, SeasonRepository $seasonRepository, TeamSeasonRepository $teamSeasonRepository, TeamRepository $teamRepository, TeamSeasonOfficialRepository $teamSeasonOfficialRepository)
         {
+            $this->clubRepository = $clubRepository;
+            $this->competitionRepository = $competitionRepository;
             $this->seasonRepository = $seasonRepository;
             $this->teamSeasonRepository = $teamSeasonRepository;
             $this->teamRepository = $teamRepository;
+            $this->teamSeasonOfficialRepository = $teamSeasonOfficialRepository;
         }
         
         /**
