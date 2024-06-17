@@ -10,7 +10,20 @@
     use ChristianKnell\Sportms\Domain\Model\TeamSeasonOfficial;
     use ChristianKnell\Sportms\Domain\Repository\ClubRepository;
     use ChristianKnell\Sportms\Domain\Repository\CompetitionRepository;
+    use ChristianKnell\Sportms\Domain\Repository\CompetitionSeasonRepository;
+    use ChristianKnell\Sportms\Domain\Repository\CompetitionTypeRepository;
+    use ChristianKnell\Sportms\Domain\Repository\GameRepository;
+    use ChristianKnell\Sportms\Domain\Repository\GameGoalRepository;
+    use ChristianKnell\Sportms\Domain\Repository\GameLineupRepository;
+    use ChristianKnell\Sportms\Domain\Repository\OfficialJobRepository;
+    use ChristianKnell\Sportms\Domain\Repository\PersonRepository;
+    use ChristianKnell\Sportms\Domain\Repository\PersonProfileRepository;
     use ChristianKnell\Sportms\Domain\Repository\SeasonRepository;
+    use ChristianKnell\Sportms\Domain\Repository\SportRepository;
+    use ChristianKnell\Sportms\Domain\Repository\SportAgeGroupRepository;
+    use ChristianKnell\Sportms\Domain\Repository\SportAgeLevelRepository;
+    use ChristianKnell\Sportms\Domain\Repository\SportPositionGroupRepository;
+    use ChristianKnell\Sportms\Domain\Repository\SportPositionRepository;
     use ChristianKnell\Sportms\Domain\Repository\TeamRepository;
     use ChristianKnell\Sportms\Domain\Repository\TeamSeasonRepository;
     use ChristianKnell\Sportms\Domain\Repository\TeamSeasonOfficialRepository;
@@ -141,11 +154,24 @@
         /**
          * @ param TeamRepository
          */
-        public function __construct(ClubRepository $clubRepository, CompetitionRepository $competitionRepository, SeasonRepository $seasonRepository, TeamRepository $teamRepository, TeamSeasonRepository $teamSeasonRepository, TeamSeasonOfficialRepository $teamSeasonOfficialRepository)
+        public function __construct(ClubRepository $clubRepository, CompetitionRepository $competitionRepository, CompetitionSeasonRepository $competitionSeasonRepository, CompetitionTypeRepository $competitionTypeRepository, GameRepository $gameRepository, GameGoalRepository $gameGoalRepository, GameLineupRepository $gameLineupRepository, OfficialJobRepository $officialJobRepository, PersonRepository $personRepository, PersonProfileRepository $personProfileRepository, SeasonRepository $seasonRepository, SportRepository $sportRepository, SportAgeGroupRepository $sportAgeGroupRepository, SportAgeLevelRepository $sportAgeLevelRepository, SportPositionGroupRepository $sportPositionGroupRepository, SportPositionRepository $sportPositionRepository, TeamRepository $teamRepository, TeamSeasonRepository $teamSeasonRepository, TeamSeasonOfficialRepository $teamSeasonOfficialRepository)
         {
             $this->clubRepository = $clubRepository;
             $this->competitionRepository = $competitionRepository;
+            $this->competitionSeasonRepository = $competitionSeasonRepository;
+            $this->competitionTypeRepository = $competitionTypeRepository;
+            $this->gameRepository = $gameRepository;
+            $this->gameGoalRepository = $gameGoalRepository;
+            $this->gameLineupRepository = $gameLineupRepository;
+            $this->officialJobRepository = $officialJobRepository;
+            $this->personRepository = $personRepository;
+            $this->personProfileRepository = $personProfileRepository;
             $this->seasonRepository = $seasonRepository;
+            $this->sportRepository = $sportRepository;
+            $this->sportAgeGroupRepository = $sportAgeGroupRepository;
+            $this->sportAgeLevelRepository = $sportAgeLevelRepository;
+            $this->sportPositionGroupRepository = $sportPositionGroupRepository;
+            $this->sportPositionRepository = $sportPositionRepository;
             $this->teamRepository = $teamRepository;
             $this->teamSeasonRepository = $teamSeasonRepository;
             $this->teamSeasonOfficialRepository = $teamSeasonOfficialRepository;
