@@ -152,7 +152,7 @@
         protected $teamSeasonOfficialRepository;
 
         /**
-         * @ param TeamRepository
+         * Constructor that injects the repositories
          */
         public function __construct(ClubRepository $clubRepository, CompetitionRepository $competitionRepository, CompetitionSeasonRepository $competitionSeasonRepository, CompetitionTypeRepository $competitionTypeRepository, GameRepository $gameRepository, GameGoalRepository $gameGoalRepository, GameLineupRepository $gameLineupRepository, OfficialJobRepository $officialJobRepository, PersonRepository $personRepository, PersonProfileRepository $personProfileRepository, SeasonRepository $seasonRepository, SportRepository $sportRepository, SportAgeGroupRepository $sportAgeGroupRepository, SportAgeLevelRepository $sportAgeLevelRepository, SportPositionGroupRepository $sportPositionGroupRepository, SportPositionRepository $sportPositionRepository, TeamRepository $teamRepository, TeamSeasonRepository $teamSeasonRepository, TeamSeasonOfficialRepository $teamSeasonOfficialRepository)
         {

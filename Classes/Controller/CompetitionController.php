@@ -8,6 +8,14 @@
     use ChristianKnell\Sportms\Domain\Model\CompetitionSeason;
     use ChristianKnell\Sportms\Domain\Model\CompetitionSeasonGameday;
     use ChristianKnell\Sportms\Domain\Model\Season;
+    use ChristianKnell\Sportms\Domain\Repository\CompetitionRepository;
+    use ChristianKnell\Sportms\Domain\Repository\CompetitionSeasonRepository;
+    use ChristianKnell\Sportms\Domain\Repository\CompetitionSeasonGamedayRepository;
+    use ChristianKnell\Sportms\Domain\Repository\CompetitionTypeRepository;
+    use ChristianKnell\Sportms\Domain\Repository\GameRepository;
+    use ChristianKnell\Sportms\Domain\Repository\SportRepository;
+    use ChristianKnell\Sportms\Domain\Repository\SportAgeGroupRepository;
+    use ChristianKnell\Sportms\Domain\Repository\SportAgeLevelRepository;
     use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
 
     /**
@@ -35,6 +43,12 @@
         protected $competitionSeasonGamedayRepository;
         
         /**
+         * @var \ChristianKnell\Sportms\Domain\Repository\CompetitionTypeRepository
+         * @TYPO3\CMS\Extbase\Annotation\Inject
+         */
+        protected $competitionTypeRepository;
+        
+        /**
          * @var \ChristianKnell\Sportms\Domain\Repository\GameRepository
          * @TYPO3\CMS\Extbase\Annotation\Inject
          */
@@ -57,12 +71,21 @@
          * @TYPO3\CMS\Extbase\Annotation\Inject
          */
         protected $sportAgeLevelRepository;
-        
+
         /**
-         * @var \ChristianKnell\Sportms\Domain\Repository\CompetitionTypeRepository
-         * @TYPO3\CMS\Extbase\Annotation\Inject
+         * Constructor that injects the repositories
          */
-        protected $competitionTypeRepository;
+        public function __construct(CompetitionRepository $competitionRepository, CompetitionSeasonRepository $competitionSeasonRepository, CompetitionSeasonGamedayRepository $competitionSeasonGamedayRepository, CompetitionTypeRepository $competitionTypeRepository, GameRepository $gameRepository, SportRepository $sportRepository, SportAgeGroupRepository $sportAgeGroupRepository, SportAgeLevelRepository $sportAgeLevelRepository)
+        {
+            $this->competitionRepository = $competitionRepository;
+            $this->competitionSeasonRepository = $competitionSeasonRepository;
+            $this->competitionSeasonGamedayRepository = $competitionSeasonGamedayRepository;
+            $this->competitionTypeRepository = $competitionTypeRepository;
+            $this->gameRepository = $gameRepository;
+            $this->sportRepository = $sportRepository;
+            $this->sportAgeGroupRepository = $sportAgeGroupRepository;
+            $this->sportAgeLevelRepository = $sportAgeLevelRepository;
+        }
         
         /**
          * @return void
