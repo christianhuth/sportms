@@ -3,7 +3,7 @@
     use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
     use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
     
-    defined('TYPO3_MODE') or die();
+    defined('TYPO3') or die();
     
     $vendor = 'ChristianKnell';
     $_EXTKEY = 'sportms';
