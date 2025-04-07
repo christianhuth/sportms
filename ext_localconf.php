@@ -53,7 +53,7 @@
     
     for ($i = 0; $i < count($pluginNamesAndTheirActions); $i++) {
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-            $vendor . '.' . $extensionName,
+            $extensionName,
             $pluginNamesAndTheirActions[$i]['name'],
             $pluginNamesAndTheirActions[$i]['cacheableActions'],
             $pluginNamesAndTheirActions[$i]['nonCacheableActions']
