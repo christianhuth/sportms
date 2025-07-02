@@ -2,7 +2,7 @@
     
     declare(strict_types=1);
     
-    namespace ChristianKnell\Sportms\ViewHelpers;
+    namespace ChristianKnell\Sportms\ViewHelpers\Person;
     use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
     use TYPO3Fluid\Fluid\Core\ViewHelper\ViewHelperInterface;
     
