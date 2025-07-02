@@ -4,8 +4,13 @@
     
     namespace ChristianKnell\Sportms\Controller;
     
+    use ChristianKnell\Sportms\Domain\Repository\ClubRepository;
+    use ChristianKnell\Sportms\Domain\Repository\CompetitionRepository;
+    use ChristianKnell\Sportms\Domain\Repository\GameRepository;
+    use ChristianKnell\Sportms\Domain\Repository\PersonRepository;
+    use ChristianKnell\Sportms\Domain\Repository\SeasonRepository;
+    use ChristianKnell\Sportms\Domain\Repository\TeamRepository;
     use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
-    use TYPO3\CMS\Extbase\Annotation\Inject;
 
     /**
      * SportMSController
@@ -14,40 +19,47 @@
     {
         
         /**
-         * @var \ChristianKnell\Sportms\Domain\Repository\ClubRepository
-         * @Inject
+         * @var ClubRepository
          */
         protected $clubRepository = null;
         
         /**
-         * @var \ChristianKnell\Sportms\Domain\Repository\CompetitionRepository
-         * @Inject
+         * @var CompetitionRepository
          */
         protected $competitionRepository = null;
         
         /**
-         * @var \ChristianKnell\Sportms\Domain\Repository\GameRepository
-         * @Inject
+         * @var GameRepository
          */
         protected $gameRepository = null;
         
         /**
-         * @var \ChristianKnell\Sportms\Domain\Repository\PersonRepository
-         * @Inject
+         * @var PersonRepository
          */
         protected $personRepository = null;
         
         /**
-         * @var \ChristianKnell\Sportms\Domain\Repository\SeasonRepository
-         * @Inject
+         * @var SeasonRepository
          */
         protected $seasonRepository = null;
         
         /**
-         * @var \ChristianKnell\Sportms\Domain\Repository\TeamRepository
-         * @Inject
+         * @var TeamRepository
          */
         protected $teamRepository = null;
+
+        /**
+         * Constructor that injects the repositories
+         */
+        public function __construct(ClubRepository $clubRepository, CompetitionRepository $competitionRepository, GameRepository $gameRepository, PersonRepository $personRepository, SeasonRepository $seasonRepository, TeamRepository $teamRepository)
+        {
+            $this->clubRepository = $clubRepository;
+            $this->competitionRepository = $competitionRepository;
+            $this->gameRepository = $gameRepository;
+            $this->personRepository = $personRepository;
+            $this->seasonRepository = $seasonRepository;
+            $this->teamRepository = $teamRepository;
+        }
         
         /**
          * @return void
