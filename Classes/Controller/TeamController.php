@@ -161,8 +161,48 @@
         
         /**
          * @param Team|null $team
+         * @param Season|null $season
          */
-        public function historyOfficialsAction(Team $team = null)
+        private function assignSeasonToView(Team $team = null, Season $season = null): Season
+        {
+            if ($season === null) {
+                $season = $this->determineSeason();
+            }
+            if ($season === null) {
+                if ($team->getTeamSeasons()) {
+                    $season = $team->getTeamSeasons()[0]->getSeason();
+                } else {
+                    die();
+                }
+            }
+            $this->view->assign('season', $season);
+            return $season;
+        }
+        
+        /**
+         * @param Team $team
+         */
+        private function assignSeasonSelectboxValuesToView(Team $team)
+        {
+            $seasonSelectboxValues = $this->teamSeasonRepository->findbyTeam($team);
+            $this->view->assign('seasonSelectboxValues', $seasonSelectboxValues);
+        }
+        
+        /**
+         * @param Team $team
+         * @param Season $season
+         */
+        private function assignTeamSeasonToView(Team $team, Season $season): TeamSeason
+        {
+            $teamSeason = $this->teamSeasonRepository->findByTeamAndSeason($team, $season);
+            $this->view->assign('teamSeason', $teamSeason);
+            return $teamSeason;
+        }
+        
+        /**
+         * @param Team|null $team
+         */
+        public function historyOfficialsAction(Team $team = null): ResponseInterface
         {
             /* MAIN CONTENT */
             $team = $this->assignTeamToView($team);
@@ -211,6 +251,8 @@
                 $team,
                 LocalizationUtility::translate('tx_sportms_action.team.historyofficials', "sportms")
             );
+            
+            return $this->htmlResponse();
         }
         
         /**
@@ -271,7 +313,7 @@
         /**
          * @param Team|null $team
          */
-        public function historyRecordGamesAction(Team $team = null)
+        public function historyRecordGamesAction(Team $team = null): ResponseInterface
         {
             /* MAIN CONTENT */
             $team = $this->assignTeamToView($team);
@@ -306,12 +348,14 @@
                 $team,
                 LocalizationUtility::translate('tx_sportms_action.team.historyrecordgames', "sportms")
             );
+            
+            return $this->htmlResponse();
         }
         
         /**
          * @param Team $team
          */
-        public function historyRecordPlayersAction(Team $team = null)
+        public function historyRecordPlayersAction(Team $team = null): ResponseInterface
         {
             /* MAIN CONTENT */
             $team = $this->assignTeamToView($team);
@@ -387,13 +431,15 @@
                 $team,
                 LocalizationUtility::translate('tx_sportms_action.team.historyrecordplayers', "sportms")
             );
+            
+            return $this->htmlResponse();
         }
         
         /**
          * @return void
          * @throws InvalidQueryException
          */
-        public function listAction(): void
+        public function listAction(): ResponseInterface
         {
             /* MAIN CONTENT */
             $teams = $this->teamRepository->findAll($this->getSportsFilter(), $this->getSportAgeGroupsFilter(),
@@ -411,13 +457,15 @@
                 LocalizationUtility::translate('tx_sportms_domain_model_team.plural', "sportms"),
                 LocalizationUtility::translate('tx_sportms_action.team.list', "sportms")
             );
+            
+            return $this->htmlResponse();
         }
         
         /**
          * @param Team|null $team
          * @param Season|null $season
          */
-        public function seasonGamesByCompetitionAction(Team $team = null, Season $season = null)
+        public function seasonGamesByCompetitionAction(Team $team = null, Season $season = null): ResponseInterface
         {
             /* MAIN CONTENT */
             $team = $this->assignTeamToView($team);
@@ -441,46 +489,8 @@
                 LocalizationUtility::translate('tx_sportms_action.team.seasongamesbycompetition', "sportms"),
                 $season
             );
-        }
-        
-        /**
-         * @param Team|null $team
-         * @param Season|null $season
-         */
-        private function assignSeasonToView(Team $team = null, Season $season = null): Season
-        {
-            if ($season === null) {
-                $season = $this->determineSeason();
-            }
-            if ($season === null) {
-                if ($team->getTeamSeasons()) {
-                    $season = $team->getTeamSeasons()[0]->getSeason();
-                } else {
-                    die();
-                }
-            }
-            $this->view->assign('season', $season);
-            return $season;
-        }
-        
-        /**
-         * @param Team $team
-         * @param Season $season
-         */
-        private function assignTeamSeasonToView(Team $team, Season $season): TeamSeason
-        {
-            $teamSeason = $this->teamSeasonRepository->findByTeamAndSeason($team, $season);
-            $this->view->assign('teamSeason', $teamSeason);
-            return $teamSeason;
-        }
-        
-        /**
-         * @param Team $team
-         */
-        private function assignSeasonSelectboxValuesToView(Team $team)
-        {
-            $seasonSelectboxValues = $this->teamSeasonRepository->findbyTeam($team);
-            $this->view->assign('seasonSelectboxValues', $seasonSelectboxValues);
+            
+            return $this->htmlResponse();
         }
         
         /**
