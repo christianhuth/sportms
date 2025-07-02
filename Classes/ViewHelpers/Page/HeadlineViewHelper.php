@@ -4,7 +4,7 @@
     
     namespace ChristianKnell\Sportms\ViewHelpers\Page;
     
-    class HeadlineViewHelper extends \TYPO3\CMS\Fluid\ViewHelpers\Link\ActionViewHelper
+    class HeadlineViewHelper
     {
         
         /**
