@@ -7,6 +7,7 @@
     use ChristianKnell\Sportms\Domain\Model\Season;
     use TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException;
     use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
+    use TYPO3\CMS\Extbase\Annotation\Inject;
 
     /**
      * SeasonController
@@ -16,7 +17,7 @@
         
         /**
          * @var \ChristianKnell\Sportms\Domain\Repository\SeasonRepository
-         * @TYPO3\CMS\Extbase\Annotation\Inject
+         * @Inject
          */
         protected $seasonRepository;
         

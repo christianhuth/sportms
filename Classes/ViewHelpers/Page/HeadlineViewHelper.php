@@ -5,19 +5,20 @@
     namespace ChristianKnell\Sportms\ViewHelpers\Page;
     use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
     use TYPO3Fluid\Fluid\Core\ViewHelper\ViewHelperInterface;
+    use TYPO3\CMS\Extbase\Annotation\Inject;
     
     class HeadlineViewHelper extends AbstractViewHelper implements ViewHelperInterface
     {
         
         /**
          * @var \TYPO3\CMS\Extbase\Object\ObjectManager
-         * @TYPO3\CMS\Extbase\Annotation\Inject
+         * @Inject
          */
         public $objectManager;
         
         /**
          * @var \TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface
-         * @TYPO3\CMS\Extbase\Annotation\Inject
+         * @Inject
          */
         public $configurationManager;
         

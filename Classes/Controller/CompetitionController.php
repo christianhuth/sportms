@@ -17,6 +17,7 @@
     use ChristianKnell\Sportms\Domain\Repository\SportAgeGroupRepository;
     use ChristianKnell\Sportms\Domain\Repository\SportAgeLevelRepository;
     use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
+    use TYPO3\CMS\Extbase\Annotation\Inject;
 
     /**
      * CompetitionController
@@ -26,49 +27,49 @@
         
         /**
          * @var \ChristianKnell\Sportms\Domain\Repository\CompetitionRepository
-         * @TYPO3\CMS\Extbase\Annotation\Inject
+         * @Inject
          */
         protected $competitionRepository;
         
         /**
          * @var \ChristianKnell\Sportms\Domain\Repository\CompetitionSeasonRepository
-         * @TYPO3\CMS\Extbase\Annotation\Inject
+         * @Inject
          */
         protected $competitionSeasonRepository;
         
         /**
          * @var \ChristianKnell\Sportms\Domain\Repository\CompetitionSeasonGamedayRepository
-         * @TYPO3\CMS\Extbase\Annotation\Inject
+         * @Inject
          */
         protected $competitionSeasonGamedayRepository;
         
         /**
          * @var \ChristianKnell\Sportms\Domain\Repository\CompetitionTypeRepository
-         * @TYPO3\CMS\Extbase\Annotation\Inject
+         * @Inject
          */
         protected $competitionTypeRepository;
         
         /**
          * @var \ChristianKnell\Sportms\Domain\Repository\GameRepository
-         * @TYPO3\CMS\Extbase\Annotation\Inject
+         * @Inject
          */
         protected $gameRepository;
         
         /**
          * @var \ChristianKnell\Sportms\Domain\Repository\SportRepository
-         * @TYPO3\CMS\Extbase\Annotation\Inject
+         * @Inject
          */
         protected $sportRepository;
         
         /**
          * @var \ChristianKnell\Sportms\Domain\Repository\SportAgeGroupRepository
-         * @TYPO3\CMS\Extbase\Annotation\Inject
+         * @Inject
          */
         protected $sportAgeGroupRepository;
         
         /**
          * @var \ChristianKnell\Sportms\Domain\Repository\SportAgeLevelRepository
-         * @TYPO3\CMS\Extbase\Annotation\Inject
+         * @Inject
          */
         protected $sportAgeLevelRepository;
 
