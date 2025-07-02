@@ -4,9 +4,9 @@
     
     namespace ChristianKnell\Sportms\PageTitle;
     
-    use TYPO3\CMS\Core\PageTitle\PageTitleProviderInterface;
+    use TYPO3\CMS\Core\PageTitle\AbstractPageTitleProvider;
 
-    class PageTitleProvider implements PageTitleProviderInterface
+    final class PageTitleProvider extends AbstractPageTitleProvider
     {
         
         /**
