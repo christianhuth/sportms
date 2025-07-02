@@ -30,6 +30,7 @@
     use TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException;
     use TYPO3\CMS\Extbase\Persistence\QueryInterface;
     use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
+    use TYPO3\CMS\Extbase\Annotation\Inject;
 
     /**
      * TeamController
@@ -39,115 +40,115 @@
         
         /**
          * @var \ChristianKnell\Sportms\Domain\Repository\ClubRepository
-         * @TYPO3\CMS\Extbase\Annotation\Inject
+         * @Inject
          */
         protected $clubRepository;
         
         /**
          * @var \ChristianKnell\Sportms\Domain\Repository\CompetitionRepository
-         * @TYPO3\CMS\Extbase\Annotation\Inject
+         * @Inject
          */
         protected $competitionRepository;
         
         /**
          * @var \ChristianKnell\Sportms\Domain\Repository\CompetitionSeasonRepository
-         * @TYPO3\CMS\Extbase\Annotation\Inject
+         * @Inject
          */
         protected $competitionSeasonRepository;
         
         /**
          * @var \ChristianKnell\Sportms\Domain\Repository\CompetitionTypeRepository
-         * @TYPO3\CMS\Extbase\Annotation\Inject
+         * @Inject
          */
         protected $competitionTypeRepository;
         
         /**
          * @var \ChristianKnell\Sportms\Domain\Repository\GameRepository
-         * @TYPO3\CMS\Extbase\Annotation\Inject
+         * @Inject
          */
         protected $gameRepository;
         
         /**
          * @var \ChristianKnell\Sportms\Domain\Repository\GameGoalRepository
-         * @TYPO3\CMS\Extbase\Annotation\Inject
+         * @Inject
          */
         protected $gameGoalRepository;
         
         /**
          * @var \ChristianKnell\Sportms\Domain\Repository\GameLineupRepository
-         * @TYPO3\CMS\Extbase\Annotation\Inject
+         * @Inject
          */
         protected $gameLineupRepository;
         
         /**
          * @var \ChristianKnell\Sportms\Domain\Repository\OfficialJobRepository
-         * @TYPO3\CMS\Extbase\Annotation\Inject
+         * @Inject
          */
         protected $officialJobRepository;
         
         /**
          * @var \ChristianKnell\Sportms\Domain\Repository\PersonRepository
-         * @TYPO3\CMS\Extbase\Annotation\Inject
+         * @Inject
          */
         protected $personRepository;
         
         /**
          * @var \ChristianKnell\Sportms\Domain\Repository\PersonProfileRepository
-         * @TYPO3\CMS\Extbase\Annotation\Inject
+         * @Inject
          */
         protected $personProfileRepository;
         
         /**
          * @var \ChristianKnell\Sportms\Domain\Repository\SeasonRepository
-         * @TYPO3\CMS\Extbase\Annotation\Inject
+         * @Inject
          */
         protected $seasonRepository;
         
         /**
          * @var \ChristianKnell\Sportms\Domain\Repository\SportRepository
-         * @TYPO3\CMS\Extbase\Annotation\Inject
+         * @Inject
          */
         protected $sportRepository;
         
         /**
          * @var \ChristianKnell\Sportms\Domain\Repository\SportAgeGroupRepository
-         * @TYPO3\CMS\Extbase\Annotation\Inject
+         * @Inject
          */
         protected $sportAgeGroupRepository;
         
         /**
          * @var \ChristianKnell\Sportms\Domain\Repository\SportAgeLevelRepository
-         * @TYPO3\CMS\Extbase\Annotation\Inject
+         * @Inject
          */
         protected $sportAgeLevelRepository;
         
         /**
          * @var \ChristianKnell\Sportms\Domain\Repository\SportPositionGroupRepository
-         * @TYPO3\CMS\Extbase\Annotation\Inject
+         * @Inject
          */
         protected $sportPositionGroupRepository;
         
         /**
          * @var \ChristianKnell\Sportms\Domain\Repository\SportPositionRepository
-         * @TYPO3\CMS\Extbase\Annotation\Inject
+         * @Inject
          */
         protected $sportPositionRepository;
         
         /**
          * @var \ChristianKnell\Sportms\Domain\Repository\TeamRepository
-         * @TYPO3\CMS\Extbase\Annotation\Inject
+         * @Inject
          */
         protected $teamRepository;
         
         /**
          * @var \ChristianKnell\Sportms\Domain\Repository\TeamSeasonRepository
-         * @TYPO3\CMS\Extbase\Annotation\Inject
+         * @Inject
          */
         protected $teamSeasonRepository;
         
         /**
          * @var \ChristianKnell\Sportms\Domain\Repository\TeamSeasonOfficialRepository
-         * @TYPO3\CMS\Extbase\Annotation\Inject
+         * @Inject
          */
         protected $teamSeasonOfficialRepository;
 
