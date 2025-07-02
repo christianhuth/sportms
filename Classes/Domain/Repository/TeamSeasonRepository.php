@@ -136,7 +136,7 @@
             $constraints = [];
             $constraints[] = $query->equals('team', $teamUid);
             $constraints[] = $query->equals('season', $seasonUid);
-            $query->matching($query->logicalAnd($constraints));
+            $query->matching($query->logicalAnd(...$constraints));
             return $query->execute()[0];
         }
         
