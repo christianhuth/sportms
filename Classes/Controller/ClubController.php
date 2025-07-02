@@ -5,6 +5,7 @@
     namespace ChristianKnell\Sportms\Controller;
     
     use ChristianKnell\Sportms\Domain\Model\Club;
+    use ChristianKnell\Sportms\Domain\Repository\ClubRepository;
     use TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException;
     use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
     use TYPO3\CMS\Extbase\Annotation\Inject;
@@ -17,7 +18,7 @@
         
         /**
          * @Inject
-         * @var \ChristianKnell\Sportms\Domain\Repository\ClubRepository
+         * @var ClubRepository
          */
         protected $clubRepository;
         

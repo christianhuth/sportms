@@ -40,7 +40,7 @@
         
         /**
          * @Inject
-         * @var \ChristianKnell\Sportms\Domain\Repository\ClubRepository
+         * @var ClubRepository
          */
         protected $clubRepository;
         
