@@ -16,6 +16,7 @@
     use TYPO3\CMS\Core\Utility\GeneralUtility;
     use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
     use TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException;
+    use TYPO3\CMS\Extbase\Annotation\Inject;
 
     class SportMSBaseController extends ActionController
     {
