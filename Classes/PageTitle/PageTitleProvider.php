@@ -4,7 +4,7 @@
     
     namespace ChristianKnell\Sportms\PageTitle;
 
-    class MyPageTitleProvider
+    class PageTitleProvider
     {
         
         /**
