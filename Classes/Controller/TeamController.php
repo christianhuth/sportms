@@ -486,26 +486,30 @@
         /**
          * @param Team|null $team
          */
-        public function historyCompetitionsAction(Team $team = null): void
+        public function historyCompetitionsAction(Team $team = null): ResponseInterface
         {
             /* MAIN CONTENT */
             $team = $this->assignTeamToView($team);
+            
+            return $this->htmlResponse();
         }
         
         /**
          * @param Team|null $team
          */
-        public function historyImagesAction(Team $team = null): void
+        public function historyImagesAction(Team $team = null): ResponseInterface
         {
             /* MAIN CONTENT */
             $team = $this->assignTeamToView($team);
+            
+            return $this->htmlResponse();
         }
         
         /**
          * @param Team|null $team
          * @param Season|null $season
          */
-        public function seasonGamesByDateAction(Team $team = null, Season $season = null): void
+        public function seasonGamesByDateAction(Team $team = null, Season $season = null): ResponseInterface
         {
             /* MAIN CONTENT */
             $team = $this->assignTeamToView($team);
@@ -527,6 +531,8 @@
                 LocalizationUtility::translate('tx_sportms_action.team.seasongamesbydate', "sportms"),
                 $season
             );
+            
+            return $this->htmlResponse();
         }
         
         public function seasonIndexAction(Team $team = null, Season $season = null): ResponseInterface
