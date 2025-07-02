@@ -3,8 +3,10 @@
     declare(strict_types=1);
     
     namespace ChristianKnell\Sportms\ViewHelpers\Page;
+    use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
+    use TYPO3Fluid\Fluid\Core\ViewHelper\ViewHelperInterface;
     
-    class HeadlineViewHelper
+    class HeadlineViewHelper extends AbstractViewHelper implements ViewHelperInterface
     {
         
         /**
