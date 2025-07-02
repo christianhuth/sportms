@@ -6,6 +6,7 @@
     
     use ChristianKnell\Sportms\Domain\Model\Club;
     use ChristianKnell\Sportms\Domain\Repository\ClubRepository;
+    use Psr\Http\Message\ResponseInterface;
     use TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException;
     use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
 
@@ -32,7 +33,7 @@
          * @return void
          * @throws InvalidQueryException
          */
-        public function listAction(): void
+        public function listAction(): ResponseInterface
         {
             /* MAIN CONTENT */
             $clubs = $this->clubRepository->findAll($this->getClubsFilter());
@@ -43,12 +44,14 @@
                 LocalizationUtility::translate('tx_sportms_domain_model_club.plural', "sportms"),
                 LocalizationUtility::translate('tx_sportms_action.club.list', "sportms")
             );
+            
+            return $this->htmlResponse();
         }
         
         /**
          * @param Club $club
          */
-        public function sectionsAction(Club $club = null): void
+        public function sectionsAction(Club $club = null): ResponseInterface
         {
             /* MAIN CONTENT */
             $club = $this->assignClubToView($club);
@@ -58,6 +61,8 @@
                 $club,
                 LocalizationUtility::translate('tx_sportms_action.club.sections', "sportms")
             );
+            
+            return $this->htmlResponse();
         }
         
         /**

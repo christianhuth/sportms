@@ -14,6 +14,7 @@
     use ChristianKnell\Sportms\Domain\Repository\SportAgeGroupRepository;
     use ChristianKnell\Sportms\Domain\Repository\SportAgeLevelRepository;
     use ChristianKnell\Sportms\Domain\Repository\TeamRepository;
+    use Psr\Http\Message\ResponseInterface;
     use TYPO3\CMS\Extbase\Persistence\QueryInterface;
     use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
 
@@ -116,7 +117,7 @@
         /**
          * @param Game $game
          */
-        public function indexAction(Game $game = null)
+        public function indexAction(Game $game = null): ResponseInterface
         {
             /* MAIN CONTENT */
             // we need to define if the goal is for the home or the away team here
@@ -151,6 +152,8 @@
                 $game,
                 LocalizationUtility::translate('tx_sportms_action.game.index', "sportms")
             );
+            
+            return $this->htmlResponse();
         }
         
         /**
@@ -176,7 +179,7 @@
         /**
          * @param Game $game
          */
-        public function historyAction(Game $game = null)
+        public function historyAction(Game $game = null): ResponseInterface
         {
             /* MAIN CONTENT */
             $orderings = [
@@ -203,12 +206,14 @@
                 $game,
                 LocalizationUtility::translate('tx_sportms_action.game.history', "sportms")
             );
+            
+            return $this->htmlResponse();
         }
         
         /**
          * @param Game|null $game
          */
-        public function reportAction(Game $game = null)
+        public function reportAction(Game $game = null): ResponseInterface
         {
             /* MAIN CONTENT */
             $this->view->assign('game', $game);
@@ -218,6 +223,8 @@
                 $game,
                 LocalizationUtility::translate('tx_sportms_action.game.report', "sportms")
             );
+            
+            return $this->htmlResponse();
         }
         
     }

@@ -6,6 +6,7 @@
     
     use ChristianKnell\Sportms\Domain\Model\Season;
     use ChristianKnell\Sportms\Domain\Repository\SeasonRepository;
+    use Psr\Http\Message\ResponseInterface;
     use TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException;
     use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
 
@@ -32,7 +33,7 @@
          * @return void
          * @throws InvalidQueryException
          */
-        public function listAction(): void
+        public function listAction(): ResponseInterface
         {
             /* MAIN CONTENT */
             $seasons = $this->seasonRepository->findAll();
@@ -43,6 +44,8 @@
                 LocalizationUtility::translate('tx_sportms_domain_model_season.plural', "sportms"),
                 LocalizationUtility::translate('tx_sportms_action.season.list', "sportms")
             );
+            
+            return $this->htmlResponse();
         }
         
         /**

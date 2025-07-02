@@ -16,6 +16,7 @@
     use ChristianKnell\Sportms\Domain\Repository\SportRepository;
     use ChristianKnell\Sportms\Domain\Repository\SportAgeGroupRepository;
     use ChristianKnell\Sportms\Domain\Repository\SportAgeLevelRepository;
+    use Psr\Http\Message\ResponseInterface;
     use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
 
     /**
@@ -25,42 +26,42 @@
     {
         
         /**
-         * @var \ChristianKnell\Sportms\Domain\Repository\CompetitionRepository
+         * @var CompetitionRepository
          */
         protected $competitionRepository;
         
         /**
-         * @var \ChristianKnell\Sportms\Domain\Repository\CompetitionSeasonRepository
+         * @var CompetitionSeasonRepository
          */
         protected $competitionSeasonRepository;
         
         /**
-         * @var \ChristianKnell\Sportms\Domain\Repository\CompetitionSeasonGamedayRepository
+         * @var CompetitionSeasonGamedayRepository
          */
         protected $competitionSeasonGamedayRepository;
         
         /**
-         * @var \ChristianKnell\Sportms\Domain\Repository\CompetitionTypeRepository
+         * @var CompetitionTypeRepository
          */
         protected $competitionTypeRepository;
         
         /**
-         * @var \ChristianKnell\Sportms\Domain\Repository\GameRepository
+         * @var GameRepository
          */
         protected $gameRepository;
         
         /**
-         * @var \ChristianKnell\Sportms\Domain\Repository\SportRepository
+         * @var SportRepository
          */
         protected $sportRepository;
         
         /**
-         * @var \ChristianKnell\Sportms\Domain\Repository\SportAgeGroupRepository
+         * @var SportAgeGroupRepository
          */
         protected $sportAgeGroupRepository;
         
         /**
-         * @var \ChristianKnell\Sportms\Domain\Repository\SportAgeLevelRepository
+         * @var SportAgeLevelRepository
          */
         protected $sportAgeLevelRepository;
 
@@ -83,7 +84,7 @@
          * @return void
          * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
          */
-        public function listAction(): void
+        public function listAction(): ResponseInterface
         {
             /* MAIN CONTENT */
             $competitions = $this->competitionRepository->findAll($this->getSportsFilter(),
@@ -102,6 +103,8 @@
                 LocalizationUtility::translate('tx_sportms_domain_model_competition.plural', "sportms"),
                 LocalizationUtility::translate('tx_sportms_action.competition.list', "sportms")
             );
+            
+            return $this->htmlResponse();
         }
         
         /**
@@ -113,7 +116,7 @@
             Competition $competition = null,
             Season $season = null,
             CompetitionSeasonGameday $competitionSeasonGameday = null
-        ): void {
+        ): ResponseInterface {
             /* MAIN CONTENT */
             $competition = $this->assignCompetitionToView($competition);
             $season = $this->assignSeasonToView($competition, $season);
@@ -140,6 +143,8 @@
                 $season,
                 $competitionSeasonGameday
             );
+            
+            return $this->htmlResponse();
         }
         
         /**
@@ -207,7 +212,7 @@
          * @param Competition|null $competition
          * @param Season|null $season
          */
-        protected function seasonClubsAction(Competition $competition = null, Season $season = null)
+        protected function seasonClubsAction(Competition $competition = null, Season $season = null): ResponseInterface
         {
             /* MAIN CONTENT */
             $competition = $this->assignCompetitionToView($competition);
@@ -223,13 +228,15 @@
                 LocalizationUtility::translate('tx_sportms_action.competition.seasonclubs', "sportms"),
                 $season
             );
+            
+            return $this->htmlResponse();
         }
         
         /**
          * @param Competition|null $competition
          * @param Season|null $season
          */
-        protected function seasonTeamsAction(Competition $competition = null, Season $season = null): void
+        protected function seasonTeamsAction(Competition $competition = null, Season $season = null): ResponseInterface
         {
             /* MAIN CONTENT */
             $competition = $this->assignCompetitionToView($competition);
@@ -245,6 +252,8 @@
                 LocalizationUtility::translate('tx_sportms_action.competition.seasonteams', "sportms"),
                 $season
             );
+            
+            return $this->htmlResponse();
         }
         
     }
