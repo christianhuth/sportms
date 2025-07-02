@@ -18,7 +18,7 @@
     use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
     use TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException;
 
-    class SportMSBaseController extends ActionController
+    final class SportMSBaseController extends ActionController
     {
         
         public function __construct(
