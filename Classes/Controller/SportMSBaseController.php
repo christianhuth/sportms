@@ -13,17 +13,12 @@
     use ChristianKnell\Sportms\Domain\Model\Season;
     use ChristianKnell\Sportms\Domain\Model\Team;
     use ChristianKnell\Sportms\Domain\Model\TeamSeason;
-    use ChristianKnell\Sportms\PageTitle\MyPageTitleProvider;
     use TYPO3\CMS\Core\Utility\GeneralUtility;
     use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
     use TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException;
 
-    final class SportMSBaseController extends ActionController
+    class SportMSBaseController extends ActionController
     {
-        
-        public function __construct(
-            private readonly MyPageTitleProvider $titleProvider,
-        ) {}
         
         /**
          * Initializes the controller before invoking an action method.
@@ -296,7 +291,7 @@
             if (!is_null($this->settings['pagetitle']['suffix'])) {
                 $pagetitle .= " " . $this->settings['pagetitle']['suffix'];
             }
-            $this->titleProvider->setTitle($pagetitle);
+            // TODO: SET PAGETITLE
         }
         
         /**
