@@ -45,6 +45,15 @@ config.tx_extbase {
 	}
 }
 
+
+config.pageTitleProviders {
+	sportms {
+		provider = ChristianKnell\Sportms\PageTitle\MyPageTitleProvider
+		before = record
+		after = altPageTitle
+	}
+}
+
 plugin.tx_sportms {
 
 	features {
