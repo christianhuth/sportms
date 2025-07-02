@@ -16,8 +16,8 @@
     {
         
         /**
-         * @var \ChristianKnell\Sportms\Domain\Repository\ClubRepository
          * @Inject
+         * @var \ChristianKnell\Sportms\Domain\Repository\ClubRepository
          */
         protected $clubRepository;
         
