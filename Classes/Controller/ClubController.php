@@ -8,7 +8,6 @@
     use ChristianKnell\Sportms\Domain\Repository\ClubRepository;
     use TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException;
     use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
-    use TYPO3\CMS\Extbase\Annotation\Inject;
 
     /**
      * ClubController
@@ -17,10 +16,17 @@
     {
         
         /**
-         * @Inject
          * @var ClubRepository
          */
         protected $clubRepository;
+
+        /**
+         * Constructor that injects the repositories
+         */
+        public function __construct(ClubRepository $clubRepository)
+        {
+            $this->clubRepository = $clubRepository;
+        }
         
         /**
          * @return void

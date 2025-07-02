@@ -7,7 +7,6 @@
     use ChristianKnell\Sportms\Domain\Model\Game;
     use TYPO3\CMS\Extbase\Persistence\QueryInterface;
     use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
-    use TYPO3\CMS\Extbase\Annotation\Inject;
 
     /**
      * GameController
@@ -17,57 +16,64 @@
         
         /**
          * @var \ChristianKnell\Sportms\Domain\Repository\ClubRepository
-         * @Inject
          */
         protected $clubRepository;
         
         /**
          * @var \ChristianKnell\Sportms\Domain\Repository\CompetitionTypeRepository
-         * @Inject
          */
         protected $competitionTypeRepository;
         
         /**
          * @var \ChristianKnell\Sportms\Domain\Repository\CompetitionRepository
-         * @Inject
          */
         protected $competitionRepository;
         
         /**
          * @var \ChristianKnell\Sportms\Domain\Repository\GameRepository
-         * @Inject
          */
         protected $gameRepository;
         
         /**
          * @var \ChristianKnell\Sportms\Domain\Repository\SeasonRepository
-         * @Inject
          */
         protected $seasonRepository;
         
         /**
          * @var \ChristianKnell\Sportms\Domain\Repository\SportRepository
-         * @Inject
          */
         protected $sportRepository;
         
         /**
          * @var \ChristianKnell\Sportms\Domain\Repository\SportAgeGroupRepository
-         * @Inject
          */
         protected $sportAgeGroupRepository;
         
         /**
          * @var \ChristianKnell\Sportms\Domain\Repository\SportAgeLevelRepository
-         * @Inject
          */
         protected $sportAgeLevelRepository;
         
         /**
          * @var \ChristianKnell\Sportms\Domain\Repository\TeamRepository
-         * @Inject
          */
         protected $teamRepository;
+
+        /**
+         * Constructor that injects the repositories
+         */
+        public function __construct(ClubRepository $clubRepository, CompetitionRepository $competitionRepository, CompetitionTypeRepository $competitionTypeRepository, GameRepository $gameRepository, SeasonRepository $seasonRepository, SportRepository $sportRepository, SportAgeGroupRepository $sportAgeGroupRepository, SportAgeLevelRepository $sportAgeLevelRepository, TeamRepository $teamRepository)
+        {
+            $this->clubRepository = $clubRepository;
+            $this->competitionRepository = $competitionRepository;
+            $this->competitionTypeRepository = $competitionTypeRepository;
+            $this->gameRepository = $gameRepository;
+            $this->seasonRepository = $seasonRepository;
+            $this->sportRepository = $sportRepository;
+            $this->sportAgeGroupRepository = $sportAgeGroupRepository;
+            $this->sportAgeLevelRepository = $sportAgeLevelRepository;
+            $this->teamRepository = $teamRepository;
+        }
         
         /**
          * @return void

@@ -17,7 +17,6 @@
     use ChristianKnell\Sportms\Domain\Repository\SportAgeGroupRepository;
     use ChristianKnell\Sportms\Domain\Repository\SportAgeLevelRepository;
     use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
-    use TYPO3\CMS\Extbase\Annotation\Inject;
 
     /**
      * CompetitionController
@@ -27,49 +26,41 @@
         
         /**
          * @var \ChristianKnell\Sportms\Domain\Repository\CompetitionRepository
-         * @Inject
          */
         protected $competitionRepository;
         
         /**
          * @var \ChristianKnell\Sportms\Domain\Repository\CompetitionSeasonRepository
-         * @Inject
          */
         protected $competitionSeasonRepository;
         
         /**
          * @var \ChristianKnell\Sportms\Domain\Repository\CompetitionSeasonGamedayRepository
-         * @Inject
          */
         protected $competitionSeasonGamedayRepository;
         
         /**
          * @var \ChristianKnell\Sportms\Domain\Repository\CompetitionTypeRepository
-         * @Inject
          */
         protected $competitionTypeRepository;
         
         /**
          * @var \ChristianKnell\Sportms\Domain\Repository\GameRepository
-         * @Inject
          */
         protected $gameRepository;
         
         /**
          * @var \ChristianKnell\Sportms\Domain\Repository\SportRepository
-         * @Inject
          */
         protected $sportRepository;
         
         /**
          * @var \ChristianKnell\Sportms\Domain\Repository\SportAgeGroupRepository
-         * @Inject
          */
         protected $sportAgeGroupRepository;
         
         /**
          * @var \ChristianKnell\Sportms\Domain\Repository\SportAgeLevelRepository
-         * @Inject
          */
         protected $sportAgeLevelRepository;
 

@@ -5,9 +5,9 @@
     namespace ChristianKnell\Sportms\Controller;
     
     use ChristianKnell\Sportms\Domain\Model\Season;
+    use ChristianKnell\Sportms\Domain\Repository\SeasonRepository;
     use TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException;
     use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
-    use TYPO3\CMS\Extbase\Annotation\Inject;
 
     /**
      * SeasonController
@@ -16,10 +16,17 @@
     {
         
         /**
-         * @var \ChristianKnell\Sportms\Domain\Repository\SeasonRepository
-         * @Inject
+         * @var SeasonRepository
          */
         protected $seasonRepository;
+
+        /**
+         * Constructor that injects the repositories
+         */
+        public function __construct(SeasonRepository $seasonRepository)
+        {
+            $this->seasonRepository = $seasonRepository;
+        }
         
         /**
          * @return void

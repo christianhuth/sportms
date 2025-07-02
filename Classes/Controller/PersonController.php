@@ -5,8 +5,9 @@
     namespace ChristianKnell\Sportms\Controller;
     
     use ChristianKnell\Sportms\Domain\Model\Person;
+    use ChristianKnell\Sportms\Domain\Repository\PersonRepository;
+    use ChristianKnell\Sportms\Domain\Repository\TeamSeasonSquadMemberRepository;
     use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
-    use TYPO3\CMS\Extbase\Annotation\Inject;
 
     /**
      * PersonController
@@ -15,16 +16,23 @@
     {
         
         /**
-         * @var \ChristianKnell\Sportms\Domain\Repository\PersonRepository
-         * @Inject
+         * @var PersonRepository
          */
         protected $personRepository;
         
         /**
-         * @var \ChristianKnell\Sportms\Domain\Repository\TeamSeasonSquadMemberRepository
-         * @Inject
+         * @var TeamSeasonSquadMemberRepository
          */
         protected $teamSeasonSquadMemberRepository;
+
+        /**
+         * Constructor that injects the repositories
+         */
+        public function __construct(PersonRepository $personRepository, TeamSeasonSquadMemberRepository $teamSeasonSquadMemberRepository)
+        {
+            $this->personRepository = $personRepository;
+            $this->teamSeasonSquadMemberRepository = $teamSeasonSquadMemberRepository;
+        }
         
         /**
          * @return void
