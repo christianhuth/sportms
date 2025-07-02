@@ -27,6 +27,7 @@
     use ChristianKnell\Sportms\Domain\Repository\TeamRepository;
     use ChristianKnell\Sportms\Domain\Repository\TeamSeasonRepository;
     use ChristianKnell\Sportms\Domain\Repository\TeamSeasonOfficialRepository;
+    use Psr\Http\Message\ResponseInterface;
     use TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException;
     use TYPO3\CMS\Extbase\Persistence\QueryInterface;
     use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
@@ -528,7 +529,7 @@
             );
         }
         
-        public function seasonIndexAction(Team $team = null, Season $season = null)
+        public function seasonIndexAction(Team $team = null, Season $season = null): ResponseInterface
         {
             /* MAIN CONTENT */
             $team = $this->assignTeamToView($team);
@@ -544,6 +545,8 @@
                 LocalizationUtility::translate('tx_sportms_action.team.seasonindex', "sportms"),
                 $season
             );
+            
+            return $this->htmlResponse();
         }
         
     }
