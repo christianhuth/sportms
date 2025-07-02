@@ -23,7 +23,7 @@
                 $constraints[] = $query->in('uid', explode(',', $venueUids));
             }
             if ($constraints) {
-                $query->matching($query->logicalAnd($constraints));
+                $query->matching($query->logicalAnd(...$constraints));
             }
             return $query->execute();
         }

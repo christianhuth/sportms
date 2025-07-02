@@ -27,7 +27,7 @@
                 $constraints[] = $query->in('uid', explode(',', $gameLineupUids));
             }
             if ($constraints) {
-                $query->matching($query->logicalAnd($constraints));
+                $query->matching($query->logicalAnd(...$constraints));
             }
             return $query->execute();
         }

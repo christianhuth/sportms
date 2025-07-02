@@ -84,7 +84,7 @@
                 $constraints[] = $query->in('season', explode(',', $seasonUids));
             }
             if ($constraints) {
-                $query->matching($query->logicalAnd($constraints));
+                $query->matching($query->logicalAnd(...$constraints));
             }
             return $query->execute();
         }
@@ -107,7 +107,7 @@
             $query = $this->createQuery();
             $constraints = [];
             $constraints[] = $query->equals('team', $teamUid);
-            $query->matching($query->logicalAnd($constraints));
+            $query->matching($query->logicalAnd(...$constraints));
             $query->setOrderings([
                 'season.label' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING,
             ]);
@@ -151,7 +151,7 @@
             $constraints = [];
             $constraints[] = $query->equals('team', $team);
             $constraints[] = $query->equals('hidden', 0);
-            $query->matching($query->logicalAnd($constraints));
+            $query->matching($query->logicalAnd(...$constraints));
             return $query->execute();
         }
         
