@@ -3,8 +3,10 @@
     declare(strict_types=1);
     
     namespace ChristianKnell\Sportms\ViewHelpers;
+    use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
+    use TYPO3Fluid\Fluid\Core\ViewHelper\ViewHelperInterface;
     
-    class NationalityViewHelper extends \TYPO3\CMS\Fluid\ViewHelpers\ImageViewHelper
+    class NationalityViewHelper extends AbstractViewHelper implements ViewHelperInterface
     {
         
         /**
