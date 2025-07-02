@@ -5,6 +5,7 @@
     namespace ChristianKnell\Sportms\ViewHelpers\Person;
     use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
     use TYPO3Fluid\Fluid\Core\ViewHelper\ViewHelperInterface;
+    use TYPO3\CMS\Extbase\Annotation\Inject;
     
     class NationalityViewHelper extends AbstractViewHelper implements ViewHelperInterface
     {
@@ -13,7 +14,7 @@
          * countryRepository
          *
          * @var \SJBR\StaticInfoTables\Domain\Repository\CountryRepository
-         * @TYPO3\CMS\Extbase\Annotation\Inject
+         * @Inject
          */
         protected $countryRepository;
         

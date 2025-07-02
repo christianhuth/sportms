@@ -5,6 +5,7 @@
     namespace ChristianKnell\Sportms\Controller;
     
     use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
+    use TYPO3\CMS\Extbase\Annotation\Inject;
 
     /**
      * SportMSController
@@ -14,37 +15,37 @@
         
         /**
          * @var \ChristianKnell\Sportms\Domain\Repository\ClubRepository
-         * @TYPO3\CMS\Extbase\Annotation\Inject
+         * @Inject
          */
         protected $clubRepository = null;
         
         /**
          * @var \ChristianKnell\Sportms\Domain\Repository\CompetitionRepository
-         * @TYPO3\CMS\Extbase\Annotation\Inject
+         * @Inject
          */
         protected $competitionRepository = null;
         
         /**
          * @var \ChristianKnell\Sportms\Domain\Repository\GameRepository
-         * @TYPO3\CMS\Extbase\Annotation\Inject
+         * @Inject
          */
         protected $gameRepository = null;
         
         /**
          * @var \ChristianKnell\Sportms\Domain\Repository\PersonRepository
-         * @TYPO3\CMS\Extbase\Annotation\Inject
+         * @Inject
          */
         protected $personRepository = null;
         
         /**
          * @var \ChristianKnell\Sportms\Domain\Repository\SeasonRepository
-         * @TYPO3\CMS\Extbase\Annotation\Inject
+         * @Inject
          */
         protected $seasonRepository = null;
         
         /**
          * @var \ChristianKnell\Sportms\Domain\Repository\TeamRepository
-         * @TYPO3\CMS\Extbase\Annotation\Inject
+         * @Inject
          */
         protected $teamRepository = null;
         

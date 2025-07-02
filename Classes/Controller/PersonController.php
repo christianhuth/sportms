@@ -6,6 +6,7 @@
     
     use ChristianKnell\Sportms\Domain\Model\Person;
     use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
+    use TYPO3\CMS\Extbase\Annotation\Inject;
 
     /**
      * PersonController
@@ -15,13 +16,13 @@
         
         /**
          * @var \ChristianKnell\Sportms\Domain\Repository\PersonRepository
-         * @TYPO3\CMS\Extbase\Annotation\Inject
+         * @Inject
          */
         protected $personRepository;
         
         /**
          * @var \ChristianKnell\Sportms\Domain\Repository\TeamSeasonSquadMemberRepository
-         * @TYPO3\CMS\Extbase\Annotation\Inject
+         * @Inject
          */
         protected $teamSeasonSquadMemberRepository;
         
