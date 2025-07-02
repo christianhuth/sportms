@@ -53,7 +53,7 @@
                 $constraints[] = $this->constraintForTeamUids($query, $teamUids);
             }
             if ($constraints) {
-                $query->matching($query->logicalAnd($constraints));
+                $query->matching($query->logicalAnd(...$constraints));
             }
             return $query->execute();
         }

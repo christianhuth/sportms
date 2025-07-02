@@ -59,7 +59,7 @@
                 $constraints[] = $query->in('season', explode(',', $seasonUids));
             }
             if ($constraints) {
-                $query->matching($query->logicalAnd($constraints));
+                $query->matching($query->logicalAnd(...$constraints));
             }
             return $query->execute();
         }
@@ -82,7 +82,7 @@
             $query = $this->createQuery();
             $constraints = [];
             $constraints[] = $query->equals('competition', $competitionUid);
-            $query->matching($query->logicalAnd($constraints));
+            $query->matching($query->logicalAnd(...$constraints));
             $query->setOrderings([
                 'season.label' => QueryInterface::ORDER_DESCENDING,
             ]);
@@ -111,7 +111,7 @@
             $constraints = [];
             $constraints[] = $query->equals('competition', $competitionUid);
             $constraints[] = $query->equals('season', $seasonUid);
-            $query->matching($query->logicalAnd($constraints));
+            $query->matching($query->logicalAnd(...$constraints));
             return $query->execute()[0];
         }
         
@@ -123,7 +123,7 @@
             $query = $this->createQuery();
             $constraints = [];
             $constraints[] = $query->equals('competition', $competition);
-            $query->matching($query->logicalAnd($constraints));
+            $query->matching($query->logicalAnd(...$constraints));
             return $query->execute();
         }
         

@@ -28,7 +28,7 @@
                 $constraints[] = $query->in('uid', explode(',', $sportPositionUids));
             }
             if ($constraints) {
-                $query->matching($query->logicalAnd($constraints));
+                $query->matching($query->logicalAnd(...$constraints));
             }
             return $query->execute();
         }

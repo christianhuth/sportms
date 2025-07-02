@@ -65,7 +65,7 @@
                     $competitionSeasonGamedayUids);
             }
             if ($constraints) {
-                $query->matching($query->logicalAnd($constraints));
+                $query->matching($query->logicalAnd(...$constraints));
             }
             return $query->execute();
         }
@@ -142,7 +142,7 @@
                 $constraints[] = $this->constraintForCompetitionSeasonGamedayUids($query,
                     (string)$competitionSeasonGameday->getUid());
             }
-            $query->matching($query->logicalAnd($constraints));
+            $query->matching($query->logicalAnd(...$constraints));
             return $query->execute();
         }
         
@@ -160,7 +160,7 @@
             $this->addOrderingsToQuery($query, $orderings);
             $constraints = [];
             $constraints[] = $this->constraintForTeamSeasonUids($query, (string)$teamSeason->getUid());
-            $query->matching($query->logicalAnd($constraints));
+            $query->matching($query->logicalAnd(...$constraints));
             return $query->execute();
         }
         
@@ -389,7 +389,7 @@
             if ($seasonUids) {
                 $constraints[] = $this->constraintForSeasonUids($query, $seasonUids);
             }
-            $query->matching($query->logicalAnd($constraints));
+            $query->matching($query->logicalAnd(...$constraints));
             $query->setLimit($limit);
             $query->setOrderings(['spectators' => $ordering]);
             return $query->execute();

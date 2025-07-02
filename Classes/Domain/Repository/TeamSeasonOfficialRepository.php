@@ -29,7 +29,7 @@
                 $constraints[] = $query->in('teamSeason.team', explode(',', $teamUids));
             }
             if ($constraints) {
-                $query->matching($query->logicalAnd($constraints));
+                $query->matching($query->logicalAnd(...$constraints));
             }
             return $query->execute();
         }
@@ -48,7 +48,7 @@
             $query->setOrderings($orderings);
             $constraints = [];
             $constraints[] = $query->equals('teamSeason.team', $team->getUid());
-            $query->matching($query->logicalAnd($constraints));
+            $query->matching($query->logicalAnd(...$constraints));
             return $query->execute();
         }
         

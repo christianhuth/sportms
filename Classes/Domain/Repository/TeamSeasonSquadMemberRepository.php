@@ -26,7 +26,7 @@
             $constraints = [];
             $constraints[] = $query->equals('person', $person->getUid());
             $constraints[] = $query->logicalNot($query->equals('squadNumber', ''));
-            $query->matching($query->logicalAnd($constraints));
+            $query->matching($query->logicalAnd(...$constraints));
             return $query->execute();
         }
         

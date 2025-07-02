@@ -40,7 +40,7 @@
                 $constraints[] = $query->in('club', explode(',', $clubUids));
             }
             if ($constraints) {
-                $query->matching($query->logicalAnd($constraints));
+                $query->matching($query->logicalAnd(...$constraints));
             }
             return $query->execute();
         }
