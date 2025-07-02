@@ -48,7 +48,7 @@ config.tx_extbase {
 
 config.pageTitleProviders {
 	sportms {
-		provider = ChristianKnell\Sportms\PageTitle\MyPageTitleProvider
+		provider = ChristianKnell\Sportms\PageTitle\PageTitleProvider
 		before = record
 		after = altPageTitle
 	}
