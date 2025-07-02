@@ -96,16 +96,3 @@
             }
         }
     }
-    
-    /* ===========================================================================
-        Register PageTitleProvider
-    =========================================================================== */
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptSetup(trim('
-        config.pageTitleProviders {
-            sportms {
-                provider = ChristianKnell\Sportms\PageTitle\MyPageTitleProvider
-                before = record
-                after = altPageTitle
-            }
-        }
-    '));
