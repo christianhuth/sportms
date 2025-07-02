@@ -39,7 +39,6 @@
     {
         
         /**
-         * @Inject
          * @var ClubRepository
          */
         protected $clubRepository;
