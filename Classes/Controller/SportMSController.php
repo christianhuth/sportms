@@ -10,6 +10,7 @@
     use ChristianKnell\Sportms\Domain\Repository\PersonRepository;
     use ChristianKnell\Sportms\Domain\Repository\SeasonRepository;
     use ChristianKnell\Sportms\Domain\Repository\TeamRepository;
+    use Psr\Http\Message\ResponseInterface;
     use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
 
     /**
@@ -64,7 +65,7 @@
         /**
          * @return void
          */
-        public function dbStatsAction()
+        public function dbStatsAction(): ResponseInterface
         {
             $dbStats = $this->settings['dbStats'];
             
@@ -98,6 +99,8 @@
                 "Sport Management System",
                 LocalizationUtility::translate('tx_sportms_action.sportms.dbstats', "sportms")
             );
+            
+            return $this->htmlResponse();
         }
         
     }

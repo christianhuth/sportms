@@ -7,6 +7,7 @@
     use ChristianKnell\Sportms\Domain\Model\Person;
     use ChristianKnell\Sportms\Domain\Repository\PersonRepository;
     use ChristianKnell\Sportms\Domain\Repository\TeamSeasonSquadMemberRepository;
+    use Psr\Http\Message\ResponseInterface;
     use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
 
     /**
@@ -38,7 +39,7 @@
          * @return void
          * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
          */
-        public function listAction(): void
+        public function listAction(): ResponseInterface
         {
             /* MAIN CONTENT */
             $persons = $this->personRepository->findAll($this->getPersonsFilter());
@@ -49,12 +50,14 @@
                 LocalizationUtility::translate('tx_sportms_domain_model_person.plural', "sportms"),
                 LocalizationUtility::translate('tx_sportms_action.person.list', "sportms")
             );
+            
+            return $this->htmlResponse();
         }
         
         /**
          * @param Person|null $person
          */
-        public function officialProfileAction(Person $person = null): void
+        public function officialProfileAction(Person $person = null): ResponseInterface
         {
             /* MAIN CONTENT */
             if ($person === null) {
@@ -67,6 +70,8 @@
                 $person,
                 LocalizationUtility::translate('tx_sportms_pagetitle.person.officialProfile', "sportms")
             );
+            
+            return $this->htmlResponse();
         }
         
         /**
@@ -82,7 +87,7 @@
         /**
          * @param Person|null $person
          */
-        public function playerProfileAction(Person $person = null): void
+        public function playerProfileAction(Person $person = null): ResponseInterface
         {
             /* MAIN CONTENT */
             if ($person === null) {
@@ -95,12 +100,14 @@
                 $person,
                 LocalizationUtility::translate('tx_sportms_pagetitle.person.playerProfile', "sportms")
             );
+            
+            return $this->htmlResponse();
         }
         
         /**
          * @param Person|null $person
          */
-        public function playerJerseysAction(Person $person = null): void
+        public function playerJerseysAction(Person $person = null): ResponseInterface
         {
             /* MAIN CONTENT */
             if ($person === null) {
@@ -115,12 +122,14 @@
                 $person,
                 LocalizationUtility::translate('tx_sportms_pagetitle.person.playerJerseys', "sportms")
             );
+            
+            return $this->htmlResponse();
         }
         
         /**
          * @param Person|null $person
          */
-        public function refereeProfileAction(Person $person = null): void
+        public function refereeProfileAction(Person $person = null): ResponseInterface
         {
             /* MAIN CONTENT */
             if ($person === null) {
@@ -133,6 +142,8 @@
                 $person,
                 LocalizationUtility::translate('tx_sportms_pagetitle.person.refereeProfile', "sportms")
             );
+            
+            return $this->htmlResponse();
         }
         
     }
