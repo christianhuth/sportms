@@ -39,116 +39,116 @@
     {
         
         /**
-         * @var \ChristianKnell\Sportms\Domain\Repository\ClubRepository
          * @Inject
+         * @var \ChristianKnell\Sportms\Domain\Repository\ClubRepository
          */
         protected $clubRepository;
         
         /**
-         * @var \ChristianKnell\Sportms\Domain\Repository\CompetitionRepository
          * @Inject
+         * @var \ChristianKnell\Sportms\Domain\Repository\CompetitionRepository
          */
         protected $competitionRepository;
         
         /**
-         * @var \ChristianKnell\Sportms\Domain\Repository\CompetitionSeasonRepository
          * @Inject
+         * @var \ChristianKnell\Sportms\Domain\Repository\CompetitionSeasonRepository
          */
         protected $competitionSeasonRepository;
         
         /**
-         * @var \ChristianKnell\Sportms\Domain\Repository\CompetitionTypeRepository
          * @Inject
+         * @var \ChristianKnell\Sportms\Domain\Repository\CompetitionTypeRepository
          */
         protected $competitionTypeRepository;
         
         /**
-         * @var \ChristianKnell\Sportms\Domain\Repository\GameRepository
          * @Inject
+         * @var \ChristianKnell\Sportms\Domain\Repository\GameRepository
          */
         protected $gameRepository;
         
         /**
-         * @var \ChristianKnell\Sportms\Domain\Repository\GameGoalRepository
          * @Inject
+         * @var \ChristianKnell\Sportms\Domain\Repository\GameGoalRepository
          */
         protected $gameGoalRepository;
         
         /**
-         * @var \ChristianKnell\Sportms\Domain\Repository\GameLineupRepository
          * @Inject
+         * @var \ChristianKnell\Sportms\Domain\Repository\GameLineupRepository
          */
         protected $gameLineupRepository;
         
         /**
-         * @var \ChristianKnell\Sportms\Domain\Repository\OfficialJobRepository
          * @Inject
+         * @var \ChristianKnell\Sportms\Domain\Repository\OfficialJobRepository
          */
         protected $officialJobRepository;
         
         /**
-         * @var \ChristianKnell\Sportms\Domain\Repository\PersonRepository
          * @Inject
+         * @var \ChristianKnell\Sportms\Domain\Repository\PersonRepository
          */
         protected $personRepository;
         
         /**
-         * @var \ChristianKnell\Sportms\Domain\Repository\PersonProfileRepository
          * @Inject
+         * @var \ChristianKnell\Sportms\Domain\Repository\PersonProfileRepository
          */
         protected $personProfileRepository;
         
         /**
-         * @var \ChristianKnell\Sportms\Domain\Repository\SeasonRepository
          * @Inject
+         * @var \ChristianKnell\Sportms\Domain\Repository\SeasonRepository
          */
         protected $seasonRepository;
         
         /**
-         * @var \ChristianKnell\Sportms\Domain\Repository\SportRepository
          * @Inject
+         * @var \ChristianKnell\Sportms\Domain\Repository\SportRepository
          */
         protected $sportRepository;
         
         /**
-         * @var \ChristianKnell\Sportms\Domain\Repository\SportAgeGroupRepository
          * @Inject
+         * @var \ChristianKnell\Sportms\Domain\Repository\SportAgeGroupRepository
          */
         protected $sportAgeGroupRepository;
         
         /**
-         * @var \ChristianKnell\Sportms\Domain\Repository\SportAgeLevelRepository
          * @Inject
+         * @var \ChristianKnell\Sportms\Domain\Repository\SportAgeLevelRepository
          */
         protected $sportAgeLevelRepository;
         
         /**
-         * @var \ChristianKnell\Sportms\Domain\Repository\SportPositionGroupRepository
          * @Inject
+         * @var \ChristianKnell\Sportms\Domain\Repository\SportPositionGroupRepository
          */
         protected $sportPositionGroupRepository;
         
         /**
-         * @var \ChristianKnell\Sportms\Domain\Repository\SportPositionRepository
          * @Inject
+         * @var \ChristianKnell\Sportms\Domain\Repository\SportPositionRepository
          */
         protected $sportPositionRepository;
         
         /**
-         * @var \ChristianKnell\Sportms\Domain\Repository\TeamRepository
          * @Inject
+         * @var \ChristianKnell\Sportms\Domain\Repository\TeamRepository
          */
         protected $teamRepository;
         
         /**
-         * @var \ChristianKnell\Sportms\Domain\Repository\TeamSeasonRepository
          * @Inject
+         * @var \ChristianKnell\Sportms\Domain\Repository\TeamSeasonRepository
          */
         protected $teamSeasonRepository;
         
         /**
-         * @var \ChristianKnell\Sportms\Domain\Repository\TeamSeasonOfficialRepository
          * @Inject
+         * @var \ChristianKnell\Sportms\Domain\Repository\TeamSeasonOfficialRepository
          */
         protected $teamSeasonOfficialRepository;
 
