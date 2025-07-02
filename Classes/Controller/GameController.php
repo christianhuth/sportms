@@ -5,6 +5,15 @@
     namespace ChristianKnell\Sportms\Controller;
     
     use ChristianKnell\Sportms\Domain\Model\Game;
+    use ChristianKnell\Sportms\Domain\Repository\ClubRepository;
+    use ChristianKnell\Sportms\Domain\Repository\CompetitionTypeRepository;
+    use ChristianKnell\Sportms\Domain\Repository\CompetitionRepository;
+    use ChristianKnell\Sportms\Domain\Repository\GameRepository;
+    use ChristianKnell\Sportms\Domain\Repository\SeasonRepository;
+    use ChristianKnell\Sportms\Domain\Repository\SportRepository;
+    use ChristianKnell\Sportms\Domain\Repository\SportAgeGroupRepository;
+    use ChristianKnell\Sportms\Domain\Repository\SportAgeLevelRepository;
+    use ChristianKnell\Sportms\Domain\Repository\TeamRepository;
     use TYPO3\CMS\Extbase\Persistence\QueryInterface;
     use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
 
@@ -15,47 +24,47 @@
     {
         
         /**
-         * @var \ChristianKnell\Sportms\Domain\Repository\ClubRepository
+         * @var ClubRepository
          */
         protected $clubRepository;
         
         /**
-         * @var \ChristianKnell\Sportms\Domain\Repository\CompetitionTypeRepository
+         * @var CompetitionTypeRepository
          */
         protected $competitionTypeRepository;
         
         /**
-         * @var \ChristianKnell\Sportms\Domain\Repository\CompetitionRepository
+         * @var CompetitionRepository
          */
         protected $competitionRepository;
         
         /**
-         * @var \ChristianKnell\Sportms\Domain\Repository\GameRepository
+         * @var GameRepository
          */
         protected $gameRepository;
         
         /**
-         * @var \ChristianKnell\Sportms\Domain\Repository\SeasonRepository
+         * @var SeasonRepository
          */
         protected $seasonRepository;
         
         /**
-         * @var \ChristianKnell\Sportms\Domain\Repository\SportRepository
+         * @var SportRepository
          */
         protected $sportRepository;
         
         /**
-         * @var \ChristianKnell\Sportms\Domain\Repository\SportAgeGroupRepository
+         * @var SportAgeGroupRepository
          */
         protected $sportAgeGroupRepository;
         
         /**
-         * @var \ChristianKnell\Sportms\Domain\Repository\SportAgeLevelRepository
+         * @var SportAgeLevelRepository
          */
         protected $sportAgeLevelRepository;
         
         /**
-         * @var \ChristianKnell\Sportms\Domain\Repository\TeamRepository
+         * @var TeamRepository
          */
         protected $teamRepository;
 
