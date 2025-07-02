@@ -6,7 +6,7 @@
     
     use TYPO3\CMS\Core\PageTitle\AbstractPageTitleProvider;
 
-    final class PageTitleProvider extends AbstractPageTitleProvider
+    final class MyPageTitleProvider extends AbstractPageTitleProvider
     {
         
         /**
