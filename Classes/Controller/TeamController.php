@@ -34,7 +34,7 @@
     /**
      * TeamController
      */
-    class TeamController extends SportMSBaseController
+    final class TeamController extends SportMSBaseController
     {
         
         /**
