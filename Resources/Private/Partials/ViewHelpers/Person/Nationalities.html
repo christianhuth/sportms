@@ -5,9 +5,9 @@
 <f:if condition="{nationalities}">
 	<f:then>
 		<f:for as="nationality" each="{nationalities}" iteration="iterator">
-			<f:debug>{nationality}</f:debug>
+			
 			<f:image class="tx-sportms-person-nationality" height="20"
-					 src="EXT:core/Resources/Public/Icons/Flags/{nationality.isoCodeA2}.webp"
+					 src="EXT:core/Resources/Public/Icons/Flags/{nationality.isoCodeA2 -> f:format.case(mode: 'lower')}.webp"
 					 width="26"/>
 			<f:if condition="!{iterator.isLast}">&nbsp;</f:if>
 		</f:for>
