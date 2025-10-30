@@ -270,6 +270,16 @@
 	top: 100% !important;
 	background-color: var(--medium-gray);
 }
+#sportmsTeamNavigation .nav-item .dropdown-menu .dropdown-item:hover,
+#sportmsTeamNavigation .nav-item .dropdown-menu .dropdown-item:focus,
+#sportmsTeamNavigation .nav-item .nav-link:hover,
+#sportmsTeamNavigation .nav-item .nav-link:focus,
+#sportmsTeamNavigation .nav-item.active > a,
+#sportmsTeamNavigation .nav-item.active > a:hover {
+	background-color: var(--light-gray);
+	color: white;
+	text-decoration: none;
+}
 
 /*
  *
