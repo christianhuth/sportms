@@ -18,15 +18,15 @@
 </f:if>
 
 
-<div class="form-group form-group-sm">
-    <label class="hidden-xs col-sm-3 control-label">
+<div class="row align-items-center mb-3">
+    <label class="d-none d-sm-block col-sm-3 col-form-label mb-0">
         <f:translate
                 key="tx_sportms_domain_model_{f:format.case(mode: 'lower', value: model)}"/>
         :
     </label>
-    <div class="col-xs-12 col-sm-9">
-        <div class="input-group">
-			<span class="input-group-addon">
+    <div class="col-12 col-sm-9 text-end">
+        <div class="input-group input-group-sm">
+			<span class="input-group-text">
 				<i class="sportmsicon sportmsicon-{f:format.case(mode: 'lower', value: model)}"></i>
 			</span>
             <f:if condition="{prependOption}">
@@ -37,7 +37,7 @@
                                       arguments="{_all}"/>
                         </f:then>
                         <f:else>
-                            <f:form.select class="form-control"
+                            <f:form.select class="form-select"
                                            name="{model}"
                                            optionLabelField="{optionLabelField}"
                                            optionValueField="{optionValueField}"
@@ -56,7 +56,7 @@
                                       arguments="{_all}"/>
                         </f:then>
                         <f:else>
-                            <f:form.select class="form-control"
+                            <f:form.select class="form-select"
                                            name="{model}"
                                            optionLabelField="{optionLabelField}"
                                            optionValueField="{optionValueField}"
@@ -72,7 +72,7 @@
 </div>
 
 <f:section name="groupedAndPrepend">
-    <f:form.select class="form-control"
+    <f:form.select class="form-select"
                    name="{model}"
                    prependOptionLabel="{f:translate(key: 'tx_sportms_form.select.{f:format.case(mode: \'lower\', value: model)}.all')}"
                    prependOptionValue="{prependOptionValue}"
@@ -109,7 +109,7 @@
 </f:section>
 
 <f:section name="grouped">
-    <f:form.select class="form-control"
+    <f:form.select class="form-select"
                    name="{model}"
                    sortByOptionLabel="{sortByOptionLabel}"
                    value="{value}">

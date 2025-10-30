@@ -1,70 +1,54 @@
-<html data-namespace-typo3-fluid="true"
-      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+<html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <f:if condition="{settings.game.navigation.enabled}">
     <div class="tx-sportms-navigation tx-sportms-game-navigation">
-        <nav class="navbar navbar-default">
-            <div class="navbar-header">
-                <button class="navbar-toggle" data-target="#gameNavbar"
-                        data-toggle="collapse"
-                        type="button">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-            <div class="collapse navbar-collapse" id="gameNavbar">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <f:render partial="ViewHelpers/LinkAction/Game/Index"
-                                  arguments="{game: game}"/>
+        <nav id="sportmsGameNavigation" class="navbar navbar-expand-lg">
+            <button class="navbar-toggler ps-4" data-bs-toggle="collapse" data-bs-target="#sportmsGameNavigationContent"
+                aria-controls="sportmsGameNavigationContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse" id="sportmsGameNavigationContent">
+                <ul class="navbar-nav me-auto p-0">
+                    <li class="nav-item">
+                        <f:render partial="ViewHelpers/LinkAction/Game/Index" arguments="{game: game}" />
                     </li>
                     <f:if condition="{game.gameReport}">
                         <f:then>
-                            <li>
-                                <f:render
-                                        partial="ViewHelpers/LinkAction/Game/Report"
-                                        arguments="{game: game}"/>
+                            <li class="nav-item">
+                                <f:render partial="ViewHelpers/LinkAction/Game/Report" arguments="{game: game}" />
                             </li>
                         </f:then>
                         <f:else>
-                            <li>
-							<span>
-								<f:translate
-                                        key="tx_sportms_action.game.report"/>
-							</span>
+                            <li class="nav-item">
+                                <span class="nav-link">
+                                    <f:translate key="tx_sportms_action.game.report" />
+                                </span>
                             </li>
                         </f:else>
                     </f:if>
-                    <li>
-                        <f:render
-                                partial="ViewHelpers/LinkAction/Game/History"
-                                arguments="{game: game}"/>
+                    <li class="nav-item">
+                        <f:render partial="ViewHelpers/LinkAction/Game/History" arguments="{game: game}" />
                     </li>
-                    <li class="dropdown">
-                        <a aria-expanded="false" aria-haspopup="true"
-                           class="dropdown-toggle"
-                           data-toggle="dropdown" href="#"
-                           role="button">
-                            <f:translate
-                                    key="tx_sportms_navigation.game.competition.dropdown"/>
-                            <span class="caret"></span>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link">
+                            <f:translate key="tx_sportms_navigation.game.competition.dropdown" />
                         </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <f:render
-                                        partial="ViewHelpers/LinkAction/Competition/SeasonGames"
-                                        arguments="{competitionSeason: game.competitionSeason}"/>
+                        <a class="nav-link dropdown-toggle dropdown-toggle-split" href="#" id="dropdown-competitions"
+                            data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                            <span class="visually-hidden">Toggle Dropdown</span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdown-competitions" data-bs-auto-close="outside">
+                            <li class="nav-item">
+                                <f:render partial="ViewHelpers/LinkAction/Competition/SeasonGames"
+                                    arguments="{competitionSeason: game.competitionSeason}" />
                             </li>
-                            <li>
-                                <f:render
-                                        partial="ViewHelpers/LinkAction/Competition/SeasonTeams"
-                                        arguments="{competitionSeason: game.competitionSeason}"/>
+                            <li class="nav-item">
+                                <f:render partial="ViewHelpers/LinkAction/Competition/SeasonTeams"
+                                    arguments="{competitionSeason: game.competitionSeason}" />
                             </li>
-                            <li>
-                                <f:render
-                                        partial="ViewHelpers/LinkAction/Competition/SeasonClubs"
-                                        arguments="{competitionSeason: game.competitionSeason}"/>
+                            <li class="nav-item">
+                                <f:render partial="ViewHelpers/LinkAction/Competition/SeasonClubs"
+                                    arguments="{competitionSeason: game.competitionSeason}" />
                             </li>
                         </ul>
                     </li>

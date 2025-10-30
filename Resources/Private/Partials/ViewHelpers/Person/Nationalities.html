@@ -1,11 +1,13 @@
 <html data-namespace-typo3-fluid="true"
 	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
+
 <f:if condition="{nationalities}">
 	<f:then>
 		<f:for as="nationality" each="{nationalities}" iteration="iterator">
+			
 			<f:image class="tx-sportms-person-nationality" height="20"
-					 src="EXT:core/Resources/Public/Icons/Flags/{nationality.isoCodeA2}.png"
+					 src="EXT:core/Resources/Public/Icons/Flags/{nationality.isoCodeA2 -> f:format.case(mode: 'lower')}.webp"
 					 width="26"/>
 			<f:if condition="!{iterator.isLast}">&nbsp;</f:if>
 		</f:for>
