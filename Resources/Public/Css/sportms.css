@@ -770,17 +770,6 @@
     margin-bottom: 50px;
 }
 
-.tx-sportms-teamseason-squad-position-officials,
-.tx-sportms-teamseason-squad-position-members {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    flex-wrap: wrap;
-    float: left;
-    width: 100%;
-}
-
 .tx-sportms-teamseason-official-wrapper a,
 .tx-sportms-teamseason-squadmember-wrapper a {
     display: block;
