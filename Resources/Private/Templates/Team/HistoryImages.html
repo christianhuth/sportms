@@ -33,9 +33,11 @@
                                     <f:for each="{teamSeason.teamSeasonImages}"
                                            as="teamSeasonImage"
                                            iteration="iterator">
-                                        <a class="t3colorbox"
+                                        <a class="skjsonlylightbox"
                                            href="{f:uri.image(image: teamSeasonImage)}"
-                                           rel="lightbox[sportms]"
+                                           data-title=""
+                                           data-description=""
+                                           data-gallery="lightbox"
                                            style="display: inline-block;
                                                   width: 350px;">
                                             <f:image image="{teamSeasonImage}"
