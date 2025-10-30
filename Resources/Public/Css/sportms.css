@@ -701,7 +701,7 @@
     font-size: 23px;
     font-weight: bold;
     line-height: 1;
-    margin-bottom: 0px;
+    margin-bottom: 0px !important;
     text-transform: uppercase;
 }
 
