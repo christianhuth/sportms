@@ -13,7 +13,9 @@
                             <f:render arguments="{season: season, team: team, teamSeason: teamSeason}" partial="ViewHelpers/LinkAction/Team/SeasonIndex" />
                         </li>
                         <li class="nav-item dropdown">
-                            <span class="nav-link"><f:translate key="tx_sportms_navigation.team.games.dropdown" /></span>
+                            <span class="nav-link">
+                                <f:translate key="tx_sportms_navigation.team.games.dropdown" />
+                            </span>
                             <a class="nav-link dropdown-toggle dropdown-toggle-split" href="#" id="dropdown-games" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
                                 <span class="visually-hidden">Toggle Dropdown</span>
                             </a>
@@ -28,32 +30,32 @@
                         </li>
 
                         <li class="nav-item dropdown">
-                            <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-bs-toggle="dropdown"
-                                href="#" role="button">
+                            <span class="nav-link">
                                 <f:translate key="tx_sportms_navigation.team.history.dropdown" />
+                            </span>
+                            <a class="nav-link dropdown-toggle dropdown-toggle-split" href="#" id="dropdown-history" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                                <span class="visually-hidden">Toggle Dropdown</span>
                             </a>
-                            <ul class="dropdown-menu">
+                            <ul class="dropdown-menu" aria-labelledby="dropdown-history" data-bs-auto-close="outside">
                                 <li class="nav-item">
-                                    <f:render arguments="{team: team}"
-                                        partial="ViewHelpers/LinkAction/Team/HistoryCompetitions" />
+                                    <f:render arguments="{team: team}" partial="ViewHelpers/LinkAction/Team/HistoryCompetitions" />
                                 </li>
                                 <li class="nav-item">
-                                    <f:render arguments="{team: team}"
-                                        partial="ViewHelpers/LinkAction/Team/HistoryImages" />
+                                    <f:render arguments="{team: team}" partial="ViewHelpers/LinkAction/Team/HistoryImages" />
                                 </li>
                                 <li class="nav-item">
-                                    <f:render arguments="{team: team}"
-                                        partial="ViewHelpers/LinkAction/Team/HistoryOfficials" />
+                                    <f:render arguments="{team: team}" partial="ViewHelpers/LinkAction/Team/HistoryOfficials" />
                                 </li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
-                            <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-bs-toggle="dropdown"
-                                href="#" role="button">
+                            <span class="nav-link">
                                 <f:translate key="tx_sportms_navigation.team.records.dropdown" />
-
+                            </span>
+                            <a class="nav-link dropdown-toggle dropdown-toggle-split" href="#" id="dropdown-records" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                                <span class="visually-hidden">Toggle Dropdown</span>
                             </a>
-                            <ul class="dropdown-menu">
+                            <ul class="dropdown-menu" aria-labelledby="dropdown-records" data-bs-auto-close="outside">
                                 <li class="nav-item">
                                     <f:render arguments="{team: team}"
                                         partial="ViewHelpers/LinkAction/Team/HistoryRecordGames" />
