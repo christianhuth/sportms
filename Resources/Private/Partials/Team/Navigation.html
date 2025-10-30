@@ -13,11 +13,11 @@
                             <f:render arguments="{season: season, team: team, teamSeason: teamSeason}" partial="ViewHelpers/LinkAction/Team/SeasonIndex" />
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link"><f:translate key="tx_sportms_navigation.team.games.dropdown" /></a>
+                            <span class="nav-link"><f:translate key="tx_sportms_navigation.team.games.dropdown" /></span>
                             <a class="nav-link dropdown-toggle dropdown-toggle-split" href="#" id="dropdown-games" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
                                 <span class="visually-hidden">Toggle Dropdown</span>
                             </a>
-                            <ul class="dropdown-menu" aria-labelledby="dropdown-games" data-bs-auto-close="outside"></ul>>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown-games" data-bs-auto-close="outside">
                                 <li class="nav-item">
                                     <f:render arguments="{season: season, team: team, teamSeason: teamSeason}" partial="ViewHelpers/LinkAction/Team/SeasonGamesByCompetition" />
                                 </li>
