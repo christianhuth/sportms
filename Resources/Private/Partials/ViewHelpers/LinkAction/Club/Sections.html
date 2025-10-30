@@ -1,32 +1,28 @@
-<html data-namespace-typo3-fluid="true"
-      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+<html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <f:if condition="{club.detailLink}">
     <f:then>
-        <f:link.action action="sections" arguments="{club: club}"
-                       controller="Club" extensionName="Sportms"
-                       pageUid="{settings.club.detail.pid}"
-                       pluginName="ClubDetail">
-            <f:render section="label"
-                      arguments="{club: club, linkLabel: linkLabel}"/>
+        <f:link.action action="sections" arguments="{club: club}" class="nav-link" controller="Club" extensionName="Sportms"
+            pageUid="{settings.club.detail.pid}" pluginName="ClubDetail">
+            <f:render section="label" arguments="{club: club, linkLabel: linkLabel}" />
         </f:link.action>
     </f:then>
     <f:else>
-        <f:render section="label"
-                  arguments="{club: club, linkLabel: linkLabel}"/>
+        <span class="nav-link">
+            <f:render section="label" arguments="{club: club, linkLabel: linkLabel}" />
+        </span>
     </f:else>
 </f:if>
 
 <f:section name="label">
     <f:switch expression="{linkLabel}">
         <f:case value="clubLogoAndLabel">
-            <f:render partial="ViewHelpers/Club/ItemInTable"
-                      arguments="{club: club}"/>
+            <f:render partial="ViewHelpers/Club/ItemInTable" arguments="{club: club}" />
         </f:case>
         <f:defaultCase>
-			<span>
-				<f:translate key="tx_sportms_action.club.sections"/>
-			</span>
+            <span>
+                <f:translate key="tx_sportms_action.club.sections" />
+            </span>
         </f:defaultCase>
     </f:switch>
 </f:section>
