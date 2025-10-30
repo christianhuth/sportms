@@ -21,7 +21,9 @@
         <f:if condition="{settings.team.uid}">
             <f:then>
                 <f:link.action action="historyCompetitions"
-                               controller="Team" extensionName="Sportms"
+                               class="nav-link"
+                               controller="Team"
+                               extensionName="Sportms"
                                pageUid="{actionPid}"
                                pluginName="TeamDetail">
                     <f:translate key="tx_sportms_action.team.historycompetitions"/>
@@ -30,7 +32,9 @@
             <f:else>
                 <f:link.action action="historyCompetitions"
                                arguments="{team: team}"
-                               controller="Team" extensionName="Sportms"
+                               class="nav-link"
+                               controller="Team"
+                               extensionName="Sportms"
                                pageUid="{actionPid}"
                                pluginName="TeamDetail">
                     <f:translate key="tx_sportms_action.team.historycompetitions"/>
