@@ -1,19 +1,17 @@
-<html data-namespace-typo3-fluid="true"
-	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+<html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <f:if condition="{settings.season.selectbox.enabled}">
-	<div class="form-group form-group-sm">
-		<label class="hidden-xs col-sm-3 control-label">
-			<f:translate key="tx_sportms_domain_model_season"/>:
+	<div class="row align-items-center mb-3">
+		<label class="d-none d-sm-block col-sm-3 col-form-label mb-0">
+			<f:translate key="tx_sportms_domain_model_season" />:
 		</label>
-		<div class="col-xs-12 col-sm-9">
-			<div class="input-group">
-				<span class="input-group-addon">
+		<div class="col-12 col-sm-9 text-end">
+			<div class="input-group input-group-sm">
+				<span class="input-group-text">
 					<i class="sportmsicon sportmsicon-season"></i>
 				</span>
-				<f:form.select class="form-control" name="season"
-							   required="required"
-							   value="{settings.season.selectbox.selected}">
+				<f:form.select class="form-select" name="season" required="required"
+					value="{settings.season.selectbox.selected}">
 					<f:for as="option" each="{options}">
 						<f:form.select.option value="{option.season.uid}">
 							{option.season.label}

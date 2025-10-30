@@ -1,42 +1,36 @@
-<html data-namespace-typo3-fluid="true"
-      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+<html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <f:if condition="{game.detailLink}">
     <f:then>
         <f:if condition="{game.sport.gameDetailPid}">
             <f:then>
-                <f:variable name="actionPid" value="{game.sport.gameDetailPid}"/>
+                <f:variable name="actionPid" value="{game.sport.gameDetailPid}" />
             </f:then>
             <f:else>
-                <f:variable name="actionPid" value="{settings.game.detail.pid}"/>
+                <f:variable name="actionPid" value="{settings.game.detail.pid}" />
             </f:else>
         </f:if>
-        <f:link.action action="history"
-                       arguments="{game: game}"
-                       controller="Game" extensionName="Sportms"
-                       pageUid="{actionPid}"
-                       pluginName="GameDetail">
-            <f:render section="label"
-                      arguments="{game: game, linkLabel: linkLabel}"/>
+        <f:link.action action="history" arguments="{game: game}" class="nav-link" controller="Game"
+            extensionName="Sportms" pageUid="{actionPid}" pluginName="GameDetail">
+            <f:render section="label" arguments="{game: game, linkLabel: linkLabel}" />
         </f:link.action>
     </f:then>
     <f:else>
-        <f:render section="label"
-                  arguments="{game: game, linkLabel: linkLabel}"/>
+        <span class="nav-link">
+            <f:render section="label" arguments="{game: game, linkLabel: linkLabel}" />
+        </span>
     </f:else>
 </f:if>
 
 <f:section name="label">
     <f:switch expression="{linkLabel}">
         <f:case value="result">
-            <f:render partial="ViewHelpers/Game/ResultInTable"
-                      arguments="{game: game}"/>
+            <f:render partial="ViewHelpers/Game/ResultInTable" arguments="{game: game}" />
         </f:case>
         <f:defaultCase>
-			<span>
-				<f:translate
-                        key="tx_sportms_action.game.history"/>
-			</span>
+            <span>
+                <f:translate key="tx_sportms_action.game.history" />
+            </span>
         </f:defaultCase>
     </f:switch>
 </f:section>

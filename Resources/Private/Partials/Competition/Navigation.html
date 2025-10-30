@@ -1,35 +1,25 @@
-<html data-namespace-typo3-fluid="true"
-	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+<html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <f:if condition="{settings.competition.navigation.enabled}">
 	<div class="tx-sportms-navigation tx-sportms-competition-navigation">
-		<nav class="navbar navbar-default">
-			<div class="navbar-header">
-				<button class="navbar-toggle"
-						data-target="#competitionNavbar"
-						data-toggle="collapse"
-						type="button">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-			</div>
-			<div class="collapse navbar-collapse" id="competitionNavbar">
-				<ul class="nav navbar-nav">
-					<li>
-						<f:render
-								partial="ViewHelpers/LinkAction/Competition/SeasonGames"
-								arguments="{competition: competition, competitionSeason: competitionSeason, season: season}"/>
+        <nav id="sportmsCompetitionNavigation" class="navbar navbar-expand-lg">
+            <button class="navbar-toggler ps-4" data-bs-toggle="collapse" data-bs-target="#sportmsCompetitionNavigationContent"
+                aria-controls="sportmsCompetitionNavigationContent">
+                <span class="navbar-toggler-icon"></span>
+			</button>
+            <div class="navbar-collapse collapse" id="sportmsCompetitionNavigationContent">
+                <ul class="navbar-nav me-auto p-0">
+					<li class="nav-item">
+						<f:render partial="ViewHelpers/LinkAction/Competition/SeasonGames"
+							arguments="{competition: competition, competitionSeason: competitionSeason, season: season}" />
 					</li>
-					<li>
-						<f:render
-								partial="ViewHelpers/LinkAction/Competition/SeasonTeams"
-								arguments="{competition: competition, competitionSeason: competitionSeason, season: season}"/>
+					<li class="nav-item">
+						<f:render partial="ViewHelpers/LinkAction/Competition/SeasonTeams"
+							arguments="{competition: competition, competitionSeason: competitionSeason, season: season}" />
 					</li>
-					<li>
-						<f:render
-								partial="ViewHelpers/LinkAction/Competition/SeasonClubs"
-								arguments="{competition: competition, competitionSeason: competitionSeason, season: season}"/>
+					<li class="nav-item">
+						<f:render partial="ViewHelpers/LinkAction/Competition/SeasonClubs"
+							arguments="{competition: competition, competitionSeason: competitionSeason, season: season}" />
 					</li>
 				</ul>
 			</div>
