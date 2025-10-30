@@ -30,11 +30,14 @@
                         <f:render partial="ViewHelpers/LinkAction/Game/History" arguments="{game: game}" />
                     </li>
                     <li class="nav-item dropdown">
-                        <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-bs-toggle="dropdown"
-                            href="#" role="button">
+                        <a class="nav-link">
                             <f:translate key="tx_sportms_navigation.game.competition.dropdown" />
                         </a>
-                        <ul class="dropdown-menu">
+                        <a class="nav-link dropdown-toggle dropdown-toggle-split" href="#" id="dropdown-competitions"
+                            data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                            <span class="visually-hidden">Toggle Dropdown</span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdown-competitions" data-bs-auto-close="outside">
                             <li class="nav-item">
                                 <f:render partial="ViewHelpers/LinkAction/Competition/SeasonGames"
                                     arguments="{competitionSeason: game.competitionSeason}" />
