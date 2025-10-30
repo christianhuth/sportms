@@ -213,6 +213,7 @@
  * SPORTMS - NAVIGATION
  *
  */
+#sportmsGameNavigation,
 #sportmsTeamNavigation {
 	background-color: var(--medium-gray) !important;
 	border-bottom: 1px solid white;
@@ -221,21 +222,27 @@
 	padding: 0;
 	-webkit-box-shadow: 0px 5px 20px -17px rgba(0, 0, 0, 0.34);
 }
+#sportmsGameNavigation .navbar-toggler,
+#sportmsGameNavigation .navbar-toggler:focus,
 #sportmsTeamNavigation .navbar-toggler,
 #sportmsTeamNavigation .navbar-toggler:focus {
 	border: none;
 	color: transparent;
 }
+#sportmsGameNavigation .navbar-toggler .navbar-toggler-icon,
 #sportmsTeamNavigation .navbar-toggler .navbar-toggler-icon {
   background-image: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="UTF-8"%3F><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="480px" height="480px" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path style="opacity:0.992" fill="%23fefffe" d="M 47.5,77.5 C 175.5,77.5 303.5,77.5 431.5,77.5C 431.5,91.8333 431.5,106.167 431.5,120.5C 303.5,120.5 175.5,120.5 47.5,120.5C 47.5,106.167 47.5,91.8333 47.5,77.5 Z"/></g><g><path style="opacity:0.97" fill="%23fefffe" d="M 122.5,217.5 C 225.5,217.5 328.5,217.5 431.5,217.5C 431.5,232.167 431.5,246.833 431.5,261.5C 328.5,261.5 225.5,261.5 122.5,261.5C 122.5,246.833 122.5,232.167 122.5,217.5 Z"/></g><g><path style="opacity:0.991" fill="%23fefffe" d="M 196.5,358.5 C 274.833,358.5 353.167,358.5 431.5,358.5C 431.5,372.833 431.5,387.167 431.5,401.5C 353.167,401.5 274.833,401.5 196.5,401.5C 196.5,387.167 196.5,372.833 196.5,358.5 Z"/></g></svg>');
 }
+#sportmsGameNavigation .nav-item.dropdown,
 #sportmsTeamNavigation .nav-item.dropdown {
 	align-items: center !important;
 	display: flex !important;
 }
+#sportmsGameNavigation .dropdown,
 #sportmsTeamNavigation .dropdown {
 	position: relative;
 }
+#sportmsGameNavigation .nav-item .nav-link,
 #sportmsTeamNavigation .nav-item .nav-link {
 	font-size: 14px;
 	padding-top: 1.2rem;
@@ -247,6 +254,7 @@
 	position: relative;
 	opacity: 1 !important;
 }
+#sportmsGameNavigation .dropdown-toggle-split,
 #sportmsTeamNavigation .dropdown-toggle-split {
 	background-color: var(--dark-gray);
 	border-radius: 0;
@@ -256,6 +264,7 @@
 	padding-right: 15px !important;
 	align-items: center;
 }
+#sportmsGameNavigation .nav-item .dropdown-menu,
 #sportmsTeamNavigation .nav-item .dropdown-menu {
 	border: none;
 	margin: 0;
@@ -268,6 +277,12 @@
 	top: 100% !important;
 	background-color: var(--medium-gray);
 }
+#sportmsGameNavigation .nav-item .dropdown-menu .dropdown-item:hover,
+#sportmsGameNavigation .nav-item .dropdown-menu .dropdown-item:focus,
+#sportmsGameNavigation .nav-item .nav-link:hover,
+#sportmsGameNavigation .nav-item .nav-link:focus,
+#sportmsGameNavigation .nav-item.active > a,
+#sportmsGameNavigation .nav-item.active > a:hover,
 #sportmsTeamNavigation .nav-item .dropdown-menu .dropdown-item:hover,
 #sportmsTeamNavigation .nav-item .dropdown-menu .dropdown-item:focus,
 #sportmsTeamNavigation .nav-item .nav-link:hover,
@@ -278,14 +293,17 @@
 	color: white;
 	text-decoration: none;
 }
+#sportmsGameNavigation .nav-item .nav-item .nav-link,
 #sportmsTeamNavigation .nav-item .nav-item .nav-link {
   padding-top: 0.6rem;
   padding-bottom: 0.6rem;
   width: 100%;
 }
+#sportmsGameNavigation .nav-item .nav-item .nav-link.dropdown-toggle-split,
 #sportmsTeamNavigation .nav-item .nav-item .nav-link.dropdown-toggle-split {
   width: auto;
 }
+#sportmsGameNavigation .nav-item .nav-item .dropdown-menu,
 #sportmsTeamNavigation .nav-item .nav-item .dropdown-menu {
   left: 100% !important;
   top: 0 !important;
@@ -293,26 +311,34 @@
 
 
 @media (max-width: 991.98px) {
+  #sportmsGameNavigation,
   #sportmsTeamNavigation {
     padding: 10px 0 0 0;
   }
+  #sportmsGameNavigation .container,
   #sportmsTeamNavigation .container {
     padding: 0;
   }
+  #sportmsGameNavigation .navbar-toggler,
   #sportmsTeamNavigation .navbar-toggler {
     margin-bottom: 10px;
   }
+  #sportmsGameNavigation .nav-item,
   #sportmsTeamNavigation .nav-item {
     border-bottom: 1px solid white;
   }
+  #sportmsGameNavigation .nav-item:last-child,
   #sportmsTeamNavigation .nav-item:last-child {
     border-bottom: none;
   }
+  #sportmsGameNavigation .nav-item > .nav-link,
   #sportmsTeamNavigation .nav-item > .nav-link {
     color: rgba(255, 255, 255, 0.7);
     padding-bottom: .5rem;
     padding-top: .5rem;
   }
+  #sportmsGameNavigation .nav-item.active > a,
+  #sportmsGameNavigation .nav-item > .nav-link:hover,
   #sportmsTeamNavigation .nav-item.active > a,
   #sportmsTeamNavigation .nav-item > .nav-link:hover {
     color: #fff;
@@ -321,38 +347,48 @@
 
 
 @media (max-width: 991.98px) {
+  #sportmsGameNavigation .nav-item.dropdown,
   #sportmsTeamNavigation .nav-item.dropdown {
     display: block !important;
     position: relative;
   }
+  #sportmsGameNavigation .dropdown-toggle-split,
   #sportmsTeamNavigation .dropdown-toggle-split {
     right: 8px;
     position: absolute !important;
     top: 0;
     border-bottom: none;
   }
+  #sportmsGameNavigation .nav-item.dropdown .dropdown-menu,
   #sportmsTeamNavigation .nav-item.dropdown .dropdown-menu {
     border-top: 1px solid white;
     width: 100%;
   }
+  #sportmsGameNavigation .nav-item:first-of-type,
   #sportmsTeamNavigation .nav-item:first-of-type {
     border-top: 1px solid white;
   }
+  #sportmsGameNavigation .nav-item .nav-item:first-of-type,
   #sportmsTeamNavigation .nav-item .nav-item:first-of-type {
     border-top: none;
   }
+  #sportmsGameNavigation .nav-item.dropdown .nav-item,
   #sportmsTeamNavigation .nav-item.dropdown .nav-item {
     border-bottom: none;
   }
+  #sportmsGameNavigation .nav-item.dropdown .nav-link:last-child,
   #sportmsTeamNavigation .nav-item.dropdown .nav-link:last-child {
     border-bottom: 1px solid white;
   }
+  #sportmsGameNavigation .nav-item.dropdown .nav-item:last-child > .nav-link,
   #sportmsTeamNavigation .nav-item.dropdown .nav-item:last-child > .nav-link {
     border-bottom: none;
   }
+  #sportmsGameNavigation .nav-item .nav-item,
   #sportmsTeamNavigation .nav-item .nav-item {
     padding-left: 20px;
   }
+  #sportmsGameNavigation .nav-item .nav-item .nav-item,
   #sportmsTeamNavigation .nav-item .nav-item .nav-item {
     padding-left: 20px;
   }
