@@ -37,7 +37,7 @@
                                       arguments="{_all}"/>
                         </f:then>
                         <f:else>
-                            <f:form.select class="form-control"
+                            <f:form.select class="form-select"
                                            name="{model}"
                                            optionLabelField="{optionLabelField}"
                                            optionValueField="{optionValueField}"
@@ -56,7 +56,7 @@
                                       arguments="{_all}"/>
                         </f:then>
                         <f:else>
-                            <f:form.select class="form-control"
+                            <f:form.select class="form-select"
                                            name="{model}"
                                            optionLabelField="{optionLabelField}"
                                            optionValueField="{optionValueField}"
@@ -72,7 +72,7 @@
 </div>
 
 <f:section name="groupedAndPrepend">
-    <f:form.select class="form-control"
+    <f:form.select class="form-select"
                    name="{model}"
                    prependOptionLabel="{f:translate(key: 'tx_sportms_form.select.{f:format.case(mode: \'lower\', value: model)}.all')}"
                    prependOptionValue="{prependOptionValue}"
@@ -109,7 +109,7 @@
 </f:section>
 
 <f:section name="grouped">
-    <f:form.select class="form-control"
+    <f:form.select class="form-select"
                    name="{model}"
                    sortByOptionLabel="{sortByOptionLabel}"
                    value="{value}">
