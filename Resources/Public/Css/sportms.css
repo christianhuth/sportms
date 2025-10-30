@@ -197,31 +197,14 @@
     padding: 0;
 }
 
-.tx-sportms .tx-sportms-filter .form-label {
+.tx-sportms .tx-sportms-filter .col-form-label {
     color: white;
     text-align: right;
-}
-
-.tx-sportms .tx-sportms-filter .input-group-addon {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    margin-right: 10px;
-    padding: 4px;
 }
 
 .tx-sportms .tx-sportms-filter .form-control {
     padding-bottom: 0;
     padding-top: 0;
-}
-
-.tx-sportms .tx-sportms-filter .input-group-addon .sportmsicon {
-    background: var(--regular-red);
-    display: block;
-    height: 20px;
-    mask-position: center center;
-    mask-size: contain;
-    width: 20px;
 }
 
 
