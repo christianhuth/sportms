@@ -1,22 +1,19 @@
-<html data-namespace-typo3-fluid="true"
-      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+<html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <f:if condition="{competitionSeason}">
     <f:then>
-        <f:variable name="competition" value="{competitionSeason.competition}"/>
-        <f:variable name="season" value="{competitionSeason.season}"/>
+        <f:variable name="competition" value="{competitionSeason.competition}" />
+        <f:variable name="season" value="{competitionSeason.season}" />
     </f:then>
     <f:else>
-        <f:variable name="competitionSeason"
-                    value="{competition.competitionSeasons.0}"/>
+        <f:variable name="competitionSeason" value="{competition.competitionSeasons.0}" />
         <f:if condition="!{season}">
-            <f:variable name="season" value="{competitionSeason.season}"/>
+            <f:variable name="season" value="{competitionSeason.season}" />
         </f:if>
     </f:else>
 </f:if>
 <f:if condition="!{competitionSeasonGameday}">
-    <f:variable name="competitionSeasonGameday"
-                value="{competitionSeason.competitionSeasonGamedays.0}"/>
+    <f:variable name="competitionSeasonGameday" value="{competitionSeason.competitionSeasonGamedays.0}" />
 </f:if>
 
 <f:if condition="	{competition.detailLink} &&
@@ -24,24 +21,22 @@
     <f:then>
         <f:if condition="{competition.sport.competitionDetailPid}">
             <f:then>
-                <f:variable name="actionPid"
-                            value="{competition.sport.competitionDetailPid}"/>
+                <f:variable name="actionPid" value="{competition.sport.competitionDetailPid}" />
             </f:then>
             <f:else>
-                <f:variable name="actionPid"
-                            value="{settings.competition.detail.pid}"/>
+                <f:variable name="actionPid" value="{settings.competition.detail.pid}" />
             </f:else>
         </f:if>
         <f:link.action action="seasonGames"
-                       arguments="{competition: competition, competitionSeasonGameday: competitionSeasonGameday, season: season}"
-                       controller="Competition" extensionName="Sportms"
-                       pageUid="{actionPid}"
-                       pluginName="CompetitionDetail">
-            <f:render section="label" arguments="{_all}"/>
+            arguments="{competition: competition, competitionSeasonGameday: competitionSeasonGameday, season: season}" class="nav-link"
+            controller="Competition" extensionName="Sportms" pageUid="{actionPid}" pluginName="CompetitionDetail">
+            <f:render section="label" arguments="{_all}" />
         </f:link.action>
     </f:then>
     <f:else>
-        <f:render section="label" arguments="{_all}"/>
+        <span class="nav-link">
+            <f:render section="label" arguments="{_all}" />
+        </span>
     </f:else>
 </f:if>
 
@@ -62,10 +57,9 @@
             {competitionSeasonGameday.label}
         </f:case>
         <f:defaultCase>
-			<span>
-				<f:translate
-                        key="tx_sportms_action.competition.seasongames"/>
-			</span>
+            <span>
+                <f:translate key="tx_sportms_action.competition.seasongames" />
+            </span>
         </f:defaultCase>
     </f:switch>
 </f:section>
