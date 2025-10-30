@@ -31,7 +31,9 @@
             <f:then>
                 <f:link.action action="seasonIndex"
                                arguments="{season: season}"
-                               controller="Team" extensionName="Sportms"
+                               class="nav-link"
+                               controller="Team"
+                               extensionName="Sportms"
                                pageUid="{actionPid}"
                                pluginName="TeamDetail">
                     <f:render section="label"
@@ -41,7 +43,9 @@
             <f:else>
                 <f:link.action action="seasonIndex"
                                arguments="{season: season, team: team}"
-                               controller="Team" extensionName="Sportms"
+                               class="nav-link"
+                               controller="Team"
+                               extensionName="Sportms"
                                pageUid="{actionPid}"
                                pluginName="TeamDetail">
                     <f:render section="label"
