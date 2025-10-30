@@ -16,9 +16,11 @@
         <div class="tx-sportms-team-seasonindex">
             <f:if condition="{teamSeason.teamSeasonImages}">
                 <div class="tx-sportms-teamseason-image">
-                    <a class="t3colorbox"
+                    <a class="skjsonlylightbox"
                        href="{f:uri.image(image: teamSeason.teamSeasonImages.0)}"
-                       rel="lightbox[sportms]">
+                       data-title=""
+                       data-description=""
+                       data-gallery="lightbox">
                         <f:image image="{teamSeason.teamSeasonImages.0}"/>
                     </a>
                     <f:if condition="{teamSeason.teamSeasonImages.0.originalResource.description}">
