@@ -204,6 +204,10 @@
     padding: 4px;
 }
 
+.tx-sportms .tx-sportms-filter .form-control {
+    padding: 0;
+}
+
 .tx-sportms .tx-sportms-filter .input-group-addon .sportmsicon {
     background: var(--regular-red);
     display: block;
