@@ -197,15 +197,22 @@
     padding: 0;
 }
 
+.tx-sportms .tx-sportms-filter .form-label {
+    color: white;
+    text-align: right;
+}
+
 .tx-sportms .tx-sportms-filter .input-group-addon {
     align-items: center;
     display: flex;
     justify-content: center;
+    margin-right: 10px;
     padding: 4px;
 }
 
 .tx-sportms .tx-sportms-filter .form-control {
-    padding: 0;
+    padding-bottom: 0;
+    padding-top: 0;
 }
 
 .tx-sportms .tx-sportms-filter .input-group-addon .sportmsicon {
@@ -231,9 +238,13 @@
 	padding: 0;
 	-webkit-box-shadow: 0px 5px 20px -17px rgba(0, 0, 0, 0.34);
 }
-#sportmsTeamNavigation .navbar-toggler, #primaryNavigation .navbar-toggler:focus, #secondaryNavigation .navbar-toggler, #secondaryNavigation .navbar-toggler:focus {
+#sportmsTeamNavigation .navbar-toggler,
+#sportmsTeamNavigation .navbar-toggler:focus {
 	border: none;
 	color: transparent;
+}
+#sportmsTeamNavigation .navbar-toggler .navbar-toggler-icon {
+  background-image: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="UTF-8"%3F><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="480px" height="480px" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path style="opacity:0.992" fill="%23fefffe" d="M 47.5,77.5 C 175.5,77.5 303.5,77.5 431.5,77.5C 431.5,91.8333 431.5,106.167 431.5,120.5C 303.5,120.5 175.5,120.5 47.5,120.5C 47.5,106.167 47.5,91.8333 47.5,77.5 Z"/></g><g><path style="opacity:0.97" fill="%23fefffe" d="M 122.5,217.5 C 225.5,217.5 328.5,217.5 431.5,217.5C 431.5,232.167 431.5,246.833 431.5,261.5C 328.5,261.5 225.5,261.5 122.5,261.5C 122.5,246.833 122.5,232.167 122.5,217.5 Z"/></g><g><path style="opacity:0.991" fill="%23fefffe" d="M 196.5,358.5 C 274.833,358.5 353.167,358.5 431.5,358.5C 431.5,372.833 431.5,387.167 431.5,401.5C 353.167,401.5 274.833,401.5 196.5,401.5C 196.5,387.167 196.5,372.833 196.5,358.5 Z"/></g></svg>');
 }
 #sportmsTeamNavigation .nav-item.dropdown {
 	align-items: center !important;
@@ -283,6 +294,91 @@
 	background-color: var(--light-gray);
 	color: white;
 	text-decoration: none;
+}
+#sportmsTeamNavigation .nav-item .nav-item .nav-link {
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+  width: 100%;
+}
+#sportmsTeamNavigation .nav-item .nav-item .nav-link.dropdown-toggle-split {
+  width: auto;
+}
+#sportmsTeamNavigation .nav-item .nav-item .dropdown-menu {
+  left: 100% !important;
+  top: 0 !important;
+}
+
+
+@media (max-width: 991.98px) {
+  #sportmsTeamNavigation {
+    padding: 10px 0 0 0;
+  }
+  #sportmsTeamNavigation .container {
+    padding: 0;
+  }
+  #sportmsTeamNavigation .navbar-toggler {
+    margin-bottom: 10px;
+  }
+  #sportmsTeamNavigation .nav-item {
+    border-bottom: 1px solid white;
+  }
+  #sportmsTeamNavigation .nav-item:last-child {
+    border-bottom: none;
+  }
+  #sportmsTeamNavigation .nav-item > .nav-link {
+    color: rgba(255, 255, 255, 0.7);
+    padding-bottom: .5rem;
+    padding-top: .5rem;
+  }
+  #sportmsTeamNavigation .nav-item.active > a,
+  #sportmsTeamNavigation .nav-item > .nav-link:hover {
+    color: #fff;
+  }
+}
+
+
+@media (max-width: 991.98px) {
+  #sportmsTeamNavigation .nav-item.dropdown {
+    display: block !important;
+    position: relative;
+  }
+  #sportmsTeamNavigation .dropdown-toggle-split {
+    right: 8px;
+    position: absolute !important;
+    top: 0;
+    border-bottom: none;
+  }
+  #sportmsTeamNavigation .nav-item.dropdown .dropdown-menu {
+    border-top: 1px solid white;
+    width: 100%;
+  }
+  #sportmsTeamNavigation .nav-item:first-of-type {
+    border-top: 1px solid white;
+  }
+  #sportmsTeamNavigation .nav-item .nav-item:first-of-type {
+    border-top: none;
+  }
+  #sportmsTeamNavigation .nav-item.dropdown .nav-item {
+    border-bottom: none;
+  }
+  #sportmsTeamNavigation .nav-item.dropdown .nav-link:last-child {
+    border-bottom: 1px solid white;
+  }
+  #sportmsTeamNavigation .nav-item.dropdown .nav-item:last-child > .nav-link {
+    border-bottom: none;
+  }
+  #sportmsTeamNavigation .nav-item .nav-item {
+    padding-left: 20px;
+  }
+  #sportmsTeamNavigation .nav-item .nav-item .nav-item {
+    padding-left: 20px;
+  }
+}
+
+@media (min-width: 992px) {
+	.dropdown .dropdown .dropdown-toggle-split::after {
+		transform: rotate(270deg);
+	}
 }
 
 /*
