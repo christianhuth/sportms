@@ -26,13 +26,13 @@
                             {teamSeason.teamSeasonImages.0.originalResource.description -> f:format.html()}
                         </div>
                     </f:if>
-                    <div class="tx-sportms-teamseason-image-seperator col-xs-12"></div>
+                    <div class="tx-sportms-teamseason-image-seperator col-12"></div>
                 </div>
             </f:if>
             
             <f:if condition="{teamSeason.teamSeasonPractices}">
                 <div class="tx-sportms-teamseason-practices">
-                    <div class="tx-sportms-teamseason-practices col-xs-12"><h3>
+                    <div class="tx-sportms-teamseason-practices col-12"><h3>
                         Trainingszeiten</h3></div>
                     <table class="table table-bordered table-condensed table-hover table-striped tx-sportms-table">
                         <thead>
@@ -52,13 +52,13 @@
                         </f:for>
                         </tbody>
                     </table>
-                    <div class="tx-sportms-teamseason-practices-seperator col-xs-12"></div>
+                    <div class="tx-sportms-teamseason-practices-seperator col-12"></div>
                 </div>
             </f:if>
             
             <f:if condition="{teamSeason.teamSeasonOfficials}">
                 <div class="tx-sportms-teamseason-officials">
-                    <div class="tx-sportms-teamseason-officials col-xs-12"><h3>
+                    <div class="tx-sportms-teamseason-officials col-12"><h3>
                         Trainerstab</h3></div>
                     <div class="tx-sportms-teamseason-officials-members">
                         <f:for as="teamSeasonOfficial"
@@ -74,7 +74,7 @@
                             </f:if>
                         </f:for>
                     </div>
-                    <div class="tx-sportms-teamseason-officials-seperator col-xs-12"></div>
+                    <div class="tx-sportms-teamseason-officials-seperator col-12"></div>
                 </div>
             </f:if>
             
@@ -84,7 +84,7 @@
                                   each="{teamSeason.teamSeasonSquadMembers}"
                                   groupBy="sportPositionGroup"
                                   groupKey="sportPositionGroup">
-                        <div class="tx-sportms-teamseason-squad-position col-xs-12">
+                        <div class="tx-sportms-teamseason-squad-position col-12">
                             <h3>{sportPositionGroup.label}</h3>
                         </div>
                         <div class="tx-sportms-teamseason-squad-position-members">
@@ -94,14 +94,14 @@
                                           partial="Team/SeasonIndex/SquadMember"/>
                             </f:for>
                         </div>
-                        <div class="tx-sportms-teamseason-squad-position-seperator col-xs-12"></div>
+                        <div class="tx-sportms-teamseason-squad-position-seperator col-12"></div>
                     </f:groupedFor>
                 </div>
             </f:if>
             
             <f:if condition="{teamSeason.teamSeasonSquadCaptains}">
                 <div class="tx-sportms-teamseason-squad-captains">
-                    <div class="tx-sportms-teamseason-squad-captains col-xs-12">
+                    <div class="tx-sportms-teamseason-squad-captains col-12">
                         <h3>Mannschaftskapitäne</h3>
                     </div>
                     <f:for as="squadCaptain"
