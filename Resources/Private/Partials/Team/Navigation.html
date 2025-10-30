@@ -3,18 +3,8 @@
 
 <f:if condition="{settings.team.navigation.enabled}">
 	<div class="tx-sportms-navigation tx-sportms-team-navigation">
-		<nav class="navbar navbar-light">
-			<div class="navbar-header">
-				<button class="navbar-toggler"
-						data-bs-target="#teamNavbar"
-						data-bs-toggle="collapse"
-						type="button">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-			</div>
-			<div class="collapse navbar-collapse" id="teamNavbar">
+		<nav class="navbar">
+			<div class="bg-dark" id="secondaryNavigationContent">
 				<ul class="nav navbar-nav">
 					<li>
 						<f:render
@@ -28,7 +18,7 @@
 						   role="button">
 							<f:translate
 									key="tx_sportms_navigation.team.games.dropdown"/>
-							<span class="caret"></span>
+							
 						</a>
 						<ul class="dropdown-menu">
 							<li>
@@ -51,7 +41,7 @@
                            role="button">
                             <f:translate
                                     key="tx_sportms_navigation.team.history.dropdown"/>
-                            <span class="caret"></span>
+                            
                         </a>
                         <ul class="dropdown-menu">
                             <li>
@@ -79,7 +69,7 @@
                            role="button">
                             <f:translate
                                     key="tx_sportms_navigation.team.records.dropdown"/>
-                            <span class="caret"></span>
+                            
                         </a>
                         <ul class="dropdown-menu">
                             <li>
