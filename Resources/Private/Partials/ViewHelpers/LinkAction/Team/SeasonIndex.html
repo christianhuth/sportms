@@ -51,7 +51,9 @@
         </f:if>
     </f:then>
     <f:else>
-        <f:render section="label" arguments="{team: team, teamSeason: teamSeason, linkLabel: linkLabel}"/>
+        <span class="nav-link">
+            <f:render section="label" arguments="{team: team, teamSeason: teamSeason, linkLabel: linkLabel}"/>
+        </span>
     </f:else>
 </f:if>
 
