@@ -198,6 +198,9 @@
 }
 
 .tx-sportms .tx-sportms-filter .input-group-addon {
+    align-items: center;
+    display: flex;
+    justify-content: center;
     padding: 4px;
 }
 
