@@ -12,27 +12,16 @@
 							<f:for as="clubSection" each="{club.clubSections}">
 								<div class="col-12 col-sm-6 col-md-6 col-lg-4 mb-5">
 									<div class="card shadow">
-										<a href="">
-											<f:if condition="{clubSection.images}">
-												<f:then>
-													<f:for as="image" each="{clubSection.images}" iteration="iterator">
-														<f:if condition="{iterator.isFirst}">
-															<div class="image overflow-hidden">
-																<f:image class="card-img-top rounded-top" height="200c"
-																	image="{image}" width="350c" />
-															</div>
-														</f:if>
-													</f:for>
-												</f:then>
-												<f:else></f:else>
-											</f:if>
-											<div class="card-body">
-												<h3 class="h5 card-title mb-0 p-0">{clubSection.label}</h3>
-												<p class="card-text">
-													<f:format.html>{clubSection.description}</f:format.html>
-												</p>
-											</div>
-										</a>
+										<f:if condition="{clubSection.urls}">
+											<f:then>
+												<f:link.page target="_blank" uri="{clubSection.urls.0.url}">
+													<f:render section="card-content" arguments="{clubSection: clubSection}" />
+												</f:link.page>
+											</f:then>
+											<f:else>
+												<f:render section="card-content" arguments="{clubSection: clubSection}" />
+											</f:else>
+										</f:if>
 									</div>
 								</div>
 							</f:for>
@@ -56,35 +45,6 @@
 						<f:for as="clubSection" each="{club.clubSections}">
 							<tr>
 								<td>
-									<f:if condition="{clubSection.phones}">
-										<f:then>
-											<f:link.external defaultScheme="tel" target="_blank"
-												uri="{clubSection.phones.0.areaCode} {clubSection.phones.0.callingNumber}">
-												{clubSection.phones.0.areaCode}
-												/
-												{clubSection.phones.0.callingNumber}
-											</f:link.external>
-										</f:then>
-										<f:else>
-											<div class="tx-sportms-table-center">
-												-
-											</div>
-										</f:else>
-									</f:if>
-								</td>
-								<td>
-									<f:if condition="{clubSection.urls}">
-										<f:then>
-											<f:link.external target="_blank" uri="{clubSection.urls.0.url}">
-												{clubSection.urls.0.url}
-											</f:link.external>
-										</f:then>
-										<f:else>
-											<div class="tx-sportms-table-center">
-												-
-											</div>
-										</f:else>
-									</f:if>
 								</td>
 							</tr>
 							<f:if condition="{section.urls} && {section.images} && {section.section.label}">
@@ -116,6 +76,27 @@
 		</table>
 	</div>
 	</div>
+	</div>
+</f:section>
+
+<f:section name="card-content">
+	<f:if condition="{clubSection.images}">
+		<f:then>
+			<f:for as="image" each="{clubSection.images}" iteration="iterator">
+				<f:if condition="{iterator.isFirst}">
+					<div class="image overflow-hidden">
+						<f:image class="card-img-top rounded-top" height="200c" image="{image}" width="350c" />
+					</div>
+				</f:if>
+			</f:for>
+		</f:then>
+		<f:else></f:else>
+	</f:if>
+	<div class="card-body">
+		<h3 class="h5 card-title mb-0 p-0">{clubSection.label}</h3>
+		<p class="card-text">
+			<f:format.html>{clubSection.description}</f:format.html>
+		</p>
 	</div>
 </f:section>
 
