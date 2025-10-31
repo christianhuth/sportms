@@ -28,6 +28,11 @@
         protected $label;
         
         /**
+         * @var string
+         */
+        protected $description;
+        
+        /**
          * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference>
          * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
          */
@@ -163,6 +168,22 @@
         public function setLabel(string $label): void
         {
             $this->label = $label;
+        }
+        
+        /**
+         * @return string
+         */
+        public function getDescription(): string
+        {
+            return $this->description;
+        }
+        
+        /**
+         * @param string $label
+         */
+        public function setDescription(string $description): void
+        {
+            $this->description = $description;
         }
         
         /**
