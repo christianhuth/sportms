@@ -7,25 +7,24 @@
 		<div class="tx-sportms-club-sections">
 			<f:if condition="{club.clubSections}">
 				<f:then>
-					<div class="container">
-						<div class="row">
-							<f:for as="clubSection" each="{club.clubSections}">
-								<div class="col-12 col-sm-6 col-md-6 col-lg-4 mb-5">
-									<div class="card shadow">
-										<f:if condition="{clubSection.urls}">
-											<f:then>
-												<f:link.typolink parameter="{clubSection.urls.0.url}">
-													<f:render section="card-content" arguments="{clubSection: clubSection}" />
-												</f:link.typolink>
-											</f:then>
-											<f:else>
-												<f:render section="card-content" arguments="{clubSection: clubSection}" />
-											</f:else>
-										</f:if>
-									</div>
+					<div class="row">
+						<f:for as="clubSection" each="{club.clubSections}">
+							<div class="col-12 col-sm-6 col-md-6 col-lg-4 mb-5">
+								<div class="card shadow">
+									<f:if condition="{clubSection.urls}">
+										<f:then>
+											<f:link.typolink parameter="{clubSection.urls.0.url}">
+												<f:render section="card-content"
+													arguments="{clubSection: clubSection}" />
+											</f:link.typolink>
+										</f:then>
+										<f:else>
+											<f:render section="card-content" arguments="{clubSection: clubSection}" />
+										</f:else>
+									</f:if>
 								</div>
-							</f:for>
-						</div>
+							</div>
+						</f:for>
 					</div>
 				</f:then>
 			</f:if>
