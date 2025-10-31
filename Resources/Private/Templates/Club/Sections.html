@@ -14,7 +14,7 @@
 									<div class="card shadow">
 										<f:if condition="{clubSection.urls}">
 											<f:then>
-												<f:debug>{clubSection.urls}</f:debug>
+												<f:debug>{clubSection.urls.0}</f:debug>
 												<f:link.page uri="{clubSection.urls.0.url}">
 													<f:render section="card-content" arguments="{clubSection: clubSection}" />
 												</f:link.page>
