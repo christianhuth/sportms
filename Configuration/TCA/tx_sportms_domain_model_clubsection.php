@@ -31,6 +31,7 @@
                 'showitem' => ' --div--;LLL:EXT:sportms/Resources/Private/Language/locallang_be.xlf:tx_sportms_general.tab.general,
                                     club,
                                     label,
+                                    description,
                                     sports,
                                     images,
                                     club_section_members,
@@ -130,6 +131,15 @@
                     'eval' => 'trim, required',
                     'size' => 30,
                     'type' => 'input',
+                ],
+            ],
+            'description' => [
+                'exclude' => 1,
+                'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_general.description',
+                'config' => [
+                    'eval' => 'trim',
+                    'size' => 30,
+                    'type' => 'text',
                 ],
             ],
             'sports' => [
