@@ -1283,6 +1283,9 @@
             <trans-unit id="tx_sportms_general.label">
                 <source>Bezeichnung</source>
             </trans-unit>
+            <trans-unit id="tx_sportms_general.description">
+                <source>Beschreibung</source>
+            </trans-unit>
             <trans-unit id="tx_sportms_general.official.duration">
                 <source>Amtszeit</source>
             </trans-unit>
