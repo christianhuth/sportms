@@ -137,6 +137,7 @@
                 'exclude' => 1,
                 'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_general.description',
                 'config' => [
+                    'enableRichtext' => true,
                     'eval' => 'trim',
                     'size' => 30,
                     'type' => 'text',
