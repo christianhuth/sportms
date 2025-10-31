@@ -88,6 +88,7 @@ CREATE TABLE tx_sportms_domain_model_clubsection
     club                   int(11) DEFAULT '0' NOT NULL,
     sports                 int(11) DEFAULT '0' NOT NULL,
     label                  varchar(255) DEFAULT NULL,
+    description            varchar(255) DEFAULT NULL,
     images                 varchar(255) DEFAULT NULL,
     club_section_members   int(11) DEFAULT NULL,
     addresses              int(11) DEFAULT NULL,
