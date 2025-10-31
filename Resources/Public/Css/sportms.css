@@ -561,6 +561,13 @@
 .tx-sportms .tx-sportms-club-detail .tx-sportms-club-sections .card a {
     text-decoration: none;
 }
+.tx-sportms .tx-sportms-club-detail .tx-sportms-club-sections .card {
+    border-radius: 1.25rem;
+}
+.tx-sportms .tx-sportms-club-detail .tx-sportms-club-sections .card .rounded-top {
+    border-top-left-radius: 1.25rem !important;
+    border-top-right-radius: 1.25rem !important;
+}
 
 
 /*
