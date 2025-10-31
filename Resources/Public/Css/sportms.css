@@ -555,6 +555,16 @@
 
 /*
  *
+ * CLUB
+ *
+ */
+.tx-sportms .tx-sportms-club-detail .tx-sportms-club-sections .card a {
+    text-decoration: none;
+}
+
+
+/*
+ *
  * GAME
  *
  */
