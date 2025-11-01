@@ -569,12 +569,16 @@
     border-top-right-radius: 1.25rem !important;
 }
 .tx-sportms .tx-sportms-club-detail .tx-sportms-club-sections .card .image {
+    align-items: center;
+    display: flex;
     height: 300px;
+    justify-content: center;
 }
 .tx-sportms .tx-sportms-club-detail .tx-sportms-club-sections .card .card-img {
     min-width: 100%;
     min-height: 100%;
     object-fit: cover;
+    object-position: center center;
 }
 
 
