@@ -568,6 +568,14 @@
     border-top-left-radius: 1.25rem !important;
     border-top-right-radius: 1.25rem !important;
 }
+.tx-sportms .tx-sportms-club-detail .tx-sportms-club-sections .card .image {
+    height: 300px;
+}
+.tx-sportms .tx-sportms-club-detail .tx-sportms-club-sections .card .card-img {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
 
 
 /*
