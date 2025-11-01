@@ -9,8 +9,8 @@
 				<f:then>
 					<div class="row">
 						<f:for as="clubSection" each="{club.clubSections}">
-							<div class="col-sm-12 col-md-6 col-lg-4 mb-5">
-								<div class="card shadow">
+							<div class="col-sm-12 col-md-6 col-lg-4 mb-5 d-flex">
+								<div class="card shadow h-100 w-100">
 									<f:if condition="{clubSection.urls}">
 										<f:then>
 											<f:link.typolink parameter="{clubSection.urls.0.url}">
@@ -45,9 +45,9 @@
 		</f:then>
 		<f:else></f:else>
 	</f:if>
-	<div class="card-body">
+	<div class="card-body d-flex flex-column flex-grow-1">
 		<h3 class="h5 card-title mb-0 p-0">{clubSection.label}</h3>
-		<p class="card-text">
+		<p class="card-text flex-grow-1">
 			<f:format.html>{clubSection.description}</f:format.html>
 		</p>
 	</div>
