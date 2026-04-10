@@ -113,10 +113,8 @@
                 'exclude' => 1,
                 'label' => 'LLL:EXT:sportms/Resources/Private/Language/locallang.xlf:tx_sportms_domain_model_mail.mail',
                 'config' => [
-                    'eval' => 'email, required, trim',
-                    'renderType' => 'inputLink',
-                    'size' => 255,
-                    'type' => 'input',
+                    'required' => 'true',
+                    'type' => 'email',
                 ],
             ],
         
